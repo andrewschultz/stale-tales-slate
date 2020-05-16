@@ -1,7 +1,17 @@
-# spechelp should be right before ==t!1,2
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+#--rbr.py v to verify nothing slipped
+
+# this is a special case--usually MIN comes first, but because of alternate routes, I have to push it second.
+
+# spechelp should be right before @!minh,mini
+# what is towers-f for? Can we delete it?
+
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-f.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt
-~	nudges	t4
-~	nu	t4
+~	max	t0
+~	minh	t1
+~	mini	t2
+~	nudges,nud,nu	t4
 ~	sli	t5
 
 ## *FILE
@@ -20,7 +30,16 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >seed 1
 >enter towers
 
-@nu
+@max
+#pre-rodney rule
+>yonder
+Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
+!by one point
+>droney
+Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
+!by one point
+
+@nud
 #nudge for trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -46,7 +65,7 @@ The badlands can't be changed on their own. They must be trekked through.
 >bladn
 The badlands can't be changed on their own. They must be trekked through.
 
-`nu
+@nud
 #spechelp for geno
 >geon
 Geno looks around, as if he's about to bolt.
@@ -65,7 +84,7 @@ Andres looks a bit more tied up at the moment.
 #spechelp for cedrick
 >cedrikc
 Cedrick cringes slightly.
-#spechelp for sir rodney
+#spechelp for rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
 
@@ -76,7 +95,7 @@ Your score has just gone up by one point
 >bleak
 Your score has just gone up by one point
 
-@nu
+@nud
 #renudge for warriors
 >warriosr
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
@@ -84,7 +103,7 @@ You've already dealt with one individual warrior--it can't be bad to tackle the 
 >score
 Score in a scenario: 3 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 50.
 
-==t!1,2
+@!minh,mini
 >tenser
 Your score has just gone up by one point
 >score
@@ -98,7 +117,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
 
-@nu
+@nud
 #renudge for warriors
 >warriosr
 There's only one warrior left, and his name is Rodney.
@@ -108,7 +127,13 @@ Your score has just gone up by one point
 
 Topside Deposit
 
-@nu
+@max
+#pre-curst-palace-spectacular rule
+>spectacular
+Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
+!by one point
+
+@nud
 #spechelp for curst palace
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
@@ -192,7 +217,7 @@ Nothing you think of could get you out of this mess, and even if it could, you'd
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
 
 >score
-==t!1,2
+@!minh,mini
 Score in a scenario: 7 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
 ==!
 Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
@@ -202,6 +227,7 @@ Score in a scenario: 4 out of 50 total points in the current region, Towers. Low
 >ddsare
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
 #spechelp for dreads adders
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
@@ -213,7 +239,7 @@ Your score has just gone up by one point
 >n
 Scope Copse
 
-@nu
+@nud
 #nudge for copse
 >copes
 The copse and the scope are both fine as-is.
@@ -230,7 +256,7 @@ There's more than one diner blocking you.
 >yutr
 There's more than one yurt there.
 
-@nu
+@nud
 #spechelp for try us yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
@@ -245,7 +271,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for subtler
 >ustberl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-@sli
 #slider test for clumsy
 >lcmuys
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -255,7 +280,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >gs
 
-==t!1,2
+@!minh,mini
 >rusty
 Your score has just gone up by one point
 >score
@@ -265,7 +290,7 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >eat tarts
 >xray butlers
 
-@nu
+@nud
 #renudge for yurts
 >yustr
 The copse and the scope are both fine as-is.
@@ -288,17 +313,17 @@ The bluster butlers cough slightly and look around furtively.
 >subtler
 Your score has just gone up by one point
 
-==t1,2
+@minh,mini
 >score
 Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
-==t1
+@minh
 >clumsy
 #notmax
 Your score has just gone up by one point
 >n
 
-==t1
+@minh
 >restful
 #notmax
 Your score has just gone up by one point
@@ -335,7 +360,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
-==t2
+@mini
 >rinsed
 #notmax
 Your score has just gone up by one point
@@ -381,7 +406,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
-@nu
+@nud
 #spechelp for diners
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
@@ -394,7 +419,7 @@ Luc Sym stumbles for a moment.
 Ms. Lucy stumbles for a moment.
 >gs
 
-==t!1,2
+@!minh,mini
 >clumsy
 Your score has just gone up by one point
 >rinsed
@@ -413,12 +438,12 @@ have more
 /(KC AYER|RAY ECK)
 a refresher on
 
-@nu
+@nud
 #spechelp for keycar
 >creayk
 The keycar sputters momentarily.
 
-==t!1,2
+@!minh,mini
 >creaky
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
@@ -431,7 +456,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rgnaidseo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 >e
 #mistake test for file
 >file
@@ -459,7 +484,7 @@ You suppress a swear as the sales pitch wears on you.
 They're not just bottles! They're bottles of NERD-AID!
 >w
 
-==t!1,2
+@!minh,mini
 >n
 
 @sli
@@ -473,7 +498,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ertsulf
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for baldest
 >baldets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -495,29 +520,31 @@ You focus and see that the brand is TRU-SELF. Which would make you see red on ge
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
 
-@nu
+@nud
 #spechelp for fluster self rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
 
-==t!1,2
+@!minh,mini
 >coiled
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
 >restful
 Your score has just gone up by one point
+
+@nud
 #spechelp for pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
 >pastier
 Your score has just gone up by one point
 
-@nu
+@nud
 #done rejects for old ice
 >oldiec
 Twist the ice too much, it might not look right.
 
-==t!1,2
+@!minh,mini
 >n
 
 @sli
@@ -531,7 +558,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -560,7 +587,7 @@ There's more than one ingrate blocking you.
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 
-==t!1,2
+@!minh,mini
 >angstier
 Your score has just gone up by one point
 >w
@@ -570,7 +597,7 @@ Your score has just gone up by one point
 >urtsedl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for finger
 >fingre
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -584,7 +611,7 @@ Work on the whole sled rut.
 >rtu
 Work on the whole sled rut.
 
-@nu
+@nud
 #spechelp for strudel
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
@@ -598,7 +625,16 @@ DR. ELTUS recommends this strudel!
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 
-==t!1,2
+@max
+>take strudel
+#pre-strudel-rustled rule
+>rustled
+(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)
+by one point
+>undo
+>undo
+
+@!minh,mini
 >rustled
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
@@ -606,7 +642,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
 >nerdiest
 Your score has just gone up by one point
 
-@nu
+@nud
 #done rejects for strudel
 >strudle
 You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
@@ -615,12 +651,12 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 The mardier admirer looks askance, then returns to evaluating you some more.
 
 
-==t!1,2
+@!minh,mini
 >married
 Your score has just gone up by one point
 >n
 
-@nu
+@nud
 #nudge for shaven
 >shavne
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -646,11 +682,11 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >ravaeg
 The ravages are chaotic enough. Changing them is a fight you'd lose.
 
-==t!1,2
+@!minh,mini
 >s
 >e
 
-@nu
+@nud
 #nudge for shoals
 >shoasl
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
@@ -669,7 +705,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eweirats
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #spechelp for asset-hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
@@ -677,13 +713,14 @@ The atheists momentarily ditch their timed snark for a few quick hitters, but th
 >waitsere
 The wait-seer looks bored and distracted for a second.
 
-==t!1,2
+@!minh,mini
 >hastiest
 Your score has just gone up by one point
 >weariest
 Your score has just gone up by one point
 >s
 
+@nud
 #spechelp for reed's ale
 >reedsael
 Lars listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
@@ -693,15 +730,16 @@ Elsa listens to what you're saying for a minute, but--no, you didn't quite get i
 >gs
 #spechelp for mel fish
 >mel fihs
-Mel Fish mutters, 'No, that's not how to be me. Gotta be something simple and plain.'
+Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
 
+@sli
 #slider test for released
 # oh crap released/resealed
 >ereledas
 WRONG
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1,2
+@!minh,mini
 >resealed
 Your score has just gone up by one point
 >thisalt
@@ -724,7 +762,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eprayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for lars
 >lasr
 No, Lars's full name. With Reed's Ale.
@@ -758,7 +796,7 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 >dela
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
-@nu
+@nud
 #nudge for gradient
 >gradietn
 This is a weird place, being at the crossroads, but better to get rid of the weeds.
@@ -770,11 +808,11 @@ Gumming up one weed wouldn't get the others.
 >weesd
 The weeds almost seem to shrug.
 
-==t!1,2
+@!minh,mini
 >sewed
 Your score has just gone up by one point
 
-@nu
+@nud
 #renudge for gradient
 >gradietn
 This is a weird place, being at the crossroads, but better to tackle a guardian.
@@ -803,7 +841,7 @@ The raves saver has limited functionality, alas.
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
 
-@nu
+@nud
 #nudge for denim
 >denmi
 You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently.
@@ -811,13 +849,13 @@ You scrape at the mended mini denim bits to see if there is any magic in dem. We
 >denmi
 The mended mini denim bends and warps, but you hear no tearing noise.
 
-==t!1,2
+@!minh,mini
 >mined
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 13 OVERALL.
 >e
 
-@nu
+@nud
 #nudge for scalier
 >scalire
 The pastry is for eating, not for changing.
@@ -831,7 +869,7 @@ His full name, Liam Garn.
 >ganr
 His full name, Liam Garn.
 
-@nu
+@nud
 >gt gradient
 #renudge for gradient
 >gradinet
@@ -842,7 +880,7 @@ This is a weird place, being at the crossroads, but better to mess around elsewh
 >alarmign
 The grailman seems almost average for a moment.
 
-@nu
+@nud
 #spechelp for lois the hostile
 >lois the hostiel
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
@@ -863,7 +901,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 
-==t!1,2
+@!minh,mini
 >marginal
 #notmax
 Your score has just gone up by one point
@@ -874,26 +912,26 @@ Your score has just gone up by one point
 >s
 >s
 
-@nu
+@nud
 #spechelp for dandier arid den
 >dandrie
 The arid den seems less imposing and impressive.
 
-==t!1,2
+@!minh,mini
 >drained
 Your score has just gone up by one point
 
-@nu
+@nud
 #nudge for native
 >natiev
 You'll need to deal with more than one native to make your way south.
 
-@nu
+@nud
 #spechelp for natives
 >nativse
 The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 
-==t!1,2
+@!minh,mini
 >vainest
 Your score has just gone up by one point
 >thisalt
@@ -910,7 +948,7 @@ Your score has just gone up by one point
 Score in a scenario: 30 out of 50 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 50.
 >w
 
-@nu
+@nud
 #nudge for ego
 >eog
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
@@ -927,12 +965,12 @@ Until you see the ego-drains themselves as organised, you probably won't see how
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
 
-@nu
+@nud
 #spechelp for organised ego drains
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
 
-==t!1,2
+@!minh,mini
 >grandiose
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
@@ -944,7 +982,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
 >sorpstie
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
@@ -952,12 +990,12 @@ You may find it easier to deal with all the ripostes at once.
 >prosiets
 The ripostes seem less cutting for a moment.
 
-==t!1,2
+@!minh,mini
 >prosiest
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 17 OVERALL.
 
-@nu
+@nud
 #nudge for lost
 >lots
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -990,7 +1028,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >anviste
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==!t1,2
+@!minh,mini
 >s
 
 @sli
@@ -998,11 +1036,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >orsuedt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==!t1,2
+@!minh,mini
 >rousted
 Your score has just gone up by one point
 
-@nu
+@nud
 #spechelp for bonker
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
@@ -1015,7 +1053,7 @@ Your score has just gone up by one point
 >resting
 Your score has just gone up by one point
 
-@nu
+@nud
 #nudge for geese
 >geees
 The geese are fine as they are. They're just there for scenery, and stuff.
@@ -1055,6 +1093,16 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 
 >e
 
+@max
+#pre-fussier rule
+>fussier
+The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
+!by one point
+#pre-unlocked rule
+>unlocked
+You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you.
+!by one point
+
 @sli
 #slider test for wordy
 # (?? not possible? Or map to the nudges?)
@@ -1071,7 +1119,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >nuolkcde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
@@ -1079,20 +1127,25 @@ Dr. Yow seems to ponder something for a second but then shakes his head--but he 
 >wordy
 Your score has just gone up by one point
 
-@nu
+@nud
 #renudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
+
+@nud
+#spechelp for fissure
+>fissuer
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it.
 
 >push retape
 >gt duck
 >push repeat
 >gt subsector
 
-@nu
-#spechelp for fissure
+@nud
+#respechelp for fissure
 >fissuer
-Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if].
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it.
 >undo
 #spechelp for ropins
 >unleckdo
@@ -1102,9 +1155,15 @@ The ropins remains secure, with no easy way to open it.
 Part of the red writing on the prison says
 There're two other bits to read.
 
->unlocked
+@max
+>fussier
+by one point
+>undo
 
-@nu
+>unlocked
+by one point
+
+@nud
 #done rejects for prison ropins
 >unlockde
 It already is. Dr. Yow is free.
@@ -1128,7 +1187,7 @@ It's not just any duck. But it's served its purpose.
 >gt copse
 >w
 
-@nu
+@nud
 #nudge for roeut
 >roetu
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1164,14 +1223,14 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 #notana
 by one point
 
-@nu
+@nud
 #renudge for shiny
 >shiyn
 The machine is complicated enough. You already got something from it.
 
 >gt coastlines
 
-@nu
+@nud
 #nudge for actionless
 >actionless
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1204,7 +1263,7 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 Staci looks at you curiously. You probably don't need to change her name or intelligence.
 >gs
 
-@nu
+@nud
 #nudge for solve
 >solev
 The pastry is for eating, not for changing.
@@ -1234,7 +1293,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 >e
 
-@nu
+@nud
 #mistake test for coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
@@ -1267,7 +1326,7 @@ Your score has just gone up by one point
 #notana
 Your score has just gone up by one point
 
-@nu
+@nud
 #spechelp for raves saver
 >pearyl
 The 'replay player' letters brighten for a second.
@@ -1282,7 +1341,7 @@ The saver is hopelessly no-frills. It'll never be anything better. But you made 
 >teatievnt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #spechelp for atblock
 >attentiev
 Scot seems a little more focused, but he could maybe do even better.
@@ -1291,7 +1350,7 @@ Scot seems a little more focused, but he could maybe do even better.
 Staci seems a little more focused, but she could maybe do even better.
 >gs
 
-==t!1,2
+@!minh,mini
 >pearly
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
@@ -1299,7 +1358,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
 
-@nu
+@nud
 #done rejects for raves saver
 >pearyl
 The raves saver is as glitzed-up as it'll get.
@@ -1314,7 +1373,7 @@ Scot is fully attentive. Don't ruin a good thing!
 #notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
-@nu
+@nud
 #renudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions
@@ -1330,7 +1389,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
 
-@nu
+@nud
 >gonear rawest waters
 #nudge for waster
 >wastre
@@ -1370,7 +1429,7 @@ This game doesn't require you to mess with diagonal directions, so maybe you sho
 >undo
 >undo
 
-@nu
+@nud
 #nudge for bot
 >bto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
@@ -1393,7 +1452,7 @@ You need to deal with both turbos.
 >read blaster
 ALBERT'S.
 
-@nu
+@nud
 >robust
 #done rejects for turbos
 >turbso
@@ -1413,7 +1472,7 @@ Maybe it's you, but the eastern shore seemed slightly closer.
 >undo
 >undo
 
-@nu
+@nud
 #spechelp for turbos
 >turbso
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
@@ -1422,7 +1481,7 @@ Despite your lack of technical knowledge, you think you almost did...something t
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 #readables for blaster
 
-==t1,2
+@minh,mini
 >robust
 >stabler
 ==!
@@ -1466,7 +1525,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tsbaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #renudge for turbo
 >turob
 You already dealt with both turbos.
@@ -1474,14 +1533,14 @@ You already dealt with both turbos.
 >rewirde
 You think you see how to untangle some of the mes inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 
-==!1,2
+@!minh,mini
 >rewired
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
 
 >enter boat
 
-@nu
+@nud
 #renudge for bland
 You're beyond the badlands now.
 #nudge for mislit
@@ -1511,7 +1570,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eepnrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #spechelp for ur-pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
@@ -1521,7 +1580,7 @@ The serpent calms down for a split-second.
 >presetn
 The serpent calms down for a split-second, again.
 
-==!1,2
+@!minh,mini
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST.
 >punier
@@ -1534,7 +1593,7 @@ Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
 
-@nu
+@nud
 #done rejects for unripe ur-pine
 >penuir
 You already found a succor crocus. There's not much else there, it seems.
@@ -1545,10 +1604,10 @@ The succor crocus just is, and it doesn't need a new way to be. Perhaps it would
 >presetn
 The serpent is taken care of.
 
-==!1,2
+@!minh,mini
 >in
 
-@nu
+@nud
 #nudge for mesprise
 >mespries
 It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
@@ -1564,17 +1623,23 @@ The Tetris Sitter breaks her glassy smile for a moment.
 >rtteis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==!1,2
+@max
+#pre-curst-palace-spectacular rule
+>spectacular
+Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
+!by one point
+
+@!minh,mini
 >triste
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 23 OVERALL.
 
-@nu
+@nud
 #done rejects for tetris sitter
 >settir
 St. Teri's back in the real world, now.
 
-==!1,2
+@!minh,mini
 >give flowerpot to sitter
 #notana
 Your score has just gone up by one point
@@ -1583,7 +1648,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
 
 >misses
 
-@nu
+@nud
 #nudge for accurst
 >accurts
 Nah, that's just garbage. It's the curst palace you need to focus on.

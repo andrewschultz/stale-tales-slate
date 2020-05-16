@@ -2,11 +2,16 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
+files=reg-roi2-routes-min.txt,reg-roi2-routes-max.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
+
+~	min	t0
+~	max	t1
+~	nudges,nud,nu	t2
+~	sli	t3
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## slider testing
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -20,7 +25,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >score
 Score in a scenario: 0 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 21.
 
-==t3
+@sli
 #slider test for towards
 >otawdsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -34,7 +39,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >srcsao
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for spoon
 >ospon
 Instead of bending the spoon, use it to help your magic powers.
@@ -110,24 +115,26 @@ Trying to change the current region you're in would be risky, or useless, or may
 >atsin
 The church's name is not as important as its mission.
 
-==t2
+@nud
 #spechelp for worst ad
 >towarsd
 The ad seems slightly nearer, for a moment.
+#readables for worst ad
+"WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
 
-==t!1
+@!min
 >towards
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 1 out of 21 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
 
-==t2
+@nud
 #spechelp for scripture picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 
-==t0
+@max
 #pre-side-art-astride rule
 >astride
 You get astride the sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
@@ -147,7 +154,7 @@ Your score has just gone up by one point
 
 Cleric Circle
 
-==t2
+@nud
 #nudge for circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -226,7 +233,7 @@ Precise recipes
 
 >out
 
-==t2
+@nud
 #renudge for die
 >edi
 The words themselves do nothing. You found the way in.
@@ -234,7 +241,7 @@ The words themselves do nothing. You found the way in.
 >ins
 The words themselves do nothing. You found the way in.
 
-==t2
+@nud
 #spechelp for adsorbing signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
@@ -244,7 +251,7 @@ Your score has just gone up by one point
 
 Idle Deli
 
-==t2
+@nud
 #nudge for idle
 >elid
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -269,14 +276,15 @@ It's not the carvings that need changing.
 It's not the carvings that need changing.
 !You got
 
-==t2
+@nud
 #spechelp for seed pit
 >despiet
 The seed pit seems to bubble slightly.
 #readables for cravings carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
-==t3
+
+@sli
 #slider test for despite
 >edeitps
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -292,7 +300,7 @@ That'd be a double negative, to re-enter. Your argument would be so won, it's lo
 !Your score has just gone up by one point
 WRONG
 
-==t2
+@nud
 #renudge for carvings
 >cravinsg
 It's not the carvings that need changing. You got the mushrooms from the seed pit, and that's what's important
@@ -302,7 +310,7 @@ It's not the carvings that need changing. You got the mushrooms from the seed pi
 It's not the carvings that need changing. You got the mushrooms from the seed pit, and that's what's important
 !You got
 
-==t2
+@nud
 #nudge for mushroom
 >umshroom
 Brother Horbert will work his magic with that.
@@ -324,7 +332,7 @@ You don't need to do anything with Pat, especially now you got the mushrooms.
 
 >out
 
-==t2
+@nud
 #spechelp for lairage regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
@@ -334,7 +342,7 @@ Your score has just gone up by one point
 
 Adobe Abode
 
-==t2
+@nud
 #nudge for trashy
 >trasyh
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
@@ -354,11 +362,12 @@ Brother Horbert will work his magic with that.
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
-==t3
+@sli
 #slider test for opposite
 >poopiset
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+
+@nud
 #spechelp for pipe soot
 >opposiet
 The soot smells a bit stronger than before for a moment.
@@ -366,7 +375,7 @@ The soot smells a bit stronger than before for a moment.
 >opposite
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for pipe soot
 #not a nudj for pipesoot
 >pipesoto
@@ -383,7 +392,7 @@ WRONG
 #done rejects for scripture picturers
 WRONG
 
-==t2
+@nud
 #dupnudge for orcas
 >ocras
 No, you found the way in, with the extra s.
@@ -397,17 +406,17 @@ The bench is too sturdy. You can't do anything with it, but you may be able to d
 >byburg
 Perhaps it's better to focus on the proper names instead. Simpler, too.
 
-==t2
+@nud
 #spechelp for bench
 >againts
 You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
 
-==t3
+@sli
 #slider test for against
 >gaiastn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0
+@max
 #pre-mesa-dir-flip rule
 >past
 !by one point
@@ -421,38 +430,41 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >against
 Your score has just gone up by one point
 
-==t2
-#done rejects for bench
+@nud
+#done rejects for sit a nag
 >againts
-You leaned on the bench right. Time to get on it.
+You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
 
 >against
 !Your score has just gone up by one point
 
-==t2
+@nud
 #nudge for tirade
 >tiraed
 There's more than one tirade
 
-==t3
+@sli
 #slider test for astride
 >sartdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
-#spechelp for bench-end
+@nud
+#spechelp for side art
 >astried
 Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
 
 >astride
 Your score has just gone up by one point
 
-==t2
-#done rejects for bench-end
+@nud
+#done rejects for side art
 >astried
 You got on the bench right. Time to start ducking.
+#redone rejects for sit a nag
+>againts
+You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
 
-==t2
+@nud
 #dupnudge for stride
 >stried
 You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal
@@ -460,12 +472,17 @@ You've sort of dealt with the tirades, but there's still more than one, and you 
 >eblows
 Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?
 
-==t3
+@nud
+#redone rejects for sit a nag
+>againts
+The anti-sag sit-a-nag isn't important with [Gast] gone.
+
+@sli
 #slider test for below
 >ebowl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for giant's elbow
 >belwo
 You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
@@ -473,12 +490,12 @@ You seem like you should be able to avoid the elbow, but you may need to mix thi
 >below
 Your score has just gone up by one point
 
-==t2
-#done rejects for giant's elbow
+@nud
+#done rejects for rude 'n nuder
 >belwo
-You don't need to avoid the giant's elbow any more.
+You don't need to avoid the WOE BOW BELL any more.
 
-==t2
+@nud
 #nudge for giatn
 >igtan
 The giant is too old and set in its ways. You may just need to listen to him from one more angle.
@@ -490,12 +507,12 @@ The giant is too old and set in its ways. You may just need to listen to him fro
 >groucyh
 The giant is too old and set in its ways. You may just need to listen to him from one more angle.
 
-==t3
+@sli
 #slider test for under
 >nuerd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
@@ -503,8 +520,8 @@ The pages of Rude 'N Nuder flutter a bit.
 >under
 Your score has just gone up by one point
 
-==t2
-#done rejects for U NERD ENDUR REDUN
+@nud
+#done rejects for u nerd endur redun
 >undre
 You don't need to do anything fancy with the runed book.
 #nudge for rude
@@ -524,17 +541,18 @@ Brother Horbert will work his magic with that.
 
 >in
 
-==t1
+@min
 REGION MAX DECREASED BY 1, 1 OVERALL
 DEBUG INFO: Taking away a max point.
 
 >out
 
-==t2
+@nud
 #spechelp for morf form
 >frmo
 WRONG
-==t3
+
+@sli
 #slider test for from
 >rfmo
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -542,11 +560,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >from
 Your score has just gone up by one point
 
-==t3
+@sli
 #slider test for beneath
 >ebentha
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+
+@nud
 #nudge for bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
@@ -565,7 +584,7 @@ Your score has just gone up by one point
 
 Harms Marsh
 
-==t2
+@nud
 #nudge for marsh
 >marhs
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -597,35 +616,37 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 >score
 Score in a scenario: 11 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 20.
 
-==t2
+@nud
 #spechelp for darkness
 >untli
 You feel it's ALMOST the right time for the darkness to lift.
-==t3
+
+@sli
 #slider test for until
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0
+@max
 #pre-around-unroad rule
 >around
 
 >until
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for un-road
 >untli
 The underground is already lit. Un-unlit.
 
-==t2
+@nud
 #nudge for pyrites
 >pyrites
 not something you
 #spechelp for un-road
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
-==t3
+
+@sli
 #slider test for around
 >rauodn
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -633,7 +654,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >around
 Your score has just gone up by one point
 
-==t2
+@nud
 #nudge for along
 >alogn
 You think of No-Gal Logan, wondering how to find a way to him.
@@ -644,11 +665,12 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
 
-==t2
+@nud
 #spechelp for along-bogus
 >alogn
 The un-road seems to lead somewhere, but you couldn't quite make it out like that.
-==t3
+
+@sli
 #slider test for along
 >lango
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -658,7 +680,7 @@ Your score has just gone up by one point
 
 Ripe Pier
 
-==t2
+@nud
 #nudge for pier
 >pire
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -666,11 +688,12 @@ You don't need to riff on any location names to win the game, unless there's not
 >mits
 Nothing happens. It's DA mist, after all.
 
-==t2
+@nud
 #spechelp for da mist
 >amidts
 Hmm, you almost see a way through the mist.
-==t3
+
+@sli
 #slider test for amidst
 >madits
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -680,7 +703,7 @@ Your score has just gone up by one point
 
 Cripple Clipper
 
-==t2
+@nud
 #nudge for clipper
 >clippre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -696,7 +719,8 @@ No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
 The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
-==t3
+
+@sli
 #slider test for athwart
 >tawrtha
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -706,13 +730,13 @@ Your score has just gone up by one point
 
 Sonancy Canyons
 
-==t0
+@max
 #pre-hurt-hog-through rule
 >through
 WRONG
 !by one point
 
-==t2
+@nud
 #nudge for canyon
 >canyno
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -732,7 +756,7 @@ The new beet seems to spin slightly away from Thor for a second.
 >throuhg
 Thor seems to gesture you by for a second.
 
-==t3
+@sli
 #slider test for without
 >ttwouhi
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -753,17 +777,17 @@ WRONG
 >through
 Your score has just gone up by one point
 
-==t1
+@min
 >beyond
 Score in a scenario: 19 out of 21 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 20 points--you missed some extra stuff you can't go back for.
 >undo
 
-==t2
+@nud
 #spechelp for raptest patters
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 
-==t0
+@max
 >without
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 2 OVERALL.
@@ -771,11 +795,12 @@ REGION MIN INCREASED BY 1, 2 OVERALL.
 Score in a scenario: 20 out of 21 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 21.
 !you missed some extra stuff you can't go back for
 
-==t3
+@sli
 #slider test for beyond
 >eboydn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+
+@nud
 #spechelp for yob den
 >beyodn
 WRONG

@@ -47,6 +47,25 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+==t0
+#pre-trolls-stroll rule
+>stroll
+The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside
+!by one point
+>sing
+>stroll
+The trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now
+!by one point
+>spit
+>stroll
+The trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty]. They're not fully on their game, though. Maybe you can be even more annoying
+!by one point
+>undo
+>undo
+>undo
+>undo
+>undo
+
 ==t2
 >inset
 #done rejects for tines
@@ -55,9 +74,9 @@ You destroyed the stein, and that's enough.
 >undo
 >undo
 >spit
-#done rejects for stumbler tumblers
+#done rejects for tips pits
 >spti
-You can't and don't want to do anything else to the tumblers.
+You can't and don't want to do anything else to the tips pits.
 >undo
 >undo
 >scrape
@@ -85,9 +104,9 @@ Complicated instructions for, of all things, how to turn off the tunes currently
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Reset, set.
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. Do, undo, set, reset? Hm.
-#readables for tumblers
->read tumblers
-PITS is written in red on the bottom of some tumblers.
+#readables for tips pits
+>read tips pits
+IT'S P is written in red on the bottom.
 #spechelp for capers recaps
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
@@ -325,6 +344,12 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
 
+==t0
+#pre-oars-soar rule
+>soar
+!by one point
+The oars have no gas, or whatever they might run on
+
 ==t2
 >enter raft
 >fart
@@ -345,8 +370,22 @@ WRONG
 >undo
 >undo
 
+==t0
+#pre-raft-fart rule
+>fart
+Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.
+>enter raft
+>fart
+#pre-boats-boast rule
+>boast
+You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
+>undo
+>undo
+
 >boast
 Your score has just gone up by one point
+
+
 Fighter Freight
 
 ==t3
@@ -376,6 +415,17 @@ Yes, the pale plea is calling and warning you to leave. But how?
 >leap
 Your score has just gone up by one point
 Anger Range
+
+==t0
+#pre-tutor-trout rule
+>tutor
+You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
+!by one point
+#pre-unearth-haunter rule
+>unearth
+!by one point
+You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'
+You haven't found or discovered a jewel, yet.
 
 ==t3
 #slider test for spike
@@ -546,6 +596,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tutor
 Your score has just gone up by one point
 
+==t0
+#pre-warp-wrap rule
+>warp
+"Goodness me!" cries Aunt Tuna. "I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!"
+Like all good bubble wrap, maybe it needs to be saved 'til you find the right person to annoy.
+!by one point
+
 ==t2
 #done rejects for trout
 >trotu
@@ -584,6 +641,10 @@ Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lo
 >w
 >n
 Lapsin' Plains
+
+==t0
+>warp
+That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 
 ==t2
 #done rejects for wipes
@@ -691,8 +752,26 @@ You had your say.
 >score
 Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 39.
 
+==t0
+#pre-crate-react rule
+>react
+That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
+#pre-kiss-skis rule
+That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
+#pre-snap-span-pans rule
+>snap
+You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
+
 >trace
 Your score has just gone up by one point
+
+==t0
+#pre-kiss-skis rule
+>kiss
+You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right.
+#pre-bonk-knob rule
+>bonk
+You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 
 ==t3
 #slider test for react
@@ -891,7 +970,7 @@ You'll probably need to destroy the hedron from within.
 #nudge for sardine
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
-#spechelp for a-s
+#spechelp for achers' chaser arches
 >searhc
 Hm, you almost thought you found something. Well, not QUITE like that.
 >reacsh
@@ -906,16 +985,28 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >esrahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+==t0
+#pre-search-arches rule
+>search
+A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
+
 >warp
 Your score has just gone up by one point
 >search
 Your score has just gone up by one point
 
+==t0
+#again pre-unearth-haunter rule
+>e
+>unearth
+!by one point
+As you begin to dig, you hear "My...jewel...close...thieves...pay."
+
 ==t2
 #done rejects for ruby
 >ruyb
 You already did in the wrap.
-#done rejects for a-s
+#done rejects for achers' chaser arches
 >srecha
 Further searching proves fruitless.
 #spechelp for gleaner
@@ -943,6 +1034,16 @@ You did enough with the arches
 
 >n
 Horned Hedron
+
+==t0
+#pre-patrol-ol-trap rule
+>patrol
+Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
+>w
+#pre-bury-ruby rule
+>bury
+Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
+>e
 
 ==t2
 #nudge for hedrno
@@ -1077,7 +1178,7 @@ You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something ent
 Your score has just gone up by one point
 
 ==t2
-#done rejects for a-p
+#done rejects for pol art portal
 >patrlo
 You discovered the portal. No need to look further.
 >in
@@ -1137,11 +1238,26 @@ Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lo
 >rppeya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+==t0
+#pre-dialer-derail rule
+>derail
+The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
+!by one point
+#pre-lever-revel rule
+>revel
+Nothing to celebrate yet--dispose of the yapper first.
+!by one point
+
 >prepay
 Your score has just gone up by one
 >undo
 >prepay yapper
 Your score has just gone up by one point
+
+==t2
+#readables for templar ramplet
+>read ramplet
+Someone named LAMPERT (written in red) constructed the templar ramplet.
 
 ==t3
 #slider test for trample
@@ -1207,6 +1323,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >derail
 Your score has just gone up by one point
+
+==t0
+#pre-dialer-redial rule
+>redial
+Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard...
+!by one point
 
 ==t3
 #slider test for spin

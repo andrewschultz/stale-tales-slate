@@ -1,9 +1,18 @@
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+#--rbr.py v to verify nothing slipped
+
+# this is a special case--usually MIN comes first, but because of alternate routes, I have to push it second.
+
 files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt,reg-roi2-troves-slider.txt
-~	nudges	t3
-~	nu	t3
+~	max	t0
+~	mina	t1
+~	minb	t2
+~	nudges,nud,nu	t3
 ~	sli	t4
 ~	slider	t4
 ~	pad	t5
+
 ## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges
@@ -34,7 +43,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >agep
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
@@ -84,24 +93,24 @@ Negative thinking! You don't need to focus on the cold but how to get rid of it.
 >score
 Score in a scenario: 0 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
 
-@nu
+@nud
 #spechelp for pa egg pea
 >gaep
 You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
 
-==t0,3
+@max,nud
 >gape
 Your score has just gone up by one point
 Adding a min point
 >score
 Score in a scenario: 1 out of 24 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 24.
 
-@nu
+@nud
 #done rejects for pa egg pea
 >gaep
 You probably did what you could. Or not-did.
 
-@nu
+@nud
 #spechelp for cold
 >haet
 You think you feel less cold for a second. But you need to make it last.
@@ -109,12 +118,12 @@ You think you feel less cold for a second. But you need to make it last.
 >hate
 Your score has just gone up by one point
 
-@nu
+@nud
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
 
-@nu
+@nud
 #spechelp for heat
 >caer
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
@@ -124,12 +133,12 @@ Your score has just gone up by one point
 
 Bustle Sublet
 
-@nu
+@nud
 #nudge for care
 >caer
 Caring and all its offshoots only go so far.
 
-@nu
+@nud
 #nudge for bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -158,7 +167,7 @@ You can't make the sidewalk crumble any more, and you probably don't want to
 >weska
 You can't make the sidewalk crumble any more, and you probably don't want to
 
-@nu
+@nud
 #nudge for sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
@@ -166,6 +175,7 @@ No, you'll want to zone out the whole verbose distraction.
 >vere
 No, you'll want to zone out the whole verbose distraction.
 
+@nud
 #spechelp for sob ever verbose
 >obserev
 WRONG
@@ -179,13 +189,14 @@ That should work, but you--your eyes are wandering now. You're not taking it all
 >observe
 Your score has just gone up by one point
 
-@nu
+@nud
 #spechelp for stop post
 >stpo
 You're not seeing the right way to see the stop post, here.
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
+
 @sli
 #slider test for observe
 >esbover
@@ -207,11 +218,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ebevlei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for stop
 >stpo
 The stop post is in the past. No need to p.s. tweaking it.
-#spechelp for what-a-bee
+#spechelp for evil bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 #spechelp for bee's head
@@ -227,7 +238,7 @@ The bee's description isn't important. It's how you see the bee that matters.
 >bee
 But it's not just any bee. It's a WRONG
 
-==t0
+@max
 >believe
 #notmax
 Your score has just gone up by one point
@@ -240,18 +251,18 @@ Score in a scenario: 7 out of 24 total points in the current region, Troves. Low
 >undo
 >undo
 
-@nu
+@nud
 #renudge for bee
 >bee
 But it's not just any bee. It's a WRONG
 
-==t0
+@max
 #pre-cellar-recall rule
 >recall
 WRONG
 !by one point
 
-==t!2
+@!minb
 >believe
 Your score has just gone up by one point
 
@@ -260,12 +271,12 @@ Your score has just gone up by one point
 >lcelra
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1
+@!mina
 >reason
 Your score has just gone up by one point
 
-@nu
-#done rejects for what-a-bee
+@nud
+#done rejects for evil bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
 #done rejects for bee's head
@@ -280,7 +291,7 @@ by one point
 
 Drain Nadir
 
-@nu
+@nud
 >reclla
 That's not something you can say, do or see here.
 #nudge for nadir
@@ -299,15 +310,16 @@ It's a sad pier.
 >pier
 It's a sad pier.
 
-==t1,2
+@mina,minb
 Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
 ==!
 Score in a scenario: 8 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
 
-@nu
+@nud
 #spechelp for diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+
 @sli
 #slider test for despair
 >edpsira
@@ -316,12 +328,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >despair
 Your score has just gone up by one point
 
-@nu
+@nud
 #nudge for diapers
 >despari
 Don't twist yourself into knots to/from REAL despair.
 
-@nu
+@nud
 #nudge for song
 >sogn
 It's the song name--I'd Cede.
@@ -329,7 +341,7 @@ It's the song name--I'd Cede.
 >eddei
 It's the song name--I'd Cede.
 
-@nu
+@nud
 #spechelp for eddie's song
 >decied
 You try to groove to Eddie's song, but that's not quite it.
@@ -343,12 +355,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 Boredom Bedroon
 
-@nu
+@nud
 #nudge for bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-@nu
+@nud
 #spechelp for large regal lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
@@ -367,50 +379,50 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >edla
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0,3
+@max,nud
 >glare
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
 
-@nu
+@nud
 #nudge for glare
 >glaer
 You stare into space some more but get distracted.??
 
-@nu
+@nud
 #spechelp for lobster
 >bolstre
 That's not quite the way to deserve that lobster.
 
-==t0
+@max
 #pre-deal rule
 >deal
 WRONG
 !by one point
 
-==t!2
+@!minb
 >bolster
 Your score has just gone up by one point
 
-@nu
+@nud
 #spechelp for me arts
 >mastre
 That's not quite the way to focus on the stream.
 
-==t!1
+@!mina
 >master
 Your score has just gone up by one point
 
-@nu
+@nud
 #done rejects for me arts
 >mearst
 The ME ARTS have nurtured you spiritually. The lobster nurtured you physically. Time to move on.
-#spechelp for ltb
+#spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
-#readables for ltb
->read ltb
+#readables for lead
+>read lead
 You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! He needs to learn to, like...!' They always acted as if it was so simple.
 However, there must be some simple way to focus and move on.
 
@@ -418,7 +430,7 @@ However, there must be some simple way to focus and move on.
 Your score has just gone up by one point
 Browse Bowers
 
-@nu
+@nud
 #nudge for eder
 >edre
 It's Si Reed's full name.
@@ -444,15 +456,16 @@ You should never need to riff on part of a location name, though you may get a l
 >nta
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
-==t1,2
+@mina,minb
 Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 ==!
 Score in a scenario: 14 out of 24 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 24.
 
-@nu
+@nud
 #spechelp for si reed
 >desier
 Your longing increases...but not enough.
+
 @sli
 #slider test for desire
 >ederis
@@ -462,7 +475,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 Econ-Cone
 
-@nu
+@nud
 #nudge for cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
@@ -488,10 +501,11 @@ If you brought down the godlings' lodgings like that somehow, mass panic would e
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
-@nu
+@nud
 #spechelp for praise spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
+
 @sli
 #slider test for aspire
 >saiper
@@ -500,31 +514,38 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tsirev
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!2
+@!minb
 >aspire
 Your score has just gone up by one point
 
-@nu
+@nud
 #done rejects for praise spirea
 >aspier
 You're wanting praise too much, now.
 #spechelp for rivets
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
+#readables for rivets
+>read rivets
+/The rivets have two messages. One is (RISE, TV|VET, SIR)!
+>read rivets
+/The rivets have two messages. One is (RISE, TV|VET, SIR)!
 
-==t!1
+@!mina
 >strive
 Your score has just gone up by one point
+
+@nud
 #renudge for statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
-@nu
+@nud
 #done rejects for rivets
 >striev
 You're striving too hard, now.
 
-@nu
+@nud
 #nudge for label
 >lable
 It's not the label but what's on it.
@@ -536,15 +557,16 @@ It's not just any bottle, but a bottle of Pernod.
 >bottel
 It's not just any bottle, but a bottle of N-E-Prod.
 
-@nu
+@nud
 #spechelp for pernod
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
-#readables for card
+#readables for r cad card
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
+
 @sli
 #slider test for ponder
 >opdnre
@@ -554,7 +576,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 Upscale Capsule
 
-@nu
+@nud
 #nudge for upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -562,18 +584,19 @@ You don't need to riff on any location names to win the game, unless there's not
 >offiec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-==t1,2
+@mina,minb
 Score in a scenario: 13 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 ==!
 Score in a scenario: 18 out of 24 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 24.
 
-@nu
+@nud
 #spechelp for red vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
 #readables for red vees
 >read red vees
 Etched into the vees are the names of this motivational device's inventors. One is
+
 @sli
 #slider test for deserve
 >edesver
@@ -582,7 +605,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >deserve
 Your score has just gone up by one point
 
-@nu
+@nud
 #nudge for fief
 >fife
 You should never need to riff on part of a location name.
@@ -614,7 +637,7 @@ The checklist was built to be especially stable and singular of purpose. So, not
 >likeness
 It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 
-@nu
+@nud
 #spechelp for salt
 >lats
 You don't quite draw inspiration from the shaker, but there can't be that many alts.
@@ -622,20 +645,27 @@ You don't quite draw inspiration from the shaker, but there can't be that many a
 >last
 Your score has just gone up by one point
 
-@nu
+@nud
 #nudge for salt
 >lats
 You've lasted long enough. There are new things to look at, now.
 
-@nu
+@nud
 #mistake test for ambler
 >ambler
 You see red slightly as the marble Blamer Balmer fails to walk away.
 #readables for blamer balmer
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
+#this is ugly but the only way to test both possibilities
+>abstract mr beal to fiefco
+>x mr beal
+#readables for blamer mr beal
+The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
+>undo
+>undo
 
-@nu
+@nud
 #spechelp for marble blamer mr beal
 >rambel
 seems slightly taken aback
@@ -646,6 +676,7 @@ seems slightly taken aback
 >resits
 Sister Tressi seems a bit more upset than usual.
 
+@sli
 #slider test for ramble
 >arbmel
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -659,21 +690,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rrecant
 WRONG
 
-==t0
+@max
 #pre-nectar-recant rule
 >recant
 !by one point
 It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
 
-==t!2
+@!minb
 >ramble
 Your score has just gone up by one point
 
-==t!1
+@!mina
 >resist
 Your score has just gone up by one point
 
-@nu
+@nud
 #spechelp for divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
@@ -694,7 +725,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 Score in a scenario: 23 out of 24 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 24.
 
-@nu
+@nud
 #nudge for divorces
 >divorcse
 No! Not another second thinking about that rubbish.
@@ -705,7 +736,7 @@ Your willpower is not quite strong enough to give it all up yet. But you must be
 >recant
 Your score has just gone up by one point
 
-==t1,2
+@mina,minb
 Troves (17/24)
 ==!
 Troves (24/24)

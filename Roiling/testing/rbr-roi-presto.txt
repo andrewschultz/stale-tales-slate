@@ -1,6 +1,12 @@
-files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+#--rbr.py v to verify nothing slipped
 
-~	nu	t2
+files=reg-roi2-presto-min.txt,reg-roi2-presto-max.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
+
+~	max	t1
+~	min	t0
+~	nudges,nud,nu	t2
 ~	sli	t3
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
@@ -12,6 +18,17 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >presto
 >enter spot
 Grey Gyre
+
+@max
+#pre-plebe-bleep rule
+>bleep
+!by one point
+You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
+
+@max
+#pre-solve-maze rule
+>mazeltov
+You're not messing around! You see the best way to destroy the maze, and you're going for it.
 
 @sli
 #slider test for blam
@@ -27,7 +44,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eebpl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for volt
 >votl
 That can't be it. It's a volt MAZE.
@@ -56,7 +73,7 @@ It's the maze you need to change, not the zany meter.
 >metre
 It's the maze you need to change, not the zany meter.
 
-==t2
+@nud
 #spechelp for hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
@@ -65,7 +82,7 @@ The hump suddenly looks a bit smaller. But not enough.
 Your score has just gone up by one point
 Austerer Treasure
 
-==t2
+@nud
 #nudge for austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -83,14 +100,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >opho
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0,2
+@max,nud
 >phooey
 Your score has just gone up by two points
 REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 3 out of 37 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 37.
 
-==t1
+@min
 >pooh
 #notmax
 Your score has just gone up by one point
@@ -99,13 +116,18 @@ REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 2 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 36.
 
+@max
+#pre-censer-screen rule
+>screen
+You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den.
+
 @sli
 #slider test for screen
 >ercsne
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
-#done rejects for onyx censer
+@nud
+#done rejects for n e recs censer
 >screne
 You don't want to change the censer back, but maybe you can change it to something more practical than treasure.
 #nudge for onyx
@@ -117,7 +139,7 @@ You let out a string of something that feels good to say, but it doesn't mean an
 
 >e
 
-==t2
+@nud
 #nudge for hump
 >umhp
 You search for the hump you overcame. You can't find it now. But it's not relevant.
@@ -125,7 +147,7 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 >s
 Char Arch
 
-==t2
+@nud
 #nudge for char
 >chra
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -171,7 +193,7 @@ Not even you can make that icky stuff in the dumpster worthwhile, but maybe you 
 >decoratiev
 You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
 
-==t2
+@nud
 #nudge for stump
 >stupm
 The stump doesn't move, but the star seems to rattle a bit.
@@ -193,13 +215,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rdta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+#pre-yak-keyboard rule
+>keyboard
+The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
+Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
+#pre-tba-tab rule
+>tab
+The yak generates an apathy that doesn't allow this. Yet.
+
 >rats
 Your score has just gone up by one point
 >drat
 Your score has just gone up by one point
 
-==t2
-#done rejects for star
+@nud
+#done rejects for tsar star
 No need for additional arts.
 #done rejects for dart
 >drta
@@ -216,14 +247,14 @@ Not even you can make that icky stuff in the dumpster worthwhile, and besides, y
 >dumpstre
 Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
 
-==t2
+@nud
 #renudge for spumed
 The spumed tar does nothing
 !Maybe focus
 
 >n
 
-==t2
+@nud
 #spechelp for plebe
 >blepe
 The plebe looks confused, as if you garbled what you said.
@@ -238,7 +269,7 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 >bleep
 Your score has just gone up by one point
 
-==t2
+@nud
 >n
 >w
 #spechelp for maze walls
@@ -254,7 +285,7 @@ WRONG
 >e
 Marines Seminar Remains
 
-==t2
+@nud
 #nudge for marines
 >marinse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -263,10 +294,10 @@ You don't need to riff on any location names to win the game, unless there's not
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for popgun
 >popgnu
-Hmm. It's not the popgun itself that's cracked but the boing mechanism inside.
+Hmm. It's not the popgun itself that's cracked but the boing go bin inside.
 #nudge for spoilt
 >spoitl
-Hmm. It's not the popgun itself that's cracked but the boing mechanism inside.
+Hmm. It's not the popgun itself that's cracked but the boing go bin inside.
 #nudge for serial
 >serila
 The number's got more numerals than letters.
@@ -274,10 +305,11 @@ The number's got more numerals than letters.
 >numbre
 The number's got more numerals than letters.
 
-==t2
+@nud
 #spechelp for boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
+
 @sli
 #slider test for bingo
 >ibgon
@@ -287,10 +319,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >bingo
+#pre-boing-bingo rule
+(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
-==t2
-#done rejects for boing mechanism
+@nud
+#done rejects for boing go bin
 >binog
 You can't force another revelation, but you don't need to.
 #renudge for popgun
@@ -301,10 +335,10 @@ The popgun is just fine.
 The popgun is just fine.
 #renudge for serial
 >serila
-You got the boing mechanism working.
+You got the boing go bin working.
 #renudge for number
 >numbre
-You got the boing mechanism working.
+You got the boing go bin working.
 #spechelp for sport ports
 >prots
 The sport ports seem even shinier for a second.
@@ -312,24 +346,25 @@ The sport ports seem even shinier for a second.
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 
-==t!1
+@!min
 >prost
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1
 
-==t2
+@nud
 #done rejects for sport ports
 >prots
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
 
-==t1
+@min
 >w
 >wont
 Your score has just gone up by one point
 REGION MAX DECREASED BY 2, 3 OVERALL.
 >score
 Score in a scenario: 7 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 34.
-===2
+
+@nud
 >gonear runway
 >n
 >gonear runway
@@ -345,19 +380,21 @@ REGION MAX DECREASED BY 1
 >undo
 >undo
 
-==t2
+@nud
 >n
 Nowt Town
 
-==t3
+@nud
 #spechelp for n-t-air
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
+
+@sli
 #slider test for wont
 >owtn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
@@ -419,7 +456,7 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
 
-==t2
+@nud
 #spechelp for lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
@@ -427,9 +464,19 @@ The lamb looks confused. Maybe you could be more forceful. Verbally, not physica
 >mazeltvo
 The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah.
 
-===0,2
+@max
+#pre-solve-maze rule
+>n
+>mazeltov
+You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
+>undo
+>undo
+
+@max,nud
+#pre-solve-maze rule
 >mazeltov
 Your score has just gone up by three points
+No point actually going through the maze when you can destroy it.
 >score
 Score in a scenario: 11 out of 37 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 37.
 >blam
@@ -438,7 +485,12 @@ REGION MIN INCREASED BY 1
 >score
 Score in a scenario: 12 out of 37 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 37.
 
-==t2
+@max
+#pre-ether-there rule
+>there
+You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.
+
+@nud
 >blma
 That's not something
 
@@ -447,7 +499,7 @@ That's not something
 >s
 Dirge Ridge
 
-==t2
+@nud
 #nudge for dirge
 >direg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -461,7 +513,7 @@ There aren't that many things to do with Leo. So few, you could probably brute-f
 >ole
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for leo
 >loe
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
@@ -486,7 +538,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >darn
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
@@ -494,13 +546,14 @@ Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've fo
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
-==t2
+@nud
 #nudge for whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
 #spechelp for wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
+
 @sli
 #slider test for whassup
 >sahwups
@@ -509,7 +562,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >whassup
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for wzup
 You don't need to greet Leo and Rand again.
 #renudge for leonard
@@ -519,18 +572,23 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 >n
 
-==t2
-#here we try 'there' before we have the ability
+@max
+#continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands.
+#test cases: no gun, no loaded gun
+>abstract popgun to seminar
 >there
-WRONG
+!by one point
+Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.
+>purloin popgun
 >there
-No, you definitely need to say THERE. You just need to have backup and maybe weapons
->undo
->undo
+!by one point
+Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.
+Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.
+!and isn't even working
 
 >load gun with dart
 
-==t2
+@nud
 #spechelp for ether
 >theer
 The ether pulsates, but you still can't see through it.
@@ -543,7 +601,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >there
 Your score has just gone up by one point
 
-==t2
+@nud
 #nudge for mazeltov
 >mazeltvo
 The volt maze is gone. Re-forming it would not be fun.
@@ -557,7 +615,7 @@ Saps' Pass
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
-==t2
+@nud
 >s
 #renudge for ether
 The ether is gone. You can just go back north.
@@ -572,7 +630,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ysek
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for lawl
 >lalw
 It's too expansive for you to use any mental energy on.
@@ -602,7 +660,7 @@ The hogs snicker a bit, but they seem a little nervous, too.
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 
-==t2
+@nud
 >gosh
 Your score has just gone up by one point
 #altpath
@@ -613,7 +671,7 @@ Phat Path
 Your score has just gone up by one point
 Phat Path
 
-==t2
+@nud
 #nudge for phat
 >phta
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -624,7 +682,7 @@ You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a s
 >clupm
 No, it's not just any clump, but hawt thaw.
 
-==t2
+@nud
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
@@ -646,12 +704,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rtsahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1
+@!min
 >what
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1
 
-==t2
+@nud
 #renudge for leonard
 >leonadr
 You've probably faced the greatest physical threat you need. You need to take leave of them, now.
@@ -682,7 +740,26 @@ Your score has just gone up by one point
 Hut! Go!
 Dat was a good dust-up
 
-==t2
+@max
+#pre-harpings-flip rule
+>so long
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>so long
+>tough
+#pre-harpings-flip rule
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>undo
+>tough
+>so long
+>later
+#pre-harpings-flip rule
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+
+@nud
 #done rejects for ought
 >ougth
 They're already off getting to know each other better
@@ -741,7 +818,31 @@ The Entry doesn't need disabling, since you're the only person that can enter.
 >n
 Hacks' Shack
 
-==t2
+@max
+>get polemic
+>s
+#pre-polemic-compile rule
+>compile
+!by one point
+There is no computer around. You probably want to go back to the Hacks' Shack for this.
+>n
+>compile
+!by one point
+Good idea, but tough without a screen.
+>compile
+!by one point
+Hmm. You may want to put the screen on the slab. Do so?";
+Done.
+>compile
+!by one point
+Hmm. You may want to put the screen on the slab. Do so?";
+Done.
+>compile
+!by one point
+Good idea, but tough to program without a keyboard.
+>purloin keyboard
+
+@nud
 >s
 #renudge for saps
 >sasp
@@ -923,11 +1024,12 @@ Your score has just gone up by one point
 >skid
 Your score has just gone up by one point
 
+@sli
 #slider test for disk
 >idks
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #done rejects for caps lock
 >capslokc
 YOU HAVE WHAT YOU NEED.
@@ -972,7 +1074,7 @@ Your score has just gone up by one point
 >futon
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for dirty looking cola
 >ocal
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
@@ -997,14 +1099,14 @@ Your score has just gone up by one point
 >put screen on slab
 Only one more piece of hardware
 
-==t!1
+@!min
 >casserole
 by one point
 REGION MIN INCREASED BY 1
 >score
 Lowest score to solve is 33. Maximum score available is 37.
 
-==t2
+@nud
 #done rejects for computer screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
@@ -1017,9 +1119,14 @@ The casserole is mixed up enough.
 >push skid s
 >push skid s
 
+@max
+#pre-skid-disk rule
+>disk
+Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.
+
 >put leaf on skid
 
-==t2
+@nud
 #nudge for yak
 >yka
 The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
@@ -1036,26 +1143,31 @@ You may wish to decipher the scratchings, instead.
 >scratchign
 You may wish to decipher the scratchings, instead.
 
-==t2
+@nud
 >give book to yak
 #notmax
 by one point
 >undo
 
-==t2
+@nud
 >push skid s
 #notana
 Your score has just gone up by one point
 Hacks' Shack
 >undo
 
+@max
+#pre-skid-disk rule
+>disk
+The yak doesn't need that sort of shock.
+
 >push skid n
 >push skid n
 >push skid n
 #notmax
 Your score has just gone up by one point
 
-==t2
+@nud
 #spechelp for drab yoke
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
@@ -1074,7 +1186,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >keyboard
 Your score has just gone up by one point
 
-==t2
+>compile
+!by one point
+Good idea, but first, you probably want to put the keyboard on the slab.
+
+@nud
 #done rejects for keyboard
 >keyboadr
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
@@ -1085,35 +1201,70 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 >put keyboard on slab
 You can now do computery things unimpeded!
 
-==t2
+@nud
 #renudge for computer
 >computre
 You need to fix the program in the computer, well, once you get it running.
 
+@max
+>compile
+!by one point
+You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+>compile
+!by one point
+You need to get rid of that uppercase to successfully compile your code.
+
 >put lock on keyboard
 fits in perfectly
 
-==t2
+@nud
 #nudge for nottobe
 >nottoeb
 Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
 #nudge for reboot
 >reboto
 You need to give that computer another (figurative) kick.
+
 @sli
 #slider test for reboot
 >oberto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>compile
+!by one point
+A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
+
 >disk
+
+@max
+>compile
+!by one point
+A DISK, I'D ASK pops up. You realize that the disk would fit fine.
+
 >put disk in drive
+
+@max
+>compile
+!by one point
+You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
+
 >reboot
 Your score has just gone up by one point
 
-==t2
+@max
+>compile
+!by one point
+You get an NEED IF-DEFINE error
+>compile
+!by one point
+That stupid NEED IF-DEFINE and that speel, still.
+
+@nud
 #nudge for sleep
 >slepe
 Your mind is a tired jumble right now, yes.
+
 @sli
 #slider test for sleep
 >eespl
@@ -1122,7 +1273,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sleep
 Your score has just gone up by one point
 
-==t2
+@nud
 #renudge for nottobe
 >nottoeb
 Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
@@ -1139,11 +1290,25 @@ Man! That's the thing about compiling. Switch one or two characters, and foom, i
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >compile
-==t1
+by one point
+
+@max
+>abstract cola to phat path
+>abstract mug to phat path
+#pre-bub-dude-egg rule
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
+!by one point
+>undo
+>undo
+>undo
+
+
+@min
 REGION MAX DECREASED BY 2
 
-==t2
-#done rejects for scratch paper
+@nud
+#done rejects for i'm le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
 #renudge for sleep
@@ -1166,11 +1331,11 @@ It says DRIVE A/A DRIVE: VARIED
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
 >read drive e
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
-#spechelp for t-key
+#spechelp for tba key
 >abt
 The TBA key rattles within the keyboard a bit.
 
-@nu
+@nud
 #spechelp for drive a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
@@ -1178,7 +1343,7 @@ Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more
 >drivee
 Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 
-==t!1
+@!min
 >avider
 by one point
 REGION MIN INCREASED BY 1
@@ -1195,7 +1360,7 @@ REGION MIN INCREASED BY 1
 by one point
 REGION MIN INCREASED BY 1
 
-==t2
+@nud
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #done rejects for rom sticks
@@ -1204,30 +1369,36 @@ The ROM sticks can probably make your computer go faster. Why fiddle further?
 #renudge for tbakey
 >tbakye
 You already did enough with the TAB key.
-#done rejects for t-key
+#done rejects for tba key
 >bta
 No, the TAB key is what it should be.
 
-==t!2
+@min
 >score
 Score in a scenario: 26 out of 37 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 31.
 
-==t2
-#spechelp for compiled code
+@nud
+#spechelp for bub dude egg
 >debgu
 Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
 BUDGE
+
 @sli
 #slider test for debug
 >edugb
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+>pre-bub-dude-egg rule
+#spechelp for cola
+The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola just won't be enough for the task ahead, as-is
+
 >pour cola in mug
 >debug
 Your score has just gone up by one point
 
-==t2
-#done rejects for compiled code
+@nud
+#done rejects for bub dude egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
 #renudge for algorithms
@@ -1237,7 +1408,7 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 >scrathc
 It's what's on the scratch paper that was important.
 
-==t2
+@nud
 #spechelp for usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
@@ -1263,7 +1434,7 @@ Strip of Profits
 WRONG
 
 >score
-==t2
+@nud
 Presto (28/37)
 ==!
 Presto (37/37)

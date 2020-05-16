@@ -1,8 +1,11 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just stores
 
-files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
-~	nu	t2
+files=reg-roi2-stores-min.txt,reg-roi2-stores-max.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
+~	min	t0
+~	max	t1
+~	nudges,nud,nu	t2
+~	sli	t3
 
 ## *FILE
 
@@ -13,7 +16,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * stores-thru
 
-==t3
+@sli
 >slon
 #slider test for sorbet
 >osbrte
@@ -46,82 +49,87 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >entsro
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for store b
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
 
-==t!1
+@!min
 >sorbet
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
-==t2
+@nud
 #done rejects for store b
 >sorbte
 You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
 
-==t2
+@nud
 #spechelp for store n
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 
-==t!1
+@!min
 >nestor
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for nestor
 >nestro
 You rescued him, and that's enough.
 
-==t2
+@nud
 #spechelp for store k
 >tokesr
 An odd sweet smell from Store K, for a second.
 
-==t!1
+@!min
 >tokers
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
-==t2
+@nud
 #done rejects for tokers
 >tokesr
 They are who they are. You should maybe try to get their friend back.
 
-==t!1
+@!min
 >enter steaming
-#spechelp for lecturer
 
-==t2
+@nud
+#spechelp for lecturer
 >outsied
 The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
 
-==t3
+@sli
 #slider test for outside
 >uostdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1
+@!min
 >outside
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
-==t2
+@nud
 #spechelp for store w
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
+#readables for store w
+>read store w
+WESTOR is the name of the company that built this. There's more, about what method they used
+>read store w
+WESTOR is the name of the company that built this. They used the SET-ROW method.
 
 >towers
 Your score has just gone up by one point
 
-==t2
-#done rejects for towers-x
+@nud
+#done rejects for truster turrets
 >towesr
-You've got an entry. No need to seal it up.
+You should just enter the truster turrets. No need or way to seal them back up.
 
-==t2
+@nud
 #spechelp for store u
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
@@ -129,13 +137,12 @@ Store U seems to light up with lines and curves for a second, but no, that's not
 >routes
 Your score has just gone up by one point
 
-==t2
-#done rejects for routes-x
+@nud
+#done rejects for course source
 >routse
-You've got an entry. No need to seal it up.
+You should just enter the course source. No need or way to seal it back up.
 
-
-==t2
+@nud
 #spechelp for store v
 >trovse
 A single paper currency flutters off from Store V, lost forever.
@@ -143,13 +150,12 @@ A single paper currency flutters off from Store V, lost forever.
 >troves
 Your score has just gone up by one point
 
-==t2
-#done rejects for troves-x
+@nud
+#done rejects for tastee estate
 >trovse
-You've got an entry. No need to seal it up.
+You should just enter the Tastee Estate. No need or way to seal it back up.
 
-
-==t2
+@nud
 #spechelp for store y
 >oystre
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
@@ -157,12 +163,12 @@ You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 >oyster
 Your score has just gone up by one point
 
-==t2
-#done rejects for oyster-x
+@nud
+#done rejects for balancer barnacle
 >oystre
-You've got an entry. No need to seal it up.
+You should just enter the balancer barnacle. No need or way to seal it back up.
 
-==t2
+@nud
 #spechelp for store h
 >othesr
 Store H looks totally different for a second.
@@ -173,12 +179,12 @@ Store H looks totally different for a second.
 >others
 Your score has just gone up by one point
 
-==t2
-#done rejects for hoster
+@nud
+#done rejects for throes hoster
 >othesr
-You've got an entry. No need to seal it up.
+You should just enter the throes hoster. No need or way to seal it back up.
 
-==t2
+@nud
 #spechelp for store p
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
@@ -186,12 +192,12 @@ You hear old forgotten magic words which seem like they might almost apply if th
 >presto
 Your score has just gone up by one point
 
-==t2
-#done rejects for e-s
+@nud
+#done rejects for odorant tornado
 >presot
-You've got an entry. No need to seal it up.
+You should just enter the odorant tornado. No need or way to seal it back up.
 
-==t2
+@nud
 #spechelp for store t
 >ottesr
 You hear various unrecognizable animal noises.
@@ -199,8 +205,8 @@ You hear various unrecognizable animal noises.
 >otters
 Your score has just gone up by one point
 
-==t2
-#done rejects for otters-x
+@nud
+#done rejects for solid idols
 >ottesr
-You've got an entry. No need to seal it up.
+You should just enter the solid idols. No need or way to seal them back up.
 

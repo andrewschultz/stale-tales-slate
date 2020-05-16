@@ -1,5 +1,8 @@
 files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt,reg-roi2-otters-slider.txt
-~	nu	t2
+~	max	t0
+~	min	t1
+~	nud	t2
+~	alt	t3
 ~	sli	t4
 ## *FILE
 
@@ -18,7 +21,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >otters
 >in
 
-==t2
+@nud
 #nudge for citadel
 >citadle
 The whole Citadel? No, you couldn't do much with it at full strength. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
@@ -34,7 +37,7 @@ Trying to change the current region you're in all at once would be risky, or use
 #nudge for bare
 >baer
 Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
-#spechelp for b-b
+#spechelp for bleary barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
 
@@ -49,8 +52,8 @@ Your score has just gone up by one point
 >l
 Burnt Brunt
 
-==t2
-#done rejects for b-b
+@nud
+#done rejects for bleary barley
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
 #nudge for ly
@@ -60,7 +63,7 @@ Yup, that's the idea here in Otters.
 >score
 Score in a scenario: 1 out of 32 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
 
-==t2
+@nud
 #nudge for burtn
 >butnr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -86,7 +89,7 @@ The cinders glow and even warm up for a bit.
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
 
-==t1
+@min
 >discern ed riley
 REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
@@ -98,7 +101,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 2 out of 32 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 32.
 
-==t2
+@nud
 #nudge for cinders
 >cindesr
 The cinders are gone for good.
@@ -118,7 +121,7 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-==t2
+@nud
 #spechelp for ed riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
@@ -135,7 +138,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >reedily
 Your score has just gone up by one point
 
-==t2
+@nud
 >plop
 #nudge for bossy
 >bosys
@@ -290,7 +293,33 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >w
 Disowned Downside
 
-==t2
+@max
+#pre-moat-atom rule
+>atom
+That'd definitely tip the macks off to who you were, even if your powers were back.
+!by one point
+#pre-ghoul-hat-although rule
+>s
+>although
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+!by one point
+#pre-ogre-ergo rule
+>ergo
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+!by one point
+>n
+>n
+#pre-seacube-because rule
+>because
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+!by one point
+#pre-eels-else rule
+>because
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+!by one point
+>s
+
+@nud
 #nudge for downside
 >downsied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -313,7 +342,7 @@ Hm, you probably can't change the macks. They're dead set in their ways. Perhaps
 >gretat
 Gretta's been manipulated enough. Deal with the macks' arguments, instead.
 
-`nu
+@nud
 #spechelp for t-bossily
 >bossiyl
 You feel you're on the right track to expose the macks. But that's not quite it.
@@ -327,7 +356,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >bossily
 Your score has just gone up by one point.
 
-==t2
+@nud
 #renudge for macks
 >macsk
 Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
@@ -339,7 +368,7 @@ Your score has just gone up by one point.
 
 >au -1
 
-==t2
+@nud
 #renudge for gretta
 >gretat
 Gretta's been manipulated enough.
@@ -348,7 +377,16 @@ Gretta's been manipulated enough.
 >1
 >3
 
-==t3
+@max
+#again pre-moat-atom rule
+>atom
+That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
+!by one point
+#pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. Both medals seem tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still.
+
+@alt
 >s
 >although
 >ergo
@@ -412,7 +450,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lees
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for pool
 >polo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -435,12 +473,17 @@ The sea cube shakes a bit.
 >eesl
 The eels swim a bit faster.
 
+@max
+>else
+You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
+!by one point
+
 >because
 by one point
 >else
 by one point
 
-==t2
+@nud
 #done rejects for eels
 >eesl
 The eels have done enough.
@@ -450,17 +493,17 @@ The eels have done enough.
 >score
 >s
 
-==t2
+@nud
 #nudge for ly
 >yl
 Yup, that's the idea here in Otters, even with your powers back.
 
-==t2
+@nud
 #renudge for allot
 >allto
 You already made it there, and you don't need to go back.
 
-==t2
+@nud
 #nudge for iq
 >qi
 No, it's a combination of what's on both medals.
@@ -474,7 +517,7 @@ It's what the medals say that makes them special.
 >medasl
 It's what the medals say that makes them special.
 
-==t2
+@nud
 >s
 #nudge for barn
 >banr
@@ -487,34 +530,35 @@ The whole picture.
 The whole picture.
 >n
 
-==!1
+@!min
 >s
 
-==t2
+@nud
 #spechelp for ghoul hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
-#spechelp for p-2
+#spechelp for ergo ogre
 >erog
 ??WRONG
 >listen
 ??WRONG
 
-#readables for p-2
->read howe
+@nudmis
+#listening for vow here
+>listen
 /One barely legible bit reads (Eeh, Row V!|Veer How|Rev. Howe|Whereov)
 
-==!1
+@max
+>ergo
+Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
+!by one point
+
+@!min
 >although
 by one point
 REGION MIN INCREASED BY 1, 2 OVERALL.
 
-==t2
-#done rejects for p-2
->althouhg
-You already justified yourself partially. Mr. Lee doesn't need more dialogue.
-
-==!1
+@!min
 >score
 Score in a scenario: 9 out of 32 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 32.
 >ergo
@@ -523,16 +567,17 @@ REGION MIN INCREASED BY 1, 3 OVERALL.
 >score
 Score in a scenario: 10 out of 32 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 32.
 
-==t2
+@nud
 #spechelp for vow here
 >howevre
 ??WRONG
 
+@sli
 #slider test for however
 >ewohrve
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==!1
+@!min
 >however
 by one point
 REGION MIN INCREASED BY 1, 4 OVERALL.
@@ -540,7 +585,7 @@ REGION MIN INCREASED BY 1, 4 OVERALL.
 Score in a scenario: 11 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 >n
 
-==t2
+@nud
 #spechelp for atmo-moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
@@ -569,7 +614,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >neegarlyd
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for shiner
 >shinre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -613,7 +658,7 @@ The imp looks slightly annoyed for a second. You may be on the right track
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 
-==t3
+@alt
 >brutely
 by one point
 #altpath
@@ -629,7 +674,7 @@ by one point
 >undo
 >undo
 
-==t2
+@nud
 #readables for coma camo
 >read coma camo
 You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger Pit/Inert Gap."
@@ -644,7 +689,7 @@ Your score has just gone up by one point
 >n
 Lamer Realm
 
-==t2
+@nud
 #nudge for low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
@@ -674,7 +719,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >agbrde
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nu
+@nud
 #nudge for lamer
 >lamre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -716,14 +761,20 @@ Your score has just gone up by one point
 >artsy
 Your score has just gone up by one point
 
-==t2
+@nud
 #renudge for ocelot
 >ocelto
 The ocelots are hanging too close together, but you already helped them, anyway.
 
+@max
+#retry pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. One of the medals seems tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still.
+
 >l
 Blest Belts
 
+@nud
 #renudge for shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
@@ -737,14 +788,14 @@ You don't need to riff on any location names to win the game, unless there's not
 >betl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-==!1
+@!min
 >garbed
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 4 OVERALL.
 >score
 Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 
-==t3
+@alt
 >undo
 >undo
 >undo
@@ -793,7 +844,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >etelrys
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for whiner
 >whinre
 You can't change who whiners are, but maybe you can make them whine less...whiningly.
@@ -832,7 +883,7 @@ The whiners manage to shush you more noisily than you've ever been shushed. You 
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 
 
-==t3
+@alt
 >tersely
 >stoically
 They find another place where rioters roister.
@@ -848,8 +899,8 @@ They find another place where rioters roister.
 >undo
 >undo
 
-==t2
-#readables for coma camo
+@nud
+#rereadables for coma camo
 >read coma camo
 You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom."
 
@@ -864,10 +915,11 @@ They find another place where rioters roister.
 >s
 Perverse Preserve
 
-==t2
+@nud
 #spechelp for raptor
 >raptro
 The raptor recoils slightly.
+
 @sli
 #slider test for parrot
 >rrpato
@@ -876,7 +928,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >parrot
 Your score has just gone up by one point
 
-==t2
+@nud
 #readables for whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
@@ -964,6 +1016,7 @@ Your score has just gone up by one point
 >racoon
 Your score has just gone up by one point
 
+@nud
 #renudge for raccoon
 >raccono
 No need to tweak the rac(c)oon again. It's fine as is.
@@ -971,14 +1024,14 @@ No need to tweak the rac(c)oon again. It's fine as is.
 >l
 Uprates Pasture
 
-==!1
+@!min
 >snipe
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 5 OVERALL.
 >score
 Score in a scenario: 25 out of 32 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 32.
 
-==t3
+@alt
 >undo
 >undo
 >undo
@@ -1013,6 +1066,13 @@ Score in a scenario: 25 out of 32 total points in the current region, Otters. Lo
 >n
 >n
 >w
+
+@max
+#pre-parrot-raptor rule
+>raptor
+!by one point
+"Awk! I'd just kill you in that form. Try that around some bad guys."
+
 >w
 Coevals' Alcoves
 
@@ -1027,7 +1087,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sadei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for monstery
 >monsteyr
 You can't change the alcoves. It's what's to the west that needs changing.
@@ -1088,7 +1148,7 @@ Score in a scenario: 26 out of 32 total points in the current region, Otters. Th
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
 
-==t2
+@nud
 #done rejects for parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
@@ -1103,10 +1163,20 @@ WRONG
 Fine, be beefin, you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
 WRONG
 
+@max
+#more pre-medals-quickly rule
+>quickly
+Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
+
 >raptor
 Your score has just gone up by one point
 
-==t2
+@max
+#more pre-medals-quickly rule
+>quickly
+There's nothing you really need to attack or avoid quickly here or nearby.
+
+@nud
 #renudge for hydra
 >hydar
 The hydra's toast. Elvira is not. Deal with her.
@@ -1117,7 +1187,7 @@ You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
 
-==t2
+@nud
 >whistel
 The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 >deepyl
@@ -1133,12 +1203,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >uqcilyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>w
+#pre-whistle-deeply rule
+>deeply
+Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.
+!by one point
+>undo
+>e
+
 >deeply
 Your score has just gone up by one point
 >quickly
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for whistle
 >eeplyd
 The whistle's already in tune.
@@ -1150,7 +1229,7 @@ You already got a boost from the medals.
 Reclusion Inclosure
 WTF FTW
 
-==t1
+@min
 WRONG (decrease)
 
 >1
@@ -1167,7 +1246,7 @@ WRONG (decrease)
 
 >misses
 
-==t2
+@nud
 #nudge for inclosure
 >inclosuer
 You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
@@ -1224,7 +1303,7 @@ Well, those stores you took care of are gone, and so is the megaton magneto-mont
 
 >score
 
-==1
+@min
 Otters (24/31)
 ==!
 Otters (31/31)
