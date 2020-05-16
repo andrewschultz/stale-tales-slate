@@ -4,7 +4,12 @@ files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+~	max	t0
+~	min	t1
+~	nudges,nud,nu	t2
+~	sli	t3
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -20,7 +25,7 @@ Posh Hops Shop
 >score
 Score in a scenario: 0 out of 40 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 40.
 
-==t3
+@sli
 >slon
 #slider test for sing
 >isgn
@@ -47,7 +52,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0
+@max
 #pre-trolls-stroll rule
 >stroll
 The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside
@@ -66,7 +71,7 @@ The trolls make you feel like you're the jerk here and maybe you can spend some 
 >undo
 >undo
 
-==t2
+@nud
 >inset
 #done rejects for tines
 >tinse
@@ -93,7 +98,7 @@ The sign mainly just disallowed singing.
 >undo
 >undo
 
-==t2
+@nud
 #readables for stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
@@ -194,7 +199,7 @@ You can't change the bad music selection. You already got a temporary escape, an
 >jukebxo
 You can't change the jukebox. The bad music has seeped into it. It's already out of commission for now.
 
-==t1
+@min
 >get pills
 >spill pills
 >thisalt
@@ -239,15 +244,15 @@ Perhaps you should've played it cool and fled, instead.
 by one point
 Olde Lode
 
-==t2
+@nud
 #nudge for lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-==t2
+@nud
 #spechelp for clam
 >caml
 The clam still seems enraged.
-==t3
+@sli
 #slider test for calm
 >acml
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -255,14 +260,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >calm
 Your score has just gone up by one point
 
-==t2
+@nud
 #nudge for calm
 >clma
 Odd, how you feel a need to panic and flee after calming the clam.
 #spechelp for urn
 >rnu
 The urn sits there, daring you to walk away.
-==t3
+@sli
 #slider test for run
 >nru
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -271,7 +276,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 Disease Seaside
 
-==t3
+@sli
 #slider test for fart
 >aftr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -282,7 +287,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >obsta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for frat raft
 >ratf
 The raft rocks slightly.
@@ -344,13 +349,13 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
 
-==t0
+@max
 #pre-oars-soar rule
 >soar
 !by one point
 The oars have no gas, or whatever they might run on
 
-==t2
+@nud
 >enter raft
 >fart
 Your score has just gone up by one point
@@ -370,7 +375,7 @@ WRONG
 >undo
 >undo
 
-==t0
+@max
 #pre-raft-fart rule
 >fart
 Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.
@@ -388,11 +393,11 @@ Your score has just gone up by one point
 
 Fighter Freight
 
-==t3
+@sli
 #slider test for leap
 >elpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #nudge for freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [FIGHTER FREIGHT]
@@ -416,7 +421,7 @@ Yes, the pale plea is calling and warning you to leave. But how?
 Your score has just gone up by one point
 Anger Range
 
-==t0
+@max
 #pre-tutor-trout rule
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
@@ -427,14 +432,14 @@ You probably can't help the trout until they're off his case, but they wouldn't 
 You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'
 You haven't found or discovered a jewel, yet.
 
-==t3
+@sli
 #slider test for spike
 >pskei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for scrap
 >csapr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for pre-haun
 >unearht
 You need an organized way to see what's under the ground, and you don't have a digging instrument, either.
@@ -480,21 +485,21 @@ Your score has just gone up by one
 >thisalt
 WRONG
 
-==t2
+@nud
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
 
 >e
 Dearths
 
-==t3
+@sli
 #slider test for seek
 >eske
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for scan
 >csna
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!
@@ -540,7 +545,7 @@ Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lo
 Your score has just gone up by one point
 Lean Lane
 
-==t2
+@nud
 #nudge for lean
 >lena
 You would upset countless people named Lena or Neal. [LEAN LANE]
@@ -551,7 +556,7 @@ You would upset countless people named Lena or Neal. [LEAN LANE]
 >detn
 That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
 
-==t2
+@nud
 #nudge for tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
@@ -569,7 +574,7 @@ Quit playing with your food, already.
 #notana 'nudge for eat'
 Your score has just gone up by one point
 
-==t2
+@nud
 #spechelp for dent
 >detn
 That's not quite the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
@@ -584,7 +589,7 @@ Really, stop playing with your food. You know what to do.
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
-==t2
+@nud
 #renudge for dent
 >detn
 You already fixed the dent. It's gone.
@@ -592,7 +597,7 @@ You already fixed the dent. It's gone.
 >score
 Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
 
-==t3
+@sli
 #slider test for tutor
 >utort
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -609,14 +614,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tutor
 Your score has just gone up by one point
 
-==t0
+@max
 #pre-warp-wrap rule
 >warp
 "Goodness me!" cries Aunt Tuna. "I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!"
 Like all good bubble wrap, maybe it needs to be saved 'til you find the right person to annoy.
 !by one point
 
-==t2
+@nud
 #done rejects for trout
 >trotu
 Retutor? Torture. Rot. True!
@@ -633,7 +638,7 @@ It's just wrap, really.
 >score
 Score in a scenario: 14 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
 
-==t2
+@nud
 #nudge for wipe
 >wiep
 It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring.
@@ -655,11 +660,11 @@ Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lo
 >n
 Lapsin' Plains
 
-==t0
+@max
 >warp
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 
-==t2
+@nud
 #done rejects for wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
@@ -732,7 +737,7 @@ The pans wobble slightly.
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 
-==t3
+@sli
 #slider test for splain
 >splain
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -754,7 +759,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
-==t2
+@nud
 #done rejects for bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on.
@@ -765,7 +770,7 @@ You had your say.
 >score
 Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 39.
 
-==t0
+@max
 #pre-crate-react rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
@@ -778,7 +783,7 @@ You hear a crate crash nearby. You can't snap just RIGHT, though you must be on 
 >trace
 Your score has just gone up by one point
 
-==t0
+@max
 #pre-kiss-skis rule
 >kiss
 You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right.
@@ -786,12 +791,12 @@ You flinch, a second too late, from a crate thrown at you. You can trace the cra
 >bonk
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 
-==t3
+@sli
 #slider test for react
 >ercta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #change, this is WRONG
 >craet
 WRONG
@@ -799,7 +804,7 @@ WRONG
 >react
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
@@ -813,7 +818,7 @@ Not worth messing with the fragments any more.
 >kiss
 Your score has just gone up by one point
 
-==t2
+@nud
 #nudge for bonk
 >bokn
 That isn't quite the right way to hit the knob.
@@ -824,7 +829,7 @@ Red writing indicates the pans were made by Nan's Apps.
 >bonk
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for knob
 >knbo
 You should leave the knob to b'n OK.
@@ -837,7 +842,7 @@ Your score has just gone up by one point
 
 Shadier Airshed
 
-==t2
+@nud
 #nudge for airshed
 >airshde
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [SHADIER AIRSHED]
@@ -858,12 +863,12 @@ You're juggling what to do with the prod, here.
 The lance is still itself[if lance is cleaned]--and you probably did enough cleaning it[else if player has wipes]--you can't figure how to apply the wipes[else]--but how to make it neater, now[end if].
 #nudge for reachs
 
-==t2
+@nud
 #spechelp for tubs
 >tusb
 Hm. The tubs rattle a bit, but you need to do something strong.
 
-==t3
+@sli
 #slider test for bust
 >ubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -871,12 +876,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bust
 Your score has just gone up by one point
 
-==t3
+@sli
 #slider test for drop
 >rdpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for prod
 >prdo
 You juggle the prod a bit, but it doesn't change into anything. Well, not like that.
@@ -884,16 +889,16 @@ You juggle the prod a bit, but it doesn't change into anything. Well, not like t
 >drop prod
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for rigged digger
 >drpo
 You managed to get a digger from a prod, and that's good enough.
 
-==t3
+@sli
 #slider test for sweat
 >wsate
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for waste
 >waset
 The heaps are still technically waste, but you may want to deal with them more delicately.
@@ -906,7 +911,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 23 out of 39 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 39.
 
-==t2
+@nud
 #done rejects for waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
@@ -914,7 +919,7 @@ The heaps are still technically waste, but you cleaned them up enough.
 >heasp
 The heaps still look ugly as ever.
 
-==t3
+@sli
 #slider test for shape
 >hspea
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -924,11 +929,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
-==t3
+@sli
 #slider test for clean
 >lcane
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #nudge for lance
 >clena
 The lance is still itself--you can't figure how to apply the wipes.
@@ -946,7 +951,7 @@ WRONG
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
-==t2
+@nud
 #done rejects for heaps
 >heasp
 You figure the heaps are at a point where you can't change them for the better.
@@ -962,7 +967,7 @@ Score in a scenario: 25 out of 39 total points in the current region, Oyster. Lo
 
 >s
 
-==t2
+@nud
 >dig
 You need to dig to some purpose, like uncovering the haunter--and not just dig. Dig?
 >unearht
@@ -971,7 +976,7 @@ You need an organized way to see what's under the ground with your rigged digger
 >w
 Achers' Arches
 
-==t2
+@nud
 #nudge for hedron
 >hedrno
 You'll probably need to destroy the hedron from within.
@@ -991,7 +996,7 @@ Hm, you almost thought you found something. Well, not QUITE like that.
 WRONG
 That's not quite what to do with the arches.
 
-==t3
+@sli
 #slider test for warp
 >awpr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -999,7 +1004,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >esrahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0
+@max
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
@@ -1009,14 +1014,14 @@ Your score has just gone up by one point
 >search
 Your score has just gone up by one point
 
-==t0
+@max
 #again pre-unearth-haunter rule
 >e
 >unearth
 !by one point
 As you begin to dig, you hear "My...jewel...close...thieves...pay."
 
-==t2
+@nud
 #done rejects for ruby
 >ruyb
 You already did in the wrap.
@@ -1030,7 +1035,7 @@ The gleaner remains too small to read.
 >read gleaner
 The gleaner was made by Al Green, written in red.
 
-==t3
+@sli
 #slider test for enlarge
 >neergal
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1038,7 +1043,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >enlarge
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if].
@@ -1049,7 +1054,7 @@ You did enough with the arches
 >n
 Horned Hedron
 
-==t0
+@max
 #pre-patrol-ol-trap rule
 >patrol
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
@@ -1059,7 +1064,7 @@ Now there's a good plan. But right now, that gang of walleyes might rough you up
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
 >e
 
-==t2
+@nud
 #nudge for hedrno
 >hedron
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [HORNED HEDRON]
@@ -1085,7 +1090,7 @@ The walleyes are a bad crowd, past redemption.
 >w
 Rascal Craals
 
-==t2
+@nud
 #nudge for craals
 >craasl
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [RASCAL CRAALS]
@@ -1099,11 +1104,11 @@ That's not quite it. You file that idea six feet under.
 >diggre
 It's what it needs to be, you imagine.
 
-==t2
+@nud
 #spechelp for ruby
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
-==t3
+@sli
 #slider test for bury
 >ubyr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1114,7 +1119,7 @@ Your score has just gone up by one
 >bury ruby
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for thin hint
 The ruby's hidden well. No need to tinker.
 #nudge for hint
@@ -1125,7 +1130,7 @@ The thin hint doesn't reveal anything else.
 >s
 >e
 
-==t3
+@sli
 #slider test for unearth
 >nuaethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1135,12 +1140,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >unearth
 by one point
 
-==t3
+@sli
 #slider test for assuage
 >saagseu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for haunter
 >assuaeg
 You're a bit tongue-tied, but that seems close.
@@ -1151,7 +1156,7 @@ Anything can howl, but this is a haunter--and, in fact, it's not just a haunter 
 >assuage
 by one point
 
-==t2
+@nud
 #done rejects for haunter
 >hauntre
 Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
@@ -1166,12 +1171,12 @@ by one point
 
 >e
 
-==t3
+@sli
 #slider test for patrol
 >aptrlo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for ol' trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol['] trap.
@@ -1191,7 +1196,7 @@ You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something ent
 >patrol
 Your score has just gone up by one point
 
-==t2
+@nud
 #done rejects for pol art portal
 >patrlo
 You discovered the portal. No need to look further.
@@ -1206,7 +1211,7 @@ You don't need to riff on any location names to win the game, unless there's not
 
 Tenfold Teflon'd Den Loft
 
-==t2
+@nud
 #nudge for tenfold
 >tenfodl
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [DEN LOFT]
@@ -1247,12 +1252,12 @@ The yapper might alert its cronies if you try anything. Even something not quite
 >score
 Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
 
-==t3
+@sli
 #slider test for prepay
 >rppeya
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t0
+@max
 #pre-dialer-derail rule
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
@@ -1268,12 +1273,12 @@ Your score has just gone up by one
 >prepay yapper
 Your score has just gone up by one point
 
-==t2
+@nud
 #readables for templar ramplet
 >read ramplet
 Someone named LAMPERT (written in red) constructed the templar ramplet.
 
-==t3
+@sli
 #spechelp for templar ramplet
 >trampel
 There MUST be a way to storm down the templar ramplet. But not that.
@@ -1286,7 +1291,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Plasm Lamps
 >score
 Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
-==t3
+@sli
 #slider test for psalm
 >splma
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1300,7 +1305,7 @@ There must be a simple way to take down the ant. You haven't quite got it right 
 >psaml
 The plasm lamps flicker slightly.
 
-==t2
+@nud
 #nudge for psalm
 >alpms
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [DOUREST DETOURS]
@@ -1315,11 +1320,11 @@ tan
 Your score has just gone up by one point
 
 
-==t3
+@sli
 #slider test for revel
 >erlve
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for lever
 >levre
 You look at the lever, wishing it would be a little more fun to pull.
@@ -1331,7 +1336,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 36 out of 39 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 39 points.
 
-==t2
+@nud
 #done rejects for lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
@@ -1342,7 +1347,7 @@ The dialer seems to click slightly
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
-==t3
+@sli
 #slider test for derail
 >edarli
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1350,17 +1355,17 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >derail
 Your score has just gone up by one point
 
-==t0
+@max
 #pre-dialer-redial rule
 >redial
 Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard...
 !by one point
 
-==t3
+@sli
 #slider test for spin
 >psni
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
@@ -1371,11 +1376,11 @@ Your score has just gone up by one
 >spin pins
 Your score has just gone up by one point
 
-==t3
+@sli
 #slider test for redial
 >eridla
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #spechelp for d2
 >redila
 There's something more to do, but that's not quite it.

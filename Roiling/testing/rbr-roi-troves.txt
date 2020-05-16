@@ -15,7 +15,7 @@ files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.tx
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -180,7 +180,7 @@ No, you'll want to zone out the whole verbose distraction.
 >obserev
 WRONG
 
-==to
+@max
 #pre-spot-stop-post rule
 >spot
 !by one point
@@ -312,7 +312,7 @@ It's a sad pier.
 
 @mina,minb
 Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
-==!
+@!
 Score in a scenario: 8 out of 24 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 24.
 
 @nud
@@ -458,7 +458,7 @@ You should never need to riff on part of a location name, though you may get a l
 
 @mina,minb
 Score in a scenario: 10 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
-==!
+@!
 Score in a scenario: 14 out of 24 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 24.
 
 @nud
@@ -586,7 +586,7 @@ You don't need to riff on any location names to win the game, unless there's not
 
 @mina,minb
 Score in a scenario: 13 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
-==!
+@!
 Score in a scenario: 18 out of 24 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 24.
 
 @nud
@@ -738,6 +738,6 @@ Your score has just gone up by one point
 
 @mina,minb
 Troves (17/24)
-==!
+@!
 Troves (24/24)
 

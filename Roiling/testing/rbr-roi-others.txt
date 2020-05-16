@@ -4,10 +4,10 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
-files=reg-roi2-others-min.txt,reg-roi2-others-max.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt
+files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt
 
-~	min	t0
-~	max	t1
+~	max	t0
+~	min	t1
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
@@ -23,7 +23,7 @@ files=reg-roi2-others-min.txt,reg-roi2-others-max.txt,reg-roi2-others-nudmis.txt
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -50,7 +50,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lpmsu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #nudge for arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
@@ -95,7 +95,7 @@ Nothing happens. Maybe just examine it.
 >x stand
 
 
-==t2
+@nud
 #nudge for stand
 >stadn
 Nothing happens. You found enough inside it, anyway.
@@ -110,7 +110,7 @@ Well, you don't technically need plurals for this, but you're on the right track
 >read mad train
 DR. NIMATA.
 
-==t2
+@nud
 #spechelp for harmonicas
 >maraschion
 The harmonicas whistle, as if something happened.
@@ -147,7 +147,7 @@ Your score has just gone up by one point.
 }}SCORE++
 {$SCOS}
 
-==t2
+@nud
 #nudge for moss
 >msso
 Nothing happens. Perhaps it's the whole item that's important.
@@ -155,7 +155,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
-==t2
+@nud
 #spechelp for moss cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
@@ -167,7 +167,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >compass
 Your score has just gone up by one point.
 
-==t2
+@nud
 #done rejects for compass
 >compssa
 If you changed the compass, it might wind up pointing in the wrong direction.
@@ -267,7 +267,7 @@ The magenta rope and other items you uncovered briefly seem as one.
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 
-==t2
+@nud
 #readables for omen prism
 >read omen prism
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
@@ -314,7 +314,7 @@ Your score has just gone up by one point.
 }}SCORE++
 {$SCOS}
 
-==t0
+@min
 # here we want to make a detour to check rejecting going east in Swell Wells. There are two based on whether or not you are carrying enough fruits.
 >n
 >e
@@ -343,7 +343,7 @@ Your score has just gone up by one point.
 }}SCORE++
 {$SCOS}
 
-==t2
+@nud
 #nudge for tekno
 >tenok
 There's enough credit on the token. Don't get greedy.
@@ -370,7 +370,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tangerines
 >atennesgri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #nudge for wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -458,7 +458,7 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 >s
 scru-it
 
-==t2
+@nud
 #spechelp for stucco
 >stucocno
 The stucco looks almost hairy for a second.
@@ -527,7 +527,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for watermelon
 >etawelrmno
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 #nudge for eog
 >eog
 There's no way to chop the foliage down, but you don't need to.
@@ -628,7 +628,7 @@ Your score has just gone up by one point.
 >s
 Nice going.
 
-==t2
+@nud
 #nudge for bluer
 >ubler
 That doesn't really describe the Tekno-Token
@@ -636,7 +636,7 @@ That doesn't really describe the Tekno-Token
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 
-==t2
+@nud
 >icons
 #spechelp for icons
 >icosn
@@ -644,7 +644,7 @@ The icons rattle and hum promisingly.
 >undo
 >undo
 
-==t2
+@nud
 #spechelp for coins
 >coisn
 The coins rattle and hum promisingly.
@@ -667,7 +667,7 @@ Blam!
 >cinso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #spechelp for s-c
 >sonci
 The sonic coins hum almost questioningly.
@@ -695,7 +695,7 @@ WRONG
 }}SCORE++
 {$SCOS}
 
-==t!1
+@!min
 >pineapple
 Your score has just gone up by one point.
 BY 1
@@ -757,7 +757,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for solemn
 >oselnm
 Your settler begins to make noises: a low hum, but nothing really piercing.
-==t2
+@nud
 ###########below is melon/lemon nudge trickiness
 >abstract melon to ll
 #nudge for lemon
@@ -812,7 +812,7 @@ Everyone promises quick payment, but what are you promising to pay quickly FOR?
 >peahc
 The peach still looks too expensive.
 
-===!1
+@!min
 >cinque
 Your score has just gone up by one point.
 >score
@@ -832,11 +832,11 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
-===!1
+@!min
 >among
 Your score has just gone up by one point.
 
-==t2
+@nud
 #dupnudge for among
 >ogman
 WRONG
@@ -856,7 +856,7 @@ The nectarine seems a little less shiny and new. But not enough.
 >cripse
 Something glints off the list of prices.
 
-===!1
+@!min
 >score
 }}SCORE++
 }}CURMIN++
@@ -886,7 +886,7 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
-==t2
+@nud
 #dupnudge for lits
 >lits
 You already messed with the list
@@ -919,7 +919,7 @@ You've already established yourself as a prompt payer.
 >d
 Scape Space
 
-==t2
+@nud
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -945,7 +945,7 @@ The design is sort of glommed onto the coins. So you should figure what to do, t
 >desigsn
 The design doesn't need changing. It's what the design's on.
 
-==t2
+@nud
 #readables for orange
 >read orange
 It's stamped with the word ENGARO in red.
@@ -976,7 +976,7 @@ first-name basis
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that storage box
 >gs
 
-==t2
+@nud
 #spechelp for a brr hub
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
@@ -1003,7 +1003,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ereredvs
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t!1
+@!min
 >nab an a
 Your score has just gone up by one point.
 >score
@@ -1029,7 +1029,8 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOTOP}
 
-==t1
+@min
+# here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
 >guru orange
 }}CURMIN--
@@ -1039,7 +1040,7 @@ You can't get the maximum, since you used the arugula
 >give dollar
 !Your score has just gone up by one point.
 
-==t2
+@nud
 #nudge for lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
@@ -1053,7 +1054,7 @@ You might break what is in the storage. Then it would be neither great nor so gr
 >put icons in slot
 !Your score has just gone up by one point.
 
-==t2
+@nud
 #nudge for popstar
 >popstra
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
@@ -1061,7 +1062,7 @@ You don't know whose passport it was, but it's yours now, and you need to study 
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
-==t2
+@nud
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 >researhc
@@ -1077,7 +1078,7 @@ It hurt to be called a perp. But maybe you can figure a way to think of it right
 >n
 Gates Stage
 
-==t2
+@nud
 #nudge for gates
 >gesta
 The gate needs to be unlocked some other way.
@@ -1103,7 +1104,7 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 >n
 PERP
 
-==t2
+@nud
 >reviwe
 #spechelp for viewer
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
@@ -1116,7 +1117,7 @@ That's not the way to learn from the searcher--it's probably not that complicate
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
-==t2
+@nud
 >perp
 #done rejects for feeling you're a perp
 >pepr
@@ -1133,7 +1134,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rppe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t2
+@nud
 #redone rejects for feeling you're a perp
 >prep
 >erpp
@@ -1141,7 +1142,7 @@ Don't want to over-prep
 >undo
 >undo
 
-==t0
+@min
 >prep
 >research
 #pre-gates-stage-flip rule
@@ -1172,21 +1173,21 @@ WRONG
 {$SCOS}
 >score
 
-==t1
+@max
 arugula
-==!
+@!
 !but you only need
 
 You can go NORTH to the Valence Enclave
 
-==t0
+@min
 #pre-gates-stage-flip rule
 >prep
 No need to over-study or over-think. Through the gates!
 >thisalt
 WRONG
 
-==t2
+@nud
 #done rejects for searcher
 >searchre
 You've done enough researching.

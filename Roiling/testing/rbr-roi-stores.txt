@@ -1,15 +1,15 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just stores
 
-files=reg-roi2-stores-min.txt,reg-roi2-stores-max.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
-~	min	t0
-~	max	t1
+files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
+~	max	t0
+~	min	t1
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q

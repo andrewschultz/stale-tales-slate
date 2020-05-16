@@ -6,7 +6,7 @@ files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt
 ~	sli	t4
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -94,7 +94,7 @@ The cinders glow and even warm up for a bit.
 REGION MAX DECREASED BY 1, 1 OVERALL.
 >score
 Score in a scenario: 1 out of 32 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
-==!
+@!
 >rescind
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
@@ -1303,5 +1303,5 @@ Well, those stores you took care of are gone, and so is the megaton magneto-mont
 
 @min
 Otters (24/31)
-==!
+@!
 Otters (31/31)

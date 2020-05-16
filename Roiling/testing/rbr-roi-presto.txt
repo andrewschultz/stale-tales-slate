@@ -2,14 +2,14 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-presto-min.txt,reg-roi2-presto-max.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
+files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
 
-~	max	t1
-~	min	t0
+~	min	t1
+~	max	t0
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 * presto_walkthrough
 
@@ -1449,6 +1449,6 @@ WRONG
 >score
 @nud
 Presto (28/37)
-==!
+@!
 Presto (37/37)
 

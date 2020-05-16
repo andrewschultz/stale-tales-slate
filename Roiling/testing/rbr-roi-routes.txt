@@ -2,16 +2,16 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-routes-min.txt,reg-roi2-routes-max.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
+files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
 
-~	min	t0
-~	max	t1
+~	min	t1
+~	max	t0
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
 ## *FILE
 
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## slider testing
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
