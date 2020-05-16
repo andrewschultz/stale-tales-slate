@@ -4,9 +4,22 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
-files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt
-~	nu	t2
+files=reg-roi2-others-min.txt,reg-roi2-others-max.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt
+
+~	min	t0
+~	max	t1
+~	nudges,nud,nu	t2
 ~	sli	t3
+
+
+}}MAX=42
+}}CURMAX=42
+}}SCORE=0
+}}CURMIN=25
+
+}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. There are no secrets left to find here, so the score to win is {CURMAX} points.
+}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
 
 ## *FILE
 
@@ -116,19 +129,23 @@ The pagers light up slightly. Maybe give it another go.
 >maraschino
 Your score has just gone up by one point.
 >score
-Score in a scenario: 1 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >grapes
 Your score has just gone up by one point.
 >score
-Score in a scenario: 2 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >tamarind
 Your score has just gone up by one point.
 >score
-Score in a scenario: 3 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >plums
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 ==t2
 #nudge for moss
@@ -231,8 +248,8 @@ The slime shifts about slightly, but not enough--yet.
 #spechelp for spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
-#readables for drinks stand
->read drinks stand
+#readables for ruts circuits
+>read ruts circuits
 One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 #readables for eerie blurbs
 >read eerie blurbs
@@ -250,8 +267,14 @@ The magenta rope and other items you uncovered briefly seem as one.
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 
+==t2
+#readables for omen prism
+>read omen prism
+/Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
+
 >score
-Score in a scenario: 5 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 # ok, we are now able to go north, but we are just trying to get to 16
 
@@ -278,28 +301,47 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >limes
 Your score has just gone up by one point.
 >score
-Score in a scenario: 6 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >pears
 Your score has just gone up by one point.
 >score
-Score in a scenario: 7 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >blueberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 8 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
+
+==t0
+# here we want to make a detour to check rejecting going east in Swell Wells. There are two based on whether or not you are carrying enough fruits.
+>n
+>e
+The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you will get some from Curtis, if you do enough.
+>apricot
+>e
+The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you can go see Curtis for remuneration. You've done a good bit.
+>undo
+>undo
+>s
+
 >pomegranate
 Your score has just gone up by one point.
 >score
-Score in a scenario: 9 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >cantaloupe
 Your score has just gone up by one point.
 Take on a token
 >score
-Score in a scenario: 10 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >persimmon
 Your score has just gone up by one point.
 >score
-Score in a scenario: 11 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 ==t2
 #nudge for tekno
@@ -393,19 +435,25 @@ The bogey's tone changes slightly for a second.
 >apricot
 Your score has just gone up by one point.
 >score
-Score in a scenario: 12 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >apples
 Your score has just gone up by one point.
 >score
-Score in a scenario: 13 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >mulberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 14 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >gooseberry
 Your score has just gone up by one point.
 >score
-Score in a scenario: 15 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
+#only really need to test this nudge once.
+You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
 >s
 scru-it
@@ -433,11 +481,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >coconuts
 Your score has just gone up by one point.
 >score
-Score in a scenario: 16 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >icon
 Your score has just gone up by one point.
 >score
-Score in a scenario: 17 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 >s
 You fiddle with the coin you got
@@ -446,7 +496,8 @@ You fiddle with the coin you got
 >tangerines
 Your score has just gone up by one point.
 >score
-Score in a scenario: 18 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 >w
 Filed Field
@@ -563,15 +614,18 @@ You had the seed of an idea there, you thought.
 >cranberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 19 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >blackberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 20 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >watermelon
 Your score has just gone up by one point.
 >score
-Score in a scenario: 21 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 !BY 1
 >e
 >s
@@ -637,34 +691,46 @@ You feel the barriers west pulling towards you.
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 
 >score
-Score in a scenario: 22 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 >icons
 WRONG
-Score in a scenario: 23 out of 42 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 42.
+}}SCORE++
+{$SCOS}
 
 ==t!1
 >pineapple
 Your score has just gone up by one point.
 BY 1
 >score
-Score in a scenario: 24 out of 42 total points in the current region, Others. Lowest score to solve is 26. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >strawberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 25 out of 42 total points in the current region, Others. Lowest score to solve is 27. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 #strawberries = last with minimum at base
 >grapefruit
 Your score has just gone up by one point.
 >score
-Score in a scenario: 26 out of 42 total points in the current region, Others. Lowest score to solve is 28. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >raspberry
 Your score has just gone up by one point.
 >score
-Score in a scenario: 27 out of 42 total points in the current region, Others. Lowest score to solve is 29. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >breadfruit
 Your score has just gone up by one point.
 >score
-Score in a scenario: 28 out of 42 total points in the current region, Others. Lowest score to solve is 30. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >e
 >e
 Clangier Clearing
@@ -753,15 +819,21 @@ The peach still looks too expensive.
 >cinque
 Your score has just gone up by one point.
 >score
-Score in a scenario: 29 out of 42 total points in the current region, Others. Lowest score to solve is 31. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >cheap
 Your score has just gone up by one point.
 >score
-Score in a scenario: 30 out of 42 total points in the current region, Others. Lowest score to solve is 32. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >papayas
 Your score has just gone up by one point.
 >score
-Score in a scenario: 31 out of 42 total points in the current region, Others. Lowest score to solve is 33. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 
 ==t2
 #nudge for among
@@ -788,29 +860,39 @@ It would be nice to find a mango, yes. But you don't find anything that way.
 #spechelp for nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
-#spechelp for l-o-p
+#spechelp for prices precis
 >cripse
 Something glints off the list of prices.
 
 ===!1
 >score
-Score in a scenario: 32 out of 42 total points in the current region, Others. Lowest score to solve is 34. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >ancienter
 Your score has just gone up by one point.
 >score
-Score in a scenario: 33 out of 42 total points in the current region, Others. Lowest score to solve is 35. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >solemn
 Your score has just gone up by one point.
 >score
-Score in a scenario: 34 out of 42 total points in the current region, Others. Lowest score to solve is 36. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >len mo
 Your score has just gone up by one point.
 >score
-Score in a scenario: 35 out of 42 total points in the current region, Others. Lowest score to solve is 37. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >cripes
 Your score has just gone up by one point.
 >score
-Score in a scenario: 36 out of 42 total points in the current region, Others. Lowest score to solve is 38. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 
 ==t2
 #dupnudge for lits
@@ -819,7 +901,7 @@ You already messed with the list
 #dupnudge for price
 >priec
 No, you already took care of stuff
-#done rejects for l-o-p
+#done rejects for prices precis
 >cripse
 You corrected the list enough.
 #done rejects for auction caution
@@ -933,19 +1015,34 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >nab an a
 Your score has just gone up by one point.
 >score
-Score in a scenario: 37 out of 42 total points in the current region, Others. Lowest score to solve is 39. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >go near
 Your score has just gone up by one point.
 >score
-Score in a scenario: 38 out of 42 total points in the current region, Others. Lowest score to solve is 40. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >rhubarb
 Your score has just gone up by one point.
 >score
-Score in a scenario: 39 out of 42 total points in the current region, Others. Lowest score to solve is 41. Maximum score available is 42.
+}}SCORE++
+}}CURMIN++
+{$SCOS}
 >reversed
 Your score has just gone up by one point.
 >score
-Score in a scenario: 40 out of 42 total points in the current region, Others. There are no secrets left to find here, so the score to win is 42 points.
+}}SCORE++
+}}CURMIN++
+{$SCOTOP}
+
+==t1
+>eat arugula
+>guru orange
+}}CURMIN--
+{$SCORE}
+You can't get the maximum, since you used the arugula
 
 >give dollar
 !Your score has just gone up by one point.
@@ -1020,13 +1117,13 @@ PERP
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 \\
-#spechelp for perp-priv
+#spechelp for feeling you're a perp
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
 ==t2
 >perp
-#done rejects for perp-priv
+#done rejects for feeling you're a perp
 >pepr
 Don't want to over-prep.
 
@@ -1041,26 +1138,56 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rppe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-==t1
->review
+==t2
+#redone rejects for feeling you're a perp
 >prep
->thisalt
-WRONG
+>erpp
+Don't want to over-prep
 >undo
 >undo
+
+==t0
+>prep
 >research
->thisalt
-WRONG
->north
-==!
->research
-Your score has just gone up by one point.
->score
-Score in a scenario: 41 out of 42 total points in the current region, Others. There are no secrets left to find here, so the score to win is 42 points.
+#pre-gates-stage-flip rule
 >review
-Your score has just gone up by one point.
+No need to over-study or over-think. Through the gates!
+>thisalt
+WRONG
+>undo
+>undo
+>undo
+>research
+#pre-gates-stage-flip rule
+>review
+No need to over-study or over-think. Through the gates!
+>thisalt
+WRONG
+>undo
+>undo
+>undo
+>undo
+
+>research
+}}SCORE++
+{$SCOS}
 >score
-Score in a scenario: 42 out of 42 total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
+>review
+}}SCORE++
+{$SCOS}
+>score
+
+==t1
+arugula
+==!
+!but you only need
+
+You can go NORTH to the Valence Enclave
+
+==t0
+#pre-gates-stage-flip rule
+>prep
+No need to over-study or over-think. Through the gates!
 >thisalt
 WRONG
 
