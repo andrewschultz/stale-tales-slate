@@ -114,7 +114,7 @@ Trying to change the current region you're in would be risky, or useless, or may
 #nudge for satin
 >atsin
 The church's name is not as important as its mission.
-#aftertexts for anti sag sit a nag
+#scannotes for anti sag sit a nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 
@@ -124,7 +124,7 @@ Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 The ad seems slightly nearer, for a moment.
 #readables for worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
-#aftertexts for worst ad
+#scannotes for worst ad
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
@@ -522,6 +522,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for rude 'n nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
+#scannotes for rude 'n nuder
+>scan rude 'n nuder
+Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 
 >under
 Your score has just gone up by one point
@@ -554,7 +557,7 @@ DEBUG INFO: Taking away a max point.
 >out
 
 @nud
-#aftertexts for morf form
+#scannotes for morf form
 >scan morf form
 Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
 #spechelp for morf form
@@ -679,6 +682,9 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 #spechelp for un-road
 >alogn
 The un-road seems to lead somewhere, but you couldn't quite make it out like that.
+#scannotes for noon gag
+>scan noon gag
+Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
 
 @sli
 #slider test for along
@@ -729,7 +735,7 @@ No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
 The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
-#aftertexts for thickness sketchins
+#scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
 

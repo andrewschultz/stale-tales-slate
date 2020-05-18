@@ -188,6 +188,9 @@ You should just enter the throes hoster. No need or way to seal it back up.
 #spechelp for store p
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+#scannotes for tropes poster
+>scan tropes poster
+I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
 
 >presto
 Your score has just gone up by one point

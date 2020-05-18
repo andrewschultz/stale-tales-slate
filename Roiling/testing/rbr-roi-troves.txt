@@ -100,7 +100,7 @@ Score in a scenario: 0 out of 24 total points in the current region, Troves. Low
 #spechelp for pa egg pea
 >gaep
 You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
-#aftertexts for pa egg pea
+#scannotes for pa egg pea
 >scan pa egg pea
 Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
 
@@ -185,9 +185,12 @@ No, you'll want to zone out the whole verbose distraction.
 #spechelp for sob ever verbose
 >obserev
 WRONG
-#aftertexts for stop post
+#scannotes for stop post
 >scan stop post
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
+#scannotes for sob ever verbose
+>scan sob ever verbose
+The question marks ... hmm. Oh, you get it now.
 
 @max
 #pre-spot-stop-post rule
@@ -264,6 +267,9 @@ Score in a scenario: 7 out of 24 total points in the current region, Troves. Low
 #renudge for bee
 >bee
 But it's not just any bee. It's a WRONG
+#scannotes for l'clear cellar
+>scan l'clear cellar
+That question mark is perhaps, um, clear if you think about it.
 
 @max
 #pre-cellar-recall rule
@@ -373,6 +379,9 @@ You don't need to riff on any location names to win the game, unless there's not
 #spechelp for large regal lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
+#scannotes for large regal lager
+>scan large regal lager
+There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
 
 @sli
 #slider test for glare
@@ -403,6 +412,9 @@ You stare into space some more but get distracted.??
 #spechelp for lobster
 >bolstre
 That's not quite the way to deserve that lobster.
+#scannotes for bortles lobster
+>scan bortles lobster
+Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
 
 @max
 #pre-deal rule
@@ -418,6 +430,9 @@ Your score has just gone up by one point
 #spechelp for me arts
 >mastre
 That's not quite the way to focus on the stream.
+#scannotes for me arts
+>scan me arts
+Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
 
 @!mina
 >master
@@ -430,7 +445,7 @@ The ME ARTS have nurtured you spiritually. The lobster nurtured you physically. 
 #spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
-#aftertexts for lead
+#scannotes for lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
 #readables for lead
@@ -517,7 +532,7 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #spechelp for praise spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
-#aftertexts for praise spirea
+#scannotes for praise spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
 
@@ -545,6 +560,9 @@ Staring at the rivets, you get the feeling you've not quite found the right way 
 /The rivets have two messages. One is (RISE, TV|VET, SIR)!
 >read rivets
 /The rivets have two messages. One is (RISE, TV|VET, SIR)!
+#scannotes for rivets
+>scan rivets
+Hmm, along with the information for scanning Trevis, you might really have something here.
 
 @!mina
 >strive
@@ -656,7 +674,7 @@ It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 #spechelp for salt
 >lats
 You don't quite draw inspiration from the shaker, but there can't be that many alts.
-#aftertexts for salt
+#scannotes for salt
 >scan salt
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
 
@@ -693,15 +711,18 @@ seems slightly taken aback
 #spechelp for sister tressi siters
 >resits
 Sister Tressi seems a bit more upset than usual.
-#aftertexts for marble blamer mr beal
+#scannotes for marble blamer mr beal
 >scan marble blamer mr beal
 Wow! Three names. You don't know if Marble Blamer Balmer would be easier but, well, it can't be helped
-#aftertexts for marble blamer balmer
+#scannotes for marble blamer balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if Marble Blamer Mr. Beal would be easier but, well, it can't be helped
-#aftertexts for sister tressi siters
+#scannotes for sister tressi siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it.
+#scannotes for trance nectar
+>scan trance nectar
+Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
 
 @sli
 #slider test for ramble
@@ -713,9 +734,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for recant
 >eractn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
->rrecant
-WRONG
 
 @max
 #pre-nectar-recant rule

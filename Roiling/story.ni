@@ -18,7 +18,7 @@ You can place a bracket before any of the other text chunks below to search. The
 TOA  = the tables of big point scoring changes, table of * anagrams
 TOH  = table of hint logic
 TMC  = mega-chatter, which logs all the tables I search lists for
-TAF  = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
+TSN  = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
 TOR/TRB = reflexive blather, asking people about themselves (this is often a default)person die
 TOD  = default gen blather, about general nonsense e.g. a misunderstood request
 DSB  = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
@@ -4252,13 +4252,13 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
-	repeat through table of aftertexts:
-[	if noun is an xtradesc in table of aftertexts: ?! doesn't work]
+	repeat through table of scannotes:
+[	if noun is an xtradesc in table of scannotes: ?! doesn't work]
 		if noun is xtradesc entry:
 			if there is no xtratext entry:
 				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH.";
 				the rule succeeds;
-			choose row with a xtradesc of noun in table of aftertexts;
+			choose row with a xtradesc of noun in table of scannotes;
 			if bothscan entry is true:
 				now noun is ncscanned;
 				now noun is cscanned;
@@ -4329,7 +4329,7 @@ check scaning heat: say "You look for a clue how to bother being a race acer..."
 
 check scaning cold: say "You look for a clue how to make some heat..."
 
-chapter aftertexts
+chapter scannotes
 
 table of region-spoilers
 hint-reg	spoil-expl
@@ -4351,7 +4351,7 @@ to say beal-or-balmer: say "Wow! Three names. You don't know if [other-mbb] woul
 [??pad question mark / scan elmer / scan merle]
 [note we start with the pram which is not in the first room so we can define xtradesc as not-scenery. Don't change this.]
 
-table of aftertexts [taf]
+table of scannotes [tsn]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
 tables	false	false	false	true	"[cheatfid]."
@@ -4383,8 +4383,8 @@ sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glar
 trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe." [START presto]
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
-boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
-sods gone odes song	true	true	false	false	"My havens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
+boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!"
+sods gone odes song	true	true	false	false	"My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
 sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
@@ -4402,11 +4402,11 @@ perma-amper	true	true	false	false	"It's a perma-amper, so that might account for
 li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
+pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[end if]."
 Achers' Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
-span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
+span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
 papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
 templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
 natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
@@ -4453,8 +4453,8 @@ whiners	false	false	false	false	"The settler then garbles and changes. The whine
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
-prices precis	true	true	false	false	"Whoah, only reds and purples. Interesting."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]Just one possibility[else]Just three possibilities[end if]."
+prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]

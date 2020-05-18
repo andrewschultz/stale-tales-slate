@@ -136,6 +136,26 @@ The tunes grow slightly less annoying, for a moment.
 >strlol
 The trolls laugh at you a bit, but nervously.
 \\
+#scannotes for gins sign
+>scan gins sign
+Hmm. Whatever the variable colors are, you think you can do something with the fixed ones.
+#scannotes for capers recaps
+>scan capers recaps
+Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+#scannotes for casper spacer
+>scan casper spacer
+Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both.
+#scannotes for perma-amper
+>scan perma-amper
+It's a perma-amper, so that might account for the twitchy light.
+#scannotes for li'l p's pills
+>scan li'l p's pills
+The pills can't be that fidgety. The particular brand must be a clue, too.
+#scannotes for lolstr trolls
+>scan lolstr trolls
+Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
+
+@nud
 #nudge for storey
 >storye
 Trying to change the current region you're in would be risky, or useless, or maybe both.
@@ -348,6 +368,9 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 #nudge for interlocking
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
+#scannotes for frat raft
+>scan frat raft
+You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
 
 @max
 #pre-oars-soar rule
@@ -416,6 +439,15 @@ No way. You're not changing the crays--and if you changed one, the others would 
 #spechelp for pale plea
 >lepa
 Yes, the pale plea is calling and warning you to leave. But how?
+#scannotes for pale plea
+>scan pale plea
+You check both ways, and it's still RYYR.
+>t
+>scan pale plea
+Well, four letters is easier than five would be for the scary crays. Must be the pale plea.
+>t
+
+
 
 >leap
 Your score has just gone up by one point
@@ -736,10 +768,14 @@ The pans wobble slightly.
 #spechelp for bogus-plains
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
+\\
+#scannotes for bogus-plains
+>scan bogus-plains
+Your settler appears to register this all across the plains.
 
 @sli
 #slider test for splain
->splain
+>psalni
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for trace
 >rtcea
@@ -834,6 +870,9 @@ Your score has just gone up by one point
 >knbo
 You should leave the knob to b'n OK.
 #note the pans must be taken care of last
+#scannotes for span pans
+>scan span pans
+There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here.
 
 >snap
 Your score has just gone up by one point
@@ -995,6 +1034,9 @@ Hm, you almost thought you found something. Well, not QUITE like that.
 >reacsh
 WRONG
 That's not quite what to do with the arches.
+#scannotes for achers' chaser arches
+>scan achers chaser arches
+You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
 
 @sli
 #slider test for warp
@@ -1034,6 +1076,9 @@ The gleaner remains too small to read.
 #readables for gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
+#scannotes for general gleaner
+>scan general gleaner
+The pattern blinks green-red and yellow-purple.
 
 @sli
 #slider test for enlarge
@@ -1248,6 +1293,9 @@ Changing the intercom to a ton-crime intercom would be the opposite of what you 
 'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
+#scannotes for papery yapper
+>scan papery yapper
+Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
 
 >score
 Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
@@ -1277,11 +1325,14 @@ Your score has just gone up by one point
 #readables for templar ramplet
 >read ramplet
 Someone named LAMPERT (written in red) constructed the templar ramplet.
-
-@sli
 #spechelp for templar ramplet
 >trampel
 There MUST be a way to storm down the templar ramplet. But not that.
+#scannotes for templar ramplet
+>scan templar ramplet
+With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
+
+@sli
 #slider test for trample
 >rtmalep
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1291,6 +1342,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Plasm Lamps
 >score
 Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
+
 @sli
 #slider test for psalm
 >splma
@@ -1298,18 +1350,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tan
 >nta
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for natant ant
+>scan natant ant
+You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
 #spechelp for natant ant
 >tna
 There must be a simple way to take down the ant. You haven't quite got it right yet, though.
 #spechelp for bogus-lamps
 >psaml
 The plasm lamps flicker slightly.
-
-@nud
 #nudge for psalm
 >alpms
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [DOUREST DETOURS]
-#nudge for detour
 #nudge for ant
 >atn
 That's close. Something brutal and direct.

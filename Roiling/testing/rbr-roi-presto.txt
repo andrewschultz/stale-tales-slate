@@ -314,6 +314,12 @@ The number's got more numerals than letters.
 #spechelp for boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
+#scannotes for boing go bin
+>scan boing go bin
+Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
+#scannotes for sport ports
+>scan sport ports
+Maybe you can find where the vowel is. That could help.
 
 @sli
 #slider test for bingo
@@ -400,6 +406,9 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#scannotes for maze walls
+>scan maze walls
+Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe.
 #nudge for mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
@@ -527,6 +536,9 @@ You don't need to face double the strength.
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 #spechelp for odes song
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it, even if it's not REALLY hurting you.
+#scannotes for sods gone odes song
+>scan sods gone odes song
+My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
 
 @sli
 #slider test for ole
@@ -538,6 +550,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for goodness
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+>goodness
+by one point
 
 >darn
 Your score has just gone up by one point
@@ -690,6 +706,9 @@ No, it's not just any clump, but hawt thaw.
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
+#scannotes for hawt thaw
+>scan hawt thaw
+Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
 
 @sli
 #slider test for what
@@ -735,6 +754,9 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 #spechelp for ought letters
 >touhg
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
+#scannotes for alert
+>scan alert
+Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
 
 >later
 Your score has just gone up by one point
@@ -823,6 +845,9 @@ The Entry doesn't need disabling, since you're the only person that can enter.
 #spechelp for starch charts
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
+#scannotes for starch charts
+>scan starch charts
+Starch is calorically and cosonantally (if that's a word) heavy. This must help.
 
 @max
 >trasch
@@ -999,6 +1024,18 @@ NO, REARRANGE AND TRY AGAIN, you think.
 The locs pack mentions, in red, PC Cloaks are also a super cool productivity booster.
 >read clack ops locs pack
 The locs pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!
+#scannotes for clack ops locs pack
+>scan clack ops locs pack
+Ugh, no matches for so many letters. Yet the definitive colors may have clues.
+#scannotes for i'm le cop polemic
+>scan i'm le cop polemic
+Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues.
+#scannotes for drive e
+>scan drive e
+Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it.
+#scannotes for drive a
+>scan drive a
+It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble.
 
 @sli
 #slider test for skid
@@ -1106,6 +1143,9 @@ That feels right, but it's not enough yet. You don't need anything grumbly, here
 #spechelp for escaroles
 >casseroel
 The escaroles seem slightly meatier.
+#scannotes for n e recs censer
+>scan n e recs censer
+This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
 
 >screen
 Your score has just gone up by one point
@@ -1405,6 +1445,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #pre-bub-dude-egg rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola just won't be enough for the task ahead, as-is
+#scannotes for bub dude egg
+>scan bub dude egg
+Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
 
 >pour cola in mug
 >debug
@@ -1422,6 +1465,10 @@ The catechism would be more likely to scramble YOU up. It's way more complex tha
 It's what's on the scratch paper that was important.
 
 @nud
+#scannotes for usb
+>scan usb
+Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good.
+\\
 #spechelp for usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.

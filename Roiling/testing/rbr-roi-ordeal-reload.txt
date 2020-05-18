@@ -65,19 +65,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for stable
 >tsbael
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#aftertexts for pram
+#scannotes for pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#aftertexts for tables
+#scannotes for tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#aftertexts for niche
+#scannotes for niche
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#aftertexts for beams
+#scannotes for beams
 >scan beams
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
-#aftertexts for meet bans
+#scannotes for meet bans
 >scan meet bans
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
 
@@ -373,7 +373,7 @@ The plates shine slightly and rattle.
 #readables for pastel plates
 >read pastel plates
 EPSTAL is written as an author's signature.
-#aftertexts for palest pastel plates
+#scannotes for palest pastel plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
 
