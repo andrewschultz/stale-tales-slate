@@ -114,6 +114,9 @@ Trying to change the current region you're in would be risky, or useless, or may
 #nudge for satin
 >atsin
 The church's name is not as important as its mission.
+#aftertexts for anti sag sit a nag
+>scan anti sag sit a nag
+Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 
 @nud
 #spechelp for worst ad
@@ -121,6 +124,9 @@ The church's name is not as important as its mission.
 The ad seems slightly nearer, for a moment.
 #readables for worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
+#aftertexts for worst ad
+>scan worst ad
+Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
 @!min
 >towards
@@ -548,9 +554,12 @@ DEBUG INFO: Taking away a max point.
 >out
 
 @nud
+#aftertexts for morf form
+>scan morf form
+Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
 #spechelp for morf form
 >frmo
-WRONG
+The MORF-FORM rocks in the air, as if it's about to fall.
 
 @sli
 #slider test for from
@@ -720,6 +729,9 @@ No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
 The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
+#aftertexts for thickness sketchins
+>scan thickness sketchins
+Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
 
 @sli
 #slider test for athwart

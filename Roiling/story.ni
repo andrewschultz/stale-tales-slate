@@ -4344,11 +4344,13 @@ others	"not nouns any more--a different part of speech in each location"
 [this table gives clues after you scan, although sometimes it may be approrpriate to give hints only in cheat mode.]
 
 to say cheatfid:
-	say "You fiddle with the cheat button and note that nothing happens to the R's and Y's"
+	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
 
 to say beal-or-balmer: say "Wow! Three names. You don't know if [other-mbb] would be easier but, well, it can't be helped"
 
 [??pad question mark / scan elmer / scan merle]
+[note we start with the pram which is not in the first room so we can define xtradesc as not-scenery. Don't change this.]
+
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
@@ -4357,41 +4359,78 @@ niche	false	false	false	true	"[cheatfid]."
 beams	false	false	false	true	"[cheatfid]."
 meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
 palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
-worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from."
-anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out." [START routes]
-MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings. But with only four letters, how hard can it be?"
+tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
+worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
+anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
+rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
+MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
+noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
-LEAD	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!" [START troves]
-Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
+Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
+sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
+l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
+large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
+bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
+me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
+LEAD	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!"
 praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
+rivets	false	true	false	false	"Hmm, along with the information for scanning Trevis, you might really have something here." [??what if already STRIVEd]
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
-sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
+sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
+trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
+maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe." [START presto]
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
-maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe."
-alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
+boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
+sods gone odes song	true	true	false	false	"My havens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
+sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
+alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
+starch charts	true	true	false	false	"Starch is calorically and cosonantally (if that's a word) heavy. This must help."
+clack ops locs pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
+i'm le cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
+bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
-LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
-li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
+gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
+capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
+casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
+li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
+LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
+frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five for the scary crays[end if]."
 Achers' Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
-bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out." [START towers]
+papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
+templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
+natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
+dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
+bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
+muscly luc sym	true	true	false	false	"You've been around thee block enough to know what the variable color must be."
+try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
+traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
+fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
+angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
+mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
+resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
-alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
-sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
+sporties' ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
+mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
+sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
+asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
+organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
+alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
+reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
@@ -4399,65 +4438,30 @@ natives' site van	true	true	false	false	"You get the feeling the natives can be 
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 pester'n serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [START otters]
+tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
+bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess." [START otters]
+cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
+t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
+Elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
-a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
-a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it."
-melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
-angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
-asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
-bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess."
-boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things."
-bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
-bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
-capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
-casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
-clack ops locs pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
-dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue."
-elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
-frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
-inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
-i'm le cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
-l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
-large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
-mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
-me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
-mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
-muscly luc sym	true	true	false	false	"You've been around thee block enough to know what the variable color must be."
-natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
-ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
-organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
-papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
-prices precis	true	true	false	false	"Whoah, only reds and purples. Interesting."
-reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
-resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
-rivets	false	true	false	false	"Hmm, along with the information for scanning Trevis, you might really have something here." [??what if already STRIVEd]
-rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
-sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
-sods gone odes song	true	true	false	false	"My havens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
-sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
-sporties' ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
-starch charts	true	true	false	false	"Starch is calorically and cosonantally (if that's a word) heavy. This must help."
-t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things."
-templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
-tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
-trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
-traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
-tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters."
-try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign--caution has four vowels, but the settler indicates three[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
+prices precis	true	true	false	false	"Whoah, only reds and purples. Interesting."
+melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
+ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
+a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
+a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
+inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
+
+========================
 
 [?? test qmh toggling and scanning stuff]
 
@@ -11273,6 +11277,10 @@ a-text of Marble Blamer Balmer is "RYRRRY". b-text of Marble Blamer Balmer is "R
 
 mbb is a thing that varies. mbb is Marble Blamer Balmer.
 
+to decide which thing is not-mbb:
+	if mbb is Marble Blamer Balmer, decide on Marble Blamer Mr Beal;
+	decide on Marble Blamer Balmer;
+
 does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
@@ -17771,6 +17779,8 @@ a-text of Merle is "RYRYRRRO". b-text of Merle is "RYRYRRRO". parse-text of merl
 a-text of Elmer is "YRYRY". b-text of Elmer is "?RYRY". parse-text of elmer is "?[sp]x[sp]-[sp]x[sp]-".
 
 to say e-m: say "[one of]Merle[or]Elmer[in random order]";
+
+[note: the scanning is weird here. They go to HONESTLY and ASIDE. I could do better with this, but I didn't.]
 
 initial appearance of Elmer is "[bug-report]".
 initial appearance of Merle is "[bug-report]".

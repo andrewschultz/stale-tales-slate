@@ -24,6 +24,9 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 
 >posf
 
+#Marble Blamer Balmer is the default to test with. It shouldn't matter. But we will test both, anyway.
+>mbb 1
+
 >ts
 >troves
 >enter troves
@@ -97,6 +100,9 @@ Score in a scenario: 0 out of 24 total points in the current region, Troves. Low
 #spechelp for pa egg pea
 >gaep
 You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
+#aftertexts for pa egg pea
+>scan pa egg pea
+Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
 
 @max,nud
 >gape
@@ -179,6 +185,9 @@ No, you'll want to zone out the whole verbose distraction.
 #spechelp for sob ever verbose
 >obserev
 WRONG
+#aftertexts for stop post
+>scan stop post
+Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
 
 @max
 #pre-spot-stop-post rule
@@ -421,6 +430,9 @@ The ME ARTS have nurtured you spiritually. The lobster nurtured you physically. 
 #spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
+#aftertexts for lead
+>scan lead
+Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
 #readables for lead
 >read lead
 You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! He needs to learn to, like...!' They always acted as if it was so simple.
@@ -505,6 +517,9 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #spechelp for praise spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
+#aftertexts for praise spirea
+>scan praise spirea
+Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
 
 @sli
 #slider test for aspire
@@ -641,6 +656,9 @@ It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
 #spechelp for salt
 >lats
 You don't quite draw inspiration from the shaker, but there can't be that many alts.
+#aftertexts for salt
+>scan salt
+Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
 
 >last
 Your score has just gone up by one point
@@ -653,7 +671,7 @@ You've lasted long enough. There are new things to look at, now.
 @nud
 #mistake test for ambler
 >ambler
-You see red slightly as the marble Blamer Balmer fails to walk away.
+You see red slightly as Marble Blamer Balmer fails to look away.
 #readables for blamer balmer
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
@@ -675,6 +693,15 @@ seems slightly taken aback
 #spechelp for sister tressi siters
 >resits
 Sister Tressi seems a bit more upset than usual.
+#aftertexts for marble blamer mr beal
+>scan marble blamer mr beal
+Wow! Three names. You don't know if Marble Blamer Balmer would be easier but, well, it can't be helped
+#aftertexts for marble blamer balmer
+>scan marble blamer balmer
+Wow! Three names. You don't know if Marble Blamer Mr. Beal would be easier but, well, it can't be helped
+#aftertexts for sister tressi siters
+>scan sister tressi siters
+Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it.
 
 @sli
 #slider test for ramble

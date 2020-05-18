@@ -863,6 +863,10 @@ section resort auxiliary
 
 to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
 
+this is the bull-moot rule:
+	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
+	the rule fails;
+
 to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
 
 this is the hotspot-no-kilns rule:

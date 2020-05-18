@@ -267,7 +267,7 @@ understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep r
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
-understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when weoful pat is touchable or poem is touchable.
+understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or poem is touchable.
 
 understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
 

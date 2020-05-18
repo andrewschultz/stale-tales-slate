@@ -1468,6 +1468,45 @@ carry out deprefing:
 		now all prefigured things are unfigured;
 	the rule succeeds;
 
+chapter mbbing
+
+[ * this changes who the Marble Blamer is ]
+
+mbbing is an action applying to nothing.
+
+understand the command "mbb" as something new.
+
+understand "mbb" as mbbing.
+understand "mbb [number]" as mbbnuming.
+
+this is the blamer-moot rule:
+	if mbb is moot, say "Already mooted [mbb]." instead;
+
+carry out mbbing:
+	abide by the blamer-moot rule;
+	now mbb is off-stage;
+	say "[mbb] moved off-stage, and ";
+	if mbb is Marble Blamer Mr Beal:
+		now mbb is Marble Blamer Balmer;
+	else:
+		now mbb is Marble Blamer Mr Beal;
+	move mbb to upscale capsule;
+	now not-mbb is off-stage;
+	say "[mbb] moved to [location of mbb].";
+	the rule succeeds.
+
+carry out mbbnuming:
+	abide by the blamer-moot rule;
+	if number understood is 1:
+		now mbb is Marble Blamer Balmer;
+	else if number understood is 2:
+		now mbb is Marble Blamer Mr Beal;
+	else:
+		say "1 = Balmer, 2 = Mr Beal." instead;
+	move mbb to Upscale Capsule;
+	now not-mbb is off-stage;
+	the rule succeeds;
+
 chapter srqing
 
 [ * solve region quick ]
