@@ -18,6 +18,9 @@ def on_off(a):
     return ". Default=" + ['off', 'on'][a]
 
 def usage():
+    global only_anagram
+    global plural
+    global verbose
     print("-1/2 = see what happens with one or two letters removed")
     print("-o/no = only anagram, or (no) add/lose a letter" + on_off(only_anagram))
     print("-p/np = plurals, or no plurals" + on_off(plural))
@@ -78,24 +81,24 @@ def do_ings():
             if temp_string:
                 print(re.sub("g$", "'", x) + ":" + temp_string + "!")
 
-with open("c:/writing/dict/brit-1word.txt") as file:
-    for line in file:
-        line = line.strip().lower()
-        l2 = ''.join(sorted(list(line)))
-        all_words[line] = True
-        ag[l2] = ag[l2] + ' ' + line
-
-if len(sys.argv) is 1:
-    print("Need an argument. Most common is -s for stdin, if you're running multiple queries. Otherwise, any words will do.")
-    usage()
-    exit()
-
 only_anagram = True
 plural = True
 verbose = False
 minus_ones = False
 minus_twos = False
 get_stdin = False
+
+if len(sys.argv) is 1:
+    print("Need an argument. Most common is -s for stdin, if you're running multiple queries. Otherwise, any words will do.")
+    usage()
+    exit()
+
+with open("c:/writing/dict/brit-1word.txt") as file:
+    for line in file:
+        line = line.strip().lower()
+        l2 = ''.join(sorted(list(line)))
+        all_words[line] = True
+        ag[l2] = ag[l2] + ' ' + line
 
 new_arg = []
 

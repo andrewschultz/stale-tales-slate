@@ -146,7 +146,7 @@ def read_data_file():
                 for x in ll:
                     x = re.sub("^(all )", "", x) #all noon gag
                     okay[x] = True
-                    if verbose: print(x, "is ok for being in aftertexts")
+                    if verbose: print(x, "is ok for being in scannotes")
                 continue
             if '=' in line:
                 ary = ll.split("=")
@@ -486,13 +486,13 @@ def aro_settler_check():
     else:
         print("No ARO flips missed.")
 
-def check_aftertexts():
+def check_scannotes():
     markedokay = 0
     mayneedsource = 0
-    mayneedaftertext = 0
+    mayneedscannote = 0
     reading_header = False
     in_table = False
-    in_aftertexts = defaultdict(int)
+    in_scannotes = defaultdict(int)
     sug_text = defaultdict(str)
     suggestions = []
     nsl = [ table_shorten(x) for x in need_source_logic ]
@@ -502,7 +502,7 @@ def check_aftertexts():
                 in_table = True
                 reading_header = False
                 continue
-            if line.startswith('table of aftertexts'):
+            if line.startswith('table of scannotes'):
                 reading_header = True
                 continue
             if not in_table: continue
@@ -510,7 +510,7 @@ def check_aftertexts():
             line = re.sub("[ \t]*\[[^\[]*\]$", "", line.strip())
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
-            in_aftertexts[l0] = line_count
+            in_scannotes[l0] = line_count
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of columns (have {:d} need 6) at line {:d}: {:s}".format(len(ll), line_count, line))
             elif len(ll) == 1:
                 print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
@@ -518,21 +518,21 @@ def check_aftertexts():
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in nsl:
                 if l0 not in okay.keys() and l0 not in abbrevs.values():
-                    suggestions.append("{:s} may be superfluous aftertext at line {:d}".format(l0, line_count))
+                    suggestions.append("{:s} may be superfluous scannote at line {:d}".format(l0, line_count))
                     mayneedsource += 1
                 #print(ll[5])
             else:
-                if verbose: print("Got", ll[0], "in aftertexts.")
+                if verbose: print("Got", ll[0], "in scannotes.")
     if len(suggestions): print("\n".join(sorted(suggestions, key=lambda x:re.sub(".* ", "", x))))
     for x in sorted(need_source_logic.keys()):
-        if table_shorten(x) not in in_aftertexts.keys() and x not in abbrevs.keys():
-            print("May need", x, "in aftertexts table.")
-            mayneedaftertext += 1
+        if table_shorten(x) not in in_scannotes.keys() and x not in abbrevs.keys():
+            print("May need", x, "in scannotes table.")
+            mayneedscannote += 1
     for x in sorted(okay.keys()):
-        if x not in in_aftertexts.keys():
-            print(x, "marked as okay for table of aftertexts but doesn't appear there.")
+        if x not in in_scannotes.keys():
+            print(x, "marked as okay for table of scannotes but doesn't appear there.")
             markedokay += 1
-    if mayneedaftertext + mayneedsource + markedokay: print("May need", mayneedaftertext, "aftertext and", mayneedsource, "source and may've wrongly marked", markedokay)
+    if mayneedscannote + mayneedsource + markedokay: print("May need", mayneedscannote, "scannote and", mayneedsource, "source and may've wrongly marked", markedokay)
 
 def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message = "", other_test = True):
     need_in_logic = 0
@@ -690,7 +690,7 @@ with open(logic_reds_file) as file:
             need_question_mark = line_count
         elif '?' in ll or 'qver ignore' in ll or 'qver-ignore' in ll: need_question_mark = 0
 
-check_aftertexts()
+check_scannotes()
 
 #we no longer need to check logic.htm as it is generated from the invisiclues file.
 #check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")

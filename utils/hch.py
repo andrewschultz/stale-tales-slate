@@ -52,8 +52,8 @@ def my_category(my_file):
 ignore_blank_cat = True
 
 def verify_reg_files(my_proj):
-    print("This is hard coded. I need to fix it.")
-    x = glob.glob("reg-roi*.txt")
+    i7.go_proj(my_proj)
+    x = glob.glob("reg-{}*.txt".format(my_proj))
     valids = { 'slider': [ 'slider' ],
       'nudmis': [ 'scannotes', 'spechelp', 'done rejects' ],
       '' : []
@@ -76,9 +76,11 @@ def verify_reg_files(my_proj):
                 for y in flaggable:
                     if line[1:].lower().startswith(y):
                         if y not in valids[cat]:
+                            if not loc:
+                                print("INVALID COMMENT(S) FOR {}:".format(fb))
                             loc += 1
                             glo += 1
-                            print("Invalid comment {}/{} {} line {}: {}".format(loc, glo, fb, line_count, line.strip()))
+                            print("    {}/{} line {}: {}".format(loc, glo, line_count, line.strip()))
     exit()
 
 def lastrev(x):
@@ -217,6 +219,8 @@ tabs = { 'sa' : ['spechelp', 'done rejects', 'readables'],
 cols = { 'scannotes': 5 }
 
 count = 1
+verify_roi = False
+verify_sa = False
 
 while count < len(sys.argv):
     arg = sys.argv[count]
@@ -232,7 +236,7 @@ while count < len(sys.argv):
     elif arg == 'lo' or arg == 'ol': out_to_file = launch_outfile = True
     elif arg == 'nq' or arg == 'qb': quiet = False
     elif arg == 'i': ignore_nudmis = True
-    elif arg == 'v': verify_reg_files('roi')
+    elif arg == 'v': verify_roi = True
     elif re.search("^[asdir]+", arg):
         if 'a' in arg: tabs.append('aftertexts')
         if 's' in arg: tabs.append('spechelp')
@@ -247,6 +251,11 @@ while count < len(sys.argv):
         print("Bad command", arg)
         usage()
     count += 1
+
+if verify_roi or verify_sa:
+    if verify_roi: verify_reg_files('roi')
+    if verify_sa: verify_reg_files('sa')
+    exit()
 
 if out_to_file: hout = open(houtfile, "w")
 

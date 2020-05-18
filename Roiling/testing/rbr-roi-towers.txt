@@ -231,6 +231,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for dreads adders
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
+#scannotes for dreads adders
+>scan dreads adders
+Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
 
 >sadder
 Your score has just gone up by one point
@@ -255,11 +258,21 @@ There's more than one diner blocking you.
 #nudge for yurt
 >yutr
 There's more than one yurt there.
-
-@nud
 #spechelp for try us yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
+#scannotes for bluster butlers
+>scan bluster butlers
+Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out.
+#scannotes for snider diners
+>scan snider diners
+The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. "What's this? Such distracting noise!" They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work.
+#scannotes for try us yurts
+>scan try us yurts
+Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
+#scannotes for muscly luc sym
+>scan muscly luc sym
+You've been around thee block enough to know what the variable color must be.
 
 @sli
 #slider test for rusty
@@ -524,6 +537,12 @@ You focus and see that the brand is TRU-SELF. Which would make you see red on ge
 #spechelp for fluster self rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
+#scannotes for fluster self rut
+>scan fluster self rut
+You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
+#scannotes for docile old ice
+>scan docile old ice
+Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
 
 @!minh,mini
 >coiled
@@ -536,6 +555,9 @@ Your score has just gone up by one point
 #spechelp for pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
+#scannotes for traipse pirates
+>scan traipse pirates
+Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
 >pastier
 Your score has just gone up by one point
 
@@ -586,6 +608,18 @@ There's more than one ingrate blocking you.
 #spechelp for ingrates
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
+#scannotes for angriest ingrates
+>scan angriest ingrates
+Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
+#scannotes for mardier admirer
+>scan mardier admirer
+Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants.
+#scannotes for resident trendies
+>scan resident trendies
+The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
+#spechelp for resident trendies
+>nerdiets
+The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 
 @!minh,mini
 >angstier
@@ -621,9 +655,6 @@ You almost expect the strudel to hop up, but the moment passes.
 #readables for strudel
 >read strudel
 DR. ELTUS recommends this strudel!
-#spechelp for resident trendies
->nerdiets
-The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
 
 @max
 >take strudel
@@ -649,7 +680,6 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 #spechelp for mardier admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
-
 
 @!minh,mini
 >married
@@ -709,9 +739,16 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for asset-hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
+#scannotes for asset-hit atheists
+>scan asset-hit atheists
+Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
+\\
 #spechelp for sweatier wait-seer
 >waitsere
 The wait-seer looks bored and distracted for a second.
+#scannotes for sweatier wait-seer
+>scan sweatier wait-seer
+The letters blink from red/yellow to purple/green and back.
 
 @!minh,mini
 >hastiest
@@ -848,6 +885,9 @@ You scrape at the mended mini denim bits to see if there is any magic in dem. We
 #spechelp for mended mini denim
 >denmi
 The mended mini denim bends and warps, but you hear no tearing noise.
+#scannotes for mended mini denim
+>scan mended mini denim
+Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
 
 @!minh,mini
 >mined
@@ -879,15 +919,24 @@ This is a weird place, being at the crossroads, but better to mess around elsewh
 #spechelp for alarming grailman
 >alarmign
 The grailman seems almost average for a moment.
+#scannotes for alarming grailman
+>scan alarming grailman
+The one letter blinks between green and yellow.
 
 @nud
 #spechelp for lois the hostile
 >lois the hostiel
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
+#scannotes for lois the hostile
+>scan lois the hostile
+Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
 >gs
 #spechelp for hostile-is-he lot
 >hostile-is-he lto
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
+#scannotes for hostile-is-he lot
+>scan hostile-is-he lot
+Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
 
 @sli
@@ -916,6 +965,9 @@ Your score has just gone up by one point
 #spechelp for dandier arid den
 >dandrie
 The arid den seems less imposing and impressive.
+#scannotes for dandier arid den
+>scan dandier arid den
+Well. That's two things you can't figure to start, but maybe you can, if you think about it.
 
 @!minh,mini
 >drained
@@ -925,6 +977,9 @@ Your score has just gone up by one point
 #nudge for native
 >natiev
 You'll need to deal with more than one native to make your way south.
+#scannotes for natives' site van
+>scan natives site van
+You get the feeling the natives can be swayed more than one way, here.
 
 @nud
 #spechelp for natives' site van
@@ -964,11 +1019,13 @@ Until you see the ego-drains themselves as organised, you probably won't see how
 #nudge for organized
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
-
-@nud
+\\
 #spechelp for organised ego drains
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
+#scannotes for organised ego drains
+>scan organised ego drains
+With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
 
 @!minh,mini
 >grandiose
@@ -989,6 +1046,9 @@ You may find it easier to deal with all the ripostes at once.
 #spechelp for sporties' ripostes
 >prosiets
 The ripostes seem less cutting for a moment.
+#scannotes for sporties' ripostes
+>scan sporties' ripostes
+You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
 
 @!minh,mini
 >prosiest
@@ -1132,6 +1192,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
+#scannotes for dr yow
+>scan dr yow
+[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]
 
 >wordy
 Your score has just gone up by one point
@@ -1163,6 +1226,9 @@ The ropins remains secure, with no easy way to open it.
 >read prison
 Part of the red writing on the prison says
 There're two other bits to read.
+#scannotes for prison ropins
+>scan prison ropins
+Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle...
 
 @max
 >fussier
@@ -1316,6 +1382,9 @@ WRONG: What about hostile?
 #spechelp for dinger
 >grainde
 Scot Agin blinks and ruffles Reading: a Dinger and yawns before flipping a page, slightly less interested than before.
+#scannotes for reading a dinger
+>scan reading a dinger
+Well, this may be more intellectually challenging than the book itself. Lots of reds.
 
 @sli
 #slider test for grained
@@ -1352,6 +1421,9 @@ Scot scrunches his eyes to try to keep even more attention, but it doesn't quite
 >agnostci
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 >gs
+#scannotes for raves saver
+>scan raves saver
+Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about.
 
 @!minh,mini
 >pearly
@@ -1535,6 +1607,9 @@ You already dealt with both turbos.
 #spechelp for weirder red wire
 >rewirde
 You think you see how to untangle some of the mes inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
+#scannotes for weirder red wire
+>scan weirder red wire
+Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
 
 @!minh,mini
 >rewired
@@ -1582,6 +1657,9 @@ The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smal
 The serpent calms down for a split-second.
 >presetn
 The serpent calms down for a split-second, again.
+#scannotes for pester'n serpent
+>scan pester'n serpent
+That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
 
 @!minh,mini
 >thisalt
@@ -1620,6 +1698,9 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ri
 #spechelp for tetris sitter
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
+#scannotes for tetris sitter
+>scan tetris sitter
+With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
 
 @sli
 #slider test for triste
@@ -1708,6 +1789,9 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 Nah, that's just garbage. It's the curst palace you need to focus on.
 >curst palaec
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
+#scannotes for curst palace
+>scan curst palace
+[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if].
 
 >spectacular
 Your score has just gone up by two points

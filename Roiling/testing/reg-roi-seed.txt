@@ -137,8 +137,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >undo
+
+#scannotes for t-formally
+>scan t-formally
+Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things.
+
 >formally
 Your score has just gone up by one point
+
+#scannotes for t-steamily
+>scan t-steamily
+Well, you have a feeling you know what that question mark should be.
 
 >steamily
 Your score has just gone up by one point
@@ -266,10 +275,15 @@ Your score has just gone up by one point
 Topside Deposit
 
 >gonear downside
+#scannotes for t-tearily-irately
+>scan t-tearily-irately
+Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways.
+
 >tearily
 Your score has just gone up by one point
 
 >undo
+
 >irately
 Your score has just gone up by one point
 
@@ -319,6 +333,10 @@ Boy, those macks, huh?
 
 >seed 6
 >gonear downside
+#scannotes for t-silently
+>scan t-silently
+Wow! Three things to consider here. This might be tricky.
+
 >silently
 Your score has just gone up by one point
 

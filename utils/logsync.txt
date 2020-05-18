@@ -236,7 +236,7 @@ sods gone odes song>goodness
 >IGNORE=ye hoop
 hoop2~ye hoop>phooey
 hoop1~hoop>pooh
-n e recs censer~censer>screen
+n e recs censer>screen
 ####marines seminar remains
 popgun~boing go bin>bingo
 sport ports>prost
@@ -284,7 +284,6 @@ stein>inset
 tines>inset
 tunes>unset
 perma-amper>remap
-trolls>stroll
 li'l p's pills>spill
 ####olde lode
 clam>calm

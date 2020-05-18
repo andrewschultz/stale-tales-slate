@@ -18,7 +18,7 @@ verbose = False
 do_before = True
 do_after = True
 
-file_filter = 'routes'
+file_filter = 'routes', 'troves'
 
 threshold = 40
 
@@ -76,7 +76,7 @@ def points_in(x):
 def cmd_to_alfchunk(y):
     ret_string = ''.join(sorted(re.sub("[^a-z]", "", y)))
     lr = len(ret_string)
-    if lr % 1 or lr < 2: return ret_string
+    if lr % 2 or lr < 2: return ret_string
     for x in range (0, len(ret_string), 2):
         if ret_string[x] != ret_string[x+1]: return ret_string
     return ret_string[::2]

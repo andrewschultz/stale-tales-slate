@@ -40,6 +40,9 @@ Your powers are so weak that you need to add a few letters to the word you need.
 #spechelp for bleary barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
+#scannotes for bleary barley
+>scan bleary barley
+That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess.
 
 @sli
 #slider test for barely
@@ -88,6 +91,9 @@ The cinders glow and even warm up for a bit.
 #readables for cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
+#scannotes for cinders
+>scan cinders
+Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
 
 @min
 >discern ed riley
@@ -587,6 +593,9 @@ Score in a scenario: 11 out of 32 total points in the current region, Otters. Lo
 #spechelp for atmo-moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
+#scannotes for atmo-moat
+>scan atmo-moat
+You feel sheepish having used the settler, but it's been a long journey.
 
 @sli
 #slider test for atom
@@ -655,6 +664,9 @@ The imp looks slightly annoyed for a second. You may be on the right track
 #spechelp for imp3
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
+#scannotes for sly imp
+>scan sly imp
+The settler then gets garbled a bit. The imp probably more than one way to be active, so the settler can't pin it down.
 
 @alt
 >brutely
@@ -879,7 +891,10 @@ The whiners manage to shush you more noisily than you've ever been shushed. You 
 #spechelp for ram3
 >terseyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
-
+\\
+#scannotes for whiners
+>scan whiners
+The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account.
 
 @alt
 >tersely
@@ -1145,6 +1160,12 @@ Score in a scenario: 26 out of 32 total points in the current region, Otters. Th
 >aside
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
+#scannotes for elmer
+>scan elmer
+Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+#scannotes for merle
+>scan merle
+Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
 
 @nud
 #done rejects for parrot
@@ -1184,6 +1205,9 @@ You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
 #spechelp for medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
+#scannotes for medals
+>scan medals
+Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed.
 
 @nud
 >whistel
