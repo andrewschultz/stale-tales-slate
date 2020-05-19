@@ -683,15 +683,18 @@ The pryer bars briefly turn very red.
 #spechelp for rapt figure
 >rapt figuer
 The rapt figure frowns as if it's eaten something sour.
-#spechelp for pipe panel fence
+#spechelp for pipe panel lie pen app
 >pineappel
-The pipe panel fence sways slightly.
+The pipe panel lie pen app rattles slightly.
 #spechelp for barriers west
 >strawberrise
 You feel the barriers west pulling towards you.
 #spechelp for buried raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
+#readables for pipe panel lie pen app
+>read lie pen app
+There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
 >score
 }}SCORE++

@@ -223,6 +223,35 @@ Your score has just gone up by one point
 Boarded Roadbed
 
 @sli
+#slider test for stay
+>tsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for a sty tasty say
+>scan sty
+!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+>scan sty
+Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+#spechelp for a sty tasty say
+>tsya
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+#readables for a sty tasty say
+>read sty
+YAY! STATS! is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+
+@!mina,minb
+>stay
+by one point
+
+@nud
+#done rejects for a sty tasty say
+>stya
+You can't over-stay your staying power, or something.
+
+@sli
 #slider test for reason
 >ersano
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -254,6 +283,7 @@ But it's not just any bee. It's a WRONG
 >believe
 #notmax
 Your score has just gone up by one point
+#this is just to test renudges for one line. It looks like a typo, but the backslashes mean a carriage return.
 =one=3	#renudge for bee\\>bee\\But it's not just any bee. It's a WRONG
 >reason
 #notmax

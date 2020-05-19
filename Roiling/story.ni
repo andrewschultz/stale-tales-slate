@@ -121,7 +121,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 24. min-score of Troves is 17. [Pa Egg Pea / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
@@ -327,7 +327,10 @@ check objasking about a hintpastry when mrlp is towers:
 
 the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
 
-a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it."
+a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it.". bore-check of a fruit is usually the bore-fruit rule.
+
+this is the bore-fruit rule:
+	if current action is eating, now boring-exception is true;
 
 a fruit has a room called frroom.
 
@@ -394,7 +397,7 @@ check eating a fruit:
 	if noun is lemons or noun is melon, say "A [if noun is lemons]lemon[else]melon[end if]? No meal!" instead;
 	say "[one of]You shouldn't eat into Curtis's profits. [or][stopping]";
 	if pun-warn is false:
-		ital-say "if you try again, you'll get a bad anagram pun.";
+		ital-say "if you try again, you'll get an even worse anagram pun.";
 		now pun-warn is true instead;
 	say "No fruit. Ruf it! On! ([one of]Told you so[or]Yup. Still here[stopping].)" instead;
 
@@ -1775,6 +1778,7 @@ haunter	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than ur-pines or those discussing yorpberries.'"
 Len Craig	"'I'm a businessman. A trader. Lots of stuff if you know how to haggle.'"
+ammo gang	"They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around."
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
 passport	--
@@ -1795,7 +1799,7 @@ to say tho-need: if power-back is true, say ", though I feel you may not need th
 
 to say left-here: say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
 
-to say doc-in-prison: say "[he-she-c] gestures to the ropins and then shakes an invisible fence of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
+to say doc-in-prison: say "[he-she-c] gestures to the ropins and then shakes an invisible cage of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
 
 check asking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interrupting is rude. [he-she-c]'ll quiet down." instead;
 
@@ -2109,7 +2113,7 @@ aunt tuna	pre-haun	"'It is searching for a stolen treasure. They say it will wre
 aunt tuna	walleyes	"[fish-these-days]."
 aunt tuna	sardine	"[fish-these-days]."
 aunt tuna	yapper	"[fish-these-days]."
-aunt tuna	Horned Hedron	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'" [??]
+aunt tuna	Horned Hedron	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
 aunt tuna	Elvira	"'A horrible person! No, I have never met her. But Yorpwald is the worse for her arrival.'"
 aunt tuna	trout	"'He is a good boy despite no fine uncle influence, [if trout is reflexed]and you have helped him to ward off those weirdos so wired in the future[else]but those weirdos so wired may still pick on him[end if].' Tortu blushes at being treated like he might be eavesdropping."
 aunt tuna	ruby	"Aunt Tuna wouldn't believe you knew anything about the jewel[if player has ruby], and seeing it might cause her heart failure[end if]."
@@ -2441,6 +2445,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
+a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
@@ -2479,6 +2484,7 @@ omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr
 riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
+pipe panel lie pen app	"There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea."
 orange	"It's stamped with the word ENGARO in red."
 singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
 
@@ -2486,12 +2492,14 @@ section red writing
 
 the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". bore-text of red writing is "You can really only read the writing.". bore-check is bore-red-writing rule.
 
+check examining red writing: try reading red writing instead;
+
 understand "words" and "red/-- letters" as writing.
 
 this is the bore-red-writing rule:
 	if current action is examining or current action is reading:
 		if number of readable things is 0, say "No red writing around here on anything." instead;
-		d "[number of readable things]: [list of readable things].";
+		d "[number of readable things]: [list of readable things] are all readable.";
 		if number of readable things is 1, try reading a random readable thing instead;
 		if last-read is touchable and last-read is not the player, try reading last-read instead;
 		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
@@ -3967,7 +3975,7 @@ when play begins (this is the basic initialization rule):
 						say "[PE] has nothing special or specific to say.";
 				if PE is not a him-asked listed in the table of reflexive-blather:
 					if litany of PE is Table of No Conversation:
-						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive Blather.";
+						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive-Blather.";
 		if convo-holes is false, say "No conversational holes.";
 	now Lars Eede has the Reed's Ale;
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Cruelest Lectures]
@@ -4370,6 +4378,7 @@ Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
+a sty tasty say	true	false	false	false	"Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't."
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
 me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
@@ -4460,8 +4469,6 @@ ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang 
 a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
 inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
-
-========================
 
 [?? test qmh toggling and scanning stuff]
 
@@ -4652,7 +4659,7 @@ rustic-hard-items is a list of things variable. rustic-hard-items is { mad train
 
 wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
 
-field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
+field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel lie pen app, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
 
 clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, Ammo Gang, quince, prices precis, lemons, auction caution, nectarine }.
 
@@ -5712,14 +5719,12 @@ Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be ab
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
-Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east[end if]."
+Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage, the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
 to say no-coma: say "The coma camo may be detectable, but you can't change it"
-
-to say if-fence: say "[if pipe panel fence is touchable]the pipe panel fence too[else]even without the fence[end if]"
 
 to say unless-max:
 	let my-tot be poss-score of oyster - cur-score of oyster;
@@ -7313,7 +7318,7 @@ The look around once light available rule is not listed in the for printing the 
 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
-		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]Hmm. Probably some of this garbage could be turned to more fruit, if you were the sort of person who wanted to do everything, but you'd rather help yourself right now.";
+		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. I mean, you can probably find a few more fruits here, but not enough to satisfy Curtis.";
 		mootl list of all carried fruits;
 		now player has moss cap;
 		continue the action;
@@ -10917,7 +10922,13 @@ every turn when player is in Boarded Roadbed:
 		if current action is not listening:
 			say "How to discover L'Clear Cellar? Distractions have gone, and you're focused there, now[if bee-score is 1]... though you may also have fun smacking the bee down a bit more[end if].[paragraph break]";
 
-Boarded Roadbed is a room in Troves. "It's odd...bare... But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
+Boarded Roadbed is a room in Troves. "It's odd...bare... except for one business, [tasty say], which [if tasty say is reflexed]you've neutralized in your mind[else]can't be where you need to be. It's up to you how directly you wish to ignore it[end if].[paragraph break]But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help."
+
+chapter A Sty, Tasty, Say
+
+A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "A Sty: Tasty, Say". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
+
+a-text of a sty tasty say is "RRYR". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
 chapter THE BEE and 2 solutions
 
@@ -15943,7 +15954,7 @@ check giving hintpastry to duck: say "It turns away as if to say, yuck." instead
 
 check giving raves saver to agnostic: say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That won't help the agnostic build anything.[stopping]" instead;
 
-before giving something to Dr Yow when Dr Yow is in prison ropins: say "Nothing fits through the fence." instead;
+before giving something to Dr Yow when Dr Yow is in prison ropins: say "Nothing fits through the prison ropins." instead;
 
 check objasking Dr Yow about gizmo when player has gizmo: if Dr Yow is not in prison ropins, try giving gizmo to Dr Yow instead;
 
@@ -16135,7 +16146,7 @@ check opening prison ropins:
 
 check opening ropins: say "It's too sturdy, and you've no reason to believe what's behind it is worth visiting." instead;
 
-check unlocking ropins with duck: if prison ropins is reflexed, say "Almost. You're going about it wrong, though. What do you want the fence to BE? Or be described AS?" instead;
+check unlocking ropins with duck: if prison ropins is reflexed, say "Almost. You're going about it wrong, though. What do you want the prison ropins to BE? Or be described AS?" instead;
 
 before locking (this is the yow unlock rule) :
 	if noun is ropins or noun is fissure, say "[if Dr Yow is in prison ropins]It already is, and two locks won't make an unlock[else]No need to fuss any more[end if]." instead;
@@ -17751,15 +17762,15 @@ check going when player is in Reclusion Inclosure:
 	if noun is inside, try going west instead;
 	if noun is outside, try going east instead;
 
+check going east in Reclusion Inclosure: if medals are reflexed and Rancho Archon Anchor is unvisited, say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
+
 section forces fresco
 
-the forces fresco is boring scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves an f-score, with or without recs of disturbing violence and amorality.". bore-text of forces fresco is "The fresco is just there to taunt and annoy people not aligned with Elvira."
+the forces fresco is boring scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves recs of f-score, with its disturbing violence and amorality.". bore-text of forces fresco is "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
 section animals' laminas
 
-the animals' laminas are boring useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". bore-text of animals' laminas is "The laminas are just part of the whole bad-guy ambiance.";
-
-check going east in Reclusion Inclosure: if medals are reflexed and Rancho Archon Anchor is unvisited, say "You don't know when your super-speed will wear off. You'd hate to waste it where you've already been." instead;
+the animals' laminas are boring useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed VELASCO, probably the resident artist in the coevals['] alcoves.". bore-text of animals' laminas is "The laminas aren't critical. They are just part of the whole bad-guy ambiance.";
 
 understand "animals/lamina/animal" as laminas.
 
@@ -19872,7 +19883,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel fence is touchable]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft lies here, too. [end if][if pipe panel fence is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel lie pen app is touchable]Plans for a pipe panel lie pen app are discarded here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft lies here, too. [end if][if pipe panel lie pen app is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others. [?? make sentences less choppy]
 
 the ego fail foliage is bounding scenery in Filed Field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -19929,12 +19940,11 @@ the jagged spoon is part of the rapt figure. it is boring. understand "utensil" 
 
 chapter pineapple
 
-the pipe panel fence is scenery in Filed Field. "It's not worth sneaking over or through, either way. It's an eyesore, really."
+the pipe panel lie pen app is scenery in Filed Field. "It details how to make a penile lie pen app out of pipe panel. You don't have the materials or need for that, but maybe it could become something else.."
 
-check taking pipe panel fence:
-	say "You don't have the strength. Maybe you can change it, though." instead;
+check taking pipe panel lie pen app: say "You don't need any instructions for something you can't build. Perhaps they can become something more nourishing." instead;
 
-a-text of pipe panel fence is "RYRYYRRRY". b-text of pipe panel fence is "PGRGYRRRY". parse-text of pipe panel fence is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of pipe panel lie pen app is "RYRYYRRRY". b-text of pipe panel lie pen app is "PGRGYRRRY". parse-text of pipe panel lie pen app is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 the pineapple is a fruit.
 
@@ -21746,6 +21756,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
+		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
@@ -21853,7 +21864,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
 		if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
 		if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [Filed Field]
-		if pipe panel fence is not moot, say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
+		if pipe panel lie pen app is not moot, say "[2drm of Filed Field]the pipe panel lie pen app could've become a PINEAPPLE.";
 		if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
 		if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
 		if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";

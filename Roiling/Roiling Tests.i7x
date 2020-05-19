@@ -1473,6 +1473,7 @@ chapter mbbing
 [ * this changes who the Marble Blamer is ]
 
 mbbing is an action applying to nothing.
+mbbnuming is an action applying to one number.
 
 understand the command "mbb" as something new.
 

@@ -221,6 +221,14 @@ The third is O or S, and the fourth is P or T, but since the first and second ca
 (SP)(SP)O(PT) is left. That means T must be in slot 4.
 SPOT is right, and PSOT is not.
 >>BOARDED ROADBED
+# logic for a sty tasty say
+?How do I properly deal with A Tasty Sty, Say?
+It's optional, but it's not hard.
+You don't particularly need to deal with the question marks, but it doesn't hurt. The Y makes it easy.
+The first two letters can be figured logically: a consonant, but not T, is S. Then the other consonant is T.
+Now one of A, S and T must be in slot 3. Only A is left.
+You could also have figured Y was in slot 4 right away, since S and T, the only two consonants, must be in the first two slots.
+So STAY it is.
 # logic for l'clear cellar
 ?How do I see L'Clear Cellar?
 You can't, because it's clear. Oh, you mean if you scan it.

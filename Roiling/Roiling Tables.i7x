@@ -85,13 +85,14 @@ book troves
 table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	a rule	a rule	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
-cold	heat	false	270386244	--	"hate"	"hate"	--	--	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."
+cold	heat	false	270386244	--	"hate"	"hate"	--	--	"You feel a rife fire in your heart, wiping out any if/er...[paragraph break]'How neat! Hate won heat now!' you think to yourself. [paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should.[paragraph break]You think 'Heats ... hates ... haste?!'[paragraph break]Anyone can race, but you need to race with purpose and emotion."
 heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	--	--	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	--	--	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	pre-spot-stop-post rule	post-spot-stop-post rule	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[else]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 l'clear cellar	l'clear cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
+a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
@@ -244,7 +245,7 @@ mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if player is in Lost Lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
-fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
+fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The prison ropins slide inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 dinger	solve a loaves	false	382846875	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
@@ -289,7 +290,7 @@ book otters
 
 table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, y'r able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
+bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, you'r able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
 cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
@@ -352,7 +353,7 @@ book others
 
 table of others anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!" [this comes first or Inform thinks we want a fruit]
+moss cap	compass	true	433635024	--	"compass"	"compass"	a rule	a rule	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which is able to tell the direction! You look at where it points north, and yes, you see a path through a border, arbored." [this comes first or Inform thinks we want a fruit]
 pagers	grapes	true	425657357	--	"grapes"	"grapes/grape"	--	--	"Poof! The pagers turn into grapes. 'Wow, got rid of the noise AND got me more merchandise.'" [start rustic citrus easy]
 slime	limes	true	386961913	--	"limes"	"lime/limes"	--	--	"The slime schlurps into a pile of limes too cumbersome for you to carry."
 spear	pears	true	393057655	--	"pears"	"pears/pear"	--	--	"The spear splatters into more pears than you can hold!"
@@ -373,7 +374,7 @@ barber sickle	blackberries	true	732304866	--	"blackberries"	"blackberries/blackb
 buried raft	breadfruit	true	619813094	--	"breadfruit"	"breadfruit"	--	--	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."
 barren cries	cranberries	true	761370255	--	"cranberries"	"cranberries/cranberry"	--	post-cranberries rule	"The barren cries and briar screen swirl into a reddish mist and become cranberries."
 rapt figure	grapefruit	true	694430761	--	"grapefruit"	"grapefruit"	--	--	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"
-pipe panel fence	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With a plain peep, the fence collapses into a pineapple!"
+pipe panel lie pen app	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--	"With a plain peep, the lie pen app bursts into a pineapple!"
 pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
 barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
 mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
@@ -1259,7 +1260,7 @@ this is the post-yow-free rule:
 
 this is the pre-unlocked rule:
 	if duck is not touchable:
-		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
+		say "You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
 		preef prison ropins;
 		do nothing instead;
 
@@ -1484,10 +1485,10 @@ this is the pre-medals-quickly rule:
 		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
 		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is touchable:
-		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
+		say "That seems right, but not now. Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals instead;
 	if player is not in Reclusion Inclosure:
-		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
+		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf]. But there probably will be. The medals will help then.";
 		preef medals instead;
 
 section others auxiliary
@@ -1847,6 +1848,7 @@ cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
 stop post	"You feel silly a bit. You can't let a simple stop post stop you!"
+a sty tasty say	"No. You pause. That can't be it. You need to do something, or nothing, differently."
 LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
 evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track."
@@ -2053,7 +2055,7 @@ satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
-pipe panel fence	"The pipe panel fence sways slightly."
+pipe panel lie pen app	"The pipe panel lie pen app rattles slightly."
 barriers west	"You feel the barriers west pulling towards you."
 sorer bogey	"The bogey's tone changes slightly for a second."
 prices precis	"Something glints off the prices precis."
@@ -2204,6 +2206,7 @@ un-road	"You know where the un-road is, but how to navigate it?"
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
+a sty tasty say	"You can't over-stay your staying power, or something."
 bee's head	"Too much fiddling with reason is unreasonable."
 evil bee	"The bee's already taken enough of your in-my-heartitude."
 ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is moot]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
@@ -2773,7 +2776,7 @@ buried raft	"[one of]Philip Larkin would know what to do with the buried raft ri
 barriers west	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
-pipe panel fence	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
+pipe panel lie pen app	"[one of]If you read it, you'll notice a semi-obscure odd science fact as a clue, as well as a silly cultural reference. But it is probably easier to follow the anagrams.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE. The references are to how pineapple gelatin took forever to make and to SpongeBob SquarePants.[minus][cycling]"
 pryer bars	"[one of]If you know what drupelets are, the pryer bars may be a bit easier. If not, consider this edutainment.[plus][or]The bars are a bit reddish, which clues the fruit's color.[plus][or]The pryer bars can become a raspberry.[minus][cycling]"
 drupelets	"They clue you as to what the pryer bars should be. If not, then maybe this game will actually help you with your vocabulary! (I didn't know what they were before I Googled.)"
 jagged spoon	"The spoon's weird shape clues you as to what the rapt figure should be."

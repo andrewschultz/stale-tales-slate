@@ -989,7 +989,7 @@ Well, you don't need to.
 And you can't.
 >>OBSCUREST SUBSECTOR
 ?Who's the person in prison?
-Read the fence.
+Read the prison ropins.
 Dr. Yow.
 Dr. Yow won't speak until compelled.
 ?How do I get Dr. Yow to speak?
@@ -1005,7 +1005,7 @@ It wouldn't be very obscure if it had more than one exit, would it?
 ?Is the fissure important?
 Try making it FUSSIER.
 Nothing happens--with just you there.
-?The fence doesn't have anything I can unlock!
+?The prison ropins don't have anything I can unlock!
 Right. You'll need help.
 The lone duck may be a clue.
 If only it were in the subsector!
@@ -1614,8 +1614,7 @@ Philip Larkin would figure this out.
 BREADFRUIT.
 ?The mean trowel?
 WATERMELON.
-?Pipe Panel fence?
-Hm, pipe panel.
+?Pipe Panel lie pen app?
 PINEAPPLE.
 ?Barriers West?
 STRAWBERRIES.
