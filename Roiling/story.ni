@@ -99,6 +99,12 @@ include Roiling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Common by Andrew Schultz.
 
+bore-check of a thing is usually bore-eat-check rule.
+
+this is the bore-eat-check rule:
+	unless mrlp is others, continue the action;
+	if noun is a fruit, try eating the noun;
+
 chapter region specs
 
 a region has a number called max-score. a region has a number called min-score.
@@ -327,10 +333,7 @@ check objasking about a hintpastry when mrlp is towers:
 
 the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
 
-a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it.". bore-check of a fruit is usually the bore-fruit rule.
-
-this is the bore-fruit rule:
-	if current action is eating, now boring-exception is true;
+a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it."
 
 a fruit has a room called frroom.
 
@@ -1311,10 +1314,6 @@ persuasion rule for asking Brother Horbert to try doing something:
 	say "Brother Horbert mutters absent-mindedly he wishes he could do something for you, but not yet.";
 	persuasion fails;
 
-persuasion rule for asking drama armada to try doing something:
-	say "They're too antsy. But maybe just saying the right word will get them going.";
-	persuasion fails;
-
 persuasion rule for asking Gast to try doing something:
 	say "[Gast] is much bigger and louder than you, so, no.";
 	persuasion fails;
@@ -1575,7 +1574,6 @@ Check asking generically (This is the check for only one sensible converser rule
 the can only talk to talkables rule is not listed in any rulebook.
 
 check talking to (this is the hint looking not talking rule):
-	if noun is armada, say "They're not in the mood for remotely reasonable conversation." instead;
 	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
 	if litany of noun is not table of no conversation:
@@ -1705,7 +1703,6 @@ Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to und
 Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
-armada	"They'll have nothing sensible to say in unison."
 Trevis Vister	"Oh, if it were the real version, you'd regret asking him about himself."
 Si Reed	--	[reflex TROVES]
 plebe	"You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
@@ -1785,7 +1782,7 @@ passport	--
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
 
-to say pat-on-pit: say "[if mushrooms are off-stage]Can't even make it to the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
+to say pat-on-pit: say "[if mushrooms are off-stage]Can't even explore the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
 
 check asking Curtis about: if second noun is a fruit, say "'[if second noun is moot]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
 
@@ -1827,7 +1824,6 @@ Mole Elmo	"[bug-report]"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
-drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it. Mob mentality and all."
 Gast	"[Gast] is sort of controlling the conversation, and [he-she]'s bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 evil bee	"The bee just buzzes. That's what bees do."
@@ -2492,14 +2488,12 @@ section red writing
 
 the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". bore-text of red writing is "You can really only read the writing.". bore-check is bore-red-writing rule.
 
-check examining red writing: try reading red writing instead;
-
 understand "words" and "red/-- letters" as writing.
 
 this is the bore-red-writing rule:
 	if current action is examining or current action is reading:
 		if number of readable things is 0, say "No red writing around here on anything." instead;
-		d "[number of readable things]: [list of readable things] are all readable.";
+		d "[number of readable things]: [list of readable things].";
 		if number of readable things is 1, try reading a random readable thing instead;
 		if last-read is touchable and last-read is not the player, try reading last-read instead;
 		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
@@ -5585,6 +5579,9 @@ check taking inventory:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
 		say "Here in the [mrlp] region you have found:[line break]";
+		if mrlp is routes and read-list is true:
+			if number of quest-items carried by the player > 1, say "  [list of quest-items carried by the player] (for Brother Horbert)[line break]";
+			now all quest-items carried by the player are unmarked for listing;
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
@@ -5794,8 +5791,7 @@ yourself	"Surly foe: yourself? Lose fury!"
 plaster	"There's too much of it, and it's too hardened." [start Ordeal Reload]
 act ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
 Elmo	"[if see-rifle]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
-drama armada	"That'd be a silly way to die." [START routes]
-Brother Horbert	"Yorpwald's already got a St. Lip-Split."
+Brother Horbert	"Yorpwald's already got a St. Lip-Split." [START routes]
 scripture picturers	"A shameful attempt at vandalism."
 THE BEAN	"It's like a dense metal or something. It's more likely it would make something else crack."
 Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in your super purse. Anyway, [he-she]'s not evil, just whiny."
@@ -6061,7 +6057,7 @@ this is the push-pull-specifics rule:
 	if noun is tables, say "They're not that kind of tables. They're tables drawn on the wall." instead;
 	if noun is skid, say "You need to specify a direction to push or pull the skid." instead;
 	if noun is slider, twiddle-slider instead;
-	if noun is THE BEAN, say "The drama armada joins in to move the bean, but unfortunately, they wind up pushing it from all sides and complaining it's too heavy. You need to give an order." instead;
+	if noun is THE BEAN, say "You'd need a drama armada, or something. There was one, but then I deleted it, and they wouldn't have been up for action. You need to find a direction to get by THE BEAN." instead;
 	if noun is the yak, say "The yak groans lazily." instead;
 	if noun is templar ramplet, say "The templar ramplet does not budge. You need some other jarring action." instead;
 	if noun is raft, say "[if player is not on raft]The oars are too far away--you'll need to get on the raft[else]They are not just interlocking but locked in[end if]. Plus you'd just crash into a boat if you tried to cross the standard way." instead;
@@ -6525,6 +6521,7 @@ does the player mean entering a direction: it is very unlikely.
 
 before examining (this is the mark as examined rule):
 	if noun is inside, say "You need to specify the object you wish to look inside. You can also probably just X/EXAMINE it." instead;
+	if noun is up and be ova is touchable, say "Not quite UP." instead;
 	if noun is a direction, say "Looking in directions isn't supported in this game. Best to go where you want to look, or if a building is to the north, say X BUILDING instead." instead;
 	if noun is a room, try looking instead;
 	if noun is not a thing, say "Try examining less abstract things instead." instead;
@@ -10056,10 +10053,6 @@ book quest-items
 
 a quest-item is a kind of thing.
 
-after printing the name of a quest-item while taking inventory:
-	if read-list is true:
-		say " (for Brother Horbert)";
-
 after taking inventory:
 	if number of carried quest-items is 3,say "You should go back to the Cleric Circle now.";
 	if number of carried quest-items > 0, say "You're on your way to helping Brother Horbert.";
@@ -10073,7 +10066,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if]."
 
 after looking in Same Mesa:
 	if Gast is in Same Mesa:
@@ -10328,8 +10321,6 @@ understand "runed/book" and "runed book" as U NERD ENDUR REDUN.
 
 does the player mean doing something with U NERD ENDUR REDUN when U NERD ENDUR REDUN is touchable: it is likely.
 
-before listing contents while taking inventory: group quest-items together.
-
 chapter worst ad
 
 the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for RADWOST, and it's all in red, but it's too lousy to determine what RADWOST is about. Maybe if you point your settler at it, you can pick it up. You're not sure how best to approach it, with all these twisty roads. You're not sure if you need to, really."
@@ -10342,7 +10333,7 @@ check taking worst ad: say "You'd need to get closer. Which isn't easy." instead
 
 chapter MORF FORM
 
-the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "[one of]Oh no! Above, you see a MORF-FORM! Those things are scary! Just the threat of them coming near is often worse than them being near[or]The MORF-FORM hangs menacingly above. You can't just leave it there[stopping]."
+the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "The MORF-FORM hangs menacingly above. You can't just leave it there[stopping]."
 
 printed name of MORF FORM is "MORF-FORM"
 
@@ -10354,7 +10345,7 @@ a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of MORF
 
 chapter THE BEAN
 
-There is a vanishing thing called THE BEAN. "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with b...unspeakable fear.". description of THE BEAN is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". THE BEAN is fixed in place.
+There is vanishing scenery called THE BEAN. . description of THE BEAN is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.".
 
 check taking THE BEAN:	say "You can't move it. Maybe you can find a way to get inside or under--wait, no, those have been done here." instead;
 
@@ -10364,22 +10355,13 @@ a-text of THE BEAN is "RYRYYRR". b-text of THE BEAN is "RYRYYRR". parse-text of 
 
 check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 	if noun is down, say "Maybe there is something below, or something. But you can't prove it." instead;
-	say "The drama armada won't let you go anywhere with the bean present." instead;
+	say "You are transfixed by THE BEAN and how to get around it." instead;
 
-section a drama armada
+chapter A Bev O' Be Ova'
 
-a drama armada is plural-named boring scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way.". bore-text is "The drama armada is probably waiting for something, well, dramatic to happen.". bore-check of drama armada is bore-armada rule.
+A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.". bore-text of A Bev O Be Ova is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look.". bore-check of A Bev O Be Ova is the bore-bev rule.
 
-this is the bore-armada rule:
-	if the action is talkative, say "You could never win them over with a speech. They need to see action." instead;
-
-after doing something with drama armada:
-	set the pronoun it to drama armada;
-	continue the action;
-
-Include (-
-	has transparent animate
--) when defining drama armada.
+a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of A Bev O Be Ova is "-[sp]-[sp]-[sp]V[sp]E".
 
 book Cleric Circle
 
@@ -10392,7 +10374,7 @@ after looking in Cleric Circle:
 		pad-rec "No-Lag Logan";
 		moot Brother Horbert;
 		pad-del "reagents";
-		now MORF FORM is in Same Mesa;
+		move a bev o be ova to Same Mesa;
 		if worst ad is not moot:
 			poss-d;
 	continue the action;
@@ -10553,7 +10535,7 @@ to say list-o-toils-text:
 
 book Adobe Abode
 
-Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray[if pipe soot is in Adobe Abode], which could use some emptying[end if]. The only exit is out to the Mesa.";
+Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray, which [if pipe soot is in Adobe Abode]could use some emptying[else]you emptied, so there's probably not much left to do here[end if]. The only exit is out to the Mesa.";
 
 check exiting in Adobe Abode: try going outside instead;
 
@@ -10594,7 +10576,7 @@ check eating pipe soot: say "Well, it doesn't SMELL that bad, but...umm, no." in
 
 book Idle Deli
 
-Idle Deli is an innie room in Routes. "This restaurant has no customers, and that's no surprise, what with the seed pit in the back ruining the ambiance--not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa."
+Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless mushrooms are off-stage], but you already got the mushrooms from there[end if]."
 
 after looking in Idle Deli:
 	set the pronoun him to pat;

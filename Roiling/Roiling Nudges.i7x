@@ -211,29 +211,26 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "putcries"	663084093	Idle Deli	--	--	"The pictures aren't here, and they're not what you need[if mushrooms are not off-stage]ed[end if] to deal with, anyway."
 "carvings"	456456048	Idle Deli	--	--	"[no-carv]."
 "carving"	360182082	Idle Deli	--	--	"[no-carv]."
-"mushroom"	600841335	--	mushrooms	--	"[horb-magic of mushrooms]."
-"mushrooms"	697115301	--	mushrooms	--	"[horb-magic of mushrooms]."
 "adobe"	243794498	Adobe Abode	--	--	"[locname]." [ADOBE ABODE]
 "oscar"	277143749	Adobe Abode	--	--	"You don't need to do anything with Oscar[if pipe soot is in Adobe Abode and list o toils is examined], but maybe you can sneak the pipe soot away[else if pipe soot is not in Adobe Abode], and you already got the pipe soot[end if]."
-"ashtray"	448724974	--	ashtray	--	"[ash-soot]."
+"rude"	339264808	--	nuder	--	"That's not quite the book's whole title."
+"boko"	220057237	--	U NERD	--	"[horb-magic of U NERD]."
+"runedbook"	628229553	--	U NERD	--	"[horb-magic of U NERD]."
+"bev"	253389834	--	be ova	--	"[whole-bev]."
+"ova"	183705215	--	be ova	--	"[whole-bev]."
+"bean"	217320340	--	THE BEAN	--	"THE BEAN has too much gravitas to be just a bean."
+"along"	231861444	--	--	am-along rule	"You think of how to find a way to No-Lag Logan. Nothing yet."
+"ashtray"	448724974	--	ashtray	--	"[ash-soot]." [ADOBE ABODE]
 "trashy"	446537156	--	ashtray	--	"[ash-soot]."
 "pipe"	335730873	--	pipe soot	--	"[horb-magic of pipe soot]."
 "soot"	348089138	--	pipe soot	--	"[horb-magic of pipe soot]."
 "pipesoot"	683820011	--	pipe soot	--	"[horb-magic of pipe soot]."
-"armada"	176991499	--	drama armada	--	"[armad-unr]."
-"armad"	174803681	--	drama armada	--	"[armad-unr]."
-"bean"	217320340	--	THE BEAN	--	"THE BEAN has too much gravitas to be just a bean."
-"rude"	339264808	--	nuder	--	"That's not quite the book's whole title."
-"boko"	220057237	--	U NERD	--	"[horb-magic of U NERD]."
-"runedbook"	628229553	--	U NERD	--	"[horb-magic of U NERD]."
-"along"	231861444	--	--	am-along rule	"You think of how to find a way to No-Lag Logan."
-"darknses"	550735437	--	darkness	--	"[dark-been]."
+"mushroom"	600841335	--	mushrooms	--	"[horb-magic of mushrooms]."
+"mushrooms"	697115301	--	mushrooms	--	"[horb-magic of mushrooms]."
+"darknses"	550735437	--	darkness	--	"[dark-been]." [SHEOL HOLES]
 "dakr"	161473888	--	darkness	--	"[dark-been]."
 "marsh"	285143039	Harms Marsh	--	--	"[locname]." [HARMS MARSH]
 "harm"	188869073	Harms Marsh	--	--	"[locname]."
-"underpass"	684374025	Harms Marsh	--	--	"[locname-part]."
-"sun"	270287281	Harms Marsh	--	--	"[locname-part]."
-"spared"	414086744	Harms Marsh	--	--	"[locname-part]."
 "sheol"	389528790	Harms Marsh	--	--	"[sheol-c]."
 "hole"	293254824	Harms Marsh	--	--	"[sheol-c]."
 "pyrites"	661331953	--	pyrites	--	"[py-glow]."
@@ -1353,11 +1350,8 @@ to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother H
 
 to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
-to say armad-unr: say "They're too unruly and confused, and you probably need to get away from them, anyway"
-
 this is the am-along rule:
 	unless player is in Harms Marsh, the rule fails;
-	if MORF FORM is off-stage, the rule fails;
 	unless un-road is off-stage, the rule fails;
 	the rule succeeds;
 

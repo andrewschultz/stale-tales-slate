@@ -143,7 +143,7 @@ understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, 
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "bane" as a mistake ("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and armada is in Same Mesa.
+understand "bane" as a mistake ("You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and THE BEAN is in Same Mesa.
 
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when WOE BOW BELL is not in Same Mesa and mrlp is routes.
 
@@ -164,8 +164,6 @@ understand "preposition" and "prepositions" as a mistake ("Yes, but WHICH prepos
 understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
 
 understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
-
-understand "ramada" as a mistake ("This wouldn't comfort the armada enough. You probably need to deal with [if morf form is in Same Mesa]the MORF-FORM[else]THE BEAN[end if].") when player is in Same Mesa and armada is in Same Mesa.
 
 understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and Gast is in location of player.
 
@@ -438,6 +436,8 @@ understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in thi
 understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.") when keyboard is enclosed by location of player.
 
 understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is in location of player.
+
+understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
 understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is enclosed by location of player]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid is enclosed by location of player or disk is enclosed by location of player.
 
@@ -778,6 +778,7 @@ understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into 
 
 understand "increds" as a mistake ("You marvel at the possible power of the cinders and even see red at the thought of giving them up.") when player has cinders or location of cinders is location of player
 
+[def=deli-rye-otters]
 understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in Minded Midden and Ed Riley is in Minded Midden.
 
 understand "reedy" as a mistake ("No, the adverb.") when player is in Minded Midden and ed riley is in Minded Midden.

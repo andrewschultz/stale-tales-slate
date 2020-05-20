@@ -58,7 +58,7 @@ book routes
 
 table of routes anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-worst ad	worst ad	false	490212044	--	"towards"	"towards/toward"	pre-mesa-dir-flip rule	a rule	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the Same Mesa again. The ad is gone. [if armada is in Same Mesa]The armada murmurs--you were so close! Maybe you can find another way to get out[end if]You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."
+worst ad	worst ad	false	490212044	--	"towards"	"towards/toward"	pre-mesa-dir-flip rule	a rule	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the Same Mesa again. The ad is gone. You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."
 scripture picturers	scripture picturers	false	404002364	Cleric Circle	"inside"	"inside"	pre-mesa-dir-flip rule	--	"The structure resigns ingress."
 lairage regalia	lairage regalia	false	373417715	Adobe Abode	"across"	"across"	pre-mesa-dir-flip rule	post-across rule	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."
 adsorbing signboard	adsorbing signboard	false	283037761	Idle Deli	"past"	"past"	pre-mesa-dir-flip rule	post-past rule	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."
@@ -68,8 +68,9 @@ WOE BOW BELL	Rude 'N Nuder	false	382326203	--	"below"	"below"	--	post-below rule
 Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	post-under rule	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
-MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
-THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	post-thebean-beneath rule	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
+be ova	MORF FORM	false	329930229	--	"above"	"above"	--	--	"You look up. There is a giant MORF-FORM! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with the MORF-FORM."
+MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'"
+THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	post-thebean-beneath rule	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
 darkness	darkness	false	375930018	--	"until"	"until"	--	post-unlit-until rule	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The darkness is largely sucked into an odd item, which looks like an all noon gag. And while the marsh isn't exactly glowing now, but you can notice things better. The sheol holes in particular, though some will still ambush you. You can't find a road, but maybe an un-road. But which way to go? Compass directions are still out."
 sheol holes	sheol holes	false	356906602	--	"around"	"around"	pre-around-unroad rule	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water under Da Mist over there."
@@ -506,8 +507,9 @@ section routes auxiliary
 
 this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
 	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
-	if drama armada is in Same Mesa or THE BEAN is in Same Mesa, say "But... [if THE BEAN is in Same Mesa]THE BEAN[else]the MORF-FORM[end if]! What to do with it[if armada is in Same Mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+	if be ova is in Same Mesa, say "You look down at [be ova]. It seems to indicate there's a new, if not particularly glamorous, direction to consider." instead;
 	if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
+	if THE BEAN is in Same Mesa, say "THE BEAN seems to pull you back to it. It's hiding something." instead;
 	if Gast is in Same Mesa:
 		say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
 		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
@@ -556,11 +558,6 @@ this is the post-under rule:
 
 this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
-
-this is the post-thebean-beneath rule:
-	if drama armada is off-stage:
-		now drama armada is in Same Mesa;
-		set the pronoun them to drama armada;
 
 this is the post-unlit-until rule:
 	now noon gag is in Harms Marsh;
@@ -2172,7 +2169,7 @@ doublewarn is a truth state that varies.
 
 volume done rejects
 
-table of done rejects [TDR - this can use a lot more entries]
+table of done rejects [TDR - while I think I've covered the entries in here, there will always be a chance I missed some.]
 specdone	spectalk
 lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either." [START manse]
 painting	"The painting really goes better with the study than the giant pin."
@@ -2202,6 +2199,7 @@ Rude 'N Nuder	"You don't want the WOE BOW BELL to come back."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
+THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
 un-road	"You know where the un-road is, but how to navigate it?"
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
@@ -2417,7 +2415,7 @@ seed pit	"[one of]Pat's not going to let you have the mushrooms you probably nee
 mushrooms	"The mushrooms are part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]."
 cravings carvings	"The cravings carvings clue how to get into the seed pit."
 MORF FORM	"[one of]The MORF-FORM may be what was needed.[plus][or]It needs to change physically. What it is, and where it is.[plus][or]MORF is spelled wrong on purpose.[plus][or]It's threatening, where it will be. How can you not worry about where it will be?[plus][or]Make it FROM.[minus][cycling]"	--	"FROM"
-drama armada	"They're just there to watch, or help you once you figure where to look, by THE BEAN."
+be ova	"[one of][be ova] doesn't signal the end. Maybe the end of the beginning, or the beginning of the end.[or]The letters do sesm a bit forced, but there are five. You need to look somewhere instead of at [be ova].[or]You need to look ABOVE.[cycling]"	--	"ABOVE"
 THE BEAN	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since THE BEAN landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH THE BEAN.[minus][cycling]"	--	"BENEATH"
 sheol holes	"They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK!"
 darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
