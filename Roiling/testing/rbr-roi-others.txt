@@ -85,23 +85,25 @@ Well, you don't technically need plurals for this, but you're on the right track
 #nudge for harmonica
 >harmonica
 The harmonicas seem stuck together, so you probably have to deal with both of them.
-#nudge for drinksstand
->drinksstand
-Nothing happens. Maybe just examine it.
-#nudge for drinks
->drinks
-Nothing happens. Maybe just examine it.
+#nudge for circuit
+>circuti
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
+#nudge for circuits
+>circuist
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
+#nudge for rtu
+>rtu
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
+#nudge for ruts
+>rust
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 
->x stand
-
+>x ruts circuits
 
 @nud
-#nudge for stand
->stadn
-Nothing happens. You found enough inside it, anyway.
-#nudge for abandoned
->abandoned
-Nothing happens. You found enough inside it, anyway.
+#renudge for ruts
+>rust
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them turned enough up.
 #nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
@@ -213,27 +215,6 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for cola
 >calo
 Nothing happens. Perhaps it's the whole item that's important.
-#nudge for videotape
->videotape
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for collection
->collection
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for videotapes
->videotapes
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for video
->video
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for videos
->videos
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for taep
->tape
-No, it's not just any videotape collection. It's those awful titles.
-#nudge for tapes
->tapes
-No, it's not just any videotape collection. It's those awful titles.
 #nudge for blurbs
 >bulbrs
 Nothing happens. Perhaps it's the whole item that's important.
@@ -266,6 +247,12 @@ The magenta rope and other items you uncovered briefly seem as one.
 #spechelp for omen prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
+#nudge for omen
+>omne
+Not just omen, or prism. It's an omen prism.
+#nudge for prism
+>prims
+Not just omen, or prism. It's an omen prism.
 
 @nud
 #readables for omen prism
@@ -527,7 +514,32 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for watermelon
 >etawelrmno
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
+#nudge for liepen
+>liepne
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for lieapp
+>lieapp
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for penapp
+>penapp
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for lie
+>lei
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for pen
+>pne
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for app
+>app
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for piep
+>piep
+Nothing happens. Perhaps it's the whole item that's important.
+#nudge for panel
+>panle
+Nothing happens. Perhaps it's the whole item that's important.
 #nudge for eog
 >eog
 There's no way to chop the foliage down, but you don't need to.
@@ -778,9 +790,6 @@ You can't focus on just one of the lemons, but you don't need to.
 Hm, there must be a better melon than that, but how to ask Len, now.
 >abstract lemons to clearing
 ###########above is melon/lemon nudge trickiness
-#nudge for lits
->lits
-The list doesn't look odd, but maybe some the prices will make you exclaim something
 #nudge for price
 >priec
 Hm, no, the pattern of prices
@@ -856,9 +865,6 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 @nud
-#dupnudge for among
->ogman
-WRONG
 #spechelp for lemons
 >lemosn
 Len frowns at the lemons.
@@ -915,10 +921,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#dupnudge for lits
->lits
-You already messed with the list
-#dupnudge for price
+#renudge for price
 >priec
 No, you already took care of stuff
 #done rejects for prices precis
@@ -951,9 +954,9 @@ Scape Space
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for banana
->abnana
-The A shines for a split-second.
+#nudge for drawing
+>drawign
+The drawing can't be changed. It's stuck to the wall as a warning.
 #nudge for droll
 >dllor
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
@@ -963,23 +966,15 @@ It's counterfeit enough as-is. You probably need to just find someone who'd actu
 #nudge for guava
 >guaav
 Just return the fruit to Curtis. No need for another change.
-#nudge for pugnacious
->pugnaciosu
-You may want to listen to what the plant has to say, or what it makes you say.
 #nudge for singed
 >deigsn
 The design is sort of glommed onto the coins. So you should figure what to do, there.
 #nudge for designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
-
-@nud
 #readables for orange
 >read orange
 It's stamped with the word ENGARO in red.
-#nudge for plant
->pantl
-You may want to listen to what the plant has to say, or what it makes you say.
 #nudge for red
 >red
 first-name basis
@@ -1026,6 +1021,9 @@ You seem to read the inapt paint backwards for a second.
 #scannotes for inapt paint
 >scan inapt paint
 Whatever this is, well, the vowels don't have much variability. Well, any.
+#nudge for brrhub
+>brrhbu
+It's a burr hub, not the burr hub. A small but important distinction.
 
 @sli
 #slider test for banana
@@ -1122,6 +1120,9 @@ Gates Stage
 The gate needs to be unlocked some other way.
 #nudge for gate
 >geta
+The gate needs to be unlocked some other way.
+#nudge for sagest
+>sagets
 The gate needs to be unlocked some other way.
 #nudge for roping
 >rpigon

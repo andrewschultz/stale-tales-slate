@@ -22,6 +22,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >in
 
 @nud
+#nudge for midden
+>middne
+You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Minded Midden]
 #nudge for citadel
 >citadle
 The whole Citadel? No, you couldn't do much with it at full strength. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
@@ -31,9 +34,6 @@ Trying to change the current region you're in all at once would be risky, or use
 #nudge for storet
 >storte
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for bleary
->bleayr
-?? needs a better reject
 #nudge for bare
 >baer
 Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
@@ -498,7 +498,7 @@ The eels have done enough.
 >s
 
 @nud
-#nudge for ly
+#renudge for ly
 >yl
 Yup, that's the idea here in Otters, even with your powers back.
 
@@ -526,12 +526,6 @@ It's what the medals say that makes them special.
 #nudge for barn
 >banr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for rev
->rve
-The whole picture.
-#nudge for howe
->hoew
-The whole picture.
 >n
 
 @!min
@@ -580,6 +574,14 @@ Score in a scenario: 10 out of 32 total points in the current region, Otters. Lo
 #slider test for however
 >ewohrve
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#nudge for vow
+>vwo
+The whole vow here.
+#nudge for here
+>heer
+The whole vow here.
 
 @!min
 >however
@@ -1152,6 +1154,11 @@ Merle and Elmer stumble off away from you for a bit.
 #spechelp for merle
 >asied
 Merle and Elmer look askance at each other for a bit.
+#nudge for idea
+>idae
+You might be able to bug both of them, not just one.
+
+@!min
 >honestly
 Your score has just gone up by one point
 DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
@@ -1168,6 +1175,9 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
 
 @nud
+#renudge for idea
+>idae
+You already bugged them both.
 #done rejects for parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
@@ -1269,9 +1279,15 @@ WRONG (decrease)
 >misses
 
 @nud
+#nudge for archon
+>rancoh
+It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
 #nudge for inclosure
 >inclosuer
-You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for enclosure
+>enclosuer
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for tripod
 >tripdo
 You can't just muck around with one part of Elvira's army. You need a way to find allies.

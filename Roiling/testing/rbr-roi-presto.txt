@@ -130,12 +130,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #done rejects for n e recs censer
 >screne
 You don't want to change the censer back, but maybe you can change it to something more practical than treasure.
-#nudge for onyx
->onxy
-You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be.
-#nudge for onyxcenser
->onyxcensre
-You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter.
 
 >e
 
@@ -151,6 +145,12 @@ Char Arch
 #nudge for char
 >chra
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for cretin
+>cretni
+You won't change the cistern, but maybe you can track down the dart.
+#nudge for cistern
+>cistenr
+You won't change the cistern, but maybe you can track down the dart.
 #nudge for mad
 >mda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
@@ -170,33 +170,11 @@ Here in the Char Arch, you don't need to mess with the scenery. Especially scene
 >gaps
 You try, but fail, to make something out of nothing.
 #nudge for gpa
->gap
+>pag
 You try, but fail, to make something out of nothing.
-#nudge for spumed
->spumde
-The spumed tar does nothing. Maybe focus on something else.
-#nudge for tar
->tra
-The spumed tar does nothing. Maybe focus on something else.
-#nudge for dumpster
->dumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
-#nudge for adumpster
->adumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
->x dumpster
->dumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
->adumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, but maybe you could reach for the dart.
-#nudge for tsar star
->decoratiev
-You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
+>x cistern
 
 @nud
-#nudge for stump
->stupm
-The stump doesn't move, but the star seems to rattle a bit.
 #spechelp for dart
 >drta
 Some 4-letter word or other will get the dart.
@@ -225,6 +203,9 @@ The yak generates an apathy that doesn't allow this. Yet.
 #spechelp for tsar star
 >rast
 The tsar star seems to wiggle a bit, but not enough to pull it out.
+#nudge for tar
+>tra
+The tars remain heterogeneous. And very sticky. And the same size.
 
 >rats
 Your score has just gone up by one point
@@ -232,27 +213,16 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
+#renudge for cistern
+>cistenr
+You got the dart from the cistern. No need to futz further.
 #done rejects for tsar star
 No need for additional arts.
 #done rejects for dart
 >drta
 The dart's just fine as-is.
-#renudge for stump
->stupm
-The stump just sits there, stumpy
-#renudge for decorative
->decoratiev
-The star's snazzy enough as-is.
-#renudge for adumpster
->adumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
->dumpstre
-Not even you can make that icky stuff in the dumpster worthwhile, and besides, you got the dart anyway.
 
 @nud
-#renudge for spumed
-The spumed tar does nothing
-!Maybe focus
 
 >n
 
@@ -356,6 +326,9 @@ The sport ports seem even shinier for a second.
 #readables for sport ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
+#nudge for port
+>potr
+But there is more than one port.
 
 @!min
 >prost
@@ -363,6 +336,9 @@ Your score has just gone up by one point
 REGION MIN INCREASED BY 1
 
 @nud
+#renudge for port
+>potr
+You already observed all the ports. No need to try to single one out.
 #done rejects for sport ports
 >prots
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
@@ -469,6 +445,36 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 #nudge for dreidl
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
+
+@nud
+#separate semi-forcing stuff
+>abstract tom avlez to runway
+#nudge for avlez
+>avlze
+No, his full name is the clue, here.
+#nudge for tom
+>tmo
+No, his full name is the clue, here.
+>undo
+>undo
+>undo
+>abstract zo mavelt to runway
+#nudge for mavelt
+>mavetl
+No, his full name is the clue, here.
+>undo
+>undo
+>abstract lev tzoma to runway
+#nudge for lev
+>lve
+No, his full name is the clue, here.
+#nudge for tzoma
+>tzoam
+No, his full name is the clue, here.
+>undo
+>undo
+>undo
+
 
 @nud
 #spechelp for lamb
@@ -709,6 +715,9 @@ The hawt thaw crackles slightly.
 #scannotes for hawt thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
+#nudge for chart
+>chatr
+But there is more than one chart to twiddle.
 
 @sli
 #slider test for what
@@ -834,9 +843,6 @@ Dat was a good dust-up
 #notmax
 Your score has just gone up by one point
 Dat was a good dust-up
-#nudge for shack
->shakc
-You'll need to enter the shack to take care of things here.
 #renudge for entry
 >entyr
 The Entry doesn't need disabling, since you're the only person that can enter.
@@ -848,6 +854,9 @@ The starch charts flutter about aimlessly. They seem harmless, but then, it coul
 #scannotes for starch charts
 >scan starch charts
 Starch is calorically and cosonantally (if that's a word) heavy. This must help.
+#nudge for summit
+>summti
+The mutism summit is meant to be stable. You'll need to go north to do what you need, in peace and quiet.
 
 @max
 >trasch
@@ -882,12 +891,12 @@ Good idea, but tough to program without a keyboard.
 
 @nud
 >s
+#renudge for summit
+>summti
+The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
 #renudge for saps
 >sasp
 You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way back north, here.
-#renudge for shack
->shakc
-You'll need to re-enter the shack to take care of things here.
 >n
 #nudge for boredyak
 >boredyka
@@ -899,12 +908,6 @@ WRONG
 #nudge for dongle
 >dongel
 It's built to be sturdy. You don't want to mess with it.
-#nudge for scratch
->scrathc
-It's what's on the scratch paper that is important.
-#nudge for paper
->papre
-It's what's on the scratch paper that is important.
 #nudge for pile
 >piel
 It's not just any pile--it's a pile of coal.
@@ -923,14 +926,8 @@ The catechism would be more likely to scramble YOU up. It'll be there when you n
 #nudge for bkoo
 >bkoo
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
-#nudge for hard
->hadr
-That computer probably holds important information--you just need to extract it right, by trying other things.
 #nudge for drive
 >driev
-That computer probably holds important information--you just need to extract it right, by trying other things.
-#nudge for harddrive
->harddriev
 That computer probably holds important information--you just need to extract it right, by trying other things.
 #nudge for shakc
 >shack
@@ -953,12 +950,6 @@ The labs slab remains sturdy. Technology 2, Wordplay Magic 0.
 #nudge for dead
 >deda
 There must be a more eco-friendly way to reincarnate the flea.
-#nudge for clock
->clokc
-You can't make much out of a clock, but clock sap, maybe.
-#nudge for puddle
->puddel
-You can't make much out of a clock, but clock sap, maybe.
 #nudge for rebuff
 >rebuff
 The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise.
@@ -1036,6 +1027,18 @@ Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is c
 #scannotes for drive a
 >scan drive a
 It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble.
+#nudge for clack
+>clakc
+You need to deal with the full Clack Ops Locs Pack.
+#nudge for ops
+>osp
+You need to deal with the full Clack Ops Locs Pack.
+#nudge for locs
+>losc
+You need to deal with the full Clack Ops Locs Pack.
+#nudge for pack
+>pakc
+You need to deal with the full Clack Ops Locs Pack.
 
 @sli
 #slider test for skid
@@ -1146,6 +1149,12 @@ The escaroles seem slightly meatier.
 #scannotes for n e recs censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
+#nudge for recs
+>resc
+It's the censer that's important, not the brand name.
+#nudge for rec
+>rce
+It's the censer that's important, not the brand name.
 
 >screen
 Your score has just gone up by one point
@@ -1249,6 +1258,9 @@ Good idea, but first, you probably want to put the keyboard on the slab.
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
 #nudge for tbakey
 >tbakye
+Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
+#nudge for yke
+>yek
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
 >put keyboard on slab
@@ -1367,12 +1379,6 @@ After compiling, you often need to make small tweaks, but not like that.
 #renudge for sleep
 >slepe
 Your mind is no longer a tired jumble.
-#nudge for compiled
->compilde
-The code won't BUDGE.
-#nudge for code
->coed
-The code won't BUDGE.
 #spechelp for trim socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
@@ -1422,6 +1428,9 @@ The ROM sticks can probably make your computer go faster. Why fiddle further?
 #renudge for tbakey
 >tbakye
 You already did enough with the TAB key.
+#renudge for yke
+>yek
+You already did enough with the TAB key.
 #done rejects for tba key
 >bta
 No, the TAB key is what it should be.
@@ -1448,6 +1457,15 @@ The process of debugging is going to take a while. You will need some sort of en
 #scannotes for bub dude egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
+#nudge for bub
+>bbu
+Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+#nudge for dude
+>dued
+Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+#nudge for geg
+>egg
+Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
 
 >pour cola in mug
 >debug
@@ -1460,9 +1478,6 @@ You had to consider all sorts of combinations while debugging, but things will b
 #renudge for algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
-#renudge for scratch
->scrathc
-It's what's on the scratch paper that was important.
 
 @nud
 #scannotes for usb

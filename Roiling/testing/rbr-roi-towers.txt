@@ -43,27 +43,18 @@ Rodney's voice would certainly seem droney by itself, but he segues into a march
 #nudge for trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#nudge for warrior
->warriro
-One at a time. Each has his own weakness.
-#nudge for warriors
->warriosr
-One at a time. Each has his own weakness.
+#nudge for picaro
+>picaor
+One at a time, by name. Each has his own weakness.
+#nudge for picaros
+>picarso
+One at a time, by name. Each has his own weakness.
 #nudge for storew
 >storwe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for torew
 >torwe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#nudge for badlands
->badlansd
-The badlands can't be changed on their own. They must be trekked through.
-#nudge for asd
->ads
-The badlands can't be changed on their own. They must be trekked through.
-#nudge for bland
->bladn
-The badlands can't be changed on their own. They must be trekked through.
 
 @nud
 #spechelp for geno
@@ -74,7 +65,7 @@ Geno looks around, as if he's about to bolt.
 Edwin hiccups.
 #spechelp for blake
 >blaek
-Blake looks a bit sadder.
+Blake looks a bit unhappier.
 #spechelp for ernest
 >ernets
 Ernest seizes up.
@@ -96,9 +87,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
-#renudge for warriors
->warriosr
-You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+#renudge for picaros
+>picarso
+You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time, by name
 
 >score
 Score in a scenario: 3 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 50.
@@ -118,9 +109,9 @@ Your score has just gone up by one point
 Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
 
 @nud
-#renudge for warriors
->warriosr
-There's only one warrior left, and his name is Rodney.
+#renudge for picaros
+>picarso
+There's only one picaro left, and his name is Rodney.
 
 >yonder
 Your score has just gone up by one point
@@ -206,15 +197,24 @@ You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
 #renudge for lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
-#renudge for lake
->laek
-You're beyond the lake now.
-#renudge for lake
->laek
-Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 #nudge for toaster
 >toastre
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
+#nudge for blub
+>blbu
+Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new.
+#nudge for wildest
+>wildets
+The Wildest Wilteds can't be changed on their own. They must be trekked through.
+#nudge for wilted
+>wiltde
+The Wildest Wilteds can't be changed on their own. They must be trekked through.
+#nudge for htu
+>htu
+The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
+#nudge for south
+>souht
+This game almost never requires you to mess with cardinal directions.
 
 >score
 @!minh,mini
@@ -304,9 +304,6 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >xray butlers
 
 @nud
-#renudge for yurts
->yustr
-The copse and the scope are both fine as-is.
 #nudge for brownie
 >brownei
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
@@ -477,9 +474,6 @@ You wish you could file Mel Fish away and put him in the past.
 #mistake test for hms
 >hms
 No ship comes to take Mel away. It's pretty landlocked here.
-#nudge for unblest
->unblets
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake. You might also want
 #nudge for casn
 >cans
 Concentrate on the Nerd-Aid. In the dandier arid den.
@@ -515,6 +509,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #nudge for baldest
 >baldets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for twes
+>twse
+You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future.
+#nudge for twe
+>tew
+You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future.
 #nudge for old
 >odl
 No, all the old ice.
@@ -768,6 +768,18 @@ Elsa listens to what you're saying for a minute, but--no, you didn't quite get i
 #spechelp for mel fish
 >mel fihs
 Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
+#nudge for smh
+>shm
+No, you need to deal with all of Mel.
+#nudge for life
+>lief
+No, you need to deal with all of Mel.
+#nudge for mel
+>mle
+No, you need to deal with all of Mel.
+#nudge for fshi
+>fsih
+No, you need to deal with all of Mel.
 
 @sli
 #slider test for released
@@ -879,15 +891,18 @@ The raves saver has limited functionality, alas.
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
 
 @nud
-#nudge for denim
->denmi
-You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently.
 #spechelp for mended mini denim
 >denmi
-The mended mini denim bends and warps, but you hear no tearing noise.
+You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently.
 #scannotes for mended mini denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
+#nudge for mended
+>mendde
+You look at the denim and it's probably the denim you want to deal with, not its properties.
+#nudge for mini
+>miin
+You look at the denim and it's probably the denim you want to deal with, not its properties.
 
 @!minh,mini
 >mined
@@ -968,6 +983,18 @@ The arid den seems less imposing and impressive.
 #scannotes for dandier arid den
 >scan dandier arid den
 Well. That's two things you can't figure to start, but maybe you can, if you think about it.
+#nudge for leveraged
+>leveragde
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for leverage
+>leveraeg
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for screech
+>screehc
+You can't change the screech creches. Well, not until you defeat Elvira.
+#nudge for creech
+>creehc
+You can't change the screech creches. Well, not until you defeat Elvira.
 
 @!minh,mini
 >drained
@@ -1096,11 +1123,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >orsuedt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@max
->rousted
-Ah! That's it! WRONG
-
 @nud
+#nudge for detour
+>detoru
+This may technically be a detour, but the area name is detours. So, yeah.
 #spechelp for bogus-detours
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
@@ -1352,12 +1378,15 @@ Neither the singular nor the plural version of a pastry can change it. They're f
 #nudge for strati
 >strait
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for trait
+>trati
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 #nudge for could
 >coudl
-You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form.
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 #nudge for coulds
 >coulsd
-You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form.
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 >n
 >w
 #nudge for salted
@@ -1469,6 +1498,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #nudge for waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
+>undo
+#renudge for lake
+>laek
+Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.
 >undo
 #nudge for spray
 >sprya
@@ -1619,8 +1652,6 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
 >enter boat
 
 @nud
-#renudge for bland
-You're beyond the badlands now.
 #nudge for mislit
 >mislti
 It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
@@ -1660,6 +1691,9 @@ The serpent calms down for a split-second, again.
 #scannotes for pester'n serpent
 >scan pester'n serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
+#renudge for lake
+>laek
+You're beyond the lake now.
 
 @!minh,mini
 >thisalt

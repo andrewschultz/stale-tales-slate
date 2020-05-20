@@ -72,6 +72,21 @@ The trolls make you feel like you're the jerk here and maybe you can spend some 
 >undo
 
 @nud
+#nudge for pti
+>pti
+You can't pick out which pit to do something to. Maybe there's an action to apply to all of them.
+#nudge for vets
+>vest
+Focus on the trolls, not their clothes.
+#nudge for vet
+>vte
+Focus on the trolls, not their clothes.
+#nudge for pesty
+>pesyt
+The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
+#nudge for type
+>tyep
+The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 >inset
 #done rejects for tines
 >tinse
@@ -82,6 +97,10 @@ You destroyed the stein, and that's enough.
 #done rejects for tips pits
 >spti
 You can't and don't want to do anything else to the tips pits.
+#renudge for pti
+>pti
+You already dealt with the tips pits.
+>undo
 >undo
 >undo
 >scrape
@@ -171,18 +190,6 @@ Dealing with just one troll would cause the rest to call you a bully and beat yo
 #nudge for recap
 >recpa
 Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You need to deal with them all.
-#nudge for patrons
->patrosn
-They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
-#nudge for patron
->patrno
-They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
-#nudge for customer
->customre
-They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
-#nudge for customers
->customesr
-They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
 #nudge for tune
 >tuen
 Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
@@ -192,12 +199,6 @@ You suspect it's what's in the jar that's important.
 #nudge for spill
 >splil
 You seem to be fumbling what to do with the pills.
-#nudge for tumbler
->tumblre
-You can't pick out which tumbler to do something to. But you're annoyed by their tips, which make you see red.
-#nudge for stumbler
->stumblre
-Someone looks at you funny. "What are you muttering?" Maybe it's the writing on the tumblers, instead.
 #nudge for jukebox
 >jukebxo
 You can't change the jukebox. The bad music has seeped into it. But maybe you can put it out of commission.
@@ -215,7 +216,7 @@ You can't change the bad music selection. You already got a temporary escape, an
 >undo
 >undo
 >undo
-#dupnudge for jukebox
+#renudge for jukebox
 >jukebxo
 You can't change the jukebox. The bad music has seeped into it. It's already out of commission for now.
 
@@ -268,7 +269,12 @@ Olde Lode
 #nudge for lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-@nud
+#nudge for braes
+>brase
+The baser braes can't be changed. There is enough to do in the Olde Lode.
+#nudge for brae
+>brea
+The baser braes can't be changed. There is enough to do in the Olde Lode.
 #spechelp for clam
 >caml
 The clam still seems enraged.
@@ -355,10 +361,13 @@ Nothing doing. It is, after all, a RED herring. Ba dum bum.
 [sculpt].
 #nudge for river
 >rivre
-[river-no].
+That would cause serious injury to people and property, even if it could work.
 #nudge for rivera
 >rivear
-[river-no].
+That would cause serious injury to people and property, even if it could work.
+#nudge for saccade
+>saccaed
+That would cause serious injury to people and property, even if it could work.
 #nudge for oar
 >ora
 If you looked at just one oar, the raft would do no better than go in circles.
@@ -584,7 +593,7 @@ You would upset countless people named Lena or Neal. [LEAN LANE]
 #nudge for reward
 >rewadr
 [if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if].
-#nudge for dent
+#spechelp for dent
 >detn
 That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
 
@@ -622,7 +631,7 @@ Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
 @nud
-#renudge for dent
+#nudge for dent
 >detn
 You already fixed the dent. It's gone.
 
@@ -879,12 +888,18 @@ Your score has just gone up by one point
 
 >in
 
-Shadier Airshed
+Shuttle Hutlets
 
 @nud
-#nudge for airshed
+#nudge for hutlet
+>hutlte
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for hutlets
+>hutlest
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for shadier
 >airshde
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [SHADIER AIRSHED]
+The Shadier Airshed is immovable and unchangeable.
 #nudge for heap
 >hepa
 [if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]
@@ -897,10 +912,9 @@ That didn't make anything go boom.
 #nudge for drop
 >drpo
 You're juggling what to do with the prod, here.
-#nudge for lance
+#spechelp for lance
 >lanec
-The lance is still itself[if lance is cleaned]--and you probably did enough cleaning it[else if player has wipes]--you can't figure how to apply the wipes[else]--but how to make it neater, now[end if].
-#nudge for reachs
+The lance is still itself--but how to make it neater, now.
 
 @nud
 #spechelp for tubs
@@ -973,7 +987,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 >lcane
 Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
-#nudge for lance
+#respechelp for lance
 >clena
 The lance is still itself--you can't figure how to apply the wipes.
 >abstract wipes to lean lane
@@ -996,7 +1010,7 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 You figure the heaps are at a point where you can't change them for the better.
 #done rejects for lance
 >lanec
-The lance is still itself--and you probably did enough cleaning it."
+The lance is still itself--and you probably did enough cleaning it.
 It's clean enough. You can't, like, make it sharper or anything.
 
 >score
@@ -1013,18 +1027,24 @@ You need to dig to some purpose, like uncovering the haunter--and not just dig. 
 You need an organized way to see what's under the ground with your rigged digger.
 
 >w
-Achers' Arches
+Sclerous Closures
 
 @nud
+#nudge for closure
+>closuer
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for closures
+>closurse
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for hedron
 >hedrno
 You'll probably need to destroy the hedron from within.
 #nudge for arch
 >arhc
-[ache-plur].
+There's not just one arch, there's two. And they've made more than one person ache.
 #nudge for acher
 >achre
-[ache-plur].
+There's not just one arch, there's two. And they've made more than one person ache.
 #nudge for sardine
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
@@ -1050,6 +1070,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
+
+@nud
+#renudge for arch
+>arhc
+You already dealt with both arches--no need to deal with one.
+#renudge for acher
+>achre
+You already dealt with both arches--no need to deal with one.
 
 >warp
 Your score has just gone up by one point
@@ -1361,15 +1389,20 @@ There must be a simple way to take down the ant. You haven't quite got it right 
 #spechelp for bogus-lamps
 >psaml
 The plasm lamps flicker slightly.
-#nudge for psalm
->alpms
-You don't need to riff on any location names to win the game, unless there's not that much else to see. [DOUREST DETOURS]
 #nudge for ant
 >atn
 That's close. Something brutal and direct.
+#nudge for plam
+>plma
+Maybe riff on ALL the lamps. But only for fun.
 
 ==!1
-tan
+>psalm
+by one point
+#renudge for plam
+>plma
+You did enough.
+>tan
 #notana 'nudge for ant'
 Your score has just gone up by one point
 

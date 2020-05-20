@@ -172,6 +172,12 @@ You can't make the sidewalk crumble any more, and you probably don't want to
 #nudge for askew
 >weska
 You can't make the sidewalk crumble any more, and you probably don't want to
+#nudge for reastier
+>reastire
+The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
+#nudge for artery
+>arteyr
+The reastier arteris cannot be changed. They cannot even change you positively if you follow them.
 
 @nud
 #nudge for sob
@@ -278,6 +284,9 @@ The bee's description isn't important. It's how you see the bee that matters.
 #nudge for bee
 >bee
 But it's not just any bee. It's a WRONG
+#nudge for snore
+>snoer
+Hmm. Nothing at all. It must be *a* snore.
 
 @max
 >believe
@@ -342,18 +351,9 @@ That's not something you can say, do or see here.
 #nudge for nadir
 >nadri
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for pictuer
->picture
-It's not just any old picture. It's of a sad pier.
 #nudge for spider
 >spidre
 The diapers, the sad pier--the spider only fits in as *a* spider.
-#nudge for sda
->sad
-It's a sad pier.
-#nudge for pire
->pier
-It's a sad pier.
 
 @mina,minb
 Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
@@ -364,6 +364,12 @@ Score in a scenario: 8 out of 24 total points in the current region, Troves. Low
 #spechelp for diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+#nudge for ires
+>irse
+It's an ires PAD.
+#nudge for pad
+>pda
+It's an IRES pad.
 
 @sli
 #slider test for despair
@@ -384,6 +390,9 @@ Don't twist yourself into knots to/from REAL despair.
 It's the song name--I'd Cede.
 #nudge for eddie
 >eddei
+It's the song name--I'd Cede.
+#nudge for cede
+>ceed
 It's the song name--I'd Cede.
 
 @nud
@@ -629,6 +638,12 @@ The bottle of Pernod seems to rattle and spin slightly.
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
+#nudge for card
+>cadr
+The card's writing is more important.
+#nudge for cad
+>cda
+The card's writing is more important.
 
 @sli
 #slider test for ponder
@@ -678,27 +693,30 @@ If it was just one divorce, you could blow it off. Or there would not be enough 
 #nudge for magazine
 >magazien
 It's not just any magazine. It's DIVORCES!
-#nudge for vanity
->vaniyt
-You really don't need to rearrange the vanity.
-#nudge for lamps
->lamsp
-You need that light for late-night work sessions.
-#nudge for lamp
->lapm
-You already did something with a lamp, and you don't need to do anything with the plasm lamps.
 #nudge for shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
 #nudge for fern
 >fenr
 The fern is mentally, if not physically, unmalleable.
+#nudge for wagon
+>wagno
+You really don't need to rearrange the wonga wagon.
+#nudge for cark
+>cakr
+The cark rack is built to be sturdy. No need to change it.
 #nudge for sked
 >skde
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 #nudge for likeness
 >likeness
 It's whom the likeness is that matters--Sister Tressi or Blamer Balmer, here.
+#nudge for phasor
+>phasro
+You need all that light for late-night work sessions.
+#nudge for pharo
+>phaor
+You need all that light for late-night work sessions.
 
 @nud
 #spechelp for salt
@@ -728,6 +746,10 @@ The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 >x mr beal
 #readables for blamer mr beal
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
+#nudge for beal
+>bela
+It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
+>undp
 >undo
 >undo
 
@@ -753,6 +775,9 @@ Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous sett
 #scannotes for trance nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
+#nudge for siter
+>sitre
+All the siters.
 
 @sli
 #slider test for ramble
@@ -780,6 +805,12 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
+#nudge for marble
+>marbel
+You already stopped thinking too much about Marble Blamer Balmer. If you try too hard to keep ignoring Marble Blamer Balmer, you'll start thinking about Marble Blamer Balmer, again.
+#nudge for siters
+>sitesr
+The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
 #spechelp for divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.

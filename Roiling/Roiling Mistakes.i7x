@@ -433,7 +433,9 @@ chapter Hacks' Shack
 
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
 
-understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.") when keyboard is enclosed by location of player.
+understand "bat" as a mistake ("You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.") when tba key is touchable.
+
+understand "clock sap" and "cock slap" and "slap cock" as a mistake ("The locs aren't that gangsta, and neither are you. And that's a good thing.") when locs pack is touchable.
 
 understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is in location of player.
 
@@ -932,8 +934,6 @@ understand "mango" as a mistake ("That's the fruit you need to find. You see red
 understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in Clangier Clearing and mango is off-stage.
 
 understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when player is in Clangier Clearing.
-
-understand "silt" and "slit" as a mistake ("Dirty way to slash prices.") when player is in Clangier Clearing.
 
 understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when player is in Clangier Clearing.
 

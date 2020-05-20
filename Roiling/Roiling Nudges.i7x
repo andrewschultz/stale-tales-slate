@@ -152,8 +152,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "mesa"	290343046	Same Mesa	--	--	"[locname]." [SAME MESA]
 "orcas"	277143749	Same Mesa	--	--	"[if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
 "towards"	490212044	--	--	got-towards rule	"You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it."
-"uhh"	179670405	Same Mesa	--	--	"[name-worry]."
-"tut"	311325843	Same Mesa	--	--	"[name-worry]."
+"uhh"	179670405	Same Mesa	--	--	"[name-worry of adobe abode]."
+"tut"	311325843	Same Mesa	--	--	"[name-worry of adobe abode]."
 "scripture"	748407896	Same Mesa	--	--	"[picturer-change]."
 "cripture"	652133930	Same Mesa	--	--	"[picturer-change]."
 "picture"	566810127	Same Mesa	--	--	"[picturer-change]."
@@ -178,10 +178,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stripe"	538972701	Same Mesa	--	--	"[not-stripe]."
 "poisonstripe"	979318134	Same Mesa	--	--	"[not-stripe]."
 "pat"	186763795	Same Mesa	--	--	"[if Idle Deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
-"resto"	486866473	Same Mesa	--	--	"[name-worry]."
-"woe"	310093459	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
-"bow"	200706255	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
-"bell"	253852692	--	WOE BOW BELL	--	"The whole WOE BOW BELL."
+"resto"	486866473	Same Mesa	--	--	"[name-worry of idle deli]."
+"woe"	310093459	--	WOE BOW BELL	--	"[whole-woe]."
+"bow"	200706255	--	WOE BOW BELL	--	"[whole-woe]."
+"bell"	253852692	--	WOE BOW BELL	--	"[whole-woe]."
 "cleric"	349947767	Cleric Circle	--	--	"[locname]." [CLERIC CIRCLE]
 "list"	298190669	Cleric Circle	--	--	"[follow-the-list]."
 "toils"	372543246	Cleric Circle	--	--	"[follow-the-list]."
@@ -339,6 +339,7 @@ table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
 "grye"	368088866	Grey Gyre	--	--	"[locname]." [start Grey Gyre]
+"hump"	287929218	--	--	hump-gone rule	"You search for the hump you overcame. You can't find it now. But it's not relevant."
 "entry"	507506690	--	zany meter	--	"[mz-chg]."
 "mazeentry"	824545388	--	zany meter	--	"[mz-chg]."
 "zany"	316424196	--	zany meter	--	"[mz-chg]."
@@ -391,14 +392,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rec"	232135497	--	censer	--	"[full-cens]."
 "marines"	489567203	Marines Seminar Remains	--	--	"[locname]." [start Marines Seminar Remains]
 "marine"	393293237	Marines Seminar Remains	--	--	"[locname]."
-"port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]No, all the ports[else]You already observed all the ports. No need to try to single one out[end if]."
+"port"	344252357	Marines Seminar Remains	--	--	"[if sport ports are reflexive]But there is more than one port[else]You already observed all the ports. No need to try to single one out[end if]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
-"drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
-"bingo"	239271538	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
 "fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "ssap"	276201709	Saps' Pass	--	--	"[locname]." [Saps' Pass]
@@ -414,7 +413,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "summit"	477632943	--	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks' Shack]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	--	harpings phrasing	--	"[harphr]."
 "harping"	352759935	--	harpings phrasing	--	"[harphr]."
-"chart"	246909523	--	starch charts	--	"No, the chartS."
+"chart"	246909523	--	starch charts	--	"But there is more than one chart to twiddle."
 "shakc"	207682846	Hacks' Shack	--	--	"[locname]." [start hacks shack]
 "hack"	111408880	Hacks' Shack	--	--	"[locname]."
 "algorithm"	497738055	Hacks' Shack	--	--	"[no-txtbk]."
@@ -460,11 +459,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stick"	316315593	--	rom sticks	--	"[romstix]."
 "bub"	141943617	--	BUB DUDE EGG	--	"[budge-note]."
 "dude"	274970094	--	BUB DUDE EGG	--	"[budge-note]."
-"egg"	193005513	--	BUB DUDE EGG	--	"[budge-note]."
+"geg"	193005513	--	BUB DUDE EGG	--	"[budge-note]."
 "dongle"	378508824	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "boredyak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
-"trimsocks"	636341092	--	rom sticks	--	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
 "storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
 
 table of oyster nudges
@@ -476,12 +474,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "vets"	434354913	Posh Hops Shop	--	--	"[tro-clo]."
 "vet"	338080947	Posh Hops Shop	--	--	"[tro-clo]."
 "recap"	315789274	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
-"pesty"	531015304	Posh Hops Shop	--	--	"[no-pesty]"
-"type"	434741338	Posh Hops Shop	--	--	"[no-pesty]"
+"pesty"	531015304	Posh Hops Shop	--	--	"[no-pesty]."
+"type"	434741338	Posh Hops Shop	--	--	"[no-pesty]."
 "tune"	404929442	--	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
 "jar"	136472146	--	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
-"pit"	229568823	--	tips pits	--	"You [if tips pits are reflexed]already dealt with the tips pits[else]can't pick out which pit to do something to[end if]."
+"pti"	229568823	--	tips pits	--	"You [if tips pits are reflexed]already dealt with the tips pits[else]can't pick out which pit to do something to. Maybe there's an action to apply to all of them[end if]."
 "jukebox"	540345182	--	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are in Posh Hops Shop]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
 "remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
@@ -500,9 +498,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sculpture"	777010893	Disease Seaside	--	--	"[sculpt]."
 "cult"	281035249	Disease Seaside	--	--	"[sculpt]."
 "super"	495975644	Disease Seaside	--	--	"[sculpt]."
-"river"	450611381	Disease Seaside	--	--	"[river-no]."
-"rivera"	452799199	Disease Seaside	--	--	"[river-no]."
-"saccade"	287495970	Disease Seaside	--	--	"[river-no]."
+"river"	450611381	Disease Seaside	--	--	"[saccade-no]."
+"rivera"	452799199	Disease Seaside	--	--	"[saccade-no]."
+"saccade"	287495970	Disease Seaside	--	--	"[saccade-no]."
 "oar"	161864198	Disease Seaside	--	--	"If you looked at just one oar, the raft would do no better than go in Cleric Circle."
 "boat"	198069318	Disease Seaside	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
 "interlocking"	776745519	--	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
@@ -528,6 +526,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "eek"	308545396	--	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
 "lean"	252715274	Lean Lane	--	--	"You would upset countless people named Lena or Neal." [LEAN LANE]
 "reward"	429605395	--	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
+"dent"	320852724	--	dent	--	"You already fixed the dent. It's gone."
 "bubble"	341982470	--	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	--	bubble wrap	--	"It's just wrap, really."
 "tuna"	279311151	--	tuna	--	"She is a bit fussy, but she is more than okay as she is."
@@ -553,13 +552,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
 "hutlet"	530228090	Shuttle Hutlets	--	--	"[locname]." [SHUTTLE HUTLETS]
 "hutlets"	626502056	Shuttle Hutlets	--	--	"[locname]."
+"shadier"	414895930	Shuttle Hutlets	--	--	"The Shadier Airshed is immovable and unchangeable."
 "heap"	248742185	--	heaps	--	"[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]"
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
 "drop"	262171428	--	prod	--	"You're juggling what to do with the prod, here."
 "closure"	561681686	Sclerous Closures	--	--	"[locname]." [SCLEROUS CLOSURES]
 "closures"	657955652	Sclerous Closures	--	--	"[locname]."
-"reachs"	367879580	Achers' Arches	--	--	"[if Achers' Chaser Arches is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]." [?? shouldn't this be taken care of by the table of anagrams?]
 "hedron"	414701385	Achers' Arches	--	--	"You'll probably need to destroy the hedron from within."
 "arch"	143799505	Achers' Arches	--	--	"[ache-plur]."
 "acher"	271605614	Achers' Arches	--	--	"[ache-plur]."
@@ -577,8 +576,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "craal"	162518863	Rascal Craals	--	--	"[locname]."
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
-"plasm"	297816735	Plasm Lamps	--	--	"You already managed to PSALM." [PLASM LAMPS]
-"plam"	201542769	Plasm Lamps	--	--	"[if bogus-lamps are reflexed]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
+"plam"	201542769	Plasm Lamps	--	--	"[if bogus-lamps are reflexed]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]." [PLASM LAMPS]
 "ant"	174205344	Plasm Lamps	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [TENFOLD TEFLON'D DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
@@ -587,7 +585,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stupid"	451977685	--	yapper	--	"[its-msg]."
 "papre"	378249648	--	yapper	--	"[its-msg]."
 "necklace"	471465731	--	yapper	--	"[its-msg]."
-"trample"	517782699	--	Templar Ramplet	--	"That's not how to charge across the Templar Ramplet."
 "intercom"	587573599	--	intercom	--	"[i-com]."
 "not"	246370103	--	intercom	--	"Changing the intercom to a ton-crime intercom would be the opposite of what you want to do."
 "crime"	341203496	--	intercom	--	"[i-com]." [end-y]
@@ -610,7 +607,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fire"	284637654	--	Topside Deposit	--	"[ftf]."
 "torn"	331693906	--	Topside Deposit	--	"[ftf]."
 "frontier"	616331560	--	Topside Deposit	--	"[ftf]."
-"hut"	245498124	Topside Deposit	--	--	"[no-hut]."
+"htu"	245498124	Topside Deposit	--	--	"[no-hut]."
 "south"	416124667	Topside Deposit	--	--	"[no-hut]."
 "flowerpot"	734674551	--	welt-proof flowerpot	--	"[flow-fine]."
 "flower"	475745997	--	welt-proof flowerpot	--	"[flow-fine]."
@@ -965,7 +962,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "harmonica"	398315407	--	harmonicas	--	"The harmonicas seem stuck together, so you probably have to deal with both of them."
 "circuit"	421536490	--	ruts circuits	--	"[ru-ci]."
 "circuits"	517810456	--	ruts circuits	--	"[ru-ci]."
-"rut"	293539628	--	ruts circuits	--	"[ru-ci]."
+"rtu"	293539628	--	ruts circuits	--	"[ru-ci]."
 "ruts"	389813594	--	ruts circuits	--	"[ru-ci]."
 "eerie"	513734976	--	eerie blurbs	--	"[whole-item]."
 "blurbs"	377355225	--	eerie blurbs	--	"[whole-item]."
@@ -1019,6 +1016,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sickle"	394825523	--	barber sickle	--	"[whole-item]."
 "buried"	402676559	--	buried raft	--	"[whole-item]."
 "raft"	217136535	--	buried raft	--	"[whole-item]."
+"liepen"	504792370	--	pipe panel	--	"[whole-item]."
+"lieapp"	391732530	--	pipe panel	--	"[whole-item]."
+"penapp"	443299312	--	pipe panel	--	"[whole-item]."
+"lie"	226612794	--	pipe panel	--	"[whole-item]."
+"pen"	278179576	--	pipe panel	--	"[whole-item]."
+"app"	165119736	--	pipe panel	--	"[whole-item]."
+"piep"	335730873	--	pipe panel	--	"[whole-item]."
+"panel"	334181233	--	pipe panel	--	"[whole-item]."
 "drupelet"	705460733	--	pryer bars	--	"[no-pryer]."
 "drupelets"	801734699	--	pryer bars	--	"[no-pryer]"
 "pryerbar"	608209452	--	pryer bars	--	"No, it's [i]both[r] pryer bars."
@@ -1036,9 +1041,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "len"	250527456	Clangier Clearing	--	--	"[len-part]."
 "craig"	184109754	Clangier Clearing	--	--	"[len-part]."
 "price"	358594302	Clangier Clearing	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
-"among"	242122758	--	--	need-mango rule	"Not quite the right way."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
-"lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to."
+"lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to." [this needs to be here if you got LEMON but not MELONS]
 "nameless"	637144468	Clangier Clearing	--	--	"You can't do anything other than listen to the nameless salesmen, and you don't need to move them out of the way."
 "superstore"	982842117	Clangier Clearing	--	--	"It's an eyesore, but unlike the Curst Palace, people are still in it--so destroying it would mean big problems. Best to concentrate on the open-air market."
 "auction"	417662159	--	caution	--	"[papay]."
@@ -1051,7 +1055,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."
 "tera"	318427748	--	Tera Darter	--	"[1st-name]."
-"brrhub"	349873522	--	a brr hub	--	"[hub-no]."
+"brrhub"	349873522	--	a brr hub	--	"[hub-a]."
 "lots"	327550400	--	so-great storage	--	"[slot-no]."
 "storage"	521653993	--	so-great	--	"You might break what is in the storage."
 "great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
@@ -1166,7 +1170,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "southwets"	851249533	--	--	degen-true rule	"[diag-dir-rej]."
 "down"	272223947	--	--	degen-true rule	"This game doesn't usually require you to mess with directions you can go."
 "norht"	368976205	--	--	degen-true rule	"[dir-rej]."
-"south"	416124667	--	--	degen-true rule	"[dir-rej]."
+"souht"	416124667	--	--	degen-true rule	"[dir-rej]."
 "eats"	329377911	--	--	degen-true rule	"[dir-rej]."
 "ewts"	435124866	--	--	degen-true rule	"[dir-rej]."
 "pedanto"	478859078	--	--	degen-true rule	"You don't need to change the pedanto-notepad, except maybe by filling it up with ideas[if-no-pad]."
@@ -1314,7 +1318,9 @@ this is the got-towards rule:
 	if worst ad is moot, the rule succeeds;
 	the rule fails;
 
-to say name-worry: say "Perhaps it's better to focus on the proper names instead. Simpler, too";
+to say name-worry of (rm - a room): say "[if rm is visited]You did well enough[else]Perhaps it's better and simpler[end if] to focus on the proper names instead"
+
+to say whole-woe: say "It seems best to deal with the whole WOE BOW BELL"
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
@@ -1347,6 +1353,8 @@ to say pit-full: say "[if mushrooms are off-stage]The whole seed pit[else]You al
 to say no-carv: say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
 
 to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
+
+to say whole-bev: say "The whole beverage name must be where it's at"
 
 to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
@@ -1427,6 +1435,10 @@ this is the divorces-gone rule:
 
 section presto auxiliary
 
+this is the hump-gone rule:
+	if player is in Grey Gyre and hump is moot, the rule succeeds;
+	the rule fails;
+
 to say mz-chg: say "It's the maze you need to change, not the zany meter"
 
 this is the can-see-volt-maze rule:
@@ -1466,12 +1478,6 @@ this is the Rand-sad rule:
 	the rule fails;
 
 to say boing-clue: say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing-go bin inside[else]The popgun is just fine[end if]"
-
-this is the gun-broken rule:
-	if boing go bin is reflexed, the rule fails;
-	if Marines Seminar Remains is unvisited, the rule fails;
-	if player does not have popgun, the rule fails;
-	the rule succeeds;
 
 this is the path-pass rule:
 	if player is in Phat Path or player is in Saps' Pass, the rule succeeds;
@@ -1535,7 +1541,7 @@ section oyster auxiliary
 
 to say tro-clo: say "Focus on the trolls, not their clothes"
 
-to say no-pesty: say "The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
+to say no-pesty: say "The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society"
 
 this is the clam-gone rule:
 	if player is in Olde Lode and clam is not in Olde Lode, the rule succeeds;
@@ -1547,11 +1553,11 @@ to say raft-is: say "No, best concentrate on what the raft is"
 
 to say sculpt: say "That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for"
 
-to say river-no: say "That would cause serious injury to people and property, even if it could work";
+to say saccade-no: say "That would cause serious injury to people and property, even if it could work"
 
 to say dest-esc: say "Destroying the boat would be a bad idea. You need to escape it"
 
-to say no-cray: say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out";
+to say no-cray: say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out"
 
 this is the now-shore rule:
 	if player is in Anger Range and haunter is moot, the rule succeeds;
@@ -1590,7 +1596,7 @@ to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
-to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
+to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 
@@ -1640,13 +1646,13 @@ to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight y
 
 to say no-creche: say "You can't change the screech creches. Well, not until you defeat Elvira"
 
-to say all-of-mel: say "No, you need to deal with all of Mel."
+to say all-of-mel: say "No, you need to deal with all of Mel"
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
 to say gradient-rej: say "This is a weird place, being at the crossroads, but better to [if number of touchable guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are touchable]get rid of the weeds[else if number of touchable guardians > 0]tackle a guardian[else if denim is touchable]see if you can get rid of the denim[end if]";
 
-to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties."
+to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties"
 
 to say grail-name: say "His full name, Liam Garn"
 
@@ -1672,7 +1678,7 @@ this is the agnostic-can-learn rule:
 	if player is in Obscurest Subsector and agnostic is in Obscurest Subsector and ag-atten is true, the rule succeeds;
 	the rule fails.
 
-to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
+to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own"
 
 this is the agnostic-male rule:
 	if agnostic is touchable and agnostic is male, the rule succeeds;
@@ -1789,7 +1795,7 @@ to say border-arbor: say "Bad idea to ruin such life-giving scenery[if compass i
 
 to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"
 
-to say ru-ci: say "Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up"
+to say ru-ci: say "Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them [if ruts circuits are examined]turned enough up[else]might turn something up[end if]"
 
 to say whole-item: say "Nothing happens. Perhaps it's the whole item that's important"
 
@@ -1807,10 +1813,6 @@ to say rapt-glare: say "The rapt figure almost seems to glare at you--or maybe i
 
 to say len-part: say "Len Craig doesn't change, and even if you messed with his full name, he wouldn't"
 
-this is the need-mango rule:
-	if player is in Clangier Clearing and mango is off-stage, the rule succeeds;
-	the rule fails.
-
 this is the lemnomel rule:
 	if lemons are touchable and melon is not touchable, the rule succeeds;
 	the rule fails;
@@ -1821,7 +1823,7 @@ to say just-c: say "Just return the fruit to Curtis. No need for another change"
 
 to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be, especially since you [if storage box is in Scape Space]want to get [else]got[end if] that storage box";
 
-to say hub-no: say "Maybe poking at the brr hub might give more ideas";
+to say hub-a: say "It's a burr hub, not the burr hub. A small but important distinction"
 
 to say slot-no: say "[if lost slot is off-stage]Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear[else]After all that work getting it to appear, you don't want to make the lost slot vanish[end if]"
 

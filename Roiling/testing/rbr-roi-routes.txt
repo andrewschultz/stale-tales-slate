@@ -52,9 +52,6 @@ The poison stripe is too incorporeal to do bend to your will.
 #nudge for poisonstripe
 >posoniestirp
 The poison stripe is too incorporeal to do bend to your will.
-#nudge for restaurant
->restauratn
-Perhaps it's better to focus on the proper names instead. Simpler, too.
 #nudge for die
 >edi
 Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined
@@ -72,12 +69,6 @@ That's not how to get into Pat'S, you reflect.
 Hm, it's Oscar'S.
 >ascors
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
-#nudge for dingy
->dinyg
-Perhaps it's better to focus on the proper names instead. Simpler, too
-#nudge for dwelling
->dwellign
-Perhaps it's better to focus on the proper names instead. Simpler, too
 #nudge for ings
 >sgin
 It's what's on the board you need to fix.
@@ -136,6 +127,9 @@ REGION MIN INCREASED BY 1, 1 OVERALL.
 Score in a scenario: 1 out of 21 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
 
 @nud
+#nudge for towards
+>towarsd
+You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 #spechelp for scripture picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
@@ -237,6 +231,17 @@ You can't change stuff like that by brute force. But you don't need to.
 >x toils
 Precise recipes
 
+@nud
+#nudge for boko
+Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
+#nudge for runedbook
+>obokduren
+Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
+Brother Horbert will work his magic with that.
+#nudge for pipesoot
+>pipesoto
+Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
+
 >out
 
 @nud
@@ -246,6 +251,15 @@ The words themselves do nothing. You found the way in.
 #renudge for sin
 >ins
 The words themselves do nothing. You found the way in.
+#nudge for uhh
+>uhh
+Perhaps it's better and simpler to focus on the proper names instead.
+#nudge for tut
+>ttu
+Perhaps it's better and simpler to focus on the proper names instead.
+#nudge for resto
+>resot
+Perhaps it's better and simpler to focus on the proper names instead.
 
 @nud
 #spechelp for adsorbing signboard
@@ -323,9 +337,6 @@ Brother Horbert will work his magic with that.
 #nudge for mushrooms
 >umshrooms
 Brother Horbert will work his magic with that.
-#dupnudge for putcries
->picturse
-The pictures aren't here, and they're not what you needed to deal with, anyway.
 #nudge for reagents
 >reagenst
 Brother Horbert will do his magic on the reagents at the right time.
@@ -339,9 +350,18 @@ You don't need to do anything with Pat, especially now you got the mushrooms.
 >out
 
 @nud
+#renudge for resto
+>resot
+You did well enough to focus on the proper names instead.
 #spechelp for lairage regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
+#nudge for sos
+>sso
+You already figured how to get into Oscar's. There's nothing else to do.
+#nudge for arc
+>acr
+You already figured how to get into Oscar's. There's nothing else to do
 
 >across
 Your score has just gone up by one point
@@ -389,6 +409,15 @@ Brother Horbert will work his magic with that.
 
 >out
 
+@nud
+#renudge for uhh
+>uhh
+You did well enough to focus on the proper names instead.
+#renudge for tut
+>ttu
+You did well enough to focus on the proper names instead.
+#renudge for sos
+You need to figure out what the whole SOS ARC in the lairage regalia can become.
 #done rejects for lairage regalia
 >acrsso
 WRONG
@@ -399,18 +428,15 @@ WRONG
 WRONG
 
 @nud
-#dupnudge for orcas
+#renudge for orcas
 >ocras
 No, you found the way in, with the extra s.
-#dupnudge for lairage
+#renudge for lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to.
 #nudge for bench
 >enchb
 The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
-#nudge for grubby
->byburg
-Perhaps it's better to focus on the proper names instead. Simpler, too.
 
 @nud
 #spechelp for sit a nag
@@ -471,12 +497,9 @@ You got on the bench right. Time to start ducking.
 You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
 
 @nud
-#dupnudge for stride
->stried
+#renudge for tirade
+>atired
 You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal
-#nudge for elbows
->eblows
-Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?
 
 @nud
 #redone rejects for sit a nag
@@ -492,6 +515,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for woe bow bell
 >belwo
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
+#nudge for woe
+>weo
+It seems best to deal with the whole WOE BOW BELL.
+#nudge for bow
+>bwo
+It seems best to deal with the whole WOE BOW BELL.
+#nudge for bell
+>bell
+It seems best to deal with the whole WOE BOW BELL.
 
 >below
 Your score has just gone up by one point
@@ -506,12 +538,6 @@ You don't need to avoid the WOE BOW BELL any more.
 >igtan
 The giant is too old and set in its ways. You may just need to listen to him from one more angle.
 WRONG what about at the start and also gender stuff
-#nudge for giantold
->igtanold
-The giant is too old and set in its ways. You may just need to listen to him from one more angle.
-#nudge for grouchy
->groucyh
-The giant is too old and set in its ways. You may just need to listen to him from one more angle.
 
 @sli
 #slider test for under
@@ -536,15 +562,16 @@ You don't need to do anything fancy with the runed book.
 #nudge for rude
 >urde
 That's not quite the book's whole title.
-#dupnudge for elbows
->eblows
-You already avoided both elbows when you avoided one.
-#nudge for boko
+#renudge for boko
 >obok
 Brother Horbert will work his magic with that.
-#nudge for runedbook
+#renudge for runedbook
 >obokduren
 Brother Horbert will work his magic with that.
+#renudge for pipesoot
+>pipesoto
+Brother Horbert will work his magic with that.
+
 
 ##no-gal needs a line break ??
 
@@ -555,6 +582,21 @@ REGION MAX DECREASED BY 1, 1 OVERALL
 DEBUG INFO: Taking away a max point.
 
 >out
+
+@nud
+#nudge for bev
+>bve
+The whole beverage name must be where it's at.
+#nudge for ova
+>oav
+The whole beverage name must be where it's at.
+#scannotes for be ova
+>scan be ova
+That's a lot of questions for such a small bottle, but it can't be too hard.
+#readables for be ova
+
+>above
+by one point
 
 @nud
 #scannotes for morf form
@@ -578,15 +620,12 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#done rejects for the bean
+>ofmr
+The Morf-Form has, uh, morphed enough. Deal with THE BEAN.
 #nudge for bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
-#nudge for armada
->armaad
-They're too unruly and confused, and you probably need to get away from them, anyway.
-#nudge for armad
->rmaad
-They're too unruly and confused, and you probably need to get away from them, anyway.
 #spechelp for the bean
 >beneaht
 The bean rolls back and forth a bit.
@@ -603,15 +642,6 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for harm
 >hamr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for underpass
->underpass
-You should never need to riff on part of a location name.
-#nudge for sun
->snu
-You should never need to riff on part of a location name.
-#nudge for spared
->sparde
-You should never need to riff on part of a location name.
 #nudge for darknses
 >darknses
 The darkness has always been there and always will be. You need to find a way to say it was dark.

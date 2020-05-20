@@ -2441,6 +2441,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
+Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -4365,6 +4366,7 @@ tropes poster	true	true	false	false	"I guess it's a trope that something with a 
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
 rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
+be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
@@ -13644,14 +13646,14 @@ this is the bore-boats rule:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
 
-Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. A frat raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up.". bore-check of Saccade Cascade is bore-cascade rule.
+Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. It's a real arrive-a-river, you could say, though that wouldn't help things.[paragraph break]You probably need to cross it, but you can't expect a groupie pirogue to show up. [if player is on frat raft]Your frat raft bobs gently in the Cascade[else]A frat raft is also docked by[end if].". bore-check of Saccade Cascade is bore-cascade rule.
 
 this is the bore-cascade rule:
 	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
-	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides." instead;
+	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll appropriately avoid, or use, those boats." instead;
 
 check going in Disease Seaside:
-	if noun is north, say "You can't cross Saccade Cascade on your own. One of the boats would hit you." instead;
+	if noun is north, say "You can't cross Saccade Cascade on your own. One of the boats would hit you. Or, if you went underwater, you'd fear strident tridents." instead;
 	say "You're not sure how to get back to the Posh Hops Shop, and you're not sure it's worth it. The boats seem hard to get by, and you're not amphibious enough to speed through the deeps." instead;
 
 section frat raft
@@ -18629,7 +18631,7 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelts it could be[end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be[end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out."
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -21235,7 +21237,6 @@ towers	"REPAIR TOASTER?"
 --	"Saying COINS RULE or RULE, SCION in the Rancho Archon Anchor?"
 others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
-others	"SILT or SLIT around the list in the clearing?"
 --	"[i][bracket]NOTE: [super-rude].[r][close bracket]"	presto-or-others rule
 presto	"TARD while getting the dart in Presto/Char Arch?"
 others	"RETARD at the Tarred Trader, [greedy-person], in Others's Scape Space?"
