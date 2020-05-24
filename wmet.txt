@@ -70,7 +70,7 @@ aspire/ponder
 deserve/last/resist/recant
 Troves (max)
 hate/care/gape
-observe/spot/believe/reason/recall
+stay/observe/spot/believe/reason/recall
 despair/decide
 glare/master/bolster/deal
 desire

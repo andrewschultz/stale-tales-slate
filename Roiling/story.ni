@@ -2441,7 +2441,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
-Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
+A Bev O Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -4366,7 +4366,7 @@ tropes poster	true	true	false	false	"I guess it's a trope that something with a 
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
 rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
-be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
+a bev o be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
@@ -4458,6 +4458,7 @@ whiners	false	false	false	false	"The settler then garbles and changes. The whine
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
+pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
 auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]Just one possibility[else]Just three possibilities[end if]."
 prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
@@ -19928,7 +19929,7 @@ the pipe panel lie pen app is scenery in Filed Field. "It details how to make a 
 
 check taking pipe panel lie pen app: say "You don't need any instructions for something you can't build. Perhaps they can become something more nourishing." instead;
 
-a-text of pipe panel lie pen app is "RYRYYRRRY". b-text of pipe panel lie pen app is "PGRGYRRRY". parse-text of pipe panel lie pen app is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of pipe panel lie pen app is "RYRYYRRRY". b-text of pipe panel lie pen app is "?GR?YRRRY". parse-text of pipe panel lie pen app is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 the pineapple is a fruit.
 

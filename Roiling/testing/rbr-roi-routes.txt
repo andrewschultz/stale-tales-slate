@@ -590,10 +590,12 @@ The whole beverage name must be where it's at.
 #nudge for ova
 >oav
 The whole beverage name must be where it's at.
-#scannotes for be ova
+#scannotes for a bev o be ova
 >scan be ova
 That's a lot of questions for such a small bottle, but it can't be too hard.
-#readables for be ova
+#readables for a bev o be ova
+>read be ova
+The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
 
 >above
 by one point

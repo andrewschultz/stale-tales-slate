@@ -172,6 +172,11 @@ There are also a few red clues, but AGAINST comes out of all this.
 ?How do I decipher what to do with Rude 'N Nuder?
 The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.
 So, U--E(NR) has D in slot 3, and thus U(NR)DE(NR). URDEN is not a word, but UNDER is.
+#logic for a bev o be ova
+?What's this? A Bev O' Be Ova?
+It has three question marks, but it is not bad at all.
+Note that V must be in slot 4, and the vowel in slot 5 can't be A or O. That leaves E.
+With E in slot 5, slots 2 and 3 can't be E, so that leaves -BOVE, or ABOVE.
 #logic for morf form
 ?What's with the morf form giving question marks?
 The ?RY? notation shows where the vowel is: O is in the third slot. That's a start.
@@ -620,6 +625,14 @@ The sonic coins need to be converted to something else. YRY?? leaves two consona
 So one of I or N is the right consonant in slot 4: N. One of C or S is the right consonant in slot 5.
 And also, the vowel in slot 3 can't be I, so it is O. That leaves I as the vowel in slot 1.
 I(CS)ON(CS) remains, where ICONS wins over ISONC.
+>>FILED FIELD
+# logic for pipe panel lie pen app
+?What does the pipe panel lie pen app become?
+The clue is ?GR?YRRRY, which gives you the I in slot 2 right away.
+But we can also note slot 4 must be a vowel so the number of consonants and vowels match up. -I-E-----.
+Furthermore, four slots cnnot have P's. That leaves only three that can, for all three P's.
+PI-E-PP--, and you should be able to guess, but just in case ... slot 5 can't be E, so it is A, making slot 9 E.
+PI-EAPP-E now allows for two possibilities, but PINEAPPLE is the real word of the two.
 >>CLANGIER CLEARING
 # logic for melon
 ?Why does something like the melon give question marks?

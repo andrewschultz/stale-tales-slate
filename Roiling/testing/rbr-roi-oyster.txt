@@ -596,6 +596,9 @@ You would upset countless people named Lena or Neal. [LEAN LANE]
 #spechelp for dent
 >detn
 That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
+#spechelp for tea
+>tae
+Really, stop playing with your food. You know what to do.
 
 @nud
 #nudge for tuna
@@ -614,15 +617,6 @@ Quit playing with your food, already.
 >eat
 #notana 'nudge for eat'
 Your score has just gone up by one point
-
-@nud
-#spechelp for dent
->detn
-That's not quite the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
-#spechelp for tea
->tae
-Really, stop playing with your food. You know what to do.
-
 
 ==!1
 >tend
@@ -991,7 +985,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >clena
 The lance is still itself--you can't figure how to apply the wipes.
 >abstract wipes to lean lane
-#spechelp for lance
+#respechelp for lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 >clean

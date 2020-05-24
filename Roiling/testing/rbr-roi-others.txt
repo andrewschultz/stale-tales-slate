@@ -698,6 +698,9 @@ The rapt figure frowns as if it's eaten something sour.
 #spechelp for pipe panel lie pen app
 >pineappel
 The pipe panel lie pen app rattles slightly.
+#scannotes for pipe panel lie pen app
+>scan pipe panel lie pen app
+Hmm. There are a lot of P's. Maybe that helps.
 #spechelp for barriers west
 >strawberrise
 You feel the barriers west pulling towards you.
