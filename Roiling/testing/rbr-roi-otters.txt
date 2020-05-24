@@ -22,6 +22,23 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >in
 
 @nud
+#mistake test for id mend/mend id
+>id mend
+It's not that easy. Find what to mend.
+>mend id
+It's not that easy. Find what to mend.
+#mistake test for dim den
+>dim den
+You remain outside in (relative) light.
+#mistake test for dim end/end dim
+>dim end
+Okay, if you say so...
+NOTE: this death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.
+>undo
+>end dim
+Okay, if you say so...
+NOTE: this death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.
+>undo
 #nudge for midden
 >middne
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [start Minded Midden]
@@ -119,7 +136,7 @@ Hm, you only managed to deal with adverbs so far, and steward doesn't have an L 
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
 #nudge for rye
 >rey
-[The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #nudge for lied
 >lide
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
@@ -131,6 +148,9 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #spechelp for ed riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
+#mistake test for deli-rye-otters
+>lied
+You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.
 
 @sli
 #slider test for reedily
@@ -139,7 +159,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for rescind
 >csrendi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
 
 >reedily
 Your score has just gone up by one point
@@ -451,12 +470,18 @@ Loop Pool
 >ebeusac
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for else
->lees
+>lese
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#nudge for pool
+#mistake test for lees
+>lees
+The eels would be insulted to be referred to as dregs.
+#mistake test for polo
 >polo
+No time for games! You don't have your powers back, anyway. It's what's IN the water you want to change.
+#nudge for pool
+>ploo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for allot
 >allto
@@ -1258,7 +1283,7 @@ The whistle's already in tune.
 You already got a boost from the medals.
 
 >w
-Reclusion Inclosure
+Rancho Archon Anchor
 WTF FTW
 
 @min
@@ -1279,6 +1304,9 @@ WRONG (decrease)
 >misses
 
 @nud
+#mistake test for charon
+>charon
+The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.
 #nudge for archon
 >rancoh
 It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.

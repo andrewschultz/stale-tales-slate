@@ -12,6 +12,8 @@ volume main anagram tables
 
 [pres.py checks to make sure all pre- rules appear in some RBR files.]
 
+[hch.py does help check / anagrammatic guesses. hch.py i q 2]
+
 book Ordeal Reload
 
 table of Ordeal Reload anagrams
@@ -2774,7 +2776,7 @@ buried raft	"[one of]Philip Larkin would know what to do with the buried raft ri
 barriers west	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
-pipe panel lie pen app	"[one of]If you read it, you'll notice a semi-obscure odd science fact as a clue, as well as a silly cultural reference. But it is probably easier to follow the anagrams.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE. The references are to how pineapple gelatin took forever to make and to SpongeBob SquarePants.[minus][cycling]"
+pipe panel lie pen app	"[one of]If you read the lie pen app, you'll notice a semi-obscure odd science fact as a clue, as well as a silly cultural reference. But it is probably easier to follow the anagrams. [plus][or]You need only worry about PIPE PANEL. [plus][or]PINEAPPLE. The science reference is to how pineapple gelatin once seemed chemically impossible, and the cultural one is to SpongeBob SquarePants, who, as his theme song goes, lives in a pineapple. [minus][cycling]"
 pryer bars	"[one of]If you know what drupelets are, the pryer bars may be a bit easier. If not, consider this edutainment.[plus][or]The bars are a bit reddish, which clues the fruit's color.[plus][or]The pryer bars can become a raspberry.[minus][cycling]"
 drupelets	"They clue you as to what the pryer bars should be. If not, then maybe this game will actually help you with your vocabulary! (I didn't know what they were before I Googled.)"
 jagged spoon	"The spoon's weird shape clues you as to what the rapt figure should be."

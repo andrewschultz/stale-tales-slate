@@ -72,6 +72,12 @@ The trolls make you feel like you're the jerk here and maybe you can spend some 
 >undo
 
 @nud
+#mistake test for phos
+>phos
+The bar fails to change into an ethnic restaurant.
+#mistake test for spyte
+>spyte
+The pesty types probably spell it that way, but I'm not letting YOU do so.
 #nudge for pti
 >pti
 You can't pick out which pit to do something to. Maybe there's an action to apply to all of them.
@@ -208,6 +214,7 @@ You can't change the bad music selection. But you can neutralize it--the jukebox
 #nudge for unset
 >unste
 The tunes grow slightly less annoying, for a moment.
+#not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
 >unset
 >unste
 You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
@@ -235,10 +242,12 @@ WRONG
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
+#not a mistake
 >unset
 !Your score has just gone up by one point
 >undo
 >undo
+#not a mistake
 >unset
 Your score has just gone up by one point
 >remap
@@ -266,6 +275,29 @@ by one point
 Olde Lode
 
 @nud
+#mistake test for bare/bares
+>bare
+A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
+Really, what did you expect?
+>bares
+A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
+Really, what did you expect?
+#mistake test for bear/bears
+>bear
+You don't need any predators chasing you.
+>bears
+You don't need any predators chasing you.
+#mistake test for dole
+>dole
+Alas, no unemployment check, pineapple or former Republican presidential candidate arrives.
+#mistake test for saber/sabre
+>saber
+A weapon won't do much good here. You need action!
+>sabre
+A weapon won't do much good here. You need action!
+#mistake test for el doodle
+>el doodle
+That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.
 #nudge for lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -389,6 +421,7 @@ The oars have no gas, or whatever they might run on
 
 @nud
 >enter raft
+#not a mistake
 >fart
 Your score has just gone up by one point
 #altpath
@@ -412,6 +445,7 @@ WRONG
 >fart
 Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.
 >enter raft
+#not a mistake
 >fart
 #pre-boats-boast rule
 >boast
@@ -419,6 +453,7 @@ You're a bit too winded to make a really good boast after your recent exertions,
 >undo
 >undo
 
+#not a mistake
 >boast
 Your score has just gone up by one point
 
@@ -437,7 +472,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >boat
 Destroying the boat would be a bad idea. You need to escape it.
 #nudge for boats
->boast
+>basto
 Destroying the boat would be a bad idea. You need to escape it.
 #nudge for crays
 >crasy
@@ -473,6 +508,11 @@ You probably can't help the trout until they're off his case, but they wouldn't 
 You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'
 You haven't found or discovered a jewel, yet.
 
+@nud
+#mistake test for fart
+>fart
+Gag! Ass-gas.
+
 @sli
 #slider test for spike
 >pskei
@@ -499,7 +539,7 @@ It's probably not just any scrawl. What the scrawl says may be important.
 [all-fish].
 #nudge for haunter
 >hauntre
-[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]The haunter needs to be dealt with otherwise.[end if]
+You start randomly digging, but you probably aren't doing it quite right.
 #spechelp for carps
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
@@ -592,7 +632,7 @@ Lean Lane
 You would upset countless people named Lena or Neal. [LEAN LANE]
 #nudge for reward
 >rewadr
-[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if].
+Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
 #spechelp for dent
 >detn
 That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
@@ -605,7 +645,7 @@ Really, stop playing with your food. You know what to do.
 >tuan
 She is a bit fussy, but she is more than okay as she is.
 #nudge for eat
->eta
+>tae
 Quit playing with your food, already.
 #nudge for tray
 >trya
@@ -637,7 +677,7 @@ Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lo
 >utort
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for eat
->ate
+>tea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for swipe
 >wspei
@@ -657,6 +697,9 @@ Like all good bubble wrap, maybe it needs to be saved 'til you find the right pe
 !by one point
 
 @nud
+#renudge for reward
+>rewadr
+There's nothing else in the drawer and no way to get in by yourself.
 #done rejects for trout
 >trotu
 Retutor? Torture. Rot. True!
@@ -676,7 +719,7 @@ Score in a scenario: 14 out of 39 total points in the current region, Oyster. Lo
 @nud
 #nudge for wipe
 >wiep
-It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring.
+It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
 #nudge for pearl
 >pealr
 The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
@@ -687,6 +730,11 @@ You try to take the wipes, but you worry you're not fast enough.
 ==!1
 >swipe
 Your score has just gone up by one point
+
+@nud
+#renudge for wipe
+>wiep
+You will need to use them all at once, and on something else
 
 >score
 Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 39.
@@ -700,12 +748,20 @@ Lapsin' Plains
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 
 @nud
+#mistake test for saplin
+>saplin
+No tre begins to grow. Er, tree.
+#mistake test for slapin/slap in
+>slapin
+No vilence, err, violence, please.
+>slap in
+No vilence, err, violence, please.
 #done rejects for wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 #nudge for acters
 >actesr
-Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
+Hmm, no, it's only one crate at a time...
 #nudge for debris
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
@@ -819,6 +875,11 @@ That feels right, but as you reach to do so, you feel something on the back of y
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 
+@nud
+#renudge for acters
+>actres
+Hmm, no, it was only one crate at a time...
+
 >trace
 Your score has just gone up by one point
 
@@ -896,12 +957,12 @@ You don't need to riff on any location names to win the game, unless there's not
 The Shadier Airshed is immovable and unchangeable.
 #nudge for heap
 >hepa
-[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]
+Change ALL the heaps!
 #nudge for ubt
 >utb
 Clear ALL the tubs!
 #nudge for bust
->buts
+>tsbu
 That didn't make anything go boom.
 #nudge for drop
 >drpo
@@ -976,6 +1037,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 1 OVERALL.
 
+@nud
+#renudge for heap
+>hepa
+You don't need or want to futz with one heap to make things super-extra-perfect.
+
 @sli
 #slider test for clean
 >lcane
@@ -1024,6 +1090,9 @@ You need an organized way to see what's under the ground with your rigged digger
 Sclerous Closures
 
 @nud
+#mistake test for rasche
+>rasche
+Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
 #nudge for closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1101,6 +1170,9 @@ The gleaner was made by Al Green, written in red.
 #scannotes for general gleaner
 >scan general gleaner
 The pattern blinks green-red and yellow-purple.
+#mistake test for reangle
+>reangle
+You tilt the gleaner around to try to see it from a different point of view. If there are any differences, they're too small for you to see.
 
 @sli
 #slider test for enlarge
@@ -1111,9 +1183,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake retest for reangle
+>reangle
+You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
 #done rejects for gleaner
 >gleanre
-It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if].
+It's already been made bigger. Not much more you can do with it.
+>x gleaner
+>gleanre
+It's already been made bigger. Not much more you can do with it except examine it.
 >reacsh
 WRONG
 You did enough with the arches
@@ -1143,7 +1221,7 @@ The hedron's spirit will remain intact even if you meddle there. You must go int
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
 #nudge for tarp
 >tapr
-You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating.
+You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol' trap would make it less intimidating.
 #nudge for patrol
 >patrlo
 The portal can't be changed for the better. It already goes where you want.
@@ -1202,6 +1280,11 @@ The thin hint doesn't reveal anything else.
 >nuaethr
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+#respechelp test for pre-haun
+>hauntre
+You need an organized way to see what's under the ground, with your rigged digger.
+
 ##>unearth haunter
 
 >unearth
@@ -1246,7 +1329,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #spechelp for ol' trap
 >patrlo
-Hm, no, that's not quite how to cover all the ground looking for the ol['] trap.
+Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 >s
 >e
 #nudge for hoser
@@ -1290,7 +1373,7 @@ You should never need to riff on part of a location name.
 You should never need to riff on part of a location name.
 #nudge for jumble
 >jumbel
-It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in den loft]. Well, once the yapper's out of the way[end if].
+It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
 #nudge for stupid
 >stupdi
 [its-msg].
@@ -1302,13 +1385,13 @@ It's the words on the jumble you need to mess with. With which you need to mess[
 [its-msg].
 #nudge for intercom
 >intercmo
-[i-com].
+The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 #nudge for not
 >nto
 Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
 #nudge for crime
 >criem
-[i-com]. [end-y]
+The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 \\
 #spechelp for papery yapper
 >yappre
@@ -1344,6 +1427,10 @@ Your score has just gone up by one
 Your score has just gone up by one point
 
 @nud
+#renudge for jumble
+>jumbel
+It's the words on the jumble you need to mess with. With which you need to mess.
+!yapper
 #readables for templar ramplet
 >read ramplet
 Someone named LAMPERT (written in red) constructed the templar ramplet.
@@ -1374,6 +1461,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for splam
+>splam
+There's a simpler way to attack the ant.
 #scannotes for natant ant
 >scan natant ant
 You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
@@ -1383,8 +1473,11 @@ There must be a simple way to take down the ant. You haven't quite got it right 
 #spechelp for bogus-lamps
 >psaml
 The plasm lamps flicker slightly.
-#nudge for ant
+#mistake test for atn
 >atn
+You've already got the ant's attention. You'll need to take care of it, now.
+#nudge for ant
+>nta
 That's close. Something brutal and direct.
 #nudge for plam
 >plma
@@ -1466,8 +1559,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >redila
 There's something more to do, but that's not quite it.
 
+#not a mistake
 >redial
 Your score has just gone up by one point
+
+@nud
+#mistake retest for fart
+>fart
+You feel slightly dafter, having farted to no good purpose
 
 >score
 Oyster (40/40)

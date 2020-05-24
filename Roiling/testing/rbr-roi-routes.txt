@@ -33,13 +33,27 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >niised
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for past
->apts
+>tpas
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for across
 >srcsao
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for preposition/prepositions
+>preposition
+Yes, but WHICH prepositions?
+>prepositions
+Yes, but WHICH prepositions?
+#mistake test for ouster-in-routes
+>ouster
+You're the ouster here, trying to get by the routes.
+#mistake test for ames
+>ames
+Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.
+#mistake test for seam
+>seam
+You can't find any crack in the Same Mesa that you could follow.
 #nudge for spoon
 >ospon
 Instead of bending the spoon, use it to help your magic powers.
@@ -62,7 +76,7 @@ Nothing happens. You twiddle both words for a moment, then realize it's probably
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, but maybe noting what's on it will help you get in.
 #nudge for pat
->apt
+>tpa
 That's not how to get into Pat'S, you reflect.
 #nudge for orcas
 >acros
@@ -134,7 +148,7 @@ You search around for the worst ad some more, but you can't find it, or anything
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 
-@max
+@!min
 #pre-side-art-astride rule
 >astride
 You get astride the sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
@@ -272,6 +286,9 @@ Your score has just gone up by one point
 Idle Deli
 
 @nud
+#mistake test for lied
+>lied
+There has been no false advertising.
 #nudge for idle
 >elid
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -362,6 +379,14 @@ You already figured how to get into Oscar's. There's nothing else to do.
 #nudge for arc
 >acr
 You already figured how to get into Oscar's. There's nothing else to do
+#mistake test for car
+>car
+Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.
+#mistake test for scoar/scoars
+>scoar
+You don't get points just for asking them.
+>scoars
+You don't get points just for asking them.
 
 >across
 Your score has just gone up by one point
@@ -398,6 +423,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >opposiet
 The soot smells a bit stronger than before for a moment.
 
+#not a mistake ("opposite" by List o Toils is)
 >opposite
 Your score has just gone up by one point
 
@@ -448,7 +474,7 @@ You hang around the bench, hoping for something to happen, but nothing happens. 
 >gaiastn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@max
+@!min
 #pre-mesa-dir-flip rule
 >past
 !by one point
@@ -484,6 +510,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for side art
 >astried
 Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
+#mistake test for ides/rat/tar
+>ides
+It's the whole side art you need to deal with.
+>rat
+It's the whole side art you need to deal with.
+>tar
+It's the whole side art you need to deal with.
 
 >astride
 Your score has just gone up by one point
@@ -495,6 +528,13 @@ You got on the bench right. Time to start ducking.
 #redone rejects for sit a nag
 >againts
 You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
+#mistake retest for ides/rat/tar
+>ides
+It's the whole side art you needed to deal with.
+>rat
+It's the whole side art you needed to deal with.
+>tar
+It's the whole side art you needed to deal with.
 
 @nud
 #renudge for tirade
@@ -524,7 +564,17 @@ It seems best to deal with the whole WOE BOW BELL.
 #nudge for bell
 >bell
 It seems best to deal with the whole WOE BOW BELL.
+#mistake test for bowel/elbow/bowels/elbows
+>bowel
+The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
+>elbow
+The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
+>bowels
+The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
+>elbows
+The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
 
+#not a mistake (mistake code is for general preposition reject)
 >below
 Your score has just gone up by one point
 
@@ -552,6 +602,7 @@ The pages of Rude 'N Nuder flutter a bit.
 >scan rude 'n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 
+#not a mistake (mistake code is for general preposition reject once you are under)
 >under
 Your score has just gone up by one point
 
@@ -584,6 +635,9 @@ DEBUG INFO: Taking away a max point.
 >out
 
 @nud
+#mistake test for along
+>along
+You aren't far enough along to, err, look along
 #nudge for bev
 >bve
 The whole beverage name must be where it's at.
@@ -632,12 +686,16 @@ THE BEAN has too much gravitas to be just a bean.
 >beneaht
 The bean rolls back and forth a bit.
 
+#not a mistake (mistake code is for general preposition reject)
 >beneath
 Your score has just gone up by one point
 
 Harms Marsh
 
 @nud
+#mistake retest for along
+>along
+There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
 #nudge for marsh
 >marhs
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -670,7 +728,7 @@ You feel it's ALMOST the right time for the darkness to lift.
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@max
+@!min
 #pre-around-unroad rule
 >around
 WRONG
@@ -781,13 +839,19 @@ Your score has just gone up by one point
 
 Sonancy Canyons
 
-@max
+@!min
 #pre-hurt-hog-through rule
 >through
 WRONG
 !by one point
 
 @nud
+#mistake test for tapster
+>tapster
+No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
+#mistake test for spatter
+>spatter
+No violence!
 #nudge for canyon
 >canyno
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -838,7 +902,7 @@ Score in a scenario: 19 out of 21 total points in the current region, Routes. Th
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 
-@max
+@!min
 >without
 Your score has just gone up by one point
 REGION MIN INCREASED BY 1, 2 OVERALL.
@@ -852,6 +916,12 @@ Score in a scenario: 20 out of 21 total points in the current region, Routes. Lo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake retest for tapster
+>tapster
+!No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
+#mistake retest for spatter
+>spatter
+!No violence!
 #spechelp for yob den
 >beyodn
 WRONG

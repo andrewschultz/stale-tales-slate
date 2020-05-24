@@ -1,6 +1,7 @@
 Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
 [mist.py checks to make sure the unit tests are synced with this]
+[malf.py alphabetizes mistakes by section]
 
 volume Roiling Mistakes
 
@@ -149,7 +150,7 @@ understand "below" as a mistake ("Nice try, but wrong preposition for the situat
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or WOE BOW BELL is in location of player.
 
-understand "bowel" and "elbow" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
+understand "bowel" and "elbow" and "bowels" and "elbows" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
 
 understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.") when player is in Same Mesa.
 
@@ -220,8 +221,6 @@ to decide whether told-of-logan:
 	no;
 
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
-
-understand "around" as a mistake ("You can't see anything around, yet. It's too unlit, here.[preefsay of sheol holes]") when darkness is in location of player and player is in Harms Marsh.
 
 understand "helos" as a mistake ("Helicopters can't make it underground.") when player is in Harms Marsh.
 
@@ -309,9 +308,11 @@ understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically ab
 
 understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when mbb-in;
 
-understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when mbb is in Upscale Capsule and player is in Upscale Capsule.
+understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
 understand "fren" as a mistake ("No dog walks along dragging Sebastian in their mouth.") when player is in Upscale Capsule.
+
+understand "gwano" as a mistake ("Enough with the (redacted) spelling.") when player is in Upscale Capsule and wonga wagon is in Upscale Capsule.
 
 understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when player is in Upscale Capsule and salt is in Upscale Capsule.
 
@@ -350,6 +351,8 @@ understand "kya" as a mistake ("The yak is unimpressed with your karate noises."
 understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Char Arch.
 
 understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is in location of player.
+
+understand "pga" and "pgas" as a mistake ("No golfers appear.") when player is in Char Arch.
 
 understand "rats" as a mistake ("[if tsar star is moot]Boy! You miss that tsar star[else]Boy! It'd be neat to have something that made you more authoritative[end if].") when tsar star is not in location of player and tsar star is not worn and mrlp is presto.
 
@@ -480,7 +483,7 @@ understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to 
 
 chapter Olde Lode
 
-understand "bare" and "bares" as a mistake ("A jogger runs by, singing 'Drop-Kick Me, Jesus, Through the Goalposts of Life.'[paragraph break]Really, what did you expect?") when player is in Olde Lode.
+understand "bare" and "bares" as a mistake ("A jogger runs by, singing 'Drop-Kick Me, Jesus, Through the Goalposts of Life.' Before he leaves, you notice the name BOBBY on his sweatshirt.[paragraph break]Really, what did you expect?") when player is in Olde Lode.
 
 understand "bear" and "bears" as a mistake ("You don't need any predators chasing you.") when player is in Olde Lode.
 
@@ -496,7 +499,7 @@ understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft 
 
 understand "boast" as a mistake ("Batso.") when player is not in Disease Seaside.
 
-understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and Anger Range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
+understand "fart" as a mistake ("[if buried raft is in location of player]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and Anger Range is visited]Gag! Ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Disease Seaside.
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
 
@@ -678,9 +681,9 @@ chapter Baldest Blasted Saltbed
 
 understand "fluters" as a mistake ("This game has no soundtrack, and if I made one, it wouldn't be very good.") when fluster self rut is in location of player.
 
-chapter Unblest Sunbelt
+chapter Leveraged Everglade
 
-understand "file" as a mistake ("You wish you could file Mel Fish away and put him in the past.") when Mel Fish is in location of player.
+understand "file" as a mistake ("You wish you could file Mel Fish away and put him in the past. Maybe he wants to do so to his own past, too. Become a new person, sort of.") when Mel Fish is in location of player.
 
 understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty landlocked here.") when Mel Fish is in location of player.
 
@@ -933,15 +936,15 @@ understand "mango" as a mistake ("That's the fruit you need to find. You see red
 
 understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in Clangier Clearing and mango is off-stage.
 
-understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when player is in Clangier Clearing.
-
 understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when player is in Clangier Clearing.
 
 chapter Filed Field
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd
-
 understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.
+
+chapter Scape Space
+
+understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is in location of player.
 

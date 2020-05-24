@@ -2,10 +2,10 @@ Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
 volume nudges
 
-[remember to sort with rorg.py so say/rules are in same order post-table as in the table]
-
+[rorg.py sorts the "to say" and rules in the order they appear in the table]
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
+[all this should be in the post-commit hooks]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random (or likely quickest-walkthrough) priority over others.
 For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside.

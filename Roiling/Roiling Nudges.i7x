@@ -2,11 +2,11 @@ Version 1/151226 of Roiling Nudges by Andrew Schultz begins here.
 
 volume table of nudges
 
-[remember to sort with rorg.py so say/rules are in same order post-table as in the table]
-
+[rorg.py sorts the "to say" and rules in the order they appear in the table]
 [nuch.py makes sure that all the nudges have a test case assigned]
 [?? todo: make sure that nothing seeps into non-nudge stuff]
 [stsv.py verifies the hash values with the strings]
+[all this should be in the post-commit hooks]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. There's a combination of most immediate stuff to do and the most efficient walkthrough. Then I just loop clockwise from the direction you entered. For Routes and Troves, it's pretty much a one-way shot, though exploring the Cleric Circle is the most natural way through, and the Deli and Adobe have equal priority..
 With Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region.
@@ -533,7 +533,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "eat"	233103945	--	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	--	tea tray	--	"[just-tea]."
 "teatray"	546084836	--	tea tray	--	"[just-tea]."
-"wipe"	362199687	--	wipes	--	"It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring."
+"wipe"	362199687	--	wipes	--	"[if player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[or]You will need to use them all at once, and on something else[end if]."
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "plain"	251367970	Lapsin' Plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
 "polyp"	413457586	Lapsin' Plains	--	--	"[polyp-no]."
@@ -1320,8 +1320,6 @@ this is the got-towards rule:
 
 to say name-worry of (rm - a room): say "[if rm is visited]You did well enough[else]Perhaps it's better and simpler[end if] to focus on the proper names instead"
 
-to say whole-woe: say "It seems best to deal with the whole WOE BOW BELL"
-
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
 to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]."
@@ -1340,6 +1338,8 @@ to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothin
 
 to say not-stripe: say "The poison stripe is too incorporeal to do bend to your will"
 
+to say whole-woe: say "It seems best to deal with the whole WOE BOW BELL"
+
 to say follow-the-list: say "Maybe you can use your powers to get what's on the list, but you don't need to use them on it";
 
 to say chanty: say "The chant doesn't change. Chants are good at that"
@@ -1356,12 +1356,12 @@ to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother H
 
 to say whole-bev: say "The whole beverage name must be where it's at"
 
-to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
-
 this is the am-along rule:
 	unless player is in Harms Marsh, the rule fails;
 	unless un-road is off-stage, the rule fails;
 	the rule succeeds;
+
+to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
 to say dark-been: say "The darkness has always been there and always will be. You need to find a way to say it was dark"
 

@@ -34,7 +34,50 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >rove over
 >others
 >in
+Rustic Citrus
+
 >z
+
+@nud
+#mistake test for boarder
+>boarder
+Rustic Citrus doesn't make for great living quarters.
+#mistake test for broader
+>broader
+Rustic Citrus is secluded enough.
+#mistake test for gapers
+>gapers
+Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
+>gs
+#mistake retest for gapers
+>gapers
+Really, you don't need people all Named It Mrs. Master Mind over changing those pagers into anything else. That's not your style.
+>gs
+#mistake test for gasper
+>gasper
+Not as healthy as fruit, to be sure!
+#mistake test for slump
+>slump
+Don't get exhausted! This area should be a bit of a break! I hope.
+#mistake test for reaps
+>reaps
+No, not verbs. Well, not here by Curtis.
+#mistake test for spare
+>spare
+No, not adjectives. Well, not here by Curtis.
+#mistake test for rapes/rape
+>rapes
+Some things, you can't joke about. So please, don't try that again.
+>undo
+>rape
+Some things, you can't joke about. So please, don't try that again.
+#mistake test for sell/sell [text]
+#mistake test for smile
+>smile
+You smile at the slime. It can't be that hard to figure what to do.
+#mistake test for miles
+>miles
+You don't want miles and miles of slime.
 
 @sli
 #slider test for grapes
@@ -462,6 +505,9 @@ Parts of the green stain turn orange-ish but is too small to be oranges.
 #slider test for icon
 >cino
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#mistake test for sonic
+>sonic
+Maybe if you had more than one coin.
 
 >n
 
@@ -475,6 +521,10 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
+#mistake retest for sonic
+>sonic
+Maybe if you had more than one icon.
 
 >s
 You fiddle with the coin you got
@@ -516,6 +566,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for fidel
+>fidel
+A thin voice howls "I fled!"
+#mistake retest for fart
+>fart
+This raft isn't as receptive as the one in Anger Range.
 #nudge for liepen
 >liepne
 Nothing happens. Perhaps it's the whole item that's important.
@@ -649,10 +705,17 @@ That doesn't really describe the Tekno-Token
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 
 @nud
+#mistake test for scion
+>scion
+Money, or something like it, should not be the guide of you.
 >icons
 #spechelp for icons
 >icosn
 The icons rattle and hum promisingly.
+#mistake retest for scion
+>scion
+Money, or something like it, should not be the guide of you.
+>undo
 >undo
 >undo
 
@@ -673,6 +736,7 @@ Even the reds and yellows seem to be blinking here. It's as though the coins nee
 >osicn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+#not a mistake
 >sonic
 by one point
 Blam!
@@ -683,6 +747,9 @@ Blam!
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake retest for scion
+>scion
+Money, or something like it, should not be the guide of you.
 #scannotes for s-c
 >scan sonic coins
 You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
@@ -756,6 +823,22 @@ Your score has just gone up by one point.
 >e
 Clangier Clearing
 
+@nud
+#mistake test for sell/sell [text]
+>sell
+You are paving the way for commerce, not interacting.
+>sell zozimus
+You are paving the way for commerce, not interacting.
+#mistake test for lameness
+>lameness
+No need to judge the nameless salesmen. We can't all be heroes.
+#mistake test for spicer
+>spicer
+You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.
+#mistake test for cigar
+>cigar
+That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
+
 @sli
 #slider test for among
 >magon
@@ -781,6 +864,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for solemn
 >oselnm
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
 ###########below is melon/lemon nudge trickiness
 >abstract melon to ll
@@ -863,7 +947,22 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
+@nud
+#mistake test for mango
+>mango
+That's the fruit you need to find. You see red wondering where or how.
+#mistake test for go man
+>go man
+That's the right idea but the wrong sorts of words.
+#mistake test for nag mo
+>nag mo
+You get all red faced asking people how to trade for a mango, and asking, and asking.
+#mistake test for an omg
+>an omg
+Lashing out that way leaves you feeling you must be close to the right way to get a mango.
+
 @!min
+#not a mistake
 >among
 Your score has just gone up by one point.
 
@@ -944,7 +1043,7 @@ The melon is fine as-is. It's better than the one that was on display, for sure.
 You got enough of a discount. Really.
 #done rejects for mango
 >manog
-Snag mo['] mangos? No mas, G.
+Snag mo' mangos? No mas, G.
 #done rejects for papayas
 >papaysa
 You've already established yourself as a prompt payer.
@@ -954,6 +1053,22 @@ You've already established yourself as a prompt payer.
 Scape Space
 
 @nud
+#mistake test for gorean
+>gorean
+This game isn't about that sort of stuff. Not that there's anything wrong with that.
+#mistake test for darter
+>darter
+Art Erd has nowhere to run, and you don't know if you want him taking that storage box with him.
+#mistake test for retard
+>retard
+You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
+>gs
+#mistake test for red rat
+>red rat
+Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
+#mistake test for allo
+>allo
+Lola says nothing back.
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -989,7 +1104,7 @@ first-name basis
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 >gs
 female
->allo
+>alol
 Lola
 #nudge for lola
 >alol
@@ -1017,7 +1132,7 @@ The orange seems a bit closer for a bit.
 The (a) banna' flutters about for a bit.
 #scannotes for a banna'
 >scan a banna'
-It must be the/a banna['] AND the message on it.
+It must be the/a banna' AND the message on it.
 #spechelp for inapt paint
 >reservde
 You seem to read the inapt paint backwards for a second.
@@ -1027,6 +1142,11 @@ Whatever this is, well, the vowels don't have much variability. Well, any.
 #nudge for brrhub
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
+#mistake test for tap in/tapin
+>tap in
+You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
+>tapin
+You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
 
 @sli
 #slider test for banana
@@ -1118,6 +1238,12 @@ It hurt to be called a perp. But maybe you can figure a way to think of it right
 Gates Stage
 
 @nud
+#mistake test for saget
+>saget
+You don't need to be part of Yorpwald's Funniest Home Videos right now.
+#mistake test for poring
+>poring
+You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the arena to the north.
 #nudge for gates
 >gesta
 The gate needs to be unlocked some other way.

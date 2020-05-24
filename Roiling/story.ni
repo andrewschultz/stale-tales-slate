@@ -4349,7 +4349,7 @@ others	"not nouns any more--a different part of speech in each location"
 to say cheatfid:
 	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
 
-to say beal-or-balmer: say "Wow! Three names. You don't know if [other-mbb] would be easier but, well, it can't be helped"
+to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can
 
 [??pad question mark / scan elmer / scan merle]
 [note we start with the pram which is not in the first room so we can define xtradesc as not-scenery. Don't change this.]
@@ -4437,7 +4437,7 @@ lois the hostile	false	true	false	false	"Well, this is tricky. There's her name,
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
-Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
+Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has not been wordy][else]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[end if]."
 prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle..."
 natives' site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."

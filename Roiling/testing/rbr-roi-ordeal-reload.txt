@@ -23,6 +23,33 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
+@nud
+#mistake test for walkthrough or walkthru
+>walkthrough
+You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+>walkthru
+You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+#mistake test for use [text]
+>use zozimus
+The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors
+>purloin settler
+#mistake test for knock [text]
+>knock zozimus
+Just KNOCK instead.
+#mistake test for hug [text]/hug
+>hug zozimus
+Hug? Ugh. Guh.
+>hug
+Hug? Ugh. Guh.
+#mistake test for embrace [text]/embrace
+>embrace zozimus
+Hug? Ugh. Guh.
+>embrace
+Hug? Ugh. Guh.
+#mistake test for consult [text]
+>consult zozimus
+You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+
 >think
 >x chair
 >x shelf
@@ -90,6 +117,24 @@ If you mess with the lamp, at least you wouldn't see those idiots outside once t
 #spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
+#mistake test for net/net beams/beams net
+>net
+But the net would still block you.
+>net beams
+But the net would still block you.
+>beams net
+But the net would still block you.
+#mistake test for basement
+>gonear largely gallery
+>basement
+Well, if you want points for that, you'll need to go back to the study.
+#mistake test for sitar
+>sitar
+You don't need music right now. A way to get around would be better.
+>undo
+>undo
+>undo
+#!these previous mistake tests are a cheap cheat to pick off an obscure mistake
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -291,6 +336,9 @@ Largely All-Grey Gallery
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake retest for sitar
+>sitar
+Surely a stair is more handy right now.
 #spechelp for ISBN bins
 >snbi
 The ISBN bins creak slightly.

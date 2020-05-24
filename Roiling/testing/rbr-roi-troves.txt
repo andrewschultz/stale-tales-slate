@@ -121,6 +121,7 @@ You probably did what you could. Or not-did.
 >haet
 You think you feel less cold for a second. But you need to make it last.
 
+#not a mistake
 >hate
 Your score has just gone up by one point
 
@@ -128,18 +129,28 @@ Your score has just gone up by one point
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
+#mistake test for hate
+>hate
+You don't want to get burnt up with hate, and that won't get back your super purse like racing after that guy.
 
 @nud
 #spechelp for heat
 >caer
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
 
+#not a mistake
 >care
 Your score has just gone up by one point
 
 Bustle Sublet
 
 @nud
+#mistake test for care
+>care
+You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.
+#mistake retest for hate
+>hate
+You don't want to get burnt up with hate.
 #nudge for care
 >caer
 Caring and all its offshoots only go so far.
@@ -684,6 +695,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake test for wogan
+>wogan
+You don't need Terry Wogan announcing your progress like it's Eurovision.
+#mistake test for gwano
+>gwano
+Enough with the (redacted) spelling.
 #nudge for fief
 >fife
 You should never need to riff on part of a location name.
@@ -742,33 +759,37 @@ You see red slightly as Marble Blamer Balmer fails to look away.
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
->abstract mr beal to fiefco
+#scannotes for marble blamer balmer
+>scan marble blamer balmer
+Wow! Three names. You don't know if, say, Marble Blamer Mr. Beal would be easier but, well, you do what you can
+>mbb 2
 >x mr beal
 #readables for blamer mr beal
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #nudge for beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
->undp
->undo
->undo
-
-@nud
+#mistake test for able
+>able
+Fortuntaely, Marble Blamer Mr. Beal doesn't become physically able.
+#mistake test for bale
+>bale
+Neither you nor Marble Blamer Mr. Beal turns into hay.
 #spechelp for marble blamer mr beal
 >rambel
 seems slightly taken aback
 #spechelp for marble blamer balmer
 >rambel
 seems slightly taken aback
+#scannotes for marble blamer mr beal
+>scan marble blamer mr beal
+Wow! Three names. You don't know if, say, Marble Blamer Balmer would be easier but, well, you do what you can
+>mbb 1
+
+@nud
 #spechelp for sister tressi siters
 >resits
 Sister Tressi seems a bit more upset than usual.
-#scannotes for marble blamer mr beal
->scan marble blamer mr beal
-Wow! Three names. You don't know if Marble Blamer Balmer would be easier but, well, it can't be helped
-#scannotes for marble blamer balmer
->scan marble blamer balmer
-Wow! Three names. You don't know if Marble Blamer Mr. Beal would be easier but, well, it can't be helped
 #scannotes for sister tressi siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it.

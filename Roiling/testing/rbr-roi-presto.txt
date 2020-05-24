@@ -77,6 +77,11 @@ It's the maze you need to change, not the zany meter.
 #spechelp for hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
+#mistake test for hm up/up hm
+>hm up
+You don't need to levitate the hump. You need a way to jump over it.
+>up hm
+You don't need to levitate the hump. You need a way to jump over it.
 
 >umph
 Your score has just gone up by one point
@@ -99,6 +104,17 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for pooh
 >opho
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#mistake test for bleep
+>bleep
+I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.")
+#mistake test for rats
+>rats
+Boy! It'd be neat to have something that made you more authoritative.
+#mistake test for whassup
+>whassup
+You probably want to TALK to people instead. Well, most of the time.
 
 @max,nud
 >phooey
@@ -142,6 +158,11 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 Char Arch
 
 @nud
+#mistake test for pga/pgas
+>pga
+No golfers appear.
+>pgas
+No golfers appear.
 #nudge for char
 >chra
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -206,13 +227,21 @@ The tsar star seems to wiggle a bit, but not enough to pull it out.
 #nudge for tar
 >tra
 The tars remain heterogeneous. And very sticky. And the same size.
+#mistake test for arts
+>arts
+Being an arts tsar won't help. You need a word that shows anger.
 
+#not a mistake
 >rats
 Your score has just gone up by one point
+
 >drat
 Your score has just gone up by one point
 
 @nud
+#mistake retest for rats
+>rats
+Boy! You miss that tsar star.
 #renudge for cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
@@ -238,6 +267,7 @@ Olav Metz and Zemo Valt were the main architects.
 >read volt maze
 It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 
+#not a mistake
 >bleep
 Your score has just gone up by one point
 
@@ -403,8 +433,17 @@ You think about doing something to the floor. But making it disappear would prob
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >w
-#nudge for bign
+#mistake test for lawls/lawl
+>lawls
+You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
+>lawl
+You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
+\\
+#mistake test for bing
 >bing
+You already did that, and with 25% more word power, too.
+#nudge for bign
+>bgin
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 #nudge for bigo
@@ -585,6 +624,7 @@ You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 >sahwups
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+#not a mistake
 >whassup
 Your score has just gone up by one point
 
@@ -642,6 +682,21 @@ Saps' Pass
 #different message for making it to the phat path 1st time? ??
 
 @nud
+#mistake test for asp/asps
+>asp
+Saps' Pass is dangerous enough.
+>asps
+Saps' Pass is dangerous enough.
+#mistake test for psa/psas
+>psa
+Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
+>psas
+Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
+#mistake test for spa/spas
+>spa
+Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
+>spas
+Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 >s
 #renudge for ether
 The ether is gone. You can just go back north.
@@ -766,6 +821,9 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 #scannotes for alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
+#mistake test for artel
+>artel
+You, Rand and Leo have already engaged in a collective effort.
 
 >later
 Your score has just gone up by one point
@@ -890,6 +948,16 @@ Good idea, but tough to program without a keyboard.
 >purloin keyboard
 
 @nud
+#mistake test for feal
+>feal
+Nobody needs allegiance, here.
+#mistake test for clock sap/cock slap/slap cock
+>clock sap
+The locs aren't that gangsta, and neither are you. And that's a good thing.
+>cock slap
+The locs aren't that gangsta, and neither are you. And that's a good thing.
+>slap cock
+The locs aren't that gangsta, and neither are you. And that's a good thing.
 >s
 #renudge for summit
 >summti
@@ -1026,7 +1094,10 @@ Well! You can probably figurer what the undefined color is, and maybe reading th
 Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it.
 #scannotes for drive a
 >scan drive a
-It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble.
+It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
+>x drive a
+>scan drive a
+It's DRIVE A, A DRIVE and VARIED, which may be what's causing the whole jumble.
 #nudge for clack
 >clakc
 You need to deal with the full Clack Ops Locs Pack.
@@ -1079,10 +1150,13 @@ Your score has just gone up by one point
 
 @sli
 #slider test for disk
->idks
+>ikds
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for repo
+>repo
+Nobody else seems to own the oper rope or the skid.
 #done rejects for caps lock
 >capslokc
 YOU HAVE WHAT YOU NEED.
@@ -1128,6 +1202,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
+#mistake retest for feal
+>feal
+Nobody needs allegiance, here.
 #done rejects for dirty looking cola
 >ocal
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
