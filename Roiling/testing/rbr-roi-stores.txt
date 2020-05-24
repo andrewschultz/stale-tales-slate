@@ -16,6 +16,14 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * stores-thru
 
+@nud
+#mistake test for throes
+>rove over
+>throes
+No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
+>undo
+>undo
+
 @sli
 >slon
 #slider test for sorbet
@@ -48,6 +56,73 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for nestor
 >entsro
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#mistake test for ergots
+>ergots
+You're trying to rescue the people of Yorpwald, not give them fungus infections.
+#mistake test for gorest/go rest
+>gorest
+Store G is too busy to allow that these days.
+>go rest
+Store G is too busy to allow that these days.
+#mistake test for gots er
+>gots er
+And what would you do with Store G, when you take it?
+#mistake test for hoster
+>hoster
+That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
+>x hoster
+That was sort of a given from the warning on Store H, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
+#mistake test for ouster
+>ouster
+It's your job to be the ouster in Store U, but you'll need to warp out of the Strip.
+#mistake test for pteros
+>pteros
+You don't need to face any predators. Aigh!
+#mistake test for repost
+>repost
+That's not what you need to do with Store P--you even see red trying to figure HOW you would.
+#mistake test for resort
+>resort
+You can't go back to the Means Manse. Well, you can, but it's a bad idea.
+#mistake test for restow
+>restow
+Store W glows red as you try this.
+#mistake test for sportif
+>sportif
+You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.
+#mistake test for stoner
+>stoner
+"Hey, man! Don't depersonalize me! Or I'll throw something at you!" you hear from inside Store N.
+>stoner
+"Like, don't do it again, dude, or I will literally totally throw these empty bottles at you."
+The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something.
+>stoner
+You've teased the person in Store N enough. You should have enough clues to figure his name now, anyway.
+#mistake test for storge
+>storge
+You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes.
+>storge
+Stop trying to make Pillar of Storge happen.
+#mistake test for stroke
+>stroke
+You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
+#mistake test for sureto or sure to
+>sureto or sure to
+You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
+#mistake retest for throes
+>throes
+No, you are not in your last throes. Neither is Yorpwald. Try looking at stores at the other end of the alphabet.
+#mistake test for tosher
+>tosher
+Insults will get you nowhere. You see red at thinking such a word.
+#mistake test for toyers
+>toyers
+You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.
+#mistake test for troyes
+>troyes
+Store Y does not lead to France.
 
 @nud
 #spechelp for store b
@@ -96,10 +171,28 @@ They are who they are. You should maybe try to get their friend back.
 @!min
 >enter steaming
 
+Cruelest Lectures
+
 @nud
 #spechelp for lecturer
 >outsied
 The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
+#mistake test for ani/nia
+>ani
+Ian's had a big life change, but that might be too big for him!
+>nia
+Ian's had a big life change, but that might be too big for him!
+#mistake test for easting
+>easting
+Compass directions aren't relevant here. You need to upset everything, somehow.
+#mistake test for eatings/tangies
+>eatings
+You might be suspected of having the munchies if you tried that.
+>tangies
+You might be suspected of having the munchies if you tried that.
+#mistake test for ingates
+>ingates
+More like, you could use out-gates to leave, amirite?
 
 @sli
 #slider test for outside
@@ -213,3 +306,13 @@ Your score has just gone up by one point
 >ottesr
 You should just enter the solid idols. No need or way to seal them back up.
 
+@nud
+#mistake retest for stoner
+>nestor
+Being a stoner isn't treason. Use his real name.
+#mistake retest for ouster
+>ouster
+It's your job to be the ouster in the course source, but you'll need to warp out of the Strip.
+#mistake retest for tosher
+>tosher
+The Throes Hoster does look a bit weird, but you need to enter it, not change it.
