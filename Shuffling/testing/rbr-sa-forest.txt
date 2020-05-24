@@ -4,11 +4,15 @@
 #
 # the nudmis file also covers two alternate ways through the forest.
 #
-files=reg-sa2-forest-max.txt,reg-sa2-forest-min.txt,reg-sa2-forest-nudmis.txt
+# we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
+#
+files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt
 ~	nudges	t2
 ~	nu	t2
+~	mi	t2
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
@@ -253,9 +257,9 @@ The skin sink bleeds no color.
 `nu
 #mistake test for helf/helfs
 >helf
-While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
 >helfs
-While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not 'help.'
+While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not "help."
 #mistake test for kin/kins
 >kin
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
@@ -554,5 +558,5 @@ Trips Strip
 
 ==t1
 16/17
-==t!1
+==!
 17/17

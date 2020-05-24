@@ -9,7 +9,7 @@ volume megachatter table
 
 table of megachatter [tmc]
 mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
-table of evil locations	false	0	30	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0 [p]
+table of evil locations	false	0	30	reading-the-slit rule	"Evil locations in  the slit (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0 [p]
 table of poem codas	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
 table of garrison chants	true	0	30	with-hippies rule	"Roarings Garrison chants (M)"	"[one of]Emosion (sic)[or]Mo['] noise[stopping] from the noisome Moonies: "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
 table of bastion dialogue	true	0	30	talk-in-bastion rule	"Obtains Boastin Bastion chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
@@ -4407,8 +4407,8 @@ this is the x-namelist rule:
 
 section forest rules
 
-this is the reading-the-map rule:
-	if current action is examining the maps, the rule succeeds;
+this is the reading-the-slit rule:
+	if current action is examining the slit, the rule succeeds;
 	the rule fails;
 
 section sortie rules

@@ -29,6 +29,7 @@ book Forest
 
 table of Forest anagrams [xxtfa]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	dubdip	vanish	to-room
+slit	silt	"silt"	"slit"	a rule	post-slit-silt rule	"The slit crumbles away. Sily comes pouring out of it, and at the same time, Corses Crosse squeezes it shut. There's no trace of the slit now."	true	298190669
 ones	nose	"nose"	"ones"	a rule	post-ones-nose rule	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
 dashes	shades	"shades"	"dashes"	--	post-dashes-shades rule	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
 noughts	shotgun	"shotgun"	"noughts"	--	post-noughts-shotgun rule	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
@@ -212,6 +213,9 @@ this is the pre-livers-sliver rule:
 	if livers are touchable, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
 	if sliver is touchable:
 		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+
+this is the post-slit-silt rule:
+	moot silt;
 
 this is the post-liches-chisel rule:
 	now spread is in Cruel Ones' Enclosure;
@@ -537,7 +541,8 @@ Store I	"Store I shakes a bit. You see red wondering how you'll rise to the chal
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
 acne-bit cabinet	"The cabinet wobbles a bit."
-ones	"The ones rattle a bit. Maybe you can sense out what they should be." [forest]
+slit	"The slit waxes and wanes a bit." [forest]
+ones	"The ones rattle a bit. Maybe you can sense out what they should be."
 dashes	"The dashes seemed to rattle a bit, but you feel slightly uncool."
 noughts	"Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you."
 banshee	"The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom."
@@ -624,9 +629,9 @@ to say spec-help of (itm - a thing):
 	repeat through table of spechelp:
 		if itm is xtrhelp entry:
 			now got-spec is true;
-			if point is true or tnt is true:
+			if point is true:
 				say "[helptxt entry][line break]";
-			else if point is false or tnt is true:
+			else if point is false:
 				say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
 			d "There is a spechelp entry for this.";
 			break;
@@ -817,6 +822,7 @@ blades	--	grinder
 elegy	"[if shotgun is off-stage]The elegy, if read correctly, can give you an idea of what the noughts can become[else]The elegy was a hint for the shotgun[end if]."
 gy	--	line of no life
 line of no life	"[if Cruel Ones' Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
+slit	"[one of]The slit is optional but not particularly difficult. [plus][or]How could it disintegrate? [plus][or]The slit could become SILT. [minus][cycling]"
 banshee	"[one of]You don't need to get rid of the banshee to solve the forest, but you can put it even more in the past. [plus][or]What's a name for something that was? [plus][or]HAS-BEEN. With dash, space or no space. [minus][cycling]"
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"
 red asp	"[one of]The red asp is too dangerous to fight, but remember, it started as a SPREAD, also red. [plus][or]Attacking the asp gives another clue, since you turn all red. [plus][or] The asp doesn't leave you feeling very homey. [plus][or]The red asp can become DRAPES. [minus][cycling]"

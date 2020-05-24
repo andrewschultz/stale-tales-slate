@@ -4,11 +4,12 @@
 #
 # the nudmis file also covers two alternate ways through the sortie.
 #
-files=reg-sa2-sortie-max.txt,reg-sa2-sortie-min.txt,reg-sa2-sortie-nudmis.txt
+files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt
 ~	nudges	t2
 ~	nu	t2
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
@@ -16,9 +17,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * metros-thru
-
-#let's test random things that it's tricky to do with a straight walkthrough
-#thanks for the lovely test commands, Inform!
 
 >ts
 `nu
@@ -35,100 +33,52 @@ WRONG
 
 >in
 
->gonear terminal
->abstract arena dig to terminal
+Undesired Underside
 
-#nudge for arena
->arean
-The invite's for an ARENA DIG.
-
-#nudge for dig
->dgi
-The invite's for an ARENA DIG.
-
->rifle
-Shooting things up is not the answer
-
-#nudge for fleir
->rifel
-The flier has helpful information it'd be better to act on than change.
-
->abstract soggy love to terminal
-
-#nudge for soggy
->sogyg
-It's just garbage.
-
-#nudge for noet
->noet
-It's just garbage.
-
-#nudge for letter
->lettre
-It's just garbage. The writing inside, too.
-
->abstract can of beer to terminal
-
-#nudge for canofbeer
->canofbere
-The beer is just garbage, not even organic like the drainage. But its name is interesting.
-
-#nudge for beer
->bere
-It's just garbage.
-
->purloin noise bag
-
-#nudge for noise
->noies
-Even if you could do anything, that'd rip the noise bag open.
-
-#nudge for bag
->bga
-Even if you could do anything, that'd rip the noise bag open.
-
-* metros-walkthrough-nudge
+#mistake test for bates
+>bates
+You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
 
 >opt in
 
->gonear underside
+`nu
+#mistake test for refind
+>refind
+Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
+#mistake test for senors/senor
+>senors
+The senors you want are behind the door.
+>senor
+The senors you want are behind the door.
 
+`nu
 #nudge for undesired
 >undesirde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for metros
 >mersto
 You don't want to change a region drastically while you're in it.
-
 #nudge for metro
 >merto
 You don't want to change a region drastically while you're in it.
-
 #nudge for metallic
 >metallci
 No way. That thing's sturdy. The people in there know their stuff.
-
 #nudge for drawign
 >drawign
 You can't change the drawing, and that won't make its warnings any less relevant.
-
 #nudge for optical
 >opticla
 Changing the beam is way out of your league.
-
 #nudge for beam
 >bema
 Changing the beam is way out of your league.
-
 #nudge for escalatro
 >escalatro
 No way. It's your way up from the metros. Once you fix things.
-
 #nudge for special
 >specila
 That's not the way to get to the special place. You need special ID
-
 #nudge for building
 >buildign
 You can't change the hotel,
@@ -383,7 +333,17 @@ electronic beeping
 The dead beat deadbeat might not beat you dead
 
 >n
-Cordoned Red Condo
+Obtains Boastin' Bastion
+
+`mi
+#mistake test for opes
+>opes
+You feel no [']ope, and nothing opens up.
+#mistake test for peso/pesos
+>peso
+The poses posse doesn't need or want a handout.
+>pesos
+The poses posse doesn't need or want a handout.
 
 #nudge for cordoned
 >cordonde
@@ -503,66 +463,58 @@ Your score has just gone up by one point.
 #done rejects for velcro
 >velcor
 The velcro remains tangled.
-
 #nudge for string
 >strign
 No need to mess with the string joining the velcro mittens.
-
 #nudge for glove
 >gloev
 The mittens are as comfortable as they're going to be.
-
 #nudge for gloves
 >glovse
 The mittens are as comfortable as they're going to be.
-
 #nudge for mitten
 >mittne
 The mittens are as comfortable as they're going to be.
-
 #nudge for mittens
 >mittesn
 The mittens are as comfortable as they're going to be.
 
 >e
-Elf Row's Flowers
+Fo' Real Florae
 
+`mi
+#mistake test for bates
+>bates
+You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
+
+`nu
 #nudge for elfrows
 >elfrosw
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for flower
 >elfrwo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
-
 #nudge for begonia
 >begonai
 Probably best not to do stuff to even one begonia while the faeries have them.
-
 #nudge for fairies
 >fairise
 They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
-
 #nudge for fairy
 >faiyr
 The rest would mangle you back worse.
-
 #nudge for faery
 >faeyr
 The rest would mangle you back worse.
-
 #nudge for stems
 >stesm
 Deal with the whole flower, not just the stems.
-
 #nudge for trounce
 >trounec
 You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
-
 #nudge for faeries
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
@@ -680,56 +632,56 @@ You don't need to perform any tricks, now you've gotten to the Anti-Cool Locatio
 
 >z
 >e
-Anti-Cool Location
+
+Esoteric Coteries
+
 >w
 >z
 >open metallic door
 >e
 Anti-Cool Location
 
+`nu
 #nudge for anticool
 >anticolo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #dupnudge for beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
-
 #nudge for tulip
 >uptil
 The nerds would gang up on you and take it back, if anything worked, which it won't.
-
 #nudge for nerd
 >nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
-
 #nudge for nerds
 >nersd
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
-
 #nudge for dorks
 >dorsk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-
 #nudge for geeks
 >geesk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-
 #nudge for dork
 >dokr
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-
 #nudge for geek
 >geke
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
-
 #nudge for asknerds
 >asknersd
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
-
 #nudge for asknerd
 >asknedr
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
+
+`mi
+#mistake test for nerd door w
+>odor
+It would stink to be you if you did that. The nerds outnumber you and would crucify you.
+>rood
+It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 
 >ask nerds about darkness
 #notana
@@ -742,6 +694,51 @@ No way. That thing's sturdy. Those nerds know their stuff.
 
 >s
 Elm Train Terminal
+
+`mi
+#mistake test for gip
+>gip
+Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.
+#mistake test for none
+>none
+Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.
+#mistake test for pass
+>pass
+You take a pass on etiquette advice. You need results right now!
+#mistake test for rat
+>rat
+No, you don't need a rat chasing you around.
+#mistake test for sap/saps
+>sap
+The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
+>saps
+The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
+#mistake test for spa/spas
+>spa
+You haven't earned a break yet.
+>spas
+You haven't earned a break yet.
+#mistake test for tar
+>tar
+That'd be neat, make the wall sticky so you could climb and deal with that [if neon pig is touchable]stupid pig[else]opening you made[end if]...but you might get stuck to it, too. Need something clingy but less gooey.
+#mistake test for asp/asps
+>asp
+That's just what you need, a snake chasing you with everything else going on.
+>asps
+That's just what you need, a snake chasing you with everything else going on.
+#mistake test for lair/lairs
+>lair
+That might work, if the rail did not lead to a lair already.
+>lairs
+That might work, if the rail did not lead to a lair already.
+#mistake test for liar/liars
+>liar
+The number of liars the rails would create would be shocking.
+>liars
+The number of liars the rails would create would be shocking.
+#mistake test for lira
+>lira
+But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 
 #nudge for tramline
 >tramline
@@ -846,15 +843,30 @@ You've already made nothing out of something, and instead of reversing that, you
 
 Bassy Abyss
 
+`mi
+#mistake test for reins
+>reins
+Horsing around like that won't hold back the [if beast is touchable]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.
+#mistake test for rinse
+>rinse
+[if siren is touchable]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you get your hands dirty and slay the final enemy, here[end if].
+#mistake test for risen
+>risen
+You don't need the [if siren is touchable]siren's volume or [end if][if beast is touchable]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.
+#mistake retest for bates
+>bates
+You don't need to deal with a knife-wielding psycho along with the beats.
+
+#mistake retest for bates
+You don't need to deal with a knife-wielding psycho on top of all this.
+
+`nu
 #nudge for bassy
 >bassy
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for beta
 >ebta
 This racket isn't just one beat.
-
-`nu
 #spechelp for siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
@@ -893,4 +905,66 @@ The hilt serves a purpose, and besides, there's not much to change it to.
 by one point
 
 Trips Strip
+
+`nu
+* metros-exhaustive-nudge-mistake
+#let's test random things that it's tricky to do with a straight walkthrough
+#thanks for the lovely test commands, Inform!
+>gonear terminal
+>abstract arena dig to terminal
+>abstract soggy love to terminal
+>abstract soggy love to terminal
+>purloin noise bag
+
+`mi
+#mistake test for baste/baste beats/baste beast
+>baste
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+>baste beats
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+>baste beast
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+#mistake test for rifle
+>rifle
+Shooting things up is not the answer
+
+`nu
+#nudge for arena
+>arean
+The invite's for an ARENA DIG.
+#nudge for dig
+>dgi
+The invite's for an ARENA DIG.
+#nudge for fleir
+>rifel
+The flier has helpful information it'd be better to act on than change.
+#nudge for soggy
+>sogyg
+It's just garbage.
+#nudge for noet
+>noet
+It's just garbage.
+#nudge for letter
+>lettre
+It's just garbage. The writing inside, too.
+#nudge for canofbeer
+>canofbere
+The beer is just garbage, not even organic like the drainage. But its name is interesting.
+#nudge for beer
+>bere
+It's just garbage.
+#nudge for noise
+>noies
+Even if you could do anything, that'd rip the noise bag open.
+#nudge for bag
+>bga
+Even if you could do anything, that'd rip the noise bag open.
+
+`mi
+#mistake test for eosin
+>eosin
+You need the bag, not a dying powder.
+#mistake test for gab
+>gab
+That's not a powerful enough noise to fight the beats.
 

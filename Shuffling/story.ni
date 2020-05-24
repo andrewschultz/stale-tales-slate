@@ -185,9 +185,9 @@ debug-scan is a truth state that varies. debug-scan is usually false. [a testing
 
 debug-parse is a truth state that varies. debug-scan is usually false. [a testing variable for if we want to check parse-scaning beforehand]
 
-tnt is a truth state that varies.
+tnt is a truth state that varies. tnt is true. [tip no tip, toggled with TNT in the test file]
 
-ff is a truth state that varies.
+ff is a truth state that varies. [this is for Fake Flip, for testing purposes.]
 
 the file of gamehints is called "shufhints".
 
@@ -605,7 +605,9 @@ to show-missed (curr - a region):
 		if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
 		if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
 		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with BACTINE.";
-	if curr is forest and has-been is off-stage, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
+	if curr is forest:
+		if slit is in Self-ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to SILT.";
+		if has-been is off-stage, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
 	if curr is sortie:
 		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
 		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
@@ -1416,6 +1418,8 @@ carry out kicking:
 	try attacking the noun instead;
 	the rule succeeds;
 
+the block attacking rule is not listed in any rulebook.
+
 check attacking:
 	if noun is the player:
 		if player has shotgun, try attacking the player instead;
@@ -1737,7 +1741,6 @@ carry out optining:
 	else:
 		say "Now pointing you with an additional hint when you have the right anagram letters. NO TIP turns this back off.";
 		now point is true;
-		now pointcue is true;
 	the rule succeeds.
 
 chapter notiping
@@ -1960,7 +1963,7 @@ Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal 
 
 Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [banshee]
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [slit, banshee]
 
 Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regtab of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. [cake pan, grist]
 
@@ -4385,12 +4388,18 @@ understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as lin
 
 section corses crosse
 
-Corses Crosse is boring scenery in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
+Corses Crosse is boring scenery in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing[if slit is in Self-ID Fields], and there's a menacing looking slit off to one side[end if]. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
 
 this is the bore-crosse rule:
 	if current action is entering, try going north instead;
 
 beard-unmade is a truth state that varies. beard-unmade is usually false.
+
+section list
+
+a slit is LLPish scenery in Self-ID Fields. description is "Peeking through the slit, you see a list ... of horribly named places, each with its own image too disturbing to describe here. You shudder at [randbla] and [randbla][one of].[paragraph break]Scary! Perhaps if there were some way to neutralize the slit, you'd feel comfort, even if you didn't make progress[or][stopping].". rgtext of slit is "[gcn][rc][rc][gc]". lgth of slit is 4. gpos of slit is 1. rpos of slit is 4. cert-text of slit is "S[d1][d1][ast]T". rect-text of slit is "S[d1][d1][ast]T".
+
+the silt is scenery. description is "You shouldn't be able to see the silt or the slit now."
 
 section selves vessel
 
@@ -4773,11 +4782,13 @@ Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is LLPish scenery in Cruel Ones' Enclosure. rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
+the banshee is LLPish scenery in Cruel Ones' Enclosure. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
 
-description of banshee is "You can hear but not see it."
+rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
-the has-been is useless boring scenery. understand "has been" and "hasbeen" as has-been. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
+the has-been is useless boring scenery. description is "You shouldn't be able to detect it, or the banshee, now.".
+
+understand "has been" and "hasbeen" as has-been.
 
 can-pass-crosse is a truth state that varies. can-pass-crosse is usually false.
 
@@ -6529,7 +6540,7 @@ description of the antlers is "The antlers are just the sort of annoying thing t
 
 the rentals are plural-named useless scenery.
 
-description of the rentals is "The antlers are gone."
+description of the rentals is "The antlers are gone. You shouldn't be able to see the rentals or antlers."
 
 check going to Obtains Boastin' Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
@@ -8861,7 +8872,7 @@ some maps are plural-named things.
 
 understand "map" as some maps when mrlp is forest.
 
-description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
+description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
 
 the Spam is flippable.
 

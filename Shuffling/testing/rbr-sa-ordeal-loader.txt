@@ -2,11 +2,15 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
-files=reg-sa2-ordeal-max.txt,reg-sa2-ordeal-min.txt,reg-sa2-ordeal-nudmis.txt
+# hch.py ti check help-stuff, mist.py to check mistakes, nuch.py to check nudges
+#
+files=reg-sa-ordeal-max.txt,reg-sa-ordeal-min.txt,reg-sa-ordeal-nudmis.txt
 ~	nudges	t2
 ~	nu	t2
+~	mi	t2
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
@@ -15,65 +19,110 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal_thru
 
+`mi
+#mistake test for magnet/a magnet
+>magnet
+A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.
+>a magnet
+A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.
+#mistake test for afos
+>afos
+You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.
+#mistake test for faso
+>faso
+There are even further-away places to explore in this game than Burkina Faso.
+#mistake test for salt mine/saltmine
+>salt mine
+Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+>saltmine
+Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+
+`mi
+#general stuff
+#mistake test for use [text]
+>use zozimus
+Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
+#mistake test for turn [text]
+You can probably just SWITCH something with two text settings.
+# stuff to test before you get settler
+#mistake test for scan
+>scan
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for scan [text]
+>scan xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for c
+>c
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for c [text]
+>c xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for r
+>r
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for r [text]
+>r xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for cr
+>cr
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for cr [text]
+>cr xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for rc
+>rc
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for rc [text]
+>rc xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+`nu
 #nudge for intro
 >intor
 You don't want to change a region drastically while you're in it.
-
 #nudge for busiest
 >busiets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
-
 #nudge for slim
 >slmi
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-
 #nudge for neat
 >neta
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-
 #nudge for name
 >naem
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-
 #nudge for list
 >lits
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
-
 #nudge for elevator
 >elevatro
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
-
 #nudge for terraces
 >terracse
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
-
 #nudge for banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
 >in
-A Dry Yard
+Rested Desert
 
-#nudge for yard
->yadr
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+`mi
+#mistake test for deters
+>deters
+No! You're trying to make progress here.
+#mistake test for rood
+>rood
+This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
-#nudge for yrd
->ydr
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
-#nudge for improbable
->improbabel
-You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler.
-
+`nu
 #nudge for breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
-
 #nudge for smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
@@ -142,9 +191,23 @@ If it were just one darnel, there'd be no point in getting mad. But there are a 
 >darnesl
 You might be able to clear the darnels, but they're not as thick as, well, the thicket.
 
+`mi
+#mistake test for landers
+>landers
+There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].
+#mistake test for sandler
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+
 >slander
 #notana
 by one point
+
+`mi
+#mistake retest for sandler
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
+
 
 #dupnudge for darnel
 >darnle
@@ -164,6 +227,14 @@ The shrub and brush waver, then point towards the toga.
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 You feel a slight psychic push-pull coming from the toga. Keep at it.
 
+`mi
+#mistake test for believe
+>believe
+Yes, but what do you believe you can do or change?
+#mistake test for gato
+>gato
+Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
+
 >goat
 Your score has just gone up by one point.
 
@@ -179,6 +250,15 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 >in
 Notices Section
 
+`mi
+#mistake test for mist
+>mist
+No, those TMIs on the broad board are useful.
+#mistake test for noetics
+>noetics
+There's enough information here.
+
+`nu
 #nudge for notices
 >noticse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -233,34 +313,57 @@ You will have to change the new land one item at a time.
 The nametag peels infinitesimally.
 You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 
+`mi
+#mistake test for get a man
+>get a man
+Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
+
 >gateman
 Your score has just gone up by one point.
+
+`mi
+#mistake retest for get a man
+>get a man
+You already did.
+
+`mi
+#mistake test for almond
+>almond
+'Don't try anything too nutty!' booms Nat Egam.
 
 `nu
 #done rejects for gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
-
 #nudge for warpy
 >waryp
 You can't change Old Warpy. You have to just trust it.
-
 #nudge for old
 >odl
 You can't change Old Warpy. You have to just trust it.
-
 #nudge for oldman
 >oldmna
 He's too old to change. At least, in his present form.
-
 #nudge for dollhouse
 >dollhoues
 Thinking that doesn't do much, but the attics seem to glow a bit.
-
 #nudge for attic
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
-
 #nudge for warmup
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
+
+>ask gateman about cabinet
+>take gadget
+
+#mistake test for elastin/nailset
+>elastin
+That would make the saltine less edible.
+>nailset
+That would make the saltine less edible.
+#mistake test for stealin
+>stealin
+You're the good guy, here.
+
+>in

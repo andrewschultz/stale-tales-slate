@@ -4,11 +4,12 @@
 #
 # the nudmis file also covers two alternate ways through the sortie.
 #
-files=reg-sa2-sortie-max.txt,reg-sa2-sortie-min.txt,reg-sa2-sortie-nudmis.txt
+files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt
 ~	nudges	t2
 ~	nu	t2
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
@@ -65,11 +66,23 @@ Messing up the dial would leave you trapped here.
 >esxtien
 The spinning seems to slow a bit.
 
-`nu
+`mi
+#mistake test for a lid
+>a lid
+Changing the dial would leave you stuck.
+
+#mistake retest for turn [text]
+>turn zozimus
+You can probably TURN the dial to a number, e.g. 99
 
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
 by one point
+
+\mi
+#mistake retest for a lid
+>a lid
+You don't need to deal with the dial, now.
 
 >n
 The Nick
@@ -95,9 +108,20 @@ You don't need to re-stop the centrifuge.
 >kitchne
 The nick blurs a little but snaps back to normal.
 
+`mi
+#mistake test for thicken
+>thicken
+You might rather thin-nen to slip through the bars, but you can't.
+
 >kitchen
 by one point
 Kitchen
+
+`mi
+#mistake retest for thicken
+>thicken
+This would be the place, but you're not hungry for anything TOO fatty right now
+
 
 #####detour to check on UFR
 >s
@@ -304,8 +328,27 @@ Best not to get too crazy with food preparation.
 >steka
 You thought you smelled meat there, for a minute. Hm.
 
+`mi
+#mistake test for stake
+>stake
+A stake would have no use here. So that might be a miskate. Err...
+#mistake test for takes
+>takes
+You do a take, then a double take, at how odd this all is.
+#mistake test for teaks
+>teaks
+Hm. An indoor forest. That would be neat to see. But this is a kitchen.
+#mistake test for keats
+>keats
+This is wordplay, not poetry. But the skate does glow red.
+
 >steak
 by one point
+
+#mistake test for keats
+>keats
+This is wordplay, not poetry.
+!But the skate
 
 `nu
 #done rejects for steak
@@ -343,6 +386,10 @@ by one point
 >lettuec
 Best not to get too crazy with food preparation.
 
+#mistake test for littoral
+>littoral
+How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.
+
 >put lettuce on tortilla
 >put steak on tortilla
 >put parmesan on tortilla
@@ -358,8 +405,16 @@ by one point
 >cota
 WRONG
 
+#mistake test for cato
+>cato
+You don't need to know your classics, here.
+
 >coat
 by one point
+
+#mistake retest for cato
+>cato
+You don't need to know your classics, here.
 
 `nu
 #done rejects for coat
@@ -525,6 +580,13 @@ WRONG
 >peasant
 by one point
 
+`mi
+#mistake test for trade/trade [text]
+>trade
+Instead of trading, use GIVE X to Y.
+>trade zozimus
+Instead of trading, use GIVE X to Y.
+
 `nu
 #done rejects for peasant
 >peasatn
@@ -623,6 +685,34 @@ You already have a passage east. Don't close it.
 
 >e
 Sacred Cedars
+
+`mi
+#mistake test for cadres
+>cadres
+You must do this on your own.
+#mistake test for ecards/e-cards
+>ecards
+Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+>e-cards
+Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+#mistake test for lois
+>lois
+Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves.
+#mistake test for potus
+>potus
+This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
+#mistake test for pray
+>pray
+Things aren't THAT bad.
+#mistake test for pray
+>pray
+It's been so long, you only mouth a "Yarp!"
+#mistake test for serve
+>serve
+You must serve by going forth on your mission of warlikeness and love.
+#mistake test for sever
+>sever
+Violence or vandalism in such a holy place? For shame.
 
 #nudge for cedars
 >cedasr
@@ -745,8 +835,18 @@ It's a plane, now, for sure.
 >panle
 WRONG
 
+`mi
+#mistake test for nepal
+>nepal
+Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
+
 >panel
 by one point
+
+`mi
+#mistake test for nepal
+>nepal
+Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
 `nu
 #done rejects for panel
@@ -895,16 +995,32 @@ No, you're overthinking it. Just the text.
 >stere
 WRONG
 
+#mistake test for terse
+>terse
+All five wrong.
+
 >steer
 by one point
+
+#mistake retest for terse
+>terse
+Already good.
 
 `nu
 #spechelp for hoots button
 >shoto
 WRONG
 
+#mistake test for sooth
+>sooth
+Close...what you need to do will sooth, in a bit.
+
 >shoot
 by one point
+
+#mistake retest for sooth
+>sooth
+Close...what you need to do will sooth, in a bit.
 
 `nu
 #nudge for button

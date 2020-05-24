@@ -2,11 +2,14 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
-files=reg-sa2-resort-max.txt,reg-sa2-resort-min.txt,reg-sa2-resort-nudmis.txt
+files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt
 ~	nudges	t2
 ~	nu	t2
+~	mi	t2
+~	max	t0
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
@@ -37,27 +40,32 @@ by one point
 >enter resort
 Astral Altars
 
+`mi
+#mistake test for lites
+>lites
+Light isn't the problem here. It's not having anywhere to go.
+#mistake test for slite
+>slite
+That's bad spelling, and it won't shrink your problems.
+
+`nu
 #nudge for astral
 >astrla
 You won't need to do anything to the whole room unless you are trapped in a room.
-
 #nudge for altar
 >altra
 You won't need to do anything to the whole room unless you are trapped in a room.
-
 #nudge for resort
 >resotr
 You don't want to change a region drastically while you're in it.
-
 #nudge for islet
 >tilse
 The tiles seem to shift a bit, but not enough.
-
 #nudge for tile
 >tiel
 You need to deal with all the tiles.
 
-`nu
+`max
 #spechelp for tiles
 >islte
 WRONG
@@ -66,6 +74,11 @@ WRONG
 by one point
 
 Leis Isle
+
+`mi
+#mistake test for download
+>download
+[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].
 
 #nudge for leis
 >lesi
@@ -106,6 +119,13 @@ Hmm, a rock, but only so much you can do with it.
 You have something on the tip of your tongue ... something about the Leis Isle doesn't seem right...
 >lies
 by one point
+
+`mi
+#mistake test for lies/lie
+>lies
+You reflect on how insidious it was to stick you here in a false paradise.
+>lie
+You reflect on how insidious it was to stick you here in a false paradise.
 
 >cork
 by one point
@@ -195,6 +215,13 @@ by one point
 >pelso
 You wouldn't want to make the slope crumble away.
 
+`mi
+#mistake test for loot
+>loot
+You don't have time for treasure with Red Bull Burdell waiting.
+#mistake test for pores
+>pores
+Almost. But you don't need to create holes.
 
 #spechelp for tool shed
 >toeholsd
@@ -214,6 +241,11 @@ WRONG
 
 >ropes
 by one point
+
+`mi
+#mistake retest for pores
+>pores
+No, you had it.
 
 `nu
 #done rejects for ropes
@@ -313,6 +345,11 @@ The trio remains unmoved. Perhaps you can give the protest more constructive aim
 >pottesr
 WRONG
 
+`mi
+#mistake test for roister
+>roister
+That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
+
 >potters
 by one point
 
@@ -404,25 +441,38 @@ WRONG
 >e
 Means Manse
 
+`nu
 #nudge for manse
 >mesna
 You won't need to do anything to the whole room unless you are trapped in a room.
-
 #nudge for extis
 >extis
 That's not quite the right sort of nothing.
-
 #nudge for marble
 >marbel
 You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
-
 #nudge for spire
 >spier
 You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
-
 #nudge for toaster
 >toastre
 You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+
+`mi
+#mistake test for amen/name
+>amen
+I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
+>name
+I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
+#mistake test for blamer
+>blamer
+No, we know who's to blame. He's done with. Time to move on.
+#mistake test for mensa
+>mensa
+No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
+#mistake test for sex it
+>sex it
+You're not even up for THAT, now. You just want to BE.
 
 >exist
 #notana

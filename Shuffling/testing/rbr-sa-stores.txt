@@ -1,0 +1,73 @@
+# rbr-sa-stores.txt
+#
+# this covers maximum points, minimum points and nudges.
+#
+# the nudmis file also covers two alternate ways through the stores.
+#
+# we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
+#
+files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt
+~	nudges	t2
+~	nu	t2
+~	mi	t2
+
+## *FILE
+## *FORK
+
+TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+>ts
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+
+`mi
+#mistake retest for get a man
+>get a man
+Tan Mage Nat Egam cannot help you now.
+
+>sortie
+
+>metros
+by one point
+#mistake test for despot
+>despot
+Summoning Red Bull Burdell would be unwise. Best not try it again.
+>despot
+Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.
+
+`mi
+#mistake test for dater
+>dater
+This is not a romance game.
+#mistake test for rated
+>rated
+The trade tread isn't for commenting on, it's for passage to the metros.
+#mistake test for lost
+>lost
+No, you need to find your way through individual stores.
+#mistake test for oyster
+>oyster
+Nice try, but that's next game![fake-clue of store y]
+#mistake test for presto
+>presto
+Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]
+#mistake test for routes
+>routes
+Hm, that seems right, but it doesn't work this game![fake-clue of store u]
+#mistake test for strobe
+>strobe
+You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
+#mistake test for tories
+>tories
+I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
+#mistake test for towers
+>towers
+That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]
+#mistake test for troves
+>troves
+Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]

@@ -1,6 +1,7 @@
 Version 1/171011 of Shuffling Mistakes by Andrew Schultz begins here.
 
 [mist.py checks to make sure the unit tests are synced with this]
+[malf.py alphabetizes by section]
 
 volume Shuffling Mistakes
 
@@ -128,19 +129,21 @@ understand "shoot [something] with [something]" as a mistake ("You can either FI
 
 chapter random forests / Softer Forest / Rest of Forest
 
-understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is in location of player.
+understand "sate" as a mistake ("There's nothing around you have to sate, thankfully.") when teas is touchable.
 
-understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is in location of player.
+understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is touchable.
 
-understand "tase" as a mistake ("This game is nonviolent--well, except for a few puns.") when teas is in location of player.
+understand "tase" as a mistake ("This game is nonviolent--well, except for a few puns.") when teas is touchable.
 
-understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is in location of player.
+understand "wets" as a mistake ("Getting lost in a swamp would be even worse than getting lost in a forest.") when stew is touchable.
 
 chapter Self-ID Fields
 
 understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in Self-ID Fields.
 
 understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self-ID Fields.
+
+understand "list" as a mistake ("There's a list inside the slit, so that's not what it could become.") when slit is touchable.
 
 understand "nile" as a mistake ("Wrong river for the underworld.") when player is in Self-ID Fields.
 
