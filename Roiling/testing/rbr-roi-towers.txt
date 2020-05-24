@@ -125,6 +125,18 @@ Your word, stupendous as it is, has no effect. Yet. You are probably not close e
 !by one point
 
 @nud
+#mistake test for posited
+>posited
+You formulate a proof that the place you are in does actually exist.
+#mistake test for cleats
+>cleats
+The castle is run-down and unromantic enough. Changing it to cleats would be even worse.
+#mistake test for a place
+>a place
+It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.
+#mistake test for crust
+>crust
+It probably needs less crust, not more. The whole curst palace.
 #spechelp for curst palace
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
@@ -237,15 +249,37 @@ Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros 
 #scannotes for curst palace
 >scan curst palace
 Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace.
+#mistake test for dopiest
+>dopiest
+You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
 
 >sadder
 Your score has just gone up by one point
 >get all
 
+@nud
+#mistake test for retoast/retoast [text]
+>retoast
+You can just TOAST or EAT a pastry once you have it.
+>retoast zozimus
+You can just TOAST or EAT a pastry once you have it.
+#mistake retest for dopiest
+>dopiest
+You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
+s
 >n
 Scope Copse
 
 @nud
+#mistake test for copes
+>copes
+You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.
+#mistake test for pecos
+>pecos
+This game ain't a dadgum Western.
+#mistake test for bustler
+>bustler
+The butlers are plural, and anyway, they're bustling plenty as-is.
 #nudge for copse
 >cepos
 The copse and the scope are both fine as-is.
@@ -276,6 +310,13 @@ Well, the orange kind of gives things away. And even with brute force, you can p
 #scannotes for muscly luc sym
 >scan muscly luc sym
 You've been around thee block enough to know what the variable color must be.
+#mistake test for scumly
+>scumly
+Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.
+>gs
+>scumly
+Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.
+>gs
 #mistake test for ursty/ur sty
 >ursty
 You're trying to destroy the yurts, not build them up.
@@ -312,6 +353,9 @@ Score in a scenario: 9 out of 50 total points in the current region, Towers. Low
 >xray butlers
 
 @nud
+#mistake test for worse
+>worse
+The brownies don't need to taste any worse.
 #nudge for brownie
 >brownei
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
@@ -577,6 +621,8 @@ Twist the ice too much, it might not look right.
 @!minh,mini
 >n
 
+Anemic Cinema
+
 @sli
 #slider test for angstier
 >nasgitre
@@ -589,6 +635,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for ice man/iceman
+>ice man
+The iceman cometh, and your life passeth.
+joke death
+>undo
+>iceman
+The iceman cometh, and your life passeth.
+joke death
+>undo
 #nudge for cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -628,11 +683,18 @@ The trendies point and laugh at your settler and how it has apparently malfuncti
 #spechelp for resident trendies
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
+#mistake test for granites/granite
+>granites
+They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
+>granite
+They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
 
 @!minh,mini
 >angstier
 Your score has just gone up by one point
 >w
+
+Fringe Finger
 
 @sli
 #slider test for rustled
@@ -640,6 +702,9 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for refing
+>refing
+You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.
 #nudge for finger
 >fingre
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -916,6 +981,9 @@ You look at the denim and it's probably the denim you want to deal with, not its
 #nudge for mini
 >miin
 You look at the denim and it's probably the denim you want to deal with, not its properties.
+#mistake test for i mend
+>i mend
+You're more interested in doing the opposite--seeing what's behind.
 
 @!minh,mini
 >mined
@@ -1074,12 +1142,30 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
 >e
 >s
 
+Lost Lots
+
 @sli
 #slider test for prosiest
 >sorpstie
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for reposit/reposits
+>reposit
+You can't just push the ripostes aside. There must be a way to change them.
+>reposits
+You can't just push the ripostes aside. There must be a way to change them.
+#mistake test for prosties
+>prosties
+Not that sort of game. There's some suggestive stuff, but nothing like that.
+#mistake test for slot
+>slot
+If you made it, you might fall in the slot and never get out.
+#mistake test for tripose/triposes
+>tripose
+No organic chemistry, please.
+>triposes
+No organic chemistry, please.
 #nudge for riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
@@ -1162,14 +1248,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
+#mistake test for ranged
+>ranged
+The garden does not get any bigger.
 #nudge for geese
 >geees
 The geese are fine as they are. They're just there for scenery, and stuff.
 #nudge for gander
 >gandre
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#nudge for obscurest
->obscurets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for locked
 >lockde
@@ -1201,6 +1287,19 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 
 >e
 
+Obscurest Subsector
+
+@nud
+#mistake test for delock
+>delock
+No, this is the wrong area for pure action.
+#mistake test for olga
+>olga
+Even if the goal could become a person, they'd be kind of wooden.
+#nudge for obscurest
+>obscurets
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
 @max
 #pre-fussier rule
 >fussier
@@ -1228,6 +1327,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake retest for delock
+>delock
+Unlocked worked better, here.
 #nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
@@ -1418,6 +1520,12 @@ You can't manipulate the clouds, and you don't need to. It's really more fun to 
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 >n
 >w
+#mistake test for slated
+>slated
+You're not sure what the Salted Deltas could be slated for. You're not here for geological research, anyway.
+#mistake test for lasted
+>lasted
+The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway.
 #nudge for salted
 >saltde
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1562,6 +1670,14 @@ Hmm. Concentrate on a shore--northern or eastern--not a direction.
 #nudge for east
 >eats
 Hmm. Concentrate on a shore--northern or eastern--not a direction.
+>undo
+#mistake test for earnest
+>earnest
+The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.
+>undo
+#mistake test for prays
+>prays
+Too late to be a prayers sprayer.
 >undo
 #nudge for southwest
 >southwets
@@ -1712,6 +1828,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for repents
+>repents
+The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.
+#mistake test for respent
+>respent
+You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
 #spechelp for ur-pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
@@ -1741,6 +1863,9 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
 
 @nud
+#mistake test for occurs
+>occurs
+You need to make something occur.
 #done rejects for unripe ur-pine
 >penuir
 You already found a succor crocus. There's not much else there, it seems.
@@ -1767,6 +1892,11 @@ The Tetris Sitter breaks her glassy smile for a moment.
 #scannotes for tetris sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.
+#mistake test for titres/titers
+>titres
+No physical sciences are necessary here.
+>titers
+No physical sciences are necessary here.
 
 @sli
 #slider test for triste

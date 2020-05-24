@@ -1210,6 +1210,9 @@ Nothing to bury anything with. Well, there's your fingers, but that'd take too l
 >e
 
 @nud
+#mistake test for tarp
+>tarp
+Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
 #nudge for hedrno
 >hedron
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [HORNED HEDRON]
@@ -1352,6 +1355,9 @@ Your score has just gone up by one point
 You discovered the portal. No need to look further.
 >in
 End Den
+#mistake test for ned
+>ned
+That was my pen name in Shuffling Around.
 #nudge for end
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [END DEN]
@@ -1461,6 +1467,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for nat
+>nat
+You don't need to name the ant. It's not a pet.
 #mistake test for splam
 >splam
 There's a simpler way to attack the ant.
@@ -1543,6 +1552,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
+
+@nud
+#mistake test for snip/snip pins
+>snip
+You don't have anything with a small enough blade to cut the pins. But that has to be close.
+>snip pins
+You don't have anything with a small enough blade to cut the pins. But that has to be close.
 
 >spin
 Your score has just gone up by one

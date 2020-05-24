@@ -2,6 +2,7 @@ Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
 [mist.py checks to make sure the unit tests are synced with this]
 [malf.py alphabetizes mistakes by section]
+[books are arranged by difficulty/first viewed, and rooms are arranged by first viewed]
 
 volume Roiling Mistakes
 
@@ -603,7 +604,7 @@ understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['
 
 chapter End Den
 
-understand "ned" as a mistake ("That was my name in the first game.") when player is in End Den.
+understand "ned" as a mistake ("That was my pen name in Shuffling Around.") when player is in End Den.
 
 chapter Plasm Lamps
 
@@ -625,11 +626,11 @@ book towers
 
 understand "xray" and "x-ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
 
-understand "cleats" as a mistake ("The castle is run-down and unromantic enough. Changing it to cleats would be even worse.") when mrlp is towers.
+understand "cleats" as a mistake ("The castle is run-down and unromantic enough. Changing it to cleats would be even worse.") when mrlp is towers and player is not in Loftier Trefoil.
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
-understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers.
+understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
 chapter Loftier Trefoil
 
@@ -697,6 +698,8 @@ chapter Fringe Finger
 
 understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.") when player is in Fringe Finger.
 
+chapter Unblest Sunbelt
+
 chapter Treading Gradient
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
@@ -715,13 +718,13 @@ understand "ranged" as a mistake ("The garden does not get any bigger.") when pl
 
 chapter Lost Lots
 
-understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
-
-understand "reposit" and "reposits" as a mistake ("You can't just push the ripostes aside. There must be a way to change them.") when ripostes are in location of player.
-
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
 understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
+
+understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
+
+understand "reposit" and "reposits" as a mistake ("You can't just push the ripostes aside. There must be a way to change them.") when ripostes are in location of player.
 
 chapter Obscurest Subsector
 
@@ -790,10 +793,6 @@ understand "reedy" as a mistake ("No, the adverb.") when player is in Minded Mid
 
 understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Minded Midden and ed riley is in Minded Midden.
 
-chapter coevals alcoves
-
-understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is in location of player.
-
 chapter Disowned Downside
 
 understand "slap em" as a mistake ("[if macks are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
@@ -814,9 +813,11 @@ understand "whoever" as a mistake ("You wonder whoever could be saying the vow h
 
 chapter Shiner Shrine
 
-understand "rhines" as a mistake ("You don't need a river or two impeding your progress.") when player is in Shiner Shrine.
+understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is in location of player.
 
-understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is in location of player
+understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is touchable.
+
+understand "rhines" as a mistake ("You don't need a river or two impeding your progress.") when player is in Shiner Shrine.
 
 chapter Lamer Realm/Blest Belts
 
@@ -825,10 +826,6 @@ understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]a
 understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help it[else]it needs no more help[end if].") when player is in Lamer Realm.
 
 understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in Lamer Realm.
-
-understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is in location of player.
-
-understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is in location of player
 
 understand "lows" as a mistake ("Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.") when owls are in location of player.
 
@@ -856,6 +853,18 @@ understand "slain" and "as nil" as a mistake ("[if nails are in location of play
 
 understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve.
 
+chapter Reclusion Inclosure
+
+understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot right now[else]Elmer and Merle look around greedily for a second[end if].") when player is in Reclusion Inclosure.
+
+understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
+
+understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is in location of player.
+
+understand "nicer soul" as a mistake ("[if elmer is in Reclusion Inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
+
+understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in Reclusion Inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
+
 chapter Rancho Archon Anchor
 
 understand "aliver" as a mistake ("[if player is in Rancho Archon Anchor]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
@@ -867,16 +876,6 @@ understand "drop it" as a mistake ("For whatever reason, you just decide to give
 understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Rancho Archon Anchor.
 
 understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Rancho Archon Anchor.
-
-chapter Reclusion Inclosure
-
-understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot right now[else]Elmer and Merle look around greedily for a second[end if].") when player is in Reclusion Inclosure.
-
-understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
-
-understand "nicer soul" as a mistake ("[if elmer is in Reclusion Inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
-
-understand "rule scion" as a mistake ("That's what you're trying to stop, here[if elmer is in Reclusion Inclosure]. Besides, Elmer and Merle wouldn't trust your word, anyway[end if].") when player is in Reclusion Inclosure.
 
 book others
 
@@ -946,7 +945,7 @@ chapter Scape Space
 
 understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
 
-understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is in location of player.
+understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 
 understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera
 

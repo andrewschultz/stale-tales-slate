@@ -3096,10 +3096,6 @@ Your score has just gone up by one point
 >bareyl
 You've dealt with the barley. You can move around a lot more, now.
 
-#mistake test for end u
->end u
-No, end *U*!
-
 #mistake test for dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
@@ -3111,17 +3107,10 @@ No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira ch
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
 
-#mistake test for reedy
->reedy
-No, the adverb.
-
 #mistake test for idle
 >idle
 Ed Riley looks pleased he's pressured you into laziness.
 
-#mistake test for yer
->yer
-Yup! It's Ed's!
 
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
@@ -3144,7 +3133,6 @@ Gent-Fora Frontage
 #mistake test for slap em
 >slap em
 Violence is not the answer! Be clever, here.
-
 #mistake test for slap me
 >slap me
 That's kind of a silly way to motivate yourself.
@@ -3492,9 +3480,6 @@ Huh huh huh, Beavis. That was cool.
 >penis
 Dammit, Beavis. You like have a game to solve.
 
-#mistake test for spine
->spine
-You don't need to grow a spine. You've gotten this far.
 
 >x medals
 The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -3571,38 +3556,8 @@ QUIT, or UNDO the last command.
 
 >undo
 
-#mistake test for coins lure
->coins lure
-Elvira momentarily sniffs. "Money? Where? Mmm, I'll find it after beating this little dorkling up."
-
->coins lure
-Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.
-
-#mistake test for aliver
->aliver
-For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.
-QUIT, or UNDO the last command.
-
 >undo
 
-#mistake test for drop it
->drop it
-For whatever reason, you just decide to give up. Elvira cackles. "I knew you'd see it my way." You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.
->undo
-
-#mistake test for prod it
->prod it
-You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.
-
->undo
-
-#mistake test for cornelius
->cornelius
-You don't know if someone named Cornelius would help or hurt you.
-
-#mistake test for sherpa
->sherpa
-You don't need someone to help you climb. You need help fighting Elvira.
 >au 1
 
 #mistake retest for use [text]
