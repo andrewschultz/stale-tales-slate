@@ -929,7 +929,7 @@ DEBUG NOTE: REGION MIN INCREASED BY 1, 4 OVERALL.
 Score in a scenario: 18 out of 32 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 32.
 
 @nud
-#mistake test for b grade/bgrade
+#mistake retest for b grade/bgrade
 >b grade
 The badger no longer feels second-rate, so it needs no more help.
 >bgrade

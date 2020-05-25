@@ -368,9 +368,6 @@ That was sort of a given from the warning on Store H, as you note E. S. Roth's s
 >resort
 You can't go back to the Roman Manor. Well, you can, but it's a bad idea.
 
-#mistake test for tortes
->tortes
-There's no time for food! Especially fatty, non-brain food!
 
 #mistake test for repost
 >repost

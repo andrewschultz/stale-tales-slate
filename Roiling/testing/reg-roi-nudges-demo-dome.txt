@@ -232,7 +232,7 @@ Yes, everyone is welcome in the Demo Dome.
 This is a museum! Messing with the exhibits would be very bad form.
 
 #nudge for ltso
->lots
+>ltso
 This is a museum! Messing with the exhibits would be very bad form.
 
 #nudge for tools

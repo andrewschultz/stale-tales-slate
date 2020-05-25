@@ -16,13 +16,11 @@ understand "knock [text]" as a mistake ("Just KNOCK instead.");
 
 understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to toggle. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
 
-understand "tut" as a mistake ("tut 1 = tutorial with nothing scanned, tut 2 = with all scanned.")
-
 understand "hug [text]" and "hug" as a mistake ("Hug? Ugh. Guh.")
 
 understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
-understand "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
+understand "pace/paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
 
 understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when player has pedanto-notepad.
 
@@ -58,7 +56,7 @@ understand "astir" as a mistake ("[if stair is touchable]You don't need to do an
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and meet bans are in Dusty Study.
 
-understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! No stupid jokes or nothing! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
+understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 
 understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
 
@@ -76,7 +74,7 @@ understand "petals" as a mistake ("That's already been done, and quite well, by 
 
 understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates are in location of player or player encloses staple.
 
-understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if]twiddling the [if player has staple]staple[else]plates[end if] to get on with things.") when player is in Carven Cavern.
+understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]twiddling the staple[else]making use of the plates[end if] to get on with things.") when player is in Carven Cavern.
 
 book stores
 
@@ -90,7 +88,7 @@ understand "gots er" as a mistake ("And what would you do with Store G, when you
 
 understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but how to get there?") when Store U is in location of player or course source is in location of player.
+understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but you'll need to warp out of the Strip.") when Store U is in location of player or course source is in location of player.
 
 understand "pteros" as a mistake ("You don't need to face any predators. Aigh!") when player is in Strip of Profits and store p is in Strip of Profits.
 
@@ -98,11 +96,11 @@ understand "repost" as a mistake ("That's not what you need to do with Store P--
 
 understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in Strip of Profits.
 
-understand "restow" as a mistake ("[if store w is in location of player]Store W glows red as you try this[else if towers are in location of player]The towers glow red as you try this[else]You did what you could in store W and the towers[end if].") when player is in Strip of Profits
+understand "restow" as a mistake ("Store W glows red as you try this.") when Store W is touchable.
 
 understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in Strip of Profits.
 
-understand "stoner" as a mistake ("[if nestor is in location of player]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
+understand "stoner" as a mistake ("[if nestor is in location of player]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' you hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased the person in Store N enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
 understand "storge" as a mistake ("[one of]You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes[or]Stop trying to make Pillar of Storge happen[stopping].") when Store G is in location of player.
 
@@ -110,7 +108,7 @@ understand "stroke" as a mistake ("You need a stroke of genius, but that's all w
 
 understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or course source is in location of player.
 
-understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. [if otters is solved]Try thinking of a more common word[else]Try looking at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
+understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
@@ -718,13 +716,13 @@ understand "ranged" as a mistake ("The garden does not get any bigger.") when pl
 
 chapter Lost Lots
 
-understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
-
-understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
-
 understand "prosties" as a mistake ("Not that sort of game. There's some suggestive stuff, but nothing like that.") when ripostes are in location of player.
 
 understand "reposit" and "reposits" as a mistake ("You can't just push the ripostes aside. There must be a way to change them.") when ripostes are in location of player.
+
+understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
+
+understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
 
 chapter Obscurest Subsector
 

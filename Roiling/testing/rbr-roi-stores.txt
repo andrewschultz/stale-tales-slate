@@ -205,22 +205,14 @@ Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
 @nud
-#spechelp for store w
->towesr
-Store W seems to push up from the ground and go narrower for a second.
-#readables for store w
->read store w
-WESTOR is the name of the company that built this. There's more, about what method they used
->read store w
-WESTOR is the name of the company that built this. They used the SET-ROW method.
-
->towers
-Your score has just gone up by one point
-
-@nud
 #done rejects for truster turrets
 >towesr
 You should just enter the truster turrets. No need or way to seal them back up.
+
+@nud
+#mistake test for tortes
+>tortes
+There's no time for food! Especially fatty, non-brain food!
 
 @nud
 #spechelp for store u
@@ -247,6 +239,19 @@ Your score has just gone up by one point
 #done rejects for tastee estate
 >trovse
 You should just enter the Tastee Estate. No need or way to seal it back up.
+
+@nud
+#spechelp for store w
+>towesr
+Store W seems to push up from the ground and go narrower for a second.
+#readables for store w
+>read store w
+WESTOR is the name of the company that built this. There's more, about what method they used
+>read store w
+WESTOR is the name of the company that built this. They used the SET-ROW method.
+
+>towers
+Your score has just gone up by one point
 
 @nud
 #spechelp for store y

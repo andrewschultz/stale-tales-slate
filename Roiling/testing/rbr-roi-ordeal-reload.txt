@@ -49,6 +49,15 @@ Hug? Ugh. Guh.
 #mistake test for consult [text]
 >consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+#mistake test for nip
+>nip
+Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
+#mistake test for odor
+>odor
+You'd stink as a host, trying that.
+#mistake test for rood
+>rood
+No need to surprise a guest like that. Just open the door.
 
 >think
 >x chair
@@ -68,6 +77,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
+#mistake retest for odor
+>odor
+No, you need a light source, not a way out.
+#mistake retest for rood
+>rood
+You need a light source.
 
 >lamp
 Your score has just gone up by one point
@@ -109,9 +124,23 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
 
 @nud
+#mistake test for palm
+>palm
+Maybe you could, but you will need the light. You won't need the landscaping.
 #done rejects for lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+#mistake retest for odor
+>odor
+The smell would gag you before the shouty youths.
+#mistake retest for rood
+>rood
+It'd be your own crucifix if you let the shouty youths outside in.
+#mistake test for pedo
+>pedo
+Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her "clever" games.
+>pedo
+Don't dwell on it. It's lies.
 
 @nud
 #spechelp for meet bans
@@ -135,6 +164,18 @@ You don't need music right now. A way to get around would be better.
 >undo
 >undo
 #!these previous mistake tests are a cheap cheat to pick off an obscure mistake
+#mistake test for basement [text]/[text] basement [text]/[text] basement
+>basement zozimus
+You can just change the ten beams by saying BASEMENT.
+>zozimus basement zozimus
+You can just change the ten beams by saying BASEMENT.
+>zozimus basement
+You can just change the ten beams by saying BASEMENT.
+#mistake test for best name/bestname
+>best name
+Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
+>bestname
+Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -142,6 +183,9 @@ Your score has just gone up by two points
 }}SCORE+=2
 
 @nud
+#mistake retest for basement [text]/[text] basement [text]/[text] basement
+>basement zozimus
+You can just go down to the basement.
 #nudge for tenbeams
 >basemetn
 You probably just want to go DOWN to the basement.
@@ -229,7 +273,9 @@ DEBUG INFO: Adding a min point
 #done rejects for painting
 >paintign
 The painting really goes better with the study than the giant pin.
-
+#mistake test for chalets
+>chalets
+You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
 
 >satchel
 Your score has just gone up
@@ -241,9 +287,39 @@ all the secrets here
 {$SCOS}
 
 @nud
+#mistake retest for chalets
+>chalets
+You don't need a safe home, right now. You need adventure.
+!that many letters
 #done rejects for satchel
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
+#mistake test for cheat on/off/teach on/off
+>cheat on
+Just type c/t or cheat/teach to toggle. Note: settler is currently in cheat mode.
+>off
+Just type c/t or cheat/teach to toggle. Note: settler is currently in cheat mode.
+>c
+>teach on
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>off
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>t
+#mistake test for pace/paces
+>pace
+The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
+>paces
+The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
+#mistake test for [text] stable [text]/stable [text]/[text] stable
+>zozimus stable zozimus
+You can just change the tables by saying STABLE.
+>stable zozimus
+You can just change the tables by saying STABLE.
+>zozimus stable
+You can just change the tables by saying STABLE.
+#mistake test for trestle
+>trestle
+The settler is pretty powerful, but it can't build bridges.
 
 @!min
 >in
@@ -255,6 +331,9 @@ You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you
 #readables for sitar
 >read sitar
 Oh, right. You bought it from Trisa Israt.
+#mistake test for astir
+>astir
+You need to change that to something else, then it'll be astir.
 
 @!min
 >stair
@@ -266,6 +345,9 @@ DEBUG INFO: Adding a min point
 {$SCOS}
 
 @nud
+#mistake retest for astir
+>astir
+You don't need to do any more with the stair.
 #done rejects for stair
 >stari
 You don't need to do any more with the stair.
@@ -342,6 +424,11 @@ Surely a stair is more handy right now.
 #spechelp for ISBN bins
 >snbi
 The ISBN bins creak slightly.
+#mistake test for bsin/bs in
+>bsin
+Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
+>bs in
+Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 
 @!min
 >snib
@@ -356,6 +443,11 @@ DEBUG INFO: Adding a min point
 #done rejects for ISBN bins
 >snbi
 The ISBN bins are secure. Best not tinker.
+#mistake retest for bsin/bs in
+>bsin
+Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
+>bs in
+Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 
 >x settler
 >in
@@ -372,6 +464,15 @@ Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at
 #readables for rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
+#mistake test for filer
+>filer
+You can't just give Elmo a desk job. Though maybe some paperwork would help.
+#mistake test for lifer
+>lifer
+You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.
+#mistake test for mole
+>mole
+You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 
 >flier
 by one point
@@ -381,8 +482,12 @@ by one point
 {$SCOS}
 
 @nud
+#nudge for flier
 >flire
 Better to pump Elmo for information.
+#mistake retest for mole
+>mole
+You can't change Elmo into an animal. Your powers don't work that way. He already seems to be a different sort of mole.
 
 >1
 >1
@@ -415,6 +520,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tspaerl
 
 @nud
+#mistake test for craven
+>craven
+Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
+#mistake test for trainer
+>trainer
+You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
 #spechelp for plates
 >stapel
 The plates shine slightly and rattle.
@@ -424,7 +535,18 @@ EPSTAL is written as an author's signature.
 #scannotes for palest pastel plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
-
+#mistake test for petals
+>petals
+That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
+#mistake test for pleats
+>pleats
+You are a text adventurer, not a fashion designer.
+#mistake retest for trainer
+>stapler
+>trainer
+You're on your own. Perhaps you'd be better off twiddling the plates to get on with things.
+>undo
+>undo
 
 >staple
 Your score has just gone up by one point
@@ -454,6 +576,9 @@ Your score has just gone up by one point
 #done rejects for stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
+#mistake retest for trainer
+>trainer
+You're on your own. Perhaps you'd be better off making use of the staple to get on with things.
 
 >put staple in stapler
 
