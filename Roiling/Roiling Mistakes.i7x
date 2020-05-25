@@ -145,9 +145,9 @@ understand "apts" as a mistake ("Pat's is a local small business, not nameless, 
 
 understand "bane" as a mistake ("You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in Same Mesa and THE BEAN is in Same Mesa.
 
-understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when WOE BOW BELL is not in Same Mesa and mrlp is routes.
+understand "below" as a mistake ("[if woe bow bell is moot]You already tried this preposition. There must be others[else]Nice try, but wrong preposition for the situation[end if].") when WOE BOW BELL is not in Same Mesa and mrlp is routes.
 
-understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when Gast has rude 'n nuder or player has u nerd or WOE BOW BELL is in location of player.
+understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when mrlp is routes and THE BEAN is off-stage.
 
 understand "bowel" and "elbow" and "bowels" and "elbows" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
 
@@ -175,7 +175,7 @@ understand "staider" as a mistake ("[if side art is reflexed]You already did you
 
 understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "tardies" as a mistake ("You can't tell [Gast] off for being late.") when Gast is in location of player.
+understand "tardies" as a mistake ("Actually, you have all the time in the world, and you don't need to delay anyone.") when side art is touchable.
 
 understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag][end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
@@ -184,15 +184,17 @@ understand "under" as a mistake ("Wrong preposition.") when player is in Same Me
 
 chapter Cleric Circle
 
+?? pat's inside and out, as well as oscar's
+
 understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in Cleric Circle.
 
-understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough") when list o toils is in location of player.
+understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough") when list o toils is in location of player and pipe soot is not touchable.
 
 chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
+understand "orcas" as a mistake ("But the whales would be beached. [if player is in same mesa]Inside or outside of Oscar's[if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
 
-understand "poopiest" as a mistake ("This is the wrong area for adjectives. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
+understand "poopiest" as a mistake ("This is the wrong area for adjectives, clean or unclean. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
 
 understand "scoar" and "scoars" as a mistake ("You don't get points just for asking them.") when player is in Same Mesa or player is in Adobe Abode.
 
@@ -210,7 +212,7 @@ understand "pta" as a mistake ("You don't need to attend any school board meetin
 
 understand "scarving" as a mistake ("Changing the restaurant to a clothes boutique isn't helpful.") when player is in Idle Deli.
 
-understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[if seed pit is reflexive], and he's not letting you in that seed pit without argument[end if].") when player is in Idle Deli.
+understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already, and [if seed pit is reflexive]he's not letting you in that seed pit without argument[else]you don't really need it now that you got the mushrooms[end if].") when player is in Idle Deli.
 
 chapter Harms Marsh
 
@@ -247,7 +249,7 @@ understand "acre" as a mistake ("That farm-[if player is male]boy[else]girl[end 
 
 understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not in location of player and mrlp is troves.
 
-understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
+understand "clod" as a mistake ("Hey! No beating yourself up. You'll probably do it wrong, anyway.") when player is in Loather Rathole.
 
 understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is in location of player], and that won't get back your super purse like racing after that guy[end if].") when cold is not in location of player and player does not have super purse.
 

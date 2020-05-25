@@ -137,6 +137,13 @@ You don't want to get burnt up with hate, and that won't get back your super pur
 #spechelp for heat
 >caer
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
+#mistake test for acre
+>acre
+That farm-boy terminology won't help show you give a darn in the big city.
+>gs
+>acre
+That farm-girl terminology won't help show you give a darn in the big city.
+>gs
 
 #not a mistake
 >care

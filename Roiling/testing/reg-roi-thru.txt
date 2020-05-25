@@ -817,10 +817,6 @@ Don't need to overheat, or overhate.
 >real hot
 You needed a strong concrete emotion to get hot.
 
-#mistake test for clod
->clod
-Hey! No beating yourself up. You'll do it wrong.
-
 #not a mistake because it is in "after reading a command"
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
