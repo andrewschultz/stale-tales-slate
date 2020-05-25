@@ -255,7 +255,7 @@ understand "hate" as a mistake ("You don't want to get burnt up with hate[if hea
 
 understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is in location of player.
 
-understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong concrete emotion to get hot.") when player is in Loather Rathole.
+understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong emotion to get hot.") when player is in Loather Rathole.
 
 chapter Boarded Roadbed
 
@@ -263,15 +263,13 @@ understand "obverse" as a mistake ("You can't just make things obverse by wantin
 
 chapter Bustle Sublet
 
-understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and sob ever verbose is moot.
-
 chapter Drain Nadir
 
 understand "aspired" as a mistake ("Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!") when player is in Drain Nadir.
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Drain Nadir and I'd Cede is in Drain Nadir.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") whenI'd Cede is touchable.
 
 chapter Boredom Bedroom
 
@@ -287,13 +285,14 @@ chapter Browse Bowers
 
 understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
-understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when player is in Browse Bowers
-
-understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and praise is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
+understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
+") when player is in Browse Bowers
 
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 chapter Econ Cone
+
+understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[elseif cone-points is 2]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
 understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and Pernod is in Econ Cone.
 
@@ -325,7 +324,7 @@ book presto
 
 understand "fire [text]" as a mistake ("SHOOT something with the gun instead.") when player has popgun.
 
-understand "shoot [text] with [text]" as a mistake ("Just say what you want to shoot.")
+understand "shoot [text] with [text]" as a mistake ("Just say what you want to shoot.") when player has popgun.
 
 chapter Grey Gyre
 
@@ -434,6 +433,8 @@ understand "ptah" as a mistake ("[if hogs are in Phat Path]If we were in ancient
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is moot and Leo is in Phat Path.
 
 chapter Hacks' Shack
+
+understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you need to[end if].") when player is in Hacks' Shack.
 
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
 

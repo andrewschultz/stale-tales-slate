@@ -335,6 +335,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake test for fire [text]
+>fire zozimus
+SHOOT something with the gun instead.
+#mistake test for shoot [text] with [text]
+>shoot zozimus with zozimus
+Just say what you want to shoot.
 #done rejects for boing go bin
 >binog
 You can't force another revelation, but you don't need to.

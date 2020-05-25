@@ -47,6 +47,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for real hot
+>real hot
+You need a strong emotion to get hot.
 #nudge for hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
@@ -126,6 +129,9 @@ You think you feel less cold for a second. But you need to make it last.
 Your score has just gone up by one point
 
 @nud
+#mistake retest for real hot
+>real hot
+You needed a strong emotion to get hot.
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
@@ -144,6 +150,12 @@ That farm-boy terminology won't help show you give a darn in the big city.
 >acre
 That farm-girl terminology won't help show you give a darn in the big city.
 >gs
+#mistake test for clod
+>clod
+Hey! No beating yourself up. You'll probably do it wrong, anyway.
+#mistake test for race
+>race
+Races scare you without the proper motivation from inside.
 
 #not a mistake
 >care
@@ -215,6 +227,9 @@ Well, that's a bit confusing. You'd think a four-letter word wouldn't have too m
 #scannotes for sob ever verbose
 >scan sob ever verbose
 The question marks ... hmm. Oh, you get it now.
+#mistake test for obverse
+>obverse
+You can't just make things obverse by wanting them to be. But if change comes within, perhaps things are closer to obverse than you think.
 
 @max
 #pre-spot-stop-post rule
@@ -372,6 +387,12 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for spider
 >spidre
 The diapers, the sad pier--the spider only fits in as *a* spider.
+#mistake test for aspired
+>aspired
+Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!
+#mistake test for praised
+>praised
+You would like to be, but you can't just want others to. Change comes from within.
 
 @mina,minb
 Score in a scenario: 6 out of 24 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
@@ -398,6 +419,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake test for snog
+>snog
+You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
 #nudge for diapers
 >despari
 Don't twist yourself into knots to/from REAL despair.
@@ -428,9 +452,15 @@ Your score has just gone up by one point
 Boredom Bedroon
 
 @nud
+#mistake test for aled
+>aled
+Getting drunk will not solve your problems. And that lager would taste awful, anyway. You see red at yourself for such thoughts.
 #nudge for bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#mistake test for broomed
+>broomed
+You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.
 
 @nud
 #spechelp for large regal lager
@@ -439,6 +469,9 @@ No...that is not quite the way to fight the temptation of the wicked brew.
 #scannotes for large regal lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
+#mistake test for alger
+>alger
+What would an Alger hero DO to such foul spirits as the lager, though?
 
 @sli
 #slider test for glare
@@ -461,6 +494,9 @@ Your score has just gone up by one point
 Score in a scenario: 11 out of 24 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 24.
 
 @nud
+#mistake retest for aled
+>aled
+Getting drunk will not solve your problems. Especially when there's nothing here to get drunk with. You see red at yourself for such thoughts.
 #nudge for glare
 >glaer
 You stare into space some more but get distracted.??
@@ -490,6 +526,11 @@ That's not quite the way to focus on the stream.
 #scannotes for me arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
+#mistake test for maters/tamers
+>maters
+Perhaps they know their trade, well, but you need to, too.
+>tamers
+Perhaps they know their trade, well, but you need to, too.
 
 @!mina
 >master
@@ -515,6 +556,12 @@ Your score has just gone up by one point
 Browse Bowers
 
 @nud
+#mistake test for bowser
+>bowser
+This game is pretty old school, but it has enough obstacles.
+#mistake test for eiders
+>eiders
+But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
 #nudge for eder
 >edre
 It's Si Reed's full name.
@@ -557,9 +604,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >desire
 Your score has just gone up by one point
+
+#Econ Cone
 Econ-Cone
 
 @nud
+#mistake test for once
+>once
+Yes! You only need a chance! Once! To get inside! But you're nowhere near enthused enough.
 #nudge for cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
@@ -592,6 +644,9 @@ That's not quite the way to look forward to praise. But it may be a start.
 #scannotes for praise spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
+#mistake test for persia
+>persia
+You redden at the thought of mystical lands that aren't relevant to the here and now.
 
 @sli
 #slider test for aspire
@@ -606,6 +661,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake test for penrod
+>penrod
+Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!
+#mistake retest for once
+>once
+Yes! You only need a chance! Once! To get inside! You are enthused enough, but you need strategy.
 #done rejects for praise spirea
 >aspier
 You're wanting praise too much, now.
@@ -626,6 +687,9 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 
 @nud
+#mistake retest for once
+>once
+Yes! You only need a chance! Once! To get inside! You are more than enthused enough, but you need strategy.
 #renudge for statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
@@ -673,6 +737,9 @@ Your score has just gone up by one point
 Upscale Capsule
 
 @nud
+#mistake test for fren
+>fren
+No dog walks along dragging Sebastian in their mouth.
 #nudge for upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -702,6 +769,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake test for lsat
+>lsat
+Oh dear. Is a standardized lawyers' aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.
+#mistake test for slat
+>slat
+You're not in the window making business.
 #mistake test for wogan
 >wogan
 You don't need Terry Wogan announcing your progress like it's Eurovision.
