@@ -45,6 +45,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for balm
+>balm
+Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
+#mistake test for enemy tzar/tzar enemy
+>enemy tzar
+You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+joke death
+>undo
+>tzar enemy
+You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+joke death
+>undo
 #nudge for volt
 >votl
 That can't be it. It's a volt MAZE.
@@ -88,6 +100,14 @@ Your score has just gone up by one point
 Austerer Treasure
 
 @nud
+#mistake test for ooph/phoo
+>ooph
+That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
+>phoo
+That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
+#mistake test for pheyoo
+>pheyoo
+But nothing really smells in here. Perhaps you need something more straightforward and universal.
 #nudge for austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -158,6 +178,35 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 Char Arch
 
 @nud
+#mistake test for tars
+>tars
+But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
+#mistake test for cafe
+>cafe
+You don't need caffeine or food here.
+#mistake test for gpa/gpas
+>gpa
+You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
+>gpas
+You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
+#mistake test for kay
+>kay
+You try to nag the yak with a 'kay?' but without the 'mm' it's just not Lumberghian enough to work.
+#mistake test for kya
+>kya
+The yak is unimpressed with your karate noises.
+#mistake test for mad
+>mad
+How can you feel mad, looking at such a beautiful work of nature?
+#mistake test for okey
+>okey
+You try to make things okey (sic) but you aren't enough of a bard to.
+#mistake test for spag
+>spag
+You don't have time to read text-adventuring magazines right now. You're too busy living them.
+#mistake test for srat
+>srat
+The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.
 #mistake test for pga/pgas
 >pga
 No golfers appear.
@@ -230,6 +279,14 @@ The tars remain heterogeneous. And very sticky. And the same size.
 #mistake test for arts
 >arts
 Being an arts tsar won't help. You need a word that shows anger.
+#mistake test for tard
+>tard
+Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion
+>tard
+Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
+You don't feel dumb after doing this, so there's no need to use that word again
+>tard
+You are just trolling now. No further clues for you[stopping].
 
 #not a mistake
 >rats
@@ -291,6 +348,25 @@ WRONG
 Marines Seminar Remains
 
 @nud
+#mistake test for oppugn [text]/oppugn
+>oppugn zozimus
+You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
+>oppugn
+You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
+#mistake test for nobig/no big
+>nobig
+Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
+>no big
+Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
+#mistake test for pilots
+>pilots
+You don't need to fly anywhere. Besides, it's a popgun, not a pistol.
+#mistake test for smearin
+>smearin
+That may've happened during the seminar, but you don't need that sort of violence here and now.
+#mistake test for strop
+>strop
+That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.
 #nudge for marines
 >marinse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -335,6 +411,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake retest for nobig/no big
+>no big
+Hey, now, that's just humblebragging.
+>nobig
+Hey, now, that's just humblebragging.
 #mistake test for fire [text]
 >fire zozimus
 SHOOT something with the gun instead.
@@ -431,6 +512,9 @@ You can't think of any way to tackle this one room. Perhaps it is the whole maze
 #nudge for bigl
 >bilg
 The big L may be some sort of clue, but you can't do anything with it.
+#mistake test for glib
+>glib
+You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
 #nudge for floor
 >floro
 You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
@@ -467,6 +551,9 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 #nudge for bigr
 >birg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
+#mistake test for brig
+>brig
+There, there. This maze is much less hard to get out of than a prison.
 >e
 #nudge for bigs
 >bisg
@@ -562,6 +649,9 @@ That's not something
 Dirge Ridge
 
 @nud
+#mistake test for evil
+>evil
+No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
 #nudge for dirge
 >direg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -571,6 +661,17 @@ The vile veil is impassive. It--kind of protects you, actually.
 #spechelp for leo
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
+#mistake test for elo
+>elo
+Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.
+#mistake test for eol
+>eol
+Somehow, you doubt Leo is into computers.
+#mistake test for asswhup/whupass
+>asswhup
+No chance.
+>whupass
+No chance.
 
 >ole
 Your score has just gone up by one point
@@ -590,6 +691,18 @@ The odes song sounds warpy for a second or two. Who knows, maybe you could get r
 #scannotes for sods gone odes song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
+#mistake retest for evil
+>evil
+No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
+#mistake test for leonard/renaldo/leandro/rolande
+>leonard
+That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+>renaldo
+That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+>leandro
+That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+>rolande
+That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 
 @sli
 #slider test for ole
@@ -610,6 +723,9 @@ by one point
 Your score has just gone up by one point
 
 @nud
+#mistake retest for evil
+>evil
+No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
 #done rejects for rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
@@ -624,6 +740,20 @@ Maybe something like that'd work with just one washup. But there are two.
 #spechelp for wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
+#mistake test for whasup/whasups
+>whasup
+That feels almost right, but you remember that that word has 2 s's in a row.
+>whasups
+That feels almost right, but you remember that that word has 2 s's in a row.
+#mistake retest for asswhup/whupass
+>asswhup
+It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins' cistern.
+#mistake retest for tard
+>tard
+You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.
+>mistake retest for leonard/renaldo/leandro/rolande
+>leonard
+You need to find a way to cheer them up.
 
 @sli
 #slider test for whassup
@@ -635,6 +765,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+>mistake retest for leonard/renaldo/leandro/rolande
+>leonard
+You wouldn't want that, now they're your friends.
+#mistake retest for asswhup/whupass
+>asswhup
+They're on your side. They will fight when they need to.
 #done rejects for wzup
 You don't need to greet Leo and Rand again.
 #renudge for leonard
@@ -759,6 +895,9 @@ Your score has just gone up by one point
 Phat Path
 
 @nud
+#mistake test for ptah
+>ptah
+No Egyptian deity comes to your rescue. Or needs to.
 #nudge for phat
 >phta
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -770,6 +909,12 @@ You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a s
 No, it's not just any clump, but hawt thaw.
 
 @nud
+#mistake test for alter
+>alter
+Vandalism! For shame!
+#mistake test for slog on
+>slog on
+You need Leo and Rand to go away, for now, before you can slog on.
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
@@ -954,6 +1099,12 @@ Good idea, but tough to program without a keyboard.
 >purloin keyboard
 
 @nud
+#mistake test for rived
+>rived
+You don't need to do that sort of hacking.
+#mistake test for diver
+>diver
+It's you that'll need to dive into some code.
 #mistake test for feal
 >feal
 Nobody needs allegiance, here.
@@ -1116,6 +1267,13 @@ You need to deal with the full Clack Ops Locs Pack.
 #nudge for pack
 >pakc
 You need to deal with the full Clack Ops Locs Pack.
+#mistake test for idks
+>idks
+You'll need to figure stuff out with the disk, but right now, yeah, you're all 'I don't know.'
+#mistake test for kids
+>kids
+Kids don't need to listen to the words you've used so far! They wouldn't help with programming, anyway.
+However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus.
 
 @sli
 #slider test for skid
@@ -1160,6 +1318,10 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake retest for kids
+>kids
+Kids don't need to listen to the words you've used so far! They wouldn't help with pushing the skid, anyway.
+!that's a plus
 #mistake test for repo
 >repo
 Nobody else seems to own the oper rope or the skid.
@@ -1197,6 +1359,12 @@ Hm, might be FUN TO try another guess. Or useful. Or both.
 #spechelp for gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
+#mistake test for alco
+>alco
+Alcohol doesn't work as well as caffeine in this situation.
+#mistake test for bat
+>bat
+You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
 
 >cola
 Your score has just gone up by one point
@@ -1208,6 +1376,15 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 @nud
+#mistake retest for alco
+>alco
+Alcohol doesn't work as well as caffeine in this situation.
+#mistake test for pop
+>pop
+It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
+#mistake test for soda
+>soda
+It's cola. It has to be. Soda could make you into a sod, of course.
 #mistake retest for feal
 >feal
 Nobody needs allegiance, here.
@@ -1484,6 +1661,9 @@ Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more
 #spechelp for drive e
 >drivee
 Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
+#mistake test for redive
+>redive
+But you've figured nothing about Drive E yet. Not that you strictly need to.
 
 @!min
 >avider
@@ -1503,6 +1683,10 @@ by one point
 REGION MIN INCREASED BY 1
 
 @nud
+#mistake retest for redive
+>redive
+Deriving was tricky enough.
+#readables for drive a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #done rejects for rom sticks

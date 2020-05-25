@@ -870,10 +870,6 @@ helping someone else
 
 ##line break??
 
-#mistake test for redive
->redive
-Close, but you need to figure out where to re-dive back into the cellar.
-
 >deriev
 It's...hmm...you remember all the clues, but what order to place them in, now.
 >derive
@@ -1170,13 +1166,6 @@ The Self-Referential Aptitude Test is an interesting puzzle, but you have enough
 >rast
 The star seems to wiggle a bit, but not enough to pull it out.
 
-#mistake test for tard
->tard
-Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.
-You see red at your slight indiscretion
->tard
-Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possbilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
-You don't feel dumb after doing this, so there's no need to use that word again.
 
 >drta
 The dart seems a bit closer, but...dang! Not quite.
@@ -1279,10 +1268,6 @@ Your score has just gone up by one point
 >oel
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
-#mistake test for leonard/renaldo/leandro/rolande
->leonard
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
-
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 >darn
@@ -1293,11 +1278,6 @@ Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've fo
 #mistake retest for evil
 >evil
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
-
-#mistake retest for leonard/renaldo/leandro/rolande
->renaldo
->leandro
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You need to find a way to cheer them up.
 
 #mistake test for whasup/whasups
 >whasup
@@ -1312,15 +1292,6 @@ Your score has just gone up by one point
 >whasspu
 You don't need to greet Leo and Rand again.
 
-#?? all possible states
-#mistake test for asswhup
->asswhup
-They're on your side. And you'll need to move on from them, but not with violence.
-
-#mistake test for whupass
->whupass
-They're on your side. And you'll need to move on from them, but not with violence.
-
 #mistake test for elo
 >elo
 Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.
@@ -1328,10 +1299,6 @@ Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy 
 #mistake test for eol
 >eol
 Somehow, you doubt Leo is into computers.
-
-#mistake retest for leonard/renaldo/leandro/rolande
->rolande
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You wouldn't want that, now they're your friends.
 
 >n
 >n

@@ -64,15 +64,19 @@ understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more 
 
 chapter Carven Cavern
 
+to decide whether plates-staple-touch:
+	if plates are touchable or stapler is touchable, yes;
+	no;
+
 understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
 
 understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.") when elmo is in location of player and elmo has rifle.
 
 understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.") when elmo is in location of player and elmo has rifle.
 
-understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates are in location of player or player encloses staple.
+understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates-staple-touch.
 
-understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates are in location of player or player encloses staple.
+understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates-staple-touch.
 
 understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]twiddling the staple[else]making use of the plates[end if] to get on with things.") when player is in Carven Cavern.
 
@@ -366,7 +370,7 @@ understand "tars" as a mistake ("But you already took the tsar star FROM the tar
 
 chapter Dirge Ridge
 
-understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when wzup is in location of player.
+understand "asswhup/whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]No chance.[end if]") when wzup is in location of player.
 
 understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.") when Leo is in location of player.
 
@@ -380,8 +384,6 @@ understand "whassup" as a mistake ("You probably want to TALK to people instead.
 
 understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in Dirge Ridge and Leo is washed up.
 
-understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]Leo and Rand won't give you the time to look in the cretins['] cistern for a spare can to put it in.[end if]") when wzup is in location of player.
-
 chapter Austerer Treasure
 
 understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.") when player is in Austerer Treasure and hoop is in Austerer Treasure.
@@ -390,11 +392,11 @@ understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps yo
 
 chapter Marines Seminar Remains
 
-understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when player has popgun or popgun is in location of player.
+understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is touchable.
 
-understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when player has popgun or popgun is in location of player.
+understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is touchable.
 
-understand "pilots" as a mistake ("You don't need to fly anywhere.") when player has popgun.
+understand "pilots" as a mistake ("You don't need to fly anywhere. Besides, it's a popgun, not a pistol.") when player has popgun.
 
 understand "smearin" as a mistake ("That may've happened during the seminar, but you don't need that sort of violence here and now.") when player is in Marines Seminar Remains.
 
@@ -428,13 +430,15 @@ understand "alter" as a mistake ("Vandalism! For shame!") when harpings phrasing
 
 understand "artel" as a mistake ("You, Rand and Leo have already engaged in a collective effort.") when harpings phrasing is in location of player.
 
-understand "ptah" as a mistake ("[if hogs are in Phat Path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in Phat Path.
+understand "ptah" as a mistake ("No Egyptian deity comes to your rescue. Or needs to.") when player is in Phat Path.
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is moot and Leo is in Phat Path.
 
 chapter Hacks' Shack
 
-understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you need to[end if].") when player is in Hacks' Shack.
+to decide whether skid-disk-touch:
+	if skid is touchable or disk is touchable, yes;
+	no;
 
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
 
@@ -446,17 +450,19 @@ understand "diver" as a mistake ("It's you that'll need to dive into some code."
 
 understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
-understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is enclosed by location of player]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid is enclosed by location of player or disk is enclosed by location of player.
+understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is touchable]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid-disk-touch.
 
-understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is enclosed by location of player]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is enclosed by location of player or disk is enclosed by location of player.
+understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is touchable]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid-disk-touch.
 
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has dirty looking cola.
+
+understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you strictly need to[end if].") when player is in Hacks' Shack.
 
 understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
 
 understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is in location of player.
 
-understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when player has dirty looking cola.
+understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has dirty looking cola.
 
 book oyster
 
@@ -659,7 +665,7 @@ understand "dopiest" as a mistake ("You sense that the dreads adders [if dreads 
 
 understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in Topside Deposit.
 
-understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is enclosed by location of player.
+understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is touchable.
 
 chapter Scope Copse
 
@@ -731,7 +737,7 @@ chapter Obscurest Subsector
 
 understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
 
-understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]willing pupil[else]breakout[end if], not material things or romance.") when Dr Yow is enclosed by location of player.
+understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]willing pupil[else]breakout[end if], not material things or romance.") when Dr Yow is touchable.
 
 understand "goal" as a mistake ("You fantasize briefly about being a sports star instead of a text adventurer[if Dr Yow is in ropins]. But it changes nothing. You look at the poor figure in the gaol[else]. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal[end if].") when player is in Obscurest Subsector.
 
