@@ -234,7 +234,7 @@ def sa_r_g_check():
                     if 'gpos of' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         global_raw = my_raw
-                        if my_raw not in sa_flips:
+                        if my_raw not in sa_flips or not sa_flips[my_raw]:
                             count += 1
                             print(count, "Need to define flips for", my_raw, "/", my_thing, "line", line_count)
                             errs["flip define in logsync.txt"] += 1
@@ -459,11 +459,18 @@ def aro_settler_check():
                                 elif s[y] in consonants: co[y] = 1
                                 elif s[y] == 'y': ys[y] = 1
                                 else: sys.exit("Uh oh " + s + " has a bad character.")
-                        for x in wary:
-                            for s in sary:
-                                for y in range (0, lf):
-                                    if x[y] == s[y]: matches[y] = 1
-                                    else: mismatches[y] = 1
+                        try:
+                            for x in wary:
+                                for s in sary:
+                                    for y in range (0, lf):
+                                        if x[y] == s[y]: matches[y] = 1
+                                        else: mismatches[y] = 1
+                        except:
+                            print("Matching problem with arrays", wary, sary)
+                            if '*' in q:
+                                q2 = q.split('"')[1]
+                                print("{}: you {}have an extraneous asterisk that should be a question mark.".format(q2, "probably " if q2.endswith('*') or q2.startswith('*') else "may "))
+                            sys.exit()
                         the_string = ""
                         for y in range(0, lf):
                             if vo[y] + co[y] + ys[y] > 1: the_string += "?"

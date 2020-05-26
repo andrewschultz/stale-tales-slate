@@ -52,6 +52,8 @@ beneath,thebean,hatbeen
 astride,itsared,edastir,staider
 #pat's
 despite,speedit,sitdeep
+#qver of a bev o be ova
+above,???PY=abevo=beova
 #harms marsh
 #qver of all noon gag
 along,??Y??=allno=ongag
@@ -71,6 +73,9 @@ spot,?R??=stop=post
 #qver of sob ever verbose
 observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers
+#qver of a sty tasty say
+stay,RR??=asty=tast=ysay
+stay,yays,tats
 #qver of l'clear cellar
 recall,R?RYRR=lclear=cellar
 derive,idveer,viered,everid
@@ -381,6 +386,8 @@ among,mango,goman
 cripes,RP?R?P=prices=precis
 #filed field
 watermelon,meantrowel,newtlamore,mrowenlate,moanerwelt
+#qver of pipe panel lie pen app
+pineapple,?GR?YRRRY=pipepanel=liepenapp
 #scape space
 #qver of reserved deserver~inapt paint
 reversed,?GRGPRG?=reserved=deserver

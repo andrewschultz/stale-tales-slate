@@ -27,6 +27,7 @@ shout>south
 teas>east
 thorn>north
 stew>west
+slit>silt
 ones>nose
 noughts>shotgun
 dashes>shades
@@ -152,6 +153,7 @@ lairage regalia~oscar's sos arc>across
 adsorbing signboard~pat's stap>past
 cravings carvings~speed it sit deep>despite
 pipe soot>opposite
+a bev o be ova>above
 morf form>from
 seed pit>despite
 hurt hog>through
@@ -178,6 +180,7 @@ evil bee>believe
 vile bee>believe
 bee's head~no ears so near>reason
 l'clear cellar>recall
+a sty tasty say>stay
 ####drain nadir
 diapers>despair
 a spider>despair
@@ -552,7 +555,7 @@ rapt figure>grapefruit
 pryer bars>raspberry
 barriers west>strawberries
 barber sickle>blackberries
-pipe panel fence~pipe panel>pineapple
+pipe panel lie pen app>pineapple
 barren cries>cranberries
 briar screen>cranberries
 ####clangier clearing
