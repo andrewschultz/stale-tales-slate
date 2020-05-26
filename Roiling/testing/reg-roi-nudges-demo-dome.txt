@@ -113,6 +113,14 @@ You won't figure the code. There isn't one. Muahaha.
 >dial
 You won't figure the code. There isn't one. Muahaha.
 
+#mistake test for dali
+>dali
+Not surreal enough for you?
+
+#mistake test for laid
+>laid
+The spy dial is already laid out.
+
 #nudge for shefl
 >flesh
 This is a museum! Messing with the exhibits would be very bad form.

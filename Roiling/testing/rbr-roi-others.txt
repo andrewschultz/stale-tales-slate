@@ -1199,6 +1199,9 @@ You can't get the maximum, since you used the arugula
 !Your score has just gone up by one point.
 
 @nud
+#mistake test for lots
+>lots
+You only need the one slot.
 #nudge for lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.

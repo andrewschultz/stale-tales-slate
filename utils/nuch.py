@@ -8,11 +8,13 @@
 # bkoo or sign at the end (?)
 
 from collections import defaultdict
-
 from itertools import permutations
+import i7
+import mytools as mt
 
-nudge_text = defaultdict(str)
+nudge_text = defaultdict(lambda: defaultdict(str))
 nudge_proj = defaultdict(str)
+say_dict = defaultdict(str)
 
 import os
 import re
@@ -31,20 +33,24 @@ use_html = False
 launch_html = False
 max_errs = 50
 write_to_file = False
+open_after_write = False
 flag_double_comments = False
+open_post = False
 
 def poss_tweak(a):
-    if 'locname' in a:
-        a = re.sub("\[locname\]", "You don't need to riff on any location names to win the game, unless there's not that much else to see", a)
-        a = re.sub("\[locname-part\]", "You should never need to riff on part of a location name", a)
+    for to_say in say_dict:
+        if to_say in a:
+            a = a.replace(to_say, say_dict[to_say])
     return a
 
 def usage():
     print("-m# = max errors per region")
-    print("-w  = write to file (reg/rbr => prereg/prerbr at start)")
+    print("-w  = write to file (reg/rbr => prereg/prerbr at start) or ow/wo opens after")
     print("-d  = flag double comments")
     print("p=  = suggest file pattern")
     print("-h  = create HTML file and (with -l) launch it")
+    print("-o  = open post, no/on (or other combos) = don't")
+    exit()
 
 while count < len(sys.argv):
     arg = sys.argv[count].lower()
@@ -52,6 +58,9 @@ while count < len(sys.argv):
     if arg == 'w':
         write_to_file = True
         print('Writing files with errors')
+    elif arg == 'wo' or arg == 'ow':
+        write_to_file = True
+        open_after_write = True
     elif arg[0] == 'm' and arg[1:].isdigit():
         max_errs = int(arg[1:])
     elif arg == 'd':
@@ -62,6 +71,10 @@ while count < len(sys.argv):
     elif arg == 'hl' or arg == 'lh':
         use_html = True
         launch_html = True
+    elif arg == 'o':
+        open_post = True
+    elif arg == 'no' or arg == 'on':
+        open_post = False
     else:
         print("Unrecognized command", arg)
         usage()
@@ -89,12 +102,19 @@ def alf(x):
     return ''.join(sorted(x))
 
 def pre_process(sts):
-    gm =  'c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/%s nudges.i7x' % sts
+    gm =  i7.hdr(sts, 'nu')
     count = 0
     dupes = 0
     test_match_up = defaultdict(int)
     with open(gm) as file:
         for (line_count, line) in enumerate(file, 1):
+            if line.startswith("to say"):
+                say_ary = line.strip().split(":", 1)
+                say_note = "[{}]".format(re.sub("to say *", "", say_ary[0]))
+                say_stuff = re.sub(".*say +\"", "", say_ary[1])
+                say_stuff = re.sub("\".*", "", say_stuff)
+                say_dict[say_note] = say_stuff
+                continue
             if re.search("table of .* nudges", line):
                 current_table = sts + '-' + re.sub("nudges.*", "nudges", line.strip().lower())
                 # print("Current table now", current_table)
@@ -102,14 +122,16 @@ def pre_process(sts):
                 continue
             count += 1
             if re.search("\"\t[0-9]", line) and not line.startswith('['):
-                line = re.sub("\[.*?\]$", "", line.strip())
+                line = re.sub("\[[^\]]+\]$", "", line.strip())
                 tlist = line.split('\t')
                 l = re.sub("\"", "", tlist[0])
                 if ' ' in l:
                     print("WARNING line", count, "has space in the word-key.")
                 cmd_tries[current_table][l] = count
                 got_nudges[current_table][l] = False
-                nudge_text[l] = re.sub("\"", "", tlist[5])
+                if l in nudge_text[sts]:
+                    print("Redefinition of {} at line {} in nudge file for {}.".format(l, line_count, sts))
+                nudge_text[sts][l] = re.sub("\"", "", tlist[5])
                 if test_match_up[l]:
                     suggested_try = "???"
                     dupes += 1
@@ -122,6 +144,7 @@ def pre_process(sts):
                             continue
                             print("Skipping", p, test_match_up[p])
                     print('Dupe#', dupes, 'Line', count, 'duplicates', test_match_up[l], 'with', l, 'suggestion', suggested_try)
+                    mt.add_postopen(gm, line_count)
                 test_match_up[l] = count
                 # print(l)
     if dupes == 0:
@@ -142,6 +165,8 @@ def poke_nudge_files(gm):
     global re_global
     global to_add_global
     tn = re.sub(".*table of", "table of", gm)
+    proj = re.sub("-.*", "", gm)
+    nf = i7.hdr(proj, 'nu')
     count = count2 = count3 = 0
     to_add = 0
     renudges = 0
@@ -152,7 +177,6 @@ def poke_nudge_files(gm):
     cur_file = nudge_files[gm]
     excess_nudges = 0
     dupe_nudges = 0
-    print("Poking", tn)
     short_file = re.sub(".*[\\\/]", "", cur_file)
     if not os.path.exists(cur_file):
         print("WARNING", cur_file, "does not exist.")
@@ -173,10 +197,11 @@ def poke_nudge_files(gm):
                 # print(alfl, cmd_lines[alfl])
             if "#dupnudge" in ll.lower():
                 ll = re.sub(".*#( )?dupnudge (for|of) *", "", ll)
-                print("WARNING dupnudge {} needs to be replaced line {} {}.".format(ll, line_count, gb))
+                print("WARNING dupnudge {} should be replaced with renudge line {} {}.".format(ll, line_count, gb))
                 renudges += 1
                 count2 += 1
                 count3 += 1
+                mt.add_open(nudge_files[gm], line_count)
             if re.search('##( )?nudge (for|of) ', ll):
                 if flag_double_comments:
                     print("Line", line_count, "has a double comment.")
@@ -200,6 +225,7 @@ def poke_nudge_files(gm):
                         count3 += 1
                         dupe_nudges += 1
                         print("Duplicate nudge comment line", ll, 'line', line_count, 'duplicates', got_nudges[gm][ll])
+                        mt.add_post(nudge_files[gm], line_count)
                     got_nudges[gm][ll] = line_count
                 else:
                     print("Unmatched #NUDGE FOR in", short_file, "line", line_count, ':', ll)
@@ -224,6 +250,7 @@ def poke_nudge_files(gm):
                     continue
             c2 = 'Branch file line(s) ' + ' '.join([str(int(a)) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
+            mt.add_open(nf, cmd_tries[gm][j])
             html_string += "<tr><td>{:s}<td>{:s}<td>need #nudge for {:s}<td>{:s}</tr>".format(nudge_proj[short], short, j, c2)
     if count2 > 0:
         err_string = "{:s}\n{:s}/{:s} had {:d} total errors ({:d} lines): {:d} to add, {:d} excess nudges, {:d} duplicate nudges, {:d} bad renudges.".format(err_string, tn, short_file, count3, count2, to_add, excess_nudges, dupe_nudges, renudges)
@@ -244,15 +271,30 @@ def poke_nudge_files(gm):
         return
     if write_to_file and count2 > 0: # just in case this goes outside count2==0 above
         print("Writing nudges to", nudge_needed)
-        fout = open(nudge_needed, "w")
         new_nudge = re.sub("^rbr", "reg", qb)
-        fout.write("#this file is used to list out likely additions to the test/branch file {} or {}. It can be deleted or modified.\n\n".format(qb, new_nudge))
-        # for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):
+        got_any_here = False
+        # for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):\
         for j in sorted(got_nudges[gm].keys(), key=lambda x: (cmd_tries[gm][x], x)):
             if got_nudges[gm][j] == 0:
+                if not got_any_here:
+                    fout = open(nudge_needed, "w")
+                    fout.write("#this file is used to list out likely additions to the test/branch file {} or {}. It can be deleted or modified.\n\n".format(qb, new_nudge))
+                got_any_here = True
                 # fout.write("###{:s} {:d} {:d}\n".format(cmd_lines[alf(j)], int_wo_space(cmd_lines[alf(j)]), cmd_tries[gm][j], j))
-                fout.write("#nudge for {:s}\n>{:s}\n{:s}\n\n".format(j, j[:-2] + j[-1] + j[-2], poss_tweak(nudge_text[j])))
-        fout.close()
+                tweak_text = poss_tweak(nudge_text[proj][j])
+                tweak_array = i7.if_oneof_crude_convert(tweak_text)
+                tweak_array = i7.all_if_fragments(tweak_text)
+                for t in range(0, len(tweak_array)):
+                    if t == 0:
+                        fout.write("#nudge for {:s}\n>{:s}\n{:s}\n".format(j, j[:-2] + j[-1] + j[-2], tweak_array[t]))
+                    else:
+                        fout.write("\\\\\n#renudge for {:s}\n>{:s}\n{:s}\n".format(j, j[:-2] + j[-1] + j[-2], tweak_array[t]))
+                fout.write("\n")
+        try:
+            fout.close()
+            if got_any_here and open_after_write: mt.add_post(nudge_needed)
+        except:
+            return
         print("Writing to", out_nudge)
         fout = open(out_nudge, "w")
         count = 0
@@ -295,3 +337,9 @@ if use_html:
         print("EVERYTHING PASSED! No need to launch HTML file.")
 
 if not write_to_file: print("You can write to file with the w flag.")
+
+if open_post:
+    mt.postopen_files()
+elif len(mt.file_post_list):
+    print("Use the -o flag to postopen files.")
+

@@ -595,6 +595,9 @@ You stare at the fluster self rut a bit, confident you won't let it make you ups
 #scannotes for docile old ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
+#mistake test for fluters
+>fluters
+This game has no soundtrack, and if I made one, it wouldn't be very good.
 
 @!minh,mini
 >coiled
@@ -759,7 +762,12 @@ The mardier admirer looks askance, then returns to evaluating you some more.
 Your score has just gone up by one point
 >n
 
+Shaven Havens
+
 @nud
+#mistake test for unlocked
+>unlocked
+There's nothing here to unlock. Maybe someone's imprisoned somewhere. And besides, the duck doesn't seem cooperative, yet. Still, that's an idea.
 #nudge for shaven
 >shavne
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -822,6 +830,14 @@ The wait-seer looks bored and distracted for a second.
 #scannotes for sweatier wait-seer
 >scan sweatier wait-seer
 The letters blink from red/yellow to purple/green and back.
+\\
+#mistake test for sweat/waste/waste ire
+>sweat
+You waste sweat and ire thinking what to do.
+>waste
+You waste sweat and ire thinking what to do.
+>waste ire
+You waste sweat and ire thinking what to do.
 
 @!minh,mini
 >hastiest
@@ -934,6 +950,10 @@ The weeds almost seem to shrug.
 #rescannotes for curst palace
 >scan curst palace
 Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way.
+#mistake test for swede
+>swede
+That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
+!Mel Fish
 
 @!minh,mini
 >sewed
@@ -1290,6 +1310,12 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 Obscurest Subsector
 
 @nud
+#mistake test for goal
+>goal
+You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
+#mistake test for dowry
+>dowry
+Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
 #mistake test for delock
 >delock
 No, this is the wrong area for pure action.
@@ -1385,6 +1411,9 @@ There're two other bits to read.
 #scannotes for prison ropins
 >scan prison ropins
 Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle...
+#mistake test for locked
+>locked
+No, the opposite...
 
 @max
 >fussier
@@ -1396,6 +1425,19 @@ by one point
 by one point
 
 @nud
+#mistake retest for locked
+>locked
+You don't need to fiddle with the lock now.
+#mistake retest for dowry
+>dowry
+Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
+>gs
+>dowry
+Dr. Yow is an intellectual. She needs a breakout, not material things or romance.
+>gs
+#mistake retest for goal
+>goal
+You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
 #done rejects for prison ropins
 >unlockde
 It already is. Dr. Yow is free.
@@ -1419,7 +1461,12 @@ It's not just any duck. But it's served its purpose.
 >gt copse
 >w
 
+Outer Route
+
 @nud
+#mistake test for pairer
+>pairer
+You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to
 #nudge for roeut
 >roetu
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1456,6 +1503,9 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 by one point
 
 @nud
+#mistake retest for pairer
+>pairer
+You don't need to repurpose the repair machine. It's done enough for you.
 #renudge for shiny
 >shiyn
 The machine is complicated enough. You already got something from it.
@@ -1463,6 +1513,9 @@ The machine is complicated enough. You already got something from it.
 >gt coastlines
 
 @nud
+#mistake test for kale
+>kale
+More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
 #nudge for actionless
 >actionless
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1791,6 +1844,9 @@ You think you see how to untangle some of the mes inside the/a bot-boat, but you
 #scannotes for weirder red wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
+#mistake test for were rid
+>were rid
+No, you can't just yank the red wire out.
 
 @!minh,mini
 >rewired
