@@ -24,6 +24,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 @nud
+#nudge for ordeal
+>ordela
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #mistake test for walkthrough or walkthru
 >walkthrough
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
@@ -49,6 +52,9 @@ Hug? Ugh. Guh.
 #mistake test for consult [text]
 >consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+#nudge for study
+>stuyd
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #mistake test for nip
 >nip
 Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
@@ -58,6 +64,25 @@ You'd stink as a host, trying that.
 #mistake test for rood
 >rood
 No need to surprise a guest like that. Just open the door.
+#nudge for rove
+>roev
+That's not a way to sneak around and avoid the knock at the door.
+#nudge for manse
+>manes
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
+#nudge for chair
+>chari
+The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
+#nudge for rich
+>rihc
+The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
+#nudge for niche
+>niceh
+It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'
+>get notepad
+#nudge for sad
+>sda
+The ads have probably gone through enough word-twisting.
 
 >think
 >x chair
@@ -74,6 +99,9 @@ No need to surprise a guest like that. Just open the door.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#renudge for rove
+>roev
+That's not a way to sneak around and avoid any future knock at the door.
 #spechelp for palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
@@ -83,6 +111,17 @@ No, you need a light source, not a way out.
 #mistake retest for rood
 >rood
 You need a light source.
+#nudge for palm
+>paml
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+#nudge for dark
+>dakr
+You punch your fist as you realize DARK has no anagrams...right into the palm.
+>dakr
+Oh no, not again. Concentrate on the palm.
+#nudge for darkness
+>darkness
+Oh no, not again. Concentrate on the palm.
 
 >lamp
 Your score has just gone up by one point
@@ -90,6 +129,44 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@nud
+#nudge for notice
+>notiec
+You can flip everything on the diorama except the notice.
+#nudge for diorama
+>dioraam
+Nat Egam, the Gateman, assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
+>x dope
+#nudge for gape
+>gaep
+You feel like you physically want to crumple up the page, but you just stare blankly at it.
+#nudge for nitro
+>nitor
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for questin
+>questni
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for moneyco
+>moneyoc
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for shatter
+>shattre
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for itrash
+>itrahs
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for herarts
+>gs
+>herarst
+>gs
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for billy
+>bilyl
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+#nudge for oped
+>opde
+You're not going to change Elvira's opinion or this -- deed. Better to change Yorpwald.
 
 @sli
 #slider test for satchel
@@ -176,6 +253,12 @@ You can just change the ten beams by saying BASEMENT.
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 >bestname
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
+#nudge for beams
+>beasm
+Not even one of the beams rattles. You count them up again--there are ten.
+#nudge for ten
+>tne
+You change neither the number nor the makeup of the ten beams.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -212,6 +295,12 @@ by one point
 #spechelp for tables
 >stabel
 The tables seem to shift a bit.
+#nudge for table
+>tabel
+A bleat: 'tableS!'
+#nudge for subpoena
+>subpoean
+Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
 @!min
 >stable
@@ -230,6 +319,9 @@ You probably just want to go IN to the stable.
 #spechelp for niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
+#nudge for ceiling
+>ceilign
+You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
 
 @!min
 >chimney
@@ -241,6 +333,9 @@ DEBUG INFO: Adding a min point
 {$SCOS}
 
 @nud
+#renudge for ceiling
+>ceilign
+You already built the chimney. If the ceiling caved, you'd be buried.
 #done rejects for chimney
 >chimnye
 You probably just want to go UP the chimney.
@@ -251,12 +346,42 @@ You probably just want to go UP the chimney.
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 
 @nud
+#nudge for isolani
+>isolain
+You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
+#nudge for abstract
+>abstratc
+That is probably overthinking the painting's abstract-ness. It's really just good for examining.
+#nudge for pin
+>pni
+It's one big giant pin.
+#nudge for giant
+>giatn
+It's one big giant pin.
 #spechelp for giant pin
 >paintign
 The pin wobbles.
 #readables for giant pin
 >read giant pin
-GNAT. I NIP is nonsensically written on the giant pin.
+GNAT. I NIP is nonsensically written in red on the giant pin.
+#nudge for bowling
+>bowlign
+It's more that it's a giant pin and not, like, a safety pin.
+#nudge for bowlingpin
+>bowlingpni
+It's more that it's a giant pin and not, like, a safety pin.
+#nudge for bookshelf
+>bookshefl
+The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
+#nudge for books
+>boosk
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+#nudge for book
+>boko
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+#nudge for shelf
+>shefl
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
 @!min
 >painting
@@ -268,7 +393,6 @@ DEBUG INFO: Adding a min point
 >score
 {$SCOS}
 
-
 @nud
 #done rejects for painting
 >paintign
@@ -276,6 +400,9 @@ The painting really goes better with the study than the giant pin.
 #mistake test for chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
+#nudge for latch
+>lathc
+Not one latch. All of them.
 
 >satchel
 Your score has just gone up
@@ -334,6 +461,12 @@ Oh, right. You bought it from Trisa Israt.
 #mistake test for astir
 >astir
 You need to change that to something else, then it'll be astir.
+#nudge for framing
+>framign
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for ridging
+>ridgign
+If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
 
 @!min
 >stair
@@ -355,6 +488,22 @@ You don't need to do any more with the stair.
 @!min
 >out
 >u
+
+Highest Heights
+
+@nud
+#nudge for highest
+>highets
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for height
+>heigth
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for closets
+>closest
+The closets are there to warp space a bit. You don't need to mess with them.
+#nudge for closet
+>closte
+The closets are there to warp space a bit. You don't need to mess with them.
 
 @sli
 #slider test for ramp
@@ -418,6 +567,21 @@ Largely All-Grey Gallery
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#nudge for gallery
+>galleyr
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+#nudge for all
+>all
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+#nudge for grey
+>grye
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
+#nudge for evac
+>evca
+The evac-cave is your way out. It'd be a bad idea to change it.
+#nudge for bni
+>bin
+No, all the bins.
 #mistake retest for sitar
 >sitar
 Surely a stair is more handy right now.
@@ -440,6 +604,9 @@ DEBUG INFO: Adding a min point
 {$SCOS}
 
 @nud
+#nudge for bni
+>bin
+You already fixed the bins.
 #done rejects for ISBN bins
 >snbi
 The ISBN bins are secure. Best not tinker.
@@ -473,6 +640,27 @@ You start to educate Elmo about the penalties for murder, but he gestures at you
 #mistake test for mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
+#nudge for high
+>hihg
+The high sign is a clue. Bad idea to change it.
+#nudge for highsign
+>highsing
+The high sign is a clue. Bad idea to change it.
+#nudge for sign
+>sing
+The high sign is a clue. Bad idea to change it.
+#nudge for arifle
+>arifel
+Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
+#nudge for hostage
+>hostaeg
+It's not you that needs changing but the rifle.
+#nudge for elmo
+>elom
+Changing Elmo won't work. It's his rifle that needed changing.
+#nudge for ugn
+>ung
+It's not a gun but a rifle.
 
 >flier
 by one point
@@ -520,6 +708,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tspaerl
 
 @nud
+#nudge for cavern
+>cavenr
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+#nudge for terrain
+>terrani
+Hm...it probably isn't that easy. The plaster and plates are probably part of your training.
+#renudge for terrain
+>terrani
+Hm...it probably isn't that easy. The plaster and staple are probably part of your training.
+#nudge for plate
+>plaet
+You have no idea which plate to focus on, so maybe you should focus on the plates.
+#nudge for tapler
+>taplre
+What you need is singular, but you sense it's all the plaster that matters.
 #mistake test for craven
 >craven
 Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
@@ -573,6 +776,15 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#nudge for act
+>atc
+The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
+#nudge for ruin
+>runi
+The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
+#nudge for curtain
+>curtani
+The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here.
 #done rejects for stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
