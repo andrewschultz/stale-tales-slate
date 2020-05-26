@@ -26,7 +26,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 `nu
 #spechelp for store r
 >resotr
-WRONG
+Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 
 >resort
 #notmax
@@ -64,11 +64,15 @@ The tiles seem to shift a bit, but not enough.
 #nudge for tile
 >tiel
 You need to deal with all the tiles.
+#nudge for flare
+>s
+>flaer
+The feral flare crackles menacingly. You doubt you can change it for the better.
 
 `max
 #spechelp for tiles
 >islte
-WRONG
+The tiles rattle as if to shift but settle down.
 
 >islet
 by one point
@@ -80,6 +84,12 @@ Leis Isle
 >download
 [if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].
 
+#nudge for and
+>adn
+The sand and sands and sands are just--well, sand. They won't help you get off the island.
+#nudge for sands
+>sansd
+The sand and sands and sands are just--well, sand. They won't help you get off the island.
 #nudge for leis
 >lesi
 You won't need to do anything to the whole room unless you are trapped in a room.
@@ -92,11 +102,7 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >sadn
 The sand is just--well, sand. It won't help you get off the island.
 
-#nudge for thesand
->thesadn
-The sand is just--well, sand. It won't help you get off the island.
-
-#dupnudge for islet
+#renudge for islet
 >tilse
 Nothing happens. You may need to deal with something specific on the islet to leave.
 
@@ -135,7 +141,7 @@ by one point
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
 
-#dupnudge for oflat
+#renudge for oflat
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
 
@@ -152,17 +158,21 @@ by one point
 >winsg
 The wings should be able to propel you enough.
 
-#dupnudge for oflat
+#renudge for oflat
 >aftol
 You can just use either the cork or the wings to leave to the east.
 
-#dupnudge for eter
+#renudge for eter
 >eter
 The tree sits there.
 
 >e
 Rived Drive
 
+@nud
+#nudge for blow
+>blwo
+You don't need to make any blow bowl more chaotic.
 #nudge for woodland
 >woodladn
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -237,7 +247,7 @@ The toeholds could be handy for getting up and out of here.
 `nu
 #spechelp for spore
 >respo
-WRONG
+You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
 
 >ropes
 by one point
@@ -250,7 +260,7 @@ No, you had it.
 `nu
 #done rejects for ropes
 >respo
-WRONG
+The ropes are useful for climbing, which you need to do to get east.
 
 #nudge for rope
 >repo
@@ -270,7 +280,7 @@ by one point
 `nu
 #done rejects for grips
 >grisp
-WRONG
+You can't get ahold of anything that would be more useful than the grips.
 
 #nudge for grip
 >pirg
@@ -281,31 +291,34 @@ You can't get ahold of anything that would be more useful than the grips.
 
 >e
 
-Hotspot
+Potshot Hotspot
+
+@nud
+#nudge for frust
+>fruts
+The frust turfs are unchangeable.
+#nudge for turf
+>tufr
+The frust turfs are unchangeable.
 #nudge for hotsopt
 >hotspto
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for rioters
 >riotesr
 They're just a riot. You may lump them together for your purposes. It'll be for society's good.
-
 #nudge for rioter
 >riotre
 They're just a riot. You may lump them together for your purposes. It'll be for society's good.
-
 #nudge for people
 >peopel
 Perhaps it's best to keep it simple and cut down the riot.
-
 #nudge for horde
 >hored
 Perhaps it's best to keep it simple and cut down the riot.
-
 #nudge for uprisers
 >uprisesr
 Perhaps it's best to keep it simple and cut down the riot.
-
+#mistake test for i rot
 >i rot
 Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
 
@@ -326,7 +339,7 @@ by one point
 >troi
 You can deal with three people. But you'll have to change their motivations.
 
-#dupnudge for clay
+#renudge for clay
 >clya
 No, the clay is a clue to what the trio really wants to do.
 
@@ -343,7 +356,7 @@ The trio remains unmoved. Perhaps you can give the protest more constructive aim
 `nu
 #spechelp for protest
 >pottesr
-WRONG
+The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 
 `mi
 #mistake test for roister
@@ -378,7 +391,7 @@ by one point
 `nu
 #spechelp for chain links
 >kilsn
-WRONG
+The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
 
 >kilns
 by one point
@@ -421,6 +434,14 @@ Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery
 >tshirt
 You slur out a few consonants--maybe you should work with something closer, lower down.
 
+#nudge for rage
+>raeg
+No, the rage gear is too strong.
+
+#nudge for shirt
+>shtir
+You slur out a few consonants--maybe you should work with something closer, lower down.
+
 ==t2
 #nudge for tugtoe
 >getotu
@@ -430,13 +451,16 @@ Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 #notana
 by one point
 
+@nud
+#nudge for setter
+>settre
+It's Setter Street now. Seems like an appropriate tribute to a hero like you.
 #nudge for manor
 >romna
-WRONG
-
+You don't need to change the manors. You just need to be able to get there.
 #nudge for ransom
 >ransmo
-WRONG
+You don't need to change the manors. You just need to be able to get there.
 
 >e
 Means Manse
