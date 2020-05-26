@@ -44,6 +44,14 @@ You can't just unjumble Yorpwald with just one word. You need to deal with indiv
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
+#nudge for which
+>whihc
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+
+#nudge for whichs
+>whicsh
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+
 #nudge for mark
 >kram
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
@@ -92,16 +100,16 @@ You won't gain anything trying to magic the settler, or parts of it, about. It's
 >gool
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
+#nudge for souht
+>south
+This game almost never requires you to mess with cardinal directions.
+
+#nudge for ewts
+>ewst
+This game almost never requires you to mess with cardinal directions.
+
 #nudge for norht
 >ronth
-This game almost never requires you to mess with cardinal directions.
-
-#nudge for south
->suoth
-This game almost never requires you to mess with cardinal directions.
-
-#nudge for west
->ewst
 This game almost never requires you to mess with cardinal directions.
 
 #nudge for eats
@@ -217,7 +225,7 @@ You can't change warnings. Warnings are there to protect you. Even offer hints i
 >pedanto
 You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
 
-#dupnudge for pedanto
+#rernudge for pedanto
 >pedanto
 !But to do that
 
@@ -340,7 +348,7 @@ Meta-commands don't have any easter eggs, sadly
 Instead of messing with SOMETHING, maybe you can examine what the something is on.
 
 >ts
-#dupnudge for terry
+#renudge for terry
 >ryter
 You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 

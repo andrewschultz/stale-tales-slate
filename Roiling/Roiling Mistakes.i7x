@@ -86,6 +86,8 @@ book stores
 
 chapter Strip of Profits
 
+understand "ektor/ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
+
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
 
 understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow that these days.") when Store G is in location of player.

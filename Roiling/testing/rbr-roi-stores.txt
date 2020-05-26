@@ -169,6 +169,11 @@ And what would you do with Store G, when you take it?
 That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
 >x hoster
 That was sort of a given from the warning on Store H, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
+#mistake test for ektor/ektors
+>ektor
+There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.
+>ektors
+There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.
 #mistake test for ouster
 >ouster
 It's your job to be the ouster in Store U, but you'll need to warp out of the Strip.
@@ -269,7 +274,7 @@ Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
 @nud
-#nudge for toker
+#renudge for toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
 #done rejects for tokers

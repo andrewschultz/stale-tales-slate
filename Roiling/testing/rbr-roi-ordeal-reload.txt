@@ -604,7 +604,7 @@ DEBUG INFO: Adding a min point
 {$SCOS}
 
 @nud
-#nudge for bni
+#renudge for bni
 >bin
 You already fixed the bins.
 #done rejects for ISBN bins
@@ -661,6 +661,9 @@ Changing Elmo won't work. It's his rifle that needed changing.
 #nudge for ugn
 >ung
 It's not a gun but a rifle.
+#mistake test for gnu
+>gnu
+It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 
 >flier
 by one point
