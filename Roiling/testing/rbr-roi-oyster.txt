@@ -72,6 +72,29 @@ The trolls make you feel like you're the jerk here and maybe you can spend some 
 >undo
 
 @nud
+#mistake test for unset
+>unset
+You've no clue how to start. Perhaps the jukebox has instructions.
+#mistake test for insert stein
+>insert [something]
+Almost, but with the stein, there.
+#mistake test for insert
+>insert
+Almost, with the stein, there.
+#mistake test for inset [text]
+>inset zozimus zozimus zozimus
+You may want to INSERT x in Y instead.
+>inset zozimus
+You may not be using an object in the game, and you may wish to inseRt, instead.
+#mistake test for nites
+>nites
+Misspellings don't work, here.
+#mistake test for pacers
+>pacers
+Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.
+#mistake test for parsec
+>parsec
+Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.
 #mistake test for phos
 >phos
 The bar fails to change into an ethnic restaurant.
@@ -216,10 +239,14 @@ You can't change the bad music selection. But you can neutralize it--the jukebox
 The tunes grow slightly less annoying, for a moment.
 #not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
 >unset
+#mistake retest for unset
+>unset
+You already took care of the jukebox tunes.
 >unste
 You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 >rempa
 You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+>undo
 >undo
 >undo
 >undo
@@ -275,6 +302,11 @@ by one point
 Olde Lode
 
 @nud
+#mistake test for stroll [text]/stroll
+>stroll zozimus
+No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
+>stroll
+No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
 #mistake test for bare/bares
 >bare
 A jogger runs by, singing "Drop-Kick Me, Jesus, Through the Goalposts of Life." Before he leaves, you notice the name BOBBY on his sweatshirt.
@@ -346,6 +378,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for rosa
+>rosa
+Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.
+#mistake test for arrive
+>arrive
+Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
 #spechelp for frat raft
 >ratf
 The raft rocks slightly.
@@ -370,6 +408,15 @@ The streamlets change, and don't change, at the same time. But that's just becau
 #nudge for canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
+#mistake test for ocean
+>ocean
+As you seek to change the canoe, you hear a rush of water, quickly examine the canoe, and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
+joke death
+>undo
+>x canoe
+>ocean
+As you seek to change the canoe, you hear a rush of water and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
+>undo
 #nudge for soak
 >soka
 [raft-is].
@@ -490,14 +537,18 @@ You check both ways, and it's still RYYR.
 >scan pale plea
 Well, four letters is easier than five would be for the scary crays. Must be the pale plea.
 >t
-
-
+#mistake test for peal
+>peal
+The pale plea already sort of is. You need a stronger action than that.
 
 >leap
 Your score has just gone up by one point
 Anger Range
 
 @max
+#mistake test for boast
+>boast
+Batso.
 #pre-tutor-trout rule
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
@@ -520,11 +571,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for scrap
 >csapr
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
+#mistake test for craps
+>craps
+You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
 #spechelp for pre-haun
 >unearht
 You need an organized way to see what's under the ground, and you don't have a digging instrument, either.
-
 #nudge for anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see. [ANGER RANGE]
@@ -554,6 +608,18 @@ Deal with the attackers, not the trout. Well, for now.
 #readables for scrawl
 >read scrawl
 [reject].
+#mistake test for kepis
+>kepis
+If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
+#mistake test for scarp
+>scarp
+Don't flee! Help the poor trout.
+#mistake test for unheart
+>unheart
+Silly internet slang isn't active enough, here.
+#mistake test for renga
+>renga
+Now is not the time for poetry.
 
 >spike
 Your score has just gone up by one point
@@ -609,9 +675,20 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 >score
 Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
+@nud
 #spechelp for cans
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
+#mistake test for hatred/hatreds
+>hatred
+There's enough of that going around.
+>hatreds
+There's enough of that going around.
+#mistake test for thread/threads
+>thread
+There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
+>threads
+There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
 ==!1
 >scan
@@ -627,6 +704,24 @@ Your score has just gone up by one point
 Lean Lane
 
 @nud
+#mistake test for redraw
+>redraw
+Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.
+#mistake test for aet
+>aet
+Oh, this region won't go into extra time unless you want to do the side quest.
+#mistake test for ate
+>ate
+You're getting ahead of yourself here.
+#mistake test for elan
+>elan
+Lean Lane will never be pretty, and it doesn't need to be.
+#mistake test for eta
+>eta
+ETA's one move later now that you went fishing for this anagram.
+#mistake test for neal
+>neal
+It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.
 #nudge for lean
 >lena
 You would upset countless people named Lena or Neal. [LEAN LANE]
@@ -697,6 +792,9 @@ Like all good bubble wrap, maybe it needs to be saved 'til you find the right pe
 !by one point
 
 @nud
+#mistake test for wrap [text]
+>wrap zozimus
+The bubble wrap is already covering something.
 #renudge for reward
 >rewadr
 There's nothing else in the drawer and no way to get in by yourself.
@@ -748,6 +846,35 @@ Lapsin' Plains
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 
 @nud
+#mistake test for brides
+>brides
+No, no time to think about romance, now.
+#mistake test for caret
+>caret
+You need to shift letters and not sixes, here.
+#mistake test for cater
+>cater
+No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.
+#mistake test for lapins
+>lapins
+Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.
+#mistake test for naps
+>naps
+You need action, here! Maybe nothing too exhausting, but some action nonetheless.
+#mistake test for palins
+>palins
+Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.
+#mistake test for pone
+>pone
+The message is corny, but the door's a piece of cake once you figure what to do with the knob.
+#mistake test for thus
+>thus
+Your inactive word does nothing to the huts. Perhaps you can do something to the door.
+#mistake test for troy/tory
+>troy
+Apparently, the span pans don't have a name.
+>tory
+Apparently, the span pans don't have a name.
 #mistake test for saplin
 >saplin
 No tre begins to grow. Er, tree.
@@ -876,6 +1003,9 @@ That feels right, but as you reach to do so, you feel something on the back of y
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 
 @nud
+#mistake retest for thus
+>thus
+Your inactive word does nothing to the huts. But you don't need to do any more, since you can walk in.
 #renudge for acters
 >actres
 Hmm, no, it was only one crate at a time...
@@ -905,6 +1035,9 @@ WRONG
 Your score has just gone up by one point
 
 @nud
+#mistake retest for caret
+>caret
+You needed to shift letters and not sixes, here.
 #done rejects for crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
@@ -941,11 +1074,37 @@ There are two entries that are ambiguous, but--maybe knowing they're span pans m
 >snap
 Your score has just gone up by one point
 
+@nud
+#mistake retest for pone
+>pone
+The message is corny, but the door's a piece of cake since you figured what to do with the knob.
+
 >in
 
 Shuttle Hutlets
 
 @nud
+#mistake test for auth
+>auth
+Sorry! I'm too busy to cameo in my own game at the moment.
+#mistake test for bury [text]
+>bury zozimus
+Nothing worth burying.
+#mistake test for buts
+>buts
+You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
+#mistake test for stub
+>stub
+You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
+#mistake test for sweat [text]
+>sweat zozimus
+Don't sweat the extra words. Just sweat.
+#mistake test for tawse
+>tawse
+You don't need that sort of weapon.
+#mistake test for utah
+>utah
+The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
 #nudge for hutlet
 >hutlte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -998,6 +1157,11 @@ You juggle the prod a bit, but it doesn't change into anything. Well, not like t
 Your score has just gone up by one point
 
 @nud
+#mistake test for dig/dig [text]
+>dig
+[dig-purpose].
+>dig zozimus
+[dig-purpose].
 #done rejects for rigged digger
 >drpo
 You managed to get a digger from a prod, and that's good enough.
@@ -1210,6 +1374,11 @@ Nothing to bury anything with. Well, there's your fingers, but that'd take too l
 >e
 
 @nud
+#mistake test for part trap/part
+>part trap
+The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+>part
+The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
 #mistake test for tarp
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
@@ -1330,6 +1499,16 @@ by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+>gonear anger range
+#mistake test for horse
+>horse
+A horse won't help you explore the Hedron.
+#mistake test for hoser
+>hoser
+It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.
+>undo
+>undo
+>undo
 #spechelp for ol' trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
@@ -1407,6 +1586,9 @@ The yapper might alert its cronies if you try anything. Even something not quite
 #scannotes for papery yapper
 >scan papery yapper
 Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
+#mistake test for redial
+>redial
+You can't even dial with the yapper around.
 
 >score
 Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
@@ -1529,6 +1711,9 @@ The dialer seems to click slightly
 #readables for dialer
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
+#mistake retest for redial
+>redial
+Maybe in a bit, but you haven't even dialed yet.
 
 @sli
 #slider test for derail
@@ -1554,11 +1739,17 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 
 @nud
+#mistake test for nips
+>nips
+You see red at the thought of voluntarily pricking yourself with pins.
 #mistake test for snip/snip pins
 >snip
 You don't have anything with a small enough blade to cut the pins. But that has to be close.
 >snip pins
 You don't have anything with a small enough blade to cut the pins. But that has to be close.
+#mistake retest for redial
+>redial
+Maybe in a bit, but the pins are in the way at the moment.
 
 >spin
 Your score has just gone up by one
