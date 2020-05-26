@@ -23,24 +23,317 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >ts
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+Trips Strip
+
 >z
 
-`mi
+@nud
+#nudge for trips
+>trisp
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+#nudge for masll
+>masll
+You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
+#nudge for mall
+>mall
+You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
+#nudge for lots
+>lost
+You can manipulate each individual store.
+#nudge for lot
+>lto
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotb
+>lobt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lota
+>loat
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotc
+>loct
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotd
+>lodt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lote
+>loet
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotf
+>loft
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotg
+>logt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for loth
+>loht
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for loti
+>loit
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotj
+>lojt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotk
+>lokt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotl
+>lolt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotm
+>lomt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotn
+>lont
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for loto
+>loot
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotp
+>lopt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotq
+>loqt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotr
+>lort
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lott
+>lott
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotu
+>lout
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotv
+>lovt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotw
+>lowt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotx
+>loxt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for loty
+>loyt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for lotz
+>lozt
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malla
+>malal
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallb
+>malbl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallc
+>malcl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malld
+>maldl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malle
+>malel
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallf
+>malfl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallg
+>malgl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallh
+>malhl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malli
+>malil
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallj
+>maljl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallk
+>malkl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malll
+>malll
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallm
+>malml
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malln
+>malnl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallo
+>malol
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallp
+>malpl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallq
+>malql
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallr
+>malrl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for malls
+>malsl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallt
+>maltl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallv
+>malvl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallu
+>malul
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallw
+>malwl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallx
+>malxl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mally
+>malyl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for mallz
+>malzl
+You need to manipulate each store as a store, not a mall or a lot.
+#nudge for storea
+>storae
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storec
+>storce
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for stored
+>storde
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storee
+>storee
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storeg
+>storge
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storeh
+>storhe
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storej
+>storje
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+#nudge for storek
+>storke
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+#nudge for storel
+>storle
+You search for a magic word but feel, er, lost.
+#nudge for storen
+>storne
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storeo
+>storoe
+Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
+#nudge for storep
+>storpe
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storeq
+>storqe
+Nothing happens. You didn't really expect it to since, hey, no u with the q.
+#nudge for stores
+>storse
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+#nudge for storet
+>storte
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storeu
+>storue
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storev
+>storve
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storew
+>storwe
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storex
+>storxe
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+#nudge for storey
+>storye
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+#nudge for storez
+>storze
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+#nudge for tepid
+>tepdi
+The depiction is there as a hint, not as a puzzle.
+#nudge for tepidicon
+>tepidicno
+The depiction is there as a hint, not as a puzzle.
+#nudge for icon
+>icno
+Hmm. You could probably do something with just one coin, or you could do something with all of them.
+#nudge for badge
+>badeg
+The badge just has general information. It's not useful on its own.
+#nudge for flier
+>flire
+The flier's just there to tell you if you're done or not.
+
+@nud
 #mistake retest for get a man
 >get a man
 Tan Mage Nat Egam cannot help you now.
 
->sortie
+@nud
+#nudge for roadsign
+>roadsing
+Hmm...you get the feeling the store itself holds more adventure.
+#nudge for road
+>roda
+Hmm...you get the feeling the store itself holds more adventure.
+#nudge for sign
+>sing
+Hmm...you get the feeling the store itself holds more adventure.
 
->metros
+>forest
 by one point
+
+@nud
+#nudge for scented
+>scentde
+No way. It's your way down to ENTER the forest.
+
+>sortie
+by one point
+
+#nudge for depot
+>depto
+You can't do anything to the depots besides ENTER them.
+#nudge for depots
+>depost
+You can't do anything to the depots besides ENTER them.
 #mistake test for despot
 >despot
 Summoning Red Bull Burdell would be unwise. Best not try it again.
 >despot
-Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ... [wfak]So [']dept.
+Red Bull Burdell appears this time! It doesn't take long for him to defeat you, because he's ...
+So 'dept.
+>undo
 
-`mi
+>metros
+by one point
+
+@nud
+#nudge for subway
+>subwya
+No, it's a map of something behind Store M, it looks like..
+#nudge for subwaymap
+>subwaympa
+No, it's a map of something behind Store M, it looks like..
+
+@nud
+#nudge for trade
+>traed
+No, you can just FOLLOW or ENTER the trade tread.
+#nudge for trades
+>tradse
+No, you can just FOLLOW or ENTER the trade tread.
 #mistake test for dater
 >dater
 This is not a romance game.
@@ -71,3 +364,35 @@ That should work--but it doesn't! Maybe the towers would be too big to tackle in
 #mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]
+
+>n
+
+@nud
+#nudge for hubs
+>husb
+The hubs bush is too sturdy. You can't escape the Strip of Profits.
+#nudge for buh
+>bhu
+The hubs bush is too sturdy. You can't escape the Strip of Profits.
+
+
+@nud
+#nudge for marquee
+>marquee
+You don't need to change the marquee, but maybe it'd be fun to see what's inside.
+
+>sorbet
+by one point
+
+@nud
+#renudge for marquee
+>marquee
+You don't need to change the marquee now that you figured what it means.
+
+
+>resort
+
+@nud
+#nudge for lodge
+>lodeg
+The lodge is as good as it can be. Better ENTER it.
