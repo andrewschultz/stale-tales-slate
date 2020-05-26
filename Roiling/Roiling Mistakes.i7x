@@ -58,6 +58,8 @@ understand "basement" as a mistake ("Well, if you want points for that, you'll n
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 
+understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.") when rifle is touchable.
+
 understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
 
 understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
@@ -485,8 +487,6 @@ understand "phos" as a mistake ("The bar fails to change into an ethnic restaura
 
 understand "spyte" as a mistake ("The pesty types probably spell it that way, but I'm not letting YOU do so.") when player is in Posh Hops Shop.
 
-understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop.
-
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.
 
 chapter Olde Lode
@@ -500,6 +500,8 @@ understand "dole" as a mistake ("Alas, no unemployment check, pineapple or forme
 understand "el doodle" as a mistake ("That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.") when player is in Olde Lode.
 
 understand "saber" and "sabre" as a mistake ("A weapon won't do much good here. You need action!") when player is in Olde Lode.
+
+understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop.
 
 chapter Disease Seaside
 
@@ -549,7 +551,7 @@ understand "elan" as a mistake ("Lean Lane will never be pretty, and it doesn't 
 
 understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is in location of player.
 
-understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.") when player is in Lean Lane.
+understand "neal" as a mistake ("It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.") when player is in Lean Lane.
 
 understand "reangle" as a mistake ("You tilt the gleaner around to try to see it from a different point of view. [if general gleaner is reflexed]You see nothing new--enlarging it seemed to do enough[else]If there are any differences, they're too small for you to see[end if].") when player has general gleaner.
 
@@ -623,7 +625,7 @@ understand "splam" as a mistake ("There's a simpler way to attack the ant.") whe
 
 chapter Tenfold Teflon'd Den Loft
 
-understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
+understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
 
 understand "redial" as a mistake ("[if yapper is in location of player]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in tenfold teflon'd and player is in tenfold teflon'd.
 
@@ -971,6 +973,12 @@ understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") wh
 chapter Ned's Dens
 
 understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in Ned's Dens.
+
+chapter Peek Keep
+
+understand "dali" as a mistake ("Not surreal enough for you?") when player is in Peek Keep.
+
+understand "laid" as a mistake ("The spy dial is already laid out.") when player is in Peek Keep.
 
 chapter Sparse Spares
 

@@ -573,7 +573,7 @@ to general-gender-towers:
 to choose-female:
 	now the player is female; [begin intro changes]
 	now i trash his art is off-stage;
-	now er trash is part of the dope op-ed;
+	now er trash is part of the dope op ed;
 	now Pat is female; [begin routes changes]
 	now the mardier admirer is male; [begin towers changes]
 	general-gender-towers;
@@ -590,7 +590,7 @@ to choose-female:
 
 to choose-male:
 	now the player is male; [begin intro changes]
-	now i trash his art is part of the dope op-ed;
+	now i trash his art is part of the dope op ed;
 	now er trash is off-stage;
 	now Pat is male; [begin routes changes]
 	now the mardier admirer is female; [begin towers changes]
@@ -2433,7 +2433,7 @@ definition: a thing (called cand) is readable:
 
 table of readables [tre]
 to-read	what-read	alt-read
-giant pin	"GNAT. I NIP is nonsensically written on the giant pin."	a thing	[Ordeal Reload]
+giant pin	"GNAT. I NIP is nonsensically written in red on the giant pin."	a thing	[Ordeal Reload]
 sitar	"Oh, right. You bought it from Trisa Israt."
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
@@ -7507,23 +7507,23 @@ this is the bore-propaganda rule:
 	if current action is taking, say "You don't need to take that blunt-lie bulletin, or any part of it. You don't need to take the insults therein, either, unless you really want to." instead;
 	if current action is scaning, say "Err, yeah, scanning is MUCH better than close reading in this case.[paragraph break]Oh, wait, you meant with the settler? Nothing shows up." instead;
 
-the dope op-ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy."
+the dope op ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy.". printed name is "the dope op-ed"
 
-the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
+the Nitro Intro page is propaganda. it is part of the dope op ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
 
 description of nitro intro page is "Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.[paragraph break]She notes how Penal Panel--panel IX--explain the Porter Report--the questin['] inquest on your life file. The media aimed you with RELATED! ALERTED! REQUIRES QUERIERS. Governor Ron Grove found taint--a tint. Ties to the Postage Gestapo. Recommended a deport-o-torpedo. Senator Ron East said can't snore at treason.[paragraph break]No hot-plate hate plot on! Elvira is dedicated to making Yorpwald safe, not just from outside forces, but from the influx of silly old anagrams and the LIKELY PERSON BEHIND THEM--a certain reruns nurser! Someone who resorted to boring old anagrams a computer could crank out.[paragraph break]She also notes she will refrain from calling you the obvious name she COULD in an op-ed, because she has class. But really, oppo = poop."
 
-the Questin' Inquest page is propaganda. it is part of the dope op-ed.
+the Questin' Inquest page is propaganda. it is part of the dope op ed.
 
 description of Questin' Inquest is "[one of]It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.[paragraph break]You pause. That's so contrived. What kind of faker-freak would think that up?[or]The Questin['] Inquest page is no less annoying the second time around.[cycling]"
 
 understand "questin" and "questin inquest" as inquest.
 
-a thing called the MoneyCo and Economy page is propaganda. it is part of the dope op-ed.
+a thing called the MoneyCo and Economy page is propaganda. it is part of the dope op ed.
 
 description of MoneyCo is "Elvira notes Yorpwald's more profitable than ever! What's good for MoneyCo is good for Yorpwald! The motto 'Come Yon, Con Em, Yo!' is a coy omen. If there were fraud, it'd have been found out. But one day MoneyCo will deserve to be MyOneCo! I mean, think about it. Elvira is cool. Money is cool. Elvira deserves money! And of course the Trips Strip deserved to become the Strip of Profits! It rousts tourists! Gets us guests!"
 
-The Shatter-Threats page is propaganda. it is part of the dope op-ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in Dusty Study.
+The Shatter-Threats page is propaganda. it is part of the dope op ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in Dusty Study.
 
 description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers, Sombrest Mobsters and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
@@ -7538,7 +7538,7 @@ dope-read is a truth state that varies.
 
 to say drt: now dope-read is true;
 
-The By Li'l Billy page is propaganda. it is part of the dope op-ed.
+The By Li'l Billy page is propaganda. it is part of the dope op ed.
 
 description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!!"
 
@@ -7727,7 +7727,7 @@ to say dear-reader:
 	if treatise is examined and satchel is touchable:
 		say "(Stuff about getting the satchel that you don't need to reread.)";
 		continue the action;
-	say "Dear, er, Reader: Apologies for any sucky yucks. I couldn't have sent tens of snug gnus, sought toughs, or any gubbins subbing for you. These latches, shut thus, contain a recoded decoder, a revised deviser. Help make your tour a rout. Not that it emits smite. Have a peek, then keep, to help lift the doom mood in Yorpwald. But you'll need to be refined, definer. Just changing things to other things, relived, won't deliver. It's powerful, too. My magician-lawyer Drab Brad warned me creating it would drain my life force. But I feel great!";
+	say "Dear, er, Reader: Apologies for any sucky yucks. I couldn't have sent tens of snug gnus, sought toughs, or any gubbins subbing for you. These latches, shut thus, contain a recoded decoder, a revised deviser. Help make your tour a rout. Not that it emits smite. Have a peek, then keep, to help lift the doom mood in Yorpwald. But you'll need to be refined, definer. Just changing things to other things, relived, won't deliver. It's powerful, too. My magician-lawyer Rawley Lawrey warned me creating it would drain my life force. But I feel great![paragraph break]  --Gateman Nat Egam[line break]";
 
 the teariest treatise is a thing. description is "[dear-reader][line break]Even without cheat mode, it's pretty handy, because it shows the letters [i]should[r] be either...[one of][paragraph break]The treatise iterates some sort of pattern but ends abruptly. You stare. Tears. Eyes watery yet raw. Arg. Life. Fragile.[or][paragraph break](Yes, the old timer is a time lord now.)[stopping]"
 
@@ -8080,7 +8080,7 @@ gallery-been is a truth state that varies.
 
 rule for supplying a missing noun when entering:
 	if player is in Largely All-Grey Gallery:
-		now the noun is the evac-cave.
+		now the noun is the evac cave.
 
 [x current room]
 Largely All-Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are touchable]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
@@ -8101,9 +8101,9 @@ understand "snibs" as snib.
 
 section evac-cave
 
-the evac-cave is boring scenery in Largely All-Grey Gallery. description of the evac-cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
+the evac cave is boring scenery in Largely All-Grey Gallery. description of the evac-cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
 
-understand "evac/cave" as evac-cave.
+printed name of evac cave is "the evac-cave".
 
 this is the bore-evac-cave rule:
 	if current action is entering, try going inside instead;
@@ -8573,10 +8573,18 @@ book Highest Heights
 
 Highest Heights is an innie room in Ordeal Reload. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is touchable], and the ramp you made slopes down[end if]."
 
+study-closeted is a truth state that varies.
+
+definition: a room (called rm) is uncloseted:
+	if rm is unvisited, yes;
+	if rm is dusty study and study-closeted is false, yes;
+	no;
+
 after going when heights are visited and Strip of Profits is unvisited:
-	if location of player was unvisited: [and location of player is not heights]
-		say "'Oh! That's where your closets were hidden here. Handy.";
+	if location of player is uncloseted: [and location of player is not heights]
+		say "'You recall [one of]a[or]another[or]yet another[stopping] passage twisting in the closest closets.";
 		move closets backdrop to all visited rooms;
+		if location of player is dusty study, now study-closeted is true;
 	continue the action;
 
 the closest closets are a backdrop. "You can't quite see where they are going. They are weird to look inside. St. Cole's designed them meticulously. But they probably lead back to the [if player is in Dusty Study]Highest Heights[else]Dusty Study[end if]."
@@ -11860,7 +11868,7 @@ for writing a paragraph about a bruisin person:
 	now Leo is mentioned;
 	now Rand is mentioned;
 	if Rand is fightin, say "Rand is here, looking to do a little better than Leo." instead;
-	if Leo is eager, say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is touchable] to further adventure, though you don't know if you want to share a lodge with them[end if]." instead;
+	if Leo is eager, say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is touchable] to further adventure, though you don't know if you want to share a mutism summit with them. They don't seem like they'd enjoy keeping quiet[end if]." instead;
 	if Rand is washed up and Leo is washed up, say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
 every turn when player is in Dirge Ridge:
@@ -12069,7 +12077,7 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in Phat Path]a harpings phrasing guarding [end if][one of]a quiet-looking structure which must be a MUTISM SUMMIT[or]the mutism summit[stopping] to the north[if starch charts are in Phat Path][desc-starch][end if][if hawt thaw is in Phat Path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
-to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the lodge[else]Some starch charts on the side of the lodge may or may not be an interesting distraction[end if]";
+to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the mutism summit[else]Some starch charts on the side of the mutism summit may or may not be an interesting distraction[end if]";
 
 the mutism summit is boring scenery in Phat Path. description of mutism summit is "[if Hacks' Shack is visited]The mutism summit/Hacks['] Shack looks just as you left it[else]The mutism looks quiet and inviting. You won't need interjections once you're in there[end if].". bore-text is "The mutism summit is pretty stable. Not much to do but [if Hacks' Shack is visited]re[end if]enter to the north.". bore-check is the bore-mutism-summit rule.
 

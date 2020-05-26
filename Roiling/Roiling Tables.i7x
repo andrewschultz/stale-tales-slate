@@ -2347,7 +2347,7 @@ equals sign	"[one of]The equals sign is useful if you don't want things to be to
 ISBN Bins	"[one of]The ISBN Bins are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a SNIB.[minus][cycling]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
 super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
-evac-cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
+evac cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
 Gird Grid	"The Gird Grid has information on the various stores to explore."
 plaster	"[one of]Plaster generally covers up holes. You need to bust through that plaster.[plus][or]If you used the settler, you might notice it, uh, settles a lot about the plaster.[plus][or]The plaster becomes a STAPLER.[minus][cycling]"
 plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a STAPLE.[minus][cycling]"
@@ -2533,7 +2533,7 @@ clack ops locs pack	"[one of]The locs pack is allegedly for making things quiete
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 Drive A	"[h-d][line break]"
-mutism summit	"[if player is in Hacks' Shack]You need to build a computer here[else]The Ogled Lodge just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
+mutism summit	"[if player is in Hacks' Shack]You need to build a computer here[else]The mutism summit is just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if Hacks' Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying the pesty types.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]

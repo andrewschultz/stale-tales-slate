@@ -4,9 +4,9 @@ volume table of nudges
 
 [rorg.py sorts the "to say" and rules in the order they appear in the table]
 [nuch.py makes sure that all the nudges have a test case assigned]
-[?? todo: make sure that nothing seeps into non-nudge stuff]
 [stsv.py verifies the hash values with the strings]
 [all this should be in the post-commit hooks]
+s[the chapter names may matter if I divide tables up not just by region but also by room to speed things up.]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. There's a combination of most immediate stuff to do and the most efficient walkthrough. Then I just loop clockwise from the direction you entered. For Routes and Troves, it's pretty much a one-way shot, though exploring the Cleric Circle is the most natural way through, and the Deli and Adobe have equal priority..
 With Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region.
@@ -17,6 +17,8 @@ Others leaves Gates Stage for last, the last room to visit, with the Swell Wells
 ]
 
 book nudge tables
+
+chapter ordeal reload nudges
 
 table of Ordeal Reload nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -29,7 +31,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "latch"	215399559	--	latches	--	"Not one latch. All of them."
 "table"	305336689	Dusty Study	--	--	"A bleat: 'tableS!'"
 "ceiling"	392118435	Dusty Study	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
-"subpoena"	574518649	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting."
+"subpoena"	574518649	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "palm"	201542769	--	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 "gape"	244059588	--	op-ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	--	x-oped rule	"[vs-oped]."
@@ -42,7 +44,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "beams"	308761951	--	meet bans	--	"Not even one of the beams rattles. You count them up again--there are ten."
 "ten"	299823635	--	meet bans	--	"You change neither the number nor the makeup of the ten beams."
 "notice"	438174643	--	notice	--	"You can flip everything on the diorama except the notice."
-"diorama"	294149104	--	diorama	--	"Old Man Almond assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though..."
+"diorama"	294149104	--	diorama	--	"Gateman Nat Egam assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though..."
 "bookshelf"	561748346	--	bookshelf	--	"The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway."
 "books"	316331203	Dusty Study	--	--	"[the-books]."
 "book"	220057237	Dusty Study	--	--	"[the-books]."
@@ -51,8 +53,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "darkness"	550735437	--	--	dark-study rule	"[dark-palm]."
 "bowling"	401020150	--	giant pin	--	"[g-pin]."
 "bowlingpin"	596386463	--	giant pin	--	"[g-pin]."
-"oped"	304653734	--	op-ed	--	"You're not going to change Elvira's opinion. Better to change Yorpwald."
-"opedoped"	609307468	--	op-ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
+"oped"	304653734	--	op-ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	--	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
 "closets"	570636060	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "closet"	474362094	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
@@ -60,7 +61,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "tenbeams"	608585586	--	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All-Grey Gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	--	study-see-stable rule	"You probably just want to go IN to the stable."
-"satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
@@ -78,7 +78,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sign"	242774022	--	high sign	--	"[hisin]."
 "arifle"	340639311	--	rifle	--	"Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE."
 "hostage"	473612489	--	rifle	--	"It's not you that needs changing but the rifle."
-"gun"	206613017	--	rifle	--	"It's not a gun but a rifle. And a gnu would be a gnu-sance anyway."
+"ugn"	206613017	--	rifle	--	"It's not a gun but a rifle."
 "flier"	338451493	--	--	elmo-chat rule	"Better to pump Elmo for information."
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle is moot] that needed changing[end if]."
 "cavern"	410395643	Carven Cavern	--	--	"[locname]." [start Carven Cavern]
@@ -87,6 +87,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ruin"	304329964	--	act ruin curtain	--	"[curtain-block]."
 "curtain"	428633385	--	act ruin curtain	--	"[curtain-block]."
 "manse"	359250554	--	--	degen-true rule	"[not-the-reg]." [end-manse]
+"ordeal"	364513235	--	--	degen-true rule	"[not-the-reg]."
+
+chapter stores nudges
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -115,7 +118,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storez"	609836091	--	store z	--	"[no-way]."
 "store"	486866473	--	store a	--	"You'll want to focus on a specific store."
 "montage"	473038885	--	magneto montage	--	"It's probably counterproductive to change--it's more an information booth."
-"toker"	443525685	--	tokers	--	"They already lost one of their collective, man. It'd be a bummer if [if nestor is off-stage]they lost another[else]someone replaced Nestor[end if]."
+"toker"	443525685	--	tokers	--	"They already lost one of their collective, man. It'd be a bummer if [if nestor is off-stage]they lost another[else]someone had to replace Nestor again[end if]."
 "someone"	633573999	--	engravings	--	"[engs]."
 "nouned"	466108598	--	engravings	--	"[engs]."
 "route"	495698314	--	course source	--	"[just-in-routes]."
@@ -146,6 +149,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "guardian"	362334391	--	Ian	--	"[ian-un]."
 "pamphlets"	647481120	cruelest	--	--	"[pamph-ana]."
 "pamphlet"	551207154	cruelest	--	--	"[pamph-ana]." [end-stores]
+
+chapter routes nudges
 
 table of routes nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -248,6 +253,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
 "rouet"	495698314	--	--	degen-true rule	"[not-the-reg]." [end-r]
 
+chapter troves nudges
+
 table of troves nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rathole"	483876463	Loather Rathole	--	--	"[locname]." [start Loather Rathole]
@@ -334,6 +341,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "troev"	497757327	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	--	degen-true rule	"[not-the-reg]." [end-v]
+
+chapter presto nudges
 
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -464,6 +473,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "boredyak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
 "storep"	568332432	--	--	degen-true rule	"[not-the-reg]." [end-p]
+
+chapter oyster nudges
 
 table of oyster nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -1292,9 +1303,9 @@ to say so-last: say "That was soooo last game! Not that Shuffling Around was lam
 
 to say no-way: say "Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway"
 
-to say shell-no: say "The shells don't move. Perhaps they are just a clue"
+to say shell-no: say "The shells don't move. Perhaps they are just a clue of what Store Y can become"
 
-to say engs: say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
+to say engs: say "Nothing happens. The engravings on the montage stay as they are. You probably need to worry about the stores and/or what they become, instead"
 
 to say just-in-routes: say "You don't need to do anything with an individual route. Just go in"
 
@@ -1308,7 +1319,7 @@ to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of
 
 to say lec-un: say "The lecturer is unchangeable in his views, but maybe he is physically movable"
 
-to say ian-un: say "Ian is unchangeable, but maybe he is movable";
+to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 
 to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
