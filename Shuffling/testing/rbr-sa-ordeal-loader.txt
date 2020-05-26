@@ -5,9 +5,11 @@
 # hch.py ti check help-stuff, mist.py to check mistakes, nuch.py to check nudges
 #
 files=reg-sa-ordeal-max.txt,reg-sa-ordeal-min.txt,reg-sa-ordeal-nudmis.txt
-~	nudges	t2
-~	nu	t2
-~	mi	t2
+~	max	t0
+~	min	t1
+~	nud	t2
+~	mis	t2
+~	nudmis	t2
 
 ## *FILE
 ## *FORK
@@ -19,8 +21,17 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal_thru
 
-`mi
-#mistake test for magnet/a magnet
+@nud
+#nudge for ordeal
+>ordela
+You don't want to change a region drastically while you're in it.
+#nudge for oafs
+>oasf
+The Oafs' Sofa is there, and there's nothing you can do about it.
+#nudge for oaf
+>ofa
+The Oafs' Sofa is there, and there's nothing you can do about it.
+`#mistake test for magnet/a magnet
 >magnet
 A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.
 >a magnet
@@ -37,7 +48,7 @@ Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
-`mi
+@nud
 #general stuff
 #mistake test for use [text]
 >use zozimus
@@ -76,10 +87,8 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
-`nu
-#nudge for intro
->intor
-You don't want to change a region drastically while you're in it.
+@nud
+gion drastically while you're in it.
 #nudge for busiest
 >busiets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -111,7 +120,10 @@ A voice in your head tells you that sort of mental wandering is what got you can
 >in
 Rested Desert
 
-`mi
+@nud
+#nudge for rested
+>restde
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. You'll find a hint device for that soon enough.
 #mistake test for deters
 >deters
 No! You're trying to make progress here.
@@ -119,7 +131,7 @@ No! You're trying to make progress here.
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
-`nu
+@nud
 #nudge for breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
@@ -127,7 +139,7 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 
-`nu
+@nud
 #spechelp for odor
 >doro
 WRONG
@@ -147,7 +159,7 @@ It's a pretty complex chord.
 >chodr
 It's a pretty complex chord.
 
-`nu
+@nud
 #spechelp for bulge
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
@@ -155,7 +167,7 @@ You feel a slight psychic push-pull coming from the bulge. Keep at it.
 >bugle
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
@@ -164,7 +176,7 @@ The bugle emits a sad "don't change me back" noise.
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
 
-`nu
+@nud
 #spechelp for bolt
 >blto
 WRONG
@@ -191,7 +203,7 @@ If it were just one darnel, there'd be no point in getting mad. But there are a 
 >darnesl
 You might be able to clear the darnels, but they're not as thick as, well, the thicket.
 
-`mi
+@nud
 #mistake test for landers
 >landers
 There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].
@@ -203,17 +215,17 @@ I award you zero points for that anagramming try, and may God have mercy on your
 #notana
 by one point
 
-`mi
+@nud
 #mistake retest for sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 
-#dupnudge for darnel
+#renudge for darnel
 >darnle
 You already got mad at all the darnels. You need to move on
 
-#dupnudge for darnels
+#renudge for darnels
 >darnesl
 You already messed with the darnels.
 
@@ -221,13 +233,13 @@ You already messed with the darnels.
 >shrbu
 The shrub and brush waver, then point towards the toga.
 
-`nu
+@nud
 #spechelp for toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 You feel a slight psychic push-pull coming from the toga. Keep at it.
 
-`mi
+@nud
 #mistake test for believe
 >believe
 Yes, but what do you believe you can do or change?
@@ -238,19 +250,19 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 >goat
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for goat
 >gota
 The goat is happy as-is. No need to go tag a ...
 
-#dupnudge for shrub
+#renudge for shrub
 >shrbu
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
 >in
 Notices Section
 
-`mi
+@nud
 #mistake test for mist
 >mist
 No, those TMIs on the broad board are useful.
@@ -258,12 +270,12 @@ No, those TMIs on the broad board are useful.
 >noetics
 There's enough information here.
 
-`nu
+@nud
 #nudge for notices
 >noticse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. There's a hint device here that'll help, then.
 
-`nu
+@nud
 #spechelp for static
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
@@ -273,7 +285,7 @@ You feel a slight psychic push-pull coming from the static. Keep at it.
 >attics
 Your score has just gone up by one point.
 
-`nu
+@nud
 #spechelp for attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
@@ -307,13 +319,13 @@ The TMIs are there to help you.
 >newladn
 You will have to change the new land one item at a time.
 
-`nu
+@nud
 #spechelp for nametag
 >gatemna
 The nametag peels infinitesimally.
 You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 
-`mi
+@nud
 #mistake test for get a man
 >get a man
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
@@ -321,17 +333,17 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 >gateman
 Your score has just gone up by one point.
 
-`mi
+@nud
 #mistake retest for get a man
 >get a man
 You already did.
 
-`mi
+@nud
 #mistake test for almond
 >almond
 'Don't try anything too nutty!' booms Nat Egam.
 
-`nu
+@nud
 #done rejects for gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
@@ -357,6 +369,10 @@ You can't change what's in the gateway. You just have to trust whatever is(n't) 
 >ask gateman about cabinet
 >take gadget
 
+@nud
+#renudge for notices
+>noticse
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 #mistake test for elastin/nailset
 >elastin
 That would make the saltine less edible.
