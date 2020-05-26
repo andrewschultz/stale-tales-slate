@@ -7,9 +7,11 @@
 # we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
 #
 files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt
-~	nudges	t2
-~	nu	t2
-~	mi	t2
+~	max	t0
+~	min	t1
+~	nud	t2
+~	mis	t2
+~	nudmis	t2
 
 ## *FILE
 ## *FORK
