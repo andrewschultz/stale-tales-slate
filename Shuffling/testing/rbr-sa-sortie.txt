@@ -5,8 +5,9 @@
 # the nudmis file also covers two alternate ways through the sortie.
 #
 files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt
-~	nudges	t2
-~	nu	t2
+~	nudges,nud,mi	t2
+~	min	t1
+~	max	t0
 
 ## *FILE
 ## *FORK
@@ -21,14 +22,14 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >opt in
 >ts
 
-`nu
+@nud
 #spechelp for store i
 >sortei
 WRONG
 
 >sortie
 
-`nu
+@nud
 #done rejects for posted depots
 >sortei
 The posted depots doen't need to be changed. What's behind them, does.
@@ -37,7 +38,10 @@ The posted depots doen't need to be changed. What's behind them, does.
 
 Trap Part
 
-`nu
+@nud
+#nudge for part
+>patr
+You need to manipulate something in the room to stop the spinning.
 #nudge for sortie
 >tosrie
 You don't want to change a region drastically while you're in it.
@@ -65,6 +69,9 @@ Messing up the dial would leave you trapped here.
 #nudge for sextien
 >esxtien
 The spinning seems to slow a bit.
+#nudge for mud
+>mdu
+The mud is just there. You can't change it.
 
 `mi
 #mistake test for a lid
@@ -79,7 +86,10 @@ You can probably TURN the dial to a number, e.g. 99
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
 by one point
 
-\mi
+@nud
+#renudge for part
+>patr
+You don't want to go back to how the Trap Part was.
 #mistake retest for a lid
 >a lid
 You don't need to deal with the dial, now.
@@ -103,7 +113,7 @@ Maybe there is a way out of the nick. Not of nick, but the nick. It's probably t
 >ixsteen
 You don't need to re-stop the centrifuge.
 
-`nu
+@nud
 #spechelp for t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
@@ -117,11 +127,22 @@ You might rather thin-nen to slip through the bars, but you can't.
 by one point
 Kitchen
 
-`mi
+@nud
+#nudge for rendin
+>rendni
+You don't need to change the red inn. It will support your cooking efforts.
 #mistake retest for thicken
 >thicken
 This would be the place, but you're not hungry for anything TOO fatty right now
-
+#nudge for ditties
+>dittise
+Don't let the songs distract you from your mission.
+#nudge for grief
+>grife
+The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
+#nudge for spear
+>spera
+The spearman is what's important.
 
 #####detour to check on UFR
 >s
@@ -131,7 +152,7 @@ A Round Den, Unadorned
 >aroundden
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
-#dupnudge for dial
+#renudge for dial
 >dila
 The dial did its part for you.
 
@@ -160,15 +181,11 @@ It's not a cake, and it's not quite a pan--it's a cake pan.
 >caek
 It's not a cake, and it's not quite a pan--it's a cake pan.
 
-#nudge for okrapot
->okrapto
-Aigh! It's a catchy tune, but really, it won't help you figure anything out.
-
 #nudge for fridge
 >frideg
 The fridge is just a fridge.
 
-`nu
+@nud
 >grtis
 #spechelp for grist
 >girts
@@ -179,17 +196,20 @@ You feel a slight psychic push-pull coming from the grist. Keep at it.
 >grits
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for grits
 >grist
 Best not to get too crazy with food preparation.
+#renudge for grief
+>grife
+The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something else inside it.
 
-`nu
+@nud
 #donerejects for grits
 >grtis
 Best not to get too crazy with food preparation.
 
-`nu
+@nud
 #spechelp for cake pan
 >pancaek
 It's a cake pan, backwards and forwards.
@@ -198,49 +218,15 @@ You feel a slight psychic push-pull coming from the cake pan. Keep at it.
 >pancake
 Your score has just gone up by one point.
 
+@nud
+#renudge for grief
+>grife
+The fridge has taken enough abuse and can't be changed for the better.
 #done rejects for pancake
 >pancaek
 Best not to get too crazy with food preparation.
 
-##############ok, test tall trio and loose label that's part of them
-
-#nudge for middle
->middel
-The chefs are all lumped together--a tall trio.
-
-#nudge for left
->letf
-The chefs are all lumped together--a tall trio.
-
-#nudge for right
->rigth
-The chefs are all lumped together--a tall trio.
-
-#nudge for middlechef
->middlechfe
-The chefs are all lumped together--a tall trio.
-
-#nudge for leftchef
->leftchfe
-The chefs are all lumped together--a tall trio.
-
-#nudge for rightchef
->rightchfe
-The chefs are all lumped together--a tall trio.
-
-#nudge for label
->lable
-The tall trio is probably what you want to change, but the label may have information.
-
-#nudge for loose
->looes
-The tall trio is probably what you want to change, but the label may have information.
-
-#nudge for looselabel
->looselable
-The tall trio is probably what you want to change, but the label may have information.
-
-`nu
+@nud
 #spechelp for tall trio
 >tortilal
 The tall trio seem to look interested for a minute.
@@ -249,7 +235,7 @@ You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 >tortilla
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for tortilla
 >tortilal
 Best not to get too crazy with food preparation.
@@ -273,7 +259,7 @@ It's the full name brand that really catches your eye.
 >houes
 It's the full name brand that really catches your eye.
 
-`nu
+@nud
 #spechelp for cathouse
 >hotsauec
 WRONG
@@ -281,13 +267,13 @@ WRONG
 >hotsauce
 by one point
 
-`nu
+@nud
 >undo
 >hot sauce
 #notmax
 by one point
 
-`nu
+@nud
 #done rejects for hotsauce
 >hotsauec
 Best not to get too crazy with food preparation.
@@ -300,16 +286,12 @@ No need to do more with the hot sauce.
 >packte
 Fiddling with sauce packets is so awful! Until it's easy. And it should be, here. Just PUT the sauce on any food.
 
-###############spearman
+
 #nudge for cheesy
 >cheeys
 It's more that he's a spearman--but maybe his cheesiness is a clue.
 
-#nudge for armor
->armro
-The armor is impervious. Maybe you can change the guy inside it, instead.
-
-`nu
+@nud
 #spechelp for spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
@@ -318,12 +300,12 @@ You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
 >parmesan
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for parmesan
 >parmesna
 Best not to get too crazy with food preparation.
 
-`nu
+@nud
 #spechelp for skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
@@ -350,7 +332,7 @@ by one point
 This is wordplay, not poetry.
 !But the skate
 
-`nu
+@nud
 #done rejects for steak
 >steka
 Best not to get too crazy with food preparation.
@@ -365,7 +347,7 @@ The steak's just right as is.
 
 ######################lettuce
 
-`nu
+@nud
 #spechelp for cult tee
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
@@ -381,7 +363,7 @@ The whole t-shirt.
 >lettuce
 by one point
 
-`nu
+@nud
 #done rejects for lettuce
 >lettuec
 Best not to get too crazy with food preparation.
@@ -400,7 +382,10 @@ How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if
 #notana
 by one point
 
-`nu
+@nud
+#renudge for rendin
+>rendni
+You don't need to change the red inn. It supported your cooking efforts.
 #spechelp for taco
 >cota
 WRONG
@@ -416,7 +401,7 @@ by one point
 >cato
 You don't need to know your classics, here.
 
-`nu
+@nud
 #done rejects for coat
 >cota
 WRONG
@@ -429,7 +414,7 @@ Room
 >weer
 The cask is changeable, but not like that. WERE-EWER just clues it can be changed.
 
-`nu
+@nud
 #spechelp for cask
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
@@ -437,7 +422,7 @@ Nothing happens. Maybe you are trying to do too much to change the cask.
 >sack
 by one point
 
-`nu
+@nud
 #spechelp for sack
 >cska
 You doubt the sack/cask has a triple purpose.
@@ -454,7 +439,7 @@ Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd
 >wrat
 Why zap just one wart? Go for all of them!
 
-`nu
+@nud
 #spechelp for warts
 >strwa
 WRONG
@@ -464,7 +449,7 @@ by one point
 
 >put straw in sack
 
-`nu
+@nud
 #done rejects for straw
 >strwa
 WRONG
@@ -473,12 +458,12 @@ WRONG
 >heos
 There's more than one hose here.
 
-`nu
+@nud
 >shoe
 WRONG
 >undo
 
-`nu
+@nud
 #spechelp for hoses
 >shose
 WRONG
@@ -486,7 +471,7 @@ WRONG
 >shoes
 by one point
 
-`nu
+@nud
 #nudge for sheo
 >heos
 But you're wearing the shoes. That might cause problems.
@@ -572,7 +557,7 @@ Pat won't react kindly to modifications of his poem.
 >rifle
 Shooting things up is not the answer.
 
-`nu
+@nud
 #spechelp for anapest
 >peasatn
 WRONG
@@ -587,7 +572,7 @@ Instead of trading, use GIVE X to Y.
 >trade zozimus
 Instead of trading, use GIVE X to Y.
 
-`nu
+@nud
 #done rejects for peasant
 >peasatn
 The peasant doesn't need a fashion boost or anything. Just a trade.
@@ -624,7 +609,7 @@ No, the full roadblock.
 >blokc
 No, the full roadblock.
 
-`nu
+@nud
 #spechelp for m2
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between them
@@ -632,11 +617,11 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 ##nudge for room
 >room
 
-`nu
+@nud
 >romo
 The room sways a bit. You do some brief mental calculation. There's no third place between them
 
-#dupnudge for kitchen
+#renudge for kitchen
 >ketchin
 You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location.
 
@@ -646,7 +631,7 @@ Stiller Trellis
 
 >w
 
-#dupnudge for kitchne
+#renudge for kitchne
 >ketchni
 There's no room between the nick and kitchen. You already found a better way out, anyway.
 
@@ -668,7 +653,7 @@ The scraped wall doesn't respond or come any closer to being a hallway.
 #notana
 by one point
 
-`nu
+@nud
 #spechelp for scraped wall
 >hallwya
 WRONG what about haywall instead
@@ -678,7 +663,7 @@ You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
 >hallway
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for hallway
 >hallwya
 You already have a passage east. Don't close it.
@@ -734,10 +719,6 @@ Best not defile this shrine. Or even try to. The oils from the spout are gift en
 >veres
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#nudge for holyverse
->holyveres
-Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
-
 #nudge for spout
 >spotu
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
@@ -786,7 +767,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >w
 >s
 
-`nu
+@nud
 
 >moor
 
@@ -802,7 +783,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >papesr
 !It's a plane, now, for sure.
 
-`nu
+@nud
 #spechelp for smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
@@ -811,26 +792,26 @@ You feel a slight psychic push-pull coming from the smilies. Keep at it.
 >missile
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for missile
 >missiel
 The missile emits an almost giggly sound but doesn't actually change.
 
 >fold paper
 
-#dupnudge for folded
+#renudge for folded
 >foldde
 It's a plane, now, for sure.
 
-#dupnudge for paper
+#renudge for paper
 >papre
 It's a plane, now, for sure.
 
-#dupnudge for papers
+#renudge for papers
 >papesr
 It's a plane, now, for sure.
 
-`nu
+@nud
 #spechelp for poem
 >panle
 WRONG
@@ -848,13 +829,13 @@ by one point
 >nepal
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
-`nu
+@nud
 #done rejects for panel
 >panle
 WRONG
 
 
-`nu
+@nud
 #spechelp for oils
 >soli
 The oils need a purpose--to build something great. You don't want to waste them.
@@ -863,16 +844,16 @@ You feel a slight psychic push-pull coming from the oils. Keep at it.
 >soil
 Your score has just gone up by one point.
 
-`nu
+@nud
 #done rejects for soil
 >soli
 The soil is right as-is, but maybe something can go on it.
 
-#dupnudge for were
+#renudge for were
 >weer
 There's no other way to change the cask than to and from the sack. WERE-EWER just clued
 
-`nu
+@nud
 #spechelp for roadblock
 >black doro
 WRONG
@@ -880,7 +861,7 @@ WRONG
 >black door
 by one point
 
-`nu
+@nud
 #done rejects for black door
 >black doro
 WRONG
@@ -912,7 +893,7 @@ Despite the magic you can do, electricity still feels like, well, total magic. P
 
 >pour oils
 
-#dupnudge for oil
+#renudge for oil
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do.
 
@@ -931,7 +912,7 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >rubbel
 The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
 
-#dupnudge for trellis
+#renudge for trellis
 >trellsi
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
 
@@ -942,7 +923,7 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 >silo
 by one point
 
-`nu
+@nud
 #done rejects for silo
 >siol
 That silo was pretty big. You probably have little more to do with the oils.
@@ -990,7 +971,7 @@ No, you're overthinking it. Just the text.
 >tresebutton
 No, you're overthinking it. Just the text.
 
-`nu
+@nud
 #spechelp for trees button
 >stere
 WRONG
@@ -1006,7 +987,7 @@ by one point
 >terse
 Already good.
 
-`nu
+@nud
 #spechelp for hoots button
 >shoto
 WRONG
@@ -1022,17 +1003,17 @@ by one point
 >sooth
 Close...what you need to do will sooth, in a bit.
 
-`nu
+@nud
 #nudge for button
 >buttno
 It's the buttons' purposes that needed changing.
 
-`nu
+@nud
 #done rejects for steer button
 >stree
 No, the steer button HAS to be right.
 
-`nu
+@nud
 #done rejects for shoot button
 >shtoo
 No, the shoot button HAS to be right.
