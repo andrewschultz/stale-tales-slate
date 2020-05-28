@@ -703,26 +703,44 @@ chapter fruiing
 
 fruiing is an action out of world.
 
+understand the command "fruits" as something new.
+understand the command "fruit" as something new.
 understand the command "frui" as something new.
+understand the command "fru" as something new.
+understand the command "fr" as something new.
 
+understand "fruits" as fruiing.
+understand "fruit" as fruiing.
 understand "frui" as fruiing.
+understand "fru" as fruiing.
+understand "fr" as fruiing.
+
+definition: a fruit (called fr) is in-play:
+	if fr is moot or fr is off-stage, no;
+	if fr is held, no;
+	yes;
+
+to say f-and-rev of (fr - a fruit):
+	say "[fr] ([if rev-item of fr is fr]magic word[else]from [rev-item of fr][end if])"
 
 carry out fruiing:
-	if mrlp is not others:
-		say "Fruit tracking is not useful outside the others region." instead;
-	let frusolv be 0;
-	let fruhid be 0;
-	let fruhere be 0;
+	if mrlp is not others, say "Fruit tracking is not useful outside the others region." instead;
+	repeat with fru running through moot fruits:
+		say "[f-and-rev of fru] has been returned to Curtis. From room = [frroom of fru].";
+	if number of moot fruits > 0, say "========================================[line break]";
+	repeat with fru running through off-stage fruits:
+		say "[f-and-rev of fru] is still off-stage. From room = [frroom of fru].";
+	if number of off-stage fruits > 0, say "========================================[line break]";
+	repeat with fru running through in-play fruits:
+		say "[f-and-rev of fru] is still in-play, in [location of fru][if location of fru is location of player] [b](HERE)[r].";
+	if number of in-play fruits > 0, say "========================================[line break]";
+	repeat with fru running through held fruits:
+		say "[f-and-rev of fru] is held.";
+	if number of held fruits > 0, say "========================================[line break]";
+	let got-error be false;
 	repeat with fru running through fruits:
-		let frr be frroom of fru;
-		say "[fru]: [if fru is off-stage]off-stage[else if fru is moot]DONE[else]in OTHERS[end if]. From room = [frr].";
-		if fru is moot:
-			increment frusolv;
-		else if fru is off-stage:
-			increment fruhid;
-		else:
-			increment fruhere;
 		let rev-itm be rev-item of fru;
+		let frr be frroom of fru;
 		if frr is Rustic Citrus:
 			if rev-itm is listed in rustic-hard-items or rev-itm is listed in rustic-easy-items, next;
 			say "[rev-itm] not in [rustic-hard-items] or [rustic-easy-items].";
@@ -732,7 +750,9 @@ carry out fruiing:
 		if frr is Filed Field and rev-itm is listed in field-hintables, next;
 		if frr is Scape Space and rev-itm is listed in scapespace-hintables, next;
 		say "[fru], in [frr], does not have [rev-itm] in a hint list. It doesn't need one, but it'd be nice to have one.";
-	say "[number of fruits] total fruits. [frusolv] to Curtis, [fruhid] not here yet, [fruhere] in the area.";
+		now got-error is true;
+	if got-error is true, say "========================================[line break]";
+	say "[number of fruits] total fruits. [number of moot fruits] to Curtis, [number of off-stage fruits] not here yet, [(number of fruits - number of moot fruits + number of off-stage fruits)] in the area.";
 	the rule succeeds;
 
 to decide which thing is rev-item of (f - a fruit):
@@ -1176,7 +1196,7 @@ to say miss-types:
 	say "MISSES = this region's misses (may provide nonsense/spoilers).";
 	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
 	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
-	say "========================Real stuff below[paragraph break]";
+	say "[paragraph break]========================Real stuff below";
 
 chapter thisalting
 

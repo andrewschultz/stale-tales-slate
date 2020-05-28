@@ -472,7 +472,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 730.
+use MAX_VERBS of 750.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -488,7 +488,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 750. [delta=20]
+use MAX_VERBS of 770. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -4349,7 +4349,7 @@ others	"not nouns any more--a different part of speech in each location"
 to say cheatfid:
 	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
 
-to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can
+to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
 [??pad question mark / scan elmer / scan merle]
 [note we start with the pram which is not in the first room so we can define xtradesc as not-scenery. Don't change this.]
@@ -4632,17 +4632,20 @@ carry out others-hinting:
 		if droll dollar is off-stage, say "You'll eventually want to get that storage box down the road.";
 		if storage box is in Scape Space and player has droll dollar, try objhinting storage box instead;
 	abide by the fruit-hint rule;
-	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if].";
+	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if].";
 	the rule succeeds;
 
-to say fruits-to-clear: say "[if fruits-left is 1]is[else]are[end if] [fruits-left in words] fruit[if fruits-left > 1]s[end if]"
+to say fruits-to-clear: say "[if fruits-left-here is 1]is[else]are[end if] [fruits-left-here in words] fruit[if fruits-left-here > 1]s[end if]"
+
+to decide which number is fruits-left-here:
+	decide on number of touchable fruit-to-find fruits;
 
 to decide which number is fruits-left:
-	let temp be 0;
-	repeat with myf running through fruits:
-		if location of player is frroom of myf:
-			unless player has myf or myf is moot, increment temp;
-	decide on temp;
+	decide on number of fruit-to-find fruits;
+
+definition: a fruit (called fr) is fruit-to-find:
+	if fr is moot or fr is held, no;
+	yes;
 
 box-down-road is a truth state that varies.
 
@@ -4652,15 +4655,15 @@ section random fruit hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { mad train, omen prism, harmonicas, peanut cola, eerie blurbs, magenta rope }
+rustic-hard-items is a list of things variable. rustic-hard-items is { eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
 
-wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
+wells-hintables is a list of things variable. wells-hintables is { green stain, miser ruble, PSA Elp, riot cap, sorer bogey, stucco }.
 
-field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel lie pen app, buried raft, barriers west, barber sickle, mean trowel, rapt figure, barren cries }.
+field-hintables is a list of things variable. field-hintables is { barber sickle, barren cries, barriers west, buried raft, mean trowel, pipe panel lie pen app, pryer bars, rapt figure }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, Ammo Gang, quince, prices precis, lemons, auction caution, nectarine }.
+clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', orange, a brr hub, inapt paint }
+scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', a brr hub, inapt paint, orange }
 
 to decide which list of things is my-fruit-list:
 	if moss cap is off-stage, decide on rustic-easy-items;
@@ -5613,7 +5616,7 @@ after taking inventory when mrlp is others:
 	eval-fruits;
 	continue the action;
 
-to decide which number is fruits-got: decide on number of moot fruits + number of held fruits;
+to decide which number is fruits-got: decide on number of not fruit-to-find fruits;
 
 to eval-fruits:
 	say "[line break]DEBUG NOTE: MISSES shows fruits left.";
@@ -5705,7 +5708,7 @@ Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Cops
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
 Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
-Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You enter the logged dogleg's [noun] entry and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
+Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
@@ -5718,11 +5721,13 @@ Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Ble
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
+Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
 Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage, the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
+
+to say curtis-next: say "[if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]"
 
 to say no-coma: say "The coma camo may be detectable, but you can't change it"
 
@@ -6288,6 +6293,7 @@ to decide whether can-hear-posh:
 listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] gast, raptest patters, [troves] sob ever verbose, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 rule for supplying a missing noun when listening:
+	if debug-state is true, say "DEBUG: Going through listen-candidates."; [??]
 	repeat with Q running through listen-candidates:
 		if Q is touchable:
 			now the noun is Q;
@@ -7318,7 +7324,7 @@ The look around once light available rule is not listed in the for printing the 
 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
-		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. I mean, you can probably find a few more fruits here, but not enough to satisfy Curtis.";
+		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. Curtis seems pretty demanding and probably wants a lot more fruit than you could find or create here.";
 		mootl list of all carried fruits;
 		now player has moss cap;
 		continue the action;
@@ -7346,7 +7352,7 @@ after fliptoing (this is the fruit cue rule):
 				d "[myf] still to do.";
 				continue the action;
 	if another-break is true, say "[line break]";
-	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. Maybe there's more to do elsewhere.";
+	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. [if number of fruit-to-find fruits is 0]Maybe there's more to do elsewhere[else]In fact, you are pretty sure you've found all the fruits[end if].";
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
@@ -7658,6 +7664,8 @@ to get-cool-stuff:
 chapter isolani liaison
 
 the isolani liaison is scenery in Dusty Study. "It's not much TO examine. Well, maybe its wires and circuits are, but all you see is a thing that lets you communicate with the outside world you're walled off from. From which you're walled off."
+
+understand "door" as liaison when player is in dusty study.
 
 answer-warn is a truth state that varies.
 
@@ -8015,6 +8023,8 @@ after examining event map:
 [line break]  R   n p[variable letter spacing]
 [paragraph break]You remember stores A-Z in the Trips Strip and how you cleared F, I and M.";
 			now bluh is true;
+	else:
+		say "A flowchart labeled 'Stores in Trips Strip.' A starting box, then three branching lines to F, I and M. They rejoin before pointing to store R. Yes, you had to solve stores F, I and M to open store R and defeat Red Bull Burdell.";
 	if bluh is false:
 		say "It's a flowchart that breaks from the Trips Strip into store F (forest,) store I (sortie,) and store M (metros,) before merging at store R, the resort.";
 	say "You wonder if there is something in the others now, and if so, what.";
@@ -10344,7 +10354,7 @@ check taking worst ad: say "You'd need to get closer. Which isn't easy." instead
 
 chapter MORF FORM
 
-the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "The MORF-FORM hangs menacingly above. You can't just leave it there[stopping]."
+the MORF FORM is a flippable thing. description is "It's huge all right. And it's a thing. It could cloud the stripe for a while. Perhaps it is what the priest summoned. If you could bring it down, maybe you could see what it is.". "The MORF-FORM hangs menacingly above. You can't just leave it there."
 
 printed name of MORF FORM is "MORF-FORM"
 
@@ -10356,7 +10366,7 @@ a-text of MORF FORM is "RRYR". b-text of MORF FORM is "?RY?". parse-text of MORF
 
 chapter THE BEAN
 
-There is vanishing scenery called THE BEAN. . description of THE BEAN is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.".
+There is a vanishing thing called THE BEAN. it is scenery. description of THE BEAN is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.".
 
 check taking THE BEAN:	say "You can't move it. Maybe you can find a way to get inside or under--wait, no, those have been done here." instead;
 
@@ -10373,6 +10383,9 @@ chapter A Bev O' Be Ova'
 A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.". bore-text of A Bev O Be Ova is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look.". bore-check of A Bev O Be Ova is the bore-bev rule.
 
 a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of A Bev O Be Ova is "-[sp]-[sp]-[sp]V[sp]E".
+
+this is the bore-bev rule:
+	if current action is drinking, say "No. You know you're nowhere near the end, and you don't just want to give up. [bev] has a different message." instead;
 
 book Cleric Circle
 
@@ -15473,7 +15486,7 @@ the Shout-So Hut is bounding boring scenery in Topside Deposit. bore-text is "Yo
 this is the bore-shout-hut rule:
 	if current action is entering, try going south instead;
 
-check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][paragraph break]It's probably got a bunch of those.[or][stopping]" instead;
+check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][line break]It's probably got a bunch of those.[or][stopping]" instead;
 
 to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
 
@@ -15647,7 +15660,7 @@ carry out repairing:
 
 book Baldest Blasted Saltbed
 
-Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if guar-here is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs]"
+Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if guar-here is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs]."
 
 check going west in Baldest Blasted Saltbed: say "The stew wets are way too dangerous. But any other way is okay." instead;
 
@@ -15682,12 +15695,12 @@ this is the bore-creches rule:
 
 book Anemic Cinema
 
-Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side[if ingrates are touchable]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
+Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side, calling itself the THEATER THEREAT, which is not important[if ingrates are touchable]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
 
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
-The theater thereat is boring useless scenery in Anemic Cinema. description of theater is "The theater has long since been in disuse. It can't be important. I mean, who needs visual images to have an adventure? Really!". bore-text of theater thereat is "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.". bore-check of theater thereat is bore-theater rule.
+The theater thereat is boring useless scenery in Anemic Cinema. description of theater is "The theater has long since been in disuse. It can't be important. I mean, who needs visual images, much less moving ones, to have an adventure? Really!". bore-text of theater thereat is "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.". bore-check of theater thereat is bore-theater rule.
 
 understand "theatre" and "theatre thereat" as theater thereat.
 
@@ -15696,11 +15709,24 @@ understand "anemic/cinema" and "anemic cinema" as theater when player is in Anem
 check going inside when player is in Anemic Cinema: try entering theater instead;
 
 this is the bore-theater rule:
-	if current action is entering, now boring-exception is true;
+	if current action is entering, say "You take a brief look inside. Nothing useful." instead; [?? move movies list to Theater Thereat]
 
 book Treading Gradient
 
-Treading Gradient is north of Leveraged Everglade and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
+Treading Gradient is north of Leveraged Everglade and east of Baldest Blasted Saltbed. "This place is [grad-by-points]. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths lead in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
+
+to decide which number is grad-points: [?? we could possibly convert this into having a list and having moots of a list being the number of moot items in the list]
+	let temp be 0;
+	if mended mini denim is moot, increment temp;
+	if weeds are moot, increment temp;
+	if mel fish is moot, increment temp;
+	if fluster self rut is moot, increment temp;
+	if lars eede is moot or elsa erde is moot, increment temp;
+	if sweatier wait-seer is moot, increment temp;
+	decide on temp;
+
+to say grad-by-points:
+	say "[if grad-points < 2]This place is quite messy and busy[else if grad-points is 2]There's a lot to clean up here[else if grad-points is 3]You've got a bit you can clean up here[else if grad-points is 4]This place was a lot busier before you started hacking through it[else if grad-points is 5]You've got very little left to do here[else]This place was busy once, but you fixed that with your mad skills[end if]"
 
 to say we-g: say "weeds swaying, despite no wind,"
 
@@ -15906,7 +15932,7 @@ check scaning bot boat (this is the scan boat components and not boat rule):
 		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
 		try scaning t-or-b instead;
 	if blaster is reflexed and turbos are reflexed:
-		if bot boat is reflexive:
+		if weirder red wire is touchable:
 			say "With the boat's components fixed, you focus on the weirder red wire.";
 			try scaning weirder red wire instead;
 		say "Nothing any more. You probably fixed the boat all you can." instead;
@@ -16331,6 +16357,8 @@ Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe
 
 understand "loaves" and "loaf" as solve a loaves.
 
+check going down in fringe finger: say "There's no way back up, even if you survived the fall." instead;
+
 section logged dogleg
 
 the logged dogleg is bounding boring scenery in Fringe Finger. description of logged dogleg is "The logged dogleg curves around so you don't fall off the fringe finger.". bore-check of logged dogleg is bore-dogleg rule. bore-text of logged dogleg is "You can't move the dogleg. It's there for your safety.".
@@ -16378,7 +16406,7 @@ check taking sled rut: say "[if strudel is in Outer Route]Maybe take the strudel
 
 chapter a bot boat
 
-description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across Leak Lake[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
+description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across Leak Lake[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if weirder red wire is touchable]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
 t-or-b is a thing that varies.
 
@@ -16993,9 +17021,9 @@ section sweatier wait-seer
 
 The sweatier wait-seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait-seer]."
 
-understand "wait/ seer" as wait-seer.
+understand "wait/seer" and "sweatier wait/seer" as wait-seer. [?? unhyphenate variable, printed name is hypenated]
 
-description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
+description of sweatier wait-seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
 
 a-text of sweatier wait-seer is "RYYRYYRR". b-text of sweatier wait-seer is "?YYRY?RR". parse-text of sweatier wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
@@ -17122,6 +17150,8 @@ after fliptoing a guardian (this is the guardian taunt and track progress rule) 
 		if guaname entry is touchable:
 			deliver-taunt guaname entry and noun;
 			continue the action;
+
+after fliptoing a guardian (this is the recalculate minimums no matter what rule) :
 	shuffle-guardians noun;
 	continue the action;
 
@@ -17252,7 +17282,6 @@ to shuffle-guardians (goner - a guardian):
 	else if Scope Copse is visited:
 		if any-cleared is false:
 			now any-cleared is true;
-			say "Well, this is the first place you cleared all the guardians from, which feels nice. [if spec-o-scope is unexamined]You don't know if you need any area completely cleared, but maybe you can check the scope[bak-copse] for more guidance[end if].";
 		else if number of not moot guardians is 0:
 			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
 		else if number of tower-accessible rooms >= 12 and Obscurest Subsector is tower-accessible and Shaven Havens are tower-accessible: [the grid + Outer Route + Shaven Havens + Obscurest Subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
@@ -18996,12 +19025,16 @@ book Rustic Citrus
 
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus.
 
+after choosing notable locale objects when player is in Rustic Citrus:
+	set the locale priority of Curtis to 1;
+
 fruits-flipped is a number that varies.
 
 after fliptoing a fruit (this is the check minimum fruits and score rule) :
 	if player is in Rustic Citrus:
 		coin-eval;
 	check-fruit-min;
+	if fruits-flipped is number of fruits and arugula is not moot, min-up;
 	continue the action;
 
 to check-fruit-min:
@@ -19010,41 +19043,45 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break][if ruts circuits are in Rustic Citrus]Ruts circuits may have random stuff strewn, so they may be wortth EXAMINEing[else][fruit-rollup][end if]."
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+
+to decide which number is touch-val of (x - a thing):
+	if x is touchable, decide on 1;
+	decide on 0;
 
 to say fruit-rollup:
-	if spear is moot and mad train is moot and lumps are moot and pagers are moot and slime is moot and omen prism is moot and eerie blurbs are moot:
-		say "You've tracked down all the fruits here";
-		continue the action;
-	let pres-available be boolval of (whether or not spear is touchable) + boolval of (whether or not mad train is touchable) + boolval of (whether or not lumps are touchable) + boolval of (whether or not slime is touchable) + boolval of (whether or not omen prism is touchable);
+	let pres-available be touch-val of spear + touch-val of mad train + touch-val of lumps + touch-val of slime + touch-val of omen prism + touch-val of harmonicas;
 	let cur-got be 0;
 	if pres-available > 0:
 		say "You see ";
 		if spear is touchable:
 			say "a spear stuck in the ground";
 			increment cur-got;
-		if mad train is touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
-			increment cur-got;
 		if lumps are touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
+			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
 			increment cur-got;
 		if slime is touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]slime oozing off to the side";
+			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]slime oozing off to the side";
 			increment cur-got;
 		if omen prism is touchable:
-			say "[if cur-got is pres-available - 1]and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
+			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
 			increment cur-got;
-	if pagers are touchable:
-		say ". Pagers seem to be beeping all around";
-		increment pres-available;
-	if eerie blurbs are touchable, say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
+		if mad train is touchable:
+			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
+			increment cur-got;
+		if harmonicas are touchable:
+			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]two harmonicas rusted together";
+			increment cur-got;
+	if eerie blurbs are touchable:
+		increment cur-got;
+		say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
+	if cur-got is 0, say "You've tracked down all the[if one-left is false], uh, low-hanging[end if] fruit here[if pagers are touchable], except for what the pagers could become[end if]"
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
 chapter augural arugula
 
-some augural arugula is a singular-named edible thing. description of arugula is "It's not enough for a luau. Arg."
+some augural arugula is a singular-named edible thing. description of arugula is "It's not enough for a luau. Arg.". indefinite article of arugula is "some".
 
 check eating arugula:
 	say "Not very tasty, but your vision seems clearer. 'La! A guru!' you think to yourself. You can now GURU what you are curious about.";
@@ -19053,7 +19090,7 @@ check eating arugula:
 	the rule succeeds;
 
 after printing the name of arugula when taking inventory:
-	say " (to eat, then GURU something to change to fruit)";
+	say " (to eat, then GURU something to change to, or acquire, fruit)";
 	continue the action;
 
 can-guru is a truth state that varies.
@@ -19180,9 +19217,7 @@ some limes are a plural-named fruit.
 
 chapter maraschino
 
-the harmonicas are a plural-named thing in Rustic Citrus. "Two harmonicas, rusted together, are here."
-
-description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
+the harmonicas are plural-named scenery. "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
 
 check taking harmonicas: say "They're too rusty." instead;
 
@@ -19321,7 +19356,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. And there's a weird omen prism[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts[stopping].". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
+the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism and two harmonicas rusted together also turn up[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts[stopping].". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
 
 check reading ruts circuits:
 	if eerie blurbs are moot, say "With the eerie blurbs gone, there's nothing much to read." instead;
@@ -19335,8 +19370,9 @@ after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 c
 	move rampage note to Rustic Citrus;
 	move mopeage rant to Rustic Citrus;
 	move omen prism to Rustic Citrus;
+	move harmonicas to Rustic Citrus;
 	moot ruts circuits;
-	say "[line break]Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
+	say "Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
 	move eerie blurbs to Rustic Citrus;
 	continue the action;
 
@@ -19405,16 +19441,28 @@ a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY"
 
 book Swell Wells
 
-Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[stopping], or west to a Filed Field[if sorer bogey is in Swell Wells]. You think you hear something from the wells[end if][if green stain is touchable]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
+Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing[one of][or], or down the un-mod mound[if mound-writing > 0], which also has writing on it[end if][stopping], or west to a Filed Field[if sorer bogey is in Swell Wells]. You think you hear something from the wells[end if][if green stain is touchable]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
 
 after printing the locale description for Swell Wells:
 	if miser ruble is off-stage:
-		say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals a way down!";
+		say "One thing is not like the others. An un-mod mound looks suspicious--and when you look at it more carefully, it reveals not only a way down but also some red writing!";
 		say "[line break]And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
 		now miser ruble is in Swell Wells;
 	continue the action;
 
-the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewher new[end if]."
+the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if]. [what-on-moubnd]."
+
+to decide what number is mound-writing:
+	decide on touch-val of stucco + touch-val of stucco + touch-val of PSA Elp;
+
+to say what-on-mound:
+	if mound-writing is 0:
+		say "Many weird and uninterersting things are written on the mound. You got enough from it.";
+		continue the action;
+		say "[if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound.";
+	if stucco is in swell wells, say "[line break]There's an advertisement in red for [stucco-ad].";
+	if sorer bogey is in swell wells "[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
+	if PSA Elp is in swell wells, say "[line break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail.";
 
 to say what-clear:
 	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
@@ -19477,11 +19525,11 @@ a-text of riot cap is "YRRYRYR". b-text of riot cap is "YRRYPYR". parse-text of 
 
 the apricot is a fruit. "It's a regular apricot. Nothing special."
 
-chapter silly shirt / apples
+chapter PSA Elp / apples
 
-the silly shirt is a boring thing in Swell Wells. "A silly shirt lies here.". description of silly shirt is "It's a hideous red-and-green-and-yellow blend with the phrase 'Got ESP, PAL?'". bore-text of silly shirt is "You wouldn't want to take or wear the shirt. Maybe it can be recycled.".
+the PSA Elp is boring scenery in Swell Wells. printed name of PSA Elp is "PSA 'Elp". description of PSA Elp is "PSA [']Elp is written in red. You can read it for more details.". bore-text of PSA Elp is "The PSA [']Elp seems like it could be changed into something else.".
 
-a-text of silly shirt is "YRRRYR". b-text of silly shirt is "YRPRYR". parse-text of silly shirt is "-[sp]x[sp]p[sp]x[sp]-[sp]x". silly shirt is cheat-spoilable.
+a-text of PSA Elp is "YRRRYR". b-text of PSA Elp is "YRRRYR". parse-text of PSA Elp is "-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
 the apples are plural-named fruit. description is "Green, red, yellowish: all kinds, really!"
 
@@ -19714,7 +19762,7 @@ check inserting into lost slot:
 	process the retract halt lath rule;
 	the rule succeeds;
 
-the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too. Written on the bottom is some nonsense about how it's not enough to have the passport to improve quality of life--you need to use it, too."
+the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher"
 
 check scaning the passport:
 	if viewer is reflexed:
@@ -19876,7 +19924,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel lie pen app is touchable]Plans for a pipe panel lie pen app are discarded here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft lies here, too. [end if][if pipe panel lie pen app is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others. [?? make sentences less choppy]
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel lie pen app is touchable]Plans for a pipe panel lie pen app are discarded here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft sticks up from the ground, too. [end if][if pipe panel lie pen app is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others. [?? make sentences less choppy]
 
 the ego fail foliage is bounding scenery in Filed Field. "The ego fail foliage will still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -19898,7 +19946,7 @@ chapter watermelon
 
 the watermelon is a fruit. description is "It isn't too heavy or big to carry, thankfully."
 
-the mean trowel is a thing in Filed Field. description is "It has some red writing saying who made it and also what it protects against."
+the mean trowel is a thing in Filed Field. description is "It has some red writing saying who made it and also what it protects against.". "A mean trowel has been discarded here. Perhaps it can become something nicer.".
 
 a-text of mean trowel is "RYRYRRYRYR". b-text of mean trowel is "RYRYRRYRYR". parse-text of mean trowel is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]".
 
@@ -21808,14 +21856,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Leveraged Everglade could've become PROSIEST.";
-		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
+		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
+		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
 		if natives' site van is not moot, say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
-		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger could've become RUSTLED.";
-		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Lost Lots could've become GRANDIOSE.";
+		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
+		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
@@ -21839,17 +21887,17 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";
 		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
-		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
 		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
 		if ruts circuits is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more pre-fruits.";
 		else:
+			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
 			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
 			if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
 			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
 			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a PERSIMMON.";
-		if apples are not dislodged, say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES."; [Swell Wells]
+		if apples are not dislodged, say "[2drm of Swell Wells]the PSA [']Elp could've become APPLES."; [Swell Wells]
 		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
 		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
 		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";

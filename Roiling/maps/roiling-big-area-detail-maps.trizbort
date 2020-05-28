@@ -11,7 +11,7 @@
 			<dock index="1" id="2" port="s" />
 		</line>
 		<room id="4" name="Scope Copse" subtitle="" x="-96" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects>Rusty Yurts|Keycar appears in 1st cleared area</objects>
+			<objects>Try Us Yurts|Keycar appears in 1st cleared area</objects>
 		</room>
 		<line id="5" name="" description="">
 			<dock index="0" id="2" port="n" />
@@ -22,8 +22,8 @@
 			<dock index="0" id="4" port="e" />
 			<dock index="1" id="6" port="w" />
 		</line>
-		<room id="8" name="Unblest Sunbelt" subtitle="" x="160" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-54" customDown="0">SPORTIES' RIPOSTES</objects>
+		<room id="8" name="Leveraged Everglade" subtitle="" x="160" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects custom="yes" customRight="-54" customDown="0">Organised Ego Drains</objects>
 		</room>
 		<line id="9" name="" description="">
 			<dock index="0" id="6" port="e" />
@@ -71,7 +71,9 @@
 			<dock index="0" id="20" port="n" />
 			<dock index="1" id="24" port="s" />
 		</line>
-		<room id="26" name="Shaven Havens" subtitle="" x="-96" y="-896" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="26" name="Shaven Havens" subtitle="" x="-96" y="-896" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>Lone duck</objects>
+		</room>
 		<line id="27" name="" description="">
 			<dock index="0" id="24" port="n" />
 			<dock index="1" id="26" port="s" />
@@ -129,7 +131,7 @@
 			<dock index="1" id="44" port="s" />
 		</line>
 		<room id="46" name="Actionless Coastline" subtitle="" x="416" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-24" customDown="0">REWIRED</objects>
+			<objects at="n" custom="yes" customRight="-52" customDown="0">WEIRDER RED WIRE</objects>
 		</room>
 		<line id="47" name="" description="">
 			<dock index="0" id="44" port="n" />
@@ -163,13 +165,13 @@
 			<dock index="0" id="55" port="n" />
 			<dock index="1" id="42" port="s" />
 		</line>
-		<room id="58" name="Natives" subtitle="" x="416" y="-224" w="96" h="64" region="LLP Guardian" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="58" name="Natives' Site Van" subtitle="" x="416" y="-224" w="96" h="64" region="LLP Guardian" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="59" name="" description="">
 			<dock index="0" id="53" port="s" />
 			<dock index="1" id="58" port="n" />
 		</line>
 		<room id="60" name="Lost Lots" subtitle="" x="416" y="-128" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-54" customDown="0">Organised Ego-Drains</objects>
+			<objects custom="yes" customRight="-54" customDown="0">SPORTIES' RIPOSTES</objects>
 		</room>
 		<line id="61" name="" description="">
 			<dock index="0" id="58" port="s" />
@@ -181,7 +183,7 @@
 			<dock index="1" id="62" port="w" />
 		</line>
 		<room id="64" name="Obscurest Subsector" subtitle="" x="672" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-36" customDown="0">"TENTATIVE"</objects>
+			<objects custom="yes" customRight="-36" customDown="0">Dr Yow (2 modes)|"TENTATIVE" (Coasting Agnostic)</objects>
 		</room>
 		<line id="65" name="" description="">
 			<dock index="0" id="62" port="e" />
@@ -192,37 +194,39 @@
 			<dock index="0" id="4" port="w" />
 			<dock index="1" id="66" port="e" />
 		</line>
-		<room id="68" name="Outer Route" subtitle="" x="-352" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="68" name="Outer Route" subtitle="" x="-352" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects>Rapier Repair</objects>
+		</room>
 		<line id="69" name="" description="">
 			<dock index="0" id="66" port="w" />
 			<dock index="1" id="68" port="e" />
 		</line>
 		<room id="70" name="Filed Field" subtitle="" x="544" y="-608" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-48" customDown="0">pryer bars|pipe panel lie pen app|buried raft|barriers west|barber sickle|mean trowel|rapt figure|barren cries</objects>
+			<objects at="n" custom="yes" customRight="-48" customDown="0">barber sickle|barren cries / briar screen|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure</objects>
 		</room>
 		<room id="71" name="Swell Wells" subtitle="" x="672" y="-608" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-48" customDown="0">riot cap|silly shirt|(on) stucco|sorer bogey|green stain|miser ruble</objects>
+			<objects at="n" custom="yes" customRight="-48" customDown="0">riot cap|PSA 'Elp|(on) stucco|sorer bogey|green stain|miser ruble</objects>
 		</room>
 		<line id="72" name="" description="">
 			<dock index="0" id="70" port="e" />
 			<dock index="1" id="71" port="w" />
 		</line>
 		<room id="73" name="Clangier Clearing" subtitle="" x="800" y="-608" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-48" customDown="0">melon|peach|mango|quince|list of prices|lemons|auction caution "PAY ASAP"|nectarine</objects>
+			<objects at="n" custom="yes" customRight="-48" customDown="0">Len Craig|auction caution "PAY ASAP"|lemons|nectarine|melon|no ammo gang|peach|prices precis|quince</objects>
 		</room>
 		<line id="74" name="" description="">
 			<dock index="0" id="71" port="e" />
 			<dock index="1" id="73" port="w" />
 		</line>
 		<room id="75" name="Rustic Citrus" subtitle="" x="672" y="-512" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-48" customDown="0">lumps/spear/pagers/slime|mad train|videotape|harmonicas|peanut cola|eerie blurbs|magenta rope</objects>
+			<objects custom="yes" customRight="-48" customDown="0">lumps/spear/pagers/|     slime/mad train|=============|eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola|</objects>
 		</room>
 		<line id="76" name="" description="">
 			<dock index="0" id="71" port="s" />
 			<dock index="1" id="75" port="n" />
 		</line>
 		<room id="77" name="Scape Space" subtitle="" x="800" y="-512" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-48" customDown="0">an a|orange|pugnacious plant|inapt paint</objects>
+			<objects custom="yes" customRight="-48" customDown="0">a banna'|a brr hub|ENGARO orange|inapt paint "RESERVED"</objects>
 		</room>
 		<line id="78" name="" description="">
 			<dock index="0" id="71" port="se" />
@@ -245,6 +249,9 @@
 			<dock index="0" id="79" port="w" />
 			<dock index="1" id="82" port="e" />
 		</line>
+		<room id="84" name="Rousted Detours" subtitle="" x="-224" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects custom="yes" customRight="-48" customDown="0">Before Finger or Lots</objects>
+		</room>
 	</map>
 	<settings>
 		<colors>
@@ -290,7 +297,7 @@
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>4</connectionStalkLength>
 			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
-			<defaultRoomName>DevReserved</defaultRoomName>
+			<defaultRoomName>Blankest Blankets</defaultRoomName>
 			<defaultRoomShape>0</defaultRoomShape>
 		</rooms>
 		<ui>

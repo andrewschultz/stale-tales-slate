@@ -20,7 +20,7 @@ understand "hug [text]" and "hug" as a mistake ("Hug? Ugh. Guh.")
 
 understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
-understand "pace/paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
+understand "pace" and "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
 
 understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when player has pedanto-notepad.
 
@@ -44,7 +44,7 @@ understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, 
 
 understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp
 
-understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in Dusty Study and op-ed is in Dusty Study.
+understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in Dusty Study and op ed is in Dusty Study.
 
 understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in Dusty Study.
 
@@ -86,7 +86,7 @@ book stores
 
 chapter Strip of Profits
 
-understand "ektor/ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
+understand "ektor" and "ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
 
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
 
@@ -192,7 +192,7 @@ understand "under" as a mistake ("Wrong preposition.") when player is in Same Me
 
 chapter Cleric Circle
 
-?? pat's inside and out, as well as oscar's
+[?? pat's inside and out, as well as oscar's]
 
 understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in Cleric Circle.
 
@@ -200,7 +200,7 @@ understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you ne
 
 chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if player is in same mesa]Inside or outside of Oscar's[if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
+understand "orcas" as a mistake ("But the whales would be beached. [if player is in same mesa]Inside or outside of Oscar's[else if list o toils is unexamined]There's no sign Oscar himself needs or wants such a change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
 
 understand "poopiest" as a mistake ("This is the wrong area for adjectives, clean or unclean. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
 
@@ -277,7 +277,7 @@ understand "aspired" as a mistake ("Now is not the time to fret solely on past d
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") whenI'd Cede is touchable.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when I'd Cede is touchable.
 
 chapter Boredom Bedroom
 
@@ -293,14 +293,13 @@ chapter Browse Bowers
 
 understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
 
-understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
-") when player is in Browse Bowers
+understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...") when player is in Browse Bowers
 
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 chapter Econ Cone
 
-understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[elseif cone-points is 2]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
+understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[else]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
 understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and Pernod is in Econ Cone.
 
@@ -374,7 +373,7 @@ understand "tars" as a mistake ("But you already took the tsar star FROM the tar
 
 chapter Dirge Ridge
 
-understand "asswhup/whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]No chance.[end if]") when wzup is in location of player.
+understand "asswhup" and "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]No chance.[end if]") when wzup is in location of player.
 
 understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.") when Leo is in location of player.
 

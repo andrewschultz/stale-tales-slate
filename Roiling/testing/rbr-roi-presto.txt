@@ -1686,7 +1686,7 @@ REGION MIN INCREASED BY 1
 #mistake retest for redive
 >redive
 Deriving was tricky enough.
-#readables for drive a
+#rereadables for drive a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 #done rejects for rom sticks

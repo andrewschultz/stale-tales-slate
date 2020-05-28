@@ -72,7 +72,7 @@ pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to t
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 be ova	MORF FORM	false	329930229	--	"above"	"above"	--	--	"You look up. There is a giant MORF-FORM! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with the MORF-FORM."
 MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'"
-THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	post-thebean-beneath rule	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
+THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	--	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
 darkness	darkness	false	375930018	--	"until"	"until"	--	post-unlit-until rule	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The darkness is largely sucked into an odd item, which looks like an all noon gag. And while the marsh isn't exactly glowing now, but you can notice things better. The sheol holes in particular, though some will still ambush you. You can't find a road, but maybe an un-road. But which way to go? Compass directions are still out."
 sheol holes	sheol holes	false	356906602	--	"around"	"around"	pre-around-unroad rule	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	un-road	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water under Da Mist over there."
@@ -221,8 +221,8 @@ table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 dreads adders	dreads adders	false	353649874	--	"sadder"	"sadder"	a rule	a rule	"The adders suddenly become less aggressive. You wonder if they feel bad about all the other people they may've obstructed, as they slide harmlessly away."
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-Muscly Luc Sym	Muscly Luc Sym	false	460633602	--	"clumsy"	"clumsy"	--	--	"Luc Sym's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
-Muscly Ms Lucy	Muscly Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	--	"Ms. Lucy's muscles shrink, and she loses coordination. 'A hokey KO. Yeah.' But she still stumbles away in embarrassment."
+Muscly Luc Sym	Muscly Luc Sym	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Luc Sym's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
+Muscly Ms Lucy	Muscly Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Ms. Lucy's muscles shrink, and she loses coordination. 'A hokey KO. Yeah.' But she still stumbles away in embarrassment."
 snider diners	snider diners	false	444333321	--	"rinsed"	"rinsed"	--	--	"The diners['] dry wit and mood dampen as a water spray erupts from nowhere--and gets them! Their outdoor dining experience has been ruined. They skulk away to somewhere safer."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	--	--	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if Actionless Coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	--	--	"You relax. You stop letting the fluster self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
@@ -254,7 +254,7 @@ dinger	solve a loaves	false	382846875	--	"grained"	"grained"	--	post-dinger-grai
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! [how-safe]."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. [how-safe]."
-weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
+weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! People still tell me I just need to get more organized. Even people younger than me. So, um, thanks!'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	--	--	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
 ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. And as it does, you hear a crackle from the welt-proof flowerpot. The blub bulb begins expanding ... into a succor crocus!"
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
@@ -367,7 +367,7 @@ harmonicas	maraschino cherry	true	494589373	--	"maraschino"	"maraschino" or "mar
 omen prism	persimmon	true	707273074	--	"persimmon"	"persimmon"	--	--	"The omen prism's red outside schlurps and changes color to form something better looking--a persimmon."
 magenta rope	pomegranate	true	769822574	--	"pomegranate"	"pomegranate"	--	post-pomegranate rule	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."
 mad train	tamarind	true	391814053	--	"tamarind"	"tamarind"	--	--	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again."
-silly shirt	apples	true	443013650	--	"apples"	"apples/apple"	--	--	"The t-shirt crumples into a few apples. Well, you may not have ESP, but it's something almost as good. You remember a pen pal called Papa Len, too." [start swell wells]
+PSA Elp	apples	true	443013650	--	"apples"	"apples/apple"	--	--	"The PSA [']Elp falls off from the wells and pops out into a few apples, red and yellow and green, like the readings on your settler. Well, you may not have ESP, but it's something almost as good." [start swell wells]
 riot cap	apricot	true	410438606	--	"apricot"	"apricot"	--	--	"The riot cap rounds into an apricot, which you take."
 stucco	coconuts	true	560113623	--	"coconuts"	"coconuts/coconut"	--	--	"The stucco that was part of the well congeals into a hairy ball (don't ASK where the hair came from) and rolls on the ground."
 sorer bogey	gooseberry	true	844616803	--	"gooseberry"	"gooseberry"	--	--	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."
@@ -409,7 +409,7 @@ book auxiliary text and rules
 section ordeal reload auxiliary
 
 this is the post-palm-lamp rule:
-	now dope op-ed is in Dusty Study;
+	now dope op ed is in Dusty Study;
 	now bean-smell is true;
 	now Dusty Study is lit;
 	if latches are off-stage, now player has latches;
@@ -1214,6 +1214,10 @@ to say vain-naiv:
 	else:
 		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and start up the site van in search of somewhere better"
 
+this is the post-muscly rule:
+	moot muscly luc sym;
+	moot muscly ms lucy;
+
 this is the post-reeds-ale rule:
 	moot lars eede;
 	moot elsa erde;
@@ -1230,12 +1234,12 @@ this is the post-agnostic-blocker rule:
 		now agnostic is in Actionless Coastlines;
 		now dinger is in Actionless Coastlines;
 		if player is in Actionless Coastlines:
-			say "Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
+			say "[line break]Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
 			guar-pro agnostic;
 		else:
-			say "You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
+			say "[line break]You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
 	else:
-		say "You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
+		say "[line break]You hear [if the-hostile are not moot]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
 this is the post-dinger-grained rule: [?? this should not be necessary if take entry is true]
 	now player has solve a loaves;
@@ -1514,7 +1518,7 @@ this is the pre-gates-stage-flip rule:
 this is the post-gates-stage-flip rule:
 	say "[line break]";
 	if gate-level is 2:
-		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others - 1]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 		if player has perp:
 			moot feeling you're a perp;
 			say "[line break]As a bonus, you lose that feeling you're a perp.";
@@ -2054,46 +2058,46 @@ satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
-pipe panel lie pen app	"The pipe panel lie pen app rattles slightly."
-barriers west	"You feel the barriers west pulling towards you."
-sorer bogey	"The bogey's tone changes slightly for a second."
-prices precis	"Something glints off the prices precis."
-auction caution	"Everyone promises quick payment, but what are you promising to pay quickly FOR?"
-peach	"The peach still looks too expensive."
-omen prism	"You must be on the right track--but nothing happens. Yet."
-barren cries	"The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?"
-harmonicas	"The harmonicas whistle, as if something happened."
-pagers	"The pagers light up slightly. Maybe give it another go."
-riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
-stucco	"The stucco looks almost hairy for a second."
-miser ruble	"The miser ruble turns a bit purpler."
-buried raft	"You loaf a bit after thinking that, hoping for something to happen. It doesn't."
-mean trowel	"You had the seed of an idea there, you thought."
-nectarine	"The nectarine seems a little less shiny and new. But not enough."
-green stain	"Parts of the green stain turn orange-ish but is too small to be oranges."
-peanut cola	"The peanut cola smells slightly fruity for a minute."
-rapt figure	"The rapt figure frowns as if it's eaten something sour."
-pryer bars	"The pryer bars briefly turn very red."
-magenta rope	"The magenta rope and other items you uncovered briefly seem as one."
-spear	"The spear stays as-is. But it can't be that hard to change."
-slime	"The slime shifts about slightly, but not enough--yet."
-lemons	"[l-frown]lemons."
-melon	"Hm, there must be a better melon than that, but how to ask Len, now."
-Ammo Gang	"You must not be mingling right with the No Ammo Gang." [No Ammo Gang]
-quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
-silly shirt	"You don't quite have ESP, pal, but with the right logic skills you can seem like you do. The shirt remains unchanged."
-eerie blurbs	"The blurbs turn a few shades of purple before settling again."
-mad train	"The train emits some fake smoke and seems ready to blow up--but no."
-barber sickle	"The barber sickle darkens a bit. You must be on the right track."
-a brr hub	"The (a) brr hub seems to swirl closed for a bit."
-orange	"The orange seems a bit closer for a bit."
-a banna'	"The (a) banna['] flutters about for a bit."
-lumps	"The lumps seem almost ready to burst."
-inapt paint	"You seem to read the inapt paint backwards for a second."
 coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close."
 coins	"The coins rattle and hum promisingly."
 icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
+lumps	"The lumps seem almost ready to burst."
+pagers	"The pagers light up slightly. Maybe give it another go."
+slime	"The slime shifts about slightly, but not enough--yet."
+spear	"The spear stays as-is. But it can't be that hard to change."
+eerie blurbs	"The blurbs turn a few shades of purple before settling again."
+harmonicas	"The harmonicas whistle, as if something happened."
+mad train	"The train emits some fake smoke and seems ready to blow up--but no."
+magenta rope	"The magenta rope and other items you uncovered briefly seem as one."
+omen prism	"You must be on the right track--but nothing happens. Yet."
+peanut cola	"The peanut cola smells slightly fruity for a minute."
+green stain	"Parts of the green stain turn orange-ish but is too small to be oranges."
+miser ruble	"The miser ruble turns a bit purpler."
+PSA Elp	"You don't fully seem to be grokking the PSA [']Elp. Your thoughts are a bit jumbled."
+riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
+sorer bogey	"The bogey's tone changes slightly for a second."
+stucco	"The stucco looks almost hairy for a second."
+barren cries	"The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?"
+pipe panel lie pen app	"The pipe panel lie pen app rattles slightly."
+barriers west	"You feel the barriers west pulling towards you."
+buried raft	"You loaf a bit after thinking that, hoping for something to happen. It doesn't."
+mean trowel	"You had the seed of an idea there, you thought."
+rapt figure	"The rapt figure frowns as if it's eaten something sour."
+pryer bars	"The pryer bars briefly turn very red."
+barber sickle	"The barber sickle darkens a bit. You must be on the right track."
+Ammo Gang	"You must not be mingling right with the No Ammo Gang." [No Ammo Gang]
+auction caution	"Everyone promises quick payment, but what are you promising to pay quickly FOR?"
+lemons	"[l-frown]lemons."
+melon	"Hm, there must be a better melon than that, but how to ask Len, now."
+nectarine	"The nectarine seems a little less shiny and new. But not enough."
+peach	"The peach still looks too expensive."
+prices precis	"Something glints off the prices precis."
+quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
+a banna'	"The (a) banna['] flutters about for a bit."
+a brr hub	"The (a) brr hub seems to swirl closed for a bit."
+orange	"The orange seems a bit closer for a bit."
+inapt paint	"You seem to read the inapt paint backwards for a second."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 feeling you're a perp	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
@@ -2783,7 +2787,7 @@ jagged spoon	"The spoon's weird shape clues you as to what the rapt figure shoul
 rapt figure	"[one of]The jagged spoon the figure is holding is a clue.[plus][or]Plus, the figure is whitish and semi-reddish and yellowish.[plus][or]GRAPEFRUIT.[minus][cycling]"
 green stain	"[one of]If you try to decipher the green stain, you see red, but it almost seems orange-ish, too.[plus][or]Small orange-ish fruits that are not oranges.[plus][or][plus][or]TANGERINES.[minus][cycling]" [begin Swell Wells hinting]
 riot cap	"[one of]The riot cap's not a very tough color for a combat helmet. What fruit can it become?[plus][or]APRICOT.[minus][cycling]"
-silly shirt	"[one of]You may not need ESP to guess what ESP, PAL on the shirt becomes.[plus][or]APPLES.[minus][cycling]"
+PSA Elp	"[one of]Reading the PSA [']Elp may set things straight.[plus][or]In particular, reading the PSA Elp will tell you where the P's are.[plus][or]APPLES.[minus][cycling]"
 sorer bogey	"[one of]The sorer bogey makes your skin break out in--well, not pimples, they'll go away in a bit.[plus][or]Bumps, more like.[plus][or]Goosebumps.[plus][or]GOOSEBERRY.[minus][cycling]"
 un mod mound	--	sorer bogey
 stucco	"[one of]A message is written ON STUCCO, in red. Plus it's for ScoutCon. Those are two clues right there.[plus][or]COCONUTS.[minus][cycling]"

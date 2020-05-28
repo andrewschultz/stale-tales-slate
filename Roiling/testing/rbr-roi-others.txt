@@ -406,18 +406,18 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for well
 >wlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for mound
+>moudn
+The mound is just for descending. You don't need to change it.
 #nudge for stucco
 >stucoc
 Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
-#nudge for silly
->silyl
-Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
-#nudge for sillyshirt
->silylshirt
-Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
-#nudge for shirt
->trish
-Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
+#nudge for elp
+>epl
+The whole 'Elp PSA.
+#nudge for pas
+>psa
+The whole 'Elp PSA.
 #nudge for riot
 >orti
 Nothing happens. Perhaps it's the whole item that's important.
@@ -448,9 +448,9 @@ The green stain could make just one fruit, but why not think bigger? It could be
 #readables for riot cap
 >read riot cap
 It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
-#spechelp for silly shirt
+#spechelp for PSA Elp
 >applse
-You don't quite have ESP, pal, but with the right logic skills you can seem like you do. The shirt remains unchanged.
+You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
 #spechelp for riot cap
 >apricto
 Nothing happens. Your magic skills feel like the pits for a second.

@@ -6,7 +6,7 @@ volume table of nudges
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
 [all this should be in the post-commit hooks]
-s[the chapter names may matter if I divide tables up not just by region but also by room to speed things up.]
+[the chapter names may matter if I divide tables up not just by region but also by room to speed things up.]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take priority over others. There's a combination of most immediate stuff to do and the most efficient walkthrough. Then I just loop clockwise from the direction you entered. For Routes and Troves, it's pretty much a one-way shot, though exploring the Cleric Circle is the most natural way through, and the Deli and Adobe have equal priority..
 With Oyster, I first go east from Anger Range, then north, then west, which is the most efficient way to get through that region.
@@ -33,7 +33,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ceiling"	392118435	Dusty Study	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "palm"	201542769	--	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
-"gape"	244059588	--	op-ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
+"gape"	244059588	--	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	--	x-oped rule	"[vs-oped]."
 "questin"	630601871	--	--	x-oped rule	"[vs-oped]."
 "moneyco"	550858761	--	--	x-oped rule	"[vs-oped]."
@@ -53,7 +53,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "darkness"	550735437	--	--	dark-study rule	"[dark-palm]."
 "bowling"	401020150	--	giant pin	--	"[g-pin]."
 "bowlingpin"	596386463	--	giant pin	--	"[g-pin]."
-"oped"	304653734	--	op-ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
+"oped"	304653734	--	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	--	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
 "closets"	570636060	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "closet"	474362094	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
@@ -544,7 +544,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "eat"	233103945	--	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	--	tea tray	--	"[just-tea]."
 "teatray"	546084836	--	tea tray	--	"[just-tea]."
-"wipe"	362199687	--	wipes	--	"[if player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[or]You will need to use them all at once, and on something else[end if]."
+"wipe"	362199687	--	wipes	--	"[if player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[else]You will need to use them all at once, and on something else[end if]."
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "plain"	251367970	Lapsin' Plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
 "polyp"	413457586	Lapsin' Plains	--	--	"[polyp-no]."
@@ -1003,10 +1003,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dollar"	290520965	--	dollar	degen-true rule	"[count-enuf]."
 "well"	343368560	Swell Wells	--	--	"[locname]." [SWELL WELLS START]
 "wells"	439642526	Swell Wells	--	--	"[locname]."
+"mound"	333470134	Swell Wells	--	--	"The mound is just for descending. You don't need to change it."
 "riot"	307779244	--	riot cap	--	"[whole-item]."
-"silly"	371253742	--	silly shirt	--	"[shirt-sez]."
-"shirt"	366982932	--	silly shirt	--	"[shirt-sez]."
-"sillyshirt"	738236674	--	silly shirt	--	"[shirt-sez]."
+"elp"	263085907	--	Elp PSA	--	"The whole [']Elp PSA."
+"pas"	179927743	--	Elp PSA	--	"The whole [']Elp PSA."
 "sorer"	469080258	--	sorer bogey	--	"[whole-item]."
 "bogey"	375536545	--	sorer bogey	--	"[whole-item]."
 "stucco"	416853538	--	stucco	--	"Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing)."
@@ -1248,19 +1248,19 @@ this is the is-study-dark rule:
 	the rule fails;
 
 this is the x-oped rule:
-	if dope op-ed is examined, the rule succeeds;
+	if dope op ed is examined, the rule succeeds;
 	the rule fails;
 
 to say vs-oped: say "You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh"
 
 this is the x-oped-m rule:
 	if the player is female, the rule fails;
-	if dope op-ed is examined, the rule succeeds;
+	if dope op ed is examined, the rule succeeds;
 	the rule fails;
 
 this is the x-oped-f rule:
 	if the player is male, the rule fails;
-	if dope op-ed is examined, the rule succeeds;
+	if dope op ed is examined, the rule succeeds;
 	the rule fails;
 
 to say the-books: say "The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first"
@@ -1815,8 +1815,6 @@ to say part-of-lots: say "No, the [i]whole[r] thing. You see several...similar..
 to say full-omen-prism: say "Not just omen, or prism. It's an omen prism"
 
 to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
-
-to say shirt-sez: say "Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle"
 
 to say no-pryer: say "No, it's the whole pryer bars"
 
