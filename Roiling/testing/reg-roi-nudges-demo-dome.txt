@@ -101,7 +101,7 @@ The dial is out of reach.
 >edom
 Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
 
-#dupnudge for display
+#renudge for display
 >dipslay
 You won't figure the code. There isn't one. Muahaha.
 
@@ -464,6 +464,10 @@ This is a museum! Messing with the exhibits would be very bad form.
 This is a museum! Messing with the exhibits would be very bad form.
 
 #nudge for sparse
+>spresa
+You don't need to flip anything here, really. Certainly not a room.
+#nudge for spare
+
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 

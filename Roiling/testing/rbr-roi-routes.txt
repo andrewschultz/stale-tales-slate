@@ -874,6 +874,15 @@ WRONG
 Your score has just gone up by one point
 
 @nud
+#nudge for aura
+>auar
+The whole odd run on aura.
+#nudge for run
+>rnu
+The whole odd run on aura.
+#nudge for odd
+>odd
+The whole odd run on aura.
 #done rejects for un-road
 >untli
 The underground is already lit. Un-unlit.

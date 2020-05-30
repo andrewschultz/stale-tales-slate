@@ -129,7 +129,7 @@ Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
 
-Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
+Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
@@ -5678,7 +5678,7 @@ Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
-Sonancy Canyons	"You must be close, but you can't quite rely on compass directions, yet."
+Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters[end if]." [troves]
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
@@ -10670,7 +10670,7 @@ after looking in Harms Marsh:
 	set the pronoun it to sheol holes;
 	continue the action;
 
-description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is touchable][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Lag Logan, how to navigate it?[else]Now, you need to find No-Lag Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is touchable][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Lag Logan, how to navigate it?[else]Now, you need to find No-Lag Logan. You need to find a good unroad...because roads and inroads will loop back. Perhaps the odd run on aura will help you with that.[end if]"
 
 section Sheol Holes
 
@@ -10692,6 +10692,12 @@ a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of dark
 
 to say to-o: say "Brother Horbert talked about how if you had faith, and patience to see them right, they might lead you to an un-road or to No-Lag Logan if you knew how to study them."
 
+chapter odd run on aura
+
+the odd run on aura is boring scenery. description of odd run on aura is "It seems to beckon you, but you're not sure how to follow it.". bore-text of aura is "It's ephemeral, just a guide."
+
+a-text of odd run on aura is "YRYYRR". b-text of odd run on aura is "YRY?RR". parse-text of odd run on aura is "-[sp]x[sp]-[sp]x[sp]-[sp]-".
+
 section all noon gag
 
 the all noon gag is a vanishing boring thing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Lag Logan.". description of noon gag is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
@@ -10702,7 +10708,7 @@ chapter un-road
 
 the un-road is vanishing boring scenery. description of un-road is "The un-road must lead to No-Lag Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Lag Logan?";
 
-understand "trail" as un-road.
+understand "trail" and "un/road/unroad" and "un road" as un-road when un-road is touchable.
 
 a-text of un-road is "YRYYRR". b-text of un-road is "YRYYRP". parse-text of un-road is "-[sp]x[sp]-[sp]-[sp]x[sp]d". un-road is cheat-spoilable.
 
@@ -10795,7 +10801,7 @@ a-text of yob den is "RYOYRR". b-text of yob den is "RYOYRR". parse-text of yob 
 
 chapter spheric ciphers
 
-the spheric ciphers are cenery in Sonancy Canyons. "You look into them and see nothingness. It would be bad to move too far away and risk getting too close to one.". bore-text is "The ciphers are nothing, and you can do nothing with them."
+the spheric ciphers are bounding boring scenery in Sonancy Canyons. "You look into them and see nothingness. It would be bad to move too far away and risk getting too close to one.". bore-text is "The ciphers are nothing, and you can do nothing with them."
 
 volume troves
 

@@ -238,6 +238,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "harm"	188869073	Harms Marsh	--	--	"[locname]."
 "sheol"	389528790	Harms Marsh	--	--	"[sheol-c]."
 "hole"	293254824	Harms Marsh	--	--	"[sheol-c]."
+"aura"	194805246	--	odd run on aura	--	"The whole odd run on aura."
+"run"	259337118	--	odd run on aura	--	"The whole odd run on aura."
 "pyrites"	661331953	--	pyrites	--	"[py-glow]."
 "pyrite"	565057987	--	pyrites	--	"[py-glow]."
 "pier"	339588717	Ripe Pier	--	--	"[locname]." [start Ripe Pier]
