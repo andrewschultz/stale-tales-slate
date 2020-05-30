@@ -2423,7 +2423,7 @@ NULL IT unit	"[one of]The NULL IT unit is producing the darkness and has for a w
 darkness	--	NULL IT unit
 sheol holes	"[one of]You need to search for No-Lag Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Lag Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
-da mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
+Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but it is a slightly odd preposition.[plus][or]You just need to go around. All over the place.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"It's just scenery."
 thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
 bad oar	"The thickness sketchins will tell you how to use the bad oar."
