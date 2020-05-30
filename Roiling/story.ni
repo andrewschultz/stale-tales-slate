@@ -1220,9 +1220,10 @@ rm	rmprog	regs	why-not
 --	1	Ordeal Reload	"Your Means Manse was surrounded, and you escaped. Bad idea to turn back."
 Carven Cavern	2	--	[Ordeal Reload]
 --	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
-Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
-Ripe Pier	3	--	"You have no idea how to turn the Cripple Clipper around, and you don't want to."
-Cripple Clipper	4	-- [routes]
+Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get past the admits mist ad[else]And onto the boat, which must go somewhere[end if]!"
+Ripe Pier	3	--	"[if progval of location of player is 3]You have no idea how to turn the Cripple Clipper around, and you don't want to[else]You've come too far. You can't go back. Physically, you can't[end if]."
+Cripple Clipper	4	-- "The Sonancy Canyons lead to your destiny."
+Sonancy Canyons	5	--	[routes]
 Posh Hops Shop	1	--	"The LOLstr trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
 Olde Lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
 Disease Seaside	3	--	"No sense crossing back. There's more on this side of the shore."
@@ -2442,6 +2443,7 @@ Store W	"WESTOR is the name of the company that built this. [one of]There's more
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
 A Bev O Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
+amidst mist ad	"[one of]IT'S MAD[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -2484,6 +2486,9 @@ mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help yo
 pipe panel lie pen app	"There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea."
 orange	"It's stamped with the word ENGARO in red."
 singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
+
+to say ad-auth:
+	say "An author's signature: [one of]T. D. ASIM[or]MS. DITA[or]SAD TIM[in random order]"
 
 section red writing
 
@@ -4368,7 +4373,10 @@ anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (no
 rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
 a bev o be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
+null it unit	true	true	false	false	"The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?"
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
+odd run on aura	true	true	false	false	"With only one ambiguous setting, the light should soon go on for you to figure where and how to go."
+admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
@@ -4875,10 +4883,10 @@ carry out routes-hinting:
 		all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
-		if darkness is in Harms Marsh, try objhinting darkness instead;
+		if NULL IT unit is in Harms Marsh, try objhinting NULL IT unit instead;
 		if noon gag is in Harms Marsh, try objhinting noon gag instead;
 		try objhinting un-road instead;
-	if location of player is Ripe Pier, try objhinting da mist instead;
+	if location of player is Ripe Pier, try objhinting admits mist ad instead;
 	if location of player is Cripple Clipper, try objhinting thickness sketchins instead;
 	if location of player is Sonancy Canyons:
 		if bent ewe is reflexive, try objhinting bent ewe instead;
@@ -9870,7 +9878,7 @@ section Tastee Estate
 the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
 
 this is the enter-troves rule:
-	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. Yourun through the darkness, and when it finally gets light, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
+	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and when it finally gets light, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
 
@@ -10706,7 +10714,7 @@ a-text of odd run on aura is "YRYYRR". b-text of odd run on aura is "YRY?RR". pa
 
 section all noon gag
 
-the all noon gag is a vanishing boring thing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Lag Logan.". description of noon gag is "You see a weird darkness in it. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag will just carry darkness with you. But maybe you can do something with it.".
+the all noon gag is a vanishing boring thing. "An all noon gag rests here. It's not useful, but maybe it can help you get near No-Lag Logan.". description of noon gag is "It seems to absorb light a bit. You don't want to take it, but maybe it can be useful.". bore-text is "The all noon gag might be too powerful to handle for too long. But maybe it can lead you in a new, positive direction.".
 
 a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text of all noon gag is "?[sp]?[sp]-[sp]?[sp]?".
 
@@ -10722,27 +10730,23 @@ understand "unroad" as un-road.
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "[one of]You see mist on this pier[or]Da mist blocks[stopping] where a brighter rig berth should be. No-Lag's boat must be beyond! It looks dangerous to enter without a plan[one of][or]. Perhaps you could LISTEN to recall Sad Tim's babbling[stopping]."
-
-after looking in Ripe Pier for the first time:
-	say "A man walks by, mumbling. 'Da mist! Da mist!' Ah, so it's not just mist. But his next babbling leaves you seeing red before he walks off. 'Sad Tim sat, dim... it's mad...' You see red at such nonsense.";
-	continue the action;
+Ripe Pier is a room in Routes. "An admits mist ad blocks you. You just can't see beyond it. But you're at a shore. No-Lag's boat must be beyond the admits mist ad! It looks dangerous to enter without a plan."
 
 after looking in Ripe Pier:
-	set the pronoun it to da mist;
+	set the pronoun it to admits mist ad;
 	continue the action;
 
 chapter two ways out
 
-section da mist
+section admits mist ad
 
-da mist is vanishing boring scenery in Ripe Pier. description of da mist is "My, It's misty. It phases through shapes, and there doesn't seem to be any clear way through.". bore-check of da mist is bore-mist rule.
+the admits mist ad is vanishing boring scenery in Ripe Pier. description of admits mist ad is "You can't really see behind it. There must be some nonlinear way to navigate things, though. You might be able to READ parts of it in red for clues, though.". bore-check of admits mist ad is bore-mist rule.
 
-a-text of da mist is "YRYRRR". b-text of da mist is "YRYRPP". parse-text of da mist is "x[sp]-[sp]x[sp]-[sp]s[sp]t". da mist is parse-spoilable.
+a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". parse-text of admits mist ad is "a[sp]-[sp]i[sp]-[sp]-[sp]-". admits mist ad is parse-spoilable.
 
 this is the bore-mist rule:
-	if current action is taking, say "Mistake. Ha ha ha." instead;
-	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the right way, with a good plan...or a bad..." instead;
+	if current action is taking, say "Mist-ake. Ha ha ha." instead;
+	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the mist behind the ad the right way, with a good plan... or even a bad one... it would work out." instead;
 
 chapter No-Lag's boat
 
