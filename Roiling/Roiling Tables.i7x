@@ -73,7 +73,7 @@ seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite
 be ova	MORF FORM	false	329930229	--	"above"	"above"	--	--	"You look up. There is a giant MORF-FORM! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with the MORF-FORM."
 MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'"
 THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	--	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
-darkness	odd run on aura	false	375930018	--	"until"	"until"	--	--	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The darkness is broken by something that tempts you to follow it: an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
+NULL IT unit	odd run on aura	false	375930018	--	"until"	"until"	pre-unlit-until rule	--	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The NULL IT unit fizzles a bit and pops, and light returns to Harms Marsh ... in the form of an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
 odd run on aura	un-road	false	356906602	--	"around"	"around"	--	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise. They're almost too bright. You find an all noon gag that helps deflect the shiniest bits, but perhaps it can help you even more."
 noon gag	noon gag	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water under Da Mist over there."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
@@ -561,6 +561,9 @@ this is the post-under rule:
 
 this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
+
+this is the pre-unlit-until rule:
+	moot darkness;
 
 this is the post-around-unroad rule:
 	now noon gag is in Harms Marsh;
@@ -1831,7 +1834,7 @@ seed pit	"The seed pit seems to bubble slightly."
 Rude 'N Nuder	"The pages of Rude [']N Nuder flutter a bit."
 sheol holes	"Hm. You thought you saw a way by...no, not BY, a little more complex than that."
 un-road	"You thought you saw an un-road for a second, but ... not quite."
-darkness	"You feel it's ALMOST the right time for the darkness to lift."
+NULL IT unit	"You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift."
 da mist	"Hmm, you almost see a way through the mist."
 thickness sketchins	"The Cripple Clipper rocks and makes negligible forward progress. Still, it's a start."
 hurt hog	"The hog grunts."
@@ -2416,7 +2419,8 @@ MORF FORM	"[one of]The MORF-FORM may be what was needed.[plus][or]It needs to ch
 be ova	"[one of][be ova] doesn't signal the end. Maybe the end of the beginning, or the beginning of the end.[or]The letters do sesm a bit forced, but there are five. You need to look somewhere instead of at [be ova].[or]You need to look ABOVE.[cycling]"	--	"ABOVE"
 THE BEAN	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since THE BEAN landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH THE BEAN.[minus][cycling]"	--	"BENEATH"
 sheol holes	"They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK!"
-darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
+NULL IT unit	"[one of]The NULL IT unit is producing the darkness and has for a while.[plus][or]You need an adjective of time[plus][or]The are was unlit, but now it is...[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
+darkness	--	NULL IT unit
 sheol holes	"[one of]You need to search for No-Lag Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Lag Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
 da mist	"[one of]Well, DA MIST is a bit of a clue, as is Sad Tim's babbling.[plus][or]You need to go all around the mist too find something that allows you aboard to go abroad.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"

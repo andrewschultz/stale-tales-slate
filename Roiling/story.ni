@@ -10684,9 +10684,15 @@ the stripey pyrites are useless scenery. "The pyrites look pretty, but you're no
 
 check taking stripey pyrites: say "Take a hint from them, where they may lead you." instead;
 
+chapter NULL IT unit
+
+the NULL IT unit is a vanishing boring thing in Harms Marsh. description of NULL IT unit is "It seems to be a source of at least some of the darkness. It also seems like it's been here a good long while. It looks rather sturdy, but maybe there's a way to neutralize it."
+
+a-text of NULL IT unit is "YRRYR". b-text of NULL IT unit is "YRR?R". parse-text of NULL IT unit is "-[sp]x[sp]x[sp]-[sp]x". NULL IT unit is cheat-spoilable.
+
 chapter darkness
 
-the darkness is vanishing boring scenery in Harms Marsh. description of darkness is "There's not much to see of the darkness. You just need to get rid of it.". bore-text is "You rage against the darkness, randomly thinking 'Ill unit, nut.' Well, you see red after that."
+the darkness is boring auxiliary scenery in Harms Marsh. description of darkness is "There's not much to see of the darkness. You just need to get rid of it.". bore-text is "You rage against the darkness, randomly thinking 'Ill unit, nut.' Well, you see red after that."
 
 a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "u[sp]n[sp]x[sp]i[sp]x". darkness is cheat-spoilable.
 
