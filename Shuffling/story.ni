@@ -247,7 +247,7 @@ use MAX_VERBS of 440. [-40 from debug]
 
 use MAX_VERBSPACE of 4800.
 
-use MAX_SYMBOLS of 33000.
+use MAX_SYMBOLS of 34000.
 
 use MAX_PROP_TABLE_SIZE of 220000.
 
@@ -259,7 +259,7 @@ use MAX_VERBS of 480.
 
 use MAX_VERBSPACE of 5100.
 
-use MAX_SYMBOLS of 34000.
+use MAX_SYMBOLS of 35000.
 
 use MAX_PROP_TABLE_SIZE of 240000.
 
@@ -2452,7 +2452,7 @@ volume Ordeal Loader
 
 book Busiest Subsite
 
-Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center."
+Busiest Subsite is a room in Ordeal Loader. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a vacate caveat over an odd side passage, and also, an Oafs['] Sofa is planted squarely in the center.".  roomnud of Busiest Subsite is table of Busiest Subsite nudges.
 
 last-loc of Ordeal Loader is Busiest Subsite.
 
@@ -2640,7 +2640,7 @@ check wearing the magenta nametag:
 
 book Rested Desert
 
-Rested Desert is a room in Ordeal Loader.
+Rested Desert is a room in Ordeal Loader. roomnud of Rested Desert is table of Rested Desert nudges.
 
 check exiting in Rested Desert: say "You'd just get even more lost." instead;
 
@@ -2755,7 +2755,7 @@ check going inside in Rested Desert: if OR DO door is touchable, try entering OR
 
 book Thickest Thickets
 
-Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
+Thickest Thickets is a room in Ordeal Loader. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in Thickest Thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if].". roomnud of Thickest Thickets is table of Thickest Thickets nudges.
 
 the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.".
 
@@ -2819,7 +2819,7 @@ carry out slandering:
 
 book Notices Section
 
-Notices Section is a room in Ordeal Loader. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping]."
+Notices Section is a room in Ordeal Loader. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping].". roomnud of Notices Section is table of Notices Section nudges.
 
 understand "tmi/tmis" as broad board when player is in Notices Section.
 
@@ -4317,7 +4317,7 @@ understand "noise/sound" as rambling shout when rambling shout is touchable.
 
 chapter Rest of Forest
 
-rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
+rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint].". roomnud of rf is table of Rest of Forest nudges.
 
 after printing the locale description for rf when rf is unvisited: set the pronoun it to a random guider in rf.
 
@@ -4329,7 +4329,7 @@ the leaves are privately-named boring scenery in sf. "They've already undergone 
 
 chapter Self-ID Fields
 
-Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north."
+Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north.". roomnud of Self-ID Fields is table of Self ID Fields nudges.
 
 after looking in Self-ID Fields:
 	set the pronoun it to gy;
@@ -4424,7 +4424,7 @@ to say nosey: say "[one of]a fake warty witch's conker[or]a fake parrot beak[or]
 
 chapter Flesh Shelf
 
-Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest.
+Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest. roomnud of Flesh Shelf is table of Flesh Shelf nudges.
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
@@ -4685,7 +4685,7 @@ understand "glop" and "glob" as livers.
 
 chapter Gnarliest Triangles
 
-Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if]."
+Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if].". roomnud of Gnarliest Triangles is table of Gnarliest Triangles nudges.
 
 to decide whether still-need-in-triangles:
 	if ones are in bucket, yes;
@@ -4766,7 +4766,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Cruel Ones' Enclosure is table of Cruel Ones Enclosure nudges.
 
 after looking in Cruel Ones' Enclosure:
 	if banshee is in Cruel Ones' Enclosure:
@@ -4821,7 +4821,7 @@ understand "coffer" and "scoffer coffer" as scoffer coffers.
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough.
+Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough. roomnud of Ghouls' Slough is table of Ghouls Slough nudges.
 
 the dog is amusing boring scenery in Ghouls' Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
@@ -4838,7 +4838,7 @@ check examining maps in Ghouls' Slough:
 
 chapter Frost Forts
 
-Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if]."
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forst nudges.
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
@@ -4908,7 +4908,7 @@ check going inside when mrlp is sortie:
 
 chapter Trap Part
 
-Trap Part is a room in Sortie. last-loc of Sortie is Trap Part. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
+Trap Part is a room in Sortie. last-loc of Sortie is Trap Part. "[if centrifuge-stopped is true]A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Ug, frenetic centrifuge, with a dial in the center. Two exits are spinning counterclockwise. They're a right angle apart.[end if]". roomnud of trap part is table of trap part nudges.
 
 check scaning dial when centrifuge-stopped is false: say "You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, [if gadget is cert]all red except for the middle that flashes green[else]green flashing between 5 and 7, red flashing between 1 and 6[end if]. Hm, exits plus two letters. What number could that be, or become." instead;
 
@@ -5066,7 +5066,7 @@ centrifuge-stopped is a truth state that varies. centrifuge-stopped is usually f
 
 chapter The Nick
 
-A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
+A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if].". roomnud of the nick is table of the nick nudges.
 
 understand "nick" as nick when player is in nick.
 
@@ -5138,7 +5138,7 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 
 chapter Kitchen
 
-Kitchen is north of Trap Part. Kitchen is in Sortie.
+Kitchen is north of Trap Part. Kitchen is in Sortie. roomnud of kitchen is table of kitchen nudges.
 
 after choosing notable locale objects when player is in kitchen:
 	if straw is in kitchen and straw is not enclosed by player, set the locale priority of the straw to 9;
@@ -5660,7 +5660,7 @@ after printing the locale description for moor when moor is unvisited:
 
 chapter Stiller Trellis / Crashing Archings
 
-Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if Sacred Cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
+Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is moot]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if Sacred Cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is moot or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie. roomnud of Stiller Trellis is table of Stiller Trellis nudges.
 
 understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
 
@@ -5716,7 +5716,7 @@ this is the bore-hallway rule:
 
 chapter moor
 
-Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
+Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if].". roomnud of moor is table of moor nudges.
 
 the rime mire is bounding scenery in moor. "The moor you're on has stable enough footing, but the rime mire seems much more treacherous."
 
@@ -5952,7 +5952,7 @@ check pushing shoot button:
 	solve-region sortie instead;
 
 to decide which number is fridge-score:
-	let temp be 0
+	let temp be 0;
 	if grist is moot, increment temp;
 	if cake pan is moot, increment temp;
 	decide on temp;
@@ -6088,7 +6088,7 @@ to say door-clue: say "[if black door is touchable]But there's a door nearby[els
 
 chapter Sacred Cedars
 
-Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the Stiller Trellis. Oddly, you feel no reason to be scared. Serve verse veers around drawings on the walls.". Cedars is in Sortie.
+Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the Stiller Trellis. Oddly, you feel no reason to be scared. Serve verse veers around drawings on the walls.". Cedars is in Sortie. roomnud of Sacred Cedars is table of Sacred Cedars nudges.
 
 after looking in Sacred Cedars:
 	set the pronoun them to drawings;
@@ -6185,7 +6185,7 @@ volume metros
 
 chapter Undesired Underside
 
-Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west."
+Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west.". roomnud of Undesired Underside is table of Undesired Underside nudges.
 
 the tilting titling is boring scenery in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if The Ol' Hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
@@ -6245,7 +6245,7 @@ to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteri
 
 chapter Roarings Garrison
 
-Roarings Garrison is north of Underside.  Roarings Garrison is in Metros. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin' Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin' Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.".
+Roarings Garrison is north of Underside.  Roarings Garrison is in Metros. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin' Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin' Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.". roomnud of Roarings Garrison is table of Roarings Garrison nudges.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -6435,7 +6435,7 @@ this is the bore-beatniks rule:
 
 chapter Bile Libe
 
-Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are touchable], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east."
+Bile Libe is west of Roarings Garrison. It is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are touchable], and words buzz about enough to drown out the intense beats heard elsewhere in the city. A lease easel covers every direction except back east.". roomnud of Bile Libe is table of Bile Libe nudges.
 
 some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
 
@@ -6503,7 +6503,7 @@ the description of the tomato is "It's as rotten as the motto of Pa Otto's you e
 
 chapter Obtains Boastin' Bastion
 
-Obtains Boastin' Bastion is north of Roarings Garrison. Obtains Boastin' Bastion is in Metros.
+Obtains Boastin' Bastion is north of Roarings Garrison. Obtains Boastin' Bastion is in Metros. roomnud of Obtains Boastin' Bastion is table of Obtains Boastin Bastion nudges.
 
 printed name of Obtains Boastin' Bastion is "Obtains/Boastin['] Bastion"
 
@@ -6635,7 +6635,7 @@ check inserting barcode into keycard: try putting barcode on keycard instead;
 
 chapter Fo' Real Florae
 
-Fo' Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp.". Fo' Real Florae is in Metros.
+Fo' Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp.". Fo' Real Florae is in Metros. roomnud of Fo' Real Florae is table of Fo Real Florae nudges.
 
 printed name of Fo' Real Florae is "Fo['] Real Florae Fare, Lo"
 
@@ -6793,7 +6793,9 @@ the torn cue is scenery in Fo' Real Florae.
 
 description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. 'ELF ROW FLOWERS = LOW SERF' is scratched in, but a torn cue written into the counter[if brocade is in florae], next to a brocade,[end if] may be more useful."
+the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. 'ELF ROW FLOWERS = LOW SERF' is scratched in, but a torn cue written into the counter[torn-next-broc] may be more useful."
+
+to say torn-next-broc: say "[if brocade is in florae], next to a brocade,[end if]"
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is touchable.
 
@@ -6829,7 +6831,7 @@ chapter The Ol' Hotel
 
 There is a room called The Ol' Hotel.
 
-The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros.
+The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros. roomnud of the ol' hotel is table of the ol hotel nudges.
 
 The Night Thing is a neuter person in The Ol' Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
 
@@ -6964,7 +6966,7 @@ rule for supplying a missing noun while throwing:
 
 chapter Esoteric Coteries
 
-Esoteric Coteries are a room in Metros. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west."
+Esoteric Coteries is a room in Metros. description of Esoteric Coteries is "It's cleverly soundproofed here. It'd make a nice mob combine, except the nerds don't seem like the bad guys, just annoying. Earliest ateliers, where the nerds make odd items to help adventurers like yourself (often well before you know you need them,) lie everywhere but back west.". roomnud of Esoteric Coteries is table of Esoteric Coteries nudges.
 
 after printing the locale description for Esoteric Coteries when Esoteric Coteries is unvisited:
 	reg-inc;
@@ -7134,7 +7136,7 @@ understand "earliest atelier" and "atelier" as Earliest Ateliers.
 
 chapter Elm Train Terminal
 
-Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if]."
+Elm Train Terminal is south of Undesired Underside. It is in Metros. "You're in a disused train station ('ELM') with, err, min-alert customer service. A scrolling display reads PA'S PSAs[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]. [if power-shut is false]It's a bit dark, but not as bad as below, where noise seems to be echoing[else]The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should [if controls are not in gin nope opening]eventually [end if]strain for the darkness below, with more rats in than trains.[paragraph break]High up above to the west, you see [terminal-if-piggy].[paragraph break]The cafe face below seems gnarled and tangled[if controls are in gin nope opening], though you don't need to climb it again[else if cafe-climbed is false], and--well, maybe there's a way to get a closer look up there[end if].[paragraph break]A rail is down to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[else]--it's no longer sparking[end if]. You could also go back north[if player is on cafe face], though you may need to get off the cafe face[terminal-if-pigcon] first[end if].". roomnud of Elm Train Terminal is table of Elm Train Terminal nudges.
 
 to say terminal-if-piggy: say "[if neon pig is touchable]a neon pig embedded in the cafe face above a fading cafe face. It seems terribly inappropriate[else if controls are in gin nope opening]controls working nicely in the opening you made above[else]an empty opening where the neon pig was. Perhaps something could fit in it[end if]"
 
@@ -7253,7 +7255,7 @@ understand "controls" as gin nope opening when controls are in gin nope opening.
 
 chapter Bassy Abyss
 
-Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are touchable]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is touchable]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros.
+Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are touchable]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is touchable]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros. roomnud of Bassy Abyss is table of Bassy Abyss nudges.
 
 after printing the locale description for abyss when abyss is unvisited:
 	set the pronoun it to siren;
@@ -7312,7 +7314,7 @@ volume resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This isn't really an ugly place. It's nice and bright in all directions, but it'd be a bummer if this was your final destination[if feral flare is in astral altars]. The feral flare restricts you from non-magical transport[end if].[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something.". roomnud of Astral Altars is table of Astral Altars nudges.
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
@@ -7330,7 +7332,7 @@ The feral flare is bounding boring scenery. description is "It covers everywhere
 
 chapter Leis Isle
 
-Leis Isle is a room in Resort. "[if l2 are in Leis Isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in Leis Isle], and now the leis here were exposed, you probably want to get going that way, too[end if]. The isle is covered with sand and sands and sands, which seem appropriate, if not helpful."
+Leis Isle is a room in Resort. "[if l2 are in Leis Isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]An odd low woodland leads all ways except east, where you think you can see distant land[if l2 are not in Leis Isle], and now the leis here were exposed, you probably want to get going that way, too[end if]. The isle is covered with sand and sands and sands, which seem appropriate, if not helpful.". roomnud of Leis Isle is table of Leis Isle nudges.
 
 printed name of Leis Isle is "[if l2 are in Leis Isle]Leis[else]Lies[end if] Isle"
 
@@ -7442,9 +7444,7 @@ carry out swiming:
 
 chapter Rived Drive
 
-There is a room called Rived Drive. "You've reached a Rived Drive. It's an odd low woodland, or was, until release 5. There's a gigantic [if poles are touchable]set of poles[else]slope you could climb[end if] off to the east[if tool shed is touchable]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if]."
-
-Rived Drive is a room in Resort.
+There is a room called Rived Drive. "You've reached a Rived Drive. It's an odd low woodland, or was, until release 5. There's a gigantic [if poles are touchable]set of poles[else]slope you could climb[end if] off to the east[if tool shed is touchable]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if].". Rived Drive is a room in Resort. roomnud of Rived Drive is table of Rived Drive nudges.
 
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
@@ -7576,7 +7576,7 @@ report going east in Rived Drive:
 	say "You won't be able to repo the rope.";
 	continue the action;
 
-Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort. printed name of Potshot Hotspot is "[if red bull burdell is moot]Setter Street[else]Potshot Hotspot[end if]".
+Potshot Hotspot is east of Rived Drive. Potshot Hotspot is in Resort. printed name of Potshot Hotspot is "[if red bull burdell is moot]Setter Street[else]Potshot Hotspot[end if]". roomnud of Potshot Hotspot is table of Potshot Hotspot nudges.
 
 check going inside in Potshot Hotspot: try going east instead;
 
@@ -7776,7 +7776,7 @@ carry out tuging:
 
 chapter Means Manse
 
-Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the [i]exits[r] and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort.
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the [i]exits[r] and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges.
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead;
 
