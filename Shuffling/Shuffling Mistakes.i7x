@@ -320,6 +320,8 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 chapter Undesired Underside
 
+understand "singers" as a mistake ("The beats would drown the singers out.") when player is in Undesired Underside.
+
 understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in Undesired Underside and a reading is in Undesired Underside.
 
 [def=nerd door w]

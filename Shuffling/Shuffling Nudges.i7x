@@ -6,6 +6,7 @@ volume nudges
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
 [all this should be in the post-commit hooks]
+[the chapter names may matter if I divide tables up not just by region but also by room to speed things up.]
 
 [Nudges are organized in roughly the order you see them going through each region. In some cases, certain rooms take random (or likely quickest-walkthrough) priority over others.
 For instance, you can go west or east from Self-ID Fields, or north or south from Undesired Underside.
@@ -14,6 +15,8 @@ Going north in the Underside leads to more immediately solvable puzzles.
 ]
 
 book nudge tables
+
+chapter ordeal loader
 
 table of Ordeal Loader nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -27,8 +30,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "banner"	371551651	Busiest Subsite	--	--	"[word-games]."
 "oafs"	199329257	Busiest Subsite	--	--	"[sofa-there]."
 "oaf"	103055291	Busiest Subsite	--	--	"[sofa-there]."
+"noentry"	650766775	Busiest Subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
 "rested"	561349094	Rested Desert	--	--	"[loc-rej]." [start Rested Desert]
-"improbable"	570855914	Rested Desert	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
 "smlel"	395782906	--	odor	--	"[nope-odor]."
 "musical"	385455014	--	OR DO Door	--	"[com-chor]."
@@ -54,6 +57,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is touchable]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	--	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
 "ordeal"	364513235	--	--	degen-true rule	"[reg-rej]." [end-ordeal-loader]
+
+chapter stores
 
 table of Stores nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -154,6 +159,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "hubs"	257080977	--	hubs bush	--	"[hub-stur]."
 "buh"	160807011	--	hubs bush	--	"[hub-stur]." [end-stores]
 
+chapter forest
+
 table of Forest nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "conifer"	446903324	--	--	first-two-forest rule	"[no-con]." [START OF SOFTER FOREST]
@@ -202,8 +209,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "shelf"	341691109	Flesh Shelf	--	--	"The shelf is frozen that way. Ba dum bum." [FLESH SHELF START]
 "skin"	263107498	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
 "ink"	166833532	Flesh Shelf	--	--	"The skin sink is frozen that way. Ba dum bum."
-"cities"	436181370	Flesh Shelf	--	--	"some text"
-"city"	289467701	Flesh Shelf	--	--	"some text"
+"cities"	436181370	Flesh Shelf	--	--	"[ice-cit]."
+"city"	289467701	Flesh Shelf	--	--	"[ice-cit]."
 "sandwich"	397613884	--	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
 "canister"	547607653	--	grinder	--	"The canister [if canister is not broken]is too solid[else]has suffered enough abuse. No need to break it further[end if]."
 "grinder"	465982860	--	grinder	--	"The grinder is too solid."
@@ -225,6 +232,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
 "snow"	347468824	Frost Forts	--	--	"[froz-ha-ha]."
 "slough"	399428190	Ghouls' Slough	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
+"lough"	303154224	Ghouls' Slough	--	--	"[loc-rej]."
 "marsh"	285143039	Ghouls' Slough	--	--	"[marsh-lake]."
 "lake"	236740944	Ghouls' Slough	--	--	"[marsh-lake]."
 "frost"	385575260	frost	--	--	"[loc-rej]." [START OF FROST FORTS]
@@ -232,6 +240,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "capitals"	403037849	--	vowels	--	"They aren't just any capitals. They're specific letters."
 "icecap"	294463902	Frost Forts	--	--	"[froz-ha-ha]."
 "bumps"	365339790	Frost Forts	--	--	"[froz-ha-ha]."
+"bmup"	269065824	Frost Forts	--	--	"[froz-ha-ha]."
 "iced"	212833629	--	iced dice	--	"[froz-ha-ha]."
 "ice"	191804540	--	iced dice	--	"[froz-ha-ha]."
 "sleet"	508810041	Frost Forts	--	--	"[froz-ha-ha]."
@@ -239,9 +248,11 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lupine"	482092068	--	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
 "forest"	513381369	--	--	degen-true rule	"[if Self-ID Fields is visited][reg-rej][else][loc-rej][end if]." [end-f]
 
+chapter sortie
+
 table of Sortie nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
-"part"	272087598	Trap Part	--	--	"You don't need to change this room[if kitchen is visited], and you don't want to change it BACK to the Trap Part." [start Trap Part]
+"part"	272087598	Trap Part	--	--	"You [if kitchen is not visited]need to manipulate something in the room to stop the spinning[else]don't want to go back to how the Trap Part was[end if]." [start Trap Part]
 "sortie"	531859319	--	--	degen-true rule	"[reg-rej]."
 "centrifuge"	741172383	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	--	b4-cent rule	"[loc-rej]."
@@ -343,6 +354,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "cliche"	301906263	Sacred Cedars	--	--	"[best-not-defile]."
 "oil"	173159262	--	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]." [end-i]
 
+chapter metros
+
 table of Metros nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
@@ -423,11 +436,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "bump"	269065824	--	bump	--	"Just search the bump instead."
 "motto"	419000343	--	motto	--	"It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it."
 "potaot"	438578967	--	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
-"florae"	369999042	Fo' Real Florae	--	--	"some text"
-"real"	269131569	Fo' Real Florae	--	--	"some text"
-"fare"	241832626	Fo' Real Florae	--	--	"some text"
+"florae"	369999042	Fo' Real Florae	--	--	"[loc-rej]."
+"real"	269131569	Fo' Real Florae	--	--	"[loc-rej]."
+"fare"	241832626	Fo' Real Florae	--	--	"[loc-rej]."
 "fairies"	428092284	Fo' Real Florae	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them."
-"flower"	475745997	Fo' Real Florae	--	--	"[loc-rej]."
 "fairy"	281378615	Fo' Real Florae	--	--	"The faeries would mangle you back worse."
 "faery"	364191878	Fo' Real Florae	--	--	"The faeries would mangle you back worse."
 "trounce"	583611407	Fo' Real Florae	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
@@ -477,6 +489,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "aligns"	298775679	Bassy Abyss	--	--	"[aligns-no]."
 "align"	202501713	Bassy Abyss	--	--	"[aligns-no]."
 "resin"	423304232	--	--	resin-lala rule	"The dust is dust now." [end-m]
+
+chapter resort
 
 table of Resort nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -539,6 +553,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "marble"	351625627	Means Manse	--	--	"[ennui]."
 "spire"	435862683	Means Manse	--	--	"[ennui]."
 "toaster"	592164309	Means Manse	--	--	"[ennui]." [end-r]
+
+chapter general
 
 table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
@@ -627,7 +643,7 @@ book auxiliary text and rules
 
 section ordeal loader auxiliary
 
-to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
+to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
 
 to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
@@ -675,7 +691,7 @@ this is the first-two-forest rule:
 
 to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
 
-to say guider-content: say "No, that's not the [i]essence[r] of the thing."
+to say guider-content: say "No, that's not the [i]essence[r] of the thing"
 
 this is the forest-south rule:
 	if shout is touchable, the rule succeeds;
@@ -706,6 +722,8 @@ to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
 to say vand-art: say "Don't vandalize the art, man"
 
 to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
+
+to say ice-cit: say "Taking care of the main menace may change the iciest cities"
 
 this is the see-meats rule:
 	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
@@ -758,7 +776,7 @@ this is the kitch-visit rule:
 	if kitchen is visited, the rule succeeds;
 	the rule fails;
 
-to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if cake pan is not moot or grist is not moot], but maybe you can fix something inside it[end if]"
+to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
 
 to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
@@ -800,9 +818,9 @@ to say best-not-defile: say "Best not defile this shrine. Or even try to. The oi
 
 section metros auxiliary
 
-to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder."
+to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder"
 
-to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]."
+to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]"
 
 to say no-hot:
 	say "You can't change the hotel, ";
@@ -839,7 +857,7 @@ to say nerd-nah: say "The nerds are a little obnoxious, but they've had people t
 
 to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
 
-to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad."
+to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad"
 
 to say fix-rail: say "[if controls are in gin nope opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
 
@@ -853,7 +871,7 @@ this is the no-beats rule:
 	if player is in Esoteric Coteries or player is in Obtains Boastin' Bastion, the rule succeeds;
 	the rule fails;
 
-to say aligns-no: say "No use messing with the aligns signal when the [b-b] needs to be dealt with"
+to say aligns-no: say "No use messing with the aligns signal when you need to focus on the [b-b]"
 
 this is the resin-lala rule:
 	if resin is moot, the rule succeeds;

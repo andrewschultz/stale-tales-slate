@@ -4297,11 +4297,11 @@ lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. rgtext of stew is "[rc]
 
 understand "smell" as whiff of stew when whiff of stew is touchable.
 
-a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or any of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". badana of thorn is "the thorn wilts slightly for a second"
+a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or any of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". badana of thorn is "The thorn wilts slightly for a second"
 
 rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
 
-an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". badana of teas is "the scent of teas changes slightly".
+an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". badana of teas is "The scent of teas changes slightly".
 
 rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
@@ -4309,7 +4309,7 @@ understand "smell" as aroma of teas when aroma of teas is touchable.
 
 understand "tea" as aroma of teas.
 
-a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere.". badana of shout is "the shout wavers for a bit. Maybe you're on to something"
+a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere.". badana of shout is "The shout wavers for a bit. Maybe you're on to something"
 
 rgtext of shout is "[gc][rc][rc][rc][rc]". the lgth of shout is 5. gpos of shout is 1. rpos of shout is 2. cert-text of shout is "S[d1][d1][d1][d1]". rect-text of shout is "S[d1][d1][d1][ast]H".
 
@@ -5951,13 +5951,13 @@ check pushing shoot button:
 	reg-inc;
 	solve-region sortie instead;
 
-to say guards-say-hi:
-	if grist is in grief'd fridge and cake pan is in grief'd fridge:
-		say ". They smile and apologize awkwardly, and you say no problem.";
-	else if grist is moot and cake pan is moot:
-		say ". They thank you for leaving them so much food even after they--well. They were too lazy when they woke up";
-	else:
-		say ". They thank you for leaving enough food to tide them over but not too much. They needed room for the feast";
+to decide which number is fridge-score:
+	let temp be 0
+	if grist is moot, increment temp;
+	if cake pan is moot, increment temp;
+	decide on temp;
+
+to say guards-say-hi: say ". [if fridge-score is 0]They smile and apologize awkwardly, and you say no problem[else if fridge-score is 1]They thank you for leaving enough food to tide them over but not too much. They needed room for a feast[else]They thank you for leaving them so much food even after they--well. They were too lazy when they woke up[end if]";
 
 trees-is-pushed is a truth state that varies. trees-is-pushed is false.
 
@@ -6793,7 +6793,7 @@ the torn cue is scenery in Fo' Real Florae.
 
 description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. A torn cue is written into the counter, next to a brocade[else]."
+the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. 'ELF ROW FLOWERS = LOW SERF' is scratched in, but a torn cue written into the counter[if brocade is in florae], next to a brocade,[end if] may be more useful."
 
 the barcode is a thing. understand "code" and "bar" as barcode when barcode is touchable.
 
