@@ -1,5 +1,7 @@
 # rl.txt = logic clues for A Roiling Original
 #
+# r2l.py converts the invisiclues to a different HTML
+#
 ->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Roiling
 out=roiling-logic-invisiclues.htm
 raw=roiling-logic-invisiclues-raw.htm
@@ -183,12 +185,30 @@ The ?RY? notation shows where the vowel is: O is in the third slot. That's a sta
 Similarly, slots 1 and 4 are F or M, leaving slot 2 as R.
 FROM is more likely than MROF. So there you go.
 >>HARMS MARSH
+#logic for null it unit
+?How does the NULL IT unit operate?
+The YRR?R suggests slot 4 is a vowel. As it is I or L, that makes it I. That makes slot 1 U.
+So with U--I-, slot 3 cn't be L or N, so it is T.
+That leaves ULTIN or UNLIT, so, UNLIT.
+#logic for odd run on aura
+?How do I deal with the odd run on aura?
+The YRY?RR means there is a vowel in the fourth slot. R or U is, then, U.
+Since slot 1 is a vowel but not O, is is A. So slot 3 is U. A-OU--.
+Slot 2 can't be D or N, so it is R.
+Slot 6 can't be N, which logically eliminates all but AROUND.
 #logic for all noon gag
 ?What do we do with the all noon gag reading?
 The ??Y?? looks intimidating, but the question marks give lots of clues:\n<pre>ALLNO\nONGAG\n??Y??</pre>
 That leaves possibilities of (AO)(LN)(AO)(AN)(OG).
 But only 1 and 3 can be A and O, so that makes 4 and 5 N and G, respectively.
 Then 2 must be L. ONALG or ALONG are the only two left. ALONG is the only word of these two.
+>>RIPE PIER
+#logic for admits mist ad
+?How do I get around the admits mist ad?
+While the red text clinches it, you can also make hay with the settler readings.
+The ?RYRRR is a big help, since we then know slot 1 must be a vowel, which must be A. That makes slot 3 I. A-I---.
+Now A(MST)I(DMS)(DMS)(MT) is left, and this is tricky. The M in slot 4 or 5 respectively gives ASMIDT/ASIDMT. Things clump if it is in slot 6, ending with DSM or SDM. So it is in slot 2, making slot 6 T.
+AMISDT or AMIDST means AMIDST.
 >>CRIPPLE CLIPPER
 #logic for whattar tawrath thatraw artthaw
 ?What is with the thickness sketchins?

@@ -328,7 +328,7 @@ else {
     : "$errs errors, $succ successes.\n"
   ) if !$auditString;
   print "$auditString turned up nothing.\n" if ( $auditString && !$gotAnyAna );
-  exit(errs);
+  exit($errs);
 }
 
 ###########################################

@@ -55,9 +55,17 @@ despite,speedit,sitdeep
 #qver of a bev o be ova
 above,???PY=abevo=beova
 #harms marsh
+#qver of null it unit
+until,YRR?R=nulli=tunit
+#qver of odd run on aura
+around,YRY?RR=oddrun=onaura
 #qver of all noon gag
 along,??Y??=allno=ongag
 along,nogal,logan
+#ripe pier
+#qver of admits mist ad
+amidst,?RYRRR=admits=mistad
+amidst,tdasim,sadtim,msdita
 #cripple clipper
 #qver of whattar tawrath thatraw artthaw~thickness sketchins
 athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
@@ -172,7 +180,7 @@ bus/sub,RY?=usb
 ################oyster
 #hops shop
 #qver of lolstr trolls
-stroll,RRRU?R=lolstr=trolls
+stroll,RRRY?R=lolstr=trolls
 #qver of li'l p's pills
 spill,RRY?R=lilps=pills
 #qver of gins sign
