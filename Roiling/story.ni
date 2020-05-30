@@ -121,21 +121,21 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regtab of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
+Troves is a region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
 
-Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
+Routes is a region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
+Oyster is a region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
+Presto is a region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
+Towers is a region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -167,11 +167,11 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 3=25 for unripe ur-pine/serpent/triste in Mislit Limits
 1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
-Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is an unsolved region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges.
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -3435,7 +3435,7 @@ check entering a portal (this is the first portal entry rule):
 	the rule succeeds;
 
 to add-errs (reg - a region):
-	repeat through regtab of reg:
+	repeat through regnud of reg:
 		if there is a this-room entry and this-room entry is not a room, d "[this-room entry] wrongly listed as a room in [reg], [this-cmd entry]f.";
 		if there is a this-item entry and this-item entry is a room, d "[this-item entry] wrongly listed as a room in [reg], [this-cmd entry].";
 		if there is no this-reg entry or this-reg entry is a region:
@@ -3598,7 +3598,7 @@ to say reject:
 						say "[line break](In particular, the first word seemed to have an effect, and you generally don't need a second word.)[line break]";
 				continue the action;
 	if roomnud of location of player is hash-found, continue the action;
-	if regtab of mrlp is hash-found, continue the action;
+	if regnud of mrlp is hash-found, continue the action;
 	if table of general nudges is hash-found, continue the action;
 	if player has settler and settler-try is false:
 		if the player's command includes "settler":

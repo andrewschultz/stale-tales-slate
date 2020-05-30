@@ -349,7 +349,7 @@ to say reject:
 				now last-hash is hashkey entry;
 				continue the action;
 	now num-in-row is 0;
-	if regtab of mrlp is hash-found, continue the action;
+	if regnud of mrlp is hash-found, continue the action;
 	if table of general nudges is hash-found, continue the action;
 	say "[verb-cue]."
 
@@ -1959,17 +1959,17 @@ Metros	trade tread	"You return to the hustle, bustle, etc."
 
 book region division
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regtab of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. [both bulge/blot, darnels, static]
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. [both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [slit, banshee]
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regtab of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. [cake pan, grist]
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. [cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. [antlers]
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. [antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 orig-region is Ordeal Loader.
 

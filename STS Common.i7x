@@ -99,7 +99,7 @@ a region has a number called poss-score. the poss-score of a region is usually z
 
 a region has a number called cur-score. the cur-score of a region is usually zero.
 
-a region has a table name called regtab. a region has a table name called regana.
+a region has a table name called regnud. a region has a table name called regana.
 
 a region has a room called last-loc.
 

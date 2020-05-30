@@ -128,7 +128,7 @@ understand the command "nul" as something new.
 understand "nul" as nuling.
 
 carry out nuling:
-	ply-table regtab of mrlp;
+	ply-table regnud of mrlp;
 	the rule succeeds;
 
 chapter gnling - not for release
@@ -141,7 +141,7 @@ understand "gnl" as gnling.
 
 carry out gnling:
 	ply-table table of general nudges;
-	ply-table regtab of mrlb;
+	ply-table regnud of mrlb;
 	ply-table roomnud of location of player;
 	the rule succeeds;
 
