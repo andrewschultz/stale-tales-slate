@@ -556,6 +556,7 @@ this is the post-below rule:
 
 this is the post-under rule:
 	moot Gast;
+	moot tirades;
 	continue the action;
 
 this is the post-seedpit-despite rule:

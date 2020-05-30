@@ -6311,7 +6311,6 @@ rule for supplying a missing noun when listening (this is the directed ambient s
 	now the noun is the location of the player;
 
 check listening:
-	if debug-state is true, say "DEBUG TO DELETE: listening to [noun].";
 	if player is in Dusty Study: [Ordeal Reload]
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
@@ -6324,12 +6323,9 @@ check listening:
 	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
 	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
 	if noun is Gast: [routes]
-		if debug-state is true, say "DEBUG TO DELETE: 1.";
-		if tirades are touchable, try listening to tirades instead;
-		if debug-state is true, say "DEBUG TO DELETE: 2.";
-		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
-		if debug-state is true, say "DEBUG TO DELETE: 3.";
 		if rude 'n nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
+		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
+		if tirades are touchable, try listening to tirades instead;
 		say "BUG. [Gast] should direct you to the next puzzle." instead;
 	if noun is woe bow bell, say "Through the Woe Bow Bell's resonance, you [one of]think you could hear something if you listen carefully[or]hear OL['] WEB, OL['] WEB. It makes you see red[stopping]." instead;
 	if player is in Same Mesa:
@@ -10770,7 +10766,7 @@ this is the bore-reef rule:
 
 book Sonancy Canyons
 
-Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break][if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
+Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break]Spheric ciphers surround you and prevent passage out. [if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise and also provides a small break in the ciphers[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if]."
 
 chapter hurt hog
 
@@ -10796,6 +10792,10 @@ chapter yob den
 the yob den is vanishing scenery. "You're not sure the best way to deal with the yob den is to enter it. But what's a good way to avoid it?"
 
 a-text of yob den is "RYOYRR". b-text of yob den is "RYOYRR". parse-text of yob den is "x[sp]E[sp]Y[sp]O[sp]x[sp]x".
+
+chapter spheric ciphers
+
+the spheric ciphers are cenery in Sonancy Canyons. "You look into them and see nothingness. It would be bad to move too far away and risk getting too close to one.". bore-text is "The ciphers are nothing, and you can do nothing with them."
 
 volume troves
 

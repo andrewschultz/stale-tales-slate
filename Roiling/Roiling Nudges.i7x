@@ -250,6 +250,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "canyons"	451994214	Sonancy Canyons	--	--	"[locname]."
 "patter"	503003725	--	raptest patters	--	"[pat-cont]."
 "patters"	599277691	--	raptest patters	--	"[pat-cont]."
+"spheric"	492150567	Sonancy Canyons	--	--	"The ciphers cannot be dispelled."
+"cipher"	395876601	Sonancy Canyons	--	--	"The ciphers cannot be dispelled."
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
 "rouet"	495698314	--	--	degen-true rule	"[not-the-reg]." [end-r]
 

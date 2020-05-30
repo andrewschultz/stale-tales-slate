@@ -1018,6 +1018,12 @@ The new beet seems to spin slightly away from Thor for a second.
 #spechelp for hurt hog
 >throuhg
 Thor seems to gesture you by for a second.
+#nudge for spheric
+>spherci
+The ciphers cannot be dispelled.
+#nudge for cipher
+>ciphre
+The ciphers cannot be dispelled.
 
 @sli
 #slider test for without
