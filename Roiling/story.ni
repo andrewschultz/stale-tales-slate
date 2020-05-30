@@ -131,9 +131,9 @@ Troves is a region. regtab of Troves is table of troves nudges. regana of Troves
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 21. min-score of Routes is 19. [worst ad, without]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/trample/ant subquest=6, tend dent, SPLAIN in the plains, PSALM in the Plasm Lamps, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, +1 point for starch charts]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
 [Necessary points:
@@ -3779,7 +3779,7 @@ carry out requesting the score:
 		the rule succeeds;
 	else:
 		d "# of turns = [turn count].";
-		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
+		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp][if number of prefigured things in mrlp > 0], with [number of prefigured things] thing[plur of number of prefigured things] you figured before you were ready[end if]";
 		if cur-score of mrlp is poss-score of mrlp:
 			if mrlp is Ordeal Reload:
 				say ". You should go IN to the Strip of Profits, now";
@@ -4646,6 +4646,10 @@ to decide which number is fruits-left:
 definition: a fruit (called fr) is fruit-to-find:
 	if fr is moot or fr is held, no;
 	yes;
+
+to decide whether got-all-fruits:
+	if number of fruit-to-find fruits is 0, yes;
+	no;
 
 box-down-road is a truth state that varies.
 
@@ -5903,6 +5907,7 @@ chapter drinking
 the block drinking rule is not listed in the check drinking rulebook.
 
 check drinking:
+	if noun is A Bev O Be Ova, say "[bev] is meant to celebrate finishing something, or to despair and not being able to finish. Neither occasion applies here." instead; [routes]
 	if noun is lager, say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way." instead; [troves]
 	if noun is trance nectar, say "No. That can't be it. You want a way to exit, to say this is not me." instead;
 	if noun is fount, say "It's dry, and besides, you need to drink literally of knowledge, not figuratively.[paragraph break]Besides, water doesn't have enough energy for the task ahead." instead; [presto]
@@ -6264,6 +6269,8 @@ check thinking:
 	if mrlp is troves, say "Yes, how you think is extra important here." instead;
 	if mrlp is towers and topside is visited, say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
 	if mrlp is demo dome, try requesting the score instead;
+	if number of unfigured things > 0:
+		say "[line break][prefigured-things]";
 	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
 chapter touching
@@ -6290,16 +6297,21 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] gast, raptest patters, [troves] sob ever verbose, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
-rule for supplying a missing noun when listening:
+the ambient sound rule is not listed in any rulebook.
+
+rule for supplying a missing noun when listening (this is the directed ambient sound rule) :
 	if debug-state is true, say "DEBUG: Going through listen-candidates."; [??]
 	repeat with Q running through listen-candidates:
 		if Q is touchable:
 			now the noun is Q;
-			the rule succeeds;
+			if debug-state is true, say "Chose [Q].";
+			continue the action;
+	now the noun is the location of the player;
 
 check listening:
+	if debug-state is true, say "DEBUG TO DELETE: listening to [noun].";
 	if player is in Dusty Study: [Ordeal Reload]
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
@@ -6310,7 +6322,16 @@ check listening:
 	if noun is tokers, say "[if nestor is touchable]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if noun is nestor, say "Nestor periodically mumbles about his lost buddies." instead;
 	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
-	if noun is Gast, say "Those [i]tirades[r] from [Gast]. [if side art is reflexive][one of]Though [he-she] gets staider.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[or][in random order][else if WOE BOW BELL is reflexive]Though the ominous WOE BOW BELL has you more distracted now.[else]All about that book, Rude [']N Nuder.[end if]" instead; [routes]
+	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
+	if noun is Gast: [routes]
+		if debug-state is true, say "DEBUG TO DELETE: 1.";
+		if tirades are touchable, try listening to tirades instead;
+		if debug-state is true, say "DEBUG TO DELETE: 2.";
+		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
+		if debug-state is true, say "DEBUG TO DELETE: 3.";
+		if rude 'n nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
+		say "BUG. [Gast] should direct you to the next puzzle." instead;
+	if noun is woe bow bell, say "Through the Woe Bow Bell's resonance, you [one of]think you could hear something if you listen carefully[or]hear OL['] WEB, OL['] WEB. It makes you see red[stopping]." instead;
 	if player is in Same Mesa:
 		if THE BEAN is touchable, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
@@ -7075,8 +7096,11 @@ understand the command "no tip" as something new.
 
 understand "no tip" as notiping.
 
+this is the no-instant-tips rule:
+	if mrlp is Ordeal Reload and cur-score of Ordeal Reload < 2, say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
+
 carry out notiping:
-	if cur-score of Ordeal Reload < 2, say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
+	abide by the no-instant-tips rule;
 	say "You [if no-tip is true]already have[else]switch to[end if] NO TIP at a region's start. OPT IN will reverse this.";
 	now no-tip is true;
 	the rule succeeds;
@@ -7090,7 +7114,7 @@ understand the command "opt in" as something new.
 understand "opt in" as optining.
 
 carry out optining:
-	if cur-score of Ordeal Reload < 2, say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
+	abide by the no-instant-tips rule;
 	say "You [if no-tip is false]already have[else]switch to[end if] OPT IN at a region's start. NO TIP reverse this.";
 	now no-tip is false;
 	the rule succeeds;
@@ -9223,7 +9247,9 @@ to say what-can-flip:
 	if mrlp is demo dome:
 		say "This shouldn't have happened, but it did. BUG.";
 		continue the action;
-	say "Stuff you figured that may be handy later: ";
+	say "Stuff you figured that may be handy later:[prefigured-things]";
+
+to say prefigured-things:
 	repeat with pft running through not unfigured things:
 		if pft is a preflip listed in table of pres:
 			say "[line break][pretodo entry]";
@@ -10264,7 +10290,7 @@ check scaning resto store:
 
 does the player mean scaning resto store: it is likely.
 
-the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[ast][r][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal. You also note the intended pronunciation of Stap is probably Stahp, because that sort of forced anagramming is abused in Yorpwald these days. True, there are bigger problems, but..."
+the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[ast][r][one of] (ugh! You cringe at the forced short-a anagram, as well as how Elvira blamed you for this sort of thing.)[or][stopping][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal. You also note the intended pronunciation of Stap is probably Stahp, because that sort of forced anagramming is abused in Yorpwald these days. True, there are bigger problems, but..."
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
@@ -10318,7 +10344,11 @@ check taking side art: say "The [sit a nag] is too well made." instead;
 
 chapter WOE BOW BELL
 
-the WOE BOW BELL is a vanishing boring thing. description of WOE BOW BELL is "You can only hear it. You can't help hearing it.". bore-text is "You can only hear the WOE BOW BELL. It makes you see red."
+the WOE BOW BELL is vanishing boring thing. description of WOE BOW BELL is "You can only hear it. You can't help hearing it. But maybe if you LISTEN, it could provide a clue.". "The WOE BOW BELL continues to clang in the distance.". bore-text is "You can only hear the WOE BOW BELL. It makes you see red.". bore-check of woe bow bell is bore-bell rule.
+
+this is the bore-bell rule:
+	if current action is taking, say "The WOE BOW BELL is distant and loud." instead;
+	if current action is listening, now boring-exception is true;
 
 a-text of woe bow bell is "RYRYR". b-text of woe bow bell is "RYRYR". parse-text of woe bow bell is "-[sp]E[sp]-[sp]O[sp]-".
 
@@ -10380,7 +10410,7 @@ check going when THE BEAN is in Same Mesa and player is in Same Mesa:
 
 chapter A Bev O' Be Ova'
 
-A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.". bore-text of A Bev O Be Ova is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look.". bore-check of A Bev O Be Ova is the bore-bev rule.
+A Bev O Be Ova is a proper-named thing. printed name is "A Bev O['] Be Ova[']". "A bottle rattles out from the wastes and stops at your feet. It's ... it's [be ova]! You've seen these before. They're usually given to people in Yorpwald to pretend like the end is closer than it actually is. The gift usually feels a bit forced, but in the right situation, it can help them ... somehow.". bore-text of A Bev O Be Ova is "It's not to drink, but it is a clue where to look next.". bore-check of A Bev O Be Ova is the bore-bev rule. description is "It's unopenable, and you're not sure if you'd want to drink what's inside. But hey, maybe it's some sort of unsubtle hint or nudge in the next direction to go or look."
 
 a-text of A Bev O Be Ova is "YRYRY". b-text of A Bev O Be Ova is "???PY". parse-text of A Bev O Be Ova is "-[sp]-[sp]-[sp]V[sp]E".
 
@@ -17610,7 +17640,7 @@ to preef (thi - a thing): [text listed in table of pres]
 	if player is in Dusty Study:
 		check-get-pad;
 	if thi is not prefigured:
-		say "[i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r][line break]";
+		say "[line break][i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r]";
 	now thi is prefigured;
 	if player is not in Dusty Study and player does not have pedanto-notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
@@ -19043,13 +19073,13 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
 
 to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
 
-to say fruit-rollup:
+to say fruit-rollup: [this is very hard-coded, but there seems to be no easy way to do this for scenery]
 	let pres-available be touch-val of spear + touch-val of mad train + touch-val of lumps + touch-val of slime + touch-val of omen prism + touch-val of harmonicas;
 	let cur-got be 0;
 	if pres-available > 0:
@@ -19058,24 +19088,24 @@ to say fruit-rollup:
 			say "a spear stuck in the ground";
 			increment cur-got;
 		if lumps are touchable:
-			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
 			increment cur-got;
 		if slime is touchable:
-			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]slime oozing off to the side";
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]slime oozing off to the side";
 			increment cur-got;
 		if omen prism is touchable:
-			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
 			increment cur-got;
 		if mad train is touchable:
-			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
 			increment cur-got;
 		if harmonicas are touchable:
-			say "[if cur-got is pres-available - 1] and [else if cur-got > 0], [end if]two harmonicas rusted together";
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]two harmonicas rusted together";
 			increment cur-got;
 	if eerie blurbs are touchable:
 		increment cur-got;
 		say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
-	if cur-got is 0, say "You've tracked down all the[if one-left is false], uh, low-hanging[end if] fruit here[if pagers are touchable], except for what the pagers could become[end if]"
+	if cur-got is 0, say "You've tracked down all the[if ruts circuits are touchable], uh, low-hanging[end if] fruit lying around[if pagers are touchable], except for what the pagers could become[end if]"
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
@@ -19158,7 +19188,16 @@ carry out guruing:
 
 chapter curtis and dealing with him
 
-Curtis is a person in Rustic Citrus. description is "I curst him to be nondescript.". "Curtis is pottering around, waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits."
+Curtis is a person in Rustic Citrus. description is "I curst him to be nondescript.". "Curtis is pottering around, [curtis-potter]."
+
+check asking Curtis about when got-all-fruits:
+	say "'You've done all you can for me. Now go do for you.'" instead;
+
+to say curtis-potter:
+	if number of fruit-to-find fruits is 0:
+		say "wondering how best to use all the fruits you got him";
+	else:
+		say "waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits"
 
 extra-citrus is a number that varies.
 
@@ -19450,7 +19489,7 @@ after printing the locale description for Swell Wells:
 		now miser ruble is in Swell Wells;
 	continue the action;
 
-the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if]. [what-on-moubnd]."
+the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if]. [what-on-mound]."
 
 to decide what number is mound-writing:
 	decide on touch-val of stucco + touch-val of stucco + touch-val of PSA Elp;
@@ -19461,7 +19500,7 @@ to say what-on-mound:
 		continue the action;
 		say "[if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound.";
 	if stucco is in swell wells, say "[line break]There's an advertisement in red for [stucco-ad].";
-	if sorer bogey is in swell wells "[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
+	if sorer bogey is in swell wells, say "[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
 	if PSA Elp is in swell wells, say "[line break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail.";
 
 to say what-clear:
@@ -21794,19 +21833,20 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
 	else if myreg is routes:
 		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
+		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
-		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
+		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too."; [1 of 2]
 		if bee's head is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
-		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS.";
+		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
-		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister.";
+		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister."; [1 of 2]
 		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
 		if DIVORCES is not moot, say "[2drm of Upscale Capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
 		if sister tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to RESIST Sister Tressi.";
-		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore [mbb].";
+		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore [mbb]."; [1 of 2]
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
@@ -21856,6 +21896,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
+		if dourest detours are unvisited, say "[2dmiss of myreg]You could have [one of](MISSED again for spoiler) [or]made yourself ROUSTED after you[stopping] visited Dourest Detours east of Anemic Cinema or south of Danger Garden.";
 		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
@@ -21867,12 +21908,17 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, though that would only give you a few hints[end if].";
+		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, to complate Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
-		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to [if cinders are not moot]DISCERN or even [end if]RESCIND the cinders.";
-		if eels are not reflexed, say "[2dmiss of myreg]you could've [if sea cube is not moot]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
+		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] DISCERN (hint another item) or even, for a bonus point,[end if] RESCIND the cinders.";
+		if loop pool is unvisited:
+			say "[2dmiss of myreg]you could've checked north of the Disowned Downside for the other way to regain your powers.";
+		else if eels are not reflexed:
+			say "[2dmiss of myreg]you could've [if sea cube is not moot]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
+		if bran barn is not visited:
+			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
 		if gore ogre is not moot, say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
@@ -21927,7 +21973,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
 	else:
-		say "Region not found."
+		say "Region [myreg] not found. This should never bee seen, but if it is, it is a bug."
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
 	say "An all-feat leaflet flutters over the fourth wall.";
