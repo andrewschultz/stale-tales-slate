@@ -141,19 +141,16 @@ understand "gnl" as gnling.
 
 carry out gnling:
 	ply-table table of general nudges;
+	ply-table regtab of mrlb;
+	ply-table roomnud of location of player;
 	the rule succeeds;
 
 to ply-table (tn - a table name):
 	say "Here are nudges from [tn]";
 	let in-room be false;
 	repeat through tn:
-		if there is a this-room entry:
-			if this-room entry is location of player:
-				now in-room is true;
-				say ".[line break](room [this-cmd entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				next;
 		if there is a this-item entry:
-			if this-item entry is visible:
+			if this-item entry is touchable:
 				say ".[line break](item [this-item entry]) [this-cmd entry] [hashval entry] is a valid hash try";
 				next;
 		if there is a this-rule entry:
@@ -161,8 +158,7 @@ to ply-table (tn - a table name):
 			if the rule succeeded:
 				say ".[line break](rule [this-rule entry]) [this-cmd entry] [hashval entry] is a valid hash try";
 				next;
-		if in-room is true:
-			say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";
+		say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";
 	say "."
 
 chapter redefining Emily Short's property checking
@@ -455,6 +451,22 @@ carry out bouing:
 		say "[Q] has bounding scenery ([BS]): [list of bounding things in Q].";
 	say "No bounding: [list of noboundy rooms].";
 	the rule succeeds.
+
+section check off nudge tables - not for release
+
+this is the check nudge tables rule:
+	repeat with X running through rooms:
+		if X is in meta team, next;
+		unless roomnud of X is table of no good guesses, next;
+		if "[X]" matches the text "nowt", case insensitively:
+			next;
+		if "[X]" matches the text "trips strip", case insensitively: [ trips strip = stores in SA]
+			next;
+		if "[X]" exactly matches the text "room", case insensitively: [room-only in Sortie has nothing special]
+			next;
+		if "[X]" exactly matches the text "softer forest", case insensitively: [Softer Forest has nothing specific to it, shares with Rest of Forest]
+			next;
+		say "Define table of nudges for [X].";
 
 STS tests ends here.
 

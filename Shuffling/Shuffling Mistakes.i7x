@@ -320,8 +320,6 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 chapter Undesired Underside
 
-understand "singers" as a mistake ("The beats would drown the singers out.") when player is in Undesired Underside.
-
 understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in Undesired Underside and a reading is in Undesired Underside.
 
 [def=nerd door w]
@@ -332,6 +330,8 @@ understand "refind" as a mistake ("Whether you're trying to act refinEd or to fi
 understand "resign" and "resigns" as a mistake ("Reverse psychology won't work on the ingress, here.") when player is in Undesired Underside.
 
 understand "senors" and "senor" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in Undesired Underside.
+
+understand "singers" as a mistake ("The beats would drown the singers out.") when player is in Undesired Underside.
 
 understand "snores" and "snore" as a mistake ("[if esoteric coteries is visited]No need to put the sensor to sleep now you got what you want[else]Any noise would be better than the beats, but without the sensor, you're probably not getting by the door[end if].") when player is in Undesired Underside.
 
