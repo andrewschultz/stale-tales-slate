@@ -13,6 +13,8 @@ files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.tx
 ~	slider	t4
 ~	pad	t5
 
+ALSO-IGNORE:mbb *,t
+
 ## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimum walkthrough with second alternate	## walkthrough with all nudges	## walkthrough with slider readings
@@ -156,6 +158,9 @@ Hey! No beating yourself up. You'll probably do it wrong, anyway.
 #mistake test for race
 >race
 Races scare you without the proper motivation from inside.
+#mistake test for a rec
+>a rec
+You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
 
 #not a mistake
 >care
@@ -707,6 +712,7 @@ It's not the label but what's on it.
 >bottel
 It's not just any bottle, but a bottle of Pernod.
 >x pernod
+###skip test checking
 #renudge for bottle
 >bottel
 It's not just any bottle, but a bottle of N-E-Prod.

@@ -1,10 +1,14 @@
+# run this file with rbr.py
+#
 files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt,reg-roi2-otters-slider.txt
+
+## *FILE
+
 ~	max	t0
 ~	min	t1
-~	nud	t2
+~	nudmis,nudges,nud,nu	t2
 ~	alt	t3
 ~	sli	t4
-## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path	## walkthrough with slider readings
 
@@ -183,7 +187,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
->plop
 #nudge for bossy
 >bosys
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
@@ -442,7 +445,9 @@ You feel a surge, but not enough. Both medals seem tarnished. Maybe that's holdi
 @alt
 >s
 >although
+###skip test checking
 >ergo
+###skip test checking
 >misses
 --you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
 --you could've said HOWEVER
@@ -484,6 +489,7 @@ REGION MIN INCREASED BY 1, 3 OVERALL.
 >htlahguo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >although
+###skip test checking
 #slider test for ergo
 >reog
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -694,7 +700,7 @@ You don't need a river or two impeding your progress.
 #mistake test for green lady
 >green lady
 You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
-
+\\
 #nudge for shiner
 >shinre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -746,11 +752,13 @@ The settler then gets garbled a bit. The imp probably more than one way to be ac
 by one point
 #altpath
 >angrily
+###skip test checking
 >thisalt
 --you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
 >undo
 >undo
 >enragedly
+###skip test checking
 >thisalt
 --you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
 >undo
@@ -940,6 +948,7 @@ The badger already feels second-rate, so you need another way to help it.
 >undo
 >undo
 >garbed
+###skip test checking
 >artsy
 DEBUG INFO: Adding a min point for this flip.
 >score
@@ -949,7 +958,9 @@ Score in a scenario: 18 out of 32 total points in the current region, Otters. Lo
 >undo
 >undo
 >garbed
+###skip test checking
 >artsy
+###skip test checking
 >paroled
 DEBUG INFO: Adding a min point for this flip.
 >score
@@ -960,8 +971,11 @@ Score in a scenario: 18 out of 32 total points in the current region, Otters. Lo
 >undo
 >undo
 >garbed
+###skip test checking
 >artsy
+###skip test checking
 >paroled
+###skip test checking
 >coolest
 DEBUG INFO: Adding a min point for this flip.
 >score
@@ -1028,6 +1042,7 @@ The settler then garbles and changes. The whiners have more than one way of stay
 
 @alt
 >tersely
+###skip test checking
 >stoically
 They find another place where rioters roister.
 >thisalt
@@ -1203,6 +1218,7 @@ Score in a scenario: 25 out of 32 total points in the current region, Otters. Lo
 >undo
 >undo
 >snipe
+###skip test checking
 >raccoon
 DEBUG INFO: Adding a min point for this flip.
 >score
@@ -1212,7 +1228,9 @@ Score in a scenario: 25 out of 32 total points in the current region, Otters. Lo
 >undo
 >undo
 >snipe
+###skip test checking
 >raccoon
+###skip test checking
 >hornets
 DEBUG INFO: Adding a min point for this flip.
 >score
@@ -1223,8 +1241,11 @@ Score in a scenario: 25 out of 32 total points in the current region, Otters. Lo
 >undo
 >undo
 >snipe
+###skip test checking
 >raccoon
+###skip test checking
 >hornets
+###skip test checking
 >snail
 DEBUG INFO: Adding a min point for this flip.
 >score

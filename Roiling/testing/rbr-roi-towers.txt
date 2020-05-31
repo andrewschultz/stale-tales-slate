@@ -7,6 +7,8 @@
 # spechelp should be right before @!minh,mini
 # what is towers-f for? Can we delete it?
 
+ALSO-IGNORE:cheat
+
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt
 ~	max	t0
 ~	minh	t1
@@ -348,9 +350,23 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 50 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 50.
 @!
->put tarts in toaster
 >eat tarts
+You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad.
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
+>undo
+>put tarts in toaster
+Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
 >xray butlers
+Hmm. You bet you could get past if the bluster butlers were SUBTLER.
+DEBUG INFO: Taking away a max point.
+
+@minh
+>purloin brownies
+>put brownies in toaster
+The x-ray vision comes back. Once again, you can XRAY what you want to.
+>xray diners
+Hmm. You bet you could get past if the snider diners were RINSED.
+!DEBUG INFO: Taking away a max point.
 
 @nud
 #mistake test for worse
@@ -726,6 +742,7 @@ Work on the whole sled rut.
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
 >take strudel
+You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well.
 >strudle
 You almost expect the strudel to hop up, but the moment passes.
 #readables for strudel
@@ -734,6 +751,7 @@ DR. ELTUS recommends this strudel!
 
 @max
 >take strudel
+###skip test checking
 #pre-strudel-rustled rule
 >rustled
 (Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)
@@ -887,7 +905,7 @@ Your score has just gone up by one point
 >released
 Your score has just gone up by one point
 
-@!minh, mini
+@!minh,mini
 >himself
 Your score has just gone up by one point
 
@@ -1027,6 +1045,7 @@ His full name, Liam Garn.
 
 @nud
 >gt gradient
+###skip test checking
 #renudge for gradient
 >gradinet
 This is a weird place, being at the crossroads, but better to mess around elsewhere
@@ -1369,6 +1388,7 @@ Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 
 @nud
 >rowdy
+###skip test checking
 #rescannotes for dr yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
@@ -1379,6 +1399,9 @@ Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 Your score has just gone up by one point
 
 @nud
+>wordy
+You recharge Dr. Yow's wordiness.
+!by one point
 #rescannotes for dr yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
@@ -1763,12 +1786,14 @@ ALBERT'S.
 
 @nud
 >robust
+by one point
 #done rejects for turbos
 >turbso
 The turbos are working. Best not tinker.
 >undo
 >undo
 >stabler
+by one point
 #done rejects for blaster
 >blastre
 The blaster is working. Best not tinker.
@@ -1790,11 +1815,14 @@ Despite your lack of technical knowledge, you think you almost did...something t
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 #readables for blaster
 
-@minh,mini
+@!minh,mini
 >robust
+by one point
 >stabler
+by one point
 @!
 >robust
+by one point
 >enter boat
 Rawest Waters
 >nearest
@@ -1917,6 +1945,7 @@ Your score has just gone up by one point
 # add minimum point here
 DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
 >score
+WRONG
 
 @nud
 #mistake test for occurs
@@ -2042,10 +2071,10 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 >curst palaec
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 #rescannotes for curst palace
->cheat
 >scan curst palace
 The final letter clue blinks alternately with the fifth--neither is purple at the same time
->cheat
+>scan curst palace
+The final letter clue blinks alternately with the fifth--neither is purple at the same time
 Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >spectacular

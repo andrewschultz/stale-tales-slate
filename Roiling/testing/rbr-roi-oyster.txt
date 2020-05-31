@@ -6,7 +6,7 @@ files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt
 
 ~	max	t0
 ~	min	t1
-~	nudges,nud,nu	t2
+~	nudmis,nudges,nud,nu	t2
 ~	sli	t3
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
@@ -405,6 +405,9 @@ The streamlets change, and don't change, at the same time. But that's just becau
 #nudge for streamlets
 >streamlest
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
+#mistake test for a cone
+>a cone
+That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.
 #nudge for canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
@@ -704,6 +707,9 @@ Your score has just gone up by one point
 Lean Lane
 
 @nud
+#mistake test for a nut
+>a nut
+That's not nice. You are a guest.
 #mistake test for redraw
 >redraw
 Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.

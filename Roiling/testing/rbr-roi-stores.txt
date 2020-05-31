@@ -19,6 +19,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @nud
 #mistake test for throes
 >rove over
+Strip of Profits
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try thinking of a more common word.
 #nudge for storer
@@ -129,6 +130,9 @@ You don't need to riff on any location names to win the game, unless there's not
 >montaeg
 It's probably counterproductive to change--it's more an information booth.
 >x montage
+Also, the montage was created by Tom Egan. Of course. Can't say he was not game.
+>x montage
+!Also, the montage was created by Tom Egan. Of course. Can't say he was not game.
 #nudge for engraving
 >engravign
 The engraving is meant to be read. You can modify it with other actions.
@@ -250,9 +254,12 @@ You're a hero and all, but only one sample per day. Just think of the field day 
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 >tokers
+by one point
 #nudge for toker
-They already lost one of their collective, man. It'd be a bummer if they lost another.
 >tokre
+They already lost one of their collective, man. It'd be a bummer if they lost another.
+>undo
+>undo
 
 @!min
 >nestor
@@ -293,7 +300,7 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
 @!min
 >enter steaming
-
+\\
 Cruelest Lectures
 
 @nud
@@ -331,6 +338,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #?? do better
 >push ian
+Before you can do anything with or to Ian, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you
 #nudge for example
 >exampel
 The lecturer is unchangeable in his views, but maybe he is physically movable.

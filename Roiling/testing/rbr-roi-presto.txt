@@ -178,6 +178,9 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 Char Arch
 
 @nud
+#mistake test for a gps
+>a gps
+A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
 #mistake test for tars
 >tars
 But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
@@ -243,6 +246,7 @@ You try, but fail, to make something out of nothing.
 >pag
 You try, but fail, to make something out of nothing.
 >x cistern
+!You take a peek in--to see a dart in there.
 
 @nud
 #spechelp for dart
@@ -281,12 +285,13 @@ The tars remain heterogeneous. And very sticky. And the same size.
 Being an arts tsar won't help. You need a word that shows anger.
 #mistake test for tard
 >tard
-Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion
+Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.
+You see red at your slight indiscretion
 >tard
 Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
 You don't feel dumb after doing this, so there's no need to use that word again
 >tard
-You are just trolling now. No further clues for you[stopping].
+You are just trolling now. No further clues for you.
 
 #not a mistake
 >rats
@@ -473,6 +478,7 @@ Score in a scenario: 7 out of 37 total points in the current region, Presto. Low
 >n
 >gonear runway
 >scan lev
+###skip test checking
 >mazeltov
 #notmax
 Your score has just gone up by two points
@@ -751,7 +757,7 @@ It's time for something more cordial than whupass. Besides, you have no can to p
 #mistake retest for tard
 >tard
 You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.
->mistake retest for leonard/renaldo/leandro/rolande
+#mistake retest for leonard/renaldo/leandro/rolande
 >leonard
 You need to find a way to cheer them up.
 
@@ -765,7 +771,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
->mistake retest for leonard/renaldo/leandro/rolande
+#mistake retest for leonard/renaldo/leandro/rolande
 >leonard
 You wouldn't want that, now they're your friends.
 #mistake retest for asswhup/whupass
@@ -841,8 +847,8 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 >s
 #renudge for ether
-The ether is gone. You can just go back north.
 >ethre
+The ether is gone. You can just go back north.
 >n
 
 @sli
@@ -991,6 +997,7 @@ You mumble other words to shoo Rand and Leo, but you sort of miss them. It was m
 >undo
 >undo
 >so long
+by one point
 >tough
 #pre-harpings-flip rule
 You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
@@ -998,7 +1005,9 @@ You mumble other words to shoo Rand and Leo, but you sort of miss them. It was m
 >undo
 >undo
 >tough
+by one point
 >so long
+by one point
 >later
 #pre-harpings-flip rule
 You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
@@ -1076,6 +1085,8 @@ Hacks' Shack
 
 @max
 >get polemic
+You take it. You don't need to, but it'd be nice to have handy.
+!Taken.
 >s
 #pre-polemic-compile rule
 >compile
@@ -1253,6 +1264,7 @@ Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is c
 >scan drive a
 It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
 >x drive a
+It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status.
 >scan drive a
 It's DRIVE A, A DRIVE and VARIED, which may be what's causing the whole jumble.
 #nudge for clack
@@ -1332,9 +1344,11 @@ YOU HAVE WHAT YOU NEED.
 >diks
 Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
 >disk
+###skip test checking
 >skdi
 Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did.
 >skid
+###skip test checking
 #nudge for caps
 >casp
 It'd sort of stink if a caps lock button broke in real life, so, no.

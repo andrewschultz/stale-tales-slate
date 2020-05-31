@@ -6,6 +6,8 @@ files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ord
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
+ALSO-IGNORE:c,t
+
 ## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## slider testing
@@ -80,6 +82,8 @@ The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
 >niceh
 It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'
 >get notepad
+Good choice taking the notepad. It'll help you tame lots that's meta, mate.
+Taking the pedanto-notepad uncovered some sad ads on the chair.
 #nudge for sad
 >sda
 The ads have probably gone through enough word-twisting.
@@ -138,6 +142,7 @@ You can flip everything on the diorama except the notice.
 >dioraam
 Nat Egam, the Gateman, assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
 >x dope
+The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
 #nudge for gape
 >gaep
 You feel like you physically want to crumple up the page, but you just stare blankly at it.
@@ -159,6 +164,7 @@ You try and twist Elvira's words or poke holes where they're wrong...and you can
 #nudge for herarts
 >gs
 >herarst
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 >gs
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 #nudge for billy
@@ -488,7 +494,6 @@ You don't need to do any more with the stair.
 @!min
 >out
 >u
-
 Highest Heights
 
 @nud
@@ -531,31 +536,43 @@ The ramp is useful now. Best keep it.
 @nud
 #spechelp for pavement
 >event mpa
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.
 >event map
-WRONG
+The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
 #spechelp for event map
 >pavemetn
-WRONG
+You know what to change it back to. There's no third option.
+>pavement
+The event map folds back into a thoroughly more dull pavement.
 #spechelp for crabgrass
 >brass crga
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.
 >brass crag
-WRONG
+The crabgrass dries out and becomes a brass crag.
 #spechelp for brass crag
 >crabgrssa
-WRONG
+You know what to change it back to. There's no third option.
+>crabgrass
+The brass crag becomes slightly less lifeless crabgrass, again. Reading the notice briefly, you see that things won't be this flexible out in the real world.
 #spechelp for platform
 >farm plto
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.
 >farm plot
 WRONG
 #spechelp for farm plot
 >platfomr
+You know what to change it back to. There's no third option.
+>platform
 WRONG
 #spechelp for pedestal
 >steel pda
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.
 >steel pad
 WRONG
 #spechelp for steel pad
 >pedestla
+You know what to change it back to. There's no third option.
+>pedestal
 WRONG
 
 >d
@@ -709,6 +726,7 @@ Carven Cavern
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for stapler
 >tspaerl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #nudge for cavern
@@ -749,6 +767,7 @@ That's already been done, and quite well, by Alan Garner in The Owl Service. If 
 You are a text adventurer, not a fashion designer.
 #mistake retest for trainer
 >stapler
+by one point
 >trainer
 You're on your own. Perhaps you'd be better off twiddling the plates to get on with things.
 >undo
