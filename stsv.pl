@@ -21,6 +21,8 @@ my $doShuf   = 1;
 my $doRoil   = 1;
 my $byLength = 0;
 
+my $clue_text_col = 4;
+
 # the hash
 my %ary = (
   "a" => 2187818,
@@ -105,7 +107,8 @@ my @shufflingArray =
 if ($doShuf) {
   $gotAnyBad = 0;
   for $reg (@shufflingArray) {
-    hashVer( "shuffling", 0, 1, "table of $reg nudges", 5, "nudges" );
+    hashVer( "shuffling", 0, 1, "table of $reg nudges",
+      $clue_text_col, "nudges" );
 
     hashVer( "shuffling", 3, 6, "table of $reg anagrams", 0, "tables" )
       if $anagramCheck;
@@ -115,7 +118,8 @@ if ($doShuf) {
 if ($doRoil) {
   $gotAnyBad = 0;
   for $reg (@roilingArray) {
-    hashVer( "roiling", 0, 1, "table of $reg nudges", 5, "nudges" );
+    hashVer( "roiling", 0, 1, "table of $reg nudges", $clue_text_col,
+      "nudges" );
 
     hashVer( "roiling", 3, 6, "table of $reg anagrams", 0, "tables" )
       if $anagramCheck;

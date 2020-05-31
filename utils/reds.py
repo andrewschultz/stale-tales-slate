@@ -141,8 +141,11 @@ def tricky_verify(target_words, from_words):
     if ret_val: return ret_val
     settler_read = from_words[0]
     from_words_mod = from_words[1:]
-    for x in range(0, len(target_words)):
+    flag_this = False
+    correct_str = ""
+    for x in range(0, len(target_words[0])):
         if type_conflict(target_words, x):
+            print("Type conflict character", x)
             temp = '?'
         else:
             any_right = 0
@@ -154,9 +157,13 @@ def tricky_verify(target_words, from_words):
                     else:
                         any_wrong += 1
             temp = settler_should_read(target_words[0][x], any_right, any_wrong)
+        correct_str += temp
         if temp != settler_read[x]:
             print("Uh oh position", x+1, "/", target_words[0][x], "in", settler_read, "is wrong for", ','.join(target_words), '/', ','.join(from_words[1:]), ": should be", temp, "but is", settler_read[x])
             ret_val += 1
+            flag_this = True
+    if flag_this:
+        print("Change", settler_read, "to", correct_str)
     return ret_val
 
 def verify_one_array(my_array):
@@ -187,6 +194,13 @@ def verify_one_array(my_array):
 
 def verify_one_line(my_line):
     return verify_one_array(my_line.split(","))
+
+def test_for_code_change():
+    print("Should be ok:")
+    tricky_verify(['until'], ['YRR?R', 'nulli', 'tunit']) # right
+    print("Should not be ok:")
+    tricky_verify(['until'], ['YRY?R', 'nulli', 'tunit']) # wrong
+    sys.exit()
 
 def verify_reds_file(my_file):
     bad_lines = total_errors = 0

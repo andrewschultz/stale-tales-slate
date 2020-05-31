@@ -39,6 +39,8 @@ flag_double_comments = False
 open_post = False
 clear_files = False
 
+TEXT_COLUMN = 4
+
 def poss_tweak(a):
     for to_say in say_dict:
         if to_say in a:
@@ -71,9 +73,11 @@ def pre_process(sts):
                 say_stuff = re.sub("\".*", "", say_stuff)
                 say_dict[say_note] = say_stuff
                 continue
-            if re.search("table of .* nudges", line):
-                current_table = sts + '-' + re.sub("nudges.*", "nudges", line.strip().lower())
-                # print("Current table now", current_table)
+            if line.startswith("chapter "):
+                chapter_name = re.sub("^chapter ", "", line.strip().lower())
+                chapter_name = re.sub(" nudges.*", "", chapter_name.strip().lower())
+                current_chapter = sts + '-' + chapter_name
+                print("Current chapter now", current_chapter)
                 continue
             if re.search("\"\t[0-9]", line) and not line.startswith('['):
                 line = re.sub(" *\[[^\]]+\]$", "", line.strip())
@@ -81,11 +85,11 @@ def pre_process(sts):
                 l = re.sub("\"", "", tlist[0])
                 if ' ' in l:
                     print("WARNING line", line_count, "has space in the word-key.")
-                cmd_tries[current_table][l] = line_count
-                got_nudges[current_table][l] = False
+                cmd_tries[current_chapter][l] = line_count
+                got_nudges[current_chapter][l] = False
                 if l in nudge_text[sts]:
                     print("Redefinition of {} at line {} in nudge file for {}.".format(l, line_count, sts))
-                nudge_text[sts][l] = re.sub("\"", "", tlist[5])
+                nudge_text[sts][l] = re.sub("\"", "", tlist[TEXT_COLUMN])
                 if test_match_up[l]:
                     suggested_try = "???"
                     dupes += 1
@@ -118,8 +122,9 @@ def poke_nudge_files(gm):
     global dupe_global
     global re_global
     global to_add_global
-    tn = re.sub(".*table of", "table of", gm)
-    proj = re.sub("-.*", "", gm)
+    ary = gm.split("-")
+    tn = ary[1]
+    proj = ary[0]
     nf = i7.hdr(proj, 'nu')
     count = count2 = count3 = 0
     to_add = 0
