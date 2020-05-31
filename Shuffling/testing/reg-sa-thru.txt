@@ -36,35 +36,31 @@ Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >salt mine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
+`mi
 #mistake test for scan
 >scan
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 #mistake test for scan [text]
 >scan xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
 #mistake test for c
 >c
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 #mistake test for c [text]
 >c xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
 #mistake test for r
 >r
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 #mistake test for r [text]
 >r xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
 #mistake test for cr
 >cr
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
 #mistake test for cr [text]
 >cr xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
-
 #mistake test for rc
 >rc
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.

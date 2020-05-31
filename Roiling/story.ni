@@ -6437,7 +6437,7 @@ rule for supplying a missing noun when listening:
 	repeat with Q running through smell-candidates:
 		if Q is touchable:
 			now the noun is Q;
-			the rule succeeds;
+			continue the action;
 
 check smelling (this is the you can smell some stuff some places rule): [see about smelling things]
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
@@ -6476,7 +6476,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Disowned Downside, say "You can [if macks are touchable]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
-	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek clearly eliminates all hope of silly fun." instead;
+	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin['] cyanide, too." instead;
 	if noun is slime, say "The slime actually smells...nice, like dishwashing detergent." instead; [others]
 	if mrlp is others, say "Smells, savory, vary so." instead;
 	say "Aroma-o-rama? Nothing's [i]tons[r] nigh." instead;
@@ -8142,7 +8142,7 @@ understand "snibs" as snib.
 
 section evac-cave
 
-the evac cave is boring scenery in Largely All-Grey Gallery. description of the evac-cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
+the evac cave is boring scenery in Largely All-Grey Gallery. description of the evac cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
 
 printed name of evac cave is "the evac-cave".
 
@@ -19019,7 +19019,7 @@ the warpish warship is amusing boring scenery in Rancho Archon Anchor. descripti
 
 a stocked stockade is amusing boring scenery in Rancho Archon Anchor. description of a stocked stockade is "You don't know the details, being the good guy and all, but you don't need to.". bore-text is "You shudder to think what you could do with it--or what it could do to you.".
 
-Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]'Coren,' she cries, over the rapidly vaporizing body of her pet hydra.[or]Elvira seems impatient for you to make a move.[stopping]". description is "Elvira's actually got ... persistent prettiness. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
+Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]She looks upset, still, over the death of her hardy hydra[or]Elvira seems impatient for you to make a move[stopping].". description is "Elvira's actually got ... persistent prettiness. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
 
 Elvira wears the Ultimate Mutilate-It Amulet.
 
@@ -19064,7 +19064,7 @@ prompt	response	enabled
 
 chapter hydra
 
-The hardy hydra is an animal in Rancho Archon Anchor. description is "One whiff of the decayin['] cyanide smell proves he melts helmets.". the hardy hydra is scenery.
+The hardy hydra is scenery in Rancho Archon Anchor. description is "One whiff of the decayin['] cyanide smell proves he melts helmets.". the hardy hydra is scenery.
 
 volume others
 

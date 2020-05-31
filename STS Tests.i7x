@@ -173,7 +173,7 @@ When play begins (this is the modified run property checks at the start of play 
 	repeat with item running through things:
 		if item is a person, follow the property-check rules for item;
 	repeat with person running through people:
-		if initial appearance of person is empty:
+		if initial appearance of person is empty and person is not scenery:
 			increment init-mt-ppl;
 			say "APPEARANCE IN ROOM [init-mt-ppl] [person].";
 	repeat with item running through things:

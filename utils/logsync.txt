@@ -154,6 +154,8 @@ adsorbing signboard~pat's stap>past
 cravings carvings~speed it sit deep>despite
 pipe soot>opposite
 a bev o be ova>above
+null it unit>until
+odd run on aura>around
 morf form>from
 seed pit>despite
 hurt hog>through
@@ -165,7 +167,7 @@ yob den>beyond
 # note that "all" is clipped in the table_shorten function
 all noon gag>along
 un-road>around
-da mist>amidst
+admits mist ad>amidst
 ####cripple clipper
 thickness sketchins~whattar tawrath thatraw artthaw>athwart
 ########REGION troves
@@ -547,7 +549,7 @@ green stain>tangerines
 miser ruble>mulberries
 sorer bogey>gooseberry
 riot cap>apricot
-silly shirt~esp pal>apples
+psa elp>apples
 ####filed field
 buried raft>breadfruit
 mean trowel>watermelon
