@@ -26,6 +26,8 @@ cfg_file = "c:/writing/scripts/rorg.txt"
 ignore_full = defaultdict(bool)
 ignore_start = defaultdict(bool)
 
+nudge_exp_cols = i7.cols_of(i7.hdr('sts', 'co'), "table of no nudges", 5, warn_if_different = True)
+
 verbose = False
 
 copy_file = False
@@ -123,7 +125,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                 continue
             if in_table:
                 lary = line.lower().strip().split("\t")
-                if exp_cols and len(lary) != exp_cols: print("Bad # of tabs in table at line {:d}. Should have 6.".format(line_count))
+                if exp_cols and len(lary) != exp_cols: print("Bad # of tabs in table at line {:d}. Should have {}.".format(line_count, exp_cols))
                 for x in range(0, len(lary)):
                     if lary[x].endswith(" rule") and lary[x] != 'a rule' and lary[x] not in table_order:
                         temp = re.sub("^the ", "", lary[x].lower())
@@ -290,6 +292,6 @@ with open(cfg_file) as file:
 
 for x in game_ary:
     if do_nudges:
-        alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", 6)
+        alf_stuff(i7.hdr(x, "nu"), "book nudge tables", "book auxiliary text and rules", "book auxiliary text and rules", "book support rules", "this-cmd", nudge_exp_cols)
     if do_tables:
         alf_stuff(i7.hdr(x, "ta"), "volume main anagram tables", "book auxiliary text and rules", "book auxiliary text and rules", "book general auxiliary rules", 0)

@@ -410,7 +410,7 @@ carry out hashchecking:
 	if my-bool is false:
 		say "Hooray! No bad hashes in tables of anagrams.";
 	now my-bool is false;
-	repeat through regtab of mrlp:
+	repeat through regnud of mrlp:
 		now this-hash is the hash of this-cmd entry;
 		if this-hash is not hashval entry:
 			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";
@@ -1422,23 +1422,21 @@ understand the command "nud" as something new.
 
 understand "nud" as nuding.
 
+to show-nudges (ta - a table name):
+	if ta is Table of No Nudges, continue the action;
+	repeat through ta:
+		if there is a this-item entry and this-item entry is not touchable, next;
+		if there is a this-rule entry:
+			process the this-rule entry;
+			unless the rule succeeded, next;
+		say "[this-cmd entry] can be nudged.";
+
 carry out nuding:
 	let nudges be 0;
 	let showit be false;
-	repeat through regtab of mrlp:
-		now showit is false;
-		if there is a this-item entry and this-item entry is visible:
-			now showit is true;
-		if there is a this-room entry and player is in this-room entry:
-			now showit is true;
-		if there is a this-rule entry:
-			follow the this-rule entry;
-			if the rule succeeded:
-				now showit is true;
-		if showit is true:
-			say "[this-cmd entry] can be nudged.";
-			increment nudges;
-	if nudges is 0, say "nothing oh dear that's wrong!";
+	show-nudges regnud of mrlp;
+	show-nudges roomnud of location of player;
+	if nudges is 0, say "Nothing can be nudged. Oh dear, that's wrong!";
 	else say "total nudge(s) [nudges]"
 
 chapter rejching

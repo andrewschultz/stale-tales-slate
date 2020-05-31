@@ -457,7 +457,7 @@ section check off nudge tables - not for release
 this is the check nudge tables rule:
 	repeat with X running through rooms:
 		if X is in meta team, next;
-		unless roomnud of X is table of no good guesses, next;
+		unless roomnud of X is Table of No Nudges, next;
 		if "[X]" matches the text "nowt", case insensitively:
 			next;
 		if "[X]" matches the text "trips strip", case insensitively: [ trips strip = stores in SA]

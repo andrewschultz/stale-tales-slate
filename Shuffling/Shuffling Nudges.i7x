@@ -20,11 +20,11 @@ chapter ordeal loader
 
 table of Ordeal Loader nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"ordeal"	364513235	--	degen-true rule	"[reg-rej]." [end-ordeal-loader]
+"ordeal"	364513235	--	degen-true rule	"[reg-rej]."
 
 table of Busiest Subsite nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"busiest"	591981617	--	--	"[loc-rej]." [start Busiest Subsite]
+"busiest"	591981617	--	--	"[loc-rej]."
 "slim"	259155804	--	--	"[name-list]."
 "neat"	302011453	--	--	"[name-list]."
 "name"	262976588	--	--	"[name-list]."
@@ -38,7 +38,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Rested Desert nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"rested"	561349094	--	--	"[loc-rej]." [start Rested Desert]
+"rested"	561349094	--	--	"[loc-rej]."
 "breeze"	610130653	odor	--	"[nope-odor]."
 "smlel"	395782906	odor	--	"[nope-odor]."
 "musical"	385455014	OR DO Door	--	"[com-chor]."
@@ -47,7 +47,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Thickest Thickets nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"thickets"	584514019	--	--	"[loc-rej]." [start Thickest Thickets]
+"thickets"	584514019	--	--	"[loc-rej]."
 "thicket"	488240053	--	--	"[loc-rej]"
 "darnel"	359068166	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
 "shrub"	342404780	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
@@ -74,7 +74,7 @@ chapter stores
 
 table of Stores nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"trips"	411166592	--	--	"[loc-rej]." [start Trips Strip]
+"trips"	411166592	--	--	"[loc-rej]."
 "tepid"	378404021	--	--	"[tid]."
 "tepidicon"	585662537	--	--	"[tid]."
 "icon"	207258516	--	--	"[tid]."
@@ -169,13 +169,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "subway"	452280521	store m	--	"[no-store-m]."
 "subwaymap"	600009451	store m	--	"[no-store-m]."
 "hubs"	257080977	hubs bush	--	"[hub-stur]."
-"buh"	160807011	hubs bush	--	"[hub-stur]." [end-stores]
+"buh"	160807011	hubs bush	--	"[hub-stur]."
 
 chapter forest
 
 table of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"conifer"	446903324	--	first-two-forest rule	"[no-con]." [START OF SOFTER FOREST]
+"conifer"	446903324	--	first-two-forest rule	"[no-con]."
 "conifers"	543177290	--	first-two-forest rule	"[no-con]."
 "rambling"	370319574	rambling shout	--	"[guider-content]."
 "whiff"	243239710	whiff of stew	--	"[guider-content]."
@@ -194,15 +194,15 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "ville"	387591453	river ville liver	--	"[rivliv]."
 "river"	450611381	river ville liver	--	"[rivliv]."
 "cylinder"	543238031	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
-"forest"	513381369	--	degen-true rule	"[if Self-ID Fields is visited][reg-rej][else][loc-rej][end if]." [end-f]
+"forest"	513381369	--	degen-true rule	"[if Self-ID Fields is visited][reg-rej][else][loc-rej][end if]."
 
 table of Rest of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"rest"	412513896	--	--	"[loc-rej]." [START OF REST OF FOREST]
+"rest"	412513896	--	--	"[loc-rej]."
 
 table of Self ID Fields nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"selfid"	370430745	--	--	"[loc-rej]." [START SELF-ID FIELDS]
+"selfid"	370430745	--	--	"[loc-rej]."
 "selves"	609138809	--	--	"The selves vessel is much too sturdy to manipulate."
 "vesel"	512864843	--	--	"The selves vessel is much too sturdy to manipulate."
 "crosse"	499036006	Corses Crosse	--	"[crosse-to-you]."
@@ -216,7 +216,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Flesh Shelf nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"shelf"	341691109	--	--	"The shelf is frozen that way. Ba dum bum." [FLESH SHELF START]
+"shelf"	341691109	--	--	"The shelf is frozen that way. Ba dum bum."
 "skin"	263107498	--	--	"The skin sink is frozen that way. Ba dum bum."
 "ink"	166833532	--	--	"The skin sink is frozen that way. Ba dum bum."
 "cities"	436181370	--	--	"[ice-cit]."
@@ -229,7 +229,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Gnarliest Triangles nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"triangles"	615015609	--	--	"The triangles need no alterings." [start Gnarliest Triangles]
+"triangles"	615015609	--	--	"The triangles need no alterings."
 "triangle"	518741643	--	--	"No triangle needs altering."
 "shell"	368990052	--	--	"[in-sort of dashes]."
 "bucket"	426379602	--	--	"[in-sort of ones]."
@@ -251,7 +251,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Cruel Ones Enclosure nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"cruel"	391055143	--	--	"[loc-rej]." [START OF CRUEL ONES ENCLOSURE]
+"cruel"	391055143	--	--	"[loc-rej]."
 "ones"	367340160	--	--	"[loc-rej]."
 "enclosure"	758395303	--	--	"[loc-rej]."
 "coffer"	359517866	--	--	"[scof-no]."
@@ -261,14 +261,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Ghouls Slough nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"slough"	399428190	--	--	"[loc-rej]." [START OF GHOULS' SLOUGH]
+"slough"	399428190	--	--	"[loc-rej]."
 "lough"	303154224	--	--	"[loc-rej]."
 "marsh"	285143039	--	--	"[marsh-lake]."
 "lake"	236740944	--	--	"[marsh-lake]."
 
 table of Frost Forst nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"frost"	385575260	--	--	"[loc-rej]." [START OF FROST FORTS]
+"frost"	385575260	--	--	"[loc-rej]."
 "snow"	347468824	--	--	"[froz-ha-ha]."
 "capital"	306763883	vowels	--	"You need to deal with all the capitals. And they're specific letters."
 "capitals"	403037849	vowels	--	"They aren't just any capitals. They're specific letters."
@@ -290,11 +290,11 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "were"	448870794	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed."
 "burlap"	346316131	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "wart"	298556412	warts	--	"Why zap just one wart? Go for all of them!"
-"shoe"	335714951	hoses	--	"There's more than one hose here." [start room]
+"shoe"	335714951	hoses	--	"There's more than one hose here."
 "pair"	213970426	hoses	--	"Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd."
 "sheo"	335714951	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
 "shoes"	431988917	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
-"room"	298104110	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]." [?? does this get found] [start moor]
+"room"	298104110	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]."
 "expo"	396392726	expo flier	--	"[expo-or-anapest]."
 "expoflier"	734844219	expo flier	--	"[expo-or-anapest]."
 "flire"	338451493	expo flier	--	"[expo-or-anapest]."
@@ -303,13 +303,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "papers"	474523614	--	got-plane rule	"It's a plane, now, for sure."
 "graffiit"	366236825	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	red graffiti	--	"Hm, there has to be a clue in it."
-"oil"	173159262	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]." [end-i]
+"oil"	173159262	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
 
 [check these as some may be useless now]
 
 table of trap part nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"part"	272087598	--	--	"You [if kitchen is not visited]need to manipulate something in the room to stop the spinning[else]don't want to go back to how the Trap Part was[end if]." [start Trap Part]
+"part"	272087598	--	--	"You [if kitchen is not visited]need to manipulate something in the room to stop the spinning[else]don't want to go back to how the Trap Part was[end if]."
 "sortie"	531859319	--	degen-true rule	"[reg-rej]."
 "centrifuge"	741172383	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	b4-cent rule	"[loc-rej]."
@@ -325,12 +325,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 table of the nick nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "graffiti"	366236825	--	--	"The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it."
-"greta"	351027450	--	--	"The grate remains impassive." [start the nick]
+"greta"	351027450	--	--	"The grate remains impassive."
 "nick"	185839117	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
 
 table of kitchen nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"kitchne"	454037543	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]." [start kitchen]
+"kitchne"	454037543	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
 "rendin"	416966863	--	--	"You don't need to change the red inn. It [if taco is off-stage]will support[else]supported[end if] your cooking efforts."
 "ditties"	541314892	--	--	"Don't let the songs distract you from your mission."
 "fridge"	338266445	--	--	"[fridge-abuse]."
@@ -353,7 +353,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Stiller Trellis nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"trellis"	565134420	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]" [start Stiller Trellis]
+"trellis"	565134420	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]"
 "arching"	290299561	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	crashing archings	--	"[loc-rej]."
 "hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
@@ -393,7 +393,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Sacred Cedars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"cedars"	351626370	--	--	"[loc-rej]." [start Sacred Cedars]
+"cedars"	351626370	--	--	"[loc-rej]."
 "cedar"	255352404	--	--	"[loc-rej]."
 "drawing"	362975539	--	--	"[best-not-defile]."
 "drawings"	459249505	--	--	"[best-not-defile]."
@@ -432,7 +432,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Undesired Underside nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"undesired"	698274326	--	--	"[loc-rej]." [Undesired Underside]
+"undesired"	698274326	--	--	"[loc-rej]."
 "titling"	451526777	--	--	"No, the tilting titling is unstable enough."
 "friend"	374574251	--	--	"[finder-cond]."
 "sensor"	548937929	--	--	"[finder-cond]."
@@ -452,7 +452,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Roarings Garrison nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"roarings"	489962023	--	--	"[loc-rej]." [Roarings Garrison]
+"roarings"	489962023	--	--	"[loc-rej]."
 "roaring"	393688057	--	--	"[loc-rej]."
 "tent"	402933653	tents	--	"As anti-personal property as the beatniks/moonies are, that'd still annoy them."
 "tents"	499207619	tents	--	"As anti-personal property as the beatniks/moonies are, that'd still annoy them."
@@ -470,7 +470,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Obtains Boastin Bastion nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"boastin"	408243638	--	--	"[loc-rej]." [boastin-obtains bastion]
+"boastin"	408243638	--	--	"[loc-rej]."
 "obtain"	311969672	--	--	"[loc-rej]."
 "candelabra"	400868292	--	--	"Interior decorating is not your strength."
 "carpets"	515173258	--	--	"Interior decorating is not your strength."
@@ -483,7 +483,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of the ol hotel nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"thelo"	396364842	--	--	"[loc-rej]." [the ol hotel]
+"thelo"	396364842	--	--	"[loc-rej]."
 "bottel"	480611466	--	--	"[no-ketch]."
 "ketchup"	526708955	--	--	"[no-ketch]."
 "catsup"	407149153	--	--	"You think of how to make the ketchup slightly classier. [no-ketch]."
@@ -543,7 +543,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Elm Train Terminal nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"tramline"	550217094	--	--	"[loc-rej]." [start tramline terminal]
+"tramline"	550217094	--	--	"[loc-rej]."
 "lairs"	282592272	--	--	"[fix-rail]."
 "lair"	186318306	--	--	"[fix-rail]."
 "track"	262560402	--	--	"[fix-rail]."
@@ -565,10 +565,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Bassy Abyss nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"bassy"	335513907	--	--	"[loc-rej]." [start Bassy Abyss]
+"bassy"	335513907	--	--	"[loc-rej]."
 "aligns"	298775679	--	--	"[aligns-no]."
 "align"	202501713	--	--	"[aligns-no]."
-"resin"	423304232	--	resin-lala rule	"The dust is dust now." [end-m]
+"resin"	423304232	--	resin-lala rule	"The dust is dust now."
 
 chapter resort
 
@@ -578,14 +578,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Astral Altars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"astral"	342897262	--	--	"[loc-rej]." [start astral altars]
+"astral"	342897262	--	--	"[loc-rej]."
 "altar"	246623296	--	--	"[loc-rej]."
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	--	--	"No, all the tiles."
 
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"leis"	322886760	--	--	"[loc-rej]." [start Leis Isle]
+"leis"	322886760	--	--	"[loc-rej]."
 "lie"	226612794	--	--	"[loc-rej]."
 "woodland"	423607270	--	--	"[loc-rej]."
 "sand"	188398381	--	--	"[the-sand]."
@@ -597,7 +597,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Rived Drive nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"drive"	386316667	--	--	"[loc-rej]." [start Rived Drive]
+"drive"	386316667	--	--	"[loc-rej]."
 "blow"	254520094	--	--	"You don't need to make any blow bowl more chaotic."
 "tool"	305629011	tool shed	--	"Hm, no, the whole tool shed."
 "shed"	282391463	tool shed	--	"Hm, no, the whole tool shed."
@@ -612,7 +612,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Potshot Hotspot nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"hotsopt"	569947414	--	--	"[loc-rej]." [start Potshot Hotspot]
+"hotsopt"	569947414	--	--	"[loc-rej]."
 "setter"	643430023	--	bull-moot rule	"It's Setter Street now. Seems like an appropriate tribute to a hero like you."
 "frust"	416328490	--	--	"The frust turfs are unchangeable."
 "turf"	320054524	--	--	"The frust turfs are unchangeable."
@@ -643,11 +643,11 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"manse"	359250554	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about." [start Means Manse]
+"manse"	359250554	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about."
 "extis"	484951020	--	--	"That's not quite the right sort of nothing."
 "marble"	351625627	--	--	"[ennui]."
 "spire"	435862683	--	--	"[ennui]."
-"toaster"	592164309	--	--	"[ennui]." [end-r]
+"toaster"	592164309	--	--	"[ennui]."
 
 chapter general
 

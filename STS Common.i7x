@@ -113,9 +113,9 @@ definition: a region (called rg) is explored:
 
 section room stuff
 
-a room has a table name called roomnud. roomnud of a room is usually the Table of No Good Guesses.
+a room has a table name called roomnud. roomnud of a room is usually the Table of No Nudges.
 
-table of no good guesses
+Table of No Nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 text	a number	a thing	a rule	text
 
