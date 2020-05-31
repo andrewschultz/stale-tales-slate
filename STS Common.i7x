@@ -116,8 +116,8 @@ section room stuff
 a room has a table name called roomnud. roomnud of a room is usually the Table of No Good Guesses.
 
 table of no good guesses
-this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-text	a number	a room	a thing	a rule	text
+this-cmd	hashval	this-item	this-rule (rule)	this-clue
+text	a number	a thing	a rule	text
 
 section region scoring
 

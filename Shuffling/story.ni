@@ -321,14 +321,13 @@ to decide whether (nt - a table name) is hash-found:
 				if the rule succeeded:
 					say "[this-clue entry][line break]";
 					decide yes;
-			if there is a this-room entry:
-				if location of player is this-room entry:
-					say "[this-clue entry][line break]";
-					decide yes;
-			if there is a this-item entry:
+			else if there is a this-item entry:
 				if this-item entry is touchable:
 					say "[this-clue entry][line break]";
 					decide yes;
+			else:
+				say "[this-clue entry][line break]";
+				decide yes;
 	decide no;
 
 to say reject:
@@ -349,6 +348,7 @@ to say reject:
 				now last-hash is hashkey entry;
 				continue the action;
 	now num-in-row is 0;
+	if roomnud of location of player is hash-found, continue the action;
 	if regnud of mrlp is hash-found, continue the action;
 	if table of general nudges is hash-found, continue the action;
 	say "[verb-cue]."

@@ -3435,14 +3435,18 @@ check entering a portal (this is the first portal entry rule):
 	the rule succeeds;
 
 to add-errs (reg - a region):
-	repeat through regnud of reg:
-		if there is a this-room entry and this-room entry is not a room, d "[this-room entry] wrongly listed as a room in [reg], [this-cmd entry]f.";
-		if there is a this-item entry and this-item entry is a room, d "[this-item entry] wrongly listed as a room in [reg], [this-cmd entry].";
+	scan-hash-errors regnud of reg;
+	repeat with X running through rooms in reg:
+		scan-hash-errors roomnud of X;
+
+to scan-hash-errors (tn - a table name):
+	repeat through tn:
+		if there is a this-item entry and this-item entry is a room, d "[this-item entry] wrongly listed as a room in [tn], [this-cmd entry].";
 		if there is no this-reg entry or this-reg entry is a region:
 			if there is no hashval entry or hashval entry is 0:
 				let XYZ be the hash of this-cmd entry;
 				now hashval entry is XYZ;
-				d "Making hashval entry [XYZ] for [this-cmd entry].[line break]";
+				d "Making hashval entry [XYZ] for [this-cmd entry] in [tn].[line break]";
 			else:
 				continue the action;
 				[d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";]
@@ -3539,10 +3543,6 @@ to decide whether (tn - a table name) is hash-found:
 							unless this-item entry is a mack-idea and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
 								say "[this-clue entry][line break]";
 								decide yes;
-					else if there is a this-room entry:
-						if location of the player is this-room entry:
-							say "[this-clue entry][line break]";
-							decide yes;
 					else if there is a this-rule entry:
 						say "[run paragraph on]";
 						follow this-rule entry;
@@ -3550,7 +3550,7 @@ to decide whether (tn - a table name) is hash-found:
 							say "[this-clue entry][line break]";
 							decide yes;
 					else:
-						d "Need error message for [this-cmd entry] misfire.";
+						decide yes;
 			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
 				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.";
 				now doublewarn is true;

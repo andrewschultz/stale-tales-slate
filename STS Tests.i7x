@@ -141,7 +141,7 @@ understand "gnl" as gnling.
 
 carry out gnling:
 	ply-table table of general nudges;
-	ply-table regnud of mrlb;
+	ply-table regnud of mrlp;
 	ply-table roomnud of location of player;
 	the rule succeeds;
 
