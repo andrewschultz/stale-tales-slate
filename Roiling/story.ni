@@ -231,6 +231,8 @@ a portal can be checkedoff or available. a portal is usually available.
 
 definition: a portal is slick if its diffic is 11 or less.
 
+[?? need to distinguish entered vs lumpable]
+
 for writing a paragraph about a lumpable portal (called ptl) :
 	say "You have [if number of lumpable touchable portals > 1]new places[else]a new place[end if] to explore![paragraph break]";
 	repeat with Q running through portals:
@@ -1396,7 +1398,7 @@ persuasion rule for asking haunter to try gotothinging ruby:
 	try objasking haunter about ruby instead;
 
 persuasion rule for asking haunter to try doing something:
-	if the player's command matches the regular expression "\b(ruby|places)\b", try objasking haunter about ruby instead;
+	if the player's command includes "ruby" or the player's command includes "places", try objasking haunter about ruby instead;
 
 persuasion rule for asking walleyes to try doing something:
 	say "They begin unglibly bullying. You're not in a bargaining position here.";
@@ -1452,9 +1454,10 @@ persuasion rule for asking agnostic to try gotoing subsector:
 	try objasking agnostic about Dr Yow instead;
 
 persuasion rule for asking agnostic to try doing something (this is the block agnostic going to Obscurest Subsector rule) :
-	if the player's command matches the regular expression "gizmo" and player has gizmo, try giving gizmo to agnostic instead;
-	if the player's command matches the regular expression "(boat|bot)" and bot boat is in Actionless Coastlines, try objasking agnostic about bot boat instead;
-	if the player's command matches the regular expression "\b(doctor|dr|yow)":
+	if the player's command includes "gizmo" and player has gizmo, try giving gizmo to agnostic instead;
+	if the player's command includes "boat" or the player's command includes "bot":
+		if bot boat is in Actionless Coastlines, try objasking agnostic about bot boat instead;
+	if the player's command includes "doctor" or the player's command includes "dr" or the player's command includes "yow":
 		if Obscurest Subsector is unvisited:
 			say "You don't know about that area yet.";
 			persuasion fails;
@@ -3527,8 +3530,18 @@ to say good-enuf of (goody - a thing):
 	if goody is ram1 or goody is ram2 or goody is ram3:
 		say "The whiners were already slowed up that way.";
 		continue the action;
-	d "The table of done rejects could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
+	if noun is part of the diorama:
+		if dio-other of noun is not off-stage:
+			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.";
+			continue the action;
+	d "The table of done rejects could still use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.[no line break]";
+
+to decide what thing is dio-other of (di - a thing):
+	repeat through table of Ordeal Reload anagrams:
+		if the-from entry is di, decide on the-to entry;
+	say "<no dio-other entry, going with the thing itself. BUG.>";
+	decide on di;
 
 firstwordhash is a number that varies.
 cmdhash is a number that varies.
@@ -3550,6 +3563,7 @@ to decide whether (tn - a table name) is hash-found:
 							say "[this-clue entry][line break]";
 							decide yes;
 					else:
+						say "[this-clue entry][line break]";
 						decide yes;
 			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
 				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.";
@@ -5213,6 +5227,10 @@ book reading the command
 
 dash-nag is a truth state that varies.
 
+apost-nag is a truth state that varies.
+
+the-warn is a truth state that varies.
+
 after reading a command:
 	let XX be indexed text;
 	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
@@ -5222,10 +5240,20 @@ after reading a command:
 		if the player's command includes "scanner":
 			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
 			now scan-nag is true;
-	if dash-nag is false and the player's command includes "-":
-		say "(NOTE: you never need to use a dash, which can be replaced with a space)";
+	if the player's command includes "-":
+		if dash-nag is false, say "(NOTE: you never need to use a dash, which can be replaced with a space)";
 		now dash-nag is true;
-	if XX matches the regular expression "^(say|think|shout|speak|yell) ":
+		now XX is the player's command;
+		replace the text "-" in XX with " ";
+		change the text of the player's command to XX;
+	if the player's command includes "'":
+		if apost-nag is false, say "(NOTE: you never need to use an apostrophe, which is eliminated)";
+		now apost-nag is true;
+		now XX is the player's command;
+		replace the text "'" in XX with "";
+		change the text of the player's command to XX;
+	let W1 be word number 1 in XX;
+	if W1 is "say" or W1 is "think" or W1 is "shout" or W1 is "speak" or W1 is "yell":
 		if say-warn is false:
 			say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them. So this game will snip SAY/THINK/SHOUT/SPEAK/YELL from the start of all future commands and reject this one.";
 			pad-rec "saying";
@@ -5233,11 +5261,14 @@ after reading a command:
 			reject the player's command;
 		say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
 		let XX be the player's command;
-		replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
+		replace word number 1 in XX with "";
 		change the text of the player's command to XX;
-	if XX matches the regular expression "\b the\b":
+	if the player's command includes "the":
+		if the-warn is false:
+			now the-warn is true;
+			say "You never need to say THE in A Roiling Original.";
 		replace the regular expression "\b the\b" in XX with "";
-	if XX matches the regular expression "scan.*with" and player has settler:
+	if the player's command includes "scan" and the player's command includes "with" and player has settler:
 		if scanwith is false:
 			ital-say "you don't need the preposition WITH. You can just say SCAN, as the settler is the only item that can scan.";
 			now scanwith is true;
@@ -5264,10 +5295,8 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
-	process the trailing-a rule;
-	if the rule succeeded:
-		reject the player's command;
 	if word number 1 in player's command is "a":
+		abide by the trailing-a rule;
 		if ask-warn is false:
 			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
 			now ask-warn is true;
@@ -5290,7 +5319,7 @@ after reading a command:
 			if number of words in player's command > 1:
 				say "You have a route planned out, but you panic and run just any which way...[paragraph break]";
 			try fliptoing urn instead;
-	repeat with QQ running through fungible things:
+	repeat with QQ running through touchable things:
 		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches right-cmd entry:
 				try fliptoing the-to entry;
@@ -5301,7 +5330,7 @@ after reading a command:
 	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
 	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in Clangier Clearing and melon is in Clangier Clearing:
-		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b", try fliptoing melon instead;
+		if the player's command includes "len" and the player's command includes "mo", try fliptoing melon instead;
 	if player is in Evoc Cove and the player's command includes "page":
 		let XX be the player's command;
 		replace the regular expression "page" in XX with "";
@@ -5345,53 +5374,65 @@ after reading a command:
 			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
 			reject the player's command;
 	if hydra-known is true and player is in Reclusion Inclosure and player does not have whistle:
-		if the player's command matches the regular expression "\b(hardy|hydra)\b":
+		if the player's command includes "hardy" or the player's command includes "hydra":
 			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
 			reject the player's command;
-	if location of player is location of butlers and butlers are not plurtry:
-		if the player's command matches the regular expression "\bbutler\b":
-			now butlers are plurtry;
-			ital-say "there are too many butlers, so getting rid of one wouldn't do much.";
-	if location of player is location of atheists and atheists are not plurtry:
-		if the player's command matches the regular expression "\batheist\b":
-			now atheists are plurtry;
-			ital-say "there are too many atheists, and they're too diverse in their arguments, to examine just one. But you don't need to.";
-	if location of player is location of pirates and pirates are not plurtry:
-		if the player's command matches the regular expression "\bpirate\b":
-			now pirates are plurtry;
-			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
-	if location of player is location of natives' site van and natives' site van is not plurtry:
-		if the player's command matches the regular expression "\bnative\b":
-			now natives' site van is plurtry;
-			ital-say "there natives' site van is too big to deal with one native at a time.";
-	if yurt-plurtry is false and player is in Scope Copse and yurts are in Scope Copse:
-		if the player's command matches the regular expression "\byurt\b":
-			now yurt-plurtry is true;
-			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
-	if location of player is location of diners and diners are not plurtry:
-		if the player's command matches the regular expression "\bdiner\b":
-			now diners are plurtry;
-			ital-say "there are too many diners, and they're too uniform, to examine just one. But you don't need to.";
-	if location of player is location of ingrates and ingrates are not plurtry:
-		if the player's command matches the regular expression "\bingrate\b":
-			now ingrates are plurtry;
-			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
-	if the player's command matches the regular expression "\bsmell\b" and word number 1 in the player's command is not "smell":
+	if mrlp is towers, towers-plurcheck;
+	if the player's command includes "smell" and word number 1 in the player's command is not "smell":
 		say "You can just type SMELL.";
 		reject the player's command;
 
+to towers-plurcheck:
+	if butlers are plurcheck:
+		if the player's command includes "butler":
+			now butlers are plurtry;
+			ital-say "there are too many butlers, so getting rid of one wouldn't do much.";
+	if atheists are plurcheck:
+		if the player's command includes "atheist":
+			now atheists are plurtry;
+			ital-say "there are too many atheists, and they're too diverse in their arguments, to examine just one. But you don't need to.";
+	if pirates are plurcheck:
+		if the player's command includes "pirate":
+			now pirates are plurtry;
+			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
+	if natives' site van is plurcheck:
+		if the player's command includes "native":
+			now natives' site van is plurtry;
+			ital-say "there natives' site van is too big to deal with one native at a time.";
+	if yurt-plurtry is false and yurts are touchable: [yurts are not a guardian, so they don't have this property]
+		if the player's command includes "yurt":
+			now yurt-plurtry is true;
+			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
+	if diners are plurcheck:
+		if the player's command includes "diner":
+			now diners are plurtry;
+			ital-say "there are too many diners, and they're too uniform, to examine just one. But you don't need to.";
+	if ingrates are plurcheck:
+		if the player's command includes "ingrates":
+			now ingrates are plurtry;
+			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
+
+definition: a guardian (called gu) is plurcheck:
+	if gu is plurtry, no;
+	if gu is touchable, yes;
+	no;
+
 section special cases
 
-this is the trailing-a rule:
-	if location of player is Disease Seaside:
-		if the player's command exactly matches the text "a cone":
-			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.";
-			the rule succeeds;
-	else if location of player is Loather Rathole:
+this is the trailing-a rule: [this is because A REC should be in mstakes but it only shows REC]
+	if player is in Loather Rathole:
 		if the player's command exactly matches the text "a rec":
 			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
 			the rule succeeds;
-	else if location of player is Lean Lane:
+	else if player is in Char Arch:
+		if the player's command exactly matches the text "a gps":
+			say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
+			the rule succeeds;
+	else if player is in Disease Seaside:
+		if the player's command exactly matches the text "a cone":
+			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.";
+			the rule succeeds;
+	else if player is in Lean Lane:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
 			the rule succeeds;
@@ -5399,11 +5440,6 @@ this is the trailing-a rule:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
-	else if player is in Char Arch:
-		if the player's command exactly matches the text "a gps":
-			say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
-			the rule succeeds;
-	the rule fails;
 
 section command reader booleans
 
@@ -5469,20 +5505,14 @@ Rule for printing a parser error when the latest parser error is the nothing to 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error:
 	say "[reject]";
 
-definition: a thing (called xx) is fungible:
-	if xx is held, yes;
-	if xx is palm and xx is in Dusty Study, yes;
-	if xx is touchable, yes;
-	no.
-
 Rule for printing a parser error when the latest parser error is the didn't understand error:
 	if player has wrap:
-		if the player's command matches "\b(wrap|bubble)\b":
+		if the player's command includes "wrap" or the player's command includes "bubble":
 			say "Hm, maybe that's not quite what to do with the wrap. As fun as it'd be to pop all those bubbles one by one, you may need to just rip them all up at once.";
 			the rule succeeds;
 	repeat through regana of mrlp:
 		if the player's command matches right-cmd entry:
-			if the-from entry is fungible:
+			if the-from entry is touchable:
 				try fliptoing the-to entry;
 				process the notify score changes rule;
 				process the hint flags checkoff rule;
@@ -5490,7 +5520,7 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
-	if the player's command matches the regular expression "^(gt|go to)":
+	if the player's command includes "gt" or the player's command includes "go to":
 		say "That's not a room or thing I recognize.";
 	else:
 		say "Nothing (significant) like that is in the immediate vicinity or region."
@@ -5499,7 +5529,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	if location of player is study and study is dark:
 		if the player's command includes "palm", say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
-	if the player's command matches the regular expression "^go", say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if meet bans are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
+	if word number 1 in the player's command is "go", say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if meet bans are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod", say "It's a digger, now." instead;
 	say "[if location of player is dark]You can't locate that in the dark, if it's there[else]Nothing unusual like that around here[if-enter][end if]." instead;
@@ -7392,7 +7422,7 @@ volume Ordeal Reload
 
 book Dusty Study
 
-Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
+Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is in dusty study]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
 
 the player is in Dusty Study.
 
@@ -7577,7 +7607,7 @@ to say drt: now dope-read is true;
 
 The By Li'l Billy page is propaganda. it is part of the dope op ed.
 
-description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!!"
+description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!,[paragraph break]There's further crayony scrawl. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!![paragraph break]Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children."
 
 dope-idx is a number that varies.
 
@@ -7807,7 +7837,7 @@ check taking tables: say "The tables are written on the wall." instead;
 table-warn is a truth state that varies.
 
 before doing something with tables when table-warn is false:
-	if the player's command matches the regular expression "\btable\b":
+	if the player's command includes "table":
 		now table-warn is true;
 		ital-say "it's important that the tables are plural, as you [if cur-score of Ordeal Reload is 0]may find[else]already found[end if].";
 	else:
@@ -8080,7 +8110,7 @@ the steel pad is a hinthelpy thing. description is "It's really wiry and reminds
 
 a-text of steel pad is "RYRYRRYR". b-text of steel pad is "RYRGRRGR". parse-text of steel pad is "x[sp]e[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x".
 
-some crabgrass is part of the diorama. the crabgrass is hinthelpy and spacy. description is "It might be fake, seeing as how it hasn't died after all these years."
+some crabgrass is part of the diorama. the crabgrass is hinthelpy and spacy and singular-named. description is "It might be fake, seeing as how it hasn't died after all these years."
 
 indefinite article of crabgrass is "some".
 
@@ -9836,7 +9866,7 @@ understand "otters/idol" as solid idols.
 this is the enter-otters rule:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
-		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
+		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
 	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
 	pad-rec-q "asking";
@@ -9947,12 +9977,12 @@ understand "store 26/twentysix" and "26/twentysix" as store z when player is in 
 
 chapter megaton magneto montage
 
-the megaton magneto montage is useless boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
+the megaton magneto montage is useless boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it M/MM/MMM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 this is the bore-megaton-magneto-montage rule:
 	if current action is scaning, say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
 
-understand "mmm/mm" as megaton magneto montage when player is in Strip of Profits.
+understand "mmm/mm/m" as megaton magneto montage when player is in Strip of Profits.
 
 after examining montage for the first time:
 	say "Also, the montage was created by Tom Egan. Of course. Can't say he was not game.";
@@ -10067,7 +10097,7 @@ description of lecturer is "He's wearing a very expensive suit and tie. You're n
 
 chapter ian
 
-Ian a Drug Guardian is a privately-named boring person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description of ian is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of ian is "Standing by the only exit is Ian (a Drug Guardian.)". bore-check of ian a drug guardian is the bore-ian rule. bore-text of ian is "[ian-pamph]".
+Ian a Drug Guardian is a boring person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description of ian is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of ian is "Standing by the only exit is Ian (a Drug Guardian.)". bore-check of ian a drug guardian is the bore-ian rule. bore-text of ian is "[ian-pamph]".
 
 to say ian-pamph:
 	if player has pamphlets:
@@ -10757,7 +10787,7 @@ check going inside in Ripe Pier: try entering mist instead;
 
 book Cripple Clipper
 
-Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions, except maybe the thickness sketchins['], presumably from Logan. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
+Cripple Clipper is a room in Routes. "Hooray...or ahoy? This isn't quite the HMS SMH. You feel a case of sail-ails, not being able to get going.[paragraph break]There's a free reef in the distance, but you didn't get enough instructions how to get there. You can pretty clearly see mess-up spumes all around.[paragraph break]Your only hope for guidance is the thickness sketchins['], presumably from Logan. A bit nonsensical, but maybe they'll give a clue where or how to adventure next. They're all you've got.". roomnud of cripple clipper is table of cripple clipper nudges.
 
 the bad oar is a thing. description is "It looks weird, but hey, it got you aboard the Cripple Clipper.". "The bad oar that helped you aboard the Cripple Clipper lies here, but you probably need to figure how to work things in general here."
 
@@ -12917,6 +12947,8 @@ carry out showing it to:
 chapter keyboarding
 
 the I'm Le Cop polemic is a reflexive thing in Hacks' Shack.
+
+report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy.";
 
 does the player mean doing something with the teariest treatise when Strip of Profits is visited: it is unlikely.
 
@@ -15497,7 +15529,7 @@ rule for printing a locale paragraph about a picaro (called pp):
 	now all touchable picaros are mentioned;
 
 to say they-just:
-	say "[if vw is 2]Well, there's just[else]They include[end if]"
+	say "[if vw is 2]Well, there's just one, now:[else]They include[end if]"
 
 section escaping or not
 
@@ -15994,7 +16026,7 @@ to say if-tent:
 	if player is in Obscurest Subsector:
 		say ", looking [if atblock is moot]attentive[else]tentative[end if]"
 
-check answering agnostic that: if the player's command matches the regular expression "\b(doctor|dr|yow)\b", try objasking agnostic about Dr Yow instead;
+check answering agnostic that: if the player's command includes "doctor" or the player's command includes "yow" or the player's command includes "dr", try objasking agnostic about Dr Yow instead;
 
 check sbing agnostic: if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector, try sbing atblock instead;
 
@@ -16437,7 +16469,7 @@ the unorg'd ground is bounding boring scenery in Fringe Finger. description of u
 
 section strudel
 
-some strudel is a LLPish reflexive hintpastry in Fringe Finger. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+some strudel is a LLPish reflexive hintpastry in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is touchable.
 
@@ -18279,7 +18311,7 @@ check switching off the medals:
 	med-flip instead;
 
 to med-flip:
-	unless the player's command matches the regular expression "\b(on|off)\b":
+	unless the player's command includes "on" or the player's command includes "off":
 		say "(Okay, silly parser stuff--just switch the medals)";
 	say "You switch the medals so the [if medals-lucky-first is true]larger[else]smaller[end if] is on the right.";
 	if medals-lucky-first is false:
@@ -22320,7 +22352,7 @@ carry out endgameing:
 	let temp be 0;
 	now player has settler;
 	now Ordeal Reload is solved;
-	if end-jump is true or the player's command matches the regular expression "p":
+	if end-jump is true or the player's command matches the regular expression "p": [we keep regexes here so we can pick off which is solved]
 		increment temp;
 		now presto is solved;
 	if end-jump is true or the player's command matches the regular expression "u":

@@ -640,8 +640,6 @@ understand "cleats" as a mistake ("The castle is run-down and unromantic enough.
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
-understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
-
 chapter Loftier Trefoil
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
