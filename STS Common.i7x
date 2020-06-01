@@ -70,6 +70,8 @@ a portal has a region called go-region. a portal has text called solved-text.
 
 a portal has a rule called entry-rule. entry-rule of a portal is usually the debug-fill-in-here rule.
 
+a portal can be ever-entered or never-entered. a portal is usually never-entered.
+
 report entering a portal: process the move dumbdrops rule;
 
 this is the debug-fill-in-here rule:

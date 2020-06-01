@@ -4180,10 +4180,15 @@ to last-loc-move (rg - a region):
 	move player to last-loc of rg;
 	process the move dumbdrops rule;
 
+definition: a portal (called po) is regsolve:
+	if go-region of po is not unsolved, yes;
+	no;
+
 check entering a portal:
 	let gr be go-region of noun;
 	if gr is not unsolved, say "[solved-text of noun]" instead;
 	check-2-of-3;
+	now the noun is ever-entered;
 	last-loc-move gr;
 	recover-items;
 	the rule succeeds;

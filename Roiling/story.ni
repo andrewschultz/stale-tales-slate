@@ -231,14 +231,12 @@ a portal can be checkedoff or available. a portal is usually available.
 
 definition: a portal is slick if its diffic is 11 or less.
 
-[?? need to distinguish entered vs lumpable]
-
 for writing a paragraph about a lumpable portal (called ptl) :
-	say "You have [if number of lumpable touchable portals > 1]new places[else]a new place[end if] to explore![paragraph break]";
-	repeat with Q running through portals:
-		if Q is in Strip of Profits, say "[initial appearance of Q] ";
+	say "You have [if number of touchable never-entered portals > 1]new places[else]a new place[end if] to explore![paragraph break]";
+	repeat with Q running through touchable never-entered portals:
+		 say "[initial appearance of Q] ";
 	say "[paragraph break]";
-	now all lumpable touchable portals are mentioned;
+	now all never-entered touchable portals are mentioned;
 	continue the action;
 
 to say fill-in-here: say "!!!!!!" [this is just so I can compile and concentrate on other things]
@@ -478,6 +476,8 @@ use MAX_VERBS of 750.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
+use MAX_PROP_TABLE_SIZE of 620000.
+
 use MAX_NUM_STATIC_STRINGS of 90000.
 
 use MAX_PROP_TABLE_SIZE of 610000.
@@ -496,7 +496,7 @@ use SYMBOLS_CHUNK_SIZE of 16000.
 
 use MAX_OBJECTS of 960.
 
-use MAX_PROP_TABLE_SIZE of 620000.
+use MAX_PROP_TABLE_SIZE of 630000.
 
 use MAX_STATIC_DATA of 760000.
 
@@ -2405,14 +2405,19 @@ does the player mean reading the player: it is very unlikely.
 does the player mean reading the chic loner chronicle: it is likely.
 does the player mean reading the novella: it is likely.
 
+does the player mean examining red writing: it is very unlikely.
+check examining red writing: try reading red writing instead;
+
 carry out reading:
 	if noun is novella:
 		read-lowest-page;
 		the rule succeeds;
 	if noun is red writing:
-		d "[list of readable things]";
 		if number of readable things is 0, say "No writing around here on anything." instead;
-		if number of readable things is 1, try examining a random readable thing instead;
+		if number of readable things is 1:
+			let RRT be a random readable thing;
+			say "(the red writing on [the RRT])[line break]";
+			try examining RRT instead;
 		say "Too much to read." instead;
 	if noun is a to-read listed in the table of readables:
 		choose row with to-read of noun in table of readables;
@@ -2497,7 +2502,7 @@ to say ad-auth:
 
 section red writing
 
-the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". bore-text of red writing is "You can really only read the writing.". bore-check is bore-red-writing rule.
+the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].[paragraph break]List of readable things = [list of readable things].". bore-text of red writing is "You can really only read the writing.". bore-check is bore-red-writing rule.
 
 understand "words" and "red/-- letters" as writing.
 
@@ -3421,20 +3426,18 @@ check entering a portal (this is the first portal entry rule):
 		say "You've already solved that area." instead;
 	abide by entry-rule of noun;
 	let try-recover be false;
-	if last-loc of grn is visited:
-		now try-recover is true;
-	else:
+	if noun is never-entered:
 		d "First visit to [grn]. Can't try recovering items yet.";
 		add-errs grn;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
-		d "REPO!";
+		d "Forcing Towers REPO!";
 		move player to last-loc of grn, without printing a room description;
 		if can-see-map, draw-towers-map;
 		reposition-guardians;
 		try looking;
 	else:
 		move player to last-loc of grn;
-	if try-recover is true, recover-items;
+	if noun is ever-entered, recover-items;
 	the rule succeeds;
 
 to add-errs (reg - a region):
@@ -5236,44 +5239,6 @@ after reading a command:
 	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
 	let XX be the player's command in lower case;
 	change the text of the player's command to XX;
-	if scan-nag is false and settler is touchable:
-		if the player's command includes "scanner":
-			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
-			now scan-nag is true;
-	if the player's command includes "-":
-		if dash-nag is false, say "(NOTE: you never need to use a dash, which can be replaced with a space)";
-		now dash-nag is true;
-		now XX is the player's command;
-		replace the text "-" in XX with " ";
-		change the text of the player's command to XX;
-	if the player's command includes "'":
-		if apost-nag is false, say "(NOTE: you never need to use an apostrophe, which is eliminated)";
-		now apost-nag is true;
-		now XX is the player's command;
-		replace the text "'" in XX with "";
-		change the text of the player's command to XX;
-	let W1 be word number 1 in XX;
-	if W1 is "say" or W1 is "think" or W1 is "shout" or W1 is "speak" or W1 is "yell":
-		if say-warn is false:
-			say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them. So this game will snip SAY/THINK/SHOUT/SPEAK/YELL from the start of all future commands and reject this one.";
-			pad-rec "saying";
-			now say-warn is true;
-			reject the player's command;
-		say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
-		let XX be the player's command;
-		replace word number 1 in XX with "";
-		change the text of the player's command to XX;
-	if the player's command includes "the":
-		if the-warn is false:
-			now the-warn is true;
-			say "You never need to say THE in A Roiling Original.";
-		replace the regular expression "\b the\b" in XX with "";
-	if the player's command includes "scan" and the player's command includes "with" and player has settler:
-		if scanwith is false:
-			ital-say "you don't need the preposition WITH. You can just say SCAN, as the settler is the only item that can scan.";
-			now scanwith is true;
-		replace the regular expression "with.*" in XX with "";
-		change the text of the player's command to XX;
 	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
 		if hint-to-file is true:
 			append "COMMENT: [the player's command]" to the file of gamehints;
@@ -5287,6 +5252,50 @@ after reading a command:
 			else:
 				say "(Comment not sent to transcript.)";
 		reject the player's command;
+	if scan-nag is false and settler is touchable:
+		if the player's command includes "scanner":
+			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
+			now scan-nag is true;
+	if the player's command matches the regular expression "-":
+		if dash-nag is false, say "(NOTE: you never need to use a dash, which can be replaced with a space. You should always be able to use either half of a dashed name.)";
+		now dash-nag is true;
+		now XX is the player's command;
+		replace the text "-" in XX with " ";
+		change the text of the player's command to XX;
+	if the player's command matches the regular expression "'":
+		if apost-nag is false, say "(NOTE: you never need to use an apostrophe, which is eliminated)";
+		now apost-nag is true;
+		now XX is the player's command;
+		replace the text "'" in XX with "";
+		change the text of the player's command to XX;
+	if number of words in the player's command > 1:
+		let W1 be word number 1 in XX;
+		if W1 is "say" or W1 is "think" or W1 is "shout" or W1 is "speak" or W1 is "yell":
+			if say-warn is false:
+				say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them.[paragraph break]After this, the game will ignore words like [W1].[paragraph break]Would you like to snip [W1] from from the start of this command?";
+				now say-warn is true;
+				if the player yes-consents:
+					do nothing;
+				else:
+					pad-rec "saying";
+					say "OK. Hit the up arrow then enter if you change your mind.";
+					reject the player's command;
+				pad-rec "saying";
+			say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
+			let XX be the player's command;
+			replace word number 1 in XX with "";
+			change the text of the player's command to XX;
+	if the player's command includes "the":
+		if the-warn is false:
+			now the-warn is true;
+			say "You never need to say THE in A Roiling Original. It doesn't hurt, but it's not necessary.";
+		replace the regular expression "\b the\b" in XX with "";
+	if the player's command includes "scan" and the player's command includes "with" and player has settler:
+		if scanwith is false:
+			ital-say "you don't need the preposition WITH. You can just say SCAN, as the settler is the only item that can scan.";
+			now scanwith is true;
+		replace the regular expression "with.*" in XX with "";
+		change the text of the player's command to XX;
 	if period-warned is false:
 		if the player's command matches the regular expression "\.":
 			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. I couldn't find a way around it. Sorry. That said, normal commands will work okay.[wfak]";
