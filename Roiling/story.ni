@@ -19111,12 +19111,18 @@ volume others
 
 citrus-score is a number that varies. non-citrus-score is a number that varies.
 
+a start-pre-fruit is a kind of thing. a start-pre-fruit has text called locale-text.
+
+check taking a start-pre-fruit: say "Maybe [the noun] would be more useful and easier to carry in some other form." instead;
+
 book Rustic Citrus
 
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus. roomnud of Rustic Citrus is table of Rustic Citrus nudges.
 
 after choosing notable locale objects when player is in Rustic Citrus:
-	set the locale priority of Curtis to 1;
+	set the locale priority of Curtis to 2;
+	repeat with spf running through all start-pre-fruits:
+		set the locale priority of spf to 1;
 
 fruits-flipped is a number that varies.
 
@@ -19133,39 +19139,18 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+
+for printing a locale paragraph about an start-pre-fruit (called th):
+	if th is not mentioned:
+		let X be number of touchable start-pre-fruits;
+		say "It looks like [list of touchable start-pre-fruits] [if X is 1]is all that's left[else if X < 3]are still not too bad[else]would not be too hard[end if] to deal with.";
+		now all start-pre-fruits are mentioned;
 
 to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
-
-to say fruit-rollup: [this is very hard-coded, but there seems to be no easy way to do this for scenery]
-	let pres-available be touch-val of spear + touch-val of mad train + touch-val of lumps + touch-val of slime + touch-val of omen prism + touch-val of harmonicas;
-	let cur-got be 0;
-	if pres-available > 0:
-		say "You see ";
-		if spear is touchable:
-			say "a spear stuck in the ground";
-			increment cur-got;
-		if lumps are touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
-			increment cur-got;
-		if slime is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]slime oozing off to the side";
-			increment cur-got;
-		if omen prism is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
-			increment cur-got;
-		if mad train is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
-			increment cur-got;
-		if harmonicas are touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]two harmonicas rusted together";
-			increment cur-got;
-	if eerie blurbs are touchable:
-		increment cur-got;
-		say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
-	if cur-got is 0, say "You've tracked down all the[if ruts circuits are touchable], uh, low-hanging[end if] fruit lying around[if pagers are touchable], except for what the pagers could become[end if]"
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
@@ -19276,7 +19261,7 @@ check going inside in Rustic Citrus: say "You can't go backward. There is enough
 
 chapter grapes
 
-some pagers are plural-named boring scenery in Rustic Citrus. description of pagers is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.".
+some pagers are a plural-named start-pre-fruit in Rustic Citrus. description of pagers is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy.". bore-text is "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods. You don't need one.". locale-text is "pagers beeping all around".
 
 a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP". parse-text of pagers is "x[sp]x[sp]-[sp]x[sp]-[sp]s".
 
@@ -19286,7 +19271,7 @@ grapes are a plural-named fruit.
 
 chapter pears
 
-A spear is scenery in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game."
+A spear is a start-pre-fruit in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game.". locale-text is "a spear stuck in the ground".
 
 to say cutoff: stop game abruptly;
 
@@ -19298,7 +19283,7 @@ the pears are a plural-named fruit.
 
 chapter plums
 
-the lumps are plural-named scenery in Rustic Citrus. "They're more purplish than dirt usually is."
+the lumps are a plural-named start-pre-fruit in Rustic Citrus. description of lumps is "They're more purplish than dirt usually is.". locale-text is "some lumps randomly dotting the landscape".
 
 a-text of lumps is "RRYRR". b-text of lumps is "RRYRP". parse-text of lumps is "x[sp]x[sp]u[sp]x[sp]s". lumps are cheat-spoilable.
 
@@ -19306,7 +19291,7 @@ the plums are a plural-named fruit.
 
 chapter slime
 
-some slime is singular-named scenery in Rustic Citrus. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy."
+some slime is a singular-named start-pre-fruit in Rustic Citrus. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy.". locale-text is "some slime schlurped around".
 
 a-text of slime is "RYRYR". b-text of slime is "RYRYR".parse-text of slime is "x[sp]-[sp]x[sp]-[sp]x".
 
@@ -19316,7 +19301,7 @@ some limes are a plural-named fruit.
 
 chapter maraschino
 
-the harmonicas are plural-named scenery. "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
+the harmonicas are a plural-named thing. "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
 
 check taking harmonicas: say "They're too rusty." instead;
 
@@ -19326,7 +19311,7 @@ the maraschino cherry is a fruit.
 
 chapter tamarind
 
-The mad train is scenery in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
++The mad train is a start-pre-fruit in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.". locale-text is "a mad train (not full size, just a model)".
 
 a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
 
@@ -19455,7 +19440,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are plural-named boring scenery in Rustic Citrus. "[one of]A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism and two harmonicas rusted together also turn up[or]There's no other nasty cola, or writing, or 'art,' to find. Finally, some eerie blurbs are traced along the edge of the ruts[stopping].". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things once you've picked off all the, uh, low-hanging fruit here that you can.".
++the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
 check reading ruts circuits:
 	if eerie blurbs are moot, say "With the eerie blurbs gone, there's nothing much to read." instead;
@@ -19470,6 +19455,7 @@ after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 c
 	move mopeage rant to Rustic Citrus;
 	move omen prism to Rustic Citrus;
 	move harmonicas to Rustic Citrus;
+	move eerie blurbs to Rustic Citrus;
 	moot ruts circuits;
 	say "Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
 	move eerie blurbs to Rustic Citrus;
@@ -19489,17 +19475,18 @@ chapter cantaloupe
 
 the cantaloupe is a fruit.
 
-the can of peanut cola is a thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan."
++the can of peanut cola is a boring thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
 
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
-check taking the peanut cola: say "Blech. Too nasty to touch. You might drink it in a moment of weakness." instead;
+this is the bore-peanut-cola rule:
+	if current action is taking or current action is drinking, say "Blech. You're not really thirsty. It can become something more natural." instead;
 
 chapter persimmon
 
 the persimmon is a fruit.
 
-the omen prism is boring scenery. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
+the omen prism is a boring thing. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
 
 a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text of omen prism is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
