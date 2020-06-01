@@ -94,7 +94,7 @@ understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow th
 
 understand "gots er" as a mistake ("And what would you do with Store G, when you take it?") when Store G is in location of player.
 
-understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
+understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is examined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is in location of player.
 
 understand "ouster" as a mistake ("It's your job to be the ouster in [if store u is in Strip of Profits]Store U[else]the course source[end if], but you'll need to warp out of the Strip.") when Store U is in location of player or course source is in location of player.
 
@@ -116,7 +116,7 @@ understand "stroke" as a mistake ("You need a stroke of genius, but that's all w
 
 understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is in location of player or course source is in location of player.
 
-understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
+understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved or others is unsolved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
@@ -185,7 +185,7 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 
 understand "tardies" as a mistake ("Actually, you have all the time in the world, and you don't need to delay anyone.") when side art is touchable.
 
-understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag][end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
+understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag] later[end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
 
 [def=under-generic]
 understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and THE BEAN is in Same Mesa.
@@ -230,6 +230,8 @@ to decide whether told-of-logan:
 	no;
 
 understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan. [?? how do we reconcile preefsay in mistakes with preefsay outside of mistakes?]
+
+understand "around" as a mistake ("You can't see an un-road yet, or anything that might lead to it.") when be ova is not off-stage and odd aura is off-stage.
 
 understand "helos" as a mistake ("Helicopters can't make it underground.") when player is in Harms Marsh.
 

@@ -37,7 +37,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "table"	305336689	--	--	"A bleat: 'tableS!'"
 "ceiling"	392118435	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
-"palm"	201542769	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 "gape"	244059588	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	x-oped rule	"[vs-oped]."
 "questin"	630601871	--	x-oped rule	"[vs-oped]."
@@ -152,7 +151,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "otter"	493702525	solid idols	--	"[idols-no]."
 "idol"	194188351	solid idols	--	"[idols-no]."
 "solid"	290462317	solid idols	--	"[idols-no]."
-"odorant"	429263390	--	--	"But you already changed Store P."
+"odorant"	429263390	odorant tornado	--	"But you already changed Store P."
 "engraving"	570489816	engravings	--	"The engraving is meant to be read. You can modify it with other actions."
 "engravings"	666763782	engravings	--	"You can only change the enrgavings by working through the other stores."
 "patcher"	456181591	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
@@ -202,6 +201,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ings"	242774022	--	--	"[board-change]."
 "board"	201312192	--	--	"[board-change]."
 "giatn"	251797892	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]."
+"ides"	290102010	side art	--	"It's the whole side art you need to deal with."
+"tra"	190621639	side art	--	"It's the whole side art you need to deal with."
 "tirade"	384449683	Gast	--	"[if side art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	--	--	"[die-sin]."
@@ -1548,7 +1549,7 @@ book auxiliary text and rules
 
 section ordeal reload auxiliary
 
-to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
+to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is unsolved]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
 	if player is in Dusty Study and gunter is off-stage, the rule succeeds;
@@ -1557,10 +1558,6 @@ this is the gunter-yet rule:
 this is the Gunter-left rule:
 	if player is in Dusty Study and Gunter is moot, the rule succeeds;
 	the rule fails.
-
-this is the is-study-dark rule:
-	if player is in Dusty Study and study is not lit, the rule succeeds;
-	the rule fails;
 
 this is the x-oped rule:
 	if dope op ed is examined, the rule succeeds;
@@ -1598,7 +1595,7 @@ this is the study-see-stable rule:
 
 to say w-twi: say "The ads have probably gone through enough word-twisting"
 
-to say locname-part: say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
+to say locname-part: say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is unsolved], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 to say hisin: say "The high sign is a clue. Bad idea to change it"
 
@@ -1683,7 +1680,7 @@ to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother H
 to say whole-bev: say "The whole beverage name must be where it's at"
 
 this is the am-along rule:
-	unless player is in Harms Marsh, the rule fails;
+	if be ova is off-stage, the rule fails;
 	unless un-road is off-stage, the rule fails;
 	the rule succeeds;
 

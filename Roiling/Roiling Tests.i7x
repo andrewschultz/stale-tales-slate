@@ -4,29 +4,6 @@ Version 1/190606 of Roiling Tests by Andrew Schultz begins here.
 
 volume testing - not for release
 
-book min/max tracking
-
-a region has a number called last-max. a region has a number called last-min. a region has a number called orig-min.
-
-when play begins:
-	repeat with RR running through regions:
-		now last-max of rr is max-score of rr;
-		now last-min of rr is min-score of rr;
-		now orig-min of rr is min-score of rr.
-
-every turn: process the maxminchange check rule;
-
-after fliptoing (this is the maxminchange check rule):
-	if last-max of mrlp > poss-score of mrlp:
-		if debug-state is true, say "DEBUG NOTE: REGION MAX DECREASED BY [last-max of mrlp - poss-score of mrlp], [max-score of mrlp - poss-score of mrlp] OVERALL.";
-		now last-max of mrlp is poss-score of mrlp;
-	if last-min of mrlp < min-score of mrlp:
-		if debug-state is true, say "DEBUG NOTE: REGION MIN INCREASED BY [min-score of mrlp - last-min of mrlp], [min-score of mrlp - orig-min of mrlp] OVERALL.";
-		now last-min of mrlp is min-score of mrlp;
-	continue the action;
-
-the maxminchange check rule is listed last in the after rulebook.
-
 book basic tests
 
 [* this is simply stuff to make sure features work. Test NOUNS to see nouns.]
@@ -1524,6 +1501,7 @@ carry out mbbnuming:
 		say "1 = Balmer, 2 = Mr Beal." instead;
 	move mbb to Upscale Capsule;
 	now not-mbb is off-stage;
+	say "Moved [mbb] to Upscale capsule, [not-mbb] off-stage." instead;
 	the rule succeeds;
 
 chapter srqing

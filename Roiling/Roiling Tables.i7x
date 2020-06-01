@@ -503,7 +503,6 @@ this is the post-lecturer-outside rule:
 		now pod-num of t-tediously is 0; [disable "tediously" in otters]
 		let B be a random number from 1 to mack-count of A;
 		place-a-mack A and B;
-	move player to Strip of Profits;
 
 section routes auxiliary
 
@@ -2285,7 +2284,7 @@ to say play-food: say "Don't play with your food. [if toaster is touchable]Maybe
 
 to say win-north: if gate-level is 2, say ", but you can just go north"
 
-to say got-e of (to-enter - a thing): say "You should just enter [the to-enter]. No need to seal [it-them of to-enter] back up"
+to say got-e of (to-enter - a thing): say "You should just enter [the to-enter]. No need or way to seal [it-them of to-enter] back up"
 
 to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
