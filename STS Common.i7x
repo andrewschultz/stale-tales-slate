@@ -91,7 +91,7 @@ chapter region stuff
 
 to decide what region is mrlp: decide on map region of location of player.
 
-a region can be solved, unsolvable, unsolved, needed, shortcircuited, bypassed or frivolous. a region is usually unsolved.
+a region can be solved, unsolvable, unsolved, shortcircuited, bypassed or frivolous. a region is usually unsolved.
 
 a region has a number called max-score. the max-score of a region is usually zero.
 
@@ -124,17 +124,17 @@ text	a number	a thing	a rule	text
 section region scoring
 
 to poss-d:
-	d "Taking away a max point.";
 	decrement poss-score of mrlp;
+	d "Taking away a max point. Max-score now [poss-score of mrlp].";
 
 to min-up:
-	d "min-up codepath--point likely added in carry out fliptoing rule on LLPish item.";
 	increment min-score of mrlp;
+	d "min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now [min-score of mrlp].";
 
 to min-and:
-	d "min-and codepath -- forcing point and min point adding. This should be used for odd non-flip points.";
 	increment min-score of mrlp;
 	reg-inc;
+	d "min-and codepath -- forcing point and min point adding. This should be used for odd non-flip points. Current=[cur-score of mrlp] min=[min-score of mrlp].";
 
 chapter person stuff
 
@@ -446,7 +446,7 @@ this is the bore-exam rule: [note: I caused bugs by saying PROCESS THE BORE-EXAM
 			if debug-state is true, say "(DEBUG: pulling bore-text) ";
 			say "[bore-text of noun][line break]";
 			the rule succeeds;
-	else:
+	else if bore-text of noun is empty:
 		say "There's not much to do with [the noun] besides examining. So you do.";
 		try examining the noun;
 		the rule succeeds;

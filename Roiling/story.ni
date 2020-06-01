@@ -169,7 +169,7 @@ Towers is a region. regnud of Towers is table of towers nudges. regana of towers
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
-Others is an unsolved region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges.
 
@@ -204,6 +204,12 @@ a thing can be warpable. a thing is usually not warpable.
 a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually uncluing.
 
 a thing can be rayed. a thing is usually not rayed.
+
+definition: a thing (called xx) is fungible:
+	if xx is held, yes;
+	if xx is palm and xx is in Dusty Study, yes; [you'd think this would qualify as touchable, but it doesn't]
+	if xx is touchable, yes;
+	no.
 
 chapter rooms
 
@@ -2488,8 +2494,8 @@ coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cat
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
-ruts circuits	"	"
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
+peanut cola	"The brand name is A PLACE UNTO. It feels forced enough to make you see red."
 riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
@@ -3365,13 +3371,15 @@ chapter zaping (with patcher)
 zaping is an action applying to one thing.
 
 understand the command "zap [something]" as something new.
+understand the command "patch [something]" as something new.
 
 understand "zap [something]" as zaping.
+understand "patch [something]" as zaping.
 
 carry out zaping:
 	if player is not in Strip of Profits, say "[reject]" instead;
 	if chapter patcher is not in Strip of Profits, say "You don't have anything that can zap anything." instead;
-	if noun is tokers or noun is nestor, say "You're a text adventurer, not a drug enforcement agent." instead;
+	if noun is tokers or noun is nestor or noun is mangiest steaming, say "You're a text adventurer, not a drug enforcement agent." instead;
 	if noun is not a sto and noun is not a portal, say "The patcher can only zap stores or portals." instead;
 	if noun is store h:
 		if otters is solved, say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
@@ -3386,21 +3394,25 @@ carry out zaping:
 	if noun is Store U, now oyster is bypassed;
 	if noun is Store P, now presto is bypassed;
 	moot noun;
-	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Well, maybe you'll get someone to help you take care of things behind [the noun] once you're finished here.[end if]" instead;
+	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Hopefully, you somehow made eveything okay behind [the noun] once you're finished here, or maybe it can be saved until after you defeat Elvira.[end if]";
+	if number of patchable things is 0:
+		say "[line break]With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.";
+		moot chapter patcher;
+	poss-d;
 	the rule succeeds;
 
-the chapter patcher is a warpable thing. description is "[if number of needed regions > 1]I bet if you switched it, something cool might happen[else]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
+the chapter patcher is a warpable thing. description is "[if number of patchable things > 1]I bet if you switched it, something cool might happen[else]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
 
-Check taking the chapter patcher: say "It'd be kind of hazardous to carry around[if number of needed regions > 1]. You can just ZAP whatever's left[else]. You're done with it, anyway[end if]." instead;
+Check taking the chapter patcher: say "It'd be kind of hazardous to carry around[if number of unsolved regions > 1]. You can just ZAP whatever's left[else]. You're done with it, anyway[end if]." instead;
 
 check switching on the chapter patcher:
 	if otters is solved, say "You don't need to do anything drastic now that you beat Elvira." instead;
-	if number of needed regions is 0, say "It's jammed. Probably because you solved most all you need to. Guess you'll have to figure [if Store T is in Strip of Profits]what's behind Store T[else]how to deal with the otters and what's behind them[end if]." instead;
+	if number of patchable things is 0, say "It's jammed. Probably because you solved most all you need to. Guess you'll have to figure [if Store T is in Strip of Profits]what's behind Store T[else]how to deal with the otters and what's behind them[end if]." instead;
 	say "The patcher shatters in a shower of fourth-wall quantum physics as you switch it. [no line break]";
 	moot patcher;
-	repeat with ZT running through needed regions:
+	repeat with ZT running through unsolved regions:
 		now ZT is bypassed;
-	say "[if number of things that are patchable is 1]You point your patcher at [random patchable thing] and it goes poof[else]You point your patcher at, in turn, [list of patchable things][end if]. Well, you should be able to see what's [if Store T is touchable]really behind Store T[else]behind the otters[end if] now.";
+	say "[if number of patchable things is 1]You point your patcher at [random patchable thing] and it goes poof[else]You point your patcher at, in turn, [list of patchable things][end if]. Well, you should be able to see what's [if Store T is touchable]really behind Store T[else]behind the otters[end if] now.";
 	repeat with ZT running through patchable things:
 		if ZT is a sto and ZT is in Strip of Profits:
 			poss-d;
@@ -3409,8 +3421,9 @@ check switching on the chapter patcher:
 
 definition: a thing (called xx) is patchable:
 	if xx is not touchable, no;
-	if xx is Store K or xx is Store N or xx is tokers or xx is store C or xx is store B, no;
-	if xx is Store H or xx is Store O or xx is Store T or xx is solid idols, no;
+	if xx is Store K or xx is Store N or xx is mangiest steaming or xx is store B, no; [LLP stuff doesn't count]
+	if xx is Store H or xx is hoster, no; [post Elvira doesn't count]
+	if xx is Store T or xx is solid idols, no;
 	if xx is a sto and xx is flippable, yes;
 	if xx is a portal, yes;
 	no.
@@ -3591,7 +3604,9 @@ to say reject:
 			if the-to entry is not the-from entry and the-to entry is touchable and the-from entry is good-enuf:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
-			if the-from entry is touchable:
+			say "[the-from entry].";
+			if the-from entry is fungible:
+				say "[the-from entry] touchable.";
 				if Gunter is off-stage and player is in Dusty Study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
@@ -4718,10 +4733,10 @@ carry out stores-hinting:
 		if Store H is touchable, try objhinting Store H instead;
 		all-say "Go through the THROES HOSTER to the OTHERS area." instead;
 	if number of game-critical stos is 0:
-		all-say "(Note: you've cleared all the stores you need to[if number of needed regions > 0], though you still have work to do behind them[end if].)[line break]";
+		all-say "(Note: you've cleared all the stores you need to[if number of unsolved regions > 0], though you still have work to do behind them[end if].)[line break]";
 		if Store K is touchable, try objhinting Store K instead;
 		if Store N is touchable, try objhinting Store N instead;
-		all-say "You have nothing more to do here. You need to [if number of needed regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
+		all-say "You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
 	if number of portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
 		if Store U is in Strip of Profits:
@@ -5328,7 +5343,7 @@ after reading a command:
 			if number of words in player's command > 1:
 				say "You have a route planned out, but you panic and run just any which way...[paragraph break]";
 			try fliptoing urn instead;
-	repeat with QQ running through touchable things:
+	repeat with QQ running through fungible things:
 		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches right-cmd entry:
 				try fliptoing the-to entry;
@@ -5521,7 +5536,7 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 			the rule succeeds;
 	repeat through regana of mrlp:
 		if the player's command matches right-cmd entry:
-			if the-from entry is touchable:
+			if the-from entry is fungible:
 				try fliptoing the-to entry;
 				process the notify score changes rule;
 				process the hint flags checkoff rule;
@@ -5967,8 +5982,7 @@ check drinking:
 		say "The mug's empty." instead;
 	if noun is tea, say "It's food-tea, not drink-tea." instead; [oyster]
 	if noun is atmo-moat, say "You hear a cholera chorale warning you in the distance, so, you think 'Oh. clear.'" instead; [otters]
-	if noun is peanut cola, say "[one of]Eww. Nasty[or]You don't want to repeat that experiment[stopping]. If only you could change it into something else entirely with just one word!" instead; [others]
-	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive]it's done incidentally when you figure another puzzle[else]you already got through there[end if]." instead;
+	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive and presto is unsolved]it's done incidentally when you figure another puzzle[else]you already got past there[end if]." instead;
 
 chapter climbing
 
@@ -7182,6 +7196,8 @@ carry out retrying:
 	if mrlp is demo dome, say "There's nothing to keep track of, here. Just explore around." instead;
 	if mrlp is others, say "This is the only region left to take care of." instead;
 	if Strip of Profits is unvisited, say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the Means Manse." instead;
+	if player is in Cruelest Lectures:
+		say "There's no way out! Well, there sort of is, but it's a bit longer than just going OUT." instead;
 	if mrlp is otters:
 		say "You shouldn't need to go anywhere else[if number of bypassed regions > 0]. While you destroyed some regions with the patcher, you can't revisit them without restarting[end if]. Are you sure?";
 		if the player yes-consents:
@@ -7683,7 +7699,7 @@ carry out denialnaileding:
 				say "BOOM! Store T shatters.";
 				moot Store T;
 				now solid idols is in Strip of Profits;
-	repeat with ZT running through needed regions:
+	repeat with ZT running through unsolved regions:
 		if ZT is not otters and ZT is not solved, now ZT is bypassed;
 	repeat with ZT running through patchable things:
 		moot ZT;
@@ -7715,8 +7731,9 @@ carry out roveovering:
 	now first-good-scan is true;
 	now kind-of-cool is true;
 	move player to Strip of Profits;
-	repeat with ZT running through needed regions:
+	repeat with ZT running through unsolved regions:
 		now ZT is bypassed;
+	now others is unsolved;
 	repeat with ZT running through patchable things:
 		moot ZT;
 	moot Store K;
@@ -9866,15 +9883,15 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 section solid idols portal
 
-solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
+the solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
 
 report examining solid idols: try examining engravings;
 
 understand "otters/idol" as solid idols.
 
 this is the enter-otters rule:
-	if number of needed regions > 0:
-		d "[list of needed regions].";
+	if number of unsolved regions > 0:
+		d "[list of unsolved regions].";
 		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
 	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
@@ -16762,7 +16779,6 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
-	process the maxminchange check rule;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	moot flowerpot instead;
 
@@ -18025,9 +18041,10 @@ to clean-for-roving:
 	moot whistle;
 	moot medals;
 	moot magneto;
+	now others is unsolved;
 	move player to Strip of Profits;
 	if number of portals in Strip of Profits > 0:
-		say "Moving [list of portals in Strip of Profits] out of the Strip. They shouldn't be there.";
+		say "Moving [list of portals in Strip of Profits] out of the Strip. They shouldn't be there. This is a bug but not game-critical." ;
 		repeat with myport running through portals in Strip of Profits:
 			if myport is not Throes Hoster, moot myport;
 
@@ -19139,7 +19156,6 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
--description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if].[paragraph break][fruit-rollup][if ruts circuits are in Rustic Citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
 
 for printing a locale paragraph about an start-pre-fruit (called th):
@@ -19151,6 +19167,34 @@ for printing a locale paragraph about an start-pre-fruit (called th):
 to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
+
+to say fruit-rollup: [this is very hard-coded, but there seems to be no easy way to do this for scenery]
+	let pres-available be touch-val of spear + touch-val of mad train + touch-val of lumps + touch-val of slime + touch-val of omen prism + touch-val of harmonicas;
+	let cur-got be 0;
+	if pres-available > 0:
+		say "You see ";
+		if spear is touchable:
+			say "a spear stuck in the ground";
+			increment cur-got;
+		if lumps are touchable:
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
+			increment cur-got;
+		if slime is touchable:
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]slime oozing off to the side";
+			increment cur-got;
+		if omen prism is touchable:
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
+			increment cur-got;
+		if mad train is touchable:
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
+			increment cur-got;
+		if harmonicas are touchable:
+			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]two harmonicas rusted together";
+			increment cur-got;
+	if eerie blurbs are touchable:
+		increment cur-got;
+		say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
+	if cur-got is 0, say "You've tracked down all the[if ruts circuits are touchable], uh, low-hanging[end if] fruit lying around[if pagers are touchable], except for what the pagers could become[end if]"
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
@@ -19311,7 +19355,7 @@ the maraschino cherry is a fruit.
 
 chapter tamarind
 
-+The mad train is a start-pre-fruit in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.". locale-text is "a mad train (not full size, just a model)".
+The mad train is a start-pre-fruit in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.". locale-text is "a mad train (not full size, just a model)"
 
 a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
 
@@ -19440,12 +19484,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-+the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
-
-check reading ruts circuits:
-	if eerie blurbs are moot, say "With the eerie blurbs gone, there's nothing much to read." instead;
-	say "Nothing much to read except the eerie blurbs..." instead;
-	try reading eerie blurbs instead;
+the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
 after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 conditions should be all true or all false, but just in case...]
 	move peanut cola to Rustic Citrus;
@@ -19458,7 +19497,6 @@ after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 c
 	move eerie blurbs to Rustic Citrus;
 	moot ruts circuits;
 	say "Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
-	move eerie blurbs to Rustic Citrus;
 	continue the action;
 
 chapter blueberries
@@ -19475,7 +19513,7 @@ chapter cantaloupe
 
 the cantaloupe is a fruit.
 
-+the can of peanut cola is a boring thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
+the can of peanut cola is a boring thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
 
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
@@ -20937,7 +20975,9 @@ cur-item is a thing that varies.
 
 carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
-	if spoilit is false:
+	if scams is true:
+		d "SCAM command says to hint [the noun].";
+	else if spoilit is false:
 		d "[noun] hinting.";
 	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
