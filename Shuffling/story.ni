@@ -4207,7 +4207,7 @@ does the player mean entering the scented descent: it is likely. [forest is firs
 
 the scented descent is a portal. go-region of scented descent is Forest. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". solved-text of scented descent is "You already [if forest is bypassed]bypassed[else]solved[end if] the forest. Maybe you should look elsewhere?". entry-rule of scented descent is the forest-entry rule.
 
-understand "forest" as scented descent.
+understand "forest" as scented descent when scented descent is touchable.
 
 description of scented descent is "[if forest is solved]It's real verdant, yeah. I could tell you about what's inside, but you've been through it[else]It's bigger on the inside than the outside, you're sure, or something like that[end if]."
 
@@ -4253,7 +4253,7 @@ section metros portal
 
 the trade tread is a portal. go-region of trade tread is Metros. "A trade tread leads off [if Undesired Underside is visited]back to the Underside[else]somewhere[end if].". description of trade tread is "You can't see where it ends, but you probably want to ENTER or FOLLOW it, now that you've revealed it.". solved-text of trade tread is "You've been there, done that[if metros is bypassed], or had it done, at any rate[end if]. Big city life is not for you.". entry-rule of trade tread is metros-entry rule.
 
-understand "metros" as trade tread when player is in Trips Strip and trade tread is in Trips Strip.
+understand "metros" as trade tread when trade tread is touchable.
 
 check climbing trade tread: try entering trade tread instead;
 
@@ -4266,6 +4266,8 @@ this is the metros-entry rule:
 section resort portal
 
 the ogled lodge is a portal. go-region of ogled lodge is Resort. description of ogled lodge is "Man, it's beautiful, spacious and sunny. Even sunnier than the Trips Strip, which is much nicer since you started cleaning up, but still...". initial appearance of ogled lodge is "You see a big resort here. It seems like it's all for you! All you have to do is enter.". entry-rule of ogled lodge is resort-entry rule. solved-text of ogled lodge is "Somehow, you got back to the Trips Strip after solving the game. I'd love to know how! Send me a bug report with a transcript."
+
+understand "resort" as ogled lodge when player is in Trips Strip and ogled lodge is in Trips Strip.
 
 this is the resort-entry rule:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the ogled lodge thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";

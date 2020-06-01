@@ -9735,7 +9735,7 @@ to it-him-her (x - a thing):
 
 section throes hoster
 
-the Throes Hoster is a not lumpable not maingame portal. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule. go-region of Throes Hoster is Others.
+the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is touchable. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule. go-region of Throes Hoster is Others.
 
 this is the enter-others rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
@@ -9850,7 +9850,7 @@ a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-
 
 section odorant tornado
 
-the odorant tornado is a portal. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-presto rule.
+the odorant tornado is a portal. understand "presto" as odorant tornado when odorant tornado is touchable. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-presto rule.
 
 this is the enter-presto rule:
 	say "[one of]Shoof! Foosh! A tentacle of Old Warpy snatches at you as you enter the odorant tornado, and you don't stop spinning for a minute. [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through the odorant tornado and Old Warpy again, managing to land on your feet this time.[stopping]"
@@ -9883,7 +9883,7 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 section solid idols portal
 
-the solid idols are a plural-named not lumpable portal. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
+the solid idols are a plural-named not lumpable portal. understand "otters" as solid idols when solid idols are touchable. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
 
 report examining solid idols: try examining engravings;
 
@@ -9913,7 +9913,7 @@ a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is
 
 section course source
 
-the course source is a portal. diffic of course source is 3. understand "routes" as course source when player is in Strip of Profits. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-routes rule. go-region of course source is Routes.
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when source course is touchable. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-routes rule. go-region of course source is Routes.
 
 this is the enter-routes rule:
 	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and each seems to lead through Old Warpy, anyway. But still you keep walking, until you cross a red line and hear a buzz. There is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
@@ -9934,7 +9934,7 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 section Tastee Estate
 
-the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
+the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
 
 this is the enter-troves rule:
 	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and when it finally gets light, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
@@ -9949,7 +9949,7 @@ a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of stor
 
 section truster turrets
 
-the truster turrets are a plural-named portal. diffic of truster turrets is 7. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-towers rule
+the truster turrets are a plural-named portal. diffic of truster turrets is 7. understand "towers" as truster turrets when truster turrets are touchable. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-towers rule
 
 towers-warn is a truth state that varies.
 
@@ -9981,7 +9981,7 @@ the shells are a boring thing. they are part of store y. the shells are uncluing
 
 section barnacle balancer
 
-the balancer barnacle is a portal. diffic of balancer barnacle is 6. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-oyster rule.
+the balancer barnacle is a portal. diffic of balancer barnacle is 6. understand "oyster" as barnacle balancer when barnacle balancer is touchable. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-oyster rule.
 
 oyster-warn is a truth state that varies.
 
@@ -19167,34 +19167,6 @@ for printing a locale paragraph about an start-pre-fruit (called th):
 to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
-
-to say fruit-rollup: [this is very hard-coded, but there seems to be no easy way to do this for scenery]
-	let pres-available be touch-val of spear + touch-val of mad train + touch-val of lumps + touch-val of slime + touch-val of omen prism + touch-val of harmonicas;
-	let cur-got be 0;
-	if pres-available > 0:
-		say "You see ";
-		if spear is touchable:
-			say "a spear stuck in the ground";
-			increment cur-got;
-		if lumps are touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]lumps covering the ground everywhere";
-			increment cur-got;
-		if slime is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]slime oozing off to the side";
-			increment cur-got;
-		if omen prism is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]that omen prism you uncovered from the circuits ruts";
-			increment cur-got;
-		if mad train is touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]a mad train glaring at the lack of track ahead";
-			increment cur-got;
-		if harmonicas are touchable:
-			say "[if cur-got is pres-available - 1 and cur-got > 0] and [else if cur-got > 0], [end if]two harmonicas rusted together";
-			increment cur-got;
-	if eerie blurbs are touchable:
-		increment cur-got;
-		say ". Eerie blurbs [if pres-available > 0]also [end if]trace out something disturbing"; [?? this whole block could be redone if you can use object properties]
-	if cur-got is 0, say "You've tracked down all the[if ruts circuits are touchable], uh, low-hanging[end if] fruit lying around[if pagers are touchable], except for what the pagers could become[end if]"
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
 
