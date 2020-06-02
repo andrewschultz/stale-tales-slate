@@ -121,21 +121,21 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Troves is a region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
 
-Routes is a region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
 
-Oyster is a region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
 
-Presto is a region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Towers is a region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 51. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 51. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -167,11 +167,11 @@ Towers is a region. regnud of Towers is table of towers nudges. regana of towers
 3=25 for unripe ur-pine/serpent/triste in Mislit Limits
 1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule.
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -3479,7 +3479,7 @@ to recover-items:
 
 chapter say "[reject]" and Meatier Emerita Emirate
 
-Meta Team is an unsolved region.
+Meta Team is an unsolvable region.
 
 Meatier Emerita Emirate is a privately-named room in Meta Team. "[bug-report]"
 
@@ -3604,9 +3604,7 @@ to say reject:
 			if the-to entry is not the-from entry and the-to entry is touchable and the-from entry is good-enuf:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
-			say "[the-from entry].";
 			if the-from entry is fungible:
-				say "[the-from entry] touchable.";
 				if Gunter is off-stage and player is in Dusty Study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
@@ -4558,7 +4556,7 @@ otters	"[pars-trub]while some words are rather long, you [if cur-score of otters
 others	"[pars-trub]you may need a variety of tricks, here, but one word will usually clinch things, and you will figure the general theme."
 demo dome	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
 
-book means-hinting
+book ordeal-reload-hinting
 
 latches-warn is a truth state that varies.
 
@@ -4598,7 +4596,7 @@ every turn when player is in Dusty Study and stuff-found < 3:
 		say "You may want to examine something [if stuff-found > 0]else [end if]to tell you about Yorpwald, like the [if bookshelf is unexamined]bookshelf[else if ads are unexamined]ads[else]pedanto-notepad[end if].";
 		now tc-last is turn count;
 
-carry out means-hinting:
+this is the ordeal-reload-hinting rule:
 	if stuff-found < 3, say "[one of]You should look around and examine stuff. Someone will eventually interrupt you.[or][next-to-see].[stopping]" instead;
 	if latches are touchable:
 		if latches-warn is false:
@@ -4646,7 +4644,7 @@ viewer-first is a truth state that varies.
 
 enuf-fruit-poke is a truth state that varies.
 
-carry out others-hinting:
+this is the others-hinting rule:
 	if player is in Clangier Clearing and cur-score of others >= 3 and ruts circuits are unexamined, try objhinting ruts circuits instead;
 	if player has moss cap, try objhinting moss cap instead;
 	if player has s-i and player has storage, all-say "You probably want to put the icons in the storage." instead;
@@ -4727,7 +4725,7 @@ this is the fruit-hint rule:
 
 book stores-hinting
 
-carry out stores-hinting:
+this is the stores-hinting rule:
 	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]Ian will also give you his 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
 	if roved is true:
 		if Store H is touchable, try objhinting Store H instead;
@@ -4759,7 +4757,7 @@ to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
 
 book presto-hinting
 
-carry out presto-hinting:
+this is the presto-hinting rule:
 	if cur-score of presto is 0 and spoilit is false, all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]There's lots of yelling, and the curst crust is a clue. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
 	if hump is touchable, try objhinting hump instead;
 	if plebe is touchable:
@@ -4883,7 +4881,7 @@ check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
 
 does the player mean objhinting Gast when mrlp is routes: it is very likely;
 
-carry out routes-hinting:
+this is the routes-hinting rule:
 	if cur-score of routes is 0 and prep-spoil is false, all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	if MORF FORM is in Same Mesa:
 		if player is in Same Mesa, try objhinting MORF FORM instead;
@@ -4945,7 +4943,7 @@ ever-previewed is a truth state that varies.
 
 sister-first is a truth state that varies.
 
-carry out troves-hinting:
+this is the troves-hinting rule:
 	if player is in Loather Rathole:
 		if cold is touchable, try objhinting cold instead;
 		try objhinting heat instead;
@@ -5049,7 +5047,7 @@ to decide which thing is oyster-item:
 		decide on dialer;
 	decide on the player;
 
-carry out oyster-hinting:
+this is the oyster-hinting rule:
 	if verb-warned is false and cur-score of oyster is 0:
 		now verb-warned is true;
 		all-say "There's a lot of action here. You will need lots of action. So that gives you a clue as to the commands to use." instead;
@@ -5074,7 +5072,7 @@ to say to-center:
 			continue the action;
 	say "[if player is in Actionless Coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
-carry out towers-hinting:
+this is the towers-hinting rule:
 	if player is in Loftier Trefoil, try objhinting h-p instead;
 	if location of player is Rawest Waters, try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
 	if player is in Anemic Cinema and mardier admirer is in Anemic Cinema, try objhinting mardier admirer instead; [we do some intelligent hinting here for guardians of highest priority]
@@ -5207,7 +5205,7 @@ shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, 
 
 cathedral-items is a list of things variable. cathedral-items is {ram1, ram2, ram3}.
 
-carry out otters-hinting:
+this is the otters-hinting rule:
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
 	if player is in Minded Midden, all-say "You made a way west. You're done here." instead; [if there is no item, see what to do next based on where we can go]
 	if player is in Disowned Downside, all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Reclusion Inclosure is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if]." instead;
@@ -5236,6 +5234,11 @@ ocelots	"coolest"
 leopard	"paroled"
 badger	"garbed"
 satyr	"artsy"
+
+book demo-dome-hinting
+
+this is the demo-dome-hinting rule:
+	say "You're already in my clue lyceum." instead;
 
 volume parser tricks and errors
 
@@ -6060,7 +6063,7 @@ check eating fretful truffle:
 		ital-say "this chocolate is a cool cheat that tells you what to [if cur-score of troves is 0]type[else]think next[end if]. Are you sure you want to do this?";
 		unless the player direct-consents, say "Okay. This warning won't appear again." instead;
 	now spoilit is true;
-	try troves-hinting;
+	process the troves-hinting rule;
 	now spoilit is false instead;
 
 rule for supplying a missing noun when eating:
@@ -6087,7 +6090,7 @@ check eating curst crust:
 		unless the player yes-consents, say "OK, maybe later. This warning won't appear again." instead;
 	say "You wince and prepare to take a bite...";
 	now spoilit is true;
-	try presto-hinting;
+	process the presto-hinting rule;
 	now spoilit is false instead;
 
 section taste means eat
@@ -9889,9 +9892,16 @@ report examining solid idols: try examining engravings;
 
 understand "otters/idol" as solid idols.
 
+definition: a region (called reg) is otters-blocking:
+	if reg is not unsolved, no;
+	if reg is others, no;
+	if reg is stores, no;
+	if reg is otters, no;
+	yes;
+
 this is the enter-otters rule:
-	if number of unsolved regions > 0:
-		d "[list of unsolved regions].";
+	if number of otters-blocking regions > 0:
+		d "[list of otters-blocking regions].";
 		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
 	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
@@ -10538,7 +10548,7 @@ check examining snoop spoon:
 			unless the player direct-consents:
 				continue the action;
 	now spoilit is true;
-	try routes-hinting;
+	abide by the routes-hinting rule;
 	now spoilit is false;
 	the rule succeeds;
 
@@ -17808,7 +17818,7 @@ carry out discerning:
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You have everything you need." instead;
 	if otters-cur-item is player, say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
-	try otters-hinting;
+	process the otters-hinting rule;
 	now spoilit is false instead;
 
 [	if ed riley is touchable:
@@ -20797,29 +20807,10 @@ check hinting:
 				ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
 
 carry out hinting:
-	if mrlp is demo dome, say "You're already in my clue lyceum." instead;
-	if mrlp is Ordeal Reload, try means-hinting instead;
-	if mrlp is stores, try stores-hinting instead;
-	if mrlp is others, try others-hinting instead;
-	if mrlp is troves, try troves-hinting instead;
-	if mrlp is oyster, try oyster-hinting instead;
-	if mrlp is routes, try routes-hinting instead;
-	if mrlp is presto, try presto-hinting instead;
-	if mrlp is towers, try towers-hinting instead;
-	if mrlp is otters, try otters-hinting instead;
 	[if hintblock is true, all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
+	abide by the reg-hint-rule of mrlp;
 	all-say "No hints for this region yet. Sorry. I need to work on that, don't I?";
 	the rule succeeds;
-
-means-hinting is an action out of world.
-others-hinting is an action out of world.
-stores-hinting is an action out of world.
-presto-hinting is an action out of world.
-routes-hinting is an action out of world.
-troves-hinting is an action out of world.
-oyster-hinting is an action out of world.
-towers-hinting is an action out of world.
-otters-hinting is an action out of world.
 
 to all-say-x (xx - indexed text):
 	if hint-to-display is true or hint-to-file is true:

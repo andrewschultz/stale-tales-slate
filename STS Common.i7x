@@ -105,6 +105,8 @@ a region has a table name called regnud. a region has a table name called regana
 
 a region has a room called last-loc.
 
+a region has a rule called reg-hint-rule.
+
 a region has a list of things called item-list.
 
 a region has a list of things called worn-list.

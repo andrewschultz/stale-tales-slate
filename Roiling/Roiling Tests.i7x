@@ -1186,6 +1186,7 @@ understand the command "thisalt" as something new.
 understand "thisalt" as thisalting.
 
 carry out thisalting:
+	say "Looking at alternate routes, [mrlp] using [altroutes of mrlp]...";
 	process the altroutes of mrlp;
 	the rule succeeds;
 
