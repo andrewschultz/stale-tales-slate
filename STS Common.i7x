@@ -384,15 +384,15 @@ to abort-if-bugfind:
 
 chapter bsing - not for release
 
-[* BS turns bugsquash on ]
+[* SQ turns bugsquash on ]
 
-bsing is an action out of world.
+sqing is an action out of world.
 
-understand the command "bs" as something new.
+understand the command "sq" as something new.
 
-understand "bs" as bsing.
+understand "sq" as sbing.
 
-carry out bsing:
+carry out sqing:
 	now bugsquash is whether or not bugsquash is false;
 	say "Now bugsquash (end game on <BUG> text) is [on-off of bugsquash].";
 	the rule succeeds;

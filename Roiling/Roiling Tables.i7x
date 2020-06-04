@@ -645,7 +645,6 @@ this is the post-deal rule:
 this is the post-strive-or-aspire rule:
 	if cone-points is 2:
 		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
-		min-up;
 		set the pronoun it to pernod;
 	else:
 		if pernod is off-stage:
@@ -1788,7 +1787,7 @@ volume specific help for things you need to flip
 table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
 meet bans	"The ten beams creak slightly. Maybe not all of them. But a few."
-palm	"The palm remains upright but seems slightly brighter."
+palm	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 niche	"Hm, no, the niche--my niche--won't unfold that way."
 latches	"You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them."
 tables	"The tables seem to shift a bit."
@@ -2096,7 +2095,7 @@ viewer	"That's not the way to learn from the viewer--it's probably not that comp
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 feeling you're a perp	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 
-to say dior-hint: say "That's not quite it. You can probably look at the diorama to see what to do"
+to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can [if diorama is examined]re[end if]examine the diorama"
 
 to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
 
@@ -2118,10 +2117,6 @@ ana-repeats is a number that varies.
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
 to say spec-help of (itm - a thing):
-	if itm is skid or itm is disk:
-		if skid is moot or disk is moot:
-			say "[sk2dsk].";
-			continue the action;
 	if rq is active:
 		say "With that conversation, you can't concentrate on much...";
 		continue the action;
@@ -2174,7 +2169,7 @@ specdone	spectalk
 lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either." [START manse]
 painting	"The painting really goes better with the study than the giant pin."
 chimney	"You probably just want to go UP the chimney."
-stair	"The stair is good for getting around. It's worth keeping."
+stair	"The stair helps you get around more easily, so it doesn't need to be changed back."
 ramp	"The ramp is useful now. Best keep it."
 satchel	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 ISBN bins	"The ISBN bins are secure. Best not tinker."
@@ -2269,6 +2264,7 @@ parrot	"The parrot can be changed back into a raptor, but not into anything new.
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."
 compass	"If you changed the compass, it might wind up pointing in the wrong direction." [START others]
+s-i	"The sonic icons seem right. No use meddling."
 prices precis	"You corrected the prices precis enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
 lemons	"You sour on changing the lemons further."

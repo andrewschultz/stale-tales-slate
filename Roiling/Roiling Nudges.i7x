@@ -24,6 +24,8 @@ table of Ordeal Reload nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "manse"	359250554	--	degen-true rule	"[not-the-reg]."
 "ordeal"	364513235	--	degen-true rule	"[not-the-reg]."
+"closets"	570636060	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
+"closet"	474362094	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 
 table of dusty study nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -59,8 +61,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowlingpin"	596386463	giant pin	--	"[g-pin]."
 "oped"	304653734	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
-"closets"	570636060	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
-"closet"	474362094	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All-Grey Gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	study-see-stable rule	"You probably just want to go IN to the stable."
 "chair"	188792351	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
@@ -96,7 +96,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of carven cavern nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cavern"	410395643	--	--	"[locname]."
-"terrain"	517651905	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are touchable]plates[else]staple[end if] are probably part of your training."
+"terrain"	517651905	plaster	--	"Hm... 'retrain terrain' is a bit circular, as anagrams go. The [if stapler is touchable]stapler[else]plaster psalter[end if] and [if plates are touchable]palest pastel plates[else]staple[end if] probably hold the key to leaving."
 "plate"	368383743	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "act"	124303421	act ruin curtain	--	"[curtain-block]."
@@ -374,12 +374,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of Browse Bowers nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"bowers"	510110133	Browse Bowers	--	"[locname]."
-"bower"	413836167	Browse Bowers	--	"[locname]."
+"bowers"	510110133	--	--	"[locname]."
+"bower"	413836167	--	--	"[locname]."
 "rotunda"	460016620	--	--	"[rotun]."
 "dour"	285811276	--	--	"[rotun]."
 "tan"	174205344	--	--	"[rotun]."
-"eder"	361965110	Browse Bowers	--	"It's Si Reed's full name."
+"eder"	361965110	--	--	"It's Si Reed's full name."
 "shmoe"	399790104	--	--	"[shmoe-homes]."
 "home"	303516138	--	--	"[shmoe-homes]."
 
@@ -1247,6 +1247,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "great"	351027450	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
+"bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
+"repp"	376061830	--	perp-moot rule	"You don't want to bring back that feeling you might be a perp. Not in any form. Just go north through the gates."
 
 table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1285,7 +1287,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drol"	234519308	lord al	degen-true rule	"[count-enuf]."
 "droll"	288333147	dollar	degen-true rule	"[count-enuf]."
 "dollar"	290520965	dollar	degen-true rule	"[count-enuf]."
-"bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
 
 table of Swell Wells nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1552,7 +1553,7 @@ section ordeal reload auxiliary
 to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is unsolved]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
-	if player is in Dusty Study and gunter is off-stage, the rule succeeds;
+	if player is in Dusty Study and knockage is true, the rule succeeds;
 	the rule fails;
 
 this is the Gunter-left rule:
@@ -2127,6 +2128,10 @@ to say part-of-lots: say "No, the [i]whole[r] thing. You see several...similar..
 to say full-omen-prism: say "Not just omen, or prism. It's an omen prism"
 
 to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
+
+this is the perp-moot rule:
+	if feeling you're a perp is moot, the rule succeeds;
+	the rule fails;
 
 to say no-pryer: say "No, it's the whole pryer bars"
 

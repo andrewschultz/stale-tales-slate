@@ -6,6 +6,10 @@ Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
 volume Roiling Mistakes
 
+understand the command "hug" as something new.
+understand the command "embrace" as something new.
+understand the command "knock" as something new.
+
 book general
 
 understand "walkthrough" or "walkthru" as a mistake ("You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.");
@@ -28,9 +32,11 @@ book Ordeal Reload
 
 chapter Dusty Study
 
-understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in Dusty Study and latches are not off-stage.
+to say intro-warn: if urgent gunter is off-stage, say "--well, once you've had an introductory dialogue with an NPC"
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in Dusty Study and latches are not off-stage.
+understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying STABLE[intro-warn][else]go IN to the stable[end if].") when player is in Dusty Study.
+
+understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if meet bans are in Dusty Study]change the ten beams by saying BASEMENT[intro-warn][else]go DOWN to enter the basement[end if].") when player is in Dusty Study.
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
@@ -52,15 +58,13 @@ understand "trestle" as a mistake ("The settler is pretty powerful, but it can't
 
 chapter Largely All-Grey Gallery
 
-understand "astir" as a mistake ("[if stair is touchable]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is touchable or stria is in location of player or sitar is in location of player.
+understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair.[else]You need to change that to something else, then it'll be astir[end if].") when stair is touchable or stria is in location of player or sitar is in location of player.
 
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and meet bans are in Dusty Study.
 
 understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
 
 understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.") when rifle is touchable.
-
-understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is in location of player.
 
 understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
@@ -70,17 +74,21 @@ to decide whether plates-staple-touch:
 	if plates are touchable or stapler is touchable, yes;
 	no;
 
+to say check-sign-imminent: process the sign-imminent rule;
+
 understand "craven" as a mistake ("Ok, the Carven Cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
 
-understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.") when elmo is in location of player and elmo has rifle.
+understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.[check-sign-imminent]") when elmo is in location of player and elmo has rifle.
 
-understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.") when elmo is in location of player and elmo has rifle.
+understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.[check-sign-imminent]") when elmo is in location of player and elmo has rifle.
+
+understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is moot]He already seems to be[else]But maybe he is[end if] a different sort of mole.[check-sign-imminent]") when Elmo is in location of player.
 
 understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates-staple-touch.
 
 understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates-staple-touch.
 
-understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]twiddling the staple[else]making use of the plates[end if] to get on with things.") when player is in Carven Cavern.
+understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]making use of the staple[else]twiddling the plates[end if] to get on with things.") when player is in Carven Cavern. [?? respect specter is not here for that]
 
 book stores
 
@@ -315,7 +323,7 @@ to decide whether mbb-in:
 
 understand "able" as a mistake ("Fortuntaely, [mbb] doesn't become physically able.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 
-understand "ambler" as a mistake ("You see red slightly as [mbb] fails to walk away.") when mbb-in;
+understand "ambler" as a mistake ("You see red slightly as [mbb] fails to look away.") when mbb-in;
 
 understand "bale" as a mistake ("Neither you nor [mbb] turns into hay.") when Mr Beal is in Upscale Capsule and player is in Upscale Capsule.
 

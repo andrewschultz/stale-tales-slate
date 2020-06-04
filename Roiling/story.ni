@@ -3529,6 +3529,10 @@ to say good-enuf of (goody - a thing):
 		if goody is specdone entry:
 			say "[if there is no spectalk entry][generic-reject][else][spectalk entry]";
 			continue the action;
+	if goody is skid or goody is disk:
+		if skid is moot or disk is moot:
+			say "[sk2dsk].";
+			continue the action;
 	if goody is a mack-idea:
 		say "You've already dealt with the macks that way.[no line break]";
 		continue the action;
@@ -3546,8 +3550,8 @@ to say good-enuf of (goody - a thing):
 	if goody is ram1 or goody is ram2 or goody is ram3:
 		say "The whiners were already slowed up that way.";
 		continue the action;
-	if noun is part of the diorama:
-		if dio-other of noun is not off-stage:
+	if goody is part of the diorama:
+		if dio-other of goody is not off-stage:
 			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.";
 			continue the action;
 	d "The table of done rejects could still use a lot more entries, like here for the [goody]. Search for TDR in the source.";
@@ -3647,6 +3651,7 @@ to say reject:
 			say "The only thing left to do here is muck with the dialer right.";
 			continue the action;
 	say "[generic-reject]";
+	if Elmo is touchable, process the sign-imminent rule;
 
 to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
@@ -3809,9 +3814,18 @@ carry out requesting the score:
 			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee? Or Derivin' Diviner? Or Sharper Phraser?";
 			now dome-score-not is true;
 		left-to-see instead;
-	if roved is true:
-		if player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to get to store H[else]Enter the Throes Hoster for the final region[end if]." instead;
-		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if][if did-guru is true]. You can't get the maximum, since you used the arugula[end if].";
+	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
+	if mrlp is others:
+		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region";
+		if min-score of mrlp is poss-score of mrlp:
+			say ", and for the rest, you'll need to [if gates stage is visited]find your way north of [here-there of Gates Stage][else]see what's north of [here-there of swell wells][end if]";
+		else if gate-level is 2:
+			say ", and you should be able to go north from [here-there of Gates Stage] to the Valence Enclave";
+		else if min-score of mrlp < max-score of mrlp:
+			say ", but you only need [min-score of mrlp]";
+		else:
+			say ", and you just need to figure a way to the north";
+		say "[if did-guru is true]. You can't get the maximum, since you used the arugula[end if].";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -3821,8 +3835,6 @@ carry out requesting the score:
 		if cur-score of mrlp is poss-score of mrlp:
 			if mrlp is Ordeal Reload:
 				say ". You should go IN to the Strip of Profits, now";
-			else if mrlp is others:
-				say ". You can go NORTH to the Valence Enclave";
 			else if mrlp is stores:
 				say ". You have access to all the sub-areas";
 			else:
@@ -5559,6 +5571,8 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	if word number 1 in the player's command is "go", say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are moot]GO IN or IN or GO TO FRAMING[else if meet bans are moot]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod", say "It's a digger, now." instead;
+	if word number 1 in the player's command is "consult":
+		say "You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X." instead;
 	say "[if location of player is dark]You can't locate that in the dark, if it's there[else]Nothing unusual like that around here[if-enter][end if]." instead;
 
 to say if-enter:
@@ -5701,6 +5715,7 @@ to eval-fruits:
 		say "[line break]You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
 	else:
 		say "[line break]You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
+	if arugula is moot, say "[line break]You can't get the maximum, since you used the arugula.";
 
 section iving
 
@@ -6235,8 +6250,6 @@ carry out xyzzying:
 chapter knocking
 
 knocking is an action applying to nothing.
-
-understand the command "knock" as something new.
 
 understand "knock" as knocking.
 
@@ -7923,14 +7936,13 @@ to decide which number is stuff-found:
 		decide on mytemp;
 	decide on mytemp.
 
-every turn when location of player is Dusty Study and stuff-found >= 3 (this is the Gunter Knocks rule):
-	if urgent Gunter is off-stage:
-		increment okay-thats-it;
-		if okay-thats-it is 6:
-			say "You're sick of the knocking, so you just answer the door, already.";
-			try opening isolani liaison instead;
-		say "[one of]Whoah! Bangish bashing at the isolani liaison[it-liaison]![or]The bangish bashing continues.[stopping]";
-		now knockage is true;
+every turn when location of player is Dusty Study and stuff-found >= 3 and Urgent Gunter is off-stage (this is the Gunter Knocks rule):
+	increment okay-thats-it;
+	if okay-thats-it is 6:
+		say "You're sick of the knocking, so you just answer the door, already.";
+		try opening isolani liaison instead;
+	say "[one of]Whoah! Bangish bashing at the isolani liaison[it-liaison]![or]The bangish bashing continues.[stopping]";
+	now knockage is true;
 
 to say it-liaison: set the pronoun it to the isolani liaison;
 
@@ -8067,6 +8079,8 @@ check taking chimney:
 before going up in Dusty Study:
 	if niche is in Dusty Study, say "Hm, the letters saying MY NICHE indicate something could be there. Hm, what." instead;
 	say "[one of]I'll skip on the whole piling your chair on the bed bit. Though actually it's kind of fun, jumping up and down to pull yourself up. The chimney has enough handholds. You walk through one of your Closest Closets--they provide localized teleporting through the Means Manse--to find yourself high up[or]You climb up again[stopping].";
+	now highest heights is visited;
+	move closets backdrop to all visited rooms;
 
 check entering chimney:	try going up instead;
 
@@ -8280,7 +8294,7 @@ check going inside in Largely All-Grey Gallery:
 		if settler-x-nag is false:
 			now settler-x-nag is true;
 			say "You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas." instead;
-	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and feel all yellow, then see red as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
+	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and see red, then feel all yellow as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
 	moot lamp;
 	now Elmo is in Largely All-Grey Gallery instead;
 
@@ -8426,11 +8440,11 @@ turns-wasted is a number that varies.
 
 high-sign is a truth state that varies.
 
-every turn when Elmo is touchable and Elmo has rifle:
+every turn when Elmo is touchable and Elmo has rifle (this is the sign-imminent rule):
 	increment turns-wasted;
 	if turns-wasted > 4:
 		if high-sign is false:
-			say "You hear a sigh nigh. A high sign from Elmo?";
+			say "You hear a sigh nigh. It looks like a high sign from Elmo!";
 			now high-sign is true;
 			now high sign is in Largely All-Grey Gallery;
 		else:
@@ -8632,7 +8646,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 49	85	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
 50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
 51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
-52	89	oyster	"A seashore seahorse mentioned a subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+52	89	oyster	"A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
 53	87	towers	"The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
 54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 48	--	--	"You'd guess area zero would be this, here, now, but you've been doing okay so far."
@@ -11032,7 +11046,10 @@ check examining stop post when sob ever verbose is in Bustle Sublet:
 
 check taking stop post: say "The post is firmly in place." instead;
 
-check scaning stop post: if sob ever verbose is touchable, try scaning sob ever verbose instead;
+check scaning stop post:
+	if sob ever verbose is touchable:
+		say "Nothing happens until you move the settler away from the post. Then the sob ever verbose picks up.";
+	try scaning sob ever verbose instead;
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
@@ -14122,7 +14139,7 @@ check going inside when player is in Lapsin' Plains:
 	if crate is reflexive, say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are not moot, say "Those skis block the door pretty handily." instead;
 	if knob is not moot, say "The knob seems stuck--and attached to the pans." instead;
-	if span pans are in Lapsin' Plains, say "The span pans still block your way, but it should be a breeze to get by them. No that's not quite it. A cinch? No..." instead;
+	if span pans are in Lapsin' Plains, say "The span pans still block your way, but it should be a breeze to get by them. No, that's not quite it. A cinch? No..." instead;
 	if Shuttle Hutlets is unvisited:
 		say "You've made it past the pans but have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
@@ -14669,12 +14686,6 @@ description of skis is "They're [one of]SISK brand (of course) and[or][stopping]
 the skis are vanishing.
 
 check taking skis: say "They're wedged to the door right now. The more you force them, the more they seem to pull away. But how to be nice to skis?" instead;
-
-section huging
-
-understand the command "hug" as something new.
-
-understand the command "embrace" as something new.
 
 chapter splaining
 
@@ -19168,9 +19179,15 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
 
-for printing a locale paragraph about an start-pre-fruit (called th):
+for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
+
+for printing a locale paragraph about a start-pre-fruit (called th) in Rustic Citrus:
 	if th is not mentioned:
 		let X be number of touchable start-pre-fruits;
+		if X is 0:
+			if debug-state is true, say "OH NO! I should have a list here, but I don't. [th].";
+			now all start-pre-fruits are mentioned;
+			continue the action;
 		say "It looks like [list of touchable start-pre-fruits] [if X is 1]is all that's left[else if X < 3]are still not too bad[else]would not be too hard[end if] to deal with.";
 		now all start-pre-fruits are mentioned;
 
@@ -19239,16 +19256,19 @@ carry out guruing:
 	repeat through table of others anagrams:
 		if noun is the-from entry:
 			if noun is reflexed:
-				say "You've already changed [the noun].";
+				say "You've already changed [the noun]. ";
 			else if noun is compass:
-				say "Whoah! A compass begins spinning.";
+				say "Whoah! A compass begins spinning. ";
 			else if noun is coins:
-				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS!";
+				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
+			else if noun is a fruit or noun is inapt paint:
+				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. ";
 			else:
-				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. The aftertaste of arugula finally dissipates.";
+				say "You have a vision of a fruit: [right-word entry in upper case]. ";
 			now can-guru is false;
 			now noun is prefigured;
 			now did-guru is true;
+			say "The aftertaste of arugula finally dissipates.";
 			poss-d;
 			the rule succeeds;
 	if noun is iconic:
@@ -19317,7 +19337,7 @@ the plums are a plural-named fruit.
 
 chapter slime
 
-some slime is a singular-named start-pre-fruit in Rustic Citrus. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy.". locale-text is "some slime schlurped around".
+some slime is a singular-named start-pre-fruit in Rustic Citrus. description is "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy.". locale-text is "some slime schlurped around".
 
 a-text of slime is "RYRYR". b-text of slime is "RYRYR".parse-text of slime is "x[sp]-[sp]x[sp]-[sp]x".
 
@@ -19327,7 +19347,7 @@ some limes are a plural-named fruit.
 
 chapter maraschino
 
-the harmonicas are a plural-named thing. "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
+the harmonicas are a plural-named thing. description is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?". "Two harmonicas lie here, rusted together."
 
 check taking harmonicas: say "They're too rusty." instead;
 
@@ -19706,7 +19726,7 @@ every turn when player has feeling you're a perp: say "You [one of][or]still [st
 chapter big endgame check
 
 check going north in Gates Stage:
-	if player does not have passport, say "'Need ID! Indeed!' the gates say mechanically." instead;
+	if player does not have passport, say "'Need ID! Indeed!' the gates say mechanically. You'll need to find, or trade for, some." instead;
 	if number of carried fruits > 0:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
 		mootl list of all carried fruits;
@@ -21868,7 +21888,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
 		if meet bans are in Dusty Study, say "[2dmiss of myreg]you could've made the MEET-BANS into a BASEMENT.";
 		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
-		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
+		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a STAIR.";
 		if niche is in Dusty Study, say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
 		if pram is in Highest Heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if Highest Heights is unvisited], if you'd gone up from the study[end if].";
 		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
