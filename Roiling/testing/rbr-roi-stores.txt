@@ -9,6 +9,8 @@ files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt
 
 ## *FILE
 
+ALSO-IGNORE:t
+
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
 
 ** game: /home/andrew/prt/debug-roiling.ulx
@@ -31,6 +33,7 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 >undo
 
 >ts
+>t
 
 @sli
 >slon
@@ -170,9 +173,11 @@ Store G is too busy to allow that these days.
 And what would you do with Store G, when you take it?
 #mistake test for hoster
 >hoster
-That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
->x hoster
 That was sort of a given from the warning on Store H, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
+>x store h
+###skip test checking
+>hoster
+That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
 #mistake test for ektor/ektors
 >ektor
 There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.
@@ -201,6 +206,7 @@ You can argue whether the strip is already sportif, but nonetheless, that would 
 "Hey, man! Don't depersonalize me! Or I'll throw something at you!" you hear from inside Store N.
 >stoner
 "Like, don't do it again, dude, or I will literally totally throw these empty bottles at you."
+>stoner
 The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something.
 >stoner
 You've teased the person in Store N enough. You should have enough clues to figure his name now, anyway.
@@ -213,7 +219,9 @@ Stop trying to make Pillar of Storge happen.
 >stroke
 You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
 #mistake test for sureto or sure to
->sureto or sure to
+>sureto
+You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
+>sure to
 You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
 #mistake retest for throes
 >throes
@@ -242,7 +250,7 @@ The smell from Store B becomes fruitier and more delicious.
 @!min
 >sorbet
 Your score has just gone up by one point
-DEBUG INFO: Adding a min point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 4.
 
 @nud
 #done rejects for store b
@@ -258,12 +266,17 @@ by one point
 #nudge for toker
 >tokre
 They already lost one of their collective, man. It'd be a bummer if they lost another.
+#done rejects for tokers
+>tokesr
+They are who they are. You should maybe try to get their friend back.
+>undo
 >undo
 >undo
 
 @!min
 >nestor
 Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
 
 @nud
 #done rejects for nestor
@@ -278,7 +291,7 @@ An odd sweet smell from Store K, for a second.
 @!min
 >tokers
 Your score has just gone up by one point
-DEBUG INFO: Adding a min point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
 
 @nud
 #renudge for toker
@@ -286,7 +299,8 @@ DEBUG INFO: Adding a min point
 They already lost one of their collective, man. It'd be a bummer if someone had to replace Nestor again.
 #done rejects for tokers
 >tokesr
-They are who they are. You should maybe try to get their friend back.
+They are who they are.
+!You should maybe try to get their friend back.
 #nudge for mangiest
 >mangiets
 You can't do anything with the mangiest steaming other than enter it for a side adventure.
@@ -300,6 +314,7 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
 @!min
 >enter steaming
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
 \\
 Cruelest Lectures
 
@@ -364,12 +379,8 @@ The lecturer is unchangeable in his views, but maybe he is physically movable.
 @!min
 >outside
 Your score has just gone up by one point
-DEBUG INFO: Adding a min point
-
-@nud
-#done rejects for truster turrets
->towesr
-You should just enter the truster turrets. No need or way to seal them back up.
+!DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+#this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 
 @nud
 #mistake test for tortes
@@ -427,10 +438,20 @@ WESTOR is the name of the company that built this. There's more, about what meth
 >read store w
 WESTOR is the name of the company that built this. They used the SET-ROW method.
 
+@min
+>abstract patcher to strip
+>zap store w
+DEBUG INFO: Taking away a max point. Max-score now 10.
+
+@!min
 >towers
 Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
 
 @nud
+#done rejects for truster turrets
+>towesr
+You should just enter the truster turrets. No need or way to seal them back up.
 #nudge for turret
 >turrte
 You don't need to adjust the truster turrets further. They're, well, big enough for a pretty huge quest if you ENTER.
@@ -447,8 +468,14 @@ You don't need to adjust the truster turrets further. They're, well, big enough 
 >oystre
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 
+@min
+>zap store y
+DEBUG INFO: Taking away a max point. Max-score now 9.
+
+@!min
 >oyster
 Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
 @nud
 #done rejects for balancer barnacle
@@ -463,13 +490,15 @@ Store H looks totally different for a second.
 >read store h
 "All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth"
 
+@!min
 >others
 Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
 @nud
 #done rejects for throes hoster
 >othesr
-You should just enter the throes hoster. No need or way to seal it back up.
+You should just enter the Throes Hoster. No need or way to seal it back up.
 
 @nud
 #spechelp for store p
@@ -479,8 +508,15 @@ You hear old forgotten magic words which seem like they might almost apply if th
 >scan tropes poster
 I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
 
+@min
+>abstract patcher to strip of profits
+>patch store p
+DEBUG INFO: Taking away a max point. Max-score now 8.
+
+@!min
 >presto
 Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
 @nud
 #nudge for odorant
@@ -494,6 +530,15 @@ You should just enter the odorant tornado. No need or way to seal it back up.
 #spechelp for store t
 >ottesr
 You hear various unrecognizable animal noises.
+
+>otters
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath
+
+@nud
+#done rejects for solid idols
+>ottesr
+You should just enter the solid idols. No need or way to seal them back up.
 #nudge for otter
 >ottre
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
@@ -503,14 +548,6 @@ The solid idols, being solid, are unchanged. They won't let you ENTER unless you
 #nudge for solid
 >soldi
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
-
->otters
-Your score has just gone up by one point
-
-@nud
-#done rejects for solid idols
->ottesr
-You should just enter the solid idols. No need or way to seal them back up.
 
 @nud
 #mistake retest for stoner
