@@ -11,13 +11,14 @@ files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
+ALSO-IGNORE:t
 
 }}MAX=42
 }}CURMAX=42
 }}SCORE=0
 }}CURMIN=25
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, but you only need {CURMIN}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. There are no secrets left to find here, so the score to win is {CURMAX} points.
 }$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
 
@@ -32,10 +33,21 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >posf
 >rove over
+
+@max
+>score
+You need to figure how to change and get through store H.
+
 >others
+
+@max
+>score
+Enter the Throes Hoster for the final region
+
 >in
 Rustic Citrus
 
+>z
 >z
 
 @nud
@@ -77,22 +89,7 @@ You smile at the slime. It can't be that hard to figure what to do.
 #mistake test for miles
 >miles
 You don't want miles and miles of slime.
-
-@sli
-#slider test for grapes
->rgpase
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for limes
->ilesm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pears
->eprsa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for plums
->lpmsu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
+\\
 #nudge for arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
@@ -139,48 +136,48 @@ Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might t
 #nudge for ruts
 >rust
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
-
->x ruts circuits
-
-@nud
-#renudge for ruts
->rust
-Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them turned enough up.
 #nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
-\\
-#readables for mad train
->read mad train
-DR. NIMATA.
-
-@nud
-#spechelp for harmonicas
->maraschion
-The harmonicas whistle, as if something happened.
-#spechelp for mad train
->mad trani
-The train emits some fake smoke and seems ready to blow up--but no.
 #spechelp for lumps
 >lumsp
 The lumps seem almost ready to burst.
-\\
 #spechelp for pagers
 >pagesr
 The pagers light up slightly. Maybe give it another go.
-\\
+#spechelp for slime
+>sliem
+The slime shifts about slightly, but not enough--yet.
+#spechelp for spear
+>spera
+The spear stays as-is. But it can't be that hard to change.
 
->maraschino
+@sli
+>slon
+#slider test for grapes
+>rgpase
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for limes
+>ilesm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pears
+>eprsa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for plums
+>lpmsu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>limes
+Your score has just gone up by one point.
+>score
+}}SCORE++
+{$SCOS}
+>pears
 Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
 >grapes
-Your score has just gone up by one point.
->score
-}}SCORE++
-{$SCOS}
->tamarind
 Your score has just gone up by one point.
 >score
 }}SCORE++
@@ -203,6 +200,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 #spechelp for moss cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
+
 @sli
 #slider test for compass
 >smoascp
@@ -221,6 +219,38 @@ Bad idea to ruin such life-giving scenery--the only way is north
 #nudge for needle
 >needel
 The needle is working fine. No need to meddle.
+
+# we can go north, but let's look for a few more points first.
+
+>x ruts circuits
+
+@sli
+#slider test for tamarind
+>atamirdn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for maraschino
+>amarcsihon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#renudge for ruts
+>rust
+Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them turned enough up.
+#spechelp for harmonicas
+>maraschion
+The harmonicas whistle, as if something happened.
+\\
+#readables for mad train
+>read mad train
+DR. NIMATA.
+
+@nud
+#spechelp for mad train
+>mad trani
+The train emits some fake smoke and seems ready to blow up--but no.
+\\
+
+@nud
 #nudge for megaton
 >megaton
 No, the whole thing. You see several...similar...items here right now.
@@ -264,13 +294,6 @@ Nothing happens. Perhaps it's the whole item that's important.
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 \\
-#spechelp for slime
->sliem
-The slime shifts about slightly, but not enough--yet.
-\\
-#spechelp for spear
->spera
-The spear stays as-is. But it can't be that hard to change.
 #readables for ruts circuits
 >read ruts circuits
 One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
@@ -305,8 +328,6 @@ Not just omen, or prism. It's an omen prism.
 }}SCORE++
 {$SCOS}
 
-# ok, we are now able to go north, but we are just trying to get to 16
-
 @sli
 #slider test for blueberries
 >ebeblreisur
@@ -314,30 +335,26 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for cantaloupe
 >acalntuoep
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for maraschino
->amarcsihon
-Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for persimmon
 >mreisponm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for pomegranate
 >opeargetnam
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tamarind
->atamirdn
-Your settler begins to make noises: a low hum, but nothing really piercing.
 
->limes
-Your score has just gone up by one point.
->score
-}}SCORE++
-{$SCOS}
->pears
+#only three points here to test the reject case of going east to the clearing without a token
+
+>tamarind
 Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
 >blueberries
+Your score has just gone up by one point.
+>score
+}}SCORE++
+{$SCOS}
+>cantaloupe
 Your score has just gone up by one point.
 >score
 }}SCORE++
@@ -349,24 +366,25 @@ Your score has just gone up by one point.
 >e
 The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you will get some from Curtis, if you do enough.
 >apricot
+by one point
 >e
 The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you can go see Curtis for remuneration. You've done a good bit.
 >undo
 >undo
 >s
 
->pomegranate
-Your score has just gone up by one point.
->score
-}}SCORE++
-{$SCOS}
->cantaloupe
-Your score has just gone up by one point.
-Take on a token
->score
-}}SCORE++
-{$SCOS}
 >persimmon
+Take on a token
+Your score has just gone up by one point.
+>score
+}}SCORE++
+{$SCOS}
+>maraschino
+Your score has just gone up by one point.
+>score
+}}SCORE++
+{$SCOS}
+>pomegranate
 Your score has just gone up by one point.
 >score
 }}SCORE++
@@ -399,6 +417,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tangerines
 >atennesgri
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
 #nudge for wells
 >swlle
@@ -485,6 +504,7 @@ Your score has just gone up by one point.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
 >s
+Curtis hands you a coin
 scru-it
 
 @nud
@@ -500,6 +520,7 @@ The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. 
 #spechelp for green stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
+
 @sli
 #slider test for icon
 >cino
@@ -507,6 +528,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for sonic
 >sonic
 Maybe if you had more than one coin.
+#slider test for icons
+>purloin icons
+>cinso
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+>undo
 
 >n
 
@@ -525,15 +552,15 @@ Your score has just gone up by one point.
 >sonic
 Maybe if you had more than one icon.
 
->s
-You fiddle with the coin you got
->n
-
 >tangerines
 Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
+>s
+You fiddle with the coin you got
+>n
 
 >w
 Filed Field
@@ -674,6 +701,27 @@ The barber sickle darkens a bit. You must be on the right track.
 #spechelp for mean trowel
 >meantrowle
 You had the seed of an idea there, you thought.
+#spechelp for pryer bars
+>pryer basr
+The pryer bars briefly turn very red.
+#spechelp for rapt figure
+>rapt figuer
+The rapt figure frowns as if it's eaten something sour.
+#spechelp for pipe panel lie pen app
+>pineappel
+The pipe panel lie pen app rattles slightly.
+#scannotes for pipe panel lie pen app
+>scan pipe panel lie pen app
+Hmm. There are a lot of P's. Maybe that helps.
+#spechelp for barriers west
+>strawberrise
+You feel the barriers west pulling towards you.
+#spechelp for buried raft
+>breadfruti
+You loaf a bit after thinking that, hoping for something to happen. It doesn't.
+#readables for pipe panel lie pen app
+>read lie pen app
+There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
 >cranberries
 Your score has just gone up by one point.
@@ -690,7 +738,12 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
-!BY 1
+>pineapple
+Your score has just gone up by one point.
+!min-up
+>score
+}}SCORE++
+{$SCOS}
 >e
 >s
 Nice going.
@@ -707,7 +760,9 @@ Hmm. You could probably do something with just one coin, or you could do somethi
 #mistake test for scion
 >scion
 Money, or something like it, should not be the guide of you.
+###skip test checking
 >icons
+###skip test checking
 #spechelp for icons
 >icosn
 The icons rattle and hum promisingly.
@@ -740,11 +795,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 Blam!
 
-@sli
-#slider test for icons
->cinso
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 @nud
 #mistake retest for scion
 >scion
@@ -755,44 +805,21 @@ You're a pro at all this, now, so two question marks don't bother you. Yes... th
 #spechelp for s-c
 >sonci
 The sonic coins hum almost questioningly.
-#spechelp for pryer bars
->pryer basr
-The pryer bars briefly turn very red.
-#spechelp for rapt figure
->rapt figuer
-The rapt figure frowns as if it's eaten something sour.
-#spechelp for pipe panel lie pen app
->pineappel
-The pipe panel lie pen app rattles slightly.
-#scannotes for pipe panel lie pen app
->scan pipe panel lie pen app
-Hmm. There are a lot of P's. Maybe that helps.
-#spechelp for barriers west
->strawberrise
-You feel the barriers west pulling towards you.
-#spechelp for buried raft
->breadfruti
-You loaf a bit after thinking that, hoping for something to happen. It doesn't.
-#readables for pipe panel lie pen app
->read lie pen app
-There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
 >score
 }}SCORE++
 {$SCOS}
+
+
+@nud
+#done rejects for s-i
 >icons
-WRONG
-}}SCORE++
-{$SCOS}
+The sonic icons seem right. No use meddling.
+
+>n
 
 @!min
->pineapple
-Your score has just gone up by one point.
-BY 1
->score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+>w
 >strawberries
 Your score has just gone up by one point.
 >score
@@ -916,6 +943,7 @@ Everyone promises quick payment, but what are you promising to pay quickly FOR?
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
 >x auction caution
+###skip test checking
 >scan auction caution
 Hm, that certainly cuts things down a ton. Just one possibility.
 >t
@@ -990,6 +1018,30 @@ Something glints off the list of prices.
 #scannotes for prices precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
+#renudge for price
+>priec
+No, you already took care of stuff
+#done rejects for prices precis
+>cripse
+You corrected the list enough.
+#done rejects for auction caution
+>papaysa
+You hear a sap yap about the sign and figure it can't be changed any more.
+#done rejects for lemons
+>lemosn
+You sour on changing the lemons further.
+#done rejects for melon
+>melno
+The melon is fine as-is. It's better than the one that was on display, for sure.
+#done rejects for peach
+>peahc
+You got enough of a discount. Really.
+#done rejects for mango
+>manog
+Snag mo' mangos? No mas, G.
+#done rejects for papayas
+>papaysa
+You've already established yourself as a prompt payer.
 
 @!min
 >score
@@ -1020,34 +1072,8 @@ Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 {$SCOS}
-
-@nud
-#renudge for price
->priec
-No, you already took care of stuff
-#done rejects for prices precis
->cripse
-You corrected the list enough.
-#done rejects for auction caution
->papaysa
-You hear a sap yap about the sign and figure it can't be changed any more.
-#done rejects for lemons
->lemosn
-You sour on changing the lemons further.
-#done rejects for melon
->melno
-The melon is fine as-is. It's better than the one that was on display, for sure.
-#done rejects for peach
->peahc
-You got enough of a discount. Really.
-#done rejects for mango
->manog
-Snag mo' mangos? No mas, G.
-#done rejects for papayas
->papaysa
-You've already established yourself as a prompt payer.
-
 >w
+
 >d
 Scape Space
 
@@ -1162,7 +1188,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
->nab an a
+>banana
 Your score has just gone up by one point.
 >score
 }}SCORE++
@@ -1185,14 +1211,24 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 }}CURMIN++
-{$SCOTOP}
+}}CURMIN++
+You have 39 of 42 total points for the post-Elvira Others region, and for the rest, you'll need to see what's north of Swell Wells.
 
 @min
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
+Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
 >guru orange
-}}CURMIN--
-{$SCORE}
+You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
+>undo
+>guru inapt paint
+You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
+>undo
+>guru brr hub
+You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
+>score
+{$SCOS}
+}}CURMAX--
 You can't get the maximum, since you used the arugula
 
 >give dollar
@@ -1289,6 +1325,7 @@ It hurt to be called a perp. But maybe you can figure a way to think of it right
 
 @nud
 >perp
+by one point
 #done rejects for feeling you're a perp
 >pepr
 Don't want to over-prep.
@@ -1307,6 +1344,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #redone rejects for feeling you're a perp
 >prep
+by one point
 >erpp
 Don't want to over-prep
 >undo
@@ -1314,48 +1352,53 @@ Don't want to over-prep
 
 @min
 >prep
+by one point
 >research
+by one point
 #pre-gates-stage-flip rule
 >review
 No need to over-study or over-think. Through the gates!
 >thisalt
-WRONG
+--you only needed two ways to work the passport. The other was to REVIEW the viewer.
 >undo
 >undo
 >undo
->research
-#pre-gates-stage-flip rule
 >review
+by one point
+#pre-gates-stage-flip rule
+>research
 No need to over-study or over-think. Through the gates!
 >thisalt
-WRONG
+--you only needed two ways to work the passport. The other was to RESEARCH the searcher.
 >undo
 >undo
 >undo
 >undo
 
 >research
+by one point
 }}SCORE++
-{$SCOS}
 >score
->review
-}}SCORE++
 {$SCOS}
+>review
+by one point
+}}SCORE++
 >score
 
-@max
-arugula
+@min
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave. You can't get the maximum, since you used the arugula.
 @!
-!but you only need
-
-You can go NORTH to the Valence Enclave
+You have 41 of 42 total points for the post-Elvira Others region.
+You can't expect anything more from Curtis.
+Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave to the north without using GURU.
 
 @min
 #pre-gates-stage-flip rule
 >prep
-No need to over-study or over-think. Through the gates!
+!No need to over-study or over-think. Through the gates!
 >thisalt
-WRONG
+--you only needed two ways to work the passport. The other was to PREP after you are called a perp.
+
 
 @nud
 #done rejects for searcher
@@ -1367,6 +1410,7 @@ You've done enough reviewing.
 
 >n
 #notana
+@!min
 by one point
 #bonus point for not usuing arugula
 
