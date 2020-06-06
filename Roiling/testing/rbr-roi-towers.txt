@@ -7,14 +7,22 @@
 # spechelp should be right before @!minh,mini
 # what is towers-f for? Can we delete it?
 
-ALSO-IGNORE:cheat
-
 files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt
 ~	max	t0
 ~	minh	t1
 ~	mini	t2
 ~	nudges,nud,nu	t3
 ~	sli	t4
+
+}}MAX=51
+}}CURMAX=51
+}}SCORE=0
+}}CURMIN=25
+
+}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. There are no secrets left to find here, so the score to win is {CURMAX} points.
+
+ALSO-IGNORE:cheat,t
 
 ## *FILE
 
@@ -30,7 +38,7 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 >towers
 
 >seed 1
->enter towers
+>enter turrets
 
 @max
 #pre-rodney rule
@@ -42,6 +50,7 @@ Rodney's voice would certainly seem droney by itself, but he segues into a march
 !by one point
 
 @nud
+>t
 #nudge for trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -82,43 +91,64 @@ Cedrick cringes slightly.
 Rodney looks around, as if he is sick of this place.
 
 >gone
-Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 >wined
-Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 >bleak
-Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 
 @nud
 #renudge for picaros
 >picarso
 You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time, by name
 
->score
-Score in a scenario: 3 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 50.
-
 @!minh,mini
 >tenser
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
 >score
-Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 50.
+{$SCOS}
 >snared
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
 >score
-Score in a scenario: 5 out of 50 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 50.
+{$SCOS}
 >cricked
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
 >score
-Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
+{$SCOS}
 
 @nud
 #renudge for picaros
 >picarso
 There's only one picaro left, and his name is Rodney.
 
+@max
+>droney
+Your score has just gone up by one point
+>undo
+
 >yonder
 Your score has just gone up by one point
+}}SCORE++
+
+@minh,mini
+}}CURMAX-=3
 
 Topside Deposit
+
+>score
+{$SCOS}
 
 @max
 #pre-curst-palace-spectacular rule
@@ -230,13 +260,8 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 >souht
 This game almost never requires you to mess with cardinal directions.
 
->score
-@!minh,mini
-Score in a scenario: 7 out of 50 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 50.
-@!
-Score in a scenario: 4 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 47.
-
 @sli
+>slon
 #slider test for sadder
 >ddsare
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -257,6 +282,11 @@ You sense that the dreads adders are one of the easier things to deal with, here
 
 >sadder
 Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
+
 >get all
 
 @nud
@@ -268,7 +298,7 @@ You can just TOAST or EAT a pastry once you have it.
 #mistake retest for dopiest
 >dopiest
 You sense that the dreads adders were one of the easier things to deal with, here, but you don't want to overstate it.
-s
+
 >n
 Scope Copse
 
@@ -347,11 +377,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @!minh,mini
 >rusty
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
 >score
-Score in a scenario: 9 out of 50 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 50.
+{$SCOS}
 @!
 >eat tarts
-You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad.
+You figure you'd better heat the pack of start tarts up in the toaster first. So you do. Mmm, not bad.
 Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
 >undo
 >put tarts in toaster
@@ -359,8 +391,9 @@ Looking at yourself after eating the pastry, you see you can see what you'd want
 >xray butlers
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 DEBUG INFO: Taking away a max point.
+}}CURMAX--
 
-@minh
+@minh,mini
 >purloin brownies
 >put brownies in toaster
 The x-ray vision comes back. Once again, you can XRAY what you want to.
@@ -390,99 +423,169 @@ The bluster butlers cough slightly and look around furtively.
 
 >subtler
 Your score has just gone up by one point
+}}SCORE++
 
-@minh,mini
 >score
-Score in a scenario: 6 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+{$SCOS}
+
 
 @minh
 >clumsy
 #notmax
 Your score has just gone up by one point
->n
-
-@minh
->restful
-#notmax
-Your score has just gone up by one point
->pastier
-#notmax
-Your score has just gone up by one point
->n
->married
-#notmax
-Your score has just gone up by one point
->n
->s
->s
->e
->sewed
-#notmax
-Your score has just gone up by one point
->released
-#notmax
-Your score has just gone up by one point
->e
->marginal
-#notmax
-Your score has just gone up by one point
->holiest
-#notmax
-Your score has just gone up by one point
->n
->hastiest
-#notmax
-Your score has just gone up by one point
->s
->s
+}}SCORE++
 >score
-Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+{$SCOS}
+>n
+\\
+Baldest Blasted Saltbed
+>restful
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>pastier
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>n
+\\
+Anemic Cinema
+\\
+>married
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>n
+\\
+Shaven Havens
+\\
+>s
+>s
+>e
+\\
+Treading Gradient
+\\
+>sewed
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>released
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>e
+\\
+Artist Traits Strait
+\\
+>marginal
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>holiest
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>n
+\\
+Actionless Coastlines
+\\
+>hastiest
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
+>s
+>s
+\\
+Danger Garden
 
 @mini
 >rinsed
 #notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 >e
 >drained
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >himself
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >e
 >w
 >n
 \\
 >sewed
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >weariest
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >n
 >hastiest
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >nerdiest
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >e
 >holiest
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >w
 >w
 >married
-#notmax
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+#notmax
 >n
 >s
 >e
 >s
 >s
 >e
->score
-Score in a scenario: 15 out of 50 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
+\\
+Danger Garden
 
 @nud
 #spechelp for snider diners
@@ -500,21 +603,32 @@ Ms. Lucy stumbles for a moment.
 @!minh,mini
 >clumsy
 Your score has just gone up by one point
+}}SCORE++
+\\
+>score
+{$SCOS}
+\\
 >rinsed
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
 @sli
 #slider test for creaky
 >rcaeyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@!minh,mini
 #readables for keycar
 >read keycar
 /(KC AYER|RAY ECK)
-have more
+has more information,
 >read keycar
 /(KC AYER|RAY ECK)
-a refresher on
+has a refresher,
 
 @nud
 #spechelp for keycar
@@ -524,15 +638,11 @@ The keycar sputters momentarily.
 @!minh,mini
 >creaky
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 6 OVERALL.
-
-@sli
-#slider test for himself
->ihsmlfe
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for grandiose
->rgnaidseo
-Your settler begins to make noises: a low hum, but nothing really piercing.
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
 @nud
 >e
@@ -618,28 +728,37 @@ This game has no soundtrack, and if I made one, it wouldn't be very good.
 @!minh,mini
 >coiled
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 7 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >restful
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 
 @nud
+#done rejects for old ice
+>oldiec
+Twist the ice too much, it might not look right.
 #spechelp for pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
 #scannotes for traipse pirates
 >scan traipse pirates
 Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
+
+@!minh,mini
 >pastier
 Your score has just gone up by one point
-
-@nud
-#done rejects for old ice
->oldiec
-Twist the ice too much, it might not look right.
+}}SCORE++
+>score
+{$SCOS}
 
 @!minh,mini
 >n
-
+\\
 Anemic Cinema
 
 @sli
@@ -708,12 +827,57 @@ They're already stonewalling you from going west. You're not sure you need to, b
 >granite
 They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
 
+@max
+>gonear leveraged everglade
+>e
+>naivest
+by one point
+>s
+Dourest Detours
+>rousted
+by one point
+Lost Lots
+>undo
+>undo
+>undo
+>undo
+>undo
+
 @!minh,mini
 >angstier
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 >w
+\\
+Dourest Detours
 
+@sli
+#slider test for rousted
+>orsuedt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#nudge for detour
+>detoru
+This may technically be a detour, but the area name is detours. So, yeah.
+#spechelp for bogus-detours
+>roustde
+You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
+
+@!minh,mini
+>rousted
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+\\
 Fringe Finger
+\\
+>score
+{$SCOS}
 
 @sli
 #slider test for rustled
@@ -762,10 +926,17 @@ by one point
 @!minh,mini
 >rustled
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 9 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >e
 >nerdiest
 Your score has just gone up by one point
+}}SCORE++
+#while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
+>score
+{$SCOS}
 
 @nud
 #done rejects for strudel
@@ -778,8 +949,11 @@ The mardier admirer looks askance, then returns to evaluating you some more.
 @!minh,mini
 >married
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 >n
-
+\\
 Shaven Havens
 
 @nud
@@ -860,8 +1034,15 @@ You waste sweat and ire thinking what to do.
 @!minh,mini
 >hastiest
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
 >weariest
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >s
 
 @nud
@@ -877,22 +1058,21 @@ Elsa listens to what you're saying for a minute, but--no, you didn't quite get i
 Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
 #nudge for smh
 >shm
-No, you need to deal with all of Mel.
+No, you need to deal with all of Mel Fish.
 #nudge for life
 >lief
-No, you need to deal with all of Mel.
+No, you need to deal with all of Mel Fish.
 #nudge for mel
 >mle
-No, you need to deal with all of Mel.
+No, you need to deal with all of Mel Fish.
 #nudge for fshi
 >fsih
-No, you need to deal with all of Mel.
+No, you need to deal with all of Mel Fish.
 
 @sli
 #slider test for released
-# oh crap released/resealed
 >ereledas
-WRONG
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is guessing at the most believable one, DEBUG: released.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!minh,mini
@@ -904,10 +1084,23 @@ Your score has just gone up by one point
 >undo
 >released
 Your score has just gone up by one point
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
+
+@sli
+#slider test for himself
+>ihsmlfe
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!minh,mini
 >himself
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @sli
 #slider test for sewed
@@ -915,9 +1108,6 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for mined
 >imedn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pearly
->eprayl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -976,6 +1166,14 @@ That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
 @!minh,mini
 >sewed
 Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+
+@sli
+#slider test for pearly
+>eprayl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #renudge for gradient
@@ -1025,8 +1223,10 @@ You're more interested in doing the opposite--seeing what's behind.
 
 @!minh,mini
 >mined
-Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 13 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >e
 
 @nud
@@ -1078,19 +1278,19 @@ Well, this is tricky. Their sort of double name affords a couple interpretations
 #slider test for holiest
 >ohilste
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@sli
+\\
 #slider test for marginal
 >amaiglrn
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-
 @!minh,mini
 >marginal
+}}SCORE++
 #notmax
 Your score has just gone up by one point
 >holiest
 #notmax
+}}SCORE++
 Your score has just gone up by one point
 >n
 >s
@@ -1116,9 +1316,19 @@ You can't change the screech creches. Well, not until you defeat Elvira.
 >creehc
 You can't change the screech creches. Well, not until you defeat Elvira.
 
+@sli
+#slider test for drained
+>rddneia
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @!minh,mini
 >drained
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
 @nud
 #nudge for native
@@ -1133,21 +1343,26 @@ You get the feeling the natives can be swayed more than one way, here.
 >nativse
 The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 
+@sli
+#slider test for naivest
+>anviste
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @!minh,mini
 >vainest
 Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
 >thisalt
---you could've also RESEALED Lars Eede to give him a new outlook on life.
---you could've also made the natives NAIVEST to uproot them.
+--you could've also made the natives' site van NAIVEST to uproot them.
 >undo
 >undo
 >naivest
 Your score has just gone up by one point
 >thisalt
---you could've also RESEALED Lars Eede to give him a new outlook on life.
---you could've also made the natives VAINEST to uproot them.
+--you could've also made the natives' site van VAINEST to uproot them.
 >score
-Score in a scenario: 30 out of 50 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 50.
+{$SCOS}
 >w
 
 @nud
@@ -1174,13 +1389,20 @@ The drains sizzle slightly but go back to menacing quiet.
 >scan organised ego drains
 With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
 
+@sli
+#slider test for grandiose
+>rgnaidseo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @!minh,mini
 >grandiose
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 16 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >e
 >s
-
 Lost Lots
 
 @sli
@@ -1218,7 +1440,11 @@ You might have to read through a lot of possibilities even if you can quickly fi
 @!minh,mini
 >prosiest
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 17 OVERALL.
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
 @nud
 #nudge for lost
@@ -1237,54 +1463,42 @@ You can't change the gadflies. There are too many.
 >gadflei
 You can't change the gadflies. There are too many.
 
->gt garden
+@!minh,mini
+>n
 
 @sli
 #slider test for broken
 >rbkone
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for resting
->ertsngi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for drained
->rddneia
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for naivest
->anviste
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!minh,mini
->s
-
-@sli
-#slider test for rousted
->orsuedt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#nudge for detour
->detoru
-This may technically be a detour, but the area name is detours. So, yeah.
-#spechelp for bogus-detours
->roustde
-You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
-
-@!minh,mini
->rousted
-Your score has just gone up by one point
 
 @nud
 #spechelp for bonker
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
+
+>broken
+Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
+
+@nud
 #spechelp for stinger
 >restign
 The stinger fizzles a bit.
 
->broken
-Your score has just gone up by one point
+@sli
+#slider test for resting
+>ertsngi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >resting
 Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
 
 @nud
 #mistake test for ranged
@@ -1352,18 +1566,18 @@ The fissure squirms a bit but settles back down. When it was open, maybe somethi
 !by one point
 #pre-unlocked rule
 >unlocked
-You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you.
+You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
 
 @sli
+#this is faked a bit. Rowdy/Wordy are not flippable things.
 #slider test for wordy
 # (?? not possible? Or map to the nudges?)
 >owdyr
-WRONG
-Your settler begins to make noises: a low hum, but nothing really piercing.
+The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
 #slider test for rowdy
 >ordyw
-Your settler begins to make noises: a low hum, but nothing really piercing.
+The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
 #slider test for fussier
 >ssfueri
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1382,6 +1596,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--but he 
 >scan dr yow
 The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions.
 
+@nud
 #rescannotes for dr yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
@@ -1397,6 +1612,10 @@ Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
 
 >wordy
 Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
 
 @nud
 >wordy
@@ -1446,6 +1665,10 @@ by one point
 #not a mistake
 >unlocked
 by one point
+}}SCORE++
+
+>score
+{$SCOS}
 
 @nud
 #mistake retest for locked
@@ -1524,6 +1747,10 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 >put dagger in repair
 #notana
 by one point
+}}SCORE++
+
+>score
+{$SCOS}
 
 @nud
 #mistake retest for pairer
@@ -1635,9 +1862,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >grained
 Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
+
 >ask agnostic about doctor yow
 #notana
-Your score has just gone up by one point
+!Your score has just gone up by one point
 
 @nud
 #spechelp for raves saver
@@ -1670,10 +1902,16 @@ Man! Four of the six entries (and you'd expect five) are blinky. That doesn't se
 @!minh,mini
 >pearly
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 18 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >attentive
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 19 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #done rejects for raves saver
@@ -1689,6 +1927,13 @@ Scot is fully attentive. Don't ruin a good thing!
 >rowdy
 #notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
+}}SCORE++
+
+@mini,minh
+}}CURMAX--
+
+>score
+{$SCOS}
 
 @nud
 #rescannotes for dr yow
@@ -1700,6 +1945,14 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 
 >gt coastlines
 >give gizmo to agnostic
+
+@sli
+#slider test for robust
+>orubts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stabler
+>tsbaerl
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @sli
 >gonear rawest waters
@@ -1815,7 +2068,7 @@ Despite your lack of technical knowledge, you think you almost did...something t
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 #readables for blaster
 
-@!minh,mini
+@minh,mini
 >robust
 by one point
 >stabler
@@ -1851,15 +2104,11 @@ Mislit Limits
 >robust
 Your score has just gone up by one point
 
+}}SCORE+=2
+
 @sli
 #slider test for rewired
 >eriderw
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for robust
->orubts
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stabler
->tsbaerl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -1879,9 +2128,23 @@ No, you can't just yank the red wire out.
 @!minh,mini
 >rewired
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 20 OVERALL.
-
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >enter boat
+You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+
+}}CURMIN=SCORE
+}}CURMIN++
+}}CURMAX=SCORE
+}}CURMAX+=5
+
+@!minh,mini
+}}CURMAX++
+
+>score
+{$SCOS}
 
 @nud
 #nudge for mislit
@@ -1939,13 +2202,17 @@ You're beyond the lake now.
 >punier
 Your score has just gone up by one point
 # add minimum point here
-DEBUG NOTE: REGION MIN INCREASED BY 1, 21 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >present
 Your score has just gone up by one point
 # add minimum point here
-DEBUG NOTE: REGION MIN INCREASED BY 1, 22 OVERALL.
+}}SCORE++
+}}CURMIN++
 >score
-WRONG
+{$SCOS}
 
 @nud
 #mistake test for occurs
@@ -1997,7 +2264,10 @@ Your word, stupendous as it is, has no effect. Yet. You may just need to go back
 @!minh,mini
 >triste
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 23 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #done rejects for tetris sitter
@@ -2008,7 +2278,10 @@ St. Teri's back in the real world, now.
 >give flowerpot to sitter
 #notana
 Your score has just gone up by one point
-DEBUG NOTE: REGION MIN INCREASED BY 1, 24 OVERALL.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 >out
 
 >misses
@@ -2078,17 +2351,21 @@ The final letter clue blinks alternately with the fifth--neither is purple at th
 Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >spectacular
-Your score has just gone up by two points
-#note for bop.py we may need a pts+1 for the bonus point for no x-rays
+
+Your score has just gone up by one point
+
+@minh,mini
+}}SCORE++
+@!
+}}SCORE+=2
+NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision anywhere!
+
 Strip of Profits
 
-#many different possibilities
->flowerpot
-WRONG
-
 >score
-Towers (50/50)
+, Towers ({SCORE}/{MAX})
 
+#this can't be easily tested elsewhere without cheating e.g. gonear limits, spectacular
 #mistake retest for tortes
 >tortes
 There's no time for food! Especially fatty, non-brain food! Besides, the towers had plenty of food. There was your chance!
