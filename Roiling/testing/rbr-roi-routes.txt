@@ -9,6 +9,17 @@ files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt
 ~	nudges,nud,nu	t2
 ~	sli	t3
 
+}}MAX=22
+}}CURMAX=22
+}}SCORE=0
+}}CURMIN=20
+
+}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
+}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes.
+
+ALSO-IGNORE:t
+
 ## *FILE
 
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
@@ -23,9 +34,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >routes
 >enter routes
 >score
-Score in a scenario: 0 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 21.
+{$SCOS}
 
 @sli
+>slon
 #slider test for towards
 >otawdsr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -40,6 +52,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+>t
 #mistake test for follow [text]
 >follow zozimus
 This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
@@ -72,7 +85,7 @@ Concerned parents won't be able to help you here.
 Actually, you have all the time in the world, and you don't need to delay anyone.
 #mistake test for under
 >under
-There's nobody to hide from, though you could maybe fit under the [sit a nag] later.
+There's nobody to hide from, though you could maybe fit under the anti-sag sit-a-nag later.
 #mistake test for under-generic
 >under
 Wrong preposition.
@@ -151,10 +164,10 @@ It's more likely that scripture can change you, or help you see something a bit 
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #nudge for rouet
 >utreo
-Trying to change the current region you're in would be risky, or useless, or maybe both.
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for storeu
 >utreos
-Trying to change the current region you're in would be risky, or useless, or maybe both.
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for satin
 >atsin
 The church's name is not as important as its mission.
@@ -174,10 +187,13 @@ Hm! The worst ad seems like it should be simple, but maybe you need to READ the 
 
 @!min
 >towards
+}}SCORE++
+}}CURMIN++
 Your score has just gone up by one point
-REGION MIN INCREASED BY 1, 1 OVERALL.
+DEBUG INFO: General LLPish min-up for worst ad.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 21.
 >score
-Score in a scenario: 1 out of 21 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+{$SCOS}
 
 @nud
 #nudge for towards
@@ -196,7 +212,7 @@ Pat's is a local small business, not nameless, faceless real estate.
 @!min
 #pre-side-art-astride rule
 >astride
-You get astride the sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
+You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
 >pad flips
 ASTRIDE
@@ -204,14 +220,18 @@ ASTRIDE
 >against
 !by one point
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
-[You add the information to your pedanto-notepad under FLIPS.]
+You add the information to your pedanto-notepad under FLIPS.
 >pad flips
 Find a way to be fearless so you can lean AGAINST the anti-sag sit-a-nag.
 
 >inside
 Your score has just gone up by one point
+}}SCORE++
 
 Cleric Circle
+
+>score
+{$SCOS}
 
 @nud
 #mistake test for man let/let man
@@ -339,6 +359,7 @@ You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll co
 
 >past
 Your score has just gone up by one point
+}}SCORE++
 
 Idle Deli
 
@@ -425,6 +446,7 @@ When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >despite
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -438,7 +460,7 @@ Actually, Pat's advice may not be apt.
 
 >despite
 !Your score has just gone up by one point
-WRONG
+That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
 
 @nud
 #renudge for carvings
@@ -495,6 +517,7 @@ You don't get points just for asking them.
 But the whales would be beached. Inside or outside of Oscar's.
 
 >across
+}}SCORE++
 Your score has just gone up by one point
 
 Adobe Abode
@@ -537,6 +560,7 @@ The soot smells a bit stronger than before for a moment.
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -596,20 +620,26 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #pre-mesa-dir-flip rule
 >past
 !by one point
+>out
 #pre-mesa-dir-flip rule
 >across
 !by one point
+>out
 #pre-mesa-dir-flip rule
 >towards
 !by one point
 
 >against
+}}SCORE++
 Your score has just gone up by one point
+
+>score
+{$SCOS}
 
 @nud
 #done rejects for sit a nag
 >againts
-You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
+You leaned on the anti-sag sit-a-nag right. You still have more to do with Ian Gast.
 
 >against
 !Your score has just gone up by one point
@@ -632,6 +662,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >astried
 Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
 #mistake test for ides/rat/tar
+#nudges for ides
 >ides
 It's the whole side art you need to deal with.
 >rat
@@ -643,6 +674,7 @@ It's the whole side art you need to deal with.
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit.
 
 >astride
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -654,7 +686,7 @@ You already did your best with the tirades and side art.
 You got on the bench right. Time to start ducking.
 #redone rejects for sit a nag
 >againts
-You leaned on the anti-sag sit-a-nag right. You still have more to do with [Gast].
+You leaned on the anti-sag sit-a-nag right. You still have more to do with Ian Gast.
 #mistake retest for ides/rat/tar
 >ides
 It's the whole side art you needed to deal with.
@@ -671,7 +703,11 @@ You've sort of dealt with the tirades, but there's still more than one, and you 
 @nud
 #redone rejects for sit a nag
 >againts
-The anti-sag sit-a-nag isn't important with [Gast] gone.
+The anti-sag sit-a-nag isn't important with Ian Gast gone.
+>gs
+>againts
+The anti-sag sit-a-nag isn't important with Nia Gast gone.
+>gs
 
 @sli
 #slider test for below
@@ -703,6 +739,7 @@ The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find 
 
 #not a mistake (mistake code is for general preposition reject)
 >below
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -734,6 +771,7 @@ Only one inconclusive clue, and you have some direct hits. This shouldn't be too
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -759,8 +797,8 @@ Brother Horbert will work his magic with that.
 >in
 
 @min
-REGION MAX DECREASED BY 1, 1 OVERALL
-DEBUG INFO: Taking away a max point.
+}}CURMAX--
+DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
 >out
 
@@ -782,7 +820,11 @@ That's a lot of questions for such a small bottle, but it can't be too hard.
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
 
 >above
-by one point
+}}SCORE++
+Your score has just gone up by one point.
+
+>score
+{$SCOS}
 
 @nud
 #scannotes for morf form
@@ -798,6 +840,7 @@ The MORF-FORM rocks in the air, as if it's about to fall.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >from
+}}SCORE++
 Your score has just gone up by one point
 
 @sli
@@ -819,9 +862,11 @@ The bean rolls back and forth a bit.
 >bane
 You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.
 joke death
+>undo
 
 #not a mistake (mistake code is for general preposition reject)
 >beneath
+}}SCORE++
 Your score has just gone up by one point
 
 Harms Marsh
@@ -853,7 +898,7 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
 >score
-Score in a scenario: 11 out of 21 total points in the current region, Routes. Lowest score to solve is 19. Maximum score available is 20.
+{$SCOS}
 
 @nud
 #spechelp for darkness
@@ -866,11 +911,12 @@ You feel it's ALMOST the right time for the darkness to lift.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
-#pre-around-unroad rule
+#mistake test for around
 >around
-WRONG
+You can't see an un-road yet, or anything that might lead to it.
 
 >until
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -901,6 +947,7 @@ You thought you saw an un-road for a second, but ... not quite.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >around
+}}SCORE++
 Your score has just gone up by one point
 
 @nud
@@ -928,6 +975,7 @@ Only one letter for sure, but five letters overall. Maybe a well-placed guess wi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >along
+}}SCORE++
 Your score has just gone up by one point
 
 Ripe Pier
@@ -951,6 +999,7 @@ Hmm, you almost see a way through the mist.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >amidst
+}}SCORE++
 Your score has just gone up by one point
 
 Cripple Clipper
@@ -989,6 +1038,7 @@ Those three sentences are certainly tangled, but ... well, you can imagine the d
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >athwart
+}}SCORE++
 Your score has just gone up by one point
 
 Sonancy Canyons
@@ -996,7 +1046,7 @@ Sonancy Canyons
 @!min
 #pre-hurt-hog-through rule
 >through
-WRONG
+That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
 
 @nud
@@ -1023,10 +1073,10 @@ It's more the content of the patters that you could deal with, if you wanted.
 It's more the content of the patters that you could deal with, if you wanted.
 #spechelp for bent ewe
 >betwene
-The new beet seems to spin slightly away from Thor for a second.
+The bent ewe stretches a bit.
 #spechelp for hurt hog
 >throuhg
-Thor seems to gesture you by for a second.
+No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 #nudge for spheric
 >spherci
 The ciphers cannot be dispelled.
@@ -1046,18 +1096,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >between
+}}SCORE++
 Your score has just gone up by one point
 
 #done rejects for bent ewe
 >betwene
-WRONG
+The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay.
 
 >through
+}}SCORE++
 Your score has just gone up by one point
 
 @min
+>score
+{$SCOS}
 >beyond
-Score in a scenario: 19 out of 21 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 20 points--you missed some extra stuff you can't go back for.
+by one point
 >undo
 
 @nud
@@ -1067,11 +1121,25 @@ The raptest patters subside a bit, but ... suddenly you miss them, in an old way
 
 @!min
 >without
+}}SCORE++
+}}CURMIN++
 Your score has just gone up by one point
-REGION MIN INCREASED BY 1, 2 OVERALL.
+
 >score
-Score in a scenario: 20 out of 21 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 21.
-!you missed some extra stuff you can't go back for
+
+@min
+{$SCOS}
+
+@!min
+{$SCOMAX}
+
+@min
+>without
+###skip test checking
+>score
+you missed some extra stuff you can't go back for
+>undo
+>undo
 
 @sli
 #slider test for beyond
@@ -1087,8 +1155,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 !No violence!
 #spechelp for yob den
 >beyodn
-WRONG
+Some different noises from the yob den.
+
+@min
+>misses
+Routes
+--you could've tried to go TOWARDS the worst ad in the Same Mesa.
+--you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.
 
 >beyond
+}}SCORE++
 Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes ({SCORE}/{MAX})
 
