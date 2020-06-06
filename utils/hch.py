@@ -51,6 +51,51 @@ def my_category(my_file):
 
 ignore_blank_cat = True
 
+def match_slider_tests():
+    i7.go_proj('roi')
+    fi = i7.hdr('roi', 'ta')
+    regions = [ 'ordeal reload' ]
+    slider_tracking = defaultdict(lambda: defaultdict(str))
+    in_header = False
+    in_table = False
+    with open(fi) as file:
+        for (line_count, line) in enumerate(file, 1):
+            ll = line.lower().strip()
+            if ll.startswith('table') and 'anagrams' in ll:
+                table_name = re.sub(" anagrams.*", "", ll)
+                table_name = re.sub("^table of +", "", table_name)
+                in_header = True
+                in_table = True
+                continue
+            if in_header:
+                in_header = False
+                continue
+            if in_table and not ll:
+                in_table = False
+                continue
+            if not in_table: continue
+            ary = ll.lower().split("\t")
+            slider_tracking[table_name][ary[5].replace('"', '')] = False
+    for x in slider_tracking:
+        file_name = "reg-roi2-{}-slider.txt".format(x.replace(' ', '-'))
+        with open(file_name) as file:
+            for (line_count, line) in enumerate(file, 1):
+                ll = line.lower().strip()
+                if ll.startswith("#slider test for "):
+                    temp = re.sub(".* test for +", "", ll)
+                    if temp not in slider_tracking[x]:
+                        print(line_count, file_name, "Bad slider comment test", temp)
+                    elif slider_tracking[x][temp]:
+                        print(line_count, file_name, "Duplicate slider comment test", temp)
+                    else:
+                        slider_tracking[x][temp] = True
+        for y in slider_tracking[x]:
+            if not slider_tracking[x][y]:
+                print("Did not find", y, "/", "#slider test for", y, "in target file", file_name)
+    exit()
+
+match_slider_tests()
+
 def verify_reg_files(my_proj):
     i7.go_proj(my_proj)
     x = glob.glob("reg-{}*.txt".format(my_proj))
@@ -268,6 +313,8 @@ for q in projs:
     for t in tabs[q]:
         print(">>>>>>>>>>>>>>>>>>>>Sync check for ...", q, t, region_wildcard)
         big_error_count += sync_check(q, t, region_wildcard)
+    if q == 'roi':
+        match_slider_tests()
 
 print(big_error_count, "total global error count.")
 
