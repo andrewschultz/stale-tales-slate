@@ -979,7 +979,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ropins"	451316659	--	--	"[no-ropin]."
 "yow"	304646602	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
-"wordy"	410999494	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
+"wordy"	410999494	Dr Yow	--	"[wordy-rowdy-nudge]."
 "tentative"	788195264	--	agnostic-can-learn rule	"[agnostic-first] is fully attentive. Don't ruin a good thing!"
 
 table of Artist Traits Strait nudges
@@ -1920,7 +1920,7 @@ to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
-to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
+to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 
@@ -1970,7 +1970,7 @@ to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight y
 
 to say no-creche: say "You can't change the screech creches. Well, not until you defeat Elvira"
 
-to say all-of-mel: say "No, you need to deal with all of Mel"
+to say all-of-mel: say "No, you need to deal with all of Mel Fish"
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
@@ -1997,6 +1997,21 @@ this is the bonker-gone rule:
 to say gasgad: say "You can't change the gadflies. There are too many"
 
 to say no-ropin: say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
+
+to say wordy-rowdy-nudge:
+	if slider is switched on:
+		if dr yow has been wordy and dr yow has not been rowdy:
+			match-process the player's command and "rowdy";
+			continue the action;
+		if dr yow has been rowdy and dr yow has not been wordy:
+			match-process the player's command and "rowdy";
+			continue the action;
+		if dr yow has been rowdy and dr yow has not been wordy:
+			say "The slider is silent. There is no third option, it appears";
+			continue the action;
+		say "The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name";
+		continue the action;
+	say "Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--[he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]";
 
 this is the agnostic-can-learn rule:
 	if player is in Obscurest Subsector and agnostic is in Obscurest Subsector and ag-atten is true, the rule succeeds;

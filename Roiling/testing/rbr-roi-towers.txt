@@ -67,28 +67,304 @@ Trying to change the current region you're in all at once would be risky, or use
 >torwe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
+@sli
+################################this tests all the possible picaros' changes. We simply dump all the "items" in the downside, then test and undo them one by one.
+>allrand
+#slider test for snared
+>nsrade
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for warned
+>awnrde
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for achier
+>caihre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for nearby
+>enrayb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for bleak
+>lbake
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for bored
+>obedr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for cricked
+>rcciedk
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for lardy
+>aldyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for timider
+>itimerd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for weedy
+>ewdye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for wined
+>iwedn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for olden
+>loend
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for tenser
+>eterns
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for gone
+>ogen
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for godly
+>oglyd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for learned
+>elendar
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for calmer
+>acmlre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for normal
+>onmrla
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for pronest
+>rpnoste
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for eggier
+>geergi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for coyer
+>ocery
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for ashen
+>saenh
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for recreant
+>eraerctn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for stony
+>tsnyo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for awed
+>wade
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for yonder
+>oydnre
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+
+@max
+>allrand
+##################################seed 1
+>gone
+Your score has just gone up by one point
+>undo
+>wined
+Your score has just gone up by one point
+>undo
+>bleak
+Your score has just gone up by one point
+>undo
+>tenser
+Your score has just gone up by one point
+>undo
+>snared
+Your score has just gone up by one point
+>undo
+>cricked
+Your score has just gone up by one point
+>undo
+##################################seed 2
+>ashen
+Your score has just gone up by one point
+>undo
+>olden
+Your score has just gone up by one point
+>undo
+>bored
+Your score has just gone up by one point
+>undo
+>calmer
+Your score has just gone up by one point
+>undo
+>warned
+Your score has just gone up by one point
+>undo
+>timider
+Your score has just gone up by one point
+>undo
+##################################seed 3
+>stony
+Your score has just gone up by one point
+>undo
+>godly
+Your score has just gone up by one point
+>undo
+>lardy
+Your score has just gone up by one point
+>undo
+>normal
+Your score has just gone up by one point
+>undo
+>achier
+Your score has just gone up by one point
+>undo
+>learned
+Your score has just gone up by one point
+>undo
+##################################seed 4
+>awed
+Your score has just gone up by one point
+>undo
+>coyer
+Your score has just gone up by one point
+>undo
+>weedy
+Your score has just gone up by one point
+>undo
+>eggier
+Your score has just gone up by one point
+>undo
+>nearby
+Your score has just gone up by one point
+>undo
+##################################seed 5
+>recreant
+Your score has just gone up by one point
+>undo
+
 @nud
+>allrand
+##################################seed 1
 #spechelp for geno
 >geon
 Geno looks around, as if he's about to bolt.
+>undo
 #spechelp for edwin
 >edwni
 Edwin hiccups.
+>undo
 #spechelp for blake
 >blaek
-Blake looks a bit unhappier.
+Blake looks a bit sadder.
+>undo
 #spechelp for ernest
 >ernets
 Ernest seizes up.
+>undo
 #spechelp for andres
 >andrse
 Andres looks a bit more tied up at the moment.
+>undo
 #spechelp for cedrick
 >cedrikc
 Cedrick cringes slightly.
-#spechelp for rodney
->rodnye
-Rodney looks around, as if he is sick of this place.
+>undo
+##################################seed 2
+#spechelp for shane
+>ashne
+Some color drains from Shane's face.
+>undo
+#spechelp for eldon
+>eldno
+Eldon looks slightly wrinkled for a moment.
+>undo
+#spechelp for bredo
+>breod
+Bredo yawns.
+>undo
+#spechelp for marcel
+>marcle
+Marcel breathes slower for a second.
+>undo
+#spechelp for andrew
+>andrwe
+Andrew suddenly looks as if he's been told he did something wrong.
+>undo
+#spechelp for demitri
+>demitir
+Demitri shivers a bit.
+>undo
+##################################seed 3
+#spechelp for tyson
+>tysno
+Tyson looks slightly less emotional.
+>undo
+#spechelp for goldy
+>golyd
+Goldy starts to fold his hands in prayer but thinks better of it.
+>undo
+#spechelp for daryl
+>darly
+Daryl pinches his sides and shakes his head.
+>undo
+#spechelp for marlon
+>marlno
+Marlon looks a little less weird for a moment.
+>undo
+#spechelp for archie
+>archei
+Archie looks a bit pained.
+>undo
+#spechelp for leander
+>leanerd
+Leander makes an a-ha gesture--no, only for a second.
+>undo
+##################################seed 4
+#spechelp for wade
+>waed
+Wade's eyes get bigger for a second.
+>undo
+#spechelp for royce
+>royec
+Royce looks a bit less aggressive.
+>undo
+#spechelp for dewey
+>dewye
+Dewey seems momentarily less muscular.
+>undo
+#spechelp for reggie
+>reggei
+Reggie sniffs the air.
+>undo
+#spechelp for barney
+>barnye
+Barney looks around a bit.
+>undo
+#spechelp for preston
+>prestno
+Preston almost slips for a second.
+>pronest
+Your score has just gone up by one point
+>undo
+>undo
+##################################seed 5
+#spechelp for terrance
+>terranec
+Terrance looks around as if he wants to run off.
+>undo
 
 >gone
 }}SCORE++
@@ -104,9 +380,12 @@ Rodney looks around, as if he is sick of this place.
 {$SCOS}
 
 @nud
+#spechelp for rodney
+>rodnye
+Rodney looks around, as if he is sick of this place.
 #renudge for picaros
 >picarso
-You've already dealt with one individual picaro--it can't be bad to tackle the others one at a time, by name
+You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
 
 @!minh,mini
 >tenser
