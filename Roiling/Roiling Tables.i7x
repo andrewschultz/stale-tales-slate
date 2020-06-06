@@ -142,14 +142,14 @@ hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	--	--	"You realize you have
 starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	--	--	"You half-memorize the charts, just in case, before dismissing them. Calling them tras(c)h sort of works as a noun or an interjection, and, well, you needed to rip up something harmless. This act [if shack-flip-yet is true]clues[else]reinforces[end if] to you that the main interjections are mostly used up, and it's probably all nouns and verbs, like the word trash itself, inside the Hacks['] Shack."
 clack ops locs pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	--	--	"You think WHOAH as the locs pack morps into a caps lock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	--	post-disk-skid rule	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
-skid	disk	true	215229079	--	"disk"	"disk"	pre-skid-disk rule	--	"The skid changes back into the familiar disk, which you take."
+skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the familiar disk, which you take." [there was a pre-skid-disk rule, but it was trumped by the SHATTER THREATS rule]
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."
 coal	dirty looking cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
-TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	pre-tba-tab rule	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
+TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
 I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
@@ -796,23 +796,25 @@ to say wont-maze:
 	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
 
 this is the post-mazeltov rule:
-	min-up;
 	now maze-points is 2;
-	if mazeguide-scanned is false:
-		min-up;
-		increment maze-points;
+	if mazeguide-scanned is false, increment maze-points;
 	shuffle-nowt-town;
 
 this is the pre-ether-there rule:
 	if Leo is not in Grey Gyre:
 		say "You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.";
-		preef ether instead;
+		preef ether;
+		do nothing instead;
+	if player does not have popgun or popgun does not contain dart:
+		say "Leo and Rand charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
+		preef ether;
+		do nothing instead;
+
+to say why-2-3:
 	if player does not have popgun:
-		say "Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
-		preef ether instead;
-	if popgun does not contain dart:
-		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
-		preef ether instead;
+		say "you don't even have a weapon";
+	else:
+		say "your popgun is unloaded[if boing is reflexive] and broken[end if]";
 
 this is the post-ether-there rule:
 	now dart is in Grey Gyre;
@@ -860,10 +862,6 @@ this is the post-disk-skid rule:
 		preef disk;
 	move skid to location of player;
 
-this is the pre-skid-disk rule:
-	if yak is on skid, say "The yak doesn't need that sort of shock." instead;
-	if location of player is not shack, say "Exposing a disk to whatever germs are on the ground seems inadvisable, so you take hold of the skid--pre-disk, whatever, first.";
-
 this is the pre-censer-screen rule:
 	if censer is touchable:
 		if Hacks' Shack is unvisited:
@@ -877,40 +875,41 @@ this is the post-censer-screen rule:
 		now player has screen;
 
 this is the pre-yak-keyboard rule:
-	if yak is touchable:
+	if yak-around:
 		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
-		preef keyboard instead;
+		now try-keyboard is true;
+		preef keyboard;
+		do nothing instead;
 
 this is the post-yak-keyboard rule:
 	moot leaf;
 	check-trivial-presto-llp;
 
-this is the pre-tba-tab rule:
-	if yak-around:
-		say "The yak generates an apathy that doesn't allow this. Yet.";
-		preef TBA key;
-		do nothing instead;
-
 this is the pre-polemic-compile rule:
 	if player is not in Hacks' Shack:
 		say "There is no computer around. You probably want to go back to the Hacks['] Shack for this.";
 		preef I'm Le Cop polemic instead;
-	if computer screen is not touchable:
-		say "Good idea, but tough without a screen.";
-		preef I'm Le Cop polemic instead;
-	if computer screen is not on slab:
-		say "Hmm. You may want to put the screen on the slab. Do so?";
-		if the player direct-consents:
-			now computer screen is on slab;
-			say "Done.";
-		else:
-			say "Ok, but by 'may want' I meant 'really probably need to.'";
-		the rule fails;
 	if keyboard is not touchable:
-		say "Good idea, but tough to program without a keyboard.";
+		say "Good idea, but tough to program without something to type on.";
+		preef I'm Le Cop polemic instead;
+	if computer screen is not touchable:
+		say "Good idea, but tough to program without something to read code off.";
 		preef I'm Le Cop polemic instead;
 	if keyboard is not on slab:
-		say "Good idea, but first, you probably want to put the keyboard on the slab.";
+		say "Good idea, but first, you probably want to put the keyboard on the slab. Do so now?";
+		if the player direct-consents:
+			now keyboard is on slab;
+			say "Done. You can try to COMPILE again, now.";
+		else:
+			say "Ok, but by 'may want' I meant 'really probably need to.'";
+		preef I'm Le Cop polemic instead;
+	if computer screen is not on slab:
+		say "Good idea, but first, you may want to put the screen on the slab. Do so now?";
+		if the player direct-consents:
+			now computer screen is on slab;
+			say "Done. You can try to COMPILE again, now.";
+		else:
+			say "Ok, but by 'may want' I meant 'really probably need to.'";
 		preef I'm Le Cop polemic instead;
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
@@ -1535,10 +1534,7 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is TBA key or noun is skid or noun is disk or noun is rom sticks:
 		if player is not in Hacks' Shack:
 			if noun is keyboard:
-				now try-keyboard is true;
-			if yak is touchable and noun is keyboard:
-				preef keyboard;
-				say "The air of apathy the yak generates spreads to its yoke, which refuses to do what it should. You will need to find a nonviolent way to separate the yak from its yoke. Maybe you can find a way to put the bored yak to sleep." instead;
+				abide by the pre-yak-keyboard rule;
 			if Hacks' Shack is not visited:
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
 				preef noun;
@@ -1566,15 +1562,18 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 					preef screen;
 					do nothing instead;
 			if noun is keyboard and yak is moot:
-				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
+				say "You probably want to [go-ret-shack] before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
 					say "Great!";
 					move player to shack;
 					move drab yoke to shack;
 					continue the action;
-			say "That stupid SHATTER-THREATS law might pick you up out here. Best to go in the shack and try again.";
+			say "That stupid SHATTER-THREATS law might pick you up out here. [if noun is disk and yak is on skid]Anyway, the yak on the skid wouldn't appreciate it. [end if]Best to [go-ret-shack] and try again.";
 			preef noun;
 			do nothing instead;
+
+to say go-ret-shack:
+	say "[if shack is unvisited]find a safe inside place[else]return to the [shack][end if]"
 
 section oyster
 
@@ -1843,7 +1842,7 @@ Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing 
 cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
-stop post	"You feel silly a bit. You can't let a simple stop post stop you!"
+stop post	"The stop post continues its silent defiance. But it can't be too hard to defeat!"
 a sty tasty say	"No. You pause. That can't be it. You need to do something, or nothing, differently."
 LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
@@ -2286,7 +2285,7 @@ to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
 to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
-to say no-rehash: say "[if leo is in Dirge Ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
+to say no-rehash: say "That'd be an awkward rehash. You need another way to say good-bye"
 
 volume table of hints
 

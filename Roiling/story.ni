@@ -2483,7 +2483,7 @@ gleaner	"The gleaner was made by Al Green, written in red."
 Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more[of]a refresher on[stopping] information, if you read again."
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"[if the-hostile is moot]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
@@ -3721,6 +3721,9 @@ to reg-inc:
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
 			now last-solved-region is stores;
+	score-notify;
+
+to score-notify:
 	if suppress-score is false, process the notify score changes rule;
 	let tru-sco be cur-score of mrlp;
 	if mrlp is otters and cinders are moot:
@@ -6085,15 +6088,21 @@ rule for supplying a missing noun when eating:
 	if player is in Lean Lane and tea tray is in Lean Lane:
 		now the noun is the tea tray;
 
+this is the can-i-heat rule:
+	if diners are touchable:
+		say "The diners let loose with some dry wit at you eating something like that cold--well, eating that at all.[line break]";
+	else if dandier arid den is touchable:
+		say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den.[line break]";
+	if player has toaster or toaster is touchable:
+		say "You figure you'd better heat [the noun] up in the toaster first. So you do. Mmm, not bad.";
+	else:
+		say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
+
 check eating a hintpastry (this is the try to eat a hint tart rule) :
 	if xrayvision is true, say "You're already under the influence of a pastry. XRAY something before continuing." instead;
 	if noun is not heated:
-		if diners are touchable, say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if player has toaster]. But maybe you can put it in the toaster[end if]." instead;
-		if dandier arid den is touchable, say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den." instead;
-		if player has toaster or toaster is touchable:
-			say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are touchable]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
-			try inserting noun into toaster instead;
-		say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
+		abide by the can-i-heat rule;
+		try inserting noun into toaster instead;
 
 check eating curst crust:
 	if swears < 1, say "[bug-report]" instead;
@@ -7379,9 +7388,14 @@ carry out fliptoing (this is the main fliptoing rule):
 				else if number of supporting stos < 4:
 					min-up;
 			if the-from entry is maze walls:
-				if the-from entry is maze walls:
-					if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned, min-and;
-					min-and;
+				increase the score by 2;
+				increase the cur-score of mrlp by 2;
+				increment the min-score of mrlp;
+				if Tom Avlez is off-stage and Zo Mavelt is not cscanned and Zo Mavelt is not ncscanned:
+					increment the score;
+					increment the cur-score of mrlp;
+					increment the min-score of mrlp;
+				score-notify;
 			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
@@ -9961,7 +9975,7 @@ section Tastee Estate
 the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
 
 this is the enter-troves rule:
-	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and when it finally gets light, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
+	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and you start to feel VERY cold before winding up in a hovel labeled [i]Eh, At Heat[r].[paragraph break]But you are soon thrown outside! There are no freeloaders in that most successful of cities: Spoiloplis![wfak][paragraph break]A girdled griddle where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
 
@@ -10928,7 +10942,7 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if heat is touchable]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[else]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru.". roomnud of Loather Rathole is table of Loather Rathole nudges.
+Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if heat is touchable]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[else]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru[if eh at heat is touchable].[paragraph break]And there it is! [i]Eh, At Heat[r]. You could use heat..". roomnud of Loather Rathole is table of Loather Rathole nudges.
 
 the hurt thru is bounding boring scenery in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
 
@@ -10949,13 +10963,22 @@ check going nowhere (this is the troves general direction reject rule):
 	if mrlp is troves, say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
 
 every turn when player is in Loather Rathole (this is the Loather Rathole complaints rule) :
-	say "[if heat is in Loather Rathole]You need your super purse back. But you try and fail to get stoked enough to be a race-acer![else]'Heat...' you think. Then you see red and muse [one of]'[one of]At... eh...[no line break][or]Eh... at...[no line break][in random order]' as you are not sure where you are.[or]'A...the...' your thoughts degenerate.[or]'The...a...' your thoughts degenerate, as your eyes redden.[in random order][end if]";
+	say "[if eh at heat is in Loather Rathole]You need heat, or some temporary substitute for it, now you were kicked out of [i]Eh, At Heat[r][else]The person who stole your super purse headed to the Race Acre, but you're not motivated right to follow them, yet[end if]."
 
 the Loather Rathole complaints rule is listed after the process random dialogue rule in the every turn rules.
 
 after printing the locale description for Loather Rathole when Loather Rathole is unvisited:
 	say "Skid Row, Wordski.";
 	continue the action;
+
+chapter eh at heat
+
+Eh At Heat is scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil."
+
+a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable.
+
+this is the bore-heat rule:
+	if current action is entering, say "[one of]You know you will get thrown out again, but maybe if you try to enter again, you will hear something that will help you.[or]You try to enter but lose your will at the last minute. Still, you hear' 'Tea! Hat? Eh!' It makes you see red.[stopping]".
 
 chapter fretful truffle
 
@@ -10977,12 +11000,6 @@ a-text of cold is "RYRY". b-text of cold is "PYRY". parse-text of cold is " h[sp
 
 check taking cold:
 	say "You have as much cold as you can take." instead;
-
-chapter heat
-
-the heat is flippable vanishing scenery. "The heat is nice and all, but being happy for it isn't the right emotion, here, with your possessions stolen."
-
-a-text of heat is "RYRY". b-text of heat is "R?R?". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable. [heat -> care, need to race]
 
 book Bustle Sublet
 
@@ -12523,7 +12540,7 @@ after printing the locale description for shack when shack is unvisited:
 		now player has computer screen;
 		reg-inc;
 	else:
-		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the N-E-Recs censer now.[else if player has the screen]--yours would do.[else if player has censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
+		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--but you remember trying to change the censer into a acreen before. Here seems like a better place.[else if player has the screen]--yours would do.[else if player has censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
 	continue the action;
 
 to go-back (rm - a room):
@@ -12554,11 +12571,7 @@ after printing the locale description for Hacks' Shack (this is the auto-screen 
 	if player has censer:
 		if censer is prefigured:
 			now Hacks' Shack is visited;
-			say "Hmm, now would be a good time to change the censer to a screen. Get it off your hands.";
 			try fliptoing screen;
-			if player has screen:
-				say "You fit the screen you just made handily on the labs slab.";
-				now screen is on labs slab;
 	check-trivial-presto-llp;
 	continue the action;
 
@@ -12699,6 +12712,8 @@ understand "a drive" as drive a.
 
 a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "?[sp]x[sp]?[sp]x[sp]?[sp]x".
 
+does the player mean inserting the disk into Drive A: it is likely.
+
 does the player mean doing something with Drive A: it is likely.
 
 check opening Drive A: say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive." instead;
@@ -12786,7 +12801,7 @@ a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of driv
 
 understand "e drive" as drive e.
 
-check inserting into drive e: say "Drive e is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if]." instead;
+check inserting into drive e: say "Drive E is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if]." instead;
 
 to decide which number is drive-llp:
 	let temp be 0;
@@ -13001,7 +13016,7 @@ chapter keyboarding
 
 the I'm Le Cop polemic is a reflexive thing in Hacks' Shack.
 
-report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy.";
+report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy." instead;
 
 does the player mean doing something with the teariest treatise when Strip of Profits is visited: it is unlikely.
 
@@ -13485,7 +13500,7 @@ to annoy-trolls:
 	if silly-acts is 1:
 		say "Your singular antic seems to have attracted the attention of a few pesty types, and the trolls look up, too.";
 	else if silly-acts is 2:
-		say "'Job perks: bop jerks.' say the trolls. The pesty types have formed a half-circle around you now.";
+		say "'Job perks: bop jerks,' say the trolls. The pesty types have formed a half-circle around you now.";
 	else:
 		say "The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
@@ -13764,7 +13779,7 @@ the baser braes are plural-named bounding boring scenery in Olde Lode. descripti
 
 book Disease Seaside
 
-Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packked with boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
+Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
 
 after looking in Disease Seaside:
 	set the pronoun them to boats;
@@ -14020,7 +14035,13 @@ unearthing is an action applying to one thing.
 
 understand the command "unearth" as something new.
 
+understand "unearth" as unearthing.
 understand "unearth [something]" as unearthing.
+
+rule for supplying a missing noun when unearthing:
+	if haunter is not off-stage, say "You already did." instead;
+	if player is not in anger range, say "Nothing worth unearthing here." instead;
+	now the noun is the pre-haun;
 
 the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
 
@@ -14097,6 +14118,7 @@ assuageing is an action applying to one thing.
 
 understand the command "assuage" as something new.
 
+understand "assuage" as assuageing.
 understand "assuage [something]" as assuageing.
 
 does the player mean assuageing the haunter: it is very likely.
@@ -14122,6 +14144,7 @@ traceing is an action applying to one thing.
 
 understand the command "trace" as something new.
 
+understand "trace" as traceing.
 understand "trace [thing]" as traceing.
 
 does the player mean traceing the crate: it is very likely.
@@ -16471,7 +16494,7 @@ check opening a hintpastry: say "You can just try to [if player has toaster]TOAS
 
 section sporties' ripostes
 
-the sporties' ripostes are plural-named vanishing boring scenery in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties' ripostes is bore-ripostes rule.
+the sporties' ripostes are plural-named vanishing boring LLPish scenery in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties' ripostes is bore-ripostes rule.
 
 a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
@@ -17359,12 +17382,7 @@ to shuffle-guardians (goner - a guardian):
 		else:
 			now G is opposite of blockdir entry;
 		now MR is the room G of location of player;
-		if MR is Salted Deltas:
-			now Artist Traits Strait is tower-accessible;
-			now Artist Traits Strait is accessible;
-		if MR is Artist Traits Strait:
-			now Salted Deltas is tower-accessible;
-			now Salted Deltas is accessible;
+	if debug-state is true, say "DEBUG: opening path to [MR]. It is [unless MR is accessible]not [end if]accessible.";
 	now goner is prodded;
 	if goner is dreads adders:
 		now topside is accessible;
@@ -17395,6 +17413,7 @@ to shuffle-guardians (goner - a guardian):
 	if gua-before is gua-to-clear: [if we still need to clear the same number of guardians, increase minimum score]
 		d "unnecessary guardian cleared.";
 		min-up;
+	d "List of accessible rooms: [list of accessible rooms].";
 	if can-see-map:
 		draw-my-loc;
 	let RG be number of not moot red guardians;
@@ -17406,11 +17425,19 @@ to shuffle-guardians (goner - a guardian):
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if guar-here > 0:
 		now mr-hinty is a random touchable guardian;
+	if MR is Salted Deltas:
+		now Artist Traits Strait is tower-accessible;
+		now Actionless Coastlines is accessible;
+		now Artist Traits Strait is accessible;
+	if MR is Artist Traits Strait:
+		now Salted Deltas is tower-accessible;
+		now Actionless Coastlines is accessible;
+		now Salted Deltas is accessible;
 	else if Scope Copse is visited:
 		if any-cleared is false:
 			now any-cleared is true;
 		else if number of not moot guardians is 0:
-			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
+			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. +To the other side of the lake.";
 		else if number of tower-accessible rooms >= 12 and Obscurest Subsector is tower-accessible and Shaven Havens are tower-accessible: [the grid + Outer Route + Shaven Havens + Obscurest Subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
 			if clear-warn is false:
 				say "You can move everywhere you need, now[if number of tower-accessible rooms < 14], but maybe you can clear a few more passages, if you want[end if].";
@@ -17426,7 +17453,7 @@ to decide which number is gua-to-clear:
 	if Anemic Cinema is not accessible, increment temp; [3]
 	if Danger Garden is not accessible, increment temp; [4]
 	if Salted Deltas are not accessible and Artist Traits Strait is not accessible, increment temp; [5]
-	decide on temp. [ the proof of this is straightforward: we need a path (deleted guardian) to get to the each corner. For the NE, either strait/deltas is ok since we must clear the hostile and the atheists. We also need to get by the Scope Copse. Therefore we have 5 separate areas to link up: x+y=0, y=2, x=2, x=1 y=1, x+y=3. This is necessary/sufficient as anything in part 2-3-4 is 1 away from part 5. So if 5 is accessible, anything undone is 1 away from it. If 5 is not accessible, then it is 1 away from something done (except 1, in which case we just see the first area we go to from the 1's) and then the other not accessible areas are 1 away from 5, where we can go next. ]
+	decide on temp. [ the proof of this is straightforward: we need a path (deleted guardian) to get to each corner. For the NE, either strait/deltas is ok since we must clear the hostile and the atheists. We also need to get by the Scope Copse. Therefore we have 5 separate areas to link up: x+y=0, y=2, x=2, x=1 y=1, x+y=3. This is necessary/sufficient as anything in part 2-3-4 is 1 away from part 5. So if 5 is accessible, anything undone is 1 away from it. If 5 is not accessible, then it is 1 away from something done (except 1, in which case we just see the first area we go to from the 1's) and then the other not accessible areas are 1 away from 5, where we can go next. ]
 
 clear-warn is a truth state that varies.
 
@@ -17491,7 +17518,7 @@ to reposition-guardians:
 			if location of player is loc entry:
 				move guy entry to location of player;
 				if there is an aux entry:
-					say "[aux entry] is an auxiliary item.";
+					if debug-state is true, say "DEBUG: [aux entry] is an auxiliary item.";
 					if aux entry is reed's ale:
 						now guy entry carries aux entry;
 					else:
@@ -21754,7 +21781,7 @@ this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if Olde Lode is visited:
-		say "[2da][remaining-actions of 2] are the other two actions that would've annoyed Posh Hops Shop pesty types, though the game restricted you to three of five.";
+		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if cheated-guy is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
 		if tunes are moot, say "[2da]You could have also [if remapped is true]UNSET the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
@@ -21843,7 +21870,12 @@ to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	if tines are not reflexed, add "INSET" to poshact;
 	if capers is not reflexed, add "SCRAPE" to poshact;
 	if gins sign is not reflexed, add "SING" to poshact;
-	if tunes are not reflexed, add "UNSET/REMAP" to poshact;
+	if tunes are not moot, add "UNSET/REMAP" to poshact;
+	if tunes are reflexed:
+		if remapped is true:
+			add "UNSET (instead of REMAP to break the jukebox)" to poshact;
+		else:
+			add "REMAP (instead of UNSET to break the jukebox)" to poshact;
 	sort poshact in random order;
 	if fd > 0:
 		while number of entries in poshact > fd:
@@ -21933,7 +21965,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if drive e is reflexive, say "[2drm of Hacks' Shack]you could've taken time to DERIVE how to improve Drive E.";
 	else if myreg is oyster:
 		if you-used-pills is true, say "[how-pills-used].";
-		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
+		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 0].";
 		if cans are not moot, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not moot, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
 		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";

@@ -393,6 +393,8 @@ understand "evil" as a mistake ("No, you're trying to get RID of the evil, here.
 
 understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else if leo is washed up]need to find a way to cheer them up[else]wouldn't want that, now they're your friends[end if].") when Rand is in location of player.
 
+understand "rondale" as a mistake ("Strength and NFL level speed is pretty awesome, but it'd revoke Leo and Rand'a individuality.") when Rand is in location of player.
+
 understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not in location of player.
 
 understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in Dirge Ridge and Leo is washed up.
