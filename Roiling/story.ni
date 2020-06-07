@@ -3566,7 +3566,10 @@ to decide what thing is dio-other of (di - a thing):
 firstwordhash is a number that varies.
 cmdhash is a number that varies.
 
+read-slider-after is a truth state that varies.
+
 to decide whether (tn - a table name) is hash-found:
+	let print-this-clue be false;
 	repeat through tn:
 		if there is a hashval entry:
 			if cmdhash is not 0:
@@ -3574,17 +3577,23 @@ to decide whether (tn - a table name) is hash-found:
 					if there is a this-item entry:
 						if this-item entry is touchable:
 							unless this-item entry is a mack-idea and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
-								say "[this-clue entry][line break]";
-								decide yes;
+								now print-this-clue is true;
 					else if there is a this-rule entry:
 						say "[run paragraph on]";
-						follow this-rule entry;
+						process the this-rule entry;
 						if the rule succeeded:
-							say "[this-clue entry][line break]";
-							decide yes;
+							now print-this-clue is true;
 					else:
-						say "[this-clue entry][line break]";
-						decide yes;
+						now print-this-clue is true;
+			if print-this-clue is true:
+				say "[this-clue entry][line break]";
+				if read-slider-after is true:
+					if cmdhash is hashval entry:
+						match-process the player's command and the this-cmd entry;
+					else:
+						match-process word number 1 in the player's command and the this-cmd entry;
+				now read-slider-after is false;
+				decide yes;
 			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
 				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.";
 				now doublewarn is true;
@@ -5816,7 +5825,7 @@ Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
 Bran Barn	"You don't need to go any way but back north."
 Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Blest Belts are private to animals[end if]."
-Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals as for humans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
+Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot![paragraph break]Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
@@ -6697,6 +6706,8 @@ check swearing obscenely:
 	if agnostic is touchable, say "Some example you are." instead; [TOWERS]
 	if player is in Actionless Coastlines or player is in Artist Traits Strait:
 		if lois is touchable or hostile-is-he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
+	if player is in Rawest Waters:
+		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
 	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
 	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "Merle and Elmer sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
@@ -17850,22 +17861,35 @@ rescind-cinders is a truth state that varies.
 discern-warn is a truth state that varies.
 
 carry out discerning:
+	if mrlp is not otters, say "[reject]" instead;
 	if player is in Minded Midden and cinders are in Minded Midden:
 		say "(taking the cinders first)[line break]";
 		try taking the cinders;
-	if noun is not cinders:
-		if mrlp is not otters, say "[reject]" instead;
-		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need to discern the cinders for that, and they're back at Minded Midden[end if]." instead;
+	if cinders are not touchable:
+		say "You need the cinders for that. They are back in [Minded Midden]." instead;
 	if discern-warn is false:
 		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is touchable]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
 		unless the player yes-consents:
 			say "Okay. This nag won't appear again." instead;
+	if noun is not cinders:
+		if noun is reflexed, say "You already did something, there." instead;
+		if noun is prefigured, say "You already found what to do, there. PAD FLIPS to see what." instead;
+		repeat through table of hintobjs:
+			if noun is hint-entry entry:
+				if there is a parallel-entry entry:
+					try discerning parallel-entry entry instead;
+				cinders-bye;
+				say "The cinders swirl away into the air. You have a revelation. [spoil-entry entry][line break]";
+				the rule succeeds;
+		say "You discern nothing. The cinders stay where they are." instead;
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You have everything you need." instead;
 	if otters-cur-item is player, say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
 	process the otters-hinting rule;
-	now spoilit is false instead;
+	now spoilit is false;
+	cinders-bye;
+	the rule succeeds;
 
 [	if ed riley is touchable:
 		say "You discern Ed Riley could speak more reedily.";
@@ -17912,7 +17936,7 @@ carry out discerning:
 	else if player has whistle:
 		if whistle is reflexive:
 			say "You discern you may need [if player is in Rancho Archon Anchor]to leave the rancho [end if]to see how to make the whistle play DEEPLY."; [ic]
-		else if nounsolve < 3 or adjsolve < 3:
+		else if medals-shiny < 2:
 			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [animals-left].";
 			now do-i-dis is false;
 		else:
@@ -17921,11 +17945,14 @@ carry out discerning:
 		now do-i-dis is false;
 	if do-i-dis is false, say "The cinders do not dissolve or blow away. Looks like they had nothing super-profound for you to discern." instead;
 	say "[line break]The cinders blow away, having imparted knowledge.";
+	cinders-bye;
+	the rule succeeds.]
+
+to cinders-bye:
 	prevent undo;
 	now undo-code is 7;
 	poss-d;
 	moot cinders;
-	the rule succeeds.]
 
 to say animals-left:
 	if adjsolve < 3:
@@ -17965,6 +17992,9 @@ an aide is a kind of person. an aide is usually henchy.
 Elmer is a reflexive LLPish aide in Reclusion Inclosure.
 
 Merle is a reflexive LLPish aide in Reclusion Inclosure. The chum of Merle is Elmer.
+
+to decide which number is elmer-merle-bonus:
+	decide on boolval of (whether or not Elmer is reflexed) + boolval of (whether or not Merle is reflexed);
 
 check scaning Elmer when Elmer is reflexed: if Merle is not reflexed, try scaning Merle instead;
 check scaning Merle when Merle is reflexed: if Elmer is not reflexed, try scaning Elmer instead;
@@ -18058,8 +18088,9 @@ carry out playing:
 			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock construe trounces and rifest strife: [twiddle of table of animal friends and 5]. Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
 			now otters is solved;
 			now last-solved-region is otters;
+			reg-inc;
 			force-status;
-			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
+			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him later. Or, if you're interested right now, would you like to go back to the Strip of Profits?";
 			unless the player direct-consents:
 				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
 				note-denial;
@@ -18082,9 +18113,9 @@ to say lee-or-eels:
 		if eels are moot:
 			say "You're surprised to see Mr. Lee and the eels together, 'LEE'S EELS,' alongside--yes, Gretta with animals of her own.";
 		else:
-			say "Some eels tag long behind Mr. Lee. You [if Loop Pool is visited]don't recognize them[else]look away sheepishly--you didn't convince them[end if], and they glare briefly as if to say, you should've TOLD us about the fun.";
+			say "[line break]Some eels tag along behind Mr. Lee. You [if Loop Pool is visited]don't recognize them[else]look away sheepishly--you didn't convince them[end if], and they glare briefly as if to say, you should've TOLD us about the fun.";
 	else:
-		say "A man tags along behind the eels you rescued. [if Bran Barn is visited]It's Mr. Lee, whom you couldn't befriend[hat-gone], but he salutes you in half-apology[else]It's Mr. Lee! He salutes you, and he's little more than a spectator, but he smiles at the machine-slaughter he hopes is ahead.";
+		say "[line break]A man tags along behind the eels you rescued. [if Bran Barn is visited]It's Mr. Lee, whom you couldn't befriend[hat-gone], but he salutes you in half-apology[else]His clothing labels him as Mr. Lee. He salutes you, and he's little more than a spectator, but he smiles at the machine-slaughter he hopes is ahead.";
 
 to say hat-gone: say "[if ghoul hat is moot] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
 
@@ -18361,6 +18392,9 @@ chapter medals
 
 the medals are a reflexive wearable plural-named thing.
 
+to decide which number is medals-shiny:
+	decide on boolval of (whether or not adjsolve > 3) + boolval of (whether or not nounsolve > 3);
+
 understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
 
 after printing the name of medals while taking inventory:
@@ -18371,7 +18405,7 @@ medalings is a list of text variable. medalings is { "crusted over", "grimy", "d
 description of the medals is "They're roped together. [medal-summary]."
 
 after examining medals for the first time:
-	say "You remember Gretta said something about good deeds restoring the medals. Also, you remember a most improper story about medals clinking together when someone good hid from a vicious animal, but ... you'll take your chances.";
+	say "You remember Gretta said something about good deeds restoring the medals. Also, you remember a most improper story (by Kasi Saik? Isak? Hmm... I ask...) about medals clinking together when someone good hid from a vicious animal, but ... you'll take your chances.";
 	continue the action;
 
 to say medal-summary:
@@ -18406,7 +18440,7 @@ nounsolve is a number that varies.
 adjsolve is a number that varies.
 
 check scaning medals:
-	if nounsolve < 3 or adjsolve < 3, say "The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more." instead;
+	if medals-shiny < 2, say "The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more." instead;
 
 a-text of medals is "RYYRRRO". b-text of medals is "[if medals-lucky-first is true]RGYRRRO[else]RYYRRRB[end if]". parse-text of medals is "[if medals-lucky-first is false]x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y[else]x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y[end if]".
 
@@ -18442,9 +18476,9 @@ after fliptoing a mack-idea:
 		say "(Wow, you did this without seeing the macks act anything like that!) ";
 	increment macked-out;
 	if macked-out is 1:
-		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
+		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic for a moment.[paragraph break]";
 	otherwise if macked-out is 2:
-		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
+		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.[paragraph break]";
 	else:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
@@ -18770,7 +18804,7 @@ chapter Loop Pool
 
 Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-vow].". roomnud of Loop Pool is table of Loop Pool nudges.
 
-to say check-vow: if vow here is touchable, say ". That vow here still echoes. It's not harming you, but maye you could get rid of it"
+to say check-vow: if vow here is touchable, say ". That vow here still echoes. It's not harming you, but maybe you could get rid of it"
 
 after looking in Loop Pool for the first time:
 	say "You hear whispering ... 'Le Mer guards the allot atoll from the not worth yet.' Well, it's good to know what to call the center of the Loop Pool.";
@@ -18886,7 +18920,7 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be[end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -21129,7 +21163,7 @@ carry out objhinting (this is the pick object to hint rule) :
 					now undo-code is 7;
 				if scams is false:
 					if noun is medals: [ugh. This is a lousy hack to say, if we just find out about te medals, don't do anything. ]
-						if nounsolve > 2 and adjsolve > 2:
+						if medals-shiny is 2:
 							poss-d;
 							moot cinders;
 					else:
@@ -21162,7 +21196,7 @@ carry out objhinting (this is the pick object to hint rule) :
 
 definition: a thing (called disc-tar) is cinder-dissolve:
 	if disc-tar is medals:
-		if nounsolve < 3 or adjsolve < 3, no;
+		if medals-shiny < 2, no;
 	yes;
 
 eisihint is a truth state that varies.
@@ -21575,7 +21609,7 @@ This is the print the modified final question rule:
 						say "[2da][final question wording entry][line break]";
 					else:
 						increment pure-metas;
-	say "You can also ";
+	say "You [if the story has ended finally]can also[else]probably want to UNDO, but your full list of choices is to[end if] ";
 	repeat through the Table of Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
 			if there is a final response rule entry

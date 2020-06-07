@@ -96,7 +96,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of carven cavern nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cavern"	410395643	--	--	"[locname]."
-"terrain"	517651905	plaster	--	"Hm... 'retrain terrain' is a bit circular, as anagrams go. The [if stapler is touchable]stapler[else]plaster psalter[end if] and [if plates are touchable]palest pastel plates[else]staple[end if] probably hold the key to leaving."
+"terrain"	517651905	--	--	"Hm... 'retrain terrain' is a bit circular, as anagrams go. The [if stapler is touchable]stapler[else]plaster psalter[end if] and [if plates are touchable]palest pastel plates[else]staple[end if] probably hold the key to leaving."
 "plate"	368383743	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "act"	124303421	act ruin curtain	--	"[curtain-block]."
@@ -1188,7 +1188,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nail"	169902011	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
 "critters"	664946148	--	--	"[restrictr]."
 "critter"	568672182	--	--	"[restrictr]."
-"raccoon"	343135453	--	--	"[if corona is touchable]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
+"raccoon"	343135453	--	--	"[if corona is touchable]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.[slider-activate][else]No need to tweak the rac(c)oon again. It's fine as is.[end if]"
 "throne"	496782314	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
 
 table of Reclusion Inclosure nudges
@@ -1238,6 +1238,8 @@ chapter others
 
 table of others nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
+"other"	427874806	--	degen-true rule	"[not-the-reg]."
+"storeh"	524148772	--	degen-true rule	"[not-the-reg]."
 "needle"	527168763	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	tekno-token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
@@ -1375,8 +1377,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nera"	284225238	--	--	"[val-chg]."
 "valence"	506691788	--	--	"[val-chg]."
 "roping"	387642395	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
-"other"	427874806	--	degen-true rule	"[not-the-reg]."
-"storeh"	524148772	--	degen-true rule	"[not-the-reg]."
 
 chapter demo dome
 
@@ -2090,7 +2090,7 @@ to say eelmry:
 		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is moot]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
 	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
-		say "You can't change Merle and Elmer, but maybe you could find a way to get rid of them";
+		say "You can't fully change Merle and Elmer, [if elmer-merle-bonus is 0]but there are ways[else if elmer-merle-bonus is 1]but there's another way[else]and you've really done all you can[end if] to shut them up for a bit. Maybe you could find a way to get rid of them";
 		continue the action;
 	if Bran Barn is unvisited and Loop Pool is unvisited and Reclusion Inclosure is unvisited:
 		say "You shouldn't know about Merle, Elmer et al yet";
@@ -2113,7 +2113,16 @@ this is the preserve-saved rule:
 
 to say lit-no: say "It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it"
 
+to say nudge-slidermatch of (ha - a number) and (mt - indexed text):
+	if slider is switched on, continue the action;
+	if cmdhash is ha:
+		match-process the player's command and mt;
+	else:
+		match-process word number 1 in the player's command and mt;
+
 to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
+
+to say slider-activate: if slider is switched on, now read-slider-after is true;
 
 this is the hydra-know rule:
 	if the player is in Rancho Archon Anchor, the rule succeeds;

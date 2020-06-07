@@ -307,7 +307,7 @@ Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogr
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if]."
-atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Even if they weren't long words, that took a bit of energy. However, there's probably even more danger inside."
+atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
 t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."
@@ -1340,16 +1340,17 @@ this is the post-lamer-realm-flip rule:
 		say "The LUCKY medal you're wearing clanks against the IQ medal. It looks a bit clearer, now.";
 	else if temp is 3:
 		say "The [list of touchable reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of touchable reflexive animals] and shrug a bit, as if it can come along if it wants to. Your LUCKY medal looks very shiny now.";
-		now random reflexive animal in Perverse Preserve is llpish;
+		now random touchable reflexive animal is llpish;
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
 	let temp be number of touchable animals;
+	if debug-state is true, say "[temp]. [list of touchable animals].";
 	if temp is 2:
 		say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
 	else if temp is 4:
 		say "The [list of touchable animals] swarm around you in a circle a few times. You seem to have established leadership of them, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
-		now random pre-animal in Perverse Preserve is llpish;
+		now random touchable pre-animal is llpish;
 
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
@@ -1375,7 +1376,7 @@ this is the post-imp-flip rule:
 this is the post-whiners-flip rule:
 	increment quietness;
 	if quietness is 2:
-		say "As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "[line break]As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
 		moot ram1;
 		moot ram2;
@@ -1476,15 +1477,18 @@ this is the pre-whistle-deeply rule:
 		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
 
 this is the pre-medals-quickly rule:
-	if nounsolve < 3 or adjsolve < 3:
-		say "You feel a surge, but not enough. [if nounsolve < 3 and adjsolve < 3]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe that's holding some power back. Maybe you have some good deeds to perform, still[med-unf].";
-		preef medals instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
+	if medals-shiny < 2:
+		say "You feel a surge, but not enough. [if medals-shiny is 0]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe there's a way to clean [if medals-shiny is 0]them[else]it[end if] up and restore their full power[med-unf].";
+		preef medals;
+		do nothing instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is touchable:
 		say "That seems right, but not now. Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
-		preef medals instead;
+		preef medals;
+		do nothing instead;
 	if player is not in Reclusion Inclosure:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf]. But there probably will be. The medals will help then.";
-		preef medals instead;
+		preef medals;
+		do nothing instead;
 
 section others auxiliary
 
@@ -1598,8 +1602,9 @@ section otters
 
 a medal check rule for a thing (called x):
 	if player does not have medals:
+		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
 		preef x; [preef mr lee/le mer]
-		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [x] is unmoved." instead;
+		do nothing instead;
 
 section general
 
@@ -2739,14 +2744,14 @@ hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
 parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
 sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
-medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or][medals-do].[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-inclosure][end if]"
+medals	"[if medals-shiny < 2][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or][medals-do].[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-inclosure][end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
 Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Rancho Archon Anchor is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"
-Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
+Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
 a border arbored	"It's just there to establish you can't walk any which way."
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[or]What's a fruit that has pits and a stem?[or]A cherry, but this is a much brighter red than usual.[or]MARASCHINO.[cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[or]What can green dishwashing detergent smell like?[or]LIMES.[cycling]"

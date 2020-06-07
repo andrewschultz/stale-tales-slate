@@ -616,7 +616,7 @@ understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Ad
 
 chapter Sclerous Closures
 
-understand "rasche" as a mistake ("Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.") when player is in Sclerous Closures.
+understand "rasche" as a mistake ("Nobody jumps from the Achers['] Chaser Arches to say, trust me, I know what I'm doing.") when player is in Sclerous Closures.
 
 chapter Horned Hedron
 
