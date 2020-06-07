@@ -299,9 +299,9 @@ Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
 imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
-ram1	ram1	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
-ram2	ram2	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
-ram3	ram3	false	716493096	--	"tersely"	"tersely"	--	post-whiners-flip rule	"[shout-check]"
+whin1	whin1	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
+whin2	whin2	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
+whin3	whin3	false	716493096	--	"tersely"	"tersely"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
 Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre vanishes! Mr. Lee blinks. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He perks up. ' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
@@ -1344,13 +1344,12 @@ this is the post-lamer-realm-flip rule:
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
-	let temp be number of touchable animals;
-	if debug-state is true, say "[temp]. [list of touchable animals].";
-	if temp is 2:
+	let temp be number of touchable southy puzanimals;
+	if temp is 1:
 		say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
-	else if temp is 4:
-		say "The [list of touchable animals] swarm around you in a circle a few times. You seem to have established leadership of them, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
-		now random touchable pre-animal is llpish;
+	else if temp is 3:
+		say "The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
+		now random not touchable southy puzanimal is llpish;
 
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
@@ -1362,8 +1361,7 @@ this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
 
 this is the post-imp-flip rule:
-	increment silence-tally;
-	if silence-tally is 2:
+	if imp-frustration is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
 		moot imp;
 		moot imp1;
@@ -1374,13 +1372,12 @@ this is the post-imp-flip rule:
 		remove noun from shrine-imp-items, if present;
 
 this is the post-whiners-flip rule:
-	increment quietness;
-	if quietness is 2:
+	if whiner-score is 2:
 		say "[line break]As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
-		moot ram1;
-		moot ram2;
-		moot ram3;
+		moot whin1;
+		moot whin2;
+		moot whin3;
 	else:
 		set the pronoun them to whiners;
 		remove noun from cathedral-items, if present;
@@ -2029,9 +2026,9 @@ Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertas
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
 imp3	"[imp-nag]."
-ram1	"[ram-nag]."
-ram2	"[ram-nag]."
-ram3	"[ram-nag]."
+whin1	"[whin-nag]."
+whin2	"[whin-nag]."
+whin3	"[whin-nag]."
 raptor	"The raptor recoils slightly."
 parrot	"The parrot seems to roll its eyes at you, as if to say, [unless player is in Reclusion Inclosure]not here[else]you DO remember what I was[end if]."
 cinders	"The cinders glow and even warm up for a bit."
@@ -2114,7 +2111,7 @@ to say jet-nq: say "Despite your lack of technical knowledge, you think you almo
 
 to say imp-nag: say "The imp looks slightly annoyed for a second. You may be on the right track";
 
-to say ram-nag: say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
+to say whin-nag: say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
 
 ana-repeats is a number that varies.
 
@@ -2722,9 +2719,9 @@ allot atoll	"The allot atoll [if eels are reflexed]was just there to get you you
 imp1	"[bug-report]"
 imp2	"[bug-report]"
 imp3	"[bug-report]"
-ram1	"[bug-report]"
-ram2	"[bug-report]"
-ram3	"[bug-report]"
+whin1	"[bug-report]"
+whin2	"[bug-report]"
+whin3	"[bug-report]"
 owls	"[one of]You only have one move to tackle the owls.[plus][or]They are too fast now.[plus][or]Make them SLOW. This hints what else to do here.[minus][cycling]"	--	"you can make the owls SLOW"
 satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of it.[plus][or]Make him less violent?[plus][or]A bit ARTSY?[minus][cycling]"	--	"you can make the satyr ARTSY"
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"

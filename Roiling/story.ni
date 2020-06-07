@@ -3547,7 +3547,7 @@ to say good-enuf of (goody - a thing):
 	if goody is imp1 or goody is imp2 or goody is imp3:
 		say "The imp's already been compromised that way.";
 		continue the action;
-	if goody is ram1 or goody is ram2 or goody is ram3:
+	if goody is whin1 or goody is whin2 or goody is whin3:
 		say "The whiners were already slowed up that way.";
 		continue the action;
 	if goody is part of the diorama:
@@ -5235,7 +5235,7 @@ to decide which thing is animal-to-hint:
 
 shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
 
-cathedral-items is a list of things variable. cathedral-items is {ram1, ram2, ram3}.
+cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, whin3}.
 
 this is the otters-hinting rule:
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
@@ -17752,6 +17752,18 @@ after going (this is the parrot follows you rule):
 			say "'Awk! Not sure you need to mess around there now.' The parrot does not follow you.";
 	continue the action;
 
+section region specific type definitions
+
+a puzanimal is a kind of animal. a puzanimal is usually neuter. a puzanimal can be northy or southy. a puzanimal has text called locale-text.
+
+a prepuzanimal is a kind of thing. a prepuzanimal has text called locale-text.
+
+after doing something with a puzanimal:
+	set the pronoun him to noun;
+	if noun is not satyr, set the pronoun her to noun;
+	set the pronoun it to noun;
+	continue the action;
+
 book otters specific verbs
 
 chapter quicklying
@@ -18152,7 +18164,7 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably.[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
@@ -18870,6 +18882,9 @@ book Shiner Shrine
 
 Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Minded Midden. "This north-south passage is [if sly imp is touchable]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west.". roomnud of Shiner Shrine is table of Shiner Shrine nudges.
 
+to decide which number is imp-frustration:
+	decide on (boolval of whether or not imp1 is reflexed) + (boolval of whether or not imp2 is reflexed) + (boolval of whether or not imp3 is reflexed);
+
 The simply sly imp is a flippable neuter person in Shiner Shrine. "A simply sly imp zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
 after looking in Shiner Shrine:
@@ -18909,7 +18924,7 @@ to decide whether try-fail-animal:
 	decide no;
 
 check going north in Shiner Shrine:
-	if imp is touchable, say "The imp gives a sidle-slide, then idles in front of you. It's [if silence-tally is 1]still a bit [end if]too smooth for you right now." instead;
+	if imp is touchable, say "The imp gives a sidle-slide, then idles in front of you. It's [if imp-frustration is 1]still a bit [end if]too smooth for you right now." instead;
 	if power-back is false:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
@@ -18930,7 +18945,7 @@ the saturnic curtains are plural-named bounding boring scenery in Lamer Realm. d
 
 chapter ocelots
 
-the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[else]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
+the ocelots are plural-named reflexive neuter northy puzanimals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[else]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
 
 understand "ocelot" as ocelots.
 
@@ -18945,7 +18960,7 @@ a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of oc
 
 chapter leopard
 
-The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camouflaged since you changed it[end if]."
+The leopard is a reflexive neuter northy puzanimal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camouflaged since you changed it[end if]."
 
 a-text of leopard is "RYRYRYR". b-text of leopard is "RYRYRYP". parse-text of leopard is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]d".
 
@@ -18955,15 +18970,17 @@ the jumpsuit is part of the leopard. description is "The leopard looks back at y
 
 chapter badger
 
-The badger is a reflexive neuter animal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[else]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[else]A badger covers his naughty bits that were buried under his fur anyway[end if]."
+The badger is a reflexive neuter northy puzanimal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[else]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[else]A badger covers his naughty bits that were buried under his fur anyway[end if]."
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
 chapter satyr
 
-the satyr is a reflexive male animal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
+the satyr is a reflexive male northy puzanimal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
+
+chapter owls
 
 the owls are plural-named terse vanishing animals in Lamer Realm. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
 
@@ -18989,47 +19006,52 @@ every turn (this is the raptor kills you rule):
 		else:
 			ital-say "You'll get a mulligan for instantaneous actions like examining, but you may want to deal with that raptor, or flee.";
 
-silence-tally is a number that varies.
-
 section debug - not for release
 
 understand "i1" as imp1 when debug-state is true and player is in Shiner Shrine.
 understand "i2" as imp2 when debug-state is true and player is in Shiner Shrine.
 understand "i3" as imp3 when debug-state is true and player is in Shiner Shrine.
-understand "r1" as ram1 when debug-state is true and player is in Shiner Shrine.
-understand "r2" as ram2 when debug-state is true and player is in Shiner Shrine.
-understand "r3" as ram3 when debug-state is true and player is in Shiner Shrine.
+understand "w1" as whin1 when debug-state is true and player is in Shiner Shrine.
+understand "w2" as whin2 when debug-state is true and player is in Shiner Shrine.
+understand "w3" as whin3 when debug-state is true and player is in Shiner Shrine.
 
 book Clarthead Cathedral
 
 Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise here is just unbearable[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west.". roomnud of Clarthead Cathedral is table of Clarthead Cathedral nudges.
 
-the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+check going south in Clarthead Cathedral:
+	if whiners are touchable, say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
+	if power-back is false:
+		now try-fail-cathedral-south is true;
+		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
+
+to decide which number is whiner-score:
+	decide on (boolval of whether or not whin1 is reflexed) + (boolval of whether or not whin2 is reflexed) + (boolval of whether or not whin3 is reflexed)
+
+the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if whin1 is reflexive]tallyhoing[else]babbling[end if][if whin2 is reflexive] with great callosity[end if] here[if whin3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
 
-to decide which number is whiner-score:
-	let temp be 0;
-	if ram1 is reflexed, increment temp;
-	if ram2 is reflexed, increment temp;
-	if ram3 is reflexed, increment temp;
-	decide on temp;
+check scaning whiners:
+	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if whin1 is reflexive]restyle[else]continue[end if] [if whin2 is reflexive]tallyhoing[else]their noisiness[end if] [if whin3 is reflexive]with callosity[end if]";
+	try scaning entry 1 of cathedral-items;
+	the rule succeeds;
 
 section dummy scenery
 
 [3 dummy sceneries. Loathingly, stoically, tersely]
 
-ram1 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram1 is undesc. printed name of ram1 is "the whiners['] shrewin[']".
+whin1 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin1 is undesc. printed name of whin1 is "the whiners['] shrewin[']".
 
-a-text of ram1 is "RRYYRYRRO". b-text of ram1 is "RRYYRYRRB". parse-text of ram1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
+a-text of whin1 is "RRYYRYRRO". b-text of whin1 is "RRYYRYRRB". parse-text of whin1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
 
-ram2 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram2 is undesc. printed name of ram2 is "the whiners['] shrewin[']".
+whin2 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin2 is undesc. printed name of whin2 is "the whiners['] shrewin[']".
 
-a-text of ram2 is "RYRRYRO". b-text of ram2 is "RGRRYPO". parse-text of ram2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". ram2 is cheat-spoilable. [tersely]
+a-text of whin2 is "RYRRYRO". b-text of whin2 is "RGRRYPO". parse-text of whin2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". whin2 is cheat-spoilable. [tersely]
 
-ram3 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. ram3 is undesc. printed name of ram3 is "the whiners['] shrewin[']".
+whin3 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin3 is undesc. printed name of whin3 is "the whiners['] shrewin[']".
 
-a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ram3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
+a-text of whin3 is "RYYRRYRRRO". b-text of whin3 is "RYYRRYRRRO". parse-text of whin3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
 
 book Perverse Preserve
 
@@ -19058,17 +19080,17 @@ the CRITTERS RESTRICT is bounding boring scenery in Perverse Preserve. descripti
 
 chapter corona and racoon
 
-A corona is a thing. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
+A corona is a prepuzanimal. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
 
 a-text of corona is "RYRYYR". b-text of corona is "RYRGYR". parse-text of corona is "x[sp]-[sp]x[sp]o[sp]-[sp]x". corona is cheat-spoilable.
 
-the racoon is a neuter animal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail."
+the racoon is a southy puzanimal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail."
 
 a lit tail is a boring thing. it is part of the racoon. it is amusing. printed name of lit tail is "a lit tail". description of a lit tail is "The racoon's tail is beautiful and eerie, but useless as far as you can tell, so it's not worth bothering with.". bore-text is "The/a lit tail isn't worth fiddling with. You rescued the racoon. That's good enough."
 
 chapter thrones and hornets
 
-the thrones are plural-named things. the thrones are fixed in place.
+the thrones are plural-named prepuzanimals. the thrones are fixed in place.
 
 understand "throne" as thrones.
 
@@ -19076,30 +19098,31 @@ description of thrones is "They're made out of, not metal, but locusts. Well, no
 
 a-text of thrones is "RYRRYRR". b-text of thrones is "RYPRYRP". parse-text of thrones is "x[sp]-[sp]r[sp]x[sp]-[sp]x[sp]s".
 
-the hornets are plural-named neuter animals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
+check taking the thrones: say "They seem abnormally sharp, as if they could sting you again and again." instead;
+
+section hornets
+
+the hornets are plural-named southy puzanimals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
 
 understand "hornet" as hornets when hornets are touchable.
 
-check taking the thrones: say "They seem abnormally sharp, as if they could sting you again and again." instead;
-
 chapter pines and snipe
 
-some pines are a plural-named thing. description is "The bases of the pines look almost like birds['] feet."
-
-the pines are fixed in place.
-
-check taking pines:
-	say "The effort would crush your spine." instead;
-
-check taking snipe: say "It will follow you when you call." instead;
-
-the snipe is a neuter animal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
+some pines are a plural-named prepuzanimal. description is "The bases of the pines look almost like birds['] feet.".
 
 a-text of pines is "RRYRY". b-text of pines is "RRYRY". parse-text of pines is "x[sp]x[sp]-[sp]x[sp]-".
 
+check taking pines: say "The effort would crush your spine." instead;
+
+section snipe
+
+check taking snipe: say "It will follow you when you call." instead;
+
+the snipe is a southy puzanimal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
+
 chapter nails and snail
 
-Some nails are plural-named things. "Some nails are lying all over the floor here."
+Some nails are plural-named prepuzanimals. "Some nails are lying all over the floor here."
 
 description of nails is "They're in a spiral. Odd."
 
@@ -19107,25 +19130,14 @@ check taking nails: say "They're almost glued to the floor or something." instea
 
 a-text of nails is "RRYYR". b-text of nails is "RRYYR". parse-text of nails is "x[sp]x[sp]-[sp]-[sp]x". nails is cheat-spoilable.
 
-the snail is a neuter animal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
+section snail
+
+the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
 
 check scaning imp:
-	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is moot]patience is legendary and butlery[else if imp3 is moot]It has a butlery air as it moves rangily[else if imp2 is moot]patience feels legendary as it moves rangily[end if].";
+	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if imp-frustration is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is reflexed]patience is legendary and butlery[else if imp3 is reflexed]It has a butlery air as it moves rangily[else if imp2 is reflexed]patience feels legendary as it moves rangily[else]here but shouldn't be. This is a BUG[end if].";
 	try scaning entry 1 of shrine-imp-items;
 	the rule succeeds;
-
-check scaning whiners:
-	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if ram1 is reflexive]restyle[else]continue[end if] [if ram2 is reflexive]tallyhoing[else]their noisiness[end if] [if ram3 is reflexive]with callosity[end if]";
-	try scaning entry 1 of cathedral-items;
-	the rule succeeds;
-
-check going south in Clarthead Cathedral:
-	if whiners are touchable, say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
-	if power-back is false:
-		now try-fail-cathedral-south is true;
-		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
-
-quietness is a number that varies.
 
 chapter raptor trap
 
@@ -21250,12 +21262,12 @@ to say casp-cap:
 	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or]SCRAPE the blackboard.[minus][cycling]"
 
 to decide whether one-imp-down:
-	if imp1 is reflexed or imp2 is reflexed or imp3 is reflexed, decide yes;
-	decide no;
+	if imp-frustration >= 1, yes;
+	no;
 
 to decide whether one-whine-down:
-	if ram1 is reflexed or ram2 is reflexed or ram3 is reflexed, decide yes;
-	decide no;
+	if whiner-score >= 1, yes;
+	no;
 
 to say medal-help:
 	say "The medals look less than perfect. ";
@@ -21918,7 +21930,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the fissure 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
-	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've acted [if ram1 is reflexive]LOATHINGLY[else if ram2 is reflexive]STOICALLY[else]TERSELY[end if].";
+	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've acted [if whin1 is reflexive]LOATHINGLY[else if whin2 is reflexive]STOICALLY[else]TERSELY[end if].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";
@@ -22460,6 +22472,8 @@ carry out a5ing:
 	get-cool-stuff;
 	move player to Strip of Profits;
 	now suppress-score is true;
+	let XXX be debug-state;
+	now debug-state is false;
 	if store k is in Strip of Profits, try fliptoing tokers;
 	if store n is in Strip of Profits, try fliptoing nestor;
 	if store p is in Strip of Profits, try fliptoing odorant tornado;
@@ -22467,6 +22481,7 @@ carry out a5ing:
 	if store v is in Strip of Profits, try fliptoing Tastee Estate;
 	if store w is in Strip of Profits, try fliptoing truster turrets;
 	if store y is in Strip of Profits, try fliptoing balancer barnacle;
+	now debug-state is XXX;
 	try fliptoing solid idols;
 	moot odorant tornado;
 	moot course source;

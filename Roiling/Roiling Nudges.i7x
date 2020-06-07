@@ -1147,10 +1147,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cathedral"	451746378	--	--	"[locname]."
 "whiner"	472247338	--	--	"[whiney]."
 "whiners"	568521304	--	--	"[whiney]."
-"loathing"	417246607	ram1	--	"[add-ly]."
-"stoic"	337734992	ram2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
-"stoical"	393736649	ram2	--	"[add-ly]."
-"terse"	540320005	ram3	--	"[add-ly]."
+"loathing"	417246607	whin1	--	"[add-ly]."
+"stoic"	337734992	whin2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
+"stoical"	393736649	whin2	--	"[add-ly]."
+"terse"	540320005	whin3	--	"[add-ly]."
 
 table of Loop Pool nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2070,7 +2070,7 @@ this is the midden-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
-to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if ram3 is moot or ram2 is moot or ram1 is moot]even [end if]less...whiningly"
+to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if whin3 is moot or whin2 is moot or whin1 is moot]even [end if]less...whiningly"
 
 to say cube-whole: say "The sea cube is unmoved. You may need to concentrate on the whole thing";
 
