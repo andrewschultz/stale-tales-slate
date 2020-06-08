@@ -336,10 +336,10 @@ t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	--	--	"Th
 t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	--	--	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
 t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--	"The macks['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
-Merle	Merle	false	683905568	--	"honestly"	"honestly"	--	--	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
-Elmer	Elmer	false	292289828	--	"aside"	"aside"	--	--	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when Merle and Elmer laugh at you, you mention THEY could never be that intimidating. That shuts them up."
+holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
+aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when Merle and Elmer laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break]Elmer and Merle shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1432,6 +1432,13 @@ this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 		preef atmo-moat;
 		do nothing instead;
 
+this is the post-holy-nest-honestly rule:
+	now holy nest is reflexed;
+
+this is the post-ideas-aides-aside rule:
+	now aside-llp is reflexed;
+	move holy nest to Reclusion Inclosure;
+
 this is the post-raptor-parrot rule:
 	preef parrot;
 	now nails are in Perverse Preserve;
@@ -1447,8 +1454,10 @@ this is the post-parrot-raptor rule:
 	moot hydra;
 	moot Merle;
 	moot Elmer;
-	if Merle is reflexive, poss-d;
-	if Elmer is reflexive, poss-d;
+	if aside-llp is not moot, poss-d;
+	if holy nest is not moot, poss-d;
+	moot aside-llp;
+	moot holy nest;
 	reg-inc;
 
 to say extra-c:
@@ -2732,8 +2741,10 @@ nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus
 pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]The corona is black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
 thrones	"[one of]Sit on the thrones and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
+aside-llp	"[one of]Elmer and Merle are ideas aides, and they are in your way. You can disturb them temporarily for a bonus point.[plus][or]You cn't work on Elmer and Merle's names but on their title, ideas aides.[plus][or]You can move them ASIDE. It doesn't work, but you get a bonus point and another puzzle.[minus][cycling]"
+holy nest	"[one of]The holy nest isn't critical, but two of the letters in it look familiar.[plus][or]Elmer and Merle aren't very moral, so maybe you can poke them about that for a bit.[plus][or]HONESTLY.[minus][cycling]"
 Elmer	--	Merle
-Merle	"[if parrot is in Reclusion Inclosure]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
+Merle	"[if parrot is in Reclusion Inclosure]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have a potential ally[end if]."
 forces fresco	"It's just there to give ambience."
 snail	"The snail will help you when the time comes."
 snipe	"The snipe will help you when the time comes."

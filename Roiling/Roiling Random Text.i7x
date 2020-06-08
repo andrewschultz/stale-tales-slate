@@ -534,15 +534,9 @@ this is the last-battle rule:
 	if current action is playing whistle and player is in Rancho Archon Anchor, the rule succeeds;
 	the rule fails.
 
-this is the em-sez rule:
-	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
-		if Merle is reflexed, the rule succeeds;
-	the rule fails;
-
 this is the inclosure-talk rule:
-	if player is in Reclusion Inclosure and Elmer is in Reclusion Inclosure:
-		if Merle is reflexed, the rule succeeds;
-		say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]"; [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in Reclusion Inclosure etc]
+	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
+		if holy nest is moot, the rule succeeds;
 	the rule fails;
 
 this is the Elvira-taunt rule:

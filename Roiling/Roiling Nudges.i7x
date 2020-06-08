@@ -1198,7 +1198,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "enclosure"	758395303	--	--	"[locname]."
 "alcoves"	480604714	--	--	"Destroy the whole citadel and not just the alcoves."
 "alcove"	384330748	--	--	"Destroy the whole citadel and not just an alcove."
-"idea"	196015862	Merle	--	"[if elmer is reflexed]You already bugged them both[else]You might be able to bug both of them, not just one[end if]."
+"idea"	196015862	Merle	--	"[if aside-llp is moot]You already pushed them aside[else]You might be able to disrupt both of them, not just one[end if]."
 "monstery"	742208386	--	--	"[w-change]."
 "monastery"	744396204	--	--	"[w-change]."
 "eelmr"	458825013	--	eelmr rule	"[eelmry]."

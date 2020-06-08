@@ -1799,7 +1799,7 @@ to say pat-on-pit: say "[if mushrooms are off-stage]Can't even explore the seed 
 
 check asking Curtis about: if second noun is a fruit, say "'[if second noun is moot]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
 
-to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]get all, ETHYLS, NO and make a drinking gesture and wag their fingers[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[end if]."
+to say mon-men: say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[else]ignore you--you seem easy to push around[end if]."
 
 to say war-duh: say "Rodney silences him from answering."
 
@@ -2493,6 +2493,7 @@ blaster	"ALBERT'S."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
+holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH[or]ELTYN SHO[in random order]"
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
@@ -3322,16 +3323,7 @@ Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-
 to say to-clean-otters: [hells bells this is ugly]
 	if gore ogre is reflexive or eels are reflexive:
 		say "[if eels are reflexive]the Bran Barn[else]the Loop Pool[end if]";
-		if cinders are not moot or elmer is reflexive:
-			say ", as well as ";
-		else:
-			continue the action;
-	if elmer is reflexive:
-		say "Elmer and Merle's annoying blather";
-		if cinders are not moot:
-			say " and ";
-		else:
-			continue the action;
+		if cinders are not moot, say ", as well as ";
 	say "the cinders";
 
 [here, the rules succeed if there's still stuff left to do]
@@ -3342,7 +3334,6 @@ this is the routes-left rule:
 
 this is the otters-left rule:
 	if gore ogre is reflexive or eels are reflexive, the rule succeeds;
-	if elmer is reflexive, the rule succeeds;
 	if cinders are not moot, the rule succeeds;
 	the rule fails.
 
@@ -17959,9 +17950,9 @@ carry out discerning:
 			now do-i-dis is false;
 	else if player is in Reclusion Inclosure:
 		if parrot is in Reclusion Inclosure:
-			say "[if Merle is reflexive]Merle and Elmer's on-the-sly-ness is too sly to discern, though you may not need to. Also, y[else]Y[end if]ou discern the parrot can become a RAPTOR again.";
-		else if Merle is in Reclusion Inclosure and Merle is reflexive:
-			say "There might be a way to make them less annoying, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
+			say "Merle and Elmer [if elmer-merle-bonus is 0]can be taken down a couple pegs for fun[else if elmer-merle-bonus is 1]can be tweaked beyond ASIDE--focus on the holy nest[else]have been psyched-out enough[end if]. More importantly, you discern the parrot can become a RAPTOR again.";
+		else if Merle is in Reclusion Inclosure and holy nest is not mood:
+			say "There might be [if aside-llp is in Reclusion Inclosure]a way or two[else]another way[end if] to make them less annoying or push back at them a bit, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
 			now do-i-dis is false;
 	else if parrot is moot and medals are reflexive:
 		say "You discern you need to [if player is not in Reclusion Inclosure]go to the Reclusion Inclosure and [end if]see the medals can make you go QUICKLY.";
@@ -17995,7 +17986,7 @@ to say animals-left:
 
 book Reclusion Inclosure
 
-Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, [if hydra-known is true and hydra is in archon anchor]though you'll need to get rid of that hardy hydra[else]if you dare[end if]. The ways north and south lead to coevals['] alcoves which are probably distractions.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges.
+Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can leave the Edictal Citadel via a [if elmer is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] passage to the east, or in to the west, [if hydra-known is true and hydra is in archon anchor]though you'll need to get rid of that hardy hydra[else]if you dare[end if]. The ways north and south lead to coevals['] alcoves which are probably distractions.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges.
 
 section going west
 
@@ -18008,7 +17999,7 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 			get-dead;
 			follow the shutdown rules instead;
 		continue the action;
-	if aides-llp is in Reclusion Inclosure:
+	if aside-llp is in Reclusion Inclosure:
 		say "[e-n-m] block you from going west. Perhaps you could use some of your magic to push by them." instead;
 	if hydra is in Rancho Archon Anchor:
 		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of Elmer and Merle first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
@@ -18018,19 +18009,19 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 
 chapter two LLPs
 
-section aides-llp
+section aside-llp
 
-the aides-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure.
+the aside-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure.
 
-a-text of aides-llp is "YRYRY". b-text of aides-llp is "?RYRY". parse-text of aides-llp is "?[sp]x[sp]-[sp]x[sp]-".
+a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "?[sp]x[sp]-[sp]x[sp]-".
 
-understand "aidesllp" as aides-llp when debug-state is true and aides-llp is touchable.
+understand "aidesllp" as aside-llp when debug-state is true and aside-llp is touchable.
 
 section holy nest
 
 the holy nest is boring LLPish scenery. "It's only nominally holy. It's covered with writing you could sneak a look at.". bore-text of holy nest is "The holy nest isn't important to finding Elvira, but maybe it could help you expose that much more of Elmer and Merle's hypocrisy.".
 
-a-text of holy nest is "RYRYRRRO". b-text of holy nest "PGRYRRRO". parse-text of holy nest "h[sp]o[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
+a-text of holy nest is "RYRYRRRO". b-text of holy nest is "PGRYRRRO". parse-text of holy nest is "h[sp]o[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
 chapter useless scenery
 
@@ -18060,17 +18051,17 @@ to say e-n-m: say "[one of]Elmer and Merle[or]Merle and Elmer[at random]"
 
 an aide is a kind of person. an aide is usually henchy.
 
-Elmer is a reflexive LLPish aide in Reclusion Inclosure.
+Elmer is an aide in Reclusion Inclosure.
 
-Merle is a reflexive LLPish aide in Reclusion Inclosure. The chum of Merle is Elmer.
+Merle is an aide in Reclusion Inclosure. The chum of Merle is Elmer.
 
 to decide which number is elmer-merle-bonus:
-	decide on boolval of (whether or not Elmer is reflexed) + boolval of (whether or not Merle is reflexed);
+	decide on boolval of (whether or not aside-llp is reflexed) + boolval of (whether or not holy nest is reflexed);
 
 check scaning an aide:
-	if aides-llp is touchable:
+	if aside-llp is touchable:
 		say "You get something for both [e-n-m]:..";
-		try scaning aides-llp instead;
+		try scaning aside-llp instead;
 	if holy nest is touchable:
 		say "Nothing for Elmer and Merle, but the holy nest between them gives something.";
 		try scaning holy nest instead;
@@ -18090,7 +18081,7 @@ does the player mean doing something with Merle:
 	it is likely.
 
 rule for printing a locale paragraph about Elmer:
-	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if elmer is reflexive]. They make it clear they're Elvira's ideas aides[end if].";
+	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if aside-llp is not moot]. They make it clear they're Elvira's ideas aides[else if holy nest is touchable]. You can see the holy nest peeking out behind them[end if].";
 	now Merle is mentioned;
 	now Elmer is mentioned;
 
@@ -18851,7 +18842,7 @@ for printing a locale paragraph about Mr Lee:
 
 section infidel infield
 
-the infidel infield is scenery in Bran Barn. "The infidel infield is Mr. Lee's property. While he would probably let you look around there[if gore ogre is not moot] with the ogre ogre gone[end if], you don't need to go there. It has, however, provided surprisingly good resistance so close to Elvira, perhaps at the cost of some of Mr. Lee's mental health."
+the infidel infield is bounding boring scenery in Bran Barn. "The infidel infield is Mr. Lee's property. While he would probably let you look around there[if gore ogre is not moot] with the ogre ogre gone[end if], you don't need to go there. It has, however, provided surprisingly good resistance so close to Elvira, perhaps at the cost of some of Mr. Lee's mental health."
 
 section ghoul hat
 
@@ -21579,7 +21570,7 @@ others	"Giving Curtis four or more fruits?"
 table of anayux
 reg-needed	yux	do-i-print
 --	"MANSE:"	a rule
---	"making the plates or staple PASTEL, PLEATS or PETALS?"
+--	"making the plates or staple PLEATS or PETALS?"
 --	"PSALTER around the plaster/stapler?"
 troves	"TROVES:"
 troves	"BROOMED in Boredom Bedroom?"
@@ -22209,8 +22200,10 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bran barn is not visited:
 			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
 		if gore ogre is not moot, say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
-		if Merle is reflexive, say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
-		if Elmer is reflexive, say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
+		if aside-llp is not reflexed:
+			say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
+		else if holy nest is not reflexed:
+			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:
 			repeat with A running through flippable things in Perverse Preserve:
 				say "[2dmiss of myreg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
