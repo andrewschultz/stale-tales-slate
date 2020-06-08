@@ -1062,7 +1062,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "medals"	365185974	medals	--	"It's what the medals say that makes them special."
 "vow"	289452170	vow here	--	"The [i]whole[r] vow here."
 "here"	378218320	vow here	--	"The [i]whole[r] vow here."
-"hydra"	268182261	--	hydra-know rule	"[if player is in Rancho Archon Anchor]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
+"hydra"	268182261	--	hydra-know rule	"[if player has whistle]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
+"coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
+"weltish"	 571213850	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 "ottre"	493702525	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	degen-true rule	"[not-the-reg]."
 
@@ -1126,7 +1128,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mack"	138201734	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
 "gretta"	454137468	Gretta	--	"Gretta's been manipulated enough[if macks are touchable]. Deal with the macks['] arguments, instead[end if]."
-"weltish"	 571213850	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
 
 table of Shiner Shrine nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1140,7 +1141,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "angry"	311378083	imp2	--	"[add-ly]."
 "angri"	234011677	imp2	--	"[add-ly]."
 "enraged"	465660138	imp3	--	"[add-ly]."
-"coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
 
 table of Clarthead Cathedral nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1169,7 +1169,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lamer"	333206722	--	--	"[locname]."
 "blest"	399422837	--	realm-saved rule	"[locname]."
 "belt"	303148871	--	realm-saved rule	"[locname]."
-"ocelot"	452440705	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
+"ocelot"	452440705	ocelots	--	"The ocelots are sticking together. You don't want or need to pick one off."
 "low"	236101189	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
 "saturnic"	524907351	--	--	"The curtains are too solid to change."
 "aturnic"	428633385	--	--	"Even one curtain is too solid to change."
@@ -2064,7 +2064,7 @@ to say both-medals: say "No, it's a combination of what's on both medals"
 
 to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
 
-to say add-ly: say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
+to say add-ly: say "No, you need a couple more letters... [if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
 
 this is the midden-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
@@ -2125,7 +2125,7 @@ to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. 
 to say slider-activate: if slider is switched on, now read-slider-after is true;
 
 this is the hydra-know rule:
-	if the player is in Rancho Archon Anchor, the rule succeeds;
+	if the player has the weltish whistle, the rule succeeds;
 	if the player is in Reclusion Inclosure and hydra-known is true, the rule succeeds;
 	the rule fails.
 

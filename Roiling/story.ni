@@ -529,6 +529,7 @@ include Object Response Tests by Juhana Leinonen.
 section screenreading and censoring
 
 when play begins (this is the screenread gender swears and precursor rule) :
+	now is-roiling is true;
 	if debug-state is true:
 		choose-male;
 		continue the action;
@@ -2465,7 +2466,7 @@ LEAD	"You can't get settled. Everything seems too general or too specific, and a
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
-Blamer Mr Beal	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
+Blamer Mr Beal	"The likeness was drawn up by E. R. Lamb, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 r cad card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
@@ -4325,22 +4326,28 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 		pad-rec-q "spaces";
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
+	let modnoun be scannote-idx of noun;
 	repeat through table of scannotes:
 [	if noun is an xtradesc in table of scannotes: ?! doesn't work]
-		if noun is xtradesc entry:
+		if modnoun is xtradesc entry:
 			if there is no xtratext entry:
 				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH.";
 				the rule succeeds;
-			choose row with a xtradesc of noun in table of scannotes;
+			choose row with a xtradesc of modnoun in table of scannotes;
 			if bothscan entry is true:
-				now noun is ncscanned;
-				now noun is cscanned;
+				now modnoun is ncscanned;
+				now modnoun is cscanned;
 			if b-only entry is false or cheat-on is true: [if cheat is off and it's b-text only clue, ignore.]
 				if clue-only-once entry is false or clued-yet entry is false:	[special clued-once text ignored]
 					now clued-yet entry is true;
 					say "[line break][xtratext entry][line break]";
 			the rule succeeds;
 	the rule succeeds;
+
+to decide which thing is scannote-idx of (th - a thing):
+	if th is imp1 or th is imp2 or th is imp3, decide on sly imp;
+	if th is whin1 or th is whin2 or th is whin3, decide on whiners;
+	decide on th;
 
 to say sb-choose:
 	say "Your settler registers ";
@@ -4526,7 +4533,7 @@ t-silently	true	true	false	false	"Wow! Three things to consider here. This might
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
-sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably more than one way to be active, so the settler can't pin it down."
+sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
@@ -17555,7 +17562,16 @@ understand the command "allrand" as something new.
 understand "allrand" as allranding.
 
 carry out allranding:
+	say "ALLRAND dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
+	if macks are moot:
+		say "WARNING macks are moot so moving all mack pickup lines to [downside] may be useless or woese.";
+	else:
+		say "Moved all mack pickup lines to disowned downside.";
 	now all mack-ideas are in Disowned Downside;
+	if Loftier Trefoil is visited and player is not in Loftier Trefoil:
+		say "WARNING you passed the Loftier Trefoil. This may result in odd behavior from the game.";
+	else:
+		say "Moved all picaros to Loftier Trefoil.";
 	now all picaros are in Loftier Trefoil;
 	the rule succeeds.
 
@@ -17756,7 +17772,11 @@ section region specific type definitions
 
 a puzanimal is a kind of animal. a puzanimal is usually neuter. a puzanimal can be northy or southy. a puzanimal has text called locale-text.
 
+for printing the name of a puzanimal (called pa) while printing the locale description: say "[locale-text of pa]".
+
 a prepuzanimal is a kind of thing. a prepuzanimal has text called locale-text.
+
+for printing the name of a prepuzanimal (called pa) while printing the locale description: say "[locale-text of pa]".
 
 after doing something with a puzanimal:
 	set the pronoun him to noun;
@@ -17784,7 +17804,7 @@ to get-dead:
 	else if location of player is Reclusion Inclosure:
 		do nothing;
 	else if joke-death is true:
-		ital-say "this death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.";
+		ital-say "this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.";
 	d "Getting dead: [undo-code].[line break]";
 	end the story saying "[deth]";
 
@@ -17877,8 +17897,8 @@ carry out discerning:
 	if player is in Minded Midden and cinders are in Minded Midden:
 		say "(taking the cinders first)[line break]";
 		try taking the cinders;
-	if cinders are not touchable:
-		say "You need the cinders for that. They are back in [Minded Midden]." instead;
+	if cinders are moot, say "[if rescind-cinders is true]You rescinded the cinders, so you can't DISCERN[else]You already used the cinders to DISCERN[end if]." instead;
+	if cinders are not touchable, say "You need the cinders for that. They are back in [Minded Midden]." instead;
 	if discern-warn is false:
 		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is touchable]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
@@ -17892,7 +17912,7 @@ carry out discerning:
 				if there is a parallel-entry entry:
 					try discerning parallel-entry entry instead;
 				cinders-bye;
-				say "The cinders swirl away into the air. You have a revelation. [spoil-entry entry][line break]";
+				say "The cinders swirl away into the air. You have a revelation. [spoil-entry entry].";
 				the rule succeeds;
 		say "You discern nothing. The cinders stay where they are." instead;
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You have everything you need." instead;
@@ -18405,7 +18425,7 @@ chapter medals
 the medals are a reflexive wearable plural-named thing.
 
 to decide which number is medals-shiny:
-	decide on boolval of (whether or not adjsolve > 3) + boolval of (whether or not nounsolve > 3);
+	decide on boolval of (whether or not adjsolve >= 3) + boolval of (whether or not nounsolve >= 3);
 
 understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
 
@@ -18943,9 +18963,30 @@ understand "blest/belts" and "blest belts" as Lamer Realm when adjsolve >= 3.
 
 the saturnic curtains are plural-named bounding boring scenery in Lamer Realm. description of the saturnic curtains is "They shine metallically and menacingly. You know better than to touch them. They are effective at keeping everything in one place[if adjsolve >= 3] and my even provide a safeguard for the animals you rescued[end if].". bore-text is "Saturnic means infected with lead poisoning, not just dark or ethereal, so you don't want to do too much with them."
 
+for printing a locale paragraph about a reflexive puzanimal (called th) in Lamer Realm:
+	if th is mentioned, continue the action;
+	let X be number of reflexive puzanimals in Lamer Realm;
+	say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of touchable puzanimals].";
+	now all touchable reflexive puzanimals are mentioned;
+
+for printing a locale paragraph about a reflexed puzanimal (called th) in Lamer Realm:
+	if th is mentioned, continue the action;
+	let X be number of reflexed puzanimals in Lamer Realm;
+	say "Just seeing the [list of touchable reflexed puzanimals] you helped makes you feel relaxed.";
+	now all touchable reflexed puzanimals are mentioned;
+
+after choosing notable locale objects when player is in Lamer Realm (this is the group animals in lamer realm rule):
+	repeat with X running through all reflexive puzanimals in Perverse Preserve:
+		set the locale priority of X to 1;
+	repeat with X running through all reflexed prepuzanimals in Perverse Preserve:
+		set the locale priority of X to 5;
+	if owls are in Lamer Realm,
+		set the locale priority of owls to 9;
+	continue the action;
+
 chapter ocelots
 
-the ocelots are plural-named reflexive neuter northy puzanimals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[else]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
+the ocelots are plural-named reflexive neuter northy puzanimals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[else]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if].". locale-text is "ocelots making gestures you'd look silly [if ocelots are reflexive](and so do they) [end if]making"
 
 understand "ocelot" as ocelots.
 
@@ -18960,7 +19001,7 @@ a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of oc
 
 chapter leopard
 
-The leopard is a reflexive neuter northy puzanimal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camouflaged since you changed it[end if]."
+The leopard is a reflexive neuter northy puzanimal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camouflaged since you changed it[end if].". locale-text is "a leopard whose markings look [if leopard is reflexive]like a jail jumpsuit[else]tough and fierce[end if]".
 
 a-text of leopard is "RYRYRYR". b-text of leopard is "RYRYRYP". parse-text of leopard is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]d".
 
@@ -18970,13 +19011,13 @@ the jumpsuit is part of the leopard. description is "The leopard looks back at y
 
 chapter badger
 
-The badger is a reflexive neuter northy puzanimal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[else]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[else]A badger covers his naughty bits that were buried under his fur anyway[end if]."
+The badger is a reflexive neuter northy puzanimal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[else]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[else]A badger covers his naughty bits that were buried under his fur anyway[end if].". locale-text is "[if badger is reflexed]a garbed badger[else]a badger that seems uncomfortable in its fur alone[end if]".
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
 chapter satyr
 
-the satyr is a reflexive male northy puzanimal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
+the satyr is a reflexive male northy puzanimal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if].". locale-text is "a stray satyr [if satyr is reflexed]dreaming of a better Yorpwald[else]resistant to all but practicality and survival[end if]".
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
 
@@ -19057,6 +19098,19 @@ book Perverse Preserve
 
 Perverse Preserve is south of Clarthead Cathedral. Perverse Preserve is a room in Otters. "[pre-desc]". roomnud of Perverse Preserve is table of Perverse Preserve nudges.
 
+for printing a locale paragraph about a prepuzanimal (called th) in Perverse Preserve:
+	if th is mentioned, continue the action;
+	let nt be number of touchable prepuzanimals;
+	if nt < 4, say "[line break]";
+	say "[if nt is 4]You see many out-of-place things here[else if nt > 1]Some things are still out of place[else]Only one more weird thing lingers here[end if]: [list of touchable prepuzanimals].";
+	now all touchable prepuzanimals are mentioned;
+
+for printing a locale paragraph about a puzanimal (called th) in Perverse Preserve:
+	if th is mentioned, continue the action;
+	let nt be number of touchable puzanimals;
+	say "The animal[if nt > 1]s[end if] you helped so far hover[if nt is 1]s[end if] around here: [list of touchable puzanimals].";
+	now all touchable puzanimals are mentioned;
+
 printed name of Perverse Preserve is "[if nounsolve < 3]Perverse Preserve[else]Uprates Pasture[end if]"
 
 understand "uprates/pasture" and "uprates pasture" as Perverse Preserve when nounsolve >= 3.
@@ -19066,8 +19120,10 @@ to say pre-desc:
 		say "[if know-restrict is true]The CRITTERS RESTRICT blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape.[no line break]";
 		continue the action;
 	else:
-		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie[if know-restrict is true], even without the CRITTERS RESTRICT blocking every way except back north[else]. You can go back north[end if].[no line break]";
+		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, [if nounsolve is 4]so you can really only go back north[else if nounsolve is 3]which feels like enough, even if one is left. You can go back north[else][still-eerie].[no line break]";
 		continue the action;
+
+to say still-eerie: say "but it's still eerie[if know-restrict is true], even without the CRITTERS RESTRICT blocking every way except back north[else]. You can go back north[end if]"
 
 chapter critters restrict
 
@@ -19080,11 +19136,11 @@ the CRITTERS RESTRICT is bounding boring scenery in Perverse Preserve. descripti
 
 chapter corona and racoon
 
-A corona is a prepuzanimal. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
+A corona is a prepuzanimal. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge.". locale-text is "a corona of light that sweeps slowly along the ground".
 
 a-text of corona is "RYRYYR". b-text of corona is "RYRGYR". parse-text of corona is "x[sp]-[sp]x[sp]o[sp]-[sp]x". corona is cheat-spoilable.
 
-the racoon is a southy puzanimal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail."
+the racoon is a southy puzanimal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail.". locale-text is "a racoon with a lit tail".
 
 a lit tail is a boring thing. it is part of the racoon. it is amusing. printed name of lit tail is "a lit tail". description of a lit tail is "The racoon's tail is beautiful and eerie, but useless as far as you can tell, so it's not worth bothering with.". bore-text is "The/a lit tail isn't worth fiddling with. You rescued the racoon. That's good enough."
 
@@ -19094,7 +19150,7 @@ the thrones are plural-named prepuzanimals. the thrones are fixed in place.
 
 understand "throne" as thrones.
 
-description of thrones is "They're made out of, not metal, but locusts. Well, not quite that."
+description of thrones is "They're made out of, not metal, but locusts. Well, not quite that.". locale-text is "thrones too dingy to sit on".
 
 a-text of thrones is "RYRRYRR". b-text of thrones is "RYPRYRP". parse-text of thrones is "x[sp]-[sp]r[sp]x[sp]-[sp]x[sp]s".
 
@@ -19102,13 +19158,13 @@ check taking the thrones: say "They seem abnormally sharp, as if they could stin
 
 section hornets
 
-the hornets are plural-named southy puzanimals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
+the hornets are plural-named southy puzanimals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here.". locale-text is "hornets buzzing about unthreateningly".
 
 understand "hornet" as hornets when hornets are touchable.
 
 chapter pines and snipe
 
-some pines are a plural-named prepuzanimal. description is "The bases of the pines look almost like birds['] feet.".
+some pines are a plural-named prepuzanimal. description is "The bases of the pines look almost like birds['] feet.". locale-text is "some pines".
 
 a-text of pines is "RRYRY". b-text of pines is "RRYRY". parse-text of pines is "x[sp]x[sp]-[sp]x[sp]-".
 
@@ -19118,11 +19174,11 @@ section snipe
 
 check taking snipe: say "It will follow you when you call." instead;
 
-the snipe is a southy puzanimal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
+the snipe is a southy puzanimal. description is "It has a long needle-like bill.". "A snipe is pacing around here.". locale-text is "a snipe pacing around".
 
 chapter nails and snail
 
-Some nails are plural-named prepuzanimals. "Some nails are lying all over the floor here."
+Some nails are plural-named prepuzanimals. "Some nails are lying all over the floor here.". locale-text is "nails lying all over the ground here".
 
 description of nails is "They're in a spiral. Odd."
 
@@ -19132,7 +19188,7 @@ a-text of nails is "RRYYR". b-text of nails is "RRYYR". parse-text of nails is "
 
 section snail
 
-the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
+the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". locale-text is "a snail slithering slowly in a circle".
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if imp-frustration is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is reflexed]patience is legendary and butlery[else if imp3 is reflexed]It has a butlery air as it moves rangily[else if imp2 is reflexed]patience feels legendary as it moves rangily[else]here but shouldn't be. This is a BUG[end if].";
@@ -19146,32 +19202,24 @@ the raptor is an animal in Perverse Preserve. description is "It's small for a r
 before entering thrones:
 	say "You try to sit on the thrones, by you feel a stinging." instead;
 
-after choosing notable locale objects when player is in Perverse Preserve (this is the raptor and parrot last rule):
+after choosing notable locale objects when player is in Perverse Preserve (this is the order animals in perverse preserve rule):
 	if raptor is in Perverse Preserve:
 		set the locale priority of raptor to 9;
 	if parrot is in Perverse Preserve:
 		set the locale priority of parrot to 9;
+	repeat with X running through all puzanimals in Perverse Preserve:
+		set the locale priority of X to 1;
+	repeat with X running through all prepuzanimals in Perverse Preserve:
+		set the locale priority of X to 5;
 	continue the action;
 
-the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "A multi-colored parrot flutters about, here."
+the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor flutters about expectantly here. [if parrot is prefigured]You'll figure when and how to change it back to a raptor[else]Perhaps it can help you somehow, some time[end if]."
 
 the parrot wears the weltish whistle.
 
 every turn when parrot is touchable (this is the parrot-chat rule):
 	if location of player is Reclusion Inclosure:
-		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
-	else if location of player is Lamer Realm:
-		let vra be number of touchable reflexive animals;
-		if owl is moot and vra is 0:
-			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
-			continue the action;
-		if vra > 0:
-			say "The parrot notes the [list of reflexive animals] [if number of touchable reflexive animals > 1]don't[else]doesn't[end if] look happy.";
-	else if location of player is Lamer Realm:
-		if number of touchable animals >= 5:
-			say "The parrot flies happily among all the animals.";
-		else:
-			say "The parrot pokes at the [list of nonreflexive things in Perverse Preserve][if number of nonreflexive things in Perverse Preserve > 1] in turn[end if].";
+		say "The parrot squawks violently at Elmer and Merle from the corner.";
 
 a-text of raptor is "RYRRYR". b-text of raptor is "RGRRGR". parse-text of raptor is "x[sp]a[sp]x[sp]x[sp]o[sp]x".
 

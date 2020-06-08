@@ -821,11 +821,11 @@ understand "slap me" as a mistake ("That's kind of a silly way to motivate yours
 
 chapter Loop Pool
 
-understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are in location of player.
+understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are touchable.
 
 understand "polo" as a mistake ("No time for games! [if eels are moot]Even with the eels rescued/on your side[else if power-back is false]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
 
-understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are in location of player.
+understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are touchable..
 
 chapter Bran Barn
 
@@ -865,13 +865,13 @@ chapter Perverse Preserve
 
 understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are in location of player.
 
-understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are in location of player or snipe is in location of player
+understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are in location of player or snipe is in location of player.
 
 understand "shorten" as a mistake ("[if thrones are in location of player]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are in location of player or hornets are in location of player.
 
-understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in Perverse Preserve
+understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in Perverse Preserve and raptor is reflexed.
 
-understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve.
+understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve and raptor is reflexed.
 
 chapter Reclusion Inclosure
 

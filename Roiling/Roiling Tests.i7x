@@ -164,7 +164,7 @@ test ottelv with "otters/enter otters/barely/rescind/reedily/w/shadily/martially
 
 test otters with "otters/enter otters/barely/rescind/reedily/w/shadily/martially/coitally/1/3/n/n/because/else/s/s/although/however/n/atom/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot/snail/hornets/snipe/racoon/n/n/w/w/honestly/raptor/deeply/quickly/w/7/e/w/play whistle"
 
-test otters-pow with "in/barely/reedily/w/tearily/snidely/nastily/1/3/n/n/else/because/s/s/however/although/n/w/e/n/else/because/else/s/s/however/although/however"
+test otters-pow with "seed 1/in/barely/reedily/w/tearily/snidely/nastily/1/3/n/n/else/because/s"
 
 test otters-cur with "otters/enter otters/barely/reedily/w/shadily/martially/coitally/1/3/w/e/s/db/although/however/n/n/because/else/s/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot"
 [/snail/hornets/snipe/racoon/n/n/w/w/seriously/raptor/w/play whistle/quickly]
@@ -596,10 +596,8 @@ understand the command "cru" as something new.
 understand "cru" as cruing.
 
 carry out cruing:
-	if track-crust is false:
-		now track-crust is true;
-	else:
-		now track-crust is false;
+	now track-crust is whether or not track-crust is true;
+	say "Now tracking crust is [on-off of track-crust].";
 	the rule succeeds;
 
 section saeing
@@ -615,10 +613,8 @@ understand the command "sae" as something new.
 understand "sae" as saeing.
 
 carry out saeing:
-	if sae is true:
-		now sae is false;
-	else:
-		now sae is true;
+	now sae is whether or not sae is true;
+	say "Scanning location every turn is now [on-off of sae].";
 	the rule succeeds;
 
 every turn when sae is true and player has settler:

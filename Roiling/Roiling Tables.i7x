@@ -1356,6 +1356,7 @@ this is the post-barley-barely rule:
 	set the pronoun him to Ed Riley;
 	move ed riley to Minded Midden;
 	move cinders to Minded Midden;
+	move Edictal Citadel backdrop to all ominous rooms;
 
 this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
@@ -1475,7 +1476,7 @@ this is the pre-whistle-deeply rule:
 
 this is the pre-medals-quickly rule:
 	if medals-shiny < 2:
-		say "You feel a surge, but not enough. [if medals-shiny is 0]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe there's a way to clean [if medals-shiny is 0]them[else]it[end if] up and restore their full power[med-unf].";
+		say "You feel a surge, but not enough. [if medals-shiny is 0]Both medals seem[else]One of the medals seems[end if] tarnished. Maybe there's a way to clean [if medals-shiny is 0]them[else]it[end if] up and restore [if medals-shiny is 0]their[else]its[end if] full power[med-unf].";
 		preef medals;
 		do nothing instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is touchable:
@@ -2030,7 +2031,6 @@ whin1	"[whin-nag]."
 whin2	"[whin-nag]."
 whin3	"[whin-nag]."
 raptor	"The raptor recoils slightly."
-parrot	"The parrot seems to roll its eyes at you, as if to say, [unless player is in Reclusion Inclosure]not here[else]you DO remember what I was[end if]."
 cinders	"The cinders glow and even warm up for a bit."
 Elmer	"Merle and Elmer stumble off away from you for a bit."
 Merle	"Merle and Elmer look askance at each other for a bit."
@@ -2040,7 +2040,7 @@ eels	"The eels swim a bit faster."
 owls	"Hmm. The owls still swarm and swirl too fast."
 ghoul hat	"Mr. Lee shakes his head and adjusts the ghoul hat."
 gore ogre	"The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here."
-vow here	"The vow here fades for a moment."
+vow here	"The vow here quiets down for a moment."
 thrones	"The thrones seem to buzz a bit."
 nails	"[one of]O[or]Another o[stopping]ne of the nails seems to bend a bit."
 pines	"The pines rustle as if an animal climbed through them."
