@@ -1163,6 +1163,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Bran Barn nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "barn"	174838034	--	--	"[locname]."
+"infidel"	388057133	--	--	"The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing."
 
 table of Lamer Realm nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

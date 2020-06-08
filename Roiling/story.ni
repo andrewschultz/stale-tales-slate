@@ -17995,7 +17995,44 @@ to say animals-left:
 
 book Reclusion Inclosure
 
-Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare. The ways north and south lead to coevals['] alcoves which are even less safe.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges.
+Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, [if hydra-known is true and hydra is in archon anchor]though you'll need to get rid of that hardy hydra[else]if you dare[end if]. The ways north and south lead to coevals['] alcoves which are probably distractions.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges.
+
+section going west
+
+hydra-known is a truth state that varies.
+
+check going west in Reclusion Inclosure (this is the need quick rule):
+	if parrot is moot and raptor is moot:
+		if medals are not reflexed:
+			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. 'Last word: drat! Slow!'[paragraph break]The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
+			get-dead;
+			follow the shutdown rules instead;
+		continue the action;
+	if aides-llp is in Reclusion Inclosure:
+		say "[e-n-m] block you from going west. Perhaps you could use some of your magic to push by them." instead;
+	if hydra is in Rancho Archon Anchor:
+		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of Elmer and Merle first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
+		now hydra-known is true;
+		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead;
+	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
+
+chapter two LLPs
+
+section aides-llp
+
+the aides-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure.
+
+a-text of aides-llp is "YRYRY". b-text of aides-llp is "?RYRY". parse-text of aides-llp is "?[sp]x[sp]-[sp]x[sp]-".
+
+understand "aidesllp" as aides-llp when debug-state is true and aides-llp is touchable.
+
+section holy nest
+
+the holy nest is boring LLPish scenery. "It's only nominally holy. It's covered with writing you could sneak a look at.". bore-text of holy nest is "The holy nest isn't important to finding Elvira, but maybe it could help you expose that much more of Elmer and Merle's hypocrisy.".
+
+a-text of holy nest is "RYRYRRRO". b-text of holy nest "PGRYRRRO". parse-text of holy nest "h[sp]o[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
+
+chapter useless scenery
 
 section coevals' alcoves
 
@@ -18019,6 +18056,8 @@ understand "animals/lamina/animal" as laminas.
 
 chapter elmer and merle
 
+to say e-n-m: say "[one of]Elmer and Merle[or]Merle and Elmer[at random]"
+
 an aide is a kind of person. an aide is usually henchy.
 
 Elmer is a reflexive LLPish aide in Reclusion Inclosure.
@@ -18028,12 +18067,14 @@ Merle is a reflexive LLPish aide in Reclusion Inclosure. The chum of Merle is El
 to decide which number is elmer-merle-bonus:
 	decide on boolval of (whether or not Elmer is reflexed) + boolval of (whether or not Merle is reflexed);
 
-check scaning Elmer when Elmer is reflexed: if Merle is not reflexed, try scaning Merle instead;
-check scaning Merle when Merle is reflexed: if Elmer is not reflexed, try scaning Elmer instead;
-
-a-text of Merle is "RYRYRRRO". b-text of Merle is "RYRYRRRO". parse-text of merle is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
-
-a-text of Elmer is "YRYRY". b-text of Elmer is "?RYRY". parse-text of elmer is "?[sp]x[sp]-[sp]x[sp]-".
+check scaning an aide:
+	if aides-llp is touchable:
+		say "You get something for both [e-n-m]:..";
+		try scaning aides-llp instead;
+	if holy nest is touchable:
+		say "Nothing for Elmer and Merle, but the holy nest between them gives something.";
+		try scaning holy nest instead;
+	say "You already found a couple ways to flummox and annoy [e-n-m]. But you need to get rid of them, and [if hydra-known is false]whatever guards may be[else]the hydra[end if] behind them, for good." instead;
 
 to say e-m: say "[one of]Merle[or]Elmer[in random order]";
 
@@ -18788,7 +18829,7 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north[check-vow].". roomnud of Bran Barn is table of Bran Barn nudges.
+Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north--you can't imagine you'd be safe in the infidel infield in other directions[check-vow].". roomnud of Bran Barn is table of Bran Barn nudges.
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Reclusion Inclosure is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
@@ -18807,6 +18848,10 @@ for printing a locale paragraph about Mr Lee:
 		else:
 			say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
 	now Mr Lee is mentioned.
+
+section infidel infield
+
+the infidel infield is scenery in Bran Barn. "The infidel infield is Mr. Lee's property. While he would probably let you look around there[if gore ogre is not moot] with the ogre ogre gone[end if], you don't need to go there. It has, however, provided surprisingly good resistance so close to Elvira, perhaps at the cost of some of Mr. Lee's mental health."
 
 section ghoul hat
 
@@ -19228,20 +19273,6 @@ a-text of parrot is "RYRRYR". b-text of parrot is "RGRRGR". parse-text of parrot
 raptor-trap is a truth state that varies. raptor-trap is false.
 
 book Rancho Archon Anchor
-
-hydra-known is a truth state that varies.
-
-check going west in Reclusion Inclosure (this is the need quick rule):
-	if parrot is moot and raptor is moot:
-		if medals are not reflexed:
-			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. 'Last word: drat! Slow!'[paragraph break]The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
-			get-dead;
-			follow the shutdown rules instead;
-		continue the action;
-	if hydra is in Rancho Archon Anchor:
-		now hydra-known is true;
-		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You[if parrot is touchable]r friend the parrot gives a helpful AWWWK as you[end if] double back." instead;
-	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
 after printing the locale description for Rancho Archon Anchor when Rancho Archon Anchor is unvisited:
 	say "'Proceedings precognised. Rats, the...eh, start the arts,' Elvira mutters as she pulls out the Ultimate Mutilate-It Amulet! A blast of energy flies at you, and reflexively, you yell 'Ail ME? Tut!' The ray fizzles.[paragraph break]'Ooh! Stout! ... Shootout!' She pulls out her phrase shape phaser, but you hum an e-sharp to deflect it. 'Won't kill a know-it-all.'[paragraph break]'Intact? It can't! SPAWN, Pawns!' she cries. 'P. S. Naw,' you say.[paragraph break]Elvira gives a crusty curtsy. 'Oh! Most smooth,' she says, with indulga-languid calm, i.e. malice, and hi-grade hid rage. And the sort of tinkly laugh you always felt forced to trust. 'You temporarily disabled my purple pulper and oranger groaner. I can't attack you first--but, details! You have to admit it was clever, filling Yorpwald with annoying anagrams to frame you!'[paragraph break]And you almost do. She has that glibness blessing! You're almost suckered, yourself. You may need fighters impervious to her charms to get rid of her for good.[paragraph break](Push any key.)[wfak]";
