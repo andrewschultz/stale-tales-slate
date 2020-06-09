@@ -61,7 +61,7 @@ table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complain
 table of theses	false	0	30	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
 table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if vw is 7]informs his gang[else if vw > 3]yells at his remaining troops[else if vw is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
 table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts" [p]
-table of Elmer and Merle squabbles	true	0	20	inclosure-talk rule	otters	"Elmer and Merle's chat"	--	""	"[e-m] blurts out 'EXACTLY!' His friend has no response. What is there to say? But they're all out of ideas, now, so they start over.[pre-lb]"
+table of ideas aides squabbles	true	0	20	inclosure-talk rule	otters	"Elmer and Merle's chat"	--	""	"[e-m] blurts out 'EXACTLY!' His friend has no response. What is there to say? But they're all out of ideas, now, so they start over.[pre-lb]"
 table of Elvira battle cries	false	0	20	last-battle rule	otters	"Elvira's battle cries"	--	""	""
 table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	""
 table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
@@ -39706,7 +39706,7 @@ blurb
 "zeal-legs gazelles"
 "a zz-more mozzer"
 
-table of Elmer and Merle squabbles [xxt2]
+table of ideas aides squabbles [xxt2]
 blurb
 "[e-m] berates Cauled Claude's magic ability." [x]
 "[e-m] berates laymen meanly, namely, Mel Yan." [x]

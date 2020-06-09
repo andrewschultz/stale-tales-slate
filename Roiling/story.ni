@@ -478,7 +478,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 750.
+use MAX_VERBS of 760.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -496,7 +496,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 770. [delta=20]
+use MAX_VERBS of 780. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -2493,7 +2493,7 @@ blaster	"ALBERT'S."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
-holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH[or]ELTYN SHO[in random order]"
+holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order]"
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
@@ -3823,7 +3823,7 @@ carry out requesting the score:
 	if mrlp is nothing, say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, how about Elites['] Listee? Or Greaten-Grantee? Or Derivin' Diviner? Or Sharper Phraser?";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites['] Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
@@ -3902,11 +3902,11 @@ table of ranks
 rank-name
 "Farce Facer"
 "Riled Idler" [got to strip]
-"Results Tussler" [1]
+"Results Tussler" [1 strip store solved]
 "Fierier Reifier" [2]
 "Rifeness Finesser" [3]
 "Lengthier Lightener" [4]
-"Truculenter Unclutterer" [5 solved]
+"Truculenter Unclutterer" [5 strip stores solved, ready for otters]
 
 to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
@@ -6707,7 +6707,7 @@ check swearing obscenely:
 	if player is in Rawest Waters:
 		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
 	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
-	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "Merle and Elmer sniff faux-piously." instead;
+	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
 	say "[randbla][line break]" instead;
 
@@ -9025,7 +9025,7 @@ pre-haun	"an outline of where something is buried" [oyster]
 eeks	"some cartoony representation of EEKS"
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 agnostic	"[agnostic-first]"
-Merle	"Elmer and Merle" [otters]
+aside-llp	"rays of energy between [e-n-m]" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 a banna'	"the/a banna[']"
 feeling you're a perp	"the words 'PERP' forming outside the Valence Enclave"
@@ -17950,7 +17950,7 @@ carry out discerning:
 			now do-i-dis is false;
 	else if player is in Reclusion Inclosure:
 		if parrot is in Reclusion Inclosure:
-			say "Merle and Elmer [if elmer-merle-bonus is 0]can be taken down a couple pegs for fun[else if elmer-merle-bonus is 1]can be tweaked beyond ASIDE--focus on the holy nest[else]have been psyched-out enough[end if]. More importantly, you discern the parrot can become a RAPTOR again.";
+			say "[e-n-m] [if elmer-merle-bonus is 0]can be taken down a couple pegs for fun[else if elmer-merle-bonus is 1]can be tweaked beyond ASIDE--focus on the holy nest[else]have been psyched-out enough[end if]. More importantly, you discern the parrot can become a RAPTOR again.";
 		else if Merle is in Reclusion Inclosure and holy nest is not mood:
 			say "There might be [if aside-llp is in Reclusion Inclosure]a way or two[else]another way[end if] to make them less annoying or push back at them a bit, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
 			now do-i-dis is false;
@@ -18002,7 +18002,7 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 	if aside-llp is in Reclusion Inclosure:
 		say "[e-n-m] block you from going west. Perhaps you could use some of your magic to push by them." instead;
 	if hydra is in Rancho Archon Anchor:
-		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of Elmer and Merle first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
+		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of [e-n-m] first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
 		now hydra-known is true;
 		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
@@ -18019,7 +18019,7 @@ understand "aidesllp" as aside-llp when debug-state is true and aside-llp is tou
 
 section holy nest
 
-the holy nest is boring LLPish scenery. "It's only nominally holy. It's covered with writing you could sneak a look at.". bore-text of holy nest is "The holy nest isn't important to finding Elvira, but maybe it could help you expose that much more of Elmer and Merle's hypocrisy.".
+the holy nest is boring LLPish vanishing scenery. "It's only nominally holy. It's covered with writing you could sneak a look at.". bore-text of holy nest is "The holy nest isn't important to finding Elvira, but maybe it could help you expose that much more of [e-n-m]'s hypocrisy.".
 
 a-text of holy nest is "RYRYRRRO". b-text of holy nest is "PGRYRRRO". parse-text of holy nest is "h[sp]o[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
@@ -18063,7 +18063,7 @@ check scaning an aide:
 		say "You get something for both [e-n-m]:..";
 		try scaning aside-llp instead;
 	if holy nest is touchable:
-		say "Nothing for Elmer and Merle, but the holy nest between them gives something.";
+		say "Nothing for [e-n-m], but the holy nest between them gives something.";
 		try scaning holy nest instead;
 	say "You already found a couple ways to flummox and annoy [e-n-m]. But you need to get rid of them, and [if hydra-known is false]whatever guards may be[else]the hydra[end if] behind them, for good." instead;
 
@@ -18081,7 +18081,7 @@ does the player mean doing something with Merle:
 	it is likely.
 
 rule for printing a locale paragraph about Elmer:
-	say "Elmer and Merle, two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if aside-llp is not moot]. They make it clear they're Elvira's ideas aides[else if holy nest is touchable]. You can see the holy nest peeking out behind them[end if].";
+	say "[e-n-m], two robed bored Coevals in scowl cowls, glance over at you contemptuously as they babble[if aside-llp is not moot]. They make it clear they're Elvira's ideas aides[else if holy nest is touchable]. You can see the holy nest peeking out behind them[end if].";
 	now Merle is mentioned;
 	now Elmer is mentioned;
 
@@ -18089,7 +18089,7 @@ description of Elmer is "He wears sober robes. His mouth smiles on the left and 
 
 description of Merle is "He wears sober robes. His mouth smiles on the right and frowns on the left."
 
-the sober robes are plural-named boring scenery in Reclusion Inclosure. description of sober robes is "Elmer and Merle don't stylize zestily.". bore-text is "Elmer and Merle, noticing you noticing their robes, yell 'Us? Drab? Absurd!'"
+the sober robes are plural-named boring scenery in Reclusion Inclosure. description of sober robes is "[e-n-m] don't stylize zestily.". bore-text is "[e-n-m], noticing you noticing their robes, yell 'Us? Drab? Absurd!'"
 
 chapter weltish whistle
 
@@ -18274,7 +18274,7 @@ check going west in Minded Midden: if Ed Riley is touchable, say "'Re-yield, yie
 
 book Disowned Downside
 
-Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited], too big to hide nothing[else if Rancho Archon Anchor is unvisited], with much more than the inclosure you've seen[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
+Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
@@ -18407,11 +18407,15 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 
 section sample maples
 
-the sample maples are boring scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved.". bore-text is "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
+the sample maples are boring scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved, but the information doesn't seem important.". bore-text is "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
 
 understand "elm sap" as sample maples.
 
+understand "sample maple" and "maple" as sample maples.
+
 chapter booting - not for release
+
+[ * boot can tell the game to get rid of a mack ]
 
 booting is an action applying to nothing.
 
@@ -18822,7 +18826,7 @@ chapter Bran Barn
 
 Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north--you can't imagine you'd be safe in the infidel infield in other directions[check-vow].". roomnud of Bran Barn is table of Bran Barn nudges.
 
-Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Reclusion Inclosure is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
+Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Reclusion Inclosure is visited]. Sort of like [e-n-m]'s much, much nicer brother[end if].". "Mr. Lee stands here, undescribed."
 
 lee-yet is a truth state that varies.
 
@@ -19002,13 +19006,14 @@ the saturnic curtains are plural-named bounding boring scenery in Lamer Realm. d
 for printing a locale paragraph about a reflexive puzanimal (called th) in Lamer Realm:
 	if th is mentioned, continue the action;
 	let X be number of reflexive puzanimals in Lamer Realm;
-	say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of touchable puzanimals].";
+	if X < 4, say "[line break]";
+	say "[if X is 1]One more animal seems[else if X < 4]Some animals still seem[else]Several animals seem[end if] to need your help here: [list of touchable reflexive puzanimals].";
 	now all touchable reflexive puzanimals are mentioned;
 
 for printing a locale paragraph about a reflexed puzanimal (called th) in Lamer Realm:
 	if th is mentioned, continue the action;
 	let X be number of reflexed puzanimals in Lamer Realm;
-	say "Just seeing the [list of touchable reflexed puzanimals] you helped makes you feel relaxed.";
+	say "Just seeing [list of touchable reflexed puzanimals] you helped gives you a peaceful feeling--you have allies nearby against Elvira.";
 	now all touchable reflexed puzanimals are mentioned;
 
 after choosing notable locale objects when player is in Lamer Realm (this is the group animals in lamer realm rule):
@@ -19144,7 +19149,7 @@ for printing a locale paragraph about a prepuzanimal (called th) in Perverse Pre
 for printing a locale paragraph about a puzanimal (called th) in Perverse Preserve:
 	if th is mentioned, continue the action;
 	let nt be number of touchable puzanimals;
-	say "The animal[if nt > 1]s[end if] you helped so far hover[if nt is 1]s[end if] around here: [list of touchable puzanimals].";
+	say "So far you've rescued or reconstituted [list of touchable puzanimals].";
 	now all touchable puzanimals are mentioned;
 
 printed name of Perverse Preserve is "[if nounsolve < 3]Perverse Preserve[else]Uprates Pasture[end if]"
@@ -19214,7 +19219,7 @@ the snipe is a southy puzanimal. description is "It has a long needle-like bill.
 
 chapter nails and snail
 
-Some nails are plural-named prepuzanimals. "Some nails are lying all over the floor here.". locale-text is "nails lying all over the ground here".
+Some nails are plural-named prepuzanimals. "Some nails are lying all over the floor here.". locale-text is "nails lying all over the ground".
 
 description of nails is "They're in a spiral. Odd."
 
@@ -19249,13 +19254,13 @@ after choosing notable locale objects when player is in Perverse Preserve (this 
 		set the locale priority of X to 5;
 	continue the action;
 
-the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor flutters about expectantly here. [if parrot is prefigured]You'll figure when and how to change it back to a raptor[else]Perhaps it can help you somehow, some time[end if]."
+the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor flutters about expectantly here. [if raptor is prefigured]You'll figure when and how to change it back to a raptor[else]Perhaps it can help you somehow, some time[end if]."
 
 the parrot wears the weltish whistle.
 
 every turn when parrot is touchable (this is the parrot-chat rule):
 	if location of player is Reclusion Inclosure:
-		say "The parrot squawks violently at Elmer and Merle from the corner.";
+		say "The parrot squawks violently at [e-n-m] from the corner.";
 
 a-text of raptor is "RYRRYR". b-text of raptor is "RGRRGR". parse-text of raptor is "x[sp]a[sp]x[sp]x[sp]o[sp]x".
 
@@ -19413,7 +19418,7 @@ check eating arugula:
 	the rule succeeds;
 
 after printing the name of arugula when taking inventory:
-	say " (to eat, then GURU something to change to, or acquire, fruit)";
+	say " (to eat, then GURU something to acquire, or change something to, a fruit)";
 	continue the action;
 
 can-guru is a truth state that varies.
@@ -21389,8 +21394,8 @@ blaster	"You fixed the blaster. Now maybe try the turbos."
 Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 bleary barley	"You've cut it down enough. Who needs that much barley anyway?" [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
-Elmer	"You can't take on Merle and Elmer by yourself--you need some allies."
-Merle	"You can't take on Merle and Elmer by yourself--you need some allies."	[end OTTERS]
+Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
+Merle	"You can't take on [e-n-m] by yourself--you need some allies."	[end OTTERS]
 
 to say other-let: say "Try either of the other letters. With variety, Leo and Rand will take the hint"
 
@@ -22201,7 +22206,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
 		if gore ogre is not moot, say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if aside-llp is not reflexed:
-			say "[2dmiss of myreg]you could've recognized Merle and Elmer as aides ideas and pushed them ASIDE.";
+			say "[2dmiss of myreg]you could've recognized [e-n-m] as aides ideas and pushed them ASIDE.";
 		else if holy nest is not reflexed:
 			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:

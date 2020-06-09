@@ -337,9 +337,9 @@ t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	--	--
 t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--	"The macks['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
-aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when Merle and Elmer laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break]Elmer and Merle shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
+aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break][e-n-m] are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1348,7 +1348,7 @@ this is the post-perverse-preserve-flip rule:
 	if temp is 1:
 		say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
 	else if temp is 3:
-		say "The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
+		say "[line break]The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
 		now random not touchable southy puzanimal is llpish;
 
 this is the post-barley-barely rule:
@@ -1374,7 +1374,7 @@ this is the post-imp-flip rule:
 
 this is the post-whiners-flip rule:
 	if whiner-score is 2:
-		say "[line break]As they sulk away from the Clarthead Cathedral, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "[line break]As they sulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post--kissing up to Elvira so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
 		moot whin1;
 		moot whin2;
@@ -1440,13 +1440,16 @@ this is the post-ideas-aides-aside rule:
 	move holy nest to Reclusion Inclosure;
 
 this is the post-raptor-parrot rule:
-	preef parrot;
 	now nails are in Perverse Preserve;
 	now corona is in Perverse Preserve;
 	now thrones are in Perverse Preserve;
 	now pines are in Perverse Preserve;
 
-this is the pre-parrot-raptor rule: if location of player is not Reclusion Inclosure, say "'Awk! I'd just kill you in that form. Try that around some bad guys.'" instead;
+this is the pre-parrot-raptor rule:
+	if location of player is not Reclusion Inclosure:
+		say "'Awk! I'd just kill you in that form. Try that around some bad guys.'";
+		preef parrot;
+		do nothing instead;
 
 this is the post-parrot-raptor rule:
 	now player has whistle;
@@ -1480,8 +1483,14 @@ this is the pre-whistle-deeply rule:
 		say "Elvira summons her monsters to attack as you learn to play the whistle. 'Sorriest resistor! Apt end, pedant.' is the last you hear. Maybe you should've practiced somewhere else.";
 		get-dead;
 		follow the shutdown rules instead;
+	if parrot is touchable:
+		say "You'll need to earn the whistle from the parrot before you can practice like that.";
+		preef whistle;
+		do nothing instead;
 	if number of NPCish people > 0:
-		say "Your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if]." instead;
+		say "That's the right idea, but your practicing might be rough on [a random npcish person]. Maybe you should go back to the Disowned Downside[if merle is moot and player is not in Reclusion Inclosure] or the Reclusion Inclosure[end if][if player is in Reclusion Inclosure], or find a way to get rid of everyone else[end if].";
+		preef whistle;
+		do nothing instead;
 
 this is the pre-medals-quickly rule:
 	if medals-shiny < 2:
@@ -1489,7 +1498,7 @@ this is the pre-medals-quickly rule:
 		preef medals;
 		do nothing instead; [?? preef at start to save code lines? Preefed gets un-preefed anyway]
 	if Merle is touchable:
-		say "That seems right, but not now. Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
+		say "That seems right, but not now. [e-n-m]'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals;
 		do nothing instead;
 	if player is not in Reclusion Inclosure:
@@ -2041,8 +2050,8 @@ whin2	"[whin-nag]."
 whin3	"[whin-nag]."
 raptor	"The raptor recoils slightly."
 cinders	"The cinders glow and even warm up for a bit."
-Elmer	"Merle and Elmer stumble off away from you for a bit."
-Merle	"Merle and Elmer look askance at each other for a bit."
+aside-llp	"[e-n-m] rock back and forth a bit."
+holy nest	"The holy nest flutters silently."
 atmo-moat	"Hm, that's not it, but it must be elemental. No, elementary."
 sea cube	"The sea cube shakes a bit."
 eels	"The eels swim a bit faster."
@@ -2273,7 +2282,7 @@ Merle	"[i]Fine, be beefin[r], you think. Neither Merle nor Elmer is going to be 
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."
-compass	"If you changed the compass, it might wind up pointing in the wrong direction." [START others]
+compass	"The compass is accurate enough. Changing it might ruin things." [START others]
 s-i	"The sonic icons seem right. No use meddling."
 prices precis	"You corrected the prices precis enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
@@ -2741,17 +2750,17 @@ nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus
 pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]The corona is black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
 thrones	"[one of]Sit on the thrones and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
-aside-llp	"[one of]Elmer and Merle are ideas aides, and they are in your way. You can disturb them temporarily for a bonus point.[plus][or]You cn't work on Elmer and Merle's names but on their title, ideas aides.[plus][or]You can move them ASIDE. It doesn't work, but you get a bonus point and another puzzle.[minus][cycling]"
-holy nest	"[one of]The holy nest isn't critical, but two of the letters in it look familiar.[plus][or]Elmer and Merle aren't very moral, so maybe you can poke them about that for a bit.[plus][or]HONESTLY.[minus][cycling]"
+aside-llp	"[one of][e-n-m] are ideas aides, and they are in your way. You can disturb them temporarily for a bonus point.[plus][or]You cn't work on [e-n-m]'s names but on their title, ideas aides.[plus][or]You can move them ASIDE. It doesn't work, but you get a bonus point and another puzzle.[minus][cycling]"
+holy nest	"[one of]The holy nest isn't critical, but two of the letters in it look familiar.[plus][or][e-n-m] aren't very moral, so maybe you can poke them about that for a bit.[plus][or]HONESTLY.[minus][cycling]"
 Elmer	--	Merle
-Merle	"[if parrot is in Reclusion Inclosure]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have a potential ally[end if]."
+Merle	"[if parrot is in Reclusion Inclosure]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with [e-n-m] until you have a potential ally[end if]."
 forces fresco	"It's just there to give ambience."
 snail	"The snail will help you when the time comes."
 snipe	"The snipe will help you when the time comes."
 hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
-parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
-sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
+parrot	"[one of]The parrot is scared of [e-n-m], as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
+sober robes	"[e-n-m] can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
 medals	"[if medals-shiny < 2][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or][medals-do].[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-inclosure][end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
@@ -2874,7 +2883,7 @@ to say ag-yow-lect:
 	say "[if yow is moot]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say medals-do:
-	say "[if Reclusion Inclosure is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not moot]You can't really use the medals until Merle and Elmer are gone[else]The medals let you go QUICKLY before going west of the Reclusion Inclosure, which will help you deal with Elvira's initial attack[end if]"
+	say "[if Reclusion Inclosure is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not moot]You can't really use the medals until [e-n-m] are gone[else]The medals let you go QUICKLY before going west of the Reclusion Inclosure, which will help you deal with Elvira's initial attack[end if]"
 
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";

@@ -859,7 +859,9 @@ understand "stray" as a mistake ("No, you [if satyr is reflexive]can get[else]al
 
 understand "trays" as a mistake ("You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)") when satyr is in location of player.
 
-chapter rote moan anteroom
+chapter Clarthead Cathedral
+
+understand "sherwin" as a mistake ("No cryptozookeeper appears.") when shrewin' whiners are touchable.
 
 chapter Perverse Preserve
 
@@ -869,9 +871,9 @@ understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]
 
 understand "shorten" as a mistake ("[if thrones are in location of player]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are in location of player or hornets are in location of player.
 
-understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in Perverse Preserve and raptor is reflexed.
+understand "slain" and "as nil" as a mistake ("[if nails are in location of player]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in Perverse Preserve and raptor is moot.
 
-understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve and raptor is reflexed.
+understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in Perverse Preserve and raptor is moot.
 
 chapter Reclusion Inclosure
 
@@ -880,6 +882,8 @@ understand "coins lure" as a mistake ("[if elmer is moot]You're not after loot r
 understand "cornelius" as a mistake ("You don't know if someone named Cornelius would help or hurt you.") when player is in Reclusion Inclosure.
 
 understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is in location of player.
+
+understand "edisa" and "sadie" as a mistake ("On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?") when Elmer is touchable.
 
 understand "nicer soul" as a mistake ("[if elmer is in Reclusion Inclosure]Elmer and Merle are beyond redemption[else]Yes, you are. But you need to be a braver soul and go west[end if].") when player is in Reclusion Inclosure.
 

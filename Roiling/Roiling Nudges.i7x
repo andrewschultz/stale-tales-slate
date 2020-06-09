@@ -1196,17 +1196,18 @@ table of Reclusion Inclosure nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "inclosure"	675582040	--	--	"[locname]."
 "enclosure"	758395303	--	--	"[locname]."
-"alcoves"	480604714	--	--	"Destroy the whole citadel and not just the alcoves."
-"alcove"	384330748	--	--	"Destroy the whole citadel and not just an alcove."
+"alcoves"	480604714	--	--	"[whole-citadel of 2]."
+"alcove"	384330748	--	--	"[whole-citadel of 1]."
 "idea"	196015862	Merle	--	"[if aside-llp is moot]You already pushed them aside[else]You might be able to disrupt both of them, not just one[end if]."
+"ideas"	292289828	--	aside-yet rule	"[e-n-m] aren't the type to get fooled that way again. [if holy nest is moot]You got them twice, and that's enough[else]Maybe there's another way to pull their chain, though[end if]."
 "monstery"	742208386	--	--	"[w-change]."
 "monastery"	744396204	--	--	"[w-change]."
 "eelmr"	458825013	--	eelmr rule	"[eelmry]."
-"sober"	402175360	sober robes	--	"If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down."
-"bored"	326930483	sober robes	--	"[e-m-prank]."
-"bore"	305901394	sober robes	--	"[e-m-prank]."
-"scowl"	351380740	sober robes	--	"[e-m-prank]."
-"cowl"	255106774	sober robes	--	"[e-m-prank]."
+"sober"	402175360	Merle	--	"[e-m-aux]."
+"bored"	326930483	Merle	--	"[e-m-aux]."
+"bore"	305901394	Merle	--	"[e-m-aux]."
+"scowl"	351380740	Merle	--	"[e-m-aux]."
+"cowl"	255106774	Merle	--	"[e-m-aux]."
 "laminas"	332438948	--	--	"[no-lam]."
 "lamina"	236164982	--	--	"[no-lam]."
 "forces"	429276936	--	--	"[fresc]."
@@ -2071,9 +2072,15 @@ this is the midden-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
-to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if whin3 is moot or whin2 is moot or whin1 is moot]even [end if]less...whiningly"
+to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if whin3 is moot or whin2 is moot or whin1 is moot]even [end if]less...effectively"
 
 to say cube-whole: say "The sea cube is unmoved. You may need to concentrate on the whole thing";
+
+this is the aside-yet rule:
+	if aside-llp is reflexed and Merle is touchable, the rule succeeds;
+
+to say whole-citadel of (citplur - a number):
+	say "It'll take more to destroy the whole citadel and not just the alcove[plur of citplur] or coeval[plur of citplur]"
 
 to say w-change: say "You can't change the inclosure. It's what's to the west that needs changing" [ic]
 
@@ -2091,14 +2098,14 @@ to say eelmry:
 		say "[if eels are reflexed]You managed to help Le Mer enough[else if gore ogre is moot]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
 		continue the action;
 	if player is in Reclusion Inclosure and Merle is in Reclusion Inclosure:
-		say "You can't fully change Merle and Elmer, [if elmer-merle-bonus is 0]but there are ways[else if elmer-merle-bonus is 1]but there's another way[else]and you've really done all you can[end if] to shut them up for a bit. Maybe you could find a way to get rid of them";
+		say "You can't fully change [e-n-m], [if elmer-merle-bonus is 0]but there are ways[else if elmer-merle-bonus is 1]but there's another way[else]and you've really done all you can[end if] to shut them up for a bit. Maybe you could find a way to get rid of them";
 		continue the action;
 	if Bran Barn is unvisited and Loop Pool is unvisited and Reclusion Inclosure is unvisited:
 		say "You shouldn't know about Merle, Elmer et al yet";
 	else:
 		say "You think back to whom you've met so far once past the Disowned Downside"
 
-to say e-m-prank: say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
+to say e-m-aux: say "That's just focusing on the trappings of [e-n-m] being ideas aides[if aside-llp is reflexed], and anyway, you pushed [e-n-m] aside, already[end if]"
 
 this is the realm-saved rule:
 	if player is in Lamer Realm and adjsolve >= 3, the rule succeeds;
