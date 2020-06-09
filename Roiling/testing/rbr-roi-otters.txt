@@ -40,6 +40,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >allrand
 
 @nud
+#this is a general test of a regex with a bad bug--I forgot to test for word boundaries
+>stuffly
+You think you're on to something, but no--you can't find anything to focus on, thinking that.
+>stuflyf
+!You think you're on to something, but no--you can't find anything to focus on, thinking that.
 #mistake test for id mend/mend id
 >id mend
 It's not that easy. Find what to mend.
@@ -198,7 +203,6 @@ DEBUG INFO: Taking away a max point.
 >undo
 >discern
 REEDILY
-}}SCORE++
 }}CURMAX--
 @!
 >rescind
@@ -208,6 +212,7 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOS}
+
 >reedily
 Your score has just gone up by one point
 }}SCORE++
@@ -629,45 +634,27 @@ You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a wa
 
 @alt
 ##balance undos
+# here we look at going to/solving Bran Barn but not Loop Pool
 >s
 >although
 ###skip test checking
 >ergo
 ###skip test checking
 >misses
+!--you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
+--you could've dispelled the "vow here" that reappeared in Bran Barn with HOWEVER after you regained your powers.
+>undo
+>n
+>n
+>misses
 --you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
---you could've said HOWEVER
+>undo
+>undo
 >undo
 >however
 by one point
 >misses
 !--you could've said HOWEVER
->undo
->n
->n
->because
-DEBUG INFO: min-up codepath
->misses
---you could've said ELSE to gain the eels' trust.
->undo
->else
-DEBUG INFO: min-up codepath
->undo
->undo
->undo
->undo
->undo
->undo
->n
->n
->because
-DEBUG INFO: min-up codepath
->else
-DEBUG INFO: min-up codepath
->misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
->undo
->undo
 >undo
 >undo
 >undo
@@ -762,7 +749,24 @@ You already made it there, and you don't need to go back.
 
 @alt
 >misses
+!--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
+--you could've checked south of the Disowned Downside for the other way to regain your powers.
+--you could've dispelled the "vow here" that reappeared in Loop Pool with HOWEVER after you regained your powers.
+#balance undos
+>however
+min-up
+>misses
+!HOWEVER
+>undo
+>undo
+>s
+>s
+>misses
 --you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
+!--you could've checked south of the Disowned Downside for the other way to regain your powers.
+>undo
+>undo
+>undo
 
 >s
 
@@ -961,13 +965,13 @@ by one point
 >angrily
 by one point
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
+--you could've made the imp act ENRAGEDLY, and the whiners could've spoken
 >undo
 >undo
 >enragedly
 ###skip test checking
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
+--you could've made the imp act ANGRILY, and the whiners could've spoken
 >undo
 >undo
 >undo
@@ -993,7 +997,7 @@ Your score has just gone up by one point
 
 @alt
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted LOATHINGLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
 
 >n
 Lamer Realm
@@ -1092,6 +1096,48 @@ The leopard is plenty powerful as-is, but you need to get it on your side.
 >pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
 
+@alt
+##balance undos
+>garbed
+by one point
+>artsy
+by one point
+>paroled
+by one point
+>coolest
+DEBUG INFO: min-up codepath
+>undo
+>misses
+COOLEST
+>undo
+>undo
+>undo
+>paroled
+by one point
+>coolest
+by one point
+>artsy
+DEBUG INFO: min-up codepath
+>undo
+>misses
+ARTSY
+>undo
+>undo
+>undo
+>coolest
+by one point
+>artsy
+by one point
+>paroled
+DEBUG INFO: min-up codepath
+>undo
+>misses
+PAROLED
+>undo
+>undo
+>undo
+>undo
+
 >coolest
 Your score has just gone up by one point
 }}SCORE++
@@ -1139,52 +1185,10 @@ You already changed the leopard.
 @max
 #retry pre-medals-quickly rule
 >quickly
-You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean them up and restore their full power.
+You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
 
 >l
 Blest Belts
-
-@alt
-##balance undos
->garbed
-by one point
->artsy
-by one point
->paroled
-by one point
->coolest
-DEBUG INFO: Adding a min point for this flip.
->undo
->misses
-COOLEST
->undo
->undo
->undo
->paroled
-by one point
->coolest
-by one point
->artsy
-DEBUG INFO: Adding a min point for this flip.
->undo
->misses
-ARTSY
->undo
->undo
->undo
->coolest
-by one point
->artsy
-by one point
->paroled
-DEBUG INFO: Adding a min point for this flip.
->undo
->misses
-PAROLED
->undo
->undo
->undo
->undo
 
 @nud
 #renudge for shades
@@ -1282,18 +1286,18 @@ The settler then garbles and changes. The whiners have more than one way of stay
 
 @alt
 ##balance undos
->tersely
-###skip test checking
 >stoically
+###skip test checking
+>tersely
 They find another place where rioters roister.
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
 >undo
 >undo
 >loathingly
 They find another place where rioters roister.
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken TERSELY.
 >undo
 >undo
 >undo
@@ -1320,10 +1324,15 @@ They find another place where rioters roister.
 
 @alt
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've acted STOICALLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken STOICALLY.
 
 >s
 Perverse Preserve
+
+@nud
+#spechelp for raptor
+>raptro
+The raptor recoils slightly.
 
 >parrot
 Your score has just gone up by one point
@@ -1333,9 +1342,6 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#mistake test for hornet
->hornte
-The thrones are plural. Besides, just one hornet--what could it do?
 #mistake test for penis
 >penis
 Huh huh huh, Beavis. That was cool.
@@ -1345,9 +1351,6 @@ Dammit, Beavis. You like have a game to solve.
 #mistake test for spine
 >spine
 You don't need to grow a spine. You've gotten this far.
-#spechelp for raptor
->raptro
-The raptor recoils slightly.
 #mistake test for shorten
 >shorten
 Well--not shorten, but break it down...you see red from the effort.
@@ -1355,14 +1358,19 @@ Well--not shorten, but break it down...you see red from the effort.
 @sli
 #slider test for parrot
 >rrpato
-Your settler begins to make noises: a low hum, but nothing really piercing.
+# this is a special case, similar to disk <=> skid, since the game wants to make it clear about parrot <=> raptor
+!Your settler begins to make noises: a low hum, but nothing really piercing.
+The parrot can be changed back into a raptor, but not into anything new.
 
 @nud
 #readables for whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
+#nudge for weltish
+>witlesh
+You can't do anything to the whistle until you have it.
 #spechelp for weltish whistle
->weltish
+>epelyd
 Probably best to have the whistle before changing it.
 #nudge for preserve
 >preserev
@@ -1429,12 +1437,66 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ohnrtse
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@alt
+##balance undos trace
+>snipe
+!min-up
+>racoon
+!min-up
+>hornets
+!min-up
+>snail
+min-up
+>undo
+>misses
+!the thrones
+--you could've turned the nails into a snail.
+!hornets
+!racoon
+!snipe
+>undo
+>undo
+>snail
+!min-up
+>hornets
+min-up
+>undo
+>misses
+--you could've turned the thrones into some hornets.
+!racoon
+!snail
+!snipe
+>undo
+>undo
+>undo
+>hornets
+!min-up
+>snail
+!min-up
+>racoon
+min-up
+>undo
+>misses
+--you could've turned the corona into a racoon.
+!hornets
+!snail
+!snipe
+>undo
+>undo
+>undo
+>undo
+
 >snail
 Your score has just gone up by one point
 }}SCORE++
 
 >score
 {$SCOS}
+
+@alt
+>hornet
+by one point
+>undo
 
 >hornets
 Your score has just gone up by one point
@@ -1450,6 +1512,13 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@alt
+>misses
+--you could've turned the pines into a snipe.
+!hornets
+!snail
+!racoon
+
 @nud
 #mistake retest for slain/as nil
 >as nil
@@ -1464,7 +1533,7 @@ No need to tweak the rac(c)oon again. It's fine as is.
 >l
 Uprates Pasture
 
-@!alt
+@!min
 >snipe
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -1472,36 +1541,6 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOS}
-
-@alt
->undo
->undo
->undo
->snipe
-###skip test checking
->raccoon
-DEBUG INFO: min-up codepath
->undo
->undo
->undo
->snipe
-###skip test checking
->raccoon
-###skip test checking
->hornets
-DEBUG INFO: min-up codepath
->undo
->undo
->undo
->undo
->snipe
-###skip test checking
->raccoon
-###skip test checking
->hornets
-###skip test checking
->snail
-DEBUG INFO: Adding a min point for this flip.
 
 @nud
 >upraet
@@ -1530,6 +1569,12 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 Reclusion Inclosure
 
 @nud
+#nudge for inclosure
+>inclosuer
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for enclosure
+>enclosuer
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #mistake test for drobe
 >drobe
 That's pretty much their whole drobe. You're not here to talk fashion, anyway.
@@ -1538,36 +1583,33 @@ That's pretty much their whole drobe. You're not here to talk fashion, anyway.
 You don't know if someone named Cornelius would help or hurt you.
 #mistake test for coins lure
 >coins lure
-Elmer and Merle look around greedily for a second.
+/(Elmer and Merle|Merle and Elmer) look around greedily for a second.
 #mistake test for nicer soul
 >nicer soul
-Elmer and Merle are beyond redemption.
+/(Elmer and Merle|Merle and Elmer) are beyond redemption.
 #mistake test for rule scion
 >rule scion
-That's what you're trying to stop, here. Besides, Elmer and Merle wouldn't trust your word, anyway.
+/That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 
 >eelmr
-You can't fully change Merle and Elmer, but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
 @nud
 ##balance undos
 >aside
 by one point
 >eelmr
-You can't fully change Merle and Elmer, but there's another way to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Maybe you could find a way to get rid of them.
 >honestly
 by one point
 >eelmr
-You can't fully change Merle and Elmer, and you've really done all you can to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Maybe you could find a way to get rid of them.
 >undo
 >undo
 >undo
 >undo
 
 @sli
-#slider test for honestly
->ohentsyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for aside
 >sadei
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1581,7 +1623,7 @@ You can't change the inclosure. It's what's to the west that needs changing.
 You can't change the inclosure. It's what's to the west that needs changing.
 #nudge for eelmr
 >eelrm
-You can't fully change Merle and Elmer, but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 #nudge for sober
 >sobre
 That's just focusing on the trappings of
@@ -1616,9 +1658,6 @@ It'll take more to destroy the whole citadel and not just the alcove or coeval.
 #nudge for hydra
 >hydar
 !You try, but that doesn't do anything with, or to, the hydra to the west.
->w
->hydar
-You try, but that doesn't do anything with, or to, the hydra to the west.
 #nudge for laminas
 >laminsa
 You can't change them, and even if you could, Elvira would probably be alerted.
@@ -1631,9 +1670,6 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 #nudge for forec
 >forec
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
-#spechelp for elmer
->honestyl
-Merle and Elmer stumble off away from you for a bit.
 #nudge for idea
 >idae
 You might be able to disrupt both of them, not just one.
@@ -1643,7 +1679,9 @@ You might be able to disrupt both of them, not just one.
 >scan elmer
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
 >scan merle
-Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+!Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+>aseid
+/(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 
 @max
 >honestly
@@ -1658,7 +1696,19 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
+@sli
+#slider test for honestly
+>ohentsyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
+#spechelp for holy nest
+>honestyl
+The holy nest flutters silently.
+#renudge for hydra
+>w
+>hydar
+You try, but that doesn't do anything with, or to, the hydra to the west.
 #renudge for bored
 >brode
 That's just focusing on the trappings of
@@ -1666,17 +1716,16 @@ being ideas aides
 and anyway, you pushed
 #nudge for ideas
 >edsia
-Elmer and Merle aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
-#scannotes for merle
+/(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
 >scan elmer
-Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
+holy nest
 >scan merle
-Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
+holy nest
 
 @nud
 #spechelp for merle
 >asied
-Merle and Elmer look askance at each other for a bit.
+/(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
 
 @!min
 >honestly
@@ -1690,13 +1739,13 @@ DEBUG INFO: min-up codepath
 @nud
 #renudge for ideas
 >edsia
-Elmer and Merle aren't the type to get fooled that way again. You got them twice, and that's enough.
+/(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
 #rescannotes for elmer
 >scan elmer
-The settler emits a BEEEOOOP as if to say there's no need to do any more, there.
+Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 #rescannotes for merle
 >scan merle
-The settler emits a BEEEOOOP as if to say there's no need to do any more, there.
+Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 
 @nud
 #renudge for idea
@@ -1705,21 +1754,21 @@ You already pushed them aside.
 #done rejects for parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
-#done rejects for merle
->honetsly
-Fine, be beefin, you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
+#nudge for ideas
 >aseid
-They won't get fooled again.
-You've taken care of both their little annoyances. Time to take care of them.
+Merle and Elmer aren't the type to get fooled that way again. You got them twice, and that's enough.
 
 @max
 #more pre-medals-quickly rule
 >quickly
-Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
+/(Elmer and Merle|Merle and Elmer)'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
 
 >raptor
 Your score has just gone up by one point
 }}SCORE++
+
+@min
+}}CURMAX-=2
 
 >score
 @min
@@ -1741,6 +1790,14 @@ There's nothing you really need to attack or avoid quickly here or nearby.
 #slider test for quickly
 >uqcilyk
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#spechelp for medals
+>quickyl
+The medals waver noiselessly. Hm, that's not quite it.
+#scannotes for medals
+>scan medals
+WRONG
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
@@ -1764,19 +1821,12 @@ Yes, you are. But you need to be a braver soul and go west.
 #mistake retest for rule scion
 >rule scion
 That's what you're trying to stop, here.
-!Besides, Elmer and Merle wouldn't trust your word, anyway.
+!Besides,
+!wouldn't trust your word, anyway.
+#!Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 #renudge for hydra
 >hydar
 The hydra's toast. Elvira is not. Deal with her.
-#nudge for crone
->croen
-You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act.
-#spechelp for medals
->quickyl
-The medals waver noiselessly. Hm, that's not quite it.
-#scannotes for medals
->scan medals
-Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed.
 
 @max
 >w
@@ -1788,10 +1838,12 @@ Elvira summons her monsters to attack as you learn to play the whistle. "Sorries
 >undo
 
 @nud
+#renudge for weltish
 >whistel
-The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
+You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
+#respechelp for weltish whistle
 >deepyl
-The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
+The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
 >read whistle
 Ed Plye, apparently, made the whistle.
 
@@ -1804,9 +1856,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
-#done rejects for whistle
->eeplyd
-The whistle's already in tune.
 #done rejects for medals
 >ickqlyu
 You already got a boost from the medals.
@@ -1818,6 +1867,15 @@ Your score has just gone up by one point
 >w
 
 @nud
+#renudge for weltish
+>iswelth
+You already figured how to play the whistle.
+#done rejects for weltish whistle
+>deepyl
+The whistle's already in tune.
+#nudge for crone
+>croen
+You can't do much with Elvira's "real" name. Or her ex-hydra's. You need to act.
 #mistake retest for aliver
 >aliver
 For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.
@@ -1842,12 +1900,6 @@ The Rancho won't change to the river of the dead just like that, but on the othe
 #nudge for archon
 >rancoh
 It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
-#nudge for inclosure
->inclosuer
-You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for enclosure
->enclosuer
-You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for tripod
 >tripdo
 You can't just muck around with one part of Elvira's army. You need a way to find allies.

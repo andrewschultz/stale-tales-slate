@@ -2068,7 +2068,7 @@ leopard	"The leopard almost seems to un-cuff its hands."
 badger	"The badger flexes imaginary suit lapels, then quickly goes back to brooding."
 satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
-weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
+weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
 coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close."
 coins	"The coins rattle and hum promisingly."

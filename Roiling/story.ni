@@ -3649,7 +3649,7 @@ to say reject:
 			now settler-try is true;
 			the rule succeeds;
 	if mrlp is otters:
-		if the player's command matches the regular expression "^<a-z>+ly":
+		if the player's command matches the regular expression "^<a-z>+ly\b":
 			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else][ly-ish].";
 			continue the action;
 	if mrlp is demo dome:
@@ -4522,8 +4522,7 @@ t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks an
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
-Elmer	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
+aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
@@ -17791,7 +17790,7 @@ to get-dead:
 	if location of player is freight:
 		ital-say "maybe that pale plea can help you figure how to escape.";
 	else if location of player is Rancho Archon Anchor:
-		ital-say "there are a few ways to die here in the confrontation with Elvira, but you should always be able to back out. In fact, you can flee if you think you need to.";
+		ital-say "there are a few ways to die here in the confrontation with Elvira, including a silly joke death or two, but you should always be able to back out. In fact, you can flee if you think you need to.";
 	else if location of player is Reclusion Inclosure:
 		do nothing;
 	else if joke-death is true:
@@ -17909,9 +17908,8 @@ carry out discerning:
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You have everything you need." instead;
 	if otters-cur-item is player, say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
-	process the otters-hinting rule;
+	process the otters-hinting rule; [note: this takes care of decrementing the region maximum if we found anything.]
 	now spoilit is false;
-	cinders-bye;
 	the rule succeeds;
 
 [	if ed riley is touchable:
@@ -18060,12 +18058,12 @@ to decide which number is elmer-merle-bonus:
 
 check scaning an aide:
 	if aside-llp is touchable:
-		say "You get something for both [e-n-m]:..";
+		say "You get something for both [e-n-m]:[line break]";
 		try scaning aside-llp instead;
 	if holy nest is touchable:
 		say "Nothing for [e-n-m], but the holy nest between them gives something.";
 		try scaning holy nest instead;
-	say "You already found a couple ways to flummox and annoy [e-n-m]. But you need to get rid of them, and [if hydra-known is false]whatever guards may be[else]the hydra[end if] behind them, for good." instead;
+	say "Nothing. But you already found a couple ways to flummox and annoy [e-n-m]. Now you need to get rid of them, and [if hydra-known is false]whatever guards may be[else]the hydra[end if] behind them, for good." instead;
 
 to say e-m: say "[one of]Merle[or]Elmer[in random order]";
 
@@ -19254,13 +19252,7 @@ after choosing notable locale objects when player is in Perverse Preserve (this 
 		set the locale priority of X to 5;
 	continue the action;
 
-the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor flutters about expectantly here. [if raptor is prefigured]You'll figure when and how to change it back to a raptor[else]Perhaps it can help you somehow, some time[end if]."
-
-the parrot wears the weltish whistle.
-
-every turn when parrot is touchable (this is the parrot-chat rule):
-	if location of player is Reclusion Inclosure:
-		say "The parrot squawks violently at [e-n-m] from the corner.";
+the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "The parrot you changed from a raptor [if player is in Reclusion Inclosure]glares from the corner here at Elmer and Merle, like it could really damage them if they were big enough[else]flutters about here[end if].". the parrot wears the weltish whistle.
 
 a-text of raptor is "RYRRYR". b-text of raptor is "RGRRGR". parse-text of raptor is "x[sp]a[sp]x[sp]x[sp]o[sp]x".
 
@@ -21245,17 +21237,10 @@ carry out objhinting (this is the pick object to hint rule) :
 				say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
 				say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
 				if noun is cinder-dissolve:
-					now noun is cheatitemed;
-					prevent undo;
-					now undo-code is 7;
-				if scams is false:
-					if noun is medals: [ugh. This is a lousy hack to say, if we just find out about te medals, don't do anything. ]
-						if medals-shiny is 2:
-							poss-d;
-							moot cinders;
+					if scams is false:
+						cinders-bye;
 					else:
-						poss-d;
-						moot cinders;
+						say "You activated SCAMS, so I won't block undo.";
 				now noun is cheatitemed;
 				the rule succeeds;
 	if there is hint-entry of noun in the table of hintobjs:
@@ -22005,7 +21990,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the fissure 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
-	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've acted [if whin1 is reflexive]LOATHINGLY[else if whin2 is reflexive]STOICALLY[else]TERSELY[end if].";
+	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've spoken [if whin1 is reflexive]LOATHINGLY[else if whin2 is reflexive]STOICALLY[else]TERSELY[end if].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";
@@ -22204,18 +22189,20 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've [if sea cube is not moot]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
 		if bran barn is not visited:
 			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
-		if gore ogre is not moot, say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
+		else if gore ogre is not moot:
+			say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if aside-llp is not reflexed:
 			say "[2dmiss of myreg]you could've recognized [e-n-m] as aides ideas and pushed them ASIDE.";
 		else if holy nest is not reflexed:
 			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:
 			repeat with A running through flippable things in Perverse Preserve:
-				say "[2dmiss of myreg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
+				let AA be the the-to corresponding to a the-from of A in the table of otters anagrams;
+				say "[2dmiss of myreg]you could've turned the [A] into [if AA is plural-named]some[else]a[end if] [AA].";
 		if number of reflexive animals in Lamer Realm > 0:
-			repeat with A running through flippable things in Lamer Realm:
+			repeat with A running through reflexive things in Lamer Realm:
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
-		if vow here is not moot, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared after you regained your powers in [location of vow here] with HOWEVER.";
+		if vow here is not moot, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in [location of vow here] with HOWEVER after you regained your powers.";
 	else if myreg is others:
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";

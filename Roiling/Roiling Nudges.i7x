@@ -1064,7 +1064,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "here"	378218320	vow here	--	"The [i]whole[r] vow here."
 "hydra"	268182261	--	hydra-know rule	"[if player has whistle]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
 "coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
-"weltish"	 571213850	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
+"weltish"	 571213850	whistle	--	"You [if whistle is reflexed]already figured how to play the whistle[else if player does not have whistle]can't do anything to the whistle until you have it[else]don't see anything happen. Then you note red writing on the whistle which might tell more about it[end if]."
 "ottre"	493702525	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	degen-true rule	"[not-the-reg]."
 
@@ -1215,7 +1215,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of Rancho Archon Anchor nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"crone"	375395582	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra. You need to act."
+"crone"	375395582	--	--	"You can't do much with Elvira's 'real' name. Or her ex-hydra's. You need to act."
 "archon"	287059590	--	--	"It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help."
 "tripod"	410274292	--	--	"[rancho-scen]."
 "becharm"	354099672	--	--	"[rancho-scen]."

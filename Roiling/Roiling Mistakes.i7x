@@ -865,8 +865,6 @@ understand "sherwin" as a mistake ("No cryptozookeeper appears.") when shrewin' 
 
 chapter Perverse Preserve
 
-understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are in location of player.
-
 understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are in location of player or snipe is in location of player.
 
 understand "shorten" as a mistake ("[if thrones are in location of player]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are in location of player or hornets are in location of player.
@@ -891,13 +889,13 @@ understand "rule scion" as a mistake ("That's what you're trying to stop, here[i
 
 chapter Rancho Archon Anchor
 
-understand "aliver" as a mistake ("[if player is in Rancho Archon Anchor]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
+understand "aliver" as a mistake ("[if player is in Rancho Archon Anchor]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser. [uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
 
 understand "charon" as a mistake ("The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.") when player is in Rancho Archon Anchor.
 
-understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Rancho Archon Anchor.
+understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that. [uurrgg]") when player is in Rancho Archon Anchor.
 
-understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Rancho Archon Anchor.
+understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily. [uurrgg]") when player is in Rancho Archon Anchor.
 
 understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Rancho Archon Anchor.
 
