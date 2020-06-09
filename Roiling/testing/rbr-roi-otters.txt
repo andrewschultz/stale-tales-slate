@@ -1438,7 +1438,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @alt
-##balance undos trace
+##balance undos
 >snipe
 !min-up
 >racoon
@@ -1742,10 +1742,10 @@ DEBUG INFO: min-up codepath
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
 #rescannotes for elmer
 >scan elmer
-Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
+/Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 #rescannotes for merle
 >scan merle
-Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
+/Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 
 @nud
 #renudge for idea
@@ -1756,7 +1756,7 @@ You already pushed them aside.
 The parrot can be changed back into a raptor, but not into anything new.
 #nudge for ideas
 >aseid
-Merle and Elmer aren't the type to get fooled that way again. You got them twice, and that's enough.
+/(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 
 @max
 #more pre-medals-quickly rule
@@ -1797,7 +1797,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The medals waver noiselessly. Hm, that's not quite it.
 #scannotes for medals
 >scan medals
-WRONG
+Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
+>x medals
+###skip test checking
+>scan medals
+Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.

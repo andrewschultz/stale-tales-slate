@@ -4442,6 +4442,7 @@ odd run on aura	true	true	false	false	"With only one ambiguous setting, the ligh
 admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
+eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
@@ -4525,7 +4526,7 @@ atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but 
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
-medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed." [end otters]
+medals	true	false	false	false	"[if cheat-on is true]Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
@@ -12398,7 +12399,7 @@ to say a-the:
 
 for writing a paragraph about a thing (called gbg) in Hacks' Shack:
 	if gbg is slab or gbg is futon or gbg is fount:
-		say "The shack is prominently furnished with a [if fount is touchable]restful looking fount too small to be a fountain[else]futon[end if] and a labs slab, which [one of]still [or][stopping]holds [a list of things on labs slab][if number of badbooks in Hacks' Shack is 1]. And oh dear, a copy of [my-auth]'s [my-bad], too[end if].";
+		say "The shack is prominently furnished with a [if fount is touchable]quaint fount too small to be a fountain[else]futon[end if] and a labs slab, which [one of]still [or][stopping]holds [a list of things on labs slab][if number of badbooks in Hacks' Shack is 1]. And oh dear, a copy of [my-auth]'s [my-bad], too[end if].";
 		now all touchable badbooks are mentioned;
 		now labs slab is mentioned;
 		now futon is mentioned;
@@ -18365,7 +18366,7 @@ gre-north-quip	"'Maybe you will figure how to help the eels to the north and the
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
 gre-east-quip	"'There are animal pens back east.' [if Clarthead Cathedral is visited and Shiner Shrine is visited]You nod your head[else if Clarthead Cathedral is unvisited and Shiner Shrine is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
-gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
+gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them. They probably aren't any old medals--they deserve a closer look.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
 
 to decide which number is optleft of (myp - a person):
 	let mytemp be 0;
@@ -18458,49 +18459,27 @@ chapter medals
 
 the medals are a reflexive wearable plural-named thing.
 
+check scaning medals when cheat-on is true:
+	say "The IQ and LUCKY medals clink together. They just don't stay still![line break]";
+
 to decide which number is medals-shiny:
 	decide on boolval of (whether or not adjsolve >= 3) + boolval of (whether or not nounsolve >= 3);
 
 understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
 
 after printing the name of medals while taking inventory:
-	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if])";
+	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if][if medals are not examined]--oh, you should examine them, too[end if])";
 
 medalings is a list of text variable. medalings is { "crusted over", "grimy", "dull", "shiny", "gleaming" }
 
-description of the medals is "They're roped together. [medal-summary]."
+description of the medals is "They're roped together and spin about as you look at them. The larger, [tarn of adjsolve]tarnished, says LUCKY. The smaller, [tarn of nounsolve]oxidized, says IQ."
 
 after examining medals for the first time:
 	say "You remember Gretta said something about good deeds restoring the medals. Also, you remember a most improper story (by Kasi Saik? Isak? Hmm... I ask...) about medals clinking together when someone good hid from a vicious animal, but ... you'll take your chances.";
 	continue the action;
 
-to say medal-summary:
-	if medals-lucky-first is true:
-		say "The larger, [tarn of adjsolve]tarnished, says LUCKY. ";
-	say "The smaller, [tarn of nounsolve]oxidized, says IQ";
-	if medals-lucky-first is false:
-		say ". The larger, [tarn of adjsolve]tarnished, says LUCKY";
-
 to say tarn of (tlev - a number):
 	say "[if tlev is 0]extremely [else if tlev is 1]very [else if tlev is 2]somewhat [else if tlev is 3]barely [else if tlev is 4]un[else]BUG[end if]";
-
-medals-lucky-first is a truth state that varies.
-
-check switching on the medals:
-	med-flip instead;
-
-check switching off the medals:
-	med-flip instead;
-
-to med-flip:
-	unless the player's command includes "on" or the player's command includes "off":
-		say "(Okay, silly parser stuff--just switch the medals)";
-	say "You switch the medals so the [if medals-lucky-first is true]larger[else]smaller[end if] is on the right.";
-	if medals-lucky-first is false:
-		now medals-lucky-first is true;
-	else:
-		now medals-lucky-first is false;
-	the rule succeeds;
 
 nounsolve is a number that varies.
 adjsolve is a number that varies.
@@ -18508,12 +18487,7 @@ adjsolve is a number that varies.
 check scaning medals:
 	if medals-shiny < 2, say "The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more." instead;
 
-a-text of medals is "RYYRRRO". b-text of medals is "[if medals-lucky-first is true]RGYRRRO[else]RYYRRRB[end if]". parse-text of medals is "[if medals-lucky-first is false]x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y[else]x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y[end if]".
-
-[
-a-text of luckyiq is "RYYRRRO". b-text of luckyiq is "RGYRRRO". parse-text of luckyiq is "x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y".
-a-text of iqlucky is "RYYRRRO". b-text of iqlucky is "RYYRRRB". parse-text of iqlucky is "x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y".
-]
+a-text of medals is "RYYRRRO". b-text of medals is "R?YRRR?". parse-text of medals is "x[sp]?[sp]-[sp]x[sp]x[sp]x[sp]?".
 
 chapter mack flipping
 
