@@ -2494,6 +2494,7 @@ cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
 holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order]"
+stray satyr	"You see TSYRA branded under the stray satyr's shoulder."
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
@@ -4522,11 +4523,12 @@ t-formally	true	true	false	false	"Two question marks in nine letters--well, seve
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
+medals	true	false	false	false	"[if cheat-on is true]Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
-medals	true	false	false	false	"[if cheat-on is true]Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals." [end otters]
+stray satyr	true	true	false	false	"The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
@@ -10990,7 +10992,7 @@ after printing the locale description for Loather Rathole when Loather Rathole i
 
 chapter eh at heat
 
-Eh At Heat is scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil."
+Eh At Heat is boring scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil."
 
 a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable.
 
@@ -19030,9 +19032,17 @@ a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger
 
 chapter satyr
 
-the satyr is a reflexive male northy puzanimal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if].". locale-text is "a stray satyr [if satyr is reflexed]dreaming of a better Yorpwald[else]resistant to all but practicality and survival[end if]".
+the stray satyr is a reflexive male northy puzanimal. description is "He looks [if satyr is reflexed]like he's dreaming of a poem or something. You've made him happier[else]He looks preoccupied and mistrustful[might-read-satyr][end if].". "A stray satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if].". locale-text is "a stray satyr [if satyr is reflexed]dreaming of a better Yorpwald[else]resistant to all but practicality and survival[end if]".
 
-a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
+to say might-read-satyr: say "[if satyr-read is true]. You might be able to READ him--his name seems branded on"
+
+understand "tsyra" as stray satyr when satyr-read is true.
+
+satyr-read is a truth state that varies. [we could define this as a thing property, but this is the only really useful case right now.]
+
+after reading stray satyr: now satyr-read is true.
+
+a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of satyr is "a[sp]-[sp]?[sp]-[sp]?". satyr is cheat-spoilable.
 
 chapter owls
 

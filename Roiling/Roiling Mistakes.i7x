@@ -855,8 +855,6 @@ understand "ratsy" as a mistake ("You don't want a rat on your side. Or someone 
 
 understand "stary" as a mistake ("What good would the satyr be, staring all the time?") when satyr is in location of player.
 
-understand "stray" as a mistake ("No, you [if satyr is reflexive]can get[else]already got[end if] him on your side.") when satyr is in location of player.
-
 understand "trays" as a mistake ("You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)") when satyr is in location of player.
 
 chapter Clarthead Cathedral
