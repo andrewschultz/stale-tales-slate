@@ -287,6 +287,7 @@ Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 }}SCORE++
+}}CURMAX-=2
 ==!
 >remap
 #notana 'nudge for remap'
@@ -791,6 +792,10 @@ DEBUG INFO: min-up codepath
 >seek
 Your score has just gone up by one point
 }}SCORE++
+
+@min
+#we skipped SCAN and there is no way back.
+}}CURMAX--
 
 Lean Lane
 
@@ -1965,6 +1970,9 @@ Your score has just gone up by one point
 }}SCORE++
 
 >score
+@min
+{$SCOS}
+@!
 {$SCOMAX}
 
 @max
@@ -2006,6 +2014,9 @@ Your score has just gone up by one point
 }}SCORE++
 
 >score
+@min
+{$SCOS}
+@!
 {$SCOMAX}
 
 @sli

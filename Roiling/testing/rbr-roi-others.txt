@@ -121,9 +121,6 @@ Well, you don't technically need plurals for this, but you're on the right track
 #nudge for pager
 >agper
 Well, you don't technically need plurals for this, but you're on the right track
-#nudge for harmonica
->harmonica
-The harmonicas seem stuck together, so you probably have to deal with both of them.
 #nudge for circuit
 >circuti
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
@@ -151,6 +148,12 @@ The slime shifts about slightly, but not enough--yet.
 #spechelp for spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
+#readables for mad train
+>read mad train
+DR. NIMATA.
+#spechelp for mad train
+>mad trani
+The train emits some fake smoke and seems ready to blow up--but no.
 
 @sli
 >slon
@@ -212,7 +215,7 @@ Your score has just gone up by one point.
 @nud
 #done rejects for compass
 >compssa
-If you changed the compass, it might wind up pointing in the wrong direction.
+The compass is accurate enough. Changing it might ruin things.
 #renudge for arbored
 >aborder
 Bad idea to ruin such life-giving scenery--the only way is north
@@ -240,15 +243,9 @@ Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them turned 
 >maraschion
 The harmonicas whistle, as if something happened.
 \\
-#readables for mad train
->read mad train
-DR. NIMATA.
-
-@nud
-#spechelp for mad train
->mad trani
-The train emits some fake smoke and seems ready to blow up--but no.
-\\
+#nudge for harmonica
+>harmonica
+The harmonicas seem stuck together, so you probably have to deal with both of them.
 
 @nud
 #nudge for megaton
