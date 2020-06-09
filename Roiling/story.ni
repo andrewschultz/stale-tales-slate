@@ -10894,6 +10894,12 @@ the free reef is boring scenery in Cripple Clipper. description of free reef is 
 this is the bore-reef rule:
 	if current action is scaning, say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper." instead;
 
+chapter mess up spumes
+
+the mess up spumes are boring scenery in Cripple Clipper. description of mess up spumes is "The mess-up spumes fizzle all about. You can't seem to avoid them by a standard direction. You doubt they themselves will give you clues, but maybe Logan left a clue behind in the Cripple Clipper.". bore-text is "The spumes aren't going to help you get through them. You need advice from somewhere else.".
+
+printed name of mess up spumes is "mess-up spumes".
+
 book Sonancy Canyons
 
 Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break]Spheric ciphers surround you and prevent passage out. [if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise and also provides a small break in the ciphers[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if].". roomnud of sonancy canyons is table of sonancy canyons nudges.

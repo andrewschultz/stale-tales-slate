@@ -297,6 +297,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "reef"	367450917	--	--	"The reef is not changed. Perhaps you can deal with what's on it."
 "sketchin"	550311509	--	--	"No need to alter them. Worth looking at, though."
 "sketchins"	646585475	--	--	"No need to alter them. Worth looking at, though."
+"mess"	384429194	--	--	"[spume-no]."
+"spume"	474726994	--	--	"[spume-no]."
+"spumes"	571000960	--	--	"[spume-no]."
 
 table of sonancy canyons nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1694,6 +1697,8 @@ to say dark-been: say "The darkness has always been there and always will be. Yo
 to say sheol-c: say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help"
 
 to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Lag Logan"
+
+to say spume-no: say "The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them"
 
 to say pat-cont: say "It's more the content of the patters that you could deal with, if you wanted"
 
