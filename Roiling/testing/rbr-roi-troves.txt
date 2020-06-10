@@ -667,6 +667,12 @@ The dour tan rotunda is passe and hasn't been knocked down yet, but that's not y
 #nudge for tan
 >nta
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
+#nudge for mire
+>mier
+The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
+#nudge for mires
+>mirse
+The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
 
 @nud
 #spechelp for si reed
@@ -953,6 +959,9 @@ Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, yo
 >rambel
 seems slightly taken aback
 >mbb 2
+>misses
+--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+!--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
 #readables for blamer mr beal
@@ -1111,11 +1120,11 @@ Upscale Capsule====
 
 @mina
 --you could've tried to RESIST Sister Tressi.
-!--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
+!--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
 
 @minb
 !--you could've tried to RESIST Sister Tressi.
---you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
+--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
 
 >recant
 Your score has just gone up by one point

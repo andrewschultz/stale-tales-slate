@@ -19337,7 +19337,7 @@ Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus. roomnud 
 
 after choosing notable locale objects when player is in Rustic Citrus:
 	set the locale priority of Curtis to 2;
-	repeat with spf running through all start-pre-fruits:
+	repeat with spf running through all touchable start-pre-fruits:
 		set the locale priority of spf to 1;
 
 fruits-flipped is a number that varies.
@@ -19355,7 +19355,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if pagers are touchable]. Pagers seem to be beeping all around[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
 
 for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
 
@@ -19754,19 +19754,19 @@ after printing the locale description for Swell Wells:
 		now miser ruble is in Swell Wells;
 	continue the action;
 
-the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if]. [what-on-mound]."
+the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if] [what-on-mound]."
 
 to decide what number is mound-writing:
 	decide on touch-val of stucco + touch-val of stucco + touch-val of PSA Elp;
 
 to say what-on-mound:
 	if mound-writing is 0:
-		say "Many weird and uninterersting things are written on the mound. You got enough from it.";
+		say ". Many weird and uninterersting things are written on the mound. None are helpful any more. You got enough from it";
 		continue the action;
-		say "[if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound.";
-	if stucco is in swell wells, say "[line break]There's an advertisement in red for [stucco-ad].";
-	if sorer bogey is in swell wells, say "[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
-	if PSA Elp is in swell wells, say "[line break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail.";
+		say ". [if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound";
+	if stucco is in swell wells, say ".[line break]There's an advertisement in red for [stucco-ad].";
+	if sorer bogey is in swell wells, say ".[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
+	if PSA Elp is in swell wells, say ".[line break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail";
 
 to say what-clear:
 	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
@@ -19892,7 +19892,7 @@ perp-check is a truth state that varies.
 
 to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-the feeling you're a perp is a vanishing boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the feeling you're a perp.". bore-check is bore-perp rule.
+the feeling you're a perp is a reflexive boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the feeling you're a perp.". bore-check is bore-perp rule.
 
 this is the bore-perp rule:
 	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the feeling you're a perp. Maybe there's a simple way to shift things around." instead;
@@ -20091,7 +20091,10 @@ to decide which number is gate-level:
 	let A be 0;
 	if viewer is reflexed, increment A;
 	if searcher is reflexed, increment A;
-	if feeling you're a perp is moot, increment A;
+	if feeling you're a perp is reflexed, increment A;
+	if A > 2:
+		if debug-state is true, say " (DEBUG: all 3 passport points are registered, defaulting to just two)";
+		decide on 2;
 	decide on A.
 
 chapter reviewing

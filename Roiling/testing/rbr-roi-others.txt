@@ -1383,7 +1383,11 @@ by one point
 >score
 
 @min
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave. You can't get the maximum, since you used the arugula.
+>s
+>score
 You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave. You can't get the maximum, since you used the arugula.
+>n
 @!
 You have 41 of 42 total points for the post-Elvira Others region.
 You can't expect anything more from Curtis.

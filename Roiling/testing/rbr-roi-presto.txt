@@ -159,14 +159,6 @@ Boy! It'd be neat to have something that made you more authoritative.
 >whassup
 You probably want to TALK to people instead. Well, most of the time.
 
-@max,nud
->phooey
-Your score has just gone up by two points
-}}SCORE+=2
-}}CURMIN++
->score
-{$SCOS}
-
 @min
 >pooh
 #notmax
@@ -175,10 +167,18 @@ Taking away a max point.
 DEBUG INFO: Taking away a max point.
 }}CURMAX--
 }}SCORE++
+@!
+>phooey
+Your score has just gone up by two points
+}}SCORE+=2
+}}CURMIN++
 >score
 {$SCOS}
 
-@max
+>score
+{$SCOS}
+
+@!min
 #pre-censer-screen rule
 >screen
 You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den.
@@ -707,6 +707,11 @@ That's not something
 >s
 Dirge Ridge
 
+@sli
+#slider test for ole
+>leo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
 #mistake test for evil
 >evil
@@ -768,9 +773,6 @@ That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo a
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 
 @sli
-#slider test for ole
->leo
-Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for darn
 >adnr
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1233,6 +1235,19 @@ by one point
 
 >n
 Hacks' Shack
+
+@min
+>s
+>s
+>w
+>screen
+by one point
+}}SCORE++
+>score
+{$SCOS}
+>e
+>n
+@!
 }}SCORE++
 
 >score
@@ -1542,16 +1557,19 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
 >mug
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
 >leaf
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
 >futon
 Your score has just gone up by one point
 }}SCORE++
@@ -1598,9 +1616,6 @@ It's the censer that's important, not the brand name.
 #nudge for rec
 >rce
 It's the censer that's important, not the brand name.
-
->score
-{$SCOS}
 
 @!min
 >casserole
@@ -1967,6 +1982,9 @@ Your score has just gone up by one point
 }}SCORE++
 
 >score
+@min
+{$SCOS}
+@!
 {$SCOMAX}
 
 @nud

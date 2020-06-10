@@ -319,6 +319,9 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 Cruelest Lectures
 
 @nud
+#nudge for storse
+>stores
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for seating
 >seatign
 That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian.
