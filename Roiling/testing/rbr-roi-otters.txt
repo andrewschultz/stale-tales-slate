@@ -1722,11 +1722,6 @@ holy nest
 >scan merle
 holy nest
 
-@nud
-#spechelp for merle
->asied
-/(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
-
 @!min
 >honestly
 Your score has just gone up by one point
@@ -1740,10 +1735,9 @@ DEBUG INFO: min-up codepath
 #renudge for ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
-#rescannotes for elmer
+#this is outside the table of scannotes, but we need to make sure scanning Elmer/Merle redirects the player.
 >scan elmer
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
-#rescannotes for merle
 >scan merle
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 

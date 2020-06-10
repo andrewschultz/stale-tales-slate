@@ -58,7 +58,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #mistake test for real hot
 >real hot
-You need a strong emotion to get hot.
+But what emotion would provide heat?
 #nudge for hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
@@ -101,9 +101,6 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 #nudge for pea
 >epa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
-#nudge for cold
->cldo
-Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat.
 
 >score
 {$SCOS}
@@ -131,9 +128,9 @@ DEBUG INFO: min-up codepath
 You probably did what you could. Or not-did.
 
 @nud
-#spechelp for cold
+#spechelp for eh at heat
 >haet
-You think you feel less cold for a second. But you need to make it last.
+You feel slightly less cold but mad at yourself for not doing better.
 
 #not a mistake
 >hate
@@ -150,31 +147,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #mistake retest for real hot
 >real hot
-You needed a strong emotion to get hot.
+You already got hot. Now you need to summon a different emotion.
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
-#mistake test for hate
->hate
-You don't want to get burnt up with hate, and that won't get back your super purse like racing after that guy.
 
 @nud
-#spechelp for heat
->caer
-Meh. Maybe you're closer than you think to motivation. How to make that matter?
-#mistake test for acre
->acre
-That farm-boy terminology isn't quite how to show you give a darn in the big city.
->gs
->acre
-That farm-girl terminology isn't quite how to show you give a darn in the big city.
->gs
-#mistake test for clod
->clod
-Hey! No beating yourself up. You'll probably do it wrong, anyway.
 #mistake test for race
 >race
-Meh. Maybe you're closer than you think to motivation. How to make that matter?
+For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though.
 #mistake test for a rec
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
@@ -193,12 +174,6 @@ Bustle Sublet
 #mistake test for care
 >care
 You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.
-#mistake retest for hate
->hate
-You don't want to get burnt up with hate.
-#nudge for care
->caer
-Caring and all its offshoots only go so far.
 
 @nud
 #nudge for bustle
@@ -252,7 +227,9 @@ The sob ever verbose remains that way--mixing up subjects and making you conside
 #redirects to sob ever verbose
 The question marks ... hmm. Oh, you get it now.
 >scan sob ever verbose
-The question marks ... hmm. Oh, you get it now.
+Nothing happens until you move the settler away from the post and towards the sob ever verbose.
+Your settler registers YRR?RR?.
+!The question marks ... hmm. Oh, you get it now.
 #mistake test for obverse
 >obverse
 You can't just make things obverse by wanting them to be. But if change comes within, perhaps things are closer to obverse than you think.
@@ -318,7 +295,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 No. You pause. That can't be it. You need to do something, or nothing, differently.
 #readables for a sty tasty say
 >read sty
-YAY! STATS! is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
 
 @!mina,minb
 >stay
@@ -344,7 +321,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #nudge for stop
 >stpo
-The stop post continues its silent defiance. But it can't be too hard to defeat!
+The stop post is in the past. No need to p.s. tweaking it.
 #spechelp for evil bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
@@ -362,7 +339,7 @@ The bee's description isn't important. It's how you see the bee that matters.
 But it's not just any bee. It's an evil bee!
 #nudge for snore
 >snoer
-Hmm. Nothing at all. It must be *a* snore.
+Hmm. Nothing at all. It must be a snore.
 
 @max
 >believe
@@ -383,14 +360,6 @@ Your score has just gone up by one point
 }}SCORE-=2
 }}CURMIN--
 
-@nud
-#renudge for bee
->bee
-But it's not just any bee. It's a WRONG
-#scannotes for l'clear cellar
->scan l'clear cellar
-That question mark is perhaps, um, clear if you think about it.
-
 @max
 #pre-cellar-recall rule
 >recall
@@ -401,6 +370,14 @@ Darn it, that should work. But you can't focus on anything with that evil bee bu
 >believe
 Your score has just gone up by one point
 }}SCORE++
+
+@nud
+#renudge for bee
+>bee
+But it's not just any bee. It's a vile bee!
+#scannotes for l'clear cellar
+>scan l'clear cellar
+That question mark is perhaps, um, clear if you think about it.
 
 @sli
 #slider test for recall
@@ -419,6 +396,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#renudge for bee
+>bee
+But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
 #done rejects for evil bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
@@ -579,6 +559,16 @@ That's not quite the way to deserve that lobster.
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
 
+@nud
+#### test altpath nudge for MASTER before BOLSTER
+>master
+by one point
+#nudge for amrest
+>amrest
+The ME ARTS nourished you spiritually. Time to move on, though you could poke at the lobster.
+>undo
+>undo
+
 @max
 #pre-deal rule
 >deal
@@ -591,6 +581,9 @@ Your score has just gone up by one point
 }}SCORE++
 
 @nud
+#nudge for bloters
+>bloters
+The lobster nourished you physically. Time to move on, though you could poke at the ME ARTS.
 #spechelp for me arts
 >mastre
 That's not quite the way to focus on the ME ARTS.
@@ -615,9 +608,12 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for me arts
->mearst
-The ME ARTS have nurtured you spiritually. The lobster nurtured you physically. Time to move on.
+#nudge for amrest
+>amrest
+The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
+#renudge for bloters
+>bloters
+The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 #spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
@@ -659,10 +655,10 @@ The people living in them don't want to change. You can't make them. You need to
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
 #nudge for bower
 >obwer
-You should never need to riff on part of a location name
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #nudge for bowers
 >obwers
-You should never need to riff on part of a location name
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #nudge for rotunda
 >ratundo
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
@@ -801,7 +797,7 @@ It's not just any bottle, but a bottle of Pernod.
 ###skip test checking
 #renudge for bottle
 >bottel
-It's not just any bottle, but a bottle of N-E-Prod.
+It's not just any bottle, but a bottle of N-E-Prod Pernod.
 
 @nud
 #spechelp for pernod
@@ -908,7 +904,7 @@ The cark rack is built to be sturdy. No need to change it.
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 #nudge for likeness
 >likeness
-It's whoever's in the likeness that matters--Sister Tressi or Marble Blamer Balmer, here.
+It's whoever's in the likeness that matters--Sister Tressi and Marble Blamer Balmer, here.
 #nudge for phasor
 >phasro
 You need all that light for late-night work sessions.
@@ -947,14 +943,17 @@ You've lasted long enough. There are new things to look at, now.
 You see red slightly as Marble Blamer Balmer fails to look away.
 #readables for blamer balmer
 >read blamer balmer
+A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
 #scannotes for marble blamer balmer
 >scan marble blamer balmer
-Wow! Three names. You don't know if, say, Marble Blamer Mr. Beal would be easier but, well, you do what you can
+Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
 >mbb 2
 >x mr beal
+A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
 #readables for blamer mr beal
+>read mr beal
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #nudge for beal
 >bela
@@ -973,7 +972,7 @@ seems slightly taken aback
 seems slightly taken aback
 #scannotes for marble blamer mr beal
 >scan marble blamer mr beal
-Wow! Three names. You don't know if, say, Marble Blamer Balmer would be easier but, well, you do what you can
+Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
 >mbb 1
 
 @nud
@@ -1070,28 +1069,34 @@ Troves
 Boarded Roadbed====
 
 @mina
---you could've tried to BELIEVE you could get past the evil bee, too.
+!--you could've tried to BELIEVE you could get past the evil bee, too.
+--you could've tried to REASON your way past the (so-near) bee, too.
 
 @minb
---you could've tried to REASON your way past the (so-near) bee, too.
+--you could've tried to BELIEVE you could get past the evil bee, too.
+!--you could've tried to REASON your way past the (so-near) bee, too.
 
 @mina,minb
 Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 
 @mina
---you could've tried to BOLSTER yourself to deserve lobster.
+--you could've tried to MASTER the ME ARTS.
+!--you could've tried to BOLSTER yourself to deserve lobster.
 
 @minb
---you could've tried to MASTER the ME ARTS.
+!--you could've tried to MASTER the ME ARTS.
+--you could've tried to BOLSTER yourself to deserve lobster.
 
 @mina,minb
 Econ-Cone====
 
 @mina
 --you could've tried to STRIVE by the statue of Trevis Vister.
+!--you could've tried to ASPIRE, from the praise in the Econ-Cone.
 
 @minb
+!--you could've tried to STRIVE by the statue of Trevis Vister.
 --you could've tried to ASPIRE, from the praise in the Econ-Cone.
 
 @mina,minb
@@ -1099,10 +1104,12 @@ Upscale Capsule====
 --you could've tried to DISCOVER something about DIVORCES magazine.
 
 @mina
---you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
+--you could've tried to RESIST Sister Tressi.
+!--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 
 @minb
---you could've tried to RESIST Sister Tressi.
+!--you could've tried to RESIST Sister Tressi.
+--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 
 >recant
 Your score has just gone up by one point

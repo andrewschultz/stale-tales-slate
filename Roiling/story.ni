@@ -2462,7 +2462,7 @@ cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is writ
 A Bev O Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
 Admits Mist Ad	"[one of]IT'S MAD[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
-LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
@@ -4453,7 +4453,7 @@ rivets	false	true	false	false	"Hmm, along with the information for scanning Trev
 marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
 marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
-sister tressi siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
+Sister Tressi Siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
 maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe." [START presto]
 n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
@@ -5003,7 +5003,7 @@ this is the troves-hinting rule:
 		if red vees are in Upscale Capsule, try objhinting red vees instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
 		if tressi is in Upscale Capsule and mbb is in Upscale Capsule:
-			if sister-first is true, try objhinting sister tressi instead;
+			if sister-first is true, try objhinting Sister Tressi Siters instead;
 			try objhinting mbb instead;
 		try objhinting trance nectar instead;
 	if spoilit is true:
@@ -11078,8 +11078,8 @@ check taking stop post: say "The post is firmly in place." instead;
 
 check scaning stop post:
 	if sob ever verbose is touchable:
-		say "Nothing happens until you move the settler away from the post. Then the sob ever verbose picks up.";
-	try scaning sob ever verbose instead;
+		say "Nothing happens until you move the settler away from the post and towards the sob ever verbose.";
+		try scaning sob ever verbose instead;
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
@@ -11094,7 +11094,7 @@ every turn when player is in Boarded Roadbed:
 
 chapter A Sty, Tasty, Say
 
-A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "A Sty: Tasty, Say". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
+A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
 
 a-text of a sty tasty say is "RRYR". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
@@ -11414,7 +11414,7 @@ to decide which number is mbb-sis-points:
 	decide on temp;
 
 to say which-capsule-pics:
-	say "[if mbb-sis-points is 0]Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if sister tressi is in Upscale Capsule]A likeness of Sister Tressi regards you severely[else if mbb is in Upscale Capsule]A likeness of [mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
+	say "[if mbb-sis-points is 0]Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if Sister Tressi is in Upscale Capsule]A likeness of Sister Tressi regards you severely[else if mbb is in Upscale Capsule]A likeness of [mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
 
 to say bb-st: say "[one of][mbb] and Sister Tressi[or]Sister Tressi and [mbb][at random]"
 
@@ -11426,15 +11426,15 @@ to report-glarers:
 	else:
 		say "You look over to [if mbb is moot]Sister Tressi[else][mbb][end if]. Maybe there's a way to get rid of [if mbb is moot]her[else]him[end if], too, or maybe there's not, but either way, you feel progress and prestige don't weight quite so heavily, now."
 
-chapter sister tressi
+chapter Sister Tressi
 
-the Sister Tressi Siters are plural-named vanishing boring scenery. description of the sister tressi siters is "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as [mbb]'s.". bore-text is "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how."
+the Sister Tressi Siters are plural-named vanishing boring scenery. description of the Sister Tressi Siters is "Everyone knows Sister Tressi and her catch phrase, 'Set, Sir!' to people both emotionally and morally sluggish. She's very compelling, and her image is as ubiquitous as [mbb]'s.". bore-text is "Sister Tressi can't be moved by normal means. You sort of want to fight mentally against her, but you're not sure how."
 
-after doing something with sister tressi siters:
-	set the pronoun her to sister tressi siters;
+after doing something with Sister Tressi Siters:
+	set the pronoun her to Sister Tressi Siters;
 	continue the action;
 
-a-text of sister tressi siters is "RYRYRR". b-text of sister tressi siters is "RY?Y?R". parse-text of sister tressi siters is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
+a-text of Sister Tressi Siters is "RYRYRR". b-text of Sister Tressi Siters is "RY?Y?R". parse-text of Sister Tressi Siters is "R[sp]?[sp]x[sp]?[sp]x[sp]x".
 
 chapter marble blamer mr beal
 
@@ -21894,7 +21894,7 @@ this is the routes-alt rule: say "[eq2][b]ROUTES[r] has no alternate, um, routes
 
 this is the troves-alt rule:
 	say "[eq2][b]TROVES[r][eq2][line break]";
-	if mbb is moot or sister tressi is moot:
+	if mbb is moot or Sister Tressi is moot:
 		say "[2da]There were two marble blamers chosen at the start. You got [mbb], but there was also [other-mbb].";
 	else:
 		say "[2da]You will have a choice of disposing of [mbb] or Sister Tressi at the end.";
@@ -22093,7 +22093,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister."; [1 of 2]
 		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
 		if DIVORCES is not moot, say "[2drm of Upscale Capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
-		if sister tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to RESIST Sister Tressi.";
+		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to RESIST Sister Tressi.";
 		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore [mbb]."; [1 of 2]
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";

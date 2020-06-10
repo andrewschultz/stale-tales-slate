@@ -1031,6 +1031,13 @@ The cripple clipper rocks and makes negligible forward progress. Still, it's a s
 #scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
+#mistake test for mess
+>msse
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+>spuem
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+>spuems
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 
 @sli
 #slider test for athwart

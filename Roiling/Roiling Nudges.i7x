@@ -342,7 +342,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "artery"	526110803	--	--	"[artery-no]."
 "boor"	252447862	--	--	"[boor-grub]."
 "grub"	241448217	--	--	"[boor-grub]."
-"snore"	452663963	--	bee-head-reflexive rule	"Hmm. Nothing at all. It must be *a* snore."
+"snore"	452663963	bee's head	--	"[if bee's head is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
 "observe"	637146289	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
 "asidewalk"	509159436	--	--	"[sidewalk-oops]."
 "askew"	387135844	--	--	"[sidewalk-oops]."
@@ -373,6 +373,8 @@ table of Boredom Bedroom nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bedroom"	465358213	--	--	"[locname]."
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
+"amrest"	478776867	--	master-moot rule	"[boredom-move-on]."
+"bloters"	559099217	--	lobster-moot rule	"[boredom-move-on]."
 
 table of Browse Bowers nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -388,14 +390,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Econ Cone nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cone"	290071779	--	--	"[cone-rec]."
-"ave"	237158747	--	--	"No sense changing them. You must change yourself."
-"aves"	333432713	--	--	"No sense changing them. You must change yourself."
+"ave"	237158747	--	--	"No sense changing the Save Aves. You must change yourself."
+"aves"	333432713	--	--	"No sense changing the Save Aves. You must change yourself."
 "recent"	531959132	--	--	"[cone-rec]."
 "skyline"	567086698	--	--	"You don't want to mess with the skyline. You want to get in the godlings['] lodgings!"
 "godling"	328295263	--	--	"[scrapery]!"
 "godlings"	424569229	--	--	"[scrapery]!"
 "statue"	537593736	Trevis Vister	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
-"bottle"	480611466	pernod	--	"It's not just any bottle, but a bottle of [unless label is moot]Pernod[else]N-E-Prod[end if]."
+"bottle"	480611466	pernod	--	"It's not just any bottle, but a bottle of [if label is moot]N-E-Prod [end if]Pernod."
 "card"	127546295	r cad card	--	"The card's writing is more important."
 "cad"	42222492	r cad card	--	"The card's writing is more important."
 "label"	256040510	label	--	"It's not the label but what's on it."
@@ -419,7 +421,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "beal"	202226671	Marble Blamer Mr Beal	--	"It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas."
 "marble"	351625627	--	marble-gone rule	"[mbb-no]."
 "siter"	457506742	Sister Tressi Siters	--	"All the siters."
-"siters"	553780708	--	siters-gone rule	"The sister tressi siters are gone. Trying to re-defeat them would be protesting too much."
+"siters"	553780708	--	siters-gone rule	"The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much."
 "divorces"	575948795	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 
 chapter presto nudges
@@ -1715,10 +1717,6 @@ to say artery-no: say "The reastier arteris cannot be changed. They cannot even 
 
 to say boor-grub: say "You can't change a whole suburb. Better to change yourself"
 
-this is the bee-head-reflexive rule:
-	if player is in Bustle Sublet and bee's head is not off-stage and bee's head is reflexive, the rule succeeds;
-	the rule fails;
-
 this is the lot-observed rule:
 	if player is in Bustle Sublet and sob ever verbose is moot, the rule succeeds;
 	the rule fails;
@@ -1726,6 +1724,16 @@ this is the lot-observed rule:
 to say sidewalk-oops: say "The sidewalk's condition can't be changed. For better or worse"
 
 to say id-cede-full: say "It's the full song name--[i]I'd Cede[r]"
+
+this is the master-moot rule:
+	if ME ARTS is moot, the rule succeeds;
+	the rule fails;
+
+this is the lobster-moot rule:
+	if BORTLES lobster is moot, the rule succeeds;
+	the rule fails;
+
+to say boredom-move-on: say "[if me arts are moot]The ME ARTS nourished you spiritually. [end if][if lobster is moot]The lobster nourished you physically. [end if]Time to move on[if lobster is touchable], though you could poke at the lobster[else if me arts are touchable], though you could poke at the ME ARTS[end if]"
 
 this is the glaring-futile rule:
 	if player is in Boredom Bedroom and lager is moot, the rule succeeds;
@@ -1756,7 +1764,7 @@ this is the marble-gone rule:
 to say mbb-no: say "You already stopped thinking too much about [mbb]. If you try too hard to keep ignoring [mbb], you'll start thinking about [mbb], again"
 
 this is the siters-gone rule:
-	if player is in Upscale Capsule and sister tressi is moot, the rule succeeds;
+	if player is in Upscale Capsule and Sister Tressi is moot, the rule succeeds;
 	the rule fails;
 
 this is the divorces-gone rule:

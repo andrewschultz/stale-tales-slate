@@ -271,6 +271,13 @@ understand "obverse" as a mistake ("You can't just make things obverse by wantin
 
 chapter Bustle Sublet
 
+to say snore-was-is:
+	say "[if bee's head is reflexed]was[else]is[end if]"
+
+understand "norse" as a mistake ("The bee's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Bustle Sublet.
+
+understand "senor" as a mistake ("The bee's gender [snore-was-is] only relevant to the point of knowing it's a [i]senora[r].") when player is in Bustle Sublet.
+
 chapter Drain Nadir
 
 understand "aspired" as a mistake ("Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!") when player is in Drain Nadir.

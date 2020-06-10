@@ -89,7 +89,7 @@ table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	a rule	a rule	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
 eh at heat	eh at heat	false	270386244	--	"hate"	"hate"	--	post-heat-hate rule	"You feel a rife fire in your heart, wiping out any if/er...[paragraph break]'How neat! Hate won heat now!' you think to yourself. [paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should.[paragraph break]You think 'Heats ... hates ... haste?!'[paragraph break]Anyone can race, but you need to race with purpose and emotion."
-Race Acre	truffle	true	234323315	Bustle Sublet	"care"	"care"	--	--	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
+Race Acre	Race Acre	true	234323315	Bustle Sublet	"care"	"care"	--	post-race-acre-care rule	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	--	--	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	pre-spot-stop-post rule	post-spot-stop-post rule	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
@@ -108,7 +108,7 @@ rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"Y
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pernod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	post-redvees-deserve rule	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
-sister tressi siters	sister tressi siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
+Sister Tressi Siters	Sister Tressi Siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Marble Blamer Balmer	Marble Blamer Balmer	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
 trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	pre-nectar-recant rule	post-nectar-recant rule	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
@@ -595,6 +595,9 @@ to say purse-gone: now purse-stolen is true;
 this is the post-heat-hate rule:
 	move Race Acre to Loather Rathole;
 
+this is the post-race-acre-care rule:
+	now player has fretful truffle;
+
 this is the pre-spot-stop-post rule:
 	if sob ever verbose is touchable:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
@@ -681,14 +684,14 @@ this is the post-salt-last rule:
 		if the-from entry is Marble Blamer Balmer:
 			now the-from entry is mbb;
 			now the-to entry is mbb; [this is part of the silly randomization]
-	now sister tressi is in Upscale Capsule;
+	now Sister Tressi Siters are in Upscale Capsule;
 
 this is the post-tressi-resist rule:
 	now mbb is LLPish;
 	report-glarers;
 
 this is the post-mbb-ramble rule:
-	now sister tressi siters are LLPish;
+	now Sister Tressi Siters are LLPish;
 	report-glarers;
 
 this is the pre-nectar-recant rule:
@@ -1863,10 +1866,10 @@ bent ewe	"The bent ewe stretches a bit."
 raptest patters	"The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to."
 yob den	"Some different noises from the yob den."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
-Eh At Heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
+Eh At Heat	"You feel slightly less cold but mad at yourself for not doing better."
 Race Acre	"For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though."
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
-stop post	"The stop post continues its silent defiance. But it can't be too hard to defeat!"
+stop post	"The stop post continues its silent defiance. You might need to look at it from a slightly different angle."
 a sty tasty say	"No. You pause. That can't be it. You need to do something, or nothing, differently."
 LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
@@ -1884,7 +1887,7 @@ ME ARTS	"That's not quite the way to focus on the ME ARTS."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 I'd Cede	"You try to groove to [i]I'd Cede[r], but that's not quite it."
-sister tressi siters	"Sister Tressi seems a bit more upset than usual."
+Sister Tressi Siters	"Sister Tressi seems a bit more upset than usual."
 marble blamer balmer	"[mbb] seems slightly taken aback."
 marble blamer mr beal	"[mbb] seems slightly taken aback."
 trance nectar	"Your willpower is not quite strong enough to give it all up yet. But you must be on the right track."
@@ -2479,7 +2482,7 @@ label	"If you peel the label (by taking it,) you will get another clue what to d
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"
-sister tressi	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
+Sister Tressi Siters	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
 blamer mr beal	"[one of]Mr. Beal helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
 trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT" [end TROVES hinting]
