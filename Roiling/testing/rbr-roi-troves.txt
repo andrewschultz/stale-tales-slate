@@ -171,11 +171,6 @@ Bustle Sublet
 {$SCOS}
 
 @nud
-#mistake test for care
->care
-You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.
-
-@nud
 #nudge for bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -224,10 +219,10 @@ No, you'll want to zone out the whole verbose distraction.
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
 #scannotes for sob ever verbose
 >scan stop post
+Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 #redirects to sob ever verbose
 The question marks ... hmm. Oh, you get it now.
 >scan sob ever verbose
-Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Your settler registers YRR?RR?.
 !The question marks ... hmm. Oh, you get it now.
 #mistake test for obverse
@@ -255,12 +250,13 @@ Your score has just gone up by one point
 @nud
 #spechelp for stop post
 >stpo
-You're not seeing the right way to see the stop post, here.
+The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
 #rescannotes for stop post
 >scan stop post
+!Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
 
 @sli
@@ -500,6 +496,12 @@ Boredom Bedroom
 {$SCOS}
 
 @nud
+#nudge for shmoe
+>shmeo
+The people living in them don't want to change. You can't make them. You need to change something for YOU.
+#nudge for home
+>hoem
+The people living in them don't want to change. You can't make them. You need to change something for YOU.
 #mistake test for aled
 >aled
 Getting drunk will not solve your problems. And that lager would taste awful, anyway. You see red at yourself for such thoughts.
@@ -579,6 +581,9 @@ That seems right! But you don't have the courage yet! Perhaps you need to start 
 >bolster
 Your score has just gone up by one point
 }}SCORE++
+\\
+>score
+{$SCOS}
 
 @nud
 #nudge for bloters
@@ -608,7 +613,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#nudge for amrest
+#renudge for amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 #renudge for bloters
@@ -647,12 +652,6 @@ But what would ducks DO in the big city? They have no ambition. They crave food 
 #nudge for eder
 >edre
 It's Si Reed's full name.
-#nudge for shmoe
->shmeo
-The people living in them don't want to change. You can't make them. You need to change something for YOU.
-#nudge for home
->hoem
-The people living in them don't want to change. You can't make them. You need to change something for YOU.
 #nudge for bower
 >obwer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -699,10 +698,10 @@ Yes! You only need a chance! Once! To get inside! But you're nowhere near enthus
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
 #nudge for ave
 >aev
-No sense changing them. You must change yourself.
+No sense changing the Save Aves. You must change yourself.
 #nudge for aves
 >avse
-No sense changing them. You must change yourself.
+No sense changing the Save Aves. You must change yourself.
 #nudge for recent
 >recetn
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
@@ -795,11 +794,11 @@ It's not the label but what's on it.
 It's not just any bottle, but a bottle of Pernod.
 >x pernod
 ###skip test checking
+>take label
+The label comes off to reveal a much less hoity-toity label: the generic N-E-PROD is the REAL manufacturer! It's in red letters, too.
 #renudge for bottle
 >bottel
-It's not just any bottle, but a bottle of N-E-Prod Pernod.
-
-@nud
+It's not just any bottle, but a bottle of N-E-Prod.
 #spechelp for pernod
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
@@ -941,20 +940,24 @@ You've lasted long enough. There are new things to look at, now.
 #mistake test for ambler
 >ambler
 You see red slightly as Marble Blamer Balmer fails to look away.
+>x blamer balmer
+A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
 #readables for blamer balmer
 >read blamer balmer
-A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
 #scannotes for marble blamer balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
+#spechelp for marble blamer balmer
+>rambel
+seems slightly taken aback
 >mbb 2
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
 #readables for blamer mr beal
 >read mr beal
-The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
+The likeness was drawn up by E. R. Lamb, whose signature is in red.
 #nudge for beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
@@ -965,9 +968,6 @@ Fortuntaely, Marble Blamer Mr. Beal doesn't become physically able.
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.
 #spechelp for marble blamer mr beal
->rambel
-seems slightly taken aback
-#spechelp for marble blamer balmer
 >rambel
 seems slightly taken aback
 #scannotes for marble blamer mr beal
@@ -1005,6 +1005,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >recant
 !by one point
 It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
+#here we test RAMBLE on the alternate blamer
+>mbb 2
+>ramble
+by one point
+>undo
+>undo
 
 @!minb
 >ramble

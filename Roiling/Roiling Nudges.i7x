@@ -337,12 +337,10 @@ table of Bustle Sublet nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bustle"	504528644	--	--	"[locname]."
 "messhole"	677684018	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
-"care"	234323315	--	--	"Caring and all its offshoots only go so far."
 "reastier"	672824472	--	--	"[artery-no]."
 "artery"	526110803	--	--	"[artery-no]."
 "boor"	252447862	--	--	"[boor-grub]."
 "grub"	241448217	--	--	"[boor-grub]."
-"snore"	452663963	bee's head	--	"[if bee's head is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
 "observe"	637146289	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
 "asidewalk"	509159436	--	--	"[sidewalk-oops]."
 "askew"	387135844	--	--	"[sidewalk-oops]."
@@ -357,6 +355,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "stop"	355202520	--	--	"The stop post is in the past. No need to p.s. tweaking it."
 "live"	333777614	evil bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
+"snore"	452663963	--	--	"[if bee's head is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
 
 table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -375,17 +374,19 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
 "amrest"	478776867	--	master-moot rule	"[boredom-move-on]."
 "bloters"	559099217	--	lobster-moot rule	"[boredom-move-on]."
+"shmoe"	399790104	--	--	"[shmoe-homes]."
+"home"	303516138	--	--	"[shmoe-homes]."
 
 table of Browse Bowers nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowers"	510110133	--	--	"[locname]."
 "bower"	413836167	--	--	"[locname]."
+"mire"	322197911	--	--	"[mires-no]."
+"mires"	418471877	--	--	"[mires-no]."
 "rotunda"	460016620	--	--	"[rotun]."
 "dour"	285811276	--	--	"[rotun]."
 "tan"	174205344	--	--	"[rotun]."
 "eder"	361965110	--	--	"It's Si Reed's full name."
-"shmoe"	399790104	--	--	"[shmoe-homes]."
-"home"	303516138	--	--	"[shmoe-homes]."
 
 table of Econ Cone nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -397,7 +398,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "godling"	328295263	--	--	"[scrapery]!"
 "godlings"	424569229	--	--	"[scrapery]!"
 "statue"	537593736	Trevis Vister	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
-"bottle"	480611466	pernod	--	"It's not just any bottle, but a bottle of [if label is moot]N-E-Prod [end if]Pernod."
+"bottle"	480611466	pernod	--	"It's not just any bottle, but a bottle of [if label is moot]N-E-Prod[else]Pernod[end if]."
 "card"	127546295	r cad card	--	"The card's writing is more important."
 "cad"	42222492	r cad card	--	"The card's writing is more important."
 "label"	256040510	label	--	"It's not the label but what's on it."
@@ -1068,7 +1069,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "here"	378218320	vow here	--	"The [i]whole[r] vow here."
 "hydra"	268182261	--	hydra-know rule	"[if player has whistle]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
 "coma"	159621133	--	midden-n-s rule	"The coma camo remains as-is. It's probably made by A-COM, and all their products are quality."
-"weltish"	 571213850	whistle	--	"You [if whistle is reflexed]already figured how to play the whistle[else if player does not have whistle]can't do anything to the whistle until you have it[else]don't see anything happen. Then you note red writing on the whistle which might tell more about it[end if]."
+"weltish"	571213850	whistle	--	"You [if whistle is reflexed]already figured how to play the whistle[else if player does not have whistle]can't do anything to the whistle until you have it[else]don't see anything happen. Then you note red writing on the whistle which might tell more about it[end if]."
 "ottre"	493702525	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	degen-true rule	"[not-the-reg]."
 
@@ -1739,9 +1740,11 @@ this is the glaring-futile rule:
 	if player is in Boredom Bedroom and lager is moot, the rule succeeds;
 	the rule fails;
 
-to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
-
 to say shmoe-homes: say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
+
+to say mires-no: say "The [mires] are, well, mired. You need to focus on something else, or you might get mired, too"
+
+to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
 
 to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
 

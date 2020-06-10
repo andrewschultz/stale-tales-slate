@@ -1396,7 +1396,6 @@ Since you've changed all the fruits without using the arugula, I think you deser
 >thisalt
 --you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
-
 @nud
 #done rejects for searcher
 >searchre
@@ -1404,6 +1403,9 @@ You've done enough researching.
 #done rejects for viewer
 >viewre
 You've done enough reviewing.
+#nudge for repp
+>repp
+You don't want to bring back that feeling you might be a perp. Not in any form. Just go north through the gates.
 
 >n
 #notana

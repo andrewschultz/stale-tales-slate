@@ -792,6 +792,8 @@ It's what the medals say that makes them special.
 @!min
 >s
 
+Bran Barn
+
 @nud
 #nudge for barn
 >banr
@@ -802,6 +804,9 @@ Mr. Lee shakes his head and adjusts the ghoul hat.
 #spechelp for gore ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
+#nudge for infidel
+>infidle
+The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
 
 @max
 >ergo
@@ -1375,7 +1380,6 @@ Probably best to have the whistle before changing it.
 #nudge for preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for uprate
 #nudge for pine
 >pien
 So many pines, hard to pick one. Might as well take care of them all.
@@ -1543,6 +1547,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
+#nudge for uprate
 >upraet
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for uprates
@@ -1748,7 +1753,7 @@ You already pushed them aside.
 #done rejects for parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
-#nudge for ideas
+#renudge for ideas
 >aseid
 /(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 

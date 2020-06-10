@@ -146,19 +146,17 @@ carry out gnling:
 	the rule succeeds;
 
 to ply-table (tn - a table name):
-	say "Here are nudges from [tn]";
+	say "Here are nudges from [tn]:[paragraph break]";
 	let in-room be false;
 	repeat through tn:
 		if there is a this-item entry:
-			if this-item entry is touchable:
-				say ".[line break](item [this-item entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				next;
+			say "(item [this-item entry]) [this-cmd entry] [hashval entry] is [unless this-item entry is touchable]NOT [end if]a valid hash try.";
+			next;
 		if there is a this-rule entry:
-			consider the this-rule entry;
-			if the rule succeeded:
-				say ".[line break](rule [this-rule entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				next;
-		say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";
+			process the this-rule entry;
+			say "(rule [this-rule entry]) [this-cmd entry] [hashval entry] is [unless the rule succeeded]NOT [end if]a valid hash try.";
+			next;
+		say "[this-cmd entry] [hashval entry] is universally valid.";
 	say "."
 
 chapter redefining Emily Short's property checking

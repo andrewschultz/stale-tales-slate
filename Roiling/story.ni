@@ -482,7 +482,7 @@ use MAX_VERBS of 760.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_PROP_TABLE_SIZE of 620000.
+use MAX_PROP_TABLE_SIZE of 630000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
@@ -502,7 +502,7 @@ use SYMBOLS_CHUNK_SIZE of 16000.
 
 use MAX_OBJECTS of 960.
 
-use MAX_PROP_TABLE_SIZE of 630000.
+use MAX_PROP_TABLE_SIZE of 640000. [delta=10000]
 
 use MAX_STATIC_DATA of 760000.
 
@@ -11199,7 +11199,11 @@ this is the bore-id-cede rule:
 
 book Boredom Bedroom
 
-Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in Boredom Bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]. As with the Drain Nadir, you could leave physically, but you hope to soar mentally above your situation.". roomnud of Boredom Bedroom is table of Boredom Bedroom nudges.
+Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, even with the shmoe homes surrounding it outside, it beats Get-a-Cot Cottage, or Drag-Grad[if me arts are in Boredom Bedroom]. And the ME ARTS hung up are inspiring, or should be[end if]. As with the Drain Nadir, you could leave physically, but you hope to soar mentally above your situation.". roomnud of Boredom Bedroom is table of Boredom Bedroom nudges.
+
+chapter shmoe homes
+
+the shmoe homes are plural-named bounding boring scenery in Boredom Bedroom. description of shmoe homes is "You look out on the shmoe homes. You're sure you can do better. You suppose they can add to your boredom or add to your motivation to do better.". bore-text is "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of being associated with them for too long. Perhaps you should look around your bedroom for ways to improve yourself."
 
 chapter how to pre-deal
 
@@ -11257,11 +11261,11 @@ check taking lager: say "No, touching or holding a can almost always leads to dr
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the shmoe homes you can look out on. The ones you're better than now, you hope.[paragraph break]An exhibit called RESIDE RESIDE advertises upscale housing.". roomnud of Browse Bowers is table of Browse Bowers nudges.
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called RESIDE RESIDE advertises upscale housing.". roomnud of Browse Bowers is table of Browse Bowers nudges.
 
-chapter shmoe homes
+chapter Miser Emirs Mires
 
-the shmoe homes are plural-named bounding boring scenery in Browse Bowers. description of shmoe homes is "Ugh! You're sure they're okay for people less motivated than you, and they USED to be okay for you. But you can do better. Much better! You know you can!". bore-text is "You DON'T want to do anything with the shmoe homes except let out oh-mes at the thought of ever being associated with them. Perhaps looking at things as Si Reed does will help you be more."
+the Miser Emirs Mires are plural-named boring scenery in Browse Bowers. "The mires aren't literal mire. They're just, well, full of people who are socially mire. Perhaps you would've been satisfied there once, but just being in the Browse Bowers makes you want to do more. Perhaps someone or something closer can help you. No daydreaming and gazing off into the distance!". bore-text of Miser Emirs Mires is "You don't need to do anything with the Mires except move on from them.". printed name is "Miser Emirs['] Mires".
 
 chapter dour tan rotunda
 
@@ -11359,12 +11363,6 @@ chapter pernod
 the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is moot]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
 
 a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text of pernod is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
-
-[
-a-text of pernod-l is "RYRRYR". b-text of pernod-l is "RYRRYR". parse-text of pernod-l is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
-
-a-text of pernod-n is "RYRRYR". b-text of pernod-n is "PYRRYR". parse-text of pernod-n is "p[sp]o[sp]x[sp]x[sp]e[sp]x".
-]
 
 check reading pernod: try reading card instead;
 
@@ -11518,7 +11516,7 @@ a-text of red vees is "RYRYRRY". b-text of red vees is "RGRYRRY". parse-text of 
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
+DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla][paragraph break]Perhaps there is something deeper to DIVORCES and its advocacy of enhanced lifestyles than youi might suspect. It might not be critical, but it could be there.". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
