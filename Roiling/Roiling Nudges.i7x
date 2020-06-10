@@ -1245,8 +1245,8 @@ chapter others
 
 table of others nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"other"	427874806	--	degen-true rule	"[not-the-reg]."
-"storeh"	524148772	--	degen-true rule	"[not-the-reg]."
+"other"	427874806	--	--	"[not-the-reg]."
+"storeh"	524148772	--	--	"[not-the-reg]."
 "needle"	527168763	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	tekno-token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
@@ -1937,7 +1937,7 @@ to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
-to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
+to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 

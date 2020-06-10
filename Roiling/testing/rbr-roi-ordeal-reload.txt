@@ -220,6 +220,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for stable
 >tsbael
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
 #scannotes for tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
@@ -232,8 +234,6 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 #scannotes for meet bans
 >scan meet bans
 You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off.
-
-@nud
 #mistake test for palm
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.

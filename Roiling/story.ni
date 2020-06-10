@@ -4440,6 +4440,7 @@ admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great l
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
 eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
+race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
@@ -6901,10 +6902,10 @@ parseing is an action out of world.
 
 understand the command "parse" as something new.
 
-understand "parse" as parseing when Strip of Profits is visited.
+understand "parse" as parseing when Strip of Profits is visited and spear is not touchable.
 
 carry out parseing:
-	say "Parsing output is [if parse-now is false]now[else]already[end if] on[but-if-parse].";
+	say "Parsing letters settler output is [if parse-now is false]now[else]already[end if] on[but-if-parse].";
 	now parse-now is true;
 	the rule succeeds;
 
@@ -6918,10 +6919,10 @@ spareing is an action out of world.
 
 understand the command "spare" as something new.
 
-understand "spare" as spareing when Strip of Profits is visited.
+understand "spare" as spareing when Strip of Profits is visited and spear is not touchable.
 
 carry out spareing:
-	say "Parsing output is [if parse-now is true]now[else]already[end if] off.";
+	say "Parsing letters settler output is [if parse-now is true]now[else]already[end if] off.";
 	now parse-now is false;
 	the rule succeeds;
 

@@ -104,14 +104,14 @@ Bad idea to ruin such life-giving scenery, but maybe you can gain a sense of dir
 \\
 #nudge for storeh
 >streho
-Trying to change the current region you're in would be risky, or useless, or maybe both.
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 \\
 #nudge for other
 >oreth
-Trying to change the current region you're in would be risky, or useless, or maybe both.
+Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for rustic
 >rucsit
-You don't need to riff
+You can't change this clearing or Curtis, but you don't need to.
 #nudge for plum
 >pulm
 Well, you don't technically need plurals for this, but you're on the right track
@@ -152,7 +152,7 @@ The spear stays as-is. But it can't be that hard to change.
 >read mad train
 DR. NIMATA.
 #spechelp for mad train
->mad trani
+>madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
 
 @sli
@@ -291,18 +291,17 @@ Nothing happens. Perhaps it's the whole item that's important.
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 \\
-#readables for ruts circuits
->read ruts circuits
-One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 #readables for eerie blurbs
 >read eerie blurbs
-One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
+/One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 #spechelp for eerie blurbs
 >eerie blursb
 The blurbs turn a few shades of purple before settling again.
 #spechelp for peanut cola
 >peanut coal
 The peanut cola smells slightly fruity for a minute.
+#readables for peanut cola
+The brand name is A PLACE UNTO. It feels forced enough to make you see red.
 #spechelp for magenta rope
 >magenta roep
 The magenta rope and other items you uncovered briefly seem as one.

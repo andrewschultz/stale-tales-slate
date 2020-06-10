@@ -901,16 +901,19 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 {$SCOS}
 
 @nud
-#spechelp for darkness
->untli
-You feel it's ALMOST the right time for the darkness to lift.
+#scannotes for null it unit
+>scan null it unit
+The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
+#spechelp for null it unit
+>litun
+You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift.
 
 @sli
 #slider test for until
 >nuilt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@!min
+@nud
 #mistake test for around
 >around
 You can't see an un-road yet, or anything that might lead to it.
@@ -920,6 +923,9 @@ You can't see an un-road yet, or anything that might lead to it.
 Your score has just gone up by one point
 
 @nud
+#scannotes for odd run on aura
+>scan odd run on aura
+With only one ambiguous setting, the light should soon go on for you to figure where and how to go.
 #nudge for aura
 >auar
 The whole odd run on aura.
@@ -987,11 +993,17 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for mist
 >mits
 Nothing happens. It's DA mist, after all.
+#readables for admits mist ad
+>read mist ad
+/(IT'S MAD|T'. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
-#spechelp for da mist
+#spechelp for admits mist ad
 >amidts
 Hmm, you almost see a way through the mist.
+#scannotes for admits mist ad
+>scan admits mist ad
+Like most ads, it doesn't pose any great logical problems.
 
 @sli
 #slider test for amidst

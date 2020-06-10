@@ -69,6 +69,7 @@ Trying to change the current region you're in all at once would be risky, or use
 
 @sli
 ################################this tests all the possible picaros' changes. We simply dump all the "items" in the downside, then test and undo them one by one.
+##balance undos
 >allrand
 #slider test for snared
 >nsrade
@@ -174,8 +175,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >oydnre
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
+>undo
 
 @max
+##balance undos
 >allrand
 ##################################seed 1
 >gone
@@ -253,6 +256,7 @@ Your score has just gone up by one point
 ##################################seed 5
 >recreant
 Your score has just gone up by one point
+>undo
 >undo
 
 @nud
@@ -364,6 +368,7 @@ Your score has just gone up by one point
 #spechelp for terrance
 >terranec
 Terrance looks around as if he wants to run off.
+>undo
 >undo
 
 >gone

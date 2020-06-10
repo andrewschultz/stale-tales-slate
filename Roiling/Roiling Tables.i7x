@@ -110,7 +110,7 @@ red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	post-redvees-deserve
 salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
 Sister Tressi Siters	Sister Tressi Siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Marble Blamer Balmer	Marble Blamer Balmer	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
-Marble Blamer Mr Beal	Marble Blamer Mr Beal	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
+Marble Blamer Mr Beal	Marble Blamer Mr Beal	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously." [this is really horrible copied code, but I see no other way to do things.]
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	--	--	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
 trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	pre-nectar-recant rule	post-nectar-recant rule	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
@@ -403,7 +403,7 @@ coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vac
 coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	--	post-iconic-flip rule	"You do a little double-think-move on the coins. They become something entirely different."
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
-feeling you're a perp	feeling you're a perp	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+feeling you're a perp	feeling you're a perp	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
 
 book auxiliary text and rules
 
@@ -1534,6 +1534,9 @@ this is the post-iconic-flip rule:
 this is the pre-gates-stage-flip rule:
 	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
 
+this is the post-perp-prep rule:
+	moot feeling you're a perp;
+
 this is the post-gates-stage-flip rule:
 	say "[line break]";
 	if gate-level is 2:
@@ -1544,6 +1547,7 @@ this is the post-gates-stage-flip rule:
 	else if gate-level is 1:
 		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
 		if player has perp, say "[line break]Also, you feel like a little less of a perp now."
+	[an edge case bothered me here, so I want to write it out in case it ever bothers me again: if did-guru is false, we cannot min-up, because you may just use the arugula and then go win anyway. That'd be a bit silly on the player's part, but it's possible.]
 
 book general auxiliary rules
 
@@ -2041,7 +2045,7 @@ sporties' ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
-weirder red wire	"You think you see how to untangle some of the mes inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
+weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 pester'n serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"The Tetris Sitter breaks her glassy smile."
@@ -2228,7 +2232,6 @@ heat	"Don't need to overheat, or overhate."
 a sty tasty say	"You can't over-stay your staying power, or something."
 bee's head	"Too much fiddling with reason is unreasonable."
 evil bee	"The bee's already taken enough of your in-my-heartitude."
-ME ARTS	"The ME ARTS have nurtured you spiritually[if lobster is moot]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 tsar star	"No need for additional arts."	[START presto]
@@ -2285,7 +2288,6 @@ unripe ur-pine	"You already found a succor crocus. There's not much else there, 
 Tetris Sitter	"St. Teri's back in the real world, now."
 bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
-Merle	"[i]Fine, be beefin[r], you think. Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."

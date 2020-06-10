@@ -1157,6 +1157,14 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@nud
+#scannotes for stray satyr
+>scan stray satyr
+The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
+#readables for stray satyr
+>read stray satyr
+You see TSYRA branded under the stray satyr's shoulder.
+
 >artsy
 Your score has just gone up by one point
 }}SCORE++
@@ -1273,15 +1281,15 @@ No, you need a couple more letters... even with your powers back, you still need
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
 \\
-#spechelp for ram1
+#spechelp for whin1
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 \\
-#spechelp for ram2
+#spechelp for whin2
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 \\
-#spechelp for ram3
+#spechelp for whin3
 >terseyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 \\
@@ -1680,13 +1688,19 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 You might be able to disrupt both of them, not just one.
 
 @nud
-#scannotes for elmer
+#scannotes for aside-llp
 >scan elmer
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
 >scan merle
 !Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
+#spechelp for aside-llp
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
+
+@nud
+#readables for holy nest
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 
 @max
 >honestly
@@ -1873,7 +1887,7 @@ Your score has just gone up by one point
 #renudge for weltish
 >iswelth
 You already figured how to play the whistle.
-#done rejects for weltish whistle
+#done rejects for whistle
 >deepyl
 The whistle's already in tune.
 #nudge for crone

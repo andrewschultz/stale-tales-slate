@@ -1104,9 +1104,6 @@ You mumble other words to shoo Rand and Leo, but you sort of miss them. It was m
 ####now so long first
 >so long
 by one point
-#done rejects for log ons
->snoogl
-That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >later
 by one point
@@ -1165,12 +1162,19 @@ Dat was a good dust-up
 {$SCOS}
 
 @nud
-#done rejects for ought
+>so long
+by one point
+#done rejects for log ons
+>snoogl
+That'd be an awkward rehash. You need another way to say good-bye.
+>undo
+>undo
+#redone rejects for ought
 >ougth
 They're already off getting to know each other better
 >undo
 >undo
-#done rejects for alert
+#redone rejects for alert
 >aletr
 That'd be an awkward rehash. You need another way to say good-bye
 >undo

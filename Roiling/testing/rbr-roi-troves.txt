@@ -131,6 +131,10 @@ You probably did what you could. Or not-did.
 #spechelp for eh at heat
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
+#scannotes for eh at heat
+>scan heat
+Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
+
 
 #not a mistake
 >hate
@@ -151,11 +155,12 @@ You already got hot. Now you need to summon a different emotion.
 #done rejects for heat
 >haet
 Don't need to overheat, or overhate.
-
-@nud
-#mistake test for race
->race
+#spechelp for race acre
+>caer
 For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though.
+#scannotes for race acre
+>scan race acre
+Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
 #mistake test for a rec
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
@@ -254,7 +259,7 @@ The stop post continues its silent defiance. You might need to look at it from a
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
-#rescannotes for stop post
+#scannotes for stop post
 >scan stop post
 !Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.

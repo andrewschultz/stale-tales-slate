@@ -1604,6 +1604,9 @@ That's not quite it. You file that idea six feet under.
 #nudge for digger
 >diggre
 It's what it needs to be, you imagine.
+#spechelp for ruby
+>ruyb
+No, that's not quite it. The ruby dulls as if covered by dirt.
 
 @sli
 #slider test for bury
