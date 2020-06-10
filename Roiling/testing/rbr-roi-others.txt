@@ -18,9 +18,9 @@ ALSO-IGNORE:t
 }}SCORE=0
 }}CURMIN=25
 
-}$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, but you only need {CURMIN}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
+}$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, though you only need {CURMIN} to win.
+}$SCONOFIND=You have {SCORE} of {MAX} total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+}$SCOVERYLAST=You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 ## *FILE
 
@@ -47,6 +47,7 @@ Enter the Throes Hoster for the final region
 >in
 Rustic Citrus
 
+>t
 >z
 >z
 
@@ -96,11 +97,11 @@ The arugula is just for eating, so you can change something else that's been stu
 \\
 #nudge for arbored
 >aborder
-Bad idea to ruin such life-giving scenery, but maybe you can gain a sense of direction.
+You're not the tree-mangling type. Perhaps if you had a sense of direction, you could figure how to leave.
 \\
 #nudge for border
 >bordre
-Bad idea to ruin such life-giving scenery, but maybe you can gain a sense of direction.
+You're not the tree-mangling type. Perhaps if you had a sense of direction, you could figure how to leave.
 \\
 #nudge for storeh
 >streho
@@ -131,8 +132,11 @@ Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might t
 >rtu
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 #nudge for ruts
->rust
+>urst
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
+#mistake test for rust
+>rust
+You're trying to make things MORE organic, not less.
 #nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
@@ -218,7 +222,7 @@ Your score has just gone up by one point.
 The compass is accurate enough. Changing it might ruin things.
 #renudge for arbored
 >aborder
-Bad idea to ruin such life-giving scenery--the only way is north
+You're not the tree-mangling type. You can only exit to the north.
 #nudge for needle
 >needel
 The needle is working fine. No need to meddle.
@@ -238,7 +242,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #renudge for ruts
 >rust
-Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them turned enough up.
+You found enough in the ruts circuits. No need to bring them back.
 #spechelp for harmonicas
 >maraschion
 The harmonicas whistle, as if something happened.
@@ -295,15 +299,16 @@ Nothing happens. Perhaps it's the whole item that's important.
 >read eerie blurbs
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 #spechelp for eerie blurbs
->eerie blursb
+>eerieblursb
 The blurbs turn a few shades of purple before settling again.
 #spechelp for peanut cola
->peanut coal
+>peanutcoal
 The peanut cola smells slightly fruity for a minute.
 #readables for peanut cola
+>read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
 #spechelp for magenta rope
->magenta roep
+>magentaroep
 The magenta rope and other items you uncovered briefly seem as one.
 #spechelp for omen prism
 >persimmno
@@ -462,7 +467,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 The green stain could make just one fruit, but why not think bigger? It could become many.
 #readables for riot cap
 >read riot cap
-It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
+/It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
 #spechelp for PSA Elp
 >applse
 You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
@@ -475,6 +480,12 @@ The miser ruble turns a bit purpler.
 #spechelp for sorer bogey
 >gooseberyr
 The bogey's tone changes slightly for a second.
+#spechelp for stucco
+>stucocno
+The stucco looks almost hairy for a second.
+#spechelp for green stain
+>tangerinse
+Parts of the green stain turn orange-ish but is too small to be oranges.
 
 >apricot
 Your score has just gone up by one point.
@@ -504,18 +515,12 @@ Curtis hands you a coin
 scru-it
 
 @nud
-#spechelp for stucco
->stucocno
-The stucco looks almost hairy for a second.
 #renudge for arbored
 >aborder
-Bad idea to ruin such life-giving scenery--the only way is north.
+You're not the tree-mangling type. So you can only exit to the north.
 #spechelp for coin
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
-#spechelp for green stain
->tangerinse
-Parts of the green stain turn orange-ish but is too small to be oranges.
 
 @sli
 #slider test for icon
@@ -719,6 +724,15 @@ You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
+@nud
+>e
+>s
+#nudge for icon
+>icno
+Hmm. You could probably do something with just one coin, or you could do something with all of them.
+>n
+>w
+
 >cranberries
 Your score has just gone up by one point.
 >score
@@ -748,9 +762,6 @@ Nice going.
 #nudge for bluer
 >ubler
 That doesn't really describe the Tekno-Token
-#nudge for icon
->icno
-Hmm. You could probably do something with just one coin, or you could do something with all of them.
 
 @nud
 #mistake test for scion
@@ -777,8 +788,6 @@ The coins rattle and hum promisingly.
 >read singed design
 The singed design on the coins reads, when you look close, property of NISCO.
 #scannotes for coins
->scan coins
-Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
 
 @sli
 #there are more possible tests here but let's worry about this...
@@ -795,12 +804,34 @@ Blam!
 #mistake retest for scion
 >scion
 Money, or something like it, should not be the guide of you.
+
+@nud
+#this is a detour for the coins/sonic path
+##balance undos
+>purloin coins
+>scan coins
+Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
+>n
+>sonic
+by one point
 #scannotes for s-c
 >scan sonic coins
 You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
 #spechelp for s-c
 >sonci
 The sonic coins hum almost questioningly.
+>icons
+by one point
+>undo
+>sonic icons
+by one point
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >score
 }}SCORE++
@@ -926,9 +957,6 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 #nudge for banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
-#nudge for kumquat
->kumquta
-Just return the fruit to Curtis. No need for another change.
 #spechelp for quince
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
@@ -983,6 +1011,9 @@ You get all red faced asking people how to trade for a mango, and asking, and as
 #mistake test for an omg
 >an omg
 Lashing out that way leaves you feeling you must be close to the right way to get a mango.
+#scannotes for ammo gang
+>scan ammo gang
+The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
 
 @!min
 #not a mistake
@@ -1002,42 +1033,18 @@ Now this is weird. It looks like there should be a space, but it's jumping back 
 #spechelp for ammo gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
-#scannotes for ammo gang
->scan ammo gang
-The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
 #spechelp for nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
 #spechelp for prices precis
 >cripse
-Something glints off the list of prices.
+Something glints off the prices precis.
 #scannotes for prices precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
 #renudge for price
 >priec
 No, you already took care of stuff
-#done rejects for prices precis
->cripse
-You corrected the list enough.
-#done rejects for auction caution
->papaysa
-You hear a sap yap about the sign and figure it can't be changed any more.
-#done rejects for lemons
->lemosn
-You sour on changing the lemons further.
-#done rejects for melon
->melno
-The melon is fine as-is. It's better than the one that was on display, for sure.
-#done rejects for peach
->peahc
-You got enough of a discount. Really.
-#done rejects for mango
->manog
-Snag mo' mangos? No mas, G.
-#done rejects for papayas
->papaysa
-You've already established yourself as a prompt payer.
 
 @!min
 >score
@@ -1068,6 +1075,31 @@ Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 {$SCOS}
+
+@nud
+#done rejects for melon
+>melno
+The melon is fine as-is. It's better than the one that was on display, for sure.
+#done rejects for peach
+>peahc
+You got enough of a discount. Really.
+#done rejects for lemons
+>lemosn
+You sour on changing the lemons further.
+#nudge for kumquat
+>kumquta
+Just return the fruit to Curtis. No need for another change.
+#done rejects for prices precis
+>cripse
+You corrected the list enough.
+#done rejects for auction caution
+>papaysa
+You've already established yourself as a prompt payer.
+#done rejects for mango
+>manog
+Snag mo' mangos? No mas, G.
+
+@!min
 >w
 
 >d
@@ -1083,13 +1115,6 @@ Art Erd has nowhere to run, and you don't know if you want him taking that stora
 #mistake test for retard
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
->gs
-#mistake test for red rat
->red rat
-Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
-#mistake test for allo
->allo
-Lola says nothing back.
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1114,6 +1139,8 @@ The design doesn't need changing. It's what the design's on.
 #readables for orange
 >read orange
 It's stamped with the word ENGARO in red.
+
+@nud
 #nudge for red
 >red
 first-name basis
@@ -1123,6 +1150,13 @@ first-name basis
 #nudge for drol
 >drol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
+>gs
+#mistake test for red rat
+>red rat
+Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
+#mistake test for allo
+>allo
+Lola says nothing back.
 >gs
 female
 >alol
@@ -1136,7 +1170,6 @@ first-name basis
 #nudge for trader
 >drtear
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that storage box
->gs
 
 @nud
 #spechelp for a brr hub
@@ -1208,7 +1241,7 @@ Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 }}CURMIN++
-You have 39 of 42 total points for the post-Elvira Others region, and for the rest, you'll need to see what's north of Swell Wells.
+{$SCONOFIND}
 
 @min
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
@@ -1225,7 +1258,7 @@ You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipa
 >score
 {$SCOS}
 }}CURMAX--
-You can't get the maximum, since you used the arugula
+You can't get the maximum score, since you used the arugula
 
 >give dollar
 !Your score has just gone up by one point.
@@ -1277,7 +1310,7 @@ Gates Stage
 You don't need to be part of Yorpwald's Funniest Home Videos right now.
 #mistake test for poring
 >poring
-You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the arena to the north.
+You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.
 #nudge for gates
 >gesta
 The gate needs to be unlocked some other way.
@@ -1320,11 +1353,13 @@ That's not the way to learn from the searcher--it's probably not that complicate
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
 @nud
->perp
+>prep
 by one point
 #done rejects for feeling you're a perp
 >pepr
-Don't want to over-prep.
+You don't want to bring back that feeling you might be a perp. Not in any form. There's got to be another way or two to prep, though.
+>undo
+>undo
 
 @sli
 #slider test for research
@@ -1336,15 +1371,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for prep
 >rppe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#redone rejects for feeling you're a perp
->prep
-by one point
->erpp
-Don't want to over-prep
->undo
->undo
 
 @min
 >prep
@@ -1371,26 +1397,48 @@ No need to over-study or over-think. Through the gates!
 >undo
 >undo
 
->research
-by one point
-}}SCORE++
->score
-{$SCOS}
+@nud
 >review
+by one point
+#done rejects for viewer
+>reveiw
+You've done enough reviewing, and now you need to try something else.
+>undo
+>undo
+
+>research
 by one point
 }}SCORE++
 >score
 
 @min
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave. You can't get the maximum, since you used the arugula.
+{$SCOS}
+@!
+{$SCONOFIND}
+
+@nud
+#done rejects for searcher
+>reserach
+You've done enough researching, and now you need to try something else.
+
+>review
+by one point
+}}SCORE++
+>score
+
+
+@min
+# let's check "here/valence enclave" conditional text in the score
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
 >s
 >score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave. You can't get the maximum, since you used the arugula.
+You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
 >n
 @!
-You have 41 of 42 total points for the post-Elvira Others region.
-You can't expect anything more from Curtis.
-Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave to the north without using GURU.
+{$SCOVERYLAST}
+Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
+!You can't expect anything more from Curtis.
+
 
 @min
 #pre-gates-stage-flip rule
@@ -1402,10 +1450,10 @@ Since you've changed all the fruits without using the arugula, I think you deser
 @nud
 #done rejects for searcher
 >searchre
-You've done enough researching.
+You've done enough researching, and now you can just go north.
 #done rejects for viewer
 >viewre
-You've done enough reviewing.
+You've done enough reviewing, and now you can just go north.
 #nudge for repp
 >repp
 You don't want to bring back that feeling you might be a perp. Not in any form. Just go north through the gates.

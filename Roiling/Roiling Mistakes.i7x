@@ -918,7 +918,11 @@ understand "slump" as a mistake ("Don't get exhausted! This area should be a bit
 
 understand "smile" as a mistake ("[if limes are in location of player]You are thrilled to have gotten those limes, yes.[else if slime is in location of player]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
 
+understand "parse" as a mistake ("You've parsed the spelling of quite a few words so far. Just a bit more, now.") when spear is in location of player.
+
 understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is in location of player.
+
+understand "rust" as a mistake ("You're trying to make things MORE organic, not less.") when ruts circuits are touchable.
 
 chapter Scape Space
 
@@ -948,7 +952,7 @@ understand "go man" as a mistake ("That's the right idea but the wrong sorts of 
 
 understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in Clangier Clearing.
 
-understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how?") when player is in Clangier Clearing and mango is off-stage.
+understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how.") when player is in Clangier Clearing and mango is off-stage.
 
 understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in Clangier Clearing and mango is off-stage.
 

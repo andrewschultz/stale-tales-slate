@@ -197,7 +197,7 @@ span pans	span pans	false	248835251	--	"snap"	"snap"	pre-snap-span-pans rule	--	
 bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	--	--	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 wrap	ruby	false	276912353	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 Achers' Chaser Arches	Achers' Chaser Arches	false	367879580	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."
-ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. As it vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, passages to new locations."
+ol' trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap springs and cannibalizes the rigged digger. As the ol['] trap vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, you've got somewhere new to go."
 tubs	tubs	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	--	--	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. Too dirty to take."
@@ -388,7 +388,7 @@ peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approac
 quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
 prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	--	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
 melon	melon	true	388955186	--	"mo len"	"mo len" or "len mo"	--	--	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."
-auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	--	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."
+auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	--	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your, um, ASAP yap."
 lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
 a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
@@ -1026,6 +1026,10 @@ this is the post-tan-ant rule:
 
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
+	if player does not have digger:
+		say "Nothing to unearth the haunter with.";
+		preef pre-haun;
+		do nothing instead;
 	d "UNEARTHING FAILED. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
 	say "[h-not-yet].";
 	if haunter is not off-stage, say "The haunter has been unearthed." instead;
@@ -2154,9 +2158,6 @@ to say spec-help of (itm - a thing):
 	if itm is prefigured:
 		say "No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!";
 		continue the action;
-	if itm is a picaro:
-		say "[if itm is rodney]Rodney blinks a bit, then frowns[else][itm] shakes his head, but a glare from Rodney sets him straight--for now[end if].";
-		continue the action;
 	if itm is a mack-idea:
 		say "You feel you're on the right track to expose the macks. But that's not quite it.";
 		continue the action;
@@ -2306,7 +2307,7 @@ viewer	"You've done enough reviewing[win-north]."
 
 to say play-food: say "Don't play with your food. [if toaster is touchable]Maybe put it in the toaster instead[else]There must be something that can prepare it[end if]"
 
-to say win-north: if gate-level is 2, say ", but you can just go north"
+to say win-north: say ", and now you [if gate-level is 2]can just go north[else]need to try something else[end if]"
 
 to say got-e of (to-enter - a thing): say "You should just enter [the to-enter]. No need or way to seal [it-them of to-enter] back up"
 

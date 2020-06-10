@@ -1257,7 +1257,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
-"repp"	376061830	--	perp-moot rule	"You don't want to bring back that feeling you might be a perp. Not in any form. Just go north through the gates."
+"repp"	376061830	--	perp-moot rule	"You don't want to bring back that feeling you might be a perp. Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
 
 table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1270,10 +1270,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pager"	329383391	pagers	--	"[plur-fruit]."
 "lime"	290687947	slime	--	"[plur-fruit]."
 "harmonica"	398315407	harmonicas	--	"The harmonicas seem stuck together, so you probably have to deal with both of them."
-"circuit"	421536490	ruts circuits	--	"[ru-ci]."
-"circuits"	517810456	ruts circuits	--	"[ru-ci]."
-"rtu"	293539628	ruts circuits	--	"[ru-ci]."
-"ruts"	389813594	ruts circuits	--	"[ru-ci]."
+"circuit"	421536490	--	--	"[ru-ci]."
+"circuits"	517810456	--	--	"[ru-ci]."
+"rtu"	293539628	--	--	"[ru-ci]."
+"ruts"	389813594	--	--	"[ru-ci]."
 "eerie"	513734976	eerie blurbs	--	"[whole-item]."
 "blurbs"	377355225	eerie blurbs	--	"[whole-item]."
 "megaton"	473038885	mopeage rant	--	"[part-of-lots]."
@@ -1348,10 +1348,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "briar"	236247175	briar screen	--	"[whole-item]."
 "briars"	332521141	briar screen	--	"[whole-item]."
 "screen"	525123080	briar screen	--	"[whole-item]."
-"clearing"	434637210	--	--	"[locname]."
 
 table of Clangier Clearing nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
+"clearing"	434637210	--	--	"[locname]."
 "len"	250527456	--	--	"[len-part]."
 "craig"	184109754	--	--	"[len-part]."
 "price"	358594302	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
@@ -2021,7 +2021,7 @@ to say wordy-rowdy-nudge:
 			match-process the player's command and "rowdy";
 			continue the action;
 		if dr yow has been rowdy and dr yow has not been wordy:
-			match-process the player's command and "rowdy";
+			match-process the player's command and "wordy";
 			continue the action;
 		if dr yow has been rowdy and dr yow has not been wordy:
 			say "The slider is silent. There is no third option, it appears";
@@ -2162,11 +2162,11 @@ to say one-toy: say "Disable one of Elvira's toys, and there's still the other. 
 
 section others auxiliary
 
-to say border-arbor: say "Bad idea to ruin such life-giving scenery[if compass is off-stage], but maybe you can gain a sense of direction[else if Swell Wells are unvisited]--try going north[else]--the only way is north[end if]"
+to say border-arbor: say "You're not the tree-mangling type. [if compass is off-stage]Perhaps if you had a sense of direction, you could figure how to leave[else]So you can only exit to the north[end if]"
 
 to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"
 
-to say ru-ci: say "Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them [if ruts circuits are examined]turned enough up[else]might turn something up[end if]"
+to say ru-ci: say "[if ruts circuits are moot]You found enough in the ruts circuits. No need to bring them back[else]Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up[end if]"
 
 to say whole-item: say "Nothing happens. Perhaps it's the whole item that's important"
 

@@ -3830,15 +3830,13 @@ carry out requesting the score:
 	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
 	if mrlp is others:
 		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region";
-		if min-score of mrlp is poss-score of mrlp:
-			say ", and for the rest, you'll need to [if gates stage is visited]find your way north of [here-there of Gates Stage][else]see what's north of [here-there of swell wells][end if]";
-		else if gate-level is 2:
-			say ", and you should be able to go north from [here-there of Gates Stage] to the Valence Enclave";
-		else if min-score of mrlp < max-score of mrlp:
-			say ", but you only need [min-score of mrlp]";
-		else:
-			say ", and you just need to figure a way to the north";
-		say "[if did-guru is true]. You can't get the maximum, since you used the arugula[end if].";
+		if gate-level is 2:
+			say ", and you should be able to go north from [here-there of Gates Stage] to the Valence Enclave to win";
+		else if fruits-left > 0:
+			say ", though you only need [min-score of mrlp] to win";
+		if fruits-left is 0:
+			say ". There are no fruits left to find or give back to Curtis";
+		say "[if did-guru is true]. You can't get the maximum score, since you used the arugula[end if].";
 		eval-fruits;
 		check-guru;
 		the rule succeeds;
@@ -3911,7 +3909,7 @@ rank-name
 
 to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
-to check-guru: if did-guru is false and cur-score of others is max-score of others - 1, say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Valence Enclave [if player is not in Gates Stage]north of the Gates Stage[else]to the north[end if] without using GURU."
+to check-guru: if did-guru is false and fruits-left is 0, say "[line break]Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you [if Gates Stage is unvisited]figure out what to do north of Swell Wells[else]enter the Valence Enclave north of [here-there of Gates Stage][end if]."
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
@@ -4529,7 +4527,7 @@ stray satyr	true	true	false	false	"The satyr seems phyiscally hard to tame, and 
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]Just one possibility[else]Just three possibilities[end if]."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]. Just one possibility[else]Just three possibilities[end if]."
 prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
@@ -5724,7 +5722,7 @@ to decide which number is fruits-got: decide on number of not fruit-to-find frui
 to eval-fruits:
 	say "[line break]DEBUG NOTE: MISSES shows fruits left.";
 	if moss cap is off-stage, continue the action;
-	if droll dollar is not off-stage:
+	if droll dollar is not off-stage and fruits-left > 0:
 		say "You can't expect anything more from Curtis.";
 		continue the action;
 	let next-goal be (curtis-level + 2) * 4;
@@ -6904,7 +6902,13 @@ understand the command "parse" as something new.
 
 understand "parse" as parseing when Strip of Profits is visited and spear is not touchable.
 
+parse-mist is a truth state that varies.
+
 carry out parseing:
+	if spear is touchable and parse-mist is false:
+		now parse-mist is true;
+		say "You've parsed the spelling of quite a few words so far. Just a bit more, now.";
+		say "[line break](If you wanted to change how you see the letters settler's output, you can type PARSE again.)" instead;
 	say "Parsing letters settler output is [if parse-now is false]now[else]already[end if] on[but-if-parse].";
 	now parse-now is true;
 	the rule succeeds;
@@ -6919,9 +6923,15 @@ spareing is an action out of world.
 
 understand the command "spare" as something new.
 
-understand "spare" as spareing when Strip of Profits is visited and spear is not touchable.
+understand "spare" as spareing when Strip of Profits is visited.
+
+spare-mist is a truth state that varies.
 
 carry out spareing:
+	if spear is touchable and spare-mist is false:
+		now spare-mist is true;
+		say "No, not adjectives. Well, not here by Curtis.";
+		say "[line break](If you wanted to change how you see the letters settler output, you can type SPARE again.)" instead;
 	say "Parsing letters settler output is [if parse-now is true]now[else]already[end if] off.";
 	now parse-now is false;
 	the rule succeeds;
@@ -14057,7 +14067,7 @@ rule for supplying a missing noun when unearthing:
 
 the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
 
-to say h-not-yet: say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is moot]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
+to say h-not-yet: say "You need the right action to deal with the haunter"
 
 this is the bore-haun rule:
 	if current action is unearthing, now boring-exception is true;
@@ -20149,7 +20159,7 @@ after fliptoing when player is in Clangier Clearing:
 
 a tekno-token is an improper-named thing. description of tekno-token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno-token.
 
-the prices precis is privately-named proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
+the prices precis is proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
 check taking prices precis: say "That'd leave everyone in the market confused[if prices precis is reflexed] and undo your help fixing the prices[end if]." instead;
 
