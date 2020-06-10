@@ -263,17 +263,7 @@ book troves
 
 chapter Loather Rathole
 
-understand "acre" as a mistake ("That farm-[if player is male]boy[else]girl[end if] terminology isn't quite how to show you give a darn in the big city.") when player is in Loather Rathole and cold is not in location of player.
-
-understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not in location of player and mrlp is troves.
-
-understand "clod" as a mistake ("Hey! No beating yourself up. You'll probably do it wrong, anyway.") when player is in Loather Rathole.
-
-understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is in location of player], and that won't get back your super purse like racing after that guy[end if].") when cold is not in location of player and player does not have super purse.
-
-understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is in location of player.
-
-understand "real hot" as a mistake ("You need[if cold is moot]ed[end if] a strong emotion to get hot.") when player is in Loather Rathole.
+understand "real hot" as a mistake ("[if Race Acre is touchable]You already got hot. Now you need to summon a different emotion.[else]But what emotion would provide heat?[end if]") when player is in Loather Rathole.
 
 chapter Boarded Roadbed
 

@@ -332,7 +332,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hurts"	427095893	--	--	"[no-hurt]."
 "pothole"	552183378	--	--	"[p-hole]."
 "potholes"	648457344	--	--	"[p-hole]."
-"cold"	168201090	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
 
 table of Bustle Sublet nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

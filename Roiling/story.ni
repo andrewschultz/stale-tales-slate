@@ -4119,10 +4119,10 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				continue the action;
 	else if mrlp is troves:
 		if player is in Loather Rathole:
-			if cold is in Loather Rathole:
-				now noun is cold;
+			if Race Acre is in Loather Rathole:
+				now noun is Race Acre;
 			else:
-				now noun is heat;
+				now noun is Eh At Heat;
 			continue the action;
 		if player is in Bustle Sublet:
 			if sob ever verbose is in Bustle Sublet:
@@ -4353,8 +4353,10 @@ check scaning location of the player (this is the location scan rule):
 		say "Only the thickness sketchins pick up anything.";
 		try scaning thickness sketchins instead;
 	if location of player is Loather Rathole: [start troves]
-		if cold is touchable, try scaning cold instead;
-		if heat is touchable, try scaning heat instead;
+		if Race Acre is touchable:
+			say "Scanning the Race Acre turns up something...";
+			try scaning Race Acre instead;
+		try scaning Eh At Heat instead;
 	if location of player is Econ Cone:
 		if pernod is touchable, try scaning pernod instead;
 		if cone-points is 0:
@@ -4394,12 +4396,6 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Swell Wells:
 		if sorer bogey is touchable, try scaning sorer bogey instead;
 	say "You can't find anything specific to scan, and nothing shows up on your settler." instead;
-
-section preambles
-
-check scaning heat: say "You look for a clue how to bother being a race acer...";
-
-check scaning cold: say "You look for a clue how to make some heat..."
 
 chapter scannotes
 
@@ -4977,7 +4973,7 @@ sister-first is a truth state that varies.
 
 this is the troves-hinting rule:
 	if player is in Loather Rathole:
-		if cold is touchable, try objhinting cold instead;
+		if Race Acre is touchable, try objhinting Race Acre instead;
 		try objhinting heat instead;
 	if player is in Bustle Sublet:
 		if verbose are in Bustle Sublet, try objhinting verbose instead;
@@ -5675,7 +5671,7 @@ check taking inventory:
 		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player].";]
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
-			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
+			say "Boy, this is a seedy area! You're worried you might get robbed of what you have.[line break]";
 		if purse-stolen is true, say "All you have is [i]Pa, Egg, Pea[r] and your pedanto-notepad and your settler[if player has fretful truffle] and that fretful truffle[end if]. You still need to get your super purse back." instead;
 	if number of things carried by the player is 0, say "Just your powers, at the moment. Nothing tangible." instead;
 	now all things carried by the player are marked for listing;
@@ -5782,7 +5778,7 @@ Ripe Pier	"You've lost all sense of direction here, but you need to figure how t
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
-Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to lash out. [if cold is not moot]Besides, you're too cold. While haste heats, going [noun] would offer no more [i]heat[r] than here[else]You need to get emotionally stoked to catch up with the thief, but right now, you wonder if it really matters[end if]." [troves]
+Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
@@ -9994,7 +9990,7 @@ section Tastee Estate
 the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
 
 this is the enter-troves rule:
-	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and you start to feel VERY cold before winding up in a hovel labeled [i]Eh, At Heat[r].[paragraph break]But you are soon thrown outside! There are no freeloaders in that most successful of cities: Spoiloplis![wfak][paragraph break]A girdled griddle where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
+	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and you start to feel VERY cold before winding up in a hovel labeled [heat].[paragraph break]But you are soon thrown outside! There are no freeloaders in that most successful of cities: Spoiloplis![wfak][paragraph break]A girdled griddle where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
 
@@ -10889,14 +10885,14 @@ a-text of thickness sketchins is "YRRRYRR". b-text of thickness sketchins is "?R
 
 chapter free reef
 
-the free reef is boring scenery in Cripple Clipper. description of free reef is "It looks like where you want to go. But how?". bore-text is "The reef is far away. You need to find a way to navigate to it.". bore-check is bore-reef rule.
+the free reef is boring useless scenery in Cripple Clipper. description of free reef is "It looks like where you want to go. But how?". bore-text is "The reef is far away. You need to find a way to navigate to it.". bore-check is bore-reef rule.
 
 this is the bore-reef rule:
 	if current action is scaning, say "The reef is too far away to scan, and you check the combination of letters anyway. Nothing. Perhaps what you need is on the Cripple Clipper." instead;
 
 chapter mess up spumes
 
-the mess up spumes are boring scenery in Cripple Clipper. description of mess up spumes is "The mess-up spumes fizzle all about. You can't seem to avoid them by a standard direction. You doubt they themselves will give you clues, but maybe Logan left a clue behind in the Cripple Clipper.". bore-text is "The spumes aren't going to help you get through them. You need advice from somewhere else.".
+the mess up spumes are boring useless scenery in Cripple Clipper. description of mess up spumes is "The mess-up spumes fizzle all about. You can't seem to avoid them by a standard direction. You doubt they themselves will give you clues, but maybe Logan left a clue behind in the Cripple Clipper.". bore-text is "The spumes aren't going to help you get through them. You need advice from somewhere else.".
 
 printed name of mess up spumes is "mess-up spumes".
 
@@ -10967,18 +10963,18 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if heat is touchable]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[else]you feel nothing but bone-chilling poverty here. Lor['], [i]HEAT[r]. It's what you need. All you can think of[end if]. Of course, with all this lost hope, there are plenty of potholes about. Each exit looks like a hurt thru[if eh at heat is touchable].[paragraph break]And there it is! [i]Eh, At Heat[r]. You could use heat..". roomnud of Loather Rathole is table of Loather Rathole nudges.
+Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if race acre is touchable]you see the Race Acre where the thief ran, but you're too bummed to follow, And you can't go back in[else][heat] stands. Lor['], [i]HEAT[r]. You're not getting back in.,feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to follow that thief through the Race Acre, though[end if]. Nothing but bone-chilling poverty here. Of course, with all this lost hope, there are plenty of potholes about to distract you from moving up in the world. Every possible exit[if race acre is touchable], even the Race Acre, [end if]looks like a hurt thru.". roomnud of Loather Rathole is table of Loather Rathole nudges.
 
-the hurt thru is bounding boring scenery in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved[care-hate-clue]."
+the hurt thru is bounding boring scenery in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved. [care-hate-clue]."
 
 to say care-hate-clue:
-	say ". [if cold is moot]Race after the thief, somehow[else]find a way to generate hate[end if]"
+	say "[if race acre is touchable]Motivate yourself to get through the Race Acre[else]Find a substitute for [heat][end if]"
 
 understand "hurt thrus" and "thrus" as hurt thru.
 
 after looking in Loather Rathole:
-	set the pronoun it to cold;
-	if heat is in Loather Rathole, set the pronoun it to heat;
+	set the pronoun it to Eh At Heat;
+	if Race Acre is in Loather Rathole, set the pronoun it to Race Acre;
 	set the pronoun them to potholes;
 	continue the action;
 
@@ -10987,23 +10983,24 @@ check looking in Loather Rathole for the first time: now the player has Pa Egg P
 check going nowhere (this is the troves general direction reject rule):
 	if mrlp is troves, say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
 
-every turn when player is in Loather Rathole (this is the Loather Rathole complaints rule) :
-	say "[if eh at heat is in Loather Rathole]You need heat, or some temporary substitute for it, now you were kicked out of [i]Eh, At Heat[r][else]The person who stole your super purse headed to the Race Acre, but you're not motivated right to follow them, yet[end if]."
-
-the Loather Rathole complaints rule is listed after the process random dialogue rule in the every turn rules.
-
 after printing the locale description for Loather Rathole when Loather Rathole is unvisited:
 	say "Skid Row, Wordski.";
 	continue the action;
 
 chapter eh at heat
 
-Eh At Heat is boring scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil."
+Eh At Heat is boring reflexive scenery in Loather Rathole. "[eh at heat] is run-down, but it was a source of warmth. You could read it to find whom to contact to get back in ... not that you could contact THEM.". bore-check of eh at heat is the bore-heat rule. bore-text of eh at heat is "There's probably no way back in, but maybe there's a similar way to warm yourself. Or bring your emotions to a boil.". printed name of Eh At Heat is "[i]Eh, At Heat[r]".
 
 a-text of eh at heat is "RYRY". b-text of eh at heat is "?YRY". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable.
 
 this is the bore-heat rule:
 	if current action is entering, say "[one of]You know you will get thrown out again, but maybe if you try to enter again, you will hear something that will help you.[or]You try to enter but lose your will at the last minute. Still, you hear' 'Tea! Hat? Eh!' It makes you see red.[stopping]".
+
+chapter Race Acre
+
+Race Acre is boring vanishing proper-named scenery. description is "You look over at Race Acre (and what's an ACRE doing in a big city?) but you're too worn out from hate to follow whoever stole your super purse. You need a different emotion.". bore-text of Race Acre is "Ho-hum. You should be motivated to follow that thief to Race Acre, but you can't.".
+
+a-text of Race Acre is "RYRY". b-text of Race Acre is "R??G". parse-text of Race Acre is "c[sp]?[sp]?[sp]e". Race Acre is cheat-spoilable.
 
 chapter fretful truffle
 
@@ -11017,18 +11014,9 @@ chapter potholes
 
 the potholes are useless plural-named boring scenery in Loather Rathole. bore-text is "The potholes symbolize lost hope. You don't need that sort of thinking right now!". description of potholes is "You probably can't use them or do anything with them. They symbolize lost hope."
 
-chapter cold
-
-the cold is flippable scenery in Loather Rathole. "[one of]Even though you wasted time watching weathercasts as a kid (boo!) and never learned to small-talk about it with important people (boo!) t[or]T[stopping]he cold's still just...cold."
-
-a-text of cold is "RYRY". b-text of cold is "PYRY". parse-text of cold is " h[sp]a[sp]t[sp]e". cold is parse-spoilable. [cold -> heat, need to hate]
-
-check taking cold:
-	say "You have as much cold as you can take." instead;
-
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]Everything seems to be going too fast for you. [if sob ever verbose is in Bustle Sublet]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. You'll need to look around to find what to do.". roomnud of Bustle Sublet is table of Bustle Sublet nudges.
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs, not that you'd risk the reastier arteries to get there. Someone seedy owns this area, [randbla]. This messhole with a sidewalk laid askew is almost as bad as being homeless...[paragraph break]You need to think less emotionally than in the Loather Rathole. [if sob ever verbose is in Bustle Sublet]Everything seems to be going too fast for you, except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, commanding your attention with the sob ever verbose gone[end if]. You'll need to look around to find what to do.". roomnud of Bustle Sublet is table of Bustle Sublet nudges.
 
 [flipping the stop post now sends you to Boarded Roadbed.]
 
@@ -11062,7 +11050,7 @@ after doing something with sob ever verbose:
 	continue the action;
 
 check taking sob ever verbose:
-	say "You have as much cold as you can take." instead;
+	say "It's not something you can take. It's just something you can pay attention to." instead;
 
 a-text of sob ever verbose is "YRRYRRY". b-text of sob ever verbose is "YRR?RR?". parse-text of sob ever verbose is "-[sp]x[sp]x[sp]?[sp]x[sp]x[sp]?".
 
@@ -11251,7 +11239,7 @@ check taking LEAD: say "You already have one motivational book. Perhaps you need
 
 chapter lager
 
-The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
+The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed.". "A can of Large Regal Lager sits here. Perhaps you can do something more moral than drinking it."
 
 check opening Large Regal Lager: try drinking Large Regal Lager instead;
 
@@ -11426,7 +11414,7 @@ to decide which number is mbb-sis-points:
 	decide on temp;
 
 to say which-capsule-pics:
-	say "[if mbb-sis-points is 2]Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if sister tressi is in Upscale Capsule]Sister Tressi regards you severely[else if mbb is in Upscale Capsule][mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
+	say "[if mbb-sis-points is 0]Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if sister tressi is in Upscale Capsule]A likeness of Sister Tressi regards you severely[else if mbb is in Upscale Capsule]A likeness of [mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
 
 to say bb-st: say "[one of][mbb] and Sister Tressi[or]Sister Tressi and [mbb][at random]"
 
@@ -20375,7 +20363,7 @@ The small yellow banana is a fruit.
 
 chapter rhubarb
 
-a brr hub is a boring thing in Scape Space. "A brr hub looms here, making the Scape Space slightly colder.". printed name of brr hub is "a brr-hub". description of brr hub is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa.". bore-text is "Before you can get too close to the (a) brr-hub, it whips out ... a burr! [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the hub's salvo[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the hub shot at you[in random order].".
+a brr hub is a boring thing in Scape Space. "A brr hub looms here, making the Scape Space slightly colder.". printed name of brr hub is "brr-hub". description of brr hub is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa.". bore-text is "Before you can get too close to the (a) brr-hub, it whips out ... a burr! [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the hub's salvo[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the hub shot at you[in random order].".
 
 a-text of a brr hub is "RRYRYRR". b-text of a brr hub is "RRYRYRP". parse-text of a brr hub is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]B".
 
