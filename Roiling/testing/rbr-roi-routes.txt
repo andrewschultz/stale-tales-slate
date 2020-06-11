@@ -819,6 +819,11 @@ That's a lot of questions for such a small bottle, but it can't be too hard.
 >read be ova
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
 
+@sli
+#slider test for above
+>baveo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >above
 }}SCORE++
 Your score has just gone up by one point.

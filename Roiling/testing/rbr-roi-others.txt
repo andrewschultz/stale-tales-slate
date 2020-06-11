@@ -614,6 +614,9 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
+#done rejects for icon
+>inco
+The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
 #mistake retest for sonic
 >sonic
 Maybe if you had more than one icon.
@@ -629,7 +632,7 @@ You fiddle with the coin you got
 >n
 
 @nud
-#readables for singed design
+#rereadables for singed design
 >read singed design
 The singed design on the icons reads, when you look close, property of NISCO.
 
@@ -934,7 +937,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for cripes
 >rcpise
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for nomel
+#slider test for mo len
 >onelm
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for papayas
@@ -1115,9 +1118,6 @@ You sour on changing the lemons further.
 #nudge for kumquat
 >kumquta
 Just return the fruit to Curtis. No need for another change.
-#done rejects for prices precis
->cripse
-You corrected the prices precis enough.
 #done rejects for auction caution
 >papaysa
 You hear a sap yap about the sign and figure it can't be changed any more.
@@ -1251,7 +1251,7 @@ You don't have time for soccer/football, and unfortunately, it's not a five-lett
 #slider test for banana
 >anaban
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for gonear
+#slider test for go near
 >ogenra
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for rhubarb
@@ -1490,10 +1490,10 @@ Since you've changed all the fruits without using the arugula to GURU, I think y
 --you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
 @nud
-#done rejects for searcher
+#redone rejects for searcher
 >searchre
 You've done enough researching, and now you can just go north.
-#done rejects for viewer
+#redone rejects for viewer
 >viewre
 You've done enough reviewing, and now you can just go north.
 #nudge for repp

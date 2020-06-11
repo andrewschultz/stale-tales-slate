@@ -567,39 +567,57 @@ Dusty Study
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 >event map
 The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
+#spechelp for platform
+>farm plto
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+>farm plot
+The platform becomes a farm plot.
+#spechelp for pedestal
+>steel pda
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+>steel pad
+The pedestal becomes a steel pad.
+#spechelp for crabgrass
+>brass crga
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+>x diorama
+###skip test checking
+>brass crga
+Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can reexamine the diorama.
+>brass crag
+The crabgrass dries out and becomes a brass crag.
+
+@sli
+#slider test for pavement
+>evapemtn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for platform
+>lptaofmr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pedestal
+>epedtsla
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for crabgrass
+>sargsarcb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
 #spechelp for event map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
-#spechelp for crabgrass
->brass crga
-Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
->brass crag
-The crabgrass dries out and becomes a brass crag.
 #spechelp for brass crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
 >crabgrass
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
-#spechelp for platform
->farm plto
-Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
->farm plot
-The platform becomes a farm plot.
 #spechelp for farm plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
 >platform
 The farm plot switches back to a platform.
->x diorama
-###skip test checking
-#spechelp for pedestal
->steel pda
-Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can reexamine the diorama.
->steel pad
-The pedestal becomes a steel pad.
 #spechelp for steel pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
@@ -610,8 +628,17 @@ The steel pad intertwines into a marginally artistic pedestal.
 Largely All-Grey Gallery
 
 @sli
-#slider test for snib
->nsbi
+#slider test for event map
+>venemtpa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for brasscrag
+>sarbcgars
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for farmplot
+>afmrlpto
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for steelpad
+>eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -641,6 +668,11 @@ The ISBN bins creak slightly.
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 >bs in
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
+
+@sli
+#slider test for snib
+>nsbi
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
 >snib

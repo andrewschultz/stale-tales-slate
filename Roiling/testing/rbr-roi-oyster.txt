@@ -1139,7 +1139,7 @@ Your score has just gone up by one point
 @max
 #pre-kiss-skis rule
 >kiss
-You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right.
+You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 #pre-bonk-knob rule
 >bonk
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
@@ -1897,14 +1897,14 @@ Maybe riff on ALL the lamps. But only for fun.
 #let's test the special case where we TAN without PSALMing.
 >tan
 }}SCORE++
-}}CURMIN--
+}}CURMAX--
 >score
 {$SCOS}
 WRONG
 >undo
 >undo
 }}SCORE--
-}}CURMIN++
+}}CURMAX++
 
 @!min
 >psalm

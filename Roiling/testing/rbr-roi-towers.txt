@@ -68,7 +68,9 @@ Trying to change the current region you're in all at once would be risky, or use
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
 @sli
+>slon
 ################################this tests all the possible picaros' changes. We simply dump all the "items" in the downside, then test and undo them one by one.
+>z
 ##balance undos
 >allrand
 #slider test for snared
@@ -545,7 +547,6 @@ The Shout-So Hut is built to resist words. You aren't getting through, or past, 
 This game almost never requires you to mess with cardinal directions.
 
 @sli
->slon
 #slider test for sadder
 >ddsare
 Your settler begins to make noises: a low hum, but nothing really piercing.

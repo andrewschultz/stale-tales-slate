@@ -203,8 +203,8 @@ You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on 
 @sli
 #slider test for screen
 >ercsne
-Your settler begins to make noises: a low hum, but nothing really piercing.
-xxxx
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #done rejects for n e recs censer
@@ -1126,52 +1126,47 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 >artel
 You, Rand and Leo have already engaged in a collective effort.
 
-@max
-#here we try all possible combinations. This does not push the game forward.
+@nud
+#first, test each done-reject individually
+##balance undos
 >later
 by one point
 #done rejects for alert
 >aletr
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
-#>tough
-#by one point
-#Dat was a good dust-up
-#>undo
+>undo
 >so long
 by one point
-Dat was a good dust-up
-#pre-harpings-flip rule
->tough
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+#done rejects for log ons
+>sloong
+That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >undo
->undo
-####now so long first
->so long
-by one point
->undo
->later
-by one point
-!Hut! Go!
-Dat was a good dust-up
->undo
->tough
-by one point
-Dat was a good dust-up
-#pre-harpings-flip rule
->later
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
->undo
-####finally tough first
 >tough
 by one point
 #done rejects for ought
->ougth
+>ughot
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
+>undo
+
+@max
+# all 6 combos to get through
+##balance undos
+#######T S L below
+>tough
+by one point
+>so long
+by one point
+!Hut! Go!
+Dat was a good dust-up
+#pre-harpings-flip rule
+>later
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+#######T L S below
 >later
 by one point
 !Hut! Go!
@@ -1181,10 +1176,47 @@ Dat was a good dust-up
 You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
+>undo
+#######S L T below
+>so long
+by one point
+>later
+by one point
+Hut! Go!
+!Dat was a good dust-up
+>tough
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+#######S T L below
+>tough
+by one point
+Hut! Go!
+Dat was a good dust-up
+>later
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>undo
+#######T L S below
+>tough
+by one point
+>later
+by one point
+!Hut! Go!
+Dat was a good dust-up
+>so long
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+#######T S L below
+>undo
+>undo
 >so long
 by one point
 !Hut! Go!
 Dat was a good dust-up
+>later
+You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
 >undo
 >undo
 
@@ -1208,58 +1240,6 @@ Dat was a good dust-up
 {$SCOS}
 
 @nud
->so long
-!by one point
-#done rejects for log ons
->snoogl
-That'd be an awkward rehash. You need another way to say good-bye.
->undo
->undo
-#redone rejects for ought
->ougth
-They're already off getting to know each other better
->undo
->undo
-#redone rejects for alert
->aletr
-That'd be an awkward rehash. You need another way to say good-bye
->undo
->so long
-Your score has just gone up by one point
-#altpath
-!Hut! Go!
-Dat was a good dust-up
-#################the above captured the done-rejects for all the harpings
->undo
->undo
->undo
-#################now we go with 'so long' first
->so long
-#notmax
-Your score has just gone up by one point
->tough
-#notmax
-Your score has just gone up by one point
-Dat was a good dust-up
->undo
->later
-#notmax
-Your score has just gone up by one point
-Dat was a good dust-up
->undo
->undo
->tough
-#notmax
-Your score has just gone up by one point
->so long
-#notmax
-Your score has just gone up by one point
-Dat was a good dust-up
->undo
->later
-#notmax
-Your score has just gone up by one point
-Dat was a good dust-up
 #renudge for entry
 >entyr
 The Entry doesn't need disabling, since you're the only person that can enter.
@@ -2042,7 +2022,7 @@ Your score has just gone up by one point
 {$SCOMAX}
 
 @nud
-#done rejects for mug
+#redone rejects for mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
 #done rejects for bub dude egg

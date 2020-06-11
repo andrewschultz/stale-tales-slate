@@ -4,6 +4,8 @@
 
 # this is a special case--usually MIN comes first, but because of alternate paths through Troves, I have to push it second.
 
+# note to self: MBB 1 = Balmer, MBB 2 = Mr Beal
+
 files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt,reg-roi2-troves-slider.txt
 ~	max	t0
 ~	mina	t1
@@ -160,7 +162,7 @@ Don't need to overheat, or overhate.
 For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though.
 #scannotes for race acre
 >scan race acre
-Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
+Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
 #mistake test for a rec
 >a rec
 You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.
@@ -347,7 +349,6 @@ Hmm. Nothing at all. It must be a snore.
 #notmax
 Your score has just gone up by one point
 #this is just to test renudges for one line. It looks like a typo, but the backslashes mean a carriage return.
-=one=3	#renudge for bee\\>bee\\But it's not just any bee. It's a vile bee!
 >reason
 #notmax
 Your score has just gone up by one point
@@ -964,9 +965,6 @@ Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, yo
 >rambel
 seems slightly taken aback
 >mbb 2
->misses
---you could've tried to RAMBLE to ignore Marble Blamer Balmer.
-!--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
 #readables for blamer mr beal
@@ -1023,6 +1021,8 @@ It ... you know you should drink the trance nectar, for the good of society and 
 >mbb 2
 >ramble
 by one point
+--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+!--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 >undo
 >undo
 
@@ -1030,6 +1030,12 @@ by one point
 >ramble
 Your score has just gone up by one point
 }}SCORE++
+
+@max
+>misses
+!--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+--you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
+
 
 @!mina
 >resist
