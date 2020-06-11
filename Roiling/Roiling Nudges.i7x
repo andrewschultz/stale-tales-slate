@@ -435,6 +435,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mazeroom"	615142808	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
 "storep"	568332432	--	degen-true rule	"[not-the-reg]."
 "floor"	314357692	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
+"mount"	415551063	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
+"deil"	247641883	--	path-pass rule	"[d-sli]."
+"deils"	343915849	--	path-pass rule	"[d-sli]."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -539,17 +542,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "whasup"	430250622	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "popgun"	443897512	popgun	--	"[boing-clue]."
 "spoilt"	454009205	popgun	--	"[boing-clue]."
-"fountain"	494078978	fount	--	"It's too small to be a fountain--really, just a fount."
-"lawl"	217750269	lawl wall	--	"It's too expansive for you to use any mental energy on."
 
-table of Saps' Pass nudges
+table of Saps' Pass nudges [because you advance after the hogs are gone, no this-item is needed.]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ssap"	276201709	--	--	"[locname]."
-"mount"	415551063	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"deil"	247641883	--	path-pass rule	"[d-sli]."
-"deils"	343915849	--	path-pass rule	"[d-sli]."
-"hog"	144234578	--	path-pass rule	"You need to deal with all the hogs."
-"key"	303098539	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
+"hog"	144234578	--	--	"You need to deal with more than one hog, here."
+"key"	303098539	--	--	"You aren't sure which key would work, so you need a plan to get them all."
+"lawl"	217750269	--	--	"The lawl wall is too expansive for you to use any mental energy on."
 
 table of Phat Path nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -571,11 +570,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "labs"	170694528	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "alb"	74420562	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "dead"	172052105	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
-"clack"	146946005	clack ops locs pack	--	"[full-pack]."
-"ops"	252092502	clack ops locs pack	--	"[full-pack]."
-"locs"	243445967	clack ops locs pack	--	"[full-pack]."
-"pack"	155592540	clack ops locs pack	--	"[full-pack]."
-"reboot"	483363989	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
+"clack"	146946005	Clack Ops Locs Pack	--	"[full-pack]."
+"ops"	252092502	Clack Ops Locs Pack	--	"[full-pack]."
+"locs"	243445967	Clack Ops Locs Pack	--	"[full-pack]."
+"pack"	155592540	Clack Ops Locs Pack	--	"[full-pack]."
+"reboot"	483363989	--	--	"[reboot-try-scan]"
 "nottobe"	570057712	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "caps"	198933328	caps lock	--	"[caps-no]."
 "lock"	200105179	caps lock	--	"[caps-no]."
@@ -612,7 +611,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "geg"	193005513	BUB DUDE EGG	--	"[budge-note]."
 "dongle"	378508824	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "boredyak"	504410731	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
-"sleep"	487165982	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
+"fountain"	494078978	fount	--	"It's too small to be a fountain--really, just a fount."
+"sleep"	487165982	--	wise-to-sleep rule	"[sleep-anagram]"
 
 chapter oyster nudges
 
@@ -984,7 +984,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ropins"	451316659	--	--	"[no-ropin]."
 "yow"	304646602	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
-"wordy"	410999494	Dr Yow	--	"[wordy-rowdy-nudge]."
+"wordy"	410999494	Dr Yow	--	"[wordy-rowdy-nudge]"
 "tentative"	788195264	--	agnostic-can-learn rule	"[agnostic-first] is fully attentive. Don't ruin a good thing!"
 
 table of Artist Traits Strait nudges
@@ -1250,7 +1250,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "needle"	527168763	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	tekno-token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
-"singed"	391609220	singed design	--	"The design is sort of glommed onto the coin[if coins are touchable]s[end if]. So you should figure what to do, there."
+"singed"	391609220	singed design	--	"The design is sort of glommed onto the [coin-icon]. So you should figure what to do, there."
+"designs"	487883186	singed design	--	"The design doesn't need changing. It's what the design's on."
 "lots"	327550400	so-great storage	--	"[slot-no]."
 "storage"	521653993	so-great	--	"You might break what is in the storage."
 "great"	351027450	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
@@ -1258,6 +1259,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
 "repp"	376061830	--	perp-moot rule	"You don't want to bring back that feeling you might be a perp. Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
+"lola"	184168073	dr lola	--	"[count-enuf]."
+"drol"	234519308	lord al	--	"[count-enuf]."
+"droll"	288333147	dollar	--	"[count-enuf]."
+"dollar"	290520965	dollar	--	"[count-enuf]."
+"guava"	249245965	guava	--	"[just-c]."
+"kumquat"	516923398	kumquat	--	"[just-c]."
 
 table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1292,10 +1299,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cola"	149359819	peanut cola	--	"[whole-item]."
 "moss"	330975662	moss cap	--	"[whole-item]." [stuff gotten from Curtis]
 "cap"	102659362	moss cap	--	"[whole-item]."
-"lola"	184168073	dr lola	degen-true rule	"[count-enuf]."
-"drol"	234519308	lord al	degen-true rule	"[count-enuf]."
-"droll"	288333147	dollar	degen-true rule	"[count-enuf]."
-"dollar"	290520965	dollar	degen-true rule	"[count-enuf]."
 
 table of Swell Wells nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1314,7 +1317,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cpa"	102659362	riot cap	--	"[whole-item]."
 "miser"	418471877	miser ruble	--	"[whole-item]."
 "ruble"	390468463	miser ruble	--	"[whole-item]."
-"designs"	487883186	singed design	--	"The design doesn't need changing. It's what the design's on."
 
 table of Filed Field nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1354,15 +1356,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "clearing"	434637210	--	--	"[locname]."
 "len"	250527456	--	--	"[len-part]."
 "craig"	184109754	--	--	"[len-part]."
-"price"	358594302	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
+"price"	358594302	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already helped correct the prices precis[end if]."
 "overpriced"	774270700	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
 "lemon"	388955186	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to." [this needs to be here if you got LEMON but not MELONS]
 "nameless"	637144468	--	--	"You can't do anything other than listen to the nameless salesmen, and you don't need to move them out of the way."
 "superstore"	982842117	--	--	"It's an eyesore, but unlike the Curst Palace, people are still in it--so destroying it would mean big problems. Best to concentrate on the open-air market."
 "auction"	417662159	caution	--	"[papay]."
 "banner"	371551651	caution	--	"[papay]."
-"guava"	249245965	guava	--	"[just-c]."
-"kumquat"	516923398	kumquat	--	"[just-c]."
 
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1836,6 +1836,16 @@ to say slab-score:
 
 to say full-pack: say "You need to deal with the full [locs pack]"
 
+to say reboot-try-scan:
+	if rebooted is true:
+		say "You don't need to give that computer another (figurative) kick.[run paragraph on]";
+		continue the action;
+	if slider is switched on:
+		match-process the player's command and "reboot";
+		say "[one of][no line break][or][run paragraph on][or][cycling]";
+		continue the action;
+		say "You need to give that computer another (figurative) kick.[run paragraph on]";
+
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
 to say tba-key-jazz: say "[if TBA key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]"
@@ -1877,6 +1887,15 @@ this is the wise-to-sleep rule:
 	if player is in Hacks' Shack:
 		if I'm Le Cop polemic is touchable and I'm Le Cop polemic is reflexive, the rule succeeds;
 	the rule fails;
+
+to say sleep-anagram:
+	if slept is true:
+		say "That could jumble your rested mind.";
+	if slider is switched on:
+		match-process the player's command and "sleep";
+		say "[one of][no line break][or][run paragraph on][or][cycling]";
+		continue the action;
+	say "Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if].[one of][no line break][or][run paragraph on][or][cycling]"
 
 section oyster auxiliary
 
@@ -2028,7 +2047,7 @@ to say wordy-rowdy-nudge:
 			continue the action;
 		say "The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name";
 		continue the action;
-	say "Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--[he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]";
+	say "Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--[he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if].";
 
 this is the agnostic-can-learn rule:
 	if player is in Obscurest Subsector and agnostic is in Obscurest Subsector and ag-atten is true, the rule succeeds;
@@ -2161,6 +2180,18 @@ to say elv-mach: say "You have enough to think about without one more of Elvira'
 to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 
 section others auxiliary
+
+to say coin-icon:
+	if player has coin:
+		say "coin";
+	else if player has icon:
+		say "icon";
+	else if player has icons or player has s-i:
+		say "icons";
+	else if player has s-c or player has coins:
+		say "coins";
+	else:
+		say "BUG. The singed design ahould be a part of something you're holding but isn't"
 
 to say border-arbor: say "You're not the tree-mangling type. [if compass is off-stage]Perhaps if you had a sense of direction, you could figure how to leave[else]So you can only exit to the north[end if]"
 

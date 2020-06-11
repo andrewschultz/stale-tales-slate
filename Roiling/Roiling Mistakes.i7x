@@ -364,7 +364,7 @@ understand "kya" as a mistake ("The yak is unimpressed with your karate noises."
 
 understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Char Arch.
 
-understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is in location of player.
+understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is touchable.
 
 understand "pga" and "pgas" as a mistake ("No golfers appear.") when player is in Char Arch.
 
@@ -374,13 +374,13 @@ understand "spag" as a mistake ("You don't have time to read text-adventuring ma
 
 understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when tsar star is in Char Arch.
 
-understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].") when player is in Char Arch and dart is in cretins' cistern.
+understand "tard" as a mistake ("[if Rand is in location of player]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.[else if dart is enclosed by the player]The interjections in Presto stop short of slurs. I hope.[else][one of]Whether you are cursing the person who put the dart there, or yourself for not being able to get the dart, a slur like that isn't the way to go. In fact, it isn't the way to go in real life, either! This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possibilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[or]You are just trolling now. No further clues for you[stopping].[end if]") when dart is touchable
 
 understand "tars" as a mistake ("But you already took the tsar star FROM the tars. Plus, you'd get all sticky.") when player wears tsar star.
 
 chapter Dirge Ridge
 
-understand "asswhup" and "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[otherwise]No chance.[end if]") when wzup is in location of player.
+understand "asswhup" and "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[else]No chance.[end if]") when Rand is in location of player.
 
 understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.") when Leo is in location of player.
 
@@ -408,7 +408,7 @@ understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, t
 
 understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is touchable.
 
-understand "pilots" as a mistake ("You don't need to fly anywhere. Besides, it's a popgun, not a pistol.") when player has popgun.
+understand "pilots" as a mistake ("You don't need to fly anywhere. Besides, it's a popgun, not a pistol.") when popgun is touchable.
 
 understand "smearin" as a mistake ("That may've happened during the seminar, but you don't need that sort of violence here and now.") when player is in Marines Seminar Remains.
 
@@ -444,7 +444,7 @@ understand "artel" as a mistake ("You, Rand and Leo have already engaged in a co
 
 understand "ptah" as a mistake ("No Egyptian deity comes to your rescue. Or needs to.") when player is in Phat Path.
 
-understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is moot and Leo is in Phat Path.
+understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and Rand is touchable.
 
 chapter Hacks' Shack
 
@@ -458,7 +458,7 @@ understand "bat" as a mistake ("You don't want to take a bat to anything, here. 
 
 understand "clock sap" and "cock slap" and "slap cock" as a mistake ("The locs aren't that gangsta, and neither are you. And that's a good thing.") when locs pack is touchable.
 
-understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is in location of player.
+understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is touchable.
 
 understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
@@ -472,7 +472,7 @@ understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky e
 
 understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
 
-understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is in location of player.
+understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is touchable.
 
 understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has dirty looking cola.
 
@@ -908,9 +908,13 @@ understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when p
 
 understand "miles" as a mistake ("You don't want miles and miles of slime.") when player is in rustic and slime is in rustic.
 
+understand "parse" as a mistake ("You've parsed the spelling of quite a few words so far. Just a bit more, now.") when spear is in location of player.
+
 understand "rapes" and "rape" as a mistake ("[one of]Some things, you can't joke about. So please, don't try that again.[or][cutoff][stopping]") when spear is in location of player.
 
 understand "reaps" as a mistake ("No, not verbs. Well, not here by Curtis.") when spear is in location of player.
+
+understand "rust" as a mistake ("You're trying to make things MORE organic, not less.") when ruts circuits are touchable.
 
 understand "sell" and "sell [text]" as a mistake ("You are paving the way for commerce, not interacting.") when player is in Rustic Citrus or player is in Clangier Clearing.
 
@@ -918,11 +922,9 @@ understand "slump" as a mistake ("Don't get exhausted! This area should be a bit
 
 understand "smile" as a mistake ("[if limes are in location of player]You are thrilled to have gotten those limes, yes.[else if slime is in location of player]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
 
-understand "parse" as a mistake ("You've parsed the spelling of quite a few words so far. Just a bit more, now.") when spear is in location of player.
-
 understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is in location of player.
 
-understand "rust" as a mistake ("You're trying to make things MORE organic, not less.") when ruts circuits are touchable.
+understand "deign" and "design" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
 
 chapter Scape Space
 

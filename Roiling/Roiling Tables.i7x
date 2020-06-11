@@ -141,7 +141,7 @@ alert letters	alert letters	false	372241587	--	"later"	"later"	pre-harpings-flip
 ought letters	ought letters	false	352450403	--	"tough"	"tough"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	--	--	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest.[paragraph break]You make plans, once Yorpwald is back to normal, to lobby for a Thaws-Swath to answer these questions. It will frequently be wash't, so it doesn't get shawt."
 starch charts	starch charts	false	343183489	--	"trasch"	"trasch"	--	--	"You half-memorize the charts, just in case, before dismissing them. Calling them tras(c)h sort of works as a noun or an interjection, and, well, you needed to rip up something harmless. This act [if shack-flip-yet is true]clues[else]reinforces[end if] to you that the main interjections are mostly used up, and it's probably all nouns and verbs, like the word trash itself, inside the Hacks['] Shack."
-clack ops locs pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	--	--	"You think WHOAH as the locs pack morps into a caps lock button, which you pick up."
+Clack Ops Locs Pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	--	--	"You think WHOAH as the locs pack morps into a caps lock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	--	post-disk-skid rule	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the familiar disk, which you take." [there was a pre-skid-disk rule, but it was trumped by the SHATTER THREATS rule]
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
@@ -394,7 +394,7 @@ a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) 
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
 a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
 inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
-coin	icon	false	207258516	--	"icon"	"icon"	--	--	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money." [start curtis gift flips]
+coin	icon	false	207258516	--	"icon"	"icon"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money." [start curtis gift flips]
 coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
@@ -960,9 +960,8 @@ this is the post-drive-flip rule:
 	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
 
 to say sub-bus:
-	let issub be false;
-	if the player's command includes "sub":
-		now issub is true;
+	now issub is false;
+	if the player's command includes "sub", now issub is true; [inform won't let me use "whether or not"]
 	moot crust;
 	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Esoteric Coteries way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
 
@@ -1914,8 +1913,7 @@ odes song	"The odes song sounds warpy for a second or two. Who knows, maybe you 
 ether	"[if ether is prefigured]No, you definitely need to say THERE. You just need to have backup and maybe weapons[else]The ether pulsates, but you still can't see through it[end if]."
 ye hoop	"The hoop dips a bit as if to taunt you."
 boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
-volt maze	"The volt maze sign shakes a bit. Oy vey! I hope this one's not too meshuggenah."
-maze walls	"The maze walls rumble a bit."
+maze walls	"The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style."
 n e recs censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
@@ -1932,7 +1930,7 @@ drab yoke	"It'd take too long to type out all the possibilities, but that seems 
 TBA key	"The TBA key rattles within the keyboard a bit."
 USB	"Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff."
 trim socks	"You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work."
-clack ops locs pack	"NO, REARRANGE AND TRY AGAIN, you think."
+Clack Ops Locs Pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
 I'm Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
@@ -2086,8 +2084,8 @@ medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
 coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close."
-coins	"The coins rattle and hum promisingly."
-icons	"The icons rattle and hum promisingly."
+coins	"The coins jingle promisingly."
+icons	"The icons rattle promisingly."
 s-c	"The sonic coins hum almost questioningly."
 lumps	"The lumps seem almost ready to burst."
 pagers	"The pagers light up slightly. Maybe give it another go."
@@ -2293,6 +2291,7 @@ parrot	"The parrot can be changed back into a raptor, but not into anything new.
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."
 compass	"The compass is accurate enough. Changing it might ruin things." [START others]
+icon	"The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more."
 s-i	"The sonic icons seem right. No use meddling."
 prices precis	"You corrected the prices precis enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
@@ -2553,7 +2552,7 @@ yak	"[if Hacks' Shack is unvisited][yak-worry].[else if yak is not on skid][one 
 catechism	"[if yak is moot]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
 blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
-clack ops locs pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
+Clack Ops Locs Pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 Drive A	"[h-d][line break]"

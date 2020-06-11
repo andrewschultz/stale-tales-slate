@@ -2472,7 +2472,7 @@ r cad card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno 
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
-clack ops locs pack	"The locs pack mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
+Clack Ops Locs Pack	"The [locs pack] mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
 drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
@@ -3593,7 +3593,8 @@ to decide whether (tn - a table name) is hash-found:
 				decide yes;
 	decide no;
 
-definition: a thing (called ge) is good-enuf:
+definition: a thing (called ge) is final-flipped:
+	if ge is coins or ge is s-c or ge is icons, no;
 	decide yes.
 
 definition: a thing (called muso) is mult-sol:
@@ -3611,10 +3612,10 @@ to say reject:
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
 		if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
-			if the-from entry is reflexed and the-from entry is touchable and the-from entry is good-enuf:
+			if the-from entry is reflexed and the-from entry is touchable and the-from entry is final-flipped:
 				say "[good-enuf of the-from entry][line break]";
 				continue the action;
-			if the-to entry is not the-from entry and the-to entry is touchable and the-from entry is good-enuf:
+			if the-to entry is not the-from entry and the-to entry is touchable and the-to entry is final-flipped:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
 			if the-from entry is fungible:
@@ -4462,7 +4463,7 @@ sport ports	true	true	false	false	"Maybe you can find where the vowel is. That c
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
 starch charts	true	true	false	false	"Starch is calorically and cosonantally (if that's a word) heavy. This must help."
-clack ops locs pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
+Clack Ops Locs Pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
 i'm le cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
 bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
@@ -4527,7 +4528,7 @@ stray satyr	true	true	false	false	"The satyr seems phyiscally hard to tame, and 
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]. Just one possibility[else]Just three possibilities[end if]."
+auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]. Just one possibility[else]. Just three possibilities[end if]."
 prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
@@ -4538,7 +4539,7 @@ inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have
 [?? test qmh toggling and scanning stuff]
 
 check scaning a prefigured thing:
-	if noun is not dialer, say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
+	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
 
 chapter qmhing
 
@@ -4849,7 +4850,7 @@ this is the presto-hinting rule:
 			now spoilit is false instead;
 		try objhinting bottle of dirty looking cola instead;
 	if fount is touchable, try objhinting fount instead;
-	if clack ops locs pack is touchable, try objhinting clack ops locs pack instead;
+	if Clack Ops Locs Pack is touchable, try objhinting Clack Ops Locs Pack instead;
 	if disk is touchable and skid is off-stage, try objhinting disk instead;
 	if yak is touchable and spoilit is false, try objhinting yak instead;
 	if drab yoke is touchable:
@@ -4865,7 +4866,7 @@ this is the presto-hinting rule:
 		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks' Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
 		if can-put-on-slab, all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
 		if rebooted is false, try objhinting blue button instead;
-		if clack ops locs pack is not moot, try objhinting clack ops locs pack instead;
+		if Clack Ops Locs Pack is not moot, try objhinting Clack Ops Locs Pack instead;
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
@@ -5493,6 +5494,10 @@ this is the trailing-a rule: [this is because A REC should be in mstakes but it 
 	else if mrlp is towers and player is not in Loftier Trefoil:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
+			the rule succeeds;
+	else if mrlp is others and Dr Lola Ollard is touchable:
+		if the player's command exactly matches the text "a lol":
+			say "You laugh at how silly Dr. Lola Ollard looks on the fake currency.";
 			the rule succeeds;
 
 section command reader booleans
@@ -12500,11 +12505,11 @@ to decide whether cpuready:
 
 chapter locs pack
 
-the clack ops locs pack is a flippable thing in Hacks' Shack. "A Clack Ops Locs Pack is here, empty.". description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
+the Clack Ops Locs Pack is a flippable thing in Hacks' Shack. "A Clack Ops Locs Pack is here, empty.". description is "It's empty. You don't see how sunglasses could make you type quieter, but you never know about technology. You might be able to read it to find out about related products or competitors."
 
 check taking locs pack: say "It seems to have no use for you in that form." instead;
 
-a-text of clack ops locs pack is "RYRRRYRR". b-text of clack ops locs pack is "?YR?R???". parse-text of clack ops locs pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
+a-text of Clack Ops Locs Pack is "RYRRRYRR". b-text of Clack Ops Locs Pack is "?YR?R???". parse-text of Clack Ops Locs Pack is "?[sp]-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 chapter trim socks
 
@@ -12747,6 +12752,8 @@ the USB is a vanishing boring thing. description of the USB is "It's an ordinary
 a-text of USB is "RYR". b-text of USB is "RY?". parse-text of usb is "x[sp]u[sp]x". usb is any-spoilable.
 
 usb-scan-warn is a truth state that varies.
+
+issub is a truth state that varies.
 
 this is the bore-usb rule:
 	if current action is taking, say "Well, you don't need to take it in THAT sense." instead;
@@ -20026,8 +20033,8 @@ check sbing coins: [can't find any way else to do this]
 	the rule succeeds;
 
 check scaning coins:
-	say "The settler flashes back, with [if cheat-on is true]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
-	say "Hm. Maybe it would be better to scan just one coin?";
+	say "The settler flashes back, with [if cheat-on is true]all five entries changing[else]all but the last entry--which stays red--changing[end if]. ";
+	say "This is odd. Maybe it would be better to scan just one coin?";
 	if the player direct-consents:
 		let mytext be indexed text;
 		if cheat-on is true:
@@ -21929,7 +21936,11 @@ this is the presto-alt rule:
 	if yak is moot:
 		say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
 	else:
-		say "[eqls]you have three ways ahead to get the drab yoke."
+		say "[eqls]you have three ways ahead to get the drab yoke.";
+	if USB is reflexive:
+		say "[eqls]You'll have two ways to deal with a USB.";
+	else:
+		say "[eqls]You could've made the USB into a [if issub is true]bus[else]sub[end if]."
 
 unset-not-remap is a truth state that varies.
 
