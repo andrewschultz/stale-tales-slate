@@ -30,6 +30,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 * presto_walkthrough
 
 >ts
+>t
 >posf
 >presto
 >enter tornado
@@ -69,11 +70,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
 #mistake test for enemy tzar/tzar enemy
 >enemy tzar
-You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+You hear a rumbling. Then Elvira appears from the maze! "Oh, dear, this will be easy," she says. And it is.
 joke death
 >undo
 >tzar enemy
-You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+You hear a rumbling. Then Elvira appears from the maze! "Oh, dear, this will be easy," she says. And it is.
 joke death
 >undo
 #nudge for volt
@@ -138,7 +139,7 @@ You don't need to riff on any location names to win the game, unless there's not
 >phooye
 The hoop dips a bit as if to taunt you.
 >poho
-WRONG
+The hoop dips a bit as if to taunt you.
 
 @sli
 #slider test for phooey
@@ -151,7 +152,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #mistake test for bleep
 >bleep
-I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.")
+I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.
 #mistake test for rats
 >rats
 Boy! It'd be neat to have something that made you more authoritative.
@@ -178,6 +179,22 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
+@nud
+#scannotes for n e recs censer
+>scan n e recs censer
+This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
+#nudge for recs
+>resc
+It's the censer that's important, not the brand name.
+#nudge for rec
+>rce
+It's the censer that's important, not the brand name.
+
+@sli
+#slider test for screen
+>ercsne
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @!min
 #pre-censer-screen rule
 >screen
@@ -187,11 +204,12 @@ You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on 
 #slider test for screen
 >ercsne
 Your settler begins to make noises: a low hum, but nothing really piercing.
+xxxx
 
 @nud
 #done rejects for n e recs censer
 >screne
-You don't want to change the censer back, but maybe you can change it to something more practical than treasure.
+No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 
 >e
 
@@ -204,12 +222,12 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 Char Arch
 
 @nud
+#mistake test for tars
+>tars
+!But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 #mistake test for a gps
 >a gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
-#mistake test for tars
->tars
-But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 #mistake test for cafe
 >cafe
 You don't need caffeine or food here.
@@ -220,7 +238,7 @@ You're not being graded here. I mean, you are getting a score, but this isn't sc
 You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
 #mistake test for kay
 >kay
-You try to nag the yak with a 'kay?' but without the 'mm' it's just not Lumberghian enough to work.
+You try to nag the yak with a "kay?" but without the "mm" it's just not Lumberghian enough to work.
 #mistake test for kya
 >kya
 The yak is unimpressed with your karate noises.
@@ -252,19 +270,23 @@ You won't change the cistern, but maybe you can track down the dart.
 You won't change the cistern, but maybe you can track down the dart.
 #nudge for mad
 >mda
-Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 #nudge for maddam
 >maddma
-Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
+It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.
+!Here in the
+>maddma
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
+!It looks like
 #nudge for amaddam
 >amaddma
-Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 #nudge for amad
 >amda
-Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 #nudge for themad
 >themda
-Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
+Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 #nudge for gasp
 >gaps
 You try, but fail, to make something out of nothing.
@@ -272,12 +294,12 @@ You try, but fail, to make something out of nothing.
 >pag
 You try, but fail, to make something out of nothing.
 >x cistern
-!You take a peek in--to see a dart in there.
+You take a peek in--to see a dart in there.
 
 @nud
 #spechelp for dart
 >drta
-Some 4-letter word or other will get the dart.
+The dart seems a bit closer, but...dang! Not quite.
 #readables for drab yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
@@ -321,6 +343,11 @@ You are just trolling now. No further clues for you.
 Your score has just gone up by one point
 }}SCORE++
 
+@nud
+#mistake retest for tars
+>tars
+But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
+
 >score
 {$SCOS}
 
@@ -332,13 +359,13 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#mistake retest for rats
->rats
-Boy! You miss that tsar star.
+>x cistern
+!You take a peek in--to see a dart in there.
 #renudge for cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
 #done rejects for tsar star
+>tsra
 No need for additional arts.
 #done rejects for dart
 >drta
@@ -369,14 +396,14 @@ Your score has just gone up by one point
 @nud
 #spechelp for volt maze
 >mazeltvo
-The volt maze sign shakes a bit. Oy vey! I hope this one's not too meshuggenah.
+The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 >n
 >w
 #spechelp for maze walls
 >mazeltvo
-The maze walls rumble a bit.
+The volt maze sign shakes a bit. Oy vey! I hope this one's not too meshuggenah.
 >wotn
-WRONG
+You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 >undo
 >undo
 >undo
@@ -413,10 +440,10 @@ You don't need to riff on any location names to win the game, unless there's not
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for popgun
 >popgnu
-Hmm. It's not the popgun itself that's cracked but the boing go bin inside.
+Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
 #nudge for spoilt
 >spoitl
-Hmm. It's not the popgun itself that's cracked but the boing go bin inside.
+Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
 #nudge for serial
 >serila
 The number's got more numerals than letters.
@@ -452,32 +479,6 @@ Your score has just gone up by one point
 >get popgun
 
 @nud
-#mistake retest for nobig/no big
->no big
-Hey, now, that's just humblebragging.
->nobig
-Hey, now, that's just humblebragging.
-#mistake test for fire [text]
->fire zozimus
-SHOOT something with the gun instead.
-#mistake test for shoot [text] with [text]
->shoot zozimus with zozimus
-Just say what you want to shoot.
-#done rejects for boing go bin
->binog
-You can't force another revelation, but you don't need to.
-#renudge for popgun
->popgnu
-The popgun is just fine.
-#renudge for spoilt
->spoitl
-The popgun is just fine.
-#renudge for serial
->serila
-You got the boing go bin working.
-#renudge for number
->numbre
-You got the boing go bin working.
 #spechelp for sport ports
 >prots
 The sport ports seem even shinier for a second.
@@ -560,23 +561,23 @@ Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a
 #nudge for mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
->w
-#renudge for mazeroom
->mazeromo
-You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
 #nudge for bigl
 >bilg
 The big L may be some sort of clue, but you can't do anything with it.
 #mistake test for glib
 >glib
 You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
-#nudge for floor
->floro
-You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
 >w
 #nudge for bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
+#renudge for mazeroom
+>mazeromo
+You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
+#nudge for floor
+>floro
+You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
+>w
 >w
 #mistake test for lawls/lawl
 >lawls
@@ -586,7 +587,13 @@ You try to laugh at the walls, but then that just might get rid of them and not 
 \\
 #mistake test for bing
 >bing
+You come to four-fifths of a revelation, but it's not about this maze, sadly.
+>bingo
+by one point
+>bing
 You already did that, and with 25% more word power, too.
+>undo
+>undo
 #nudge for bign
 >bgin
 It's just one letter in the maze. You may want to focus on the whole volt maze.
@@ -628,7 +635,6 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for bigv
 >bivg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
->n
 #nudge for dreidl
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
@@ -755,6 +761,7 @@ You don't need to face double the strength.
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 #spechelp for odes song
+>nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it, even if it's not REALLY hurting you.
 #scannotes for sods gone odes song
 >scan sods gone odes song
@@ -780,7 +787,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@max
+@!min
 >goodness
 by one point
 }}SCORE++
@@ -876,6 +883,34 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@nud
+#mistake retest for nobig/no big
+>no big
+Hey, now, that's just humblebragging.
+>nobig
+Hey, now, that's just humblebragging.
+#mistake test for fire [text]
+>fire zozimus
+SHOOT something with the gun instead.
+#mistake test for shoot [text] with [text]
+>shoot zozimus with zozimus
+Just say what you want to shoot.
+#done rejects for boing go bin
+>binog
+You can't force another revelation, but you don't need to.
+#renudge for popgun
+>popgnu
+The popgun is just fine.
+#renudge for spoilt
+>spoitl
+The popgun is just fine.
+#renudge for serial
+>serila
+You got the boing go bin working.
+#renudge for number
+>numbre
+You got the boing go bin working.
 
 @max
 >there
@@ -987,6 +1022,20 @@ Phat Path
 >undo
 >undo
 
+@nud
+#mistake retest for rats
+>rats
+Boy! You miss that tsar star.
+#renudge for mount
+>moutn
+Mount Um, Not silently disposes of your attempts to manipulate it.
+#renudge for deil
+>deli
+Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
+#renudge for deils
+>deisl
+Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
+
 >syke
 }}SCORE++
 Your score has just gone up by one point
@@ -1036,9 +1085,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tough
 >otghu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for trasch
->rtsahc
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
@@ -1163,7 +1209,7 @@ Dat was a good dust-up
 
 @nud
 >so long
-by one point
+!by one point
 #done rejects for log ons
 >snoogl
 That'd be an awkward rehash. You need another way to say good-bye.
@@ -1218,6 +1264,11 @@ Dat was a good dust-up
 >entyr
 The Entry doesn't need disabling, since you're the only person that can enter.
 
+@sli
+#slider test for trasch
+>rtsahc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @nud
 #spechelp for starch charts
 >trashc
@@ -1229,7 +1280,7 @@ Starch is calorically and cosonantally (if that's a word) heavy. This must help.
 >summti
 The mutism summit is meant to be stable. You'll need to go north to do what you need, in peace and quiet.
 
-@max
+@!min
 >trasch
 by one point
 }}SCORE++
@@ -1308,8 +1359,8 @@ You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a s
 >boredyka
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
 >keyboard
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. That seems like a decent idea for later, though.
 That seems like a decent idea for later, though
-WRONG
 >undo
 #nudge for dongle
 >dongel
@@ -1400,16 +1451,19 @@ They're not just socks, or trim. They're trim socks.
 They're not just socks, or trim. They're trim socks.
 #nudge for trimsock
 >trimsokc
-You'll know what to do with the sticks when you're ready to program.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
 #nudge for sticks
 >sticsk
-You'll know what to do with the sticks when you're ready to program.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
 #nudge for rom
 >rmo
-You'll know what to do with the sticks when you're ready to program.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
 #nudge for stick
+>banish gum
 >stikc
-You'll know what to do with the sticks when you're ready to program.
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+>undo
+>undo
 #spechelp for disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
@@ -1451,7 +1505,7 @@ You need to deal with the full Clack Ops Locs Pack.
 You need to deal with the full Clack Ops Locs Pack.
 #mistake test for idks
 >idks
-You'll need to figure stuff out with the disk, but right now, yeah, you're all 'I don't know.'
+You'll need to figure stuff out with the disk, but right now, yeah, you're all "I don't know."
 #mistake test for kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with programming, anyway.
@@ -1488,6 +1542,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for derive
 >edevir
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for capslock
+>acclskpo
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >capslock
 Your score has just gone up by one point
@@ -1501,9 +1558,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @sli
+#note the regular code path is usurped to remind the player of what they already know
 #slider test for disk
 >ikds
-Your settler begins to make noises: a low hum, but nothing really piercing.
+No, skid <=> disk is about it. There's no tricky third way.
 
 @nud
 #mistake retest for kids
@@ -1518,7 +1576,7 @@ Nobody else seems to own the oper rope or the skid.
 YOU HAVE WHAT YOU NEED.
 #spechelp for skid
 >diks
-Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
+No, skid <=> disk is about it. There's no tricky third way.
 >disk
 ###skip test checking
 >skdi
@@ -1533,7 +1591,7 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 It'd sort of stink if a caps lock button broke in real life, so, no.
 #nudge for rope
 >roep
-You don't need to do anything with the skid's rope.
+You don't need to do anything tricky with the skid's rope.
 #nudge for fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
@@ -1552,9 +1610,6 @@ Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
 #mistake test for alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
-#mistake test for bat
->bat
-You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
 
 >cola
 Your score has just gone up by one point
@@ -1601,7 +1656,7 @@ No need to go technologically backwards. Plus the cola was processed enough befo
 The futon could be a little less lumpy, sure, but that's beyond your magic powers.
 #done rejects for mug
 >mgu
-You'd get cola all over you if you tried anything with the mug.
+The mug is no longer manipulable.
 #done rejects for leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
@@ -1611,15 +1666,6 @@ That feels right, but it's not enough yet. You don't need anything grumbly, here
 #spechelp for escaroles
 >casseroel
 The escaroles seem slightly meatier.
-#scannotes for n e recs censer
->scan n e recs censer
-This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
-#nudge for recs
->resc
-It's the censer that's important, not the brand name.
-#nudge for rec
->rce
-It's the censer that's important, not the brand name.
 
 @!min
 >casserole
@@ -1698,12 +1744,6 @@ It'd take too long to type out all the possibilities, but that seems basically r
 #slider test for keyboard
 >ekbyaodr
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tab
->abt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for capslock
->acclskpo
-Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >keyboard
 Your score has just gone up by one point
@@ -1711,6 +1751,11 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@sli
+#slider test for tab
+>abt
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
 >au 2
@@ -1723,6 +1768,9 @@ Ok, but by "may want" I meant "really probably need to."
 >undo
 
 @nud
+#mistake test for bat
+>bat
+You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
 #done rejects for keyboard
 >keyboadr
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
@@ -1748,8 +1796,8 @@ You can now do computery things unimpeded! Hooray!
 
 @nud
 #renudge for computer
->computre
-You need to fix the program in the computer, well, once you get it running.
+>compuert
+You need to fix the program in the computer.
 
 @max
 >compile
@@ -1941,7 +1989,7 @@ Deriving was tricky enough.
 It says DRIVE A/A DRIVE: AVIDER
 #done rejects for rom sticks
 >trimsocsk
-The ROM sticks can probably make your computer go faster. Why fiddle further?
+Man, it would be too easy to mess the rom sticks up. Better not tinker like that.
 #renudge for tbakey
 >tbakye
 You already did enough with the TAB key.
@@ -1955,8 +2003,7 @@ No, the TAB key is what it should be.
 @nud
 #spechelp for bub dude egg
 >debgu
-Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
-BUDGE
+Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing.
 
 @sli
 #slider test for debug
@@ -1964,12 +2011,15 @@ BUDGE
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#pre-bub-dude-egg rule
->debug
-The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola just won't be enough for the task ahead, as-is
 #scannotes for bub dude egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
+#pre-bub-dude-egg rule
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola won't quite be enough for the task ahead, as-is.
+#rescannotes for bub dude egg
+>scan bub dude egg
+Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad."
 #nudge for bub
 >bbu
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
@@ -1992,6 +2042,9 @@ Your score has just gone up by one point
 {$SCOMAX}
 
 @nud
+#done rejects for mug
+>mgu
+You'd get cola all over you if you tried anything with the mug.
 #done rejects for bub dude egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
@@ -1999,8 +2052,8 @@ You had to consider all sorts of combinations while debugging, but things will b
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
 
-@min
 >misses
+@min
 Grey Gyre====
 --you could've shouted BLAM at the lamb.
 --you could've said MAZEL TOV to get past the maze.
@@ -2019,7 +2072,8 @@ Hacks' Shack====
 --you could've made the escaroles a CASSEROLE.
 --you could've made Drive A AVIDER.
 --you could've taken time to DERIVE how to improve Drive E.
-
+@!
+!presto
 
 @nud
 #scannotes for usb
@@ -2031,11 +2085,13 @@ Hm, USB seems pretty straightforward. Maybe there are two solutions, each equall
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 >bus
 Your score has just gone up by one point
-#altpath
 !Diver time
 Strip of Profits
->misses
-WRONG
+
+@max
+>altpath
+You could've made the USB into a sub, too.
+>undo
 >undo
 
 @sli
@@ -2046,9 +2102,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sub
 Your score has just gone up by one point
 }}SCORE++
-
 Diver time
+
 Strip of Profits
+
+@max
+>altpath
+You could've made the USB into a sub, too.
+>undo
 
 >score
 

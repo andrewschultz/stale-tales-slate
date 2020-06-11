@@ -62,10 +62,12 @@ Rustic Citrus is secluded enough.
 >gapers
 Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
 >gs
+female
 #mistake retest for gapers
 >gapers
 Really, you don't need people all Named It Mrs. Master Mind over changing those pagers into anything else. That's not your style.
 >gs
+male
 #mistake test for gasper
 >gasper
 Not as healthy as fruit, to be sure!
@@ -222,7 +224,7 @@ Your score has just gone up by one point.
 The compass is accurate enough. Changing it might ruin things.
 #renudge for arbored
 >aborder
-You're not the tree-mangling type. You can only exit to the north.
+You're not the tree-mangling type. So you can only exit to the north.
 #nudge for needle
 >needel
 The needle is working fine. No need to meddle.
@@ -362,7 +364,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @min
-# here we want to make a detour to check rejecting going east in Swell Wells. There are two based on whether or not you are carrying enough fruits.
+# here we want to make a detour to check rejecting going east in Swell Wells. There are two cases based on whether or not you are carrying enough fruits.
 >n
 >e
 The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you will get some from Curtis, if you do enough.
@@ -515,6 +517,9 @@ Curtis hands you a coin
 scru-it
 
 @nud
+#nudge for singed
+>deigsn
+The design is sort of glommed onto the coin. So you should figure what to do, there.
 #renudge for arbored
 >aborder
 You're not the tree-mangling type. So you can only exit to the north.
@@ -523,6 +528,7 @@ You're not the tree-mangling type. So you can only exit to the north.
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 
 @sli
+#detour for slider testing misses for "icon" and "icons"
 #slider test for icon
 >cino
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -530,11 +536,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sonic
 Maybe if you had more than one coin.
 #slider test for icons
+##balance undos
 >purloin icons
->cinso
+>cisno
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
+#note if we switch to "cinso" above we don't undo PURLOINing the icons. I'm not sure what's going on here. Check this once test runs are more stable. ??
 
 >n
 
@@ -543,12 +551,69 @@ Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
+
+@nud
+##balance undo
+#this is to check on the COINS path
+>tangerines
+by one point
+>s
+Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
+#renudge for singed
+>deigsn
+The design is sort of glommed onto the coins. So you should figure what to do, there.
+>undo
+#scannotes for coins
+>scan coins
+The settler flashes back, with all five entries changing. This is odd. Maybe it would be better to scan just one coin?
+#it's important to say yes/no here so the balance undo tracker understands this is just replying to a question and not making a move
+>yes
+Your settler registers YRYP.
+>undo
+>scan coins
+The settler flashes back, with all five entries changing. This is odd. Maybe it would be better to scan just one coin?
+>no
+Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
+>undo
+#readables for singed design
+>read singed design
+The singed design on the coins reads, when you look close, property of NISCO.
+>undo
+#nudge for icon
+>icno
+Hmm. You could probably do something with just one coin, or you could do something with all of them.
+>undo
+#spechelp for coins
+>cisno
+The coins jingle promisingly.
+>sonic
+by one point
+#scannotes for s-c
+>scan sonic coins
+You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
+>undo
+#spechelp for s-c
+>sonci
+The sonic coins hum almost questioningly.
+>undo
+>icons
+by one point
+>undo
+>sonic icons
+by one point
+>undo
+>undo
+>undo
+>undo
+>undo
+
 >icon
 Your score has just gone up by one point.
 >score
 }}SCORE++
 {$SCOS}
 
+@nud
 #mistake retest for sonic
 >sonic
 Maybe if you had more than one icon.
@@ -562,6 +627,11 @@ Your score has just gone up by one point.
 >s
 You fiddle with the coin you got
 >n
+
+@nud
+#readables for singed design
+>read singed design
+The singed design on the icons reads, when you look close, property of NISCO.
 
 >w
 Filed Field
@@ -724,15 +794,6 @@ You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
-@nud
->e
->s
-#nudge for icon
->icno
-Hmm. You could probably do something with just one coin, or you could do something with all of them.
->n
->w
-
 >cranberries
 Your score has just gone up by one point.
 >score
@@ -767,27 +828,20 @@ That doesn't really describe the Tekno-Token
 #mistake test for scion
 >scion
 Money, or something like it, should not be the guide of you.
+
+@nud
 ###skip test checking
 >icons
 ###skip test checking
 #spechelp for icons
 >icosn
-The icons rattle and hum promisingly.
-#mistake retest for scion
+The icons rattle promisingly.
+#mistake test for scion
 >scion
 Money, or something like it, should not be the guide of you.
 >undo
 >undo
 >undo
-
-@nud
-#spechelp for coins
->coisn
-The coins rattle and hum promisingly.
-#readables for singed design
->read singed design
-The singed design on the coins reads, when you look close, property of NISCO.
-#scannotes for coins
 
 @sli
 #there are more possible tests here but let's worry about this...
@@ -804,34 +858,6 @@ Blam!
 #mistake retest for scion
 >scion
 Money, or something like it, should not be the guide of you.
-
-@nud
-#this is a detour for the coins/sonic path
-##balance undos
->purloin coins
->scan coins
-Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
->n
->sonic
-by one point
-#scannotes for s-c
->scan sonic coins
-You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
-#spechelp for s-c
->sonci
-The sonic coins hum almost questioningly.
->icons
-by one point
->undo
->sonic icons
-by one point
->undo
->undo
->undo
->undo
->undo
->undo
->undo
 
 >score
 }}SCORE++
@@ -1014,6 +1040,9 @@ Lashing out that way leaves you feeling you must be close to the right way to ge
 #scannotes for ammo gang
 >scan ammo gang
 The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
+#spechelp for ammo gang
+>amogn
+You must not be mingling right with the No Ammo Gang.
 
 @!min
 #not a mistake
@@ -1030,9 +1059,6 @@ Hm, there must be a better melon than that, but how to ask Len, now.
 #scannotes for melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
-#spechelp for ammo gang
->amogn
-You must not be mingling right with the No Ammo Gang.
 #spechelp for nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
@@ -1042,9 +1068,6 @@ Something glints off the prices precis.
 #scannotes for prices precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
-#renudge for price
->priec
-No, you already took care of stuff
 
 @!min
 >score
@@ -1077,6 +1100,9 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
+#renudge for price
+>priec
+No, you already helped correct the prices precis.
 #done rejects for melon
 >melno
 The melon is fine as-is. It's better than the one that was on display, for sure.
@@ -1091,16 +1117,35 @@ You sour on changing the lemons further.
 Just return the fruit to Curtis. No need for another change.
 #done rejects for prices precis
 >cripse
-You corrected the list enough.
+You corrected the prices precis enough.
 #done rejects for auction caution
 >papaysa
-You've already established yourself as a prompt payer.
+You hear a sap yap about the sign and figure it can't be changed any more.
 #done rejects for mango
 >manog
 Snag mo' mangos? No mas, G.
+#done rejects for prices precis
+>cripse
+You corrected the prices precis enough.
 
 @!min
 >w
+
+@nud
+#doing this in front of the prices precis gives a differrent result.
+#redone rejects for prices precis
+>cripse
+Just return the fruit to Curtis. No need for another change.
+#done rejects for papayas
+>papaysa
+You've already established yourself as a prompt payer.
+>n
+#nudge for halt
+>ltha
+The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
+>undo
+>undo
+#need to undo and not just go south as there is a test for gates stage being (not) visited
 
 >d
 Scape Space
@@ -1127,12 +1172,9 @@ It's counterfeit enough as-is. You probably need to just find someone who'd actu
 #nudge for dollar
 >dllora
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
-#nudge for guava
->guaav
-Just return the fruit to Curtis. No need for another change.
-#nudge for singed
+#renudge for singed
 >deigsn
-The design is sort of glommed onto the coins. So you should figure what to do, there.
+The design is sort of glommed onto the icons. So you should figure what to do, there.
 #nudge for designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
@@ -1141,6 +1183,7 @@ The design doesn't need changing. It's what the design's on.
 It's stamped with the word ENGARO in red.
 
 @nud
+#####let's test nudges/mistakes for the two traders.
 #nudge for red
 >red
 first-name basis
@@ -1151,16 +1194,16 @@ first-name basis
 >drol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 >gs
+female
 #mistake test for red rat
 >red rat
 Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
 #mistake test for allo
 >allo
 Lola says nothing back.
->gs
-female
->alol
-Lola
+#mistake test for a lol
+>a lol
+You laugh at how silly Dr. Lola Ollard looks on the fake currency.
 #nudge for lola
 >alol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
@@ -1170,6 +1213,8 @@ first-name basis
 #nudge for trader
 >drtear
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that storage box
+>gs
+male
 
 @nud
 #spechelp for a brr hub
@@ -1264,6 +1309,9 @@ You can't get the maximum score, since you used the arugula
 !Your score has just gone up by one point.
 
 @nud
+#nudge for guava
+>guaav
+Just return the fruit to Curtis. No need for another change.
 #mistake test for lots
 >lots
 You only need the one slot.
@@ -1293,12 +1341,6 @@ The passport is fine as it is, full of practical knowledge to look at it. You wo
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 >researhc
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
->purloin perp paper
->erpp
-It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
->undo
->undo
-
 
 >u
 >n
@@ -1323,9 +1365,9 @@ The gate needs to be unlocked some other way.
 #nudge for roping
 >rpigon
 You don't need to grapple with the roping, and you don't need the roping to grapple with you.
-#nudge for halt
+#renudge for halt
 >ltha
-The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
+The halt lath is ineffective, now you have the passport.
 #nudge for arena
 >arean
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
