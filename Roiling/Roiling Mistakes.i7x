@@ -902,6 +902,8 @@ understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living 
 
 understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
 
+understand "deign" and "design" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
+
 understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in Rustic Citrus and pagers are in Rustic Citrus.
 
 understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when player is in Rustic Citrus and pagers are in Rustic Citrus.
@@ -923,8 +925,6 @@ understand "slump" as a mistake ("Don't get exhausted! This area should be a bit
 understand "smile" as a mistake ("[if limes are in location of player]You are thrilled to have gotten those limes, yes.[else if slime is in location of player]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
 
 understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is in location of player.
-
-understand "deign" and "design" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
 
 chapter Scape Space
 

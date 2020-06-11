@@ -3623,6 +3623,9 @@ to say reject:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
 				if slider is switched on:
+					if the-from entry is prefigured:
+						say "Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here";
+						continue the action;
 					if the-from entry is mult-sol, say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is guessing at the most believable one[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
@@ -3634,6 +3637,9 @@ to say reject:
 						continue the action;
 					if stuff-found < 3 and player is in Dusty Study:
 						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
+						continue the action;
+					if the-from entry is prefigured:
+						say "You sort of already figured what to do. If you forgot, you can PAD FLIPS";
 						continue the action;
 					say "[spec-help of the-from entry]";
 					if rq is active:
