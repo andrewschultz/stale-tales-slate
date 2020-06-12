@@ -274,7 +274,7 @@ Edwin hiccups.
 >undo
 #spechelp for blake
 >blaek
-Blake looks a bit sadder.
+Blake looks a bit unhappier.
 >undo
 #spechelp for ernest
 >ernets
@@ -457,49 +457,32 @@ It already is a place. It needs to be more than that, to wipe off the stigma of 
 It probably needs less crust, not more. The whole curst palace.
 #spechelp for curst palace
 >curst palaec
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
+!Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
+>curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 #nudge for deposit
 >deposti
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for fire
 >fier
-The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
 #nudge for torn
 >tonr
-The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
 #nudge for frontier
 >frontire
-The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
-#nudge for flowerpot
->flowerpto
-The flowerpot itself is just fine--you haven't found anything to put in it yet.
-#nudge for flower
->flowre
-The flowerpot itself is just fine--you haven't found anything to put in it yet.
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life.
 #nudge for pot
->pto
-The flowerpot itself is just fine--you haven't found anything to put in it yet.
-#nudge for proof
->profo
-The flowerpot itself is just fine--you haven't found anything to put in it yet.
-#nudge for welt
->wetl
-The flowerpot itself is just fine--you haven't found anything to put in it yet.
+>tpo
+The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet.
 #nudge for adder
 >addre
 You need to take care of all the adders.
 #nudge for renato
 >renaot
 You don't have time to think about, or change, Renato. You got his present to his friend.
-#renudge for renato
->renaot
-You don't have time to think about, or change, Renato. You've found and made his friend a bit happier, but maybe you can do even more.
-#renudge for renato
->renaot
-You don't have time to think about, or change, Renato. His friend is still unreceptive, though.
-#renudge for renato
->renaot
-You don't have time to think about, or change, Renato. You haven't yet found his friend he wants the gift sent to, anyway.
 #nudge for curst
 >curts
 It's not just that it's curst, it's a PALACE, too.
@@ -599,10 +582,10 @@ This game ain't a dadgum Western.
 The butlers are plural, and anyway, they're bustling plenty as-is.
 #nudge for copse
 >cepos
-The copse and the scope are both fine as-is.
+The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 #nudge for spec
 >spce
-The copse and the scope are both fine as-is.
+The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 #nudge for butler
 >butlre
 You need to deal with all the butlers. Not just one.
@@ -687,6 +670,9 @@ Hmm. You bet you could get past if the snider diners were RINSED.
 !DEBUG INFO: Taking away a max point.
 
 @nud
+#renudge for copse
+>cepos
+The copse and the scope are both fine as-is.
 #mistake test for worse
 >worse
 The brownies don't need to taste any worse.
@@ -1073,19 +1059,13 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 #nudge for theater
 >theatre
 You don't need to go looking for screens to stare at right now. You have a world to save.
-#nudge for wait
->wati
-The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
-#nudge for seer
->sere
-The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
 #nudge for rampant
 >rampatn
-No, just an admirer, really.
+No, just a mardier admirer, really.
 >gs
 #nudge for womantrap
 >womantrpa
-No, just an admirer, really.
+No, just a mardier admirer, really.
 >gs
 #nudge for ingrate
 >ingraet
@@ -1148,7 +1128,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #nudge for detour
 >detoru
-This may technically be a detour, but the area name is detours. So, yeah.
+This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
 #spechelp for bogus-detours
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
@@ -1176,9 +1156,6 @@ You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? R
 #nudge for finger
 >fingre
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#nudge for strudel
->strudle
-The pastry is for eating, not for changing.
 #nudge for sled
 >slde
 Work on the whole sled rut.
@@ -1283,7 +1260,7 @@ That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 #nudge for atheist
 >atheits
-Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
+Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways.
 
 @sli
 #slider test for hastiest
@@ -1315,6 +1292,13 @@ You waste sweat and ire thinking what to do.
 You waste sweat and ire thinking what to do.
 >waste ire
 You waste sweat and ire thinking what to do.
+\\
+#nudge for wait
+>wati
+The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
+#nudge for seer
+>sere
+The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
 
 @!minh,mini
 >hastiest
@@ -1331,13 +1315,44 @@ Your score has just gone up by one point
 >s
 
 @nud
+#nudge for reeds
+>reesd
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for reed
+>rede
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for ale
+>ael
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for reedale
+>reedael
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for sere
+>seer
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for deal
+>dela
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #spechelp for reed's ale
 >reedsael
-Lars listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
+Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
+#nudge for lars
+>lasr
+No, Lars's full name. With Reed's Ale.
+#nudge for eede
+>eeed
+No, Lars's full name. With Reed's Ale.
 >gs
 >reedsael
-Elsa listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
+Elsa Erde listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
+#nudge for elsa
+>elas
+No, Elsa's full name. With Reed's Ale.
+#nudge for erde
+>ered
+No, Elsa's full name. With Reed's Ale.
 >gs
+\\
 #spechelp for mel fish
 >mel fihs
 Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
@@ -1394,40 +1409,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for mined
 >imedn
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#nudge for lars
->lasr
-No, Lars's full name. With Reed's Ale.
-#nudge for eede
->eeed
-No, Lars's full name. With Reed's Ale.
->gs
-#nudge for elsa
->elas
-No, Lars's full name. With Reed's Ale.
-#nudge for erde
->ered
-No, Lars's full name. With Reed's Ale.
->gs
-#nudge for reeds
->reesd
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for reed
->rede
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for ale
->ael
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for reedale
->reedael
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for sere
->seer
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for deal
->dela
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
 @nud
 #nudge for gradient
@@ -1492,7 +1473,7 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 @nud
 #spechelp for mended mini denim
 >denmi
-You scrape at the mended mini denim bits to see if there is any magic in dem. Well, not the way you thought, apparently.
+The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
 #scannotes for mended mini denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
@@ -2263,7 +2244,7 @@ The spray will still drown you if you don't figure a way to move somewhere.
 >undo
 #nudge for water
 >watre
-The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?
+The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to a shore?
 >undo
 #nudge for northern
 >northenr
@@ -2560,7 +2541,7 @@ Your score has just gone up by one point
 St. Teri's back in the real world, now.
 
 @!minh,mini
->give flowerpot to sitter
+>give pot to sitter
 #notana
 Your score has just gone up by one point
 }}SCORE++

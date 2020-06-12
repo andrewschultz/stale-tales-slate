@@ -267,7 +267,9 @@ understand "real hot" as a mistake ("[if Race Acre is touchable]You already got 
 
 chapter Boarded Roadbed
 
-understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when sob ever verbose is in location of player.
+understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when sob ever verbose is touchable.
+
+understand "pots" as a mistake ("You can't see what you would do with a bunch of pots.") when stop post is touchable.
 
 chapter Bustle Sublet
 

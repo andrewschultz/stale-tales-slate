@@ -798,13 +798,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "castle"	402197335	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
 "lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if Mislit Limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
-"flowerpot"	734674551	welt-proof flowerpot	--	"[flow-fine]."
-"flower"	475745997	welt-proof flowerpot	--	"[flow-fine]."
-"pot"	258928554	welt-proof flowerpot	--	"[flow-fine]."
-"proof"	342009812	welt-proof flowerpot	--	"[flow-fine]."
-"welt"	392664739	welt-proof flowerpot	--	"[flow-fine]."
-"blub"	195757456	welt-proof flowerpot	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
-"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if flowerpot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if Mesprise Premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
+"pot"	258928554	top opt pot	--	"The top opt pot is too sturdy to be changed."
+"blub"	195757456	blub bulb	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
+"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if Mesprise Premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
 "toaster"	592164309	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	start tarts	--	"[eat-pastry]." [pastry rejects]
@@ -919,7 +915,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Fringe Finger nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "finger"	386144864	--	--	"[towersloc]."
-"strudel"	592462631	--	strood rule	"[eat-pastry]."
 "sled"	298923003	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	sled rut	--	"Work on the whole sled rut."
 
@@ -950,7 +945,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "delta"	307946873	--	--	"[towersloc]."
 "shoals"	360184465	shoals	--	"[shoaly]."
 "shoal"	263910499	shoals	--	"[shoaly]."
-"atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly."
+"atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways."
 
 table of Danger Garden nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1969,10 +1964,14 @@ to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you ch
 
 to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway"
 
-to say flow-fine: say "The flowerpot [if crocus is in flowerpot]itself [end if]is just fine--[if Mislit Limits are unvisited]you haven't found anything to put in it yet[else if ur-pine is reflexed], and so is the crocus in it[else]. Maybe something around here could go in it[end if]"
+to say flow-fine:
+	if crocus is in top opt pot:
+		say "With the crocus in the top opt pot, there's no need to change";
+	else:
+		say "The best--well, the only--way to change the top opt pot is to put something in it, [if mislit limits are unvisited]but you haven't seen anything suitable yet[else]and maybe something here could turn up[end if]";
 
 this is the got-pot rule:
-	if flowerpot is not off-stage, the rule succeeds;
+	if top opt pot is not off-stage, the rule succeeds;
 	the rule fails;
 
 this is the pas-vis rule:

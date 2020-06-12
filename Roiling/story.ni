@@ -163,7 +163,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=19 for organised ego drains (Lost Lots)
 1=20 for tentative (agnostic meets dr yow)
 1=21 for rewired (bot-boat)
-1=22 for giving Tetris Sitter the flowerpot NON-ANAGRAM
+1=22 for giving Tetris Sitter the top opt pot NON-ANAGRAM
 3=25 for unripe ur-pine/serpent/triste in Mislit Limits
 1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
@@ -1764,8 +1764,8 @@ ingrates	--
 organised	--
 mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
-Atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
-Tetris Sitter	"[if flowerpot is moot]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
+atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
+Tetris Sitter	"[if top opt pot is moot]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
 Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
@@ -1920,10 +1920,10 @@ bonker	"You try to chat but feel like a, er, knob."
 stinger	"As you start to talk, you almost see a grin set in the stinger, which makes you see red."
 Lois the Hostile	"She complains[hostile-red]!"
 Hostile-Is-He Lot	"They complain[hostile-red]!"
-Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
+atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your flowerpot, sadly[else if crocus is not moot]St. Teri looks at your flowerpot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
@@ -2179,7 +2179,7 @@ agnostic	Elvira	"'I don't get why other people say she's so cool. They say I'm t
 agnostic	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 agnostic	keycar	"'Those things are annoying! But it'd be neat to know how they worked.'"
 agnostic	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
-agnostic	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
+agnostic	atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
 agnostic	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
 agnostic	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
 agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is touchable]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
@@ -2195,8 +2195,8 @@ Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against askin
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but the Tetris Sitter's observations were a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
-Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in flowerpot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Tetris Sitter	flowerpot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
+Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
+Tetris Sitter	top opt pot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if crocus is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
 macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
@@ -2459,7 +2459,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
-A Bev O Be Ova	"The person behind this whole business idea was Ev Abo. You see red at how much they must have profited."
+A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
 Admits Mist Ad	"[one of]IT'S MAD[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
@@ -3318,7 +3318,7 @@ yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in Grey Gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
 trance nectar	trance nectar	false	troves-left rule	"You tidied your Upscale Capsule up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
-curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Renato."
+curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that top opt pot you got from Renato."
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
 
 to say to-clean-otters: [hells bells this is ugly]
@@ -3339,7 +3339,7 @@ this is the otters-left rule:
 	the rule fails.
 
 this is the towers-left rule:
-	if flowerpot is not moot, the rule succeeds;
+	if top opt pot is not moot, the rule succeeds;
 	the rule fails;
 
 this is the oyster-left rule:
@@ -3639,7 +3639,7 @@ to say reject:
 						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
 						continue the action;
 					if the-from entry is prefigured:
-						say "You sort of already figured what to do. If you forgot, you can PAD FLIPS";
+						say "You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.";
 						continue the action;
 					say "[spec-help of the-from entry]";
 					if rq is active:
@@ -4505,7 +4505,7 @@ raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expe
 sporties' ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
-asset-hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
+asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
 organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
@@ -5143,9 +5143,9 @@ this is the towers-hinting rule:
 		if turbos are reflexive, try objhinting turbos instead;
 		if blaster is reflexive, try objhinting blaster instead;
 	if player is in Mesprise Premises:
-		if crocus is in flowerpot or player has crocus, try objhinting crocus instead;
+		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
 		if Tetris Sitter is reflexive, try objhinting Tetris Sitter instead;
-		if player has flowerpot, all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
+		if player has top opt pot, all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
 
@@ -6312,9 +6312,9 @@ check giving something to:
 		unless noun is gizmo:
 			say "That's not technical enough for the agnostic." instead;
 		continue the action;
-	if noun is flowerpot:
+	if noun is top opt pot:
 		if second noun is agnostic, say "[he-she-c]'s more physical sciences than biological." instead;
-		if second noun is Dr Yow, say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
+		if second noun is Dr Yow, say "[one of]Dr. Yow puts the top opt pot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
 		if second noun is a guardian, 	say "You remember Ornate Atoner Renato's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis, say "Curtis shrugs. That won't help him with his big fruit empire." instead; [others]
 	say "Hm. Nah. [if second noun is plural-named]They don't[else if second noun is female]She doesn't[else if second noun is male]He doesn't[else]It doesn't[end if] want that--or, it seems, anything of yours." instead;
@@ -6497,7 +6497,7 @@ check listening:
 	if noun is angriest ingrates, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
 	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if]along." instead;
 	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
-	if noun is asset-hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
+	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if noun is wait-seer, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Dourest Detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
@@ -9352,7 +9352,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for...well, someone Renato was sad to miss."	"wilteds"	true	towers
+"wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."	"wilteds"	true	towers
 "guru"	false	"You can GURU something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
@@ -10474,7 +10474,7 @@ check scaning sit a nag:
 
 section side art
 
-the side art is part of the anti sag sit a nag. description of side art is "Boy! There's a lot here.". the side art is vanishing.
+the side art is part of the anti sag sit a nag. description of side art is "Boy! There's a lot here.". the side art is reflexive.
 
 a-text of side art is "YRRRYRY". b-text of side art is "YRRRYRY". parse-text of side art is "-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -10639,7 +10639,7 @@ check looking under pews: try examining pews instead;
 check entering pews: say "A voice seems to intone: '[']Tis no sin to sit on, is...? NOT!'" instead;
 
 check examining the pews when summary is off-stage:
-	say "You search through the pews, just as when you were a kid, looking for anything, maybe a note from the last person. You found something from yourself, once. But this time, something actually turns up! It's been hidden carefully, tucked where two woody bits are glued together.[paragraph break]An initial glance reveals nothing about Mum Ray's identity. Is it a woman with a last name of Ray? A silent fellow named Ray who preferred to write? Or just a pen name? They probably needed the anonymity, with the power Rev. Ali had, and either way, there's a lot to read.";
+	say "You search through the pews, just as when you were a kid, looking for anything, maybe a note from the last person. You found something from yourself, once. But this time, something actually turns up! It's been hidden carefully, tucked where two woody bits are glued together. Mum Ray's Summary![paragraph break]An initial glance reveals nothing about Mum Ray's identity. Is it a woman with a last name of Ray? A silent fellow named Ray who preferred to write? Or just a pen name? They probably needed the anonymity, with the power Rev. Ali had, and either way, there's a lot to read.";
 	now player has the summary instead;
 
 section mum ray's summary
@@ -11965,7 +11965,7 @@ understand "throw [something preferably held]" as plainthrowing.
 understand "throw [something preferably held] at [something]" as throwing it at.
 
 carry out plainthrowing:
-	if noun is flowerpot, say "But it's Renato's. You don't have to help him out, but it'd be best not to give up." instead;
+	if noun is top opt pot, say "But it's Renato's. You don't have to help him out, but it'd be best not to give up." instead;
 	if noun is dart:
 		say "The dart was more made for shooting than throwing.";
 		the rule succeeds;
@@ -14059,24 +14059,24 @@ carry out spikeing:
 
 chapter unearthing
 
-rule for supplying a missing noun when unearthing:
-	if player is in Rascal Craals:
-		if thin hint is in Rascal Craals:
-			now noun is thin hint;
-		else:
-			now noun is location;
-
 unearthing is an action applying to one thing.
-
-understand the command "unearth" as something new.
 
 understand "unearth" as unearthing.
 understand "unearth [something]" as unearthing.
 
 rule for supplying a missing noun when unearthing:
 	if haunter is not off-stage, say "You already did." instead;
-	if player is not in anger range, say "Nothing worth unearthing here." instead;
-	now the noun is the pre-haun;
+	if player is in Rascal Craals:
+		if thin hint is in Rascal Craals:
+			now noun is thin hint;
+		else:
+			now noun is location;
+	else if player is not in Anger Range:
+		say "Nothing worth unearthing here." instead;
+	else if pre-haun is touchable:
+		now the noun is the pre-haun;
+	else:
+		say "You need to worry about the carps and pikes, first." instead;
 
 the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
 
@@ -15215,9 +15215,9 @@ check giving hintpastry to a guardian:
 palace-warn is a truth state that varies.
 
 check xraying:
-	if noun is crocus, try xraying flowerpot instead;
-	if noun is flowerpot:
-		if noun is reflexed, say "The flowerpot has a plant in it. You decline to speculate in molecular biology or whatever." instead;
+	if noun is crocus, try xraying top opt pot instead;
+	if noun is top opt pot:
+		if noun is reflexed, say "The top opt pot has a plant in it. You decline to speculate in molecular biology or whatever." instead;
 		if Mislit Limits is unvisited, say "Nothing, yet. Maybe you're not far enough along." instead;
 		if player is not in Mislit Limits, say "Maybe you should go back outside." instead;
 	if noun is rayed and xraytrump is false:
@@ -16067,7 +16067,7 @@ to say vis-guar:
 	if ngs is 0:
 		say ". You've gotten rid of all nuisances here, anyway";
 	else:
-		say ". Might be more productive to deal with [the list of guardians in Salted Deltas], instead[if ngs is 2]. Especially the Atheists[end if]";
+		say ". Might be more productive to deal with [the list of guardians in Salted Deltas], instead[if ngs is 2]. Especially the atheists[end if]";
 
 to say agnostic-first: say "[if agnostic is male]Scot[else]Staci[end if]"
 
@@ -16584,7 +16584,7 @@ check scaning strudel:
 	if strudel is reflexed, say "You already rustled it." instead;
 	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
 
-The sled rut is auxiliary scenery in Outer Route. "It's flecked with red, oddly[if strudel is in Outer Route], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+The sled rut is auxiliary scenery in Fringe Finger. "It's flecked with red, oddly[if strudel is in Fringe Finger], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
 
 a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
@@ -16645,7 +16645,7 @@ to towers-min-adj: [this is when you leave the mainland]
 	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
 	if old ice is not moot, d "Left old ice.";
 	if sporties' ripostes are not moot, d "Left sporties['] ripostes.";
-	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
+	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
 		increment poss-score of towers; [we get another point for Rawest Waters]
@@ -16668,7 +16668,7 @@ after printing the locale description for Rawest Waters when Rawest Waters is un
 	now poss-score of Towers is 5 + cur-score of towers;
 	now min-score of Towers is 1 + cur-score of towers;
 	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the flowerpot. And the strudel can always be rustled.]
+		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the top opt pot. And the strudel can always be rustled.]
 
 every turn when player is in Rawest Waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
@@ -16835,68 +16835,68 @@ book Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
 
-the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it[else if flowerpot is moot]happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 the itster is auxiliary boring scenery in Mesprise Premises. description of itster is "It's red, and MAN what a high score the Tetris Sitter has.". bore-text of the itster is "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
 
-check going east in Mesprise Premises (this is the force give flowerpot rule):
-	if player has flowerpot and flowerpot contains crocus and Tetris Sitter is reflexed:
-		say "Before you leave, you remember Ornate Atoner Renato's speech--the flowerpot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
-		moot flowerpot;
+check going east in Mesprise Premises (this is the force give top opt pot rule):
+	if player has top opt pot and top opt pot contains crocus and Tetris Sitter is reflexed:
+		say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
+		moot top opt pot;
 		reg-inc;
 	continue the action;
 
 Ornate Atoner Renato is an undesc.
 
 check giving to Tetris Sitter:
-	if second noun is crocus, try giving flowerpot to Tetris Sitter instead;
+	if second noun is crocus, try giving top opt pot to Tetris Sitter instead;
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
-		if noun is not flowerpot, say "She mumbles '[']S trite,' [if noun is flowerpot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
-	unless noun is flowerpot, say "St. Teri thanks you, but [if flowerpot is moot]the flowerpot was probably enough[else]that's not quite what she wants[end if]." instead;
-	if crocus is off-stage, say "You consider giving the flowerpot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
-	say "St. Teri smiles at the flowerpot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
+		if noun is not top opt pot, say "She mumbles '[']S trite,' [if noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
+	unless noun is top opt pot, say "St. Teri thanks you, but [if top opt pot is moot]the top opt pot was probably enough[else]that's not quite what she wants[end if]." instead;
+	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
+	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
 	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
-	moot flowerpot instead;
+	moot top opt pot instead;
 
 check going outside in Mesprise Premises: try going east instead;
 
-chapter welt-proof flowerpot
+chapter top opt pot
 
-the welt-proof flowerpot is a container. description of flowerpot is "You don't know what good welt-proofing will do, but it seems pretty sturdy. The [if bulb is in flowerpot]blub bulb[else]succor crocus you found under the ur-pine[end if] rests in the flowerpot."
+the top opt pot is a container. description of top opt pot is "A top opt pot is sturdy (a welt-proof top opt pot, if you will) and conducive to giving life. The [if bulb is in top opt pot]blub bulb[else]succor crocus you found under the ur-pine[end if] rests inside."
 
-check examining welt-proof flowerpot: ignore the examine containers rule;
+check examining top opt pot: ignore the examine containers rule;
 
-the blub bulb is a boring thing. description of blub bulb is "One look makes you b blu and not bubl. But maybe it can become something cheerier some day.". the flowerpot contains the blub bulb. bore-text of blub bulb is "You don't want to mess with the blub bulb. Maybe it could become something better, but it's fragile. Growing plants takes time."
+the blub bulb is a boring thing. description of blub bulb is "One look makes you b blu and not bubl. But maybe it can become something cheerier some day. Or it can irrigate a much cheerier seedling.". the top opt pot contains the blub bulb. bore-text of blub bulb is "You don't want to mess with the blub bulb. Maybe it could become, or help something else become, something better. It's fragile but safe in the top opt pot."
 
-after printing the name of the flowerpot while taking inventory:
-	say " (holding a [if crocus is in flowerpot]succor crocus[else]blub bulb[end if])";
+after printing the name of the top opt pot while taking inventory:
+	say " (holding a [if crocus is in top opt pot]succor crocus[else]blub bulb[end if])";
 	now succor crocus is mentioned;
 	now blub bulb is mentioned;
 	omit contents in listing;
 	continue the action;
 
-understand "pot" and "flower pot" as flowerpot.
+understand "flowerpot" and "flower pot" as top opt pot.
 
-check inserting into the flowerpot:
+check inserting into the top opt pot:
 	if noun is crocus:
 		if noun is in Mislit Limits, try taking noun instead;
-		say "The crocus is in the flowerpot already." instead;
-	say "Only a flower [if crocus is in flowerpot]like the crocus [end if]belongs in the flowerpot." instead;
+		say "The crocus is in the top opt pot already." instead;
+	say "Only a flower [if crocus is in top opt pot]like the crocus [end if]belongs in the top opt pot." instead;
 
-check wearing the flowerpot: say "Devo is not accepting new members." instead;
+check wearing the top opt pot: say "Devo is not accepting new members." instead;
 
-check putting on the flowerpot: say "The flowerpot is just for holding a flower. Or future flowers." instead;
+check putting on the top opt pot: say "The top opt pot is just for holding a flower. Or future flowers." instead;
 
 chapter succor crocus
 
-before giving the crocus to: try giving flowerpot to second noun instead;
-before giving the blub bulb to: try giving flowerpot to second noun instead;
+before giving the crocus to: try giving top opt pot to second noun instead;
+before giving the blub bulb to: try giving top opt pot to second noun instead;
 
-before showing the crocus to: try showing flowerpot to second noun instead;
-before showing the blub bulb to: try showing flowerpot to second noun instead;
+before showing the crocus to: try showing top opt pot to second noun instead;
+before showing the blub bulb to: try showing top opt pot to second noun instead;
 
 understand "flower" as crocus.
 
@@ -17241,11 +17241,11 @@ chapter Salted Deltas guardians
 
 section atheists
 
-the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
+the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
 
-understand "atheist" as atheists.
+printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
-a-text of asset-hit atheists is "RYRRYYRR". b-text of asset-hit atheists is "RY?R?YR?". parse-text of asset-hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
+a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
 chapter Danger Garden guardians
 
@@ -17304,13 +17304,13 @@ pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you la
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 Mel Fish	Leveraged Everglade	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Leveraged Everglade	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
+wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
 Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
-Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
+atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
 grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives' site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
@@ -20976,7 +20976,7 @@ check burning:
 	if noun is log gaol, say "Even if the Wildest Wilteds weren't desolate enough, you don't have anything incendiary." instead; [towers]
 	if noun is ropins, say "The ropins aren't actual rope, so they don't burn. Even if they did, [if Dr Yow is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
 	if noun is bot boat, say "Destroy a possible way to the Palace and hurt someone's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
-	if noun is flowerpot or noun is crocus, say "Renato would be so upset." instead;
+	if noun is top opt pot or noun is crocus, say "Renato would be so upset." instead;
 	if noun is try us yurts, say "Perhaps another more natural way of decomposition would work better." instead;
 	if noun is curst palace, say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
 	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is touchable]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
@@ -21379,7 +21379,7 @@ gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figur
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
-Tetris Sitter	"Now St. Teri's sick of Tetris, [if flowerpot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
+Tetris Sitter	"Now St. Teri's sick of Tetris, [if top opt pot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 bleary barley	"You've cut it down enough. Who needs that much barley anyway?" [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
@@ -22185,7 +22185,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if flowerpot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the flowerpot, to complate Ornate Atoner Renato's quest[end if].";
+		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
