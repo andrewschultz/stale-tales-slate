@@ -1858,17 +1858,18 @@ scripture picturers	"You feel you're not quite ready to enter the Cleric Circle,
 lairage regalia	"You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close."
 adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you."
 sit a nag	"You hang around the [sit a nag], hoping for something to happen, but nothing happens. Though it seems like it should."
-side art	"Oof! That doesn't quite work. It could have, though. You glance  at the side art for clues."
+side art	"[if Gast is off-stage]There's something in the side art, but you're not sure if you need to figure it out just right now[else]Oof! That doesn't quite work. It could have, though. You glance at the side art for clues[end if]."
 WOE BOW BELL	"You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit."
 MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
 Rude 'N Nuder	"The pages of Rude [']N Nuder flutter a bit."
 sheol holes	"Hm. You thought you saw a way by...no, not BY, a little more complex than that."
-un-road	"You thought you saw an un-road for a second, but ... not quite."
+odd run on aura	"You thought you saw an un-road for a second, but ... not quite."
 NULL IT unit	"You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift."
+noon gag	"You think of how to find a way to No-Lag Logan's boat."
 admits mist ad	"Hmm, you almost see a way past the admits mist ad."
-thickness sketchins	"The Cripple Clipper rocks and makes negligible forward progress. Still, it's a start."
+thickness sketchins	"Your craft rocks and makes negligible forward progress. Still, it's a start."
 hurt hog	"The hog grunts."
 bent ewe	"The bent ewe stretches a bit."
 raptest patters	"The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to."
@@ -2153,9 +2154,6 @@ to say spec-help of (itm - a thing):
 		say "With that conversation, you can't concentrate on much...";
 		continue the action;
 	now itm is attempted;
-	if itm is prefigured:
-		say "No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!";
-		continue the action;
 	if itm is a mack-idea:
 		say "You feel you're on the right track to expose the macks. But that's not quite it.";
 		continue the action;
@@ -2217,14 +2215,15 @@ nestor	"You rescued him, and that's enough."
 scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
-sit a nag	"[if Gast is moot][giant-over][else][else if side art is not reflexed]You leaned on the [sit a nag] right. You still have more to do with [Gast][end if]."
+sit a nag	"[if Gast is moot][giant-over][else if side art is not reflexed]You already leaned on the [sit a nag] right. You look around it and wonder if the side art could stop [gast]'s tirades[else]The [sit a nag] itself isn't as important as what's happening around it[end if]."
 side art	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the [sit a nag] right. Time to start ducking[end if]."
 Rude 'N Nuder	"You don't want the WOE BOW BELL to come back."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
-pipe soot	"Brother Horbert probably knows what to do with that."
+pipe soot	"Brother Horbert will work his magic with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
 THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
 un-road	"You know where the un-road is, but how to navigate it?"
+odd run on aura	"The underground is already lit. Un-unlit."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."

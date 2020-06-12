@@ -70,7 +70,7 @@ Nice try, but wrong preposition for the situation.
 Picking a fight--or spitting--is uncouth.
 #mistake test for staider
 >staider
-Nothing's too riotous yet.
+Nothing has gotten too riotous yet.
 #mistake test for taps
 >taps
 You have no bugle. Well, not in this game.
@@ -85,10 +85,7 @@ Concerned parents won't be able to help you here.
 Actually, you have all the time in the world, and you don't need to delay anyone.
 #mistake test for under
 >under
-There's nobody to hide from, though you could maybe fit under the anti-sag sit-a-nag later.
-#mistake test for under-generic
->under
-Wrong preposition.
+There's nobody to hide from, though you could fit under the anti-sag sit-a-nag later.
 #mistake test for among
 >among
 Maybe if there were mango trees around.
@@ -106,9 +103,6 @@ Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys fro
 #mistake test for seam
 >seam
 You can't find any crack in the Same Mesa that you could follow.
-#nudge for spoon
->ospon
-Instead of bending the spoon, use it to help your magic powers.
 #nudge for poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
@@ -174,12 +168,19 @@ The church's name is not as important as its mission.
 #scannotes for anti sag sit a nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
+#spechelp for sit a nag
+>agastni
+You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
+#spechelp for side art
+>astried
+There's something in the side art, but you're not sure if you need to figure it out just right now.
 
 @nud
 #spechelp for worst ad
 >towarsd
 The ad seems slightly nearer, for a moment.
 #readables for worst ad
+>read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
 #scannotes for worst ad
 >scan worst ad
@@ -233,7 +234,15 @@ Cleric Circle
 >score
 {$SCOS}
 
+>x list o toils
+
 @nud
+#mistake test for noops
+>noops
+The snoop spoon isn't as complicated as assembly language.
+#nudge for spoon
+>ospon
+Instead of bending the spoon, use it to help your magic powers if need be.
 #mistake test for man let/let man
 >man let
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
@@ -242,6 +251,8 @@ Your heart is in the right place, but telling the mantle to cool it won't do muc
 #nudge for circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+>x pews
+Mum Ray's Summary!
 #nudge for mum
 >mmu
 That document is the stone truth! It doesn't need revisionism or embellishment.
@@ -268,7 +279,7 @@ The chant doesn't change. Chants are good at that.
 The chant doesn't change. Chants are good at that.
 #nudge for reagent
 >regenta
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
+Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 #nudge for cleric
 >cicler
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -319,18 +330,21 @@ Precise recipes
 @nud
 #mistake test for opposite
 >opposite
-Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough
-#mistake test for noops
->noops
-The snoop spoon isn't as complicated as assembly language.
+Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.
 #nudge for boko
+>boko
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 #nudge for runedbook
 >obokduren
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-Brother Horbert will work his magic with that.
 #nudge for pipesoot
 >pipesoto
+Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
+#nudge for mushroom
+>murshmoo
+Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
+#nudge for mushrooms
+>murshmoos
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 
 >out
@@ -364,9 +378,6 @@ Your score has just gone up by one point
 Idle Deli
 
 @nud
-#mistake retest for satired
->satired
-Bad idea to poke fun at someone that much bigger than you.
 #mistake retest for psat
 >psat
 You have enough word juggling now. You don't need a standardized test, too.
@@ -414,9 +425,8 @@ You don't need to attend any school board meetings.
 #mistake test for tap pat/tap
 >tap pat
 You have Pat's attention, already, and he's not letting you in that seed pit without argument.
-#mistake retest for tap pat/tap
 >tap
-You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
+You have Pat's attention, already, and he's not letting you in that seed pit without argument.
 #mistake test for apt
 >apt
 Actually, Pat's advice may not be apt. Look to the seed pit.
@@ -450,6 +460,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
+#mistake retest for tap pat/tap
+>tap
+You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
 #done rejects for seed pit
 >despiet
 That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
@@ -465,18 +478,18 @@ That'd be a double negative, to re-enter. Your argument would be so won, it's lo
 @nud
 #renudge for carvings
 >cravinsg
-It's not the carvings that need changing. You got the mushrooms from the seed pit, and that's what's important
-!You got
+It's not the carvings that need changing.
+You got the mushrooms from the seed pit, and that's what's important
 #renudge for carving
 >cravign
-It's not the carvings that need changing. You got the mushrooms from the seed pit, and that's what's important
-!You got
+It's not the carvings that need changing.
+You got the mushrooms from the seed pit, and that's what's important
 
 @nud
-#nudge for mushroom
+#renudge for mushroom
 >umshroom
 Brother Horbert will work his magic with that.
-#nudge for mushrooms
+#renudge for mushrooms
 >umshrooms
 Brother Horbert will work his magic with that.
 #nudge for reagents
@@ -500,10 +513,10 @@ You did well enough to focus on the proper names instead.
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 #nudge for sos
 >sso
-You already figured how to get into Oscar's. There's nothing else to do.
+You need to figure out what the whole SOS ARC in the lairage regalia can become.
 #nudge for arc
 >acr
-You already figured how to get into Oscar's. There's nothing else to do
+You need to figure out what the whole SOS ARC in the lairage regalia can become.
 #mistake test for car
 >car
 Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.
@@ -585,15 +598,18 @@ You did well enough to focus on the proper names instead.
 >ttu
 You did well enough to focus on the proper names instead.
 #renudge for sos
-You need to figure out what the whole SOS ARC in the lairage regalia can become.
+>oss
+You already figured how to get into Oscar's. There's nothing else to do.
 #done rejects for lairage regalia
 >acrsso
-WRONG
+You twist your mind a bit, but no, there's probably only one way to enter.
 #done rejects for adsorbing signboard
 >pats
-WRONG
+No, you don't see any other way around the signboard to enter. You don't need one, either.
 #done rejects for scripture picturers
-WRONG
+>inseid
+The picturers were pretty strict about what they suggested. Not much else you can do with them.
+
 
 @nud
 #renudge for orcas
@@ -601,15 +617,15 @@ WRONG
 No, you found the way in, with the extra s.
 #renudge for lairage
 >lairaeg
-Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to.
+Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to, now you've visited Oscar.
 #nudge for bench
 >enchb
-The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
+The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
 @nud
-#spechelp for sit a nag
+#respechelp for sit a nag
 >againts
-You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 
 @sli
 #slider test for against
@@ -637,9 +653,18 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#mistake test for staider
+>staider
+Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
 #done rejects for sit a nag
 >againts
-You leaned on the anti-sag sit-a-nag right. You still have more to do with Ian Gast.
+You already leaned on the anti-sag sit-a-nag right. You look around it and wonder if the side art could stop Ian Gast's tirades.
+#nudge for ides
+>idse
+It's the whole side art you need to deal with.
+#nudge for tra
+>tar
+It's the whole side art you need to deal with.
 
 >against
 !Your score has just gone up by one point
@@ -660,7 +685,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #spechelp for side art
 >astried
-Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #mistake test for ides/rat/tar
 #nudges for ides
 >ides
@@ -683,10 +708,10 @@ Your score has just gone up by one point
 You already did your best with the tirades and side art.
 #done rejects for side art
 >astried
-You got on the bench right. Time to start ducking.
+You got on the anti-sag sit-a-nag right. Time to start ducking.
 #redone rejects for sit a nag
 >againts
-You leaned on the anti-sag sit-a-nag right. You still have more to do with Ian Gast.
+The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 #mistake retest for ides/rat/tar
 >ides
 It's the whole side art you needed to deal with.
@@ -698,16 +723,12 @@ It's the whole side art you needed to deal with.
 @nud
 #renudge for tirade
 >atired
-You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal
+You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
 @nud
 #redone rejects for sit a nag
 >againts
-The anti-sag sit-a-nag isn't important with Ian Gast gone.
->gs
->againts
-The anti-sag sit-a-nag isn't important with Nia Gast gone.
->gs
+The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
 @sli
 #slider test for below
@@ -748,13 +769,16 @@ Your score has just gone up by one point
 You already tried this preposition. There must be others.
 #done rejects for rude 'n nuder
 >belwo
-You don't need to avoid the WOE BOW BELL any more.
+You don't want the WOE BOW BELL to come back.
 
 @nud
 #nudge for giatn
 >igtan
-The giant is too old and set in its ways. You may just need to listen to him from one more angle.
-WRONG what about at the start and also gender stuff
+Ian Gast is too old and set in his ways. You may just need to listen to him from one more angle.
+>gs
+>igtan
+Nia Gast is too old and set in her ways. You may just need to listen to her from one more angle.
+>gs
 
 @sli
 #slider test for under
@@ -768,6 +792,9 @@ The pages of Rude 'N Nuder flutter a bit.
 #scannotes for rude 'n nuder
 >scan rude 'n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
+#nudge for rude
+>urde
+That's not quite the book's whole title.
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
@@ -775,12 +802,15 @@ Only one inconclusive clue, and you have some direct hits. This shouldn't be too
 Your score has just gone up by one point
 
 @nud
+#spechelp for sit a nag
+>sitagna
+The anti-sag sit-a-nag isn't important with Ian Gast gone.
+#mistake retest for satired
+>satired
+Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
 #done rejects for u nerd endur redun
 >undre
-You don't need to do anything fancy with the runed book.
-#nudge for rude
->urde
-That's not quite the book's whole title.
+You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that.
 #renudge for boko
 >obok
 Brother Horbert will work his magic with that.
@@ -792,7 +822,7 @@ Brother Horbert will work his magic with that.
 Brother Horbert will work his magic with that.
 
 
-##no-gal needs a line break ??
+##No-Lag needs a line break ??
 
 >in
 
@@ -818,6 +848,9 @@ That's a lot of questions for such a small bottle, but it can't be too hard.
 #readables for a bev o be ova
 >read be ova
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
+#nudge for along
+>alogn
+You suspect you have a little way to go before finding clues of No-Lag Logan.
 
 @sli
 #slider test for above
@@ -854,6 +887,9 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for under-generic
+>under
+You already went UNDER. You need something new. Something slightly different.
 #done rejects for the bean
 >ofmr
 The Morf-Form has, uh, morphed enough. Deal with THE BEAN.
@@ -862,7 +898,7 @@ The Morf-Form has, uh, morphed enough. Deal with THE BEAN.
 THE BEAN has too much gravitas to be just a bean.
 #spechelp for the bean
 >beneaht
-The bean rolls back and forth a bit.
+THE BEAN rolls back and forth a bit.
 #mistake test for bane
 >bane
 You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.
@@ -877,6 +913,12 @@ Your score has just gone up by one point
 Harms Marsh
 
 @nud
+#nudge for null
+>null
+The whole NULL IT unit.
+#nudge for unit
+>unti
+The whole NULL IT unit.
 #mistake test for helos
 >helos
 Helicopters can't make it underground.
@@ -940,7 +982,8 @@ The whole odd run on aura.
 #nudge for odd
 >odd
 The whole odd run on aura.
-#done rejects for un-road
+#done rejects for odd run on aura
+#??this wasn't flagged by nuch/hch
 >untli
 The underground is already lit. Un-unlit.
 
@@ -962,20 +1005,17 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @nud
-#nudge for along
->alogn
-You think of No-Gal Logan, wondering how to find a way to him.
 #renudge for pyrites
 >pyrites
-The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
+The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 #nudge for pyrite
 >pyrite
-The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Gal Logan.
+The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 
 @nud
 #spechelp for un-road
 >alogn
-The un-road seems to lead somewhere, but you couldn't quite make it out like that.
+You think of how to find a way to No-Lag Logan's boat.
 #scannotes for noon gag
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
@@ -997,15 +1037,15 @@ Ripe Pier
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for mist
 >mits
-Nothing happens. It's DA mist, after all.
+Nothing happens. It's a MIST AD, after all.
 #readables for admits mist ad
 >read mist ad
-/(IT'S MAD|T'. D\. ASIM|MS\. DITA|SAD TIM)
+/(IT'S MAD|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
 #spechelp for admits mist ad
 >amidts
-Hmm, you almost see a way through the mist.
+Hmm, you almost see a way past the admits mist ad.
 #scannotes for admits mist ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
@@ -1022,6 +1062,15 @@ Your score has just gone up by one point
 Cripple Clipper
 
 @nud
+#nudge for mess
+>mess
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+#nudge for spume
+>spuem
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+#nudge for spumes
+>spumse
+The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 #mistake test for abroad/aboard
 >abroad
 Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.
@@ -1044,7 +1093,7 @@ No need to alter them. Worth looking at, though.
 No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
-The cripple clipper rocks and makes negligible forward progress. Still, it's a start.
+Your craft rocks and makes negligible forward progress. Still, it's a start.
 #scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
@@ -1079,7 +1128,7 @@ That could work later, but the hog and ewe don't trust you to go by yet.
 Well, sort of, but not so colloquial.
 #mistake test for tapster
 >tapster
-No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
+No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start playing, either.
 #mistake test for spatter
 >spatter
 No violence!
@@ -1100,7 +1149,7 @@ It's more the content of the patters that you could deal with, if you wanted.
 The bent ewe stretches a bit.
 #spechelp for hurt hog
 >throuhg
-No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 #nudge for spheric
 >spherci
 The ciphers cannot be dispelled.

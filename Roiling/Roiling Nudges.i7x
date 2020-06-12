@@ -179,6 +179,20 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rouet"	495698314	--	degen-true rule	"[not-the-reg]."
 "reagent"	547741067	--	has-reag rule	"[fol-reag]."
 "reagents"	644015033	--	has-reag rule	"[fol-reag]."
+"along"	231861444	--	am-along rule	"You suspect you have a little way to go before finding clues of No-Lag Logan."
+"pipesoot"	683820011	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
+"pipe"	335730873	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
+"soot"	348089138	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
+"mushroom"	600841335	--	in-horbert-quest rule	"[horb-magic of mushrooms]."
+"mushrooms"	697115301	--	in-horbert-quest rule	"[horb-magic of mushrooms]."
+"boko"	220057237	--	in-horbert-quest rule	"[horb-magic of U NERD]."
+"runedbook"	628229553	--	in-horbert-quest rule	"[horb-magic of U NERD]."
+"spoon"	395352587	snoop spoon	--	"Instead of bending the spoon, use it to help your magic powers if need be."
+"summary"	539400952	summary	--	"[rev-sum]."
+"ummary"	443126986	summary	--	"[rev-sum]."
+"mum"	233256113	summary	--	"[rev-sum]."
+"rays"	306144839	summary	--	"[rev-sum]."
+"ray"	209870873	summary	--	"[rev-sum]."
 
 table of same mesa nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -200,9 +214,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "adsorbing"	444086214	--	--	"[board-change]."
 "ings"	242774022	--	--	"[board-change]."
 "board"	201312192	--	--	"[board-change]."
-"giatn"	251797892	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is in Same Mesa]one more angle[else]several different angles[end if]."
-"ides"	290102010	side art	--	"It's the whole side art you need to deal with."
-"tra"	190621639	side art	--	"It's the whole side art you need to deal with."
+"giatn"	251797892	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is touchable]one more angle[else]several different angles[end if]."
+"ides"	290102010	side art	--	"[whole-side]."
+"tra"	190621639	side art	--	"[whole-side]."
 "tirade"	384449683	Gast	--	"[if side art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	--	--	"[die-sin]."
@@ -215,26 +229,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "woe"	310093459	WOE BOW BELL	--	"[whole-woe]."
 "bow"	200706255	WOE BOW BELL	--	"[whole-woe]."
 "bell"	253852692	WOE BOW BELL	--	"[whole-woe]."
-"spoon"	395352587	snoop spoon	--	"Instead of bending the spoon, use it to help your magic powers."
-"summary"	539400952	summary	--	"[rev-sum]."
-"ummary"	443126986	summary	--	"[rev-sum]."
-"mum"	233256113	summary	--	"[rev-sum]."
-"rays"	306144839	summary	--	"[rev-sum]."
-"ray"	209870873	summary	--	"[rev-sum]."
 "rude"	339264808	nuder	--	"That's not quite the book's whole title."
-"boko"	220057237	U NERD	--	"[horb-magic of U NERD]."
-"runedbook"	628229553	U NERD	--	"[horb-magic of U NERD]."
 "bev"	253389834	be ova	--	"[whole-bev]."
 "ova"	183705215	be ova	--	"[whole-bev]."
 "bean"	217320340	THE BEAN	--	"THE BEAN has too much gravitas to be just a bean."
-"along"	231861444	--	am-along rule	"You think of how to find a way to No-Lag Logan. Nothing yet."
-"ashtray"	448724974	ashtray	--	"[ash-soot]."
-"trashy"	446537156	ashtray	--	"[ash-soot]."
-"pipe"	335730873	pipe soot	--	"[horb-magic of pipe soot]."
-"soot"	348089138	pipe soot	--	"[horb-magic of pipe soot]."
-"pipesoot"	683820011	pipe soot	--	"[horb-magic of pipe soot]."
-"mushroom"	600841335	mushrooms	--	"[horb-magic of mushrooms]."
-"mushrooms"	697115301	mushrooms	--	"[horb-magic of mushrooms]."
 
 table of cleric circle nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -269,6 +267,8 @@ table of adobe abode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "adobe"	243794498	--	--	"[locname]."
 "oscar"	277143749	--	--	"You don't need to do anything with Oscar[if pipe soot is in Adobe Abode and list o toils is examined], but maybe you can sneak the pipe soot away[else if pipe soot is not in Adobe Abode], and you already got the pipe soot[end if]."
+"ashtray"	448724974	ashtray	--	"[ash-soot]."
+"trashy"	446537156	ashtray	--	"[ash-soot]."
 
 table of harms marsh nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -289,7 +289,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of ripe pier nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pier"	339588717	--	--	"[locname]."
-"mist"	308451983	--	--	"Nothing happens. It's a MIST SD, after all."
+"mist"	308451983	--	--	"Nothing happens. It's a MIST AD, after all."
 
 table of cripple clipper nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1653,9 +1653,11 @@ to say name-worry of (rm - a room): say "[if rm is visited]You did well enough[e
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
-to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]."
+to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole SOS ARC in the lairage regalia can become[end if]"
 
 to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
+
+to say whole-side: say "It's the whole side art you need[if side art is reflexed]ed[end if] to deal with"
 
 this is the has-reag rule:
 	if list o toils is examined:
@@ -1683,13 +1685,18 @@ to say pit-full: say "[if mushrooms are off-stage]The whole seed pit[else]You al
 
 to say no-carv: say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
 
-to say horb-magic of (tt - a thing): say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
+this is the in-horbert-quest rule:
+	if list o toils is unexamined, the rule fails;
+	if brother horbert is moot, the rule fails;
+	the rule succeeds;
+
+to say horb-magic of (tt - a thing): say "[if tt is touchable]Brother Horbert will work his magic with that[else]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[end if]";
 
 to say whole-bev: say "The whole beverage name must be where it's at"
 
 this is the am-along rule:
 	if be ova is off-stage, the rule fails;
-	unless un-road is off-stage, the rule fails;
+	if noon gag is not off-stage, the rule fails;
 	the rule succeeds;
 
 to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"

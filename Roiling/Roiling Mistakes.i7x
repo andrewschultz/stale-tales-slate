@@ -173,30 +173,28 @@ understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you
 
 understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is in location of player.
 
-understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
-
 understand "preposition" and "prepositions" as a mistake ("Yes, but WHICH prepositions?") when player is in Same Mesa.
 
 understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
 
 understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in Same Mesa and Gast is in location of player.
+understand "satired" as a mistake ("[if gast is off-stage]You find nothing to satirize[else if gast is touchable]Bad idea to poke fun at someone that much bigger than you[else]Don't be mean. [Gast] isn't and wasn't the enemy. Move on[end if].") when player is in Same Mesa.
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if THE BEAN is in location of player], except maybe under THE BEAN. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "staider" as a mistake ("[if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when Gast is in location of player.
+understand "staider" as a mistake ("[if gast is off-stage]Nothing has gotten too riotous yet[else if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when player is in Same Mesa.
 
 understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
 understand "tardies" as a mistake ("Actually, you have all the time in the world, and you don't need to delay anyone.") when side art is touchable.
 
-understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag] later[end if].") when player is in Same Mesa and Rude 'N Nuder is not in location of player.
+understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag] later[end if].") when player is in Same Mesa and Rude 'N Nuder is off-stage.
 
 [def=under-generic]
-understand "under" as a mistake ("Wrong preposition.") when player is in Same Mesa and THE BEAN is in Same Mesa.
+understand "under" as a mistake ("You already went UNDER. You need something new. Something slightly different.") when player is in Same Mesa and THE BEAN is in Same Mesa.
 
 chapter Cleric Circle
 
@@ -204,7 +202,9 @@ chapter Cleric Circle
 
 understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in Cleric Circle.
 
-understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough") when list o toils is in location of player and pipe soot is not touchable.
+understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
+
+understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.") when list o toils is in location of player and pipe soot is not touchable.
 
 chapter Adobe Abode
 
