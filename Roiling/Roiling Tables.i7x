@@ -145,17 +145,17 @@ Clack Ops Locs Pack	caps lock	true	399038507	--	"capslock"	"capslock" or "caps l
 disk	skid	false	215229079	--	"skid"	"skid"	--	post-disk-skid rule	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the familiar disk, which you take." [there was a pre-skid-disk rule, but it was trumped by the SHATTER THREATS rule]
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
-gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."
-coal	dirty looking cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."
+gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be, because they have odd special abilities. Maybe if you examine this mug, you can see if it does."
+coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira tried to corner the market with the deceptively named All-Cocoa Cola."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
-I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."
+I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
-BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if TBA key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"
+BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Features ... use after...' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if TBA key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, taking the mug with it and revealing a plain old USB. You need a way out!"
 drive a	drive a	false	388504485	--	"avider"	"avider"	--	post-drive-flip rule	"Drive A coughs and whirrs a bit before humming a bit louder. You see the status on the side change from VARIED to AVIDER. Yay! It should work faster now."
 drive e	drive e	false	514122776	--	"derive"	"derive"	--	post-drive-flip rule	"You inspect Drive E and, with some educated guesswork, figure why it is out of whack. A few common-sense steps later, it's fixed."
 USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
@@ -944,13 +944,14 @@ this is the post-polemic-compile rule:
 	if player has rom sticks, moot rom sticks;
 
 this is the pre-bub-dude-egg rule:
-	if fizzy cola is not in mug:
-		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is touchable]. That bottle of cola won't quite be enough for the task ahead, as-is[else]. That coal won't cut it. Too early 20th century[end if].";
+	if ALocalCo Cola is not moot:
+		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is touchable]coal won't cut it. Too early 20th century[else]ALocalCo cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
 		preef BUB DUDE EGG instead;
 
 this is the post-bub-dude-egg rule:
 	now USB is in Hacks' Shack;
 	moot golden dongle;
+	moot mug;
 
 this is the post-clean-lance rule:
 	moot wipes;
@@ -1573,7 +1574,7 @@ after fliptoing when player is in Hacks' Shack:
 check fliptoing when mrlp is demo dome: say "This game tried to flip something, but it should not have. BUG." instead;
 
 check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS rule):
-	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is TBA key or noun is skid or noun is disk or noun is rom sticks:
+	if noun is leaf or noun is mug or noun is ALocalCo cola or noun is keyboard or noun is TBA key or noun is skid or noun is disk or noun is rom sticks:
 		if player is not in Hacks' Shack:
 			if noun is keyboard:
 				abide by the pre-yak-keyboard rule;
@@ -2254,10 +2255,10 @@ ought	"[no-rehash]."
 rom sticks	"Man, it would be too easy to mess the rom sticks up. Better not tinker like that."
 casserole	"The casserole is mixed up enough."
 leaf	"You can't bring the flea back to life--or do anything else to the leaf."
-dirty looking cola	"No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle."
+ALocalCo	"No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle."
 futon	"The futon could be a little less lumpy, sure, but that's beyond your magic powers."
 caps lock	"YOU HAVE WHAT YOU NEED."
-mug	"[if fizzy cola is touchable]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
+mug	"[if ALocalCo cola is moot]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
 TBA key	"No, the TAB key is what it should be."
@@ -2537,7 +2538,7 @@ casserole	"[if yak is in Hacks' Shack or yak is moot]You can't use the casserole
 trim socks	"[one of]The socks aren't critical to solving the game, but they do give a LLP--Last Lousy Point.[plus][or]The socks don't seem very technical, but they look like circuit chips or something.[plus][or]Maybe they'd make you go faster or something.[plus][or]Maybe they are, instead, ROM STICKS.[minus][cycling]"
 rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
-mug	"[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not moot]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
+mug	"[if ALocalCo Cola is moot]You will be able to drink from the mug when the time is right.[else][mug-detail][end if]"
 skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks' Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 oper rope	"The oper rope isn't useful on its own, but it lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
@@ -2545,8 +2546,7 @@ keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of 
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 TBA key	"[if TBA key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
 signature	--	I'm Le Cop polemic
-dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
-fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."
+ALocalCo cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
 I'm Le Cop polemic	"[if signature is reflexed]Useless now.[else][one of]The signature and the I'm Le Cop polemic are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the I'm Le Cop polemic"
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
 drab yoke	"[if yak is not moot]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
@@ -2881,6 +2881,9 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+
+to say mug-detail:
+	say "[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not moot]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
 
 to say if-rand-gone:
 	say "[if rand is in Dirge Ridge]now[else]once[end if] Leo and Rand are gone"

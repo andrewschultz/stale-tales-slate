@@ -456,7 +456,14 @@ to decide whether skid-disk-touch:
 	if skid is touchable or disk is touchable, yes;
 	no;
 
-understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or player has fizzy cola or player has bottle of cola.
+to decide whether cola-around:
+	if ALocalCo cola is touchable, yes;
+	if mug is touchable and ALocalCo cola is moot, yes;
+	no;
+
+understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or cola-around.
+
+understand "loca" as a mistake ("What you [if ALocalCo Cola is touchable]have helps[else]want needs to help[end if] programming more than water or French champagne or dancing in the rain.") when coal is in location of player or cola-around.
 
 understand "bat" as a mistake ("You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.") when tba key is touchable.
 
@@ -470,7 +477,7 @@ understand "idks" as a mistake ("You'll need to figure stuff out with the [if di
 
 understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is touchable]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid-disk-touch.
 
-understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has dirty looking cola.
+understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has ALocalCo cola.
 
 understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you strictly need to[end if].") when player is in Hacks' Shack.
 
@@ -478,7 +485,7 @@ understand "repo" as a mistake ("Nobody else seems to own the oper rope or the s
 
 understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is touchable.
 
-understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has dirty looking cola.
+understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has ALocalCo cola.
 
 book oyster
 

@@ -443,6 +443,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "number"	469637285	popgun	--	"[is-boing]."
 "popgun"	443897512	popgun	--	"[boing-clue]."
 "spoilt"	454009205	popgun	--	"[boing-clue]."
+"lcao"	149359819	--	cola-in-mug rule	"The mug is already somehow generating infinite cola. Don't want to mess with that."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -594,9 +595,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "button"	473004833	--	--	"[shackbut]."
 "buttons"	569278799	--	--	"[shackbut]."
 "escarole"	586569806	escaroles	--	"All the escaroles."
-"caffeine"	443735767	dirty looking cola	--	"[caffeine-no]."
-"fine"	268221359	dirty looking cola	--	"[caffeine-no]."
-"cafe"	175514408	dirty looking cola	--	"[caffeine-no]."
+"local"	203173658	ALocalCo cola	--	"The cola has already been reprocessed enough. You'll drink it when the time comes."
 "rope"	368948448	skid	--	"You don't need to do anything tricky with the skid's rope."
 "soda"	193843450	--	my-cola rule	"[cola-is-cola]."
 "pop"	237284495	--	my-cola rule	"[cola-is-cola]."
@@ -1826,6 +1825,10 @@ this is the Rand-sad rule:
 
 to say boing-clue: say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing-go bin inside[else]The popgun is just fine[end if]"
 
+this is the cola-in-mug rule:
+	if mug is touchable and ALocalCo Cola is moot, the rule succeeds;
+	the rule fails;
+
 this is the path-pass rule:
 	if player is in Phat Path or player is in Saps' Pass, the rule succeeds;
 	the rule fails;
@@ -1863,7 +1866,7 @@ to say shackbut: say "There are buttons all over the shack, but they should rema
 to say caffeine-no: say "The name brand is not important. Besides, your body will break down the caffeine on its own, when needed"
 
 this is the my-cola rule:
-	if fizzy cola is touchable or dirty cola is touchable, the rule succeeds;
+	if cola-around, the rule succeeds;
 	the rule fails;
 
 to say cola-is-cola: say "It's cola, not soda or pop. And you can just drink it"

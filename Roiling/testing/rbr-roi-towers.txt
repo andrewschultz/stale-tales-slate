@@ -482,7 +482,7 @@ The best--well, the only--way to change the top opt pot is to put something in i
 You need to take care of all the adders.
 #nudge for renato
 >renaot
-You don't have time to think about, or change, Renato. You got his present to his friend.
+You don't have time to think about, or change, Renato. You haven't yet found anyone who might want the top opt pot, anyway.
 #nudge for curst
 >curts
 It's not just that it's curst, it's a PALACE, too.
@@ -507,9 +507,6 @@ You need to be specific about which pastry--or you would, if any could be change
 #nudge for lake
 >laek
 You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
-#renudge for lake
->laek
-You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
 #nudge for toaster
 >toastre
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
@@ -527,7 +524,7 @@ The Wildest Wilteds can't be changed on their own. They must be trekked through.
 The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
 #nudge for south
 >souht
-This game almost never requires you to mess with cardinal directions.
+The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway.
 
 @sli
 #slider test for sadder
@@ -540,13 +537,36 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The adders look downcast for a minute before resuming a threatening pose.
 #scannotes for dreads adders
 >scan dreads adders
+Your settler registers RY?RYR--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
 #scannotes for curst palace
->scan curst palace
-Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace.
 #mistake test for dopiest
 >dopiest
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
+
+@nud
+#testing skip-aheads for scaning palace
+>scan palace
+#palace 4 lights
+You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
+Your settler registers RRYR*******.
+Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace.
+>scan palace
+!You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
+You don't see any new information about the curst palace this time.
+Your settler registers RRYR*******.
+##balance undo
+>gonear anemic cinema
+>scan palace
+Ooh! A few more lights, now.
+>undo
+>undo
+>gonear saltbed
+>scan palace
+Ooh! A couple more lights, now.
+>undo
+>undo
+
 
 >sadder
 Your score has just gone up by one point
@@ -571,6 +591,22 @@ You sense that the dreads adders were one of the easier things to deal with, her
 Scope Copse
 
 @nud
+#rescannotes for curst palace
+>scan palace
+#palace 5 lights
+Ooh! Another light, now.
+Your settler registers RRYR?******.
+Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler.
+>t
+>scan palace
+Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace
+!Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler.
+>t
+>s
+>scan palace
+You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
+>undo
+>undo
 #mistake test for copes
 >copes
 You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.
@@ -670,6 +706,12 @@ Hmm. You bet you could get past if the snider diners were RINSED.
 !DEBUG INFO: Taking away a max point.
 
 @nud
+#rescannotes for curst palace
+>scan palace
+#palace 5 lights
+You don't see any new information about the curst palace this time.
+Your settler registers RRYR?******.
+Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
 #renudge for copse
 >cepos
 The copse and the scope are both fine as-is.
@@ -698,7 +740,6 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
-
 
 @minh
 >clumsy
@@ -995,6 +1036,11 @@ Hm, it's certainly docile old ice, so the confusing letter may not be so confusi
 #mistake test for fluters
 >fluters
 This game has no soundtrack, and if I made one, it wouldn't be very good.
+#rescannotes for curst palace
+>scan palace
+#palace 6 lights
+Ooh! Another light, now.
+Your settler registers RRYR?Y*****.
 
 @!minh,mini
 >coiled
@@ -1044,6 +1090,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#rescannotes for curst palace
+>scan palace
+#palace 7 lights
+Ooh! Another light, now.
+Your settler registers RRYR?YR****.
+#rescannotes for curst palace
+>t
+>scan palace
+Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
+>scan palace
+!Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
+>t
 #mistake test for ice man/iceman
 >ice man
 The iceman cometh, and your life passeth.
@@ -1299,6 +1357,10 @@ The wait-seer shrugs patiently, unfazed you did not understand their full being.
 #nudge for seer
 >sere
 The wait-seer shrugs patiently, unfazed you did not understand their full being. This is most certainly for you to fix.
+#palace 8 lights
+>scan palace
+Your settler registers RRYR?YRY***.
+Ooh! Another light, now.
 
 @!minh,mini
 >hastiest
@@ -1315,6 +1377,12 @@ Your score has just gone up by one point
 >s
 
 @nud
+#rescannotes for curst palace
+#palace 7 lights
+>scan palace
+!Ooh! Another light, now.
+You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
+Your settler registers RRYR?YR****.
 #nudge for reeds
 >reesd
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
@@ -1338,19 +1406,19 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
 #nudge for lars
 >lasr
-No, Lars's full name. With Reed's Ale.
+No, Lars's full name. Lars Eede. With Reed's Ale.
 #nudge for eede
 >eeed
-No, Lars's full name. With Reed's Ale.
+No, Lars's full name. Lars Eede. With Reed's Ale.
 >gs
 >reedsael
 Elsa Erde listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
 #nudge for elsa
 >elas
-No, Elsa's full name. With Reed's Ale.
+No, Elsa's full name. Elsa Erde. With Reed's Ale.
 #nudge for erde
 >ered
-No, Elsa's full name. With Reed's Ale.
+No, Elsa's full name. Elsa Erde. With Reed's Ale.
 >gs
 \\
 #spechelp for mel fish
@@ -1394,6 +1462,16 @@ Your score has just gone up by one point
 >ihsmlfe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+>sewed
+by one point
+#renudge for gradient
+>gradietn
+You can't change the treading gradient, but maybe you can get
+out of the way.
+>undo
+>undo
+
 @!minh,mini
 >himself
 Your score has just gone up by one point
@@ -1413,17 +1491,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #nudge for gradient
 >gradietn
-This is a weird place, being at the crossroads, but better to get rid of the weeds.
-WRONG there are more
+While you can't change the Treading Gradient, perhaps you can deal with the weeds.
 #nudge for weed
 >wede
 Gumming up one weed wouldn't get the others.
 #spechelp for weeds
 >weesd
 The weeds almost seem to shrug.
-#rescannotes for curst palace
->scan curst palace
-Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way.
 #mistake test for swede
 >swede
 That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
@@ -1442,9 +1516,6 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#renudge for gradient
->gradietn
-This is a weird place, being at the crossroads, but better to tackle a guardian.
 #nudge for save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks ultimately matter.
@@ -1486,6 +1557,9 @@ You look at the denim and it's probably the denim you want to deal with, not its
 #mistake test for i mend
 >i mend
 You're more interested in doing the opposite--seeing what's behind.
+#renudge for gradient
+>gradietn
+The gradient itself can't be changed, but you can change the last thing that's here: the denim
 
 @!minh,mini
 >mined
@@ -1493,6 +1567,12 @@ You're more interested in doing the opposite--seeing what's behind.
 }}CURMIN++
 >score
 {$SCOS}
+
+@nud
+#renudge for gradient
+>gradietn
+You already tweaked so much here in the Treading Gradient. You don't need to change the place itself
+
 >e
 
 @nud
@@ -1514,7 +1594,7 @@ His full name, Liam Garn.
 ###skip test checking
 #renudge for gradient
 >gradinet
-This is a weird place, being at the crossroads, but better to mess around elsewhere
+You already tweaked so much here in the Treading Gradient. You don't need to change the place itself.
 >undo
 >undo
 #spechelp for alarming grailman
@@ -1525,19 +1605,23 @@ The grailman seems almost average for a moment.
 The one letter blinks between green and yellow.
 
 @nud
-#spechelp for lois the hostile
->lois the hostiel
-Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
-#scannotes for lois the hostile
->scan lois the hostile
-Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
->gs
+#readables for thearchy hatchery
+>read thearchy hatchery
+THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
+!Nice, but you don't need clues any more.
 #spechelp for hostile-is-he lot
->hostile-is-he lto
+>esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 #scannotes for hostile-is-he lot
 >scan hostile-is-he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
+>gs
+#spechelp for lois the hostile
+>loisthe
+Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
+#scannotes for lois the hostile
+>scan lois the hostile
+Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
 >gs
 
 @sli
@@ -1570,17 +1654,6 @@ The arid den seems less imposing and impressive.
 >scan dandier arid den
 Well. That's two things you can't figure to start, but maybe you can, if you think about it.
 #nudge for leveraged
->leveragde
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#nudge for leverage
->leveraeg
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-#nudge for screech
->screehc
-You can't change the screech creches. Well, not until you defeat Elvira.
-#nudge for creech
->creehc
-You can't change the screech creches. Well, not until you defeat Elvira.
 
 @sli
 #slider test for drained
@@ -1601,13 +1674,13 @@ Your score has just gone up by one point
 >natiev
 You'll need to deal with more than one native to make your way south.
 #scannotes for natives' site van
->scan natives site van
+>scan site van
 You get the feeling the natives can be swayed more than one way, here.
 
 @nud
 #spechelp for natives' site van
 >nativse
-The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
+The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 
 @sli
 #slider test for naivest
@@ -1632,6 +1705,17 @@ Your score has just gone up by one point
 >w
 
 @nud
+>leveragde
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for leverage
+>leveraeg
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#nudge for screech
+>screehc
+You can't change the screech creches. Well, not until you defeat Elvira.
+#nudge for creech
+>creehc
+You can't change the screech creches. Well, not until you defeat Elvira.
 #nudge for ego
 >eog
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
@@ -1777,6 +1861,27 @@ The geese are fine as they are. They're just there for scenery, and stuff.
 >gandre
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for locked
+
+>e
+
+Obscurest Subsector
+
+@nud
+#mistake test for goal
+>goal
+You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
+#mistake test for dowry
+>dowry
+Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
+#mistake test for delock
+>delock
+No, this is the wrong area for pure action.
+#mistake test for olga
+>olga
+Even if the goal could become a person, they'd be kind of wooden.
+#nudge for obscurest
+>obscurets
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 >lockde
 Nothing needs to be locked here, certainly not the gaol which already is.
 #nudge for gol
@@ -1803,27 +1908,6 @@ He's a doctor! Have some respect when you try to scramble him up.
 #nudge for doctor
 >doctro
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
-
->e
-
-Obscurest Subsector
-
-@nud
-#mistake test for goal
->goal
-You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
-#mistake test for dowry
->dowry
-Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
-#mistake test for delock
->delock
-No, this is the wrong area for pure action.
-#mistake test for olga
->olga
-Even if the goal could become a person, they'd be kind of wooden.
-#nudge for obscurest
->obscurets
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
 @max
 #pre-fussier rule
@@ -1852,27 +1936,31 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#mistake retest for delock
->delock
-Unlocked worked better, here.
 #nudge for wordy
 >woryd
-Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell
+Dr. Yow seems to ponder something for a second but then shakes his head--he can't break out of his shell
 #scannotes for dr yow
 >scan dr yow
 The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions.
 
 @nud
-#rescannotes for dr yow
->scan dr yow
-Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
-
-@nud
+##balance undo
 >rowdy
-###skip test checking
+by one point
 #rescannotes for dr yow
 >scan dr yow
 Hm, maybe Dr. Yow has more emotion than what you already brought out of him.
+>wordy
+by one point
+#rescannotes for dr yow
+>scan dr yow
+Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again.
+#renudge for wordy
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions.
+>undo
+>undo
+>undo
 >undo
 >undo
 
@@ -1922,6 +2010,13 @@ Now this is odd. The ropins have six letters, but they register eight. Maybe if 
 #mistake test for locked
 >locked
 No, the opposite...
+#mistake retest for dowry
+>dowry
+Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
+>gs
+>dowry
+Dr. Yow is an intellectual. She needs a breakout, not material things or romance.
+>gs
 
 @max
 >fussier
@@ -1937,16 +2032,12 @@ by one point
 {$SCOS}
 
 @nud
+#mistake retest for delock
+>delock
+Unlocked worked better, here.
 #mistake retest for locked
 >locked
 You don't need to fiddle with the lock now.
-#mistake retest for dowry
->dowry
-Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
->gs
->dowry
-Dr. Yow is an intellectual. She needs a breakout, not material things or romance.
->gs
 #mistake retest for goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
@@ -2003,12 +2094,6 @@ The machine is complicated enough. You probably just need to figure what to put 
 #nudge for shiny
 >shiyn
 The machine is complicated enough. You probably just need to figure what to put in it.
-#nudge for gizmo
->gizom
-It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
-#nudge for zomg
->zogm
-It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 
 >put dagger in repair
 #notana
@@ -2019,6 +2104,12 @@ by one point
 {$SCOS}
 
 @nud
+#nudge for gizmo
+>gizom
+It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
+#nudge for zomg
+>zogm
+It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 #mistake retest for pairer
 >pairer
 You don't need to repurpose the repair machine. It's done enough for you.
@@ -2053,8 +2144,11 @@ Scot looks at you curiously. You probably don't need to change his name or intel
 #nudge for agin
 >agni
 Scot looks at you curiously. You probably don't need to change his name or intelligence.
+>l
+###skip test checking, delete
 >gs
->renudge for coasting
+#renudge for coasting
+>coatgins
 Staci Ong looks at you curiously. You probably don't need to change her name or intelligence.
 #nudge for staci
 >staic
@@ -2062,18 +2156,13 @@ Staci looks at you curiously. You probably don't need to change her name or inte
 #nudge for ong
 >ogn
 Staci looks at you curiously. You probably don't need to change her name or intelligence.
+>l
+###skip test checking, delete
 >gs
+>l
+###skip test checking, delete
 
 @nud
-#nudge for solve
->solev
-The pastry is for eating, not for changing.
-#nudge for loaves
->loavse
-The pastry is for eating, not for changing.
-#nudge for loaf
->lofa
-Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 >s
 #nudge for strati
 >strait
@@ -2101,22 +2190,34 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 #nudge for delta
 >delat
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+#renudge for lake
+>laek
+You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
+#scannotes for curst palace
+#palace 8 lights
+>scan palace
+Your settler registers RRYR?YRY***.
+You don't see any new information about the curst palace this time.
+!In fact, you have less information than when you were closer.
 >e
 
 @nud
+#scahnotes for curst palace
+#palace 9 lights
+>scan palace
+Your settler registers RRYR?YRYR**.
 #mistake test for coatings
 >coatings
 No, Scot Agin doesn't need to change like THAT.
 #readables for dinger
 >read dinger
 You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red.
-#readables for thearchy hatchery
+#rereadables for thearchy hatchery
 >read thearchy hatchery
-THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
-WRONG: What about hostile?
+THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don't need clues any more.
 #spechelp for dinger
 >grainde
-Scot Agin blinks and ruffles Reading: a Dinger and yawns before flipping a page, slightly less interested than before.
+Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
 #scannotes for reading a dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
@@ -2138,14 +2239,21 @@ Your score has just gone up by one point
 !Your score has just gone up by one point
 
 @nud
+#nudge for solve
+>solev
+The pastry is for eating, not for changing.
+#nudge for loaves
+>loavse
+The pastry is for eating, not for changing.
+#nudge for loaf
+>lofa
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 #spechelp for raves saver
 >pearyl
-The 'replay player' letters brighten for a second.
->peraly
+The "replay player" letters brighten for a second.
 #renudge for save
-The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 >saev
-The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
+The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
 
 @sli
 #slider test for attentive
@@ -2154,11 +2262,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #spechelp for atblock
->agnostci
+>attentiev
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 >gs
 #respechelp for atblock
->agnostci
+>attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
 >gs
 #scannotes for raves saver
@@ -2180,6 +2288,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#renudge for save
+>Saev
+The saver is hopelessly no-frills. It'll never be anything better. But you made it look a bit nicer. Not that looks ultimately matter.
 #done rejects for raves saver
 >pearyl
 The raves saver is as glitzed-up as it'll get.
@@ -2200,14 +2311,6 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
-
-@nud
-#rescannotes for dr yow
->scan dr yow
-Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again.
-#renudge for wordy
->woryd
-Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions.
 
 >gt coastlines
 >give gizmo to agnostic
@@ -2230,6 +2333,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >gonear rawest waters
+#scannotes for curst palace
+#palace 10 lights
+>scan palace
+Your settler registers RRYR?YRYRY*.
+>undo
 #nudge for waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
@@ -2290,7 +2398,6 @@ Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 #nudge for boatbot
 >boatbto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
-WRONG check out fixing other boat parts
 #nudge for wire
 >wier
 The wires are okay. They're just organized WEIRDER.
@@ -2304,11 +2411,16 @@ You need to deal with both turbos.
 ALBERT'S.
 
 @nud
+#balance undo
 >robust
 by one point
 #done rejects for turbos
 >turbso
 The turbos are working. Best not tinker.
+#renudge for bot
+>bto
+You fixed the turbos, so maybe you can tackle the blaster.
+>undo
 >undo
 >undo
 >stabler
@@ -2316,6 +2428,10 @@ by one point
 #done rejects for blaster
 >blastre
 The blaster is working. Best not tinker.
+#renudge for bot
+>bto
+You fixed the blaster, so maybe you can tackle the turbos.
+>undo
 >undo
 >undo
 >gonear rawest
@@ -2383,13 +2499,16 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You already dealt with both turbos.
 #spechelp for weirder red wire
 >rewirde
-You think you see how to untangle some of the mes inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
+You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
 #scannotes for weirder red wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
 #mistake test for were rid
 >were rid
 No, you can't just yank the red wire out.
+#renudge for bot
+>bto
+You fixed what you can of the boat.
 
 @!minh,mini
 >rewired
@@ -2489,7 +2608,7 @@ You need to make something occur.
 You already found a succor crocus. There's not much else there, it seems.
 #nudge for occurs
 >occusr
-The succor crocus just is, and it doesn't need a new way to be. Perhaps it would make a nice gift.
+Changing the blub bulb to a succor crocus was good enough. Why risk more?
 #nudge for present
 >presetn
 The serpent is taken care of.
@@ -2500,10 +2619,10 @@ The serpent is taken care of.
 @nud
 #nudge for mesprise
 >mespries
-It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
+It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
 #nudge for emprise
 >empries
-It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
+It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
 #spechelp for tetris sitter
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
@@ -2536,6 +2655,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#nudge for teri
+>teir
+St. Teri is fine as-is. If she needs more changing, it will come from life experience.
 #done rejects for tetris sitter
 >settir
 St. Teri's back in the real world, now.
@@ -2548,73 +2670,87 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@nud
+>ask teri about palace
+It can be something super special.
+
+@!minh,mini
 >out
+
+@nud
+You notice something you wouldn't have seen without St. Teri's help.
+>palclu
+Moving all palace clue items to Mislit Limits:
 
 >misses
 
 @nud
 #nudge for accurst
 >accurts
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for leap
 >lepa
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for clear
 >clera
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for catsup
 >catspu
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for pest
 >pets
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for accrual
 >accrula
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for cactus
 >cactsu
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for pealr
 >pearl
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for capsule
 >capsuel
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for cart
 >catr
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for accu
 >acuc
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for plaster
 >plastre
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for last
 >lats
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for race
 >raec
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for cup
 >cpu
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for talc
 >tacl
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for aps
 >asp
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 #nudge for cure
 >cuer
-Nah, that's just garbage. It's the curst palace you need to focus on.
+That might help you figure what to do with the curst palace, but it can't be important by itself.
 >curst palaec
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 #rescannotes for curst palace
->scan curst palace
-The final letter clue blinks alternately with the fifth--neither is purple at the same time
->scan curst palace
-The final letter clue blinks alternately with the fifth--neither is purple at the same time
-Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
+>scan palace
+#palace 11 lights
+The entire settler lights up, finally!
+Your settler registers RRYR?YRYRY?.
+The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process
+!Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
+>scan palace
+!The entire settler lights up, finally!
 
 >spectacular
 

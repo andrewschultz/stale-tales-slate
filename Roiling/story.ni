@@ -4864,11 +4864,11 @@ this is the presto-hinting rule:
 	if coal is touchable, try objhinting coal instead;
 	if flea is touchable, try objhinting flea instead;
 	if gum is touchable, try objhinting gum instead;
-	if bottle of dirty looking cola is touchable:
+	if ALocalCo cola is touchable:
 		if spoilit is true:
-			all-say "No, you'd rather pour the cola in the mug. It's slightly less nasty than the crust.";
+			all-say "No, you'd rather pour the cola into [if mug is touchable]the mug[else]some simple drinking container[end if]. It's slightly less nasty than the crust.";
 			now spoilit is false instead;
-		try objhinting bottle of dirty looking cola instead;
+		try objhinting ALocalCo cola instead;
 	if fount is touchable, try objhinting fount instead;
 	if Clack Ops Locs Pack is touchable, try objhinting Clack Ops Locs Pack instead;
 	if disk is touchable and skid is off-stage, try objhinting disk instead;
@@ -4894,7 +4894,7 @@ this is the presto-hinting rule:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
 		if I'm Le Cop polemic is reflexive, try objhinting I'm Le Cop polemic instead;
-		if fizzy cola is not in mug, try objhinting mug instead;
+		if ALocalCo cola is not moot, try objhinting mug instead;
 		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
 		if usb is touchable, try objhinting usb instead;
 	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
@@ -6034,10 +6034,10 @@ check drinking:
 	if noun is lager, say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way." instead; [troves]
 	if noun is trance nectar, say "No. That can't be it. You want a way to exit, to say this is not me." instead;
 	if noun is fount, say "It's dry, and besides, you need to drink literally of knowledge, not figuratively.[paragraph break]Besides, water doesn't have enough energy for the task ahead." instead; [presto]
-	if noun is dirty looking cola, say "[if mug contains dirty looking cola]You can sip it as you do your programming[else]You don't want to guzzle it before you need to. In fact, you wish there would be a way to make more of it, because there really isn't much left. It'd be outstanding to have giant donuts, but you have what you have[end if]." instead;
+	if noun is ALocalCo cola, say "Not from the bottle! Also, you don't want to guzzle it before you need to. In fact, you wish there would be a way to make more of it, because there really isn't much left. It'd be outstanding to have giant donuts, but you have what you have." instead;
 	if noun is mug:
-		if mug contains fizzy cola, try drinking fizzy cola instead;
-		say "The mug's empty." instead;
+		unless ALocalCo cola is moot, say "The mug's empty." instead;
+		say "You can sip it as you do your programming." instead;
 	if noun is tea, say "It's food-tea, not drink-tea." instead; [oyster]
 	if noun is atmo-moat, say "You hear a cholera chorale warning you in the distance, so, you think 'Oh. clear.'" instead; [otters]
 	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive and presto is unsolved]it's done incidentally when you figure another puzzle[else]you already got past there[end if]." instead;
@@ -6102,7 +6102,7 @@ check eating (this is the general eating rule):
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 	if noun is gum, say "Seriously. It's tough to program and chew gum at the same time.[paragraph break]No, I didn't mean it that way! I meant, the noise from your gum chewing would be distracting, with all that deep thinking you would have to do." instead;
 	if noun is leaf, say "You are the wrong sort of animal for that." instead;
-	if noun is cola, try drinking noun instead;
+	if noun is ALocalCo cola or noun is peanut cola or noun is mug, try drinking noun instead;
 	if noun is Li'L P's pills, say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead; [oyster]
 	if noun is clam, say "Biting its shell would make you shout hells." instead;
 	if noun is a hintpastry and noun is not heated, say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead; [towers]
@@ -12451,7 +12451,7 @@ for writing a paragraph about a thing (called gbg) in Hacks' Shack:
 
 shack-mess is a list of thing variable. shack-mess is { disk, coal, socks, gum, I'm Le Cop polemic, flea, escaroles, casserole }.
 
-chapter coal and cola
+chapter coal and ALocalCo cola
 
 the pile of coal is a thing in Hacks' Shack. description is "Black and disgusting as rotted teeth. Good for energy, apparently.". "Coal lies here in a corner."
 
@@ -12459,26 +12459,24 @@ check taking coal: say "You don't need an armful of THAT." instead;
 
 a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "c[sp]o[sp]l[sp]a". coal is cheat-spoilable.
 
-the fizzy cola is a singular-named boring thing. description of the fizzy cola is "The mug it's in seems to make it is more than usual, too. Cool.". the indefinite article of fizzy cola is "some". bore-text is "Now that the fizzy cola's in the mug, you will ration it as you need to."
-
-the bottle of dirty looking cola is a thing. description is "It's Café Fine Caffeine cola, and it's almost empty. In place of nutritional information, you read the following:[paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P."
+the ALocalCo cola is a singular-named proper-named boring thing. description of ALocalCo cola is "In place of nutritional information on this bottle, you read: [paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P."
 
 [?? inserting into could be an action, here]
 
-Does the player mean drinking dirty looking cola: it is very likely
+Does the player mean drinking ALocalCo: it is very likely.
+does the player mean drinking the mug: it is very likely.
 
-understand "can" as dirty looking cola.
+understand "bottle" as ALocalCo cola.
 
-before inserting dirty looking cola into mug:
-	say "You drain the cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.";
-	moot dirty looking cola;
-	now fizzy cola is in mug instead;
+before inserting ALocalCo cola into mug:
+	say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.";
+	moot ALocalCo cola;
+	the rule succeeds;
 
 check inserting into mug: say "Only liquids would belong there." instead;
 
 check inserting into (this is the cola/mug/censer rule) :
-	if noun is fizzy cola, say "Bad idea to pour the fizzy cola out of the mug." instead;
-	if noun is dirty looking cola:
+	if noun is ALocalCo cola:
 		if second noun is on slab, say "Programmer rage! Love it!" instead;
 		if noun is censer, say "The censer wasn't made for that." instead;
 		if second noun is not mug, say "You need to pour into something that can contain a liquid." instead;
@@ -12681,10 +12679,10 @@ the gum is a singular-named thing in Hacks' Shack. description of gum is "It's w
 
 a-text of gum is "RYR". b-text of gum is "RGR". parse-text of gum is "x[sp]u[sp]x". gum is any-spoilable.
 
-the mug is a container.
+the mug is a container. understand "cola" as mug when player is in hacks' shack and ALocalCo Cola is moot.
 
 after printing the name of the mug while taking inventory:
-	say " ([if fizzy cola is in mug]full of fizzy cola[else]empty[end if])";
+	say " ([if ALocalCo cola is moot]full of ALocalCo cola[else]empty[end if])";
 	omit contents in listing; [trix]
 	continue the action;
 
@@ -12927,8 +12925,7 @@ Understand the command "put [other things] in/inside/into [something]" as someth
 Understand "put [other things] in/inside/into [something]" as pouring it into.
 
 check pouring it into:
-	if noun is fizzy cola, say "It's already in the mug." instead;
-	if noun is dirty looking cola, try inserting noun into second noun instead;
+	if noun is ALocalCo cola, try inserting noun into second noun instead;
 	say "That won't work. You need to pour a liquid (a small amount) into something." instead;
 
 chapter rebooting
@@ -16841,7 +16838,7 @@ definition: a thing is followy:
 
 book Mesprise/Emprise Premise(s)
 
-Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
+Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
 
 the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
@@ -16863,7 +16860,7 @@ Ornate Atoner Renato is an undesc.
 check giving to Tetris Sitter:
 	if second noun is crocus, try giving top opt pot to Tetris Sitter instead;
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
-		say "She mumbles '[']S trite,' [if noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
+		say "She mumbles '[']S trite,' [unless noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is top opt pot, say "St. Teri thanks you, but [if top opt pot is moot]the top opt pot was probably enough[else]that's not quite what she wants[end if]." instead;
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
@@ -21564,7 +21561,6 @@ routes	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
 routes	"Feeling BANE around the bean?"
 troves	"Anagramming the astute STATUE?"
 presto	"Calling the cola POP or SODA?"
-presto	"Anagramming caffeine with the cola? Or the bad book in the shack, or the crust?"
 presto	"Cursing, or anagramming cursing, anywhere in Presto?"
 oyster	"Anagramming PLAINS in the plains?"
 others	"Trying to get a mango twice in the Clearing?"
