@@ -105,7 +105,7 @@ LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal ru
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pernod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
+END PRONER POD	END PRONER POD	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	post-redvees-deserve rule	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
 Sister Tressi Siters	Sister Tressi Siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
@@ -651,13 +651,12 @@ this is the post-deal rule:
 
 this is the post-strive-or-aspire rule:
 	if cone-points is 2:
-		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
-		set the pronoun it to pernod;
+		say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the END PRONER POD. You haven't fully balanced fear of winding up there with focusing on your goals.";
+		set the pronoun it to END PRONER POD;
 	else:
-		if pernod is off-stage:
-			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
-			now pernod is in Econ Cone;
-			set the pronoun it to pernod;
+		say "Your concentration is broken by a scuffle! When you turn around, you notice the person who originally gave you the Peg A. Page book. They have been escorted out by security. And not just escorted. Pushed into a structure you did not notice before. It is an END PRONER POD. You hear the end of the argument: apparently, they made their ambition too obvious.[paragraph break]You shudder to think what will happen to them. And yet ... this could be an opportunity for you. You almost believe you deserve to move further up in the world, but you need to think just a bit more, and perhaps you need to do more than just want, want, want ... or you need to seem to, at least.";
+		now END PRONER POD is in Econ Cone;
+		set the pronoun it to END PRONER POD;
 		if praise spirea is reflexive, now praise spirea is llpish;
 		if rivets are reflexive, now rivets are llpish;
 
@@ -665,7 +664,7 @@ this is the post-rivets-strive rule:
 	process the post-strive-or-aspire rule;
 	now Trevis Vister is reflexed; [?? this should be something else]
 
-this is the post-pernod-ponder rule:
+this is the post-pod-ponder rule:
 	if cone-points < 2, poss-d;
 
 this is the post-redvees-deserve rule:
@@ -1893,7 +1892,7 @@ evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith y
 l'clear cellar	"It's...hmm...you remember all the clues, but what order to place them in, now."
 diapers	"Staring again at the diapers, you are depressed you couldn't even get being depressed right."
 rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
-Pernod	"The bottle of Pernod seems to rattle and spin slightly."
+END PRONER POD	"The END PRONER POD seems to pulse slightly."
 large regal lager	"No...that is not quite the way to fight the temptation of the wicked brew."
 Si Reed	"Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!"
 praise spirea	"That's not quite the way to look forward to praise. But it may be a start."
@@ -2484,10 +2483,9 @@ rivets	--	Trevis Vister
 Trevis Vister	"[one of]Trevis Vister (and the rivets) can help you want to be your best. Or well, worth your most.[plus][or]Scanning Trevis Vister in cheeat mode doesn't turn up any question marks.[plus][or]The rivets give a critical abstract clue that Trevis doesn't, since they are red. They help with the vowels.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE" [?? hint before and after]
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 cark rack	"Just part of the scenery."
-godlings' lodgings	"[if pernod is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the godlings' lodgings.[end if]"
-Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it advertises itself that way. That is what the Pernod claims to do.[plus][or]In this case, you have two more clues, which is what is on the front of the note tied to the Pernod and the back. 'Derp on, Epdorn.'[plus][or]'Dr. Peno and Ned Orp.'[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
-card	"The card gives a clue, along with the Pernod, of how to get into the godlings' lodgings."
-label	"If you peel the label (by taking it,) you will get another clue what to do to get in the godlings' lodgings."
+godlings' lodgings	"[if END PRONER POD is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The END PRONER POD holds a clue how to get into the godlings' lodgings.[end if]"
+END PRONER POD	"[one of]You don't want to wind up in the END PRONER POD, but part of you still worries about the risk of failure. Or it advertises itself that way.[plus][or]You need a way to reflect, to balance your desiring.[plus][or]You can READ the END PRONER POD for clues if you want. They will logically eliminate all possibilities.[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
+r cad card	"The r-cad card gives a clue, along with the END PRONER POD, of how to get into the godlings' lodgings."
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"

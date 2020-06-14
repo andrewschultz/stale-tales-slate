@@ -310,7 +310,9 @@ chapter Econ Cone
 
 understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if cone-points is 0]But you're nowhere near enthused enough[else if cone-points is 1]You're enthused enough, but you need to strategize[else]You're more than enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
-understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and Pernod is in Econ Cone.
+understand "penrod" as a mistake ("Juvenile children's literature? At a time like this, when you are so close to making it? Certainly not!") when player is in Econ Cone and END PRONER POD is in Econ Cone.
+
+understand "pernod" as a mistake ("There will be time for ritzy, overpriced alcohol AFTER you have made it to the top.") when player is in Econ Cone and END PRONER POD is in Econ Cone.
 
 chapter Upscale Capsule
 

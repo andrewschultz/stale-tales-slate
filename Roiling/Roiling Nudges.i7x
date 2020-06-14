@@ -398,10 +398,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "godling"	328295263	--	--	"[scrapery]!"
 "godlings"	424569229	--	--	"[scrapery]!"
 "statue"	537593736	Trevis Vister	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if rivets are reflexed]You did what you could, anyway[else]Maybe there's a lesson from Trevis Vister himself in here[end if]."
-"bottle"	480611466	pernod	--	"It's not just any bottle, but a bottle of [if label is moot]N-E-Prod[else]Pernod[end if]."
+"edn"	217742706	--	--	"[full-pod]."
+"proner"	523179759	--	--	"[full-pod]."
+"pod"	176847625	--	--	"[full-pod]."
 "card"	127546295	r cad card	--	"The card's writing is more important."
 "cad"	42222492	r cad card	--	"The card's writing is more important."
-"label"	256040510	label	--	"It's not the label but what's on it."
 
 table of Upscale Capsule nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1751,6 +1752,8 @@ to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down ye
 to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
 
 to say scrapery: say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
+
+to say full-pod: say "You must deal with the full END PRONER POD"
 
 to say pha-light: say "You need all that light for late-night work sessions"
 

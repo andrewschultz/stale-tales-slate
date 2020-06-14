@@ -2463,6 +2463,7 @@ red vees	"Etched into the vees are the names of this motivational device's inven
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
 Blamer Mr Beal	"The likeness was drawn up by E. R. Lamb, whose signature is in red."
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
+END PRONER POD	"It is, apparently, produced by N-E-PROD corporation."
 r cad card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
@@ -4358,7 +4359,7 @@ check scaning location of the player (this is the location scan rule):
 			try scaning Race Acre instead;
 		try scaning Eh At Heat instead;
 	if location of player is Econ Cone:
-		if pernod is touchable, try scaning pernod instead;
+		if END PRONER POD is touchable, try scaning END PRONER POD instead;
 		if cone-points is 0:
 			if rivets-first is true:
 				say "The rivets have a weird magnetic pull to them. As if there's brain waves in there pulling you towards it so it can tell you what to do.";
@@ -5017,7 +5018,7 @@ this is the troves-hinting rule:
 		if cone-points is 0:
 			if rivets-first is true, try objhinting rivets instead;
 			try objhinting praise instead;
-		try objhinting Pernod instead;
+		try objhinting END PRONER POD instead;
 	if location of player is Upscale Capsule:
 		if red vees are in Upscale Capsule, try objhinting red vees instead;
 		if salt is in Upscale Capsule, try objhinting salt instead;
@@ -6381,7 +6382,7 @@ chapter thinking
 
 thinko is a truth state that varies.
 
-understand "ponder" as thinking when pernod is not touchable.
+understand "ponder" as thinking when END PRONER POD is not touchable.
 
 check thinking:
 	if player is in Dusty Study:
@@ -6390,12 +6391,12 @@ check thinking:
 			now thinko is true instead;
 		else if Gunter is off-stage:
 			say "Hard to think with that knocking." instead;
-	if player is in Econ Cone and pernod is in Econ Cone, say "No, you need to think a little more soulfully." instead;
-	if mrlp is troves, say "Yes, how you think is extra important here." instead;
+	if player is in Econ Cone and END PRONER POD is in Econ Cone, say "No, you need to think a little differently to move." instead;
+	if mrlp is troves and number of unfigured things is 0, say "Yes, how you think is extra important here. But generic thinking won't get you through." instead;
 	if mrlp is towers and topside is visited, say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
 	if mrlp is demo dome, try requesting the score instead;
 	if number of unfigured things > 0:
-		say "[line break][prefigured-things]";
+		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
 	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
 chapter touching
@@ -11337,21 +11338,21 @@ after looking in Econ Cone:
 	set the pronoun it to Trevis Vister;
 	set the pronoun him to Trevis Vister;
 	set the pronoun them to rivets;
-	if pernod is in Econ Cone, set pronoun it to pernod;
+	if END PRONER POD is in Econ Cone, set pronoun it to END PRONER POD;
 	continue the action;
 
 chapter godlings['] lodgings
 
 understand "skyline" as godlings' lodgings
 
-the godlings' lodgings are plural-named scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
+the godlings' lodgings are plural-named boring scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%.". bore-text of godlings' lodgings is "Don't think too much about them directly. There are other ways to think yourself in."
 
 understand "godling/lodging" and "godlings/godling lodging/lodgings" as godlings' lodgings.
 
 check scaning godlings' lodgings:
-	if pernod is off-stage, say "The godlings' lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
-	say "Your settler seems to give the same reading for the Pernod as for the lodgings.";
-	try scaning pernod instead;
+	if END PRONER POD is off-stage, say "The godlings' lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
+	say "Your settler seems to give the same reading for lodgings as for the END PRONER POD.";
+	try scaning END PRONER POD instead;
 
 chapter Trevis Vister
 
@@ -11397,35 +11398,26 @@ a-text of rivets is "RRRYRY". b-text of rivets is "RRRYRY". parse-text of rivets
 
 chapter pernod
 
-the bottle of Pernod is a vanishing thing. "A broken bottle of [if label is moot]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
+the END PRONER POD is boring vanishing scenery. "It's very red and pulsing fearfully. There's red writing on it (ok, with a black outline, so you can see it) that might help you avoid the END PRONER POD as your own fate.". bore-text of END PRONER POD is "You don't even want to think of the END PRONER POD. Well, except to think just so, to blank it from your mind and avoid your former benefactor's fate. How to think around it creatively?". bore-check of END PRONER POD is the bore-proner rule.
 
-a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR". parse-text of pernod is "[if label is part of pernod]p[else]x[end if][sp]o[sp]x[sp]x[sp]e[sp]x".
+this is the bore-proner rule:
+	if current action is taking or current action is entering, say "You need to kill yourself making it to the top, not before you make it to the top." instead;
 
-check reading pernod: try reading card instead;
+a-text of END PRONER POD is "RYRRYR". b-text of END PRONER POD is "RYRRYR". parse-text of END PRONER POD is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
 
-check taking bottle of Pernod: say "The jagged glass would cut your hands, or your super purse's space-capes." instead;
+after examining END PRONER POD:
+	if r cad card is off-stage:
+		say "And what's this? An r-cad card, that universal communication of contempt, is stuck by the END PRONER POD.";
+		now r cad card is in Econ Cone;
+	continue the action;
 
-description of bottle of pernod is "It says [if label is moot]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
-
-understand "champagne" as Pernod.
-
-understand "prod/neprod/n-e-prod" and "bottle of prod/neprod/n-e-prod" as Pernod.
-
-section label
-
-the label is part of the bottle of pernod. the label is boring. description of label is "It says PERNOD. It also looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card (an r-cad card, for blow-off gifts and greetings) tied to the bottle.". bore-text of label is "It looks loose. Maybe TAKEing it would provide a clue, if you need one.". bore-check is bore-label rule.
-
-this is the bore-label rule:
-	if current action is taking:
-		say "The label comes off to reveal a much less hoity-toity label: the generic N-E-PROD is the [i]REAL[r] manufacturer! It's in red letters, too.";
-		moot label instead;
-	if current action is scaning, try scaning the pernod instead;
+understand "neprod" and "n e prod" as END PRONER POD when END PRONER POD is examined.
 
 section card
 
-the r cad card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read.". printed name of r cad card is "r-cad card".
+the r cad card is scenery. "It's got red writing on it that you could read.". printed name of r cad card is "r-cad card".
 
-check taking the card: say "It's glued to the Pernod." instead;
+check taking the r cad card: say "It's stuck next to the END PRONER POD. And it's not for you. If it were for you, you'd be in trouble, anyway." instead;
 
 a-text of r cad card is "RYRRYR". b-text of r cad card is "RYRRYR". parse-text of r cad card is "x[sp]o[sp]x[sp]x[sp]e[sp]x".
 
@@ -20988,7 +20980,7 @@ check burning:
 	if noun is pipe soot, say "It's been through enough of that." instead;
 	if noun is divorces, say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead; [troves]
 	if noun is praise or noun is Trevis Vister, say "[if noun is reflexive]Perhaps have it create a burning in you[else]It already created a burning in you[end if]." instead;
-	if noun is lager or noun is pernod, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
+	if noun is lager, say "It's not high enough proof. In fact, it's almost certainly watered-down." instead;
 	if noun is cretins' cistern, say "The cistern may deserve it, but Char Arch is burnt enough already." instead;
 	if noun is coal, say "You need to burn mental fuel, here." instead; [presto]
 	if noun is on labs slab, say "You may figuratively want to, right now, but that's natural when you're programming something tough." instead;
