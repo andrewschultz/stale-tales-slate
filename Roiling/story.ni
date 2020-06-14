@@ -1760,7 +1760,7 @@ organised	--
 mardier admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse languidly over some philosophical point. You feel dumb not being able to figure it out, but you feel sort of compelled to listen for more."
-Tetris Sitter	"[if top opt pot is moot]St. Teri mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive]St. Teri wants to help, but she can't quite, yet[else]The Tetris Sitter ignores you, working on her high score[end if]."
+Tetris Sitter	"[if top opt pot is moot][The tetris sitter] mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive][The tetris sitter] wants to help, but she can't quite, yet[else][The tetris sitter] ignores you, working on her high score[end if]."
 Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
@@ -1918,7 +1918,7 @@ Hostile-Is-He Lot	"They complain[hostile-red]!"
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
@@ -5159,7 +5159,7 @@ this is the towers-hinting rule:
 	if player is in Mesprise Premises:
 		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
 		if Tetris Sitter is reflexive, try objhinting Tetris Sitter instead;
-		if player has top opt pot, all-say "You should GIVE the succor crocus to the Tetris Sitter for hints." instead;
+		if player has top opt pot, all-say "You should GIVE the succor crocus to [the tetris sitter] for hints." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
 	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
 
@@ -6586,7 +6586,6 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Tenfold Teflon'd Den Loft, say "Old heat. Loathed hot lead." instead;
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if mrlp is towers and leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
-	if player is in Mesprise Premises, say "Noodles so olden." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if noun is nerd-aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
@@ -15207,13 +15206,14 @@ to say big-hint of (rayx - a thing) :
 	if rayx is a guardian or rayx is a picaro:
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
-	else: [only for non guardians/non picaros] [if rayx is tetris sitter TRISTE] [the order is southeastish and north, 1st place you can use something]
+	else: [only for non guardians/non picaros] [the order is southeastish and north, 1st place you can use something]
 		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
 check giving hintpastry to Tetris Sitter:
-	say "The Tetris Sitter is used to loftier meals than that." instead;
+	if top opt pot is moot, say "You already gave [The tetris sitter] a much better gift." instead;
+	say "[if tetris sitter is reflexed][The tetris sitter] doesn't need comfort food, and the insights [the noun] would give won't help her[else]Now [the tetris sitter] is back in the real world, she probably needs something healthier[end if]." instead;
 
 check giving hintpastry to a guardian:
 	if second noun is diners, say "They scoff at what your idea of fine cuisine seems to be." instead;
@@ -16676,7 +16676,7 @@ after printing the locale description for Rawest Waters when Rawest Waters is un
 	now poss-score of Towers is 5 + cur-score of towers;
 	now min-score of Towers is 1 + cur-score of towers;
 	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Triste Sitter the top opt pot. And the strudel can always be rustled.]
+		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also PUNIER, TRISTE, PRESENT and give the Tetris Sitter the top opt pot. And the strudel can always be rustled.]
 
 every turn when player is in Rawest Waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
@@ -16841,19 +16841,19 @@ definition: a thing is followy:
 
 book Mesprise/Emprise Premise(s)
 
-Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
+Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
 
-the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
 understand "st/teri" and "st teri" as tetris sitter when tetris sitter is reflexed.
 
-the itster is auxiliary boring scenery in Mesprise Premises. description of itster is "It's red, and MAN what a high score the Tetris Sitter has.". bore-text of the itster is "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
+the itster is auxiliary boring scenery in Mesprise Premises. description of itster is "It's red, and MAN what a high score [the Tetris Sitter] has.". bore-text of the itster is "The itster is [the Tetris Sitter]'s, but maybe you can remind her there's a lot more to life."
 
 check going east in Mesprise Premises (this is the force give top opt pot rule):
 	if player has top opt pot and top opt pot contains crocus and Tetris Sitter is reflexed:
-		say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for the Tetris Sitter, now she's not stuck on her game. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
+		say "Before you leave, you remember Ornate Atoner Renato's speech--the succor crocus in the top opt pot seems like a nice gift for [the tetris sitter], now she's not stuck on her ITSTER game of Tetris. You give it to her.[paragraph break]'Come back if you need help with Castle Apcur!' she says, as she goes to set the crocus out somewhere nice.";
 		moot top opt pot;
 		reg-inc;
 	continue the action;
@@ -16863,7 +16863,7 @@ Ornate Atoner Renato is an undesc.
 check giving to Tetris Sitter:
 	if second noun is crocus, try giving top opt pot to Tetris Sitter instead;
 	if second noun is Tetris Sitter and Tetris Sitter is reflexive:
-		if noun is not top opt pot, say "She mumbles '[']S trite,' [if noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
+		say "She mumbles '[']S trite,' [if noun is top opt pot]without looking up[else]but she does seem slightly intrigued. Maybe you need to change her outlook[end if]." instead;
 	unless noun is top opt pot, say "St. Teri thanks you, but [if top opt pot is moot]the top opt pot was probably enough[else]that's not quite what she wants[end if]." instead;
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
@@ -16941,10 +16941,7 @@ after printing the locale description for Mislit Limits when Mislit Limits is un
 	if player has strudel and strudel is not reflexed:
 		increment poss-score of towers;
 
-Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are visited]where it looks like someone might be living[else]which houses [tet-ter][end if][if ur-pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
-
-to say tet-ter:
-	say "[if tetris sitter is reflexed]the Tetris Sitter[else]St. Teri[end if]"
+Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are visited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if ur-pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
 
 chapter scaly clays
 

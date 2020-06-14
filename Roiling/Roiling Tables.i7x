@@ -1327,6 +1327,8 @@ to say add-adj:
 
 this is the post-tetris-sitter-triste rule:
 	moot itster;
+	now tetris sitter is proper-named;
+	now printed name of tetris sitter is "St. Teri";
 
 this is the pre-curst-palace-spectacular rule:
 	if player is not in Mislit Limits:
@@ -1341,7 +1343,7 @@ this is the post-curstpalace-spectacular rule:
 
 to say what-about-ed:
 	if Tetris Sitter is reflexed:
-		say "St. Teri comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
+		say "[The tetris sitter] comes out to see the results of your magicking. 'Did OK, kiddo!' she yells, shaking your hand";
 	else if serpent is reflexive:
 		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
 	else:
@@ -2057,7 +2059,7 @@ blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 pester'n serpent	"The serpent calms down for a split-second[ser-try]."
-Tetris Sitter	"The Tetris Sitter breaks her glassy smile for a moment."
+Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
 ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
@@ -2289,7 +2291,7 @@ prison ropins	"It already is. Dr. Yow is free."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 succor crocus	"You already found a succor crocus. There's not much else there, it seems."
-Tetris Sitter	"St. Teri's back in the real world, now."
+Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
 bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
@@ -2645,7 +2647,7 @@ mended mini denim	"[one of]The mended mini denim can't quite be cut through by s
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][or]Making them happy isn't your business, but you can still make them...[plus][or]SADDER.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
-Tetris Sitter	"[if Tetris Sitter is reflexive][one of][the tetris sitter] seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [Tetris Sitter]her once you have the crocus.[minus][cycling]"
+Tetris Sitter	"[if Tetris Sitter is reflexive][one of][The tetris sitter] seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
 itster	--	Tetris Sitter
 ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
@@ -2726,7 +2728,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
-succor crocus	"[if Mesprise Premises is unvisited]Maybe you haven't found where to do something with the crocus[else]You should probably give the succor crocus to the Tetris Sitter[end if]."
+succor crocus	"[if Mesprise Premises is unvisited]Maybe you haven't found where to do something with the crocus[else]You should probably give the succor crocus to [the Tetris Sitter][end if]."
 top opt pot	--	succor crocus
 Ornate Atoner Renato	"[if Mislit Limits is unvisited]You don't need to worry about Renato's gift until the very end[else if crocus is off-stage]You may find something behind the unripe ur-pine to put in the top opt pot[else if player has crocus]The crocus can be given to someone else[else]You've taken care of Ornate Atoner Renato's gift[end if]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]

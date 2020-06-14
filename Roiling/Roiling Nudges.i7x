@@ -1044,6 +1044,7 @@ table of Mesprise Premises nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesprise"	724017911	--	--	"[towersloc]."
 "emprise"	627743945	--	--	"[towersloc]."
+"teri"	361232776	--	teri-reflexed rule	"St. Teri is fine as-is. If she needs more changing, it will come from life experience."
 
 table of Dourest Detours nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2093,6 +2094,10 @@ this is the serpent-hiding rule:
 	the rule fails.
 
 to say focus-castle: say "That might help you figure what to do with the curst palace, but it can't be important by itself"
+
+this is the teri-reflexed rule:
+	if player is in Mesprise Premises and Tetris Sitter is reflexed, the rule succeeds;
+	the rule fails;
 
 this is the cppc rule:
 	if player is in Mislit Limits:
