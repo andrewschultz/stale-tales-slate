@@ -382,15 +382,15 @@ pipe panel lie pen app	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--
 pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
 barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
 mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
-Ammo Gang	mango	true	242122758	--	"among"	"among"	--	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
-nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."
+Ammo Gang	mango	true	242122758	--	"among"	"among"	--	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token through a credit-verification machine and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
+nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token to pay for it, taking only one: multiple nectarines might have transience."
 peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
 quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
 prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	--	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
 melon	melon	true	388955186	--	"mo len"	"mo len" or "len mo"	--	--	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."
 auction caution	papayas	true	388128590	--	"papayas"	"papayas/papaya"	--	--	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your, um, ASAP yap."
 lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"
-a banna'	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
+a banna	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
 a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
 inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
@@ -1537,7 +1537,7 @@ this is the post-pomegranate rule: [the magenta rope is already flipped]
 	moot mopeage rant;
 
 this is the post-sonic-flip rule:
-	if player has so-great storage, slot-appear;
+	if player has So Great Storage, slot-appear;
 	now singed design is part of the noun;
 
 this is the post-iconic-flip rule:
@@ -2129,13 +2129,13 @@ nectarine	"The nectarine seems a little less shiny and new. But not enough."
 peach	"The peach still looks too expensive."
 prices precis	"Something glints off the prices precis."
 quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
-a banna'	"The (a) banna['] flutters about for a bit."
+a banna	"The (a) banna['] flutters about for a bit."
 a brr hub	"The (a) brr hub seems to swirl closed for a bit."
 orange	"The orange seems a bit closer for a bit."
 inapt paint	"You seem to read the inapt paint backwards for a second."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
-fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
+fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though."
 
 to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can [if diorama is examined]re[end if]examine the diorama"
 
@@ -2827,7 +2827,7 @@ nectarine	"[one of]The nectarine's not too old, but if it were, you might get it
 peach	"[one of]The peach is currently too expensive, but there's a way to fix that.[plus][or]The settler knocks the peach out, logically, on cheat mode. Actually, just mentioning cheat mode may be a tremendous hint, here.[plus][or]How could the peach be described as less expensive?[plus][or]CHEAP.[minus][cycling]"
 Ammo Gang	"[one of]AGMNO are the five letters for the No Ammo Gang. You need to mingle with them.[plus][or]TThis word didn't fit anywhere in Routes, so it got dumped here.[plus][or]AMONG.[minus][cycling]"
 quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price for the quince? [plus][or]Uno, duo, tre, quattro, ...[plus][or] ...CINQUE.[minus][cycling][end if]"
-a banna'	"[one of]A banna['] says Naa-Na-B.[plus][or]Non-cheat mode might help things to drop out more easily, but with six letters, it can't be that hard.[plus][or]You can make a BANANA.[minus][cycling]" [Scape Space fruit hints]
+a banna	"[one of]A banna['] says Naa-Na-B.[plus][or]Non-cheat mode might help things to drop out more easily, but with six letters, it can't be that hard.[plus][or]You can make a BANANA.[minus][cycling]" [Scape Space fruit hints]
 orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
 a brr hub	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
 inapt paint	"[one of]DESERVER-RESERVED.[plus][or]The settler makes the vowels in the paint pretty clear.[plus][or]How do you make the paint the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
@@ -2848,9 +2848,9 @@ Dr Tera	"[trader-clue]"
 droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to [greedy-s] in the Scape Space.[minus][cycling]"
 Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
-tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
+tekno token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are moot]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
-halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
+halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has So Great Storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"

@@ -2235,7 +2235,7 @@ Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
-len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
+len craig	tekno token	"[one of]He inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
 Ammo Gang	mango	"Yes, we sell them. Come join our conversation the right way. You turn red, briefly, thinking it can't be too hard to figure how to get a mango." [end OTHERS]
@@ -2455,7 +2455,7 @@ Store W	"WESTOR is the name of the company that built this. [one of]There's more
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
 A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
-Admits Mist Ad	"[one of]IT'S MAD[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
+Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -4534,7 +4534,7 @@ auction caution	false	false	false	false	"Hm, that certainly cuts things down a t
 prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
 melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
-a banna'	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
+a banna	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
 inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
 
@@ -4756,7 +4756,7 @@ field-hintables is a list of things variable. field-hintables is { barber sickle
 
 clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { a banna', a brr hub, inapt paint, orange }
+scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, inapt paint, orange }
 
 to decide which list of things is my-fruit-list:
 	if moss cap is off-stage, decide on rustic-easy-items;
@@ -6172,7 +6172,7 @@ check buying:
 			if noun is storage, try giving dollar to greedy-person instead;
 		else:
 			say "You have nothing [greedy-person] wants." instead;
-	if player has tekno-token, say "This isn't a place of commerce." instead;
+	if player has tekno token, say "This isn't a place of commerce." instead;
 	if player is in Lean Lane:
 		if wipes are in Lean Lane, say "You can't pay for the wipes, but maybe you don't need to." instead;
 	say "There's nothing to buy, and there's nothing to buy it with[if player has ruby]. The ruby's kind of priceless[else if player has pearl]. The pearl isn't really tradeable[end if]." instead;
@@ -9064,7 +9064,7 @@ atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 agnostic	"[agnostic-first]"
 aside-llp	"rays of energy between [e-n-m]" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
-a banna'	"the/a banna[']"
+a banna	"the/a banna[']"
 fleeing feeling	"the word 'PERP' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
@@ -16911,7 +16911,7 @@ before showing the blub bulb to: try showing top opt pot to second noun instead;
 
 understand "flower" as crocus.
 
-the succor crocus is a boring LLPish flippable thing. "A succor crocus lies here, full of livid colors that don't make you happier.". bore-check of succor crocus is bore-crocus rule.
+the succor crocus is a boring LLPish flippable thing. "The succor crocus in the top opt pot makes you happier than a WE-ROFL flower or even a reflow-flower.". bore-check of succor crocus is bore-crocus rule.
 
 this is the bore-crocus rule:
 	if current action is taking, say "No. It took long enough for the crocus to grow." instead;
@@ -19608,8 +19608,8 @@ to coin-eval:
 			if levb4 entry is temp and levaf entry is curtis-level:
 				say "[line break][blabber entry][line break]";
 				if get-token entry is 1:
-					now player has tekno-token;
-					set the pronoun it to tekno-token;
+					now player has tekno token;
+					set the pronoun it to tekno token;
 				if get-coin entry is 1:
 					now player has coin;
 					set the pronoun it to coin;
@@ -19879,7 +19879,7 @@ book Gates Stage
 Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The Swell Wells are back south, and important-looking gates, [if halt lath is in Gates Stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. [one of]What could be behind them? A near arena? You take a step back. Yes...it looks like you have found a secret rear entrance to the Valence Enclave, where great political debates and pronouncements are always held![or]The Valence Enclave lies ahead.[stopping]". Gates Stage is in Others. roomnud of Gates Stage is table of Gates Stage nudges.
 
 after looking in Gates Stage (this is the retract halt lath rule):
-	if halt lath is in Gates Stage and player has popstar's passport:
+	if halt lath is in Gates Stage and player has popstar passport:
 		say "Your popstar's passport beeps quickly. The halt lath rises and retracts into the gates to the north. The gates are probably still shut for the moment, but it's a start.";
 		moot halt lath;
 	continue the action;
@@ -19994,12 +19994,12 @@ a coin is a thing. description is "The coin really looks more omen-y than money.
 
 a thing can be final-puz. a thing is usually not final-puz.
 
-s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz. tekno-token is final-puz.
+s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz. tekno token is final-puz.
 
 check giving a final-puz thing to when mrlp is others:
 	if second noun is storage, try inserting noun into second noun instead;
 	if second noun is curtis, say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
-	if second noun is len craig, say "[if noun is tekno-token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
+	if second noun is len craig, say "[if noun is tekno token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
 	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
 	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
 
@@ -20093,17 +20093,17 @@ check inserting into storage box:
 
 check inserting into lost slot:
 	if noun is s-c or noun is coins, say "The coins hum a bit before they're spit back out. You catch them. The box seems averse to money." instead;
-	if noun is tekno-token or noun is coin, say "The box wheezes slightly and spits the monetary item back out." instead;
+	if noun is tekno token or noun is coin, say "The box wheezes slightly and spits the monetary item back out." instead;
 	if noun is icon or noun is icons, say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
 	if noun is not s-i, say "That doesn't fit." instead;
 	say "As you perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
 	moot storage box;
 	moot s-i;
-	now player has popstar's passport;
+	now player has popstar passport;
 	process the retract halt lath rule;
 	the rule succeeds;
 
-the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher"
+the popstar passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher". printed name is "popstar's passport". understand "popstar/popstars" and "popstar/popstars passport" as popstar passport.
 
 check scaning the passport:
 	if viewer is reflexed:
@@ -20138,7 +20138,7 @@ chapter reviewing
 
 book Clangier Clearing
 
-check going east in swell wells: if player does not have tekno-token, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
+check going east in swell wells: if player does not have tekno token, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
 
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
 
@@ -20183,7 +20183,7 @@ after fliptoing when player is in Clangier Clearing:
 	if noun is a fruit or noun is prices precis, increment clearing-fruits;
 	continue the action;
 
-a tekno-token is an improper-named thing. description of tekno-token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno-token.
+a tekno token is an improper-named thing. description of tekno token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno token. printed name of tekno token is "tekno-token".
 
 the prices precis is proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
@@ -20374,7 +20374,9 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna' is in Scape Space]. A banna['] takes up one part of the wall[end if][if inapt paint is in Scape Space]. You notice inapt paint on another wall, too[end if].". roomnud of Scape Space is table of Scape Space nudges.
+Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna is in Scape Space]. A banna['] takes up one part of the wall[end if][inapt-in-space].". roomnud of Scape Space is table of Scape Space nudges.
+
+to say inapt-in-space: if inapt paint is in Scape Space, say ". You notice inapt paint on [if a banna is moot]one wall[else]another wall, too[end if]"
 
 chapter warding drawing
 
@@ -20393,9 +20395,9 @@ the guava is a fruit. [paint gives guava]
 
 chapter banana/a
 
-a banna' is boring scenery in Scape Space. description of a banna' is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna'.
+a banna is boring scenery in Scape Space. description of a banna is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna.
 
-a-text of a banna' is "RYRYRY". b-text of a banna' is "R?RY??". parse-text of a banna' is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna' is parse-spoilable.
+a-text of a banna is "RYRYRY". b-text of a banna is "R?RY??". parse-text of a banna is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna is parse-spoilable.
 
 The small yellow banana is a fruit.
 
@@ -20423,7 +20425,7 @@ this is the bore-greedy rule:
 	if action is procedural, continue the action;
 	if player has storage, say "You don't want to deal with [greedy-s] any more than you have to." instead;
 
-to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
+to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that So-Great Storage?"
 
 to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
 
@@ -20440,7 +20442,7 @@ rule for printing a locale paragraph about greedy-person:
 		now storage box is mentioned;
 	continue the action;
 
-the so-great storage box is a thing.
+the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when So Great Storage is touchable.
 
 the storage box is in Scape Space. "A box labeled So-Great Storage is here.".
 
@@ -20462,7 +20464,7 @@ check giving something to greedy-person:
 			say "[line break]";
 			slot-appear;
 		now player has storage instead;
-	if noun is tekno-token, say "Traceable. Be real, cat." instead;
+	if noun is tekno token, say "Traceable. Be real, cat." instead;
 	say "'An empty payment.' He's not interested in that. Just money." instead;
 
 check opening slot: say "It will fit if you give it the right thing." instead;

@@ -1244,16 +1244,16 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "other"	427874806	--	--	"[not-the-reg]."
 "storeh"	524148772	--	--	"[not-the-reg]."
 "needle"	527168763	compass	--	"The needle is working fine. No need to meddle."
-"tekno"	427109390	tekno-token	--	"There's enough credit on the token. Don't get greedy."
+"tekno"	427109390	tekno token	--	"There's enough credit on the token. Don't get greedy."
 "icon"	207258516	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
 "singed"	391609220	singed design	--	"The design is sort of glommed onto the [coin-icon]. So you should figure what to do, there."
 "designs"	487883186	singed design	--	"The design doesn't need changing. It's what the design's on."
-"lots"	327550400	so-great storage	--	"[slot-no]."
-"storage"	521653993	so-great	--	"You might break what is in the storage."
-"great"	351027450	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
+"lots"	327550400	So Great storage	--	"[slot-no]."
+"storage"	521653993	So Great Storage	--	"You might break what is in the storage."
+"great"	351027450	So Great Storage	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
-"bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
+"bluer"	390468463	tekno token	--	"That doesn't really describe the tekno-token."
 "repp"	376061830	--	perp-moot rule	"You don't want to bring back that fleeing feeling whispering 'PERP.' Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
 "lola"	184168073	dr lola	--	"[count-enuf]."
 "drol"	234519308	lord al	--	"[count-enuf]."
@@ -1370,6 +1370,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "red"	234159001	Art Erd	--	"[1st-name]."
 "tera"	318427748	Tera Darter	--	"[1st-name]."
 "brrhub"	349873522	a brr hub	--	"[hub-a]."
+"banna"	160609557	banna	--	"It's [i]a[r] banna[']. The puzzle here is criminally corny, but it's not criminal like [greedy-person]."
 
 table of Gates Stage nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
