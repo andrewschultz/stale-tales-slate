@@ -68,6 +68,8 @@ include Bypass Disambiguation by Climbing Stars.
 
 include Large Game Speedup by Andrew Plotkin.
 
+include Punctuation Stripper by Andrew Schultz.
+
 the story headline is "(or ailing) Squeeal! A Sequel!"
 
 the story description is "Dear, Lo! Ordeal reload!"
@@ -5305,37 +5307,12 @@ the-warn is a truth state that varies.
 after reading a command:
 	let XX be indexed text;
 	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
+	abide by the punctuation-munge rule;
 	let XX be the player's command in lower case;
-	change the text of the player's command to XX;
-	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
-		if hint-to-file is true:
-			append "COMMENT: [the player's command]" to the file of gamehints;
-		if currently transcripting:
-			say "Noted.";
-		else:
-			if ignore-transcript-nag is false:
-				say "You've made a comment-style command, but Transcript is off. Type TRANSCRIPT to turn it on, if you wish to make notes.[paragraph break]The long version of this nag will only appear once. You may press any key to continue.";
-				wait for any key;
-				now ignore-transcript-nag is true;
-			else:
-				say "(Comment not sent to transcript.)";
-		reject the player's command;
 	if scan-nag is false and settler is touchable:
 		if the player's command includes "scanner":
 			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
 			now scan-nag is true;
-	if the player's command matches the regular expression "-":
-		if dash-nag is false, say "(NOTE: you never need to use a dash, which can be replaced with a space. You should always be able to use either half of a dashed name.)";
-		now dash-nag is true;
-		now XX is the player's command;
-		replace the text "-" in XX with " ";
-		change the text of the player's command to XX;
-	if the player's command matches the regular expression "'":
-		if apost-nag is false, say "(NOTE: you never need to use an apostrophe, which is eliminated)";
-		now apost-nag is true;
-		now XX is the player's command;
-		replace the text "'" in XX with "";
-		change the text of the player's command to XX;
 	if number of words in the player's command > 1:
 		let W1 be word number 1 in XX;
 		if W1 is "say" or W1 is "think" or W1 is "shout" or W1 is "speak" or W1 is "yell":
