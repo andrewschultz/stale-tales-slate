@@ -4240,8 +4240,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is whiners;
 			continue the action;
 	else if mrlp is others: [others]
-		if player has feeling you're a perp:
-			now noun is feeling you're a perp;
+		if player has fleeing feeling:
+			now noun is fleeing feeling;
 			continue the action;
 		if player is in Clangier Clearing:
 			if Ammo Gang is in Clangier Clearing:
@@ -9065,7 +9065,7 @@ agnostic	"[agnostic-first]"
 aside-llp	"rays of energy between [e-n-m]" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 a banna'	"the/a banna[']"
-feeling you're a perp	"the words 'PERP' forming outside the Valence Enclave"
+fleeing feeling	"the word 'PERP' forming outside the Valence Enclave"
 coins	"Curtis's coins"
 icons	"the icons you made"
 
@@ -9093,7 +9093,7 @@ definition: a thing (called candi) is bluable:
 		if c2 is in Lapsin' Plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in Gates Stage and gate-level is 2: [others specific]
-		if candi is feeling you're a perp or candi is searcher or candi is viewer, no;
+		if candi is fleeing feeling or candi is searcher or candi is viewer, no;
 	if player is in Filed Field and candi is barren cries, no;
 	if candi is touchable, yes;
 	decide no;
@@ -19467,7 +19467,7 @@ carry out guruing:
 	if noun is a person:
 		if noun is len craig, say "Nothing, despite all Len Craig [if number of entries in clearing-hintables > 0]has[else]had[end if] to sell." instead;
 		if noun is not ammo gang, say "A person shouldn't and can't be changed into a fruit[unless ammo gang is moot], though perhaps you could trade someone for one." instead;
-	if noun is viewer or noun is searcher or noun is feeling you're a perp, say "No. You don't want to use the arugula on this. It's got to be pretty simple." instead;
+	if noun is viewer or noun is searcher or noun is fleeing feeling, say "No. You don't want to use the arugula on this. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
 			if noun is reflexed:
@@ -19929,14 +19929,14 @@ perp-check is a truth state that varies.
 
 to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-the feeling you're a perp is a reflexive boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the feeling you're a perp.". bore-check is bore-perp rule.
+the fleeing feeling is a reflexive boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the fleeing feeling whispering 'PERP' in your head.". bore-check is bore-perp rule.
 
 this is the bore-perp rule:
-	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the feeling you're a perp. Maybe there's a simple way to shift things around." instead;
+	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the fleeing feeling whispering 'PERP!' Maybe there's a simple way to shift things around." instead;
 
 a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
 
-every turn when player has feeling you're a perp: say "You [one of][or]still [stopping]can't shake that feeling you're [if gate-level is 1]kind of [end if]a PERP.";
+every turn when player has fleeing feeling: say "You [one of][or]still [stopping]can't shake that fleeing feeling you should just run, because you're [if gate-level is 1]kind of [end if]a PERP.";
 
 chapter big endgame check
 
@@ -19947,7 +19947,7 @@ check going north in Gates Stage:
 		mootl list of all carried fruits;
 	if gate-level < 2:
 		now perp-check is true;
-		now player has feeling you're a perp;
+		now player has fleeing feeling;
 	if gate-level is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	if gate-level is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
 	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fly-Heart Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
@@ -20128,7 +20128,7 @@ to decide which number is gate-level:
 	let A be 0;
 	if viewer is reflexed, increment A;
 	if searcher is reflexed, increment A;
-	if feeling you're a perp is reflexed, increment A;
+	if fleeing feeling is reflexed, increment A;
 	if A > 2:
 		if debug-state is true, say " (DEBUG: all 3 passport points are registered, defaulting to just two)";
 		decide on 2;

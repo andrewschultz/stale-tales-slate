@@ -1382,17 +1382,20 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 PERP
 
 @nud
->reviwe
+#nudge for feeling
+>feelign
+You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP.
 #spechelp for viewer
+>reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 \\
 #spechelp for searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 \\
-#spechelp for feeling you're a perp
+#spechelp for fleeing feeling
 >prpe
-It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
+It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 
 @nud
 >prep
@@ -1480,7 +1483,6 @@ You have {SCORE} of {MAX} total points for the post-Elvira Others region, and yo
 {$SCOVERYLAST}
 Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
 !You can't expect anything more from Curtis.
-
 
 @min
 #pre-gates-stage-flip rule

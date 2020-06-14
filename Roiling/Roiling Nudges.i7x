@@ -1254,13 +1254,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "bluer"	390468463	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
-"repp"	376061830	--	perp-moot rule	"You don't want to bring back that feeling you might be a perp. Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
+"repp"	376061830	--	perp-moot rule	"You don't want to bring back that fleeing feeling whispering 'PERP.' Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
 "lola"	184168073	dr lola	--	"[count-enuf]."
 "drol"	234519308	lord al	--	"[count-enuf]."
 "droll"	288333147	dollar	--	"[count-enuf]."
 "dollar"	290520965	dollar	--	"[count-enuf]."
 "guava"	249245965	guava	--	"[just-c]."
 "kumquat"	516923398	kumquat	--	"[just-c]."
+"feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP."
 
 table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2234,7 +2235,7 @@ to say full-omen-prism: say "Not just omen, or prism. It's an omen prism"
 to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
 
 this is the perp-moot rule:
-	if feeling you're a perp is moot, the rule succeeds;
+	if fleeing feeling is moot, the rule succeeds;
 	the rule fails;
 
 to say no-pryer: say "No, it's the whole pryer bars"

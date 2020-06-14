@@ -403,7 +403,7 @@ coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vac
 coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	--	post-iconic-flip rule	"You do a little double-think-move on the coins. They become something entirely different."
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
 searcher	searcher	false	581009492	--	"research"	"research"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
-feeling you're a perp	feeling you're a perp	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
+fleeing feeling	fleeing feeling	false	376061830	--	"prep"	"prep"	pre-gates-stage-flip rule	post-perp-prep rule	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, being prepared, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
 
 book auxiliary text and rules
 
@@ -1547,15 +1547,15 @@ this is the pre-gates-stage-flip rule:
 	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
 
 this is the post-perp-prep rule:
-	moot feeling you're a perp;
+	moot fleeing feeling;
 
 this is the post-gates-stage-flip rule:
 	say "[line break]";
 	if gate-level is 2:
 		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others - 1]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 		if player has perp:
-			moot feeling you're a perp;
-			say "[line break]As a bonus, you lose that feeling you're a perp.";
+			moot fleeing feeling;
+			say "[line break]As a bonus, all that preparation puts to sleep the feeling you're a perp.";
 	else if gate-level is 1:
 		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
 		if player has perp, say "[line break]Also, you feel like a little less of a perp now."
@@ -2135,7 +2135,7 @@ orange	"The orange seems a bit closer for a bit."
 inapt paint	"You seem to read the inapt paint backwards for a second."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
-feeling you're a perp	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
+fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 
 to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can [if diorama is examined]re[end if]examine the diorama"
 
@@ -2308,7 +2308,7 @@ melon	"The melon is fine as-is. It's better than the one that was on display, fo
 peach	"You got enough of a discount. Really."
 mango	"Snag mo['] mangos? No mas, G."
 papayas	"You've already established yourself as a prompt payer."
-feeling you're a perp	"Don't want to over-prep[win-north]."
+fleeing feeling	"Don't want to over-prep[win-north]."
 searcher	"You've done enough researching[win-north]."
 viewer	"You've done enough reviewing[win-north]."
 
@@ -2855,7 +2855,7 @@ passport	"The passport will get you through the gates in the Gates Stage, but yo
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
-feeling you're a perp	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
+fleeing feeling	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
 Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"
