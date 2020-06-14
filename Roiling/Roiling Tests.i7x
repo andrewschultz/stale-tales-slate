@@ -1539,6 +1539,20 @@ carry out hring:
 	now headaches is 50;
 	the rule succeeds.
 
+chapter palcluing
+
+palcluing is an action applying to nothing.
+
+understand the command "palclu" as something new.
+
+understand "palclu" as palcluing.
+
+carry out palcluing:
+	say "Moving all palace clue items to Mislit Limits: [nextclue].";
+	repeat with NC running through nextclue:
+		now NC is in Mislit Limits;
+	the rule succeeds.
+
 chapter twiding
 
 [* this lets the user twiddle a table early on to see how it roughly looks. It does not place it in context. ]

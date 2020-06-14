@@ -438,6 +438,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mount"	415551063	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
 "deil"	247641883	--	path-pass rule	"[d-sli]."
 "deils"	343915849	--	path-pass rule	"[d-sli]."
+"serial"	410398381	popgun	--	"[is-boing]."
+"number"	469637285	popgun	--	"[is-boing]."
+"popgun"	443897512	popgun	--	"[boing-clue]."
+"spoilt"	454009205	popgun	--	"[boing-clue]."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -525,6 +529,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dirge"	311751549	--	--	"[locname]."
 "liev"	333777614	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "leonard"	433420743	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
+"whasup"	430250622	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 
 table of Austerer Treasure nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -537,18 +542,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "marines"	489567203	--	--	"[locname]."
 "marine"	393293237	--	--	"[locname]."
 "port"	344252357	--	--	"[if sport ports are reflexive]But there is more than one port[else]You already observed all the ports. No need to try to single one out[end if]."
-"serial"	410398381	popgun	--	"[is-boing]."
-"number"	469637285	popgun	--	"[is-boing]."
-"whasup"	430250622	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
-"popgun"	443897512	popgun	--	"[boing-clue]."
-"spoilt"	454009205	popgun	--	"[boing-clue]."
 
 table of Saps' Pass nudges [because you advance after the hogs are gone, no this-item is needed.]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ssap"	276201709	--	--	"[locname]."
-"hog"	144234578	--	--	"You need to deal with more than one hog, here."
+"hog"	144234578	--	--	"The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all."
 "key"	303098539	--	--	"You aren't sure which key would work, so you need a plan to get them all."
-"lawl"	217750269	--	--	"The lawl wall is too expansive for you to use any mental energy on."
+"lawl"	217750269	--	--	"The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on."
 
 table of Phat Path nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -797,10 +797,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "palace"	286467128	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
 "castle"	402197335	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
-"lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if Mislit Limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
-"pot"	258928554	top opt pot	--	"The top opt pot is too sturdy to be changed."
+"lake"	236740944	--	degen-true rule	"[if player is in Rawest Waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if Mislit Limits is visited]You're beyond the lake now.[else if leak lake is touchable]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
+"pot"	258928554	top opt pot	--	"The best--well, the only--way to change the top opt pot is to put something in it, but you haven't seen anything suitable yet."
 "blub"	195757456	blub bulb	--	"Your anagramming prowess alone cannot change the blub bulb. Maybe somewhere along your journey, it can change into something new."
-"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if Mesprise Premises is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he wants the gift sent to, anyway[end if]."
+"renato"	461687833	--	got-pot rule	"You don't have time to think about, or change, Renato. [if top opt pot is moot]You got his present to his friend[else if Tetris Sitter is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if Mesprise Premises is visited]His friend is still unreceptive, though[else]You haven't yet found anyone who might want the top opt pot, anyway[end if]."
 "toaster"	592164309	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	start tarts	--	"[eat-pastry]." [pastry rejects]
@@ -833,10 +833,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bottles"	576885432	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "liam"	165069656	grailman	--	"[grail-name]."
 "garn"	189018831	grailman	--	"[grail-name]."
-"lars"	237599426	reed's ale	--	"[reed-name]."
-"eede"	404447416	reed's ale	--	"[reed-name]."
-"elsa"	280081732	reed's ale	--	"[reed-name]."
-"erde"	361965110	reed's ale	--	"[reed-name]."
+"lars"	237599426	lars eede	--	"[reed-name]."
+"eede"	404447416	lars eede	--	"[reed-name]."
+"elsa"	280081732	elsa erde	--	"[reed-name]."
+"erde"	361965110	elsa erde	--	"[reed-name]."
 "reeds"	458239076	reed's ale	--	"[reed-ale]."
 "reed"	361965110	reed's ale	--	"[reed-ale]."
 "ale"	183807766	reed's ale	--	"[reed-ale]."
@@ -931,6 +931,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "leverage"	664508309	--	--	"[towersloc]."
 "screech"	512503456	--	--	"[no-creche]."
 "creech"	416229490	--	--	"[no-creche]."
+"ego"	234758388	ego drains	--	"[ego-dr]."
+"drains"	318715030	ego drains	--	"[ego-dr]. Plus, if they were boring old drains, you could just step around them."
+"egodrain"	457199452	ego drains	--	"[ego-dr]."
+"drain"	222441064	ego drains	--	"[ego-dr]. Plus, if it was a boring old drain, you could just step around."
+"organized"	580169070	organised	--	"Nothing seems to happen. Then you remember organized can be spelled with an s and not a z."
 
 table of Treading Gradient nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -950,12 +955,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Danger Garden nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gander"	337854029	--	--	"[towersloc]." [DANGER GARDEN 3 1]
-"ego"	234758388	ego drains	--	"[ego-dr]."
-"drains"	318715030	ego drains	--	"[ego-dr]. Plus, if they were boring old drains, you could just step around them."
-"egodrain"	457199452	ego drains	--	"[ego-dr]."
-"drain"	222441064	ego drains	--	"[ego-dr]. Plus, if it was a boring old drain, you could just step around."
 "native"	454169119	natives' site van	--	"[plutry of natives' site van]You'll need to deal with more than one native to make your way south."
-"organized"	580169070	organised	--	"Nothing seems to happen. Then you remember organized can be spelled with an s and not a z."
 "geese"	512291995	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 
 table of Lost Lots nudges
@@ -2016,13 +2016,21 @@ to say all-of-mel: say "No, you need to deal with all of Mel Fish"
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
-to say gradient-rej: say "This is a weird place, being at the crossroads, but better to [if number of touchable guardians is 0 and weeds are moot and denim is moot]mess around elsewhere[else if weeds are touchable]get rid of the weeds[else if number of touchable guardians > 0]tackle a guardian[else if denim is touchable]see if you can get rid of the denim[end if]";
+to say gradient-rej:
+	if number of touchable guardians is 0 and weeds are moot and denim is moot:
+		say "You already tweaked so much here in the Treading Gradient. You don't need to change the place itself";
+	else if weeds are touchable:
+		say "While you can't change the Treading Gradient, perhaps you can deal with the weeds";
+	else if number of touchable guardians > 0:
+		say "You can't change the treading gradient, but maybe you can get [random touchable guardian] out of the way";
+	else:
+		say "The gradient itself can't be changed, but you can change the last thing that's here: the denim"
 
 to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties"
 
 to say grail-name: say "His full name, Liam Garn"
 
-to say reed-name: say "No, [el-la-f]'s full name. With Reed's Ale"
+to say reed-name: say "No, [el-la-first]'s full name. [el-la-full]. With Reed's Ale"
 
 to say reed-ale: say "Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale"
 
@@ -2081,7 +2089,7 @@ this is the serpent-hiding rule:
 	if player is in Mislit Limits and serpent is moot, the rule succeeds;
 	the rule fails.
 
-to say focus-castle: say "Nah, that's just garbage. It's the curst palace you need to focus on"
+to say focus-castle: say "That might help you figure what to do with the curst palace, but it can't be important by itself"
 
 this is the cppc rule:
 	if player is in Mislit Limits:

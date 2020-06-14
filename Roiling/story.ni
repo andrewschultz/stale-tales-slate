@@ -253,11 +253,6 @@ a guardian is a kind of person. a guardian is usually vanishing. a guardian can 
 
 a guardian has a person called other-g. The other-g of a guardian is usually dreads adders.
 
-to decide whether gn-gone of (g - a guardian):
-	if g is moot, yes;
-	if other-g of g is not dreads adders and other-g of g is moot, yes;
-	no.
-
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
 a guardian has text called retrytext.
@@ -566,7 +561,7 @@ when play begins (this is the screenread gender swears and precursor rule) :
 
 to decide whether gen-gone of (g - a guardian):
 	if g is moot, yes;
-	if other-g of g is moot, yes;
+	if other-g of g is not dreads adders and other-g of g is moot, yes;
 	no;
 
 to general-gender-towers:
@@ -1923,7 +1918,7 @@ Hostile-Is-He Lot	"They complain[hostile-red]!"
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive]The Tetris Sitter has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
@@ -2193,8 +2188,8 @@ Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tutor someone!'[else if agnostic is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
-Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
-Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but the Tetris Sitter's observations were a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
+Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
+Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside."
 Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Tetris Sitter	top opt pot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if crocus is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
@@ -2486,7 +2481,7 @@ dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but 
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
-Thearchy Hatchery	"[if the-hostile is moot]The Hatchery reads, in red, THE LOIS SIT HOLE! But you don't need clues any more.[else]THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.[end if]"
+Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
@@ -4325,19 +4320,19 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	say "[sb-choose][full-monty of noun].";
 	let modnoun be scannote-idx of noun;
 	repeat through table of scannotes:
-[	if noun is an xtradesc in table of scannotes: ?! doesn't work]
-		if modnoun is xtradesc entry:
-			if there is no xtratext entry:
+[	if noun is an thing-to-note in table of scannotes: ?! doesn't work]
+		if modnoun is thing-to-note entry:
+			if there is no postscanclue entry:
 				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH.";
 				the rule succeeds;
-			choose row with a xtradesc of modnoun in table of scannotes;
+			choose row with a thing-to-note of modnoun in table of scannotes;
 			if bothscan entry is true:
 				now modnoun is ncscanned;
 				now modnoun is cscanned;
 			if b-only entry is false or cheat-on is true: [if cheat is off and it's b-text only clue, ignore.]
 				if clue-only-once entry is false or clued-yet entry is false:	[special clued-once text ignored]
 					now clued-yet entry is true;
-					say "[line break][xtratext entry][line break]";
+					say "[line break][postscanclue entry][line break]";
 			the rule succeeds;
 	the rule succeeds;
 
@@ -4422,10 +4417,10 @@ to say cheatfid:
 to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
 [??pad question mark / scan elmer / scan merle]
-[note we start with the pram which is not in the first room so we can define xtradesc as not-scenery. Don't change this.]
+[note we start with the pram which is not in the first room so we can define thing-to-note as not-scenery. Don't change this.]
 
 table of scannotes [tsn]
-xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
+thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
@@ -4512,11 +4507,11 @@ lois the hostile	false	true	false	false	"Well, this is tricky. There's her name,
 hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
-Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has not been wordy][else]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[end if]."
+Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
 prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle..."
 natives' site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
-curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
+curst palace	false	false	false	false	"[scannotes-curst]."
 pester'n serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess." [START otters]
@@ -4546,6 +4541,24 @@ inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have
 
 check scaning a prefigured thing:
 	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
+
+to say scannotes-curst:
+	if palace-let < 6:
+		say "Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace[if palace-let >= 5 and cheat-on is true]. [sadly-curst]";
+		continue the action;
+	else if palace-let is 11 and cheat-on is true:
+		say "The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process";
+	else if cheat-on is true:
+		say "[sadly-curst]";
+	else:
+		say "Even if the reds and yellows were all in place, there'd still be a lot of possibilities[if max-pal-seen < 8][one of]. But it should still help to get closer ro the Curst Palace[or][stopping]";
+		repeat through table of scannotes:
+			if thing-to-note entry is curst palace:
+				now b-only entry is true;
+				 continue the action;
+
+to say sadly-curst:
+	say "Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler";
 
 chapter qmhing
 
@@ -6465,7 +6478,9 @@ check listening:
 		if Rand is washed up:
 			say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
 			try asking a random washed up person about "rannygazoo" instead;
-	if player is in Dirge Ridge, say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite dealing with Rand and Leo[end if]." instead;
+	if player is in Dirge Ridge:
+		if Rand is washed up, try listening to Rand instead;
+		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with Rand and Leo[end if]." instead;
 	if player is in Hacks' Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
 	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened." instead; [oyster]
@@ -6483,7 +6498,7 @@ check listening:
 	if noun is dialer, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if noun is Rodney, say "Rodney's intimidating enough, he can keep this place quiet." instead; [towers]
 	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead;
-	if noun is lars eede or noun is elsa erde, say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
+	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if noun is diners, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
 	if noun is butlers, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in Shaven Havens, say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
@@ -15328,14 +15343,15 @@ when play begins (this is the place guardians rule):
 book which room is how far
 
 to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
-	if location of player is Topside Deposit or location of player is Outer Route, decide on 4;
-	if location of player is Scope Copse, decide on 5;
-	if location of player is Lost Lots or location of player is Fringe Finger or location of player is Leveraged Everglade or location of player is Baldest Blasted Saltbed, decide on 6;
-	if location of player is Treading Gradient or location of player is Obscurest Subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
-	if location of player is Salted Deltas or location of player is Artist Traits Strait, decide on 8;
-	if location of player is Actionless Coastlines or location of player is Rawest Waters, decide on 9;
-	if location of player is Mesprise Premises, decide on 10;
-	if location of player is Mislit Limits, decide on 11;
+	let LP be location of player;
+	if LP is Topside Deposit or LP is Outer Route, decide on 4;
+	if LP is Scope Copse, decide on 5;
+	if LP is Lost Lots or LP is Fringe Finger or LP is Leveraged Everglade or LP is Baldest Blasted Saltbed, decide on 6;
+	if LP is Treading Gradient or LP is Obscurest Subsector or LP is Danger Garden or LP is Shaven Havens or LP is Anemic Cinema, decide on 7;
+	if LP is Salted Deltas or LP is Artist Traits Strait, decide on 8;
+	if LP is Actionless Coastlines, decide on 9;
+	if LP is Rawest Waters or LP is Mesprise Premises, decide on 10;
+	if LP is Mislit Limits, decide on 11;
 	decide on 2;
 
 book drawing the map
@@ -16151,7 +16167,7 @@ to say what-ag-sez:
 before taking gizmo:
 	if agnostic has gizmo, say "That'd be mean, since you gave it to the agnostic in the first place." instead;
 
-check giving hintpastry to agnostic: say "[he-she-c] has had enough empty short-term gratification with [i]Reading: a Dinger[r]." instead;
+check giving hintpastry to agnostic: say "[he-she-c] has had enough empty short-term gratification with [dinger]." instead;
 
 check giving hintpastry to Dr Yow: say "[he-she-c] doesn't seem hungry." instead;
 
@@ -16207,7 +16223,7 @@ chapter reading a dinger
 
 a thing called Reading a Dinger is flippable scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves utter nonsense like someone figuring out centuries-old world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. Saner places would reject it, I'm sure.".
 
-printed name of Reading a Dinger is "[i]READING: A Dinger[r]"
+printed name of Reading a Dinger is "[i]READING: a Dinger[r]"
 
 check taking dinger:
 	say "You hear a rage din from the coasting agnostic. You both see red. They might not be particularly fond of the book, but since it's there and it's theirs, they don't want to give it up. Maybe you can make it more unattractive somehow." instead;
@@ -16614,7 +16630,7 @@ check entering bot boat:
 		say "You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!";
 		towers-min-adj;
 		now player is in Mislit Limits instead;
-	say "Then you hear a voice call AIR FLUE FAILURE as you hear the [if turbos are reflexive]turbos go burst-o[else]blaster, er, blast[end if]. You fall in the waters, about halfway to the opposite shore.";
+	say "Then you hear a voice call AIR FLUE FAILURE as you hear the [if turbos are reflexive]turbos go burst-o[else]blaster, er, blast[end if]. You fall in the waters, about halfway to the opposite shore.[paragraph break]Panicked, you grab at your super purse, but it's sealed automatically--and it's water-proof, too! Whew.";
 	towers-min-adj;
 	now player is in Rawest Waters instead;
 
@@ -16835,9 +16851,11 @@ book Mesprise/Emprise Premise(s)
 
 Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Emprise Premises[else]Mesprise Premises[end if]". Mesprise Premises is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
 
-the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
+the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now[end if].". "The Tetris Sitter sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
 a-text of Tetris Sitter is "RRYRRY". b-text of Tetris Sitter is "?RYRRY". parse-text of Tetris Sitter is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
+
+understand "st/teri" and "st teri" as tetris sitter when tetris sitter is reflexed.
 
 the itster is auxiliary boring scenery in Mesprise Premises. description of itster is "It's red, and MAN what a high score the Tetris Sitter has.". bore-text of the itster is "The itster is the Tetris Sitter's, but maybe you can make her realize there's a lot more to life."
 
@@ -16907,7 +16925,7 @@ this is the bore-crocus rule:
 
 description of crocus is "It looks much better than the blub bulb it was."
 
-to say new-yerg-thing: now flip-final-clue is true;
+to say new-mislit-clue: now flip-final-clue is true;
 
 flip-final-clue is a truth state that varies.
 
@@ -16973,14 +16991,16 @@ check examining curst palace when player is not in Mislit Limits: say "The curst
 max-pal-seen is a number that varies.
 
 check scaning curst palace (this is the nab a few letters rule) :
+	if curst palace is prefigured, continue the action;
 	if player is in Loftier Trefoil, say "You'll want to walk outside first, at the very least." instead;
 	if player is not in Mislit Limits:
+		let newdelt be palace-let - max-pal-seen;
 		if max-pal-seen is 0:
 			say "You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.";
-		else if palace-let > max-pal-seen:
-			say "Ooh! A few more lights, now.";
+		else if newdelt > 0:
+			say "Ooh! [if newdelt is 1]Another light[else if newdelt is 2]A couple more lights[else]A few more lights[end if], now.";
 		else:
-			say "You don't see any more than you have before[if palace-let < max-pal-seen]. In fact, you have less information than when you were closer[end if].";
+			say "You don't see any new information about the curst palace this time[if palace-let < max-pal-seen]. In fact, you have less information than when you were closer[end if].";
 	else if max-pal-seen < 11:
 		say "The entire settler lights up[if max-pal-seen is 0]--but it takes a while. You're lucky you're so close[else], finally[end if]!";
 	if max-pal-seen < palace-let, now max-pal-seen is palace-let;
@@ -16997,7 +17017,7 @@ pal-b is text that varies. pal-b is "RRYR?YRYRY?".
 to say cpset of (myt - text):
 	let p-l be palace-let;
 	repeat with L running from 1 to 11:
-		say "[if p-l < L][character number L in myt][else]*[end if]"
+		say "[if L <= p-l][character number L in myt][else]*[end if]"
 
 check entering curst palace: say "Less tours, more roust." instead;
 
@@ -17215,7 +17235,7 @@ a-text of sweatier wait-seer is "RYYRYYRR". b-text of sweatier wait-seer is "?YY
 section reed's ale
 
 to say deal-seer:
-	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
+	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
 
 Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
@@ -17233,7 +17253,7 @@ understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
 
 the Reed's Ale is a vanishing thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
-description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-f]. Yet [el-la-f] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
+description of Reed's Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
 
 rese is a truth state that varies.
 
@@ -17241,7 +17261,7 @@ chapter Salted Deltas guardians
 
 section atheists
 
-the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
+the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
 
 printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
@@ -17379,12 +17399,12 @@ to say n-s-rav:
 	say "[if player is in Treading Gradient]south[else]north[end if]"
 
 to say reedale:
-	say "[el-la] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
+	say "[el-la-full] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
 
-to say el-la-f:
+to say el-la-full:
 	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
 
-to say el-la:
+to say el-la-first:
 	say "[if player is female]Elsa[else]Lars[end if]"
 
 section specific taunts
@@ -17548,19 +17568,20 @@ chapter reposition-guardians
 to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
-		if guy entry is not moot:
-			if bad-gender-match of guy entry, next;
-			if location of player is loc entry:
-				move guy entry to location of player;
-				if there is an aux entry:
-					if debug-state is true, say "DEBUG: [aux entry] is an auxiliary item.";
-					if aux entry is reed's ale:
-						now guy entry carries aux entry;
-					else:
-						move aux entry to location of player;
-			if the room blockdir entry of loc entry is location of player:
-				move guy entry to location of player;
-				if there is an aux entry, move aux entry to location of player;
+		if guy entry is moot, next;
+		if bad-gender-match of guy entry, next;
+		if other-g of guy entry is not dreads adders and other-g of guy entry is moot, next; [this is for testing purposes. If we moot the Hostile Lot and gender flip, Lois may turn up in the Hostile Lot's place. Since the player cannot change gender mid-game, this should not matter in the release build.]
+		if location of player is loc entry:
+			move guy entry to location of player;
+			if there is an aux entry:
+				if debug-state is true, say "DEBUG: [aux entry] is an auxiliary item.";
+				if aux entry is reed's ale:
+					now guy entry carries aux entry;
+				else:
+					move aux entry to location of player;
+		if the room blockdir entry of loc entry is location of player:
+			move guy entry to location of player;
+			if there is an aux entry, move aux entry to location of player;
 
 chapter allranding
 
@@ -21984,7 +22005,7 @@ this is the towers-alt rule:
 	else if towers is not solved and Bredo is in Loftier Trefoil:
 		say "[2da]Bredo has two solutions.";
 	if towers is not solved and reed's ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
-	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
+	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
 	if towers is not solved and natives' site van is not moot, say "[2da]Two solutions for the natives['] site van.";
 	if natives' site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";

@@ -382,7 +382,7 @@ understand "tars" as a mistake ("But you already took the tsar star FROM the tar
 
 chapter Dirge Ridge
 
-understand "asswhup" and "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[else]No chance.[end if]") when Rand is in location of player.
+understand "asswhup" and "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. They will fight when they need to.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins['] cistern.[else]No chance.[end if]") when Leo is in location of player.
 
 understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.") when Leo is in location of player.
 
@@ -639,8 +639,6 @@ chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
 
-understand "redial" as a mistake ("[if yapper is in location of player]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in tenfold teflon'd and player is in tenfold teflon'd.
-
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
 book towers
@@ -769,7 +767,7 @@ chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in Actionless Coastlines and weirder red wire is in Actionless Coastlines.
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in Actionless Coastlines and weirder red wire is touchable.
 
 chapter Rawest Waters
 

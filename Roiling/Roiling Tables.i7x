@@ -133,7 +133,7 @@ ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-ce
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-censer]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
-ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
+ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-bye rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-bye rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons letters	log ons letters	false	400300169	--	"solong"	"so long" or "solong"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
@@ -234,7 +234,7 @@ mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	--	--	"Yo
 resident trendies	resident trendies	false	675249448	--	"nerdiest"	"nerdiest"	--	--	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 organised ego drains	organised ego drains	false	553473418	--	"grandiose"	"grandiose"	--	--	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."
 sweatier wait-seer	sweatier wait-seer	false	695435442	--	"weariest"	"weariest"	--	--	"The wait-seer blinks as if enlightened, then shakes his head. He's only getting older and so forth. He decides to go find somewhere more scenic to block."
-reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
+reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-full] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 alarming grailman	alarming grailman	false	354088487	--	"marginal"	"marginal"	--	--	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
 bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
 stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting rule	"The stinger whirs around, wheezes, then flops on the ground and rolls off. You wait a minute, wondering if something tougher than the stinger will appear. But you only hear a gander that has flown in, no longer scared by a bonker or stinger. The path east is clear now! "
@@ -257,7 +257,7 @@ turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit 
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. [how-safe]."
 weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! People still tell me I just need to get more organized. Even people younger than me. So, um, thanks!'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	--	--	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the top opt pot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
-ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. And as it does, you hear a crackle from the top opt pot. The blub bulb begins expanding ... into a succor crocus!"
+ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. Behind it is a rare succor crocua--which can bring more happiness than a We-ROFL flower! But it is dying, dingy. When you bring the top opt pot near, though, the blub bulb opens up. It and the succor crocus are a perfect fit! You put the crocus in the top opt pot, and it blooms slightly."
 pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
@@ -813,7 +813,7 @@ this is the pre-ether-there rule:
 		preef ether;
 		do nothing instead;
 	if player does not have popgun or popgun does not contain dart:
-		say "Leo and Rand charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
+		say "[one of]Leo and Rand charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. 'Ha, bums! Ambush!' you hear, before taking a thumping.[paragraph break]You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon[or]THERE, you think, realizing you're not [if player has popgun]effectively [end if]armed yet[stopping].";
 		preef ether;
 		do nothing instead;
 
@@ -854,7 +854,7 @@ to say increm:
 		say "'But we ain't bored yet, boss!' You convince them they sort of are, what they are getting there, and it works a bit, without using any too-charged words. A bit more, and you'll veto their vote.[no line break]";
 		now rebuked is true;
 	else:
-		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Maybe you can bribe them later to help you.[no line break]";
+		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Perhaps if you need some extra muscle later, they could help you.[paragraph break]You look around a bit and see some starch charts on the mutism summit that you missed before. They can't be critical -- and yet, they seem to suggest a change from the interjections you've been using to a more esoteric final bit.[no line break]";
 		pad-rec-q "Leo and Rand";
 		now Leo is in Dirge Ridge;
 		now Rand is in Dirge Ridge;
@@ -1170,9 +1170,6 @@ this is the pre-lever-revel rule:
 this is the post-spin-pins rule:
 	now d2 is in Tenfold Teflon'd Den Loft;
 
-this is the pre-dialer-redial rule:
-	if pins are reflexive, say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
-
 this is the pre-dialer-derail rule:
 	if yapper is touchable:
 		say "The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.";
@@ -1182,6 +1179,16 @@ this is the pre-dialer-derail rule:
 this is the post-dialer-derail rule:
 	now d2 is in tenfold;
 	now pins are in tenfold;
+
+this is the pre-dialer-redial rule:
+	if yapper is touchable:
+		say "You can't even [i]dial[r] with the yapper around.";
+		preef d2;
+		the rule fails;
+	if pins are reflexive:
+		say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard...";
+		preef d2;
+		the rule fails;
 
 section towers auxiliary
 
@@ -2031,7 +2038,7 @@ mardier admirer	"The mardier admirer looks askance, then returns to evaluating y
 natives' site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 alarming grailman	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
-Reed's Ale	"[el-la-f] listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
+Reed's Ale	"[el-la-full] listens to what you're saying for a minute, but--no, you didn't quite get it right. [he-she-c] goes back to reciting [his-her] tired sales pitch."
 sweatier wait-seer	"The wait-seer looks bored and distracted for a second."
 bluster butlers	"The bluster butlers cough slightly and look around furtively."
 asset hit atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
@@ -2051,7 +2058,7 @@ blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 pester'n serpent	"The serpent calms down for a split-second[ser-try]."
-Tetris Sitter	"The Tetris Sitter breaks her glassy smile."
+Tetris Sitter	"The Tetris Sitter breaks her glassy smile for a moment."
 ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
@@ -2282,7 +2289,7 @@ strudel	"You'd have to drop the strudel on the ground and get it germy to try th
 prison ropins	"It already is. Dr. Yow is free."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
-unripe ur-pine	"You already found a succor crocus. There's not much else there, it seems."
+succor crocus	"You already found a succor crocus. There's not much else there, it seems."
 Tetris Sitter	"St. Teri's back in the real world, now."
 bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
@@ -2313,7 +2320,7 @@ to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
 
 to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
-to say no-rehash: say "That'd be an awkward rehash. You need another way to say good-bye"
+to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With Leo and Rand gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
 volume table of hints
 
@@ -2655,7 +2662,7 @@ keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 agnostic	"[if Obscurest Subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][agnostic-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][agnostic-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [agnostic-first] something to build with. A tool.[else][agnostic-first]'s bot boat is more important.[end if]"
-Reed's Ale	"[one of]Poor [el-la-f]! Having to dress like that. They either want to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-f]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-f].[minus][cycling]"
+Reed's Ale	"[one of]Poor [el-la-full]! Having to dress like that. [he-she-c] either wants to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-full]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-full].[minus][cycling]"
 Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
