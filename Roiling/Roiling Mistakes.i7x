@@ -940,7 +940,7 @@ chapter Scape Space
 
 understand "allo" as a mistake ("Lola says nothing back.") when player has dollar and player is female.
 
-understand "lots" as a mistake ("You only need the one slot.") when player has storage box and lost slot is part of storage box.
+understand "lots" as a mistake ("You only need the one slot.") when player has So Great Storage and lost slot is part of So Great Storage.
 
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
@@ -976,7 +976,7 @@ understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is 
 
 chapter Scape Space
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in Scape Space], and you don't know if you want him taking that storage box with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
+understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storage is in Scape Space], and you don't know if you want him taking that So Great Storage with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 

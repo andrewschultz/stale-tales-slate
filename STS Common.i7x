@@ -161,6 +161,10 @@ a thing can be universal, useless, amusing, cluey, unimportant, abstract, boundi
 
 a thing can be unscannable. a thing is usually not unscannable.
 
+a thing can be read-yet. a thing is usually not read-yet.
+
+to say re-read of (th - a thing): say "[if th is not read-yet]re-[end if]read"
+
 volume when play begins
 
 when play begins:

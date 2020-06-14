@@ -2230,12 +2230,12 @@ curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and 
 curtis	Len Craig	"'A bit of a salesman, but he has some goods. Just--we're not on great terms, so maybe you can...'"
 curtis	Elvira	"'She was terrible for business and innovation. Things are picking up again now, though.'"
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
-Art Erd	storage box	"'[if storage box is in Scape Space]It's...umm...worth something.[else]You bought it[end if].'"
+Art Erd	So Great Storage	"'[if So Great Storage is in Scape Space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
-len craig	tekno token	"[one of]He inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
+len craig	tekno token	"[one of]Len inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping]."
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
 Ammo Gang	mango	"Yes, we sell them. Come join our conversation the right way. You turn red, briefly, thinking it can't be too hard to figure how to get a mango." [end OTHERS]
@@ -2420,10 +2420,12 @@ carry out reading:
 			let RRT be a random readable thing;
 			say "(the red writing on [the RRT])[line break]";
 			try examining RRT instead;
-		say "Too much to read." instead;
+		say "Too much to read. You'll need to be specific about what you want to read." instead;
 	if noun is a to-read listed in the table of readables:
 		choose row with to-read of noun in table of readables;
-		if there is a what-read entry, say "[what-read entry][line break]" instead;
+		if there is a what-read entry:
+			say "[what-read entry][line break]";
+			now noun is read-yet;
 		try reading alt-read entry instead;
 	if noun is large regal lager, try examining rubbish story instead;
 	try examining noun instead;
@@ -4718,8 +4720,8 @@ this is the others-hinting rule:
 		try objhinting passport instead;
 	if player is in Gates Stage, all-say "[if Scape Space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
 	if player is in Scape Space:
-		if droll dollar is off-stage, say "You'll eventually want to get that storage box down the road.";
-		if storage box is in Scape Space and player has droll dollar, try objhinting storage box instead;
+		if droll dollar is off-stage, say "You'll eventually want to get that So-Great Storage down the road.";
+		if So Great Storage is in Scape Space and player has droll dollar, try objhinting So Great Storage instead;
 	abide by the fruit-hint rule;
 	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if].";
 	the rule succeeds;
@@ -15674,7 +15676,7 @@ the fire torn frontier is bounding boring scenery in Topside Deposit. descriptio
 
 section shout so hut
 
-the Shout So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. description of shout-so hut is "It doesn't look that intimidating, but it's noisy enough to keep you away.". printed name of Shout So Hut is "Shout So Hut"
+the Shout So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. "It doesn't look that intimidating, but it's noisy enough to keep you away.". printed name of Shout So Hut is "Shout So Hut"
 
 this is the bore-shout-hut rule:
 	if current action is entering, try going south instead;
@@ -16577,7 +16579,7 @@ to say dogleg-other of (myd - a direction):
 
 section unorg'd ground
 
-the unorgd ground is bounding boring scenery in Fringe Finger. description of unorgd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorg'd ground is "The unorg'd ground is not worth your time.". printed name is "unorg'd ground".
+the unorgd ground is bounding boring scenery in Fringe Finger. description of unorgd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorgd ground is "The unorg'd ground is not worth your time.". printed name is "unorg'd ground".
 
 understand "unorg" and "unorg ground" as unorgd ground.
 
@@ -17195,7 +17197,7 @@ a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR"
 
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
-the bottles of Nerd Aid are boring auxiliary plural-named scenery. the arid den carries the Nerd Aid. understand "wares" and "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. printed name of Nerd Aid is "Nerd-Aid". description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
+the bottles of Nerd Aid are boring auxiliary plural-named scenery. the arid den carries the Nerd Aid. understand "wares" and "nerd/aid" and "nerdaid" and "nerd aid" as Nerd Aid. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
 
 a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYYRYP". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
@@ -18041,7 +18043,7 @@ chapter two LLPs
 
 section aside-llp
 
-the aside-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure.
+the aside-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure. "[bug-report]"
 
 a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "?[sp]x[sp]-[sp]x[sp]-".
 
@@ -19063,13 +19065,9 @@ chapter satyr
 
 the stray satyr is a reflexive male northy puzanimal. description is "He looks [if satyr is reflexed]like he's dreaming of a poem or something. You've made him happier[else]He looks preoccupied and mistrustful[might-read-satyr][end if].". "A stray satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if].". locale-text is "a stray satyr [if satyr is reflexed]dreaming of a better Yorpwald[else]resistant to all but practicality and survival[end if]".
 
-to say might-read-satyr: say "[if satyr-read is true]. You might be able to READ him--his name seems branded on"
+to say might-read-satyr: say "[if satyr is read-yet]. You might be able to READ him--his name seems branded on"
 
-understand "tsyra" as stray satyr when satyr-read is true.
-
-satyr-read is a truth state that varies. [we could define this as a thing property, but this is the only really useful case right now.]
-
-after reading stray satyr: now satyr-read is true.
+understand "tsyra" as stray satyr when satyr is read-yet.
 
 a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of satyr is "a[sp]-[sp]?[sp]-[sp]?". satyr is cheat-spoilable.
 
@@ -19929,7 +19927,7 @@ perp-check is a truth state that varies.
 
 to say two-of-three: say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-the fleeing feeling is a reflexive boring thing. it is cheat-spoilable. description of perp is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the fleeing feeling whispering 'PERP' in your head.". bore-check is bore-perp rule.
+the fleeing feeling is a reflexive boring thing. it is cheat-spoilable. description of fleeing feeling is "It's not a particularly rational thought, but it's buried in you that you're a perp.". bore-text is "There must be something you can do to shake the fleeing feeling whispering 'PERP' in your head.". bore-check is bore-perp rule.
 
 this is the bore-perp rule:
 	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the fleeing feeling whispering 'PERP!' Maybe there's a simple way to shift things around." instead;
@@ -20083,12 +20081,12 @@ understand "icon" and "sonic icon" as s-i when player has s-i.
 sonicing is an action applying to nothing.
 
 to slot-appear:
-	if lost slot is not part of storage box:
-		say "The So-Great Storage box begins to rattle by your [if player has s-i]icons[else if player has s-c]coins[else][bug-report][end if], and a lost slot appears in it.";
-		now lost slot is part of storage box.
+	if lost slot is not part of So Great Storage:
+		say "The So-Great Storage begins to rattle by your [if player has s-i]icons[else if player has s-c]coins[else][bug-report][end if], and a lost slot appears in it.";
+		now lost slot is part of So Great Storage.
 
-check inserting into storage box:
-	if lost slot is part of the storage box, say "The box has a slot, so I assume you meant that.";
+check inserting into So Great Storage:
+	if lost slot is part of So Great Storage, say "The box has a slot, so I assume you meant that.";
 	try inserting noun into lost slot instead;
 
 check inserting into lost slot:
@@ -20097,7 +20095,7 @@ check inserting into lost slot:
 	if noun is icon or noun is icons, say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
 	if noun is not s-i, say "That doesn't fit." instead;
 	say "As you perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
-	moot storage box;
+	moot So Great Storage;
 	moot s-i;
 	now player has popstar passport;
 	process the retract halt lath rule;
@@ -20432,25 +20430,23 @@ to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]
 to say trader-clue: say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
 
 to say gree-app:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in Scape Space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if So Great Storage is in Scape Space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
 rule for printing a locale paragraph about greedy-person:
-	if storage box is in Scape Space:
-		now storage box is mentioned;
+	if So Great Storage is in Scape Space:
+		now So Great Storage is mentioned;
 	continue the action;
 
-the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when So Great Storage is touchable.
+the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when So Great Storage is touchable. "A box labeled So-Great Storage is here.".
 
-the storage box is in Scape Space. "A box labeled So-Great Storage is here.".
-
-description of storage box is "[unless lost slot is part of storage box]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
+description of storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
 
 check opening box: say "If brute force worked, it wouldn't be so great for storage." instead;
 
-check taking storage box: say "[greedy-s] guards it carefully. 'I need currency. Give me currency.'" instead;
+check taking So Great Storage: say "[greedy-s] guards it carefully. 'I need currency. Give me currency.'" instead;
 
 check giving droll dollar to someone: if second noun is not greedy-person, say "[second noun] isn't seedy enough to accept it." instead;
 
@@ -20458,7 +20454,7 @@ check giving something to greedy-person:
 	if player has storage, say "You've already traded." instead;
 	if noun is coin or noun is coins, say "'[one of]No redeem. Need more.'[or]Too heavy.' Hey! A veto![in random order]" instead;
 	if noun is dollar:
-		say "[he-she-c] consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, he cries 'Monies so mine!'[paragraph break]You take the storage box.";
+		say "[he-she-c] consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, he cries 'Monies so mine!'[paragraph break]You take the So-Great Storage.";
 		now greedy-person has dollar;
 		if player has s-i:
 			say "[line break]";
@@ -20743,7 +20739,7 @@ to read-lowest-page:
 	let xyz be 1;
 	let nonsense be false;
 	repeat through table of pagelist:
-		if read-yet entry is true or comprehensible entry is false:
+		if page-read-yet entry is true or comprehensible entry is false:
 			now nonsense is true;
 			increment xyz;
 		else:
@@ -20758,7 +20754,7 @@ to read-lowest-page:
 to say lowest-unread:
 	let xyz be 1;
 	repeat through table of pagelist:
-		if read-yet entry is true or comprehensible entry is false:
+		if page-read-yet entry is true or comprehensible entry is false:
 			increment xyz;
 		else:
 			say "--the lowest page you haven't read that looks comprehensible is [xyz]";
@@ -20779,7 +20775,7 @@ carry out numreading:
 	if the number understood < 0, say "You can't un-read the book, but you can leave it un-read." instead;
 	if the number understood > 100, say "The book is only 100 pages long." instead;
 	choose row number understood in table of pagelist;
-	now read-yet entry is true;
+	now page-read-yet entry is true;
 	if number of characters in pgtxt entry > 2:
 		say "You glance over page [number understood]. The most interesting bit seems to be [pgtxt entry][line break]";
 	else:
@@ -20788,13 +20784,13 @@ carry out numreading:
 	if novella is unnoted:
 		now novella is perused;
 	repeat through table of pagelist:
-		if read-yet entry is false and comprehensible entry is true, the rule succeeds;
+		if page-read-yet entry is false and comprehensible entry is true, the rule succeeds;
 	now novella is exhausted;
 	the rule succeeds;
 
 when play begins (this is the seed novella rule) :
 	repeat through table of pagelist:
-		now read-yet entry is false;
+		now page-read-yet entry is false;
 		if number of characters in pgtxt entry > 2:
 			now comprehensible entry is true;
 		else:

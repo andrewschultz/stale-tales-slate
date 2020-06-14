@@ -1723,7 +1723,7 @@ obser [from chic loner chronicle] [tdm4]
 "Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate."
 
 table of pagelist [from novella] [tdm5]
-pgtxt	read-yet	comprehensible
+pgtxt	page-read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true
 "Page Two: 'Pa, we got top wage!'"
 "'Gape there? Ah, pert age!'"
@@ -2839,10 +2839,10 @@ coin	"[one of]You ultimately need another coin, but perhaps it can be converted 
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
 icon	"You've done what you can with the icon. You need to [if number of moot fruits < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
 icons	"[one of]The icons are too inert.[plus][or]The icons can become SONIC.[minus][cycling]"
-Sagest Gate	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
+Sagest Gate	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has So Great Storage]You have the So-Great Storage[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become ICONS.[minus][cycling]"
-s-i	"[if player has storage box]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
-storage box	"[if player has dollar]You can trade the dollar for the storage box.[else if player has storage and lost slot is touchable]You can put something in the box's slot.[else]There's a way to open the storage box. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
+s-i	"[if player has So Great Storage]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
+So Great Storage	"[if player has dollar]You can trade the dollar for the So-Great Storage.[else if player has storage and lost slot is touchable]You can put something in the box's slot.[else]There's a way to open the So-Great Storage. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
 Art Erd	"[trader-clue]"
 Dr Tera	"[trader-clue]"
 droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to [greedy-s] in the Scape Space.[minus][cycling]"

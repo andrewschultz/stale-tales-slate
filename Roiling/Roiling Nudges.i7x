@@ -1364,7 +1364,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "space"	326739437	--	--	"[locname]."
-"trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
+"trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that So-Great Storage[end if]."
 "drawing"	362975539	--	--	"The drawing can't be changed. It's stuck to the wall as a warning."
 "art"	190621639	Art Erd	--	"[1st-name]."
 "red"	234159001	Art Erd	--	"[1st-name]."
@@ -2253,7 +2253,7 @@ to say papay: say "[if auction caution is reflexive]You're probably over-thinkin
 
 to say just-c: say "Just return the fruit to Curtis. No need for another change"
 
-to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be, especially since you [if storage box is in Scape Space]want to get [else]got[end if] that storage box";
+to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be, especially since you [if So Great Storage is in Scape Space]want to get [else]got[end if] that So-Great Storage";
 
 to say hub-a: say "It's a burr hub, not the burr hub. A small but important distinction"
 
