@@ -826,11 +826,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "life"	253127690	Mel Fish	--	"[all-of-mel]."
 "mel"	245695101	Mel Fish	--	"[all-of-mel]."
 "fshi"	205064007	Mel Fish	--	"[all-of-mel]."
-"casn"	186374877	Nerd-Aid	--	"[nerd-a]."
-"nerd"	303066509	Nerd-Aid	--	"[nerd-a]."
-"aid"	68209753	Nerd-Aid	--	"[nerd-a]."
-"wears"	419526469	Nerd-Aid	--	"You suppress a swear as the sales pitch wears on you."
-"bottles"	576885432	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
+"casn"	186374877	Nerd Aid	--	"[nerd-a]."
+"nerd"	303066509	Nerd Aid	--	"[nerd-a]."
+"aid"	68209753	Nerd Aid	--	"[nerd-a]."
+"wears"	419526469	Nerd Aid	--	"You suppress a swear as the sales pitch wears on you."
+"bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "liam"	165069656	grailman	--	"[grail-name]."
 "garn"	189018831	grailman	--	"[grail-name]."
 "lars"	237599426	lars eede	--	"[reed-name]."
@@ -1455,6 +1455,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "trifle"	441561511	--	--	"[its-a-museum]."
 "dustpan"	478080165	--	--	"[its-a-museum]."
 "scalpit"	400850031	--	--	"[its-a-museum]."
+"clasp"	252747167	--	--	"[its-a-museum]."
 "placer"	369603113	--	--	"[its-a-museum]."
 "scalper"	465877079	--	--	"[its-a-museum]."
 "rudest"	538648792	--	--	"[its-a-museum]."
@@ -2295,8 +2296,8 @@ this is the past-strip rule:
 to say dir-rej: say "This game almost never requires you to mess with cardinal directions";
 
 to say if-no-pad:
-	if player does not have pedanto-notepad:
-		now player has pedanto-notepad;
+	if player does not have pedanto notepad:
+		now player has pedanto notepad;
 		say ". But to do that, you need to take it, first. And you do";
 
 to say xyzzys: say "A hollow voice booms, 'Lo! Of...'[no line break]"

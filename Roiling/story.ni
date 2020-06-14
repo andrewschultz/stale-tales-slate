@@ -461,7 +461,7 @@ section compiler non-syntax section
 
 use MAX_DICT_ENTRIES of 3000.
 
-use MAX_OBJECTS of 950.
+use MAX_OBJECTS of 960.
 
 use MAX_SYMBOLS of 140000.
 
@@ -495,7 +495,7 @@ use MAX_VERBS of 780. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
-use MAX_OBJECTS of 960.
+use MAX_OBJECTS of 970. [delta=10]
 
 use MAX_PROP_TABLE_SIZE of 640000. [delta=10000]
 
@@ -1270,7 +1270,7 @@ persuasion rule for asking a person to try doing something (this is the default 
 
 [general]
 
-persuasion rule for asking pedanto-notepad to try doing something:
+persuasion rule for asking pedanto notepad to try doing something:
 	say "CONSULT it instead.";
 	persuasion fails;
 
@@ -1601,7 +1601,7 @@ to reason-clue:
 check objasking it about (This is the check for object information rule):
 	d "noun=[noun] 2nd noun = [second noun] location = [location of second noun].";
 	if noun is evil bee, reason-clue instead;
-	if noun is pedanto-notepad, try consulting pedanto-notepad about "[second noun]" instead;
+	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
 	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
 	if noun is not a person, try talking to noun instead;
 	if noun is washed up, washup-clue instead;
@@ -1661,7 +1661,7 @@ definition: a thing (called th) is to-gen-blather:
 
 check asking about (This is the check for specific topics rule):
 	if noun is evil bee, reason-clue instead;
-	if noun is pedanto-notepad, try consulting pedanto-notepad about "[second noun]" instead;
+	if noun is pedanto notepad, try consulting pedanto notepad about "[second noun]" instead;
 	if noun is duck, say "Quack, quack." instead;
 	if noun is not a person, try talking to noun instead;
 	if noun is washed up, washup-clue instead;
@@ -2158,7 +2158,7 @@ grailman	curst palace	"'You can get there without getting by me, I bet!'"
 Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
 Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
-arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
+arid den	Nerd Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
 arid den	Elvira	"'WHETHER YOU LIKE OR HATE ELVIRA, NERD-AID TASTES GREAT!'"
 atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
 lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing out...'"
@@ -2365,7 +2365,7 @@ table of object-blather [this gives people default things to say about stuff, if
 person-subj	right-region	him-say
 Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way.'"
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
-pedanto-notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
+pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
 haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
@@ -3690,7 +3690,7 @@ settler-try is a truth state that varies;
 to say mb-ss-ped:
 	if player has settler:
 		say "maybe with SS, ";
-	if player has pedanto-notepad:
+	if player has pedanto notepad:
 		say "maybe looking again through your pedanto-notepad for general tips, ";
 
 last-hash is a number that varies.
@@ -4615,7 +4615,7 @@ to say next-to-see:
 		if a random chance of 1 in 7 - stuff-found succeeds:
 			say "You can page through the sad ads.";
 			continue the action;
-	unless player has pedanto-notepad:
+	unless player has pedanto notepad:
 		if a random chance of 1 in 6 - stuff-found succeeds:
 			say "You should examine or take the notepad";
 			continue the action;
@@ -6548,7 +6548,7 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
-smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] weaselly walleyes, [towers] angriest ingrates, nerd-aid, [others] slime }
+smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] weaselly walleyes, [towers] angriest ingrates, Nerd Aid, [others] slime }
 
 rule for supplying a missing noun when listening:
 	repeat with Q running through smell-candidates:
@@ -6587,7 +6587,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if mrlp is towers and leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
-	if noun is nerd-aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
+	if noun is Nerd Aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
 	if player is in Disowned Downside, say "You can [if macks are touchable]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
@@ -6786,7 +6786,7 @@ understand "c" and "t" and "cheat" and "teach" as cting.
 
 carry out cting:
 	if settler is not touchable, say "[reject]" instead;
-	try pushing tech etcha' instead;
+	try pushing tech etcha instead;
 
 chapter sbing
 
@@ -7324,9 +7324,9 @@ definition: a thing (called mything) is cromulent:
 	decide no;
 
 to check-get-pad:
-	if player does not have pedanto-notepad:
+	if player does not have pedanto notepad:
 		say "[line break]In fact, you realize the notepad on the chair would be a great place to file that idea. It'll help tame lots that's meta, mate.";
-		now player has pedanto-notepad;
+		now player has pedanto notepad;
 
 to two-up:
 	increment the score;
@@ -7529,7 +7529,7 @@ volume Ordeal Reload
 
 book Dusty Study
 
-Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is in dusty study]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
+Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto notepad is in dusty study]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
 
 the player is in Dusty Study.
 
@@ -7562,7 +7562,7 @@ rule for printing the name of a dark room: say "No light-glint, oh!"
 
 section a rich chair
 
-a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if].". bore-text is "[if gunter is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
+a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if].". bore-text is "[if gunter is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
 
 this is the bore-chair rule:
 	if current action is searching:
@@ -7609,7 +7609,7 @@ check examining sad ads for the first time:
 
 section pedanto notepad
 
-report taking pedanto-notepad:
+report taking pedanto notepad:
 	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
 	if sad ads are not in Dusty Study:
 		now sad ads are in Dusty Study;
@@ -7808,7 +7808,7 @@ carry out roveovering:
 	if player is not in Dusty Study, say "You're not sure where to." instead;
 	if Gunter is not off-stage, say "It's not that easy. Maybe once you've returned [if player is in Dusty Study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
-	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to [b]ROVE OVER[r]. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto-notepad] and check you have your settler and notepad and super purse[end if].";
+	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to [b]ROVE OVER[r]. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto notepad] and check you have your settler and notepad and super purse[end if].";
 	now roved is true;
 	now first-good-scan is true;
 	now kind-of-cool is true;
@@ -7828,7 +7828,7 @@ to get-cool-stuff:
 	now player has gird grid;
 	now player has super purse;
 	now player has letters settler;
-	now player has pedanto-notepad;
+	now player has pedanto notepad;
 
 chapter isolani liaison
 
@@ -7966,10 +7966,10 @@ check going in Dusty Study:
 			say "You take the latches--they must be useful for something[if player does not have treatise]. There's also a tear-stained paper bound up in them. You pull it out[end if].";
 			now player has latches;
 			now need-line-break is true;
-		if pedanto-notepad is in Dusty Study:
+		if pedanto notepad is in Dusty Study:
 			if need-line-break is true, say "[line break]";
 			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
-			now player has pedanto-notepad;
+			now player has pedanto notepad;
 			now sad ads are in Dusty Study;
 
 chapter Urgent Gunter
@@ -7991,7 +7991,7 @@ to decide which number is stuff-found:
 	if gunter is moot, decide on 3;
 	if thinko is true, increase mytemp by 2;
 	if sad ads are examined, increment mytemp;
-	if player has pedanto-notepad, increment mytemp;
+	if player has pedanto notepad, increment mytemp;
 	if notice is examined, increment mytemp;
 	if bookshelf is examined, increment mytemp;
 	if diorama-flip is true, increment mytemp;
@@ -8929,17 +8929,19 @@ check  switching on the settler: try switching on the whichs shwich instead;
 
 check switching off the settler: try switching on the whichs shwich instead;
 
-a tech etcha' is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha' when player has settler.
+a tech etcha is part of the letters settler. understand "teach button" and "cheat button" and "teach" and "cheat" and "button" as a tech etcha when player has settler. printed name is "tech etcha[']".
 
-description of tech etcha' is "It says A TECH ETCHA['] in the middle, with [if cheat-on is true]a glowing [end if]CHEAT below and [unless cheat-on is true]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
+description of tech etcha is "It says A TECH ETCHA['] in the middle, with [if cheat-on is true]a glowing [end if]CHEAT below and [unless cheat-on is true]a glowing [end if]TEACH below. You could PUSH it to change that, or just type CHEAT or TEACH."
+
+after examining tech etcha for the first time: say "You reflect that while 'a tech etcha[']' feels a little forced, well, sometimes a kludge like that is the only way to get any results."
 
 cheat-on is a truth state that varies.
 
-check switching on the tech etcha': try pushing the tech etcha' instead;
+check switching on the tech etcha: try pushing the tech etcha instead;
 
-check switching off the tech etcha': try pushing the tech etcha' instead;
+check switching off the tech etcha: try pushing the tech etcha instead;
 
-check pushing the tech etcha':
+check pushing the tech etcha:
 	say "You push the teach-cheat button, and it's now [if cheat-on is true]off. Hooray for more challenge[else]on. Hooray for more information[end if][one of] when you SCAN in the future--though you can push the button to go back to normal mode[or][stopping][if cheat-on is false and seen-blues is false]. The logo seems to change colors as well[end if].";
 	now cheat-on is whether or not cheat-on is false instead;
 
@@ -9133,7 +9135,7 @@ before scaning (this is the don't scan part of the settler rule) :
 
 chapter slider
 
-the idlers' slider is a device. the slider is switched off. the slider is part of the letters settler. description is "The slider[one of], which is red (a nice touch--slider and idlers not having any letters that match up,) [or] [stopping]is currently switched [if slider is switched on]on[else]off[end if], with a number [headaches] next to it[one of]. You'd guess that is the number of charges left, or something[or][stopping]."
+the idlers slider is a device. the slider is switched off. the slider is part of the letters settler. description is "The slider[one of], which is red (a nice touch--slider and idlers not having any letters that match up,) [or] [stopping]is currently switched [if slider is switched on]on[else]off[end if], with a number [headaches] next to it[one of]. You'd guess that is the number of charges left, or something[or][stopping].". printed name is "idlers['] slider".
 
 after examining slider:
 	toggle-slider-note;
@@ -9185,25 +9187,25 @@ chapter teariest treatise
 
 book pedanto-notepad
 
-the pedanto-notepad is a warpable thing in Dusty Study. understand "pad/note/notebook/pedanto/notepad" and "note book" and "note pad" and "pedanto notepad" as pedanto-notepad.
+the pedanto notepad is a warpable thing in Dusty Study. understand "pad/note/notebook" and "note book/pad" as pedanto notepad. printed name is "pedanto-notepad".
 
 after choosing notable locale objects when player is in Dusty Study:
-	if pedanto-notepad is in Dusty Study, set locale priority of pedanto-notepad to 0;
+	if pedanto notepad is in Dusty Study, set locale priority of pedanto notepad to 0;
 
-report taking pedanto-notepad:
+report taking pedanto notepad:
 	the rule succeeds;
 
-understand "book" as pedanto-notepad when player is not in Hacks' Shack.
+understand "book" as pedanto notepad when player is not in Hacks' Shack.
 
-check opening the pedanto-notepad: say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one." instead;
+check opening the pedanto notepad: say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one." instead;
 
-check searching the pedanto-notepad: say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one." instead;
+check searching the pedanto notepad: say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one." instead;
 
-after printing the name of the pedanto-notepad while taking inventory:
-	if pedanto-notepad is examined:
+after printing the name of the pedanto notepad while taking inventory:
+	if pedanto notepad is examined:
 		say "(PAD to use[if number of prefigured things > 0] or PAD FLIPS/PF for solutions you figured in advance[end if])";
 
-check dropping the pedanto-notepad: say "One problem with owning a pedanto-notepad is that you are wracked with silly reasons to keep it, even if you have the big-picture stuff covered. Sorry about that." instead;
+check dropping the pedanto notepad: say "One problem with owning a pedanto-notepad is that you are wracked with silly reasons to keep it, even if you have the big-picture stuff covered. Sorry about that." instead;
 
 vaguing is an action applying to nothing.
 
@@ -9212,17 +9214,17 @@ understand the commands "consult pad" and "consult about" and "pad" as something
 understand "consult pad" and "consult about" and "pad" as vaguing.
 
 carry out vaguing:
-	if location of player is dark, say "You can't [if player does not have pedanto-notepad]locate[else]read[end if] your notepad right now." instead;
-	if player does not have pedanto-notepad, try taking pedanto-notepad;
+	if location of player is dark, say "You can't [if player does not have pedanto notepad]locate[else]read[end if] your notepad right now." instead;
+	if player does not have pedanto notepad, try taking pedanto notepad;
 	say "[cur-has]";
 	the rule succeeds.
 
-description of pedanto-notepad is "Other people have computers, but your notepad is yours[one of]. It's made by Da Ponte, who now have a monopoly. But you just like it. The color, the feel[or][stopping]. [cur-has][no line break]"
+description of pedanto notepad is "Other people have computers, but your notepad is yours[one of]. It's made by Da Ponte, who now have a monopoly. But you just like it. The color, the feel[or][stopping]. [cur-has][no line break]"
 
-check examining pedanto-notepad for the first time:
-	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto-notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].[paragraph break](To use the notepad, you can type PAD (subject) or CONSULT PAD ABOUT (subject). If you forget what you've written about, you can type PAD or CONSULT PAD.)";
-	if player does not have pedanto-notepad:
-		now player has pedanto-notepad;
+check examining pedanto notepad for the first time:
+	say "It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.[paragraph break]It won't actually make you pedantic--it just stores the fourth-wall stuff that non-text-adventurers aren't even aware of. Stuff that's a nuisance for text adventurers. While most of it is marginally intuitive (he said, behind the fourth wall,) having to remember it can take away from puzzle solving and such[if player does not have pedanto notepad]. You decide to take it. It'll help tame lots that's meta, mate[end if].[paragraph break](To use the notepad, you can type PAD (subject) or CONSULT PAD ABOUT (subject). If you forget what you've written about, you can type PAD or CONSULT PAD.)";
+	if player does not have pedanto notepad:
+		now player has pedanto notepad;
 	the rule succeeds;
 
 to decide whether (qq - a truth state) is unrelevant:
@@ -9266,7 +9268,7 @@ to say cur-has:
 	else:
 		say "There are no topics specific to this region right now.";
 
-the pen is part of the pedanto-notepad.
+the pen is part of the pedanto notepad.
 
 description of the pen is "It's clipped there so you don't misplace it."
 
@@ -9468,8 +9470,8 @@ pad-consult is a truth state that varies.
 
 check consulting it about:
 	if location of player is dark, say "Not in the dark." instead;
-	if noun is not pedanto-notepad, say "You can only really consult your notepad. ASK something animate, if you want to." instead;
-	if player does not have pedanto-notepad, try taking pedanto-notepad;
+	if noun is not pedanto notepad, say "You can only really consult your notepad. ASK something animate, if you want to." instead;
+	if player does not have pedanto notepad, try taking pedanto notepad;
 	repeat through table of pad-stuff:
 		if known entry is true and topic understood includes topic entry:
 			now readyet entry is true;
@@ -9490,7 +9492,7 @@ understand "notepad [text]" and "pedanto [text]" and "pad [text]" as padding.
 padding is an action applying to one topic.
 
 carry out padding:
-	try consulting pedanto-notepad about topic understood instead;
+	try consulting pedanto notepad about topic understood instead;
 
 recbuffer is indexed text that varies.
 
@@ -9577,12 +9579,12 @@ understand "pf" as pfing.
 
 carry out pfing:
 	now pf-warn is true;
-	if player does not have pedanto-notepad:
+	if player does not have pedanto notepad:
 		say "You need your notepad to use the PF shortcut.";
 	else:
 		choose row with short of "flips" in table of pad-stuff;
 		if known entry is false, say "You consult your notepad but haven't figured any flips in advance yet." instead;
-		try consulting pedanto-notepad about "flips";
+		try consulting pedanto notepad about "flips";
 	the rule succeeds;
 
 volume stores
@@ -11865,7 +11867,7 @@ does the player mean showing a badbook to yak: it is very likely.
 
 understand "bad book" as a badbook.
 
-before giving pedanto-notepad to yak:
+before giving pedanto notepad to yak:
 	say "You don't want to risk the yak nibbling at that. Maybe try something less useful." instead;
 
 try-keyboard is a truth state that varies.
@@ -15672,7 +15674,7 @@ the fire torn frontier is bounding boring scenery in Topside Deposit. descriptio
 
 section shout so hut
 
-the Shout-So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. description of shout-so hut is "It doesn't look that intimidating, but it's noisy enough to keep you away."
+the Shout So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. description of shout-so hut is "It doesn't look that intimidating, but it's noisy enough to keep you away.". printed name of Shout So Hut is "Shout So Hut"
 
 this is the bore-shout-hut rule:
 	if current action is entering, try going south instead;
@@ -16365,7 +16367,7 @@ before locking (this is the yow unlock rule) :
 does the player mean unlocking with dagger: it is very likely;
 does the player mean unlocking with settler: it is likely;
 
-does the player mean unlocking with pedanto-notepad when settler is off-stage: it is likely.
+does the player mean unlocking with pedanto notepad when settler is off-stage: it is likely.
 
 does the player mean locking with dagger: it is very likely;
 does the player mean locking with settler: it is likely;
@@ -16575,7 +16577,9 @@ to say dogleg-other of (myd - a direction):
 
 section unorg'd ground
 
-the unorg'd ground is bounding boring scenery in Fringe Finger. description of unorg'd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorg'd ground is "The unorg'd ground is not worth your time."
+the unorgd ground is bounding boring scenery in Fringe Finger. description of unorgd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorg'd ground is "The unorg'd ground is not worth your time.". printed name is "unorg'd ground".
+
+understand "unorg" and "unorg ground" as unorgd ground.
 
 section strudel
 
@@ -17191,9 +17195,9 @@ a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR"
 
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
-the bottles of Nerd-Aid are boring auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd-aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd-aid is bore-nerd-aid rule.
+the bottles of Nerd Aid are boring auxiliary plural-named scenery. the arid den carries the Nerd Aid. understand "wares" and "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid. printed name of Nerd Aid is "Nerd-Aid". description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
 
-a-text of Nerd-Aid is "RRYYRYR". b-text of Nerd-Aid is "RRYYRYP". parse-text of nerd-aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
+a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYYRYP". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
 this is the bore-nerd-aid rule:
 	if current action is taking or current action is eating or current action is drinking, say "You'd need to buy the Nerd-Aid, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
@@ -17237,7 +17241,9 @@ understand "deal seer" and "deal/seer" as Lars Eede when player is male.
 
 understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
 
-the Reed's Ale is a vanishing thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+the Reed's Ale is a vanishing thing.
+
+a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 description of Reed's Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
 
@@ -17833,9 +17839,9 @@ to preef (thi - a thing): [text listed in table of pres]
 	if thi is not prefigured:
 		say "[line break][i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r]";
 	now thi is prefigured;
-	if player is not in Dusty Study and player does not have pedanto-notepad:
+	if player is not in Dusty Study and player does not have pedanto notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
-		now player has pedanto-notepad;
+		now player has pedanto notepad;
 	pad-rec "flips";
 
 to preef-nol (thi - a thing):
@@ -20900,13 +20906,13 @@ to say part-one-thru:
 
 book Ned's Dens
 
-Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle[clc-pro]. You can go back east.". roomnud of Ned's Dens is table of Ned's Dens nudges.
+Neds Dens is west of Peek Keep. Neds Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle[clc-pro]. You can go back east.". roomnud of Neds Dens is table of Ned's Dens nudges. printed name of Neds Dens is "Ned's Dens".
 
 to say clc-pro: set the pronoun it to chic loner chronicle;
 
 chapter Chic Loner Chronicle
 
-The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]". bore-text is "The Chic Loner Chronicle is only there for reading or examining."
+The Chic Loner Chronicle is an exhibit in Neds Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]". bore-text is "The Chic Loner Chronicle is only there for reading or examining."
 
 chron-row is a number that varies.
 
@@ -20948,9 +20954,9 @@ the larded ladder is a sparething in Sparse Spares. description is "The larded l
 
 the trifle filter is a sparething in Sparse Spares. description is "A finely-tuned device that helped me decide whether silly details were totally irrelevant or just irrelevant enough to be funny and quirky. Or seem that way to me."
 
-The stand-up dustpan is a sparething in Sparse Spares. description is "Useful for sweeping bugs and inconsistencies under the metaphorical rug."
+The stand up dustpan is a sparething in Sparse Spares. description is "Useful for sweeping bugs and inconsistencies under the metaphorical rug.". printed name is "stand-up dustpan".
 
-The plastic scalp-it is a sparething in Sparse Spares. description is "Handy for when a chunk of code--or a story arc--completely didn't work."
+The plastic scalp it is a sparething in Sparse Spares. description is "Handy for when a chunk of code--or a story arc--completely didn't work.". printed name is "plastic scalp-it".
 
 the parcel placer is a sparething in Sparse Spares. description is "Handy for deciding where a good anagram should go--one I wanted to have along, but I didn't know if it should be a thing, a description or random text. Often seen shuffling around (ha! Ha!) the same thing more than once."
 
@@ -22382,7 +22388,7 @@ index map with Rancho Archon Anchor mapped east of Anger Range.
 
 [start towers]
 
-index map with Shaven Havens mapped south of Ned's Dens.
+index map with Shaven Havens mapped south of Neds Dens.
 
 [start presto]
 
@@ -22392,7 +22398,7 @@ index map with r44 mapped west of Hacks' Shack.
 
 [start demo dome]
 
-index map with Ned's Dens mapped east of Scape Space.
+index map with Neds Dens mapped east of Scape Space.
 index map with Intel Inlet mapped north of Evoc Cove.
 index map with Sparse Spares mapped south of Peek Keep.
 

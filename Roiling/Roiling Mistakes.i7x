@@ -3,6 +3,7 @@ Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 [mist.py checks to make sure the unit tests are synced with this]
 [malf.py alphabetizes mistakes by section]
 [books are arranged by difficulty/first viewed, and rooms are arranged by first viewed]
+[note the code may look weird since room names don't have hyphens, to facilitate parser usage for the player with GT]
 
 volume Roiling Mistakes
 
@@ -26,7 +27,7 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 understand "pace" and "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when player has super purse.
 
-understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when player has pedanto-notepad.
+understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when player has pedanto notepad.
 
 book Ordeal Reload
 
@@ -452,18 +453,16 @@ understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, b
 
 chapter Hacks' Shack
 
-to decide whether skid-disk-touch:
-	if skid is touchable or disk is touchable, yes;
-	no;
-
 to decide whether cola-around:
 	if ALocalCo cola is touchable, yes;
 	if mug is touchable and ALocalCo cola is moot, yes;
 	no;
 
-understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or cola-around.
+to decide whether skid-disk-touch:
+	if skid is touchable or disk is touchable, yes;
+	no;
 
-understand "loca" as a mistake ("What you [if ALocalCo Cola is touchable]have helps[else]want needs to help[end if] programming more than water or French champagne or dancing in the rain.") when coal is in location of player or cola-around.
+understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or cola-around.
 
 understand "bat" as a mistake ("You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.") when tba key is touchable.
 
@@ -476,6 +475,8 @@ understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is t
 understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is touchable]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid-disk-touch.
 
 understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is touchable]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid-disk-touch.
+
+understand "loca" as a mistake ("What you [if ALocalCo Cola is touchable]have helps[else]want needs to help[end if] programming more than water or French champagne or dancing in the rain.") when coal is in location of player or cola-around.
 
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has ALocalCo cola.
 
@@ -995,7 +996,7 @@ understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") wh
 
 chapter Ned's Dens
 
-understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in Ned's Dens.
+understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in Neds Dens.
 
 chapter Peek Keep
 
@@ -1004,6 +1005,8 @@ understand "dali" as a mistake ("Not surreal enough for you?") when player is in
 understand "laid" as a mistake ("The spy dial is already laid out.") when player is in Peek Keep.
 
 chapter Sparse Spares
+
+understand "clasp" as a mistake ("If there were a puzzle for stealing stuff, that'd work. But there isn't.") when player is in Sparse Spares.
 
 understand "spears" as a mistake ("There's nothing you need a weapon to fight against.") when player is in Sparse Spares.
 

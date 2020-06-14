@@ -1051,7 +1051,7 @@ understand the command "pall" as something new.
 understand "pall" as palling.
 
 carry out palling:
-	now player has pedanto-notepad;
+	now player has pedanto notepad;
 	repeat through table of pad-stuff:
 		now known entry is true;
 	say "Pad is now fully stocked. Have fun.";
