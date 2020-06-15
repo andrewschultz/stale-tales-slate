@@ -192,7 +192,7 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 
 understand "tardies" as a mistake ("Actually, you have all the time in the world, and you don't need to delay anyone.") when side art is touchable.
 
-understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag] later[end if].") when player is in Same Mesa and Rude 'N Nuder is off-stage.
+understand "under" as a mistake ("[if Gast is in location of player]You can't hide from [Gast] like that, right now[else]There's nobody to hide from, though you could fit under the [sit a nag] later[end if].") when player is in Same Mesa and Rude N Nuder is off-stage.
 
 [def=under-generic]
 understand "under" as a mistake ("You already went UNDER. You need something new. Something slightly different.") when player is in Same Mesa and THE BEAN is in Same Mesa.
@@ -238,7 +238,7 @@ to decide whether told-of-logan:
 	if the rule succeeded, yes;
 	no;
 
-understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan. [?? how do we reconcile preefsay in mistakes with preefsay outside of mistakes?]
+understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un road]") when told-of-logan. [?? how do we reconcile preefsay in mistakes with preefsay outside of mistakes?]
 
 understand "around" as a mistake ("You can't see an un-road yet, or anything that might lead to it.") when be ova is not off-stage and odd aura is off-stage.
 
@@ -724,6 +724,8 @@ understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your lif
 chapter Fringe Finger
 
 understand "refing" as a mistake ("You're not sure what sort of ref'ing would work best. Refinancing? Refocusing? Referencing? Refuting? Reformatting? Refrigerating? Refashioning? Whichever, there really doesn't seem to be much to do here.") when player is in Fringe Finger.
+
+understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is touchable.
 
 chapter Unblest Sunbelt
 

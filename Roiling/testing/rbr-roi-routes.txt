@@ -826,10 +826,6 @@ Brother Horbert will work his magic with that.
 
 >in
 
-@min
-}}CURMAX--
-DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
-
 >out
 
 @nud
@@ -909,6 +905,10 @@ joke death
 >beneath
 }}SCORE++
 Your score has just gone up by one point
+
+@min
+}}CURMAX--
+DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
 Harms Marsh
 
@@ -1040,7 +1040,7 @@ You don't need to riff on any location names to win the game, unless there's not
 Nothing happens. It's a MIST AD, after all.
 #readables for admits mist ad
 >read mist ad
-/(IT'S MAD|T\. D\. ASIM|MS\. DITA|SAD TIM)
+/(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
 #spechelp for admits mist ad

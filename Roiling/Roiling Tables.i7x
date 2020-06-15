@@ -66,15 +66,15 @@ lairage regalia	lairage regalia	false	373417715	Adobe Abode	"across"	"across"	pr
 adsorbing signboard	adsorbing signboard	false	283037761	Idle Deli	"past"	"past"	pre-mesa-dir-flip rule	post-past rule	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."
 sit a nag	Gast	false	350259676	--	"against"	"against"	pre-sitanag-against rule	post-sitanag-against rule	"Quakes squeak as someone approaches, and you think 'Angst! Ai!' [he-she-c] is a lot bigger than you. [he-she-c] sits down and begins, 'tantrums! Must rant![paragraph break]The buggin['] biggun wants you to LISTEN to its staired tirades but also occasionally gestures to the side art on the [sit a nag][if side art is unexamined] you missed before[end if]."
 side art	side art	false	480723649	--	"astride"	"astride"	pre-side-art-astride rule	post-side-art-astride rule	"You sit right on the end of the [sit a nag], prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!'[paragraph break][gast] changes pace. You hear something in the distance. 'The WOE BOW BELL!' [Gast] moans, distracted."
-WOE BOW BELL	Rude 'N Nuder	false	382326203	--	"below"	"below"	--	post-below rule	"It's worth a shot. You duck below the [sit a nag]. Not actually kneeling, of course, because that would be sort of like bowing. But [Gast] decides, why not join you, just in case? After several minutes, the WOE BOW BELL stops. Perhaps there was a correlation. Perhaps not. But [Gast] has decided to change the subject, pulling out a book labeled Rude [']N Nuder and launching new complaints about how this is what Yorpwald is reduced to these days."
-Rude 'N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	post-under rule	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
+WOE BOW BELL	Rude N Nuder	false	382326203	--	"below"	"below"	--	post-below rule	"It's worth a shot. You duck below the [sit a nag]. Not actually kneeling, of course, because that would be sort of like bowing. But [Gast] decides, why not join you, just in case? After several minutes, the WOE BOW BELL stops. Perhaps there was a correlation. Perhaps not. But [Gast] has decided to change the subject, pulling out a book labeled Rude [']N Nuder and launching new complaints about how this is what Yorpwald is reduced to these days."
+Rude N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	post-under rule	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
 pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 be ova	MORF FORM	false	329930229	--	"above"	"above"	--	--	"You look up. There is a giant MORF-FORM! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with the MORF-FORM."
 MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'"
-THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	--	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
+THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	post-the-bean-beneath rule	"You push THE BEAN and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. You think you hear a drama armada cheering you: 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear THE BEAN roll back into place..."
 NULL IT unit	odd run on aura	false	375930018	--	"until"	"until"	pre-unlit-until rule	--	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The NULL IT unit fizzles a bit and pops, and light returns to Harms Marsh ... in the form of an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
-odd run on aura	un-road	false	356906602	--	"around"	"around"	--	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise. They're almost too bright. You find an all noon gag that helps deflect the shiniest bits, but perhaps it can help you even more."
+odd run on aura	un road	false	356906602	--	"around"	"around"	--	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise. They're almost too bright. You find an all noon gag that helps deflect the shiniest bits, but perhaps it can help you even more."
 noon gag	noon gag	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water behind the admits mist ad over there."
 admits mist ad	admits mist ad	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
 thickness sketchins	thickness sketchins	false	441136547	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. You suddenly feel enveloped with all manner of navigational knowledge, and the mess-up spumes popping up everywhere? Well, they are no problem. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think you yourself, scan yon... so canny... and you wind up somewhere different."
@@ -552,7 +552,7 @@ this is the post-side-art-astride rule:
 	now WOE BOW BELL is in Same Mesa;
 
 this is the post-below rule:
-	now Gast has Rude 'N Nuder;
+	now Gast has Rude N Nuder;
 
 this is the post-under rule:
 	moot Gast;
@@ -562,13 +562,16 @@ this is the post-under rule:
 this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
 
+this is the post-the-bean-beneath rule:
+	if worst ad is reflexive, poss-d;
+
 this is the pre-unlit-until rule:
 	moot darkness;
 
 this is the post-around-unroad rule:
 	now noon gag is in Harms Marsh;
 	now stripey pyrites are in Harms Marsh;
-	now un-road is in Harms Marsh;
+	now un road is in Harms Marsh;
 
 this is the post-athwart rule:
 	moot bad oar;
@@ -1872,7 +1875,7 @@ WOE BOW BELL	"You seem like you should be able to find shelter from the WOE BOW 
 MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
-Rude 'N Nuder	"The pages of Rude [']N Nuder flutter a bit."
+Rude N Nuder	"The pages of [Nuder] flutter a bit."
 sheol holes	"Hm. You thought you saw a way by...no, not BY, a little more complex than that."
 odd run on aura	"You thought you saw an un-road for a second, but ... not quite."
 NULL IT unit	"You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift."
@@ -2226,12 +2229,12 @@ lairage regalia	"You twist your mind a bit, but no, there's probably only one wa
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 sit a nag	"[if Gast is moot][giant-over][else if side art is not reflexed]You already leaned on the [sit a nag] right. You look around it and wonder if the side art could stop [gast]'s tirades[else]The [sit a nag] itself isn't as important as what's happening around it[end if]."
 side art	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal with Rude [']N Nuder, now[else]You got on the [sit a nag] right. Time to start ducking[end if]."
-Rude 'N Nuder	"You don't want the WOE BOW BELL to come back."
+Rude N Nuder	"You don't want the WOE BOW BELL to come back."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert will work his magic with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
 THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
-un-road	"You know where the un-road is, but how to navigate it?"
+un road	"You know where the un-road is, but how to navigate it?"
 odd run on aura	"The underground is already lit. Un-unlit."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
@@ -2437,7 +2440,7 @@ Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine th
 side art	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 tirades	--	side art
 WOE BOW BELL	"[one of]The WOE BOW BELL doesn't have a ten-letter anagram, but a five-letter one.[plus][or]Since the WOE BOW BELL makes you see red, that also helps with what the letters should be, if you don't want to scan things. There's a direction you can go that might make you feel better about avoiding the bell.[plus][or]Go BELOW[minus][cycling]"	--	"BELOW"
-Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than [Gast] ranting. But again, you need to avoid [his-her] flailing entirely. You need to duck something that's over.[or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
+Rude N Nuder	"[one of]The contents of [Nuder] are probably worse than [Gast] ranting. But again, you need to avoid [his-her] flailing entirely. You need to duck something that's over.[or]On cheat mode, [Nuder] scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
 Oscar	"Oscar has little to say, [if U NERD ENDUR REDUN is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
 Pat	"Pat has little to say, other than to discourage you from the seed pit, [if seed pit is reflexed]but you got through there[else]so you need to enter it despite Pat's objections[end if]."
 U NERD ENDUR REDUN	"U NERD ENDUR REDUN is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]."
@@ -2453,7 +2456,7 @@ sheol holes	"They're just there as an agent to make you find the right way out. 
 NULL IT unit	"[one of]The NULL IT unit is producing the darkness and has for a while.[plus][or]You need an adjective of time[plus][or]The are was unlit, but now it is...[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
 darkness	--	NULL IT unit
 sheol holes	"[one of]You need to search for No-Lag Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
-un-road	"[one of]You're halfway to finding No-Lag Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
+un road	"[one of]You're halfway to finding No-Lag Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
 Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but it is a slightly odd preposition.[plus][or]You just need to go around. All over the place.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 free reef	"It's just scenery."
 thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"

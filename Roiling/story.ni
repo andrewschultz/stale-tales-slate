@@ -4435,7 +4435,7 @@ palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't 
 tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
-rude 'n nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
+Rude N Nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
 a bev o be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
 MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
 null it unit	true	true	false	false	"The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?"
@@ -4927,7 +4927,7 @@ prep-spoil is a truth state that varies.
 to say p-spo: now prep-spoil is true;
 
 check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
-	if noun is sit a nag or noun is side art or noun is WOE BOW BELL or noun is Rude 'N Nuder or noun is Gast:
+	if noun is sit a nag or noun is side art or noun is WOE BOW BELL or noun is Rude N Nuder or noun is Gast:
 		if Cleric Circle is unvisited, all-say "You aren't ready to do anything with the [sit a nag] yet. The church may make you feel better about things." instead;
 		if list o toils is unexamined, all-say "You may want to look at the list-o-toils first." instead;
 
@@ -4945,7 +4945,7 @@ this is the routes-hinting rule:
 		if sit a nag is reflexive, try objhinting sit a nag instead;
 		if side art is reflexive, try objhinting side art instead;
 		if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
-		if Rude 'N Nuder is touchable, try objhinting Rude 'N Nuder instead;
+		if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
 		if Cleric Circle is unvisited, 	try objhinting scripture picturers instead;
 		if Idle Deli is unvisited, try objhinting adsorbing signboard instead;
@@ -4970,7 +4970,7 @@ this is the routes-hinting rule:
 	if location of player is Harms Marsh:
 		if NULL IT unit is in Harms Marsh, try objhinting NULL IT unit instead;
 		if noon gag is in Harms Marsh, try objhinting noon gag instead;
-		try objhinting un-road instead;
+		try objhinting un road instead;
 	if location of player is Ripe Pier, try objhinting admits mist ad instead;
 	if location of player is Cripple Clipper, try objhinting thickness sketchins instead;
 	if location of player is Sonancy Canyons:
@@ -5393,7 +5393,7 @@ after reading a command:
 	if the player's command includes "under":
 		if number of words in the player's command > 1:
 			if Gast is touchable:
-				if rude 'n nuder is touchable:
+				if Rude N Nuder is touchable:
 					say "Truncating to one word.";
 					change the text of the player's command to "under";
 	if player is in Rascal Craals and ruby is moot:
@@ -6428,7 +6428,7 @@ check listening:
 	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
 	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
 	if noun is Gast: [routes]
-		if rude 'n nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
+		if Rude N Nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
 		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
 		if tirades are touchable, try listening to tirades instead;
 		say "BUG. [Gast] should direct you to the next puzzle." instead;
@@ -9331,7 +9331,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "methods"	true	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."	"methods"	false
 "red"	true	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."	"red"	true
 "shuffling/ around" or "shuffling around"	true	"Postmortems? Most sport em. Details: I lasted. I miss my tagged gadget and how it helped me through the Forest (store F,) Sortie (store I,) and Metros (store M) in the Trips Strip. To the resort (store R.) Redness = guised guides (letters all wrong.)"	"Shuffling Around"	true
-"no-lag/logan" or "no-lag logan"	false	"No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road."	"No-Lag Logan"	true	routes
+"no lag" or "logan" or "no lag logan"	false	"No-Lag Logan may have a ship that can get you out of here. It is beyond an un-road."	"No-Lag Logan"	true	routes
 "tagged/gadget" or "tagged gadget"	true	"You wrote some notes about the Tagged Gadget in here, about Certify and Rectify modes. How Certify showed all the right letters, and Rectify made the first and last right[if player does not have settler]. You could do with a new thingamabob now[else]. How Secure allowed you to keep both modes and Recuse let you skip a store. Your settler is apparently handy in a different way[end if][if Carven Cavern is unvisited]. Probably a bunch of different commands to use, though[end if]."	"tagged gadget"	true
 "retry" or "terry"	true	"You wrote notes about how you can RETRY thanks to Terry if you get stuck somewhere past a store."	"retry"	true
 "warp"	true	"[i][bracket]FOURTH WALL NOTE: if you solved Store P, U, V, W, or Y in an earlier release, you can type the final command to bypass it. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"	"warp"	true
@@ -9391,8 +9391,8 @@ table of pres [xxpre]
 preflip	thereg	pretodo
 sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
 side art	routes	"Find a reason to sit ASTRIDE the [sit a nag]."
-sheol holes	routes	"You can look AROUND to find the un-road."
-un-road	routes	"You can go ALONG the un-road...once you find it."
+sheol holes	routes	"You can look AROUND to find the unroad."
+un road	routes	"You can go ALONG the un-road...once you find it."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
 bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
 yob den	routes	"You need to go BEYOND the yob den."
@@ -10300,7 +10300,7 @@ part people and things
 
 chapter Gast
 
-Gast is a male person. "[gast] sits here on the [sit a nag][if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if] Gast".
+Gast is a male person. "[gast] sits here on the [sit a nag][if Rude N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if] Gast".
 
 description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if WOE BOW BELL is reflexed][his-her-c] is drowned out by the WOE BOW BELL[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
@@ -10488,11 +10488,11 @@ a-text of woe bow bell is "RYRYR". b-text of woe bow bell is "RYRYR". parse-text
 
 chapter Rude N Nuder
 
-Rude 'N Nuder is a vanishing boring thing. description of Rude 'N Nuder is "You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of 'work,' whether extolling freedom of speech or saying how tasteless it is.". bore-text of Rude 'N Nuder is "You don't need to do anything special with Rude [']N Nuder. Well, maybe apart from the special stuff you've been doing so far this game."
+Rude N Nuder is a vanishing boring thing. description of Rude N Nuder is "You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of 'work,' whether extolling freedom of speech or saying how tasteless it is.". bore-text of Rude N Nuder is "You don't need to do anything special with [nuder]. Well, maybe apart from the special stuff you've been doing so far this game.". printed name is "Rude [']N Nuder".
 
-a-text of Rude 'N Nuder is "YRRYR". b-text of Rude 'N Nuder is "YRPG?". parse-text of Rude 'N Nuder is "u[sp]x[sp]x[sp]e[sp]x". Rude 'n Nuder is cheat-spoilable.
+a-text of Rude N Nuder is "YRRYR". b-text of Rude N Nuder is "YRPG?". parse-text of Rude N Nuder is "u[sp]x[sp]x[sp]e[sp]x". Rude N Nuder is cheat-spoilable.
 
-does the player mean doing something with Rude 'N Nuder when Nuder is touchable: it is likely.
+does the player mean doing something with Rude N Nuder when Rude N Nuder is touchable: it is likely.
 
 section U NERD ENDUR REDUN
 
@@ -10563,8 +10563,6 @@ after looking in Cleric Circle:
 		moot Brother Horbert;
 		pad-del "reagents";
 		move a bev o be ova to Same Mesa;
-		if worst ad is not moot:
-			poss-d;
 	continue the action;
 
 after printing the locale description for Cleric Circle when Cleric Circle is unvisited (this is the reveal snoop spoon rule):
@@ -10634,21 +10632,23 @@ check looking under pews: try examining pews instead;
 
 check entering pews: say "A voice seems to intone: '[']Tis no sin to sit on, is...? NOT!'" instead;
 
-check examining the pews when summary is off-stage:
+check examining the pews when Mum Rays Summary is off-stage:
 	say "You search through the pews, just as when you were a kid, looking for anything, maybe a note from the last person. You found something from yourself, once. But this time, something actually turns up! It's been hidden carefully, tucked where two woody bits are glued together. Mum Ray's Summary![paragraph break]An initial glance reveals nothing about Mum Ray's identity. Is it a woman with a last name of Ray? A silent fellow named Ray who preferred to write? Or just a pen name? They probably needed the anonymity, with the power Rev. Ali had, and either way, there's a lot to read.";
 	now player has the summary instead;
 
-section mum ray's summary
+section Mum Ray's Summary
 
-check closing summary:
+Mum Rays Summary is a thing. description of Mum Rays Summary is "[part-of-summary]". printed name is "Mum Ray's Summary".
+
+check closing Mum Rays Summary:
 	say "You fold up the summary and start at page 1.";
 	now summary-page is 1;
-	try examining summary instead;
+	try examining Mum Rays Summary instead;
 
-check opening summary:
-	try closing summary instead;
+check opening Mum Rays Summary:
+	try closing Mum Rays Summary instead;
 
-Mum Ray's Summary is a thing. description of Mum Ray's Summary is "[part-of-summary]";
+understand "mum ray" and "ray summary" and "ray" and "mum ray summary" as Mum Rays Summary when mrlp is routes.
 
 to say part-of-summary:
 	increment summary-page;
@@ -10801,7 +10801,7 @@ check entering seed pit: say "[if mushrooms are off-stage]Pat holds you back, wa
 
 book Harms Marsh
 
-Harms Marsh is an innie room in Routes. description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is touchable][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Lag Logan, how to navigate it?[else]Now, you need to find No-Lag Logan. You need to find a good unroad...because roads and inroads will loop back. Perhaps the odd run on aura will help you with that.[end if]". roomnud of harms marsh is table of harms marsh nudges.
+Harms Marsh is an innie room in Routes. description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is touchable][paragraph break]And this area seems like it was always unlit... but you intuit null about how to change that...[else if un road is in Harms Marsh]Now you've found the un-road to get to No-Lag Logan, how to navigate it?[else]Now, you need to find No-Lag Logan. You need to find a good unroad...because roads and inroads will loop back. Perhaps the odd run on aura will help you with that.[end if]". roomnud of harms marsh is table of harms marsh nudges.
 
 after looking in Harms Marsh:
 	set the pronoun them to sheol holes;
@@ -10848,17 +10848,15 @@ a-text of all noon gag is "YRYRR". b-text of all noon gag is "??Y??". parse-text
 
 chapter un-road
 
-the un-road is vanishing boring scenery. description of un-road is "The un-road must lead to No-Lag Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Lag Logan?";
+the un road is vanishing boring scenery. description of un road is "The un-road must lead to No-Lag Logan. But how to follow it?". bore-text is "The un-road leads somewhere, you think. But how to follow it to No-Lag Logan?". printed name of un road is "un-road".
 
-understand "trail" and "un/road/unroad" and "un road" as un-road when un-road is touchable.
+understand "trail" and "un/road/unroad" as un road when mrlp is routes.
 
-a-text of un-road is "YRYYRR". b-text of un-road is "YRYYRP". parse-text of un-road is "-[sp]x[sp]-[sp]-[sp]x[sp]d". un-road is cheat-spoilable.
-
-understand "unroad" as un-road.
+a-text of un road is "YRYYRR". b-text of un road is "YRYYRP". parse-text of un road is "-[sp]x[sp]-[sp]-[sp]x[sp]d". un road is cheat-spoilable.
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "An admits mist ad blocks you. You just can't see beyond it. But you're at a shore. No-Lag's boat must be beyond the admits mist ad! It looks dangerous to enter without a plan.". roomnud of ripe pier is table of ripe pier nudges.
+Ripe Pier is a room in Routes. "You're at a shore. An admits mist ad seems to do the opposite of, well, admitting you behind. You just can't see, anyway. It looks dangerous to enter without a plan. But something must be behind. Perhaps No-Lag Logan's boat! ". roomnud of ripe pier is table of ripe pier nudges.
 
 after looking in Ripe Pier:
 	set the pronoun it to admits mist ad;
@@ -10875,12 +10873,6 @@ a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". pars
 this is the bore-mist rule:
 	if current action is taking, say "Mist-ake. Ha ha ha." instead;
 	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the mist behind the ad the right way, with a good plan... or even a bad one... it would work out." instead;
-
-chapter No-Lag's boat
-
-No-Lag's Boat is boring scenery in Ripe Pier. description of No-Lag's Boat is "You can barely see it, but you can't hear No-Lag Logan calling you.". bore-text is "Just poking it won't help you get there. You need to find a way to it."
-
-check going inside in Ripe Pier: try entering mist instead;
 
 book Cripple Clipper
 
@@ -16564,8 +16556,6 @@ section strudel
 
 some strudel is a LLPish reflexive hintpastry in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
-understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is touchable.
-
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
 check scaning strudel:
@@ -19187,7 +19177,7 @@ section hornets
 
 the hornets are plural-named southy puzanimals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here.". locale-text is "hornets buzzing about unthreateningly".
 
-understand "hornet" as hornets when hornets are touchable.
+understand "hornet" as hornets when mrlp is otters.
 
 chapter pines and snipe
 
@@ -20417,7 +20407,7 @@ rule for printing a locale paragraph about greedy-person:
 		now So Great Storage is mentioned;
 	continue the action;
 
-the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when So Great Storage is touchable. "A box labeled So-Great Storage is here.".
+the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when mrlp is others. "A box labeled So-Great Storage is here.".
 
 description of storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
 
@@ -20951,7 +20941,7 @@ check burning:
 	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
 	if noun is sitar, say "That's not the way to recover rock-star status." instead;
 	if noun is a sto, say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;
-	if noun is rude 'n nuder, say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead; [routes]
+	if noun is Rude N Nuder, say "I am anti-censorship, even of that sort of thing. Plus you have no source of flame." instead; [routes]
 	if noun is pipe soot, say "It's been through enough of that." instead;
 	if noun is divorces, say "A rubbish society rag deserves such a fate--in an incinerator or something. Maybe you can think DIVORCES into irrelevance, though." instead; [troves]
 	if noun is praise or noun is Trevis Vister, say "[if noun is reflexive]Perhaps have it create a burning in you[else]It already created a burning in you[end if]." instead;
@@ -21120,7 +21110,7 @@ understand the command "hint/hints/info/help [any thing]" as something new.
 
 understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
 
-[understand "hint [any not hintrelevant thing]" as a mistake ("Can't hint that.").]
+[understand "hint [any not hintrelevant thing]" as a mistake ("Can't hint that.").] [?? test weird cases]
 
 ever-obj-hinted is a truth state that varies.
 
@@ -21283,7 +21273,7 @@ check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
 	if side art is reflexive, try objhinting side art instead;
 	if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
-	if Rude 'N Nuder is touchable, try objhinting Rude 'N Nuder instead;
+	if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
 	say "[bug-report]" instead;
 
 to say in-hovels:
