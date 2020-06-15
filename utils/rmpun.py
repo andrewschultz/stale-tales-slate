@@ -1,8 +1,7 @@
 import sys
 from collections import defaultdict
 import re
-
-#done = ['asset-hit atheists', 'welt-proof flowerpot', 'shout-so hut', "unorg'd ground", "pedanto-notepad", "idlers' slider", "tech etcha'", 'stand-up dustpan', 'plastic scalp-it', "ned's dens" ]
+import i7
 
 #truth state which/that varies
 # feeling you're a perp -> fleeing feeling (PERP)
@@ -31,26 +30,7 @@ deffos_start = [ 'figure ', 'the graphics-window is a ', 'altroutes of', 'defini
 # deffos_anywhere means that a sentence/paragraph containing this should be ignored in all cases.
 deffos_anywhere = [ 'is a truth state that varies', 'is a truth state which varies', 'is a number that varies', 'is a person that varies',  'is a number variable', 'is a number that varies', 'is a room that varies', 'is a list of', 'is a thing that varies', 'is a region that varies', 'are an object-based rulebook', 'text that varies', 'is not listed in any rulebook', 'is a guardian that varies', 'is a picaro that varies', 'other-g', 'a person can be ', 'a quip can be ', 'is an object that varies', ' is listed before the ', 'start-pre-fruit', 'bore-check ', 'bore-text ', 'last-loc of ', 'a-text', 'b-text', 'last-loc', '(this is the', 'go-region', 'reg-hint-rule', 'passed-on', 'locale-text' ]
 
-to_fixes = [
-"accu-plaster", "gropin' roping", "reed's ale", "spec-o-scope", "unripe ur-pine", "pester'n serpent", "natives' site van", "hostile-is-he lot", "gadflies' gasfield", "sporties' ripostes", "wait-seer", "owers'-bin brownies", "claire's scalier",
-# store w above
-"so-great storage", "feeling you're a perp", "tekno-token", "popstar's passport", "a banna'", "so-great storage",
-# store h above
-'perma-amper', "vets' vest", "achers' chaser arches", "lapsin' plains", "ol' trap",
-#store y above
-"coevals' alcoves", "mutilate-it amulet", "slopinc clip-ons", "look-kool", 'atmo-moat', "animals' laminas", "shrewin' whiners", 'gretta garett-tatger', "tenfold teflon'd den loft", "li'l p's pills",
-#store t above
-"mount um-not", "deil's slide", "cretins' cistern", "pg-on-up popgun", "saps' pass", "i'm le cop polemic", "hacks' shack", 
-#store p above
-"bee's head", "godlings' lodgings", "l'clear cellar", 
-#store v above
-"by li'l billy", "questin' inquest", 'shatter-threats', "largely all-grey gallery", "i'd cede",
-#ordeal reload above
-'un-road', "rude 'n nuder", "mum ray's summary", "no-lag's boat", 
-#store u above
-#demo dome (cleared)
-#general above
-]
+to_fixes = defaultdict(bool)
 
 def cut_down_need_fixing(line, line_count):
     temp = line
@@ -96,14 +76,44 @@ def cut_down_shorts(line):
             temp = re.sub(r'\b{}\b'.format(x), 'yyy', temp)
     return temp
 
+def find_strings():
+    in_to_fixes = False
+    with open("rmpun-{}.txt".format(my_project)) as file:
+        for (line_count, line) in enumerate(file, 1):
+            if line.startswith("#"): continue
+            if line.startswith(";"): break
+            if line.lower().startswith("to_fixes"):
+                in_to_fixes = True
+                continue
+            if in_to_fixes:
+                for x in line.lower().strip().split(","):
+                    x0 = x.strip()
+                    if not x0:
+                        print("WARNING blank string line", line_count)
+                    if x in to_fixes:
+                        print("Duplicate to_fix", x, "line", line_count)
+                    else:
+                        to_fixes[x] = True
+
 caught_need_fix = 0
 final_string = ""
 
-try:
-    if sys.argv[1] == 'f':
+my_project = "roiling"
+cmd_count = 1
+
+while cmd_count < len(sys.argv):
+    arg = sys.argv[cmd_count]
+    if arg == 'f':
         show_first_lines = True
-except:
-    pass
+    elif arg == 's':
+        my_project = "shuffling"
+    elif arg == 'r':
+        my_project = "roiling"
+    cmd_count += 1
+
+i7.go_proj(my_project)
+
+find_strings()
 
 with open("story.ni") as file:
     for (line_count, line) in enumerate(file, 1):
