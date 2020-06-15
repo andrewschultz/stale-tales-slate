@@ -591,21 +591,21 @@ understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to sh
 
 understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is in location of player or c2 is in location of player.
 
-understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin' Plains
+understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin Plains.
 
-understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are in location of player.
+understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are touchable.
 
-understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
+understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
 
-understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in Lapsin' Plains and player is in Lapsin' Plains.
+understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in Lapsin Plains and player is in Lapsin Plains.
 
-understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin' Plains.
+understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin Plains.
 
-understand "slapin" and "slap in" as a mistake ("No vilence, err, violence, please.") when player is in Lapsin' Plains.
+understand "slapin" and "slap in" as a mistake ("No vilence, err, violence, please.") when player is in Lapsin Plains.
 
-understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in Lapsin' Plains.
+understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in Lapsin Plains.
 
-understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
+understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin Plains and span pans are in Lapsin Plains.
 
 chapter Shuttle Hutlets
 
@@ -631,9 +631,9 @@ understand "rasche" as a mistake ("Nobody jumps from the Achers['] Chaser Arches
 
 chapter Horned Hedron
 
-understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in Horned Hedron and ol' trap is in Horned Hedron.
+understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when player is in Horned Hedron and ol trap is in Horned Hedron.
 
-understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in Horned Hedron and ol' trap is in Horned Hedron.
+understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when player is in Horned Hedron and ol trap is in Horned Hedron.
 
 chapter End Den
 

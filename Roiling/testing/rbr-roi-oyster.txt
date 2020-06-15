@@ -540,17 +540,17 @@ Your score has just gone up by one point
 {$SCOS}
 #altpath
 #done rejects for frat raft
->frat ratf
+>ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
-Your score has just gone up by one point>score
+Your score has just gone up by one point
 >score
 }}SCORE++
 {$SCOS}
 #altpath
 Anger Range
 >thisalt
-WRONG
+--you could've tried to BOAST to get the boats' attention, then LEAP.
 >undo
 >undo
 >undo
@@ -2000,9 +2000,9 @@ You look at the pins. They're in the way, but they don't look particularly sturd
 You see red at the thought of voluntarily pricking yourself with pins.
 #mistake test for snip/snip pins
 >snip
-You don't have anything with a small enough blade to cut the pins. But that has to be close.
+You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
 >snip pins
-You don't have anything with a small enough blade to cut the pins. But that has to be close.
+You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
 #mistake retest for redial
 >redial
 Maybe in a bit, but the pins are in the way at the moment.

@@ -4149,19 +4149,19 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Fighter Freight:
 			now noun is pale plea;
 			continue the action;
-		if player is in Lapsin' Plains:
-			if crate are in Lapsin' Plains and crate is reflexive:
+		if player is in Lapsin Plains:
+			if crate are in Lapsin Plains and crate is reflexive:
 				now noun is crate;
 				continue the action;
-			else if c2 is in Lapsin' Plains:
+			else if c2 is in Lapsin Plains:
 				now noun is c2;
 				continue the action;
 			else if bogus-plains are reflexive:
 				now noun is bogus-plains;
 				continue the action;
 		if player is in Sclerous Closures:
-			if Achers' Chaser Arches are reflexive:
-				now noun is Achers' Chaser Arches;
+			if Achers Chaser Arches are reflexive:
+				now noun is Achers Chaser Arches;
 				continue the action;
 		if player is in Anger Range:
 			if pikes are moot and haunter is off-stage:
@@ -4179,8 +4179,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is eeks;
 			continue the action;
-		if player is in Horned Hedron and walleyes are moot and ol' trap is in Horned Hedron:
-			now noun is ol' trap;
+		if player is in Horned Hedron and walleyes are moot and ol trap is in Horned Hedron:
+			now noun is ol trap;
 			continue the action;
 		if player is in Plasm Lamps:
 			if bogus-lamps are in Plasm Lamps:
@@ -4479,12 +4479,12 @@ Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not exa
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
 capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
 casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
-perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
+perma amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
 li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[end if]."
-Achers' Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
+Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
@@ -5062,10 +5062,10 @@ to decide which thing is oyster-item:
 		if haunter is off-stage, decide on pre-haun;
 		if haunter is reflexive, decide on haunter;
 	if haunter is reflexed and location of player is location of haunter, decide on haunter;
-	if player is in Lapsin' Plains:
-		if c2 is in Lapsin' Plains, decide on c2;
+	if player is in Lapsin Plains:
+		if c2 is in Lapsin Plains, decide on c2;
 		if crate is reflexive, decide on crate;
-		if skis are in Lapsin' Plains, decide on skis;
+		if skis are in Lapsin Plains, decide on skis;
 		if knob is reflexive, decide on knob;
 		if pans are reflexive, decide on pans;
 	if player is in Hardest Trashed Dearths, decide on eeks;
@@ -5084,10 +5084,10 @@ to decide which thing is oyster-item:
 		if sardine is in Sclerous Closures:
 			if player has wrap, decide on wrap;
 			decide on sardine;
-		if Achers' Chaser Arches is reflexive, decide on Achers' Chaser Arches;
+		if Achers Chaser Arches is reflexive, decide on Achers Chaser Arches;
 	if player is in Horned Hedron:
 		if walleyes are in Horned Hedron, decide on walleyes;
-		if ol' trap is in Horned Hedron, decide on ol' trap;
+		if ol trap is in Horned Hedron, decide on ol trap;
 	if player has gleaner and gleaner is reflexive, decide on gleaner;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
@@ -5802,7 +5802,7 @@ Disease Seaside	"The matterless streamlets, err, don't matter. They might even l
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
+Lapsin Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
 Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
@@ -6278,7 +6278,7 @@ knocking is an action applying to nothing.
 understand "knock" as knocking.
 
 carry out knocking:
-	if player is in Lapsin' Plains or player is in Dusty Study:
+	if player is in Lapsin Plains or player is in Dusty Study:
 		if urgent Gunter is off-stage and stuff-found is 3, say "Knock knock! / Who's there? / An adventurer who should probably just OPEN the door instead." instead;
 		say "A hollow CONKK, but nothing more. You may need to try other actions here." instead;
 	if player is in Gates Stage, say "It'll be a bit tougher than that." instead;
@@ -9073,8 +9073,8 @@ definition: a thing (called candi) is bluable:
 	if candi is tunes, no; [oyster specific]
 	if player is in Plasm Lamps and candi is ant, yes;
 	if candi is haunter and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
-	if candi is crate and player is in Lapsin' Plains:
-		if c2 is in Lapsin' Plains, yes;
+	if candi is crate and player is in Lapsin Plains:
+		if c2 is in Lapsin Plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in Gates Stage and gate-level is 2: [others specific]
 		if candi is fleeing feeling or candi is searcher or candi is viewer, no;
@@ -9415,7 +9415,7 @@ plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[el
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
-Achers' Chaser Arches	oyster	"SEARCH the arches."
+Achers Chaser Arches	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
 lance	oyster	"CLEAN the lance once you have something to wash it with."
@@ -13101,12 +13101,12 @@ a direction can be viable.
 
 definition: a direction (called dir) is viable:
 	if player is in Phat Path and dir is north, no;
-	if player is in Lapsin' Plains and dir is inside and span pans are in Lapsin' Plains, no;
+	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
 	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west, no;
 	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
 	if player is in Gates Stage and player does not have passport and dir is north, no;
 	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
-	if player is in Horned Hedron and dir is inside and walleyes are moot and ol' trap is reflexed, yes;
+	if player is in Horned Hedron and dir is inside and walleyes are moot and ol trap is reflexed, yes;
 	if player is in Largely All-Grey Gallery and dir is inside, yes;
 	if player is in Carven Cavern and dir is inside and act ruin curtain is moot, yes;
 	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
@@ -13306,7 +13306,7 @@ check taking tunes: say "Ironically, they're the sort of tunes you really can't 
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "u[sp]x[sp]x[sp]e[sp]x". tunes is cheat-spoilable.
 
-The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
+The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
 a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]i[sp]x". tips pits are cheat-spoilable.
 
@@ -13318,11 +13318,11 @@ check scaning jukebox:
 
 chapter perma amper
 
-the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
+the perma amper is part of the jukebox. printed name of perma amper is "perma-amper".
 
-the perma-amper is an auxiliary boring thing. description of perma-amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.". bore-check is bore-perma-amper rule.
+the perma amper is an auxiliary boring thing. description of perma amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.". bore-check is bore-perma-amper rule.
 
-a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text of perma-amper is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
+a-text of perma amper is "RYRYR.". b-text of perma amper is "R?RYR". parse-text of perma amper is "x[sp]-[sp]m[sp]a[sp]x". perma amper is cheat-spoilable.
 
 this is the bore-perma-amper rule:
 	if debug-state is true, say "[current action].";
@@ -13335,17 +13335,17 @@ check pushing the song buttons: say "They're probably all pretty terrible. You n
 
 does the player mean doing something with song buttons when player is in Posh Hops Shop: it is likely.
 
-the LOLstr trolls are plural-named reflexive people in Posh Hops Shop. description is "LOLstr trolls have gained prominence in Yorpwald by being especially good at baiting patrons they don't like. Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets' vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]LOLstr return your gapin['] with aping, menacingly. They probably don't want an apology[else]LOLstr block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
+the LOLstr trolls are plural-named reflexive people in Posh Hops Shop. description is "LOLstr trolls have gained prominence in Yorpwald by being especially good at baiting patrons they don't like. Each is bigger and stronger than you and eyeing you as a fishy character. Each has got a mohawk that says WHAM! OK! and is wearing a vets['] vest. They're hired to cram pesty types back in. No sprat parts til he traps them with his strap.". "[if silly-acts > 0]LOLstr return your gapin['] with aping, menacingly. They probably don't want an apology[else]LOLstr block the door out[end if][one of]. They're not exactly froodish doorfish[or][stopping]."
 
 a-text of LOLstr trolls is "RRRYRR". b-text of LOLstr trolls is "RRRY?R". parse-text of LOLstr trolls is "x[sp]x[sp]x[sp]o[sp]l[sp]x".
 
-the vets' vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap."
+the vets vest is a useless thing. description is "It reads: [i]We toss sots. Ew![r] You suspect this means probably only the disruptive, broke sots who patronise this noise trap.". printed name of vets' vest is "vets['] vest".
 
-check scaning vets' vest:
+check scaning vets vest:
 	say "You scan the trolls instead.";
 	try scaning trolls instead;
 
-the LOLstr trolls wear the vets' vest.
+the LOLstr trolls wear the vets vest.
 
 Casper Spacer is a person in Posh Hops Shop. description is "He hides the writing in his Capers Recaps from your prying eyes.". "Casper Spacer, the famous fish author, is here, working on his latest book, Capers Recaps[one of]. He seems to want to be bothered and not want to be at the same time. Writers have a way of massaging life's contradictions[or][stopping]."
 
@@ -13406,13 +13406,13 @@ understand the command "remap" as something new.
 
 understand "remap [something]" as remaping.
 
-does the player mean remaping the perma-amper: it is very likely.
+does the player mean remaping the perma amper: it is very likely.
 
 rule for supplying a missing noun when remaping:
-	if player is in Posh Hops Shop, now noun is perma-amper;
+	if player is in Posh Hops Shop, now noun is perma amper;
 
 carry out remaping:
-	if noun is perma-amper:
+	if noun is perma amper:
 		if tunes are moot, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
 		try fliptoing tunes instead;
 	say "There's only one thing to remap in the game." instead;
@@ -13595,9 +13595,9 @@ prod	"You spill the pills, which bounce around at your legs until you're annoyed
 heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
 waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.[paragraph break]The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it."
-Achers' Chaser Arches	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
+Achers Chaser Arches	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
 gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
-ol' trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
+ol trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
@@ -13622,7 +13622,7 @@ carry out spilling:
 			say "You can't spill the jar--just what's in it.";
 	now cheated-guy is nothing;
 	if player is in Sclerous Closures:
-		if Achers' Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
+		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of haunter is location of player:
 		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
 	if player is in Rascal Craals:
@@ -14112,7 +14112,7 @@ every turn (this is the track haunter rule):
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
 			if location of player is Rascal Craals:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol' trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
 				moot walleyes;
 				moot haunter;
 				moot thin hint;
@@ -14168,15 +14168,15 @@ carry out traceing:
 	if c2 is moot, say "You already did that. If you retrace, you might get lost at a terrace." instead;
 	try fliptoing c2 instead;
 
-check scaning crate: if c2 is in Lapsin' Plains, try scaning c2 instead;
+check scaning crate: if c2 is in Lapsin Plains, try scaning c2 instead;
 
 check opening span pans: try going inside instead;
 
-check going inside when player is in Lapsin' Plains:
+check going inside when player is in Lapsin Plains:
 	if crate is reflexive, say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are not moot, say "Those skis block the door pretty handily." instead;
 	if knob is not moot, say "The knob seems stuck--and attached to the pans." instead;
-	if span pans are in Lapsin' Plains, say "The span pans still block your way, but it should be a breeze to get by them. No, that's not quite it. A cinch? No..." instead;
+	if span pans are in Lapsin Plains, say "The span pans still block your way, but it should be a breeze to get by them. No, that's not quite it. A cinch? No..." instead;
 	if Shuttle Hutlets is unvisited:
 		say "You've made it past the pans but have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
@@ -14187,7 +14187,7 @@ does the player mean bonking the knob: it is very likely.
 the can't search unless container or supporter rule is not listed in any rulebook.
 
 carry out searching:
-	if noun is ol' trap, say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
+	if noun is ol trap, say "That's the right idea. But not the right way to search. You need to walk all over the floor, here, to disable the ol['] trap." instead;
 	if noun is pol art portal, say "The portal has nothing." instead;
 	say "You're not able to find anything hidden." instead;
 
@@ -14308,7 +14308,7 @@ does the player mean seeking the eeks: it is very likely.
 
 carry out seeking:
 	if noun is eeks, try fliptoing eeks instead;
-	if noun is Achers' Chaser Arches, say "Not quite the right way to poke through the arches." instead;
+	if noun is Achers Chaser Arches, say "Not quite the right way to poke through the arches." instead;
 	try searching noun instead;
 	the rule succeeds.
 
@@ -14678,13 +14678,13 @@ carry out cleaning:
 
 book Lapsin' Plains
 
-to say knob-link: say "[if knob is in Lapsin' Plains], linked by a knob,[end if]"
+to say knob-link: say "[if knob is in Lapsin Plains], linked by a knob,[end if]"
 
-Lapsin' Plains is north of Anger Range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are touchable]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are touchable]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel inadvisable everywhere except past [if pans are in Lapsin' Plains]the pans[else]where the pans were[end if] and back south.". roomnud of Lapsin' Plains is table of Lapsin' Plains nudges.
+Lapsin Plains is north of Anger Range. Lapsin Plains is in oyster. "Boy, it's desolate here! [if span pans are touchable]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are touchable]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. Sloppy polyps make travel inadvisable everywhere except past [if pans are in Lapsin Plains]the pans[else]where the pans were[end if] and back south.". roomnud of Lapsin Plains is table of Lapsin Plains nudges. printed name of Lapsin Plains is "Lapsin['] Plains".
 
-the sloppy polyps are plural-named bounding boring scenery in Lapsin' Plains. description of sloppy polyps is "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why.". bore-text is "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond.".
+the sloppy polyps are plural-named bounding boring scenery in Lapsin Plains. description of sloppy polyps is "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why.". bore-text is "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond.".
 
-c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
+c2 is vanishing privately-named scenery in Lapsin Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
@@ -14692,7 +14692,7 @@ does the player mean opening the span pans: it is likely.
 
 section crate
 
-the crate is reflexive boring scenery in Lapsin' Plains. description of the crate is "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
+the crate is reflexive boring scenery in Lapsin Plains. description of the crate is "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
@@ -14700,17 +14700,17 @@ understand "debris" and "crates" as crate.
 
 chapter shut huts
 
-the shut huts are plural-named scenery in Lapsin' Plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
+the shut huts are plural-named scenery in Lapsin Plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
 
 check taking shut huts: try going inside instead;
 
 check entering huts: try going inside instead;
 
-after printing the locale description for Lapsin' Plains when Lapsin' Plains is unvisited:
+after printing the locale description for Lapsin Plains when Lapsin Plains is unvisited:
 	say "You hear splintering and notice a crate that fell near you. Someone or something doesn't like you here.";
-	now fragments are in Lapsin' Plains;
+	now fragments are in Lapsin Plains;
 
-the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixed in place. "Skis criss-cross over the pans, blocking you from entry."
+the skis are a plural-named flippable thing in Lapsin Plains. the skis are fixed in place. "Skis criss-cross over the pans, blocking you from entry."
 
 a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "x[sp]i[sp]x[sp]s". skis is cheat-spoilable.
 
@@ -14726,7 +14726,7 @@ check taking skis: say "They're wedged to the door right now. The more you force
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true and bogus-plains are not moot. printed name is "all around the plains". description of bogus-plains is "The plains would be bigger except for the sloppy polyps."
+bogus-plains is privately-named LLPish reflexive scenery in Lapsin Plains. understand "plains" as bogus-plains when player is in Lapsin Plains and debug-state is true and bogus-plains are not moot. printed name is "all around the plains". description of bogus-plains is "The plains would be bigger except for the sloppy polyps."
 
 understand "bp" as bogus-plains when debug-state is true.
 
@@ -14734,19 +14734,19 @@ a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-te
 
 chapter bonking
 
-the span pans are plural-named vanishing scenery in Lapsin' Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!' ... they seem less relevant than the red writing of who created them.[paragraph break][if skis are in Lapsin' Plains and knob is in Lapsin' Plains]Skis and a knob hold the pans together[else if skis are in Lapsin' Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
+the span pans are plural-named vanishing scenery in Lapsin Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!' ... they seem less relevant than the red writing of who created them.[paragraph break][if skis are in Lapsin Plains and knob is in Lapsin Plains]Skis and a knob hold the pans together[else if skis are in Lapsin Plains]Skis crisscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
 
 to say pan-block:
-	if knob is in Lapsin' Plains and skis are in Lapsin' Plains:
+	if knob is in Lapsin Plains and skis are in Lapsin Plains:
 		say "[one of]skis and knob[or]knob and skis[at random]";
-	else if knob is in Lapsin' Plains:
+	else if knob is in Lapsin Plains:
 		say "knob";
 	else:
 		say "skis"
 
 a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span is "?[sp]?[sp]?[sp]p". span pans are cheat-spoilable.
 
-understand "pan" and "snap pan" as span pans when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
+understand "pan" and "snap pan" as span pans when player is in Lapsin Plains and span pans are in Lapsin Plains.
 
 after doing something with span pans:
 	set the pronoun it to span pans;
@@ -14756,7 +14756,7 @@ check taking span pans: say "Much too heavy." instead;
 
 check entering span pans: try opening span pans instead;
 
-the knob is vanishing scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
+the knob is vanishing scenery in Lapsin Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
 
 understand "doorknob" as knob.
 
@@ -14766,7 +14766,7 @@ does the player mean bonking the knob: it is very likely.
 
 check scaning span pans:
 	if knob is moot and skis are moot, continue the action;
-	say "The settler gives weird readouts depending on if you go over [if knob is in Lapsin' Plains and skis are in Lapsin' Plains]the knob, skis or pans[else if knob is in Lapsin' Plains]the knob or pans[else]the skis or pans[end if], but when you focus on the skis, this is what you get:[paragraph break]";
+	say "The settler gives weird readouts depending on if you go over [if knob is in Lapsin Plains and skis are in Lapsin Plains]the knob, skis or pans[else if knob is in Lapsin Plains]the knob or pans[else]the skis or pans[end if], but when you focus on the skis, this is what you get:[paragraph break]";
 
 chapter snaping
 
@@ -14777,7 +14777,7 @@ understand the command "snap" as something new.
 understand "snap" as snaping.
 
 carry out snaping:
-	if player is in Lapsin' Plains:
+	if player is in Lapsin Plains:
 		if span pans are moot, say "After a bit of thought, you decide against 'losing it.'" instead;
 		try fliptoing span pans instead;
 	say "This isn't the time or place to snap. With your fingers or with your brain.";
@@ -14794,7 +14794,7 @@ understand "bonk [something]" as bonking.
 bonkies is a truth state that varies.
 
 carry out bonking:
-	if location of player is not Lapsin' Plains, say "[reject]" instead;
+	if location of player is not Lapsin Plains, say "[reject]" instead;
 	if noun is door:
 		say "I'll assume you meant the knob instead...";
 		try bonking the knob instead;
@@ -14816,7 +14816,7 @@ to say mr-miss: say "[if player is male]Mr.[run paragraph on][else]Miss[end if]"
 
 to say heepy: say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
-Shuttle Hutlets is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside.". roomnud of Shuttle Hutlets is table of Shuttle Hutlets nudges.
+Shuttle Hutlets is inside of Lapsin Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside.". roomnud of Shuttle Hutlets is table of Shuttle Hutlets nudges.
 
 understand "hut" and "huts" and "hutlet" as Shuttle Hutlets.
 
@@ -14924,7 +14924,7 @@ carry out busting:
 
 book Sclerous Closures
 
-Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers' Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if Achers' Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west.". roomnud of Sclerous Closures is table of Sclerous Closures nudges.
+Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if Achers Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west.". roomnud of Sclerous Closures is table of Sclerous Closures nudges.
 
 check going in Sclerous Closures: if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
@@ -14940,23 +14940,23 @@ OH NERD HERD NO is boring scenery in Sclerous Closures. "OH NERD HERD NO covers 
 this is the bore-onho rule:
 	if current action is entering, try going north instead;
 
-the Achers' Chaser Arches are plural-named reflexive scenery in Sclerous Closures. description of Achers' Chaser Arches is "[if Achers' Chaser Arches is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].".
+the Achers Chaser Arches are plural-named reflexive scenery in Sclerous Closures. description of Achers Chaser Arches is "[if Achers Chaser Arches is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". printed name is "Achers['] Chaser Arches".
 
-check taking Achers' Chaser Arches: say "[if Achers' Chaser Arches are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
+check taking Achers Chaser Arches: say "[if Achers Chaser Arches are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
 
-a-text of Achers' Chaser Arches is "RYYRRR". b-text of Achers' Chaser Arches is "RY?RRR". parse-text of Achers' Chaser Arches is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
+a-text of Achers Chaser Arches is "RYYRRR". b-text of Achers Chaser Arches is "RY?RRR". parse-text of Achers Chaser Arches is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
-does the player mean searching the Achers' Chaser Arches: it is very likely.
+does the player mean searching the Achers Chaser Arches: it is very likely.
 
-check searching Achers' Chaser Arches:
+check searching Achers Chaser Arches:
 	if sardine is in Sclerous Closures:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
-		preef Achers' Chaser Arches instead;
+		preef Achers Chaser Arches instead;
 	if the player's command includes "search":
-		try fliptoing Achers' Chaser Arches; [?? if something is flipto'd, it should become unfigured, or we should have error checking]
-		now Achers' Chaser Arches are unfigured;
+		try fliptoing Achers Chaser Arches; [?? if something is flipto'd, it should become unfigured, or we should have error checking]
+		now Achers Chaser Arches are unfigured;
 		the rule succeeds;
-	say "[if Achers' Chaser Arches are reflexed]You already searched, and there's nothing else[else]No, that is not quite the way to look through the arches[end if]." instead;
+	say "[if Achers Chaser Arches are reflexed]You already searched, and there's nothing else[else]No, that is not quite the way to look through the arches[end if]." instead;
 
 check going north in Sclerous Closures: if sardine is in Sclerous Closures, say "'Sop, no snoop,' says the sandier sardine, pulling you back." instead;
 
@@ -14998,7 +14998,7 @@ carry out burying:
 
 book Horned Hedron
 
-Horned Hedron is north of Sclerous Closures. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol' trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol' trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west.". roomnud of Horned Hedron is table of Horned Hedron nudges.
+Horned Hedron is north of Sclerous Closures. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west.". roomnud of Horned Hedron is table of Horned Hedron nudges.
 
 check going west when player is in Horned Hedron: if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
 
@@ -15019,13 +15019,13 @@ this is the bore-sheets rule:
 
 chapter ol trap and portal
 
-the ol' trap is flippable scenery in Horned Hedron. understand "ol trap" and "ol/oltrap" as ol' trap.
+the ol trap is flippable scenery in Horned Hedron. printed name of ol trap is "ol['] trap".
 
-a-text of ol' trap is "RYRRYR". b-text of ol' trap is "RYPPYR". parse-text of ol' trap is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
+a-text of ol trap is "RYRRYR". b-text of ol trap is "RYPPYR". parse-text of ol trap is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
 
-check taking ol' trap: say "That'd be a good way to spring it." instead;
+check taking ol trap: say "That'd be a good way to spring it." instead;
 
-description of ol' trap is "Naturally, it is there to make you rot, pal, if you try to get by it. But there must be some mechanism to disarm it. Somewhere hidden in this room. You just need to look around right."
+description of ol trap is "Naturally, it is there to make you rot, pal, if you try to get by it. But there must be some mechanism to disarm it. Somewhere hidden in this room. You just need to look around right."
 
 The weaselly walleyes are plural-named people in Horned Hedron. "[one of]Some weaselly walleyes whisper to each other and smirk at your every move[or]Those weaselly walleyes are still acting and looking all shifty[stopping]."
 
@@ -15042,10 +15042,10 @@ description of walleyes is "Oh, they are seedy, all right. But they seem more in
 
 check going inside in Horned Hedron:
 	if pol art portal is in Horned Hedron, try entering pol art portal instead;
-	if ol' trap is in Horned Hedron, try entering ol' trap instead;
+	if ol trap is in Horned Hedron, try entering ol trap instead;
 	say "There's nothing to enter at the moment." instead;
 
-check entering ol' trap: say "It's an obvious ol['] trap but likely an effective one." instead;
+check entering ol trap: say "It's an obvious ol['] trap but likely an effective one." instead;
 
 the pol art portal is auxiliary scenery. description of pol art portal is "Despite the pol(itical) art on it prpoagandizing Elvira smashing her opponents, including a grossly inaccurate caricature of you, it looks safe. It doesn't crackle or anything. The only question is where it leads."
 
@@ -15073,18 +15073,18 @@ understand "patrol" as patroling.
 
 carry out patroling:
 	if player is in Horned Hedron:
-		if ol' trap is touchable, try fliptoing pol art portal instead;
+		if ol trap is touchable, try fliptoing pol art portal instead;
 		say "You already patrolled." instead;
 	if Horned Hedron is visited:
-		if walleyes are moot and ol' trap is in Horned Hedron and mrlp is oyster:
+		if walleyes are moot and ol trap is in Horned Hedron and mrlp is oyster:
 			say "You suddenly realize how to search out the ol['] trap in the Horned Hedron.";
 			move player to Horned Hedron, without printing a room description;
 			try fliptoing pol art portal instead;
 		if walleyes are in Horned Hedron and mrlp is oyster:
 			say "That's a good idea. Maybe you can search the Horned Hedron once if the walleyes are gone.";
-			preef ol' trap;
+			preef ol trap;
 			do nothing instead;
-	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if ol' trap is moot]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
+	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if ol trap is moot]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
 	the rule succeeds;
 
 book Rascal Craals
@@ -22048,7 +22048,7 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers' Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol' trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
@@ -22341,7 +22341,7 @@ index map with Olde Lode mapped east of Posh Hops Shop.
 index map with Disease Seaside mapped east of Olde Lode.
 index map with Fighter Freight mapped east of Disease Seaside.
 index map with Sclerous Closures mapped north of Posh Hops Shop.
-index map with Lean Lane mapped east of Lapsin' Plains.
+index map with Lean Lane mapped east of Lapsin Plains.
 index map with Hardest Trashed Dearths mapped east of Lean Lane.
 index map with tenfold mapped north of Horned Hedron.
 index map with Plasm Lamps mapped east of tenfold.
