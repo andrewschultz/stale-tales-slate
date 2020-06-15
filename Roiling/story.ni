@@ -2460,6 +2460,7 @@ worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [r
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
 A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
 Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
+stop post	"POP'S TOTS is written in red on the stop post."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
@@ -4057,7 +4058,7 @@ definition: a person (called per) is guardianish:
 last-wall is a thing that varies. last-wall is usually allow lots tools wall.
 
 when play begins (this is the hint and other randomization rule):
-	if a random chance of 1 in 2 succeeds, now bee-head-first is true; [troves random clues]
+	if a random chance of 1 in 2 succeeds, now evil-bee-second is true; [troves random clues]
 	if a random chance of 1 in 2 succeeds, now rivets-first is true;
 	if a random chance of 1 in 2 succeeds, now lobster-first is true;
 	if a random chance of 1 in 2 succeeds, now sister-first is true;
@@ -5004,10 +5005,8 @@ this is the troves-hinting rule:
 		try objhinting post instead;
 	if player is in Boarded Roadbed:
 		if bee-score is 0:
-			if bee-head-first is true, try objhinting bee's head instead;
+			if evil-bee-second is true, try objhinting snore so arena instead;
 			try objhinting evil bee instead;
-		if bee's head is reflexive, try objhinting bee's head instead;
-		if evil bee is reflexive, try objhinting evil bee instead;
 		try objhinting L'Clear Cellar instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
@@ -5035,7 +5034,7 @@ this is the troves-hinting rule:
 		now spoilit is false instead;
 	all-say "Pa Egg Pea has no further immediately practical advice, though it probably should. [bug-report]" instead;
 
-bee-head-first is a truth state which varies.
+evil-bee-second is a truth state which varies.
 
 lobster-first is a truth state which varies.
 
@@ -6402,7 +6401,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6445,10 +6444,16 @@ check listening:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
-		if bee's head is reflexive, say "A snore from the bee makes you see red." instead;
+		if snore so arena is reflexive, say "A snore from the Snore So Arena makes you see red." instead;
 		say "The bee is quiet now." instead;
 	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
+	if noun is SNORE SO ARENA:
+		if SNORE SO ARENA is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
+		say "[one of]A snore arises from the arena. You see red.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
+	if noun is evil bee:
+		if SNORE SO ARENA is reflexive, try listening to SNORE SO ARENA instead;
+		say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
 	if noun is I'd Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if noun is praise spirea, try examining praise spirea instead;
@@ -11075,7 +11080,7 @@ check examining sob ever verbose:
 
 chapter stop post
 
-The stop post is reflexive scenery in Bustle Sublet. "[if sob ever verbose is reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the sob ever verbose--you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
+The stop post is reflexive scenery in Bustle Sublet. "[if sob ever verbose is reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the sob ever verbose--you could look at it a while without seeing anything meaningful. It's the intersection of Evans Ave N/S and Weave Ave E/W, but this means nothing to you[else if post is reflexive]The stop post has something written on it[end if]."
 
 check scaning post:
 	if sob ever verbose is reflexive, try scaning sob ever verbose instead;
@@ -11112,19 +11117,21 @@ chapter THE BEE and 2 solutions
 
 section bee proper (believe)
 
-the evil bee is a reflexive privately-named thing in Boarded Roadbed. printed name of evil bee is "[vile-evil] bee"
+the evil bee is a reflexive thing in Boarded Roadbed. printed name of evil bee is "[vile-evil] bee"
 
 after looking in Boarded Roadbed:
 	set the pronoun it to evil bee;
 	set the pronoun her to evil bee;
 	continue the action;
 
-initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
+initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here above a SNORE SO ARENA, against the laws of physics. It's [if bee-score is 0]really[else if bee-score is 1]kind of, but not fatally,[else if bee-score is 2]is no longer[end if] distracting you from the thinking you need to do[if SNORE SO ARENA is reflexed]. There's also noise coming from the SNORE SO ARENA[end if]."
 
 a-text of evil bee is "RYRYYRY". b-text of evil bee is "RYRYYRG". parse-text of evil bee is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e"
 
+[(code needed to confirm evil/vile bee to believel)]
+
 [
-a-text of vile bee is "RYRYYRY". b-text of vile bee is "RYPYYRG". parse-text of evil bee is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]". parse-text of evil bee is "x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e".
+a-text of vile bee is "RYRYYRY". b-text of vile bee is "RYPYYRG". parse-text of evil bee is "[if snore so arena is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]". parse-text of evil bee is "x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e".
 ]
 
 check taking evil bee: say "I'll be stingy. Better me than the bee, eh?" instead;
@@ -11133,7 +11140,7 @@ Include (-
 	has transparent animate
 -) when defining evil bee.
 
-description of evil bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to L'Clear Cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][else]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee's head is reflexive]. Bizarrely, it has NO EARS. And it's a bit red where the ears should be[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
+description of evil bee is "[if bee-score is 2]It looks utterly defeated, but at least it didn't die[else if bee-score is 0]It seems to know you want to go down to L'Clear Cellar. Bees can smell that, especially an EVIL BEE[one of]. One thing's for sure, no free beers while this bee's freer[or][stopping][else]It's buzzing a bit, but it's not moving around so fast. You're not threatened by it any more. You could probably sneak past it[end if][if bee-score < 2]. It seems pretty [vile-evil][end if]."
 
 to say vile-evil: say "[if bee-score is 0]evil[else if bee-score is 1]vile[else]live[end if]"
 
@@ -11143,26 +11150,24 @@ understand "vile" and "vile bee" as evil bee when bee-score > 1.
 understand "live" and "live bee" as evil bee when bee-score is 2.
 
 check scaning evil bee:
-	if bee-score is 0:
-		if a random chance of 1 in 2 succeeds:
-			say "The bee pokes her head in so near and disrupts your settler's reading.";
-			try scaning bee's head instead;
-	if evil bee is reflexed and bee's head is reflexive:
-		say "Nothing shows up until you get to the bee's head.";
-		try scaning bee's head instead;
-	if bee-score is 2, say "The bee rests, silent, and so does your settler." instead;
+	if evil bee is reflexed and snore so arena is reflexive:
+		say "The bee shows nothing, but the SNORE SO ARENA does.";
+		try scaning snore so arena instead;
 
-section bee's head (reason)
+check scaning snore so arena:
+	if evil bee is reflexive and snore so arena is reflexed:
+		say "Nothing shows up until you scan the evil bee.";
+		try scaning evil bee instead;
 
-the bee's head is part of the evil bee. the bee's head is reflexive. description is "[if bee's head is reflexed]It appears a bit duller now, after you reasoned so well against it[else]It shines brightly, as if it is ready for a battle of wits[end if]."
+section SNORE SO ARENA
 
-a-text of bee's head is "RYYRYR". b-text of bee's head is "RYYRYR". parse-text of bee's head is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
+the SNORE SO ARENA is scenery in Boarded Roadbed. the SNORE SO ARENA is reflexive. description is "It's bright red, and the [evil bee] dances around it. There's also red writing[if snore so arena is reflexive], and it emits noise, too[end if]."
 
-check taking bee's head: say "You're not fast enough to behead the bee's head." instead;
+a-text of SNORE SO ARENA is "RYYRYR". b-text of SNORE SO ARENA is "RYYRYR". parse-text of SNORE SO ARENA is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 to decide which number is bee-score:
 	let temp be 0;
-	if bee's head is reflexed, increment temp;
+	if SNORE SO ARENA is reflexed, increment temp;
 	if evil bee is reflexed, increment temp;
 	decide on temp;
 
@@ -19899,7 +19904,7 @@ the fleeing feeling is a reflexive boring thing. it is cheat-spoilable. descript
 this is the bore-perp rule:
 	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the fleeing feeling whispering 'PERP!' Maybe there's a simple way to shift things around." instead;
 
-a-text of perp is "RRYR". b-text of perp is "PRYP". parse-text of perp is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
+a-text of fleeing feeling is "RRYR". b-text of fleeing feeling is "PRYP". parse-text of fleeing feeling is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
 
 every turn when player has fleeing feeling: say "You [one of][or]still [stopping]can't shake that fleeing feeling you should just run, because you're [if gate-level is 1]kind of [end if]a PERP.";
 
@@ -20407,9 +20412,7 @@ rule for printing a locale paragraph about greedy-person:
 		now So Great Storage is mentioned;
 	continue the action;
 
-the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when mrlp is others. "A box labeled So-Great Storage is here.".
-
-description of storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
+the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when mrlp is others. "A box labeled So-Great Storage is here.". description of So Great Storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
 
 check opening box: say "If brute force worked, it wouldn't be so great for storage." instead;
 
@@ -21330,8 +21333,8 @@ hint-entry	advice-entry
 Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point." [start TROVES]
 stop post	"Now you've spotted the post, it is only good for another clue if you examine it."
 evil bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
-bee's head	"[by-bee]."
-diapers	"[by-bee]."
+SNORE SO ARENA	"[by-bee]."
+diapers	"You figured what to do with the diapers."
 praise	"[by-rivets]."
 rivets	"[by-rivets]."
 ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
@@ -22091,8 +22094,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
-		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE you could get past the evil bee, too."; [1 of 2]
-		if bee's head is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
+		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
+		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO arena, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";

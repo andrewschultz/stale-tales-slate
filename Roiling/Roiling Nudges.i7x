@@ -355,7 +355,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "stop"	355202520	--	--	"The stop post is in the past. No need to p.s. tweaking it."
 "live"	333777614	evil bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
-"snore"	452663963	--	--	"[if bee's head is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
+"snore"	452663963	--	--	"[if SNORE SO ARENA is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
+"arena"	286413056	--	--	"[if SNORE SO ARENA is reflexed]Nothing happens. You may need to look at the full SNORE SO ARENA[else]You already managed to REASON your way around the SNORE SO ARENA."
 
 table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

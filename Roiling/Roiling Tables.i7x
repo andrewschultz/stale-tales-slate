@@ -92,7 +92,7 @@ eh at heat	eh at heat	false	270386244	--	"hate"	"hate"	--	post-heat-hate rule	"Y
 Race Acre	Race Acre	false	234323315	Bustle Sublet	"care"	"care"	--	post-race-acre-care rule	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	--	--	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	pre-spot-stop-post rule	post-spot-stop-post rule	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
-bee's head	bee's head	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if bee-score is 2]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
+SNORE SO ARENA	SNORE SO ARENA	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"The SNORE SO ARENA doesn't make sense. You calm down and sort out the reasons it doesn't, and that helps. Then you remember the bumblebee and giant paraadoxes: small bumblebees flying don't make any sense. Then, therefore, a much bigger one should make even less sense[if bee-score is 2]. So you have now disposed of the bee both emotionally and logically[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[else]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
 l'clear cellar	l'clear cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
@@ -613,9 +613,10 @@ this is the post-spot-stop-post rule:
 
 this is the bee-less-active rule:
 	if bee-score is 2:
+		say "You're now able to focus perfectly on L'Clear Cellar and how to get into it[if cellar is prefigured]. Not much else to do here than RECALL[end if].";
 		min-up;
 	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+		say "You're able to focus on L'Clear Cellar and how to get into it, now[if cellar is prefigured]. Maybe you could focus perfectly if you wanted, or you could just RECALL now[end if].";
 
 this is the pre-cellar-recall rule:
 	if bee-score is 0:
@@ -1893,7 +1894,7 @@ sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and 
 stop post	"The stop post continues its silent defiance. You might need to look at it from a slightly different angle."
 a sty tasty say	"No. You pause. That can't be it. You need to do something, or nothing, differently."
 LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
-bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
+SNORE SO ARENA	"The SNORE SO ARENA flashes weirdly."
 evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track."
 l'clear cellar	"It's...hmm...you remember all the clues, but what order to place them in, now."
 diapers	"Staring again at the diapers, you are depressed you couldn't even get being depressed right."
@@ -2240,7 +2241,7 @@ bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. 
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
 a sty tasty say	"You can't over-stay your staying power, or something."
-bee's head	"Too much fiddling with reason is unreasonable."
+SNORE SO ARENA	"Drowning something without reason in reason is unreasonable."
 evil bee	"The bee's already taken enough of your in-my-heartitude."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
@@ -2471,7 +2472,7 @@ Race Acre	"[one of]You can't be bothered with the Race Acre since you're drained
 fretful truffle	"The fretful truffle, if you eat it, will tell you what to [if cur-score of troves is 0]type[else]think[end if] next."
 verbose	"[one of]Even when someone or something is terse with you, their terseness can give you something to focus on and manipulate[plus][or]OBSERVE other people or things[minus][cycling]."	--	"OBSERVE"
 post	"[one of]You must persist when you are stonewalled. The second time is easier than the first and likely requires less creativity[plus][or]You may SPOT something interesting on a second look[minus][cycling]."	--	"SPOT"
-bee's head	"[one of]The bee is hovering so near. But small bees shouldn't be able to fly. Giant bees--well, there is the giant's paradox.[plus][or]The path of concrete reasoning should not be closed to the common man or woman.[plus][or] often, once you believe you can, you really can REASON![minus][cycling]"	--	"REASON"
+SNORE SO ARENA	"[one of]There's no good reason for the SNORE SO ARENA to be there. But it may still block you from doing what you want.[plus][or]If you listen, you may get other clues.[plus][or]If you REASON, it will disrupt but the arena and the [evil bee].[minus][cycling]"	--	"REASON"
 evil bee	"[one of]Even intellectual elitists know, deep down inside, that there is an emotional component to things.[plus][or]They hope to be able to BELIEVE without letting the common man do so as well. Not that they need to, to achieve their goals.[minus][cycling]"	--	"BELIEVE"
 l'clear cellar	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
 spider	--	ires pad

@@ -343,6 +343,9 @@ But it's not just any bee. It's an evil bee!
 #nudge for snore
 >snoer
 Hmm. Nothing at all. It must be a snore.
+#nudge for arena
+>arena
+Nothing happens. You may need to look at the full SNORE SO ARENA
 
 @max
 >believe
@@ -398,6 +401,12 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#renudge for snore
+>snoer
+You already managed to REASON with a snore. Nothing else to do.
+#renudge for arena
+>arena
+You already managed to REASON your way around the SNORE SO ARENA.
 #renudge for bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.

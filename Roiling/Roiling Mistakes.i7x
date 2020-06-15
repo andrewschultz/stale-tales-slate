@@ -275,9 +275,11 @@ understand "pots" as a mistake ("You can't see what you would do with a bunch of
 chapter Bustle Sublet
 
 to say snore-was-is:
-	say "[if bee's head is reflexed]was[else]is[end if]"
+	say "[if SNORE SO ARENA is reflexed]was[else]is[end if]"
 
-understand "norse" as a mistake ("The bee's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Bustle Sublet.
+understand "norse" as a mistake ("The bee or arena's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Bustle Sublet.
+
+understand "noser" as a mistake ("A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.") when player is in bustle sublet.
 
 understand "senor" as a mistake ("The bee's gender [snore-was-is] only relevant to the point of knowing it's a [i]senora[r].") when player is in Bustle Sublet.
 
