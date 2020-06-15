@@ -94,7 +94,7 @@ sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	--	--	"
 stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	pre-spot-stop-post rule	post-spot-stop-post rule	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief! You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 SNORE SO ARENA	SNORE SO ARENA	false	454851781	--	"reason"	"reason"	--	bee-less-active rule	"The SNORE SO ARENA doesn't make sense. You calm down and sort out the reasons it doesn't, and that helps. Then you remember the bumblebee and giant paraadoxes: small bumblebees flying don't make any sense. Then, therefore, a much bigger one should make even less sense[if bee-score is 2]. So you have now disposed of the bee both emotionally and logically[else]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee-score is 2]. On top of your reasoning it can't, you render it out of commission emotionally and factually[else]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
-l'clear cellar	l'clear cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
+L Clear Cellar	L Clear Cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
 I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
@@ -621,7 +621,7 @@ this is the bee-less-active rule:
 this is the pre-cellar-recall rule:
 	if bee-score is 0:
 		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
-		preef l'clear cellar;
+		preef L Clear Cellar;
 		the rule succeeds;
 
 this is the post-cellar-recall rule:
@@ -1557,12 +1557,12 @@ this is the post-gates-stage-flip rule:
 	say "[line break]";
 	if gate-level is 2:
 		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies in the Valence Enclave, now[if cur-score of others < max-score of others - 1]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
-		if player has perp:
+		if player has fleeing feeling:
 			moot fleeing feeling;
 			say "[line break]As a bonus, all that preparation puts to sleep the feeling you're a perp.";
 	else if gate-level is 1:
 		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to see what awaits in the Valence Enclave, now. Even if you didn't get anywhere, the failure might teach you something.";
-		if player has perp, say "[line break]Also, you feel like a little less of a perp now."
+		if player has fleeing feeling, say "[line break]Also, you feel a little less like a perp now. The fleeing feeling remains, but it's much weaker."
 	[an edge case bothered me here, so I want to write it out in case it ever bothers me again: if did-guru is false, we cannot min-up, because you may just use the arugula and then go win anyway. That'd be a bit silly on the player's part, but it's possible.]
 
 book general auxiliary rules
@@ -1896,7 +1896,7 @@ a sty tasty say	"No. You pause. That can't be it. You need to do something, or n
 LEAD	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 SNORE SO ARENA	"The SNORE SO ARENA flashes weirdly."
 evil bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track."
-l'clear cellar	"It's...hmm...you remember all the clues, but what order to place them in, now."
+L Clear Cellar	"It's...hmm...you remember all the clues, but what order to place them in, now."
 diapers	"Staring again at the diapers, you are depressed you couldn't even get being depressed right."
 rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
 END PRONER POD	"The END PRONER POD seems to pulse slightly."
@@ -2474,7 +2474,7 @@ verbose	"[one of]Even when someone or something is terse with you, their tersene
 post	"[one of]You must persist when you are stonewalled. The second time is easier than the first and likely requires less creativity[plus][or]You may SPOT something interesting on a second look[minus][cycling]."	--	"SPOT"
 SNORE SO ARENA	"[one of]There's no good reason for the SNORE SO ARENA to be there. But it may still block you from doing what you want.[plus][or]If you listen, you may get other clues.[plus][or]If you REASON, it will disrupt but the arena and the [evil bee].[minus][cycling]"	--	"REASON"
 evil bee	"[one of]Even intellectual elitists know, deep down inside, that there is an emotional component to things.[plus][or]They hope to be able to BELIEVE without letting the common man do so as well. Not that they need to, to achieve their goals.[minus][cycling]"	--	"BELIEVE"
-l'clear cellar	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
+L Clear Cellar	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
 spider	--	ires pad
 ires pad	"[one of]Each picture/author name in the Ires Pad has a red-letter clue.[or]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
 diapers	"[one of]The diapers symbolize ... wait, no, they just mesh with the other items to present a seven-word anagram.[plus][or]Nevertheless, diapers are pretty depressing, too.[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
@@ -2490,9 +2490,9 @@ rivets	--	Trevis Vister
 Trevis Vister	"[one of]Trevis Vister (and the rivets) can help you want to be your best. Or well, worth your most.[plus][or]Scanning Trevis Vister in cheeat mode doesn't turn up any question marks.[plus][or]The rivets give a critical abstract clue that Trevis doesn't, since they are red. They help with the vowels.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE" [?? hint before and after]
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 cark rack	"Just part of the scenery."
-godlings' lodgings	"[if END PRONER POD is off-stage]You can't think of getting into the godlings' lodgings until you are in tune with Trevis Vister.[else]The END PRONER POD holds a clue how to get into the godlings' lodgings.[end if]"
+godlings lodgings	"[if END PRONER POD is off-stage]You can't think of getting into [the lodgings] until you are in tune with Trevis Vister.[else]The END PRONER POD holds a clue how to get into [the lodgings].[end if]"
 END PRONER POD	"[one of]You don't want to wind up in the END PRONER POD, but part of you still worries about the risk of failure. Or it advertises itself that way.[plus][or]You need a way to reflect, to balance your desiring.[plus][or]You can READ the END PRONER POD for clues if you want. They will logically eliminate all possibilities.[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
-r cad card	"The r-cad card gives a clue, along with the END PRONER POD, of how to get into the godlings' lodgings."
+r cad card	"The r-cad card gives a clue, along with the END PRONER POD, of how to get into [the lodgings]."
 red vees	"[one of]You have to believe it's worth it for you to do something with the red vees. That you're good enough.[plus][or]You must learn to DESERVE to use them[minus][cycling]."	--	"DESERVE"
 DIVORCES	"[one of]You can learn something from DIVORCES. Not from the content, but from just how vapid and materialistic it is.[plus][or]You may have an epiphany how bad the magazine is.[plus][or]You can DISCOVER to put the magazine to shame.[minus][cycling]"
 salt	"[one of]Anyone can make it to the top, but only those worth their salt will stay for any meaningful length of time[plus][or]The truly great can LAST[minus][cycling]."	--	"LAST"

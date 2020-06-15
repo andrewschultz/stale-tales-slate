@@ -4379,7 +4379,7 @@ check scaning location of the player (this is the location scan rule):
 		if bee-score is 0:
 			say "That bee is all up in your face. So you sort of scan it by default.";
 			try scaning evil bee instead;
-		try scaning L'Clear Cellar instead;
+		try scaning L Clear Cellar instead;
 	if location of player is Drain Nadir:
 		if diapers are reflexive, say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the Ires Pad, the diapers, a spider..." instead;
 	if location of player is Hacks' Shack and BUB DUDE EGG is touchable: [start presto]
@@ -4449,7 +4449,7 @@ eh at heat	true	true	false	false	"Well, it's only four letters, and you're not s
 race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-l'clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
+l clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
 a sty tasty say	true	false	false	false	"Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't."
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
@@ -5007,7 +5007,7 @@ this is the troves-hinting rule:
 		if bee-score is 0:
 			if evil-bee-second is true, try objhinting snore so arena instead;
 			try objhinting evil bee instead;
-		try objhinting L'Clear Cellar instead;
+		try objhinting L Clear Cellar instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
 		try objhinting I'd Cede instead;
@@ -5782,7 +5782,7 @@ Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel 
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L'Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
@@ -6033,7 +6033,7 @@ check climbing (this is the generic silly climbing reject rule):
 		if player is in Farming Framing, move player to Largely All-Grey Gallery instead;
 		move player to study instead;
 	if noun is THE BEAN, say "THE BEAN is too slippery and round." instead; [strt routes]
-	if noun is godlings' lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
+	if noun is godlings lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
 	if noun is mount um-not, say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead; [start presto]
 	if noun is deil's slide, say "Oh dear. It's more like you'd fall down Deil's Slide instead. Semantics aside, it's a bad idea." instead; [end PRESTO]
 	if noun is crate, say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead; [start OYSTER]
@@ -9036,7 +9036,7 @@ definition: a thing (called mbbl) is blurry:
 table of altviews
 altview	alttext
 darkness	"a weird outline in the darkness" [routes]
-L'Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
+L Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
 lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
 rubbish story	--
 praise	"the praise floating in the air"
@@ -11173,9 +11173,9 @@ to decide which number is bee-score:
 
 chapter L'Clear Cellar door (after bee dispatched)
 
-L'Clear Cellar is proper-named vanishing boring scenery in Boarded Roadbed. "You can't really examine L'Clear Cellar if you don't know where it is, but maybe finding ways to hone your mind or remove distractions will give you some sort of clue what is going on, here.". bore-text of L'Clear Cellar is "No, you need to do something to find L'Clear Cellar. Since you can't quite remember...". bore-check of cellar is bore-cellar rule.
+L Clear Cellar is proper-named vanishing boring scenery in Boarded Roadbed. "You can't really examine L'Clear Cellar if you don't know where it is, but maybe finding ways to hone your mind or remove distractions will give you some sort of clue what is going on, here.". bore-text of L Clear Cellar is "No, you need to do something to find L'Clear Cellar. Since you can't quite remember...". bore-check of cellar is bore-cellar rule. printed name of L Clear Cellar is "L'Clear Cellar".
 
-a-text of L'Clear Cellar is "RYRYRR". b-text of L'Clear Cellar is "R?RYRR". parse-text of L'Clear Cellar is "x[sp]e[sp]x[sp]a[sp]x[sp]x". L'Clear Cellar is cheat-spoilable.
+a-text of L Clear Cellar is "RYRYRR". b-text of L Clear Cellar is "R?RYRR". parse-text of L Clear Cellar is "x[sp]e[sp]x[sp]a[sp]x[sp]x". L Clear Cellar is cheat-spoilable.
 
 this is the bore-cellar rule:
 	if current action is taking or current action is opening or current action is closing, say "Easier said than done, until you locate L'Clear Cellar." instead;
@@ -11302,7 +11302,7 @@ understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the godlings['] lodgings in the center forms the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to the godlings['] lodgings[end if].". roomnud of Econ Cone is table of Econ Cone nudges.
+Econ Cone is a room in Troves. printed name of Econ Cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because [the lodgings] in the center form the top of a cone of buildings. It's quieter here than the rathole or roadbed or even the bowers. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Save aves branch out each way. They're okay for lesser people, but the astute statue of Trevis Vister and praise spirea will unlock true wealth and power! [if rivets is reflexive and praise spirea is reflexive]Maybe learning their lessons right will motivate yourself even more[else if rivets is reflexive or praise spirea is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]Now they've taught you all they could, so maybe you can move on--or in--to [the lodgings][end if].". roomnud of Econ Cone is table of Econ Cone nudges.
 
 understand "econ-cone" as Econ Cone.
 
@@ -11318,16 +11318,14 @@ after looking in Econ Cone:
 	if END PRONER POD is in Econ Cone, set pronoun it to END PRONER POD;
 	continue the action;
 
-chapter godlings['] lodgings
+chapter godlings' lodgings
 
-understand "skyline" as godlings' lodgings
+the godlings lodgings are plural-named boring scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%.". bore-text of godlings lodgings is "Don't think too much about them directly. There are other ways to think yourself in.". printed name is "godlings['] lodgings".
 
-the godlings' lodgings are plural-named boring scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%.". bore-text of godlings' lodgings is "Don't think too much about them directly. There are other ways to think yourself in."
+understand "skyline" as godlings lodgings.
 
-understand "godling/lodging" and "godlings/godling lodging/lodgings" as godlings' lodgings.
-
-check scaning godlings' lodgings:
-	if END PRONER POD is off-stage, say "The godlings' lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
+check scaning godlings lodgings:
+	if END PRONER POD is off-stage, say "The godlings lodgings shows nothing. Which is sort of a relief, though it probably means you haven't found what you need to focus on. Perhaps something will come along that you can focus on." instead;
 	say "Your settler seems to give the same reading for lodgings as for the END PRONER POD.";
 	try scaning END PRONER POD instead;
 
@@ -19210,7 +19208,7 @@ a-text of nails is "RRYYR". b-text of nails is "RRYYR". parse-text of nails is "
 
 section snail
 
-the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". locale-text is "a snail slithering slowly in a circle".
+the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". locale-text is "a snail slithering slowly in a circle". "A snail slithers slowly and saltlessly here."
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if imp-frustration is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is reflexed]patience is legendary and butlery[else if imp3 is reflexed]It has a butlery air as it moves rangily[else if imp2 is reflexed]patience feels legendary as it moves rangily[else]here but shouldn't be. This is a BUG[end if].";
@@ -19904,7 +19902,7 @@ the fleeing feeling is a reflexive boring thing. it is cheat-spoilable. descript
 this is the bore-perp rule:
 	if current action is not objhinting and current action is not fliptoing and current action is not guruing and current action is not gxing, say "You just can't shake the fleeing feeling whispering 'PERP!' Maybe there's a simple way to shift things around." instead;
 
-a-text of fleeing feeling is "RRYR". b-text of fleeing feeling is "PRYP". parse-text of fleeing feeling is "P[sp]R[sp]E[sp]P". perp is cheat-spoilable.
+a-text of fleeing feeling is "RRYR". b-text of fleeing feeling is "PRYP". parse-text of fleeing feeling is "P[sp]R[sp]E[sp]P". fleeing feeling is cheat-spoilable.
 
 every turn when player has fleeing feeling: say "You [one of][or]still [stopping]can't shake that fleeing feeling you should just run, because you're [if gate-level is 1]kind of [end if]a PERP.";
 

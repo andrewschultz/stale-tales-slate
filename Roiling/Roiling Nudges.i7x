@@ -1753,9 +1753,9 @@ to say mires-no: say "The [mires] are, well, mired. You need to focus on somethi
 
 to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
 
-to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter the godlings['] lodgings[else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering the godlings['] lodgings or being sure you deserve to[end if]"
+to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter [the lodgings][else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering [the lodgings] or being sure you deserve to[end if]"
 
-to say scrapery: say "If you brought down the godlings['] lodgings like that somehow, mass panic would ensue. You need to enter somehow";
+to say scrapery: say "The godlings['] lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway";
 
 to say full-pod: say "You must deal with the full END PRONER POD"
 

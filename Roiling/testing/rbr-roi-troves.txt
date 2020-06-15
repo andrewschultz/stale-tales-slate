@@ -731,10 +731,10 @@ You think about the econ-cone being the recent center, but theorizing doesn't wo
 You don't want to mess with the skyline. You want to get in the godlings' lodgings!
 #nudge for godling
 >godlign
-If you brought down the godlings' lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway.
 #nudge for godlings
 >godlinsg
-If you brought down the godlings' lodgings like that somehow, mass panic would ensue. You need to enter somehow!
+The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway.
 #nudge for statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
