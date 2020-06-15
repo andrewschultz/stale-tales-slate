@@ -147,11 +147,11 @@ skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the 
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be, because they have odd special abilities. Maybe if you examine this mug, you can see if it does."
 coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira tried to corner the market with the deceptively named All-Cocoa Cola."
-fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if I'm Le Cop polemic is reflexive], though you're not really tired yet[end if]."
+fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if Im Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
-I'm Le Cop polemic	I'm Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
+Im Le Cop polemic	Im Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
 trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
@@ -741,7 +741,7 @@ this is the pre-plebe-bleep rule:
 		do nothing instead;
 
 this is the pre-boing-bingo rule:
-	if player does not have the PG-on-up popgun and popgun is touchable:
+	if player does not have the PG on up popgun and popgun is touchable:
 		say "(taking the popgun first while you mess with the boing-go bin)[paragraph break]";
 		now player has popgun;
 
@@ -831,13 +831,13 @@ this is the post-ether-there rule:
 	moot dart;
 
 this is the post-hogs-bye rule:
-	now Mount Um-Not is in Phat Path;
-	now Deil's Slide is in Phat Path;
+	now Mount Um Not is in Phat Path;
+	now Deils Slide is in Phat Path;
 	now Leo is in Phat Path;
 	now Rand is in Phat Path;
 	now Grey Gyre is mapped south of Phat Path;
 	now Phat Path is mapped north of Grey Gyre;
-	if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
+	if hawt thaw is in Saps Pass, now hawt thaw is in Phat Path;
 	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
 	move player to Phat Path;
 
@@ -874,14 +874,14 @@ this is the post-disk-skid rule:
 
 this is the pre-censer-screen rule:
 	if censer is touchable:
-		if Hacks' Shack is unvisited:
+		if Hacks Shack is unvisited:
 			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
 			preef censer instead;
 
 this is the post-censer-screen rule:
-	if Hacks' Shack is visited and player is not in Hacks' Shack:
+	if Hacks Shack is visited and player is not in Hacks Shack:
 		say "That screen would go great with Drive A in the shack. So you go back there.";
-		go-back Hacks' Shack;
+		go-back Hacks Shack;
 		now player has screen;
 
 this is the pre-yak-keyboard rule:
@@ -896,15 +896,15 @@ this is the post-yak-keyboard rule:
 	check-trivial-presto-llp;
 
 this is the pre-polemic-compile rule:
-	if player is not in Hacks' Shack:
+	if player is not in Hacks Shack:
 		say "There is no computer around. You probably want to go back to the Hacks['] Shack for this.";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if keyboard is not touchable:
 		say "Good idea, but tough to program without something to type on.";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if computer screen is not touchable:
 		say "Good idea, but tough to program without something to read code off.";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if keyboard is not on slab:
 		say "Good idea, but first, you probably want to put the keyboard on the slab. Do so now?";
 		if the player direct-consents:
@@ -912,7 +912,7 @@ this is the pre-polemic-compile rule:
 			say "Done. You can try to COMPILE again, now.";
 		else:
 			say "Ok, but by 'may want' I meant 'really probably need to.'";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if computer screen is not on slab:
 		say "Good idea, but first, you may want to put the screen on the slab. Do so now?";
 		if the player direct-consents:
@@ -920,23 +920,23 @@ this is the pre-polemic-compile rule:
 			say "Done. You can try to COMPILE again, now.";
 		else:
 			say "Ok, but by 'may want' I meant 'really probably need to.'";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if disk is not in Drive A:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if].";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if rebooted is false:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 	if slept is false:
 		if speel is off-stage:
 			say "You get an NEED IF-DEFINE error the first time you try to compile. 'Up late, a letup,' you think restlessly and dreamily to yourself, 'Then fail the final!'[paragraph break]You're just too exhausted to put up with another compiling speel (you're too tired to check if that's spelt right)...slipping on virtual peels...probably you just switched something or got something backwards.";
-			now speel is in Hacks' Shack;
+			now speel is in Hacks Shack;
 		else:
 			say "That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsure what you switched or got backwards[one of][or]. Maybe you misspelled a variable, but you aren't up to logic leeps[stopping].";
-		preef I'm Le Cop polemic instead;
+		preef Im Le Cop polemic instead;
 
 this is the post-polemic-compile rule:
 	now BUB DUDE EGG is part of the computer screen;
@@ -953,7 +953,7 @@ this is the pre-bub-dude-egg rule:
 		preef BUB DUDE EGG instead;
 
 this is the post-bub-dude-egg rule:
-	now USB is in Hacks' Shack;
+	now USB is in Hacks Shack;
 	moot golden dongle;
 	moot mug;
 
@@ -1571,7 +1571,7 @@ section presto
 
 shack-flip-yet is a truth state that varies.
 
-after fliptoing when player is in Hacks' Shack:
+after fliptoing when player is in Hacks Shack:
 	now shack-flip-yet is true;
 	continue the action;
 
@@ -1579,10 +1579,10 @@ check fliptoing when mrlp is demo dome: say "This game tried to flip something, 
 
 check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS rule):
 	if noun is leaf or noun is mug or noun is ALocalCo cola or noun is keyboard or noun is TBA key or noun is skid or noun is disk or noun is rom sticks:
-		if player is not in Hacks' Shack:
+		if player is not in Hacks Shack:
 			if noun is keyboard:
 				abide by the pre-yak-keyboard rule;
-			if Hacks' Shack is not visited:
+			if Hacks Shack is not visited:
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
 				preef noun;
 				do nothing instead;
@@ -1947,7 +1947,7 @@ trim socks	"You don't have the available memory in your head to see all the poss
 Clack Ops Locs Pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
-I'm Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
+Im Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 BUB DUDE EGG	"Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing."
 drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
@@ -2266,7 +2266,7 @@ mug	"[if ALocalCo cola is moot]You'd get cola all over you if you tried anything
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
 TBA key	"No, the TAB key is what it should be."
-I'm Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
+Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
@@ -2514,12 +2514,12 @@ censer	"[one of]The censer's black and green and really retro.[plus][or]The cens
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"
 tsar star	"[one of]The tsar star is stuck in the tars, and taking it is too frustrating.[plus][or]Sticky, eh? The tars and the tsar star.[plus][or]What's a good clean word of frustration?[plus][or]Four letters, but not FOUR LETTERS.[plus][or]RATS.[minus][cycling]"	--	"RATS"
 tars	--	tsar star
-cretins' cistern	"The cretin's cistern [if dart is in Char Arch]is[else]was[end if] only relevant because it [if dart is in Char Arch]holds[else]held[end if] the dart. You don't need to deal with it directly."
+cretins cistern	"The cretin's cistern [if dart is in Char Arch]is[else]was[end if] only relevant because it [if dart is in Char Arch]holds[else]held[end if] the dart. You don't need to deal with it directly."
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
 plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has tsar star or player wears tsar star]You've got something that will impress him[else]You need to find something to impress the plebe--you may want to go visit the Char Arch to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has tsar star or player wears tsar star]now[else]once[end if] you have the tsar star.[minus][cycling]"	--	"BLEEP"
 Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost, but you can do a bit better.[plus]What can YE HOOP anagram to?[minus][cycling]"	--	"POOH"
-Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in Hacks' Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
-Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in Hacks' Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
+Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in Hacks Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
+Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in Hacks Shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not moot]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
 wzup	"[wash-up]"	--	"WHASSUP"
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing-go bin, used to hold ammo, is broken.[end if]"
 boing go bin	"[one of]So, the boing-go bin doesn't go BOING.[plus][or]A eureka moment could change the boing-go bin's brokenness.[plus][or]Or, if you notice the popgun's serial number...[plus][or]...and convert the numbers to letters...[plus]BINGO.[minus][cycling]"	--	"BINGO"
@@ -2538,27 +2538,27 @@ futon	"[if slept is true]You won't need to sleep on the futon again.[else][one o
 speel	"[one of]You're too tired to read the speel.[plus][or]You can't make any logic leeps in your current condition.[plus][or]Best to SLEEP.[minus][cycling]"	--	"SLEEP"
 fount	"[one of]The fount is a fount of knowledge. Dry knowledge, but knowledge.[plus][or]The fount's also very restful.[plus][or]You can probably find a way to fold the fount into...[plus][or]...a FUTON.[minus][cycling]"	--	"make a FUTON"
 escaroles	"[one of]The escaroles aren't much of a meal on their own. They could be more meaty.[plus][or]The escaroles could be a dish instead of garnish. Any old dish, with all sorts of things slopped into it.[plus][or]Or a CASSEROLE.[minus][cycling]"	--	"Fix a CASSEROLE."
-casserole	"[if yak is in Hacks' Shack or yak is moot]You can't use the casserole any more. You could've bribed Leo and Rand with it.[else][one of]You can't take the casserole--it's too hot. It's also kind of yucky for someone as sophisticated as you unless you need calories.[plus][or]Met anyone who can use calories who doesn't sweat niceties?[plus][or]Leo and Rand. If you poke them when you have a tough physical task, you can get them to push the skid north.[minus][cycling][end if]"
+casserole	"[if yak is in Hacks Shack or yak is moot]You can't use the casserole any more. You could've bribed Leo and Rand with it.[else][one of]You can't take the casserole--it's too hot. It's also kind of yucky for someone as sophisticated as you unless you need calories.[plus][or]Met anyone who can use calories who doesn't sweat niceties?[plus][or]Leo and Rand. If you poke them when you have a tough physical task, you can get them to push the skid north.[minus][cycling][end if]"
 trim socks	"[one of]The socks aren't critical to solving the game, but they do give a LLP--Last Lousy Point.[plus][or]The socks don't seem very technical, but they look like circuit chips or something.[plus][or]Maybe they'd make you go faster or something.[plus][or]Maybe they are, instead, ROM STICKS.[minus][cycling]"
 rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
 mug	"[if ALocalCo Cola is moot]You will be able to drink from the mug when the time is right.[else][mug-detail][end if]"
-skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks' Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
+skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 oper rope	"The oper rope isn't useful on its own, but it lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is touchable]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 TBA key	"[if TBA key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
-signature	--	I'm Le Cop polemic
+signature	--	Im Le Cop polemic
 ALocalCo cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is moot]the mug[else]what the gum can become[end if].[minus][cycling]"
-I'm Le Cop polemic	"[if signature is reflexed]Useless now.[else][one of]The signature and the I'm Le Cop polemic are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the I'm Le Cop polemic"
+Im Le Cop polemic	"[if signature is reflexed]Useless now.[else][one of]The signature and the I'm Le Cop polemic are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the I'm Le Cop polemic"
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
 drab yoke	"[if yak is not moot]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
 BUB DUDE EGG	"[one of]BUB DUDE EGG is a warning message that gives hints.[plus][or]You may notice it has two of five different letters, and random actions point out you see red trying to make the code BUDGE.[plus][or]More specifically, BUB DUDE EGG shows up because there are still bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"to DEBUG the code you compiled"
 slab	"You [if cpuready]already[else]can[end if] put things on the slab to build a computer."
 USB	"[one of]The USB is pretty universal. It can become either of two things.[plus][or]The USB can become transport out of here.[plus][or]SUB or BUS.[minus][cycling]"	--	"make a BUS or USB"
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
-yak	"[if Hacks' Shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in Hacks' Shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
+yak	"[if Hacks Shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in Hacks Shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
 catechism	"[if yak is moot]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
 blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
@@ -2566,9 +2566,9 @@ Clack Ops Locs Pack	"[one of]The locs pack is allegedly for making things quiete
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
 Drive A	"[h-d][line break]"
-mutism summit	"[if player is in Hacks' Shack]You need to build a computer here[else]The mutism summit is just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
+mutism summit	"[if player is in Hacks Shack]You need to build a computer here[else]The mutism summit is just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
-computer screen	"[if Hacks' Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
+computer screen	"[if Hacks Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying the pesty types.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]
 tips pits	"[one of]The tips pits are for putting something in them.[plus][or]What could go in? A noun or a verb.[plus][or]SPIT into the tips pits.[minus][cycling]"
 song buttons	--	tunes

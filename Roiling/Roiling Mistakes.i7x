@@ -437,11 +437,17 @@ understand "brig" as a mistake ("There, there. This maze is much less hard to ge
 
 chapter Saps' Pass
 
-understand "asp" and "asps" as a mistake ("Saps['] Pass is dangerous enough.") when player is in Saps' Pass.
+understand "asp" and "asps" as a mistake ("Saps['] Pass is dangerous enough.") when player is in Saps Pass.
 
-understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in Saps' Pass.
+understand "delis" as a mistake ("You don't need food. And the food would probably be pretty evil, anyway.") when player is in Saps Pass.
 
-understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps' Pass.
+understand "idles" as a mistake ("Deil's Slide can out-wait you. So you'll want to get on with things.") when player is in Saps Pass.
+
+understand "sidle" as a mistake ("You don't need to sneak up Deil's Slide.") when player is in Saps Pass.
+
+understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in Saps Pass.
+
+understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps Pass.
 
 chapter Phat Path
 
@@ -464,13 +470,13 @@ to decide whether skid-disk-touch:
 	if skid is touchable or disk is touchable, yes;
 	no;
 
-understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is in location of player or cola-around.
+understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is touchable or cola-around.
 
 understand "bat" as a mistake ("You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.") when tba key is touchable.
 
 understand "clock sap" and "cock slap" and "slap cock" as a mistake ("The locs aren't that gangsta, and neither are you. And that's a good thing.") when locs pack is touchable.
 
-understand "diver" as a mistake ("It's you that'll need to dive into some code.") when Drive A is touchable.
+understand "diver" as a mistake ("It's you that'll need to dive into some code.") when player is in Hacks Shack.
 
 understand "feal" as a mistake ("Nobody needs allegiance, here.") when leaf is touchable or flea is touchable.
 
@@ -482,11 +488,11 @@ understand "loca" as a mistake ("What you [if ALocalCo Cola is touchable]have he
 
 understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when player has ALocalCo cola.
 
-understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you strictly need to[end if].") when player is in Hacks' Shack.
+understand "redive" as a mistake ("[if drive e is reflexed]Deriving was tricky enough[else]But you've figured nothing about Drive E yet. Not that you strictly need to[end if].") when player is in Hacks Shack.
 
 understand "repo" as a mistake ("Nobody else seems to own the oper rope or the skid.") when skid is in location of player.
 
-understand "rived" as a mistake ("You don't need to do that sort of hacking.") when Drive A is touchable.
+understand "rived" as a mistake ("You don't need to do that sort of hacking.") when player is in Hacks Shack.
 
 understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has ALocalCo cola.
 

@@ -433,7 +433,7 @@ table of presto nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "crust"	408819179	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
 "mazeltov"	655479952	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
-"ether"	481328338	--	ether-gone rule	"The ether is gone. You can just go [if Saps' Pass is visited]back [end if]north."
+"ether"	481328338	--	ether-gone rule	"The ether is gone. You can just go [if Saps Pass is visited]back [end if]north."
 "mazeroom"	615142808	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
 "storep"	568332432	--	degen-true rule	"[not-the-reg]."
 "floor"	314357692	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
@@ -556,10 +556,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Phat Path nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "phat"	224046094	--	--	"[locname]."
-"saps"	276201709	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks' Shack is visited]back [end if]north, here."
+"saps"	276201709	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks Shack is visited]back [end if]north, here."
 "entyr"	507506690	--	--	"[if leo is touchable]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
 "clump"	323466343	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks' Shack]back [end if]north to do what you need, in peace and quiet."
+"summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	harpings phrasing	--	"[harphr]."
 "harping"	352759935	harpings phrasing	--	"[harphr]."
 "chart"	246909523	starch charts	--	"But there is more than one chart to twiddle."
@@ -753,7 +753,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hedrno"	414701385	--	--	"[locname]."
 "theses"	588552467	theses sheets	--	"The hedron's spirit will remain intact even if you meddle there. You must go into its heart."
 "these"	492278501	theses sheets	--	"It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead."
-"tarp"	272087598	ol' trap	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
+"tarp"	272087598	ol trap	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
 "patrol"	400254014	pol art portal	--	"The portal can't be changed for the better. It already goes where you want."
 "walleye"	595721739	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	walleyes	--	"The walleyes are a bad crowd, past redemption."
@@ -1031,8 +1031,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pealr"	350597528	--	cppc rule	"[focus-castle]."
 "capsule"	485659083	capsule cart	--	"[focus-castle]."
 "cart"	209627224	capsule cart	--	"[focus-castle]."
-"accu"	145304795	accu-plaster	--	"[focus-castle]."
-"plaster"	549981512	accu-plaster	--	"[focus-castle]."
+"accu"	145304795	accu plaster	--	"[focus-castle]."
+"plaster"	549981512	accu plaster	--	"[focus-castle]."
 "last"	255385641	last acre cup	--	"[focus-castle]."
 "race"	234323315	last acre cup	--	"[focus-castle]."
 "cup"	205577351	last acre cup	--	"[focus-castle]."
@@ -1834,7 +1834,7 @@ this is the cola-in-mug rule:
 	the rule fails;
 
 this is the path-pass rule:
-	if player is in Phat Path or player is in Saps' Pass, the rule succeeds;
+	if player is in Phat Path or player is in Saps Pass, the rule succeeds;
 	the rule fails;
 
 to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
@@ -1897,8 +1897,8 @@ to say kboard-det:
 			say "You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.[no line break]";
 
 this is the wise-to-sleep rule:
-	if player is in Hacks' Shack:
-		if I'm Le Cop polemic is touchable and I'm Le Cop polemic is reflexive, the rule succeeds;
+	if player is in Hacks Shack:
+		if Im Le Cop polemic is touchable and Im Le Cop polemic is reflexive, the rule succeeds;
 	the rule fails;
 
 to say sleep-anagram:
