@@ -364,10 +364,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spider"	456891772	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
 "ires"	354396724	--	--	"It's an ires PAD."
 "pad"	104682866	--	--	"It's an IRES pad."
-"song"	272133753	I'd Cede	--	"[id-cede-full]."
-"cede"	295646892	I'd Cede	--	"[id-cede-full]."
-"diapers"	459079590	I'd Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
-"eddie"	342663242	I'd Cede	--	"[id-cede-full]."
+"song"	272133753	Id Cede	--	"[id-cede-full]."
+"cede"	295646892	Id Cede	--	"[id-cede-full]."
+"diapers"	459079590	Id Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
+"eddie"	342663242	Id Cede	--	"[id-cede-full]."
 
 table of Boredom Bedroom nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1178,7 +1178,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "aturnic"	428633385	--	--	"Even one curtain is too solid to change."
 "shades"	380853247	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "clipons"	438812280	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
-"kool"	255452171	look-kool	--	"You're not here to mess with fashion."
+"kool"	255452171	Look Kool	--	"You're not here to mess with fashion."
 
 table of Perverse Preserve nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1731,7 +1731,7 @@ this is the lot-observed rule:
 
 to say sidewalk-oops: say "The sidewalk's condition can't be changed. For better or worse"
 
-to say id-cede-full: say "It's the full song name--[i]I'd Cede[r]"
+to say id-cede-full: say "It's the full song name--[Id Cede]"
 
 this is the master-moot rule:
 	if ME ARTS is moot, the rule succeeds;

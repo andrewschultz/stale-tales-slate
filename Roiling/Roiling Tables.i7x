@@ -97,7 +97,7 @@ evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule
 L Clear Cellar	L Clear Cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
-I'd Cede	I'd Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
+Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-bedroom]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
@@ -308,7 +308,7 @@ Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogr
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if]."
-atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
+atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
 t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."
@@ -630,7 +630,7 @@ this is the post-cellar-recall rule:
 this is the post-diapers-despair rule:
 	moot Ires Pad;
 	moot spider;
-	move I'd Cede to Drain Nadir;
+	move Id Cede to Drain Nadir;
 
 this is the post-master-or-bolster rule:
 	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
@@ -1448,11 +1448,11 @@ this is the post-eels-else rule:
 this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 	if macks are in Disowned Downside:
 		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
-		preef atmo-moat;
+		preef atmo moat;
 		do nothing instead;
 	else if power-back is false:
 		say "That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.";
-		preef atmo-moat;
+		preef atmo moat;
 		do nothing instead;
 
 this is the post-holy-nest-honestly rule:
@@ -1497,8 +1497,8 @@ this is the post-owls-slow rule:
 	now leopard is in Lamer Realm;
 
 this is the post-ocelots-coolest rule:
-	moot slopinc clip-ons;
-	now ocelots wear look-kool shades;
+	moot SlopInc Clip Ons;
+	now ocelots wear Look Kool shades;
 	process the post-lamer-realm-flip rule;
 
 this is the pre-whistle-deeply rule:
@@ -1908,7 +1908,7 @@ lobster	"That's not quite the way to deserve that lobster."
 ME ARTS	"That's not quite the way to focus on the ME ARTS."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
 salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
-I'd Cede	"You try to groove to [i]I'd Cede[r], but that's not quite it."
+Id Cede	"You try to groove to [Id Cede], but that's not quite it."
 Sister Tressi Siters	"Sister Tressi seems a bit more upset than usual."
 marble blamer balmer	"[mbb] seems slightly taken aback."
 marble blamer mr beal	"[mbb] seems slightly taken aback."
@@ -2079,7 +2079,7 @@ raptor	"The raptor recoils slightly."
 cinders	"The cinders glow and even warm up for a bit."
 aside-llp	"[e-n-m] rock back and forth a bit."
 holy nest	"The holy nest flutters silently."
-atmo-moat	"Hm, that's not it, but it must be elemental. No, elementary."
+atmo moat	"Hm, that's not it, but it must be elemental. No, elementary."
 sea cube	"The sea cube shakes a bit."
 eels	"The eels swim a bit faster."
 owls	"Hmm. The owls still swarm and swirl too fast."
@@ -2479,7 +2479,7 @@ spider	--	ires pad
 ires pad	"[one of]Each picture/author name in the Ires Pad has a red-letter clue.[or]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
 diapers	"[one of]The diapers symbolize ... wait, no, they just mesh with the other items to present a seven-word anagram.[plus][or]Nevertheless, diapers are pretty depressing, too.[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
 lager	"[one of]The Large Regal Lager [if player is in Boredom Bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
-I'd Cede	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
+Id Cede	"[one of]Eddie C, [Id Cede]. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
 LEAD	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
@@ -2748,9 +2748,9 @@ Mr Lee	"[loop-pool-already][if ghoul hat is not moot]Try to help Mr. Lee with th
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
 Gore Ogre	"[loop-pool-already][if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjuncion that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or]ERGO.[minus][cycling]"	--	"you can say ERGO"
 Vow Here	"[one of]You don't need to deal with the vow here, but since it appears in an area where you've used conjunctions, you need one more,[plus][or]Listening to the vow here may help a bit.[or][plus]You can say HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
-atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an ATOM"
+atmo moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an ATOM"
 le mer	--	sea cube
-sea cube	"[bran-barn-already][one of]The sea cube in the atmo-moat/Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
+sea cube	"[bran-barn-already][one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
 allot atoll	"The allot atoll [if eels are reflexed]was just there to get you your reward[else]in is not helpful on its own, but you'll get there if you help the eels[end if]. You don't need to do anything to it."
 imp1	"[bug-report]"
@@ -2783,7 +2783,7 @@ sober robes	"[e-n-m] can't be naked, and I felt like trawling for a cheap anagra
 medals	"[if medals-shiny < 2][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or][medals-do].[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-inclosure][end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
-Look-Kool	"You can't do much but admire them."
+Look Kool	"You can't do much but admire them."
 Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Rancho Archon Anchor is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"

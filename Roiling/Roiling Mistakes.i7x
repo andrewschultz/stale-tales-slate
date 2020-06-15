@@ -443,9 +443,9 @@ understand "delis" as a mistake ("You don't need food. And the food would probab
 
 understand "idles" as a mistake ("Deil's Slide can out-wait you. So you'll want to get on with things.") when player is in Saps Pass.
 
-understand "sidle" as a mistake ("You don't need to sneak up Deil's Slide.") when player is in Saps Pass.
-
 understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in Saps Pass.
+
+understand "sidle" as a mistake ("You don't need to sneak up Deil's Slide.") when player is in Saps Pass.
 
 understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps Pass.
 

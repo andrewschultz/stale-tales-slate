@@ -1925,7 +1925,7 @@ keycar	"The keycar just randomly talks about itself. Conversation won't be inter
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is not moot]You must convince me to unlock the sea cube[tho-need].[else if eels are not moot]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
-atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
+atmo moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if gore ogre is moot]'You have gained my trust and your powers. Go on!'[else if ghoul hat is moot]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gore Ogre	"'EORG EORG EORG!!!'"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
@@ -4047,10 +4047,10 @@ when play begins (this is the basic initialization rule):
 	now Nowt Town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
+	unless myrm is in Otters, no;
 	if myrm is Minded Midden and bleary barley is reflexive, no;
-	if myrm is in Otters:
-		if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
-		decide yes;
+	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
+	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
 
 definition: a person (called per) is guardianish:
 	if per is a guardian, yes;
@@ -4138,8 +4138,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is stop post;
 				continue the action;
 		if player is in Drain Nadir:
-			if I'd Cede is in Drain Nadir:
-				now noun is I'd Cede;
+			if Id Cede is in Drain Nadir:
+				now noun is Id Cede;
 				continue the action;
 	else if mrlp is presto:
 		if player is in Dirge Ridge and leo is washed up:
@@ -4225,8 +4225,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if gore ogre is in Bran Barn:
 				now noun is gore ogre;
 				continue the action;
-		if player is in Disowned Downside and atmo-moat is in Disowned Downside and macks are not in Disowned Downside:
-			now noun is atmo-moat;
+		if player is in Disowned Downside and atmo moat is in Disowned Downside and macks are not in Disowned Downside:
+			now noun is atmo moat;
 			continue the action;
 		if player is in Perverse Preserve and raptor is in Perverse Preserve:
 			now noun is raptor;
@@ -4527,7 +4527,7 @@ t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks an
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
 medals	true	false	false	false	"[if cheat-on is true]Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
-atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
+atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
@@ -5010,7 +5010,7 @@ this is the troves-hinting rule:
 		try objhinting L Clear Cellar instead;
 	if player is in Drain Nadir:
 		if diapers are in Drain Nadir, try objhinting diapers instead;
-		try objhinting I'd Cede instead;
+		try objhinting Id Cede instead;
 	if player is in Boredom Bedroom:
 		if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
 			if lobster-first is true, try objhinting lobster instead;
@@ -5203,7 +5203,7 @@ to decide which thing is otters-cur-item:
 		if Ed Riley is in Minded Midden, decide on Ed Riley;
 	if player is in Disowned Downside:
 		if Macks are in Disowned Downside, decide on Gretta;
-		if atmo-moat is in Disowned Downside and power-back is true, decide on atmo-moat;
+		if atmo moat is in Disowned Downside and power-back is true, decide on atmo moat;
 	if player is in Bran Barn:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
 		if gore ogre is in Bran Barn, decide on gore ogre;
@@ -6017,7 +6017,7 @@ check drinking:
 		unless ALocalCo cola is moot, say "The mug's empty." instead;
 		say "You can sip it as you do your programming." instead;
 	if noun is tea, say "It's food-tea, not drink-tea." instead; [oyster]
-	if noun is atmo-moat, say "You hear a cholera chorale warning you in the distance, so, you think 'Oh. clear.'" instead; [otters]
+	if noun is atmo moat, say "You hear a cholera chorale warning you in the distance, so, you think 'Oh. clear.'" instead; [otters]
 	say "You don't need to drink anything in this game. Well, there's one place where you sort of need to drink something, but [if BUB DUDE EGG is reflexive and presto is unsolved]it's done incidentally when you figure another puzzle[else]you already got past there[end if]." instead;
 
 chapter climbing
@@ -6205,7 +6205,7 @@ lyre-dest is a truth state that varies.
 
 check singing:
 	if player is in Cleric Circle, say "You don't know any appropriate songs, here." instead;
-	if player is in Drain Nadir and I'd Cede is in Drain Nadir, say "You can't quite mimic Eddie C, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead; [troves]
+	if player is in Drain Nadir and Id Cede is in Drain Nadir, say "You can't quite mimic Eddie C, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead; [troves]
 	if mrlp is troves, say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
 	if player is in hops shop, try fliptoing gins sign instead; [oyster]
 	if clam is touchable, say "If you could sing, it might settle the clam down. But you can't, so it doesn't." instead;
@@ -6401,7 +6401,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, I'd Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6454,7 +6454,7 @@ check listening:
 	if noun is evil bee:
 		if SNORE SO ARENA is reflexive, try listening to SNORE SO ARENA instead;
 		say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
-	if noun is I'd Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
+	if noun is Id Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if noun is praise spirea, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
@@ -9452,7 +9452,7 @@ eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[
 sea cube	otters	"You can tell the eels in the sea cube BECAUSE once you know why."
 ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player has medals]now you've figured[else]once you figure[end if] where the bad guys are."
 gore ogre	otters	"You can say ERGO to deal with the Gore Ogre."
-atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
+atmo moat	otters	"You can collapse the atmo moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
 Ammo Gang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
 
@@ -11231,9 +11231,9 @@ a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of 
 
 section I'd Cede
 
-I'd Cede is reflexive boring scenery. description of I'd Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. I'd Cede is parse-spoilable.
+Id Cede is reflexive boring scenery. description of Id Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. Id Cede is parse-spoilable. printed name of Id Cede is "I'd Cede".
 
-a-text of I'd Cede is "RYRYRY". b-text of I'd Cede is "RYPYPG". parse-text of I'd Cede is "x[sp]e[sp]x[sp]i[sp]x[sp]e".
+a-text of Id Cede is "RYRYRY". b-text of Id Cede is "RYPYPG". parse-text of Id Cede is "x[sp]e[sp]x[sp]i[sp]x[sp]e".
 
 this is the bore-id-cede rule:
 	if current action is examining, try listening instead;
@@ -13100,7 +13100,7 @@ a direction can be viable.
 definition: a direction (called dir) is viable:
 	if player is in Phat Path and dir is north, no;
 	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
-	if player is in Disowned Downside and atmo-moat is in Disowned Downside and dir is west, no;
+	if player is in Disowned Downside and atmo moat is in Disowned Downside and dir is west, no;
 	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
 	if player is in Gates Stage and player does not have passport and dir is north, no;
 	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
@@ -18027,7 +18027,7 @@ chapter useless scenery
 
 section coevals' alcoves
 
-the coevals' alcoves are boring scenery in Reclusion Inclosure. description of coevals' alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.".
+the coevals alcoves are boring scenery in Reclusion Inclosure. description of coevals alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.". printed name of coevals alcoves is "coevals['] alcoves".
 
 check going when player is in Reclusion Inclosure:
 	if noun is inside, try going west instead;
@@ -18041,7 +18041,7 @@ the forces fresco is boring scenery in Reclusion Inclosure. description of force
 
 section animals' laminas
 
-the animals' laminas are boring useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed VELASCO, probably the resident artist in the coevals['] alcoves.". bore-text of animals' laminas is "The laminas aren't critical. They are just part of the whole bad-guy ambiance.";
+the animals laminas are boring useless scenery in Reclusion Inclosure. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed VELASCO, probably the resident artist in the coevals['] alcoves.". bore-text of animals laminas is "The laminas aren't critical. They are just part of the whole bad-guy ambiance.". printed name is "animals['] laminas".
 
 understand "animals/lamina/animal" as laminas.
 
@@ -18274,7 +18274,7 @@ check going west in Minded Midden: if Ed Riley is touchable, say "'Re-yield, yie
 
 book Disowned Downside
 
-Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo-moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
+Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
 
 after looking in Disowned Downside:
 	if macks are in Disowned Downside:
@@ -18282,15 +18282,17 @@ after looking in Disowned Downside:
 		set the pronoun her to gretta;
 	continue the action;
 
-the atmo-moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
+chapter atmo-moat
 
-a-text of atmo-moat is "YRYR". b-text of atmo-moat is "??YR". parse-text of atmo-moat is "-[sp]x[sp]O[sp]M". atmo-moat is parse-spoilable.
+the atmo moat is vanishing scenery in Disowned Downside. understand "atmo/moat" and "atmo moat" as atmo moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red.". printed name of atmo moat is "atmo-moat".
+
+a-text of atmo moat is "YRYR". b-text of atmo moat is "??YR". parse-text of atmo moat is "-[sp]x[sp]O[sp]M". atmo moat is parse-spoilable.
 
 Include (-
 	has transparent animate
--) when defining atmo-moat.
+-) when defining atmo moat.
 
-check entering atmo-moat: say "It's too gulfy. Things'd get fugly. You've no diver pod provided. Plus you might get poked by strident tridents." instead;
+check entering atmo moat: say "It's too gulfy. Things'd get fugly. You've no diver pod provided. Plus you might get poked by strident tridents." instead;
 
 after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
@@ -18330,7 +18332,7 @@ to say how-macked:
 	else if macked-out is 2:
 		say ", but they're wavering a bit. If you blow up their flow once more, you could probably get rid of them"
 
-Gretta Garett-Tatger is a female person in Disowned Downside. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore."
+Gretta Garett Tatger is a female person in Disowned Downside. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore.". printed name of Gretta Garett Tatger is "Gretta Garett-Tatger".
 
 before doing something when Gretta is touchable and macks are not touchable:
 	if current action is examining, say "You should probably talk with Gretta Garett-Tatger a bit." instead;
@@ -18342,7 +18344,7 @@ before doing something when Gretta is touchable and macks are not touchable:
 		reject the player's command;
 	continue the action.
 
-the litany of Gretta Garett-Tatger is the table of Gretta comments.
+the litany of Gretta Garett Tatger is the table of Gretta comments.
 
 to say but-stuck:
 	say "[if try-fail-animal], but I got chased after that[end if]"
@@ -18544,12 +18546,12 @@ check going in Disowned Downside when Gretta is in Disowned Downside:
 to say cree-pee:
 	say "A few macks [if player is male]laugh at how you obviously can't give Gretta Garett-Tatger the attention they can[else]let Gretta Garett-Tatger know she's more worth impressing than you[end if] as you leave"
 
-check taking atmo-moat:
+check taking atmo moat:
 	say "Way too big." instead;
 
 check going west in Disowned Downside:
 	if macks are in Disowned Downside, say "One of the macks stops you from tripping the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
-	if atmo-moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
+	if atmo moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is touchable, say "[cree-pee]." instead;
 
 chapter nasty things guys do
@@ -18903,7 +18905,7 @@ to de-inhib:
 	now power-back is true;
 	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' But they are overtaken ... by a vow here.";
 	move vow here to location of player;
-	if atmo-moat is prefigured:
+	if atmo moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
 		if try-fail-animal:
 			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-cathedral-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
@@ -18968,7 +18970,14 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if][atleast-evenbetter]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
+
+to say atleast-evenbetter: say ". [if enough-animals-solved-here]Even better,[else]At least[end if] it's secluded enough you can't see the Edictal Citadel from here"
+
+to decide whether enough-animals-solved-here:
+	if player is in Lamer Realm and adjsolve >= 3, yes;
+	if player is in Perverse Preserve and nounsolve >= 3, yes;
+	no;
 
 printed name of Lamer Realm is "[if adjsolve < 3]Lamer Realm[else]Blest Belts[end if]"
 
@@ -19004,12 +19013,12 @@ the ocelots are plural-named reflexive neuter northy puzanimals. description is 
 
 understand "ocelot" as ocelots.
 
-the SlopInc Clip-Ons are a boring thing. description of SlopInc Clip-Ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats.". bore-text is "Uncool. Both the clip-ons and paying too much attention to them. And by too much, I mean any. Maybe you can help the ocelots, though.". the ocelots wear the SlopInc Clip-Ons.
+the SlopInc Clip Ons are a boring thing. description of SlopInc Clip Ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats.". bore-text is "Uncool. Both the clip-ons and paying too much attention to them. And by too much, I mean any. Maybe you can help the ocelots, though.". the ocelots wear the SlopInc Clip Ons. understand "clipons" and "slopinc clipons" as SlopInc Clip Ons.
 
-the Look-Kool Shades are a wearable thing. description of Look-Kool is "Man! You couldn't wear them, or tell why they rout the cheap Ok-Ol[']-Look knockoffs, but the coolest ocelots can."
+the Look Kool Shades are a wearable thing. description of Look Kool Shades is "Man! You couldn't wear them, or tell why they rout the cheap Ok-Ol[']-Look knockoffs, but the coolest ocelots can."
 
 understand "sunglasses/glasses/shades" as SlopInc when ocelots wear SlopInc.
-understand "sunglasses/glasses/shades" as Look-Kool when ocelots wear Look-Kool.
+understand "sunglasses/glasses/shades" as Look Kool Shades when ocelots wear Look Kool Shades.
 
 a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of ocelots is "x[sp]-[sp]-[sp]l[sp]-[sp]x[sp]x". ocelots is cheat-spoilable.
 
@@ -19087,7 +19096,7 @@ check going south in Clarthead Cathedral:
 to decide which number is whiner-score:
 	decide on (boolval of whether or not whin1 is reflexed) + (boolval of whether or not whin2 is reflexed) + (boolval of whether or not whin3 is reflexed)
 
-the shrewin' whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if whin1 is reflexive]tallyhoing[else]babbling[end if][if whin2 is reflexive] with great callosity[end if] here[if whin3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if whin1 is reflexive]tallyhoing[else]babbling[end if][if whin2 is reflexive] with great callosity[end if] here[if whin3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
 
@@ -19114,7 +19123,7 @@ a-text of whin3 is "RYYRRYRRRO". b-text of whin3 is "RYYRRYRRRO". parse-text of 
 
 book Perverse Preserve
 
-Perverse Preserve is south of Clarthead Cathedral. Perverse Preserve is a room in Otters. "[pre-desc]". roomnud of Perverse Preserve is table of Perverse Preserve nudges.
+Perverse Preserve is south of Clarthead Cathedral. Perverse Preserve is a room in Otters. "[pre-desc][atleast-evenbetter].". roomnud of Perverse Preserve is table of Perverse Preserve nudges.
 
 for printing a locale paragraph about a prepuzanimal (called th) in Perverse Preserve:
 	if th is mentioned, continue the action;
@@ -19135,10 +19144,10 @@ understand "uprates/pasture" and "uprates pasture" as Perverse Preserve when nou
 
 to say pre-desc:
 	if number of animals in Perverse Preserve is 1:
-		say "[if know-restrict is true]The CRITTERS RESTRICT blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape.[no line break]";
+		say "[if know-restrict is true]The CRITTERS RESTRICT blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape";
 		continue the action;
 	else:
-		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, [if nounsolve is 4]so you can really only go back north[else if nounsolve is 3]which feels like enough, even if one is left. You can go back north[else][still-eerie].[no line break]";
+		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, [if nounsolve is 4]so you can really only go back north[else if nounsolve is 3]which feels like enough, even if one is left. You can go back north[else][still-eerie][end if]";
 		continue the action;
 
 to say still-eerie: say "but it's still eerie[if know-restrict is true], even without the CRITTERS RESTRICT blocking every way except back north[else]. You can go back north[end if]"
@@ -19281,9 +19290,7 @@ a stocked stockade is amusing boring scenery in Rancho Archon Anchor. descriptio
 
 Elvira is a woman in Rancho Archon Anchor. understand "necro/crone" and "necro-crone" and "necrocrone" as Elvira. "[one of]It's Elvira! The necro-crone![paragraph break]She looks upset, still, over the death of her hardy hydra[or]Elvira seems impatient for you to make a move[stopping].". description is "Elvira's actually got ... persistent prettiness. Sterling ringlets. She looks like a seraph even with that phrase-shaper-phaser. Though her beauty makes you say yea, but..."
 
-Elvira wears the Ultimate Mutilate-It Amulet.
-
-the mutilate-it amulet is an amusing boring thing. description of the mutilate-it amulet is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.".
+the Ultimate Mutilate it Amulet is an amusing boring thing. description of the mutilate it amulet is "It's very bare except for the words 'Um...a title?' on it.". bore-text is "Hm, best not to try anything. It can't zap you if you don't mess with it.". printed name is "Ultimate Mutilate-it Amulet". Elvira wears the Ultimate Mutilate It Amulet.
 
 The phrase shaper phaser is an amusing boring thing. description of phrase shaper phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa.". bore-text is "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you.". Elvira carries the phrase shaper phaser.
 
@@ -20959,7 +20966,7 @@ check burning:
 	if noun is a hintpastry, say "There aren't many ways to botch food like that, but that's one[if toaster is touchable]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and Topside Deposit is unvisited, say "Don't be a brushfire furbisher." instead;
 	if noun is bleary barley, say "You'd be right in the middle. So, bad idea." instead; [otters]
-	if noun is atmo-moat, say "It's nowhere near greasy enough." instead;
+	if noun is atmo moat, say "It's nowhere near greasy enough." instead;
 	if noun is storage, say "It's meant to be nearly indestructible." instead;
 	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
 
