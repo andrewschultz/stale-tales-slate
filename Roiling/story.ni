@@ -1867,7 +1867,7 @@ yapper	"The yapper does not shut up about unbribability but still manages to win
 ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
-spec-o-scope	"Try looking in it instead."
+Spec O Scope	"Try looking in it instead."
 dreads adders	"They can't speak. They seem happy enough just blocking you." [begin TOWERS]
 Andres	"[war-duh]"
 Andrew	"[war-duh]"
@@ -5118,14 +5118,14 @@ this is the oyster-hinting rule:
 
 book towers-hinting
 
-to say seesaw: say "[if scope is examined]saw[else]could see[end if]";
+to say seesaw: say "[if Spec O Scope is examined]saw[else]could see[end if]";
 
 to say to-center:
 	repeat with mydir running through directions:
 		if the room mydir of location of player is Treading Gradient:
 			say "[mydir]";
 			continue the action;
-	say "[if player is in Actionless Coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
+	say "[if player is in Actionless Coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Fringe Finger]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the Spec-O-Scope[end if]";
 
 this is the towers-hinting rule:
 	if player is in Loftier Trefoil, try objhinting h-p instead;
@@ -5141,7 +5141,7 @@ this is the towers-hinting rule:
 		any-guardian-hint instead;
 	if player is in Loftier Trefoil, try objhinting h-p instead;
 	if Scope Copse is unvisited, all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
-	if Shaven Havens is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Shaven Havens is accessible]go[else]make a path[end if] there." instead;
+	if Treading Gradient is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Treading Gradient is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient, all-say "Collect the loot from the Treading Gradient." instead;
 	if Obscurest Subsector is unvisited, all-say "[if bonker is moot]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the Scope Copse.[end if]" instead;
 	if Treading Gradient is unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit you [seesaw] in the Scope Copse.[end if]" instead;
@@ -5153,7 +5153,7 @@ this is the towers-hinting rule:
 	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if dinger is in Actionless Coastlines, try objhinting dinger instead;
-	if Outer Route is not visited, all-say "You need to visit west of the Copse Scope[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
+	if Outer Route is not visited, all-say "You need to visit west of the Scope Copse[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
 		if weeds are in Treading Gradient, all-say "The item you want is behind the weeds in the Treading Gradient." instead;
 		if gizmo is off-stage, try objhinting rapier repair instead;
@@ -5931,7 +5931,8 @@ span pans	"Well, you need to do something to the pans."
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 dialer	"That would only sabotage communications here. You need to sabotage the supplier."
-campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
+yurts	"Don't get [']urty! (Sorry not sorry.)" [START towers]
+campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
 sweatier wait seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
@@ -5956,7 +5957,7 @@ imp	"It jumps out of reach, streakily, satyrlike."
 whiners	"That idea is banefully unflyable."
 leopard	"Even if he weren't a hardened criminal, you'd lose. I mean, a leopard."
 ocelots	"They're bigger than average. And the leopard would back them up."
-satyr	"It's bigger than average. And the leopard would back it up."
+satyr	"He's bigger than average. And the leopard would back him up."
 badger	"It's bigger than average. And the leopard would back it up."
 raptor	"Not even."
 cube	"Bounce no cube."
@@ -6375,10 +6376,10 @@ check thinking:
 			say "Hard to think with that knocking." instead;
 	if player is in Econ Cone and END PRONER POD is in Econ Cone, say "No, you need to think a little differently to move." instead;
 	if mrlp is troves and number of unfigured things is 0, say "Yes, how you think is extra important here. But generic thinking won't get you through." instead;
-	if mrlp is towers and topside is visited, say "Ornate Atoner Renato's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
 	if mrlp is demo dome, try requesting the score instead;
 	if number of unfigured things > 0:
 		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
+	if mrlp is towers and topside is visited, say "[if number of unfigured things > 0][line break][end if]Ornate Atoner Renato's advice about people--if not things--being mostly too complex for just five letters is stuck in your head." instead;
 	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
 chapter touching
@@ -15325,7 +15326,7 @@ book drawing the map
 
 to decide whether can-see-map:
 	if Rawest Waters is visited or Mislit Limits is visited, decide no;
-	if spec-o-scope is unexamined, decide no;
+	if Spec O Scope is unexamined, decide no;
 	if mrlp is towers, decide yes;
 	decide no.
 
@@ -15334,7 +15335,7 @@ tow-y-start is a number that varies. tow-y-start is 8.
 tow-delta is a number that varies. tow-delta is 16.
 square-from-center is a number that varies. square-from-center is 4.
 
-after examining spec-o-scope (this is the specoscope draw rule):
+after examining Spec O Scope (this is the specoscope draw rule):
 	draw-my-loc;
 	continue the action;
 
@@ -15530,7 +15531,7 @@ to say which-cue of (therow - a number) :
 table of townarr
 observ
 "[line break]The palace is barely visible now."
-"The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
+"The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
 "You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think."
 "The castle looks a little bigger now--but you may eventually need to cut [if location of player is Anemic Cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is Anemic Cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
 "You're a good deal closer to the palace than at the copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass."
@@ -15700,7 +15701,7 @@ Report taking the strudel:
 
 book Scope Copse
 
-Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if try us yurts are touchable], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east.". roomnud of Scope Copse is table of Scope Copse nudges.
+Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A spec-o-scope [one of](scope, for short)[or](scope)[stopping] rests in the center of this wooded area. [if try us yurts are touchable]Some yurts also stand here, looking out of place. [end if]Paths lead in all directions, though things seem more open to the north and east.". roomnud of Scope Copse is table of Scope Copse nudges.
 
 the Try Us Yurts are plural-named vanishing boring scenery in Scope Copse. description of Try Us Yurts is "The Try Us Yurts, of dull sturdy metal, don't look very lived-in, because they're too small. They're mostly for storage, and they're not blocking you, but maybe they're hiding something useful.". bore-text is "It would be fun to see what is in or behind the yurts, but you probably need to do something magical.". bore-check of Try Us Yurts is bore-yurt rule.
 
@@ -15716,30 +15717,30 @@ a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text
 
 section Owers' Bin Brownies
 
-some Owers Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems.". printd name of Owers Bin Browniea is "Owers[']-Bin Brownies".
+some Owers Bin Brownies are a plural-named LLPish hintpastry. description of Owers Bin Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems.". printed name of Owers Bin Brownies is "Owers[']-Bin Brownies".
 
 understand "brownie" and "owers/bin/ower brownie" and "ower brownies" as Owers Bin Brownies.
 
 chapter spec-o-scope
 
-the spec-o-scope is scenery in Scope Copse. understand "map/scope/specoscope/spec" and "copse scope" as spec-o-scope. [ugh, I would like to call it the spec o scope but then that can conflict with the Scope Copse]
+the Spec O Scope is scenery in Scope Copse. understand "speco/specoscope" and "copse scope" as Spec O Scope. understand "map/telescope" as Spec O Scope when Spec O Scope is touchable and Spec O Scope is examined.
 
 Include (-
 	has transparent talkable
--) when defining spec-o-scope.
+-) when defining Spec O Scope.
 
-check taking spec-o-scope: say "It's firmly stuck in place. And it might lose its powers if you moved it." instead;
+check taking Spec O Scope: say "It's firmly stuck in place. And it might lose its powers if you moved it." instead;
 
-check searching spec-o-scope: try examining spec-o-scope instead;
+check searching Spec O Scope: try examining Spec O Scope instead;
 
-before examining spec-o-scope for the first time: say "A telescope! Place to see!"
+before examining Spec O Scope for the first time: say "A telescope! Place to see!"
 
-check examining spec-o-scope:
-	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the scope to a visual one?[close bracket][r][line break]";
+check examining Spec O Scope:
+	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the Spec-O-Scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the Spec-O-Scope to a visual one?[close bracket][r][line break]";
 	if the player direct-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
-description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
+description of Spec O Scope is "You look into the Spec-O-Scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
 [line break]  [pc of cinema and north]~~~~~~
 [line break]+[pc of cinema and west].[pc of cinema and east].[pc of deltas and east].~ +
@@ -16001,7 +16002,7 @@ after going somewhere (this is the duck-follows-you rule):
 
 chapter éclairs
 
-Claires Scalier Eclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold.". printed name of Claires Scalier Eclairs is "Claire's Scalier Éclairs". "Some Claire's Scalier Eclairs are lying here, packaged neatly."
+Claires Scalier Eclairs is an LLPish hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold.". printed name of Claires Scalier Eclairs is "Claire's Scalier Éclairs". "Some Claire's Scalier Eclairs are lying here, packaged neatly."
 
 understand "éclair/éclairs" as Eclairs.
 
@@ -17235,7 +17236,7 @@ chapter Danger Garden guardians
 
 section natives' site van
 
-the natives site van is a white guardian. "A natives['] site van block your way [psgdir of natives' site van], though you don't really see anything interesting there.". printed name is "natives['] site van". description of natives site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
+the natives site van is a white guardian. "A natives['] site van block your way [psgdir of natives site van], though you don't really see anything interesting there.". printed name is "natives['] site van". description of natives site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
 a-text of natives site van is "RYYRYRR". b-text of natives site van is "??YRYRR". parse-text of natives site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -17265,11 +17266,11 @@ a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR"
 
 section hostile is he lot
 
-The Hostile Is He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile is he lot].". description is "It's amazing, the variety of hostile expressions!". printed name of Hostile Ia He Lot is "Hostile-Is-He Lot".
+The Hostile Is He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile is he lot].". description is "It's amazing, the variety of hostile expressions!". printed name of Hostile Is He Lot is "Hostile-Is-He Lot".
 
-a-text of hostile is he lot is "RYRYYRR". b-text of hostile is he lot is "??RYYR?". parse-text of hostile is he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
+a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
-other-g of Lois the Hostile is hostile is he lot. other-g of hostile is he lot is Lois the Hostile.
+other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
 chapter guardian org table
 
@@ -17452,14 +17453,20 @@ to shuffle-guardians (goner - a guardian):
 		if any-cleared is false:
 			now any-cleared is true;
 		else if number of not moot guardians is 0:
-			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. +To the other side of the lake.";
-		else if number of tower-accessible rooms >= 12 and Obscurest Subsector is tower-accessible and Shaven Havens are tower-accessible: [the grid + Outer Route + Shaven Havens + Obscurest Subsector] [?? this is not quite correct. If we clear the stinger/admirer/butlers last, we could have gotten everything. However, it is impossible to clear a red/blue guardian and get all rooms accessible in one swoop. That's because the grid squares each have more than one way to get there.]
+			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
+		else if number of towers-access-needed rooms is 0:
 			if clear-warn is false:
 				say "You can move everywhere you need, now[if number of tower-accessible rooms < 14], but maybe you can clear a few more passages, if you want[end if].";
 				now clear-warn is true;
 		else if number of tower-accessible rooms >= 10:
 			say "You probably don't have much left to do, to get everywhere you need.";
 	continue the action;
+
+definition: a room (called rm) is towers-access-needed:
+	unless map region of rm is towers, no;
+	if rm is Loftier Trefoil or rm is Fringe Finger or rm is Lost Lots or rm is Rawest Waters or rm is Mislit Limits or rm is Mesprise Premises, no;
+	if rm is tower-accessible, no;
+	yes;
 
 to decide which number is gua-to-clear:
 	let temp be 0;
@@ -21521,14 +21528,14 @@ book amusing
 table of big yucks
 reg-needed	yux
 --	"KNOCK when Urgent Gunter knocks?"
---	"KISSing Elvira?"
+--	"KISSing Elvira or making her ALIVER?"
 --	"TICKLE ELMO?"
 --	"WAITing (Z) or not typing anything in a command a few times?"
 --	"READing all of the Dope Op-Ed? (It has far fewer entries than the random text)"
 --	"BURNING various things?"
 --	"SMELLing in various places?"
 --	"LISTENing in various places?"
---	"ATTACKing various NPCs?"
+--	"ATTACKing yourself, or various NPCs or things, including Brother Horbert, the Tetris Sitter, the yurts and the campiest campsite?"
 --	"Asking for a HINT in the Rancho Archon Anchor?"
 --	"reading Roiling Mistakes.i7x for other 'clever' 'jokes?'"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
@@ -21537,7 +21544,6 @@ routes	"Feeling BANE around the bean?"
 troves	"Anagramming the astute STATUE?"
 presto	"Calling the cola POP or SODA?"
 presto	"Cursing, or anagramming cursing, anywhere in Presto?"
-oyster	"Anagramming PLAINS in the plains?"
 others	"Trying to get a mango twice in the Clearing?"
 others	"Giving Curtis four or more fruits?"
 

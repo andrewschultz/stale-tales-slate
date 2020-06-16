@@ -1652,7 +1652,7 @@ a medal check rule for a thing (called x):
 section general
 
 after fliptoing (this is the general min up rule):
-	if noun is LLPish or noun is claire's scalier: [bleah. mended mini Denim isn't reflexive. Neither is giant pin]
+	if noun is LLPish:
 		d "General LLPish min-up for [noun].";
 		min-up;
 	continue the action;
@@ -2645,7 +2645,7 @@ Eclairs	"The éclairs are food you can put in the toaster."
 solve a loaves	"The solve-a-loaves are food you can put in the toaster."
 start tarts	"The tarts are food you can put in the toaster."
 Brownies	"The brownies are food you can put in the toaster."
-spec-o-scope	"The Scope Copse gives a rough progress map."
+Spec O Scope	"The Scope Copse gives a rough progress map."
 old ice	"[if old ice is reflexed]You made the old ice coiled, already.[else][one of]The old ice is a Last Lousy Point. It's docile, which is fine, but how to make it more impressive?[plus][or]If it were more like a sculpture, maybe...[plus][or]COILED.[cycling][end if]"
 mended mini denim	"[one of]The mended mini denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the mended mini denim.[or]You can, however, cheat to strip the mended mini denim away.[or]The mended mini denim can be MINED.[cycling]"
 pestern serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"

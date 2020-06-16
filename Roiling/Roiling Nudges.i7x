@@ -884,8 +884,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of Scope Copse nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"copse"	398904196	spec-o-scope	--	"[cop-sco]."
-"spec"	324551619	spec-o-scope	--	"[cop-sco]."
+"copse"	398904196	--	--	"[cop-sco]."
+"spec"	324551619	--	--	"[cop-sco]."
 "yurt"	415898880	yurts	--	"There's more than one yurt there."
 
 table of Outer Route nudges
@@ -1993,7 +1993,7 @@ to say eat-pastry: say "The pastry is for eating, not for changing[if toaster is
 
 to say not-singular-hp: say "Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway";
 
-to say cop-sco: say "The copse and the scope are both fine as-is[if yurts are touchable], though maybe you can do something about the yurts[end if]"
+to say cop-sco: say "The copse and the Spec-O-Scope are both fine as-is[if yurts are touchable], though maybe you can do something about the yurts[end if]"
 
 to say plutry of (pg - a guardian): now pg is plurtry
 

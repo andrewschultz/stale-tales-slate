@@ -699,7 +699,7 @@ chapter Scope Copse
 
 understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in Scope Copse and butlers are in Scope Copse.
 
-understand "copes" as a mistake ("You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.") when player is in Scope Copse.
+understand "copes" as a mistake ("You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.") when player is in Scope Copse.
 
 understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in Scope Copse.
 

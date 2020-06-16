@@ -1093,7 +1093,7 @@ carry out gzing:
 		increment min-score of towers;
 	if old ice is reflexed:
 		increment min-score of towers;
-	if sporties' ripostes are reflexed:
+	if sporties ripostes are reflexed:
 		increment min-score of towers;
 
 chapter diing

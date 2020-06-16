@@ -273,6 +273,7 @@ definition: a thing (called th) is thing-goable:
 	yes;
 
 carry out gotothinging:
+	if debug-state is true, say "Going to [location of noun], where [the noun] is.";
 	try gotoing location of noun instead;
 
 Rule for supplying a missing noun while gotothinging:
