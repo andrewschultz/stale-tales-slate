@@ -6,7 +6,7 @@ import i7
 import mytools as mt
 
 remove_bracketed = True
-valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes']
+valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes', 'ignores', 'replaceables', 'deffos_start', 'deffos_anywhere']
 
 #truth state which/that varies
 replaced = defaultdict(int)
@@ -22,18 +22,6 @@ replace_first = defaultdict(int)
 this_section = ""
 count = 0
 
-#ignores means that we can flat out ignore a line starting with this.
-ignores = [ '--', 'a-text', '"', "\t", "index map with", "to ", "this is the ", "volume ", "chapter ", "book ", "part ", "section ", "[", "check ", "before ", "instead of ", "carry out ", "after ", "report ", "-)", 'does the player mean', 'every turn', 'start-pre-fruit', 'reg-needed', 'hint-entry', 'sum-page', 'this-reg', 'num-ascii', 'this-animal', 'hint-reg', '{-', 'rank-name', 'him-asked', 'default-talker', 'the-person', 'mack-randomize', 'thing-to-note' ]
-
-# replaceables means we can replace this text with XXX and continue checking for bad punctuation.
-replaceables = [ 'singular-named', 'plural-named', 'privately-named', 'proper-named', 'improper-named', 'improperly-named', 'mack-idea', 'pill-thing', 'my-loc', 'quest-item', 'cur-hint-sto', 'hub-room', 'aside-llp', 'big-let', 'n-t-air', 'pre-haun', 'to-read', 'my-let', 'him-who', 'person-subj', 'disamb-store', 'bogus-lamps', 'bogus-plains', 'nowt-town-p', 'final-puz', 'mack-prio', 'bogus-detours', 'pod-num', 'pod-ord', 'maze-order', 'yow-talk', 'yow-yell', 'mack-brief', 'mack-move', 'cheat-spoilable' ]
-
-# deffos_anywhere means that a sentence/paragraph starting with this should be ignored in all cases.
-deffos_start = [ 'figure ', 'the graphics-window is a ', 'altroutes of', 'definition:', 'to decide ', 'a thing can be', 'table of ', "persuasion rule for ", "rule for ", "for printing", 'description of ', 'the specification of ', 'a room can be', 'to decide ', 'to protect ', 'a thing has ', 'orig-region is ', 'hub-region is ', 'a region has ', '1=', '2=', '3=', '5=', 'include ', 'tmc  =', 'tsn  =', 'tdr  =', 'pre  =', 'vrt  =' , 'tosb =', "the graphics window is ", 'current-idea' ]
-
-# deffos_anywhere means that a sentence/paragraph containing this should be ignored in all cases.
-deffos_anywhere = [ 'is a truth state that varies', 'is a truth state which varies', 'is a number that varies', 'is a person that varies',  'is a number variable', 'is a number that varies', 'is a room that varies', 'is a list of', 'is a thing that varies', 'is a region that varies', 'are an object-based rulebook', 'text that varies', 'is not listed in any rulebook', 'is a guardian that varies', 'is a picaro that varies', 'other-g', 'a person can be ', 'a quip can be ', 'is an object that varies', ' is listed before the ', 'start-pre-fruit', 'bore-check ', 'bore-text ', 'last-loc of ', 'a-text', 'b-text', 'last-loc', '(this is the', 'go-region', 'reg-hint-rule', 'passed-on', 'locale-text' ]
-
 def cut_down_need_fixing(line, line_count):
     temp = line
     for x in match_dictionary["to_fixes"]:
@@ -47,22 +35,22 @@ def cut_down_need_fixing(line, line_count):
 
 def cut_down(line):
     temp = line.lower()
-    for x in replaceables:
+    for x in match_dictionary["replaceables"]:
         temp = temp.replace(x, 'xxx')
     return temp
 
 def is_ignorable(line):
-    for x in ignores:
+    for x in match_dictionary["ignores"]:
         if line.startswith(x):
             starts[x] += 1
             return True
     return False
 
 def is_definition(line):
-    for x in deffos_start:
+    for x in match_dictionary["deffos_start"]:
         if line.startswith(x):
             return True
-    for x in deffos_anywhere:
+    for x in match_dictionary["deffos_anywhere"]:
         if x in line:
             if 'popstar' in line: print("!!", x)
             return True
@@ -85,6 +73,7 @@ def find_strings():
             if line.startswith("#"): continue
             if line.startswith(";"): break
             ll = line.lower().strip()
+            if not ll: continue
             if line == line.upper():
                 if ll not in valid_matchdict:
                     print("WARNING: invalid section", ll, "line", line_count)
@@ -171,7 +160,7 @@ with open("story.ni") as file:
             mt.add_open("story.ni", line_count)
             continue
         if is_ignorable(ll): continue
-        first_sentence = re.sub("[\"\t\(\[].*", "", line.strip()).lower()
+        first_sentence = re.sub("[\"\t\(\[].*", "", line.rstrip()).lower()
         if is_definition(first_sentence): continue
         l2 = cut_down(first_sentence)
         if "'" not in l2 and "-" not in l2: continue
