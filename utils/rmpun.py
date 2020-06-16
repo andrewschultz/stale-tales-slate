@@ -6,6 +6,7 @@ import i7
 import mytools as mt
 
 remove_bracketed = True
+valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes']
 
 #truth state which/that varies
 replaced = defaultdict(int)
@@ -21,9 +22,6 @@ replace_first = defaultdict(int)
 this_section = ""
 count = 0
 
-#shorts is for tricky hyphenations. For instance, we want to flag s-c but not corses-crosse. So we use a regex (slower than just comparing text) on these,
-shorts = [ 's-c', 's-i', 's-d', 'c-p', 'w-p', 'm-bk' ]
-
 #ignores means that we can flat out ignore a line starting with this.
 ignores = [ '--', 'a-text', '"', "\t", "index map with", "to ", "this is the ", "volume ", "chapter ", "book ", "part ", "section ", "[", "check ", "before ", "instead of ", "carry out ", "after ", "report ", "-)", 'does the player mean', 'every turn', 'start-pre-fruit', 'reg-needed', 'hint-entry', 'sum-page', 'this-reg', 'num-ascii', 'this-animal', 'hint-reg', '{-', 'rank-name', 'him-asked', 'default-talker', 'the-person', 'mack-randomize', 'thing-to-note' ]
 
@@ -36,12 +34,9 @@ deffos_start = [ 'figure ', 'the graphics-window is a ', 'altroutes of', 'defini
 # deffos_anywhere means that a sentence/paragraph containing this should be ignored in all cases.
 deffos_anywhere = [ 'is a truth state that varies', 'is a truth state which varies', 'is a number that varies', 'is a person that varies',  'is a number variable', 'is a number that varies', 'is a room that varies', 'is a list of', 'is a thing that varies', 'is a region that varies', 'are an object-based rulebook', 'text that varies', 'is not listed in any rulebook', 'is a guardian that varies', 'is a picaro that varies', 'other-g', 'a person can be ', 'a quip can be ', 'is an object that varies', ' is listed before the ', 'start-pre-fruit', 'bore-check ', 'bore-text ', 'last-loc of ', 'a-text', 'b-text', 'last-loc', '(this is the', 'go-region', 'reg-hint-rule', 'passed-on', 'locale-text' ]
 
-to_fixes = defaultdict(bool)
-flag_outside_quotes = defaultdict(bool)
-
 def cut_down_need_fixing(line, line_count):
     temp = line
-    for x in to_fixes:
+    for x in match_dictionary["to_fixes"]:
         t2 = temp
         temp = temp.replace(x, 'zzz')
         if t2 != temp:
@@ -77,7 +72,7 @@ def is_definition(line):
 
 def cut_down_shorts(line):
     temp = line
-    for x in shorts:
+    for x in match_dictionary['shorts']:
         if x not in temp: continue
         if x in temp and re.search(r'\b{}\b'.format(x), temp):
             temp = re.sub(r'\b{}\b'.format(x), 'yyy', temp)
@@ -89,32 +84,26 @@ def find_strings():
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
-            if line.lower().startswith("to_fixes"):
-                this_section = "to_fixes"
-                continue
-            if line.lower().startswith("flag_outside_quotes"):
-                this_section = "flag_outside_quotes"
-                continue
-            if this_section == "flag_outside_quotes":
-                for x in line.lower().strip().split(","):
-                    x0 = x.strip()
-                    if not x0:
-                        print("WARNING blank string line", line_count)
-                        continue
-                    if x in to_fixes:
-                        print("Duplicate flag_outside_quotes", x, "line", line_count)
-                    else:
-                        flag_outside_quotes[x] = True
-            if this_section == "to_fixes":
-                for x in line.lower().strip().split(","):
-                    x0 = x.strip()
-                    if not x0:
-                        print("WARNING blank string line", line_count)
-                        continue
-                    if x in to_fixes:
-                        print("Duplicate to_fix", x, "line", line_count)
-                    else:
-                        to_fixes[x] = True
+            ll = line.lower().strip()
+            if line == line.upper():
+                if ll not in valid_matchdict:
+                    print("WARNING: invalid section", ll, "line", line_count)
+                    this_section = ""
+                    continue
+                else:
+                    # print("Section", ll, "line", line_count)
+                    this_section = ll
+                    continue
+            if not this_section: continue
+            for x in ll.split(","):
+                x0 = x.strip()
+                if not x0:
+                    print("WARNING blank string line", line_count)
+                    continue
+                if x in match_dictionary[this_section]:
+                    print("Duplicate entry", x, "for", this_section, "line", line_count)
+                else:
+                    match_dictionary[this_section][x] = 0
 
 def has_flaggable(my_line):
     if i7.is_outline_start(my_line): return
@@ -127,7 +116,7 @@ def has_flaggable(my_line):
     ml = ' '.join(my_line.split('"')[0::2])
     if remove_bracketed: ml = re.sub("\[[^\]]+\]", "", ml)
     ary = []
-    for q in flag_outside_quotes:
+    for q in match_dictionary["flag_outside_quotes"]:
         if q in ml:
             ml = ml.replace("bore-" + q, "borexxx")
             ml = ml.replace("table of " + q, "borexxx")
@@ -202,7 +191,7 @@ for x in headers_list:
 
 print("Caught needing a fix:", caught_need_fix)
 print(len(replaced))
-fix_no_replace = [x for x in to_fixes if x not in replaced]
+fix_no_replace = [x for x in match_dictionary["to_fixes"] if x not in replaced]
 if len(fix_no_replace):
     print("No longer in the source:", fix_no_replace)
 else:
