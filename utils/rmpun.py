@@ -1,13 +1,19 @@
+import os
 import sys
 from collections import defaultdict
 import re
 import i7
+import mytools as mt
+
+remove_bracketed = True
 
 #truth state which/that varies
-# feeling you're a perp -> fleeing feeling (PERP)
 replaced = defaultdict(int)
 # zap m-bk
 # zap no-lag's boat?
+
+#the match dictionary is a dictionary of dictionaries of integers because we may wish to keep track of how many matches we find.
+match_dictionary = defaultdict(lambda: defaultdict(int))
 
 starts = defaultdict(int)
 replace_first = defaultdict(int)
@@ -114,10 +120,12 @@ def has_flaggable(my_line):
     if i7.is_outline_start(my_line): return
     if my_line.startswith("["): return
     try:
-        x = int(my_line[1])
-    except:
+        x = int(my_line[0])
         return
+    except:
+        pass
     ml = ' '.join(my_line.split('"')[0::2])
+    if remove_bracketed: ml = re.sub("\[[^\]]+\]", "", ml)
     ary = []
     for q in flag_outside_quotes:
         if q in ml:
@@ -127,6 +135,18 @@ def has_flaggable(my_line):
                 ary.append(q)
     if ary: print(ml)
     return ary
+
+def just_flag(my_file):
+    my_file_short = os.path.basename(my_file)
+    with open(my_file) as f:
+        for (line_count, line) in enumerate(f, 1):
+            ll = line.lower()
+            temp = has_flaggable(ll)
+            if temp:
+                print(my_file_short, line_count, "FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
+                print("----" + ll)
+                mt.add_open(my_file, line_count)
+                continue
 
 caught_need_fix = 0
 final_string = ""
@@ -148,6 +168,8 @@ while cmd_count < len(sys.argv):
 
 i7.go_proj(my_project)
 
+headers_list = [ i7.hdr(my_project, 'ta'), i7.hdr(my_project, 'nu'), i7.hdr(my_project, 'mi') ]
+
 find_strings()
 
 with open("story.ni") as file:
@@ -155,8 +177,9 @@ with open("story.ni") as file:
         ll = line.lower()
         temp = has_flaggable(ll)
         if temp:
-            print("FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
+            print("story.ni", line_count, "FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
             print("----" + ll)
+            mt.add_open("story.ni", line_count)
             continue
         if is_ignorable(ll): continue
         first_sentence = re.sub("[\"\t\(\[].*", "", line.strip()).lower()
@@ -174,6 +197,9 @@ with open("story.ni") as file:
             count += 1
         print(count, line_count, first_sentence, '/', l2, '/', l3)
 
+for x in headers_list:
+    just_flag(x)
+
 print("Caught needing a fix:", caught_need_fix)
 print(len(replaced))
 fix_no_replace = [x for x in to_fixes if x not in replaced]
@@ -184,3 +210,5 @@ else:
 
 if show_first_lines:
     for x in replace_first: print(x, replace_first[x])
+
+mt.postopen()
