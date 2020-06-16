@@ -12,7 +12,7 @@ replaced = defaultdict(int)
 starts = defaultdict(int)
 replace_first = defaultdict(int)
 
-show_first_lines = False
+this_section = ""
 count = 0
 
 #shorts is for tricky hyphenations. For instance, we want to flag s-c but not corses-crosse. So we use a regex (slower than just comparing text) on these,
@@ -31,6 +31,7 @@ deffos_start = [ 'figure ', 'the graphics-window is a ', 'altroutes of', 'defini
 deffos_anywhere = [ 'is a truth state that varies', 'is a truth state which varies', 'is a number that varies', 'is a person that varies',  'is a number variable', 'is a number that varies', 'is a room that varies', 'is a list of', 'is a thing that varies', 'is a region that varies', 'are an object-based rulebook', 'text that varies', 'is not listed in any rulebook', 'is a guardian that varies', 'is a picaro that varies', 'other-g', 'a person can be ', 'a quip can be ', 'is an object that varies', ' is listed before the ', 'start-pre-fruit', 'bore-check ', 'bore-text ', 'last-loc of ', 'a-text', 'b-text', 'last-loc', '(this is the', 'go-region', 'reg-hint-rule', 'passed-on', 'locale-text' ]
 
 to_fixes = defaultdict(bool)
+flag_outside_quotes = defaultdict(bool)
 
 def cut_down_need_fixing(line, line_count):
     temp = line
@@ -77,29 +78,63 @@ def cut_down_shorts(line):
     return temp
 
 def find_strings():
-    in_to_fixes = False
+    this_section = ""
     with open("rmpun-{}.txt".format(my_project)) as file:
         for (line_count, line) in enumerate(file, 1):
             if line.startswith("#"): continue
             if line.startswith(";"): break
             if line.lower().startswith("to_fixes"):
-                in_to_fixes = True
+                this_section = "to_fixes"
                 continue
-            if in_to_fixes:
+            if line.lower().startswith("flag_outside_quotes"):
+                this_section = "flag_outside_quotes"
+                continue
+            if this_section == "flag_outside_quotes":
                 for x in line.lower().strip().split(","):
                     x0 = x.strip()
                     if not x0:
                         print("WARNING blank string line", line_count)
+                        continue
+                    if x in to_fixes:
+                        print("Duplicate flag_outside_quotes", x, "line", line_count)
+                    else:
+                        flag_outside_quotes[x] = True
+            if this_section == "to_fixes":
+                for x in line.lower().strip().split(","):
+                    x0 = x.strip()
+                    if not x0:
+                        print("WARNING blank string line", line_count)
+                        continue
                     if x in to_fixes:
                         print("Duplicate to_fix", x, "line", line_count)
                     else:
                         to_fixes[x] = True
+
+def has_flaggable(my_line):
+    if i7.is_outline_start(my_line): return
+    if my_line.startswith("["): return
+    try:
+        x = int(my_line[1])
+    except:
+        return
+    ml = ' '.join(my_line.split('"')[0::2])
+    ary = []
+    for q in flag_outside_quotes:
+        if q in ml:
+            ml = ml.replace("bore-" + q, "borexxx")
+            ml = ml.replace("table of " + q, "borexxx")
+            if q in ml:
+                ary.append(q)
+    if ary: print(ml)
+    return ary
 
 caught_need_fix = 0
 final_string = ""
 
 my_project = "roiling"
 cmd_count = 1
+
+show_first_lines = False
 
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count]
@@ -118,6 +153,11 @@ find_strings()
 with open("story.ni") as file:
     for (line_count, line) in enumerate(file, 1):
         ll = line.lower()
+        temp = has_flaggable(ll)
+        if temp:
+            print("FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
+            print("----" + ll)
+            continue
         if is_ignorable(ll): continue
         first_sentence = re.sub("[\"\t\(\[].*", "", line.strip()).lower()
         if is_definition(first_sentence): continue
