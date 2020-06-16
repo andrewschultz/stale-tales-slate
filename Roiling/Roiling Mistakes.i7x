@@ -61,13 +61,13 @@ chapter Largely All-Grey Gallery
 
 understand "astir" as a mistake ("[if stair is touchable]You don't need a moving stair.[else]You need to change that to something else, then it'll be astir[end if].") when stair is touchable or stria is in location of player or sitar is in location of player.
 
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and meet bans are in Dusty Study.
+understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All Grey Gallery and meet bans are in Dusty Study.
 
-understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All-Grey Gallery.
+understand "bsin" and "bs in" as a mistake ("Now, now! This game is strictly about logic! Nothing frivolous, if you please! [if isbn bins are reflexed]Okay, you can take a small break for fixing the bins[else]Right now, you're just dancing around a way to fix the ISBN bins[end if].") when player is in Largely All Grey Gallery.
 
 understand "gnu" as a mistake ("It's a rifle, not a gun. Besides, you don't need a gnu-sance.") when rifle is touchable.
 
-understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
+understand "sitar" as a mistake ("[if stair is touchable]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All Grey Gallery.
 
 chapter Carven Cavern
 
@@ -289,7 +289,7 @@ understand "aspired" as a mistake ("Now is not the time to fret solely on past d
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when I'd Cede is touchable.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when Id Cede is touchable.
 
 chapter Boredom Bedroom
 
@@ -745,9 +745,9 @@ understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, bu
 
 chapter shoals aslosh (backdrop)
 
-understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is touchable.
+understand "kale" as a mistake ("'More kale, dear?' / 'Did I ASK for more kale, dear?'[paragraph break]Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is touchable.
 
-understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is in location of player.
+understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait seer is touchable.
 
 chapter Danger Garden
 
@@ -876,7 +876,7 @@ understand "trays" as a mistake ("You can't transform something living into some
 
 chapter Clarthead Cathedral
 
-understand "sherwin" as a mistake ("No cryptozookeeper appears.") when shrewin' whiners are touchable.
+understand "sherwin" as a mistake ("No cryptozookeeper appears.") when shrewin whiners are touchable.
 
 chapter Perverse Preserve
 

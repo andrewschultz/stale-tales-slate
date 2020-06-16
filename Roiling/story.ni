@@ -278,7 +278,7 @@ check objasking a guardian about a guardian (this is the guardian general chat r
 the specification of guardian is "A person that blocks your way through the towers area until you describe him correctly."
 
 after doing something with a guardian:
-	if noun is organised or noun is hostile-is-he lot:
+	if noun is organised or noun is hostile is he lot:
 		set the pronoun them to noun;
 	else:
 		set the pronoun it to noun;
@@ -568,7 +568,7 @@ to decide whether gen-gone of (g - a guardian):
 
 to general-gender-towers:
 	unless gen-gone of lois the hostile:
-		now hostile-is-he lot is off-stage;
+		now hostile is he lot is off-stage;
 		now lois the hostile is off-stage;
 	unless gen-gone of lars eede:
 		now lars eede is off-stage;
@@ -1422,7 +1422,7 @@ persuasion rule for asking a nasty person to try doing something:
 
 [towers]
 
-persuasion rule for asking pester'n serpent to try doing something:
+persuasion rule for asking pestern serpent to try doing something:
 	say "The serpent needs a change of attitude, and speaking won't do it.";
 	persuasion fails;
 
@@ -1736,18 +1736,18 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 dreads adders	"The adders sit around and look intimidating."
-pester'n serpent	"[serp-say]."
+pestern serpent	"[serp-say]."
 Mel Fish	--
 muscly luc sym	--
 muscly ms lucy	--
 lois the hostile	--
-hostile-is-he lot	--
-natives' site van	--
+hostile is he lot	--
+natives site van	--
 snider diners	"'We are EATING,' they exclaim, dryly. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help."
-sweatier wait-seer	--
+sweatier wait seer	--
 arid den	--
 bluster butlers	--
-unripe ur-pine	--
+unripe ur pine	--
 resident trendies	--
 fluster self rut	--
 pirates	--
@@ -1906,21 +1906,21 @@ lars eede	"He seems to want to talk, really, and at the same time, he doesn't. H
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
 Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
-natives' site van	"You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
-sweatier wait-seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
+natives site van	"You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
+sweatier wait seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 duck	"It quacks."
 Resident Trendies	"They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
-pester'n serpent	"[serp-say]."
+pestern serpent	"[serp-say]."
 alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
 bonker	"You try to chat but feel like a, er, knob."
 stinger	"As you start to talk, you almost see a grin set in the stinger, which makes you see red."
 Lois the Hostile	"She complains[hostile-red]!"
-Hostile-Is-He Lot	"They complain[hostile-red]!"
+Hostile Is He Lot	"They complain[hostile-red]!"
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
 Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
-Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur-pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
+Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
@@ -2164,10 +2164,10 @@ arid den	Nerd Aid	"'YES! NERD-AID!' booms some unseen response system in the ari
 arid den	Elvira	"'WHETHER YOU LIKE OR HATE ELVIRA, NERD-AID TASTES GREAT!'"
 atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
 lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing out...'"
-hostile-is-he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
+hostile is he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
 organised	Elvira	"Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before."
-natives' site van	Elvira	"The natives mention she says everyone deserves their own place, unless they don't, because they're lame."
-natives' site van	curst palace	"'Why go there when you could live in the Wildest Wilteds?'"
+natives site van	Elvira	"The natives mention she says everyone deserves their own place, unless they don't, because they're lame."
+natives site van	curst palace	"'Why go there when you could live in the Wildest Wilteds?'"
 fluster self rut	Elvira	"You hear nothing and imagine Elvira laughing at you."
 bonker	Elvira	"'She has increased bonker production by 1000%!'"
 bonker	curst palace	"'It must be guarded by a thousand like me!'"
@@ -2177,7 +2177,7 @@ agnostic	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage
 agnostic	keycar	"'Those things are annoying! But it'd be neat to know how they worked.'"
 agnostic	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
 agnostic	atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
-agnostic	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
+agnostic	hostile is he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
 agnostic	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
 agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is touchable]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
 agnostic	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the agnostic, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The agnostic'll use it better anyway."
@@ -2271,7 +2271,7 @@ ag-guar is a person that varies. [ag-guar is usually nothing.]
 
 check objasking agnostic about (this is the agnostic can spoil rule):
 	if second noun is lois the hostile and agnostic is male, say "'Wow! It woulda been too much to have anyone more snooping around.'" instead;
-	if second noun is hostile-is-he lot and agnostic is female, say "'Wow! It woulda been too much to have anyone more snooping around." instead;
+	if second noun is hostile is he lot and agnostic is female, say "'Wow! It woulda been too much to have anyone more snooping around." instead;
 	if second noun is moot, say "[if second noun is not atheists and second noun is not the-hostile and second noun is not lois the hostile]Out of the way[else]The agnostic doesn't want to be reminded, probably[end if]." instead;
 	unless second noun is guardian or second noun is curst palace:
 		continue the action;
@@ -2381,7 +2381,7 @@ topic	right-region	him-say
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
 	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
-	if wait-seer is not moot:
+	if wait seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
 	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
 
@@ -2549,7 +2549,7 @@ chapter quip-variable-text
 
 to say satchel-extra:
 	if satchel is bscanned, continue the action;
-	if satchel is not in Largely All-Grey Gallery, say "quickly go back to the study for the satchel, ";
+	if satchel is not in Largely All Grey Gallery, say "quickly go back to the study for the satchel, ";
 	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
 
 to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, lots of stuff to look at[stopping]";
@@ -2983,8 +2983,8 @@ after quipping when qbc_litany is the table of Gunter comments:
 		moot Gunter;
 		now Dusty Study is dark;
 		if do-i-chat is true:
-			move Elmo to Largely All-Grey Gallery;
-			move player to Largely All-Grey Gallery;
+			move Elmo to Largely All Grey Gallery;
+			move player to Largely All Grey Gallery;
 			moot rifle;
 			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Gunter's dialogue]
 	else:
@@ -3664,9 +3664,13 @@ to say reject:
 	if mrlp is demo dome:
 		say "There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.";
 		continue the action;
-	if player is in Tenfold Teflon'd Den Loft and yapper is not in Tenfold Teflon'd Den Loft:
-		unless hash of the player's command is 501914680 or hash of the player's command is 335153504:
-			say "The only thing left to do here is muck with the dialer right.";
+	if player is in Tenfold Teflond Den Loft and yapper is not in Tenfold Teflond Den Loft:
+		if hash of the player's command is 335153504:
+			do nothing;
+		else if hash of the player's command is 291640279 and pins are reflexive:
+			do nothing;
+		else:
+			say "The only thing required here is muck with the dialer right.";
 			continue the action;
 	say "[generic-reject]";
 	if Elmo is touchable, process the sign-imminent rule;
@@ -3990,7 +3994,7 @@ carry out exitsing:
 		if player is in Idle Deli or player is in adobe or player is in Cleric Circle, say "You can go back out." instead;
 		say "Looks like you will need to figure a way to go onward without directions. You've been doing well so far." instead;
 	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
-	if player is in Tenfold Teflon'd Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [start oyster]
+	if player is in Tenfold Teflond Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [start oyster]
 	if player is in end den, say "You can go back outside to the Horned Hedron." instead;
 	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [start towers]
 	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [start otters]
@@ -4503,22 +4507,22 @@ mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings
 resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
-sporties' ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
+sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
-sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
+sweatier wait seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
 organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
-hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
+hostile is he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
 prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle..."
-natives' site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
+natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	false	false	false	false	"[scannotes-curst]."
-pester'n serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
+pestern serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess." [START otters]
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
@@ -5093,8 +5097,8 @@ to decide which thing is oyster-item:
 		if player has digger and player has ruby, decide on ruby;
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
-		if yapper is in Tenfold Teflon'd Den Loft, decide on yapper;
-		if d2 is in Tenfold Teflon'd Den Loft, decide on d2;
+		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
+		if d2 is in Tenfold Teflond Den Loft, decide on d2;
 		decide on dialer;
 	decide on the player;
 
@@ -5381,7 +5385,7 @@ after reading a command:
 				process the hint flags checkoff rule;
 				process the scam rule instead;
 	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
-	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
+	if the player's command includes "tickle" and Elmo is in Largely All Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in Clangier Clearing and melon is in Clangier Clearing:
 		if the player's command includes "len" and the player's command includes "mo", try fliptoing melon instead;
 	if player is in Evoc Cove and the player's command includes "page":
@@ -5448,10 +5452,10 @@ to towers-plurcheck:
 		if the player's command includes "pirate":
 			now pirates are plurtry;
 			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
-	if natives' site van is plurcheck:
+	if natives site van is plurcheck:
 		if the player's command includes "native":
-			now natives' site van is plurtry;
-			ital-say "there natives' site van is too big to deal with one native at a time.";
+			now natives site van is plurtry;
+			ital-say "there natives site van is too big to deal with one native at a time.";
 	if yurt-plurtry is false and yurts are touchable: [yurts are not a guardian, so they don't have this property]
 		if the player's command includes "yurt":
 			now yurt-plurtry is true;
@@ -5770,7 +5774,7 @@ check going nowhere (this is the main can't go that way rule) :
 
 table of nowheres [tnw]
 theloc	thereject
-Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
+Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have conked your sense of compass directions. There must be a generic way to leave!" [stores]
@@ -5807,7 +5811,7 @@ Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in S
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
-Tenfold Teflon'd Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
+Tenfold Teflond Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
@@ -5930,7 +5934,7 @@ dialer	"That would only sabotage communications here. You need to sabotage the s
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." [START towers]
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
-sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
+sweatier wait seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
@@ -6030,7 +6034,7 @@ check climbing (this is the climb to enter rule) :
 check climbing (this is the generic silly climbing reject rule):
 	if noun is ramp, try going down instead; [start Ordeal Reload]
 	if noun is stair:
-		if player is in Farming Framing, move player to Largely All-Grey Gallery instead;
+		if player is in Farming Framing, move player to Largely All Grey Gallery instead;
 		move player to study instead;
 	if noun is THE BEAN, say "THE BEAN is too slippery and round." instead; [strt routes]
 	if noun is godlings lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
@@ -6043,7 +6047,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is Edictal Citadel, say "Elvira is in the Edictal Citadel, not on top of it." instead; [start otters]
 	if noun is wire weir, say "It's a long way down, and it'd take you away from your quest." instead; [end OTTERS]
 	if noun is un mod mound, try going down instead; [start others]
-	if noun is gropin' roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead; [end OTHERS]
+	if noun is gropin roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead; [end OTHERS]
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
 chapter dropping
@@ -6141,7 +6145,7 @@ understand "taste [something]" as eating.
 chapter buying
 
 check buying:
-	if player is in tenfold and yapper is in Tenfold Teflon'd Den Loft, say "The papery yapper stage-whispers 'Ix-nay on the Vi-OS-ob-ay. That's not how business is DONE, here!'" instead;
+	if player is in tenfold and yapper is in Tenfold Teflond Den Loft, say "The papery yapper stage-whispers 'Ix-nay on the Vi-OS-ob-ay. That's not how business is DONE, here!'" instead;
 	if player is in Clangier Clearing:
 		if player has noun, say "It's already yours." instead;
 		say "You need to haggle. With actions. And descriptive words. And so forth." instead;
@@ -6401,7 +6405,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait-seer, ripostes, arid den, natives' site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6419,7 +6423,7 @@ check listening:
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
-	if player is in Farming Framing or player is in Largely All-Grey Gallery, say "Merciful quiet, for the moment." instead;
+	if player is in Farming Framing or player is in Largely All Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if noun is elmo, say "[if rifle is moot]You're in a conversation[else]Awkward silence, what with Elmo holding that rifle[end if]." instead;
 	if noun is odorant tornado, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
 	if noun is tokers, say "[if nestor is touchable]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
@@ -6480,7 +6484,7 @@ check listening:
 	if noun is aunt tuna, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
 	if player is in Sclerous Closures, say "Silence[if sardine is in sclerous closures]--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU[end if]." instead;
 	if noun is papery yapper, say "Mindless materialistic babble." instead;
-	if noun is dialer, say "[if pins are in Tenfold Teflon'd Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
+	if noun is dialer, say "[if pins are in Tenfold Teflond Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if noun is Rodney, say "Rodney's intimidating enough, he can keep this place quiet." instead; [towers]
 	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead;
 	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
@@ -6497,18 +6501,18 @@ check listening:
 	if noun is angriest ingrates, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
 	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if]along." instead;
 	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
-	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait-seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
-	if noun is wait-seer, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
+	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
+	if noun is wait seer, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Dourest Detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
 	if noun is bonker, say "A menacing silence spews from the bonker. Or maybe it's just your imagination." instead;
 	if noun is stinger, say "A menacing buzz spews from the stinger. Or maybe it's just your imagination." instead;
 	if noun is geese, say "Honk, honk." instead;
-	if noun is sporties' ripostes, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
+	if noun is sporties ripostes, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
 	if noun is dandier arid den, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
-	if noun is natives' site van:
+	if noun is natives site van:
 		say "The babble from the natives['] site van doesn't stop.";
-		try objasking natives' site van about natives' site van instead;
+		try objasking natives site van about natives site van instead;
 	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
 	if noun is macks, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
@@ -6567,7 +6571,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Lean Lane, say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
 	if noun is weaselly walleyes, say "The weaselly walleyes smell of Skum-Musk." instead;
-	if player is in Tenfold Teflon'd Den Loft, say "Old heat. Loathed hot lead." instead;
+	if player is in Tenfold Teflond Den Loft, say "Old heat. Loathed hot lead." instead;
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if mrlp is towers and leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
@@ -6710,7 +6714,7 @@ check swearing obscenely:
 	if player is in Lean Lane, say "You don't want Aunt Tuna to perform a tsk task." instead;
 	if agnostic is touchable, say "Some example you are." instead; [TOWERS]
 	if player is in Actionless Coastlines or player is in Artist Traits Strait:
-		if lois is touchable or hostile-is-he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
+		if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in Rawest Waters:
 		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
 	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
@@ -7464,7 +7468,7 @@ carry out fliptoing (this is the main fliptoing rule):
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
 				else if the-to entry is meet bans:
-					if Largely All-Grey Gallery is unvisited, two-up;
+					if Largely All Grey Gallery is unvisited, two-up;
 				else if the-to entry is censer and the player's command includes "phooey":
 					two-up;
 				else if the-from entry is not part of the diorama:
@@ -7697,9 +7701,9 @@ the Nitro Intro page is propaganda. it is part of the dope op ed. the printed na
 
 description of nitro intro page is "Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.[paragraph break]She notes how Penal Panel--panel IX--explain the Porter Report--the questin['] inquest on your life file. The media aimed you with RELATED! ALERTED! REQUIRES QUERIERS. Governor Ron Grove found taint--a tint. Ties to the Postage Gestapo. Recommended a deport-o-torpedo. Senator Ron East said can't snore at treason.[paragraph break]No hot-plate hate plot on! Elvira is dedicated to making Yorpwald safe, not just from outside forces, but from the influx of silly old anagrams and the LIKELY PERSON BEHIND THEM--a certain reruns nurser! Someone who resorted to boring old anagrams a computer could crank out.[paragraph break]She also notes she will refrain from calling you the obvious name she COULD in an op-ed, because she has class. But really, oppo = poop."
 
-the Questin' Inquest page is propaganda. it is part of the dope op ed.
+the Questin Inquest page is propaganda. it is part of the dope op ed. printed name of Questin Inquest is "Questin['] Inquest".
 
-description of Questin' Inquest is "[one of]It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.[paragraph break]You pause. That's so contrived. What kind of faker-freak would think that up?[or]The Questin['] Inquest page is no less annoying the second time around.[cycling]"
+description of Questin Inquest is "[one of]It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.[paragraph break]You pause. That's so contrived. What kind of faker-freak would think that up?[or]The Questin['] Inquest page is no less annoying the second time around.[cycling]"
 
 understand "questin" and "questin inquest" as inquest.
 
@@ -7707,9 +7711,9 @@ a thing called the MoneyCo and Economy page is propaganda. it is part of the dop
 
 description of MoneyCo is "Elvira notes Yorpwald's more profitable than ever! What's good for MoneyCo is good for Yorpwald! The motto 'Come Yon, Con Em, Yo!' is a coy omen. If there were fraud, it'd have been found out. But one day MoneyCo will deserve to be MyOneCo! I mean, think about it. Elvira is cool. Money is cool. Elvira deserves money! And of course the Trips Strip deserved to become the Strip of Profits! It rousts tourists! Gets us guests!"
 
-The Shatter-Threats page is propaganda. it is part of the dope op ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in Dusty Study.
+The Shatter Threats page is propaganda. it is part of the dope op ed. printed name of Shatter Threats page is "Shatter-Threats page".
 
-description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers, Sombrest Mobsters and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
+description of Shatter Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers, Sombrest Mobsters and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
 The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda.
 
@@ -7722,7 +7726,7 @@ dope-read is a truth state that varies.
 
 to say drt: now dope-read is true;
 
-The By Li'l Billy page is propaganda. it is part of the dope op ed.
+The By Lil Billy page is propaganda. it is part of the dope op ed. printed name of By Lil Billy is "By Li'l Billy".
 
 description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!,[paragraph break]There's further crayony scrawl. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!![paragraph break]Elvira somehow established it was cute when seven-year-olds did it but horrible when you did, all the same excoriating your terrible influence on children."
 
@@ -8269,17 +8273,17 @@ book Largely All-Grey Gallery
 gallery-been is a truth state that varies.
 
 rule for supplying a missing noun when entering:
-	if player is in Largely All-Grey Gallery:
+	if player is in Largely All Grey Gallery:
 		now the noun is the evac cave.
 
 [x current room]
-Largely All-Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are touchable]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of largely all-grey gallery is table of largely all-grey gallery nudges.
+the Largely All Grey Gallery is an innie room in Ordeal Reload. It is stairy. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that, though it's full of ISBN bins. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of Ordeal Reload < max-score of Ordeal Reload], though if you're a completionist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are touchable]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].". roomnud of Largely All Grey Gallery is table of largely all-grey gallery nudges. printed name of Largely All Grey Gallery is "Largely All-Grey Gallery".
 
-diorama is in Dusty Study and Largely All-Grey Gallery. [this is written in here after defining the gallery as a room]
+diorama is in Dusty Study and Largely All Grey Gallery. [this is written in here after defining the gallery as a room]
 
 section isbn bins and snib
 
-the ISBN bins are plural-named LLPish reflexive boring scenery in Largely All-Grey Gallery. description of ISBN bins is "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if].". bore-text is "You don't have much time to meddle in depth with the bins, [if bins are reflexed]now you've made them secure[else]but you could make them a bit more secure[end if].";
+the ISBN bins are plural-named LLPish reflexive boring scenery in Largely All Grey Gallery. description of ISBN bins is "[if bins are reflexed]The bins are now locked and a bit securer with the snib[else]The ISBN bins are very red and very unlocked. One of them says NIBS (in another shade of red), an embarrassing reference to how fawned over you once gave all sorts of embarrassing sobriquets you didn't want[end if].". bore-text is "You don't have much time to meddle in depth with the bins, [if bins are reflexed]now you've made them secure[else]but you could make them a bit more secure[end if].";
 
 understand "bin" and "ISBN bin" as ISBN bins. ISBN bins are parse-spoilable.
 
@@ -8291,7 +8295,7 @@ understand "snibs" as snib.
 
 section evac-cave
 
-the evac cave is boring scenery in Largely All-Grey Gallery. description of the evac cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
+the evac cave is boring scenery in Largely All Grey Gallery. description of the evac cave is "It's a bit small, but you can enter it, or go inside.". bore-text is "You probably just want to enter the cave or go IN.". bore-check is the bore-evac-cave rule.
 
 printed name of evac cave is "the evac-cave".
 
@@ -8300,17 +8304,17 @@ this is the bore-evac-cave rule:
 
 section stria
 
-the stria are plural-named vanishing LLPish scenery in Largely All-Grey Gallery. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the Largely All-Grey Gallery you don't need to attack them]
+the stria are plural-named vanishing LLPish scenery in Largely All Grey Gallery. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the Gallery you don't need to deal with them]
 
 a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "s[sp]t[sp]a[sp]i[sp]r". stria is parse-spoilable.
 
 check taking stria: say "Too high up." instead;
 
-the stair is a boring backdrop. description of stair is "It leads [if player is in Largely All-Grey Gallery]up[else]down[end if].". bore-text of stair is "Can't do much but go up or down a stair.".
+the stair is a boring backdrop. description of stair is "It leads [if player is in Largely All Grey Gallery]up[else]down[end if].". bore-text of stair is "Can't do much but go up or down a stair.".
 
 does the player mean climbing the stair: it is very likely.
 
-after printing the locale description for Largely All-Grey Gallery when Largely All-Grey Gallery is unvisited:
+after printing the locale description for Largely All Grey Gallery when Largely All Grey Gallery is unvisited:
 	if do-i-chat is false:
 		if tables are in Dusty Study and meet bans are in Dusty Study:
 			say "After your trip down the ramp, you note the stria--and the ten beams. Ten beams, basement--that makes sense. You could probably do something to the stria or visit the closets if you wanted, but you don't have to.";
@@ -8323,11 +8327,11 @@ after printing the locale description for Largely All-Grey Gallery when Largely 
 			now min-alert is true;
 		continue the action;
 
-check going outside in Largely All-Grey Gallery:
+check going outside in Largely All Grey Gallery:
 	say "To get out of the gallery, you need to go inward. So let's go that way.";
 	try going inside instead;
 
-check exiting in Largely All-Grey Gallery: try going inside instead;
+check exiting in Largely All Grey Gallery: try going inside instead;
 
 check going down in Dusty Study:
 	if meet bans are in Dusty Study, say "Ouch! You smack into the MEET-BANS[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
@@ -8342,9 +8346,9 @@ check going in Farming Framing:
 
 check going down in Farming Framing:
 	if stair is not touchable, say "There should be a way down. That sitar could trans-substantiate or be reincarnated as something more useful." instead;
-	move player to Largely All-Grey Gallery instead;
+	move player to Largely All Grey Gallery instead;
 
-check going up in Largely All-Grey Gallery:
+check going up in Largely All Grey Gallery:
 	if stria are touchable and meet bans are in Dusty Study, say "Hmm. There should be a way back up. The stria could be disposable." instead;
 	if backcheck is false:
 		now backcheck is true;
@@ -8360,7 +8364,7 @@ check going up in Largely All-Grey Gallery:
 
 settler-x-nag is a truth state that varies.
 
-check going inside in Largely All-Grey Gallery:
+check going inside in Largely All Grey Gallery:
 	if player has latches:
 		if treatise is off-stage:
 			say "You fumble nervously with the latches before entering, and a treatise falls out. Maybe it will help you decide what to do with the latches, before you go out into the wide world without a scanning device to help you know where to use your power.";
@@ -8372,7 +8376,7 @@ check going inside in Largely All-Grey Gallery:
 			say "You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas." instead;
 	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and see red, then feel all yellow as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
 	moot lamp;
-	now Elmo is in Largely All-Grey Gallery instead;
+	now Elmo is in Largely All Grey Gallery instead;
 
 book Carven Cavern
 
@@ -8522,7 +8526,7 @@ every turn when Elmo is touchable and Elmo has rifle (this is the sign-imminent 
 		if high-sign is false:
 			say "You hear a sigh nigh. It looks like a high sign from Elmo!";
 			now high-sign is true;
-			now high sign is in Largely All-Grey Gallery;
+			now high sign is in Largely All Grey Gallery;
 		else:
 			say "Elmo is flashing some sort of high sign. Bold cue? Could be.";
 	else:
@@ -8543,7 +8547,7 @@ after doing something with rifle:
 	if the player's command includes "gun", say "It's a rifle, not a gun. This may or may not help.";
 	continue the action;
 
-check fliptoing when rifle is touchable and player is in Largely All-Grey Gallery:
+check fliptoing when rifle is touchable and player is in Largely All Grey Gallery:
 	if noun is not rifle, say "Any distraction, and Elmo might fire. Unless, of course, you can change the rifle itself." instead;
 
 this is the bore-rifle rule:
@@ -8757,7 +8761,7 @@ check going inside in Dusty Study: if tables are in Dusty Study, say "Hm, maybe 
 
 section girding ridging
 
-the girding ridging is bounding boring scenery in Farming Framing. description of the girding ridging is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now.". bore-text is "The girding ridging is probably holding people back from entering. You don't need to do anything. You need a hidden escape[if Largely All-Grey Gallery is visited], like in the gallery below[end if]."
+the girding ridging is bounding boring scenery in Farming Framing. description of the girding ridging is "It blocks your way out, but on the other hand, it blocks a mob's way in, which is more important right now.". bore-text is "The girding ridging is probably holding people back from entering. You don't need to do anything. You need a hidden escape[if Largely All Grey Gallery is visited], like in the gallery below[end if]."
 
 book Highest Heights
 
@@ -8792,7 +8796,7 @@ check entering closets:
 		now player is in Highest Heights instead;
 	if player is in Highest Heights:
 		say "You go back down to the closets[if ramp is touchable], not ready for the ramp yet[else], not able to figure the pram yet[end if].";
-	else if player is in Largely All-Grey Gallery:
+	else if player is in Largely All Grey Gallery:
 		if backcheck is false:
 			now backcheck is true;
 			say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
@@ -8829,7 +8833,7 @@ check taking ramp:
 check going down in Highest Heights:
 	if ramp is not touchable, try entering closets instead;
 	say "You slide down the ramp--into the basement you [if meet bans are not in Dusty Study]uncovered another, easier way to get to[else]nearly forgot you had[end if].";
-	now player is in Largely All-Grey Gallery instead;
+	now player is in Largely All Grey Gallery instead;
 
 check going inside in Highest Heights: try entering closets instead;
 
@@ -9525,7 +9529,7 @@ to pad-rec-p (q - text):
 to decide whether need-line-break:
 	if player is in Dusty Study and gunter is in Dusty Study, no;
 	if player is in Disowned Downside and gretta is in Disowned Downside, no;
-	if player is in Largely All-Grey Gallery and elmo is in Largely All-Grey Gallery, no;
+	if player is in Largely All Grey Gallery and elmo is in Largely All Grey Gallery, no;
 	yes;
 
 to pad-rec (q - text):
@@ -13105,7 +13109,7 @@ definition: a direction (called dir) is viable:
 	if player is in Gates Stage and player does not have passport and dir is north, no;
 	if player is in Sclerous Closures and sardine is in Sclerous Closures and dir is north, no; [first we go with exceptional rejections, then exceptional allows]
 	if player is in Horned Hedron and dir is inside and walleyes are moot and ol trap is reflexed, yes;
-	if player is in Largely All-Grey Gallery and dir is inside, yes;
+	if player is in Largely All Grey Gallery and dir is inside, yes;
 	if player is in Carven Cavern and dir is inside and act ruin curtain is moot, yes;
 	unless the room dir from location of player is nothing, yes; [this is the main one. If a room's there, go]
 	decide no;
@@ -14256,14 +14260,14 @@ the general gleaner is a reflexive thing. description is "[if gleaner is reflexe
 
 after examining gleaner when player is in end den and gleaner is reflexed:
 	say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
-	move player to Tenfold Teflon'd Den Loft;
+	move player to Tenfold Teflond Den Loft;
 	continue the action;
 
 after printing the name of the general gleaner while taking inventory:
 	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
 	continue the action;
 
-check examining gleaner when player is in Tenfold Teflon'd Den Loft: say "You found the way in and know the way out. Better deal with the [if yapper is touchable]yapper and [end if]dialer, now." instead;
+check examining gleaner when player is in Tenfold Teflond Den Loft: say "You found the way in and know the way out. Better deal with the [if yapper is touchable]yapper and [end if]dialer, now." instead;
 
 to say ho-he:
 	say "[if end den is visited]maybe the maze you [are-were-hedron] stuck in[else if player is in Horned Hedron]somewhere, maybe somewhere close[else if Horned Hedron is visited]the Horned Hedron[else if Sclerous Closures is visited]a structure, possibly the Horned Hedron north of [here-there of Sclerous Closures],[else]some structure[end if]";
@@ -14423,27 +14427,27 @@ carry out taning:
 	moot ant;
 	moot lance;
 	now Plasm Lamps is shunned;
-	now player is in Tenfold Teflon'd Den Loft instead;
+	now player is in Tenfold Teflond Den Loft instead;
 
 book Den Loft
 
-Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflon'd Den Loft], then a lever to pull[end if].". roomnud of den loft is table of den loft nudges.
+Tenfold Teflond Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflond Den Loft], then a lever to pull[end if].". roomnud of den loft is table of den loft nudges. printed name is "Tenfold Teflon'd Den Loft".
 
-understand "loft den" as Tenfold Teflon'd Den Loft.
+understand "loft den" as Tenfold Teflond Den Loft.
 
 lev-pull is a truth state that varies.
 
-check going outside in Tenfold Teflon'd Den Loft:
+check going outside in Tenfold Teflond Den Loft:
 	if lev-pull is true, say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
 
 chapter papery yapper
 
-the papery yapper is a vanishing neuter person in Tenfold Teflon'd Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. It is wearing a stupid paper necklace.". description of papery yapper is "It looks precisely folded, but also shifty, like it could be bribed. But you probably can't just bribe it directly."
+the papery yapper is a vanishing neuter person in Tenfold Teflond Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. It is wearing a stupid paper necklace.". description of papery yapper is "It looks precisely folded, but also shifty, like it could be bribed. But you probably can't just bribe it directly."
 
-after printing the locale description when player is in Tenfold Teflon'd Den Loft:
-	if yapper is in Tenfold Teflon'd Den Loft, it-him-her yapper;
+after printing the locale description when player is in Tenfold Teflond Den Loft:
+	if yapper is in Tenfold Teflond Den Loft, it-him-her yapper;
 	if yapper is moot and wipes are moot and templar ramplet is off-stage:
-		move templar ramplet to Tenfold Teflon'd Den Loft;
+		move templar ramplet to Tenfold Teflond Den Loft;
 		say "This time around, you notice something you didn't before. A templar ramplet leading off to the side!";
 	continue the action;
 
@@ -14461,7 +14465,7 @@ check giving the gleaner to the papery yapper:
 check giving something to the papery yapper:
 	say "'Bribe? Sigh. Gibberish. Maybe we could reclassify the donation with creative financing[if noun is not gleaner], and make it a better donation, too[end if].' You're not sure if he rolled his eyes." instead;
 
-the dialer is reflexive scenery in Tenfold Teflon'd Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in Tenfold Teflon'd Den Loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
+the dialer is reflexive scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in Tenfold Teflond Den Loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
 
 to say shift-dialer:
 	if dialer is reflexed, say " again"
@@ -14470,7 +14474,7 @@ Include (-
 	has transparent talkable
 -) when defining dialer.
 
-the NotCrime intercom is scenery in Tenfold Teflon'd Den Loft. "The NotCrime intercom, the let-in-intel device of choice for the shadier denizens of Yorpwald. It probably works with the dialer in some way."
+the NotCrime intercom is scenery in Tenfold Teflond Den Loft. "The NotCrime intercom, the let-in-intel device of choice for the shadier denizens of Yorpwald. It probably works with the dialer in some way."
 
 Include (-
 	has transparent talkable
@@ -14502,7 +14506,7 @@ a-text of lever is "RYRYR". b-text of lever is "RGPGR". parse-text of lever is "
 this is the bore-lever rule:
 	if current action is pushing or current action is pulling or current action is taking, say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead; [??check pulling lever/check pushing lever]
 
-check exiting in Tenfold Teflon'd Den Loft:
+check exiting in Tenfold Teflond Den Loft:
 	say "You could finish things off now, but hey, you can always find your way back easily enough.";
 	now player is in Horned Hedron instead;
 
@@ -15055,8 +15059,8 @@ check entering pol art portal:
 	if ruby is not moot, say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron, say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
-		say "You make your way [if Tenfold Teflon'd Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking[end if].";
-		move player to Tenfold Teflon'd Den Loft instead;
+		say "You make your way [if Tenfold Teflond Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking[end if].";
+		move player to Tenfold Teflond Den Loft instead;
 	else:
 		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.[paragraph break]";
 		move player to End Den instead;
@@ -15178,7 +15182,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non picaros] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur-pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -15434,7 +15438,7 @@ book basic guardian work
 
 definition: a guardian (called gu) is mas:
 	if gu is lars eede, yes;
-	if gu is hostile-is-he lot, yes;
+	if gu is hostile is he lot, yes;
 	if gu is muscly luc sym, yes;
 	no;
 
@@ -15450,7 +15454,7 @@ to decide whether bad-gender-match of (myg - a guardian):
 	no;
 
 for writing a paragraph about a guardian (called gua):
-	if gua is unripe ur-pine or gua is reed's ale, continue the action;
+	if gua is unripe ur pine or gua is reed's ale, continue the action;
 	let so-far be 0;
 	repeat with myg running through touchable not prevseen guardians:
 		if bad-gender-match of myg, next;
@@ -15708,11 +15712,13 @@ this is the bore-yurt rule:
 
 understand "yurt" as try us yurts.
 
-some Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
-
-understand "brownie" as brownies.
-
 a-text of try us yurts is "RYRRO". b-text of try us yurts is "R?R?O". parse-text of try us yurts is "x[sp]-[sp]x[sp]-[sp]y". try us yurts are cheat-spoilable.
+
+section Owers' Bin Brownies
+
+some Owers Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems.". printd name of Owers Bin Browniea is "Owers[']-Bin Brownies".
+
+understand "brownie" and "owers/bin/ower brownie" and "ower brownies" as Owers Bin Brownies.
 
 chapter spec-o-scope
 
@@ -15731,7 +15737,7 @@ before examining spec-o-scope for the first time: say "A telescope! Place to see
 check examining spec-o-scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the scope to a visual one?[close bracket][r][line break]";
 	if the player direct-consents:
-		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives' site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
+		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
@@ -15887,7 +15893,7 @@ to decide which number is grad-points: [?? we could possibly convert this into h
 	if mel fish is moot, increment temp;
 	if fluster self rut is moot, increment temp;
 	if lars eede is moot or elsa erde is moot, increment temp;
-	if sweatier wait-seer is moot, increment temp;
+	if sweatier wait seer is moot, increment temp;
 	decide on temp;
 
 to say grad-by-points:
@@ -15995,12 +16001,12 @@ after going somewhere (this is the duck-follows-you rule):
 
 chapter éclairs
 
-a pack of Claire's Scalier Éclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold."
+Claires Scalier Eclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold.". printed name of Claires Scalier Eclairs is "Claire's Scalier Éclairs". "Some Claire's Scalier Eclairs are lying here, packaged neatly."
 
-understand "eclair/eclairs" as Éclairs.
+understand "éclair/éclairs" as Eclairs.
 
-after doing something with Éclairs:
-	set the pronoun them to Éclairs;
+after doing something with Eclairs:
+	set the pronoun them to Eclairs;
 	continue the action;
 
 chapter retapeing
@@ -16202,7 +16208,7 @@ to say relig-mf:
 		say "Lois the Hostile";
 
 to decide which guardian is the-hostile:
-	if player is male, decide on hostile-is-he lot;
+	if player is male, decide on hostile is he lot;
 	decide on lois the hostile;
 
 Artist Traits Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Artist Traits Strait is in Towers. roomnud of Artist Traits Strait is table of Artist Traits Strait nudges.
@@ -16496,21 +16502,21 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties' ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if].". roomnud of Lost Lots is table of Lost Lots nudges.
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if].". roomnud of Lost Lots is table of Lost Lots nudges.
 
 after looking in Lost Lots:
 	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
 	continue the action;
 
-the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
+the gadflies gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you.". printed name is "gadflies['] gasfield".
 
 check opening a hintpastry: say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
 
-section sporties' ripostes
+section sporties ripostes
 
-the sporties' ripostes are plural-named vanishing boring LLPish scenery in Lost Lots. description of sporties' ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties' ripostes is bore-ripostes rule.
+the sporties ripostes are plural-named vanishing boring LLPish scenery in Lost Lots. description of sporties ripostes is "They may not be clever, but they're slick and efficiently delivered. Like all taunts, you don't need to neutralize them, but it might feel good.". bore-text is "The ripostes are annoying to deal with, because they are so quick and witty, but maybe you can find a way.". bore-check of sporties ripostes is bore-ripostes rule. printed name is "sporties['] ripostes".
 
-a-text of sporties' ripostes is "RRYRYYRR". b-text of sporties' ripostes is "RR?RYYRR". parse-text of sporties' ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
+a-text of sporties ripostes is "RRYRYYRR". b-text of sporties ripostes is "RR?RYYRR". parse-text of sporties ripostes is "-[sp]x[sp]x[sp]-[sp]a[sp]l".
 
 this is the bore-ripostes rule:
 	if current action is taking, say "Actually, you want to find a way to say, you're NOT going to take them any more." instead;
@@ -16623,7 +16629,7 @@ to towers-min-adj: [this is when you leave the mainland]
 	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
 	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
 	if old ice is not moot, d "Left old ice.";
-	if sporties' ripostes are not moot, d "Left sporties['] ripostes.";
+	if sporties ripostes are not moot, d "Left sporties['] ripostes.";
 	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
@@ -16846,7 +16852,7 @@ check going outside in Mesprise Premises: try going east instead;
 
 chapter top opt pot
 
-the top opt pot is a container. description of top opt pot is "A top opt pot is sturdy (a welt-proof top opt pot, if you will) and conducive to giving life. The [if bulb is in top opt pot]blub bulb[else]succor crocus you found under the ur-pine[end if] rests inside."
+the top opt pot is a container. description of top opt pot is "A top opt pot is sturdy (a welt-proof top opt pot, if you will) and conducive to giving life. The [if bulb is in top opt pot]blub bulb[else]succor crocus you found under the ur pine[end if] rests inside."
 
 check examining top opt pot: ignore the examine containers rule;
 
@@ -16912,7 +16918,7 @@ after printing the locale description for Mislit Limits when Mislit Limits is un
 	if player has strudel and strudel is not reflexed:
 		increment poss-score of towers;
 
-Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are visited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if ur-pine is in Mislit Limits]. An unripe ur-pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
+Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? Scaly clays rise steeply enough to block progress every way except west, [if Mesprise Premises are visited]where it looks like someone might be living[else]which houses [the Tetris Sitter][end if][if ur pine is in Mislit Limits]. An unripe ur pine also stands here, intimidatingly big[end if].". roomnud of Mislit Limits is table of Mislit Limits nudges.
 
 chapter scaly clays
 
@@ -16920,23 +16926,23 @@ the scaly clays are plural-named bounding boring scenery in Mislit Limits. descr
 
 chapter unripe ur-pine
 
-the unripe ur-pine is boring vanishing LLPish scenery in Mislit Limits. understand "pine/urpine" and "unripe pine/urpine" as ur-pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if].". bore-text is "The unripe ur-pine just sits there, almost impossibly big. Maybe you could make it smaller.". bore-check is the bore-ur-pine rule.
+the unripe ur pine is boring vanishing LLPish scenery in Mislit Limits. understand "urpine" and "unripe urpine" as ur pine. "It covers a lot of ground[if crocus is not off-stage], but there's probably nothing else beneath it. [one of]Maybe it's hiding something. [or]You see red wondering if you'd see anything as ridiculous in Peru[stopping][end if].". bore-text is "The unripe ur-pine just sits there, almost impossibly big. Maybe you could make it smaller.". bore-check is the bore-ur-pine rule. printed name of unripe ur pine is "unripe ur-pine".
 
 this is the bore-ur-pine rule:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
 
-a-text of unripe ur-pine is "RYRYYR". b-text of unripe ur-pine is "RYRGYR". parse-text of unripe ur-pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
+a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
 
 chapter pester'n serpent
 
 understand the command "present" as something new.
 
-A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
+A pestern serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "It's coiled and ready to strike anyone who tries to go by it.". printed name is "pester'n serpent". understand "pester" and "pester serpent" as pestern serpent.
+
+a-text of pestern serpent is "RRYRYRR". b-text of pestern serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
 rule for supplying a missing second noun when showing:
-	if pester'n serpent is touchable, now second noun is pester'n serpent.
-
-a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+	if pestern serpent is touchable, now second noun is pestern serpent.
 
 chapter curst palace
 
@@ -17018,7 +17024,7 @@ a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". pars
 
 check going west in Anemic Cinema when ingrates are moot: abide by the detour-check rule;
 
-check going south in Danger Garden when natives' site van is moot: abide by the detour-check rule;
+check going south in Danger Garden when natives site van is moot: abide by the detour-check rule;
 
 last-detour is a room that varies.
 
@@ -17040,7 +17046,7 @@ to say gd of (zz - a guardian):
 	if zz is the-hostile, say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists, say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
 	if zz is arid den, say "[one of][or] still hawking Nerd-Aid[stopping]";
-	if zz is natives' site van, say "[one of][or] (you assume, by how the people inside are talking about the Wildest Wilteds and looking at you funny)[stopping]";
+	if zz is natives site van, say "[one of][or] (you assume, by how the people inside are talking about the Wildest Wilteds and looking at you funny)[stopping]";
 
 to say mb-aswell:
 	if guardians-seen is 3:
@@ -17176,7 +17182,7 @@ chapter Treading Gradient guardians
 
 section alarming grailman
 
-the alarming grailman is a red guardian. understand "liam/ garn/" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
+the alarming grailman is a red guardian. understand "liam garn" and "liam/garn" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
 
 description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
 
@@ -17184,13 +17190,9 @@ a-text of alarming grailman is "RYRRYRYR". b-text of alarming grailman is "RYRRY
 
 section sweatier wait-seer
 
-The sweatier wait-seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait-seer]."
+The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait seer].". printed name of wait seer is "sweatier wait- seer". description of sweatier wait seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
 
-understand "wait/seer" and "sweatier wait/seer" as wait-seer. [?? unhyphenate variable, printed name is hypenated]
-
-description of sweatier wait-seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
-
-a-text of sweatier wait-seer is "RYYRYYRR". b-text of sweatier wait-seer is "?YYRY?RR". parse-text of sweatier wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
 section reed's ale
 
@@ -17233,13 +17235,11 @@ chapter Danger Garden guardians
 
 section natives' site van
 
-the natives' site van is a white guardian. "A natives['] site van block your way [psgdir of natives' site van], though you don't really see anything interesting there."
+the natives site van is a white guardian. "A natives['] site van block your way [psgdir of natives' site van], though you don't really see anything interesting there.". printed name is "natives['] site van". description of natives site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
-understand "native" as natives' site van.
+a-text of natives site van is "RYYRYRR". b-text of natives site van is "??YRYRR". parse-text of natives site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-description of natives' site van is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Wildest Wilteds like they know all about it, and they're looking at you funny, as if they know you don't fit in."
-
-a-text of natives' site van is "RYYRYRR". b-text of natives' site van is "??YRYRR". parse-text of natives' site van is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
+understand "native" and "native site/van" and "native site van" as natives site van.
 
 section bonker
 
@@ -17265,13 +17265,11 @@ a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR"
 
 section hostile is he lot
 
-The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot].". description is "It's amazing, the variety of hostile expressions!"
+The Hostile Is He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile is he lot].". description is "It's amazing, the variety of hostile expressions!". printed name of Hostile Ia He Lot is "Hostile-Is-He Lot".
 
-understand "hostile/ is/ he/ lot" as hostile-is-he when player is male.
+a-text of hostile is he lot is "RYRYYRR". b-text of hostile is he lot is "??RYYR?". parse-text of hostile is he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
-a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?". parse-text of hostile-is-he lot is "-[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
-
-other-g of Lois the Hostile is hostile-is-he lot. other-g of hostile-is-he lot is Lois the Hostile.
+other-g of Lois the Hostile is hostile is he lot. other-g of hostile is he lot is Lois the Hostile.
 
 chapter guardian org table
 
@@ -17286,7 +17284,7 @@ pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you la
 fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 Mel Fish	Leveraged Everglade	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Leveraged Everglade	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-wait-seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too."
+wait seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
@@ -17294,11 +17292,11 @@ Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deal
 Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
 grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
-bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives' site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
+bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
-natives' site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
+natives site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
 lois the hostile	Artist Traits Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
-hostile-is-he lot	Artist Traits Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
+hostile is he lot	Artist Traits Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
 
@@ -17343,18 +17341,18 @@ Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, m
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 stinger	"The stinger continues to fizz and buzz."
-natives' site van	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
+natives site van	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep blue sea."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 fluster self rut	"The fluster self rut buzzes to remind you that, well, you haven't cleared EVERYONE and EVERYTHING."
 Lars Eede	"[reedale].'"
 Elsa Erde	"[reedale].'"
 lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
-hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
+hostile is he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 mardier admirer	"The mardier admirer oohs and ahhs but then considers, hmm, maybe there were only so many possibilities, really."
 trendies	"The resident trendies whisper that they're too cool to be disappeared like that."
-wait-seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
+wait seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
 
 to say n-s-rav:
@@ -17388,7 +17386,7 @@ to shuffle-guardians (goner - a guardian):
 	let MR be Topside Deposit;
 	if goner is ingrates:
 		now MR is Fringe Finger;
-	else if goner is natives' site van:
+	else if goner is natives site van:
 		now MR is Lost Lots;
 	else:
 		choose row with guy of goner in table of guard-org;
@@ -19894,7 +19892,7 @@ the halt lath is a boring thing. it is part of the Sagest Gate. description of h
 
 section gropin' roping
 
-the gropin' roping is bounding boring scenery in Gates Stage. description of gropin' roping is "The gropin['] roping guards you from going west or east.". bore-text is "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.".
+the gropin roping is bounding boring scenery in Gates Stage. description of gropin roping is "The gropin['] roping guards you from going west or east.". bore-text is "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.". printed name is "gropin['] roping".
 
 section check for PERP
 
@@ -20942,7 +20940,7 @@ check burning:
 		ital-say "In this game, you should never have a burning implement, and you should never need one. So this verb is only good for cheap jokes. There are about twenty-five at last count.";
 		now burn-check is true instead;
 	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
-	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
+	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile is he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
 	if noun is a fruit or noun is lobster or noun is tea tray, say "Good thing this game isn't a cooking sim." instead;
 	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
 	if noun is sitar, say "That's not the way to recover rock-star status." instead;
@@ -21060,7 +21058,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is the location, no;
 	if hintcand is Gast and mrlp is routes, yes; [Gast is known-about before he comes on stage officially]
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?] [this and below is for backdrops. I don't have a better way to do things.]
-		if player is in Largely All-Grey Gallery or player is in Dusty Study, yes;
+		if player is in Largely All Grey Gallery or player is in Dusty Study, yes;
 		no;
 	if hintcand is closest closets:
 		if mrlp is Ordeal Reload and Highest Heights is visited, yes;
@@ -21954,7 +21952,7 @@ this is the oyster-alt rule:
 		say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
 	else:
 		say "[2da]you can defeat the carps and pikes two different ways ahead.";
-	if end den is unvisited, say "[2da][if Tenfold Teflon'd Den Loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You have a chance to jump past the End Den[end if].";
+	if end den is unvisited, say "[2da][if Tenfold Teflond Den Loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You have a chance to jump past the End Den[end if].";
 
 bredo-bored is a truth state that varies.
 
@@ -21968,8 +21966,8 @@ this is the towers-alt rule:
 		say "[2da]Bredo has two solutions.";
 	if towers is not solved and reed's ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
 	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
-	if towers is not solved and natives' site van is not moot, say "[2da]Two solutions for the natives['] site van.";
-	if natives' site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
+	if towers is not solved and natives site van is not moot, say "[2da]Two solutions for the natives['] site van.";
+	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
 	if towers is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming at Mislit Limits.";
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
@@ -22143,7 +22141,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of pinko picaros > 0:
 			repeat with pk running through pinko picaros:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
-		let xxx be unripe ur-pine;
+		let xxx be unripe ur pine;
 		if number of not moot guardians > 0:
 			repeat with gua running through not moot guardians:
 				if bad-gender-match of gua, next;
@@ -22157,17 +22155,17 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if dourest detours are unvisited, say "[2dmiss of myreg]You could have [one of](MISSED again for spoiler) [or]made yourself ROUSTED after you[stopping] visited Dourest Detours east of Anemic Cinema or south of Danger Garden.";
-		if sporties' ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
+		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
-		if natives' site van is not moot, say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
+		if natives site van is not moot, say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
 		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
-		if unripe ur-pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
+		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
 		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";

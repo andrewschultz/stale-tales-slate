@@ -33,7 +33,7 @@ pram	ramp	false	233052733	--	"ramp"	"ramp"	--	post-pram-ramp rule	"The pram fold
 sitar	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	--	"stair"	"stair"	--	post-sitar-or-stria-to-stair rule	"The stria glow and cascade into a stair leading back up."
 niche	chimney	false	484428752	--	"chimney"	"chimney"	--	post-my-niche-chimney rule	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
-meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
+meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-basement rule	"[if Largely All Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
@@ -210,7 +210,7 @@ gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	--	"Rustle. Result: lu
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 lever	lever	false	501914680	--	"revel"	"revel"	pre-lever-revel rule	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	--	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
-natant ant	natant ant	false	174205344	Tenfold Teflon'd Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"
+natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"
 bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
@@ -233,21 +233,21 @@ ingrates	ingrates	false	561201770	--	"angstier"	"angstier"	--	--	"The ingrates s
 mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	--	--	"Your admirer blinks, then looks down a ring on their finger, which may or may not have been there before (the ring, you silly.) They start talking of the old ball and chain, and while it's not clear whether the old ball and chain will help them be a better person, which is how it works in theory, or they are just someone to complain to, well ... the mardier admirer is done with you. Why were they wasting time? Such a leer--a sure lech! Your ex-admirer walks away, spouting spouse opuses."
 resident trendies	resident trendies	false	675249448	--	"nerdiest"	"nerdiest"	--	--	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 organised ego drains	organised ego drains	false	553473418	--	"grandiose"	"grandiose"	--	--	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."
-sweatier wait-seer	sweatier wait-seer	false	695435442	--	"weariest"	"weariest"	--	--	"The wait-seer blinks as if enlightened, then shakes his head. He's only getting older and so forth. He decides to go find somewhere more scenic to block."
+sweatier wait seer	sweatier wait seer	false	695435442	--	"weariest"	"weariest"	--	--	"The wait-seer blinks as if enlightened, then shakes his head. He's only getting older and so forth. He decides to go find somewhere more scenic to block."
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-full] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 alarming grailman	alarming grailman	false	354088487	--	"marginal"	"marginal"	--	--	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
 bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
 stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting rule	"The stinger whirs around, wheezes, then flops on the ground and rolls off. You wait a minute, wondering if something tougher than the stinger will appear. But you only hear a gander that has flown in, no longer scared by a bonker or stinger. The path east is clear now! "
-natives' site van	natives' site van	false	550443085	--	"naivest"	"vainest" or "naivest"	--	--	"[vain-naiv]. Now that the natives have moved on, you can go south."
+natives site van	natives site van	false	550443085	--	"naivest"	"vainest" or "naivest"	--	--	"[vain-naiv]. Now that the natives have moved on, you can go south."
 asset hit atheists	asset hit atheists	false	611037040	--	"hastiest"	"hastiest"	--	post-agnostic-blocker rule	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right! You probably don't even capitalize Atheist! You bum.' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
-hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already." [end of guardians.]
+Hostile is He Lot	Hostile is He Lot	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already." [end of guardians.]
 try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 docile old ice	docile old ice	false	341000045	--	"coiled"	"coiled"	--	--	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
-mended mini denim	Éclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
+mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
-sporties' ripostes	sporties' ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
+sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if player is in Lost Lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The prison ropins slide inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
@@ -257,8 +257,8 @@ turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit 
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	--	--	"The blaster whirs a bit and grows shinier. It quits making those weird noises. [how-safe]."
 weirder red wire	weirder red wire	false	600216532	--	"rewired"	"rewired"	--	--	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [agnostic] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [agnostic] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [agnostic-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! People still tell me I just need to get more organized. Even people younger than me. So, um, thanks!'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	--	--	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the top opt pot, too, and maybe you have the time to drop off a gift...wherever Renato's friend may be."
-ur-pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. Behind it is a rare succor crocua--which can bring more happiness than a We-ROFL flower! But it is dying, dingy. When you bring the top opt pot near, though, the blub bulb opens up. It and the succor crocus are a perfect fit! You put the crocus in the top opt pot, and it blooms slightly."
-pester'n serpent	pester'n serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
+ur pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier rule	"The ur-pine shrinks and flails. Behind it is a rare succor crocua--which can bring more happiness than a We-ROFL flower! But it is dying, dingy. When you bring the top opt pot near, though, the blub bulb opens up. It and the succor crocus are a perfect fit! You put the crocus in the top opt pot, and it blooms slightly."
+pestern serpent	pestern serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and detours are randomly located. Put them near the end.]
@@ -438,9 +438,9 @@ this is the post-pram-ramp rule:
 		min-up; [check if passage is already available via beams or stable->stair]
 
 this is the post-sitar-or-stria-to-stair rule:
-	now Largely All-Grey Gallery is mapped below Farming Framing;
+	now Largely All Grey Gallery is mapped below Farming Framing;
 	if the room below study is nothing:
-		now Farming Framing is mapped above Largely All-Grey Gallery;
+		now Farming Framing is mapped above Largely All Grey Gallery;
 	if meet bans are moot:
 		min-up;
 	else if niche is moot and pram is moot:
@@ -455,8 +455,8 @@ this is the post-my-niche-chimney rule:
 
 this is the post-meet-bans-basement rule:
 	moot beams;
-	now Largely All-Grey Gallery is mapped below study;
-	now study is mapped above Largely All-Grey Gallery;
+	now Largely All Grey Gallery is mapped below study;
+	now study is mapped above Largely All Grey Gallery;
 
 this is the post-tables-stable rule:
 	now study is mapped inside Farming Framing;
@@ -467,7 +467,7 @@ to say dust-b:
 	say "[one of]. You say, 'Dust, be busted' to clear up the mess in the air. You can go [b]IN[r] to the stable, now, to look around there[or][stopping]";
 
 this is the post-bins-snib rule:
-	move snib to Largely All-Grey Gallery;
+	move snib to Largely All Grey Gallery;
 
 this is the post-psalter-stapler rule:
 	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;
@@ -1161,10 +1161,10 @@ this is the pre-bury-ruby rule:
 
 this is the post-yapper-prepay rule:
 	moot gleaner;
-	now lever is in Tenfold Teflon'd Den Loft;
+	now lever is in Tenfold Teflond Den Loft;
 	if wipes are moot:
 		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
-		move templar ramplet to Tenfold Teflon'd Den Loft;
+		move templar ramplet to Tenfold Teflond Den Loft;
 
 this is the pre-lever-revel rule:
 	if yapper is touchable:
@@ -1172,7 +1172,7 @@ this is the pre-lever-revel rule:
 		preef lever instead;
 
 this is the post-spin-pins rule:
-	now d2 is in Tenfold Teflon'd Den Loft;
+	now d2 is in Tenfold Teflond Den Loft;
 
 this is the pre-dialer-derail rule:
 	if yapper is touchable:
@@ -2041,31 +2041,31 @@ muscly luc sym	"Luc Sym stumbles for a moment."
 muscly ms lucy	"Ms. Lucy stumbles for a moment."
 organised ego drains	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
-natives' site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
+natives site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 alarming grailman	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
 Reed's Ale	"[el-la-full] listens to what you're saying for a minute, but--no, you didn't quite get it right. [he-she-c] goes back to reciting [his-her] tired sales pitch."
-sweatier wait-seer	"The wait-seer looks bored and distracted for a second."
+sweatier wait seer	"The wait-seer looks bored and distracted for a second."
 bluster butlers	"The bluster butlers cough slightly and look around furtively."
 asset hit atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
 resident trendies	"The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled."
 keycar	"The keycar sputters momentarily."
 lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
-hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
+Hostile is He Lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
 prison ropins	"The ropins remains secure, with no easy way to open it."
 dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page, slightly less interested than before."
 atblock	"[agnostic-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
 bogus-detours	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
-sporties' ripostes	"The ripostes seem less cutting for a moment."
+sporties ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
-pester'n serpent	"The serpent calms down for a split-second[ser-try]."
+pestern serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
-ur-pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
+ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
@@ -2372,7 +2372,7 @@ sitar	"[one of]You need a way down, but the sitar doesn't allow that.[plus][or]R
 stria	"[one of]Embedded in the ceiling, the stria split it a bit. Maybe they offer a way up?[plus][or]The stria can become a STAIR.[minus][cycling]"
 pram	"[one of]The pram gives you a sinking feeling to look at it.[plus][or]You need a way down and out of reach. Something you could even crawl down.[plus][or]The pram can become a ramp.[minus][cycling]"
 ramp	"Just go down or in to walk down the ramp."
-latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Largely All-Grey Gallery is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
+latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Largely All Grey Gallery is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
 satchel	"The satchel might be useful for carrying things, but your super purse is better. So don't worry about it."
 letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
@@ -2641,27 +2641,27 @@ dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible.
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
 strudel	"[if strudel is not reflexed][one of]The strudel is, or was in a sled rut.[plus][or]Taking the strudel gets no points, but you can implicitly take, or steal, it. Even if you already have it.[plus][or]The strudel can be RUSTLED.[plus][or]You can put it in the toaster after just taking it, too.[minus][cycling][else]The strudel is food you can put in the toaster.[end if]"
 sled rut	--	strudel
-Éclairs	"The éclairs are food you can put in the toaster."
+Eclairs	"The éclairs are food you can put in the toaster."
 solve a loaves	"The solve-a-loaves are food you can put in the toaster."
 start tarts	"The tarts are food you can put in the toaster."
 Brownies	"The brownies are food you can put in the toaster."
 spec-o-scope	"The Scope Copse gives a rough progress map."
 old ice	"[if old ice is reflexed]You made the old ice coiled, already.[else][one of]The old ice is a Last Lousy Point. It's docile, which is fine, but how to make it more impressive?[plus][or]If it were more like a sculpture, maybe...[plus][or]COILED.[cycling][end if]"
 mended mini denim	"[one of]The mended mini denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the mended mini denim.[or]You can, however, cheat to strip the mended mini denim away.[or]The mended mini denim can be MINED.[cycling]"
-pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
+pestern serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][or]Making them happy isn't your business, but you can still make them...[plus][or]SADDER.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
 Tetris Sitter	"[if Tetris Sitter is reflexive][one of][The tetris sitter] seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
 itster	--	Tetris Sitter
-ur-pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
-sporties' ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
+ur pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
+sporties ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly luc sym	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 muscly ms lucy	"[one of]Muscly is nice, but if you could tangle her up...[plus][or]Maybe if she weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
-sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
+sweatier wait seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
 lois the hostile	"[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
-hostile-is-he lot	--	lois the hostile
+Hostile is He Lot	--	lois the hostile
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
@@ -2671,7 +2671,7 @@ Lars Eede	--	Reed's Ale
 Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 mardier admirer	"[one of]The mardier admirer needs someone to emote to, hopefully more constructively than with you. To be ... engaged with.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
-natives' site van	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the native['] site van.[plus][or]The natives['] site van can become VAINEST, or NAIVEST.[minus][cycling]"
+natives site van	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the native['] site van.[plus][or]The natives['] site van can become VAINEST, or NAIVEST.[minus][cycling]"
 yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can corrupt them by making them...[plus][or]RUSTY.[minus][cycling]"
 arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
 Nerd Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."

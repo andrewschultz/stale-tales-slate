@@ -61,7 +61,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowlingpin"	596386463	giant pin	--	"[g-pin]."
 "oped"	304653734	dope op ed	--	"You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald."
 "niche"	297994347	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
-"tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All-Grey Gallery is visited]gallery[else]basement[end if]."
+"tenbeams"	608585586	--	study-see-basement rule	"You probably just want to go DOWN to the [if Largely All Grey Gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	study-see-stable rule	"You probably just want to go IN to the stable."
 "chair"	188792351	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
@@ -778,7 +778,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "tenfold"	475534036	--	--	"[locname]."
 "loft"	257791330	--	--	"[locname-part]."
 "den"	217742706	--	--	"[locname-part]."
-"jumble"	418180338	--	--	"It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in Tenfold Teflon'd Den Loft]. Well, once the yapper's out of the way[end if]."
+"jumble"	418180338	--	--	"It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in Tenfold Teflond Den Loft]. Well, once the yapper's out of the way[end if]."
 "stupid"	451977685	yapper	--	"[its-msg]."
 "papre"	378249648	yapper	--	"[its-msg]."
 "necklace"	471465731	yapper	--	"[its-msg]."
@@ -806,8 +806,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pastry"	490720816	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "start"	390005623	start tarts	--	"[eat-pastry]." [pastry rejects]
 "tart"	293731657	start tarts	--	"[not-singular-hp]."
-"scalier"	429403966	Éclairs	--	"[eat-pastry]."
-"eclair"	333130000	Éclairs	--	"[not-singular-hp]."
+"scalier"	429403966	Eclairs	--	"[eat-pastry]."
+"eclair"	333130000	Eclairs	--	"[not-singular-hp]."
 "brownie"	527736521	brownies	--	"[not-singular-hp]."
 "brownies"	624010487	brownies	--	"[eat-pastry]."
 "owers"	491691228	brownies	--	"[eat-pastry]."
@@ -819,8 +819,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "butler"	493578481	bluster butlers	--	"You need to deal with all the butlers. Not just one."
 "diner"	348059355	diners	--	"[plutry of diners]There's more than one diner blocking you."
 "pirate"	444886553	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
-"wait"	258225455	wait-seer	--	"[wait-see]."
-"seer"	437209987	wait-seer	--	"[wait-see]."
+"wait"	258225455	wait seer	--	"[wait-see]."
+"seer"	437209987	wait seer	--	"[wait-see]."
 "rampant"	407258077	mardier admirer	--	"No, just a mardier admirer, really."
 "womantrap"	589545427	--	see-female-admirer rule	"No, just a mardier admirer, really."
 "smh"	197631418	Mel Fish	--	"[all-of-mel]."
@@ -956,7 +956,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Danger Garden nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gander"	337854029	--	--	"[towersloc]." [DANGER GARDEN 3 1]
-"native"	454169119	natives' site van	--	"[plutry of natives' site van]You'll need to deal with more than one native to make your way south."
+"native"	454169119	natives site van	--	"[plutry of natives site van]You'll need to deal with more than one native to make your way south."
 "geese"	512291995	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 
 table of Lost Lots nudges
@@ -966,7 +966,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gasfield"	405218265	--	--	"[gasgad]."
 "gadfly"	258504596	--	--	"[gasgad]."
 "gadflie"	308944299	--	--	"[gasgad]."
-"riposte"	613325278	sporties' ripostes	--	"You may find it easier to deal with all the ripostes at once."
+"riposte"	613325278	sporties ripostes	--	"You may find it easier to deal with all the ripostes at once."
 
 table of Obscurest Subsector nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1018,7 +1018,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mislit"	407258668	--	--	"[towersloc]."
 "clays"	293640460	--	--	"[clay-pal]."
 "caly"	197366494	--	--	"[clay-pal]."
-"erip"	339588717	unripe ur-pine	--	"It's officially an ur-pine, not a pine."
+"enip"	339588717	unripe ur pine	--	"It's officially an ur-pine, not a pine."
 "pester"	621785964	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "present"	690693472	--	serpent-hiding rule	"The serpent is taken care of."
 "accurst"	430012582	accurst leap	--	"[focus-castle]."
