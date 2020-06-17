@@ -3318,18 +3318,24 @@ check dropping the gadget: say "It seems far too useful[if scanned-g is false], 
 
 check examining tagged gadget (this is the did I break gadget rule): if gadget is broken, say "It's lifeless without the tag. Nice work!" instead;
 
-description of tagged gadget is "It looks like a wall stud sensor, six inches by twelve, with a screen on the top. A show hows tag [if show hows tag is examined]you've read[else]you can read[end if] is tied by a tight knot to the handle, which narrows where it meets the main part. The gadget crackles with greeny energy. A tip in a pit on one of its edges points to [c-r][if gadget-secured is true] and is stuck there[end if].[paragraph break]You see a blurb above a button labeled SECURE/RECUSE."
+description of tagged gadget is "It looks like a wall stud sensor, six inches by twelve, with a screen (labeled 'RECENT CENTER' with a NetRec brand) on the top. A show hows tag [if show hows tag is examined]you've read[else]you can read[end if] is tied by a tight knot to the handle, which narrows where it meets the main part. The gadget crackles with greeny energy. A tip in a pit on one of its edges points to [c-r][if gadget-secured is true] and is stuck there[end if].[paragraph break]You see a blurb above a button labeled SECURE/RECUSE."
 
 the show hows tag is part of the tagged gadget. understand "show-hows" and "show-hows tag" as show hows tag
 
 does the player mean taking off the magenta nametag when the player is not wearing the magenta nametag: it is very unlikely.
 
-the gadget-screen is a boring thing. it is part of the tagged gadget. the gadget-screen is privately-named. the printed name of the gadget-screen is "gadget's screen". Understand "gadget screen" and "screen" as the gadget-screen. bore-text is "Looking at the tag, you see you probably need to SCAN other objects to change the screen productively. There's probably not much else you want to do with or to the screen.". bore-check is bore-gadget-screen rule. description of gadget-screen is "The screen will be blank until you SCAN something.".
+the Recent Center is a boring thing. it is part of the tagged gadget. understand "net rec" and "netrec" as Recent Center. bore-text is "Looking at the tag, you see you probably need to SCAN other objects so something appears in the Recent Center. You probably can't manipulate the data, once it's on there.". description of Recent Center is "[if last-obj is not oafs' sofa][last-obj] gave a reading of [last-reading][else]You need to SCAN something to see anything on the Recent Center[end if].".
 
-this is the bore-gadget-screen rule:
-	if current action is examining:
-		say "You see if the gadget registers anything by default.";
-		try scaning the location instead;
+last-obj is a thing that varies. last-obj is the oafs' sofa.
+
+last-was-cert is a truth state that varies.
+
+to say last-reading:
+	let po be parse-output;
+	now parse-output is false;
+	say "[if last-was-cert is true][rgtext of last-obj][else][rgbtext of last-obj]";
+	now parse-output is po;
+	if last-obj is moot, say ", but you took care of that. So I guess that clue was useful, even if it isn't, now"
 
 the s-r is part of the tagged gadget. the s-r is privately-named.
 
@@ -3361,8 +3367,6 @@ to say c-r: say "[if gadget is cert]CERTIFY[else]RECTIFY[end if]".
 to say r-c: say "[unless gadget is cert]CERTIFY[else]RECTIFY[end if]".
 
 the blurb is part of the tagged gadget. description of blurb is "'Ask a qualified person if the [s-r] button is right for you. Or, at least, to learn what it does.'"
-
-check examining gadget-screen: try examining gadget instead;
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
@@ -3421,8 +3425,6 @@ check taking the show hows tag:
 	the rule succeeds;
 
 check pulling show hows tag: try taking show hows tag instead;
-
-does the player mean examining the gadget-screen when gadget is held: it is likely.
 
 does the player mean examining the gadget: it is very likely.
 
@@ -8305,7 +8307,7 @@ carry out scaning:
 			say "The gadget is more active on the right edge where the smilies are, so you move it over there.";
 			try examining the smilies instead;
 		say "The gadget makes an odd noise. Perhaps it's in some weird state between forms. If poems can mean different things, they can probably become different things." instead;
-	if noun is inflexible, say "The gadget registers nothing. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
+	if noun is inflexible, say "The Recent Center goes grey for a second before returning to its former state. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
 	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
 	if gadget is not examined or ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert]CERTIFY[else]RECTIFY[end if].";
@@ -8313,6 +8315,7 @@ carry out scaning:
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
+	now last-obj is noun;
 	if noun is River Ville liver or noun is viler liver, say "You see five red lights in a row--but you only see the [if noun is viler liver]bottom[else]top[end if] half of them. Odd." instead;
 	if noun is dial:
 		if numset of dial is 16, say "Your gadget is silent. You've figured what to do with the dial." instead;
@@ -8599,7 +8602,7 @@ gateman	arrow	"'That's just to show SECURE/RECUSE is linked to whether you can c
 gateman	knot	"'It's good and tight. Case it gets joggled while you adventure. If the gadget isn't tagged, it loses its magic because, well...'"
 gateman	examples	"'Hm, LEMON and MELON have three letters in common, and they're all green. The two that switch are red. So that's not bad. PASTE and TAPES, on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left.'"
 gateman	disclaimer	"'Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge.'"
-gateman	gadget-screen	"'The screen will light up when you scan something relevant.'"
+gateman	Recent Center	"'The Recent Center is a fancy name for a screen. It will light up when you scan something relevant, and that data will stay.'"
 gateman	handle	"You can't imagine anything tricky about the handle, so you decide not to ask."
 gateman	goat	"[goat-toga]"
 gateman	toga	"[goat-toga]"
@@ -9794,7 +9797,6 @@ to say cabinet-loop:
 
 check reading (this is the reading is almost examining rule):
 	if noun is gadget, try examining tag instead;
-	if noun is gadget-screen, try scaning location of player instead;
 	repeat through table of readables:
 		if noun is to-read entry, say "[the-red entry]" instead;
 	say "You found nothing to read, so you just EXAMINE, instead.";

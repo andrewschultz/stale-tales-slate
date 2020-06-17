@@ -730,7 +730,7 @@ snarled darnels	"[if darn-slan is true]You've already vented your frustrations o
 goat	"The goat's done its job."
 magenta nametag	"[one of]The magenta nametag needs to become something. Something that can help with the gateway. [plus][or]The broad board, along with trying to enter the gateway, gives hints. [plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate. [plus][or]Thus, you must summon a GATE MAN. With or without the space. [minus][cycling]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
-gadget-screen	"Data will flash up once you CERTIFY or RECTIFY."
+Recent Center	"The Recent Center tracks the most recent thing you managed to CERTIFY or RECTIFY."
 blurb	"Just a riff on what's going on with the gadget."
 show hows tag	"The tag provides examples of CERTIFY and RECTIFY."
 disclaimer	--	show hows
