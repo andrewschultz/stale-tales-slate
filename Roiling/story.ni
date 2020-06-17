@@ -588,7 +588,7 @@ to choose-female:
 	now agnostic is female;
 	now Dr Yow is female;
 	now Gast is female;
-	now Elsa Erde has Reed's Ale;
+	now Elsa Erde has Reeds Ale;
 	now Dr Lola is part of droll dollar; [begin others changes]
 	now coin-person is Dr Lola;
 	now Lord Al is off-stage;
@@ -606,7 +606,7 @@ to choose-male:
 	now agnostic is male;
 	now Dr Yow is male;
 	now Gast is male;
-	now Lars Eede has Reed's Ale;
+	now Lars Eede has Reeds Ale;
 	now Lord Al is part of droll dollar; [begin others changes]
 	now coin-person is Lord Al;
 	now Dr Lola is off-stage;
@@ -3601,7 +3601,7 @@ definition: a thing (called ge) is final-flipped:
 definition: a thing (called muso) is mult-sol:
 	if muso is t-tearily-irately, yes;
 	if muso is cinders, yes;
-	if muso is reed's ale or muso is lars eede or muso is elsa erde, yes;
+	if muso is Reeds Ale or muso is lars eede or muso is elsa erde, yes;
 	if muso is rodney, yes;
 	no;
 
@@ -4045,7 +4045,7 @@ when play begins (this is the basic initialization rule):
 					if litany of PE is Table of No Conversation:
 						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive-Blather.";
 		if convo-holes is false, say "No conversational holes.";
-	now Lars Eede has the Reed's Ale;
+	now Lars Eede has the Reeds Ale;
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Cruelest Lectures]
 	now r10 is mapped west of Nowt Town;
 	now Nowt Town is mapped east of r10;
@@ -4484,7 +4484,7 @@ gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you thin
 capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
 casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 perma amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
-li'l p's pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
+Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[end if]."
@@ -6086,7 +6086,7 @@ check eating (this is the general eating rule):
 	if noun is gum, say "Seriously. It's tough to program and chew gum at the same time.[paragraph break]No, I didn't mean it that way! I meant, the noise from your gum chewing would be distracting, with all that deep thinking you would have to do." instead;
 	if noun is leaf, say "You are the wrong sort of animal for that." instead;
 	if noun is ALocalCo cola or noun is peanut cola or noun is mug, try drinking noun instead;
-	if noun is Li'L P's pills, say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead; [oyster]
+	if noun is Lil Ps Pills, say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead; [oyster]
 	if noun is clam, say "Biting its shell would make you shout hells." instead;
 	if noun is a hintpastry and noun is not heated, say "You'll want to put [the noun] in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead; [towers]
 	if noun is clear catsup, say "Yuck." instead;
@@ -7423,6 +7423,8 @@ definition: a thing (called th) is pronoun-settable:
 	if th is a guardian, no;
 	if th is vanishing, no;
 	yes;
+
+suppress-score is a truth state that varies. [this is used in beta testing]
 
 carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
@@ -10464,7 +10466,7 @@ the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[a
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
-understand "pat's/pats/pat" and "pat's/pats/pat stap" as the resto store when player is in Same Mesa.
+understand "pats/pat" and "pats/pat stap" as the resto store when player is in Same Mesa.
 
 a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of signboard is "?[sp]?[sp]x[sp]x". it is parse-spoilable.
 
@@ -13535,20 +13537,20 @@ to check-silly-death:
 
 chapter spilling
 
-the Li'L P's pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping]."
+the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil P's Pills is "Li'L P's Pills".
 
-understand "jar/jr" and "jar of pills" and "pill jar" as li'l p's pills when player is in Posh Hops Shop or player carries li'l p's pills.
+understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
 
-a-text of Li'L P's Pills is "RRYRR". b-text of Li'L P's Pills is "RRY?R.". parse-text of Li'L P's Pills is "x[sp]x[sp]i[sp]l[sp]x".
+a-text of Lil Ps Pills is "RRYRR". b-text of Lil Ps Pills is "RRY?R.". parse-text of Lil Ps Pills is "x[sp]x[sp]i[sp]l[sp]x".
 
-after printing the name of the Li'L P's pills while taking inventory:
+after printing the name of the Lil Ps pills while taking inventory:
 	if jar-empty is true, say " (empty)";
 
 Rule for clarifying the parser's choice of pills: do nothing.
 
 jar-empty is a truth state that varies.
 
-check opening the Li'L P's pills: say "[if jar-empty is true]The jar's kind of empty now.[else]It's tamper proof. It's one of those jars you can't open until you're thinking about doing something other than eating them--but what could you do with pills?[end if]" instead;
+check opening the Lil Ps Pills: say "[if jar-empty is true]The jar's kind of empty now.[else]It's tamper proof. It's one of those jars you can't open until you're thinking about doing something other than eating them--but what could you do with pills?[end if]" instead;
 
 pill-warned is a truth state that varies.
 
@@ -15455,7 +15457,7 @@ to decide whether bad-gender-match of (myg - a guardian):
 	no;
 
 for writing a paragraph about a guardian (called gua):
-	if gua is unripe ur pine or gua is reed's ale, continue the action;
+	if gua is unripe ur pine or gua is Reeds Ale, continue the action;
 	let so-far be 0;
 	repeat with myg running through touchable not prevseen guardians:
 		if bad-gender-match of myg, next;
@@ -17197,8 +17199,12 @@ a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YY
 
 section reed's ale
 
+the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far.". understand "reed/reeds ale" and "reed/reeds" as Reeds Ale
+
+a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text of Reeds Ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+
 to say deal-seer:
-	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
+	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reeds Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
 
 Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
@@ -17214,13 +17220,7 @@ understand "deal seer" and "deal/seer" as Lars Eede when player is male.
 
 understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
 
-the Reed's Ale is a vanishing thing.
-
-a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
-
-description of Reed's Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
-
-rese is a truth state that varies.
+rese is a truth state that varies. [resealed or released in point-scoring command?]
 
 chapter Salted Deltas guardians
 
@@ -17289,8 +17289,8 @@ wait seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat as
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
 mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
 Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
-Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
+Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	Reeds Ale
+Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	Reeds Ale
 atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
 grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
@@ -17542,7 +17542,7 @@ to reposition-guardians:
 			move guy entry to location of player;
 			if there is an aux entry:
 				if debug-state is true, say "DEBUG: [aux entry] is an auxiliary item.";
-				if aux entry is reed's ale:
+				if aux entry is Reeds Ale:
 					now guy entry carries aux entry;
 				else:
 					move aux entry to location of player;
@@ -21970,8 +21970,8 @@ this is the towers-alt rule:
 		say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
 	else if towers is not solved and Bredo is in Loftier Trefoil:
 		say "[2da]Bredo has two solutions.";
-	if towers is not solved and reed's ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
-	if reed's ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
+	if towers is not solved and Reeds Ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
+	if Reeds Ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
 	if towers is not solved and natives site van is not moot, say "[2da]Two solutions for the natives['] site van.";
 	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
@@ -22152,11 +22152,11 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			repeat with gua running through not moot guardians:
 				if bad-gender-match of gua, next;
 				now xxx is gua;
-				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reed's Ale;
+				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reeds Ale;
 				choose row with the-from of xxx in table of towers anagrams;
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
-				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
+				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
@@ -22518,8 +22518,6 @@ a5ing is an action applying to nothing.
 understand the command "a5" as something new.
 
 understand "a5" as a5ing.
-
-suppress-score is a truth state that varies.
 
 carry out a5ing:
 	now Ordeal Reload is solved;

@@ -657,7 +657,7 @@ chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
 
-understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
+understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflond Den Loft and pins are in Tenfold Teflond Den Loft.
 
 book towers
 

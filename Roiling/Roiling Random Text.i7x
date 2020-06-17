@@ -38532,7 +38532,6 @@ blurb
 "No-Class Con Sal's" []
 "No-Sides Edison's"
 "Nyssa Snay's"
-"Oafs['] Sofa" []
 "Ole Sot Toole's" []
 "Once-Sly Conley's"
 "Outscorning Courington's"

@@ -163,7 +163,7 @@ USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
 book oyster
 
 [because oyster is about verbs, it's tougher to have a one-to-one correspondence between points and lines in the anagram table.
-REMAP/PERMA-AMPER is shuffled to TUNES/UNSET. "remap" is listed in the table of oyster nudges.
+REMAP/PERMA AMPER is shuffled to TUNES/UNSET. "remap" is listed in the table of oyster nudges.
 ]
 
 table of oyster anagrams
@@ -234,7 +234,7 @@ mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	--	--	"Yo
 resident trendies	resident trendies	false	675249448	--	"nerdiest"	"nerdiest"	--	--	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance."
 organised ego drains	organised ego drains	false	553473418	--	"grandiose"	"grandiose"	--	--	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."
 sweatier wait seer	sweatier wait seer	false	695435442	--	"weariest"	"weariest"	--	--	"The wait-seer blinks as if enlightened, then shakes his head. He's only getting older and so forth. He decides to go find somewhere more scenic to block."
-reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-full] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
+Reeds Ale	Reeds Ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-full] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 alarming grailman	alarming grailman	false	354088487	--	"marginal"	"marginal"	--	--	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
 bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
 stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting rule	"The stinger whirs around, wheezes, then flops on the ground and rolls off. You wait a minute, wondering if something tougher than the stinger will appear. But you only hear a gander that has flown in, no longer scared by a bonker or stinger. The path east is clear now! "
@@ -2044,7 +2044,7 @@ mardier admirer	"The mardier admirer looks askance, then returns to evaluating y
 natives site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 alarming grailman	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
-Reed's Ale	"[el-la-full] listens to what you're saying for a minute, but--no, you didn't quite get it right. [he-she-c] goes back to reciting [his-her] tired sales pitch."
+Reeds Ale	"[el-la-full] listens to what you're saying for a minute, but--no, you didn't quite get it right. [he-she-c] goes back to reciting [his-her] tired sales pitch."
 sweatier wait seer	"The wait-seer looks bored and distracted for a second."
 bluster butlers	"The bluster butlers cough slightly and look around furtively."
 asset hit atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
@@ -2575,7 +2575,7 @@ song buttons	--	tunes
 jukebox	--	tunes
 perma amper	"[one of]The perma-amper is kind of complex, but knowing the right way to fiddle with it helps.[plus][or]It's something with a, e, m, p and r.[plus][or]What's another word for reconfigure?[plus][or]REMAP.[minus][cycling]"
 tunes	"[one of]It's kind of complicated to change the tunes or get rid of them.[plus][or]Just pushing stuff to alter the tunes doesn't work.[plus][or]However, following the instructions can get rid of the tunes, if you do it right.[plus][or]You need to UNSET the tunes.[minus][cycling]"
-li'l p's pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
+Lil Ps pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
 tines	--	stein
 stein	"[one of]The stein is free.[plus][or]How does the stein hook up with the tines?[plus][or]INSERT the stein and you're five-sixths there.[plus][or]INSET the stein.[minus][cycling]"
 casper	"[if recaps is moot]You've disturbed Casper enough.[else][casp-cap][end if]"
@@ -2666,9 +2666,9 @@ keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 agnostic	"[if Obscurest Subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][agnostic-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][agnostic-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [agnostic-first] something to build with. A tool.[else][agnostic-first]'s bot boat is more important.[end if]"
-Reed's Ale	"[one of]Poor [el-la-full]! Having to dress like that. [he-she-c] either wants to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-full]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-full].[minus][cycling]"
-Lars Eede	--	Reed's Ale
-Elsa Erde	--	Reed's Ale
+Reeds Ale	"[one of]Poor [el-la-full]! Having to dress like that. [he-she-c] either wants to be free or stop feeling silly.[plus][or]The Reed's Ale is a bit of a clue.[plus][or]There are two ways to help [el-la-full]. Each flips two letters in the other.[plus][or]RESEALED or RELEASED both get rid of [el-la-full].[minus][cycling]"
+Lars Eede	--	Reeds Ale
+Elsa Erde	--	Reeds Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 mardier admirer	"[one of]The mardier admirer needs someone to emote to, hopefully more constructively than with you. To be ... engaged with.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
 natives site van	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the native['] site van.[plus][or]The natives['] site van can become VAINEST, or NAIVEST.[minus][cycling]"
