@@ -347,9 +347,9 @@ understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't m
 
 chapter Obtains Boastin' Bastion
 
-understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion.
+understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when poses posse is touchable.
 
-understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion.
+understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when poses posse is touchable.
 
 chapter Fo' Real Florae
 
@@ -357,11 +357,11 @@ understand "eosin" as a mistake ("You need the bag, not a dying powder.") when p
 
 understand "gab" as a mistake ("That's not a powerful enough noise to fight the beats.") when player has noise bag.
 
-understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo' Real Florae.
+understand "loafer" as a mistake ("You're un-magically being a loafer, with ideas like that.") when player is in Fo Real Florae.
 
-understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when player is in Fo' Real Florae.
+understand "recount" as a mistake ("The faeries aren't interested in what you've done so far, only what you can do.") when player is in Fo Real Florae.
 
-understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo' Real Florae.
+understand "trounce" and "trounce counter" as a mistake ("The faeries have very magic and very demoralizing anti-vandalism spells.") when player is in Fo Real Florae.
 
 chapter tramline terminal
 

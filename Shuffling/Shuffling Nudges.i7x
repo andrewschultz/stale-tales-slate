@@ -483,7 +483,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "pose"	379898611	Poses Posse	--	"[no-poses]."
 "caek"	201932690	dry cake	--	"It isn't just any cake. It's dry cake."
 "dry"	228712144	dry cake	--	"It isn't just any cake. It's dry cake."
-"rental"	441149095	--	--	"[if antlers are in Obtains Boastin' Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
+"rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
 
 table of the ol hotel nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -925,16 +925,16 @@ to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric 
 
 to say no-hot:
 	say "You can't change the hotel, ";
-	if night thing is not in The Ol' Hotel:
+	if night thing is not in The Ol Hotel:
 		say "and you got rid of the night thing, anyway";
 	else:
-		say "but you could have a[if The Ol' Hotel is visited]nother[else] look around[end if]";
+		say "but you could have a[if The Ol Hotel is visited]nother[else] look around[end if]";
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
 to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
-to say condo-visit: say "[if dry cake is in Obtains Boastin' Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
+to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
 to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
 
@@ -969,7 +969,7 @@ to say faded-ad: say "The ad and the PSA are just silly. What's to the east is q
 to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
 
 this is the no-beats rule:
-	if player is in Esoteric Coteries or player is in Obtains Boastin' Bastion, the rule succeeds;
+	if player is in Esoteric Coteries or player is in Obtains Boastin Bastion, the rule succeeds;
 	the rule fails;
 
 to say aligns-no: say "No use messing with the aligns signal when you need to focus on the [b-b]"

@@ -295,7 +295,7 @@ to say tag-status:
 	else:
 		say "[if gateman is touchable]at least [end if]not wearing that stupid nametag any more";
 
-check dropping tomato: say "Much as you'd like to drop it, it [if player is in The Ol' Hotel]is actually handy here[else]might come in handy somewhere[end if]." instead;
+check dropping tomato: say "Much as you'd like to drop it, it [if player is in The Ol Hotel]is actually handy here[else]might come in handy somewhere[end if]." instead;
 
 section mootness bonus
 
@@ -614,9 +614,9 @@ to show-missed (curr - a region):
 		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
 		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
 	if curr is metros:
-		if antlers are in Obtains Boastin' Bastion, say "[2da of metros]the antlers in the Obtains Boastin' Bastion could've become RENTALS.";
+		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become RENTALS.";
 		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
-		say "[2dn]the [if begonias are in Fo' Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
+		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	if curr is resort:
 		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in Leis Isle]to expose the Leis Isle as an illusion[else]instead of taking the leis[end if].";
@@ -903,7 +903,7 @@ this is the forest-hinting rule:
 	if silver is off-stage, try objhinting sliver instead;
 	if shotgun is not loaded, try objhinting shotgun instead;
 	if player does not have maps, try objhinting spam instead;
-	if player is in Ghouls' Slough, try objhinting maps instead;
+	if player is in Ghouls Slough, try objhinting maps instead;
 	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Cruel Ones' Enclosure]from the enclosure [end if]now." instead;
 	if player is in Frost Forts:
 		if vowels are touchable, try objhinting vowels instead;
@@ -921,18 +921,18 @@ carry out objhinting heaths when fairy-worthy is false: try objhinting faeries i
 carry out objhinting tulip when tulip is in Esoteric Coteries: try objhinting nerds instead;
 
 this is the metros-hinting rule:
-	if player is in The Ol' Hotel:
-		if night thing is in The Ol' Hotel, try objhinting night thing instead;
+	if player is in The Ol Hotel:
+		if night thing is in The Ol Hotel, try objhinting night thing instead;
 		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
 		all-say "Why not search the mattress? Something's in there." instead;
-	if player is in Obtains Boastin' Bastion, try objhinting dry cake instead;
+	if player is in Obtains Boastin Bastion, try objhinting dry cake instead;
 	if player has heaths, try objhinting heaths instead;
 	if player has begonias, try objhinting begonias instead;
 	if player is in Undesired Underside:
 		if drainage is in Undesired Underside, try objhinting drainage instead;
-		if Fo' Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
+		if Fo Real Florae is not visited, all-say "Since you've got the gardenia, you can and should visit the flower shop east of the Roarings Garrison." instead;
 		if Bile Libe is not visited, all-say "You can go west from the camp to a library." instead;
-		if dry cake is in Obtains Boastin' Bastion, all-say "You should try going [if Obtains Boastin' Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
+		if dry cake is in Obtains Boastin Bastion, all-say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Esoteric Coteries are not visited:
 			if keycard-put is true, say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
@@ -941,21 +941,21 @@ this is the metros-hinting rule:
 				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the friend finder." instead;
 				try objhinting keycard instead;
 			if player has barcode:
-				if dry cake is in Obtains Boastin' Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
+				if dry cake is in Obtains Boastin Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
-		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
+		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in Roarings Garrison:
-		if dry cake is in Obtains Boastin' Bastion, all-say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
+		if dry cake is in Obtains Boastin Bastion, all-say "You need to clear out the Bastion to the north to gain the Roarings Garrison's trust[unless player has emitter]. It may help to have a machine or something to use[end if]." instead;
 		if clover is in camp, all-say "You can take the clover for later, or you can figure what it should be." instead;
 		if lost corn is in camp, all-say "The lost corn will be useful as something else." instead;
 		all-say "You've gotten everything you need here. There are no hidden puzzles." instead;
-	if location of player is Fo' Real Florae:
+	if location of player is Fo Real Florae:
 		if player does not have brocade and barcode is off-stage, all-say "The brocade is free, whether or not you've helped the faeries. Why not take it?" instead;
 		if fairy-worthy is false, try objhinting faeries instead;
 		if player has gardenia, try objhinting gardenia instead;
-		if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae, all-say "Take a flower. Either flower." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Take a flower. Either flower." instead;
 		if player has sheath or player has noise bag, all-say "You've transformed your flower[if words are not in Bile Libe], and you've gotten the words from the Bile Libe. So you're done here[else], but you need to use your new item in the Bile Libe[end if]." instead;
 		all-say "Take a flower. Either flower." instead;
 	if player is in Bile Libe:
@@ -966,7 +966,7 @@ this is the metros-hinting rule:
 		if player has sheath, try objhinting sheath instead;
 		if player has begonias, try objhinting begonias instead;
 		if player has noise bag, try objhinting noise bag instead;
-		if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
+		if heaths are in Fo Real Florae and begonias are in Fo Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
 		all-say "You don't have much to do here right now." instead;
 	if player is in Esoteric Coteries:
 		if player has lit up tulip, all-say "Nothing more to do here." instead;
@@ -990,7 +990,7 @@ this is the metros-hinting rule:
 		if beats are touchable, try objhinting beats instead;
 		if player has noise bag, try objhinting noise bag instead;
 		all-say "[bug-report] I let you in with an item I should not have." instead;
-	if player is in Obtains Boastin' Bastion:
+	if player is in Obtains Boastin Bastion:
 		if player has dry cake, all-say "You've got the cake. You can just leave." instead;
 		if player does not have emitter, all-say "There's something in the Ol['] Hotel that will upset the residents here, if you use it." instead;
 		try objhinting emitter instead;
@@ -1185,9 +1185,9 @@ check singing:
 check waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
 	if player is in notices and gateman is in notices, say "You've already introduced yourself. Just ask him about what you want/need." instead;
-	if player is in The Ol' Hotel and night thing is in The Ol' Hotel, say "Bad idea. Don't know what might make it charge." instead;
+	if player is in The Ol Hotel and night thing is in The Ol Hotel, say "Bad idea. Don't know what might make it charge." instead;
 	if player is in Roarings Garrison, say "The dead beat deadbeat nods in return." instead;
-	if player is in Obtains Boastin' Bastion and poses posse are in Obtains Boastin' Bastion, say "They pointedly ignore you." instead;
+	if player is in Obtains Boastin Bastion and poses posse are in Obtains Boastin Bastion, say "They pointedly ignore you." instead;
 	if beast is in Bassy Abyss and player is in Bassy Abyss, say "It's not very friendly at all." instead;
 	if goat is in Thickest Thickets and player is in Thickest Thickets, say "Do you expect it to wave back? It'd probably fall over trying." instead;
 	if number of npcish people > 0, say "There's someone else here, but just TALK TO them or ASK them about something instead." instead;
@@ -1327,14 +1327,14 @@ check exiting:
 chapter buying
 
 rule for supplying a missing noun while buying:
-	if player is in Fo' Real Florae:
-		if heaths are in Fo' Real Florae:
+	if player is in Fo Real Florae:
+		if heaths are in Fo Real Florae:
 			now noun is heaths;
-		if begonias are in Fo' Real Florae:
+		if begonias are in Fo Real Florae:
 			now noun is begonias;
 
 check buying:
-	if location of player is Fo' Real Florae:
+	if location of player is Fo Real Florae:
 		if noun is brocade, say "The torn cue said the brocade was free." instead;
 		if fairy-worthy is true:
 			if player has heaths or player has sheath or player has begonias or player has noise bag, say "You've already traded them a favor. Plus, you have no money." instead;
@@ -1349,7 +1349,7 @@ chapter pushing and pulling
 
 this is the push-or-pull rule:
 	if noun is controls, say "[if controls are in gin nope opening]No need to fiddle further[else]They're not hooked up to anything[end if]." instead;
-	if noun is signers' ingress, say "It's an automatic door." instead;
+	if noun is signers ingress, say "It's an automatic door." instead;
 
 check pushing:
 	if noun is the player, say "You push yourself to find the next word that works." instead;
@@ -1434,7 +1434,7 @@ check attacking:
 	if noun is poses posse, say "Their inanity inspires violent fantasies, but no.'" instead; [metros]
 	if noun is neon pig, say "No poking a pig even if your name's Penny." instead;
 	if noun is nerds, say "[one of]'Def-con: co-fend!' they yell, seeing you tense up. [or][stopping]They're just annoying and superior, not evil." instead;
-	if noun is the signers' ingress, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
+	if noun is the signers ingress, say "As you rush at the door, you notice one of the stick figures in the tech etch attacking a door as big and solid as this one! To save your self-esteem, you turn away and forget what you saw." instead;
 	if noun is mattress:
 		if bump is part of the mattress, say "You might to better to look at that bump before disturbing it." instead;
 		say "Hey, it's not the mattress's fault it only yielded a lousy termite emitter." instead;
@@ -2315,7 +2315,7 @@ sr-acc is a truth state that varies.
 
 when play begins (this is the initialise anagrams pad and beats rule) :
 	now all rooms in metros are noisy;
-	now Obtains Boastin' Bastion is not noisy;
+	now Obtains Boastin Bastion is not noisy;
 	now Esoteric Coteries is not noisy;
 	move beats backdrop to all noisy rooms;
 	repeat with Q running through regions:
@@ -2447,7 +2447,7 @@ last-loc of Ordeal Loader is Busiest Subsite.
 
 section silly scenery
 
-the caterers' terraces are plural-named amusing scenery in Busiest Subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them."
+the caterers terraces are plural-named amusing scenery in Busiest Subsite. "You can't see the caterers working on the terraces, and you probably don't want to disturb them.". printed name is "caterers['] terraces". understand "caterer" and "caterer terraces" as caterers terraces.
 
 section grim hint
 
@@ -2570,7 +2570,7 @@ check exiting in Busiest Subsite: try going outside instead;
 
 section oafs' sofa
 
-The OAFS' SOFA is amusing boring scenery in Busiest Subsite. description is "It's labeled OAFS['] SOFA to remind you that you don't want to be wasting time off in dreamland right now.". bore-check of OAFS' SOFA is bore-enter-reject rule. bore-text is "The Oafs['] Sofa is there as something to avoid. The organizers tried to make a joke out of this, because jokes help people be motivated and productive and turn that frown upside-down, but unsurprisingly, they totally failed."
+The oafs sofa is amusing boring scenery in Busiest Subsite. printed name is "OAFS['] SOFA". description is "It's labeled OAFS['] SOFA to remind you that you don't want to be wasting time off in dreamland right now.". bore-check of oafs sofa is bore-enter-reject rule. bore-text is "The OAFS['] SOFA is there as something to avoid. The organizers tried to make a joke out of this, because jokes help people be motivated and productive and turn that frown upside-down, but unsurprisingly, they totally failed."
 
 this is the bore-enter-reject rule:
 	if current action is taking, say "Hauling a big sofa is the wrong sort of work to look for, here." instead;
@@ -3322,9 +3322,9 @@ the show hows tag is part of the tagged gadget. understand "show-hows" and "show
 
 does the player mean taking off the magenta nametag when the player is not wearing the magenta nametag: it is very unlikely.
 
-the Recent Center is a boring thing. it is part of the tagged gadget. understand "net rec" and "netrec" as Recent Center. bore-text is "Looking at the tag, you see you probably need to SCAN other objects so something appears in the Recent Center. You probably can't manipulate the data, once it's on there.". description of Recent Center is "[if last-obj is not oafs' sofa][last-obj] gave a reading of [last-reading][else]You need to SCAN something to see anything on the Recent Center[end if].".
+the Recent Center is a boring thing. it is part of the tagged gadget. understand "net rec" and "netrec" as Recent Center. bore-text is "Looking at the tag, you see you probably need to SCAN other objects so something appears in the Recent Center. You probably can't manipulate the data, once it's on there.". description of Recent Center is "[if last-obj is not oafs sofa][last-obj] gave a reading of [last-reading][else]You need to SCAN something to see anything on the Recent Center[end if].".
 
-last-obj is a thing that varies. last-obj is the oafs' sofa.
+last-obj is a thing that varies. last-obj is the oafs sofa.
 
 last-was-cert is a truth state that varies.
 
@@ -3580,8 +3580,8 @@ carry out gleaning:
 		if hoots button is touchable or trees button is touchable, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
 		all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
 	if mrlp is metros:
-		if night thing is in The Ol' Hotel, all-say "You see yourself giving something reddish to [if The Ol' Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
-		if cake is in Obtains Boastin' Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
+		if night thing is in The Ol Hotel, all-say "You see yourself giving something reddish to [if The Ol Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
+		if cake is in Obtains Boastin Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
 		if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
 		if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
 		if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
@@ -3773,7 +3773,7 @@ check closing a sto: say "It's already closed. And locked." instead;
 
 check of unlocking:
 	if noun is a sto, say "Forget it. It's good and shut." instead;
-	if noun is signers' ingress, say "It has no visible keyholes. The only possible interface seems to be the friend finder." instead;
+	if noun is signers ingress, say "It has no visible keyholes. The only possible interface seems to be the friend finder." instead;
 	if noun is OR DO door, say "[if bugle-played is true]You already did when you played the bugle.[else if bolt is moot]You already got rid of the bolt.[else]No keyholes. Maybe you can break it down some other way?[end if]" instead;
 	say "You don't need to." instead;
 
@@ -4815,17 +4815,17 @@ understand "coffer" and "scoffer coffer" as scoffer coffers.
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls' Slough. roomnud of Ghouls' Slough is table of Ghouls Slough nudges.
+Ghouls Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough.
 
-the dog is amusing boring scenery in Ghouls' Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
+the dog is amusing boring scenery in Ghouls Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
-the bog is amusing boring scenery in Ghouls' Slough. description is "The bog is pretty much all around. Maybe something could help you through it, though.". bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it. Maybe something could help you through it, though."
+the bog is amusing boring scenery in Ghouls Slough. description is "The bog is pretty much all around. Maybe something could help you through it, though.". bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it. Maybe something could help you through it, though."
 
 to say end-it: end the story.
 
-check going nowhere in Ghouls' Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
+check going nowhere in Ghouls Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
 
-check examining maps in Ghouls' Slough:
+check examining maps in Ghouls Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
 	now maps are realized;
 	move player to Frost Forts instead;
@@ -4834,7 +4834,7 @@ chapter Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forst nudges.
 
-Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
+Frost Forts is north of Ghouls Slough. nowhere is south of Frost Forts.
 
 check going nowhere in Frost Forts: say "[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead;
 
@@ -5155,7 +5155,7 @@ for printing a locale paragraph about a tacoish thing (called xyzyx) when player
 	now the player is mentioned;
 	now red inn is mentioned;
 	now dud mum mud is mentioned;
-	now grief'd fridge is mentioned;
+	now griefd fridge is mentioned;
 	if xyzyx is a pregredient or xyzyx is an ingredient:
 		if xyzyx is not mentioned and xyzyx is not part of the tortilla:
 			say "The Red Inn contains things that [if nvp > 0 and number of separate-in-kitchen ingredients > 0]do and don't [else if number of touchable pregredients > 0]don't [end if]belong in a kitchen: ";
@@ -5178,7 +5178,7 @@ after printing the locale description for kitchen when kitchen is unvisited:
 
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
-description of Kitchen is "This is a kitchen, though it's a bit bare, except for the grief'd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
+description of Kitchen is "This is a kitchen, though it's a bit bare, except for the griefd fridge and [if taco is off-stage]a Red Inn which holds various foodstuffs[else]the Red Inn you made the taco on[end if]. South is the Trap Part you escaped, and east is [if Stiller Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
 
 the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2. cert-text of tall trio is "T[d1][d1][d1][d1][d1][d1][d1]". rect-text of tall trio is "T[d1][d1][d1][d1][d1][d1][ast]A".
 
@@ -5351,28 +5351,28 @@ the red inn is scenery in kitchen. "It's for rendin['] dinner[if taco is not off
 
 section fridge
 
-the grief'd fridge is scenery in kitchen. understand "refrigerator" as fridge.
+the griefd fridge is scenery in kitchen. understand "refrigerator" as fridge. understand "grief fridge" and "grief" as griefd fridge.
 
-the grief'd fridge is an opaque openable container.
+the griefd fridge is an opaque openable container.
 
 check examining fridge: ignore examine containers rule.
 
 rule for printing room description details of fridge: omit contents in listing.
 
-the manila animal is an amusing boring thing. it is part of the grief'd fridge. understand "lamina" as manila animal. bore-text of manila animal is "You've torn up a [if stos-down > 1]couple stores[else]store[end if] already, but you draw the line at aesthetically altering a fridge. Someone surely put love into decorating it!". description of manila animal is "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
+the manila animal is an amusing boring thing. it is part of the griefd fridge. understand "lamina" as manila animal. bore-text of manila animal is "You've torn up a [if stos-down > 1]couple stores[else]store[end if] already, but you draw the line at aesthetically altering a fridge. Someone surely put love into decorating it!". description of manila animal is "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of grief'd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
 
-after examining grief'd fridge:
+after examining griefd fridge:
 	pad-rec-q "warts";
 	continue the action;
 
 fridge-open is a truth state that varies.
 
-check opening grief'd fridge:
+check opening griefd fridge:
 	now fridge-open is true;
 	now fridge is transparent;
-	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in grief'd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
+	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in griefd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
 
 some grist is in the fridge.
 
@@ -6179,7 +6179,7 @@ chapter Undesired Underside
 
 Undesired Underside is a room in Metros. last-loc of metros is Undesired Underside. "This is some sort of seedy underground intersection with a train station south. You can also go north to [if Roarings Garrison is visited]the camp, again[else]what looks like a camp[end if]. You can't see the trade tread you came here by. Tilting titling advertises The Ol['] Hotel to the west.". roomnud of Undesired Underside is table of Undesired Underside nudges.
 
-the tilting titling is boring scenery in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if The Ol' Hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
+the tilting titling is boring scenery in Undesired Underside. description of titling is "The tilting titling's too high above to reach. It's just there to advertise the Ol['] Hotel[if The Ol Hotel is visited], where you've already been[end if].". bore-text is "You can't do much with the titling, and you don't need to.".
 
 check going inside in Undesired Underside: say "That's ambiguous with the hotel west and the metal door east." instead;
 
@@ -6195,7 +6195,7 @@ description of drainage is "It smells and looks disgusting. Just the sort of thi
 
 a gardenia is a flower.
 
-description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if Fo' Real Florae are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
+description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if Fo Real Florae are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
 
 section a reading
 
@@ -6208,18 +6208,18 @@ section cramped red camp
 
 the cramped red camp is useless scenery in Undesired Underside. "It's pretty dirty and meager[if Roarings Garrison is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
-section signers' ingress
+section signers ingress
 
-The signers' ingress is a door. description is "It's very solid[if signers' ingress is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if].". it is east of underside and west of Esoteric Coteries.
+The signers ingress is a door. description is "It's very solid[if signers ingress is open] when it's closed[end if][if player is in Undesired Underside], and a tech etch gives it some semblance of character[end if].". it is east of underside and west of Esoteric Coteries. printed name is "signers['] ingress".
 
-check putting keycard on signers' ingress when player is in Undesired Underside: try putting keycard on friend finder instead;
-check putting keycard on signers' ingress when player is in Esoteric Coteries: try going west instead;
+check putting keycard on signers ingress when player is in Undesired Underside: try putting keycard on friend finder instead;
+check putting keycard on signers ingress when player is in Esoteric Coteries: try going west instead;
 
-the initial appearance of the signers' ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now, with a friend finder (sensor) attached to it[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no friend finder on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a [one of]sensor (call it a friend finder)[or]friend finder[stopping] off to the side[prob-reads][end if][stopping].". understand "metallic/door" and "metallic door" as signers' ingress when player is in Undesired Underside.
+the initial appearance of the signers ingress is "[one of]A metallic door labeled SIGNERS['] INGRESS is to the east. It looks forbidding, for now, with a friend finder (sensor) attached to it[or]The signers['] ingress looms to the [if player is in Esoteric Coteries]west. It's got no friend finder on this side, so you can probably just walk back through it[else]east, waiting for, uh, a sign. It has a tech etch repelling any old chump from entering. There's also a [one of]sensor (call it a friend finder)[or]friend finder[stopping] off to the side[prob-reads][end if][stopping].". understand "metallic/door" and "metallic door" as signers ingress when player is in Undesired Underside.
 
 to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
 
-the tech etch is part of the signers' ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
+the tech etch is part of the signers ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
 
 check taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it." instead;
 
@@ -6237,7 +6237,7 @@ to say want-wanted: say "[if player has tulip]got the tulip from[else if Esoteri
 
 chapter Roarings Garrison
 
-Roarings Garrison is north of Underside.  Roarings Garrison is in Metros. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin' Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin' Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.". roomnud of Roarings Garrison is table of Roarings Garrison nudges.
+Roarings Garrison is north of Underside.  Roarings Garrison is in Metros. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in Obtains Boastin Bastion]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the Bastion, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in Obtains Boastin Bastion].[paragraph break]A cordoned red condois north[else].[paragraph break]The Obtains Boastin['] Bastion you're not welcome back at is to the north[end if]. You hear painful music.". roomnud of Roarings Garrison is table of Roarings Garrison nudges.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -6265,7 +6265,7 @@ the cordoned red condo is scenery in Roarings Garrison. "It's immaculate compare
 
 check entering cordoned red condo: try going north instead;
 
-to say n-of-garrison: say "[if Obtains Boastin' Bastion is visited]bastion[else]condo[end if]"
+to say n-of-garrison: say "[if Obtains Boastin Bastion is visited]bastion[else]condo[end if]"
 
 the tents are useless boring scenery in Roarings Garrison. understand "commune" as tents. description of tents is "Decorated with a corny crayon-a-crony.". bore-text is "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
 
@@ -6302,7 +6302,7 @@ the posh shop is amusing scenery in Roarings Garrison. "It's apparently called F
 
 the library is scenery in Roarings Garrison. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
 
-the barrier is useless scenery in Roarings Garrison. "[if dry cake is in Obtains Boastin' Bastion]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
+the barrier is useless scenery in Roarings Garrison. "[if dry cake is in Obtains Boastin Bastion]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
 
 check going north in Roarings Garrison: if bastion-evac is true, say "You'd probably be recognized and arrested." instead;
 
@@ -6465,7 +6465,7 @@ check opening noise bag:
 		if location of player is Abyss, say "[if beast is touchable]The beast has no time for words! You need to attack it more directly, with something else[else]The beats will drown the words out[end if]." instead;
 		say "The words currently caught in the bag would do no good here.";
 		the rule succeeds;
-	if player is in Fo' Real Florae, say "The faeries are not making noise." instead;
+	if player is in Fo Real Florae, say "The faeries are not making noise." instead;
 	if player is in camp, say "The chants are disjointed and not really forceful or annoying anyone. They're talk without action." instead;
 	if player is not in Bassy, say "Nothing's quite focused enough here to go pouring in the bag. The beats are too amorphous, and there're no clear words." instead;
 
@@ -6495,18 +6495,16 @@ the description of the tomato is "It's as rotten as the motto of Pa Otto's you e
 
 chapter Obtains Boastin' Bastion
 
-Obtains Boastin' Bastion is north of Roarings Garrison. Obtains Boastin' Bastion is in Metros. roomnud of Obtains Boastin' Bastion is table of Obtains Boastin Bastion nudges.
+Obtains Boastin Bastion is north of Roarings Garrison. Obtains Boastin Bastion is in Metros. roomnud of Obtains Boastin Bastion is table of Obtains Boastin Bastion nudges. printed name is "Obtains/Boastin['] Bastion"
 
-printed name of Obtains Boastin' Bastion is "Obtains/Boastin['] Bastion"
+check going inside in Obtains Boastin Bastion: say "You're already inside." instead;
 
-check going inside in Obtains Boastin' Bastion: say "You're already inside." instead;
+check going outside in Obtains Boastin Bastion: try going south instead;
 
-check going outside in Obtains Boastin' Bastion: try going south instead;
+the poses posse are plural-named amusing scenery in Obtains Boastin Bastion. understand "poso" and "pose posse" as poses posse.
 
-the poses posse are plural-named amusing scenery in Obtains Boastin' Bastion. understand "poso" and "pose posse" as poses posse.
-
-after looking in Obtains Boastin' Bastion:
-	if poses posse are in Obtains Boastin' Bastion, set the pronoun them to poses posse;
+after looking in Obtains Boastin Bastion:
+	if poses posse are in Obtains Boastin Bastion, set the pronoun them to poses posse;
 	continue the action;
 
 after doing something with poses posse:
@@ -6524,7 +6522,7 @@ does the player mean throwing the tomato at the poses posse: it is likely.
 
 check throwing tomato at poses posse: say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them." instead;
 
-the antlers are plural-named LLPish scenery in Obtains Boastin' Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
+the antlers are plural-named LLPish scenery in Obtains Boastin Bastion. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7. cert-text of antlers is "-[d1][d1][d1][d1][d1][ast]S". rect-text of antlers is "R[d1][d1][d1][d1][d1][ast]S".
 
 check taking the antlers: say "They are utterly useless, even for impressing people. Actually, they're all just here for the free food, too." instead;
 
@@ -6534,13 +6532,13 @@ the rentals are plural-named useless scenery.
 
 description of the rentals is "The antlers are gone. You shouldn't be able to see the rentals or antlers."
 
-check going to Obtains Boastin' Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
+check going to Obtains Boastin Bastion for the first time: say "Since you shave, you can pass as one of the 'haves.' The beats drown out as you enter the condo. 'Eat On!' cries the hired help.[paragraph break]'Neato! ... No tea? ATONE!'[paragraph break]You are inspected and deemed less unworthy than that deadbeat who tried to enter--the one still sitting in the camp--but all the same, you're warned not to try anything funny."
 
-description of Obtains Boastin' Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. A poses posse chatters away amongst themselves here[end if]. A barnacled candelabra hangs above[if antlers are touchable], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
+description of Obtains Boastin Bastion is "[if bastion-evac is true][cake-blab][else]The beats aren't audible here, but conversation voices rant on. A poses posse chatters away amongst themselves here[end if]. A barnacled candelabra hangs above[if antlers are touchable], antlers are attached to a wall[end if], and carpets provide garish spectra on the floor[if bastion-evac is false]. [paragraph break]All in all, this place probably has a high property value, and people would be horrified if something happened to make it drop[end if]."
 
-A barnacled candelabra is amusing boring scenery in Obtains Boastin' Bastion. description of candelabra is "It's tasteful and clever, as much as you hate to admit it.". bore-text is "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.".
+A barnacled candelabra is amusing boring scenery in Obtains Boastin Bastion. description of candelabra is "It's tasteful and clever, as much as you hate to admit it.". bore-text is "You couldn't even jump to get close to it. But it's not important. Someone just put it there because they could.".
 
-the carpets are plural-named useless scenery in Obtains Boastin' Bastion. understand "spectra" and "carpet" as carpets.
+the carpets are plural-named useless scenery in Obtains Boastin Bastion. understand "spectra" and "carpet" as carpets.
 
 after doing something with carpets:
 	set the pronoun it to carpets;
@@ -6552,9 +6550,9 @@ check looking under carpets: say "This is a tribute to Nord and Bert, not Zork. 
 
 check taking carpets: say "Too bulky, and what if they turned into something precast?" instead;
 
-to say cake-blab: say "You probably want to [if cake is in Obtains Boastin' Bastion]take the cake and run[else]get going before everyone gets back[end if]"
+to say cake-blab: say "You probably want to [if cake is in Obtains Boastin Bastion]take the cake and run[else]get going before everyone gets back[end if]"
 
-check going in Obtains Boastin' Bastion:
+check going in Obtains Boastin Bastion:
 	if bastion-evac is true and noun is not south, say "Best not hang around the scene of the crime." instead;
 	if noun is north, say "A guard pushes you away from the SIN BOAT." instead;
 	if noun is east, say "You're pushed away for not respecting Saint Bo." instead;
@@ -6562,7 +6560,7 @@ check going in Obtains Boastin' Bastion:
 	if noun is up, say "You're pushed back. As you leave, someone baits on. You aren't allowed anywhere except the main area." instead;
 	if noun is diagonal, say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
-Some dry cake is a singular-named thing in Obtains Boastin' Bastion. "Some dry cake is here[if poses posse is in Obtains Boastin' Bastion]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
+Some dry cake is a singular-named thing in Obtains Boastin Bastion. "Some dry cake is here[if poses posse is in Obtains Boastin Bastion]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[else]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. cert-text of dry cake is "-[d1][ast]Y[ast]C[ast]A[d1][d1]". rect-text of dry cake is "K[d1][d1][d1][d1][d1][ast]D".
 
 indefinite article of dry cake is "some".
 
@@ -6577,7 +6575,7 @@ understand "steal [something]" as taking.
 
 after taking the lost corn: say "'All yours, man,' says the deadbeat. 'It's some pretty good corn, too. Ask me if you like want details.'".
 
-check going south in Obtains Boastin' Bastion when bastion-evac is true:
+check going south in Obtains Boastin Bastion when bastion-evac is true:
 	if player does not have dry cake and player does not have keycard:
 		say "You glance at the dry cake and think 'Tool?! Loot!' [run paragraph on]"; [??]
 		try taking the dry cake;
@@ -6627,13 +6625,13 @@ check inserting barcode into keycard: try putting barcode on keycard instead;
 
 chapter Fo' Real Florae
 
-Fo' Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp.". Fo' Real Florae is in Metros. roomnud of Fo' Real Florae is table of Fo Real Florae nudges.
+Fo Real Florae is east of Roarings Garrison. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp.". Fo Real Florae is in Metros. roomnud of Fo Real Florae is table of Fo Real Florae nudges.
 
-printed name of Fo' Real Florae is "Fo['] Real Florae Fare, Lo"
+printed name of Fo Real Florae is "Fo['] Real Florae Fare, Lo"
 
-check going to Fo' Real Florae for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
+check going to Fo Real Florae for the first time: say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'".
 
-after choosing notable locale objects when player is in Fo' Real Florae: set the locale priority of the faeries to 2.
+after choosing notable locale objects when player is in Fo Real Florae: set the locale priority of the faeries to 2.
 
 rule for printing a locale paragraph about faeries:
 	say "Faeries buzz around here, [if fairy-worthy is false]guarding some heaths and begonias[else if heaths are moot]guarding the begonias you declined[else if begonias are moot]guarding the heaths you declined[else]waiting for you to choose between the heaths and begonias[end if].";
@@ -6643,15 +6641,15 @@ rule for printing a locale paragraph about faeries:
 
 violets is a truth state that varies.
 
-report going west in Fo' Real Florae when violets is false:
+report going west in Fo Real Florae when violets is false:
 	if player has noise bag or player has begonias or player has heaths or player has sheath:
 		say "Apropos of nothing, the faeries say 'Violet? Love it!'";
 		now violets is true;
 	continue the action;
 
-check going east in Fo' Real Florae: say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead;
+check going east in Fo Real Florae: say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead;
 
-Some freesia faeries are people in Fo' Real Florae. "Freesia faeries fly around here [if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae]anxiously[else]randomly[end if]."
+Some freesia faeries are people in Fo Real Florae. "Freesia faeries fly around here [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]anxiously[else]randomly[end if]."
 
 understand "freesia/ fairies/" as faeries.
 
@@ -6671,7 +6669,7 @@ after doing something with wands:
 	continue the action;
 
 to say he-be:
-	if heaths are in Fo' Real Florae or begonias are in Fo' Real Florae:
+	if heaths are in Fo Real Florae or begonias are in Fo Real Florae:
 		if heaths are moot or begonias are moot:
 			say "You have performed your magic admirably on our gift. Go and slay the beast![no line break]";
 		else:
@@ -6679,9 +6677,9 @@ to say he-be:
 	else:
 		say "'You may take one of the groups of flowers if you bring us some. They are the last of the batch from before the Night Thing came.'";
 
-to say sure-you: say "[if heaths are not in Fo' Real Florae or begonias are not in Fo' Real Florae]! We are sure you can do something with your reward[end if]".
+to say sure-you: say "[if heaths are not in Fo Real Florae or begonias are not in Fo Real Florae]! We are sure you can do something with your reward[end if]".
 
-some heaths are a plural-named flower in Fo' Real Florae. they are not fixed in place. rgtext of heaths is "[rcn][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5. cert-text of heaths is "-[d1][d1][d1][d1][d1]". rect-text of heaths is "S[d1][d1][d1][d1][ast]H".
+some heaths are a plural-named flower in Fo Real Florae. they are not fixed in place. rgtext of heaths is "[rcn][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5. cert-text of heaths is "-[d1][d1][d1][d1][d1]". rect-text of heaths is "S[d1][d1][d1][d1][ast]H".
 
 understand "heath" as heaths.
 
@@ -6701,7 +6699,7 @@ check taking off sheath: say "It'd be too awkward to carry." instead;
 
 description of sheath is "It's a dull grey, with the words FOR GREAT QUIETNESS inscribed in some Gothic font."
 
-some begonias are a plural-named flower in Fo' Real Florae. they are not fixed in place. rgtext of begonias is "[rcn][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3. cert-text of begonias is "-[d1][d1][d1][d1][d1][ast]A[d1]". rect-text of begonias is "N[d1][d1][d1][d1][d1][d1][ast]G".
+some begonias are a plural-named flower in Fo Real Florae. they are not fixed in place. rgtext of begonias is "[rcn][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3. cert-text of begonias is "-[d1][d1][d1][d1][d1][ast]A[d1]". rect-text of begonias is "N[d1][d1][d1][d1][d1][d1][ast]G".
 
 understand "begonia" as begonias.
 
@@ -6731,7 +6729,7 @@ check giving to faeries:
 check showing to faeries: try giving noun to faeries instead;
 
 check giving gardenia to faeries:
-	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in Fo' Real Florae]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";
+	say "They're visibly impressed. 'Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one[if brocade is in Fo Real Florae]. And take the brocade, too[end if]. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need.'";
 	moot the gardenia;
 	now fairy-worthy is true instead;
 
@@ -6754,7 +6752,7 @@ check taking:
 		now player has Spam;
 		moot sandwich;
 	if noun is in fridge, say "If it's in the fridge, it's probably someone's property. Even if it's someone you don't know or like[if noun is grits or noun is pancake], and even though you made it edible[end if]." instead;
-	if location of player is Fo' Real Florae:
+	if location of player is Fo Real Florae:
 		if noun is brocade:
 			if fairy-worthy is false:
 				say "The faeries buzz around for a bit, peeved at your boldness. 'Well, maybe you will do something for us some day.'";
@@ -6771,9 +6769,9 @@ check taking:
 
 to say greedy-greedy: say "The faeries cry 'We already gave you one clump of flowers for your one flower! So unfair, sour naif!'".
 
-the brocade is a thing in Fo' Real Florae. "A small piece of brocade is discarded away from the merchandise below the counter. You see a torn cue above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
+the brocade is a thing in Fo Real Florae. "A small piece of brocade is discarded away from the merchandise below the counter. You see a torn cue above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
 
-the merchandise is scenery in Fo' Real Florae. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in Fo' Real Florae and heaths are not in Fo' Real Florae]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
+the merchandise is scenery in Fo Real Florae. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in Fo Real Florae and heaths are not in Fo Real Florae]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
@@ -6781,11 +6779,11 @@ understand "flowers/seeds/flower/seed" as merchandise when merchandise is toucha
 
 description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. A torn cue above it indicates it's not part of the normal merchandise[end if]."
 
-the torn cue is scenery in Fo' Real Florae.
+the torn cue is scenery in Fo Real Florae.
 
 description of torn cue is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
-the cornute counter is bounding scenery in Fo' Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo' Real Florae]. 'ELF ROW FLOWERS = LOW SERF' is scratched in, but a torn cue written into the counter[torn-next-broc] may be more useful."
+the cornute counter is bounding scenery in Fo Real Florae. "It is cornute, or horn-shaped, and it divides you from the faeries and, well, any mysterious back areas. It doesn't divide them from you, though, since they can fly[if brocade is in Fo Real Florae]. 'ELF ROW FLOWERS = LOW SERF' is scratched in, but a torn cue written into the counter[torn-next-broc] may be more useful."
 
 to say torn-next-broc: say "[if brocade is in florae], next to a brocade,[end if]"
 
@@ -6812,7 +6810,7 @@ check buying:
 		say "Awfully generous, but your quest-aiding items here are all free." instead;
 	if noun is tulip and nerds are touchable, say "You have nothing to barter with. Either find what to ask, or outflank them somehow." instead;
 	if location of player is Trips Strip, say "Your job is presumably to raise property values here, not take advantage of them." instead;
-	if player is in Fo' Real Florae:
+	if player is in Fo Real Florae:
 		if noun is brocade, say "It is free." instead;
 		if noun is heaths or noun is begonias, say "You don't have any money[if fairy-worthy is true], and the faeries don't seem to want to barter any more[else], but perhaps if you gave the faeries a flower, they would be willing to trade[end if]." instead;
 	if peasant is touchable and noun is hay, say "Maybe there's something you can give him, instead." instead;
@@ -6821,11 +6819,11 @@ check buying:
 
 chapter The Ol' Hotel
 
-There is a room called The Ol' Hotel.
+There is a room called The Ol Hotel.
 
-The Ol' Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros. roomnud of the ol' hotel is table of the ol hotel nudges.
+The Ol Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. While it's possible to go anywhere but east, it seems extremely unwise, with L'HÔTE HELOT scribbled about. The only way out is east.". Hotel is in Metros. roomnud of The Ol Hotel is table of the ol hotel nudges. printed name of the ol hotel is "The Ol['] Hotel".
 
-The Night Thing is a neuter person in The Ol' Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
+The Night Thing is a neuter person in The Ol Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
 
 after doing something with the night thing:
 	set the pronoun her to night thing;
@@ -6851,7 +6849,7 @@ check giving something to the night thing:
 
 the cruel ulcer is a boring thing. it is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there.". bore-text is "It's neither a clue-r nor lucre."
 
-the ketchup bottle is a thing in The Ol' Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is touchable]is roaring nearby[else]was here[end if]."
+the ketchup bottle is a thing in The Ol Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is touchable]is roaring nearby[else]was here[end if]."
 
 the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's shaped that way, too. They apparently put, heck, whatever they want in it! And you'll like it that way!"
 
@@ -6859,7 +6857,7 @@ check taking the ketchup bottle: say "[if night thing is not touchable]Trust me.
 
 check inserting into the bottle: say "Ketchup bottles have those narrow necks, so nothing really fits. One look at the bottle, and you probably don't WANT anything to fit." instead;
 
-check going outside in The Ol' Hotel: try going east instead;
+check going outside in The Ol Hotel: try going east instead;
 
 The termite emitter is a device. "A termite emitter lies here, forgotten. It still looks operational. Perhaps it's part of why the hotel is so beaten up."
 
@@ -6907,9 +6905,9 @@ check switching on the termite emitter:
 	if location is Hotel, say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
 	if location is Roarings Garrison, say "That'd be kind of cruel." instead;
 	if location is Bile Libe, say "The termites are the wrong sort of pest for the Bile Libe." instead;
-	if location is Fo' Real Florae, say "Trust me. You don't want to know what the faeries would do back to you." instead;
+	if location is Fo Real Florae, say "Trust me. You don't want to know what the faeries would do back to you." instead;
 	if location is Esoteric Coteries, say "You're being watched too closely." instead;
-	if location of player is Obtains Boastin' Bastion:
+	if location of player is Obtains Boastin Bastion:
 		if bastion-evac is true, say "It's already crawling with termites." instead;
 		now bastion-evac is true;
 		moot poses posse;
@@ -6919,7 +6917,7 @@ check switching on the termite emitter:
 	if location is Bassy, say "The termites would put up a valiant but futile effort." instead;
 	say "The termites don't have enough to eat here." instead;
 
-the smartest mattress is a boring fixed in place container in The Ol' Hotel. bore-text of smartest mattress is "The night thing is sitting on the smartest mattress. You'll need to get rid of the mattress.". bore-check is bore-mattress rule.
+the smartest mattress is a boring fixed in place container in The Ol Hotel. bore-text of smartest mattress is "The night thing is sitting on the smartest mattress. You'll need to get rid of the mattress.". bore-check is bore-mattress rule.
 
 does the player mean entering the mattress: it is likely.
 
@@ -7000,7 +6998,7 @@ check putting keycard on friend finder:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if barcode is not part of keycard, say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
-	if signers' ingress is open:
+	if signers ingress is open:
 		say "The door is open. So you just walk east instead.";
 		try going east instead;
 	if keycard-put is false:
@@ -7008,37 +7006,37 @@ check putting keycard on friend finder:
 		now keycard-put is true;
 		now keycard is realized;
 		now friend finder is realized;
-		now signers' ingress is realized;
+		now signers ingress is realized;
 		now barcode is realized;
 	else:
 		say "The door slides open again.";
-	now signers' ingress is open instead;
+	now signers ingress is open instead;
 
 check going east in Undesired Underside:
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
-	if signers' ingress is open, continue the action;
+	if signers ingress is open, continue the action;
 	if player has the keycard and barcode is part of the keycard:
 		if Esoteric Coteries are unvisited, say "Hm, maybe your keycard will do the trick.[paragraph break]";
 		try putting keycard on friend finder;
 		continue the action;
 	else:
-		try opening the signers' ingress instead;
+		try opening the signers ingress instead;
 
-check opening the signers' ingress:
+check opening the signers ingress:
 	if noun is open, say "But it already is. For now." instead;
 	if location of player is Esoteric Coteries:
 		say "The door slides open as you step near it.";
-		now signers' ingress is open;
+		now signers ingress is open;
 		the rule succeeds;
 	process the bother-nerds rule;
 	if the rule failed, the rule succeeds;
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
 		try putting keycard on friend finder instead;
-	set the pronoun it to signers' ingress;
+	set the pronoun it to signers ingress;
 	if location of player is undesired and keycard is off-stage, say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
-	say "The signers' ingress has handle. It's probably operated by the friend finder[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
+	say "The [ingress] has no handle. It's probably operated by the friend finder[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
 
 check putting on the optical beam:
 	ignore the can't put onto what's not a supporter rule;
@@ -7049,10 +7047,10 @@ check putting it on:
 
 ever-shut is a truth state that varies.
 
-every turn when signers' ingress was open:
-	now signers' ingress is closed;
-	if signers' ingress is touchable:
-		say "The signers' ingress slides shut.";
+every turn when signers ingress was open:
+	now signers ingress is closed;
+	if signers ingress is touchable:
+		say "The [ingress] slides shut.";
 		if ever-shut is false:
 			now ever-shut is true;
 			if player has tulip:
@@ -7142,13 +7140,13 @@ check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe 
 
 the dead fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims ARTISAN, TSARINA: TRANSIT!!! and also that it's an anti-sot 'I sat not to stain' station. Which doesn't help you.". printed name is "dead-fad faded ad".
 
-Pa's PSA is amusing scenery in Elm Train Terminal. "[randbla]."
+Pas PSA is amusing scenery in Elm Train Terminal. "[randbla].". printed name is "Pa's PSA". understand "pa" and "pa psa" as Pas PSA.
 
-after examining Pa's PSA for the first time:
+after examining Pas PSA for the first time:
 	say "'I'm learnt,' you think, after reading that.";
 	continue the action;
 
-understand "psas" as pa's psa.
+understand "psas" as pas psa.
 
 the cafe face is a scenery supporter in Elm Train Terminal. "The cafe face looks rough and tangled, like steel wool."
 
@@ -8122,7 +8120,7 @@ after reading a command:
 		if the player's command matches the regular expression "\bgoat\b":
 			say "[one of]The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
-	if player is in Fo' Real Florae:
+	if player is in Fo Real Florae:
 		if the player's command matches the text "fairies":
 			say "[one of]Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes[or]They can see in your eyes you're spelling things wrong, but they'll have to deal.[or][run paragraph on][stopping]";
 	if word number 1 in the player's command is "chisel" and player has chisel:
@@ -8254,7 +8252,7 @@ carry out scaning:
 		try scaning location of player instead;
 	if noun is night thing, say "No way you're getting close enough." instead;
 	if noun is nerds, say "[one of]'Whoah! Hey! What's this, a Skansder?' You turn red, explaining you don't know what that is. 'You didn't make that, did you? Don't know the specifications? Thought not.'[or]'Still messing with technology over your head, eh? Like that Skansder you don't know what it is.'[stopping][paragraph break]As the nerds ask other questions, the gadget lights up, and you notice [nerdsask], until the nerds ask no more. Then it goes back to [asknerds] as you think how, why and what to ask nerds." instead;
-	if location of player is Fo' Real Florae:
+	if location of player is Fo Real Florae:
 		say "[one of]You feel a bit self-conscious waving your gadget around such intrinsically magical beings. But they do not seem to mind.[paragraph break][or][stopping]";
 	if noun is poem and poem is not folded:
 		if smilies are touchable:
@@ -8862,7 +8860,7 @@ some maps are plural-named things.
 
 understand "map" as some maps when mrlp is forest.
 
-description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
+description of maps is "[if Ghouls Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
 
 the Spam is flippable.
 
@@ -9058,10 +9056,10 @@ roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the 
 Stiller Trellis	"[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Roarings Garrison	"There's [if Obtains Boastin' Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not off-stage], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
+Roarings Garrison	"There's [if Obtains Boastin Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not off-stage], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
 Bile Libe	"Only way out's back east."
-Fo' Real Florae	"The only safe way out is back west."
-The Ol' Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
+Fo Real Florae	"The only safe way out is back west."
+The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
 Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
@@ -9097,13 +9095,13 @@ carry out gotoing:
 	if noun is Rested Desert, say "The door from Rested Desert was one-way[if player is in Thickest Thickets]. You can't even see it now[end if]." instead;
 	if noun is Thickets, say "You can't see the passage back to the Thickets." instead; [end Ordeal Loader]
 	if noun is sf or noun is rf, say "You can't retrace your steps." instead; [start forest]
-	if player is in Ghouls' Slough, say "You've done all you could in the enclosure and before. Onward." instead;
+	if player is in Ghouls Slough, say "You've done all you could in the enclosure and before. Onward." instead;
 	if player is in Frost Forts, say "It's time to deal with things, not run." instead; [end forest]
 	if noun is the nick, say "No, you don't want to go back there." instead; [start sortie]
 	if player is in the nick, say "That's not the magic way out. Sorry!" instead;
 	if player is in Sacred Cedars, check-block-cedars;
 	if noun is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
-	if noun is Obtains Boastin' Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
+	if noun is Obtains Boastin Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
 	if noun is Esoteric Coteries and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
 	if player is in Bassy Abyss, say "No going back now. You came here to defeat the [b-b]." instead; [end metros]
 	if mrlp is resort:
@@ -9426,8 +9424,8 @@ check listening:
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
 		if player is in Roarings Garrison, try examining music instead;
 		if night thing is touchable, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
-		if player is in Obtains Boastin' Bastion, say "The conversation changes subject rapidly and randomly." instead;
-		if player is in Fo' Real Florae, say "The faeries have managed to block out the beats here, which is nice." instead;
+		if player is in Obtains Boastin Bastion, say "The conversation changes subject rapidly and randomly." instead;
+		if player is in Fo Real Florae, say "The faeries have managed to block out the beats here, which is nice." instead;
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
 	if player is in Busiest Subsite, say "[one of][thissy].[or]'That lecture'll fix your helpless spells, eh?' someone walking by asks.[or]'A resume masseur!' someone exclaims.[or]'Boy, I need to re-care about my career,' someone actually says with a straight face.[or]'Tell yourself I'M PRE PRIME!'[cycling]" instead;
 	if player is in Thickest Thickets, say "[if goat is in Thickest Thickets]The goat snores slightly as he half-naps, but that's it[else]The toga flutters in some wind you can't quite feel[end if]." instead;
@@ -9632,7 +9630,7 @@ up-nearby is a truth state that varies.
 
 before going up:
 	if player is in Rived Drive, try going east instead;
-	if player is in Elm Train Terminal or player is in Obtains Boastin' Bastion or player is in Undesired Underside or player is on cafe face, continue the action;
+	if player is in Elm Train Terminal or player is in Obtains Boastin Bastion or player is in Undesired Underside or player is on cafe face, continue the action;
 [	if up-nearby is true:
 		say "[if cur-score of Ordeal Loader is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
@@ -9642,7 +9640,7 @@ before going up:
 before going down in Busiest Subsite: say "You're not waiting for the elevator back down. And the only stairs are fire stairs, which will set off an alarm." instead;
 
 before going down:
-	if player is in Busiest Subsite or player is in Obtains Boastin' Bastion, continue the action;
+	if player is in Busiest Subsite or player is in Obtains Boastin Bastion, continue the action;
 	if player is on cafe face, try getting off the cafe face instead;
 	if player is in Trips Strip:
 		if posted depots are touchable or trade tread is touchable, continue the action;
@@ -9731,7 +9729,7 @@ understand "knock on [something]" as knocking.
 does the player mean knocking the black door: it is very likely.
 does the player mean knocking the cabinet: it is very likely.
 does the player mean knocking the OR DO door: it is very likely.
-does the player mean knocking the signers' ingress: it is very likely.
+does the player mean knocking the signers ingress: it is very likely.
 does the player mean knocking Corses Crosse: it is very likely.
 does the player mean knocking a portal:
 	if cabinet is touchable, it is unlikely;
@@ -9742,7 +9740,7 @@ carry out knocking:
 	if noun is cabinet, say "That's potentially an act of violence." instead;
 	if noun is black door, say "[if black door is part of silo]Nobody answers, unsurprisingly[else]How polite! And ineffective[end if]." instead;
 	if noun is OR DO door, say "[if player has bugle]It's a bit awkward knocking with the bugle in your hand[else]You brush against the bulge as you knock[end if]. You get no response." instead;
-	if noun is signers' ingress, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
+	if noun is signers ingress, say "[if player has tulip]You don't need to go back[else if Esoteric Coteries are visited]Nah, just walk in[else]Weird. It doesn't make any noise. Or the noise drowns quickly. You suspect the door's intended to keep people out, though[end if]." instead;
 	if noun is Corses Crosse, say "A good way to scrape your knuckles, seeing how quickly it turns." instead;
 	say "Knock, knock. Who's there? Conkk, conkk." instead;
 

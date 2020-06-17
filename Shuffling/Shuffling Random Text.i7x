@@ -4420,7 +4420,7 @@ this is the pat-poem rule:
 section metros rules
 
 this is the x-psa rule:
-	if current action is examining Pa's PSA, the rule succeeds;
+	if current action is examining Pas PSA, the rule succeeds;
 	the rule fails;
 
 this is the with-hippies rule:

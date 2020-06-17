@@ -376,9 +376,9 @@ this is the pre-lostcorn-controls rule:
 	if bastion-evac is false and lost corn is touchable, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
 
 this is the pre-heaths-sheath rule:
-	if player is in Fo' Real Florae:
+	if player is in Fo Real Florae:
 		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
-		if begonias are not in Fo' Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
+		if begonias are not in Fo Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
 		if player does not have heaths:
 			try taking heaths;
 		say "[rude].[line break]";
@@ -388,9 +388,9 @@ this is the post-heaths-sheath rule:
 
 this is the pre-begonias-noisebag rule:
 	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
-	if player is in Fo' Real Florae:
+	if player is in Fo Real Florae:
 		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
-		if heaths are not in Fo' Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
+		if heaths are not in Fo Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
 		if player does not have begonias:
 			try taking begonias;
 		say "[rude].[line break]";
@@ -399,7 +399,7 @@ this is the pre-brocade-barcode rule:
 	if player does not have the brocade:
 		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
 		try taking brocade;
-	if player is in Fo' Real Florae:
+	if player is in Fo Real Florae:
 		say "[rude].[line break]";
 
 this is the pre-drycake-keycard rule:
@@ -833,7 +833,7 @@ silver	"[if silver is part of shotgun]It's ready to fire when needed[else if sho
 shotgun	"[if player has silver and silver is not in shotgun]Put the silver in the shotgun.[else if silver is off-stage]You need to create a bullet for the shotgun.[else if wolves are touchable]SHOOT the wolves.[else]You need to find a target, one vulnerable to silver, maybe.[end if]"
 muzzle	"It's the shotgun you need to worry about."
 doorway	"It's not terribly intimidating, but you'll want to be prepared with a guide and possibly self-defense. Things will only get tougher than the liches."
-maps	"[if player is in Ghouls' Slough]You need to READ the MAPS[else]The maps will be useful to read when you get somewhere unknown[end if]."
+maps	"[if player is in Ghouls Slough]You need to READ the MAPS[else]The maps will be useful to read when you get somewhere unknown[end if]."
 vowels	"[one of]The vowels seem to be hiding a great evil, a Halloweeny menace. They seem to be saying 'We're Vowels.' [plus][or]Two solutions: WEREWOLVES or WOLVES. [minus][cycling]"
 wolves	"They're due for a violent end."
 bumps	"The bumps clue what the vowels can become."
@@ -901,9 +901,9 @@ panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON S
 wires	"The wires aren't important. The panel is."
 drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if]. [plus][or]Anything would be more beautiful than drainage, especially a flower. [plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA. [minus][cycling]" [START METROS]
 a reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
-signers' ingress	"[if nerds-unwelcome is true]You got through the signers['] ingress, but you're not welcome back. Still, you got something useful[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
+signers ingress	"[if nerds-unwelcome is true]You got through the [ingress], but you're not welcome back. Still, you got something useful[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
-smartest mattress	"[if night thing is in The Ol' Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
+smartest mattress	"[if night thing is in The Ol Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
 cruel ulcer	"That cruel ulcer looks like a weak link. If you could throw something in there..."
 ketchup bottle	"The ketchup bottle clues what the night thing likes."
 tomato	"The tomato is rotten enough that throwing it at something may send them off-stage."
@@ -917,7 +917,7 @@ lease easel	"The lease easel just [if motto is in Bile Libe]held[else]holds[end 
 motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you. [plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[or]Potato, ...[or]TOMATO. [minus][cycling]"
 neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons. [plus][or]You can scan it, and that gives you some information. [plus][or]You'd rather have nothing there than the pig, too. [plus][or]It can become an OPENING. [minus][cycling]"
 cafe face	"You can climb up the cafe face with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
-gardenia	"[if player is in Fo' Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
+gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 tilting titling	"The tilting titling is just there for ambience."
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
 friend finder	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
@@ -927,10 +927,10 @@ yellow kernels	"The different colored kernels may clue what the lost corn should
 dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be. [plus][or]The cake becomes a KEYCARD. [minus][cycling]"
 optical beam	--	friend finder
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
-cordoned red condo	"The cordoned red condo is an area [if cake is not in Obtains Boastin' Bastion]where you're not welcome[else]with an item you need[end if]."
+cordoned red condo	"The cordoned red condo is an area [if cake is not in Obtains Boastin Bastion]where you're not welcome[else]with an item you need[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
-deadbeat	"[if dry cake is in Obtains Boastin' Bastion]The deadbeat would like you to take a stand against the Bastion to the north before you earn anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
-keycard	"[if brocade is in Fo' Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
+deadbeat	"[if dry cake is in Obtains Boastin Bastion]The deadbeat would like you to take a stand against the Bastion to the north before you earn anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
+keycard	"[if brocade is in Fo Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
 brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessary. [minus][cycling]"
 adhesive backing	"Useful once you find something to attach the barcode to."
 barcode	"[if barcode is part of the keycard]The barcode is now fully scannable[else if player does not have keycard]You need to find something that will hold the barcode[else]PUT BARCODE ON KEYCARD[end if]."
@@ -939,10 +939,10 @@ heaths	"[one of]You can change the heaths into something that can hold something
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something. [plus][or]Also, one word is related to sound. [plus][or]Create a NOISE BAG. [minus][cycling]"
 noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in Bassy Abyss and beast is in Bassy Abyss]You can OPEN the noise bag to defeat the beast.[else if player is in Bassy Abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
-words	"[if player is in Bassy Abyss]This is the place to change the words[else if begonias are in Fo' Real Florae and heaths are in Fo' Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo' Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
+words	"[if player is in Bassy Abyss]This is the place to change the words[else if begonias are in Fo Real Florae and heaths are in Fo Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is touchable and siren is not touchable]Attack the beast[else if beast is touchable]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
-torn cue	"It indicates the brocade [if brocade is in Fo' Real Florae]is[else]was[end if] free."
+torn cue	"It indicates the brocade [if brocade is in Fo Real Florae]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in Bassy Abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
@@ -956,7 +956,7 @@ resin	"With the resin on your hands, you can get a better grip on things. You do
 hilt	"[if siren is in Bassy Abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."
 beats	"[if player is not in Bassy Abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
-emitter	"[if dry cake is in Obtains Boastin' Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
+emitter	"[if dry cake is in Obtains Boastin Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
 stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET. [minus][cycling]"
 l2	"They're not what you want to be after. You may or may not notice an anagram, here."
