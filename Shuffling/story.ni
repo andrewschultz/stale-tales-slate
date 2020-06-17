@@ -706,12 +706,7 @@ blot-first is a truth state that varies.
 
 carry out mainhelping:
 	if hintsoff is true, all-say "You elected to turn hints off for the remainder of the game. You'll need to restart to change that." instead;
-	if mrlp is Ordeal Loader, try ordeal-loader-hinting instead;
-	if mrlp is stores, try stores-hinting instead;
-	if mrlp is forest, try forest-hinting instead;
-	if mrlp is metros, try metros-hinting instead;
-	if mrlp is sortie, try sortie-hinting instead;
-	if mrlp is resort, try resort-hinting instead;
+	abide by the reg-hint-rule of mrlp;
 	all-say "[bug-report] Bug text. Should not appear.";
 	the rule succeeds;
 
@@ -727,14 +722,6 @@ to all-say (a - indexed text):
 		say "[word number 1 in a] [word number 2 in a] [number of words in a] [number of characters in a].[line break]";]
 
 outline-print is a truth state that varies. outline-print is usually true.
-
-ordeal-loader-hinting is an action applying to nothing.
-stores-hinting is an action applying to nothing.
-forest-hinting is an action applying to nothing.
-metros-hinting is an action applying to nothing.
-sortie-hinting is an action applying to nothing.
-resort-hinting is an action applying to nothing.
-nerd-hinting is an action applying to nothing.
 
 coe-clue is a truth state that varies. coe-clue is usually false.
 
@@ -839,7 +826,7 @@ carry out objhinting:
 
 section Ordeal Loader
 
-carry out ordeal-loader-hinting:
+this is the ordeal-loader-hinting rule:
 	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
 		if odor is touchable, try objhinting odor instead;
@@ -859,7 +846,7 @@ carry out ordeal-loader-hinting:
 
 section stores
 
-carry out stores-hinting:
+this is the stores-hinting rule:
 	if you-can-advance:
 		if store r is in Trips Strip:
 			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
@@ -874,7 +861,7 @@ carry out stores-hinting:
 
 section forest
 
-carry out forest-hinting:
+this is the forest-hinting rule:
 	if location of player is rf or location of player is sf:
 		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random touchable guider instead;
@@ -931,7 +918,7 @@ carry out objhinting heaths when fairy-worthy is false: try objhinting faeries i
 
 carry out objhinting tulip when tulip is in Esoteric Coteries: try objhinting nerds instead;
 
-carry out metros-hinting:
+this is the metros-hinting rule:
 	if player is in The Ol' Hotel:
 		if night thing is in The Ol' Hotel, try objhinting night thing instead;
 		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
@@ -1012,7 +999,7 @@ rock-first is a truth state that varies.
 
 isle-clue is a truth state that varies.
 
-carry out resort-hinting:
+this is the resort-hinting rule:
 	if player is in Astral Altars, try objhinting tiles instead;
 	if player is in Leis Isle:
 		if cork is touchable or wings are touchable, all-say "You've found one way across the water[if cork is off-stage], though you can HINT ROCK for another[else if wings are off-stage], though you can HINT SWING for another[end if]." instead;
@@ -1050,7 +1037,7 @@ carry out objhinting cask when sack is off-stage: all-say "[one of]The cask is v
 
 carry out objhinting an ingredient: all-say "[The noun] can become part of a meal." instead;
 
-carry out sortie-hinting:
+this is the sortie-hinting rule:
 	if player is in Trap Part:
 		if numset of dial is 16, all-say "You don't need to do anything else here." instead;
 		try objhinting dial instead;
@@ -1959,17 +1946,17 @@ Metros	trade tread	"You return to the hustle, bustle, etc."
 
 book region division
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. [both bulge/blot, darnels, static]
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. [both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. [cabinet]
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. [cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. [slit, banshee]
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. [slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. [cake pan, grist]
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. [cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. [antlers]
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. [antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 orig-region is Ordeal Loader.
 
