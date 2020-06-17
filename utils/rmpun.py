@@ -83,6 +83,12 @@ def find_strings(my_project):
             if line.startswith(";"): break
             ll = line.lower().strip()
             if not ll: continue
+            if ll.startswith("source_start_line="):
+                global source_start_line
+                if source_start_line:
+                    print("Rewriting source start line", source_start_line, "at", my_project, line_count)
+                source_start_line = re.sub(".*=", "", ll)
+                continue
             if line == line.upper():
                 if ll not in valid_matchdict:
                     print("WARNING: invalid section", ll, "line", line_count)
@@ -153,14 +159,28 @@ while cmd_count < len(sys.argv):
         my_project = "roiling"
     cmd_count += 1
 
+source_start_line = ""
+
+try:
+    find_strings("globals")
+except:
+    print("Could not find globals file. This is not a big deal.")
+
 find_strings(my_project)
 i7.go_proj(my_project)
+
+source_started_yet = not source_start_line
 
 headers_list = [ i7.hdr(my_project, 'ta'), i7.hdr(my_project, 'nu'), i7.hdr(my_project, 'mi') ]
 
 with open("story.ni") as file:
     for (line_count, line) in enumerate(file, 1):
         ll = line.lower()
+        if not source_started_yet:
+            if ll.startswith(source_start_line):
+                source_started_yet = True
+                print("Started reading source at line", line_count)
+            continue
         temp = has_flaggable(ll)
         if temp:
             print("story.ni", line_count, "FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
@@ -190,12 +210,17 @@ print("Caught needing a fix:", caught_need_fix)
 print(len(replaced))
 fix_no_replace = [x for x in match_dictionary['to_fixes'] if x not in replaced]
 
+full_count = local_count = 0
+
 if print_unused:
     for x in sorted(match_dictionary):
+        local_count = 0
         if x == 'flag_outside_quotes': continue
         for y in sorted(match_dictionary[x]):
             if not match_dictionary[x][y]:
-                print(x, "did not use", y)
+                local_count += 1
+                full_count += 1
+                print("{}{}".format(local_count, "/" + str(full_count) if full_count > local_count else ""), x, "did not use", y)
 
 if show_first_lines:
     for x in replace_first: print(x, replace_first[x])
