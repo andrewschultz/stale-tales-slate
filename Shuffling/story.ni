@@ -109,6 +109,8 @@ include Shuffling Tests by Andrew Schultz. [must come after rules-based testing]
 
 include STS Common by Andrew Schultz.
 
+include Punctuation Stripper by Andrew Schultz.
+
 book debug modules - not for release
 
 include Object Response Tests by Juhana Leinonen.
@@ -8065,6 +8067,7 @@ after reading a command:
 			all-say "[the player's command]";
 			now just-print is true;
 		reject the player's command;
+	abide by the punctuation-munge rule;
 	if period-warned is false:
 		if the player's command matches the regular expression "\.":
 			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. This is fixed in later versions of Inform, but moving ahead proved too sticky. Sorry. That said, normal commands will work okay.[wfak]";

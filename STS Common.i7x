@@ -395,7 +395,7 @@ sqing is an action out of world.
 
 understand the command "sq" as something new.
 
-understand "sq" as sbing.
+understand "sq" as sqing.
 
 carry out sqing:
 	now bugsquash is whether or not bugsquash is false;
