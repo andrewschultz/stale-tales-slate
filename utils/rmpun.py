@@ -9,7 +9,9 @@ import mytools as mt
 print_unused = True
 remove_bracketed = True
 
-valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes', 'ignores', 'replaceables', 'deffos_start', 'deffos_anywhere']
+source_start = defaultdict(str)
+
+valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes', 'ignores', 'replaceables', 'deffos_start', 'deffos_anywhere', 'source_start_line']
 
 #truth state which/that varies
 replaced = defaultdict(int)
@@ -83,12 +85,6 @@ def find_strings(my_project):
             if line.startswith(";"): break
             ll = line.lower().strip()
             if not ll: continue
-            if ll.startswith("source_start_line="):
-                global source_start_line
-                if source_start_line:
-                    print("Rewriting source start line", source_start_line, "at", my_project, line_count)
-                source_start_line = re.sub(".*=", "", ll)
-                continue
             if line == line.upper():
                 if ll not in valid_matchdict:
                     print("WARNING: invalid section", ll, "line", line_count)
@@ -99,6 +95,10 @@ def find_strings(my_project):
                     this_section = ll
                     continue
             if not this_section: continue
+            if this_section == "source_start_line":
+                ary = line.lower().strip().split('=')
+                source_start[ary[0]] = ary[1]
+                continue
             for x in ll.split(","):
                 x0 = x.strip()
                 if not x0:
@@ -130,8 +130,15 @@ def has_flaggable(my_line):
 
 def just_flag(my_file):
     my_file_short = os.path.basename(my_file)
+    short_lower = my_file_short.lower()
+    source_started_yet = short_lower not in source_start
     with open(my_file) as f:
         for (line_count, line) in enumerate(f, 1):
+            if not source_started_yet:
+                if line.startswith(source_start[short_lower]):
+                    #print("Starting to read", my_file_short, "source line", line_count)
+                    source_started_yet = True
+                continue
             ll = line.lower().strip()
             temp = has_flaggable(ll)
             if temp:
@@ -171,8 +178,6 @@ while cmd_count < len(sys.argv):
         exit()
     cmd_count += 1
 
-source_start_line = ""
-
 try:
     find_strings("globals")
 except:
@@ -181,23 +186,21 @@ except:
 find_strings(my_project)
 i7.go_proj(my_project)
 
-source_started_yet = not source_start_line
+short_main = os.path.basename(i7.main_src(my_project)).lower()
+source_started_yet = short_main not in source_start
 
-headers_list = [ i7.hdr(my_project, 'ta'), i7.hdr(my_project, 'nu'), i7.hdr(my_project, 'mi') ]
+full_file_list = [ i7.main_src(my_project), i7.hdr(my_project, 'ta'), i7.hdr(my_project, 'nu'), i7.hdr(my_project, 'mi') ]
 
 with open("story.ni") as file:
     for (line_count, line) in enumerate(file, 1):
         ll = line.lower()
         if not source_started_yet:
-            if ll.startswith(source_start_line):
+            if ll.startswith(source_start[short_main]):
                 source_started_yet = True
                 print("Started reading source at line", line_count)
             continue
         temp = has_flaggable(ll)
         if temp:
-            print("story.ni", line_count, "FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
-            print("----" + ll)
-            mt.add_open("story.ni", line_count)
             continue
         if is_ignorable(ll): continue
         first_sentence = re.sub("[\"\t\(\[].*", "", line.rstrip()).lower()
@@ -215,7 +218,7 @@ with open("story.ni") as file:
             count += 1
         print(count, line_count, first_sentence, '/', l2, '/', l3)
 
-for x in headers_list:
+for x in full_file_list:
     just_flag(x)
 
 print("Caught needing a fix:", caught_need_fix)
