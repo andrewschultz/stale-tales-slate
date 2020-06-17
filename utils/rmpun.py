@@ -126,18 +126,18 @@ def has_flaggable(my_line):
             ml = ml.replace("table of " + q, "borexxx")
             if q in ml:
                 ary.append(q)
-    if ary: print(ml)
     return ary
 
 def just_flag(my_file):
     my_file_short = os.path.basename(my_file)
     with open(my_file) as f:
         for (line_count, line) in enumerate(f, 1):
-            ll = line.lower()
+            ll = line.lower().strip()
             temp = has_flaggable(ll)
             if temp:
                 print(my_file_short, line_count, "FLAGGED TEXT WE THOUGHT WAS DONE:", temp)
                 print("----" + ll)
+                print()
                 mt.add_open(my_file, line_count)
                 continue
 
@@ -157,6 +157,18 @@ while cmd_count < len(sys.argv):
         my_project = "shuffling"
     elif arg == 'r':
         my_project = "roiling"
+    elif arg == 'er' or arg == 're':
+        os.system("rmpun-roiling.txt")
+        exit()
+    elif arg == 'es' or arg == 'se':
+        os.system("rmpun-shuffling.txt")
+        exit()
+    elif arg == 'eg' or arg == 'ge':
+        os.system("rmpun-globals.txt")
+        exit()
+    elif arg == 'ec' or arg == 'ce':
+        mt.open_this()
+        exit()
     cmd_count += 1
 
 source_start_line = ""
@@ -209,6 +221,8 @@ for x in headers_list:
 print("Caught needing a fix:", caught_need_fix)
 print(len(replaced))
 fix_no_replace = [x for x in match_dictionary['to_fixes'] if x not in replaced]
+if len(fix_no_replace):
+    print("Slated for fix with no replacement:", ', '.join(sorted(fix_no_replace)))
 
 full_count = local_count = 0
 
@@ -216,6 +230,7 @@ if print_unused:
     for x in sorted(match_dictionary):
         local_count = 0
         if x == 'flag_outside_quotes': continue
+        if x == 'to_fixes': continue
         for y in sorted(match_dictionary[x]):
             if not match_dictionary[x][y]:
                 local_count += 1
