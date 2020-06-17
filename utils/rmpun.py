@@ -5,7 +5,10 @@ import re
 import i7
 import mytools as mt
 
+#future cmd line options
+print_unused = True
 remove_bracketed = True
+
 valid_matchdict = ['shorts', 'to_fixes', 'flag_outside_quotes', 'ignores', 'replaceables', 'deffos_start', 'deffos_anywhere']
 
 #truth state which/that varies
@@ -24,7 +27,7 @@ count = 0
 
 def cut_down_need_fixing(line, line_count):
     temp = line
-    for x in match_dictionary["to_fixes"]:
+    for x in match_dictionary['to_fixes']:
         t2 = temp
         temp = temp.replace(x, 'zzz')
         if t2 != temp:
@@ -35,25 +38,30 @@ def cut_down_need_fixing(line, line_count):
 
 def cut_down(line):
     temp = line.lower()
-    for x in match_dictionary["replaceables"]:
+    for x in match_dictionary['replaceables']:
         temp = temp.replace(x, 'xxx')
+        match_dictionary['replaceables'][x] += 1
     return temp
 
 def is_ignorable(line):
-    for x in match_dictionary["ignores"]:
+    for x in match_dictionary['ignores']:
         if line.startswith(x):
-            starts[x] += 1
+            match_dictionary['ignores'][x] += 1
             return True
     return False
 
 def is_definition(line):
-    for x in match_dictionary["deffos_start"]:
+    exact_found = False
+    for x in match_dictionary['deffos_start']:
         if line.startswith(x):
-            return True
-    for x in match_dictionary["deffos_anywhere"]:
+            match_dictionary['deffos_start'][x] += 1
+            exact_found = True
+    for x in match_dictionary['deffos_anywhere']:
         if x in line:
             if 'popstar' in line: print("!!", x)
-            return True
+            match_dictionary['deffos_anywhere'][x] += 1
+            exact_found = True
+    if exact_found: return True
     if '-quip' in line and re.search("^[a-zA-Z0-9-]+-quip", line): return True
     if line.startswith('t-') and re.search("^t-[a-z]+ly", line): return True
     return False;
@@ -63,10 +71,11 @@ def cut_down_shorts(line):
     for x in match_dictionary['shorts']:
         if x not in temp: continue
         if x in temp and re.search(r'\b{}\b'.format(x), temp):
+            match_dictionary['shorts'][x] += 1
             temp = re.sub(r'\b{}\b'.format(x), 'yyy', temp)
     return temp
 
-def find_strings():
+def find_strings(my_project):
     this_section = ""
     with open("rmpun-{}.txt".format(my_project)) as file:
         for (line_count, line) in enumerate(file, 1):
@@ -105,7 +114,7 @@ def has_flaggable(my_line):
     ml = ' '.join(my_line.split('"')[0::2])
     if remove_bracketed: ml = re.sub("\[[^\]]+\]", "", ml)
     ary = []
-    for q in match_dictionary["flag_outside_quotes"]:
+    for q in match_dictionary['flag_outside_quotes']:
         if q in ml:
             ml = ml.replace("bore-" + q, "borexxx")
             ml = ml.replace("table of " + q, "borexxx")
@@ -144,11 +153,10 @@ while cmd_count < len(sys.argv):
         my_project = "roiling"
     cmd_count += 1
 
+find_strings(my_project)
 i7.go_proj(my_project)
 
 headers_list = [ i7.hdr(my_project, 'ta'), i7.hdr(my_project, 'nu'), i7.hdr(my_project, 'mi') ]
-
-find_strings()
 
 with open("story.ni") as file:
     for (line_count, line) in enumerate(file, 1):
@@ -180,11 +188,14 @@ for x in headers_list:
 
 print("Caught needing a fix:", caught_need_fix)
 print(len(replaced))
-fix_no_replace = [x for x in match_dictionary["to_fixes"] if x not in replaced]
-if len(fix_no_replace):
-    print("No longer in the source:", fix_no_replace)
-else:
-    print("Everything in the fix array is targeted in the source.")
+fix_no_replace = [x for x in match_dictionary['to_fixes'] if x not in replaced]
+
+if print_unused:
+    for x in sorted(match_dictionary):
+        if x == 'flag_outside_quotes': continue
+        for y in sorted(match_dictionary[x]):
+            if not match_dictionary[x][y]:
+                print(x, "did not use", y)
 
 if show_first_lines:
     for x in replace_first: print(x, replace_first[x])
