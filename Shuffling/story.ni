@@ -1025,7 +1025,7 @@ this is the resort-hinting rule:
 		if potters are touchable and kilns are not touchable, try objhinting links instead;
 		if red bull burdell is touchable, try objhinting red bull burdell instead;
 		all-say "There is nothing more to do here except go east." instead;
-	if player is in Means Manse, try objhinting final-exits instead;
+	if player is in Means Manse, try objhinting X ITES exits instead;
 	all-say "Unhandled case. I need to fix this, so a transcript would be an enormous help." instead;
 	the rule succeeds;
 
@@ -2966,7 +2966,7 @@ rule for supplying a missing noun when xmxing:
 			now noun is m2;
 		continue the action;
 	if player is in Means Manse:
-		now noun is final-exits;
+		now noun is X ITES exits;
 		continue the action;
 	say "Nothing really sticks out. You may have to XX something specific.";
 	reject the player's command;
@@ -3126,7 +3126,7 @@ carry out xmxing:
 	if noun is red bull burdell or noun is toe:
 		say "You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells 'GET OUT.' Maybe you could pull it...no, not pull...well, there are only six possibilities...";
 		ditch-saltine instead;
-	if noun is final-exits:
+	if noun is X ITES exits:
 		say "They just seem to EXIST. Maybe you can, too.";
 		ditch-saltine instead;
 	if noun is a teleporter:
@@ -7774,15 +7774,13 @@ carry out tuging:
 
 chapter Means Manse
 
-Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the [i]exits[r] and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges.
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The last thing to do is to assure yourself you don't need to do any more. Perhaps you could just praise yourself or make the manse feel a bit more yours or even just ignore the exits (labeled X-ITES in red) and be yourself. There's got to be more than one way to get full closure[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort. roomnud of Means Manse is table of Means Manse nudges.
 
 check going outside in Means Manse: say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead;
 
-check scaning final-exits: try scaning the location instead;
+check scaning X ITES exits: try scaning the location instead;
 
-the final-exits are flippable privately-named plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do."
-
-understand "exits" as final-exits when player is in Means Manse.
+the X ITES exits are flippable plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do.". understand "xites" and "xites exits" as X ITES exits when player is in Means Manse.
 
 the marble is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
