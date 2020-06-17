@@ -23,7 +23,7 @@ store f	scented descent	"forest"	"store f"	--	--	"The greens and browns of Store
 store i	posted depots	"sortie"	"store i"	--	--	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	--	--	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
 store r	ogled lodge	"resort"	"store r"	pre-storer-resort rule	--	"Store R rumbles and reforms into something far posher. Not just a resort, but an ogled lodge! 'Congratulations, adventurer!' croons a syrupy voice. 'For defeating Red Bull Burdell, a wonderful place is now yours and yours alone!'[paragraph break]Hey! Wait a minute! But before you reply, the voice continues 'Go! Rest!'"	false	572190276
-acne-bit cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	post-cabinet-bactine rule	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
+acne bit cabinet	tenibac	"bactine"	"bactine"	pre-cabinet-bactine rule	post-cabinet-bactine rule	"You hear bubbling. A small bottle of Bactine appears in the back of the acne-bit cabinet and then tips over on each place where the cabinet was scarrred. Slowly, the cabinet smooths out. The cabinet almost seems to dance."	false	384428789	--	--	Trips Strip [end Trips Strip anagrams] [note that cratered bits and not cabinet are what is flipped. Since Shuffling doesn't use "reflexed" like roiling, this is the easiest way to do things.ere it's at.]
 
 book Forest
 
@@ -37,7 +37,7 @@ bread	beard	"beard"	"bread"	--	--	"[process-sandwich]The bread seems to grow a f
 sliver	silver	"silver"	"silver"	pre-livers-sliver-silver rule	--	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
 livers	sliver	"sliver"	"livers"	pre-livers-sliver rule	--	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
 liches	chisel	"chisel"	"liches"	--	post-liches-chisel rule	"'Dissolve, vile sods!' you cry for effect. You hear a spectral clapster![paragraph break]As the final shade heads to Hades--sad, eh?--a chisel clatters behind. The chisel doesn't seem to vibrate scarily or anything, so you take it. You're also less distracted now and notice a spread on the north wall--it seems to pulse a bit, as if it could change to something dangerous."	true	379174644
-banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	--	post-banshee-hasbeen rule	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
+banshee	has been	"hasbeen" or "has been"	"banshee"	--	post-banshee-hasbeen rule	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
 red asp	drapes	"drapes"	"red asp"	--	--	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
 spread	drapes	"drapes"	"spread"	--	--	"The spread briefly turns into a red asp that jumps at you before collapsing into thicker, but less wide, drapes. You won't be able to just walk through them."	false	414086744 [must be 2nd else you get a problem with 2 points]
 Spam	maps	"maps"	"spam"	--	--	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
@@ -50,7 +50,7 @@ the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg
 warts	straw	"straw"	"warts"	--	--	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
 t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
-cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
+cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
 cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	pre-cathouse-hotsauce rule	--	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
 grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
@@ -222,7 +222,7 @@ this is the post-liches-chisel rule:
 
 this is the post-banshee-hasbeen rule:
 	min-up;
-	moot has-been;
+	moot has been;
 
 section sortie auxiliary
 
@@ -540,7 +540,7 @@ Store F	"That seemed right but didn't seem quite natural."
 Store I	"Store I shakes a bit. You see red wondering how you'll rise to the challenge of entering it."
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
-acne-bit cabinet	"The cabinet wobbles a bit."
+acne bit cabinet	"The cabinet wobbles a bit."
 slit	"The slit waxes and wanes a bit." [forest]
 ones	"The ones rattle a bit. Maybe you can sense out what they should be."
 dashes	"The dashes seemed to rattle a bit, but you feel slightly uncool."
@@ -711,7 +711,7 @@ hint-entry	advice-entry	parallel-entry
 yourself	"[if cur-score of Ordeal Loader is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
 dope tan notepad	"You will write procedural things in your notepad as you get them."
-acne-bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems wounded. Maybe you can help it not be acne-bit. [plus][or]The acne-bit cabinet is a LLP and maybe a slightly tricky one, because it refers to a brand name that has become a word. [plus][or]A healing solution that has no letter slots in common with if you READ the cabinet will work. You could also scan the cabinet for clues, of course. [plus][or]BACTINE. [minus][cycling]"
+acne bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems wounded. Maybe you can help it not be acne-bit. [plus][or]The acne-bit cabinet is a LLP and maybe a slightly tricky one, because it refers to a brand name that has become a word. [plus][or]A healing solution that has no letter slots in common with if you READ the cabinet will work. You could also scan the cabinet for clues, of course. [plus][or]BACTINE. [minus][cycling]"
 cratered bits	"The cratered bits make the cabinet acne-bit and clue what it can become[if Trips Strip is unvisited] once you start your main quest[end if], since they are red, and red means no letters are right."
 name list	"The list hints what Shuffling Around is all about."
 vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
@@ -949,7 +949,7 @@ instructions	"Just a little something to make it plausible to muddle with the co
 nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question. [plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing. [plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is... [plus][or]DARKNESS. [plus][or] ASK NERDS ABOUT DARKNESS. [minus][cycling]"
 Memo Tote Tome	"Examining, if not reading, the Memo Tote Tome gives clues what to ask the nerds about."
 tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
-lit-up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
+lit up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
 gin nope opening	"[if controls are part of gin nope opening]You've fixed the power.[else][one of]The opening at the top of the cafe face is interesting. [plus][or]It appears to have a bunch of circuit-ends, etc. [plus][or]The controls can override the power surge to the east. [plus][or]PUT CONTROLS IN OPENING. [minus][cycling][end if]"
 siren	"[one of]The siren is irritating. [plus][or]You can disable it and make something you need. [plus][or]It becomes RESIN. [minus][cycling]"
 resin	"With the resin on your hands, you can get a better grip on things. You don't need to do anything."

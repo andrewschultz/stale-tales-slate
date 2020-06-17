@@ -166,7 +166,7 @@ chapter forest
 
 test fo with "forest/forest/smell/n/s/e/w/enter door" in Trips Strip
 
-test shades with "w/get bread/e/e/dashes/ones/shades/nose/beard/put shades on nose/put nose on beard/disas/put shades on beard/put nose on beard/disas/put nose on beard/put shades on beard/disas/put nose on beard/put shades on nose" in Self-ID Fields
+test shades with "w/get bread/e/e/dashes/ones/shades/nose/beard/put shades on nose/put nose on beard/disas/put shades on beard/put nose on beard/disas/put nose on beard/put shades on beard/disas/put nose on beard/put shades on nose" in Self ID Fields
 
 test forest with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shades on nose/get nose and shotgun/w/w/get bread/get spam/beard/put nose on beard/wear beard/e/n/y/chisel/get chisel/s/w/peel viler/peel river/put viler in canister/put river in canister/spam/e/n/hasbeen/silver/sliver/silver/drapes/silver/cut drapes/silver/put silver in shotgun/maps/n/read maps/wolves/shoot wolves/v ts" in Trips Strip
 
@@ -530,7 +530,7 @@ carry out meting:
 	if number understood > 2 or number understood < 1, say "1 for heaths, 2 for begonias." instead;
 	if Bassy Abyss is visited:
 		say "Sorry, you need to restart to run the MET test command again.";
-	now player has the lit-up tulip;
+	now player has the lit up tulip;
 	now power-shut is true;
 	move player to terminal, without printing a room description;
 	if number understood is 1:
@@ -714,7 +714,7 @@ rule-short (topic)	rule-name	rule-description
 "fi"	in-fields rule	"in Self-ID Fields"
 
 this is the in-fields rule:
-	if the player is in Self-ID Fields, the rule succeeds;
+	if the player is in Self ID Fields, the rule succeeds;
 	the rule fails;
 
 this is the max-reg-score rule:

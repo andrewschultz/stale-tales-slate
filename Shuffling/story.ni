@@ -245,7 +245,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 250.
 
-use MAX_VERBS of 440. [-40 from debug]
+use MAX_VERBS of 450. [-40 from debug]
 
 use MAX_VERBSPACE of 4800.
 
@@ -257,7 +257,7 @@ section compiler adjust constant section - not for release
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 480.
+use MAX_VERBS of 490.
 
 use MAX_VERBSPACE of 5100.
 
@@ -608,8 +608,8 @@ to show-missed (curr - a region):
 		if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
 		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with BACTINE.";
 	if curr is forest:
-		if slit is in Self-ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to SILT.";
-		if has-been is off-stage, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
+		if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to SILT.";
+		if banshee is not moot, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
 	if curr is sortie:
 		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
 		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
@@ -619,7 +619,7 @@ to show-missed (curr - a region):
 		say "[2dn]the [if begonias are in Fo' Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	if curr is resort:
-		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in Leis Isle]to expose the leis as an illusion[else]instead of taking the leis[end if].";
+		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in Leis Isle]to expose the Leis Isle as an illusion[else]instead of taking the leis[end if].";
 		if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
 		if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
 		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
@@ -640,7 +640,7 @@ rule for showing what the player missed:
 	repeat with zq running through solved regions:
 		show-missed zq;
 
-to say toolwood: say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
+to say toolwood: say "[one of][if tool shed is in Rived Drive]. The sprig/spore was one way through, but the toolshed was the other[end if][or][stopping]"
 
 to say alt-sols:
 	let firsty be false;
@@ -867,7 +867,7 @@ this is the forest-hinting rule:
 	if location of player is rf or location of player is sf:
 		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random touchable guider instead;
-	if location of player is Self-ID Fields:
+	if location of player is Self ID Fields:
 		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
 		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
 		if ones are off-stage or shades are off-stage, all-say "You need to solve a puzzle to the east." instead;
@@ -969,7 +969,7 @@ this is the metros-hinting rule:
 		if heaths are in Fo' Real Florae and begonias are in Fo' Real Florae, all-say "Pick a reward from the faeries, then come back here." instead;
 		all-say "You don't have much to do here right now." instead;
 	if player is in Esoteric Coteries:
-		if player has lit-up tulip, all-say "Nothing more to do here." instead;
+		if player has lit up tulip, all-say "Nothing more to do here." instead;
 		try objhinting nerds instead;
 	if player is in Elm Train Terminal or player is on cafe face:
 		if power-shut is true, all-say "You've done what you can here[if player does not have tulip]. You'll need a light source to go east across the rail[end if][if Esoteric Coteries are unvisited]. You haven't been behind the door east of the Underside, yet[end if]." instead;
@@ -1206,7 +1206,7 @@ understand "eat [something]" as eating.
 
 check eating: [?? eat weird stuff]
 	if noun is snarled darnels, say "[if goat is touchable]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead; [ordeal reload]
-	if noun is info-lit, say "If this were a spy game, that would be ideal. But it isn't." instead;
+	if noun is tin foil info lit, say "If this were a spy game, that would be ideal. But it isn't." instead;
 	if noun is bread, say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use." instead; [forest]
 	if noun is beard, say "It's less appetizing as a beard than as bread. And if there WERE anything edible in it, ... eww." instead;
 	if noun is a glopmeat, say "Uggh. No way[if noun is examined]. Even though someone stamped it as eatable[end if]." instead;
@@ -2392,7 +2392,7 @@ check going when player is in sf or player is in rf:
 		else:
 			say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
 			reg-inc;
-			move player to Self-ID Fields;
+			move player to Self ID Fields;
 			the rule succeeds;
 	if noun is inside or noun is outside, say "Any of the four directions could lead inside somewhere else, or outside the forest. So you need to figure which." instead;
 	say "You go [noun] a bit, but the paths and vegetation multiply. You detect [one of]a sneak-snake[or]a fauns snafu[or]a stag or gators[or]a stoat making toast of you[or]percuss-spruces[or]slickest stickles[in random order], which is enough to drive you back to where you were." instead;
@@ -2543,7 +2543,7 @@ check examining (this is the examine-dirs rule):
 	if noun is a direction, say "[if the room noun of location of player is nowhere]That doesn't seem to lead anywhere.[else]Just try going that way instead. Don't be scared! You can always undo![end if]" instead;
 
 check going inside in Busiest Subsite:
-	say "Someone tugs you by the arm. 'Can't you read? It says NOPE! PEON! But you look at it again, and the passage seems to say OPEN. You brush that someone off, and oddly, they are wearing a NEON POPE t-shirt.[paragraph break]'Nice. Smart. Miscreant!' they snort, as you flee.[paragraph break][wfak]";
+	say "Someone tugs you by the arm. 'Can't you read? It says NOPE! PEON! But you look at it again, and the passage seems to say OPEN. You brush that someone off, and oddly, each is wearing a NEON POPE t-shirt.[paragraph break]'Nice. Smart. Miscreant!' they snort, as you flee.[paragraph break][wfak]";
 	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file, or you may be charged with an if-ill fee.";
 	set the pronoun it to odor;
 	now player is in Rested Desert instead;
@@ -2870,31 +2870,29 @@ description of the attics is "They fit perfectly on what was once the top of the
 
 section acne-bit cabinet
 
-the acne-bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne-bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping]."
+the acne bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping].". printed name of cabinet is "acne-bit cabinet". understand "acnebit" and "acnebit cabinet" as cabinet. description of acne bit cabinet is "It's open[if acne-bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
 
-gpos of acne-bit cabinet is 3. rpos of acne-bit cabinet is 6. lgth of acne-bit cabinet is 7. rgtext of acne-bit cabinet is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of acne-bit cabinet is "-A[d1][d1][d1][d1][d1]". rect-text of acne-bit cabinet is "B[d1][d1][d1][d1][d1]E".
-
-check inserting into the acne-bit cabinet:
-	if noun is gadget or noun is saltine or noun is info-lit or noun is phial, say "No need to put [the noun] back in the cabinet. It's yours." instead;
-	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else if Trips Strip is visited]only need to put items you're done with in it[else]probably won't be coming back[end if]." instead;
-
-check opening acne-bit cabinet: say "It already is." instead;
-
-check taking acne-bit cabinet: say "Whatever keeps it floating in place also keeps you from moving it. Besides, it's a bit heavy." instead;
-
-description of acne-bit cabinet is "It's open[if acne-bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
+gpos of acne bit cabinet is 3. rpos of acne bit cabinet is 6. lgth of acne bit cabinet is 7. rgtext of acne bit cabinet is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of acne bit cabinet is "-A[d1][d1][d1][d1][d1]". rect-text of acne bit cabinet is "B[d1][d1][d1][d1][d1]E".
 
 to say velcro-check: say " with the right healing potion or whatever[if metros is solved]. You think back to how the Velcro was sort of a brand name, and maybe you need a common one here[end if]"
+
+check inserting into the acne bit cabinet:
+	if noun is gadget or noun is saltine or noun is tin foil info lit or noun is phial, say "No need to put [the noun] back in the cabinet. It's yours." instead;
+	say "Yes, the cabinet is for storage, but you [if gateman is off-stage]don't have anywhere to go, yet[else if Trips Strip is visited]only need to put items you're done with in it[else]probably won't be coming back[end if]." instead;
 
 check examining cabinet:
 	ignore the examine containers rule;
 	if location of player is Trips Strip, say "You've no idea where the cabinet puts all its items. Maybe you didn't read the right fantasy books. But--they're there, helping keep your inventory free. A small favor[if number of things in cabinet > 0]. You notice some potentially useful stuff in the cabinet: [list of things in cabinet]." instead;
 
+check opening acne bit cabinet: say "It already is." instead;
+
+check taking acne bit cabinet: say "Whatever keeps it floating in place also keeps you from moving it. Besides, it's a bit heavy." instead;
+
 description of cratered bits is "The acne-bit parts are very red. Interesting."
 
-check closing the acne-bit cabinet: say "You don't need to hide anything in there from anyone." instead;
+check closing the acne bit cabinet: say "You don't need to hide anything in there from anyone." instead;
 
-the tenibac is boring scenery. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.".
+the tenibac is boring scenery. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
 
 section prep paper
 
@@ -2908,7 +2906,7 @@ to say metros-prep: say "M-A. [if gardenia is off-stage]Find a flower[else][seco
 
 section salient saltine
 
-the salient saltine is a warpable thing in the acne-bit cabinet.
+the salient saltine is a warpable thing in the acne bit cabinet.
 
 report taking salient saltine for the first time:
 	say "Got it. You'd have liked a beefier freebie, but with calm opining, you see no use complaining.";
@@ -3176,15 +3174,15 @@ check eating the saltine:
 
 section tinfoil info-lit
 
-the tinfoil info-lit is an amusing thing in cabinet. understand "tin/info/lit/paper" as tinfoil info-lit. the tinfoil info-lit is warpable.
+the tin foil info lit is an amusing thing in cabinet. understand "paper" as tin foil info lit. the tin foil info lit is warpable. printed name of tin foil info lit is "tinfoil info-lit". [we might as well separate tin and foil, hence the "tin foil"]
 
-description of tinfoil info-lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why don't you have even MORE cluing items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in Trips Strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
+description of tin foil info lit is "[one of]It's tinfoil only in writing content--it's actually just paper. It's excessively all-caps and underlined, but I'll spare you that.[or]You read it again.[stopping]--If you can change stuff, why can't the people who made the gadget? How do they know you can? Or why couldn't they find someone off the street? Perhaps they're the real enemy and you're the pawn.[line break]--If they really wanted you to clean things up, why don't you have even MORE cluing items?[line break]--That NEW DOOR is not really ONE WORD. Same as the guy who can lift it! They are two short words, easier than one big scary seven-letter word.[line break]--Anyone smart enough to untangle this world won't get any fulfillment from doing so. So there, stupider disputer![paragraph break]--Sane Sean, Farce Facer, Saltier Realist[paragraph break][if store f is moot or store i is moot or store m is moot]This seems like total nonsense, now you've found other portals and such[else if player is in Trips Strip]This guy must be wrong. You've gotten to the Trips Strip, and you just need a way out[else]It'd all be distressingly persuasive gotcha-logic if you hadn't been able to flip that toga. But this is a fantasy world, [logic-cracks][end if]."
 
 to say logic-cracks: say "[if getaway is touchable or gateman is touchable]and you've already shown cracks in his logic[else]so there's a chance he's wrong[end if]"
 
 section tagged gadget
 
-a tagged gadget is in acne-bit cabinet. the tagged gadget is warpable. the tagged gadget can be broken. the tagged gadget is not broken.
+a tagged gadget is in acne bit cabinet. the tagged gadget is warpable. the tagged gadget can be broken. the tagged gadget is not broken.
 
 after printing the name of the tagged gadget when taking inventory:
 	if tagged gadget is examined or ever-scan is true:
@@ -3434,7 +3432,7 @@ section blue lube and phail phial
 
 [a hack here is to put this below the gadget so the "Ow" appears last]
 
-the PHAIL phial is a thing in acne-bit cabinet. the phial is warpable.
+the PHAIL phial is a thing in acne bit cabinet. the phial is warpable.
 
 description of PHAIL phial is "It feels tingly and looks glinty. It contains some blue lube that sloshes about a bit[if phial is not in cabinet]. You see the words GLEAN/ANGLE scratched on it, and it also reads, in small print, PROACTIVELY HELPING ADVENTURERS IN LIMBO. Geez, acronyms can be so contrived[else]. It looks like you could read it, if you took it from the cabinet[end if]."
 
@@ -3552,7 +3550,7 @@ carry out gleaning:
 		if store r is touchable, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
 		all-say "You see yourself relaxing in a large manse far from here." instead;
 	if mrlp is forest:
-		if Self-ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
+		if Self ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
 		if Cruel Ones' Enclosure is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
 		if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
 		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
@@ -3892,7 +3890,7 @@ description of disamb-store is "[sto-desc]".
 check burning:
 	if noun is a sto, say "The stores have suffered enough." instead;
 	if noun is warts, say "That's a false cure that makes them worse." instead;
-	say "You've got no source of fire[if player has lit-up tulip]. The tulip doesn't count--it's child safe and stuff[end if]." instead;
+	say "You've got no source of fire[if player has lit up tulip]. The tulip doesn't count--it's child safe and stuff[end if]." instead;
 
 check pushing a sto: say "Physical activity won't do it, here." instead;
 
@@ -4327,18 +4325,18 @@ the leaves are privately-named boring scenery in sf. "They've already undergone 
 
 chapter Self-ID Fields
 
-Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north.". roomnud of Self-ID Fields is table of Self ID Fields nudges.
+Self ID Fields is a room in Forest. printed name is "Self-ID Fields". "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes from a selves vessel to the south through [one of]something labeled [or][stopping]Corses Crosse at regular intervals to the north.". roomnud of Self ID Fields is table of Self ID Fields nudges. understand "selfid" and "selfid fields" as Self ID Fields.
 
-after looking in Self-ID Fields:
+after looking in Self ID Fields:
 	set the pronoun it to gy;
 	set the pronoun him to gy;
 	set the pronoun her to gy;
 	set the pronoun them to line of no life;
 	continue the action;
 
-check going inside in Self-ID Fields: try going north instead;
+check going inside in Self ID Fields: try going north instead;
 
-check going north in Self-ID Fields when Enclosure is unvisited and player has gadget and tag is part of the gadget (this is the forest gadget checkpoint rule):
+check going north in Self ID Fields when Enclosure is unvisited and player has gadget and tag is part of the gadget (this is the forest gadget checkpoint rule):
 	if player has beard or player wears beard:
 		if forest-warn is false and button-locked is false:
 			now forest-warn is true;
@@ -4357,7 +4355,7 @@ Include (-
 	has transparent animate
 -) when defining gy.
 
-gy is privately-named boring scenery in Self-ID Fields. understand "man" as gy when player is in Self-ID Fields. description of gy is "They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.". bore-text of gy is "Any individual guy going by doesn't matter. All they can do is face their fate. Maybe you can learn from them.".
+gy is privately-named boring scenery in Self ID Fields. understand "man" as gy when player is in Self ID Fields. description of gy is "They are going by too quickly to look at any one for too long. There's some limited variety to their facial hair and dress.". bore-text of gy is "Any individual guy going by doesn't matter. All they can do is face their fate. Maybe you can learn from them.".
 
 this is the bore-gy rule:
 	set the pronoun it to gy;
@@ -4377,7 +4375,7 @@ Include (-
 	has transparent animate
 -) when defining line of no life.
 
-a thing called line of no life is plural-named boring scenery in Self-ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if Cruel Ones' Enclosure is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
+a thing called line of no life is plural-named boring scenery in Self ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if Cruel Ones' Enclosure is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
 
 this is the bore-line-life rule:
 	it-them line of no life;
@@ -4386,7 +4384,7 @@ understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as lin
 
 section corses crosse
 
-Corses Crosse is boring scenery in Self-ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing[if slit is in Self-ID Fields], and there's a menacing looking slit off to one side[end if]. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
+Corses Crosse is boring scenery in Self ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing[if slit is in Self ID Fields], and there's a menacing looking slit off to one side[end if]. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
 
 this is the bore-crosse rule:
 	if current action is entering, try going north instead;
@@ -4395,22 +4393,22 @@ beard-unmade is a truth state that varies. beard-unmade is usually false.
 
 section list
 
-a slit is LLPish scenery in Self-ID Fields. description is "Peeking through the slit, you see a list ... of horribly named places, each with its own image too disturbing to describe here. You shudder at [randbla] and [randbla][one of].[paragraph break]Scary! Perhaps if there were some way to neutralize the slit, you'd feel comfort, even if you didn't make progress[or][stopping].". rgtext of slit is "[gcn][rc][rc][gc]". lgth of slit is 4. gpos of slit is 1. rpos of slit is 4. cert-text of slit is "S[d1][d1][ast]T". rect-text of slit is "S[d1][d1][ast]T".
+a slit is LLPish scenery in Self ID Fields. description is "Peeking through the slit, you see a list ... of horribly named places, each with its own image too disturbing to describe here. You shudder at [randbla] and [randbla][one of].[paragraph break]Scary! Perhaps if there were some way to neutralize the slit, you'd feel comfort, even if you didn't make progress[or][stopping].". rgtext of slit is "[gcn][rc][rc][gc]". lgth of slit is 4. gpos of slit is 1. rpos of slit is 4. cert-text of slit is "S[d1][d1][ast]T". rect-text of slit is "S[d1][d1][ast]T".
 
 the silt is scenery. description is "You shouldn't be able to see the silt or the slit now."
 
 section selves vessel
 
-The selves vessel is boring scenery in Self-ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is bore-selves-vessel rule.
+The selves vessel is boring scenery in Self ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is bore-selves-vessel rule.
 
 this is the bore-selves-vessel rule:
 	if current action is entering, try going south instead;
 
-check going south in Self-ID Fields: say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
+check going south in Self ID Fields: say "Given that the people leaving the selves vessel look dead, you probably don't want to go in." instead;
 
 section random ID field text
 
-every turn when player is in Self-ID Fields and Cruel Ones' Enclosure is unvisited (this is the crosse-guys-through rule): say "[guy-by-description]";
+every turn when player is in Self ID Fields and Cruel Ones' Enclosure is unvisited (this is the crosse-guys-through rule): say "[guy-by-description]";
 
 to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. Corses Crosse glows briefly as the undead walks through."
 
@@ -4422,7 +4420,7 @@ to say nosey: say "[one of]a fake warty witch's conker[or]a fake parrot beak[or]
 
 chapter Flesh Shelf
 
-Flesh Shelf is west of Self-ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest. roomnud of Flesh Shelf is table of Flesh Shelf nudges.
+Flesh Shelf is west of Self ID Fields. "It's cold here, but you'd expect that, on a ledge with iciest cities lie far below. The only way back is east. A skin sink holds some odd stuff, here.". Flesh Shelf is in Forest. roomnud of Flesh Shelf is table of Flesh Shelf nudges.
 
 the skin sink is scenery in Flesh Shelf. "Eww! But at least you don't have to bend down to pick up or use anything IN the sink."
 
@@ -4683,7 +4681,7 @@ understand "glop" and "glob" as livers.
 
 chapter Gnarliest Triangles
 
-Gnarliest Triangles is east of Self-ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if].". roomnud of Gnarliest Triangles is table of Gnarliest Triangles nudges.
+Gnarliest Triangles is east of Self ID Fields. Gnarliest Triangles is in Forest. "It's awesomely geometric and mathematical here. Triangles all around create a sort of dome effect, and the only bummer is that they block any exit except back west. [container-desc]. And a notes stone rises above the center[if notes stone is not examined and still-need-in-triangles]. Maybe it can help you[end if].". roomnud of Gnarliest Triangles is table of Gnarliest Triangles nudges.
 
 to decide whether still-need-in-triangles:
 	if ones are in bucket, yes;
@@ -4764,7 +4762,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure.
 
-Cruel Ones' Enclosure is north of Self-ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Cruel Ones' Enclosure is table of Cruel Ones Enclosure nudges.
+Cruel Ones' Enclosure is north of Self ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Cruel Ones' Enclosure is table of Cruel Ones Enclosure nudges.
 
 after looking in Cruel Ones' Enclosure:
 	if banshee is in Cruel Ones' Enclosure:
@@ -4784,15 +4782,13 @@ the banshee is LLPish scenery in Cruel Ones' Enclosure. bore-text is "That's jus
 
 rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
-the has-been is useless boring scenery. description is "You shouldn't be able to detect it, or the banshee, now.".
-
-understand "has been" and "hasbeen" as has-been.
+the has been is useless boring scenery. description is "You shouldn't be able to detect it, or the banshee, now.". printed name is "has-been". understand "hasbeen" as has been.
 
 can-pass-crosse is a truth state that varies. can-pass-crosse is usually false.
 
 to say agn: say "[one of][or] again[stopping]".
 
-check going north in Self-ID Fields:
+check going north in Self ID Fields:
 	say "'Scopers! Process corpses!' you hear.[paragraph break]";
 	unless player wears beard:
 		if player has beard and shades are part of beard and nose is part of the beard:
@@ -5285,9 +5281,7 @@ the skate is a pregredient in Kitchen. rgtext of skate is "[gcn][rc][rc][rc][rc]
 
 description of the skate is "Ice, not roller. [one of]Apparently, it's Kate's. The blade is sharp enough to cut meat, but unfortunately, there's not any around here. Yet. Plus, the blade's probably not clean enough. You don't see any sink around. Never mind[or]It's a meaty question, what an ice skate's doing somewhere this warm[stopping]."
 
-some cut-up steak is an ingredient.
-
-description of steak is "Pre-cooked, and you can still smell the sizzle if you reach down to smell it. You think."
+some cut up steak is an ingredient. printed name of steak is "cut-up steak". description of steak is "Pre-cooked, and you can still smell the sizzle if you reach down to smell it. You think."
 
 after doing something with the spearman:
 	set the pronoun him to the spearman;
@@ -5898,7 +5892,7 @@ after printing the name of the poem while taking inventory:
 	continue the action;
 
 does the player mean folding the poem: it is likely.
-does the player mean doing something with the tinfoil info-lit: it is very unlikely.
+does the player mean doing something with the tin foil info lit: it is very unlikely.
 
 does the player mean doing something with prep paper when the poem is touchable: it is unlikely.
 
@@ -6888,7 +6882,7 @@ bastion-evac is a truth state that varies. bastion-evac is usually false.
 flies-in-emitter is a truth state that varies. flies-in-emitter is false.
 
 to get-tulip:
-	now player has the lit-up tulip;
+	now player has the lit up tulip;
 	now termite emitter is realized;
 	now dead beat deadbeat is realized;
 
@@ -6898,7 +6892,7 @@ check switching on the termite emitter:
 		if faeries are touchable, say "The faeries are on your side. Try someone else, maybe." instead;
 		if player is in Bassy Abyss, say "Those angst gnats have no chance. You need something much more powerful." instead;
 		if location is not Esoteric Coteries, say "There's nobody here worth bumming out with the angst gnats." instead;
-		if player has lit-up tulip, say "You already have the tulip. That'd be mean." instead;
+		if player has lit up tulip, say "You already have the tulip. That'd be mean." instead;
 		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
 		get-tulip;
@@ -6991,7 +6985,7 @@ this is the bother-nerds rule:
 	if nerds-unwelcome is true:
 		say "You aren't welcome back east[if keycard is moot], and besides, no keycard[end if].";
 		the rule fails;
-	if player has lit-up tulip:
+	if player has lit up tulip:
 		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc.";
 		the rule fails;
 	the rule succeeds;
@@ -7075,7 +7069,7 @@ check putting noise bag on nerds:
 	say "Too many nerds, too few bags." instead;
 
 before giving something to nerds:
-	if player has lit-up tulip, say "You have nothing they want, and they gave you what you need." instead;
+	if player has lit up tulip, say "You have nothing they want, and they gave you what you need." instead;
 	if noun is gadget, say "They have their own techie toys to futz with. With which to futz." instead;
 	if noun is noise bag:
 		say "It's too valuable[if words are not in bag], even with nothing in it[else], so you just open it instead[end if].";
@@ -7089,15 +7083,15 @@ description of nerds is "They're sitting around nattering about nerd things. The
 
 lgth of nerds is 8. gpos of nerds is 7. rpos of nerds is 2. rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1][d1][d1][d1][d1][d1]S". rgtext of nerds is "[rcn][rc][rc][rc][rc][rc][rc][gc]".
 
-the lit-up tulip is a thing in Esoteric Coteries.
+the lit up tulip is a thing in Esoteric Coteries. printed name is "lit-up tulip".
 
-check taking lit-up tulip:
+check taking lit up tulip:
 	if nerds are touchable and player does not have tulip:
 		say "Someone grabs your wrist. 'No light for the unenlightened! You have to ASK NERDS the right thing before you can get it. What do you want it for? Why? And ASK us, don't TELL us.'[paragraph break]That was kind of abrasive[one of]. You think of the places you haven't been and the obstacles to getting there[or]. You wonder if there's a way to disrupt their little gathering if you can't figure what to ask[or]. These intellectual elites are almost as annoying as the economic elites[cycling]." instead;
 
-check dropping the lit-up tulip: say "No. It's useful." instead;
+check dropping the lit up tulip: say "No. It's useful." instead;
 
-description of lit-up tulip is "No fickler flicker or slight lights--its twinkle lets it wink for a long while, with no way to turn it off or on. The words SUNLITE UTENSIL are carved in it."
+description of lit up tulip is "No fickler flicker or slight lights--its twinkle lets it wink for a long while, with no way to turn it off or on. The words SUNLITE UTENSIL are carved in it."
 
 check switching off tulip:
 	if player does not have the tulip, say "That's the nerds[']." instead;
@@ -7146,7 +7140,7 @@ check scaning in Elm Train Terminal (this is the can't scan some things til you 
 
 check going west in Elm Train Terminal: say "The cafe face is in the way. Maybe you could climb it[if cafe-climbed is true] again[end if]." instead;
 
-the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims ARTISAN, TSARINA: TRANSIT!!! and also that it's an anti-sot 'I sat not to stain' station. Which doesn't help you."
+the dead fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims ARTISAN, TSARINA: TRANSIT!!! and also that it's an anti-sot 'I sat not to stain' station. Which doesn't help you.". printed name is "dead-fad faded ad".
 
 Pa's PSA is amusing scenery in Elm Train Terminal. "[randbla]."
 
@@ -7687,7 +7681,7 @@ before asking red bull burdell about: say "Realizing he's not going to help you,
 
 understand "rbb" as Red Bull Burdell.
 
-description of Red Bull Burdell is "His face is covered with crass scars, and he's wearing a t-shirt saying 'thirst' over some rage gear. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason."
+description of Red Bull Burdell is "His face is covered with crass scars, and he's wearing a t-shirt saying 'THIRST' over some rage gear. He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason."
 
 section cutlery
 
@@ -7698,13 +7692,11 @@ this is the bore-cutlery rule:
 
 section THIRST t-shirt
 
-the THIRST t-shirt is a boring thing. Red Bull Burdell wears the thirst t-shirt. description of thirst t-shirt is "The THIRST t-shirt is not very practical, but it establishes Red Bull Burdell as the bad guy.". bore-text is "The THIRST t-shirt is not Red Bull Burdell's weakness."
+the THIRST t shirt is an amusing boring thing. printed name is "THIRST t-shirt". Red Bull Burdell wears the thirst t shirt. description of thirst t shirt is "The THIRST t-shirt doesn't provide much protection, but it establishes Red Bull Burdell as the bad guy.". bore-text is "The THIRST t-shirt is not Red Bull Burdell's weakness."
 
-understand "thirst/tshirt/shirt" and "thirst tshirt/shirt" as THIRST t-shirt.
+the rage gear is an amusing boring thing. Red Bull Burdell wears the rage gear. description of rage gear is "It's a rare egg--impenetrable, covering almost all of Red Bull Burdell's body. It's no mere flimsy eager rag to re-garage.[paragraph break]If you're looking for a weakness of Red Bull Burdell's, it's elsewhere.". bore-text of rage gear is "No. The rage gear is sturdy. But it can't cover ALL of Red Bull Burdell.".
 
-the rage gear is a boring thing. Red Bull Burdell wears the rage gear. description of rage gear is "It's a rare egg--impenetrable, covering almost all of Red Bull Burdell's body. It's no mere flimsy eager rag to re-garage.[paragraph break]If you're looking for a weakness of Red Bull Burdell's, it's elsewhere.". bore-text of rage gear is "No. The rage gear is sturdy. But it can't cover ALL of Red Bull Burdell.".
-
-the crass scars are a boring thing. They are part of red bull burdell. description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks.". bore-text of scars is "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
+the crass scars are an amusing boring plural-named thing. They are part of red bull burdell. description of scars is "Every villain has a few. Red Bull Burdell maxed out his useful attributes, but no amount of leveling up could improve his looks.". bore-text of scars is "He'd want to beat you up for looking at them even if he didn't already want to beat you up.".
 
 section RBB's toe
 
@@ -7815,7 +7807,7 @@ carry out existing:
 		else:
 			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well.";
 			now end-path is 2;
-		say "[line break]It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
+		say "[line break]It's time to become an adventurer emeritus. Resume it? One day, but for now, laurels['] allures are too great. You begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
 		reg-inc;
 		now resort is solved;
@@ -8268,7 +8260,7 @@ carry out scaning:
 		if smilies are touchable:
 			say "Your gadget doesn't do much [']til it's over the smilies. So you look more closely at those.";
 			try scaning smilies instead;
-	if noun is tinfoil info-lit, say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
+	if noun is tin foil info lit, say "Nothing happens. Which just proves the paper's premise that this is all too ridiculous, amirite?" instead;
 	if noun is barcode:
 		say "[one of]You receive a rush of insight unlike anything anywhere else in the game![or]You receive more practical insight![stopping][paragraph break]";
 		say "[one of]Bread, $1 per loaf[or]Condensed cream of mushroom soup, $.39[or]Cabbage, $.19/lb[or]Ice Cream, $2.50/gallon[or]Jack's Pizza, 5/$10, limit 5[or]OnCor entrees, $2[or]Hot dogs, 89 cents[or]7 oz. pasta, 3/$1[or]Milk, $1.99/gallon[or]Root Beer, $.68 per liter bottle[at random] at BreadCo. Much better than [one of]Winn-Dixie[or]Strack and Van Til[or]SuperFresh[or]Marsh[or]Kroger[or]Piggly Wiggly[or]Jewel Finer Foods[or]Aldi[or]Safeway[or]Moo and Oink[at random]!" instead;
@@ -8325,7 +8317,7 @@ carry out scaning:
 		if gadget is rect, now nt-rect is true;
 	if gadget is cert:
 		if noun is not inflexible:
-			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
+			say "[if noun is begonias or noun is roadblock or noun is acne bit cabinet]You notice the gadget beeps twice. Hmm[else]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
 			if parse-output is true:
 				say "Hmm, that means [cert-text of noun]. ";
 			kibitz noun;
@@ -8587,7 +8579,7 @@ gateman	phail phial	"[about-lube]"
 gateman	prep paper	"'No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start.'"
 gateman	Red Bull Burdell	"[one of]'Like he was thought up by a demonic comedian. Made a desirable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called 'Leveling up.' Maximizing stuff called hit points and magic points. Things went awry before we were wary.' You sense there's more, if you can bear it.[or]'Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned...' His eyes grow mistened. 'Ten dimes say it's end times. We've waited for an upturn to turn up...'[or]'The time for talk is over.'[stopping][one of][line break][rbb][or][stopping]"
 gateman	tip	"[tip-dialogue]"
-gateman	tinfoil info-lit	"'Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent.'"
+gateman	tin foil info lit	"'Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent.'"
 gateman	Bud Helm	"'Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now.'"
 gateman	Raw Rori	"'Pure strength. That won't get the job done here.'"
 gateman	pen	"[one of]'How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense.'[or]You probably know more about the pen than he does.[stopping]"
@@ -9055,7 +9047,7 @@ theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
 Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help."
-Self-ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
+Self ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' The scoffer coffers would drain you mentally if you tried to go any way other than north or back south."
@@ -9309,7 +9301,7 @@ check putting it on(this is the disguise-piece conglomeration rule):
 		if A is nothing, continue the action;
 		try putting A on second noun instead;
 
-to say you-int: say "You must almost blend in, with that! But you [if player is in Self-ID Fields]look over at[else]remember[end if] the spirits walking through, and they have just a bit more."
+to say you-int: say "You must almost blend in, with that! But you [if player is in Self ID Fields]look over at[else]remember[end if] the spirits walking through, and they have just a bit more."
 
 before wearing a disguise-piece:
 	if noun is part of the beard:
@@ -9604,8 +9596,8 @@ to solve-region (sre - a region):
 		say "Man! With the SECURE settings on your gadget, you can RECUSE if you want and hit Store R.";
 
 to say espec-xtra:
-	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tinfoil is in cabinet]. Well, except the tinfoil info-lit[end if]";
-	if info-lit is in cabinet, moot info-lit;
+	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tin foil is in cabinet]. Well, except the tinfoil info lit[end if]";
+	if tin foil info lit is in cabinet, moot tin foil info lit;
 	now player has all things in cabinet;
 
 to item-warp:
@@ -9949,10 +9941,10 @@ does the player mean folding the prep paper: it is very unlikely.
 carry out folding:
 	if noun is prep paper, say "No way! That's got valuable information." instead;
 	if noun is maps, say "They aren't big, unwieldy maps. They're surprisingly easy to read." instead;
-	if noun is tinfoil:
+	if noun is tin foil info lit:
 		if player is in Trips Strip:
-			say "You find a random trash can behind a random store and drop the info-lit in.";
-			moot tinfoil;
+			say "You find a random trash can behind a random store and drop the tinfoil info-lit in.";
+			moot tin foil info lit;
 			the rule succeeds;
 		say "It probably deserves to be crumpled." instead;
 	if noun is shades, say "You try to execute a def move with the shades but fail." instead;
@@ -10396,7 +10388,7 @@ understand "sr [direction]" and "rs [direction]" as sring.
 does the player mean sring sr-dir: it is likely.
 
 to decide which direction is sr-dir:
-	if Self-ID Fields is not visited, decide on up;
+	if Self ID Fields is not visited, decide on up;
 	if stew is off-stage and teas are off-stage, decide on west;
 	if shout is off-stage and thorn is off-stage, decide on north;
 	if thorn is off-stage and stew is off-stage, decide on northwest;
@@ -10433,7 +10425,7 @@ carry out sring:
 				else:
 					now i2 entry is in sf;
 					now i1 entry is in rf;
-	if player is in Self-ID Fields:
+	if player is in Self ID Fields:
 		if Gnarliest Triangles is visited or Flesh Shelf is visited:
 			say "This shouldn't be a problem, but you've explored some other rooms after hitting the fields.";
 		else:

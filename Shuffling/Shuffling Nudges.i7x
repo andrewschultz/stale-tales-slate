@@ -31,10 +31,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "list"	298190669	--	--	"[name-list]."
 "elevator"	681565093	--	--	"[word-games]."
 "terraces"	646837211	--	--	"[word-games]."
+"terrace"	550563245	--	--	"[word-games]."
 "banner"	371551651	--	--	"[word-games]."
 "oafs"	199329257	--	--	"[sofa-there]."
 "oaf"	103055291	--	--	"[sofa-there]."
 "noentry"	650766775	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
+"caveat"	361462168	--	--	"Vandalizing the vacate caveat is probably more trouble than it's worth."
 
 table of Rested Desert nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -194,7 +196,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "ville"	387591453	river ville liver	--	"[rivliv]."
 "river"	450611381	river ville liver	--	"[rivliv]."
 "cylinder"	543238031	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
-"forest"	513381369	--	degen-true rule	"[if Self-ID Fields is visited][reg-rej][else][loc-rej][end if]."
+"forest"	513381369	--	degen-true rule	"[if Self ID Fields is visited][reg-rej][else][loc-rej][end if]."
 
 table of Rest of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -203,16 +205,18 @@ this-cmd	hashval	this-item	this-rule	this-clue
 table of Self ID Fields nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "selfid"	370430745	--	--	"[loc-rej]."
+"fidle"	274156779	--	--	"[loc-rej]."
 "selves"	609138809	--	--	"The selves vessel is much too sturdy to manipulate."
 "vesel"	512864843	--	--	"The selves vessel is much too sturdy to manipulate."
 "crosse"	499036006	Corses Crosse	--	"[crosse-to-you]."
 "cross"	371229897	Corses Crosse	--	"[crosse-to-you]."
 "crose"	402762040	Corses Crosse	--	"[crosse-to-you]."
-"line"	295520302	--	--	"They're dead and not interfering with you."
-"life"	253127690	--	--	"They're dead and not interfering with you."
-"lineof"	396387775	--	--	"They're dead and not interfering with you."
+"line"	295520302	--	--	"[line-is-dead]."
+"life"	253127690	--	--	"[line-is-dead]."
+"lineof"	396387775	--	--	"[line-is-dead]."
 "undead"	346065420	--	--	"[no-un]."
 "undeads"	442339386	--	--	"[no-un]."
+"self"	304408810	--	--	"[loc-rej]."
 
 table of Flesh Shelf nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -658,7 +662,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "prep"	376061830	prep paper	--	"[no-2]."
 "sheet"	492278501	prep paper	--	"[no-2]."
 "firm"	220906698	prep paper	--	"FIMR is just a mnemonic for the [if Trips Strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
-"tinfoil"	416684530	info-lit	--	"You can't change paranoid ramblings."
+"tinfoil"	416684530	tin foil info lit	--	"Wrestling with paranoid ramblings helps no-one."
 "tagged"	319332438	gadget	--	"Bad idea to mess with electronics you don't understand."
 "lemon"	388955186	gadget	--	"That's just an example, for CERTIFY."
 "paste"	410843870	gadget	--	"That's just an example, for RECTIFY."
@@ -809,6 +813,8 @@ this is the forest-east rule:
 to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
 to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
+
+to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
 
 to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
@@ -1021,7 +1027,7 @@ this is the past-loader rule:
 	the rule fails;
 
 this is the past-strip rule:
-	if Self-ID Fields is visited or underside is visited or Trap Part is visited, the rule succeeds;
+	if Self ID Fields is visited or underside is visited or Trap Part is visited, the rule succeeds;
 	the rule fails;
 
 to say what-for: say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"

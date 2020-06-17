@@ -139,17 +139,17 @@ understand "wets" as a mistake ("Getting lost in a swamp would be even worse tha
 
 chapter Self-ID Fields
 
-understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in Self-ID Fields.
+understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in Self ID Fields.
 
-understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self-ID Fields.
+understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self ID Fields.
 
 understand "list" as a mistake ("There's a list inside the slit, so that's not what it could become.") when slit is touchable.
 
-understand "nile" as a mistake ("Wrong river for the underworld.") when player is in Self-ID Fields.
+understand "nile" as a mistake ("Wrong river for the underworld.") when player is in Self ID Fields.
 
-understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in Self-ID Fields.
+understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in Self ID Fields.
 
-understand "scorse" as a mistake ("You can't trade with the dead.") when player is in Self-ID Fields.
+understand "scorse" as a mistake ("You can't trade with the dead.") when player is in Self ID Fields.
 
 chapter Flesh Shelf
 
@@ -391,6 +391,8 @@ chapter Esoteric Coteries
 
 [def=nerd door e]
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Esoteric Coteries.
+
+understand "up til" and "uptil" as a mistake ("The [tulip] is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.") when lit up tulip is touchable.
 
 chapter Bassy Abyss
 
