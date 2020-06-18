@@ -1472,7 +1472,7 @@ persuasion rule for asking agnostic to try doing something (this is the block ag
 [otters]
 
 persuasion rule for asking Ed Riley to try doing something:
-	say "He wags his finger. You need to find a way to dent his confidence.";
+	say "He wags his finger dismissively. You need to find a way to dent his confidence.";
 	persuasion fails;
 
 persuasion rule for asking Le Mer to try doing something:
@@ -2087,7 +2087,7 @@ LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
 LOLstr trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 LOLstr trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 LOLstr trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
-LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
+LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lotsa people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 LOLstr trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 LOLstr trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
 pesty types	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
@@ -2236,7 +2236,7 @@ Art Erd	So Great Storage	"'[if So Great Storage is in Scape Space]It's...umm...w
 Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
-len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
+len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but kinda bossy. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno token	"[one of]Len inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping]."
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
@@ -2552,7 +2552,7 @@ to say satchel-extra:
 	if satchel is not in Largely All Grey Gallery, say "quickly go back to the study for the satchel, ";
 	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
 
-to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, lots of stuff to look at[stopping]";
+to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, you've got a whole body of data, now[stopping]";
 
 last-yays is a number that varies.
 
@@ -3776,7 +3776,7 @@ presto	2	"Gee! Such good clean fun! But--how many clean swears are there? Golly!
 oyster	1	"You've started to get some action in."
 oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
 towers	1	"Well! You kind of cost him a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
-towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Trefoil, but this is good practice."
+towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice."
 otters	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
 otters	2	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
 others	1	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here."
@@ -5161,7 +5161,7 @@ this is the towers-hinting rule:
 	if player has gizmo, try objhinting gizmo instead;
 	if Dr Yow is not moot, all-say "You need to ASK AGNOSTIC ABOUT DR YOW, then make Dr. Yow ROWDY." instead; [?? flesh out]
 	if location of player is not Actionless Coastlines, all-say "You'll want to head to the coastlines to make it across the water." instead;
-	if rawest is unvisited and limits are unvisited:
+	unless across-leak-lake:
 		if t-or-b is reflexive, try objhinting t-or-b instead;
 		if turbos are reflexive, try objhinting turbos instead;
 		if blaster is reflexive, try objhinting blaster instead;
@@ -6384,7 +6384,6 @@ check thinking:
 	if mrlp is demo dome, try requesting the score instead;
 	if number of unfigured things > 0:
 		say "[line break][prefigured-things]"; [?? this creates a problem: are things wiped from "unfigured" once we're done? Should we define unfigured + in-region?]
-	if mrlp is towers and topside is visited, say "[if number of unfigured things > 0][line break][end if]Ornate Atoner Renato's advice about people--if not things--being mostly too complex for just five letters is stuck in your head." instead;
 	say "Nothing immediate comes up. If you need help, just say HINT. K?" instead;
 
 chapter touching
@@ -8663,11 +8662,11 @@ lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to fi
 gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green[if y-orange is false]. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too[end if].'"
 settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
 yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
-stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
-basement-quip	"You remember cheat mode did not change the ten beams when you scanned them before entering the basement--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
-chimney-quip	"You remember cheat mode did not change the 'my niche' text when you scanned it before entering the chimney--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. And an orange. You suddenly realize the orange mapped to Y[y-know]."
+stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was a lot of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
+basement-quip	"You remember cheat mode did not change the ten beams when you scanned them before entering the basement. There were the same reds and yellows."
+chimney-quip	"You remember cheat mode did not change the 'my niche' text when you scanned it before entering the chimney--MY NICHE was in red writing, which your pedanto-notepad says was wrong letters. But there were some yellows, too. And an orange. You suddenly realize the orange mapped to Y[y-know]."
 ramp-quip	"You recall red, yellow, red, red for the ramp, cheat or no."
-painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple."
+painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple in cheat mode. Figuring why only those two go purple would be big."
 stair-quip	"You recall R R Y Y R with one tile changing color with cheat mode. But it is probably best to focus on non-cheat mode."
 dio-quip	"You scan the whole diorama to make sure of things, and Elmo looks at your diorama notes for the [list of hinthelpy escanned things].[paragraph break][dior-scan][if crabgrass is cscanned or brass crag is cscanned or steel pad is cscanned or pedestal is cscanned]You and Elmo notice a few entries changed color when and where letters were the same. You decide to isolate what they mean[else]Hmm, all reds and yellows[end if][unless its-all-scanned]. You realize you could get more data, so maybe you could sneak up to the study and try again[end if]."
 dio-all-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
@@ -13936,9 +13935,11 @@ understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range 
 
 printed name of Anger Range is "[if haunter is not moot]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
 
-after looking in Anger Range:
+after printing the locale description for Anger Range:
 	if trout is in Anger Range, set the pronoun it to trout;
 	if pikes are in Anger Range, set the pronoun it to pikes;
+	if pikes are moot and Lean Lane is unvisited:
+		say "Your friend the trout left to the east. He wanted you to follow. Maybe you should go see him. Perhaps he could help.";
 	continue the action;
 
 to say hau-clue:
@@ -14205,6 +14206,13 @@ carry out searching:
 book Hardest Trashed Dearths
 
 Hardest Trashed Dearths is a room in oyster. Hardest Trashed Dearths is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him. With all the crackling and general blurriness, you suspect you are surrounded by potentially lethal spark parks, with no quick directional way out.[paragraph break]You do hear something, though[if cans are touchable], and the ground is littered with cans[end if].". roomnud of Hardest Trashed Dearths is table of Hardest Trashed Dearths nudges.
+
+check going west in Hardest Trashed Dearths:
+	say "The eeks shouldn't be too hard to find. Still go back west?";
+	if the player yes-consents:
+		continue the action;
+	else:
+		say "Yes, you'll work through it and discover where to go.";
 
 section spark parks
 
@@ -15124,7 +15132,7 @@ check exiting in End Den:
 
 volume towers
 
-[this is the biggest area of the game, though Oyster has almost as many lines. Guardians are a sort of specific person, as are picaros. Because picaros are only in the Trefoil, they will be in that section.]
+[this is the biggest area of the game, though Oyster has almost as many lines. Guardians are a sort of specific person, as are picaros. Because picaros are only in the Loftier Trefoil, they will be in that section.]
 
 book towers specific verbs
 
@@ -15215,7 +15223,7 @@ check xraying:
 	else if xraytrump is true:
 		d "using x-ray trump.";
 	if mrlp is not towers:
-		if Topside is unvisited, say "[reject]" instead;
+		if Topside Depoait is unvisited, say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
 	if noun is prefigured:
 		choose row with the-from of noun in table of towers anagrams;
@@ -15329,11 +15337,15 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 
 book drawing the map
 
+to decide whether across-leak-lake:
+	if Rawest Waters is visited or Mislit Limits is visited, yes;
+	no;
+
 to decide whether can-see-map:
-	if Rawest Waters is visited or Mislit Limits is visited, decide no;
-	if Spec O Scope is unexamined, decide no;
-	if mrlp is towers, decide yes;
-	decide no.
+	if across-leak-lake, no;
+	if Spec O Scope is unexamined, no;
+	if mrlp is towers, yes;
+	no.
 
 tow-x-start is a number that varies. tow-x-start is 320.
 tow-y-start is a number that varies. tow-y-start is 8.
@@ -15539,7 +15551,7 @@ observ
 "The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
 "You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think."
 "The palace looks a little bigger now--but you may eventually need to cut [if location of player is Anemic Cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is Anemic Cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
-"You're a good deal closer to the palace than at the copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass."
+"You're a good deal closer to the palace than at the Scope Copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass."
 "Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace."
 "You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been."
 "Since your head's barely above water, you can't see a shore any more. But you know it must be there."
@@ -15949,7 +15961,7 @@ does the player mean doing something with repeat button when repeat button is no
 
 this is the saver-check rule:
 	if lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
-	if Rawest Waters is visited or Mislit Limits is visited, say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
+	if across-leak-lake, say "The saver got bumped around too much when you crossed Leak Lake. Well, you got good use out of it." instead;
 	if saver is touchable and player does not have saver, try silently taking raves saver;
 
 check pushing retape button:
@@ -16231,11 +16243,11 @@ Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place
 
 the savager ravages are boring bounding scenery in Shaven Havens. description of savager ravages is "They're pretty forbidding. Trust me, you don't want to go any way but back south.". bore-text is "You don't want to mess with the savager ravages.".
 
-havens-visit is a truth state that varies.
+duck-goto-note is a truth state that varies.
 
-after printing the locale description for Shaven Havens when havens-visit is false:
+after printing the locale description for Shaven Havens when duck-goto-note is false:
 	ital-say "you may wish to GO TO DUCK or even GT DUCK to get back here with less hassle.";
-	now havens-visit is true;
+	now duck-goto-note is true;
 	continue the action;
 
 The lone duck is an animal in Shaven Havens. "[if lone duck is friendly]That[else]A[end if] lone duck is quacking along here[if id tag is examined]. It is wearing a small ID tag[end if][if agnostic is touchable], and it's ignoring the agnostic[end if]."
@@ -16442,7 +16454,7 @@ to ag-gets-it:
 	if ag-atten is false:
 		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [agnostic-first] will find [his-her] own clever life hacks to focus more.";
 	else:
-		say "[line break]The lecture goes extra quickly with [agnostic-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
+		say "[line break]The lecture goes extra quickly with [agnostic-first] attentive! So much common sense, but there's so much deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
 	say "[line break]The lecture over, [agnostic-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[paragraph break][agnostic] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! I have this lots-o-tools stool...' but the agnostic's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares. Maybe you can rescue them, too!' Unintentional compliments are the nicest.";
 	moot Dr Yow;
 	moot duck;
@@ -17585,12 +17597,12 @@ initial appearance of a picaro is "[the item described] looks to Rodney for orde
 
 h-p is a picaro that varies. [h-p means hinted picaro]
 
-the specification of picaro is "A person who blocks your way out of the Trefoil."
+the specification of picaro is "A person who blocks your way out of the Loftier Trefoil."
 
 roddro is a truth state that varies.
 rodyon is a truth state that varies.
 
-after fliptoing a picaro (this is the trefoil exit rule):
+after fliptoing a picaro (this is the loftier trefoil exit rule):
 	if noun is Rodney, continue the action;
 	d "[list of picaros in Loftier Trefoil].";
 	if vw < 4:
@@ -22137,7 +22149,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is Towers:
 		if number of pinko picaros > 0:
 			repeat with pk running through pinko picaros:
-				say "[2dmiss of myreg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
+				say "[2dmiss of myreg][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 		let xxx be unripe ur pine;
 		if number of not moot guardians > 0:
 			repeat with gua running through not moot guardians:

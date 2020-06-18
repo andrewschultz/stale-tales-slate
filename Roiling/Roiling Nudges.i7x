@@ -1281,14 +1281,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ruts"	389813594	--	--	"[ru-ci]."
 "eerie"	513734976	eerie blurbs	--	"[whole-item]."
 "blurbs"	377355225	eerie blurbs	--	"[whole-item]."
-"megaton"	473038885	mopeage rant	--	"[part-of-lots]."
-"pera"	296783689	mopeage rant	--	"[part-of-lots]."
-"magenta"	400874126	mopeage rant	--	"[part-of-lots]."
-"roep"	368948448	mopeage rant	--	"[part-of-lots]."
-"rampage"	395646362	mopeage rant	--	"[part-of-lots]."
-"note"	374176212	mopeage rant	--	"[part-of-lots]."
-"mopeage"	510293427	mopeage rant	--	"[part-of-lots]."
-"rant"	259529147	mopeage rant	--	"[part-of-lots]."
+"megaton"	473038885	mopeage rant	--	"[part-of-pom]."
+"pera"	296783689	mopeage rant	--	"[part-of-pom]."
+"magenta"	400874126	mopeage rant	--	"[part-of-pom]."
+"roep"	368948448	mopeage rant	--	"[part-of-pom]."
+"rampage"	395646362	mopeage rant	--	"[part-of-pom]."
+"note"	374176212	mopeage rant	--	"[part-of-pom]."
+"mopeage"	510293427	mopeage rant	--	"[part-of-pom]."
+"rant"	259529147	mopeage rant	--	"[part-of-pom]."
 "omen"	335141347	omen prism	--	"[full-omen-prism]."
 "prism"	372131727	omen prism	--	"[full-omen-prism]."
 "dam"	87292060	mad train	--	"[whole-item]."
@@ -2230,7 +2230,7 @@ to say ru-ci: say "[if ruts circuits are moot]You found enough in the ruts circu
 
 to say whole-item: say "Nothing happens. Perhaps it's the whole item that's important"
 
-to say part-of-lots: say "No, the [i]whole[r] thing. You see several...similar...items here right now"
+to say part-of-pom: say "No, the [i]whole[r] thing. You see several...similar...items here right now"
 
 to say full-omen-prism: say "Not just omen, or prism. It's an omen prism"
 
