@@ -127,7 +127,7 @@ understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out 
 
 understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. Try [if otters is solved or others is unsolved]thinking of a more common word[else]looking at stores at the other end of the alphabet[end if].") when Store H is in location of player or Throes Hoster is in location of player.
 
-understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
+understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if Topside Deposit is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
 understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The Throes Hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in Strip of Profits
 
@@ -517,8 +517,6 @@ understand "phos" as a mistake ("The bar fails to change into an ethnic restaura
 
 understand "spyte" as a mistake ("The pesty types probably spell it that way, but I'm not letting YOU do so.") when player is in Posh Hops Shop.
 
-understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.
-
 chapter Olde Lode
 
 understand "bare" and "bares" as a mistake ("A jogger runs by, singing 'Drop-Kick Me, Jesus, Through the Goalposts of Life.' Before he leaves, you notice the name BOBBY on his sweatshirt.[paragraph break]Really, what did you expect?") when player is in Olde Lode.
@@ -603,7 +601,7 @@ understand "naps" as a mistake ("You need action, here! Maybe nothing too exhaus
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
 
-understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in Lapsin Plains and player is in Lapsin Plains.
+understand "pone" as a mistake ("The message [if knob is reflexed]is[else]was[end if] corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
 
 understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin Plains.
 
@@ -612,6 +610,8 @@ understand "slapin" and "slap in" as a mistake ("No vilence, err, violence, plea
 understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when player is in Lapsin Plains.
 
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin Plains and span pans are in Lapsin Plains.
+
+understand "tush" as a mistake ("Oh, behave.") when player is in Lapsin Plains.
 
 chapter Shuttle Hutlets
 
@@ -795,9 +795,9 @@ understand "were rid" as a mistake ("No, you can't just yank the red wire out.")
 
 chapter Rawest Waters
 
-understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in rawest.
+understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in Rawest Waters.
 
-understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in rawest.
+understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in Rawest Waters.
 
 chapter Mislit Limits
 

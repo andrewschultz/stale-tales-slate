@@ -662,7 +662,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "river"	450611381	--	--	"[saccade-no]."
 "rivera"	452799199	--	--	"[saccade-no]."
 "saccade"	287495970	--	--	"[saccade-no]."
-"oar"	161864198	--	--	"If you looked at just one oar, the raft would do no better than go in Cleric Circle."
+"oar"	161864198	--	--	"If you looked at just one oar, the raft would do no better than go in circles."
 "boat"	198069318	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
 "interlocking"	776745519	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
 
@@ -699,14 +699,14 @@ table of Lean Lane nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lean"	252715274	--	--	"You would upset countless people named Lena or Neal."
 "reward"	429605395	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
-"dent"	320852724	dent	--	"You already fixed the dent. It's gone."
+"dent"	320852724	--	dent-gone rule	"You already fixed the dent. It's gone."
 "bubble"	341982470	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	bubble wrap	--	"It's just wrap, really."
 "tuna"	279311151	tuna	--	"She is a bit fussy, but she is more than okay as she is."
 "eat"	233103945	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	tea tray	--	"[just-tea]."
 "teatray"	546084836	tea tray	--	"[just-tea]."
-"wipe"	362199687	wipes	--	"[if player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[else]You will need to use them all at once, and on something else[end if]."
+"wipe"	362199687	wipes	--	"[unless player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[else]You will need to use them all at once, and on something else[end if]."
 "pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 
 table of Lapsin' Plains nudges
@@ -725,7 +725,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "fragment"	510525007	fragments	--	"[crate-frag]."
 "shut"	341772090	--	--	"[hutzy]."
 "hut"	245498124	--	--	"[hutzy]."
-"bonk"	214612168	knob	--	"That isn't quite the right way to hit the knob."
+"bonk"	214612168	--	knob-gone rule	"That isn't quite the right way to hit the knob."
 
 table of shuttle hutlets nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -736,6 +736,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ubt"	226634730	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	tubs	--	"That didn't make anything go boom."
 "drop"	262171428	prod	--	"You're juggling what to do with the prod, here."
+"waste"	437312684	--	waste-gone rule	"The heaps are still technically waste, but you cleaned them up enough."
 
 table of Sclerous Closures nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1947,6 +1948,10 @@ this is the is-hauntable rule:
 
 to say to-dig: say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
+this is the dent-gone rule:
+	if dent is moot, the rule succeeds;
+	the rule fails;
+
 to say just-tea: say "Best to think of it as just tea";
 
 to say polyp-no: say "You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further"
@@ -1954,6 +1959,14 @@ to say polyp-no: say "You're a bit worried anything you did to unstabilize the p
 to say crate-frag: say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"
 
 to say hutzy: say "[if Shuttle Hutlets is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the pans[end if]"
+
+this is the knob-gone rule:
+	if knob is moot, the rule succeeds;
+	the rule fails;
+
+this is the waste-gone rule:
+	if waste is moot, the rule succeeds;
+	the rule fails;
 
 to say ache-plur: say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 

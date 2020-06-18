@@ -1784,7 +1784,7 @@ sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 haunter	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than ur-pines or those discussing yorpberries.'"
-Len Craig	"'I'm a businessman. A trader. Lots of stuff if you know how to haggle.'"
+Len Craig	"'I'm a businessman. A trader. All kinds of goods to swap. Let's haggle.'"
 ammo gang	"They are low on conversational ammo, too, but you get the feeling they'd just like you around. Well, not quite around."
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
@@ -2236,7 +2236,7 @@ Art Erd	So Great Storage	"'[if So Great Storage is in Scape Space]It's...umm...w
 Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
-len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but kinda bossy. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
+len craig	curtis	"[one of]'Nice fella, interesting ideas about agriculture, but kinda bossy. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno token	"[one of]Len inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping]."
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
@@ -4487,7 +4487,7 @@ perma amper	true	true	false	false	"It's a perma-amper, so that might account for
 Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[end if]."
+pale plea	false	true	false	true	"[one of]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[or]You remember it's the plea, not the crays, that's giving a readout here[stopping][if cheat-on is false]. You check both ways, and it's still RYYR[end if]."
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
@@ -4815,7 +4815,7 @@ to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
 book presto-hinting
 
 this is the presto-hinting rule:
-	if cur-score of presto is 0 and spoilit is false, all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]There's lots of yelling, and the curst crust is a clue. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
+	if cur-score of presto is 0 and spoilit is false, all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]The yelling and the curst crust are clues. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
 	if hump is touchable, try objhinting hump instead;
 	if plebe is touchable:
 		if spoilit is true and player does not wear tsar star:
@@ -5105,7 +5105,7 @@ to decide which thing is oyster-item:
 this is the oyster-hinting rule:
 	if verb-warned is false and cur-score of oyster is 0:
 		now verb-warned is true;
-		all-say "There's a lot of action here. You will need lots of action. So that gives you a clue as to the commands to use." instead;
+		all-say "The Posh Hops Shop is full of action. So that gives you a clue as to the commands to use." instead;
 	if oyster-item is not player, try objhinting oyster-item instead;
 	if haunter is reflexed and location of haunter is location of player, all-say "You need to show the haunter where the ruby is buried, now." instead;
 	if player is in Sclerous Closures and bubble wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
@@ -6093,7 +6093,7 @@ check eating (this is the general eating rule):
 	if noun is ALocalCo cola or noun is peanut cola or noun is mug, try drinking noun instead;
 	if noun is Lil Ps Pills, say "[if jar-empty is true]Eating the empty jar would be even unhealthier than popping the pills[else]They're placebos. And you're not sick. Okay, maybe you're sick of a puzzle. But you need to do something else with them[end if]." instead; [oyster]
 	if noun is clam, say "Biting its shell would make you shout hells." instead;
-	if noun is a hintpastry and noun is not heated: say "You'll want to put [the noun] in the toaster[if toaster is in Topside Deposit] [hereish of Topside Depoait][end if], first, or it'll just be calories." instead; [towers]
+	if noun is a hintpastry and noun is not heated, say "You'll want to put [the noun] in the toaster[if toaster is in Topside Deposit] [hereish of Topside Deposit][end if], first, or it'll just be calories." instead; [towers]
 	if noun is clear catsup, say "Yuck." instead;
 	if noun is bleary barley, say "That'd go down terribly." instead; [otters]
 	if noun is the player, try swearing obscenely instead;
@@ -7379,26 +7379,20 @@ this is the mesa-pass rule:
 	if noun is adsorbing signboard and Idle Deli is visited, try entering resto store instead;
 	if noun is scripture picturers and Cleric Circle is visited, try entering snatchier chantries instead;
 
-check fliptoing (this is the portal palm and reflexive flip rule):
+check fliptoing (this is the see about flipping touchable things rule):
 	d "Trying to flip [noun].";
 	if noun is touchable:
 		if noun is a portal, try entering noun instead;
 		if noun is reflexive or noun is vanishing, continue the action;
-		repeat through regana of mrlp:
-			if noun is the-to entry and the-from entry is reflexed:
-				abide by the mesa-pass rule;
-				print-the-from the-from entry;
-				the rule succeeds;
+		if mrlp is routes:
+			repeat through regana of mrlp:
+				if noun is the-to entry and the-from entry is reflexed:
+					abide by the mesa-pass rule;
+					print-the-from the-from entry;
+					the rule succeeds;
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
 		say "(examining)[line break]";
 		try examining noun instead;
-	if noun is meet bans or noun is tables or noun is palm or noun is giant pin or noun is niche:
-		if Gunter is not moot:
-			say "Nothing urgent yet[if stuff-found >= 3] except that bangish bashing[end if]. So no need to pre-flip, flipper.";
-			check-get-pad;
-			now noun is prefigured;
-			pad-rec "flips";
-			the rule succeeds;
 
 check fliptoing when player is in Dusty Study and gunter is off-stage (this is the don't flip til you should at start rule) :
 	repeat through table of Ordeal Reload anagrams:
@@ -7431,6 +7425,12 @@ definition: a thing (called th) is pronoun-settable:
 
 suppress-score is a truth state that varies. [this is used in beta testing]
 
+check fliptoing (this is the check off preconditions before flipping rule):
+	repeat through regana of mrlp:
+		if noun is the-to entry and the-from entry is cromulent:
+			if the-from entry is reflexed, say "[reject]" instead;
+			if there is a pre-rule entry, abide by the pre-rule entry;
+
 carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
@@ -7438,8 +7438,6 @@ carry out fliptoing (this is the main fliptoing rule):
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
 				say "[the-to entry] to [the-from entry] denied! Push ff to change this![line break]" instead;
 			d "OK, [the-from entry] to [the-to entry].";
-			if the-from entry is reflexed, say "[reject]" instead;
-			if there is a pre-rule entry, abide by the pre-rule entry;
 			if the-from entry is reflexive, now the-from entry is reflexed;
 			now the-from entry is unfigured;
 			if the-from entry is pronoun-settable and the-from entry is not the-to entry:
@@ -7728,7 +7726,7 @@ The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda
 description of I Trash His Art is "[artrash]". description of Er Trash is "[artrash]".
 
 to say artrash:
-	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that.[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manse! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
+	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. All kinds of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that.[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manse! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
 
 dope-read is a truth state that varies.
 
@@ -9931,7 +9929,7 @@ to say move-toners: now toners are in Strip of Profits.
 
 check taking toners: say "They aren't yours. And you don't need to look good while adventuring." instead;
 
-the bottles of toners are a plural-named cluey thing. understand "lotions" as toners. description is "They are trial-sized red bottles of toners for skin care[one of]. Thankfully, they weren't made of Sterno, which wouldn't have helped you at all and makes you see red just imagining[or]. They're so rent you can't see a brand name[or]There's lots--er, tons--to look at if you see it right[stopping]. The bottles are disgracefully red."
+the bottles of toners are a plural-named cluey thing. understand "lotions" as toners. description is "They are trial-sized red bottles of toners for skin care[one of]. Thankfully, they weren't made of Sterno, which wouldn't have helped you at all and makes you see red just imagining[or]. They're so rent you can't see a brand name[or]There's, er, tons (feel free to see red) to deduce from themuy[stopping]. The bottles are disgracefully red."
 
 chapter store o
 
@@ -13542,7 +13540,7 @@ to check-silly-death:
 
 chapter spilling
 
-the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil P's Pills is "Li'L P's Pills".
+the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'L P's Pills".
 
 understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
 
@@ -14943,7 +14941,7 @@ carry out busting:
 
 book Sclerous Closures
 
-Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if Achers Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west.". roomnud of Sclerous Closures is table of Sclerous Closures nudges.
+Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are so many hidden places you could ambush someone from[end if][if Achers Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west.". roomnud of Sclerous Closures is table of Sclerous Closures nudges.
 
 check going in Sclerous Closures: if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 
@@ -15223,7 +15221,7 @@ check xraying:
 	else if xraytrump is true:
 		d "using x-ray trump.";
 	if mrlp is not towers:
-		if Topside Depoait is unvisited, say "[reject]" instead;
+		if Topside Deposit is unvisited, say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
 	if noun is prefigured:
 		choose row with the-from of noun in table of towers anagrams;
@@ -17290,8 +17288,8 @@ bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all 
 muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity."
 muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so muscly as she forces you back."	"Looking again at muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
-pirates	Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
-fluster self rut	Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
+pirates	Baldest Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
+fluster self rut	Baldest Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
 Mel Fish	Leveraged Everglade	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
 arid den	Leveraged Everglade	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 wait seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you."	"Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too."
@@ -17407,8 +17405,8 @@ to shuffle-guardians (goner - a guardian):
 	if debug-state is true, say "DEBUG: opening path to [MR]. It is [unless MR is accessible]not [end if]accessible.";
 	now goner is prodded;
 	if goner is dreads adders:
-		now topside is accessible;
-		now copse is accessible;
+		now Topside Deposit is accessible;
+		now Scope Copse is accessible;
 		continue the action;
 	if goner is white: [white guardians are optional]
 		now MR is mightaswell;

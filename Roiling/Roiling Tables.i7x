@@ -103,8 +103,8 @@ lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster
 large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
-praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
+praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
+rivets	rivets	false	564671562	--	"strive"	"strive"	--	post-rivets-strive rule	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if praise spirea is reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
 END PRONER POD	END PRONER POD	false	458885045	Upscale Capsule	"ponder"	"ponder"	--	post-pod-ponder rule	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through! You run past countless offices with people named Gingold, Golding or even Gil Dong before finding an individual one right for you."
 red vees	red vees	false	693210005	--	"deserve"	"deserve"	--	post-redvees-deserve rule	"You believe you can, and you can! Once you do, your office fills up with meaningful and productive stuff. The salt, though the smallest, may be the most important. The rest is just trappings."
 salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! A delivery of Trance Nectar came when you were away. That's totally the stuff to help keep you focused and productive, unlike that nasty Large Regal Lager back in Boredom Bedroom.[paragraph break]In addition, there's more 'fine art' to help you focus on your work. [bb-st] now look down on you disapprovingly. For motivation, of course. For motivation."
@@ -118,7 +118,7 @@ book presto
 
 table of presto anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-lamb	lamb	false	138495715	--	"blam"	"blam"	a rule	a rule	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures[if cur-score of presto is 0]. Hmm. That was a loud word you used, there. You make a mental note of others[end if]."
+lamb	lamb	false	138495715	--	"blam"	"blam"	a rule	a rule	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures."
 hump	hump	false	287929218	Austerer Treasure	"umph"	"umph"	--	post-hump-umph rule	"You don't need to ham up 'Hup, ma!' to get over a hump, because it's enough just to try umph. The hump vanishes once you get oveer it[if Leo is touchable]. Leo and Rand follow, jumping unnecessarily[end if]."
 tsar star	tsar star	true	286895605	--	"rats"	"rats"	--	post-tsar-star rule	"The tsar star seems lodged in the tars. But you twist it around saying RATS, and it seems to wiggle a bit. Just as you're about to give up, you give one more twiddle, and the tsar star pops in the air![paragraph break]You manage to juggle it before it falls in the tars again, and you just manage to swat it onto dry ground before it falls. You take time to wipe the remaining tars off the tsar star, and as you do, the main tars themselves schlurp into the ground.[paragraph break]Now the tsar star is clean, you see you can affix it to your clothes. So you do."
 dart	dart	true	211650728	--	"drat"	"drat"	--	--	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."
@@ -201,7 +201,7 @@ ol trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap r
 tubs	tubs	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	--	--	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. Too dirty to take."
-lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	--	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."
+lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
 pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
@@ -261,9 +261,9 @@ ur pine	succor crocus	true	513602032	--	"punier"	"punier"	--	post-urpine-punier 
 pestern serpent	pestern serpent	false	690693472	--	"present"	"present" or "present serpent"	--	--	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
-keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and detours are randomly located. Put them near the end.]
+keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and rousted detours can appear in radically different places, so we want these near the end.]
 bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
-Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee." [even though the picaros are at the beginning, I've placed them at the end, because this saves time in the long run.]
+Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Loftier Trefoil. It's nothing lethal, but enough to make him flee." [even though the picaros are at the beginning, I've placed them at the end, because this saves time in the long run.]
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	--	--	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	--	--	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
 Barney	Barney	false	425003395	--	"nearby"	"nearby"	--	--	"Barney assures Rodney he'll look for any unused exits captives might sneak out. But you can see him sneaking off once he is out of Rodney's sight."
@@ -274,7 +274,7 @@ Daryl	Daryl	false	284713801	--	"lardy"	"lardy"	--	--	"Suddenly, Daryl grows flab
 Demitri	Demitri	false	491329864	--	"timider"	"timider"	--	--	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if vw > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"
 Dewey	Dewey	false	506935332	--	"weedy"	"weedy"	--	--	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow. Don't worry--he'll gain his muscle back. Working out is a habit for him!"
 Edwin	Edwin	false	370670325	--	"wined"	"wined"	--	--	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now to others who drink."
-Eldon	Eldon	false	345909122	--	"olden"	"olden"	--	--	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Trefoil and free of your magic, his youth comes back, but he bolts in shame. Hopefully he retained some wisdom."
+Eldon	Eldon	false	345909122	--	"olden"	"olden"	--	--	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Loftier Trefoil and free of your magic, his youth comes back, but he bolts in shame. Hopefully he retained some wisdom."
 Ernest	Ernest	false	609227513	--	"tenser"	"tenser"	--	--	"Ernest, who had looked quite relaxed up to this point, suddenly mumbles to himself about all the things that could go wrong, to resent his way of life. And even if nothing can go wrong, that would just make it even more embarrassing if things did. He whispers a prayer to St. Rene, then zigzags jerkily out."
 Geno	Geno	false	303665896	--	"gone"	"gone"	--	--	"Geno just walks off, without explanation. Not that you need any. Perhaps he went to seek his twin, Egon."
 Goldy	Goldy	false	304154459	--	"godly"	"godly"	--	--	"Goldy has a revelation and looks to the skies. 'No more mercenary money! No more violence!' he cries. He runs off, a new mission in life."
@@ -950,12 +950,19 @@ this is the post-polemic-compile rule:
 this is the pre-bub-dude-egg rule:
 	if ALocalCo Cola is not moot:
 		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is touchable]coal won't cut it. Too early 20th century[else]ALocalCo cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
-		preef BUB DUDE EGG instead;
+		preef BUB DUDE EGG;
+		do nothing instead;
 
 this is the post-bub-dude-egg rule:
 	now USB is in Hacks Shack;
 	moot golden dongle;
 	moot mug;
+
+this is the pre-clean-lance rule:
+	if player does not have wipes:
+		say "Good idea, but you have nothing that could clean the lance effectively.";
+		preef lance;
+		do nothing instead;
 
 this is the post-clean-lance rule:
 	moot wipes;
@@ -1034,7 +1041,6 @@ this is the pre-unearth-haunter rule:
 		preef pre-haun;
 		do nothing instead;
 	d "UNEARTHING FAILED. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
-	say "[h-not-yet].";
 	if haunter is not off-stage, say "The haunter has been unearthed." instead;
 	say "Ravage a grave!";
 	if ruby is off-stage:
@@ -1247,7 +1253,7 @@ this is the post-agnostic-blocker rule:
 		now agnostic is in Actionless Coastlines;
 		now dinger is in Actionless Coastlines;
 		if player is in Actionless Coastlines:
-			say "[line break]Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has lots of smart tidbits! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
+			say "[line break]Someone comes ... coasting into view with the atheists and [relig-mf] gone, reading a book. And not just any book, but the inexplicable bestseller [i]Reading a Dinger[r]. While it's not particularly good, you can wind up reading more than you wanted of it. They look up. 'Oh, hi, I'm the coasting agnostic. Thanks for releasing me from having to think about...those people. I can read my book now. I guess smart people read, and they read stuff like this. I hear it has all kinds of cultural tidbits I should know! And I don't have anything more constructive to do. Plus the book's so well presented. No excuse not to read it...'";
 			guar-pro agnostic;
 		else:
 			say "[line break]You hear someone yell, 'Yay! They're all gone! I can read in peace, now!' to the [if player is in Artist Traits Strait]north[else]east[end if].";
@@ -1571,7 +1577,7 @@ section presto
 
 shack-flip-yet is a truth state that varies.
 
-after fliptoing when player is in Hacks Shack:
+report fliptoing when player is in Hacks Shack:
 	now shack-flip-yet is true;
 	continue the action;
 
@@ -1626,13 +1632,13 @@ section oyster
 
 check fliptoing when player is in Posh Hops Shop: if noun is not trolls and silly-acts is 3, check-silly-death instead;
 
-after fliptoing when player is in Posh Hops Shop:
+report fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
 		annoy-trolls;
 		remove noun from shop-hint-items, if present;
 	continue the action;
 
-after fliptoing (this is the oyster min score annoying details rule):
+report fliptoing (this is the oyster min score annoying details rule):
 	if noun is trolls and player does not have pills, min-up;
 	if noun is trout and player has pills and jar-empty is false, min-up;
 	continue the action;
@@ -1651,7 +1657,7 @@ a medal check rule for a thing (called x):
 
 section general
 
-after fliptoing (this is the general min up rule):
+report fliptoing (this is the general min up rule):
 	if noun is LLPish:
 		d "General LLPish min-up for [noun].";
 		min-up;
@@ -1705,7 +1711,7 @@ thiscode [x allow-lots-tools wall] [tdm3]
 "In the book/author notes, there's a few comments about 70% had matching names before the try, and 10% just had bad anagrams, before that was all fixed. And many former author names were shipped off to Shuffling Around to make room for new ones here."
 "while ($a = <A>) { if (($a =~ /@ARGV[bracket]0[close bracket]/) && ($a =~ /@ARGV[bracket]1[close bracket]/)) { print '$a matches.'; } } # simple check for if I wrote something already"
 "There's simpler code below just detecting if any anagrams are found in table entries. It's tough to follow, with exceptions for if two of the same word are in an entry, with the same hash as above."
-"There's code of what appears to be copying critical files to a GitHub directory. Shuffling Around and Roiling files are sent to sister directories, along with the compiled release binaries and lots of utilities."
+"There's code of what appears to be copying critical files to a GitHub directory. Shuffling Around and Roiling files are sent to sister directories, along with the compiled release binaries and piles of odd utilities."
 "The rest is too archaic, but it includes other things I put on [ghsite] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
 
 table of observations
@@ -1968,9 +1974,9 @@ pale plea	"Yes, the pale plea is calling and warning you to leave. But how?"
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 pikes	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 cans	"You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though."
-dent	"That's not quite the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it."
-trout	"[if player is in Anger Range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[end if]."
-tea	"Really, stop playing with your food. You know what to do."
+dent	"Fixing the dent is a tricky business. Get two things out of order, and it might get worse. But you must be close."
+trout	"[if player is in Anger Range]The best way to help the trout at the moment is to deal with the carps and pikes[else if wrap is off-stage]You try to describe how to fight, but that's not it[end if]."
+tea	"You anticipate Aunt Tuna telling you to stop playing with your food, already."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
 pre-haun	"You need an organized way to see what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
@@ -2276,9 +2282,7 @@ frat raft	"The frat raft has fuel. It needs to use that fuel, now, with the oars
 trout	"Retutor? Torture. Rot. True!"
 wipes	"Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on."
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
-knob	"You should leave the knob to b'n OK."
 bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
-waste	"The heaps are still technically waste, but you tidied them up enough."
 lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
