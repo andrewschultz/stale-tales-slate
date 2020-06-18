@@ -671,21 +671,19 @@ chapter Loftier Trefoil
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
 
-understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
+understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when Edwin is touchable.
 
-understand "occurs" as a mistake ("You need to make something occur.") when player is in Mislit Limits or player has succor crocus.
+understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when Daryl is touchable.
 
-understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in Loftier Trefoil and Daryl is in Loftier Trefoil.
+understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when Marcel is touchable.
 
-understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in Loftier Trefoil and marcel is in Loftier Trefoil.
+understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is touchable.
 
-understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is in location of player.
+understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot picaro][end if].") when Andrew is touchable.
 
-understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot picaro][end if].") when Andrew is in location of player.
+understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is in touchable.
 
-understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is in location of player.
-
-understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
+understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when Edwin is touchable.
 
 chapter Topside Deposit
 
@@ -697,13 +695,17 @@ understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or E
 
 chapter Scope Copse
 
-understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in Scope Copse and butlers are in Scope Copse.
+to decide which guardian is the-muscle:
+	if player is male, decide on Muscly Luc Sym;
+	decide on Muscly Ms Lucy;
+
+understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when butlers are touchable.
 
 understand "copes" as a mistake ("You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.") when player is in Scope Copse.
 
 understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in Scope Copse.
 
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly ms lucy is in location of player or muscly luc sym is in location of player.
+understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when the-muscle is touchable.
 
 understand "ursty" and "ur sty" as a mistake ("You're trying to destroy the yurts, not build them up.") when player is in Scope Copse and yurts are in Scope Copse.
 
@@ -739,9 +741,11 @@ chapter Unblest Sunbelt
 
 chapter Treading Gradient
 
+understand "dang rite" as a mistake ("Creative, but ineffective, positive colloquialism.") when player is in Treading Gradient.
+
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is in Treading Gradient]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are in location of player.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is touchable]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are touchable.
 
 chapter shoals aslosh (backdrop)
 
@@ -781,13 +785,13 @@ chapter Salted Deltas
 
 understand "lasted" as a mistake ("The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].") when player is in Salted Deltas.
 
-understand "slated" as a mistake ("You're not sure what the Salted Deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
+understand "slated" as a mistake ("You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research[vis-guar].") when player is in Salted Deltas.
 
 chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in Actionless Coastlines and weirder red wire is touchable.
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
 chapter Rawest Waters
 
@@ -797,9 +801,11 @@ understand "prays" as a mistake ("Too late to be a prayers sprayer.") when playe
 
 chapter Mislit Limits
 
-understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is in Mislit Limits and player is in Mislit Limits.
+understand "occurs" as a mistake ("You need to make something occur.") when succor crocus is touchable.
 
-understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in Mislit Limits and player is in Mislit Limits.
+understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is touchable.
+
+understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in touchable.
 
 chapter Mesprise Premises
 

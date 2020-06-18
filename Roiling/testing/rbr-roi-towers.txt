@@ -618,10 +618,10 @@ This game ain't a dadgum Western.
 The butlers are plural, and anyway, they're bustling plenty as-is.
 #nudge for copse
 >cepos
-The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
+The copse and the Spec-O-Scope are both fine as-is, though maybe you can do something about the yurts.
 #nudge for spec
 >spce
-The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
+The copse and the Spec-O-Scope are both fine as-is, though maybe you can do something about the yurts.
 #nudge for butler
 >butlre
 You need to deal with all the butlers. Not just one.
@@ -2544,8 +2544,8 @@ Changing the clays would cause the curst palace to come tumbling down, since it'
 #nudge for pester
 >pestre
 The serpent doesn't just pester, it's pester'n.
-#nudge for erip
->erpi
+#nudge for enip
+>enpi
 It's officially an ur-pine, not a pine.
 
 @sli

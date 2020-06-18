@@ -867,13 +867,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "zomg"	293997050	gizmo	--	"[giz-tex]."
 "occurs"	399067323	succor crocus	--	"Changing the blub bulb to a succor crocus was good enough. Why risk more?"
 
-table of Loftier Trefoil nudges
+table of Loftier Trefoil nudges [0 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "trefoil"	515914088	--	--	"[towersloc]."
 "picaro"	307328588	--	--	"[picaro-note]."
 "picaros"	403602554	--	--	"[picaro-note]."
 
-table of Topside Deposit nudges
+table of Topside Deposit nudges [1 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "deposit"	549030564	--	--	"[towersloc]."
 "fire"	284637654	--	--	"[ftf]."
@@ -882,13 +882,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "htu"	245498124	--	--	"[no-hut]."
 "south"	416124667	--	--	"[no-hut]."
 
-table of Scope Copse nudges
+table of Scope Copse nudges [1 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "copse"	398904196	--	--	"[cop-sco]."
 "spec"	324551619	--	--	"[cop-sco]."
 "yurt"	415898880	yurts	--	"There's more than one yurt there."
 
-table of Outer Route nudges
+table of Outer Route nudges [0 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "roeut"	495698314	--	--	"[towersloc]."
 "sway"	328755809	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful"
@@ -899,7 +899,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "machine"	364257318	--	--	"[rapier-mach]."
 "shiny"	369815871	--	--	"[rapier-mach]."
 
-table of Baldest Blasted Saltbed nudges
+table of Baldest Blasted Saltbed nudges [1 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "baldest"	422639744	--	--	"[towersloc]."
 "twes"	435124866	--	--	"[wets-no]."
@@ -907,26 +907,26 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "old"	149195505	old ice	--	"No, all the old ice."
 "ice"	191804540	old ice	--	"No, all the old ice."
 
-table of Anemic Cinema nudges
+table of Anemic Cinema nudges [1 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cinema"	326975019	--	--	"[towersloc]."
 "theater"	586626174	--	--	"You don't need to go looking for screens to stare at right now. You have a world to save."
 "ingrate"	464927804	ingrates	--	"[plutry of ingrates]There's more than one ingrate blocking you." [the ingrates can only guard west of Anemic Cinema]
 
-table of Fringe Finger nudges
+table of Fringe Finger nudges [0 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "finger"	386144864	--	--	"[towersloc]."
 "sled"	298923003	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	sled rut	--	"Work on the whole sled rut."
 
-table of Shaven Havens nudges
+table of Shaven Havens nudges [1 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "shaven"	439622520	--	--	"[towersloc]."
 "haven"	343348554	--	--	"[towersloc]."
 "ravages"	453544036	--	--	"[rav-chao]."
 "ravage"	357270070	--	--	"[rav-chao]."
 
-table of Leveraged Everglade nudges
+table of Leveraged Everglade nudges [2 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "leveraged"	685537398	--	--	"[towersloc]."
 "leverage"	664508309	--	--	"[towersloc]."
@@ -938,39 +938,39 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drain"	222441064	ego drains	--	"[ego-dr]. Plus, if it was a boring old drain, you could just step around."
 "organized"	580169070	organised	--	"Nothing seems to happen. Then you remember organized can be spelled with an s and not a z."
 
-table of Treading Gradient nudges
+table of Treading Gradient nudges [2 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gradient"	485956893	--	--	"[gradient-rej]."
 "mended"	430653057	mended mini denim	--	"[prob-denim]."
 "mini"	222968353	mended mini denim	--	"[prob-denim]."
 "weed"	384576080	weeds	--	"Gumming up one weed wouldn't get the others."
 
-table of Salted Deltas nudges
+table of Salted Deltas nudges [2 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"salted"	404220839	--	--	"[towersloc]." [SALTED DELTAS 2 3]
+"salted"	404220839	--	--	"[towersloc]."
 "delta"	307946873	--	--	"[towersloc]."
 "shoals"	360184465	shoals	--	"[shoaly]."
 "shoal"	263910499	shoals	--	"[shoaly]."
 "atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways."
 
-table of Danger Garden nudges
+table of Danger Garden nudges [3 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"gander"	337854029	--	--	"[towersloc]." [DANGER GARDEN 3 1]
+"gander"	337854029	--	--	"[towersloc]."
 "native"	454169119	natives site van	--	"[plutry of natives site van]You'll need to deal with more than one native to make your way south."
 "geese"	512291995	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 
-table of Lost Lots nudges
+table of Lost Lots nudges [3 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"lost"	327550400	--	--	"[towersloc]." [LOST LOTS 3 0]
+"lost"	327550400	--	--	"[towersloc]."
 "lot"	231276434	--	--	"[towersloc]."
 "gasfield"	405218265	--	--	"[gasgad]."
 "gadfly"	258504596	--	--	"[gasgad]."
 "gadflie"	308944299	--	--	"[gasgad]."
 "riposte"	613325278	sporties ripostes	--	"You may find it easier to deal with all the ripostes at once."
 
-table of Obscurest Subsector nudges
+table of Obscurest Subsector nudges [4 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"obscurest"	725670736	--	--	"[towersloc]." [OBSCUREST SUBSECTOR 4 1]
+"obscurest"	725670736	--	--	"[towersloc]."
 "locked"	348940377	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
 "gol"	160766118	--	--	"[if fissure is touchable]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
 "gaol"	162953936	--	--	"The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer."
@@ -983,14 +983,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "wordy"	410999494	Dr Yow	--	"[wordy-rowdy-nudge]"
 "tentative"	788195264	--	agnostic-can-learn rule	"[agnostic-first] is fully attentive. Don't ruin a good thing!"
 
-table of Artist Traits Strait nudges
+table of Artist Traits Strait nudges [3 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"strati"	434998469	--	--	"[towersloc]." [ARTIST TRAITS STRAIT 3 2]
+"strati"	434998469	--	--	"[towersloc]."
 "trait"	338724503	--	--	"[could-cloud]."
 "could"	273306897	--	--	"[could-cloud]."
 "coulds"	369580863	--	--	"[could-cloud]."
 
-table of Actionless Coastlines nudges
+table of Actionless Coastlines nudges [3 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "actionless"	686724232	--	--	"[towersloc]."
 "coastline"	590450266	--	--	"[towersloc]."
@@ -1001,7 +1001,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "wire"	366057531	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
 "wires"	462331497	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
 
-table of Rawest Waters nudges
+table of Rawest Waters nudges [4 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "waster"	522636487	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better."
 "spray"	387610798	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
@@ -1013,7 +1013,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "east"	329377911	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
 "southwest"	851249533	--	--	"[diag-dir-rej]."
 
-table of Mislit Limits nudges
+table of Mislit Limits nudges [4 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mislit"	407258668	--	--	"[towersloc]."
 "clays"	293640460	--	--	"[clay-pal]."
@@ -1040,7 +1040,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "aps"	179927743	talc spa cure	--	"[focus-castle]."
 "cure"	337241304	talc spa cure	--	"[focus-castle]."
 
-table of Mesprise Premises nudges
+table of Mesprise Premises nudges [3 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesprise"	724017911	--	--	"[towersloc]."
 "emprise"	627743945	--	--	"[towersloc]."
