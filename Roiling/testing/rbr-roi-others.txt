@@ -535,6 +535,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for sonic
 >sonic
 Maybe if you had more than one coin.
+#slider test for sonic icons
+>purloin coins
+>ocsin
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic icons.
+>undo
+>undo
 #slider test for icons
 ##balance undos
 >purloin icons
@@ -1233,11 +1239,11 @@ Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give anot
 #spechelp for orange
 >oraneg
 The orange seems a bit closer for a bit.
-#spechelp for a banna'
+#spechelp for a banna
 >nabaan
 The (a) banna' flutters about for a bit.
-#scannotes for a banna'
->scan a banna'
+#scannotes for a banna
+>scan a banna
 It must be the/a banna' AND the message on it.
 #spechelp for inapt paint
 >reservde
@@ -1407,7 +1413,7 @@ It hurt to be called a perp. But maybe you can figure a way to spin that and hea
 @nud
 >prep
 by one point
-#done rejects for feeling you're a perp
+#done rejects for fleeing feeling
 >pepr
 You don't want to bring back that feeling you might be a perp. Not in any form. There's got to be another way or two to prep, though.
 >undo

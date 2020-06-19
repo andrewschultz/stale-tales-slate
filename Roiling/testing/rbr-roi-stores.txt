@@ -328,9 +328,9 @@ That might cause a bit too much commotion. Maybe you can just get rid of the lec
 #nudge for mangiets
 >mangiest
 You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious.
-#spechelp for lecturer
+#spechelp for blabber babbler
 >outsied
-The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
+The blabber babbler coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
 #mistake test for ani/nia
 >ani
 Ian's had a big life change, but that might be too big for him!

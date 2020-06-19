@@ -65,6 +65,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#spechelp for volt maze
+>veltamoz
+The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
 #spechelp for lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
@@ -207,7 +210,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den.
 
 @sli
-#slider test for screen
+#reslider test for screen
 >ercsne
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -1454,7 +1457,7 @@ NO, REARRANGE AND TRY AGAIN, you think.
 #scannotes for clack ops locs pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
-#scannotes for i'm le cop polemic
+#scannotes for im le cop polemic
 >scan i'm le cop polemic
 Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues.
 #scannotes for drive e
@@ -1613,6 +1616,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#done rejects for alocalco cola
+>alocaloc
+No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 #nudge for soda
 >soad
 It's cola, not soda or pop. And you can just drink it.
@@ -1631,9 +1637,6 @@ It's cola. It has to be. Soda could make you into a sod, of course.
 #mistake retest for feal
 >feal
 Nobody needs allegiance, here.
-#done rejects for dirty looking cola
->ocal
-No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 #done rejects for futon
 >futno
 The futon could be a little less lumpy, sure, but that's beyond your magic powers.
@@ -1643,7 +1646,7 @@ The mug is no longer manipulable.
 #done rejects for leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
-#spechelp for n e recs censer
+#done rejects for screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 #spechelp for escaroles
@@ -1660,9 +1663,6 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#done rejects for computer screen
->screne
-The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 #done rejects for casserole
 >casseroel
 The casserole is mixed up enough.
@@ -1841,9 +1841,21 @@ You get an NEED IF-DEFINE error
 That stupid NEED IF-DEFINE and that speel, still.
 
 @nud
+#done rejects for small blue button
+>toober
+No need to reboot twice.
 #nudge for sleep
 >slepe
 Your mind is a tired jumble right now, yes.
+#scannotes for peels speel
+>scan peels speel
+Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
+#readables for peels speel
+>read peels speel
+Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
+#spechelp for peels speel
+>epsel
+Whatever you thought seemed a bit of a tired mess.
 
 @sli
 #slider test for sleep
@@ -1858,13 +1870,16 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#done rejects for peels speel
+>epsle
+You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
 #renudge for nottobe
 >nottoeb
 Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
 #renudge for reboot
 >reboto
 You don't need to give that computer another (figurative) kick.
-#spechelp for i'm le cop polemic
+#spechelp for im le cop polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 
@@ -1895,7 +1910,7 @@ The process of debugging is going to take a while. You will need some sort of en
 {$SCOS}
 
 @nud
-#done rejects for i'm le cop polemic
+#done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
 #renudge for sleep

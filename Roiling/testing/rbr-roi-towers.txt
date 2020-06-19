@@ -539,13 +539,13 @@ The adders look downcast for a minute before resuming a threatening pose.
 >scan dreads adders
 Your settler registers RY?RYR--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
-#scannotes for curst palace
 #mistake test for dopiest
 >dopiest
 You sense that the dreads adders are one of the easier things to deal with, here, but you don't want to overstate it.
 
 @nud
 #testing skip-aheads for scaning palace
+#scannotes for curst palace
 >scan palace
 #palace 4 lights
 You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
@@ -1329,18 +1329,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for asset-hit atheists
+#spechelp for asset hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
-#scannotes for asset-hit atheists
->scan asset-hit atheists
+#scannotes for asset hit atheists
+>scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
 \\
-#spechelp for sweatier wait-seer
+#spechelp for sweatier wait seer
 >waitsere
 The wait-seer looks bored and distracted for a second.
-#scannotes for sweatier wait-seer
->scan sweatier wait-seer
+#scannotes for sweatier wait seer
+>scan sweatier wait seer
 The letters blink from red/yellow to purple/green and back.
 \\
 #mistake test for sweat/waste/waste ire
@@ -1401,7 +1401,7 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #nudge for deal
 >dela
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#spechelp for reed's ale
+#spechelp for reeds ale
 >reedsael
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
 #nudge for lars
@@ -1440,8 +1440,8 @@ No, you need to deal with all of Mel Fish.
 @sli
 #slider test for released
 >ereledas
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is guessing at the most believable one, DEBUG: released.
-Your settler begins to make noises: a low hum, but nothing really piercing.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: released.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!minh,mini
 >resealed
@@ -1609,11 +1609,11 @@ The one letter blinks between green and yellow.
 >read thearchy hatchery
 THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 !Nice, but you don't need clues any more.
-#spechelp for hostile-is-he lot
+#spechelp for hostile is he lot
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
-#scannotes for hostile-is-he lot
->scan hostile-is-he lot
+#scannotes for hostile is he lot
+>scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
 #spechelp for lois the hostile
@@ -1673,12 +1673,12 @@ Your score has just gone up by one point
 #nudge for native
 >natiev
 You'll need to deal with more than one native to make your way south.
-#scannotes for natives' site van
+#scannotes for natives site van
 >scan site van
 You get the feeling the natives can be swayed more than one way, here.
 
 @nud
-#spechelp for natives' site van
+#spechelp for natives site van
 >nativse
 The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 
@@ -1780,10 +1780,10 @@ No organic chemistry, please.
 #nudge for riposte
 >riposet
 You may find it easier to deal with all the ripostes at once.
-#spechelp for sporties' ripostes
+#spechelp for sporties ripostes
 >prosiets
 The ripostes seem less cutting for a moment.
-#scannotes for sporties' ripostes
+#scannotes for sporties ripostes
 >scan sporties' ripostes
 You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
 
@@ -2193,7 +2193,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 #renudge for lake
 >laek
 You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water!
-#scannotes for curst palace
+#rescannotes for curst palace
 #palace 8 lights
 >scan palace
 Your settler registers RRYR?YRY***.
@@ -2333,7 +2333,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >gonear rawest waters
-#scannotes for curst palace
+#rescannotes for curst palace
 #palace 10 lights
 >scan palace
 Your settler registers RRYR?YRYRY*.
@@ -2566,15 +2566,15 @@ The serpent remains kinda chaotic evil looking, and not just because it can't un
 #mistake test for respent
 >respent
 You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
-#spechelp for ur-pine
+#spechelp for ur pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
-#spechelp for pester'n serpent
+#spechelp for pestern serpent
 >presetn
 The serpent calms down for a split-second.
 >presetn
 The serpent calms down for a split-second, again.
-#scannotes for pester'n serpent
+#scannotes for pestern serpent
 >scan pester'n serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
 #renudge for lake
@@ -2603,9 +2603,6 @@ Your score has just gone up by one point
 #mistake test for occurs
 >occurs
 You need to make something occur.
-#done rejects for unripe ur-pine
->penuir
-You already found a succor crocus. There's not much else there, it seems.
 #nudge for occurs
 >occusr
 Changing the blub bulb to a succor crocus was good enough. Why risk more?

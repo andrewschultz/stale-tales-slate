@@ -227,6 +227,9 @@ The sob ever verbose remains that way--mixing up subjects and making you conside
 #scannotes for sob ever verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
+#readables for stop post
+>read stop post
+POP'S TOTS is written in red on the stop post.
 #redirects to sob ever verbose
 The question marks ... hmm. Oh, you get it now.
 >scan sob ever verbose
@@ -328,7 +331,7 @@ The stop post is in the past. No need to p.s. tweaking it.
 #spechelp for evil bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
-#spechelp for bee's head
+#spechelp for snore so arena
 >reasno
 The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
 #nudge for roadbed
@@ -380,8 +383,8 @@ Your score has just gone up by one point
 #renudge for bee
 >bee
 But it's not just any bee. It's a vile bee!
-#scannotes for l'clear cellar
->scan l'clear cellar
+#scannotes for l clear cellar
+>scan l clear cellar
 That question mark is perhaps, um, clear if you think about it.
 
 @sli
@@ -413,10 +416,10 @@ But it's not just any bee. It's a live bee! Though, really, you've already given
 #done rejects for evil bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
-#done rejects for bee's head
+#done rejects for snore so arena
 >reasno
 Too much fiddling with reason is unreasonable.
-#spechelp for l'clear cellar
+#spechelp for l clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
 
@@ -492,7 +495,7 @@ It's the full song name--I'd Cede.
 It's the full song name--I'd Cede.
 
 @nud
-#spechelp for i'd cede
+#spechelp for id cede
 >decied
 You try to groove to I'd Cede, but that's not quite it.
 
@@ -819,6 +822,9 @@ You must deal with the full END PRONER POD.
 #nudge for pod
 >pdo
 You must deal with the full END PRONER POD.
+#readables for end proner pod
+>read end proner pod
+It is, apparently, produced by N-E-PROD corporation.
 >x end proner pod
 ###skip test checking
 #readables for r cad card
@@ -832,6 +838,9 @@ The card's writing is more important.
 #nudge for cad
 >cda
 The card's writing is more important.
+#spechelp for end proner pod
+>end proner pdo
+The END PRONER POD seems to pulse slightly.
 
 @sli
 #slider test for ponder
