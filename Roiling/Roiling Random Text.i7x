@@ -25,8 +25,8 @@ mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbefor
 table of random books	false	0	30	read-books rule	Ordeal Reload	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
 table of ad slogans	true	0	30	blurby rule	Ordeal Reload	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
 table of mob chants	false	0	30	mob-chanting rule	Ordeal Reload	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
-table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
-table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
+table of idiotic babbler points	true	0	15	babbler-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	" [ted-die]"	"The blabber babbler flips back to the start of [his-her] keystone keynotes, resuming [his-her] ol['] mongo monolog.[pre-brk]"	20
+table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	""	"The blabber babbler reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
 table of store c competitors	false	0	10	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
 table of store c ads	false	0	10	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
@@ -256,7 +256,7 @@ die-to-us is a truth state that varies.
 to say ted-die:
 	if die-trigger > 0:
 		decrement die-trigger;
-		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if].";
+		say "[if die-trigger is 0]'Die to us!' the blabber babbler yells, pointing at someone who may or may not be using drugs right now. 'To use...I'd...' the poor soul mumbles on being slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if].";
 	else if a random chance of 1 in 4 succeeds:
 		say "After that ... incident, everything is back to [i]tedious[r].";
 	else:
@@ -375,9 +375,9 @@ this is the ohai-tokers rule:
 	if player is in strip and tokers are in strip and nestor is in strip, the rule succeeds;
 	the rule fails;
 
-this is the lecture-point rule:
+this is the babbler-point rule:
 	if player is in cruelest:
-		if go-with-first of table of idiotic lecture points and table of overdone movies, the rule succeeds;
+		if go-with-first of table of idiotic babbler points and table of overdone movies, the rule succeeds;
 	the rule fails;
 
 this is the name-movie rule:
@@ -17566,7 +17566,7 @@ blurb
 
 book stores
 
-table of idiotic lecture points [xxs1]
+table of idiotic babbler points [xxs1]
 blurb
 "applauds the rigorous squalor of [i]Grub, Dust, Drug Bust[r]."
 "asks, how do you want your life? Bald? Acne? Or BALANCED?" [x]

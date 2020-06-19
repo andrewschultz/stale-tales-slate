@@ -161,11 +161,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of cruelest lectures nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"lectures"	718245236	--	--	"[lec-un]."
-"lecture"	621971270	--	--	"[lec-un]."
-"seating"	475877967	--	--	"That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the lecturer and the Rehabs Basher."
-"mangiets"	539953120	--	--	"You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and lecturer, and you'd rather deal with the lecturer. Tedious."
-"example"	569923068	--	--	"[lec-un]."
+"lecture"	621971270	--	--	"[locname]."
+"lectures"	718245236	--	--	"[locname]."
+"seating"	475877967	--	--	"That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the blabber babbler and the Rehabs Basher."
+"mangiets"	539953120	--	--	"You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler, and you'd rather deal with the blabber babbler. Tedious."
+"blabber"	324388284	--	--	"[blab-un]."
+"example"	569923068	--	--	"[blab-un]."
 "ian"	116088172	--	--	"[ian-un]."
 "guardian"	362334391	--	--	"[ian-un]."
 "pamphlets"	647481120	--	--	"[pamph-ana]."
@@ -1635,7 +1636,7 @@ to say idols-no: say "The solid idols, being solid, are unchanged. They won't le
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
 
-to say lec-un: say "The lecturer is unchangeable in his views, but maybe he is physically movable"
+to say blab-un: say "The blabber babbler is unchangeable, but perhaps indiectly moving [him-her] will work"
 
 to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 

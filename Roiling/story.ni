@@ -633,6 +633,8 @@ to say fs: say "[if player is male][else]s[end if]"; [s added for Mr/Mrs option]
 
 to say i-n: say "[if player is male]Ian[else]Nia[end if]"
 
+to say i-n-u: say "[if player is male]IAN[else]NIA[end if]"
+
 to say m-e: say "[one of]Me[or][']Em[in random order]"
 
 to say mle: say "[one of]Mel[or]Lem[in random order]"
@@ -660,6 +662,8 @@ to say he-she-c: say "[if player is male]He[else]She[end if]"
 to say him-her-c: say "[if player is male]Him[else]Her[end if]" [probably unused but why chance it]
 
 to say his-her-c: say "[if player is male]His[else]Her[end if]"
+
+to say his-her-u: say "[if player is male]HIS[else]HER[end if]"
 
 to say mrmaam: say "[if player is female]ma'am[else]mister[end if]";
 
@@ -1707,8 +1711,8 @@ Gunter	"His views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is touchable]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
-lecturer	--
-Rehabs Basher	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
+blabber babbler	--
+Rehabs Basher	"'I'm nothing without [bab-name]'s help.' This continues for a minute, after which you sort of wish the Rehabs Basher WOULD be, or say, nothing. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
@@ -1827,8 +1831,8 @@ table of default-gen-blather	[ask x about nonsense] [tod] [xxtalk2]
 default-talker	gen-blah
 yourself	"You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints."
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
-Rehabs Basher	"He nods at you and the lecturer. It's remarkably effective psychological warfare, to repress you and all."
-lecturer	"If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
+Rehabs Basher	"[he-she-c] nods at you and the blabber babbler. It's remarkably effective psychological warfare, to repress you and all."
+blabber babbler	"If [he-she] actually heard you, [he-she]'d yell a stunning rebuke to whatever [he-she] could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
@@ -1907,7 +1911,7 @@ Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. 
 mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
 Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
 natives site van	"You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
-sweatier wait seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
+sweatier wait seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' the wait-seer says before going silent again. You see red."
 duck	"It quacks."
 Resident Trendies	"They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
@@ -2017,7 +2021,7 @@ to say ohai-casper:
 table of subject-blather	[ask x about thing they know about] [tosb] [xxtalk4]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
-Rehabs Basher	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
+Rehabs Basher	blabber babbler	"'Ayup. Listen up.'" [start STORES]
 Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
 Rehabs Basher	Rehabs Basher	"The pamphlets the Rehabs Basher gave you will say enough."
 nestor	Elvira	"'So bogusly repressive!'"
@@ -2027,8 +2031,8 @@ tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until i
 tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is all the drug you need!'"
 tokers	nestor	"[if nestor is touchable]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
 tokers	mangiest steaming	"[if Cruelest Lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
-lecturer	Elvira	"You probably know he's in favor of her."
-lecturer	lecturer	"Oh, his good-for-society rant has enough of his own experiences sprinkled in."
+blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which is all for the better."
+blabber babbler	blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
 Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
@@ -3253,7 +3257,7 @@ to solve-region (sre - a region):
 				now wiped-any-out is true;
 	if wiped-any-out is true:
 		say "(You wipe out writing in your notepad that probably only applied to this region.)";
-	if lecturer is reflexed: [have to get rid of them before moving the player, but we want to print a note AFTER going. So, tap dance with code a bit.]
+	if blabber babbler is reflexed: [have to get rid of them before moving the player, but we want to print a note AFTER going. So, tap dance with code a bit.]
 		if mangiest steaming is in Strip of Profits:
 			now tokers-home is true;
 			moot nestor;
@@ -3816,6 +3820,9 @@ when play begins (this is the define-status-line and intro text rule):
 	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
 
 to say lhs:
+	if player is in cruelest lectures and tedious-cue is true:
+		say "TEDIOUS ... DOUSE IT";
+		continue the action;
 	if mrlp is not troves:
 		say "[location of player] ([mrlp])";
 		continue the action;
@@ -4115,7 +4122,7 @@ understand "scan [thing]" as scaning.
 rule for supplying a missing noun while scaning or sying or sning or sbing (this is the how to scan the air rule):
 	if mrlp is stores:
 		if player is in Cruelest Lectures:
-			now noun is lecturer;
+			now noun is blabber babbler;
 			continue the action;
 	else if mrlp is routes:
 		if location is Harms Marsh:
@@ -4784,7 +4791,7 @@ this is the fruit-hint rule:
 book stores-hinting
 
 this is the stores-hinting rule:
-	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]The Rehabs Basher will also give you his 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
+	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]The Rehabs Basher will also give you [his-her] 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
 	if roved is true:
 		if Store H is touchable, try objhinting Store H instead;
 		all-say "Go through the THROES HOSTER to the OTHERS area." instead;
@@ -5783,7 +5790,7 @@ theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Cruelest Lectures	"You fear a 'BE RASH? HE BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
+Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
@@ -5941,7 +5948,7 @@ yurts	"Don't get [']urty! (Sorry not sorry.)" [START towers]
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
 rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
-sweatier wait seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
+sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
@@ -6508,7 +6515,7 @@ check listening:
 	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if] along." instead;
 	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
-	if noun is wait seer, say "The wait-seer is so serene, you almost can't waste ire on him blocking you. Almost. Maybe even saying random stuff might help a hint slip." instead;
+	if noun is wait seer, say "The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip." instead;
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Dourest Detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
 	if noun is bonker, say "A menacing silence spews from the bonker. Or maybe it's just your imagination." instead;
@@ -7452,7 +7459,7 @@ carry out fliptoing (this is the main fliptoing rule):
 			else if suppress-score is false:
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
-				if the-from entry is Store T or the-from entry is lecturer: [you need to get rid of the lecturer to leave Cruelest Lecturers, so no min-up]
+				if the-from entry is Store T or the-from entry is blabber babbler: [you need to get rid of the blabber babbler to leave Cruelest Lectures, so no min-up]
 					do nothing;
 				else if the-from entry is store H:
 					if roved is false, min-up;
@@ -9882,11 +9889,11 @@ the mangiest steaming is a not maingame not lumpable portal. diffic of mangiest 
 
 this is the enter-steaming rule:
 	if nestor is off-stage, say "'Dude, we, like, can't share these righteous fumes unless you help us. Maybe find our friend or something.'" instead;
-	if lecturer is reflexive:
-		say "The tokers begin singing 'Oh sigh, so high,' then 'TO PHONY TYPHOON!' and you're all 'Rest. OK?' You step into the mangiest steaming and find yourself on a way high highway. (Proof that stuff's an entry drug.) You wind up saving lands similar to Yorpwald which speak Spanish, French, German and Italian.[paragraph break]Well, in a dream, anyway. Then you wake up. A policeman towers over, asking if you're on drugs: 'Don't cop a lie, man. No jukein['] on, junkie.'[paragraph break]After a stern lecture about how using drugs makes you miss obvious details (other than, well, a WANTED poster of you that you see) and you druggies think you're special but there's nothing magical about drugs, the no-[crap] narc-op pushes you to an anti-drug seminar.";
+	if blabber babbler is reflexive:
+		say "The tokers begin singing 'Oh sigh, so high,' then 'TO PHONY TYPHOON!' and you're all 'Rest. OK?' You step into the mangiest steaming and find yourself on a way high highway. (Proof that stuff's an entry drug.) You wind up saving lands similar to Yorpwald which speak Spanish, French, German and Italian.[paragraph break]Well, in a dream, anyway. Then you wake up to see someone with a badge: GUARD ON A GROUND DURANGO. They ask if you're on drugs. Before you can reply: 'No jukein['] on, junkie.'[paragraph break]After a stern lecture about how using drugs makes you miss obvious details (other than, well, a WANTED poster of you that you see) and you druggies think you're special but there's nothing magical about drugs, the no-[crap] narc-op pushes you to an anti-drug seminar.[paragraph break]'The blabber babbler will set you straight. They call themselves that because of irony, see. Because they have something useful to say. Humor.' Seeing your blank look, because you realize that's now how self-parody works, Durango excoriates your cognitive abilities or lack thereof, though you're just confused because 'blabber babbler' is something Nestor and the tokers might giggle at.";
 		min-up;
 		now player is in Cruelest Lectures instead;
-	say "Oh, no. Not that again. Country'll have a new alphabet the next time. And a worse lecture." instead; [we need these in here since it is a nonstandard portal]
+	say "If Cruelest Lectures is still destroyed, no point going back. If it isn't, you'll be in big trouble." instead; [we need these in here since it is a nonstandard portal]
 
 section tokers
 
@@ -10177,12 +10184,16 @@ this is the bore-windows rule:
 
 book Cruelest Lectures
 
-Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. People stare at a lecturer as if they've been drugged. Um, hypnotized[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E.". roomnud of cruelest lectures is table of cruelest lectures nudges.
+Cruelest Lectures is an innie room in Stores. "You're standing in the back of an uncomfortable auditorium. There's some teasing seating, but you're not sure it'd improve the experience[one of]. A blabber babbler at the front leaves your fellow speaker parkees in a trance. But not drug-induced, of course[or][stopping]. Nearby, a passage leads to[if e-revealed is false] somewhere called[end if] Studio E.". roomnud of cruelest lectures is table of cruelest lectures nudges.
 
 check looking in Cruelest Lectures for the first time: say "As you march through the smoke, you hear 'Pored? ... ROPED, doper! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. [if mangiest steaming is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
 
 check exiting in Cruelest Lectures:
-	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The lecturer isn't as tedious as coworker chitchat, but you never pulled yourself away from THAT, either[or]Tedious, tedious, tedious[or]Your eyes wander to the top of the screen. Um, the screen behind the lecturer, that sort of blends in with the room[stopping]." instead;
+	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The blabber babbler even more tedious than coworker chitchat you never could pull yourself away[or]Tedious, tedious, tedious[or][tedcue]Your eyes wander to the top of the screen. Um, the screen behind the blabber babbler, that sort of blends in with the room[stopping]." instead;
+
+tedious-cue is a truth state that varies.
+
+to say tedcue: now tedious-cue is true;
 
 section seats
 
@@ -10193,7 +10204,7 @@ to say seat-try: now tried-seating is true;
 the teasing seating is useless boring scenery in Cruelest Lectures. "Some of it is open, but you figure it's reserved, or someone will peg you back. ". bore-check of teasing seating is bore-seating rule.
 
 this is the bore-seating rule:
-	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or the Rehabs Basher. Or the lecturer." instead;
+	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or the Rehabs Basher. Or the blabber babbler." instead;
 	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls the Rehabs Basher, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
 
 section passage
@@ -10224,35 +10235,43 @@ chapter outsideing
 
 outside-warned is a truth state that varies.
 
-chapter lecturer
+chapter blabber babbler
 
-the lecturer is a reflexive person in Cruelest Lectures. "A lecturer lectures lecturingly about why his wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste HIS time, and the golden rule and stuff."
+the blabber babbler is a reflexive person in Cruelest Lectures. "A blabber babbler rattles on about why and how [his-her] wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste [his-her-u] time. Real golden rule stuff."
 
-check scaning lecturer: say "You point your settler at the tedious lecturer.";
+check scaning blabber babbler: say "'Geez, you're tedious,' you think as you point your settler at the blabber babbler.";
 
-a-text of lecturer is "YYRRYRY". b-text of lecturer is "YYRRYRY". parse-text of lecturer is "-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
+a-text of blabber babbler is "YYRRYRY". b-text of blabber babbler is "YYRRYRY". parse-text of blabber babbler is "-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-understand "max p lee" and "max/lee/example" and "max lee" as lecturer.
+understand "example" as blabber babbler.
 
-description of lecturer is "He's wearing a very expensive suit and tie. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and $300 ties. You read MAX P LEE, EXAMPLE projected behind him, and he is sponsored by RutCorp, who help pull you out of ruts, apparently."
+understand "max/peel" and "max peel" as blabber babbler when player is male.
+
+understand "pam/exel" and "pam exel" as blabber babbler when player is female.
+
+to say bab-name-u: say "[if player is male]MAX PEEL[else]PAM EXEL[end if]"
+
+to say bab-name: say "[if player is male]Max Peel[else]Pam Exel[end if]"
+
+description of blabber babbler is "The blabber babbler is bedecked in a very expensive suit and jewelry. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and jewelry--unaffordable if the blabber babbler actually used drugs, of course. You read [bab-name-u], EXAMPLE (sponsored by RutCorp, who help pull you out of ruts) projected behind [him-her]."
 
 chapter Rehabs Basher
 
-the Rehabs Basher is a boring person in Cruelest Lectures. description of Rehabs Basher is "In case you were wondering about his actual name, his shirt advertises him as IAN, A DRUG GUARDIAN.[paragraph break]'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of Rehabs Basher is "The Rehabs Basher guards the only exit. Whether he bashes people before, after or during rehabs, or all three, he will definitely bash you if you try to leave the standard way.". bore-check of ian a drug guardian is the bore-rehabs-basher rule. bore-text of Rehabs Basher is "[ian-pamph]".
+the Rehabs Basher is a boring person in Cruelest Lectures. description of Rehabs Basher is "In case you were wondering about [his-her] actual name, [his-her] shirt advertises [him-her] as [i-n-u], A DRUG GUARDIAN.[paragraph break]'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' [he-she-c] nods and points to the blabber babbler.". initial appearance of Rehabs Basher is "The Rehabs Basher guards the only exit. Whether [he-she] bashes people before, after or during rehabs, or all three, [he-she] will definitely bash you if you try to leave the standard way.". bore-check of the Rehabs Basher is the bore-rehabs-basher rule. bore-text of Rehabs Basher is "[ian-pamph]".
 
 to say ian-pamph:
 	if player has pamphlets:
-		say "Before you can do anything, the Rehabs Basher points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
+		say "Before you can do anything, the Rehabs Basher points at the pamphlets [he-she] shared on you. Or at you. But not just plain with you. [he-she-c]'s so much bigger than you, it distracts you from whatever you meant to do.";
 	else:
-		say "Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
+		say "Before you can do anything with or to the Rehabs Basher, [he-she] thrusts pamphlets labeled Help Stamp Hemp SPLAT at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
 		if the player yes-consents:
 			now player has pamphlets;
-			say "'Good choice. Say, if they're good enough, do you think you could I could become an even better lecturer than ... him?'";
+			say "'Good choice. Say, if they're good enough, do you think you could I could become an even better blabber babbler than ... [him-her]?'";
 		else:
-			say "The Rehabs Basher looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up.";
+			say "The Rehabs Basher looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers [him-her] up.";
 
 this is the bore-rehabs-basher rule:
-	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
+	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' [he-she-c] nods and smiles, faux-friendly, and you turn back to the blabber babbler." instead;
 	if current action is attacking, say "Bad idea. The Rehabs Basher can, er, bash and re-bash." instead;
 
 section reflections
@@ -10344,7 +10363,7 @@ part people and things
 
 chapter Gast
 
-Gast is a male person. "[gast] sits here on the [sit a nag][if Rude N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[if gast is male]Ian[else]Nia[end if] Gast".
+Gast is a male person. "[gast] sits here on the [sit a nag][if Rude N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[else], going on some [i]tirades[r] about something or other. You're not sure if [he-she] needs space or someone to listen to[end if].". printed name of Gast is "[i-n] Gast".
 
 description of Gast is "You can't do much more than listen to [gast]. [if sit a nag is reflexed]You're not sure what [he-she]'s complaining about, but it seems [he-she] really needs to[else if WOE BOW BELL is reflexed][his-her-c] is drowned out by the WOE BOW BELL[else][he-she-c] seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 

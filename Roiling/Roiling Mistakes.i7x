@@ -140,13 +140,19 @@ understand "troyes" as a mistake ("Store Y does not lead to France.") when store
 
 chapter Cruelest Lectures
 
-understand "her abs" as a mistake ("Suggesting the Rehabs Basher might be feminine in any way is almost as bad as accusing him of steroid use to get those abs.") when player is in Cruelest Lectures.
+understand "douse it" as a mistake ("Sort of, but why not get rid of it--this whole boondoggle--outright?") when player is in Cruelest Lectures.
 
 understand "easting" as a mistake ("Compass directions aren't relevant here. You need to upset everything, somehow.") when player is in Cruelest Lectures.
 
 understand "eatings" and "tangies" as a mistake ("You might be suspected of having the munchies if you tried that.") when player is in Cruelest Lectures.
 
+understand "hear bs" or "hear b s" as a mistake ("You can't help but do so, alas.") when player is in Cruelest Lectures.
+
+understand "her abs" as a mistake ("Suggesting the Rehabs Basher might be feminine in any way is almost as bad as accusing him of steroid use to get those abs.") when player is in Cruelest Lectures.
+
 understand "ingates" as a mistake ("More like, you could use out-gates to leave, amirite?") when player is in Cruelest Lectures.
+
+understand "tedious" as a mistake ("Yes, it's tedious enough to make you see red.") when player is in Cruelest Lectures.
 
 book routes
 

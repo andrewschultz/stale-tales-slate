@@ -28,7 +28,7 @@ version 3 March 2015</history>
 			<objects at="wsw" />
 		</room>
 		<room id="7" name="Cruelest Lectures" subtitle="" x="-288" y="-128" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-76" customDown="0">  Rehabs Basher, Max P Lee</objects>
+			<objects at="n" custom="yes" customRight="-64" customDown="0">Rehabs Basher, Max P Lee</objects>
 		</room>
 		<room id="8" name="Same Mesa" subtitle="Start Routes" x="96" y="-32" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="noncardinal directions" roomFill="#FFA040" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="#000000" roomSmallText="" ZOrder="0">
 			<objects at="wsw" />
