@@ -475,7 +475,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 760.
+use MAX_VERBS of 770.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -493,7 +493,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 780. [delta=20]
+use MAX_VERBS of 790. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -2428,6 +2428,7 @@ carry out reading:
 		if there is a what-read entry:
 			say "[what-read entry][line break]";
 			now noun is read-yet;
+			the rule succeeds;
 		try reading alt-read entry instead;
 	if noun is large regal lager, try examining rubbish story instead;
 	try examining noun instead;
@@ -3603,6 +3604,7 @@ definition: a thing (called muso) is mult-sol:
 	if muso is cinders, yes;
 	if muso is Reeds Ale or muso is lars eede or muso is elsa erde, yes;
 	if muso is rodney, yes;
+	if muso is USB, yes;
 	no;
 
 to say reject:
@@ -3625,9 +3627,9 @@ to say reject:
 					continue the action;
 				if slider is switched on:
 					if the-from entry is prefigured:
-						say "Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here";
+						say "Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.";
 						continue the action;
-					if the-from entry is mult-sol, say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is guessing at the most believable one[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
+					if the-from entry is mult-sol, say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
 					else:
@@ -4487,7 +4489,6 @@ perma amper	true	true	false	false	"It's a perma-amper, so that might account for
 Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-pale plea	false	true	false	true	"[one of]Well, four letters is easier than five would be for the scary crays. Must be the pale plea[or]You remember it's the plea, not the crays, that's giving a readout here[stopping][if cheat-on is false]. You check both ways, and it's still RYYR[end if]."
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
@@ -5070,7 +5071,7 @@ to decide which thing is oyster-item:
 		if c2 is in Lapsin Plains, decide on c2;
 		if crate is reflexive, decide on crate;
 		if skis are in Lapsin Plains, decide on skis;
-		if knob is reflexive, decide on knob;
+		if knob is touchable, decide on knob;
 		if pans are reflexive, decide on pans;
 	if player is in Hardest Trashed Dearths, decide on eeks;
 	if player is in Shuttle Hutlets:
@@ -5930,7 +5931,7 @@ frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no rea
 carps	"That sounds so--brutal. And nonspecific."
 pikes	"That sounds so--brutal. And nonspecific."
 trout	"This game's kind of topsy turvy, but not like THAT."
-knob	"[if knob is reflexed]It's been hit already[else]Yes, but how?[end if]"
+knob	"Yes, but how?"
 skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
 span pans	"Well, you need to do something to the pans."
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
@@ -7364,16 +7365,6 @@ to print-the-from (frm - a thing):
 
 check fliptoing when mrlp is otters and power-back is false (this is the don't flip animals until they're flippable rule) : if player is in Lamer Realm or player is in Perverse Preserve, say "You can't summon the energy to do that. It seems it should work, but it doesn't. You may need a recharge." instead;
 
-check fliptoing (this is the check region ending flip rule):
-	if noun is a thisflip listed in table of end-flips:
-		choose row with thisflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
-		unless the rule succeeded, do nothing instead;
-	else if noun is a thatflip listed in table of end-flips:
-		choose row with thatflip of noun in table of end-flips;
-		consider the check final region action rule for noun;
-		unless the rule succeeded, do nothing instead;
-
 this is the mesa-pass rule:
 	if noun is lairage regalia and adobe abode is visited, try entering Uhh Tut Hut instead;
 	if noun is adsorbing signboard and Idle Deli is visited, try entering resto store instead;
@@ -7430,6 +7421,16 @@ check fliptoing (this is the check off preconditions before flipping rule):
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed, say "[reject]" instead;
 			if there is a pre-rule entry, abide by the pre-rule entry;
+
+check fliptoing (this is the check region ending flip rule):
+	if noun is a thisflip listed in table of end-flips:
+		choose row with thisflip of noun in table of end-flips;
+		consider the check final region action rule for noun;
+		unless the rule succeeded, do nothing instead;
+	else if noun is a thatflip listed in table of end-flips:
+		choose row with thatflip of noun in table of end-flips;
+		consider the check final region action rule for noun;
+		unless the rule succeeded, do nothing instead;
 
 carry out fliptoing (this is the main fliptoing rule):
 	repeat through regana of mrlp:
@@ -12196,7 +12197,7 @@ after printing the locale description for Marines Seminar Remains when Marines S
 
 chapter PG-on-up popgun
 
-The PG on up popgun is a container in Marines Seminar Remains. "The only equipment left over from the seminar is a PG-on-up popgun.". printed name of PG on up popgun is "PG-on-up popgun".
+The PG on up popgun is a container in Marines Seminar Remains. "The only equipment left over from the seminar is a PG-on-up popgun.". printed name of PG on up popgun is "PG-on-up popgun". understand "gun" as PG on up popgun.
 
 description of PG on up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing-go bin, now[else]. You notice its boing-go bin, where you put the ammunition, is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
 
@@ -12264,7 +12265,7 @@ a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?". parse-text o
 
 book Saps' Pass
 
-Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges.
+Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges. printed name is "Saps['] Pass".
 
 check going south in Saps Pass: say "The hogs snicker as you walk away.";
 
@@ -12445,21 +12446,25 @@ check taking coal: say "You don't need an armful of THAT." instead;
 
 a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "c[sp]o[sp]l[sp]a". coal is cheat-spoilable.
 
-the ALocalCo cola is a singular-named proper-named boring thing. description of ALocalCo cola is "In place of nutritional information on this bottle, you read: [paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P."
+the ALocalCo Cola is a singular-named proper-named boring thing. description of ALocalCo cola is "In place of nutritional information on this bottle, you read: [paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P.". bore-text of ALocalCo cola is "You can just drink it, or POUR it somewhere, when the time is right.". bore-check of ALocalCo Cola is bore-alocalco-cola rule.
+
+this is the bore-alocalco-cola rule:
+	if current action is drinking or current action is eating, now boring-exception is true;
+	if current action is inserting or current action is pouring, now boring-exception is true;
 
 [?? inserting into could be an action, here]
 
 Does the player mean drinking ALocalCo: it is very likely.
 does the player mean drinking the mug: it is very likely.
 
-understand "bottle" as ALocalCo cola.
+understand "bottle" as ALocalCo Cola when ALocalCo Cola is touchable.
 
-before inserting ALocalCo cola into mug:
-	say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.";
-	moot ALocalCo cola;
-	the rule succeeds;
-
-check inserting into mug: say "Only liquids would belong there." instead;
+check inserting into mug:
+	if noun is ALocalCo Cola:
+		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.";
+		moot ALocalCo cola;
+		the rule succeeds;
+	say "Only liquids would belong there." instead;
 
 check inserting into (this is the cola/mug/censer rule) :
 	if noun is ALocalCo cola:
@@ -13451,8 +13456,6 @@ chapter inseting
 
 inseting is an action applying to one thing.
 
-understand the command "inset" as something new.
-
 understand "inset [something]" as inseting.
 
 carry out inseting:
@@ -13471,7 +13474,15 @@ unseting is an action applying to one thing.
 
 understand the command "unset" as something new.
 
+understand "unset" as unseting.
 understand "unset [something]" as unseting.
+
+rule for supplying a missing noun when unseting:
+	if tunes are touchable:
+		now noun is tunes;
+	else:
+		say "You already dealt with the tunes.";
+		reject the player's command;
 
 does the player mean unseting tunes: it is very likely.
 
@@ -13503,12 +13514,11 @@ section insert-shorting
 
 insetring is an action applying to one thing.
 
-understand the command "insert [something]" as something new.
-
-understand "insert [something]" as insetring.
+understand "insert [something]" as insetring when player is in posh hops shop.
 
 carry out insetring:
 	if noun is tines or noun is stein, try inserting stein into tines instead;
+	if player is in hops shop, say "[if stein is in hops shop]Almost, but with the stein, there[else]You already inset the stein[end if].";
 	say "You need to specify what to insert that into." instead;
 
 chapter inseting
@@ -13908,10 +13918,10 @@ a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale
 scray-scan is a truth state that varies.
 
 check scaning when player is in Fighter Freight:
-	if scray-scan is true, say "You already scanned around here. You saw RYYR, probably from the pale plea." instead;
-	say "The crays are till slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
-	now scray-scan is true;
 	if noun is not plea, try scaning plea instead;
+	if scray-scan is true, say "You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea." instead;
+	say "The crays are still slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
+	now scray-scan is true;
 
 chapter leaping
 
@@ -14183,7 +14193,7 @@ check scaning crate: if c2 is in Lapsin Plains, try scaning c2 instead;
 check opening span pans: try going inside instead;
 
 check going inside when player is in Lapsin Plains:
-	if crate is reflexive, say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
+	if crate is reflexive, say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is touchable]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are not moot, say "Those skis block the door pretty handily." instead;
 	if knob is not moot, say "The knob seems stuck--and attached to the pans." instead;
 	if span pans are in Lapsin Plains, say "The span pans still block your way, but it should be a breeze to get by them. No, that's not quite it. A cinch? No..." instead;
@@ -14544,11 +14554,21 @@ sniping is an action applying to one thing.
 
 understand the command "snip" as something new.
 
+understand "snip" as sniping.
 understand "snip [something]" as sniping.
 
+rule for supplying a missing noun when sniping:
+	if pins are not touchable:
+		now the noun is the player;
+	else:
+		now the noun is the pins;
+
+does the player mean sniping the pins: it is very likely;
+
 carry out sniping:
-	if pins are reflexed, say "You've dealt with the pins. Now to mess with the dialer, again." instead;
-	if noun is pins, say "You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do." instead;
+	if pins are touchable:
+		if pins are reflexed, say "You've dealt with the pins. Now to mess with the dialer, again." instead;
+		if noun is pins, say "You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do." instead;
 	say "There's no scissors or anything in this game. Sorry." instead;
 
 chapter spining
@@ -14557,6 +14577,7 @@ spining is an action applying to one thing.
 
 understand the command "spin" as something new.
 
+understand "spin" as spining.
 understand "spin [something]" as spining.
 
 does the player mean spining the pins: it is very likely.
@@ -14825,7 +14846,7 @@ fragments are plural-named scenery. "Rotten brown fragments. Annoying and gross,
 check taking the fragments: say "Eww. You would rather trace where they came from." instead;
 
 check opening the span pans:
-	if knob is reflexive, say "The pans are jammed together, and there's no key. Or keyhole under the knob[one of]. And no, there's no mat to look under anywhere for a key. Just FYI[or][stopping]." instead;
+	if knob is touchable, say "The pans are jammed together, and there's no key. Or keyhole under the knob[one of]. And no, there's no mat to look under anywhere for a key. Just FYI[or][stopping]." instead;
 
 book Shuttle Hutlets
 
@@ -14869,13 +14890,13 @@ the rigged digger is a thing. description is "It is, unsurprisingly, a product o
 
 to say dig-purpose:
 	if haunter is moot and ruby is moot:
-		say "You're finished with the digger";
+		say "You're finished with the digger.";
 		continue the action;
 	if ruby is moot:
 		say "You managed to bury the ruby. On to the next bit.";
 		continue the action;
 	if player is in Rascal Craals and hint is in Rascal Craals:
-		say "Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did";
+		say "Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did.";
 		continue the action;
 	say "You need to dig to some purpose";
 	if player is in Anger Range and haunter is off-stage:
@@ -14884,7 +14905,7 @@ to say dig-purpose:
 		say ", maybe to hide something here to frame the walleyes";
 	else:
 		say ", though maybe somewhere else";
-	say "--and not just dig";
+	say "--and not just dig. Dig?";
 
 check searching the heaps:
 	say "[if player has rigged digger]Don't get greedy[else]That'd be too boring. You might have more fun creating something with the heaps. You don't know why, but you just do[end if]." instead;
@@ -19714,7 +19735,7 @@ the can of peanut cola is a boring thing. description is "There's an actual peon
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
 this is the bore-peanut-cola rule:
-	if current action is taking or current action is drinking, say "Blech. You're not really thirsty. It can become something more natural." instead;
+	if current action is taking or current action is drinking or current action is eating, say "Blech. You're not really thirsty. It can become something more natural." instead;
 
 chapter persimmon
 

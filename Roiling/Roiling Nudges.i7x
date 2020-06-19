@@ -620,6 +620,13 @@ chapter oyster nudges
 table of oyster nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "storey"	609225725	--	degen-true rule	"[not-the-reg]."
+"jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
+"spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
+"digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
+"howler"	486513400	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
+"bubble"	341982470	bubble wrap	--	"It's just wrap, really."
+"bubblewrap"	618894823	bubble wrap	--	"It's just wrap, really."
+"pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 
 table of posh hops shop nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -632,12 +639,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pesty"	531015304	--	--	"[no-pesty]."
 "type"	434741338	--	--	"[no-pesty]."
 "tune"	404929442	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
-"jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
-"spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
 "pti"	229568823	tips pits	--	"You [if tips pits are reflexed]already dealt with the tips pits[else]can't pick out which pit to do something to. Maybe there's an action to apply to all of them[end if]."
-"jukebox"	540345182	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are in Posh Hops Shop]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
-"remap"	360858842	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
-"unset"	501203408	jukebox	--	"You can't change the bad music selection[if tunes are in Posh Hops Shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
+"jukebox"	540345182	--	--	"[if tunes are in posh hops shop]You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper[else]The jukebox is already temporarily out of commission[end if]."
+"remap"	360858842	--	--	"You can't change the bad music selection. You already got a temporary escape, and that should be good enough."
+"unset"	501203408	--	--	"You can't change the bad music selection. You already got a temporary escape, and that should be good enough."
 
 table of Olde Lode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -664,7 +669,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "saccade"	287495970	--	--	"[saccade-no]."
 "oar"	161864198	--	--	"If you looked at just one oar, the raft would do no better than go in circles."
 "boat"	198069318	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
-"interlocking"	776745519	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
+"interlocking"	776745519	--	--	"Whoah, they're just oars. Think simpler. Much simpler."
 
 table of Fighter Freight nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -682,8 +687,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "scrawl"	364539784	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
 "pike"	307198092	pikes	--	"[all-fish]."
 "carp"	187983165	carps	--	"[all-fish]."
-"haunter"	529723362	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]The haunter needs to be dealt with otherwise.[end if]"
-"howler"	486513400	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
+"haunter"	529723362	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]You can't change the haunter, but maybe you can show it something.[end if]"
 
 table of Hardest Trashed Dearths nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -700,14 +704,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lean"	252715274	--	--	"You would upset countless people named Lena or Neal."
 "reward"	429605395	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "dent"	320852724	--	dent-gone rule	"You already fixed the dent. It's gone."
-"bubble"	341982470	bubble wrap	--	"It's just wrap, really."
-"bubblewrap"	618894823	bubble wrap	--	"It's just wrap, really."
 "tuna"	279311151	tuna	--	"She is a bit fussy, but she is more than okay as she is."
 "eat"	233103945	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	tea tray	--	"[just-tea]."
 "teatray"	546084836	tea tray	--	"[just-tea]."
 "wipe"	362199687	wipes	--	"[unless player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[else]You will need to use them all at once, and on something else[end if]."
-"pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 
 table of Lapsin' Plains nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -719,13 +720,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "isk"	194199990	skis	--	"But you need to remove both skis."
 "open"	352532153	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "doorknob"	469670214	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
-"acters"	433707299	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time..."
+"acters"	433707299	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time[if crate is reflexed], and you dealt with things, anyway[end if]..."
 "debris"	393844718	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
 "fragments"	606798973	fragments	--	"[crate-frag]."
 "fragment"	510525007	fragments	--	"[crate-frag]."
 "shut"	341772090	--	--	"[hutzy]."
 "hut"	245498124	--	--	"[hutzy]."
-"bonk"	214612168	--	knob-gone rule	"That isn't quite the right way to hit the knob."
 
 table of shuttle hutlets nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -734,8 +734,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "shadier"	414895930	--	--	"The Shadier Airshed is immovable and unchangeable."
 "heap"	248742185	heaps	--	"[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]"
 "ubt"	226634730	tubs	--	"Clear ALL the tubs!"
-"bust"	322908696	tubs	--	"That didn't make anything go boom."
-"drop"	262171428	prod	--	"You're juggling what to do with the prod, here."
 "waste"	437312684	--	waste-gone rule	"The heaps are still technically waste, but you cleaned them up enough."
 
 table of Sclerous Closures nudges
@@ -746,8 +744,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "arch"	143799505	--	--	"[ache-plur]."
 "acher"	271605614	--	--	"[ache-plur]."
 "sardine"	446521139	sardine	--	"The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly."
-"digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
-"hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else."
 
 table of Horned Hedron nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -755,7 +751,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "theses"	588552467	theses sheets	--	"The hedron's spirit will remain intact even if you meddle there. You must go into its heart."
 "these"	492278501	theses sheets	--	"It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead."
 "tarp"	272087598	ol trap	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
-"patrol"	400254014	pol art portal	--	"The portal can't be changed for the better. It already goes where you want."
 "walleye"	595721739	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	walleyes	--	"The walleyes are a bad crowd, past redemption."
 
@@ -763,7 +758,7 @@ table of Rascal Craals nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "craals"	258792829	--	--	"[locname]."
 "craal"	162518863	--	--	"[locname]."
-"bury"	331207767	ruby	--	"That's not quite it. You file that idea six feet under."
+"hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else."
 
 table of End Den nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1968,7 +1963,7 @@ this is the waste-gone rule:
 	if waste is moot, the rule succeeds;
 	the rule fails;
 
-to say ache-plur: say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
+to say ache-plur: say "[if sardine is in sclerous closures]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 
 to say its-msg: say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
 

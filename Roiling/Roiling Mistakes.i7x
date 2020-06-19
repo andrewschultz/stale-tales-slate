@@ -7,9 +7,12 @@ Version 1/171011 of Roiling Mistakes by Andrew Schultz begins here.
 
 volume Roiling Mistakes
 
+[some of these were defined in the main file, but if we do that, we wipe out the mistakes]
+
 understand the command "hug" as something new.
 understand the command "embrace" as something new.
 understand the command "knock" as something new.
+understand the command "inset" as something new.
 
 book general
 
@@ -500,9 +503,6 @@ book oyster
 
 chapter Posh Hops Shop
 
-[def=insert stein]
-understand "insert [something]" as a mistake ("Almost, but with the stein, there.") when stein is in hops shop and player is in hops shop.
-
 understand "insert" as a mistake ("Almost, with the stein, there.") when stein is in hops shop and player is in hops shop.
 
 understand "inset [text]" as a mistake ("[if the number of words in the player's command > 3]You may want to INSERT x in Y instead[else]You may not be using an object in the game, and you may wish to inseRt, instead[end if].")
@@ -541,7 +541,7 @@ understand "fart" as a mistake ("[if buried raft is in location of player]This r
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Disease Seaside.
 
-understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are in Disease Seaside and player is in Disease Seaside.
+understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are touchable.
 
 chapter Fighter Freight
 
@@ -599,9 +599,11 @@ understand "lapins" as a mistake ("Cute bunnies can make any game better, but ha
 
 understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are touchable.
 
+understand "nkob" as a mistake ("[if knob is reflexed]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
+
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
 
-understand "pone" as a mistake ("The message [if knob is reflexed]is[else]was[end if] corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
+understand "pone" as a mistake ("The message [if span pans are moot]is[else]was[end if] corny, but the door's a piece of cake [if span pans are not moot]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
 
 understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin Plains.
 
@@ -621,7 +623,7 @@ understand "bury [text]" as a mistake ("Nothing worth burying.") when player has
 
 understand "buts" as a mistake ("You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.") when tubs are in location of player.
 
-understand "dig" and "dig [text]" as a mistake ("[dig-purpose].") when player has digger.
+understand "dig" and "dig [text]" as a mistake ("[dig-purpose]") when player has digger.
 
 understand "stub" as a mistake ("You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.") when tubs are in location of player.
 
@@ -656,6 +658,8 @@ understand "splam" as a mistake ("There's a simpler way to attack the ant.") whe
 chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
+
+understand "redial" as a mistake ("[if papery yapper is touchable]You can't even dial with the yapper around[else]You need use the dialer meaningfully first[end if].") when player is in Tenfold Teflond Den Loft and d2 is off-stage.
 
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflond Den Loft and pins are in Tenfold Teflond Den Loft.
 

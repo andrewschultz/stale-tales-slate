@@ -206,7 +206,7 @@ heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You 
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
 pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
-gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	--	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
+gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 lever	lever	false	501914680	--	"revel"	"revel"	pre-lever-revel rule	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	--	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
@@ -340,7 +340,7 @@ t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	-
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break][e-n-m] are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1058,6 +1058,11 @@ this is the post-unearth-haunter rule:
 	now haunter is in Anger Range;
 	it-him-her haunter;
 
+this is the post-enlarge-gleaner rule:
+	if gleaner is examined:
+		say "[line break]You may wish to re-examine the gleaner now it's changed.";
+		now gleaner is unexamined;
+
 this is the pre-crate-react rule:
 	if c2 is in Lapsin Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
@@ -1191,12 +1196,8 @@ this is the post-dialer-derail rule:
 	now pins are in tenfold;
 
 this is the pre-dialer-redial rule:
-	if yapper is touchable:
-		say "You can't even [i]dial[r] with the yapper around.";
-		preef d2;
-		the rule fails;
 	if pins are reflexive:
-		say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard...";
+		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
 		preef d2;
 		the rule fails;
 
@@ -1933,7 +1934,8 @@ odes song	"The odes song sounds warpy for a second or two. Who knows, maybe you 
 ether	"[if ether is prefigured]No, you definitely need to say THERE. You just need to have backup and maybe weapons[else]The ether pulsates, but you still can't see through it[end if]."
 ye hoop	"The hoop dips a bit as if to taunt you."
 boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
-maze walls	"The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style."
+volt maze	"The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style."
+maze walls	"The [if player is in Grey Gyre]volt maze rumbles[else]maze walls rumble[end if] a bit. You must have all the right letters to bring [if player is in Grey Gyre]it[else]them[end if] crashing down in style."
 n e recs censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
@@ -1962,6 +1964,7 @@ Capers Recaps	"You think of mocking Casper's writing style, but that's not quite
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tips pits	"The tips pits rattle a bit as you try to do ... something ... to them."
 tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
+perma amper	"You can't change the bad music selection. But you can neutralize it--the jukebox has instructions."
 tunes	"The tunes grow slightly less annoying, for a moment."
 trolls	"The trolls laugh at you a bit, but nervously."
 clam	"The clam still seems enraged."
@@ -1979,7 +1982,7 @@ trout	"[if player is in Anger Range]The best way to help the trout at the moment
 tea	"You anticipate Aunt Tuna telling you to stop playing with your food, already."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
-pre-haun	"You need an organized way to see what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
+pre-haun	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
@@ -1988,8 +1991,8 @@ span pans	"The pans wobble slightly."
 bogus-plains	"You feel like making a big speech about what you've done and what you plan to do, but not quite like that."
 waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
 heaps	"The heaps still look ugly as ever."
-tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
-prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
+tubs	"Hm. The tubs shake slightly. Maybe if you were more forceful."
+prod	"You juggle the prod a bit, but it doesn't change into anything new."
 lance	"The lance glimmers slightly. It has potential to be shiny."
 Achers Chaser Arches	"Hm, you almost thought you found something. Well, not QUITE like that."
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
@@ -2283,7 +2286,7 @@ trout	"Retutor? Torture. Rot. True!"
 wipes	"Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on."
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
 bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
-lance	"Your work turned up enough."
+lance	"It's clean enough. You can't, like, make it sharper or anything."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
 Achers Chaser Arches	"Further searching proves fruitless."
