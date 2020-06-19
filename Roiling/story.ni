@@ -7468,6 +7468,8 @@ carry out fliptoing (this is the main fliptoing rule):
 					increment the score;
 					increment the cur-score of mrlp;
 					increment the min-score of mrlp;
+				else:
+					poss-d;
 				score-notify;
 			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and frat raft is reflexed:
@@ -11751,8 +11753,8 @@ check entering volt maze: try going north instead;
 maze-points is a number that varies. maze-points is 0.
 
 to shuffle-nowt-town:
-	remove maze entry zany meter from play;
-	remove volt maze from play;
+	moot maze entry zany meter;
+	moot volt maze;
 	remove maze walls from play;
 	remove n-t-air from play;
 	now ether is in Grey Gyre;
@@ -12337,9 +12339,12 @@ a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]
 check taking hogs:
 	say "You and Rand and Leo can take [']em. But not literally." instead;
 
-check going north in Phat Path:
-	if Leo is touchable, say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be a help anyway, to say the least.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
-	if Hacks Shack is unvisited, say "You feel a small tingle--you've felt it before, from the YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
+the YrNet Entry is boring amusing scenery. "You can't see where the YrNet Entry is. It's top-notch security, designed to fool even Elvira's sneakiest minions!". bore-text of YrNet Entry is "The YrNet Entry ultimately [if Leo is touchable]will[else]did[end if] not restrict you from entering the Hacks['] Shack.".
+
+check going north in Phat Path when hogs are moot or keys are moot:
+	move YrNet Entry to Phat Path;
+	if Leo is touchable, say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those out-of-sight high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be much help anyway.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
+	if Hacks Shack is unvisited, say "You feel a small tingle--you've felt it before, from the invisible YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
 
 check scaning in Phat Path when Leo is in Phat Path: say "Leo and Rand ooh and aah at how you're using a thing to find out about things.";
 
@@ -12733,6 +12738,9 @@ after putting a thing on the labs slab:
 check taking labs slab: say "The labs slab is there so you don't have to take stuff. Plus it's too heavy." instead;
 
 description of labs slab is "It's far from a plain old table, but you can call it that if you want. It's quite ergonomic and sturdy and not just because none of the twenty-two other things you (yes, you) could zap it to make any sense."
+
+to decide which number is drive-score:
+	decide on boolval of (whether or not Drive A is reflexed) + boolval of (whether or not Drive E is reflexed);
 
 Drive A is proper-named reflexive LLPish container on the labs slab. understand "disk drive" and "eco-trump computer" and "computer" and "hard" and "hard drive" as Drive A.
 

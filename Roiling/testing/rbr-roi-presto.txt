@@ -65,6 +65,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#spechelp for lamb
+>blma
+The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 #mistake test for balm
 >balm
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
@@ -189,6 +192,9 @@ It's the censer that's important, not the brand name.
 #nudge for rec
 >rce
 It's the censer that's important, not the brand name.
+#spechelp for n e recs censer
+>screne
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
 
 @sli
 #slider test for screen
@@ -209,7 +215,7 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 @nud
 #done rejects for n e recs censer
 >screne
-No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
+You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 
 >e
 
@@ -394,14 +400,14 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#spechelp for volt maze
->mazeltvo
-The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
->n
->w
 #spechelp for maze walls
 >mazeltvo
-The volt maze sign shakes a bit. Oy vey! I hope this one's not too meshuggenah.
+The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
+>n
+>w
+#respechelp for maze walls
+>mazeltvo
+The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 >undo
@@ -509,6 +515,13 @@ You don't need to praise military activity and sacrifice too much. Countries whe
 
 >w
 
+@max
+>mazeltov
+!You're not messing around! You see the best way to destroy the maze, and you're going for it.
+No point actually going through the maze when you can destroy it.
+by three points
+>undo
+
 @min
 >wont
 Your score has just gone up by one point
@@ -523,7 +536,7 @@ DEBUG INFO: Taking away a max point.
 >gonear runway
 >n
 >gonear runway
->scan lev
+>scan zo
 ###skip test checking
 >mazeltov
 #notmax
@@ -531,8 +544,9 @@ Your score has just gone up by two points
 }}CURMIN++
 }}CURMAX--
 }}SCORE+=2
-DEBUG INFO: min-up codepath
-DEBUG INFO: Taking away a max point.
+>score
+{$SCOS}
+>undo
 >undo
 >undo
 >undo
@@ -636,8 +650,11 @@ You don't need to riff on any location names to win the game, unless there's not
 >bivg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 #nudge for dreidl
+>n
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
+>undo
+>undo
 
 @nud
 #separate semi-forcing stuff
@@ -668,12 +685,6 @@ No, his full name is the clue, here.
 >undo
 >undo
 
-
-@nud
-#spechelp for lamb
->blma
-The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
-
 @max
 #pre-solve-maze rule
 >n
@@ -687,7 +698,6 @@ by three points
 #pre-solve-maze rule
 >mazeltov
 Your score has just gone up by three points
-No point actually going through the maze when you can destroy it.
 }}SCORE+=3
 }}CURMIN+=2
 >score
@@ -768,7 +778,7 @@ The odes song sounds warpy for a second or two. Who knows, maybe you could get r
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
 #mistake retest for evil
 >evil
-No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
+No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
 #mistake test for leonard/renaldo/leandro/rolande
 >leonard
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
@@ -855,6 +865,7 @@ You wouldn't want that, now they're your friends.
 >asswhup
 They're on your side. They will fight when they need to.
 #done rejects for wzup
+>asshuwp
 You don't need to greet Leo and Rand again.
 #renudge for leonard
 >leonadr
@@ -864,12 +875,23 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 
 @max
-#continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands.
+#continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
 #test cases: no gun, no loaded gun
 >abstract popgun to seminar
 >there
 !by one point
 Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Still, you note you started things right.
+>there
+!by one point
+#don't let Leo and Rand get beaten up twice.
+THERE, you think, realizing you're not armed yet.
+#detour to test "efffectively" armed
+>banish dart
+>there
+THERE, you think, realizing you're not efectively armed yet.
+>undo
+>undo
+#end detour
 >purloin popgun
 >there
 !by one point
@@ -907,10 +929,10 @@ The popgun is just fine.
 The popgun is just fine.
 #renudge for serial
 >serila
-You got the boing go bin working.
+You got the boing-go bin working.
 #renudge for number
 >numbre
-You got the boing go bin working.
+You got the boing-go bin working.
 
 @max
 >there
@@ -983,7 +1005,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #nudge for lawl
 >lalw
-It's too expansive for you to use any mental energy on.
+The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on.
 #nudge for ssap
 >sspa
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -998,7 +1020,7 @@ Despite being dangerous to walk into, Deil's Slide serves an important ecologica
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 #nudge for hog
 >hgo
-You need to deal with all the hogs.
+The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all.
 #nudge for key
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
@@ -1069,9 +1091,6 @@ The hawt thaw crackles slightly.
 #scannotes for hawt thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
-#nudge for chart
->chatr
-But there is more than one chart to twiddle.
 
 @sli
 #slider test for what
@@ -1107,9 +1126,10 @@ Concentrate on the words of the harpings phrasing.
 #nudge for harping
 >harpign
 Concentrate on the words of the harpings phrasing.
-#nudge for entyr
+#nudge for yrnet
+>n
 >entyr
-No way you'll be able to meddle with the Entry from outside
+The YrNet entry is secure. You wouldn't know where to start. But you don't need to do anything to it excelt get rid of Rand and Leo.
 #spechelp for alert letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
@@ -1259,6 +1279,9 @@ Starch is calorically and cosonantally (if that's a word) heavy. This must help.
 #nudge for summit
 >summti
 The mutism summit is meant to be stable. You'll need to go north to do what you need, in peace and quiet.
+#nudge for chart
+>chatr
+But there is more than one chart to twiddle.
 
 @!min
 >trasch
@@ -1365,7 +1388,7 @@ The catechism would be more likely to scramble YOU up. It'll be there when you n
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 #nudge for drive
 >driev
-That computer probably holds important information--you just need to extract it right, by trying other things.
+Since there's both Drive A and Drive E, that's ambiguous. You could tweak each individually if you wanted, though.
 #nudge for shakc
 >shack
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1405,21 +1428,6 @@ There are buttons all over the shack, but they should remain that way. You may h
 #nudge for escarole
 >escaroel
 All the escaroles.
-#nudge for caffeine
->caffeien
-The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
-#nudge for fine
->fien
-The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
-#nudge for cafe
->caef
-The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
-#nudge for soda
->soad
-It's cola, not soda or pop. And you can just drink it.
-#nudge for pop
->ppo
-It's cola, not soda or pop. And you can just drink it.
 #nudge for trim
 >trmi
 They're not just socks, or trim. They're trim socks.
@@ -1432,18 +1440,6 @@ They're not just socks, or trim. They're trim socks.
 #nudge for trimsock
 >trimsokc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
-#nudge for sticks
->sticsk
-You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
-#nudge for rom
->rmo
-You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
-#nudge for stick
->banish gum
->stikc
-You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
->undo
->undo
 #spechelp for disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
@@ -1452,9 +1448,9 @@ The disk seems to want to expand, but not quite into that. You must be close.
 NO, REARRANGE AND TRY AGAIN, you think.
 #readables for clack ops locs pack
 >read clack ops locs pack
-The locs pack mentions, in red, PC Cloaks are also a super cool productivity booster.
+/(The Clack Ops Locs Pack mentions, in red, PC Cloaks are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!)
 >read clack ops locs pack
-The locs pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!
+/(The Clack Ops Locs Pack mentions, in red, PC Cloaks are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!)
 #scannotes for clack ops locs pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
@@ -1542,6 +1538,7 @@ Your score has just gone up by one point
 #slider test for disk
 >ikds
 No, skid <=> disk is about it. There's no tricky third way.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #mistake retest for kids
@@ -1616,6 +1613,12 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#nudge for soda
+>soad
+It's cola, not soda or pop. And you can just drink it.
+#nudge for pop
+>ppo
+It's cola, not soda or pop. And you can just drink it.
 #mistake retest for alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
@@ -1642,7 +1645,7 @@ The mug is no longer manipulable.
 You can't bring the flea back to life--or do anything else to the leaf.
 #spechelp for n e recs censer
 >screne
-That feels right, but it's not enough yet. You don't need anything grumbly, here.
+The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 #spechelp for escaroles
 >casseroel
 The escaroles seem slightly meatier.
@@ -1798,11 +1801,6 @@ Even more nothing happens than you expected. The blue button really is too broke
 >reboto
 You need to give that computer another (figurative) kick.
 
-@sli
-#slider test for reboot
->oberto
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 @max
 >compile
 !by one point
@@ -1821,6 +1819,11 @@ A DISK, I'D ASK pops up. You realize that the disk would fit fine.
 >compile
 !by one point
 You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
+
+@sli
+#slider test for reboot
+>oberto
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >reboot
 Your score has just gone up by one point
@@ -1932,6 +1935,13 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOS}
+
+@nud
+#renudge for drive
+>driev
+Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
+
+@!min
 >derive
 by one point
 DEBUG INFO: min-up codepath
@@ -1961,6 +1971,21 @@ DEBUG INFO: min-up codepath
 {$SCOMAX}
 
 @nud
+#nudge for sticks
+>sticsk
+You'll know what to do with the sticks when you're ready to program
+#nudge for rom
+>rmo
+You'll know what to do with the sticks when you're ready to program
+#nudge for stick
+>banish gum
+>stikc
+You'll know what to do with the sticks when you're ready to program
+>undo
+>undo
+#renudge for drive
+>driev
+Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
 #mistake retest for redive
 >redive
 Deriving was tricky enough.
@@ -1996,10 +2021,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
 #pre-bub-dude-egg rule
 >debug
-The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola won't quite be enough for the task ahead, as-is.
+The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
+!by one point
 #rescannotes for bub dude egg
 >scan bub dude egg
-Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad."
+Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad.
 #nudge for bub
 >bbu
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
@@ -2009,8 +2035,21 @@ Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole m
 #nudge for geg
 >egg
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
+#nudge for local
+>locla
+The cola has already been reprocessed enough. You'll drink it when the time comes.
 
 >pour cola in mug
+You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+
+@nud
+#redone rejects for mug
+>mgu
+You'd get cola all over you if you tried anything with the mug.
+#nudge for lcao
+>lcoa
+The mug is already somehow generating infinite cola. Don't want to mess with that.
+
 >debug
 Your score has just gone up by one point
 }}SCORE++
@@ -2022,9 +2061,6 @@ Your score has just gone up by one point
 {$SCOMAX}
 
 @nud
-#redone rejects for mug
->mgu
-You'd get cola all over you if you tried anything with the mug.
 #done rejects for bub dude egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
@@ -2063,12 +2099,12 @@ Hm, USB seems pretty straightforward. Maybe there are two solutions, each equall
 #spechelp for usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
->bus
-Your score has just gone up by one point
-!Diver time
-Strip of Profits
 
 @max
+>bus
+Your score has just gone up by one point
+Drive time
+Strip of Profits
 >altpath
 You could've made the USB into a sub, too.
 >undo
@@ -2077,7 +2113,7 @@ You could've made the USB into a sub, too.
 @sli
 #slider test for sub
 >usb
-Your settler begins to make noises: a low hum, but nothing really piercing.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sub.
 
 >sub
 Your score has just gone up by one point
@@ -2093,4 +2129,5 @@ You could've made the USB into a sub, too.
 
 >score
 
-Presto ({SCORE}/{MAX})
+@!min
+Presto ({MAX}/{MAX})

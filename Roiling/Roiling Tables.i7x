@@ -949,7 +949,7 @@ this is the post-polemic-compile rule:
 
 this is the pre-bub-dude-egg rule:
 	if ALocalCo Cola is not moot:
-		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is touchable]coal won't cut it. Too early 20th century[else]ALocalCo cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
+		say "The process of debugging is going to take a while. You will need some sort of energy. That [if coal is touchable]coal won't cut it. Too early 20th century[else]ALocalCo Cola won't quite be enough for the task ahead, as-is. It seems crazy to say, but maybe there's a way to make more of it[end if].";
 		preef BUB DUDE EGG;
 		do nothing instead;
 
@@ -1602,7 +1602,6 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 					continue the action;
 				else:
 					say "You can't see much more to do with the skid now, though.";
-					preef disk;
 					do nothing instead;
 			if noun is screen and shack is visited:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";

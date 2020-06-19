@@ -445,6 +445,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "popgun"	443897512	popgun	--	"[boing-clue]."
 "spoilt"	454009205	popgun	--	"[boing-clue]."
 "lcao"	149359819	--	cola-in-mug rule	"The mug is already somehow generating infinite cola. Don't want to mess with that."
+"dreidl"	353994775	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
+"leonard"	433420743	Rand	--	"[if hogs are moot or keys are moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -501,7 +503,6 @@ table of unwary runway nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "unwary"	491818961	--	--	"[locname]."
 "bigv"	203176273	--	--	"[just-letter]."
-"dreidl"	353994775	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
 "avlez"	413942204	Tom Avlez	--	"No, his full name is the clue, here."
 "tom"	241537748	Tom Avlez	--	"No, his full name is the clue, here."
 "mavelt"	458157757	Zo Mavelt	--	"No, his full name is the clue, here."
@@ -531,7 +532,6 @@ table of Dirge Ridge nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dirge"	311751549	--	--	"[locname]."
 "liev"	333777614	--	--	"The vile veil is impassive. It--kind of protects you, actually."
-"leonard"	433420743	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "whasup"	430250622	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 
 table of Austerer Treasure nudges
@@ -557,9 +557,9 @@ table of Phat Path nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "phat"	224046094	--	--	"[locname]."
 "saps"	276201709	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks Shack is visited]back [end if]north, here."
-"entyr"	507506690	--	--	"[if leo is touchable]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
+"yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start. But you don't need to do anything to it[if leo is touchable] except get rid of Rand and Leo[end if]."
 "clump"	323466343	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
-"summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack]back [end if]north to do what you need, in peace and quiet."
+"summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack is visited]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	harpings phrasing	--	"[harphr]."
 "harping"	352759935	harpings phrasing	--	"[harphr]."
 "chart"	246909523	starch charts	--	"But there is more than one chart to twiddle."
@@ -589,7 +589,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "catechism"	513739379	--	--	"[no-txtbk]."
 "textbook"	666851463	--	--	"[no-txtbk]."
 "bkoo"	220057237	--	--	"[no-txtbk]."
-"drive"	386316667	--	--	"[no-dsk]."
+"drive"	386316667	--	--	"Since there's both Drive A and Drive E, that's ambiguous. [if drive-score is 2]But it doesn't matter. You did what you could with both, anyway[else if drive-score is 0]You could tweak each individually if you wanted, though[else]You can still tweak [a-or-e], though[end if]."
 "rebuff"	389684416	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
 "magnetic"	462684739	--	--	"The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise."
 "computer"	660245011	--	--	"You need to fix the program in the computer[if number of things on labs slab < 4], well, once you get it running[end if]."
@@ -1839,6 +1839,8 @@ to say harphr: say "Concentrate on the words of the harpings phrasing"
 
 to say no-txtbk: say "The catechism would be more likely to scramble YOU up. [if usb is touchable]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
 
+to say a-or-e: say "Drive [if Drive A is reflexive]A[else]E[end if]"
+
 to say slab-score:
 	if slab-pts < 10, increment slab-pts; [prevent rollover]
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
@@ -1858,8 +1860,6 @@ to say reboot-try-scan:
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
 to say tba-key-jazz: say "[if TBA key is reflexive]Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down[else]You already did enough with the TAB key[end if]"
-
-to say no-dsk: say "Since there's both Drive A and Drive E, that's ambiguous";
 
 to say shackbut: say "There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though"
 
