@@ -4902,7 +4902,7 @@ this is the presto-hinting rule:
 	if player is in Hacks Shack:
 		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
 		if can-put-on-slab, all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
-		if rebooted is false, try objhinting blue button instead;
+		if blue button is reflexive, try objhinting blue button instead;
 		if Clack Ops Locs Pack is not moot, try objhinting Clack Ops Locs Pack instead;
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
@@ -12525,7 +12525,7 @@ to decide whether cpuready:
 	if computer screen is not on slab, decide no;
 	if caps lock is not part of keyboard, decide no;
 	if disk is not in drive a, decide no;
-	if rebooted is false, decide no;
+	if blue button is reflexive, decide no;
 	decide yes.
 
 chapter locs pack
@@ -12580,7 +12580,7 @@ a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text
 check scaning computer screen: if BUB DUDE EGG is touchable, try scaning BUB DUDE EGG instead;
 
 check restarting the game when player is in Hacks Shack:
-	say "[if rebooted is false]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
+	say "[if blue button is reflexive]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
 
 after printing the locale description for shack when shack is unvisited:
 	if computer screen is in Austerer Treasure:
@@ -12797,7 +12797,7 @@ check scaning USB:
 
 description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status."
 
-The small blue button is part of Drive A. understand "reboot/ button" as small blue button. it is flippable.
+The small blue button is part of Drive A. understand "reboot/ button" as small blue button. it is flippable. it is reflexive.
 
 The small orange button is part of Drive A.
 
@@ -12807,35 +12807,13 @@ description of small blue button is "'To be or'"
 
 description of small orange button is "'Not to be'"
 
-rebooted is a truth state that varies.
-
 check pushing small blue button:
-	if the player's command does not include "reboot", say "You're not sure what that button does. You see red thinking it's a [i]bore to[r] push again. Or I'm not sure you are, and I'm looking out for my fellow computers, here." instead;
-	if player has keyboard and keyboard is not on slab:
-		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
-		preef small blue button instead;
-	if disk is not in Drive A:
-		say "It's risky to boot without a disk, like that [if disk is in Hacks Shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
-		preef small blue button instead;
-	if computer screen is not on slab:
-		say "You wouldn't know if anything happened, since there's no screen on the table[if player has computer screen]. The one in your inventory should do[end if].";
-		preef small blue button instead;
-	if keyboard is not touchable:
-		say "You have nothing to type with, so it doesn't do much good.";
-		preef small blue button instead;
-	if rebooted is true, say "No need to reboot twice." instead;
-	now small blue button is unfigured;
-	now small blue button is reflexed;
-	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen.";
-	set the pronoun it to computer screen;
-	if player has rom sticks:
-		moot rom sticks;
-	reg-inc;
-	now rebooted is true instead;
+	if small blue button is reflexive and the player's command does not include "reboot", say "You're not sure what that button does. You see red thinking it's a [i]bore to[r] push again. Or I'm not sure you are, and I'm looking out for my fellow computers, here." instead;
+	try fliptoing small blue button instead;
 
-understand "code/program" as screen when rebooted is true and player is in Hacks Shack.
+understand "code/program" as screen when blue button is reflexed and player is in Hacks Shack.
 
-check pushing small orange button: say "It's too bent to push. Seems like the blue button [if rebooted is true]was[else]is[end] more worth pushing." instead;
+check pushing small orange button: say "It's too bent to push. Seems like the blue button [if blue button is reflexed]was[else]is[end] more worth pushing." instead;
 
 check taking (this is the can't remove computer parts from labs slab rule):
 	if noun is in Drive A, say "The disk is where it should be." instead;

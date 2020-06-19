@@ -580,8 +580,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ops"	252092502	Clack Ops Locs Pack	--	"[full-pack]."
 "locs"	243445967	Clack Ops Locs Pack	--	"[full-pack]."
 "pack"	155592540	Clack Ops Locs Pack	--	"[full-pack]."
-"reboot"	483363989	--	--	"[reboot-try-scan]"
-"nottobe"	570057712	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
+"nottobe"	570057712	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if blue button is reflexed]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "caps"	198933328	caps lock	--	"[caps-no]."
 "lock"	200105179	caps lock	--	"[caps-no]."
 "tbakey"	426815280	TBA key	--	"[tba-key-jazz]."
@@ -1851,16 +1850,6 @@ to say slab-score:
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
 
 to say full-pack: say "You need to deal with the full [locs pack]"
-
-to say reboot-try-scan:
-	if rebooted is true:
-		say "You don't need to give that computer another (figurative) kick.[run paragraph on]";
-		continue the action;
-	if slider is switched on:
-		match-process the player's command and "reboot";
-		say "[one of][no line break][or][run paragraph on][or][cycling]";
-		continue the action;
-		say "You need to give that computer another (figurative) kick.[run paragraph on]";
 
 to say caps-no: say "It'd sort of stink if a caps lock button broke in real life, so, no"
 

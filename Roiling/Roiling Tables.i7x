@@ -147,6 +147,7 @@ skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the 
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be, because they have odd special abilities. Maybe if you examine this mug, you can see if it does."
 coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira tried to corner the market with the deceptively named All-Cocoa Cola."
+blue button	blue button	false	483363989	--	"reboot"	"reboot"	pre-reboot rule	--	"The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if Im Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
@@ -872,6 +873,23 @@ this is the post-disk-skid rule:
 		preef disk;
 	move skid to location of player;
 
+this is the pre-reboot rule:
+	if player has keyboard and keyboard is not on slab:
+		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
+		preef small blue button instead;
+	if disk is not in Drive A:
+		say "It's risky to boot without a disk, like that [if disk is in Hacks Shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
+		preef small blue button instead;
+	if computer screen is not on slab:
+		say "You wouldn't know if anything happened, since there's no screen on the table[if player has computer screen]. The one in your inventory should do[end if].";
+		preef small blue button instead;
+	if keyboard is not touchable:
+		say "You have nothing to type with, so it doesn't do much good.";
+		preef small blue button instead;
+	set the pronoun it to computer screen;
+	if player has rom sticks:
+		moot rom sticks;
+
 this is the pre-censer-screen rule:
 	if censer is touchable:
 		if Hacks Shack is unvisited:
@@ -927,7 +945,7 @@ this is the pre-polemic-compile rule:
 	if disk is not in Drive A:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if].";
 		preef Im Le Cop polemic instead;
-	if rebooted is false:
+	if blue button is reflexive:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
 		preef Im Le Cop polemic instead;
 	if slept is false:
@@ -2273,6 +2291,7 @@ caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if ALocalCo cola is moot]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
+small blue button		"No need to reboot twice."
 TBA key	"No, the TAB key is what it should be."
 Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
@@ -2566,7 +2585,7 @@ USB	"[one of]The USB is pretty universal. It can become either of two things.[pl
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
 yak	"[if Hacks Shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in Hacks Shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
 catechism	"[if yak is moot]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
-blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
+blue button	"[if blue button is reflexed]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
 Clack Ops Locs Pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
@@ -2942,7 +2961,7 @@ to say frootz:
 
 check objhinting drive:
 	if disk is in Drive A:
-		if rebooted is true, all-say "You have the disk drive working." instead;
+		if blue button is reflexed, all-say "You have the disk drive working." instead;
 		try objhinting blue button instead;
 
 to say h-d: [??]
