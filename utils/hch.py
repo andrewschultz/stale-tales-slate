@@ -56,6 +56,7 @@ ignore_blank_cat = True
 def match_slider_tests():
     i7.go_proj('roi')
     fi = i7.hdr('roi', 'ta')
+    fi2 = i7.hdr('roi', 'nu')
     regions = [ 'ordeal reload' ]
     slider_tracking = defaultdict(lambda: defaultdict(str))
     in_header = False
@@ -79,6 +80,17 @@ def match_slider_tests():
             ary = ll.lower().split("\t")
             string_to_slide = ary[5].replace('"', '').strip()
             slider_tracking[table_name][string_to_slide] = False
+    aux_sect = ""
+    with open(fi2) as file:
+        for (line_count, line) in enumerate(file, 1):
+            ll = line.lower().strip()
+            if (ll.startswith("section") and "auxiliary" in ll) or (ll.startswith("chapter") and "nudges" in ll):
+                ary = ll.split(' ')
+                aux_sect = ary[1]
+            if '[slider test ' in ll:
+                string_to_slide = re.sub(".*slider test ", "", ll)
+                string_to_slide = re.sub("\]", "", string_to_slide)
+                slider_tracking[aux_sect][string_to_slide] = False
     for x in slider_tracking:
         file_name = "reg-roi2-{}-slider.txt".format(x.replace(' ', '-'))
         with open(file_name) as file:
@@ -92,6 +104,12 @@ def match_slider_tests():
                         print(line_count, file_name, "Duplicate slider comment test", temp)
                     else:
                         slider_tracking[x][temp] = True
+                elif ll.startswith("#rslider test for "):
+                    temp = re.sub(".* test for +", "", ll)
+                    if temp not in slider_tracking[x]:
+                        print(line_count, file_name, "Bad reslider comment test", temp)
+                    elif not slider_tracking[x][temp]:
+                        print(line_count, file_name, "Reslider comment withour slider test", temp)
         for y in slider_tracking[x]:
             if y == 'lamp' or y == 'satchel': continue # kludge for now
             if not slider_tracking[x][y]:
