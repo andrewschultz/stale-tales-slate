@@ -1,5 +1,7 @@
 # sweep.py: this sweeps through source code to look for potential anagrams and red-writing verification
 
+import os
+import i7
 import sys
 import re
 import sts
@@ -18,6 +20,16 @@ ignore_words = defaultdict(bool)
 last_line_and_file = defaultdict(tuple)
 
 region_of = defaultdict(str)
+
+my_proj = 'roi'
+
+try:
+    if sys.argv[1] == 's' or sys.argv[1] == 'sa':
+        my_proj = 'sa'
+except:
+    pass
+
+file_list = [ i7.main_src(my_proj), i7.hdr(my_proj, 'nu'), i7.hdr(my_proj, 'ta') ]
 
 with open("sweep.txt") as file:
     for line in file:
@@ -50,22 +62,21 @@ def ignorable(word_array):
     return False
 
 def print_red_letters(string1, wordary, double_first = False):
-    if double_first: string1 *= 2
+    s1 = string1.lower()
+    if double_first: s1 *= 2
     string2 = ''.join(wordary)
     string3 = ' '.join(wordary)
-    print(string1, string2, string3)
-    if len(string1) != len(string2):
+    if len(s1) != len(string2):
         return("STRING SIZE MISMATCH {} {}\n".format(string1, string2))
     any_matches = False
-    s1 = string1.lower()
     s2 = string2.lower()
     s3 = string3.lower()
     clash = []
     for x in range(0, len(s1)):
         if s1[x] == s2[x]: clash.append(str(x+1))
-    return("{} RED: {} vs {}/{} {}\n".format("NOT" if len(clash) else "   ", s1, s2, s3, ' ' + '/'.join(clash) if len(clash) else ''))
+    return("{} RED: {} vs {}/{} {}\n".format("NOT" if len(clash) else "   ", string1, s2, s3, ' ' + '/'.join(clash) if len(clash) else ''))
 
-def find_reasonable_hashes(my_line):
+def find_reasonable_hashes(file_base, my_line):
     if '"' not in my_line: return
     x = ' '.join(my_line.strip().split('"')[1::2])
     x = x.replace('-', ' ')
@@ -88,7 +99,7 @@ def find_reasonable_hashes(my_line):
                         pass
                         #print("Duplicate line/file for", cand)
                     else:
-                        output_string[cand] += "{} {}".format(line_count, line)
+                        output_string[cand] += "{} L{}: {}".format(file_base, line_count, line)
                     last_line_and_file[cand] = (line_count, file)
                     output_string[cand] += print_red_letters(cand, comp_word, double_first = True)
             continue
@@ -101,13 +112,15 @@ def find_reasonable_hashes(my_line):
                         pass
                         #print("Duplicate line/file for", cand)
                     else:
-                        output_string[cand] += "{} {}".format(line_count, line)
+                        output_string[cand] += "{} L{}: {}".format(file_base, line_count, line)
                     last_line_and_file[cand] = (line_count, file)
                     output_string[cand] += print_red_letters(cand, comp_word)
 
-with open("story.ni") as file:
-    for (line_count, line) in enumerate(file, 1):
-        find_reasonable_hashes(line)
+for x in file_list:
+    xb = os.path.basename(x)
+    with open(x) as file:
+        for (line_count, line) in enumerate(file, 1):
+            find_reasonable_hashes(xb, line)
 
 for x in sorted(output_string, key=lambda x:(region_of[x], x)):
     print("{} ({}) {}/{}".format("=" * 50, region_of[x], x, description_of[x]))

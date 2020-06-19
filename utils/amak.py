@@ -1,5 +1,5 @@
 #
-# amak.py: this makes an anagram of a word with no identical letter slots.
+# amak.py: this makes an anagram of a word that has no identical letter slots in common with the original.
 #
 # in other words, HEAT and HATE have the first letter identical, but EATH has no letter slots in common with HEAT.
 #
@@ -313,7 +313,7 @@ found_end_word = True
 found_start_word = True
 if start_word:
     found_start_word = False
-
+sys.exit(format_string)
 for w in words_to_shift:
     if not found_start_word:
         if start_word in w:

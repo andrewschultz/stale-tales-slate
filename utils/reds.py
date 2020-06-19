@@ -23,6 +23,17 @@ space_char = 'x'
 
 reds_file = "c:/writing/dict/reds.txt"
 
+def usage(my_cmd = "BASIC USAGE"):
+    print('=' * 50 + my_cmd)
+    print("v=verbose")
+    print("m#=max guesses to show, ce# = check every X guesses.")
+    print("% means we know if a letter is a consonant, vowel or Y.")
+    print("w=search for wild card string in file reds.txt")
+    print("anything else 3 letters long or more is used for general color comparisons, e.g. REAL LEAR would fail at slots 2 and 3.")
+    print("Or REAL % would give 4 possibilities.")
+    exit()
+
+
 def comb_calc(this_word, try_perms = False):
     freq = defaultdict(int)
     ret_val = factorial(len(this_word))
@@ -144,8 +155,7 @@ def tricky_verify(target_words, from_words):
     flag_this = False
     correct_str = ""
     for x in range(0, len(target_words[0])):
-        if type_conflict(target_words, x):
-            print("Type conflict character", x)
+        if type_conflict(target_words, x): # e.g. SONIC ICONS first character from COINS could be vowel *or* consonant
             temp = '?'
         else:
             any_right = 0
@@ -242,8 +252,10 @@ while cmd_count < len(sys.argv):
         check_every = int(arg[2:])
     elif len(arg) >= 3:
         my_array.append(arg)
-    else:
+    elif arg == '?':
         usage()
+    else:
+        usage("Bad command " + arg)
     cmd_count += 1
 
 if len(my_array): read_file = False

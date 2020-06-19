@@ -21,7 +21,7 @@ store m>metros
 store r>resort
 roster>resort
 marquee~bertos>sorbet
-acne-bit cabinet~cabinet>bactine
+acne bit cabinet~cabinet>bactine
 #forest
 shout>south
 teas>east
@@ -139,7 +139,7 @@ voters>troves
 store w>towers
 store y>oyster
 ####CRUELEST LECTURES
-lecturer~uosdeti>outside
+blabber babbler~uosdeti>outside
 pamphlets~i used to>outside
 >IGNORE=letters settler
 ########REGION routes
@@ -148,9 +148,9 @@ worst ad~warts do sow drat>towards
 anti sag sit a nag>against
 side art>astride
 woe bow bell>below
-rude 'n nuder>under
+rude n nuder>under
 lairage regalia~oscar's sos arc>across
-adsorbing signboard~pat's stap>past
+adsorbing signboard~pats stap>past
 cravings carvings~speed it sit deep>despite
 pipe soot>opposite
 a bev o be ova>above
@@ -160,34 +160,34 @@ morf form>from
 seed pit>despite
 hurt hog>through
 bent ewe>between
-rude 'n nuder>under
+rude n nuder>under
 the bean>beneath
 darkness~unlit>until
 yob den>beyond
 # note that "all" is clipped in the table_shorten function
 all noon gag>along
-un-road>around
+un road>around
 admits mist ad>amidst
 ####cripple clipper
 thickness sketchins~whattar tawrath thatraw artthaw>athwart
 ########REGION troves
 ####loather rathole
-cold~heat>hate
-heat~race acer>care
+eh at heat>hate
+race acre>care
 sob ever verbose>observe
 stop post>spot
 pa egg pea~pa egg pea peg a page>gape
 ####boarded roadbed
 evil bee>believe
 vile bee>believe
-bee's head~no ears so near>reason
-l'clear cellar>recall
+SNORE SO ARENA>reason
+l clear cellar>recall
 a sty tasty say>stay
 ####drain nadir
 diapers>despair
 a spider>despair
 ires pad>despair
-i'd cede>decide
+id cede>decide
 ####boredom bedroom
 large regal lager>glare
 rubbish story~ergal agler>glare
@@ -202,8 +202,7 @@ praise spirea>aspire
 rivets>strive
 trevis vister>strive
 >IGNORE=pernod
-pernod-n~pernod>ponder
-pernod-l~neprod>ponder
+end proner pod>ponder
 r cad card~derp on epdorn dr peno ned orp>ponder
 ####upscale capsule
 red vees>deserve
@@ -273,12 +272,12 @@ fount>futon
 skid>disk
 disk>skid
 flea>leaf
-speel>sleep
+peels speel>sleep
 usb>sub,bus
 tba key~tba>tab
 bub dude egg>debug
 small blue button~to be or>reboot
-i'm le cop polemic>compile
+im le cop polemic>compile
 ########REGION oyster
 lolstr trolls>stroll
 tips pits>spit
@@ -288,8 +287,8 @@ capers recaps>scrape
 stein>inset
 tines>inset
 tunes>unset
-perma-amper>remap
-li'l p's pills>spill
+perma amper>remap
+lil ps pills>spill
 ####olde lode
 clam>calm
 urn>run
@@ -320,7 +319,7 @@ crate>react
 skis>kiss
 span pans>snap
 knob>bonk
-bogus-plains~lapsin' plains>splain
+bogus-plains~lapsin plains>splain
 ####shadier airshed
 prod>drop
 tubs>bust
@@ -328,10 +327,10 @@ heaps>shape
 waste>sweat
 lance>clean
 ####achers' arches
-achers' chaser arches>search
+achers chaser arches>search
 general gleaner>enlarge
 ####horned hedron
-ol' trap>patrol
+ol trap>patrol
 ####rascal craals
 ruby>bury
 ####tenfold teflon'd loft den
@@ -392,11 +391,11 @@ fluster self rut>restful
 docile old ice>coiled
 ####unblest sunbelt
 smh life mel fish>himself
-nerd-aid>drained
+nerd aid>drained
 dandier arid den>drained
 organised ego drains>grandiose
 ####lost lots
-sporties' ripostes>prosiest
+sporties ripostes>prosiest
 ####anemic cinema
 angriest ingrates>angstier
 mardier admirer>married
@@ -405,22 +404,22 @@ resident trendies>nerdiest
 weeds>sewed
 mended mini denim>mined
 raves saver~replay player>pearly
-sweatier wait-seer>weariest
+sweatier wait seer>weariest
 lars eede>released
-reed's ale>released
+reeds ale>released
 elsa erde>released
 ####danger garden
 alarming grailman>marginal
 bonker>broken
 stinger>resting
-natives' site van>naivest
+natives site van>naivest
 ####shaven havens
 lone duck>unlocked
 ####salted deltas
-asset-hit atheists>hastiest
+asset hit atheists>hastiest
 ####artist traits strait
 lois the hostile>holiest
-hostile-is-he lot>holiest
+he lot~hostile is he lot>holiest
 ####obscurest subsector
 prison ropins~ednulcok>unlocked
 fissure>fussier
@@ -435,14 +434,14 @@ reading a dinger>grained
 ####rawest waters
 eastern shore~eastern>nearest
 ####mislit limits
-pester'n serpent>present
-unripe ur-pine>punier
+pestern serpent>present
+unripe ur pine>punier
 accurst leap>spectacular
 clear catsup>spectacular
 pest accrual>spectacular
 c-p~cactus pearl>spectacular
 pearl cactus>spectacular
-accu-plaster>spectacular
+accu plaster>spectacular
 capsule cart>spectacular
 last acre cup>spectacular
 talc spa cure>spectacular
@@ -457,7 +456,7 @@ bleary barley>barely
 deli rye>reedily
 ed riley>reedily
 ####disowned downside
-atmo-moat>atom
+atmo moat>atom
 t-bossily~i sly sob si bloys>bossily
 t-seedily~eyelids>seedily
 t-cattily~tacitly>cattily
@@ -506,23 +505,21 @@ nails>snail
 raptor%parrot
 ####Clarthead Cathedral
 >IGNORE=whiners
-ram1~callosity>stoically
-ram2~restyle>tersely
-ram3~tallyhoing>loathingly
+whin1~callosity>stoically
+whin2~restyle>tersely
+whin3~tallyhoing>loathingly
 ####lamer realm
 owls>slow
 ocelots>coolest
 leopard>paroled
 badger>garbed
-satyr>artsy
+stray satyr>artsy
 ####reclusion inclosure
-merle~yelthons>honestly
-elmer~ideas aides>aside
+holy nest>honestly
+aside-llp~ideas aides>aside
 whistle~yelped>deeply
 >IGNORE=macks
->IGNORE=medals
-iqlucky>quickly
-luckyiq>quickly
+medals~iqluckyluckyiq>quickly
 ########REGION=others
 ####rustic citrus
 pagers>grapes
@@ -571,13 +568,13 @@ prices precis>cripes
 no ammo gang>among
 ####scape space
 engaro orange>go near
-a banna'~naa na b a banna>banana
+a banna~naa na b a banna>banana
 inapt paint~reserved deserver>reversed
 a brr hub>rhubarb
 ####gates stage
 searcher>research
 viewer>review
-perp>prep
+fleeing feeling~perp>prep
 ##############logic file checks (eventually delete this all)
 ###################stuff that is okay for aftertexts
 #means manse
@@ -593,7 +590,7 @@ AFT=pale plea
 AFT=prison ropins
 AFT=dr yow
 #otters
-AFT=merle,sly imp,medals,whiners
+AFT=sly imp,medals,whiners
 #others
 AFT=a brr hub
 AFT=auction caution

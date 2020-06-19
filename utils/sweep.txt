@@ -1,10 +1,28 @@
+lamp~ordeal~palm
+chimney~ordeal~my niche
+tables~ordeal~stable
+tenbeams~ordeal~basement
+painting~ordeal~giant pin LLP
+stair~ordeal~sitar or stria
 snib~ordeal~isbn bins
+staple~ordeal~plates
+stapler~ordeal~plaster psalter
+flier~ordeal~elmo's rifle
+ramp~ordeal~pram in highest heights
 ###############################################
+towards~routes~LLP in mesa
+against~routes~gast pt 1
+astride~routes~tirades (gast 2)
+below~routes~woe bow bell (gast 3)
+under~routes~rude n nuder (gast 4)
 athwart~routes~Athwart(Cripple clipper)
+inside~routes~enter Cleric Circle
+past~routes~enter Idle Deli
+across~routes~enter Adobe Abode
 above~routes~A Bev O' Be Ova'
 from~routes~MORF FORM
-amidst~routes~da mist
 until~routes~UNLIT puzzle
+amidst~routes~da mist
 ##############################################
 restful~towers~Fluster Self Rut
 grandiose~towers~Organised Ego Drains

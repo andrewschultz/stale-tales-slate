@@ -32,7 +32,7 @@ rev_word = sorted(sts_hash, key=sts_hash.get, reverse = True)
 
 def word_hash_match(my_word):
     temp = 0
-    for q in my_word:
+    for q in my_word.lower():
         if q in sts_hash:
             temp += sts_hash[q]
     return temp

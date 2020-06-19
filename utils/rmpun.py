@@ -213,6 +213,7 @@ with open("story.ni") as file:
         if "'" not in l3 and "-" not in l3:
             caught_need_fix += 1
             final_string += line
+            mt.add_postopen("story.ni", line_count, priority=3, rewrite=True)
             continue
         else:
             count += 1

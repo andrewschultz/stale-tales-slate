@@ -14,6 +14,7 @@ import i7
 import sys
 import re
 import os
+import mytools as mt
 
 wks = [ 'fails', 'checks out' ]
 vowels = 'aeiou'
@@ -391,8 +392,9 @@ def aro_settler_check():
                         aro_got[my_raw] = True
                         if my_raw not in aro_flips:
                             count += 1
-                            print("#", count, "Need logsync.txt entry for what", my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), "should become at line", line_count, "of source.")
-                            if count >= 25: sys.exit()
+                            print("#", count, "Need logsync.txt entry for what {} (line {} of story.ni) should become.".format(my_raw + ("/{:s}".format(my_thing) if my_raw in aro_trans else ""), line_count))
+                            mt.add_postopen(r_src, line_count)
+                            if count >= 25: return
                             skip = True
                             break
                             continue
@@ -490,6 +492,8 @@ def aro_settler_check():
     flip_miss = [x for x in aro_flips if x not in aro_got]
     if len(flip_miss):
         print("{:02d}".format(len(flip_miss)), "Flips from logsync.txt to ARO source missed:", ', '.join(["{:s}/{:d}".format(f, aro_line[f]) for f in flip_miss]))
+        for f in flip_miss:
+            mt.add_postopen("logsync.txt", aro_line[f])
     else:
         print("No ARO flips missed.")
 
@@ -640,6 +644,7 @@ with open(i7.sdir("roiling") + "/logic.htm") as file:
         if '<!--' in line and '-->' in line and 'logic for' in line:
             scanned = re.sub(".*logic for ", "", line.strip().lower())
             scanned = re.sub("( )?-->.*", "", scanned)
+            scanned = i7.strip_name(scanned)
             if scanned in got_logic.keys():
                 print("Duplicate logic-for in logic.htm:", scanned, "line", line_count, "originally", got_logic[scanned])
             else:
@@ -718,3 +723,5 @@ if open_after:
     exit()
 elif len(open_line):
     print("You could open automatically with the -a or -oa flag.")
+
+mt.postopen_files()
