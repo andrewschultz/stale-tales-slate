@@ -140,7 +140,7 @@ understand "troyes" as a mistake ("Store Y does not lead to France.") when store
 
 chapter Cruelest Lectures
 
-understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
+understand "her abs" as a mistake ("Suggesting the Rehabs Basher might be feminine in any way is almost as bad as accusing him of steroid use to get those abs.") when player is in Cruelest Lectures.
 
 understand "easting" as a mistake ("Compass directions aren't relevant here. You need to upset everything, somehow.") when player is in Cruelest Lectures.
 

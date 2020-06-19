@@ -161,15 +161,17 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of cruelest lectures nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"lectures"	718245236	lecturer	--	"[lec-un]."
-"lecture"	621971270	lecturer	--	"[lec-un]."
-"seating"	475877967	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
-"mangiets"	539953120	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
-"example"	569923068	lecturer	--	"[lec-un]."
-"ian"	116088172	Ian	--	"[ian-un]."
-"guardian"	362334391	Ian	--	"[ian-un]."
+"lectures"	718245236	--	--	"[lec-un]."
+"lecture"	621971270	--	--	"[lec-un]."
+"seating"	475877967	--	--	"That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the lecturer and the Rehabs Basher."
+"mangiets"	539953120	--	--	"You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and lecturer, and you'd rather deal with the lecturer. Tedious."
+"example"	569923068	--	--	"[lec-un]."
+"ian"	116088172	--	--	"[ian-un]."
+"guardian"	362334391	--	--	"[ian-un]."
 "pamphlets"	647481120	--	--	"[pamph-ana]."
 "pamphlet"	551207154	--	--	"[pamph-ana]."
+"rehab"	271018934	--	--	"[rehab-no]."
+"rehabs"	367292900	--	--	"[rehab-no]."
 
 chapter routes nudges
 
@@ -1638,6 +1640,8 @@ to say lec-un: say "The lecturer is unchangeable in his views, but maybe he is p
 to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 
 to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
+
+to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead"
 
 section routes auxiliary
 

@@ -1708,7 +1708,7 @@ Elmo	"You already know about his mission and what he's done to help you. No time
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is touchable]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 lecturer	--
-Ian	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
+Rehabs Basher	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
@@ -1827,7 +1827,7 @@ table of default-gen-blather	[ask x about nonsense] [tod] [xxtalk2]
 default-talker	gen-blah
 yourself	"You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints."
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
-Ian	"He nods at you and the lecturer. It's remarkably effective psychological warfare, to repress you and all."
+Rehabs Basher	"He nods at you and the lecturer. It's remarkably effective psychological warfare, to repress you and all."
 lecturer	"If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
@@ -2017,9 +2017,9 @@ to say ohai-casper:
 table of subject-blather	[ask x about thing they know about] [tosb] [xxtalk4]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
-Ian	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
-Ian	Elvira	"'She didn't get to her position of power by using DRUGS.'"
-Ian	Ian	"The pamphlets Ian gave you will say enough."
+Rehabs Basher	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
+Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
+Rehabs Basher	Rehabs Basher	"The pamphlets the Rehabs Basher gave you will say enough."
 nestor	Elvira	"'So bogusly repressive!'"
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 nestor	tokers	"[if tokers are touchable]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
@@ -2356,7 +2356,7 @@ nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
-Ian	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
+Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
 LOLstr trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
 aunt tuna	"horned/hedron" or "horned hedron"	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
 sardine	"horned/hedron" or "horned hedron"	"'I work here. Well, I guard the outside.'"
@@ -4784,7 +4784,7 @@ this is the fruit-hint rule:
 book stores-hinting
 
 this is the stores-hinting rule:
-	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]Ian will also give you his 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
+	if location of player is Cruelest Lectures, all-say "[one of]The whole bit about nouns won't work here. The people who drug, err, dragged you here said so.[plus][or]It's tough to figure how to leave, and no normal method does the trick.[plus][or]TEDIOUS is one clue.[plus][or]The Rehabs Basher will also give you his 'I USED TO' litany.[plus][or]How can you leave?[plus][or]Studio E gives you some disturbing truths. You can see where all the vowels go, by the greens on your settler.[plus][or]You can cross out the consonants from your other clues to kick people OUTSIDE.[minus][cycling]" instead;
 	if roved is true:
 		if Store H is touchable, try objhinting Store H instead;
 		all-say "Go through the THROES HOSTER to the OTHERS area." instead;
@@ -5783,7 +5783,7 @@ theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Cruelest Lectures	"The trumped-up charges and the teleological lectures have conked your sense of compass directions. There must be a generic way to leave!" [stores]
+Cruelest Lectures	"You fear a 'BE RASH? HE BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
@@ -10193,8 +10193,8 @@ to say seat-try: now tried-seating is true;
 the teasing seating is useless boring scenery in Cruelest Lectures. "Some of it is open, but you figure it's reserved, or someone will peg you back. ". bore-check of teasing seating is bore-seating rule.
 
 this is the bore-seating rule:
-	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or Ian. Or the lecturer." instead;
-	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls Ian, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
+	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or the Rehabs Basher. Or the lecturer." instead;
+	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls the Rehabs Basher, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
 
 section passage
 
@@ -10212,7 +10212,7 @@ check entering passage:
 	if e-revealed is true, say "No. Regardless of how cynical you are, you don't need to see that again. But you remember YYRRGRG." instead;
 	say "You sense that you may uncover a deeply disturbing truth if you enter. Or, you might just get a too-spoilery hint that gets you out of here. Care to continue?";
 	if the player direct-consents:
-		say "You step into studio E. There, you see well-known pharmaceutical industry barons discussing perfectly legal and safe substitutes to various illegal drugs, along with perfectly air-tight patents and tax avoidance schemes. You also see a bottle 'DORI'S ROIDS: for IAN' with a so-tired needle beside it.[paragraph break]You rush out of Studio E before you see anything more--although you quickly [if cheat-on is false]switch your gadget back and forth and note it[else]note your gadget[end if] flashes YYRRGRG.";
+		say "You step into studio E. There, you see well-known pharmaceutical industry barons discussing perfectly legal and safe substitutes to various illegal drugs, along with perfectly air-tight patents and tax avoidance schemes. You also see 'DORI'S ROIDS' bottled (for the Rehabs Basher) with a so-tired needle beside it.[paragraph break]You rush out of Studio E before you see anything more--although you quickly [if cheat-on is false]switch your gadget back and forth and note it[else]note your gadget[end if] flashes YYRRGRG.";
 		now e-revealed is true;
 	else:
 		say "You decide to rely on what you see in the Lectures to get out.";
@@ -10236,24 +10236,24 @@ understand "max p lee" and "max/lee/example" and "max lee" as lecturer.
 
 description of lecturer is "He's wearing a very expensive suit and tie. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and $300 ties. You read MAX P LEE, EXAMPLE projected behind him, and he is sponsored by RutCorp, who help pull you out of ruts, apparently."
 
-chapter ian
+chapter Rehabs Basher
 
-Ian a Drug Guardian is a boring person in Cruelest Lectures. printed name of Ian is "Ian (a Drug Guardian)". description of ian is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of ian is "Standing by the only exit is Ian (a Drug Guardian.)". bore-check of ian a drug guardian is the bore-ian rule. bore-text of ian is "[ian-pamph]".
+the Rehabs Basher is a boring person in Cruelest Lectures. description of Rehabs Basher is "In case you were wondering about his actual name, his shirt advertises him as IAN, A DRUG GUARDIAN.[paragraph break]'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". initial appearance of Rehabs Basher is "The Rehabs Basher guards the only exit. Whether he bashes people before, after or during rehabs, or all three, he will definitely bash you if you try to leave the standard way.". bore-check of ian a drug guardian is the bore-rehabs-basher rule. bore-text of Rehabs Basher is "[ian-pamph]".
 
 to say ian-pamph:
 	if player has pamphlets:
-		say "Before you can do anything, Ian points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
+		say "Before you can do anything, the Rehabs Basher points at the pamphlets he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 	else:
-		say "Before you can do anything with or to Ian, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
+		say "Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take them?";
 		if the player yes-consents:
 			now player has pamphlets;
-			say "'Good choice. Say, if they're good enough, do you think you could put in a word for me--to a lecturer like THAT?";
+			say "'Good choice. Say, if they're good enough, do you think you could I could become an even better lecturer than ... him?'";
 		else:
-			say "Ian looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up.";
+			say "The Rehabs Basher looks hurt but blames it on the lack of attention span from the drugs you've been taking. That cheers him up.";
 
-this is the bore-ian rule:
+this is the bore-rehabs-basher rule:
 	if current action is scaning or current action is sbing, say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
-	if current action is attacking, say "Ian's too big for you. With or without righteous roid rage." instead;
+	if current action is attacking, say "Bad idea. The Rehabs Basher can, er, bash and re-bash." instead;
 
 section reflections
 
@@ -10316,7 +10316,7 @@ check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles
 							if adobe is visited, move player to adobe instead;
 							move player to Idle Deli instead;
 				now in-try is true;
-				say "You just can't make it through to the Cleric Circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if Adobe Abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
+				say "Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time[if Adobe Abode is visited or deli is visited]--you already used [aop] to enter another place differently, so the same probably applies here[end if]." instead;
 			move player to Cleric Circle instead;
 		if noun is down and THE BEAN is touchable, say "Well, not quite DOWN..." instead;
 		if noun is up or noun is down, say "That won't work right now." instead;
