@@ -615,7 +615,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dongle"	378508824	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "boredyak"	504410731	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "fountain"	494078978	fount	--	"It's too small to be a fountain--really, just a fount."
-"sleep"	487165982	--	wise-to-sleep rule	"[sleep-anagram]"
 
 chapter oyster nudges
 
@@ -1885,20 +1884,6 @@ to say kboard-det:
 			say "Besides, you already made a perfectly good keyboard.[no line break]";
 		else:
 			say "You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.[no line break]";
-
-this is the wise-to-sleep rule:
-	if player is in Hacks Shack:
-		if Im Le Cop polemic is touchable and Im Le Cop polemic is reflexive, the rule succeeds;
-	the rule fails;
-
-to say sleep-anagram:
-	if slept is true:
-		say "That could jumble your rested mind.";
-	if slider is switched on:
-		match-process the player's command and "sleep";
-		say "[one of][no line break][or][run paragraph on][or][cycling]";
-		continue the action;
-	say "Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if].[one of][no line break][or][run paragraph on][or][cycling]"
 
 section oyster auxiliary
 

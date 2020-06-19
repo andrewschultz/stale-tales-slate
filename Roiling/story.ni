@@ -2451,6 +2451,7 @@ definition: a thing (called cand) is readable:
 	if cand is not a to-read listed in table of readables, decide no;
 	if cand is not touchable, decide no;
 	if cand is the player, decide no;
+	if cand is peels speel and can-name-speel, yes;
 	decide yes;
 
 table of readables [tre]
@@ -2481,6 +2482,7 @@ drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 Clack Ops Locs Pack	"The [locs pack] mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
 drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
+peels speel	"Thrrough the jargon, you read [']E Elps! [']E Elps! a lot. It's emphasized in red."
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tips pits	"IT'S P is written in red on the bottom."
@@ -4907,7 +4909,7 @@ this is the presto-hinting rule:
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
-		if futon is touchable and slept is false:
+		if futon is touchable and peels speel is reflexive:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
 		if Im Le Cop polemic is reflexive, try objhinting Im Le Cop polemic instead;
@@ -6611,23 +6613,14 @@ check sleeping:
 		say "Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now." instead;
 	if mrlp is presto:
 		if player is in Hacks Shack:
-			if futon is in Hacks Shack:
-				unless cpuready, say "Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from assembling the computer! Yet." instead;
-				if slept is true, say "You've had enough comforts from cots to do the programming you need. You might re-wake weaker." instead;
-				say "You feel smarter the moment you lie down on a lump you realize must be an armrest. So it's definitely more practical than some oaf's sofa. During this purest rest-up, you osmose the max-sleep examples, and even the smartest mattress would only have given smatters of what your subconscious soaks up from the comfort of the cot. The sleep peels away your fatigue and doesn't even leave an ague fit in return. 'Real day already?' you remark. 'Up, coder! Produce!' Rested, you desert the futon.";
-				reg-inc;
-				pad-del "sleep";
-				moot speel;
-				now slept is true instead;
-				say "You'll sleep on the futon when you need to." instead;
-			say "You don't have anything to lie down on yet." instead;
-		if Hacks Shack is visited and slept is false, say "Only the shack seems to be a safe place to sleep, here." instead;
+			if peels speel is in Hacks Shack, try fliptoing peels speel instead;
+		if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
 	if mrlp is oyster, say "You feel too inclined towards action for that." instead;
-	if slept is true, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
+	if peels speel is reflexed, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
 	say "[one of][sleep-reject].[or][randbla][stopping]" instead;
 
 to say sleep-reject:
-	if slept is true:
+	if peels speel is reflexed:
 		say "You found the one place in the game where you needed to sleep";
 	else if location is outie:
 		say "Sleeping outside is dangerous. You'd need somewhere protected";
@@ -9459,6 +9452,7 @@ DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
 censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
 plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
+peels speel	presto	"You tried to SLEEP, but the time wasn't right."
 LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
 Achers Chaser Arches	oyster	"SEARCH the arches."
@@ -12512,13 +12506,11 @@ check taking the fount: say "It is heavier than it seems. Plus, it's too bulky."
 
 description of fount is "It's relaxing to look at, even if it isn't running. Perhaps it was a fount of knowledge, and knowledge was just too dry for the water that was in it."
 
-the futon is a thing. description is "It doesn't have any brand name like [randbla]. [unless cpuready]Like most futons, it's unsoft. You wouldn't want to sleep there unless you had some really tiring task ahead[else if slept is false]It looks almost comfortable. It's sewn with designs of all sorts of peels--banana, orange, apple, and some you can't identify. Like most futons, it's unsoft[else]You're impressed you slept on it for so long. It looks lumpy now[end if].". "The futon you [if slept is false]made from the fount[else]slept on[end if] lies here."
+the futon is a thing. description is "It doesn't have any brand name like [randbla]. [unless cpuready]Like most futons, it's unsoft. You wouldn't want to sleep there unless you had some really tiring task ahead[else if peels speel is reflexive]It looks almost comfortable. It's sewn with designs of all sorts of peels--banana, orange, apple, and some you can't identify. Like most futons, it's unsoft[else]You're impressed you slept on it for so long. It looks lumpy now[end if].". "The futon you [if peels speel is reflexive]made from the fount[else]slept on[end if] lies here."
 
 check entering futon: say "It's not quite for sitting, but it may help you make [i]leeps[r] of logic." instead;
 
 check taking the futon: say "You need to get programming, here, not interior decorating." instead;
-
-slept is a truth state that varies.
 
 to decide whether cpuready:
 	if keyboard is not on slab, decide no;
@@ -13014,9 +13006,15 @@ check pulling oper rope: try pulling skid instead;
 
 chapter speel
 
-the speel is auxiliary boring scenery. description of speel is "The jargon's a bit beyond you. Maybe if your mind were fully sharp, you'd know what to do.". bore-text is "It's just plain computer text."
+the peels speel is boring reflexive scenery. it is privately-named. description of speel is "It's full of all sorts of weird jargon of figurative banana peels you could slip on. The jargon's a bit beyond you at the moment, but maybe if your mind were fully sharp, you'd know what to do. Some stuff sticks out in red.". bore-text is "It's just plain computer text."
 
-a-text of speel is "RRYYR". b-text of speel is "PRGGR". parse-text of speel is "s[sp]x[sp]e[sp]e[sp]x". speel is cheat-spoilable.
+a-text of peels speel is "RRYYR". b-text of peels speel is "?RG?R". parse-text of speel is "?[sp]x[sp]e[sp]?[sp]p". speel is cheat-spoilable.
+
+understand "peels speel" and "peels/speel" as peels speel when can-name-speel.
+
+to decide whether can-name-speel:
+	if blue button is reflexed and polemic is not reflexed, yes;
+	no;
 
 check inserting into the keyboard (this is the insert-keyboard rule):
 	ignore the can't insert into what's not a container rule;
