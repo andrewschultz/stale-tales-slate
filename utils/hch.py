@@ -61,6 +61,7 @@ def match_slider_tests():
     slider_tracking = defaultdict(lambda: defaultdict(str))
     in_header = False
     in_table = False
+    need_cmd = False
     with open(fi) as file:
         for (line_count, line) in enumerate(file, 1):
             ll = line.lower().strip()
@@ -96,7 +97,12 @@ def match_slider_tests():
         with open(file_name) as file:
             for (line_count, line) in enumerate(file, 1):
                 ll = line.lower().strip()
+                if ll.startswith(">"):
+                    need_cmd = False
                 if ll.startswith("#slider test for "):
+                    if need_cmd:
+                        print("WARNING slider test untested line", line_count, "file", file_name)
+                    need_cmd = True
                     temp = re.sub(".* test for +", "", ll)
                     if temp not in slider_tracking[x]:
                         print(line_count, file_name, "Bad slider comment test", temp)
@@ -135,8 +141,11 @@ def verify_reg_files(my_proj):
         if ignore_blank_cat and not cat:
             if not quiet: print("Skipping category for", fi)
             continue
+        need_cmd = False
         with open(fi) as file:
             for (line_count, line) in enumerate(file, 1):
+                if line.startswith(">"):
+                    need_cmd = False
                 if not line.startswith('#'): continue
                 for y in flaggable:
                     if line[1:].lower().startswith(y):
@@ -146,6 +155,13 @@ def verify_reg_files(my_proj):
                             loc += 1
                             glo += 1
                             print("    {}/{} line {}: {}".format(loc, glo, line_count, line.strip()))
+                        if need_cmd:
+                            print("Two test comments in a row without a command", fi, line_count)
+                        need_cmd = True
+                if line.startswith("#mistake"):
+                    if need_cmd:
+                        print("Two test comments in a row without a command", fi, line_count)
+                    need_cmd = True
     exit()
 
 def lastrev(x):
@@ -301,7 +317,9 @@ while count < len(sys.argv):
     elif arg == 'lo' or arg == 'ol': out_to_file = launch_outfile = True
     elif arg == 'nq' or arg == 'qb': quiet = False
     elif arg == 'i': ignore_nudmis = True
-    elif arg == 'v': verify_roi = True
+    elif arg == 'v': verify_roi = verify_sa = True
+    elif arg == 'rv' or arg == 'vr': verify_roi = True
+    elif arg == 'sv' or arg == 'vs': verify_sa = True
     elif re.search("^[asdir]+", arg):
         if 'a' in arg: tabs.append('aftertexts')
         if 's' in arg: tabs.append('spechelp')
