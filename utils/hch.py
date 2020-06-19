@@ -3,6 +3,8 @@
 # help check e.g. check good guesses for rejects show up
 #
 # this looks for a table named, say, XYZ, then looks for #xyz in a glob of test files
+#
+# todo: check for rules as well. They should always go in MAX.
 
 from collections import defaultdict
 import os
@@ -75,7 +77,8 @@ def match_slider_tests():
                 continue
             if not in_table: continue
             ary = ll.lower().split("\t")
-            slider_tracking[table_name][ary[5].replace('"', '')] = False
+            string_to_slide = ary[5].replace('"', '').strip()
+            slider_tracking[table_name][string_to_slide] = False
     for x in slider_tracking:
         file_name = "reg-roi2-{}-slider.txt".format(x.replace(' ', '-'))
         with open(file_name) as file:
@@ -90,11 +93,10 @@ def match_slider_tests():
                     else:
                         slider_tracking[x][temp] = True
         for y in slider_tracking[x]:
+            if y == 'lamp' or y == 'satchel': continue # kludge for now
             if not slider_tracking[x][y]:
                 print("Did not find", y, "/", "#slider test for", y, "in target file", file_name)
     exit()
-
-match_slider_tests()
 
 def verify_reg_files(my_proj):
     i7.go_proj(my_proj)
@@ -208,7 +210,7 @@ def find_in_glob(sync_stuff, pattern, b, region, details, extras = []):
                     else:
                         print(">{}".format(q))
                     print(details[q])
-                if out_to_file: hout.write("#{:s} for {:s}\n>{:s}\n{:s}\n\n".format(b, q, 'read ' + q if b == 'readables' else lastrev(q), sync_detail[q]))
+                if out_to_file: hout.write("#{:s} for {:s}\n>{:s}\n{:s}\n\n".format(b, q, 'read ' + q if b == 'readables' else 'scan ' + q if b == 'scannotes' else lastrev(q), sync_detail[q]))
             elif err_max and errs == err_max + 1: print("Too many errors. Increase with -e##.")
             last_line = sync_stuff[q]
         if q not in sync_stuff.keys():
@@ -252,7 +254,7 @@ def sync_check(a, b, region=""):
         return 0
     rbr_find = "rbr-*"
     reg_find = "*-nudmis*"
-    ret_val = find_in_glob(needs_sync_test, rbr_find, b, region, sync_detail, ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [])
+    ret_val = find_in_glob(needs_sync_test, rbr_find, b, region, sync_detail, []) # formerly ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [] until I moved that to RBRs. Included this comment for posterity if we need to use this again.
     if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, b, region, sync_detail)
     return ret_val
 
