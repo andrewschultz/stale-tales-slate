@@ -1179,7 +1179,6 @@ carry out gotoing:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 	if mrlp is presto: [PRESTO]
-		if noun is Saps Pass and Phat Path is visited, say "Saps['] Pass is sort of the Phat Path, now." instead; [?? delete this]
 		if noun is Dirge Ridge:
 			if Leo is dismissed:
 				post-wall-arch;
@@ -2482,7 +2481,7 @@ drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 Clack Ops Locs Pack	"The [locs pack] mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
 drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
-peels speel	"Thrrough the jargon, you read [']E Elps! [']E Elps! a lot. It's emphasized in red."
+peels speel	"Through the jargon, you read [']E Elps! [']E Elps! a lot. It's emphasized in red."
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tips pits	"IT'S P is written in red on the bottom."
@@ -3611,6 +3610,7 @@ definition: a thing (called muso) is mult-sol:
 	if muso is Reeds Ale or muso is lars eede or muso is elsa erde, yes;
 	if muso is rodney, yes;
 	if muso is USB, yes;
+	if muso is coins, yes;
 	no;
 
 to say reject:
@@ -4491,6 +4491,7 @@ bub dude egg	true	true	false	false	"Only one color for sure? And you don't even 
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
 Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
+peels speel	true	true	false	false	"Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue..."
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
 capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
 casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
@@ -4868,15 +4869,15 @@ this is the presto-hinting rule:
 			try objhinting ether instead;
 	if player is in Grey Gyre or player is in Char Arch:
 		if Hacks Shack is unvisited:
-			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps Pass is unvisited]go north[else if Phat Path is unvisited]go see about getting past the lawl wall [hereish of Saps Pass][else if Hacks Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
-	if player is in Saps Pass, try objhinting lawl wall instead;
-	if player is in Phat Path:
+			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps Pass is unvisited]go north[else if lawl wall is not moot]go see about getting past the lawl wall [hereish of Saps Pass][else if Hacks Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+	if player is in Saps Pass:
+		if lawl wall is touchable, try objhinting lawl wall instead;
 		if Hacks Shack is unvisited:
 			if harpings phrasing is touchable and shack is unvisited:
 				if Leo is touchable, try objhinting harpings phrasing instead;
 				all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's in that shack[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
 	if spoilit is true:
-		if Dirge Ridge is not visited or austerer is not visited or marines is not visited:
+		if Dirge Ridge is not visited or Austerer Treasure is not visited or Marines Seminar Remains is not visited:
 			now spoilit is false;
 			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
 		if ye hoop is in austerer and austerer is visited, all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
@@ -5813,8 +5814,7 @@ Austerer Treasure	"The treasure room has no secret passages, so you can only go 
 Marines Seminar Remains	"While you're impressed with people who can navigate sport ports, you [if sport ports are reflexed]already saluted them. No need to do more[else]couldn't do much more than show respect for them, if you need a distraction from your main quest[end if]."
 Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
 Unwary Runway	"The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?"
-Saps Pass	"There's no way around the hogs. You need to get rid of them."
-Path Path	"It's best to stay on the Phat Path."
+Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The LOLstr trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the LOLstr trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The LOLstr trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The LOLstr trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]." [troves]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
@@ -6347,7 +6347,7 @@ check pushing the skid to (this is the yak-oof rule):
 		go-back Hacks Shack;
 		the rule succeeds;
 	if the room second noun of location of player is nowhere, continue the action;
-	if yak is on skid and location of player is Phat Path and second noun is north:
+	if yak is on skid and location of player is Saps Pass and second noun is north:
 		say "The yoke doesn't quite fit through the door. It does, however, snap off and the yak looks freer, aliver, almost happy. It decides it's had enough of the leaf and, with a nod, walks off to a yak realm, perhaps in search of more malarkey. Maybe [if lamb is moot]near the lamb you rescued[else]somewhere near the poor lamb's home[end if].";
 		moot yak;
 		now yak-sol is 1;
@@ -6372,7 +6372,7 @@ check pushing the skid to (this is the yak-oof rule):
 After going a direction (called way-pushed) with the skid:
 	if way-pushed is north and location is Hacks Shack:
 		say "The skid barely fits as you go in the door.";
-	if way-pushed is south and location is Phat Path:
+	if way-pushed is south and location is Saps Pass:
 		say "The skid barely fits as you go out the door.";
 	continue the action.
 
@@ -11622,7 +11622,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 	else:
 		if location of player is adjacent to location of Leo:
 			if Leo is not dismissed:
-				if location of player is Saps Pass and location of hogs is Saps Pass:
+				if hogs are touchable:
 					say "Leo and Rand didn't flee, but they're not quite as big as the hogs. You may have to be sneaky, here.";
 				else:
 					say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
@@ -11755,9 +11755,7 @@ section dart
 
 section volt maze path
 
-the volt maze is vanishing scenery in Grey Gyre. "At the start of the path is tiled WELCOME TO THE [b]VOLT MAZE[r]. You can read red writing about who made it.". understand "path" as volt maze.
-
-understand "maze/ entry" as volt maze when player is in Grey Gyre.
+the volt maze is vanishing scenery in Grey Gyre. "At the start of the path is tiled WELCOME TO THE [b]VOLT MAZE[r]. You can read red writing about who made it.". understand "path" as volt maze when player is in Grey Gyre.
 
 a-text of volt maze is "RYRYRRYR". b-text of volt maze is "RYRYRRYR". parse-text of volt maze is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -12280,11 +12278,17 @@ a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?". parse-text o
 
 book Saps' Pass
 
-Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges. printed name is "Saps['] Pass".
+Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [wall-sentence][if hawt thaw is in Saps Pass]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course.. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges. printed name is "[if lawl wall is moot]Phat Path[else]Saps['] Pass[end if]".
 
-check going south in Saps Pass: say "The hogs snicker as you walk away.";
+to say wall-sentence:
+	if lawl wall is touchable:
+		say "There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it";
+	else:
+		say "There's not much left with the wall gone, except for [if harpings phrasing is in Saps Pass]a harpings phrasing guarding [end if][one of]a quiet-looking structure which must be a MUTISM SUMMIT[or]the mutism summit[stopping] to the north[if starch charts are in Saps Pass][desc-starch][end if]"
 
-check going north in Saps Pass: say "Not with the wall and the hogs in the way." instead;
+check going in Saps Pass when lawl wall is touchable:
+	if noun is south, say "The hogs snicker as you walk away.";
+	if noun is north, say "Not with the wall and the hogs in the way." instead;
 
 Mount Um Not is bounding boring scenery in Saps Pass. description of Mount Um Not is "It's as huge and unwelcoming as Cupid's Cuspid isn't.". bore-text is "Mount Um-Not is just there for scenery. Intimidating scenery, but scenery.". bore-check is the bore-mount-um-not rule. printed name of Mount Um Not is "Mount Um-Not".
 
@@ -12292,40 +12296,19 @@ this is the bore-mount-um-not rule:
 	if current action is climbing or current action is entering, try going east instead;
 	if current action is taking, say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
 
-[	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
-
 Deils Slide is bounding boring scenery in Saps Pass. description of Deils Slide is "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma].". bore-check of Deils Slide is bore-deils-slide rule. understand "deil" and "deil slide" as Deils Slide.
 
 this is the bore-deils-slide rule:
 	if current action is taking, say "The Deil's Slide is more likely to take YOU." instead;
 	if current action is climbing or current action is entering, try going west instead;
 
-book Phat Path
+check going west when player is in Saps Pass: say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's not much left with the wall gone, except for [if harpings phrasing is in Phat Path]a harpings phrasing guarding [end if][one of]a quiet-looking structure which must be a MUTISM SUMMIT[or]the mutism summit[stopping] to the north[if starch charts are in Phat Path][desc-starch][end if][if hawt thaw is in Phat Path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course.". roomnud of Phat Path is table of Phat Path nudges.
+check going east when player is in Saps Pass: say "[if Leo is touchable]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
 
-to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the mutism summit[else]Some starch charts on the side of the mutism summit may or may not be an interesting distraction[end if]";
+Check going inside in Saps Pass: if mutism summit is touchable, try going north instead;
 
-the mutism summit is boring scenery in Phat Path. description of mutism summit is "[if Hacks Shack is visited]The mutism summit/Hacks['] Shack looks just as you left it[else]The mutism looks quiet and inviting. You won't need interjections once you're in there[end if].". bore-text is "The mutism summit is pretty stable. Not much to do but [if Hacks Shack is visited]re[end if]enter to the north.". bore-check is the bore-mutism-summit rule.
-
-this is the bore-mutism-summit rule:
-	if current action is entering, try going north instead;
-	if current action is attacking,	say "Whack the shack? Back!" instead;
-
-check going west when player is in Saps Pass or player is in Phat Path: say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
-
-to say swan-puma:
-	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
-
-check going east when player is in Saps Pass or player is in Phat Path: say "[if Leo is touchable]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
-
-Check going inside in Phat Path: try going north instead;
-
-the harpings phrasing is scenery in Phat Path. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!'"
-
-check taking harpings phrasing: say "Removing the warning won't make the warning any less valid." instead;
-
-check scaning harpings phrasing: say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
+section lawl wall
 
 the lawl wall is vanishing scenery in Saps Pass.
 
@@ -12352,14 +12335,45 @@ a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]
 check taking hogs:
 	say "You and Rand and Leo can take [']em. But not literally." instead;
 
+section hawt thaw
+
+the clump of hawt thaw is LLPish vanishing boring scenery in Saps Pass. description of hawt thaw is "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit.". bore-text is "From what you know of hawt thaw, it may not be entirely safe. It sort of appears and disappears with little rhyme or reason."
+
+a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
+
+chapter Phat Path scenery
+
+to say desc-starch: say ". [if starch charts are reflexed]The starch charts you ridiculed are tacked to the side of the mutism summit[else]Some starch charts on the side of the mutism summit may or may not be an interesting distraction[end if]";
+
+section mutism summit
+
+the mutism summit is boring scenery. description of mutism summit is "[if Hacks Shack is visited]The mutism summit/Hacks['] Shack looks just as you left it[else]The mutism looks quiet and inviting. You won't need interjections once you're in there[end if].". bore-text is "The mutism summit is pretty stable. Not much to do but [if Hacks Shack is visited]re[end if]enter to the north.". bore-check is the bore-mutism-summit rule.
+
+this is the bore-mutism-summit rule:
+	if current action is entering, try going north instead;
+	if current action is attacking,	say "Whack the shack? Back!" instead;
+
+to say swan-puma:
+	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
+
+section harpings phrasing
+
+the harpings phrasing is scenery. description of harpings phrasing is "It's got warnings against entering the shack:[paragraph break]'ALERT! ALTER! RETREAT, ALL![paragraph break]LOG ONS? NO! SLOG![paragraph break]UGH! GOTH, OUT! THUG TOO? UGH! GO, HUT!'"
+
+check taking harpings phrasing: say "Removing the warning won't make the warning any less valid." instead;
+
+check scaning harpings phrasing: say "It's all over the place. Maybe you should focus on a specific row[if rebuked is true] you haven't worked with yet[end if].";
+
+section yrnet entry
+
 the YrNet Entry is boring amusing scenery. "You can't see where the YrNet Entry is. It's top-notch security, designed to fool even Elvira's sneakiest minions!". bore-text of YrNet Entry is "The YrNet Entry ultimately [if Leo is touchable]will[else]did[end if] not restrict you from entering the Hacks['] Shack.".
 
-check going north in Phat Path when hogs are moot or keys are moot:
-	move YrNet Entry to Phat Path;
+check going north in Saps Pass when hogs are moot or keys are moot:
+	move YrNet Entry to Saps Pass;
 	if Leo is touchable, say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those out-of-sight high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be much help anyway.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
 	if Hacks Shack is unvisited, say "You feel a small tingle--you've felt it before, from the invisible YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
 
-check scaning in Phat Path when Leo is in Phat Path: say "Leo and Rand ooh and aah at how you're using a thing to find out about things.";
+check scaning in Saps Pass when Leo is in Saps Pass: say "Leo and Rand ooh and aah at how you're using a thing to find out about things.";
 
 byebyes is a list of things variable. byebyes is { log ons letters, alert letters, ought letters}.
 
@@ -12396,12 +12410,6 @@ a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "
 
 rebuked is a truth state that varies.
 
-chapter hawt thaw
-
-the clump of hawt thaw is LLPish vanishing boring scenery in Saps Pass. description of hawt thaw is "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit.". bore-text is "From what you know of hawt thaw, it may not be entirely safe. It sort of appears and disappears with little rhyme or reason."
-
-a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
-
 chapter Starch Charts
 
 the Starch Charts are vanishing LLPish plural-named scenery. "The starch charts seem a bit beyond you, yet they seem to be indicating something. You're not sure what, and you're not sure you need to 'solve' the charts to know. But they're covered with all the interjections you've used so far--well, up to a certain point. Where the interjections become, well, actual concrete nouns or even verbs you could spit out in disgust to similar effect. Some are misspelled for effect, but you still recognize them."
@@ -12410,7 +12418,7 @@ a-text of starch charts is "RRYRRR". b-text of starch charts is "RRGR??". parse-
 
 book Hacks' Shack
 
-Hacks Shack is an innie room in Presto. Hacks Shack is north of Phat Path. "[if Hacks Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[else]You're in the shack where you probably need to write a program or something[end if][if Im Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if].". roomnud of Hacks Shack is table of Hacks' Shack nudges. printed name of Hacks Shack is "Hacks['] Shack".
+Hacks Shack is an innie room in Presto. Hacks Shack is north of Saps Pass. "[if Hacks Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[else]You're in the shack where you probably need to write a program or something[end if][if Im Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if].". roomnud of Hacks Shack is table of Hacks' Shack nudges. printed name of Hacks Shack is "Hacks['] Shack".
 
 after looking in Hacks Shack for the first time:
 	say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
@@ -12632,7 +12640,7 @@ to check-trivial-presto-llp:
 				if sport ports are reflexed:
 					poss-d;
 					now pt-discounted is true;
-				if hawt thaw is in Phat Path:
+				if hawt thaw is in Saps Pass:
 					poss-d;
 					now pt-discounted is true;
 	continue the action;
@@ -13116,7 +13124,7 @@ before going up when location of player is a mazeroom or location of player is U
 a direction can be viable.
 
 definition: a direction (called dir) is viable:
-	if player is in Phat Path and dir is north, no;
+	if player is in Saps Pass and dir is north and Leo is touchable, no;
 	if player is in Lapsin Plains and dir is inside and span pans are in Lapsin Plains, no;
 	if player is in Disowned Downside and atmo moat is in Disowned Downside and dir is west, no;
 	if player is in Reclusion Inclosure and merle is in Disowned Downside and dir is west, no;
@@ -21303,7 +21311,7 @@ to say dh-true: now trolls-hinted is true;
 to say dio-part: say "Not a puzzle per se but helps you understand what to do with [if settler is off-stage]an analytical object you may uncover[else]the settler[end if]"
 
 to say yak-worry:
-	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Phat Path is not visited]. You need to go north of the gyre and the maze, first[end if]"
+	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
 check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
@@ -22143,8 +22151,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
-		if hawt thaw is not moot, say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
-		if starch charts are not reflexed, say "[2drm of Phat Path]you could've made the starch charts TRASCH.";
+		if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said WHAT to the Hawt Thaw.";
+		if starch charts are not reflexed, say "[2drm of Saps Pass]you could've made the starch charts TRASCH.";
 		if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become ROM STICKS.";
 		if TBA key is reflexive, say "[2drm of Hacks Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a CASSEROLE.";
@@ -22393,7 +22401,7 @@ index map with Shaven Havens mapped south of Neds Dens.
 [start presto]
 
 index map with Hacks Shack mapped south of Harms Marsh.
-index map with Austerer Treasure mapped south of Phat Path.
+index map with Austerer Treasure mapped south of Saps Pass.
 index map with r44 mapped west of Hacks Shack.
 
 [start demo dome]

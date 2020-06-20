@@ -148,7 +148,7 @@ understand "eatings" and "tangies" as a mistake ("You might be suspected of havi
 
 understand "hear bs" or "hear b s" as a mistake ("You can't help but do so, alas.") when player is in Cruelest Lectures.
 
-understand "her abs" as a mistake ("Suggesting the Rehabs Basher might be feminine in any way is almost as bad as accusing him of steroid use to get those abs.") when player is in Cruelest Lectures.
+understand "be rash" as a mistake ("It'd get you in trouble around here.") when player is in Cruelest Lectures.
 
 understand "ingates" as a mistake ("More like, you could use out-gates to leave, amirite?") when player is in Cruelest Lectures.
 
@@ -446,7 +446,7 @@ understand "brig" as a mistake ("There, there. This maze is much less hard to ge
 
 chapter Saps' Pass
 
-understand "asp" and "asps" as a mistake ("Saps['] Pass is dangerous enough.") when player is in Saps Pass.
+understand "asp" and "asps" as a mistake ("[Saps Pass] [if lawl wall is moot]was[else]is[end if] dangerous enough.") when player is in Saps Pass.
 
 understand "delis" as a mistake ("You don't need food. And the food would probably be pretty evil, anyway.") when player is in Saps Pass.
 
@@ -456,7 +456,7 @@ understand "psa" and "psas" as a mistake ("Getting rid of bullies will help you 
 
 understand "sidle" as a mistake ("You don't need to sneak up Deil's Slide.") when player is in Saps Pass.
 
-understand "spa" and "spas" as a mistake ("Maybe one day, Saps['] Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps Pass.
+understand "spa" and "spas" as a mistake ("Maybe one day, [if lawl wall is moot]the Phat Path[else]Saps['] Pass[end if] will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.") when player is in Saps Pass.
 
 chapter Phat Path
 
@@ -464,9 +464,9 @@ understand "alter" as a mistake ("Vandalism! For shame!") when harpings phrasing
 
 understand "artel" as a mistake ("You, Rand and Leo have already engaged in a collective effort.") when harpings phrasing is in location of player.
 
-understand "ptah" as a mistake ("No Egyptian deity comes to your rescue. Or needs to.") when player is in Phat Path.
+understand "ptah" as a mistake ("No Egyptian deity comes to your rescue. Or needs to.") when player is in Saps Pass and lawl wall is moot.
 
-understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and Rand is touchable.
+understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Saps Pass and lawl wall is moot and Rand is touchable.
 
 chapter Hacks' Shack
 
@@ -671,7 +671,7 @@ understand "snip" and "snip pins" as a mistake ("You don't have anything with a 
 
 book towers
 
-understand "xray" and "x-ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
+understand "xray" and "x ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
 
 understand "cleats" as a mistake ("The castle is run-down and unromantic enough. Changing it to cleats would be even worse.") when mrlp is towers and player is not in Loftier Trefoil.
 
@@ -938,7 +938,7 @@ understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living 
 
 understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
 
-understand "deign" and "design" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
+understand "deign" and "deigns" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
 
 understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in Rustic Citrus and pagers are in Rustic Citrus.
 

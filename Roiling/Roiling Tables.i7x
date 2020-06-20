@@ -134,8 +134,8 @@ ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[ge
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
-keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-bye rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
-hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-bye rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
+keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-or-keys rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
+hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-or-keys rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons letters	log ons letters	false	400300169	--	"solong"	"so long" or "solong"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 alert letters	alert letters	false	372241587	--	"later"	"later"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 ought letters	ought letters	false	352450403	--	"tough"	"tough"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
@@ -832,16 +832,13 @@ this is the post-ether-there rule:
 	now dart is in Grey Gyre;
 	moot dart;
 
-this is the post-hogs-bye rule:
-	now Mount Um Not is in Phat Path;
-	now Deils Slide is in Phat Path;
-	now Leo is in Phat Path;
-	now Rand is in Phat Path;
-	now Grey Gyre is mapped south of Phat Path;
-	now Phat Path is mapped north of Grey Gyre;
-	if hawt thaw is in Saps Pass, now hawt thaw is in Phat Path;
-	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as you wind up at...";
-	move player to Phat Path;
+this is the post-hogs-or-keys rule:
+	moot lawl wall;
+	moot hogs;
+	moot keys;
+	move harpings phrasing to Saps Pass;
+	move mutism summit to Saps Pass;
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as the area suddenly becomes brighter...";
 
 to say h-n-k: now hogs-not-keys is true;
 
@@ -865,7 +862,7 @@ to say increm:
 		now Rand is in Dirge Ridge;
 		now Leo is dismissed;
 		now Rand is dismissed;
-		now starch charts are in Phat Path;
+		now starch charts are in Saps Pass;
 		if odes song is in Dirge Ridge, poss-d; [?? we need to make sure that we can't scan the harpings phrasing any more]
 
 this is the post-disk-skid rule:
@@ -957,10 +954,10 @@ this is the pre-polemic-compile rule:
 
 this is the post-polemic-compile rule:
 	now BUB DUDE EGG is part of the computer screen;
-	if hawt thaw is in Phat Path, poss-d;
+	if hawt thaw is in Saps Pass, poss-d;
 	if lamb is in Grey Gyre, poss-d;
 	if sport ports are reflexive, poss-d;
-	if starch charts are in Phat Path, poss-d;
+	if starch charts are in Saps Pass, poss-d;
 	if odes song is in Dirge Ridge, poss-d;
 	if player has rom sticks, moot rom sticks;
 
@@ -1910,7 +1907,6 @@ MORF FORM	"The MORF-FORM rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
 Rude N Nuder	"The pages of [Nuder] flutter a bit."
-sheol holes	"Hm. You thought you saw a way by...no, not BY, a little more complex than that."
 odd run on aura	"You thought you saw an un-road for a second, but ... not quite."
 NULL IT unit	"You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift."
 noon gag	"You think of how to find a way to No-Lag Logan's boat."
@@ -2295,11 +2291,11 @@ ought	"[no-rehash]."
 rom sticks	"Man, it would be too easy to mess the rom sticks up. Better not tinker like that."
 casserole	"The casserole is mixed up enough."
 leaf	"You can't bring the flea back to life--or do anything else to the leaf."
-ALocalCo	"No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle."
+ALocalCo Cola	"No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle."
 futon	"The futon could be a little less lumpy, sure, but that's beyond your magic powers."
 caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if ALocalCo cola is moot]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
-computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
+screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
 small blue button		"No need to reboot twice."
 TBA key	"No, the TAB key is what it should be."
@@ -2320,7 +2316,6 @@ rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
-ruby	"You already did in the wrap."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"The ruby's hidden well. No need to tinker."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
@@ -2331,7 +2326,6 @@ strudel	"You'd have to drop the strudel on the ground and get it germy to try th
 prison ropins	"It already is. Dr. Yow is free."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
-succor crocus	"You already found a succor crocus. There's not much else there, it seems."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
 bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 eels	"The eels have done enough."
@@ -2579,7 +2573,7 @@ trim socks	"[one of]The socks aren't critical to solving the game, but they do g
 rom sticks	"[one of]You can put the sticks in Drive A to make it go faster. The game does this automatically.[plus][or]The sticks don't actually save moves or anything, though.[minus][cycling]"
 gum	"[one of]Gum comes in more than six flavors at your local supermarket, but there are only five ways to change G-U-M.[plus][or]As for what it's good for, it's everlasting gum, and maybe what it changes into will help other things be everlasting.[plus][or]Oh, the solution?[plus][or]UMG, er, OMG, do you need to ask?[plus][or]You don't need to go to George Mason University.[plus][or]I just put extra clues in to give more clues than anagram possibilities, because I could.[plus][or]MUG. In which you pour liquid.[minus][cycling]"	--	"make a MUG"
 mug	"[if ALocalCo Cola is moot]You will be able to drink from the mug when the time is right.[else][mug-detail][end if]"
-skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Phat Path]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
+skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Saps Pass]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 oper rope	"The oper rope isn't useful on its own, but it lets you PULL the skid."
 disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is touchable]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
@@ -2689,7 +2683,7 @@ dreads adders	"[one of]You want to make the dreads adders less ferocious.[plus][
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
 Tetris Sitter	"[if Tetris Sitter is reflexive][one of][The tetris sitter] seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
 itster	--	Tetris Sitter
-ur pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
+unripe ur pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 sporties ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
 muscly luc sym	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
 muscly ms lucy	"[one of]Muscly is nice, but if you could tangle her up...[plus][or]Maybe if she weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"

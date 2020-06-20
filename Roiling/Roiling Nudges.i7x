@@ -440,9 +440,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mazeroom"	615142808	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
 "storep"	568332432	--	degen-true rule	"[not-the-reg]."
 "floor"	314357692	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
-"mount"	415551063	--	path-pass rule	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"deil"	247641883	--	path-pass rule	"[d-sli]."
-"deils"	343915849	--	path-pass rule	"[d-sli]."
 "serial"	410398381	popgun	--	"[is-boing]."
 "number"	469637285	popgun	--	"[is-boing]."
 "popgun"	443897512	popgun	--	"[boing-clue]."
@@ -552,14 +549,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Saps' Pass nudges [because you advance after the hogs are gone, no this-item is needed.]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ssap"	276201709	--	--	"[locname]."
-"hog"	144234578	--	--	"The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all."
-"key"	303098539	--	--	"You aren't sure which key would work, so you need a plan to get them all."
-"lawl"	217750269	--	--	"The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on."
-
-table of Phat Path nudges
-this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"phat"	224046094	--	--	"[locname]."
-"saps"	276201709	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way [if Hacks Shack is visited]back [end if]north, here."
+"phat"	224046094	mutism summit	--	"[locname]."
+"hog"	144234578	hogs	--	"The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all."
+"key"	303098539	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
+"lawl"	217750269	lawl wall	--	"The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on."
+"mount"	415551063	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
+"deil"	247641883	--	--	"[d-sli]."
+"deils"	343915849	--	--	"[d-sli]."
 "yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start. But you don't need to do anything to it[if leo is touchable] except get rid of Rand and Leo[end if]."
 "clump"	323466343	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack is visited]back [end if]north to do what you need, in peace and quiet."
@@ -622,7 +618,7 @@ table of oyster nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "storey"	609225725	--	degen-true rule	"[not-the-reg]."
 "jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
-"spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills[if slider is switched on]. You hear nothing from the slider--perhaps it won't help you with auxiliary cheating items[end if]."
+"spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills.[slider-activate]" [slider test spill]
 "digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
 "howler"	486513400	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
 "bubble"	341982470	bubble wrap	--	"It's just wrap, really."
@@ -1188,7 +1184,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nail"	169902011	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
 "critters"	664946148	--	--	"[restrictr]."
 "critter"	568672182	--	--	"[restrictr]."
-"raccoon"	343135453	--	--	"[if corona is touchable]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.[slider-activate][else]No need to tweak the rac(c)oon again. It's fine as is.[end if]"
+"raccoon"	343135453	--	--	"[if corona is touchable]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important.[slider-activate][else]No need to tweak the rac(c)oon again. It's fine as is.[end if]" [slider test raccoon]
 "throne"	496782314	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
 
 table of Reclusion Inclosure nudges
@@ -1235,7 +1231,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 ["disrupt"	537301488	--	--	"You can never fight stupid. You don't need to, here."]
 ["studip"	451977685	--	--	"You can never fight stupid. You don't need to, here."]
 
-chapter others
+chapter others nudges
 
 table of others nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1381,7 +1377,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "valence"	506691788	--	--	"[val-chg]."
 "roping"	387642395	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
 
-chapter demo dome
+chapter demo dome nudges
 
 table of demo dome nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1832,10 +1828,6 @@ this is the cola-in-mug rule:
 	if mug is touchable and ALocalCo Cola is moot, the rule succeeds;
 	the rule fails;
 
-this is the path-pass rule:
-	if player is in Phat Path or player is in Saps Pass, the rule succeeds;
-	the rule fails;
-
 to say d-sli: say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
 
 to say harphr: say "Concentrate on the words of the harpings phrasing"
@@ -2049,10 +2041,10 @@ to say no-ropin: say "[if duck is returned]No need to mess with the ropins any m
 to say wordy-rowdy-nudge:
 	if slider is switched on:
 		if dr yow has been wordy and dr yow has not been rowdy:
-			match-process the player's command and "rowdy";
+			match-process the player's command and "rowdy"; [slider test rowdy]
 			continue the action;
 		if dr yow has been rowdy and dr yow has not been wordy:
-			match-process the player's command and "wordy";
+			match-process the player's command and "wordy"; [slider test wordy]
 			continue the action;
 		if dr yow has been rowdy and dr yow has not been wordy:
 			say "The slider is silent. There is no third option, it appears";
