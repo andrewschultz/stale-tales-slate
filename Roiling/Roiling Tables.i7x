@@ -48,7 +48,7 @@ Store B	Store B	false	505285378	--	"sorbet"	"sorbet"	a rule	a rule	"You ask 'Got
 Store H	Throes Hoster	false	524148772	--	"others"	"others"	--	post-storeh-hoster rule	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."
 Store K	tokers	false	539799651	--	"tokers"	"tokers"	--	post-storek-tokers rule	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	--	--	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
-blabber babbler	blabber babbler	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	--	post-babbler-outside rule	"The Rehabs Basher and the blabber babbler are swept from the doorway and stage, respectively, by something unseen. The blabber babbler frantically babbles something about how this is why we need to fight drugs, but [he-she] is too busy backwards somersaulting to establish eye contact with [his-her] audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers express remorse they already gobbled up the REALLY good stuff. But what you got helps reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
+blabber babbler	blabber babbler	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	pre-babbler-outside rule	--	"The Rehabs Basher and the blabber babbler are swept from the doorway and stage, respectively, by something unseen. The blabber babbler frantically babbles something about how this is why we need to fight drugs, but [he-she] is too busy backwards somersaulting to establish eye contact with [his-her] audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers express remorse they already gobbled up the REALLY good stuff. But what you got helps reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now.[paragraph break]Their general partying and babble about wanting to find adventure like yours tires you out. As you doze off, you hear them moaning they need more, uh, supplies. When you wake up, they're gone. Maybe for the best, there."
 Store P	odorant tornado	false	568332432	--	"presto"	"presto"	--	--	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, something more nature-like, but daunting. You recognize an odorant tornado, which you can ENTER, if you dare. You'll probably need to."
 Store T	solid idols	false	589976491	--	"otters"	"otters"	--	--	"The store divides in two until it becomes a path with solid idols packed so densely they block your view. They're all of otters, not-so-oddly."
 Store U	course source	false	591972280	--	"routes"	"routes"	--	--	"Store U splits into strips that snake out. They intertwine dizzingly, making a source course. You can ENTER to see where it leads."
@@ -135,7 +135,7 @@ n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	--	post-hogs-or-keys rule	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
-hogs	hogs	false	240508544	--	"gosh"	"gosh"	--	post-hogs-or-keys rule	"[h-n-k]You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
+hogs	hogs	false	240508544	--	"gosh"	"gosh"	pre-hogs-not-keys rule	post-hogs-or-keys rule	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons letters	log ons letters	false	400300169	--	"solong"	"so long" or "solong"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 alert letters	alert letters	false	372241587	--	"later"	"later"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
 ought letters	ought letters	false	352450403	--	"tough"	"tough"	pre-harpings-flip rule	post-harpings-flip rule	"[increm]"
@@ -495,16 +495,19 @@ to say check-nestor:
 to say check-tokers:
 	say "[if tokers are in Strip of Profits]motion to the mangiest steaming.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][else]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
 
-this is the post-babbler-outside rule:
-	now mangiest steaming is not maingame;
-	now list-headache is true;
+this is the pre-babbler-outside rule: [there are no conditions here. We just want to organize everything before moving back to the Strip of Profits.]
+	moot nestor;
+	moot tokers;
+	moot mangiest steaming;
 	moot pamphlets;
+	now list-headache is true;
 	increase headaches by 10;
 	now lectures is shunned;
 	if t-tediously is in otters:
 		let A be pod-num of t-tediously;
 		now pod-num of t-tediously is 0; [disable "tediously" in otters]
-		let B be a random number from 1 to mack-count of A;
+		now t-tediously is off-stage;
+		let B be a random number from 1 to mack-count of A - 1; [I'm hard coding things here... assuming t-tediously has the highest pod number. Otherwise I am writing lots of code for one special case.]
 		place-a-mack A and B;
 
 section routes auxiliary
@@ -818,7 +821,7 @@ this is the pre-ether-there rule:
 		preef ether;
 		do nothing instead;
 	if player does not have popgun or popgun does not contain dart:
-		say "[one of]Leo and Rand charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. 'Ha, bums! Ambush!' you hear, before taking a thumping.[paragraph break]You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon[or]THERE, you think, realizing you're not [if player has popgun]effectively [end if]armed yet[stopping].";
+		say "[one of]Leo and Rand charge in. It's two-on-three, though, since [why-2-3]--and the enemies are bigger than you. 'Ha, bums! Ambush!' you hear, before taking a thumping.[paragraph break]You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need [if player does not have popgun]a weapon[else]to load that popgun[end if][or]THERE, you think, realizing you're not [if player has popgun]effectively [end if]armed yet[if player has popgun and boing go bin is reflexive]. You need to fix the popgun[end if][stopping].";
 		preef ether;
 		do nothing instead;
 
@@ -832,15 +835,16 @@ this is the post-ether-there rule:
 	now dart is in Grey Gyre;
 	moot dart;
 
+this is the pre-hogs-not-keys rule:
+	now hogs-not-keys is true;
+
 this is the post-hogs-or-keys rule:
 	moot lawl wall;
 	moot hogs;
 	moot keys;
 	move harpings phrasing to Saps Pass;
 	move mutism summit to Saps Pass;
-	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as the area suddenly becomes brighter...";
-
-to say h-n-k: now hogs-not-keys is true;
+	say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]You give a 'PHT!' as the area suddenly becomes brighter...[paragraph break][b]Phat Path[r][line break]";
 
 this is the pre-harpings-flip rule:
 	if Leo is in Dirge Ridge, say "You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe [if yak is not moot]you can get them to provide some muscle[else]they could have helped push the skid, but they did enough[end if]." instead;
@@ -925,7 +929,7 @@ this is the pre-polemic-compile rule:
 		preef Im Le Cop polemic instead;
 	if keyboard is not on slab:
 		say "Good idea, but first, you probably want to put the keyboard on the slab. Do so now?";
-		if the player direct-consents:
+		if the player dir-consents:
 			now keyboard is on slab;
 			say "Done. You can try to COMPILE again, now.";
 		else:
@@ -933,7 +937,7 @@ this is the pre-polemic-compile rule:
 		preef Im Le Cop polemic instead;
 	if computer screen is not on slab:
 		say "Good idea, but first, you may want to put the screen on the slab. Do so now?";
-		if the player direct-consents:
+		if the player dir-consents:
 			now computer screen is on slab;
 			say "Done. You can try to COMPILE again, now.";
 		else:
@@ -949,7 +953,7 @@ this is the pre-polemic-compile rule:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
 		preef Im Le Cop polemic instead;
 	if peels speel is reflexive:
-		say "You get an NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.[paragraph break]'Up late, a letup,' you think restlessly and dreamily to yourself, 'Then fail the final!'[paragraph break]You're just too exhausted to put up with any more ... probably you just switched something or got something backwards.";
+		say "[one of]You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.[paragraph break]'Up late, a letup,' you think restlessly and dreamily to yourself, 'Then fail the final!'[paragraph break]You're just too exhausted to put up with any more ... probably you just switched something or got something backwards[or]That stupid NEED IF-DEFINE and that peels speel, still[stopping].";
 		preef Im Le Cop polemic instead;
 
 this is the post-polemic-compile rule:
@@ -1977,6 +1981,7 @@ trim socks	"You don't have the available memory in your head to see all the poss
 Clack Ops Locs Pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
+small blue button	"You need to give that computer another (figurative) kick."
 peels speel	"Whatever you thought seemed a bit of a tired mess."
 Im Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."

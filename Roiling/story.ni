@@ -3232,7 +3232,6 @@ chapter regions
 you-used-pills is a truth state that varies.
 
 to solve-region (sre - a region):
-	let tokers-home be false;
 	process the notify score changes rule;
 	now sre is solved;
 	now last-solved-region is sre;
@@ -3243,7 +3242,6 @@ to solve-region (sre - a region):
 	say "Congratulations! [sre] node: done![paragraph break]";
 	if sre is otters and debug-state is true:
 		append "Test passed for Otters." to the file of debuggery;
-	if sre is stores, continue the action;
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre, moot po;
 		check-the-store po;
@@ -3258,15 +3256,11 @@ to solve-region (sre - a region):
 				now wiped-any-out is true;
 	if wiped-any-out is true:
 		say "(You wipe out writing in your notepad that probably only applied to this region.)";
-	if blabber babbler is reflexed: [have to get rid of them before moving the player, but we want to print a note AFTER going. So, tap dance with code a bit.]
-		if mangiest steaming is in Strip of Profits:
-			now tokers-home is true;
-			moot nestor;
-			moot tokers;
-			moot mangiest steaming;
 	if min-score of mrlp > poss-score of mrlp, say "NOTE: somehow the minimum score processed by the code exceeded the possible score. If you are able to, and you can cut/paste the game transcript, I'd appreciate seeing it at [email] so I can fix it. This won't affect the game, but all the same--it's a nuisance bug. Thanks!";
-	if player is not in Strip of Profits:
-		d "player not currently in Strip of Profits. Player moved from [location of player].";
+	if player is in Strip of Profits:
+		d "BUG. Player shuld not be in Strip of Profits yet.";
+	else:
+		d "Player moved from [location of player].";
 		move player to Strip of Profits;
 	if sre is not spoiled and solid idols are examined:
 		now note-progress is true;
@@ -3274,8 +3268,6 @@ to solve-region (sre - a region):
 	if engravings are examined and eng-change is false:
 		say "The engraving by [if store t is touchable]store t[else]the otters[end if] seems to have changed since last you looked.";
 		now eng-change is true;
-	if tokers-home is true:
-		say "The tokers packed up and went home. Just as well. You'd hate to have had to explain your journeys to them.";
 
 to check-the-store (po - a portal):
 	repeat through table of stores anagrams:
@@ -7489,8 +7481,10 @@ carry out fliptoing (this is the main fliptoing rule):
 			if taked entry is true or player has the-from entry:
 				if the-from entry is not ruby and the-from entry is not medals, now player has the-to entry; [else medals go from worn to carried]
 			if there is a roomjump entry:
-				if roomjump entry is Strip of Profits, solve-region the map region of the location of the player;
-				move player to roomjump entry;
+				if roomjump entry is Strip of Profits and player is not in Cruelest Lectures:
+					solve-region the map region of the location of the player;
+				else:
+					move player to roomjump entry;
 				process the show blues rule; [for debugging]
 				process the process random dialogue rule;
 			else if the-from entry is part of the diorama:
@@ -12276,7 +12270,7 @@ understand "sport port" and "port" as sport ports when player is in Marines Semi
 
 a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?". parse-text of sport ports is "?[sp]x[sp]?[sp]x[sp]?".
 
-book Saps' Pass
+book Saps' Pass / Phat Path
 
 Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [wall-sentence][if hawt thaw is in Saps Pass]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course.. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges. printed name is "[if lawl wall is moot]Phat Path[else]Saps['] Pass[end if]".
 
@@ -13054,7 +13048,7 @@ carry out showing it to:
 
 chapter keyboarding
 
-the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "Im Le Cop Polemic".
+the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
 
 report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy." instead;
 
@@ -18709,9 +18703,9 @@ t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text of t-sincerely is
 
 t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
 
-t-tediously is a mack-idea. pod-num is 5. pod-ord is 4. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [not alphabetical, but due to lazy coding I wand this last. Tediously has to disappear.]
+t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
 
-t-wearingly is a mack-idea. pod-num is 5. pod-ord is 5. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
 
 [pod 6 is 10-11 letters.]
 t-desperately is a mack-idea. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
