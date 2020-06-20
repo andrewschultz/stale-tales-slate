@@ -446,7 +446,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spoilt"	454009205	popgun	--	"[boing-clue]."
 "lcao"	149359819	--	cola-in-mug rule	"The mug is already somehow generating infinite cola. Don't want to mess with that."
 "dreidl"	353994775	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
-"leonard"	433420743	Rand	--	"[if lawl wall is moot]Leo and Rand need to be together, but by themselves, for themselves. They've done enough for you[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
+"leonard"	433420743	Rand	--	"[if lawl wall is moot][l-n-r] need to be together, but by themselves, for themselves. They've done enough for you[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -556,7 +556,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mount"	415551063	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
 "deil"	247641883	--	--	"[d-sli]."
 "deils"	343915849	--	--	"[d-sli]."
-"yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start hacking it. [if hacks shack is visited]Besides, you've already been north to the [shack], and it let you by[else if leo is touchable]But it won't let you by until Rand and Leo are gone[else]It only seemed to stop Leo and Rand, so you should be able to bypass it easily[end if]."
+"yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start hacking it. [if hacks shack is visited]Besides, you've already been north to the [shack], and it let you by[else if leo is touchable]But it won't let you by until [l-n-r] are gone[else]It only seemed to stop [l-n-r], so you should be able to bypass it easily[end if]."
 "clump"	323466343	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack is visited]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	harpings phrasing	--	"[harphr]."
@@ -1358,7 +1358,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "space"	326739437	--	--	"[locname]."
-"trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that So-Great Storage[end if]."
+"trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape space]you got what you wanted[else][he-she] might trade that So-Great Storage[end if]."
 "drawing"	362975539	--	--	"The drawing can't be changed. It's stuck to the wall as a warning."
 "art"	190621639	Art Erd	--	"[1st-name]."
 "red"	234159001	Art Erd	--	"[1st-name]."

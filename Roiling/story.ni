@@ -1186,7 +1186,7 @@ carry out gotoing:
 		if player is in Hacks Shack, abide by the shack-south rule;
 		if Leo is touchable and Leo is eager:
 			if noun is not a mazeroom:
-				say "(Leo and Rand following.)";
+				say "([l-n-r] following.)";
 				move Leo to noun;
 				move Rand to noun;
 	if mrlp is oyster: [OYSTER]
@@ -4842,7 +4842,7 @@ this is the presto-hinting rule:
 		if Rand is in Dirge Ridge and Rand is fightin, try objhinting Rand instead;
 		if Rand is washed up and Leo is washed up, try objhinting wzup instead;
 		if spoilit is true, now spoilit is false;
-		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
+		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe [l-n-r]'s combined muscle could help you somewhere[end if]." instead;
 	if boing is reflexive and popgun is touchable, try objhinting boing go bin instead;
 	if popgun is touchable:
 		if dart is not touchable, all-say "You need to find ammo for your popgun." instead;
@@ -4930,7 +4930,7 @@ to say maze-solve:
 	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
 
 to say wash-up:
-	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
+	say "[one of][l-n-r] are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
 
 to say hereish of (rm - a room):
 	say "[if player is in rm]here[else]in [rm][end if]"
@@ -5931,7 +5931,7 @@ Leo	"[dont-hit of Leo]" [START Presto]
 Rand	"[dont-hit of Rand]"
 lamb	"Meanie. There's a better way to help it flee home."
 walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
-hogs	"If you were as strong as Rand and Leo, maybe. But you're not. Maybe you can out-think them."
+hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
 LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
 boats	"Sabot? Batso!"
@@ -6479,11 +6479,11 @@ check listening:
 	if noun is odes song, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead; [presto]
 	if noun is Rand or noun is Leo:
 		if Rand is washed up:
-			say "You horn in on Leo and Rand's small talk, and they open up to you a bit.";
+			say "You horn in on [l-n-r]'s small talk, and they open up to you a bit.";
 			try asking a random washed up person about "rannygazoo" instead;
 	if player is in Dirge Ridge:
 		if Rand is washed up, try listening to Rand instead;
-		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with Rand and Leo[end if]." instead;
+		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
 	if player is in Hacks Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
 	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened." instead; [oyster]
@@ -6946,7 +6946,7 @@ parseing is an action out of world.
 
 understand the command "parse" as something new.
 
-understand "parse" as parseing when Strip of Profits is visited and spear is not touchable.
+understand "parse" as parseing when Strip of Profits is visited.
 
 parse-mist is a truth state that varies.
 
@@ -9081,7 +9081,7 @@ lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
 rubbish story	--
 praise	"the praise floating in the air"
 rivets	"the rivets spelling PRAISE"
-wzup	"a pair of hands patting Leo and Rand on the back" [presto]
+wzup	"a pair of hands patting [l-n-r] on the back" [presto]
 pre-haun	"an outline of where something is buried" [oyster]
 eeks	"some cartoony representation of EEKS"
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
@@ -9383,7 +9383,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "directions/dirs"	true	"A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."	"directions/dirs"	false	--
 "casper"	false	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."	"casper"	true	oyster
 "reagents/reagent"	false	"You need three reagents to help Brother Horbert: mushrooms[if player has mushrooms] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
-"Leo/Rand" or "Leo and Rand"	false	"Leo and Rand may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
+"Leo/Rand" or "Leo and Rand"	false	"[l-n-r] may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
 "haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"the haunter"	true	oyster
 "die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"DIE THOU"	true	oyster
 "progress"	false	"You note the following: Ordeal Reload = stuff[other-areas]."	"progress"	false
@@ -11627,14 +11627,14 @@ section turn rules
 
 every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey rule):
 	if location of player is Nowt Town:
-		if Leo was touchable, say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' Leo and Rand wait outside.";
+		if Leo was touchable, say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' [l-n-r] wait outside.";
 	else:
 		if location of player is adjacent to location of Leo:
 			if Leo is not dismissed:
 				if hogs are touchable:
-					say "Leo and Rand didn't flee, but they're not quite as big as the hogs. You may have to be sneaky, here.";
+					say "[l-n-r] didn't flee, but they're not quite as big as the hogs. You may have to be sneaky, here.";
 				else:
-					say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
+					say "[l-n-r] lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
 				move Leo to location of player;
 				move Rand to location of player;
 				move wzup to location of player;
@@ -11755,7 +11755,7 @@ ether-try is a truth state that varies.
 check going north in Grey Gyre:
 	if cur-score of presto < 3, say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
 	if ether is in Grey Gyre:
-		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is touchable]. Leo and Rand mutter that if you point out where dose peoples is, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not touchable]and some henchmen to tackle them[end if][stopping].";
+		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is touchable]. [l-n-r] mutter that if you point out where dose peoples is, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or][l-n-r] might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not touchable]and some henchmen to tackle them[end if][stopping].";
 		set the pronoun it to ether instead;
 		now ether-try is true instead;
 	if Saps Pass is not visited and ether is not off-stage, say "You stride confidently north with your two friends. You can tackle anyone!";
@@ -11928,14 +11928,14 @@ check going south in Char Arch:
 
 to post-wall-arch:
 	if casserole is moot:
-		say "You don't have another workout for Rand and Leo.";
+		say "You don't have another workout for [l-n-r].";
 		continue the action;
 	if yak is moot:
-		say "[if casserole is moot]You don't have another casserole. Or another chore[else]You maybe could've used Leo and Rand to push the yak around, but not now[end if].";
+		say "[if casserole is moot]You don't have another casserole. Or another chore[else]You maybe could've used [l-n-r] to push the yak around, but not now[end if].";
 		continue the action;
 	if yak is on skid:
 		if casserole is in Hacks Shack:
-			say "You offer Leo and Rand the casserole in exchange for pushing the skid north. 'Fuel? Us? Useful!' It's a great workout for them, and though they're a bit careless pulling the skid into the shack, it breaks a safety catch on the drab yoke, which falls to the ground. The yak blinks, nods at all three of you, and runs off. The casserole replenishes vital carbohydrates or something for Leo and Rand. They ask to keep the dish, which is fine with you. The shack's messy enough.";
+			say "You offer [l-n-r] the casserole in exchange for pushing the skid north. 'Fuel? Us? Useful!' It's a great workout for them, and though they're a bit careless pulling the skid into the shack, it breaks a safety catch on the drab yoke, which falls to the ground. The yak blinks, nods at all three of you, and runs off. The casserole replenishes vital carbohydrates or something for [l-n-r]. They ask to keep the dish, which is fine with you. The shack's messy enough.";
 			reg-inc;
 			moot yak;
 			now yak-sol is 3;
@@ -11944,9 +11944,9 @@ to post-wall-arch:
 			moot casserole;
 			move player to Hacks Shack;
 			continue the action;
-		say "You'd like to ask for help, but you don't have enough muscle food for Leo and Rand after they pull the skid. Those escaroles simply aren't meaty enough.";
+		say "You'd like to ask for help, but you don't have enough muscle food for [l-n-r] after they pull the skid. Those escaroles simply aren't meaty enough.";
 		continue the action;
-	say "'Nyurgh! Hungry!' you recall Leo and Rand saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
+	say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
 
 section cretins' cistern
 
@@ -12063,7 +12063,7 @@ check taking a fightin person: say "You can 'take' [noun] by trickery." instead;
 
 to say l-r: say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
 
-to say lrp:	say "[if a random chance of 1 in 2 succeeds]Leo and Rand[else]Rand and Leo[end if]"
+to say l-n-r: say "[one of]Leo and Rand[or]Rand and Leo[at random]"
 
 Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset. For all their macho talk, he and Leo might just need someone to talk to[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
@@ -12086,7 +12086,7 @@ persuasion rule for asking a bruisin person to try doing something:
 	if noun is not eager:
 		say "[noun] isn't up to that.";
 		persuasion fails;
-	say "Alas, Leo and Rand are men of action.";
+	say "Alas, [l-n-r] are men of action.";
 	persuasion fails;
 
 before scaning a fightin person: if Rand is washed up and Leo is washed up, try scaning wzup instead;
@@ -12098,8 +12098,8 @@ for writing a paragraph about a bruisin person:
 	now Leo is mentioned;
 	now Rand is mentioned;
 	if Rand is fightin, say "Rand is here, looking to do a little better than Leo." instead;
-	if Leo is eager, say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is touchable] to further adventure, though you don't know if you want to share a mutism summit with them. They don't seem like they'd enjoy keeping quiet[end if]." instead;
-	if Rand is washed up and Leo is washed up, say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
+	if Leo is eager, say "[l-n-r] are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is touchable] to further adventure, though you don't know if you want to share a mutism summit with them. They don't seem like they'd enjoy keeping quiet[end if]." instead;
+	if Rand is washed up and Leo is washed up, say "[l-n-r] are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
 every turn when player is in Dirge Ridge:
 	if Leo is fightin, say "Leo bulls at you, but you're easily able to outrun and outwit him. Maybe you can easily discourage him, too." instead;
@@ -12115,7 +12115,7 @@ to say lrblab:
 
 chapter whassuping
 
-the wzup is privately-named reflexive boring scenery in Dirge Ridge. printed name of wzup is "Leo and Rand". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both Rand and Leo at once. Referring to one is as good as referring to the other.".
+the wzup is privately-named reflexive boring scenery in Dirge Ridge. printed name of wzup is "[l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -12311,9 +12311,9 @@ this is the bore-deils-slide rule:
 	if current action is taking, say "The Deil's Slide is more likely to take YOU." instead;
 	if current action is climbing or current action is entering, try going west instead;
 
-check going west when player is in Saps Pass: say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
+check going west when player is in Saps Pass: say "The Deil's Slide would make quick work of even [if Leo is in Dirge Ridge]your old friends [end if][l-n-r][swan-puma], with or without a goop-pogo." instead;
 
-check going east when player is in Saps Pass: say "[if Leo is touchable]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
+check going east when player is in Saps Pass: say "[if Leo is touchable][l-n-r] don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
 
 Check going inside in Saps Pass: if mutism summit is touchable, try going north instead;
 
@@ -12329,20 +12329,20 @@ some keys are part of the lawl wall. the keys are vanishing and plural-named. de
 
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
-the hogs are vanishing plural-named people in Saps Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look much more pompous, though--maybe distracting them just right can get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+the hogs are vanishing plural-named people in Saps Pass. description is "They're as big as [l-n-r] but meaner. Plus there are three of them. They look much more pompous, though--maybe distracting them just right can get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
 
 hogs-not-keys is a truth state that varies.
 
 after printing the locale description for Saps Pass when Saps Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
-	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
+	say "A 'PSS!' Suddenly three hogs, all [l-n-r]'s size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your tsar star and crumples before going to guard the keys, the big jerk. What to do?";
 	moot tsar star;
 	moot popgun;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
 
 check taking hogs:
-	say "You and Rand and Leo can take [']em. But not literally." instead;
+	say "You and [l-n-r] can take [']em. But not literally." instead;
 
 section hawt thaw
 
@@ -12379,10 +12379,10 @@ the YrNet Entry is boring amusing scenery. "You can't see where the YrNet Entry 
 
 check going north in Saps Pass when hogs are moot or keys are moot:
 	move YrNet Entry to Saps Pass;
-	if Leo is touchable, say "[one of]You walk north into the hacks['] shack. Leo and Rand follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those out-of-sight high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be much help anyway.[paragraph break]It'd be sad to see Leo and Rand go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. Leo and Rand don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
+	if Leo is touchable, say "[one of]You walk north into the hacks['] shack. [l-n-r] follow. An electronic voice booms at them! 'YrNet Entry rejects N-E-Try!' It's one of those out-of-sight high-tech alarm devices, and it's detected them as not smart enough! It's not fair, and it's not nice, but if you need to do some programming, maybe they won't be much help anyway.[paragraph break]It'd be sad to see [l-n-r] go, but perhaps a nicer way than yelling at them could help give them time to get to know each other without you standing in the way. Perhaps you could take a cue from that sign by the shack--it might give you some authority[or]You don't want that electronic warning. [l-n-r] don't, either. You glance at the sign again. Whether or not they can read it, you can tell them the gist. It'll be a softer letdown, coming from you[stopping]." instead;
 	if Hacks Shack is unvisited, say "You feel a small tingle--you've felt it before, from the invisible YrNet Entry which disrupts unwanted visitors. But only people. Sometimes it also breaks up really oppressive software and hardware, too. It doesn't reject you, and that's good."
 
-check scaning in Saps Pass when Leo is in Saps Pass: say "Leo and Rand ooh and aah at how you're using a thing to find out about things.";
+check scaning in Saps Pass when Leo is in Saps Pass: say "[l-n-r] ooh and aah at how you're using a thing to find out about things.";
 
 byebyes is a list of things variable. byebyes is { log ons letters, alert letters, ought letters}.
 
@@ -20463,7 +20463,7 @@ rule for printing a locale paragraph about greedy-person:
 		now So Great Storage is mentioned;
 	continue the action;
 
-the So Great Storage is a thing. printed name is "So-Great Storage". understand "box" as So Great Storage when mrlp is others. "A box labeled So-Great Storage is here.". description of So Great Storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
+the So Great Storage is a thing in Scape Space. printed name is "So-Great Storage". understand "box" as So Great Storage when mrlp is others. "A box labeled So-Great Storage is here.". description of So Great Storage is "[unless lost slot is part of So Great Storage]It's so great at storing, you can't find a way in there. It reads LOST SLOT, and the slot certainly, uh, is[else]There's a (formerly) lost slot in the box. What to put into it, now[end if].".
 
 check opening box: say "If brute force worked, it wouldn't be so great for storage." instead;
 
@@ -21417,7 +21417,7 @@ medals	"The medals are in good enough shape. They will help you speed up when yo
 Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
 Merle	"You can't take on [e-n-m] by yourself--you need some allies."	[end OTTERS]
 
-to say other-let: say "Try either of the other letters. With variety, Leo and Rand will take the hint"
+to say other-let: say "Try either of the other letters. With variety, [l-n-r] will take the hint"
 
 to say this-animal: say "You've got a useful ally. They'll be ready just as they are when the time comes"
 
@@ -21606,7 +21606,7 @@ troves	"STUB or BUTS by the tubs?"
 presto	"PRESTO:"
 presto	"ENEMY TZAR around the maze entry in the Grey Gyre?"
 presto	"ELO or EOL by Leo?"
-presto	"ASSWHUP or WHUPASS when Leo and Rand are commiserating?"
+presto	"ASSWHUP or WHUPASS when [l-n-r] are commiserating?"
 presto	"SPAG or A GPS by the gasp-gaps in Char Arch?"
 presto	"PTAH in the Phat Path?"
 presto	"IDKS or KIDS around the disk or skid?"
@@ -21961,7 +21961,7 @@ this is the presto-alt rule:
 	else:
 		say "[2da]You have two ways to remove the hoop ahead.";
 	if maze-points > 0:
-		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT would cop out Nowt Town, but for fewer points[end if].";
+		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT was how to cop out of Nowt Town, but for only one poine instead of [maze-points in words][end if].";
 	else:
 		say "[2da]There are three ways to get by the maze ahead, each giving a different number of points.";
 	if hogs are moot:

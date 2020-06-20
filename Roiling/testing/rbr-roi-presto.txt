@@ -784,16 +784,16 @@ My heavens, that's not a lot of positive clues! But the one variable letter may 
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
 #mistake test for leonard/renaldo/leandro/rolande
 >leonard
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+/That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >renaldo
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+/That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >leandro
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+/That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >rolande
-That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+/That'd be some crazy Voltron stuff beyond your magic powers. It would deny (Rand and Leo|Leo and Rand) their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 #mistake test for rondale
 >rondale
-Strength and NFL level speed is pretty awesome, but it'd revoke Leo and Rand's individuality.
+/Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
 
 @sli
 #slider test for darn
@@ -845,7 +845,7 @@ That feels almost right, but you remember that that word has 2 s's in a row.
 It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the cretins' cistern.
 #mistake retest for tard
 >tard
-You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before.
+/You pause before saying/thinking that, especially with (Rand and Leo|Leo and Rand) around. They may've heard that, before.
 #mistake retest for leonard/renaldo/leandro/rolande
 >leonard
 You need to find a way to cheer them up.
@@ -872,7 +872,7 @@ You wouldn't want that, now they're your friends.
 They're on your side. They will fight when they need to.
 #done rejects for wzup
 >asshuwp
-You don't need to greet Leo and Rand again.
+/You don't need to greet (Rand and Leo|Leo and Rand) again.
 #renudge for leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
@@ -884,16 +884,16 @@ You don't need to combine them physically, but their physical strengths combined
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
 #test cases: no gun, no loaded gun, first time, subsequent times
 >there
-You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need to load that popgun.
+/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need to load that popgun.
 >undo
 >abstract popgun to seminar
 >there
 !by one point
 Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
-You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
+/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
 >there
 !by one point
-#don't let Leo and Rand get beaten up twice.
+#don't let your pals get beaten up twice.
 THERE, you think, realizing you're not armed yet.
 #detour to test "efffectively" armed
 >banish dart
@@ -1103,7 +1103,7 @@ No, it's not just any clump, but hawt thaw.
 Vandalism! For shame!
 #mistake test for slog on
 >slog on
-You need Leo and Rand to go away, for now, before you can slog on.
+/You need (Rand and Leo|Leo and Rand) to go away, for now, before you can slog on.
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
@@ -1148,7 +1148,7 @@ Concentrate on the words of the harpings phrasing.
 #nudge for yrnet
 >n
 >yrnte
-The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until Rand and Leo are gone.
+/The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until (Rand and Leo|Leo and Rand) are gone.
 #spechelp for alert letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
@@ -1163,7 +1163,7 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
 #mistake test for artel
 >artel
-You, Rand and Leo have already engaged in a collective effort.
+/You, (Rand and Leo|Leo and Rand) have already engaged in a collective effort.
 
 @nud
 #first, test each done-reject individually
@@ -1202,7 +1202,7 @@ by one point
 Dat was a good dust-up
 #pre-harpings-flip rule
 >later
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
 #######T L S below
@@ -1212,7 +1212,7 @@ by one point
 Dat was a good dust-up
 #pre-harpings-flip rule
 >so long
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
 >undo
@@ -1224,7 +1224,7 @@ by one point
 !Hut! Go!
 Dat was a good dust-up
 >tough
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
 #######S T L below
@@ -1233,7 +1233,7 @@ by one point
 Hut! Go!
 Dat was a good dust-up
 >later
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
 >undo
@@ -1245,7 +1245,7 @@ by one point
 !Hut! Go!
 Dat was a good dust-up
 >so long
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 #######T S L below
 >undo
 >undo
@@ -1254,7 +1254,7 @@ by one point
 !Hut! Go!
 Dat was a good dust-up
 >later
-You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
 >undo
 >undo
@@ -1281,7 +1281,7 @@ Dat was a good dust-up
 @nud
 #renudge for yrnet
 >yrnte
-The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop Leo and Rand, so you should be able to bypass it easily.
+/The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
 @sli
 #slider test for trasch
@@ -1860,7 +1860,7 @@ Your score has just gone up by one point
 @max
 >compile
 !by one point
-You get an NEED IF-DEFINE error
+You get a NEED IF-DEFINE error
 >compile
 !by one point
 That stupid NEED IF-DEFINE and that peels speel, still.
