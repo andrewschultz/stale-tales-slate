@@ -107,7 +107,7 @@ chapter stores nudges
 
 table of stores nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"storse"	583140439	store s	--	"[not-the-reg]."
+"storse"	583140439	--	--	"[not-the-reg]."
 
 table of strip of profits nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -164,7 +164,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lecture"	621971270	--	--	"[locname]."
 "lectures"	718245236	--	--	"[locname]."
 "seating"	475877967	--	--	"That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the blabber babbler and the Rehabs Basher."
-"mangiets"	539953120	--	--	"You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler, and you'd rather deal with the blabber babbler. Tedious."
+"mangiets"	539953120	--	--	"You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler. Tedious."
 "blabber"	324388284	--	--	"[blab-un]."
 "example"	569923068	--	--	"[blab-un]."
 "ian"	116088172	--	--	"[ian-un]."
@@ -446,7 +446,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spoilt"	454009205	popgun	--	"[boing-clue]."
 "lcao"	149359819	--	cola-in-mug rule	"The mug is already somehow generating infinite cola. Don't want to mess with that."
 "dreidl"	353994775	--	dreidl-dread rule	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
-"leonard"	433420743	Rand	--	"[if lawl wall is moot]You've probably faced the greatest physical threat you needed them for. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
+"leonard"	433420743	Rand	--	"[if lawl wall is moot]Leo and Rand need to be together, but by themselves, for themselves. They've done enough for you[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -556,7 +556,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mount"	415551063	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
 "deil"	247641883	--	--	"[d-sli]."
 "deils"	343915849	--	--	"[d-sli]."
-"yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start. But you don't need to do anything to it[if leo is touchable] except get rid of Rand and Leo[end if]."
+"yrnet"	507506690	YrNet Entry	--	"The YrNet entry is secure. You wouldn't know where to start hacking it. [if hacks shack is visited]Besides, you've already been north to the [shack], and it let you by[else if leo is touchable]But it won't let you by until Rand and Leo are gone[else]It only seemed to stop Leo and Rand, so you should be able to bypass it easily[end if]."
 "clump"	323466343	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "summit"	477632943	mutism summit	--	"The mutism summit is meant to be stable. You'll need to go [if Hacks Shack is visited]back [end if]north to do what you need, in peace and quiet."
 "harpings"	449033901	harpings phrasing	--	"[harphr]."
@@ -1247,7 +1247,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "great"	351027450	So Great Storage	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "popstar"	524180100	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
-"bluer"	390468463	tekno token	--	"That doesn't really describe the tekno-token."
+"bluer"	390468463	tekno token	--	"That doesn't really describe the Tekno-Token."
 "repp"	376061830	--	perp-moot rule	"You don't want to bring back that fleeing feeling whispering 'PERP.' Not in any form. [if gate-level is 1]There's got to be another way or two to prep, though[else]Just go north through the gates[end if]."
 "lola"	184168073	dr lola	--	"[count-enuf]."
 "drol"	234519308	lord al	--	"[count-enuf]."

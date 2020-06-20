@@ -384,8 +384,8 @@ pipe panel lie pen app	pineapple	true	669912106	--	"pineapple"	"pineapple"	--	--
 pryer bars	raspberry	true	704483418	--	"raspberry"	"raspberry"	--	--	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."
 barriers west	strawberries	true	980775919	--	"strawberries"	"strawberries/strawberry"	--	--	"The barriers west collapse into a pile of strawberries."
 mean trowel	watermelon	true	815317707	--	"watermelon"	"watermelon"	--	--	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."
-Ammo Gang	mango	true	242122758	--	"among"	"among"	--	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your tekno-token through a credit-verification machine and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
-nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your tekno-token to pay for it, taking only one: multiple nectarines might have transience."
+Ammo Gang	mango	true	242122758	--	"among"	"among"	--	--	"You mingle among the No Ammo Gang for a while. You have some good conversation, and at the end, they swipe your Tekno-Token through a credit-verification machine and give you a mango. You let out an OMG. It seems the right thing to do." [start Clangier Clearing]
+nectarine	nectarine	true	648047304	--	"ancienter"	"ancienter"	--	--	"The unripe nectarine becomes salable. You swipe your Tekno-Token to pay for it, taking only one: multiple nectarines might have transience."
 peach	peach	true	267747770	--	"cheap"	"cheap"	--	--	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."
 quince	quince	true	450223472	--	"cinque"	"cinque"	--	--	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."
 prices precis	kumquat	true	454868268	--	"cripes"	"cripes"	--	--	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."
@@ -568,7 +568,7 @@ this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
 
 this is the post-the-bean-beneath rule:
-	if worst ad is reflexive, poss-d;
+	if worst ad is not moot, poss-d;
 
 this is the pre-unlit-until rule:
 	moot darkness;
@@ -870,9 +870,8 @@ to say increm:
 		if odes song is in Dirge Ridge, poss-d; [?? we need to make sure that we can't scan the harpings phrasing any more]
 
 this is the post-disk-skid rule:
-	if disk is not prefigured:
-		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
-		preef disk;
+	if skid is off-stage:
+		say "[line break]You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
 	move skid to location of player;
 
 this is the pre-reboot rule:
@@ -1970,7 +1969,7 @@ alert letters	"[l-r-bye-hint]."
 log ons letters	"[l-r-bye-hint]."
 ought letters	"[l-r-bye-hint]."
 starch charts	"The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way."
-disk	"[if skid is moot]Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did[else]The disk seems to want to expand, but not quite into that. You must be close[end if]."
+disk	"[if skid is moot][sk2dsk][else]The disk seems to want to expand, but not quite into that. You must be close[end if]."
 escaroles	"The escaroles seem slightly meatier."
 coal	"Microscopic bubbles seem to form on the coal and burst in the air."
 flea	"The flea makes a crinkly noise but still seems quite dead."
@@ -2130,7 +2129,7 @@ corona	"The corona scurries about for a bit before settling down again."
 ocelots	"The ocelots squint at you through their clip-ons."
 leopard	"The leopard almost seems to un-cuff its hands."
 badger	"The badger flexes imaginary suit lapels, then quickly goes back to brooding."
-satyr	"The satyr puts a hand on its chin as if pondering music."
+satyr	"The satyr puts a hand on its chin as if pondering deeper things."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
@@ -2887,7 +2886,7 @@ Dr Tera	"[trader-clue]"
 droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to [greedy-s] in the Scape Space.[minus][cycling]"
 Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
-tekno token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
+tekno token	"The Tekno-Token is a sort of debit card to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are moot]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
 halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has So Great Storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."

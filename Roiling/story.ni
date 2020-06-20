@@ -3594,6 +3594,7 @@ to decide whether (tn - a table name) is hash-found:
 
 definition: a thing (called ge) is final-flipped:
 	if ge is coins or ge is s-c or ge is icons, no;
+	if ge is disk and yak is not moot, no;
 	decide yes.
 
 definition: a thing (called muso) is mult-sol:
@@ -3627,7 +3628,9 @@ to say reject:
 					if the-from entry is prefigured:
 						say "Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.";
 						continue the action;
-					if the-from entry is mult-sol, say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
+					if the-from entry is mult-sol:
+						say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
+						continue the action;
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
 					else:
@@ -3640,6 +3643,9 @@ to say reject:
 						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
 						continue the action;
 					if the-from entry is prefigured:
+						if the-from entry is disk and yak is not moot:
+							say "[sk2dsk].";
+							continue the action;
 						say "You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.";
 						continue the action;
 					say "[spec-help of the-from entry]";
@@ -4054,10 +4060,11 @@ when play begins (this is the basic initialization rule):
 	now Nowt Town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
-	unless myrm is in Otters, no;
+	if map region of myrm is in Otters, no;
 	if myrm is Minded Midden and bleary barley is reflexive, no;
 	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
+	yes;
 
 definition: a person (called per) is guardianish:
 	if per is a guardian, yes;
@@ -9401,12 +9408,20 @@ to say xray-help:
 
 pf-warn is a truth state that varies.
 
+definition: a thing (called th) is flip-known:
+	if th is prefigured, yes;
+	if th is disk or th is skid:
+		if skid is off-stage, no;
+		if yak is moot, no;
+		yes;
+	no;
+
 to say what-can-flip:
 	if pf-warn is false:
 		if word number 1 in the player's command is not "pf":
 			ital-say "you can abbreviate this with PF in the future.";
 			now pf-warn is true;
-	if number of prefigured things is 0:
+	if number of flip-known things is 0:
 		say "You have nothing [if ever-fig is true]else [end if]you figured in advance.[no line break]";
 		continue the action;
 	if mrlp is demo dome:
@@ -19615,6 +19630,7 @@ to coin-eval:
 				if get-token entry is 1:
 					now player has tekno token;
 					set the pronoun it to tekno token;
+					say "[line break]A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.";
 				if get-coin entry is 1:
 					now player has coin;
 					set the pronoun it to coin;
@@ -19668,10 +19684,10 @@ to say if-clear: say "[if Clangier Clearing is visited]--ah, you're nodding, you
 
 table of coingiving
 levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
-0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.' Curtis hands you a tekno-token."
-0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a tekno-token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"
-0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a tekno-token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!'"
-0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a tekno-token for the clearing up north and east--not that you may need it--and a couple coins, and a dollar. Don't know if I can give you anything else.'"
+0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.' Curtis hands you a Tekno-Token."
+0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"
+0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a Tekno-Token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!'"
+0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a Tekno-Token for the clearing up north and east--not that you may need it--and a couple coins, and a dollar. Don't know if I can give you anything else.'"
 1	2	0	1	0	0	"'Glad you didn't say scru-it. We're getting somewhere[if player has moss cap]. Maybe if you physically get somewhere, we can get further[end if].' Curtis hands you a coin for your efforts."
 1	3	0	0	1	0	"'Wow. So much done at once.' Curtis hands you two coins for your efforts."
 1	4	0	0	1	1	"'Spurtin['] turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with.' Curtis, looking very pleased, hands you two coins and some sort of dollar."
@@ -20188,7 +20204,7 @@ after fliptoing when player is in Clangier Clearing:
 	if noun is a fruit or noun is prices precis, increment clearing-fruits;
 	continue the action;
 
-a tekno token is an improper-named thing. description of tekno token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno token. printed name of tekno token is "tekno-token".
+a tekno token is an improper-named thing. description of tekno token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno token. printed name of tekno token is "Tekno-Token".
 
 the prices precis is proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
@@ -22129,7 +22145,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
-		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO arena, too.";
+		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO ARENA, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
