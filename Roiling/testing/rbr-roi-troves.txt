@@ -10,7 +10,7 @@ files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.tx
 ~	max	t0
 ~	mina	t1
 ~	minb	t2
-~	nudges,nud,nu	t3
+~	nudges,nud,nu,mis	t3
 ~	sli	t4
 ~	slider	t4
 #~	pad	t5
@@ -177,6 +177,11 @@ Bustle Sublet
 >score
 {$SCOS}
 
+@mis
+#mistake test for pots
+>pots
+You can't see what you would do with a bunch of pots.
+
 @nud
 #nudge for bustle
 >subelt
@@ -282,6 +287,17 @@ Boarded Roadbed
 }}SCORE++
 >score
 {$SCOS}
+
+@mis
+#mistake test for norse
+>norse
+The bee or arena's nationality is not relevant, and besides, it is a snore.
+#mistake test for noser
+>noser
+A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.
+#mistake test for senor
+>senor
+The bee's gender is only relevant to the point of knowing it's a senora.
 
 @sli
 #slider test for stay
@@ -402,6 +418,11 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@mis
+#mistake retest for norse
+>norse
+The bee or arena's nationality is not relevant, and besides, it was a snore.
 
 @nud
 #renudge for snore
@@ -1110,12 +1131,12 @@ Troves
 Boarded Roadbed====
 
 @mina
-!--you could've tried to BELIEVE you could get past the evil bee, too.
---you could've tried to REASON your way past the (so-near) bee, too.
+!you could've tried to BELIEVE to neutralize the evil bee, too.
+--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
 @minb
---you could've tried to BELIEVE you could get past the evil bee, too.
-!--you could've tried to REASON your way past the (so-near) bee, too.
+you could've tried to BELIEVE to neutralize the evil bee, too.
+!--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
 @mina,minb
 Boredom Bedroom====

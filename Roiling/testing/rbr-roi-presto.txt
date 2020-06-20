@@ -6,7 +6,7 @@ files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt
 
 ~	min	t1
 ~	max	t0
-~	nudges,nud,nu	t2
+~	nudges,nud,nu,mis	t2
 ~	sli	t3
 
 }}MAX=41
@@ -791,6 +791,9 @@ That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo a
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 >rolande
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
+#mistake test for rondale
+>rondale
+Strength and NFL level speed is pretty awesome, but it'd revoke Leo and Rand's individuality.
 
 @sli
 #slider test for darn
@@ -879,11 +882,15 @@ You don't need to combine them physically, but their physical strengths combined
 
 @max
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
-#test cases: no gun, no loaded gun
+#test cases: no gun, no loaded gun, first time, subsequent times
+>there
+You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need to load that popgun.
+>undo
 >abstract popgun to seminar
 >there
 !by one point
-Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Still, you note you started things right.
+Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
+You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
 >there
 !by one point
 #don't let Leo and Rand get beaten up twice.
@@ -891,14 +898,15 @@ THERE, you think, realizing you're not armed yet.
 #detour to test "efffectively" armed
 >banish dart
 >there
-THERE, you think, realizing you're not efectively armed yet.
+THERE, you think, realizing you're not armed yet.
 >undo
 >undo
 #end detour
 >purloin popgun
 >there
 !by one point
-Leo and Rand charge in. It's two-on-three, though, since your popgun is unloaded and broken--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Still, you note you started things right.
+THERE, you think, realizing you're not effectively armed yet.
+You need to fix the popgun.
 
 >bingo
 #pre-boing-bingo rule
@@ -940,7 +948,8 @@ You got the boing-go bin working.
 @max
 >there
 !by one point
-Leo and Rand charge in. It's two-on-three, though, since your popgun is unloaded--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Still, you note you started things right.
+THERE, you think, realizing you're not effectively armed yet.
+!You need to fix the popgun.
 
 >load gun with dart
 
@@ -975,7 +984,16 @@ Saps' Pass
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
-@nud
+@mis
+#mistake test for delis
+>delis
+You don't need food. And the food would probably be pretty evil, anyway.
+#mistake test for idles
+>idles
+Deil's Slide can out-wait you. So you'll want to get on with things.
+#mistake test for sidle
+>sidle
+You don't need to sneak up Deil's Slide.
 #mistake test for asp/asps
 >asp
 Saps' Pass is dangerous enough.
@@ -991,6 +1009,8 @@ Getting rid of bullies will help you go north! Also, persistence will help you r
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 >spas
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
+
+@nud
 >s
 #renudge for ether
 >ethre
@@ -1038,7 +1058,6 @@ The hogs snicker a bit, but they seem a little nervous, too.
 @max
 >gosh
 Your score has just gone up by one point
-#altpath
 Phat Path
 }}SCORE++
 >score
@@ -1074,9 +1093,6 @@ No Egyptian deity comes to your rescue. Or needs to.
 #nudge for phat
 >phta
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-#nudge for saps
->sasp
-You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way north, here.
 #nudge for clump
 >clupm
 No, it's not just any clump, but hawt thaw.
@@ -1122,7 +1138,7 @@ DEBUG INFO: min-up codepath
 @nud
 #renudge for leonard
 >leonadr
-You've probably faced the greatest physical threat you need. You need to take leave of them, now.
+Leo and Rand need to be together, but by themselves, for themselves. They've done enough for you.
 #nudge for harpings
 >harpinsg
 Concentrate on the words of the harpings phrasing.
@@ -1131,8 +1147,8 @@ Concentrate on the words of the harpings phrasing.
 Concentrate on the words of the harpings phrasing.
 #nudge for yrnet
 >n
->entyr
-The YrNet entry is secure. You wouldn't know where to start. But you don't need to do anything to it excelt get rid of Rand and Leo.
+>yrnte
+The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until Rand and Leo are gone.
 #spechelp for alert letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
@@ -1205,8 +1221,8 @@ You mumble other words to shoo Rand and Leo, but you sort of miss them. It was m
 by one point
 >later
 by one point
-Hut! Go!
-!Dat was a good dust-up
+!Hut! Go!
+Dat was a good dust-up
 >tough
 You mumble other words to shoo Rand and Leo, but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -1263,9 +1279,9 @@ Dat was a good dust-up
 {$SCOS}
 
 @nud
-#renudge for entry
->entyr
-The Entry doesn't need disabling, since you're the only person that can enter.
+#renudge for yrnet
+>yrnte
+The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop Leo and Rand, so you should be able to bypass it easily.
 
 @sli
 #slider test for trasch
@@ -1297,6 +1313,13 @@ by one point
 >n
 Hacks' Shack
 
+@nud
+>s
+#renudge for yrnet
+>yrnte
+The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
+>n
+
 @min
 >s
 >s
@@ -1315,6 +1338,7 @@ by one point
 {$SCOS}
 
 @max
+>au 2
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
@@ -1323,16 +1347,15 @@ You take it. You don't need to, but it'd be nice to have handy.
 >compile
 !by one point
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
+>undo
 >n
 >compile
 !by one point
 Good idea, but tough to program without something to type on.
 >purloin keyboard
->abstract screen to phat path
 >compile
 !by one point
-Good idea, but tough to program without something to read code off.
->undo
+Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
 >undo
 >undo
 
@@ -1357,9 +1380,6 @@ The locs aren't that gangsta, and neither are you. And that's a good thing.
 #renudge for summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
-#renudge for saps
->sasp
-You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to find a way back north, here.
 >n
 #nudge for boredyak
 >boredyka
@@ -1560,7 +1580,7 @@ No, skid <=> disk is about it. There's no tricky third way.
 >disk
 ###skip test checking
 >skdi
-Bleah. Did all this high-tech work make you forget the disk was a skid? Yes. Yes, it did.
+No, skid <=> disk is about it. There's no tricky third way.
 >skid
 ###skip test checking
 #nudge for caps
@@ -1590,6 +1610,9 @@ Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
 #mistake test for alco
 >alco
 Alcohol doesn't work as well as caffeine in this situation.
+#mistake test for loca
+>loca
+What you want needs to help programming more than water or French champagne or dancing in the rain.
 
 >cola
 Your score has just gone up by one point
@@ -1615,9 +1638,14 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@mis
+#mistake retest for loca
+>loca
+What you have helps programming more than water or French champagne or dancing in the rain.
+
 @nud
 #done rejects for alocalco cola
->alocaloc
+>aloc
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 #nudge for soda
 >soad
@@ -1741,11 +1769,9 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
->au 2
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
->n
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 >undo
@@ -1770,7 +1796,6 @@ Only one more piece of hardware is needed, and the computer will work.
 @max
 >compile
 Good idea, but first, you may want to put the screen on the slab. Do so now?
->n
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 
@@ -1838,15 +1863,12 @@ Your score has just gone up by one point
 You get an NEED IF-DEFINE error
 >compile
 !by one point
-That stupid NEED IF-DEFINE and that speel, still.
+That stupid NEED IF-DEFINE and that peels speel, still.
 
 @nud
 #done rejects for small blue button
 >toober
 No need to reboot twice.
-#nudge for sleep
->slepe
-Your mind is a tired jumble right now, yes.
 #scannotes for peels speel
 >scan peels speel
 Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
@@ -1856,6 +1878,7 @@ Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 #spechelp for peels speel
 >epsel
 Whatever you thought seemed a bit of a tired mess.
+
 
 @sli
 #slider test for sleep
@@ -1878,7 +1901,7 @@ You've had enough comforts from cots to do the programming you need. You might r
 Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
 #renudge for reboot
 >reboto
-You don't need to give that computer another (figurative) kick.
+No need to reboot twice.
 #spechelp for im le cop polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
@@ -1894,11 +1917,13 @@ by one point
 
 @max
 >abstract cola to phat path
+>purloin coal
 >abstract mug to phat path
 #pre-bub-dude-egg rule
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
+>undo
 >undo
 >undo
 >undo
@@ -1915,7 +1940,7 @@ The process of debugging is going to take a while. You will need some sort of en
 After compiling, you often need to make small tweaks, but not like that.
 #renudge for sleep
 >slepe
-Your mind is no longer a tired jumble.
+You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
 #spechelp for trim socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
@@ -2120,7 +2145,7 @@ Hmm. There are only five possibilities, and more than one may be right. You've d
 Your score has just gone up by one point
 Drive time
 Strip of Profits
->altpath
+>missalt
 You could've made the USB into a sub, too.
 >undo
 >undo
@@ -2138,8 +2163,8 @@ Diver time
 Strip of Profits
 
 @max
->altpath
-You could've made the USB into a sub, too.
+>missalt
+You could've made the USB into a bus, too.
 >undo
 
 >score

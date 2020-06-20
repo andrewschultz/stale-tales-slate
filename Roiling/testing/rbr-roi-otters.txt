@@ -4,7 +4,7 @@ files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt
 
 ~	max	t0
 ~	min	t1
-~	nudmis,nudges,nud,nu	t2
+~	nudmis,nudges,nud,nu,mis	t2
 ~	alt	t3
 ~	sli	t4
 
@@ -789,7 +789,7 @@ It's what the medals say that makes them special.
 
 @!min
 >s
-
+\\
 Bran Barn
 
 @nud
@@ -1076,10 +1076,7 @@ The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 \\
 #spechelp for satyr
 >satry
-The satyr puts a hand on its chin as if pondering music.
-#mistake test for stray
->stray
-No, you can get him on your side.
+The satyr puts a hand on its chin as if pondering deeper things.
 #mistake test for ratsy
 >ratsy
 You don't want a rat on your side. Or someone who says rats too much.
@@ -1184,9 +1181,6 @@ You don't want the badger to have barged into you. Clothed or not.
 #mistake test for trays
 >trays
 You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)
-#mistake retest for stray
->stray
-No, you already got him on your side.
 #mistake retest for ape lord/apelord
 >ape lord
 You already changed the leopard.
@@ -1241,6 +1235,11 @@ The badger no longer feels second-rate, so it needs no more help.
 >s
 
 Clarthead Cathedral
+
+@mis
+#mistake test for sherwin
+>sherwin
+No cryptozookeeper appears.
 
 @sli
 #slider test for loathingly
@@ -1605,6 +1604,13 @@ You don't know if someone named Cornelius would help or hurt you.
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
+@mis
+#mistake test for edisa/sadie
+>edisa
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+>sadie
+On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
+
 @nud
 ##balance undos
 >aside
@@ -1695,11 +1701,6 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 
-@nud
-#readables for holy nest
->read holy nest
-/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
-
 @max
 >honestly
 !by one point
@@ -1719,6 +1720,19 @@ DEBUG INFO: min-up codepath
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#readables for holy nest
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
+>read holy nest
+/Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 #spechelp for holy nest
 >honestyl
 The holy nest flutters silently.

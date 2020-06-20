@@ -6,7 +6,7 @@ files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt
 
 ~	min	t1
 ~	max	t0
-~	nudges,nud,nu	t2
+~	nudges,nud,nu,mis	t2
 ~	sli	t3
 
 }}MAX=22
@@ -209,6 +209,15 @@ You don't need to worry about art, here.
 #mistake test for apts
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
+
+@nud
+#mistake test for ides/rat/tar
+>ides
+It's the whole side art you need to deal with.
+>rat
+It's the whole side art you need to deal with.
+>tar
+It's the whole side art you need to deal with.
 
 @!min
 #pre-side-art-astride rule
@@ -657,7 +666,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#mistake test for staider
+#mistake retest for staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
 #done rejects for sit a nag
@@ -690,7 +699,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #respechelp for side art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
-#mistake test for ides/rat/tar
+#mistake retest for ides/rat/tar
 #nudges for ides
 >ides
 It's the whole side art you need to deal with.
@@ -705,6 +714,11 @@ Ian Gast fails to calm down. Perhaps you just need to position yourself correctl
 >astride
 }}SCORE++
 Your score has just gone up by one point
+
+@mis
+#mistake retest for ides/rat/tar
+>ides
+It's the whole side art you needed to deal with.
 
 @nud
 #mistake retest for staider
@@ -976,7 +990,7 @@ Your score has just gone up by one point
 @nud
 #done rejects for un road
 >urdano
-You know where the un-road is, but how to navigate it?
+You thought you saw an un-road for a second, but ... not quite.
 #scannotes for odd run on aura
 >scan odd run on aura
 With only one ambiguous setting, the light should soon go on for you to figure where and how to go.
@@ -1105,11 +1119,13 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 #scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
-#mistake test for mess
+#nudge for mess
 >msse
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+#nudge for spume
 >spuem
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
+#nudge for spumes
 >spuems
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 

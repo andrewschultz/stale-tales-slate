@@ -11,7 +11,7 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ~	max	t0
 ~	minh	t1
 ~	mini	t2
-~	nudges,nud,nu	t3
+~	nudges,nud,nu,mis	t3
 ~	sli	t4
 
 }}MAX=51
@@ -39,6 +39,7 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 
 >seed 1
 >enter turrets
+>z
 
 @max
 #pre-rodney rule
@@ -176,6 +177,49 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for yonder
 >oydnre
 Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+>undo
+
+@mis
+##balance undos
+>allrand
+#mistake test for enters
+>enters
+You'll need a few exits, here, really.
+>undo
+#mistake test for new id
+>new id
+You need to make sure Edwin's new ID is something negative.
+>undo
+#mistake test for radly
+>radly
+Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.
+>undo
+#mistake test for recalm/recalm marcel
+>recalm
+Right idea, but it might work better in another area.
+>recalm marcel
+Right idea, but it might work better in another area.
+>undo
+>undo
+#mistake test for resent
+>resent
+But how could you make Ernest feel so he'd resent his position?
+>undo
+#mistake test for wander
+>wander
+A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
+>undo
+#mistake test for warden
+>warden
+Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.
+>undo
+#mistake test for wendi/widen
+>wendi
+Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+>widen
+Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+>undo
 >undo
 >undo
 
@@ -697,6 +741,13 @@ Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 DEBUG INFO: Taking away a max point.
 }}CURMAX--
 
+@mis
+#mistake test for xray/x ray
+>xray
+You don't have x-ray vision right now.
+>x ray
+You don't have x-ray vision right now.
+
 @minh,mini
 >purloin brownies
 >put brownies in toaster
@@ -1202,6 +1253,13 @@ Fringe Finger
 >score
 {$SCOS}
 
+@mis
+#mistake test for rustle/rustle strudel
+>rustle
+Wrong type of word, and you're missing a d.
+>rustle strudel
+Wrong type of word, and you're missing a d.
+
 @sli
 #slider test for rustled
 >urtsedl
@@ -1461,6 +1519,10 @@ Your score has just gone up by one point
 #slider test for himself
 >ihsmlfe
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#mistake test for dang rite
+>dang rite
+Creative, but ineffective, positive colloquialism.
 
 @nud
 >sewed

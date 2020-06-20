@@ -263,7 +263,6 @@ The tunes grow slightly less annoying, for a moment.
 ###balance undos
 >unset
 by one point
-#mistake retest for unset
 >unset
 !(tunes)
 You already dealt with the tunes.
@@ -961,7 +960,10 @@ Lapsin' Plains
 >warp
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 
-@nud
+@mis
+#mistake test for tush
+>tush
+Oh, behave.
 #mistake test for brides
 >brides
 No, no time to think about romance, now.
@@ -999,6 +1001,11 @@ No tre begins to grow. Er, tree.
 No vilence, err, violence, please.
 >slap in
 No vilence, err, violence, please.
+#mistake test for nkob
+>nkob
+The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
+
+@nud
 #done rejects for wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
@@ -1198,12 +1205,22 @@ Your score has just gone up by one point
 >read span pans
 Red writing indicates the pans were made by Nan's Apps.
 
+@max
+>bonk knob
+by one point
+>undo
+
 >bonk
 Your score has just gone up by one point
 }}SCORE++
 
 >score
 {$SCOS}
+
+@mis
+#mistake retest for nkob
+>nkob
+You already did what you needed with the knob, Step by Step.
 
 @nud
 #note the pans must be taken care of last

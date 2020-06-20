@@ -35,7 +35,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 #nudge for ordeal
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-#mistake test for walkthrough or walkthru
+#mistake test for walkthrough/walkthru
 >walkthrough
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
 >walkthru
@@ -140,6 +140,7 @@ Oh no, not again. Concentrate on the palm.
 #nudge for darkness
 >darkness
 Oh no, not again. Concentrate on the palm.
+
 >lamp
 Your score has just gone up by one point.
 }}SCORE++
@@ -678,9 +679,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >snib
 }}CURMIN++
 }}SCORE++
-@!
-{$SCOMAX}
-all the secrets here
+>score
+{$SCOS}
 
 @nud
 #renudge for bni
@@ -697,6 +697,10 @@ Now, now! This game is strictly about logic! Nothing frivolous, if you please! O
 
 >x settler
 >in
+
+@min
+@!
+all the secrets here
 
 @sli
 #slider test for flier

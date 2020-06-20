@@ -4,7 +4,7 @@
 files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
 ~	max	t0
 ~	min	t1
-~	nudges,nud,nu	t2
+~	nudges,nud,nu,mis	t2
 ~	sli	t3
 
 ## *FILE
@@ -218,7 +218,7 @@ Stop trying to make Pillar of Storge happen.
 #mistake test for stroke
 >stroke
 You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
-#mistake test for sureto or sure to
+#mistake test for sureto/sure to
 >sureto
 You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
 >sure to
@@ -279,6 +279,9 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
 
 @nud
+#mistake retest for stoner
+>stoner
+Being a stoner isn't treason. Use his real name.
 #done rejects for nestor
 >nestro
 You rescued him, and that's enough.
@@ -318,24 +321,35 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 \\
 Cruelest Lectures
 
+@mis
+#mistake test for douse it
+>douse it
+Sort of, but why not get rid of it--this whole boondoggle--outright?
+#mistake test for hear bs/hear b s
+>hear bs
+You can't help but do so, alas.
+>hear b s
+You can't help but do so, alas.
+#mistake test for tedious
+>tedious
+Yes, it's tedious enough to make you see red.
+#mistake test for be rash
+>be rash
+It'd get you in trouble around here.
+
 @nud
 #nudge for storse
 >stores
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for seating
 >seatign
-That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian.
+That might cause a bit too much commotion. Maybe you can pay attention to a common thread that will dispose of the blabber babbler and the Rehabs Basher.
 #nudge for mangiets
 >mangiest
-You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious.
+You can't see the way high highway any more. You're stuck dealing with the Rehabs Basher and blabber babbler. Tedious.
 #spechelp for blabber babbler
 >outsied
 The blabber babbler coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
-#mistake test for ani/nia
->ani
-Ian's had a big life change, but that might be too big for him!
->nia
-Ian's had a big life change, but that might be too big for him!
 #mistake test for easting
 >easting
 Compass directions aren't relevant here. You need to upset everything, somehow.
@@ -354,12 +368,17 @@ More like, you could use out-gates to leave, amirite?
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#?? do better
->push ian
-Before you can do anything with or to Ian, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you
+>gs
+>push rehabs basher
+Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets labeled Help Stamp Hemp SPLAT at you. "It will help you in ways you don't know. And even I don't know." Do you take them?
+"Good choice. Say, if they're good enough, do you think you could I could become an even better blabber babbler than ... her?"
+>undo
+>gs
+>push rehabs basher
+Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you
 #nudge for example
 >exampel
-The lecturer is unchangeable in his views, but maybe he is physically movable.
+The blabber babbler is unchangeable, but perhaps indiectly moving him will work.
 #nudge for ian
 >ina
 Ian is unchangeable, but maybe he is movable.
@@ -374,10 +393,10 @@ You're probably overthinking it. The I-USED-TO examples are just plain tedious.
 You're probably overthinking it. The I-USED-TO examples are just plain tedious.
 #nudge for lectures
 >lecturse
-The lecturer is unchangeable in his views, but maybe he is physically movable.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 #nudge for lecture
 >lectuer
-The lecturer is unchangeable in his views, but maybe he is physically movable.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 @!min
 >outside
@@ -553,9 +572,6 @@ The solid idols, being solid, are unchanged. They won't let you ENTER unless you
 The solid idols, being solid, are unchanged. They won't let you ENTER unless you're, well, ready.
 
 @nud
-#mistake retest for stoner
->stoner
-Being a stoner isn't treason. Use his real name.
 #mistake retest for ouster
 >ouster
 It's your job to be the ouster in the course source, but you'll need to warp out of the Strip.

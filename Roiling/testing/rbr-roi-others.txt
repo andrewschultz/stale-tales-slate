@@ -8,7 +8,7 @@ files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt
 
 ~	max	t0
 ~	min	t1
-~	nudges,nud,nu	t2
+~	nudges,nud,nu,mis	t2
 ~	sli	t3
 
 ALSO-IGNORE:t
@@ -160,6 +160,11 @@ DR. NIMATA.
 #spechelp for mad train
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
+
+@mis
+#mistake test for parse
+>parse
+You've parsed the spelling of quite a few words so far. Just a bit more, now.
 
 @sli
 >slon
@@ -516,6 +521,13 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 Curtis hands you a coin
 scru-it
 
+@mis
+#mistake test for deign/deigns
+>deign
+The singed design on the coin should make you not just want to deign but DO.
+>deigns
+The singed design on the coin should make you not just want to deign but DO.
+
 @nud
 #nudge for singed
 >deigsn
@@ -528,6 +540,7 @@ You're not the tree-mangling type. So you can only exit to the north.
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 
 @sli
+#balance undos
 #detour for slider testing misses for "icon" and "icons"
 #slider test for icon
 >cino
@@ -538,7 +551,7 @@ Maybe if you had more than one coin.
 #slider test for sonic icons
 >purloin coins
 >ocsin
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic icons.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic.
 >undo
 >undo
 #slider test for icons
@@ -845,7 +858,7 @@ Money, or something like it, should not be the guide of you.
 #spechelp for icons
 >icosn
 The icons rattle promisingly.
-#mistake test for scion
+#mistake retest for scion
 >scion
 Money, or something like it, should not be the guide of you.
 >undo
@@ -1415,7 +1428,7 @@ It hurt to be called a perp. But maybe you can figure a way to spin that and hea
 by one point
 #done rejects for fleeing feeling
 >pepr
-You don't want to bring back that feeling you might be a perp. Not in any form. There's got to be another way or two to prep, though.
+You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. There's got to be another way or two to prep, though.
 >undo
 >undo
 
@@ -1513,7 +1526,7 @@ You've done enough researching, and now you can just go north.
 You've done enough reviewing, and now you can just go north.
 #nudge for repp
 >repp
-You don't want to bring back that feeling you might be a perp. Not in any form. Just go north through the gates.
+You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. Just go north through the gates.
 
 >n
 #notana
