@@ -359,7 +359,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "live"	333777614	evil bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "snore"	452663963	--	--	"[if SNORE SO ARENA is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
-"arena"	286413056	--	--	"[if SNORE SO ARENA is reflexed]Nothing happens. You may need to look at the full SNORE SO ARENA[else]You already managed to REASON your way around the SNORE SO ARENA."
+"arena"	286413056	--	--	"[if SNORE SO ARENA is reflexive]Nothing happens. You may need to look at the full SNORE SO ARENA[else]You already managed to REASON your way around the SNORE SO ARENA."
 
 table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -755,7 +755,7 @@ table of Rascal Craals nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "craals"	258792829	--	--	"[locname]."
 "craal"	162518863	--	--	"[locname]."
-"hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else."
+"hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else. You've hidden the ruby well enough."
 
 table of End Den nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1011,7 +1011,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mislit"	407258668	--	--	"[towersloc]."
 "clays"	293640460	--	--	"[clay-pal]."
 "caly"	197366494	--	--	"[clay-pal]."
-"enip"	339588717	unripe ur pine	--	"It's officially an ur-pine, not a pine."
+"enip"	323172422	unripe ur pine	--	"It's officially an ur-pine, not a pine."
 "pester"	621785964	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "present"	690693472	--	serpent-hiding rule	"The serpent is taken care of."
 "accurst"	430012582	accurst leap	--	"[focus-castle]."
@@ -1750,7 +1750,7 @@ to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down ye
 
 to say cone-rec: say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if praise is reflexed and rivets are reflexed]how to enter [the lodgings][else if praise is reflexive and rivets are reflexive]that statue, or the praise floating in the air[else]entering [the lodgings] or being sure you deserve to[end if]"
 
-to say scrapery: say "The godlings['] lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway";
+to say scrapery: say "The godlings['] lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you";
 
 to say full-pod: say "You must deal with the full END PRONER POD"
 
@@ -1934,7 +1934,7 @@ this is the waste-gone rule:
 	if waste is moot, the rule succeeds;
 	the rule fails;
 
-to say ache-plur: say "[if sardine is in sclerous closures]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
+to say ache-plur: say "[if arches are reflexive]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 
 to say its-msg: say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
 
@@ -2049,7 +2049,7 @@ to say wordy-rowdy-nudge:
 		if dr yow has been rowdy and dr yow has not been wordy:
 			say "The slider is silent. There is no third option, it appears";
 			continue the action;
-		say "The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name";
+		say "The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.";
 		continue the action;
 	say "Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--[he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if].";
 
@@ -2172,7 +2172,10 @@ to say nudge-slidermatch of (ha - a number) and (mt - indexed text):
 
 to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
 
-to say slider-activate: if slider is switched on, now read-slider-after is true;
+to say slider-activate:
+	if slider is switched on:
+		say "[line break]";
+		now read-slider-after is true;
 
 this is the hydra-know rule:
 	if the player has the weltish whistle, the rule succeeds;

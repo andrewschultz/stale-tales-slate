@@ -2016,7 +2016,7 @@ knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
 span pans	"The pans wobble slightly."
 bogus-plains	"You feel like making a big speech about what you've done and what you plan to do, but not quite like that."
-waste	"The heaps are still technically waste, but you may want to deal with them more delicately."
+waste	"You make an effort to clean the waste but feel you could do better."
 heaps	"The heaps still look ugly as ever."
 tubs	"Hm. The tubs shake slightly. Maybe if you were more forceful."
 prod	"You juggle the prod a bit, but it doesn't change into anything new."
@@ -2182,7 +2182,7 @@ to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rust
 to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
 
 to say di-cli:
-	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]There's something more to do, but that's not quite it[end if]"
+	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
 
 to say ser-try: say "[one of][or], again[stopping]";
 

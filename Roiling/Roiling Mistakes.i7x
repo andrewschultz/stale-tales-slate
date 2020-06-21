@@ -275,22 +275,22 @@ chapter Loather Rathole
 
 understand "real hot" as a mistake ("[if Race Acre is touchable]You already got hot. Now you need to summon a different emotion.[else]But what emotion would provide heat?[end if]") when player is in Loather Rathole.
 
-chapter Boarded Roadbed
+chapter Bustle Sublet
 
 understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when sob ever verbose is touchable.
 
 understand "pots" as a mistake ("You can't see what you would do with a bunch of pots.") when stop post is touchable.
 
-chapter Bustle Sublet
+chapter Boarded Roadbed
 
 to say snore-was-is:
 	say "[if SNORE SO ARENA is reflexed]was[else]is[end if]"
 
-understand "norse" as a mistake ("The bee or arena's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Bustle Sublet.
+understand "norse" as a mistake ("The bee or arena's nationality is not relevant, and besides, it [snore-was-is] a snore.") when player is in Boarded Roadbed.
 
-understand "noser" as a mistake ("A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.") when player is in bustle sublet.
+understand "noser" as a mistake ("A small orange blob with big eyes, short legs, and no arms falls off to the side, emitting garbled pseudo-profanity.") when player is in Boarded Roadbed.
 
-understand "senor" as a mistake ("The bee's gender [snore-was-is] only relevant to the point of knowing it's a [i]senora[r].") when player is in Bustle Sublet.
+understand "senor" as a mistake ("The bee's gender [snore-was-is] only relevant to the point of knowing it's a [i]senora[r].") when player is in Boarded Roadbed.
 
 chapter Drain Nadir
 
@@ -605,11 +605,11 @@ understand "lapins" as a mistake ("Cute bunnies can make any game better, but ha
 
 understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are touchable.
 
-understand "nkob" as a mistake ("[if knob is reflexed]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
+understand "nkob" as a mistake ("[if knob is moot]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
 
-understand "pone" as a mistake ("The message [if span pans are moot]is[else]was[end if] corny, but the door's a piece of cake [if span pans are not moot]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
+understand "pone" as a mistake ("The message [if span pans are moot]was[else]is[end if] corny, but the door[if span pans are moot] was[else]'s[end if] a piece of cake [if span pans are not moot]once you figure[else]since you figured[end if] what to do with the knob.") when player is in Lapsin Plains.
 
 understand "saplin" as a mistake ("No tre begins to grow. Er, tree.") when player is in Lapsin Plains.
 
@@ -633,7 +633,7 @@ understand "dig" and "dig [text]" as a mistake ("[dig-purpose]") when player has
 
 understand "stub" as a mistake ("You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.") when tubs are in location of player.
 
-understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat.") when waste is in airshed and player is in airshed.
+understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat.") when waste is touchable.
 
 understand "tawse" as a mistake ("You don't need that sort of weapon.") when waste is in location of player.
 
@@ -691,7 +691,7 @@ understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so h
 
 understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random moot picaro][end if].") when Andrew is touchable.
 
-understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is in touchable.
+understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become the main warden over Rodney.") when Andrew is touchable.
 
 understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when Edwin is touchable.
 
@@ -817,7 +817,7 @@ understand "occurs" as a mistake ("You need to make something occur.") when succ
 
 understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is touchable.
 
-understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is in touchable.
+understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is touchable.
 
 chapter Mesprise Premises
 
@@ -1004,7 +1004,7 @@ understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is 
 
 chapter Scape Space
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storage is in Scape Space], and you don't know if you want him taking that So Great Storage with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
+understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storage is in Scape Space], and you don't know if you want him taking that So-Great Storage with him[end if].") when player is in Scape Space and greedy-person is Art Erd.
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 

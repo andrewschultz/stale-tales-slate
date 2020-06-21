@@ -3606,6 +3606,8 @@ definition: a thing (called muso) is mult-sol:
 	if muso is coins, yes;
 	no;
 
+slider-diorama is a truth state that varies.
+
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		process the show blues rule;
@@ -3631,10 +3633,17 @@ to say reject:
 					if the-from entry is mult-sol:
 						say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
 						continue the action;
+					if the-from entry is part of the diorama and slider-diorama is true:
+						say "You already got some data from the slider on the diorama. You may want to save it for other things down the road.";
+						continue the action;
+					let old-headaches be headaches;
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
 					else:
 						match-process word number 1 in the player's command and the right-word entry;
+					if old-headaches > headaches and the-from entry is part of the diorama and slider-diorama is false:
+						say "[line break]Since the diorama has instructions on what changes to what, and it is only a teaching instrument, you probably don't want to use up any more slider charges on any part of it.";
+						now slider-diorama is true;
 				else:
 					if Elmo is touchable and the-from entry is not rifle:
 						say "You need to [if Elmo carries rifle]disarm[else]talk to[end if] Elmo instead.";
@@ -21976,7 +21985,7 @@ this is the presto-alt rule:
 	if USB is reflexive:
 		say "[eqls]You'll have two ways to deal with a USB.";
 	else:
-		say "[eqls]You could've made the USB into a [if issub is true]bus[else]sub[end if]."
+		say "[eqls]You could also have made the USB into a [if issub is true]bus[else]sub[end if]."
 
 unset-not-remap is a truth state that varies.
 
