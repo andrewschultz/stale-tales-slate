@@ -176,7 +176,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 #slider test for yonder
 >oydnre
-Your settler begins to make noises: a low hum, but nothing really piercing.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible,
 >undo
 >undo
 
@@ -212,7 +212,7 @@ A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have t
 >undo
 #mistake test for warden
 >warden
-Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.
+Andrew doesn't look like he has the leadership qualities necessary to become the main warden over Rodney.
 >undo
 #mistake test for wendi/widen
 >wendi
@@ -653,7 +653,7 @@ You don't see any new information about the curst palace this time. In fact, you
 >undo
 #mistake test for copes
 >copes
-You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.
+You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.
 #mistake test for pecos
 >pecos
 This game ain't a dadgum Western.
@@ -765,7 +765,7 @@ Your settler registers RRYR?******.
 Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler
 #renudge for copse
 >cepos
-The copse and the scope are both fine as-is.
+The copse and the Spec-O-Scope are both fine as-is.
 #mistake test for worse
 >worse
 The brownies don't need to taste any worse.
@@ -1323,6 +1323,13 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 #spechelp for mardier admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
+>e
+#mistake test for slated
+>slated
+You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research.
+!You've gotten rid of all nuisances here, anyway.
+>undo
+>undo
 
 @!minh,mini
 >married
@@ -1520,6 +1527,7 @@ Your score has just gone up by one point
 >ihsmlfe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@mis
 #mistake test for dang rite
 >dang rite
 Creative, but ineffective, positive colloquialism.
@@ -2184,7 +2192,8 @@ The machine is complicated enough. You already got something from it.
 @nud
 #mistake test for kale
 >kale
-More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
+"More kale, dear?" / "Did I ASK for more kale, dear?"
+Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
 #nudge for actionless
 >actionless
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -2240,9 +2249,9 @@ You can't manipulate the clouds, and you don't need to. It's really more fun to 
 You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own.
 >n
 >w
-#mistake test for slated
+#mistake retest for slated
 >slated
-You're not sure what the Salted Deltas could be slated for. You're not here for geological research, anyway.
+You're not sure why the Salted Deltas could be slated, or how. You're not here for geological research. You've gotten rid of all nuisances here, anyway.
 #mistake test for lasted
 >lasted
 The Salted Deltas have already lasted since well before you were born, and that's a verb, anyway.
@@ -2512,12 +2521,13 @@ Despite your lack of technical knowledge, you think you almost did...something t
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 #readables for blaster
 
-@minh,mini
+@!max
 >robust
 by one point
 >stabler
 by one point
-@!
+
+@max
 >robust
 by one point
 >enter boat
@@ -2579,8 +2589,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
 >enter boat
 You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+
+Mislit Limits
 
 }}CURMIN=SCORE
 }}CURMIN++
@@ -2800,7 +2813,7 @@ That might help you figure what to do with the curst palace, but it can't be imp
 >cuer
 That might help you figure what to do with the curst palace, but it can't be important by itself.
 >curst palaec
-Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
+Hmm...only faint rumbling from the curst palace. Big words have all sorts of possibilities.
 #rescannotes for curst palace
 >scan palace
 #palace 11 lights

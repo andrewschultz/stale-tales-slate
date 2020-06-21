@@ -588,20 +588,6 @@ Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it
 >brass crag
 The crabgrass dries out and becomes a brass crag.
 
-@sli
-#slider test for pavement
->evapemtn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for platform
->lptaofmr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pedestal
->epedtsla
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for crabgrass
->sargsarcb
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 @nud
 #spechelp for event map
 >pavemetn
@@ -629,6 +615,18 @@ The steel pad intertwines into a marginally artistic pedestal.
 Largely All-Grey Gallery
 
 @sli
+#slider test for pavement
+>venemtpa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for platform
+>afmrlpto
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pedestal
+>eestplda
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for crabgrass
+>sarbcgars
+Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for event map
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -641,6 +639,16 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for steelpad
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
+###################here we test a special case: if you use the slider on part of the diorama, then you figure what it's for, and the game doesn't let you do it again.
+>slaeepdt
+Your settler throws out a bunch of beeps:  HIGH LOW LOW HIGH LOW HIGH LOW LOW.
+Ugh. Those high notes gave you a migraine mini-rage. You switch off the slider.
+You figure you can take that noise nine more times.
+Since the diorama has instructions on what changes to what, and it is only a teaching instrument, you probably don't want to use up any more slider charges on any part of it.
+>slon
+>slaeepdt
+You already got some data from the slider on the diorama. You may want to save it for other things down the road.
+!Your settler throws out a bunch of beeps
 
 @nud
 #nudge for gallery
@@ -677,10 +685,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
 >snib
+all the secrets here
 }}CURMIN++
 }}SCORE++
 >score
-{$SCOS}
+{$SCOMAX}
 
 @nud
 #renudge for bni
@@ -697,10 +706,6 @@ Now, now! This game is strictly about logic! Nothing frivolous, if you please! O
 
 >x settler
 >in
-
-@min
-@!
-all the secrets here
 
 @sli
 #slider test for flier
@@ -797,7 +802,11 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 >1
 >1
 >1
+
+@nud
 >1
+###skip test checking
+
 # note option 2 just hooks around meaningless babble here
 >2
 Carven Cavern

@@ -50,6 +50,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for across
 >srcsao
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for against
+>gaiastn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for astride
+>sartdei
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >t
@@ -641,9 +647,9 @@ The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 
 @sli
-#slider test for against
+#slider retest for against
 >gaiastn
-Your settler begins to make noises: a low hum, but nothing really piercing.
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
 @!min
 #pre-mesa-dir-flip rule
@@ -691,9 +697,9 @@ You can't hide from Ian Gast like that, right now.
 There's more than one tirade
 
 @sli
-#slider test for astride
+#slider retest for astride
 >sartdei
-Your settler begins to make noises: a low hum, but nothing really piercing.
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
 @nud
 #respechelp for side art
@@ -1140,6 +1146,11 @@ Your score has just gone up by one point
 
 Sonancy Canyons
 
+@sli
+#slider test for through
+>hthugor
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 @!min
 #pre-hurt-hog-through rule
 >through
@@ -1188,9 +1199,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for between
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for through
+#slider retest for through
 >hthugor
-Your settler begins to make noises: a low hum, but nothing really piercing.
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
 >between
 }}SCORE++

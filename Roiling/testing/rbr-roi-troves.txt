@@ -232,11 +232,11 @@ The sob ever verbose remains that way--mixing up subjects and making you conside
 #scannotes for sob ever verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
+The question marks ... hmm. Oh, you get it now.
 #readables for stop post
 >read stop post
 POP'S TOTS is written in red on the stop post.
 #redirects to sob ever verbose
-The question marks ... hmm. Oh, you get it now.
 >scan sob ever verbose
 Your settler registers YRR?RR?.
 !The question marks ... hmm. Oh, you get it now.
@@ -349,7 +349,7 @@ The stop post is in the past. No need to p.s. tweaking it.
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 #spechelp for snore so arena
 >reasno
-The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
+The SNORE SO ARENA flashes weirdly.
 #nudge for roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -439,7 +439,7 @@ But it's not just any bee. It's a live bee! Though, really, you've already given
 The bee's already taken enough of your in-my-heartitude.
 #done rejects for snore so arena
 >reasno
-Too much fiddling with reason is unreasonable.
+Drowning something without reason in reason is unreasonable.
 #spechelp for l clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
@@ -755,10 +755,10 @@ You think about the econ-cone being the recent center, but theorizing doesn't wo
 You don't want to mess with the skyline. You want to get in the godlings' lodgings!
 #nudge for godling
 >godlign
-The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway.
+The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
 #nudge for godlings
 >godlinsg
-The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. You'd start a riot, anyway.
+The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
 #nudge for statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
@@ -860,7 +860,7 @@ The card's writing is more important.
 >cda
 The card's writing is more important.
 #spechelp for end proner pod
->end proner pdo
+>erpdon
 The END PRONER POD seems to pulse slightly.
 
 @sli

@@ -889,7 +889,7 @@ You don't need to combine them physically, but their physical strengths combined
 >abstract popgun to seminar
 >there
 !by one point
-Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
+/(Leo and Rand|Rand and Leo) charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
 /You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
 >there
 !by one point
@@ -1138,7 +1138,7 @@ DEBUG INFO: min-up codepath
 @nud
 #renudge for leonard
 >leonadr
-Leo and Rand need to be together, but by themselves, for themselves. They've done enough for you.
+/(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
 #nudge for harpings
 >harpinsg
 Concentrate on the words of the harpings phrasing.
@@ -2146,7 +2146,7 @@ Your score has just gone up by one point
 Drive time
 Strip of Profits
 >missalt
-You could've made the USB into a sub, too.
+You could also have made the USB into a sub.
 >undo
 >undo
 
@@ -2164,7 +2164,7 @@ Strip of Profits
 
 @max
 >missalt
-You could've made the USB into a bus, too.
+You could also have made the USB into a bus.
 >undo
 
 >score
