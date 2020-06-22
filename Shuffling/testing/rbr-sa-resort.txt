@@ -4,9 +4,19 @@
 #
 files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt
 ~	nudges	t2
-~	nu	t2
-~	mi	t2
+~	nud,nu	t2
+~	mis,mi	t2
+~	min	t1
 ~	max	t0
+
+}}MAX=15
+}}CURMAX=15
+}}SCORE=0
+}}CURMIN=10
+
+}$SCOS=You currently have {SCORE} out of {MAX} total points for the Resort region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
+}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
 
 ## *FILE
 ## *FORK
@@ -22,25 +32,26 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >tsf
 
 >opt in
+>poss
 
-`nu
+@nud
 #spechelp for store r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
 
 >resort
 #notmax
-by one point
+Your score has just gone up by one point
 
-`nu
-#done rejects for r-p
+@nud
+#done rejects for ogled lodge
 >resotr
-
+You already made passage to the ogled lodge. It's good enough. Why change it?
 
 >enter resort
 Astral Altars
 
-`mi
+@mis
 #mistake test for lites
 >lites
 Light isn't the problem here. It's not having anywhere to go.
@@ -48,13 +59,13 @@ Light isn't the problem here. It's not having anywhere to go.
 >slite
 That's bad spelling, and it won't shrink your problems.
 
-`nu
+@nud
 #nudge for astral
 >astrla
-You won't need to do anything to the whole room unless you are trapped in a room.
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
 #nudge for altar
 >altra
-You won't need to do anything to the whole room unless you are trapped in a room.
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
 #nudge for resort
 >resotr
 You don't want to change a region drastically while you're in it.
@@ -68,65 +79,85 @@ You need to deal with all the tiles.
 >s
 >flaer
 The feral flare crackles menacingly. You doubt you can change it for the better.
-
-`max
 #spechelp for tiles
 >islte
 The tiles rattle as if to shift but settle down.
+#readables for tiles
+>read tiles
+The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
 
 >islet
-by one point
+Your score has just gone up by one point.
+}}SCORE++
 
 Leis Isle
 
-`mi
+>score
+{$SCOS}
+
+@mis
 #mistake test for download
 >download
-[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].
+The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real
+!But then, since the leis were fake, you shouldn't be surprised the woodland is, too.
+>download
+It still seems computer-generated, wrong.
+>lies
+###skip test checking
+>download
+But then, since the leis were fake, you shouldn't be surprised the woodland is, too.
+>undo
+>undo
 
+@nud
 #nudge for and
 >adn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
+\\
 #nudge for sands
 >sansd
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 #nudge for leis
 >lesi
-You won't need to do anything to the whole room unless you are trapped in a room.
-
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+\\
 #nudge for lie
 >eil
-You won't need to do anything to the whole room unless you are trapped in a room.
-
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+\\
 #nudge for sand
 >sadn
 The sand is just--well, sand. It won't help you get off the island.
-
+\\
 #renudge for islet
 >tilse
 Nothing happens. You may need to deal with something specific on the islet to leave.
-
+\\
 #nudge for eter
 >eter
 The tree sits there, but the swing rocks a bit.
-
+\\
 #nudge for oflat
 >aftol
 You notice writing on the rock and swing similar to what you just said. Or tried to say. Also, no need to make anything lo-fat here.
-
-`nu
+\\
 #spechelp for rock
 >crko
 Hmm, a rock, but only so much you can do with it.
-
-==t!1
+\\
 #spechelp for l2
 >lise
 You have something on the tip of your tongue ... something about the Leis Isle doesn't seem right...
+
+@!min
 >lies
 by one point
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
 
-`mi
+@mis
 #mistake test for lies/lie
 >lies
 You reflect on how insidious it was to stick you here in a false paradise.
@@ -134,40 +165,69 @@ You reflect on how insidious it was to stick you here in a false paradise.
 You reflect on how insidious it was to stick you here in a false paradise.
 
 >cork
-by one point
+Your score has just gone up by one point.
+}}SCORE++
 
-`nu
+>score
+{$SCOS}
+
+@nud
 #done rejects for cork
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
-
+\\
 #renudge for oflat
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
-
-`nu
+\\
 #spechelp for swing
 >winsg
 The swing goes slightly airborne.
 
+@!min
 >wings
-by one point
+Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
-`nu
+@nud
 #done rejects for wings
 >winsg
 The wings should be able to propel you enough.
-
+\\
 #renudge for oflat
 >aftol
 You can just use either the cork or the wings to leave to the east.
-
+\\
 #renudge for eter
 >eter
 The tree sits there.
 
+@min
+>take leis
+}}CURMAX--
+>score
+{$SCOS}
+>e
+}}CURMAX--
+>score
+{$SCOS}
+>undo
+>undo
+>undo
+>undo
+}}CURMAX+=2
+#while we subtract 2 after the "e" command, I'll keep this here, so in case anything is added, I don't gloss over the fact we need to deduct 2 points
+
 >e
 Rived Drive
+
+@min
+}}CURMAX-=2
+>score
+{$SCOS}
 
 @nud
 #nudge for blow
@@ -175,57 +235,61 @@ Rived Drive
 You don't need to make any blow bowl more chaotic.
 #nudge for woodland
 >woodladn
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+\\
 #nudge for drive
 >driev
-You won't need to do anything to the whole room unless you are trapped in a room.
-
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+\\
 #nudge for tool
 >loto
 Hm, no, the whole tool shed.
-
+\\
 #nudge for shed
 >shde
 Hm, no, the whole tool shed.
-
+\\
 #nudge for ashed
 >asdeh
 A shed may provide shade, but you need a way up.
-
-
+\\
 #nudge for window
 >windwo
 They remain still. Maybe the toolshed itself.
-
+\\
 #nudge for windows
 >windwos
 They remain still. Maybe the toolshed itself.
-
+\\
 #nudge for ulock
 >ulokc
 Nope. That lock's secure.
-
+\\
 #nudge for lock
 >lokc
 Nope. That lock's secure.
-
+\\
 #nudge for pole
 >pelo
 Only changing one pole would still leave a vertical barrier.
-
+\\
 #spechelp for poles
 >polse
 The poles start to bend at an angle--or maybe that's the light.
 
 >slope
 by one point
+}}SCORE++
 
+>score
+{$SCOS}
+
+@nud
 #done rejects for slope
 >pelso
 You wouldn't want to make the slope crumble away.
 
-`mi
+@mis
 #mistake test for loot
 >loot
 You don't have time for treasure with Red Bull Burdell waiting.
@@ -233,65 +297,84 @@ You don't have time for treasure with Red Bull Burdell waiting.
 >pores
 Almost. But you don't need to create holes.
 
+@nud
 #spechelp for tool shed
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
+#readables for u lock
+>read u lock
+Red writing shows the U-Lock brand is OLD THOSE.
 
 >toeholds
-by two points
+Your score has just gone up by two points.
+}}SCORE+=2
 
+>score
+{$SCOS}
+
+@nud
 #done rejects for toeholds
 >toeholsd
 The toeholds could be handy for getting up and out of here.
-
-`nu
+\\
 #spechelp for spore
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
 
+@!min
 >ropes
-by one point
+Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
-`mi
+@mis
 #mistake retest for pores
 >pores
 No, you had it.
 
-`nu
+@nud
 #done rejects for ropes
 >respo
 The ropes are useful for climbing, which you need to do to get east.
-
+\\
 #nudge for rope
 >repo
 Those are already useful.
 
->respo
-The ropes are useful for climbing, which you need to do to get east.
-
-`nu
+@nud
 #spechelp for sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
 
+@!min
 >grips
-by one point
+Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 
-`nu
+@nud
 #done rejects for grips
 >grisp
 You can't get ahold of anything that would be more useful than the grips.
-
+\\
 #nudge for grip
 >pirg
 Those are already useful.
 
->pgris
-You can't get ahold of anything that would be more useful than the grips.
-
 >e
 
 Potshot Hotspot
+
+@min
+}}CURMAX-=2
+>score
+{$SCOS}
 
 @nud
 #nudge for frust
@@ -302,7 +385,7 @@ The frust turfs are unchangeable.
 The frust turfs are unchangeable.
 #nudge for hotsopt
 >hotspto
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
 #nudge for rioters
 >riotesr
 They're just a riot. You may lump them together for your purposes. It'll be for society's good.
@@ -318,31 +401,34 @@ Perhaps it's best to keep it simple and cut down the riot.
 #nudge for uprisers
 >uprisesr
 Perhaps it's best to keep it simple and cut down the riot.
-#mistake test for i rot
->i rot
-Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
-
 #nudge for clay
 >clya
 No, the clay is a clue to what the protest really wants to do.
-
-`nu
 #spechelp for riot
 >troi
 The riot's still a crowd. A BIG crowd.
 
->trio
-by one point
+@mis
+#mistake test for i rot
+>i rot
+Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
 
-`nu
+>trio
+Your score has just gone up by one point.
+}}SCORE++
+
+>score
+{$SCOS}
+
+@nud
 #done rejects for protest
 >troi
 You can deal with three people. But you'll have to change their motivations.
-
+\\
 #renudge for clay
 >clya
 No, the clay is a clue to what the trio really wants to do.
-
+\\
 #nudge for protesters
 >ersprotest
 They're just a simple protest.
@@ -353,19 +439,24 @@ They're not bad people
 >ethre
 The trio remains unmoved. Perhaps you can give the protest more constructive aims?
 
-`nu
+@nud
 #spechelp for protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 
-`mi
+@mis
 #mistake test for roister
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
 
 >potters
-by one point
+Your score has just gone up by one point.
+}}SCORE++
 
+>score
+{$SCOS}
+
+@nud
 #nudge for potter
 >pottre
 Picking one person out of a crowd never works.
@@ -373,76 +464,99 @@ Picking one person out of a crowd never works.
 >pottesr
 You cut the riot down, but you need to change their protest now.
 
+@nud
 #nudge for three
 >ethre
 The trio remains unmoved. Perhaps you can get the potters something to work with?
-
+\\
 #nudge for chainlinks
 >chainliskn
 You're overthinking it. Or you hope you are. It's both a chain, and links.
-
+\\
+#spechelp for chain links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
 
+@!min
 >china
 #notana
-by one point
+Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SFIXMAX}
 
-`nu
-#spechelp for chain links
+
+@nud
+#respechelp for chain links
+>ainch
+WRONG
+#respechelp for chain links
 >kilsn
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
 
 >kilns
-by one point
+Your score has just gone up by one point.
+}}SCORE++
+
+@min
+}}CURMAX--
+
+>score
+@min
+{$SFIXNOMAX}
+@!
+{$SFIXMAX}
 
 >get out
+!Your score has just
 
+@nud
 #nudge for red
 >rde
 Burdell's laugh echoes. "You think you can change ME?!"
-
+\\
 #nudge for bull
 >bllu
 Burdell's laugh echoes. "You think you can change ME?!"
-
+\\
 #nudge for burdell
 >burdlle
 Burdell's laugh echoes. "You think you can change ME?!"
-
+\\
 #nudge for boot
 >boto
 The boot is already a little--modified. You can see its toe. Maybe that is a weakness.
-
+\\
 #nudge for toe
 >teo
 But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?
-
+\\
 #nudge for scar
 >scar
 Now's not the time for cosmetic stuff!
-
+\\
 #nudge for crass
 >crssa
 Now's not the time for cosmetic stuff!
-
+\\
 #nudge for cutlery
 >cutleyr
 Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?
-
+\\
 #nudge for tshirt
 >tshirt
 You slur out a few consonants--maybe you should work with something closer, lower down.
-
+\\
 #nudge for rage
 >raeg
 No, the rage gear is too strong.
-
+\\
 #nudge for shirt
 >shtir
 You slur out a few consonants--maybe you should work with something closer, lower down.
-
-==t2
+\\
 #nudge for tugtoe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
@@ -450,6 +564,15 @@ Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 >tug toe
 #notana
 by one point
+
+Your score has just gone up by one point.
+}}SCORE++
+
+>score
+@min
+{$SFIXNOMAX}
+@!
+{$SFIXMAX}
 
 @nud
 #nudge for setter
@@ -465,24 +588,24 @@ You don't need to change the manors. You just need to be able to get there.
 >e
 Means Manse
 
-`nu
+@nud
 #nudge for manse
 >mesna
-You won't need to do anything to the whole room unless you are trapped in a room.
+You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
 #nudge for extis
 >extis
 That's not quite the right sort of nothing.
 #nudge for marble
 >marbel
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
 #nudge for spire
 >spier
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
 #nudge for toaster
 >toastre
-You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
 
-`mi
+@mis
 #mistake test for amen/name
 >amen
 I'm going to be pedantic here and force you to use the plural, but yeah, you've got the right idea.
@@ -493,7 +616,8 @@ I'm going to be pedantic here and force you to use the plural, but yeah, you've 
 No, we know who's to blame. He's done with. Time to move on.
 #mistake test for mensa
 >mensa
-No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
+No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant or character-developing or literary enough. Sheesh.
+Even if they wouldn't, well, the Means Manse is for you and you alone. You earned it.
 #mistake test for sex it
 >sex it
 You're not even up for THAT, now. You just want to BE.
@@ -501,14 +625,18 @@ You're not even up for THAT, now. You just want to BE.
 >exist
 #notana
 by one point
+My Adieu to You: Made It!
 
-==t2
+@max
 >undo
 >amens
 by one point
-#altpath
+My Adieu to You: Made It!
+\\
+>undo
 >names
 by one point
-#altpath
+My Adieu to You: Made It!
+
 
 ################################################

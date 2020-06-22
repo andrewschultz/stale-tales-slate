@@ -9,9 +9,7 @@
 files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt
 ~	max	t0
 ~	min	t1
-~	nud	t2
-~	mis	t2
-~	nudmis	t2
+~	nudmis,nud,mis	t2
 
 ## *FILE
 ## *FORK
@@ -292,6 +290,11 @@ Hmm...you get the feeling the store itself holds more adventure.
 #nudge for sign
 >sing
 Hmm...you get the feeling the store itself holds more adventure.
+#readables for roadsign
+>read roadsign
+/The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
+>read roadsign
+/The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
 
 >forest
 by one point
@@ -300,10 +303,19 @@ by one point
 #nudge for scented
 >scentde
 No way. It's your way down to ENTER the forest.
+#readables for store i
+>read store i
+Red writing:
+RISE TO RITES, O! OR TIES.
+RISE TO TIES OR RITES, O!
 
 >sortie
 by one point
 
+@nud
+#spechelp for store b
+>strebo
+You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
 #nudge for depot
 >depto
 You can't do anything to the depots besides ENTER them.
@@ -347,13 +359,13 @@ The trade tread isn't for commenting on, it's for passage to the metros.
 No, you need to find your way through individual stores.
 #mistake test for oyster
 >oyster
-Nice try, but that's next game![fake-clue of store y]
+Nice try, but that's next game!
 #mistake test for presto
 >presto
-Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]
+Your magic is not advanced enough to change store p! Well, not this game!
 #mistake test for routes
 >routes
-Hm, that seems right, but it doesn't work this game![fake-clue of store u]
+Hm, that seems right, but it doesn't work this game!
 #mistake test for strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
@@ -362,12 +374,13 @@ You're briefly assaulted by the colors of every single colored Starburst and Ski
 I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
 #mistake test for towers
 >towers
-That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]
+That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
 #mistake test for troves
 >troves
-Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]
+Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 
 >n
+hubs bush
 
 @nud
 #nudge for hubs
@@ -376,7 +389,6 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 #nudge for buh
 >bhu
 The hubs bush is too sturdy. You can't escape the Strip of Profits.
-
 
 @nud
 #nudge for marquee
@@ -390,7 +402,6 @@ by one point
 #renudge for marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
-
 
 >resort
 
