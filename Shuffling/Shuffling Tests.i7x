@@ -332,19 +332,19 @@ to unsolve-metros:
 	now clover is not flipped-yet;
 	now Velcro is off-stage;
 	now bastion-evac is false; [Obtains Boastin' Bastion]
-	now dry cake is in Obtains Boastin' Bastion;
+	now dry cake is in Obtains Boastin Bastion;
 	now dry cake is not flipped-yet;
 	now keycard is off-stage;
-	now antlers are in Obtains Boastin' Bastion;
+	now antlers are in Obtains Boastin Bastion;
 	now antlers are not flipped-yet;
-	now brocade is in Fo' Real Florae;	[Fo' Real Florae]
+	now brocade is in Fo Real Florae;	[Fo' Real Florae]
 	now brocade is not flipped-yet;
 	now barcode is in Trips Strip;
 	now barcode is off-stage;
-	now heaths are in Fo' Real Florae;
+	now heaths are in Fo Real Florae;
 	now heaths are not flipped-yet;
 	now sheath is off-stage;
-	now begonias are in Fo' Real Florae;
+	now begonias are in Fo Real Florae;
 	now begonias are not flipped-yet;
 	now noise bag is off-stage;
 	now fairy-worthy is false;
@@ -356,7 +356,7 @@ to unsolve-metros:
 	now tomato is off-stage;
 	now tulip is in Esoteric Coteries;	[special place]
 	now Esoteric Coteries are unvisited;
-	now night thing is in The Ol' Hotel;	[ol' hotel]
+	now night thing is in The Ol Hotel;	[ol' hotel]
 	now termite emitter is off-stage;
 	now termite emitter is ungnatted;
 	now power-shut is false;	[train terrain]
@@ -396,8 +396,8 @@ to unsolve-sortie:
 	now tall trio is not flipped-yet;
 	now coat is off-stage;
 	now taco is not flipped-yet;
-	now grist is in grief'd fridge;
-	now cake pan is in grief'd fridge;
+	now grist is in griefd fridge;
+	now cake pan is in griefd fridge;
 	now grits are off-stage;
 	now pancake is off-stage;
 	now grist is not flipped-yet;

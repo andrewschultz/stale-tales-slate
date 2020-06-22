@@ -2870,7 +2870,7 @@ description of the attics is "They fit perfectly on what was once the top of the
 
 section acne-bit cabinet
 
-the acne bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping].". printed name of cabinet is "acne-bit cabinet". understand "acnebit" and "acnebit cabinet" as cabinet. description of acne bit cabinet is "It's open[if acne-bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
+the acne bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping].". printed name of cabinet is "acne-bit cabinet". understand "acnebit" and "acnebit cabinet" as cabinet. description of acne bit cabinet is "It's open[if acne bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
 
 gpos of acne bit cabinet is 3. rpos of acne bit cabinet is 6. lgth of acne bit cabinet is 7. rgtext of acne bit cabinet is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of acne bit cabinet is "-A[d1][d1][d1][d1][d1]". rect-text of acne bit cabinet is "B[d1][d1][d1][d1][d1]E".
 
@@ -4171,11 +4171,13 @@ to last-loc-move (rg - a region):
 
 definition: a portal (called po) is regsolve:
 	if go-region of po is not unsolved, yes;
+	if go-region of po is Stores, yes;
 	no;
 
-check entering a portal:
+check entering a portal (this is the check if portal region is solved rule):
+	abide by the entry-rule of noun;
 	let gr be go-region of noun;
-	if gr is not unsolved, say "[solved-text of noun]" instead;
+	if gr is regsolve, say "[solved-text of noun]" instead;
 	check-2-of-3;
 	now the noun is ever-entered;
 	last-loc-move gr;
@@ -7184,8 +7186,11 @@ check climbing cafe face:
 		say "You can't climb up there with bare hands, so you decide to wear the Velcro. [run paragraph on]";
 		try silently wearing the Velcro;
 	if player is not wearing the Velcro, say "The cafe face is vertical. You'd need something that sticks to the bits of steel wool." instead;
-	say "The Velcro strip is just the thing to climb the cafe face and reach the [if neon pig is touchable]pig[else]small recess[end if].";
-	now cafe-climbed is true;
+	if cafe-climbed is false:
+		say "The Velcro strip is just the thing to climb the cafe face and reach the [if neon pig is touchable]pig[else]small recess[end if].";
+		now cafe-climbed is true;
+	else:
+		say "You climb back up the cafe face.";
 	now player is on the cafe face instead;
 
 the neon pig is scenery in Elm Train Terminal.
@@ -7479,7 +7484,7 @@ carry out scaning outcroppings: say "They don't seem to give a different scan th
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
-the u-lock is a boring thing. the u-lock is part of the tool shed. understand "lock" as u-lock. bore-check of u-lock is bore-ulock rule. description of u-lock is "You probably won't be able to do anything with the u-lock. But you could READ it."
+the u lock is a boring thing. the u-lock is part of the tool shed. understand "ulock" as u lock. bore-check of u lock is bore-ulock rule. description of u lock is "You probably won't be able to do anything with the u-lock. But you could READ it.". printed name of u-lock is "u-lock".
 
 this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
@@ -7515,8 +7520,8 @@ check going east in Rived Drive:
 	if poles are touchable, say "The poles are too vertical to climb[if toeholds are touchable]. Even with the toeholds[else if ropes are touchable and grips are touchable]. Even with your tools[else if ropes are touchable or grips are touchable], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
 	if toeholds are touchable:
 		say "You make it up the [p-s] with some effort and surprisingly little risk. The toeholds are more like footholds, really[if player has grips or player has ropes]. You didn't even need any climbing gadgets--and in fact you drop them in surprise when you see what awaits[end if].";
-		if grips are not moot, poss-d;
-		if ropes are not moot, poss-d;
+		if grips are off-stage, poss-d;
+		if ropes are off-stage, poss-d;
 		now player is in Potshot Hotspot instead;
 	if player has ropes and player has grips:
 		say "Tying the rope around your waist, throwing it [']til it catches on a rock above, and using the grips, you make it up the slope. What you see makes you drop them in surprise!";
@@ -8402,6 +8407,7 @@ this is the enter-gateway rule:
 
 this is the bore-gateway rule:
 	if current action is opening, say "It's open. It's just unclear where it leads." instead;
+	if current action is entering, now boring-exception is true;
 
 the new land is boring scenery in Notices Section. description of new land is "You'll have to go there to see it all.". bore-text is "ENTER the gate to learn more about it.". bore-check is bore-new-land rule.
 
@@ -9048,7 +9054,7 @@ Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once i
 Self ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
-Cruel Ones' Enclosure	"You think you hear 'Lo! Censure lures once!' The scoffer coffers would drain you mentally if you tried to go any way other than north or back south."
+Cruel Ones' Enclosure	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
@@ -9254,7 +9260,7 @@ to say and-bypass:
 carry out requesting the score:
 	d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved. Current rank in numbers is [player-rank].";
 	if mrlp is nothing, say "[bug-report]: This location needs a region." instead;
-	say "You currently have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region.";
+	say "You currently have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region. ";
 	repeat with Q running through regions:
 		if number of visited rooms in Q > 0:
 			if mrlp is not Q, say "You have scored [cur-score of Q] out of [max-score of Q] total points for the [Q] region.";
@@ -9794,7 +9800,7 @@ table of readables
 to-read	the-red
 toga	"A GOT-TA GO ... hmm, not the very best ever." [ordeal loader]
 gateway	"'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like A TAN GEM and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]."
-cabinet	"Here is one of several writings in red in the cabinet: [one of]I C BEATN[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]"
+acne bit cabinet	"Here is one of several writings in red in the cabinet: [one of]I C BEATN.[or]IN, BE, ACT!!![or]C N-E BAIT??[or]CIT-E BAN!!![or]Numbers for a NITECAB.[or]ABE [']N TIC![or]TEN ABC, I!!![in random order]"
 store i	"Red writing:[paragraph break]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O!" [stores]
 roadsign	"The sign appears to say, in all red, [one of]E FORTS/OSTFER[or]TRESFO/S EFTRO[cycling][r] before a gust of wind picks it up and flips it around."
 great grate	"The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit." [sortie]
@@ -9803,9 +9809,9 @@ spearman	"The spearman's name, in red, is MR. SANE PA[if player carries spearman
 scraped wall	"[if scraped wall is hayfilled]You can no longer see where it says [end if]HALLWAY UNDER (UN-)UN-CONSTRUCTION."
 a reading	"On one of several pages, you see: [one of]AID ANGER is written[or]conspiracy theories from EDGAR IAN[or]silly musings on being IN A GRADE[or]a horror story: DINER, AAG[or]conspiracy theories from NIA EDGAR[or]an exhortation to RIDE AGAN (sic) on the last page[stopping]. The nonsense makes you see red." [metros]
 neon pig	"Apparently the neon pig is a creation of one INPENGO."
-gin nope opening	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by Orton LSC, whoever they are."
-tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." [resort]
-u-lock	"Red writing shows the U-Lock brand is OLD THOSE."
+controls	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by Orton LSC, whoever they are."
+tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit." [resort]
+u lock	"Red writing shows the U-Lock brand is OLD THOSE."
 
 chapter following
 

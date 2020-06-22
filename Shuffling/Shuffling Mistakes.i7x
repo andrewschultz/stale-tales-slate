@@ -211,9 +211,9 @@ understand "spared" as a mistake ("That is too passive, to ask to be spared.") w
 
 chapter Ghouls' Slough
 
-understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.[end-it]") when player is in Ghouls' Slough.
+understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.[end-it]") when player is in Ghouls Slough.
 
-understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in Ghouls' Slough.
+understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in Ghouls Slough.
 
 chapter Frost Forts
 
@@ -314,7 +314,7 @@ understand "sever" as a mistake ("Violence or vandalism in such a holy place? Fo
 
 book store m
 
-understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in The Ol' Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
+understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in Bassy Abyss]along with the beats[else if player is in The Ol Hotel or player is in Undesired Underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
 
 understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.") when beats are touchable or beast is touchable.
 
@@ -365,6 +365,8 @@ understand "trounce" and "trounce counter" as a mistake ("The faeries have very 
 
 chapter tramline terminal
 
+to say pig-or-opening: say "[if neon pig is touchable]stupid pig[else]opening you made[end if]"
+
 understand "asp" and "asps" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when player is in Elm Train Terminal.
 
 understand "gip" as a mistake ("Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.") when player is in Elm Train Terminal and neon pig is in Elm Train Terminal.
@@ -385,7 +387,7 @@ understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not litera
 
 understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Elm Train Terminal.
 
-understand "tar" as a mistake ("That'd be neat, make the wall sticky so you could climb and deal with that [if neon pig is touchable]stupid pig[else]opening you made[end if]...but you might get stuck to it, too. Need something clingy but less gooey.") when player is in Elm Train Terminal.
+understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it sbove the cafe face with the velcro[end if].") when player is in Elm Train Terminal.
 
 chapter Esoteric Coteries
 
@@ -400,7 +402,7 @@ understand "reins" as a mistake ("Horsing around like that won't hold back the [
 
 understand "rinse" as a mistake ("[if siren is touchable]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you get your hands dirty and slay the final enemy, here[end if].") when player is in Bassy Abyss.
 
-understand "risen" as a mistake ("You don't need the [if siren is touchable]siren's volume or [end if][if beast is touchable]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
+understand "risen" as a mistake ("You don't need [if siren is touchable]the siren's volume or [end if][if beast is touchable]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
 
 book store r
 

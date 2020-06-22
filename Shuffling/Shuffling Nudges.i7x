@@ -793,21 +793,21 @@ to say no-con: say "No conifers appear. Maybe you can just use your senses, and 
 to say guider-content: say "No, that's not the [i]essence[r] of the thing"
 
 this is the forest-south rule:
-	if shout is touchable, the rule succeeds;
+	if shout is touchable or shout is moot, the rule succeeds;
 	the rule fails;
 
-to say forest-no of (x - a thing): say "Your compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot], and you remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
 
 this is the forest-north rule:
-	if thorn is touchable, the rule succeeds;
+	if thorn is touchable or thorn is moot, the rule succeeds;
 	the rule fails;
 
 this is the forest-west rule:
-	if stew is touchable, the rule succeeds;
+	if stew is touchable or stew is moot, the rule succeeds;
 	the rule fails;
 
 this is the forest-east rule:
-	if teas are touchable, the rule succeeds;
+	if teas are touchable or teas are moot, the rule succeeds;
 	the rule fails;
 
 to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
@@ -1036,7 +1036,11 @@ to say no-pen: say "If you changed the pen, you'd have nothing to write with";
 
 to say diag-dir-rej: say "This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief";
 
-to say dir-rej: say "This game usually doesn't require you to mess with cardinal directions";
+to say dir-rej:
+	if player is in sf or player is in rf:
+		say "You think you're on to something, but you still feel stuck";
+	else:
+		say "This game usually doesn't require you to mess with cardinal directions[if sf is visited]. You got by the forest puzzle, and that's all you needed to do[else]Hopefully it'll be clear if and when you need to[end if]";
 
 to say xyzzys: say "A hollow voice booms, 'Lo! Of...'[no line break]"
 
