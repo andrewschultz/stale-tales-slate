@@ -125,7 +125,7 @@ book store f
 
 understand "fire [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want.") when player has shotgun.
 
-understand "shoot [something] with [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
+understand "shoot [something] with [something]" and "shoot [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.") when player has shotgun.
 
 chapter random forests / Softer Forest / Rest of Forest
 

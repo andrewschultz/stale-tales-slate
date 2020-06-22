@@ -1970,7 +1970,7 @@ chapter the verb
 
 definition: a thing (called xx) is fungible:
 	if xx is held, yes;
-	if location of xx is location of player, yes;
+	[if location of xx is location of player, yes;]
 	if xx is touchable, yes;
 	no.
 
@@ -4817,7 +4817,7 @@ understand "coffer" and "scoffer coffer" as scoffer coffers.
 
 chapter Ghouls' Slough
 
-Ghouls Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough.
+Ghouls Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough".
 
 the dog is amusing boring scenery in Ghouls Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
@@ -4828,8 +4828,10 @@ to say end-it: end the story.
 check going nowhere in Ghouls Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
 
 check examining maps in Ghouls Slough:
-	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...";
+	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...[paragraph break]";
 	now maps are realized;
+	if banshee is not moot, poss-d;
+	if slit is not moot, poss-d;
 	move player to Frost Forts instead;
 
 chapter Frost Forts
@@ -5295,7 +5297,9 @@ understand "man" as spearman when spearman is touchable. the spearman can be fem
 
 description of spearman is "[if player does not have spearman]Hmm. You could TAKE him. [end if]He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You could probably READ him for clues, like his name and [if player carries spearman]what's on the base and [end if]so forth.".
 
-report taking the spearman: say "As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.".
+report taking the spearman:
+	say "As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.";
+	the rule succeeds;
 
 check scaning (this is the scan the spearman and not his parts rule):
 	if noun is spear:
@@ -5376,15 +5380,16 @@ check opening griefd fridge:
 	now fridge is transparent;
 	say "[one of][or]You reopen and peer on. [stopping]You see [a list of things in griefd fridge] inside[one of]. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice[or][stopping]." instead;
 
-some grist is in the fridge.
+section grist and grits
+
+some grist is in the fridge. it is LLPish. it is singular-named. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
 
 description of grist is "It's a heapin['] helpin['] of the stuff, haphazardly lumped at the bottom of the fridge."
 
-understand "heapin/ helpin/" as grist
+understand "heapin helpin" and "heapin/helpin" as grist when grist is touchable.
+understand "heapin helpin" and "heapin/helpin" as grits when grits are touchable.
 
-understand "heapin/ helpin/" as grits
-
-the grits are a plural-named LLPish thing. the grits are in the fridge. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]". cert-text of grist is "G[ast]R[ast]I[d1][d1]". rect-text of grist is "G[d1][d1][d1][ast]S".
+the grits are a plural-named thing.
 
 rule for deciding whether all includes a thing in fridge: it does not.
 
@@ -5394,6 +5399,8 @@ rule for deciding whether all includes cake pan: it does not.
 rule for deciding whether all includes pancake: it does not.
 
 description of grits is "They look more edible than the grist, but you're not THAT hungry right now."
+
+section cake pan and pancake
 
 the cake pan is in the fridge. the cake pan is LLPish. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
@@ -6583,6 +6590,7 @@ check going south in Obtains Boastin Bastion when bastion-evac is true:
 		try taking the dry cake;
 		unless player carries dry cake, now player has dry cake;
 	say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. Why, the deadbeat has promoted you from The (Wo)Man to Dude. I bet you could even take that corn now!";
+	if antlers are not moot, poss-d;
 
 report taking the dry cake:
 	say "Taking it is a piece of cake with everyone gone, you note dryly.";
@@ -6924,7 +6932,8 @@ the smartest mattress is a boring fixed in place container in The Ol Hotel. bore
 does the player mean entering the mattress: it is likely.
 
 this is the bore-mattress rule:
-	if current action is examining or current action is searching or current action is reading, say "Not with the night thing on it." instead;
+	if night thing is not moot:
+		if current action is examining or current action is searching or current action is reading, say "Not with the night thing on it." instead;
 
 rule for printing a locale paragraph about the smartest mattress:
 	if night thing is not touchable, say "The mattress still conforms to the shape of the night thing that sat on it[if emitter is off-stage]--but it also has a bump in one corner[end if].";
@@ -7484,7 +7493,7 @@ carry out scaning outcroppings: say "They don't seem to give a different scan th
 
 description of outcroppings is "They are something you could put your feet--no, the edge of them--on. They look sturdy enough to hold you, but the problem is, they don't lead anywhere."
 
-the u lock is a boring thing. the u-lock is part of the tool shed. understand "ulock" as u lock. bore-check of u lock is bore-ulock rule. description of u lock is "You probably won't be able to do anything with the u-lock. But you could READ it.". printed name of u-lock is "u-lock".
+the u lock is a boring thing. the u lock is part of the tool shed. understand "ulock" as u lock. bore-check of u lock is bore-ulock rule. description of u lock is "You probably won't be able to do anything with the u-lock. But you could READ it.". printed name of u lock is "u-lock".
 
 this is the bore-ulock rule:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
@@ -9261,6 +9270,16 @@ carry out requesting the score:
 	d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved. Current rank in numbers is [player-rank].";
 	if mrlp is nothing, say "[bug-report]: This location needs a region." instead;
 	say "You currently have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region. ";
+	if possibles is true:
+		if min-score of mrlp is max-score of mrlp:
+			say "You have found all the secret points in the region, so you will get the maximum score once you solve it.";
+		else if min-score of mrlp is poss-score of mrlp:
+			say "Your final possible score is fixed. You missed something you can't go back for.";
+		else:
+			say "Your minimum possible score on solving is [min-score of mrlp], and the maximum is [poss-score of mrlp].";
+	else:
+		say "[line break]";
+	if mrlp is not Ordeal Loader, say "[line break]";
 	repeat with Q running through regions:
 		if number of visited rooms in Q > 0:
 			if mrlp is not Q, say "You have scored [cur-score of Q] out of [max-score of Q] total points for the [Q] region.";
