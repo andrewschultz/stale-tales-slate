@@ -62,16 +62,16 @@ That's bad spelling, and it won't shrink your problems.
 @nud
 #nudge for astral
 >astrla
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 #nudge for altar
 >altra
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 #nudge for resort
 >resotr
 You don't want to change a region drastically while you're in it.
 #nudge for islet
 >tilse
-The tiles seem to shift a bit, but not enough.
+The tiles rattle as if to shift but settle down.
 #nudge for tile
 >tiel
 You need to deal with all the tiles.
@@ -85,6 +85,9 @@ The tiles rattle as if to shift but settle down.
 #readables for tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
+#renudge for altar
+>altra
+While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
 >islet
 Your score has just gone up by one point.
@@ -101,7 +104,7 @@ Leis Isle
 The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real
 !But then, since the leis were fake, you shouldn't be surprised the woodland is, too.
 >download
-It still seems computer-generated, wrong.
+You wait for the woodland to download fully, but it doesn't. Well, maybe that's what you get for playing a text adventure.
 >lies
 ###skip test checking
 >download
@@ -117,21 +120,21 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 #nudge for sands
 >sansd
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
-#nudge for leis
+#spechelp for l2
 >lesi
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
 \\
 #nudge for lie
 >eil
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+Perhaps you can deal with the leis, or maybe you can use something else to escape the isle.
 \\
 #nudge for sand
 >sadn
-The sand is just--well, sand. It won't help you get off the island.
+The sand and sands and sands are just--well, sand. They won't help you get off the island.
 \\
 #renudge for islet
 >tilse
-Nothing happens. You may need to deal with something specific on the islet to leave.
+That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 \\
 #nudge for eter
 >eter
@@ -144,10 +147,6 @@ You notice writing on the rock and swing similar to what you just said. Or tried
 #spechelp for rock
 >crko
 Hmm, a rock, but only so much you can do with it.
-\\
-#spechelp for l2
->lise
-You have something on the tip of your tongue ... something about the Leis Isle doesn't seem right...
 
 @!min
 >lies
@@ -156,6 +155,15 @@ by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@nud
+#renudge for leis
+>isel
+You already noticed the leis. Use something one the isle to escape it.
+#renudge for lie
+>iel
+You already noticed the leis. Use something one the isle to escape it.
+
 
 @mis
 #mistake test for lies/lie
@@ -229,17 +237,27 @@ Rived Drive
 >score
 {$SCOS}
 
+@mis
+#mistake test for repos
+>repos
+You resolve to organize your programming code better once this adventure is over.
+\\
+#mistake test for verdi
+>verdi
+You don't need a musical score for this adventure.
+\\
+#mistake test for diver
+>diver
+But you just got by a lot of water. No need to go back in.
+
 @nud
 #nudge for blow
 >blwo
 You don't need to make any blow bowl more chaotic.
-#nudge for woodland
->woodladn
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
 \\
 #nudge for drive
 >driev
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+There is too much lying around here to mess with the Rived Drive's name.
 \\
 #nudge for tool
 >loto
@@ -277,6 +295,11 @@ Only changing one pole would still leave a vertical barrier.
 >polse
 The poles start to bend at an angle--or maybe that's the light.
 
+@mis
+#mistake test for prose
+>prose
+There's not much of that left in this game, and more of it won't help you up the poles. The spore can be something sturdier. You see red wondering what.
+
 >slope
 by one point
 }}SCORE++
@@ -293,9 +316,14 @@ You wouldn't want to make the slope crumble away.
 #mistake test for loot
 >loot
 You don't have time for treasure with Red Bull Burdell waiting.
+\\
 #mistake test for pores
 >pores
 Almost. But you don't need to create holes.
+\\
+#mistake test for poser
+>poser
+You wonder if YOU are the poser, for not being able to figure what to do.
 
 @nud
 #spechelp for tool shed
@@ -331,6 +359,14 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @mis
+#mistake retest for prose
+>prose
+There's not much of that left in this game, and more of it won't help you up the slope. The ropes will.
+\\
+#mistake retest for poser
+>poser
+You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near.
+\\
 #mistake retest for pores
 >pores
 No, you had it.
@@ -349,6 +385,11 @@ Those are already useful.
 >grisp
 The sprig seems to grow less fragile for a moment.
 
+@mis
+#mistake test for prigs
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
+
 @!min
 >grips
 Your score has just gone up by one point.
@@ -357,6 +398,11 @@ Your score has just gone up by one point.
 \\
 >score
 {$SCOS}
+
+@mis
+#mistake retest for prigs
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
 @nud
 #done rejects for grips
@@ -370,6 +416,17 @@ Those are already useful.
 >e
 
 Potshot Hotspot
+
+@max
+>trio
+by one point
+>kilns
+by one point
+>potters
+I am RED BULL BURDELL!
+>undo
+>undo
+>undo
 
 @min
 }}CURMAX-=2
@@ -385,13 +442,13 @@ The frust turfs are unchangeable.
 The frust turfs are unchangeable.
 #nudge for hotsopt
 >hotspto
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+Placating the people here is your best bet for making this place less of a hotspot.
 #nudge for rioters
 >riotesr
-They're just a riot. You may lump them together for your purposes. It'll be for society's good.
+Perhaps it's best to keep it simple and cut down the riot.
 #nudge for rioter
 >riotre
-They're just a riot. You may lump them together for your purposes. It'll be for society's good.
+Perhaps it's best to keep it simple and cut down the riot.
 #nudge for people
 >peopel
 Perhaps it's best to keep it simple and cut down the riot.
@@ -449,6 +506,15 @@ The protesters mumble at you for trying to exert mind control. You've struck a n
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
 
+@mis
+#mistake test for spotter
+>spotter
+No, you see 'em, you just need a better way to disperse 'em.
+\\
+#mistake test for lacy
+>lacy
+No, the clay is a clue to what the protest really wants to do.
+
 >potters
 Your score has just gone up by one point.
 }}SCORE++
@@ -475,7 +541,12 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 \\
 #spechelp for chain links
 >ainch
-The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
+The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
+
+@mis
+#mistake test for achin
+>achin
+You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
 @!min
 >china
@@ -487,14 +558,22 @@ Your score has just gone up by one point.
 >score
 {$SFIXMAX}
 
+@mis
+#mistake retest for achin
+>achin
+You don't have the ability to dish out an achin'.
+\\
+#mistake test for slink
+>slink
+Too many people are watching for you to slink away.
 
 @nud
 #respechelp for chain links
 >ainch
-WRONG
+The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
 #respechelp for chain links
 >kilsn
-The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now.
+The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
 
 >kilns
 Your score has just gone up by one point.
@@ -512,7 +591,19 @@ Your score has just gone up by one point.
 >get out
 !Your score has just
 
+@mis
+#mistake retest for slink
+>slink
+You couldn't slink behind the kilns even if they were here.
+\\
+#mistake test for brb
+>brb
+You don't know him that well. No riffing on his initials!
+
 @nud
+#renudge for hotspot
+>hotspto
+Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 #nudge for red
 >rde
 Burdell's laugh echoes. "You think you can change ME?!"
@@ -535,11 +626,11 @@ But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?
 \\
 #nudge for scar
 >scar
-Now's not the time for cosmetic stuff!
+No time for cosmetic changes.
 \\
 #nudge for crass
 >crssa
-Now's not the time for cosmetic stuff!
+No time for cosmetic changes.
 \\
 #nudge for cutlery
 >cutleyr
@@ -560,6 +651,10 @@ You slur out a few consonants--maybe you should work with something closer, lowe
 #nudge for tugtoe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
+\\
+#renudge for hotsopt
+>hotspto
+Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
 >tug toe
 #notana
@@ -574,7 +669,35 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
+@mis
+#mistake retest for slink
+>slink
+Why slink? No one is blocking or watching you any more.
+\\
+#mistake test for morans/moran
+>morans
+A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
+>moran
+A long-haired fellow wearing a St. Louis Cardinals t-shirt and an American flag bandana appears, holds up a sign saying GET A BRAIN, and vanishes. Whoah! That was random!
+\\
+#mistake test for retest
+>retest
+Oh, wow! Do you really want to play through again? I'm flattered!
+\\
+#mistake test for romans
+>romans
+It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.
+\\
+#mistake test for tester
+>tester
+Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.
+On the other hand, if you're volunteering to test my other games, I could always use the help.
+
 @nud
+#renudge for hotsopt
+>hotspto
+You don't want to make this place a hotspot again.
+\\
 #nudge for setter
 >settre
 It's Setter Street now. Seems like an appropriate tribute to a hero like you.
@@ -591,19 +714,19 @@ Means Manse
 @nud
 #nudge for manse
 >mesna
-You won't need to do anything with a place's name unless you are trapped there with nothing else to do.
+You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits.
 #nudge for extis
 >extis
 That's not quite the right sort of nothing.
 #nudge for marble
 >marbel
-You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
 #nudge for spire
 >spier
-You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
 #nudge for toaster
 >toastre
-You don't even want to TRY any more tricky anagrams. You just want to BE...and not even take any of the exits here.
+You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the exits here.
 
 @mis
 #mistake test for amen/name

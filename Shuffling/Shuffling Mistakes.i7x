@@ -239,7 +239,7 @@ chapter kitchen
 
 understand "cato" as a mistake ("You don't need to know your classics, here.") when taco is enclosed by player or player carries coat.
 
-understand "keats" as a mistake ("This is wordplay, not poetry. But the skate does glow red.") when skate is touchable.
+understand "keats" as a mistake ("This is wordplay, not poetry. [if skate is touchable]But the skate does glow red[else]The steak is what it needs to be[end if].") when skate is touchable or steak is touchable.
 
 understand "limes" as a mistake ("I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.") when spear is touchable.
 
@@ -414,7 +414,7 @@ understand "slite" as a mistake ("That's bad spelling, and it won't shrink your 
 
 chapter Leis Isle
 
-understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[else]You wait for the woodland to download fully, but it doesn't[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in Leis Isle.
+understand "download" as a mistake ("[if woodland-revealed is false]The woodland appears to glitch in and out like a loaded JPEG. It doesn't seem fully real[woodrev][else]You wait for the woodland to download fully, but it doesn't. Well, maybe that's what you get for playing a text adventure[end if][if l2 are not in Leis Isle]. But then, since the leis were fake, you shouldn't be surprised the woodland is, too[end if].") when player is in Leis Isle.
 
 understand "lies" and "lie" as a mistake ("You reflect on how insidious it was to stick you here in a false paradise.") when player is in Leis Isle and l2 are moot.
 
@@ -428,11 +428,13 @@ understand "poser" as a mistake ("[if ropes are touchable]You mutter a small epi
 
 understand "prigs" as a mistake ("Grumbling about prigs, or showing those prigs, won't help now. You should probably [if grips are touchable]use the grips to climb[else]make the sprig into something useful[end if] instead.") when grips are touchable or sprig is touchable.
 
-understand "prose" as a mistake ("There's not much of that left in this game, and talking won't help you up the [p-s][if ropes are touchable]. The ropes will[else]. The spore can be something sturdier. You see red at the thought of having to read[end if].") when player is in Rived Drive.
+understand "prose" as a mistake ("There's not much of that left in this game, and more of it won't help you up the [p-s][if ropes are touchable]. The ropes will[else]. The spore can be something sturdier. You see red wondering what[end if].") when player is in Rived Drive.
 
 understand "repos" as a mistake ("You resolve to organize your programming code better once this adventure is over.") when player is in Rived Drive.
 
 understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.
+
+understand "diver" as a mistake ("But you just got by a lot of water. No need to go back in.") when player is in Rived Drive.
 
 chapter Potshot Hotspot
 
@@ -454,7 +456,7 @@ understand "roister" as a mistake ("That's what's causing the riot, and it's up 
 
 understand "romans" as a mistake ("It's a pretty ritzy area. It doesn't need sanitation, medicine, education, wine, public order, irrigation, roads, a fresh water system, or public health.") when player is in Potshot Hotspot and ransom manors are in Potshot Hotspot.
 
-understand "slink" as a mistake ("[if red bull burdell is touchable]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot
+understand "slink" as a mistake ("[if red bull burdell is touchable]You couldn't slink behind the kilns even if they were here[else if red bull burdell is moot]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in Potshot Hotspot and links are not off-stage.
 
 understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in Potshot Hotspot and potters are not moot.
 
@@ -466,7 +468,7 @@ understand "amen" and "name" as a mistake ("I'm going to be pedantic here and fo
 
 understand "blamer" as a mistake ("No, we know who's to blame. He's done with. Time to move on.") when player is in Means Manse.
 
-understand "mensa" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.") when player is in Means Manse.
+understand "mensa" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey was not particularly relevant or character-developing or literary enough. Sheesh.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone. You earned it.") when player is in Means Manse.
 
 understand "sex it" as a mistake ("[if player is not in means manse]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
 

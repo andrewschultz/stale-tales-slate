@@ -318,11 +318,11 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "centrifuge"	741172383	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	b4-cent rule	"[loc-rej]."
 "dial"	122023592	--	--	"[if centrifuge-stopped is false]Messing up the dial would leave you trapped here[else]The dial did its part for you[end if]."
-"sextien"	681664637	--	cent-spin rule	"The spinning seems to slow a bit."
-"exitsnw"	661793301	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
-"exitssw"	689159759	--	cent-spin rule	"The room seems to spin faster, as if you are totally on the wrong track."
-"exitsse"	709031095	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
-"exits"	484951020	--	cent-spin rule	"You can't do much to the exits when you don't even know which way they are."
+"sextien"	681664637	--	b4-cent rule	"The spinning seems to slow a bit."
+"exitsnw"	661793301	--	b4-cent rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
+"exitssw"	689159759	--	b4-cent rule	"The room seems to spin faster, as if you are totally on the wrong track."
+"exitsse"	709031095	--	b4-cent rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
+"exits"	484951020	--	b4-cent rule	"You can't do much to the exits when you don't even know which way they are."
 "sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
 "aroundden"	574649308	--	af-cent rule	"[loc-rej]."
 
@@ -582,26 +582,26 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Astral Altars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"astral"	342897262	--	--	"[loc-rej]."
-"altar"	246623296	--	--	"[loc-rej]."
+"astral"	342897262	--	--	"[astral-nudge]."
+"altar"	246623296	--	--	"[astral-nudge]."
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
-"tile"	329722812	--	--	"No, all the tiles."
+"tile"	329722812	--	--	"You need to deal with all the tiles."
 
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"leis"	322886760	--	--	"[loc-rej]."
-"lie"	226612794	--	--	"[loc-rej]."
-"woodland"	423607270	--	--	"[loc-rej]."
+"leis"	322886760	--	--	"You already noticed the leis. Use something one the isle to escape it."
+"lie"	226612794	--	--	"[if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something one the isle to escape it[end if]."
+"woodland"	423607270	--	--	"The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway."
 "sand"	188398381	--	--	"[the-sand]."
 "and"	92124415	--	--	"[the-sand]."
 "sands"	284672347	--	--	"[the-sand]."
-"islet"	425996778	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
+"islet"	425996778	--	--	"That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave."
 "eter"	444046039	--	--	"The tree sits there[if swing is touchable], but the swing rocks a bit[end if]."
 "oflat"	259979148	--	--	"[if cork is touchable and wings are touchable]You can just use either the cork or the wings to leave to the east[else if cork is touchable or wings are touchable]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 
 table of Rived Drive nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"drive"	386316667	--	--	"[loc-rej]."
+"drive"	386316667	--	--	"There is too much lying around here to mess with the Rived Drive's name."
 "blow"	254520094	--	--	"You don't need to make any blow bowl more chaotic."
 "tool"	305629011	tool shed	--	"Hm, no, the whole tool shed."
 "shed"	282391463	tool shed	--	"Hm, no, the whole tool shed."
@@ -616,7 +616,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Potshot Hotspot nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"hotsopt"	569947414	--	--	"[loc-rej]."
+"hotsopt"	569947414	--	--	"[no-hotspot]."
 "setter"	643430023	--	bull-moot rule	"It's Setter Street now. Seems like an appropriate tribute to a hero like you."
 "frust"	416328490	--	--	"The frust turfs are unchangeable."
 "turf"	320054524	--	--	"The frust turfs are unchangeable."
@@ -647,7 +647,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"manse"	359250554	--	--	"You like your manse just fine now. No need to change it. It's just all the EXITS you don't want to worry about."
+"manse"	359250554	--	--	"You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
 "extis"	484951020	--	--	"That's not quite the right sort of nothing."
 "marble"	351625627	--	--	"[ennui]."
 "spire"	435862683	--	--	"[ennui]."
@@ -859,10 +859,6 @@ this is the b4-cent rule:
 	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
 
-this is the cent-spin rule:
-	if the player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
-	the rule fails;
-
 this is the nick-visit rule:
 	if nick is visited, the rule succeeds;
 	the rule fails;
@@ -980,7 +976,15 @@ this is the resin-lala rule:
 
 section resort auxiliary
 
+to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
+
 to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+
+to say no-hotspot:
+	if red bull burdell is moot:
+		say "You don't want to make this place a hotspot again";
+	else:
+		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
 
 this is the bull-moot rule:
 	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;

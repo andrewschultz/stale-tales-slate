@@ -1180,6 +1180,7 @@ check squeezing: say "That's either icky or impossible or both." instead;
 
 check singing:
 	if location of player is Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones." instead;
+	if trio is touchable, say "Dah, dah, dah. They don't love you. You don't love them." instead;
 	say "Oddly, when you start, you see a big sign telling you not to." instead;
 
 check waving hands:

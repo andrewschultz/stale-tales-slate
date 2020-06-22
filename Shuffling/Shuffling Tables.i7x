@@ -597,7 +597,7 @@ sprig	"The sprig seems to grow less fragile for a moment."
 poles	"The poles start to bend at an angle--or maybe that's the light."
 spore	"You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy."
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
-chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own, as they are now."
+chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own[if china is moot], and maybe the links have artsy potential beyond the china you made[end if]."
 riot	"The riot's still a crowd. A BIG crowd."
 
 to say m-r-almost:
