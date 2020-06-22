@@ -12,6 +12,7 @@ import re
 import glob
 import i7
 import sys
+import mytools as mt
 
 debug = False
 ignore_nudmis = False
@@ -20,6 +21,8 @@ err_max = 0
 quiet = 0
 
 sync_detail = defaultdict(str)
+
+rbr_warn = defaultdict(int)
 
 region_wildcard = ""
 
@@ -33,13 +36,14 @@ houtfile = "hch_out.txt"
 def standard_usage():
     print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
     print("hch.py 1 si e50 = print 50 maximum errors from shuffling (1) ignoring NUDMIS (nudge/miss) output file testing")
-    print("hch.py 2 a e50 o = print 50 maximum errors from roiling (2) only the aftertexts (e.g. what they say after) and sends to output")
+    print("hch.py rb 2 a e50 o = print 50 maximum errors from roiling (2) only the aftertexts (e.g. what they say after) and sends to output. Also run RBR.PY before.")
     exit()
 
 def usage():
     print("1/2 = sa or roiling only")
     print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
     print("w nw wn = switch on/off WRONG notifications")
+    print("rb = run RBR before. Useful when wiping out bugs one at a time.")
     print("r= = region wildcard")
     print("e# = maximum errors")
     print("q = quiet")
@@ -182,7 +186,12 @@ def jump_str(a, b):
     if a - b <= 1: return ''
     return "*JUMP* {}".format(a-b-1)
 
-def find_in_glob(sync_stuff, pattern, b, region, details, extras = []):
+def rbr_of(loc_proj, x):
+    ary = os.path.basename(x).split('-')
+    the_name = '-'.join(ary[2:-1])
+    return "rbr-{}-{}.txt".format(loc_proj, the_name)
+
+def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = []):
     for_pattern = "for pattern {} in {}.".format(pattern, b)
     got_sync_yet = defaultdict(str)
     errs = 0
@@ -190,6 +199,12 @@ def find_in_glob(sync_stuff, pattern, b, region, details, extras = []):
     last_line = 0
     wrong_count = 0
     for x in glob.glob(pattern) + extras:
+        if x.startswith("reg-"):
+            rox = rbr_of(loc_proj, x)
+            if mt.last_mod(rox) > mt.last_mod(x):
+                if rox not in rbr_warn:
+                    print("WARNING", rox, "modified after", x)
+                rbr_warn[rox] += 1
         with open(x) as file:
             if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
@@ -288,8 +303,8 @@ def sync_check(a, b, region=""):
         return 0
     rbr_find = "rbr-*"
     reg_find = "*-nudmis*"
-    ret_val = find_in_glob(needs_sync_test, rbr_find, b, region, sync_detail, []) # formerly ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [] until I moved that to RBRs. Included this comment for posterity if we need to use this again.
-    if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, b, region, sync_detail)
+    ret_val = find_in_glob(needs_sync_test, rbr_find, a, b, region, sync_detail, []) # formerly ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [] until I moved that to RBRs. Included this comment for posterity if we need to use this again.
+    if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail)
     return ret_val
 
 projs = ['sa', 'roi']
@@ -302,6 +317,7 @@ cols = { 'scannotes': 5 }
 count = 1
 verify_roi = False
 verify_sa = False
+rbr_before = False
 
 while count < len(sys.argv):
     arg = sys.argv[count]
@@ -309,6 +325,7 @@ while count < len(sys.argv):
     if arg == '1' or arg == 'sa': projs = ['sa']
     elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r': projs = ['roi']
     elif arg == 'q': quiet = True
+    elif arg == 'rb' or arg == 'br': rbr_before = True
     elif arg == 'o': out_to_file = True
     elif arg == 'w': show_wrongs = True
     elif arg == 'nw' or arg == 'wn': show_wrongs = False
@@ -334,6 +351,8 @@ while count < len(sys.argv):
         print("Bad command", arg)
         usage()
     count += 1
+
+if rbr_before: os.system("rbr.py")
 
 if verify_roi or verify_sa:
     if verify_roi: verify_reg_files('roi')
