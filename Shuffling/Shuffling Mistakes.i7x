@@ -14,7 +14,7 @@ book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.")
 
-understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when player wears nametag.
+understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when nametag is touchable.
 
 understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
 
@@ -52,8 +52,6 @@ understand "faso" as a mistake ("There are even further-away places to explore i
 
 understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
 
-understand "try" as a mistake ("[if player is in subsite]You're sure the lecture to the east will be about trying versus doing. Ugh[else]That's more sensible than the five alternatives, but it's not concrete enough[end if].")
-
 chapter Rested Desert
 
 understand "deters" as a mistake ("No! You're trying to make progress here.") when player is in Rested Desert.
@@ -76,8 +74,6 @@ chapter Notices Section
 understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.") when player is in Notices Section and gateman is in Notices Section.
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is touchable.
-
-understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is quickvis and cabinet-bit-me is true.
 
 understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.") when cabinet is in location of player.
 
@@ -255,9 +251,9 @@ understand "teaks" as a mistake ("Hm. An indoor forest. [if Sacred Cedars is unv
 
 chapter ROOM
 
-understand "hoes" as a mistake ("One, there's more than one shoe. Two, this isn't that sort of game. Innuendo only, if you please!") when player is in roomroom and hoses are in roomroom.
+understand "hoes" as a mistake ("One, there's more than one [if shoes are touchable]shoe[else]hose[end if]. Two, this isn't that sort of game. Innuendo only, if you please!") when shoes are touchable or hoses are touchable.
 
-understand "shoe" as a mistake ("You need more than one shoe.") when player is in roomroom and hoses are in roomroom.
+understand "shoe" as a mistake ("You need more than one shoe.") when hoses are touchable.
 
 chapter Stiller Trellis
 
@@ -320,7 +316,7 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 chapter Undesired Underside
 
-understand "grained" as a mistake ("There's an extra A in here. And anyway, we're looking for a noun.") when player is in Undesired Underside and a reading is in Undesired Underside.
+understand "grained" as a mistake ("Good try, but we're looking for a noun. With an extra A.") when player is in Undesired Underside and a reading is in Undesired Underside.
 
 [def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric Coteries is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in Undesired Underside.
@@ -339,7 +335,7 @@ chapter Roarings Garrison
 
 understand "isonome" as a mistake ("The noisome moonies pretend to be all about nature, but as for actually understanding science? Pfft.") when player is in Roarings Garrison.
 
-understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
+understand "smitten" as a mistake ("No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they [if cafe-climbed is true]stuck really well on the cafe face[else]could stick really well on the right surface[end if].") when player has Velcro.
 
 understand "stent" as a mistake ("Medical procedures aren't necessary here. The noise is too distracting anyway.") when player is in Roarings Garrison.
 
@@ -420,6 +416,8 @@ understand "lies" and "lie" as a mistake ("You reflect on how insidious it was t
 
 chapter Rived Drive
 
+understand "diver" as a mistake ("But you just got by a lot of water. No need to go back in.") when player is in Rived Drive.
+
 understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in Rived Drive and tool shed is in Rived Drive.
 
 understand "pores" as a mistake ("[if ropes are touchable]No, you had it[else]Almost. But you don't need to create holes[end if].") when player is in Rived Drive.
@@ -433,8 +431,6 @@ understand "prose" as a mistake ("There's not much of that left in this game, an
 understand "repos" as a mistake ("You resolve to organize your programming code better once this adventure is over.") when player is in Rived Drive.
 
 understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.
-
-understand "diver" as a mistake ("But you just got by a lot of water. No need to go back in.") when player is in Rived Drive.
 
 chapter Potshot Hotspot
 

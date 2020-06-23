@@ -1178,10 +1178,12 @@ check sleeping:
 
 check squeezing: say "That's either icky or impossible or both." instead;
 
+the block singing rule is not listed in any rulebook.
+
 check singing:
 	if location of player is Gnarliest Triangles, say "Alas, the notes stone does not interact favorably with your tones." instead;
 	if trio is touchable, say "Dah, dah, dah. They don't love you. You don't love them." instead;
-	say "Oddly, when you start, you see a big sign telling you not to." instead;
+	say "Oddly, when you start, you imagine a big sign telling you not to." instead;
 
 check waving hands:
 	if player is in Busiest Subsite, say "You don't see any friends nearby, sadly. It's all a bit awkward." instead;
@@ -6298,8 +6300,6 @@ check giving emitter to deadbeat: try objasking deadbeat about emitter instead;
 
 understand "man" as deadbeat when deadbeat is touchable.
 
-to say are-were: say "[if controls are in gin nope opening]we[else]['][end if]re"
-
 description of deadbeat is "He's wearing designer reedings."
 
 the designer reedings are amusing scenery.
@@ -10711,9 +10711,9 @@ carry out tsfing:
 	if Trips Strip is unvisited:
 		move player to Trips Strip;
 		now ordeal loader is solved;
+		say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
 	else:
-		say "I'm not letting you run TSF if you're already in the Trips Strip. Restart to allow this.";
-	say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
+		say "WARNING: you may not want to mess around in the Trips Strip if you run TSF after visiting the strip. Bad things may happen. Just a warning.";
 	now sortie is solved;
 	now forest is solved;
 	now metros is solved;

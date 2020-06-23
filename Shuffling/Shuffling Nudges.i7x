@@ -136,28 +136,28 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "mallx"	286658730	--	--	"[lotmaso]."
 "mally"	296249901	--	--	"[lotmaso]."
 "mallz"	296860267	--	--	"[lotmaso]."
-"storea"	489054291	store a	--	"[no-cand]."
-"storec"	505872058	store c	--	"[no-cand]."
-"stored"	507895562	store d	--	"[no-cand]."
-"storee"	614672582	store e	--	"[no-cand]."
-"storeg"	519466175	store g	--	"[no-cand]."
+"storea"	489054291	store a	--	"[no-cand of store a]."
+"storec"	505872058	store c	--	"[no-cand of store c]."
+"stored"	507895562	store d	--	"[no-cand of store d]."
+"storee"	614672582	store e	--	"[no-cand of store e]."
+"storeg"	519466175	store g	--	"[no-cand of store g]."
 "flier"	338451493	store g	--	"The flier's just there to tell you if you're done or not."
-"storeh"	524148772	store h	--	"[no-cand]."
-"storej"	535826998	store j	--	"[no-way]."
-"storek"	539799651	store k	--	"[no-way]."
+"storeh"	524148772	store h	--	"[no-mb of store h]."
+"storej"	535826998	store j	--	"[no-way of store j]."
+"storek"	539799651	store k	--	"[no-way of store k]."
 "storel"	540680312	store l	--	"You search for a magic word but feel, er, lost."
-"storen"	555773981	store n	--	"[no-cand]."
+"storen"	555773981	store n	--	"[no-cand of store n]."
 "storeo"	561219050	store o	--	"Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote."
-"storep"	568332432	store p	--	"[no-mb]."
+"storep"	568332432	store p	--	"[no-mb of store p]."
 "storeq"	571272090	store q	--	"Nothing happens. You didn't really expect it to since, hey, no u with the q."
-"stores"	583140439	store s	--	"[no-cand]."
-"storet"	589976491	store t	--	"[no-mb]."
-"storeu"	591972280	store u	--	"[no-mb]."
-"storev"	594031293	store v	--	"[no-mb]."
-"storew"	594801246	store w	--	"[no-mb]."
-"storex"	599634554	store x	--	"[no-way]."
-"storey"	609225725	store y	--	"[no-mb]."
-"storez"	609836091	store z	--	"[no-way]."
+"stores"	583140439	store s	--	"[no-cand of store s]."
+"storet"	589976491	store t	--	"[no-mb of store t]."
+"storeu"	591972280	store u	--	"[no-mb of store u]."
+"storev"	594031293	store v	--	"[no-mb of store v]."
+"storew"	594801246	store w	--	"[no-mb of store w]."
+"storex"	599634554	store x	--	"[no-way of store x]."
+"storey"	609225725	store y	--	"[no-mb of store y]."
+"storez"	609836091	store z	--	"[no-way of store z]."
 "marquee"	596710416	--	--	"You don't need to change the marquee[unless sorbet is moot], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
 "depot"	407763752	posted depots	--	"You can't do anything to the depots besides ENTER them."
 "depots"	504037718	posted depots	--	"You can't do anything to the depots besides ENTER them."
@@ -205,7 +205,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 table of Self ID Fields nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "selfid"	370430745	--	--	"[loc-rej]."
-"fidle"	274156779	--	--	"[loc-rej]."
+"self"	304408810	--	--	"[loc-rej]."
+"field"	274156779	--	--	"[loc-rej]."
 "selves"	609138809	--	--	"The selves vessel is much too sturdy to manipulate."
 "vesel"	512864843	--	--	"The selves vessel is much too sturdy to manipulate."
 "crosse"	499036006	Corses Crosse	--	"[crosse-to-you]."
@@ -216,7 +217,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "lineof"	396387775	--	--	"[line-is-dead]."
 "undead"	346065420	--	--	"[no-un]."
 "undeads"	442339386	--	--	"[no-un]."
-"self"	304408810	--	--	"[loc-rej]."
 
 table of Flesh Shelf nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -308,6 +308,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "graffiit"	366236825	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	red graffiti	--	"Hm, there has to be a clue in it."
 "oil"	173159262	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
+"lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. [cant-change-lois]."
 
 [check these as some may be useless now]
 
@@ -589,7 +590,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"leis"	322886760	--	--	"You already noticed the leis. Use something one the isle to escape it."
+"leis"	322886760	--	--	"You already noticed the leis. Use something on the isle to escape it."
 "lie"	226612794	--	--	"[if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something one the isle to escape it[end if]."
 "woodland"	423607270	--	--	"The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway."
 "sand"	188398381	--	--	"[the-sand]."
@@ -770,11 +771,11 @@ to say say-which: say "You'll need to pick out a store to work with. Mall or Mal
 
 to say lotmaso: say "You need to manipulate each store as a store, not a mall or a lot"
 
-to say no-cand: say "Nothing happens. You'd think that store could be a good candidate to change, but it isn't"
+to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens."
 
-to say no-way: say "Nothing happens. The store remains impassive and dark"
+to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seemed like a bit of a long shot"
 
-to say no-mb: say "Nothing happens. Maybe if Yorpwald were in even more danger, it would";
+to say no-mb of (x - a thing): say "Nothing happens. Maybe if Yorpwald were in even more danger the future, [x] might change. But not this adventure";
 
 to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
 
@@ -855,6 +856,10 @@ to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is bey
 
 section sortie auxiliary
 
+this is the cedars-visited rule:
+	if sacred cedars is visited, the rule succeeds;
+	the rule fails;
+
 this is the b4-cent rule:
 	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
@@ -892,6 +897,14 @@ this is the rm-or-moor rule:
 to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
 to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
+
+to say cant-change-lois:
+	if caskfillings is 2:
+		say "Besides, you have gotten all the oils you need";
+	else if caskfillings is 1:
+		say "The gift of oils should be enough";
+	else:
+		say "There is something you can take from Sacred Cedars, though"
 
 to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
 
