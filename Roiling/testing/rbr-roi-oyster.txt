@@ -64,6 +64,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >lrtlso
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+>remap
+#nudge for remap
+>rempa
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+>undo
+>undo
+
 @max
 #pre-trolls-stroll rule
 >stroll
@@ -1274,9 +1282,6 @@ The Shadier Airshed is immovable and unchangeable.
 #nudge for ubt
 >utb
 Clear ALL the tubs!
-#nudge for bust
->tsbu
-Hm. The tubs shake slightly. Maybe if you were more forceful.
 
 @nud
 #spechelp for tubs
@@ -1313,6 +1318,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#nudge for digger
+>diggre
+It's what it needs to be, you imagine.
+\\
 #mistake test for bury [text]
 >bury zozimus
 Nothing worth burying.
@@ -1429,7 +1438,7 @@ It's clean enough. You can't, like, make it sharper or anything.
 >out
 
 @nud
-#nudge for shut
+#renudge for shut
 >shtu
 You found the hut you needed to.
 
@@ -1650,9 +1659,12 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#done rejects for thin hint
+#nudge for hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
+#done rejects for thin hint
+>yurb
+It was enough to bury the ruby.
 
 >e
 >s
@@ -1953,6 +1965,11 @@ by one point
 #renudge for plam
 >plma
 You did enough.
+\\
+#nudge for ant
+>atn
+That's close. Something brutal and direct.
+
 
 @!min
 >tan

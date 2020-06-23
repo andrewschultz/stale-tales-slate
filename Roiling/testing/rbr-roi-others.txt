@@ -1394,7 +1394,7 @@ You don't need to grapple with the roping, and you don't need the roping to grap
 #renudge for halt
 >ltha
 The halt lath is ineffective, now you have the passport.
-#nudge for arena
+#nudge for arean
 >arean
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
 #nudge for nera

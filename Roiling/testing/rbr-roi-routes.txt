@@ -1125,15 +1125,6 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 #scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
-#nudge for mess
->msse
-The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
-#nudge for spume
->spuem
-The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
-#nudge for spumes
->spuems
-The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 
 @sli
 #slider test for athwart

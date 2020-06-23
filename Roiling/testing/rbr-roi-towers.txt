@@ -25,6 +25,7 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ALSO-IGNORE:cheat,t
 
 ## *FILE
+## *FORK
 
 TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## walkthrough with all nudges	## walkthrough with slider readings
 
@@ -2482,7 +2483,7 @@ You need to deal with both turbos.
 ALBERT'S.
 
 @nud
-#balance undo
+##balance undo
 >robust
 by one point
 #done rejects for turbos

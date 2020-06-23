@@ -1822,7 +1822,7 @@ fits in perfectly
 #nudge for nottobe
 >nottoeb
 Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
-#nudge for reboot
+#spechelp for small blue button
 >reboto
 You need to give that computer another (figurative) kick.
 
@@ -1899,7 +1899,7 @@ You've had enough comforts from cots to do the programming you need. You might r
 #renudge for nottobe
 >nottoeb
 Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
-#renudge for reboot
+#done rejects for reboot
 >reboto
 No need to reboot twice.
 #spechelp for im le cop polemic
@@ -1938,9 +1938,6 @@ The process of debugging is going to take a while. You will need some sort of en
 #done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
-#renudge for sleep
->slepe
-You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
 #spechelp for trim socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.

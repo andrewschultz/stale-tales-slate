@@ -468,6 +468,14 @@ This is a museum! Messing with the exhibits would be very bad form.
 You don't need to flip anything here, really. Certainly not a room.
 #nudge for spare
 
+#mistake test for clasp
+>clasp
+If there were a puzzle for stealing stuff, that'd work. But there isn't.
+
+#nudge for clasp
+>alcsp
+This is a museum! Messing with the exhibits would be very bad form.
+
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 
@@ -556,3 +564,4 @@ Epilogue's Up! Lie, Ego
 >u
 >s
 busy for frivolity.
+!not in total detail

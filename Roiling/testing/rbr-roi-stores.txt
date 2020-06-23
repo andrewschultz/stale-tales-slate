@@ -338,6 +338,18 @@ Yes, it's tedious enough to make you see red.
 It'd get you in trouble around here.
 
 @nud
+#nudge for blabber
+>blabbre
+The blabber babbler is unchangeable, but perhaps indiectly moving [him-her] will work.
+\\
+#nudge for rehab
+>rehba
+The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead.
+\\
+#nudge for rehabs
+>rehasb
+The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead.
+\\
 #nudge for storse
 >stores
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
