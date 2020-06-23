@@ -289,7 +289,7 @@ chapter sortie
 
 table of Sortie nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"kitchen"	454037543	--	kitch-visit rule	"You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location."
+"kitchen"	454037543	--	kitch-visit rule	"You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them."
 "mud"	190210049	--	drop-mud rule	"The mud is just there. You can't change it."
 "were"	448870794	cask	--	"[if sack is abrod]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is abrod]d[else]s[end if] it can be changed."
 "burlap"	346316131	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
@@ -308,23 +308,24 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "graffiit"	366236825	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	red graffiti	--	"Hm, there has to be a clue in it."
 "oil"	173159262	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
-"lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. [cant-change-lois]."
+"lois"	269433228	--	cedars-visited rule	"Changing Lois, or asking her to change, is unlikely and counterproductive. She has left you all you need[if silo is in moor]ed[end if]."
+"sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
+"hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
 
 [check these as some may be useless now]
 
 table of trap part nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"part"	272087598	--	--	"You [if kitchen is not visited]need to manipulate something in the room to stop the spinning[else]don't want to go back to how the Trap Part was[end if]."
+"part"	272087598	--	--	"You [if centrifuge-stopped is false]need to manipulate something in the room to stop the spinning[else]don't want to go back to how the Trap Part was[end if]."
 "sortie"	531859319	--	degen-true rule	"[reg-rej]."
-"centrifuge"	741172383	--	b4-cent rule	"[loc-rej]."
-"frenetic"	603466874	--	b4-cent rule	"[loc-rej]."
+"centrifuge"	741172383	--	b4-cent rule	"[cent-diz]."
+"frenetic"	603466874	--	b4-cent rule	"[cent-diz]."
 "dial"	122023592	--	--	"[if centrifuge-stopped is false]Messing up the dial would leave you trapped here[else]The dial did its part for you[end if]."
 "sextien"	681664637	--	b4-cent rule	"The spinning seems to slow a bit."
 "exitsnw"	661793301	--	b4-cent rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exitssw"	689159759	--	b4-cent rule	"The room seems to spin faster, as if you are totally on the wrong track."
 "exitsse"	709031095	--	b4-cent rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exits"	484951020	--	b4-cent rule	"You can't do much to the exits when you don't even know which way they are."
-"sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
 "aroundden"	574649308	--	af-cent rule	"[loc-rej]."
 
 table of the nick nudges
@@ -361,7 +362,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "trellis"	565134420	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]"
 "arching"	290299561	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	crashing archings	--	"[loc-rej]."
-"hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
 "wall"	217750269	scraped wall	--	"[hway-hint]."
 "scraped"	433092329	scraped wall	--	"[hway-hint]."
 "rubble"	408887368	crashing archings	--	"The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need."
@@ -390,10 +390,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "shootbutton"	858376270	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
 "treesbutton"	1013324838	--	panel-in-silo rule	"No, you're overthinking it. Just the text."
 "anapests"	578213162	anapest	--	"Well, there are many, but the poem is [i]in[r] anapest."
-"pome"	347699798	poem	--	"[peas-poe]."
-"poetyr"	594417718	poem	--	"[peas-poe]."
 "peom"	347699798	pat	--	"[pat-poe]."
 "poerty"	594417718	pat	--	"[pat-poe]."
+"pome"	347699798	poem	--	"[peas-poe]."
+"poetyr"	594417718	poem	--	"[peas-poe]."
 "warhead"	383751709	missile	--	"You don't want to change the missile's message, which seems rather nice."
 
 table of Sacred Cedars nudges
@@ -863,6 +863,8 @@ this is the cedars-visited rule:
 this is the b4-cent rule:
 	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
 	the rule fails;
+
+to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
 
 this is the nick-visit rule:
 	if nick is visited, the rule succeeds;

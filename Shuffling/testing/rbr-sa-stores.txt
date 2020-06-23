@@ -26,19 +26,20 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 Trips Strip
 
 >z
+>opt in
 
 @nud
 #nudge for trips
 >trisp
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for masll
 >masll
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
 #nudge for mall
->mall
+>mlla
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
 #nudge for lots
->lost
+>ltso
 You can manipulate each individual store.
 #nudge for lot
 >lto
@@ -174,7 +175,7 @@ You need to manipulate each store as a store, not a mall or a lot.
 You need to manipulate each store as a store, not a mall or a lot.
 #nudge for malls
 >malsl
-You need to manipulate each store as a store, not a mall or a lot.
+You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
 #nudge for mallt
 >maltl
 You need to manipulate each store as a store, not a mall or a lot.
@@ -198,67 +199,67 @@ You need to manipulate each store as a store, not a mall or a lot.
 You need to manipulate each store as a store, not a mall or a lot.
 #nudge for storea
 >storae
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store A seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storec
 >storce
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store C seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for stored
 >storde
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store D seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storee
 >storee
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store E seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storeg
 >storge
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store G seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storeh
 >storhe
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store H might change. But not this adventure.
 #nudge for storej
 >storje
-Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+Store J remains impassive and dark, but it seemed like a bit of a long shot.
 #nudge for storek
 >storke
-Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+Store K remains impassive and dark, but it seemed like a bit of a long shot.
 #nudge for storel
 >storle
 You search for a magic word but feel, er, lost.
 #nudge for storen
 >storne
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store N seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storeo
 >storoe
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
 #nudge for storep
 >storpe
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store P might change. But not this adventure.
 #nudge for storeq
 >storqe
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
 #nudge for stores
 >storse
-Nothing happens. You'd think that store would be a good candidate to change, but it isn't.
+Store S seems like a good candidate to change and reveal something, but nothing happens.
 #nudge for storet
 >storte
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store T might change. But not this adventure.
 #nudge for storeu
 >storue
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store U might change. But not this adventure.
 #nudge for storev
 >storve
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store V might change. But not this adventure.
 #nudge for storew
 >storwe
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store W might change. But not this adventure.
 #nudge for storex
 >storxe
-Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+Store X remains impassive and dark, but it seemed like a bit of a long shot.
 #nudge for storey
 >storye
-Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+Nothing happens. Maybe if Yorpwald were in even more danger the future, Store Y might change. But not this adventure.
 #nudge for storez
 >storze
-Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway.
+Store Z remains impassive and dark, but it seemed like a bit of a long shot.
 #nudge for tepid
 >tepdi
 The depiction is there as a hint, not as a puzzle.
@@ -267,7 +268,7 @@ The depiction is there as a hint, not as a puzzle.
 The depiction is there as a hint, not as a puzzle.
 #nudge for icon
 >icno
-Hmm. You could probably do something with just one coin, or you could do something with all of them.
+The depiction is there as a hint, not as a puzzle.
 #nudge for badge
 >badeg
 The badge just has general information. It's not useful on its own.
@@ -288,7 +289,7 @@ Hmm...you get the feeling the store itself holds more adventure.
 >roda
 Hmm...you get the feeling the store itself holds more adventure.
 #nudge for sign
->sing
+>sgni
 Hmm...you get the feeling the store itself holds more adventure.
 #readables for roadsign
 >read roadsign
@@ -330,16 +331,16 @@ Red Bull Burdell appears this time! It doesn't take long for him to defeat you, 
 So 'dept.
 >undo
 
->metros
-by one point
-
 @nud
 #nudge for subway
 >subwya
-No, it's a map of something behind Store M, it looks like..
+No, it's a map of something behind Store M, it looks like.
 #nudge for subwaymap
 >subwaympa
-No, it's a map of something behind Store M, it looks like..
+No, it's a map of something behind Store M, it looks like.
+
+>metros
+by one point
 
 @nud
 #nudge for trade
@@ -385,14 +386,14 @@ hubs bush
 @nud
 #nudge for hubs
 >husb
-The hubs bush is too sturdy. You can't escape the Strip of Profits.
+The hubs bush is too sturdy. You can't escape the Trips Strip.
 #nudge for buh
 >bhu
-The hubs bush is too sturdy. You can't escape the Strip of Profits.
+The hubs bush is too sturdy. You can't escape the Trips Strip.
 
 @nud
 #nudge for marquee
->marquee
+>marqeue
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
 
 >sorbet
@@ -403,9 +404,12 @@ by one point
 >marquee
 You don't need to change the marquee now that you figured what it means.
 
->resort
-
 @nud
-#nudge for lodge
+>tsf
+WARNING
+>resort
+by one point
+\\
+#nudge for ogled
 >lodeg
 The lodge is as good as it can be. Better ENTER it.

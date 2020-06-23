@@ -10,6 +10,12 @@ definition: a thing (called t) is quickvis:
 	if t is in location of player, yes;
 	no;
 
+section understand logic
+
+understand "tap [something]" as taping.
+
+understand the command "tap" as something new.
+
 book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.")
@@ -229,7 +235,7 @@ understand "turn [text]" as a mistake ("[if player is in Trap Part and centrifug
 
 chapter the nick
 
-understand "thicken" as a mistake ("[if player is in kitchen]This would be the place, but you're not hungry for fatty foods right now[else]You might rather thin-nen to slip through the bars, but you can't[end if].") when player is in nick or player is in kitchen.
+understand "thicken" as a mistake ("[if player is in kitchen]This would be the place, but you're not hungry for anything TOO fatty right now[else]You might rather thin-nen to slip through the bars, but you can't[end if].") when player is in nick or player is in kitchen.
 
 chapter kitchen
 
@@ -251,7 +257,7 @@ understand "teaks" as a mistake ("Hm. An indoor forest. [if Sacred Cedars is unv
 
 chapter ROOM
 
-understand "hoes" as a mistake ("One, there's more than one [if shoes are touchable]shoe[else]hose[end if]. Two, this isn't that sort of game. Innuendo only, if you please!") when shoes are touchable or hoses are touchable.
+understand "hoes" as a mistake ("One, there's more than one [if hoses are touchable]hose[else]shoe[end if]. Two, this isn't that sort of game. Innuendo only, if you please!") when hoses are moot or hoses are touchable.
 
 understand "shoe" as a mistake ("You need more than one shoe.") when hoses are touchable.
 
@@ -266,11 +272,13 @@ understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep r
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
-understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or poem is touchable.
+understand "mope" as a mistake ("[if woeful pat is touchable]Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.[else if smilies are touchable]You try, but the smilies on the poem prevent you.[else if poem is touchable]You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]") when woeful pat is touchable or woeful pat is moot.
 
 understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
 
 understand "otohs" as a mistake ("You start fruitlessly double- and triple- thinking whether you should change [if shoot button is touchable]back to [end if]the hoots button.") when shoot button is touchable or hoots button is touchable.
+
+understand "peom" as a mistake ("Nigel Molesworth salutes your spelling technique, if not your tendency to play weedy wet text adventures.") when woeful pat is touchable or poem is touchable.
 
 understand "reest" as a mistake ("You are noisily uncooperative for a minute. With what, I don't know. But you are.") when player is in moor and panel is part of silo.
 
@@ -284,7 +292,7 @@ understand "sooth" as a mistake ("Close...what you need to do will sooth, in a b
 
 understand "stere" as a mistake ("Units of measurements are abstract. We need something concrete.") when player is in moor and panel is part of silo.
 
-understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)") when woeful pat is touchable.
+understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)") when woeful pat is touchable.
 
 understand "terse" as a mistake ("[if trees button is touchable]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 
@@ -296,7 +304,7 @@ chapter Sacred Cedars
 
 understand "cadres" as a mistake ("You must do this on your own.") when player is in Sacred Cedars.
 
-understand "ecards" and "e-cards" as a mistake ("Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.") when player is in Sacred Cedars.
+understand "ecards" as a mistake ("Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.") when player is in Sacred Cedars.
 
 understand "lois" as a mistake ("[what-to-ask-lois].") when cedars is visited
 

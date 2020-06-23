@@ -21,6 +21,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal_thru
 
+>opt in
+
 @nud
 #nudge for ordeal
 >ordela
@@ -89,7 +91,8 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
 @nud
-gion drastically while you're in it.
+#nudge for
+You don't want to change a region drastically while you're in it
 #nudge for busiest
 >busiets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -119,7 +122,7 @@ A voice in your head tells you that sort of mental wandering is what got you can
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 #nudge for caveat
 >acevta
-A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
+Vandalizing the vacate caveat is probably more trouble than it's worth.
 #nudge for banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
@@ -149,7 +152,8 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 @nud
 #spechelp for odor
 >doro
-WRONG
+The odor doesn't seem too complex. You pause. You can figure what it should be.
+You feel a slight psychic push-pull coming from the odor. Keep at it.
 
 @mis
 #mistake test for or do door
@@ -294,9 +298,11 @@ Notices Section
 Maybe it's significant that the writing's red, and that can help you
 There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice
 >read board
-Mary
+OUR NEEDS ENDURE SO!
+>read board
+Canny Nancy
 >enter gateway
-mega ant
+mega-ant
 >read gateway
 The red text is just like A TAN GEM and such on the broad board
 There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice
@@ -360,7 +366,7 @@ You will have to change the new land one item at a time.
 #spechelp for nametag
 >gatemna
 The nametag peels infinitesimally.
-You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+DEBUG: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 
 @mis
 #mistake test for get a man
@@ -373,12 +379,12 @@ Your score has just gone up by one point.
 @nud
 #mistake retest for get a man
 >get a man
-You already did.
+"Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions."
 
 @nud
 #mistake test for almond
 >almond
-'Don't try anything too nutty!' booms Nat Egam.
+"Don't try anything too nutty!'" booms Nat Egam.
 
 @nud
 #done rejects for gateman
@@ -427,38 +433,38 @@ The cabinet wobbles a bit.
 #readables for acne bit cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 >read cabinet
 Here is one of several writings in red in the cabinet:
-/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)/
+/(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 
 @nud
 #renudge for notices
 >noticse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #mistake test for elastin/nailset
 >elastin
-That would make the saltine less edible.
+The saltine's there to help you. Changing it might work against you.
 >nailset
-That would make the saltine less edible.
+The saltine's there to help you. Changing it might work against you.
 #mistake test for stealin
 >stealin
-You're the good guy, here.
+You're the good guy, here. You don't need to steal.
 
 >in
 Trips Strip

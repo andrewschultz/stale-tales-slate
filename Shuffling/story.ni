@@ -4936,7 +4936,7 @@ check turning the dial:
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][else]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]You see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
+description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
 
 to say dial-hints:
 	if numset of dial is 16, the rule succeeds;
@@ -5748,7 +5748,7 @@ to say reset-goof:
 	if steer button is touchable:
 		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be";
 	else if reset-already is false:
-		say "Unfortunately, it's not QUITE as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. You have one more puzzle to navigate";
+		say "Unfortunately, it's not QUITE as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. But rearraning it? I hope that's not too bad";
 		now reset-already is true;
 	else:
 		say "Resetting twice won't get you anywhere. You need a new direction to change the TREES"
@@ -6107,7 +6107,7 @@ to say what-to-ask-lois:
 	else if caskfillings is 0:
 		say "Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves";
 	else if caskfillings is 1:
-		say "Lois is silent. You figure what to pour, where";
+		say "Lois is silent. You must figure what to pour, where";
 	else:
 		say "You feel guilt at asking Lois for more"
 
@@ -6157,10 +6157,11 @@ section taping
 
 taping is an action applying to one thing.
 
-understand the command "tap" as something new.
-
-understand "tap" as taping.
-understand "tap [something]" as taping.
+rule for supplying a missing noun when taping:
+	if woeful pat is touchable:
+		now noun is woeful pat;
+	else:
+		now noun is player;
 
 carry out taping:
 	if noun is pat, say "Not apt." instead;
@@ -6215,6 +6216,11 @@ There is a boring thing called A reading. "[one of]A reading (well, a bunch of p
 
 this is the bore-reading rule:
 	if current action is taking, say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here." instead;
+
+after going to undesired underside (this is the reading clue to underside rule):
+	if drainage is not moot and a reading is off-stage:
+		move a reading to undesired underside;
+	continue the action;
 
 section cramped red camp
 
@@ -7879,9 +7885,13 @@ to say blurby:
 	if location of player is Notices Section:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
-	if location of player is Rested Desert:
+	else if location of player is Rested Desert:
 		say "A magnet [if goat is touchable]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not touchable]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
+	else if location of player is Thickest Thickets:
+		say "Magnets don't work on plants. Besides, you wonder if 'a' magnet is cheating a bit.";
+	else:
+		say "'A' magnet would certainly help the nametag stick on easier. Not that you want or need to wear it. Youjust don't want to be caught without it.";
 	say "[reject][run paragraph on]";
 
 section forest

@@ -535,7 +535,7 @@ static	"You [if attics are moot]don't think you can change it to anything but th
 attics	"Hm, you can't think of anything to do with the attics but change them back."
 Store B	"You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet."
 Store F	"That seemed right but didn't seem quite natural."
-Store I	"Store I shakes a bit. You see red wondering how you'll rise to the challenge of entering it."
+Store I	"Store I shakes a bit. 'RISE TO...' you think, as you see red. Rise to what?"
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
 acne bit cabinet	"The cabinet wobbles a bit."
@@ -576,7 +576,7 @@ hoots button	"You suppress a few minor swears as you realize that can't be right
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
 oils	"The oils need a purpose--to build something great. You don't want to waste them." [separate if statement below takes other cases]
 drainage	"The drainage bubbles a bit." [metros start]
-motto	"Hm, you maybe could bend the motto a bit differently."
+motto	"Hm, you maybe could bend the/a motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
 lost corn	"You thought you heard electronic beeping from the corn."
 heaths	"You stare at the heaths, picturing them in the circle and wondering which is the 'starter.'"
@@ -602,7 +602,7 @@ riot	"The riot's still a crowd. A BIG crowd."
 
 to say m-r-almost:
 	if moor is visited:
-		say "The [if player is in moor]moor[else]room[end if] sways a bit. You do some brief mental calculation. There's no third place between them";
+		say "The [if player is in moor]moor[else]room[end if] sways a bit. You do some brief mental calculation. There's no third place between the room and the moor";
 	else:
 		say "You almost feel something picking you up for a second. You must have been close"
 

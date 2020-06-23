@@ -34,7 +34,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @nud
 #spechelp for store i
 >sortei
-WRONG
+you think, as you see red. Rise to what?
 
 >sortie
 by one point
@@ -50,6 +50,11 @@ The posted depots doen't need to be changed. What's behind them, does.
 
 Trap Part
 
+@mis
+#mistake test for turn [text]
+>turn zozimus
+You can probably TURN the dial to a number, e.g. 99.
+
 @nud
 #nudge for part
 >patr
@@ -58,11 +63,11 @@ You need to manipulate something in the room to stop the spinning.
 >tosrie
 You don't want to change a region drastically while you're in it.
 #nudge for centrifuge
->centrifuge
+>centrifueg
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
 #nudge for frenetic
 >frenetic
-You won't need to do anything to the whole room unless you are trapped in a room.
+You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
 #nudge for exitsnw
 >xeitsnw
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
@@ -99,6 +104,11 @@ You can probably TURN the dial to a number, e.g. 99
 by one point
 }}SCORE++
 
+@mis
+#mistake retest for turn [text]
+>turn zozimus
+You can probably just SWITCH something with two text settings.
+
 >score
 {$SCOS}
 
@@ -120,7 +130,7 @@ The grate seems to be made by HECK TIN. It's not steel, but it's still too thick
 \\
 #nudge for graffiti
 >graffiit
-The graffiti's etched in. It's here to help, anyway.
+The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it.
 \\
 #nudge for greta
 >greta
@@ -151,6 +161,15 @@ Kitchen
 
 >score
 {$SCOS}
+
+@mis
+#mistake test for limes
+>limes
+I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.
+\\
+#mistake test for pears
+>pears
+I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
 
 @nud
 #nudge for rendin
@@ -185,7 +204,7 @@ The dial did its part for you.
 \\
 #nudge for kitchen
 >ketchin
-You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location.
+You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
 >n
 
@@ -212,7 +231,7 @@ It's not a cake, and it's not quite a pan--it's a cake pan.
 \\
 #nudge for fridge
 >frideg
-The fridge is just a fridge.
+The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
 \\
 #spechelp for grist
 >grtis
@@ -239,7 +258,6 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #spechelp for cake pan
 >pancaek
 It's a cake pan, backwards and forwards.
-You feel a slight psychic push-pull coming from the cake pan. Keep at it.
 
 @!min
 >pancake
@@ -261,7 +279,6 @@ Best not to get too crazy with food preparation.
 #spechelp for tall trio
 >tortilal
 The tall trio seem to look interested for a minute.
-You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 #readables for tall trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
@@ -306,7 +323,7 @@ It's the full name brand that really catches your eye.
 @nud
 #spechelp for cathouse
 >hotsauec
-WRONG
+The CATHOUSE perfume suddenly smells a bit spicier.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -319,6 +336,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
+>undo
 >undo
 >hot sauce
 #notmax
@@ -343,23 +361,20 @@ It's more that he's a spearman--but maybe his cheesiness is a clue.
 \\
 #readables for spearman
 >take spearman
-As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.";
+As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.
 !Taken.
 >read spearman
 The spearman's name, in red, is MR. SANE PA.
->take spearman
-Taken.
 >read spearman
-You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
+/You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 >read spearman
-You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
+/You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 >read spearman
-You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
+/You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 \\
 #spechelp for spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
-You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
 
 >parmesan
 Your score has just gone up by one point.
@@ -483,7 +498,7 @@ Your score has just gone up by one point.
 You don't need to change the red inn. It supported your cooking efforts.
 #spechelp for taco
 >cota
-WRONG
+Weird. The taco almost seemed to grow arms, or even sleeves.
 
 @mis
 #mistake test for cato
@@ -501,6 +516,12 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @mis
+#mistake retest for dumdum/dum/dum dum
+>dumdum
+The mud is stuck that way. You don't need to change it.
+!Besides, you already figured how to get out.
+
+@mis
 #mistake retest for cato
 >cato
 You don't need to know your classics, here.
@@ -508,7 +529,7 @@ You don't need to know your classics, here.
 @nud
 #done rejects for coat
 >cota
-WRONG
+No need for fashion tweaks.
 
 >e
 >s
@@ -553,7 +574,7 @@ Why zap just one wart? Go for all of them!
 @nud
 #spechelp for warts
 >strwa
-WRONG
+The warts itch slightly.
 
 >straw
 Your score has just gone up by one point.
@@ -570,7 +591,7 @@ Your score has just gone up by one point.
 @nud
 #done rejects for straw
 >strwa
-WRONG
+The straw remains motionless.
 \\
 #nudge for shoe
 >heos
@@ -578,17 +599,27 @@ There's more than one hose here.
 
 @nud
 >shoe
-WRONG
+You need more than one shoe.
 >undo
 
 @nud
 #spechelp for hoses
 >shose
-WRONG
+Something leaks out of the hoses. Hm. What else can be rubber, now.
+
+@mis
+#mistake test for hoes
+>hoes
+One, there's more than one hose. Two, this isn't that sort of game. Innuendo only, if you please!
 
 >shoes
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#mistake retest for hoes
+>hoes
+One, there's more than one shoe. Two, this isn't that sort of game. Innuendo only, if you please!
 
 >score
 @min
@@ -613,6 +644,23 @@ You almost feel something picking you up for a second. You must have been close.
 Your score has just gone up by one point.
 }}SCORE++
 
+@mis
+#mistake test for tap/tap [text]
+>tap
+"Ah! You are TAPping your feet to my anapest beat!"
+(TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)
+>tap zozimus
+"Ah! You are TAPping your feet to my anapest beat!"
+(TAP is not a standard verb. PUSH may work better, but Pat will be gone by then.)
+\\
+#mistake test for mope
+>mope
+Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
+\\
+#mistake test for peom
+>peom
+Nigel Molesworth salutes your spelling technique, if not your tendency to play weedy wet text adventures.
+
 >score
 @min
 {$SCOS}
@@ -620,7 +668,12 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 >mroo
-The moor sways a bit. You do some brief mental calculation. There's no third place between them.
+The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
+
+@mis
+#mistake test for emir
+>emir
+You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.
 
 @nud
 #nudge for mire
@@ -672,7 +725,7 @@ Thinking of the flier leads you back to the anapest.
 Well, there are many, but the poem is in anapest.
 \\
 #nudge for peom
->pome
+>epmo
 Pat won't react kindly to modifications of his poem.
 \\
 #nudge for poerty
@@ -694,7 +747,7 @@ Shooting things up is not the answer.
 @nud
 #spechelp for anapest
 >peasatn
-WRONG
+You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
 
 >peasant
 Your score has just gone up by one point.
@@ -706,7 +759,12 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
-`mi
+@mis
+#mistake test for yah
+>yah
+It's not nice to make fun of the peasant for having hay he doesn't want
+
+@mis
 #mistake test for trade/trade [text]
 >trade
 Instead of trading, use GIVE X to Y.
@@ -716,7 +774,7 @@ Instead of trading, use GIVE X to Y.
 @nud
 #done rejects for peasant
 >peasatn
-The peasant doesn't need a fashion boost or anything. Just a trade.
+You're better off changing what the peasant has than what he is.
 
 >give straw to peasant
 #notana
@@ -729,9 +787,14 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
+@mis
+#mistake retest for yah
+>yah
+You're glad you've got the hay, but you're not excited, and you can't fake it.
+
 @nud
 #nudge for pome
->pome
+>epmo
 The peasant's poem is about as good as it can be, for what it is. It's better than Pat's.
 \\
 #nudge for poetyr
@@ -760,27 +823,37 @@ No, the full roadblock.
 \\
 #spechelp for m2
 >romo
-The moor sways a bit. You do some brief mental calculation. There's no third place between them
+The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 \\
 
 >room
 "The room's smoother," you muse...
 
 @nud
-#renudge for room
+#nudge for room
 >oorm
-WRONG
-
-@nud
->romo
-The room sways a bit. You do some brief mental calculation. There's no third place between them
+The room sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 \\
 #renudge for kitchen
 >ketchin
-You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location.
+You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
 >n
 Stiller Trellis
+
+@mis
+#mistake retest for dumdum/dum/dum dum
+>dumdum
+The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
+>dum
+The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
+>dum dum
+The mud is stuck that way. You don't need to change it. Besides, you already figured how to get out.
+
+@mis
+#mistake test for tillers
+>tillers
+You aren't going to sea in this game.
 
 >w
 
@@ -823,7 +896,6 @@ Your score has just gone up by one point.
 @nud
 #spechelp for scraped wall
 >hallwya
-WRONG what about haywall instead
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 #rereadables for scraped wall
 >read wall
@@ -854,17 +926,12 @@ You must do this on your own.
 #mistake test for ecards/e-cards
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
->e-cards
-Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
 #mistake test for lois
 >lois
-Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves.
+You suddenly feel discontent at your container of choice.
 #mistake test for potus
 >potus
 This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
-#mistake test for pray
->pray
-Things aren't THAT bad.
 #mistake test for pray
 >pray
 It's been so long, you only mouth a "Yarp!"
@@ -940,9 +1007,22 @@ Fluids would leak through the sack. The cask you had would be better.
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
 
+@mis
+#mistake retest for lois
+>lois
+Lois will not pour the oils in the cask for you, but she is not stopping you. Lois helps those who help themselves.
+
 >pour oils
 Gainly laying the cask under the spout, you pour in some oils.
 !A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
+
+@mis
+#mistake retest for lois
+>lois
+Lois is silent. You must figure what to pour, where.
+#renudge for lois
+>oisl
+The oils need a purpose--to build something great. You don't want to waste them.
 
 @max
 >pour oils
@@ -954,10 +1034,15 @@ The cask is already full of oils.
 Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do.
 
 >w
+
 >s
 
-@nud
+@mis
+#mistake test for pray
+>pray
+Things aren't THAT bad.
 
+@nud
 >moor
 "The mire, I'm there," you muse.
 Oh, hey, teleporting's easier with experience.
@@ -979,11 +1064,28 @@ Moor
 #spechelp for smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
-You feel a slight psychic push-pull coming from the smilies. Keep at it.
+
+@mis
+#mistake retest for mope
+>mope
+You try, but the smilies on the poem prevent you.
+\\
+#mistake test for similes
+>similes
+Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.
 
 >missile
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#mistake retest for mope
+>mope
+You mope, but it doesn't change the poem. Or even give you an idea for one.
+\\
+#mistake retest for similes
+>similes
+You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
 
 >score
 @min
@@ -1015,7 +1117,7 @@ It's a plane, now, for sure.
 \\
 #spechelp for poem
 >panle
-WRONG
+The plane can probably become something else, but not that.
 
 @mis
 #mistake test for nepal
@@ -1033,6 +1135,10 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @mis
+#mistake retest for mope
+>mope
+You mope, but you imagine no poem.
+\\
 #mistake test for nepal
 >nepal
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
@@ -1040,11 +1146,10 @@ Whoah! Teleporting there would be too cold even with that coat on. Plus, you hav
 @nud
 #done rejects for panel
 >panle
-WRONG
+The panel bleeps a "stop that" sort of warning.
 #spechelp for oils
 >soli
 The oils need a purpose--to build something great. You don't want to waste them.
-You feel a slight psychic push-pull coming from the oils. Keep at it.
 
 >soil
 Your score has just gone up by one point.
@@ -1067,11 +1172,25 @@ There's no other way to change the cask than to and from the sack. WERE-EWER jus
 \\
 #spechelp for roadblock
 >black doro
-WRONG
+The roadblock changes all the colors of the rainbow, but none seem appropriate.
+
+@mis
+#mistake test for blackdoor
+>black rood
+Hm, no, keep religion out of it.
+>rood
+Hm, no, keep religion out of it.
+>blackrood
+Hm, no, keep religion out of it.
 
 >black door
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#mistake retest for blackdoor
+>blackrood
+Hm, no, keep religion out of it--you have what you need.
 
 >score
 @min
@@ -1082,7 +1201,7 @@ Your score has just gone up by one point.
 @nud
 #done rejects for black door
 >black doro
-WRONG
+The black door is good as it is.
 \\
 #nudge for blakc
 >blakc
@@ -1106,11 +1225,6 @@ Despite the magic you can do, electricity still feels like, well, total magic. P
 
 >room
 
-@nud
-#nudge for room
->oorm
-WRONG
-
 >n
 >e
 
@@ -1118,6 +1232,10 @@ WRONG
 Gainly laying the cask under the spout, you pour in some oils.
 A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
 
+@mis
+#mistake retest for lois
+>lois
+You feel guilt at asking Lois for more.
 
 @max
 >pour oils
@@ -1149,7 +1267,7 @@ The rubble is too dense to rearrange, physically or magically. You should have a
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
 
 >s
-##nudge for room
+
 >moor
 
 >silo
@@ -1163,6 +1281,13 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
+>room
+###skip test checking
+#mistake retest for lois
+>lois
+Lois may not hear you out here--she has left you to your own devices, but you must be close.
+>moor
+###skip test checking
 #done rejects for silo
 >siol
 That silo was pretty big. You probably have little more to do with the oils.
@@ -1172,6 +1297,15 @@ The panel fits into that rectangle handily and even starts to glow. Two buttons 
 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
+
+@mis
+#mistake test for otohs
+>otohs
+You start fruitlessly double- and triple- thinking whether you should change the hoots button.
+\\
+#mistake test for reest
+>reest
+You are noisily uncooperative for a minute. With what, I don't know. But you are.
 
 @nud
 #nudge for buttons
@@ -1216,13 +1350,42 @@ No, you're overthinking it. Just the text.
 
 @nud
 #spechelp for trees button
+>teres
+Hmm, that doesn't work, but you bet you can bull your way through things.
+\\
+#mistake test for stere
 >stere
-WRONG
+Units of measurements are abstract. We need something concrete.
 
 @mis
 #mistake test for terse
 >terse
 All five wrong.
+
+@mis
+#mistake test for reset/reset button
+>push trees
+Trees begin growing out of the side of the silo. The Trees button switches to a reset button which starts blinking violently. You push it before the trees crash down on you. They vanish, and it's a trees button again. Whew.
+>steer
+by one point
+>reset
+You don't need to reset the steer button like you did the trees button. It's what it's supposed to be.
+>undo
+>undo
+>reset
+Unfortunately, it's not QUITE as easy as just pushing a reset button, which only worked to undo the trees. But rearraning it? I hope that's not too bad.
+>undo
+>undo
+>steer
+by one point
+>reset
+You don't need to reset the steer button. It's what it's supposed to be.
+>undo
+>undo
+>reset
+Unfortunately, it's not QUITE as easy as just pushing a reset button. But rearraning it? I hope that's not too bad.
+>reset button
+Resetting twice won't get you anywhere. You need a new direction to change the TREES.
 
 >steer
 Your score has just gone up by one point.
@@ -1242,7 +1405,7 @@ Already good.
 @nud
 #spechelp for hoots button
 >shoto
-WRONG
+You suppress a few minor swears as you realize that can't be right.
 
 @mis
 #mistake test for sooth
@@ -1252,6 +1415,11 @@ Close...what you need to do will sooth, in a bit.
 >shoot
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#mistake test for otohs
+>otohs
+You start fruitlessly double- and triple- thinking whether you should change back to the hoots button.
 
 >score
 @min
