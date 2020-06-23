@@ -611,6 +611,12 @@ to say red-to:
 	set the pronoun it to red asp;
 	moot spread;
 
+definition: a thing (called itm) is all-around:
+	if itm is r2 or itm is t-n or itm is m2, yes;
+	no;
+
+to say where-pull of (itm - a thing): say "[if itm is all-around]all around[else][the itm]";
+
 to say spec-help of (itm - a thing):
 	if itm is begonias:
 		if player has heaths or player has sheath:
@@ -629,13 +635,14 @@ to say spec-help of (itm - a thing):
 			now got-spec is true;
 			if point is true:
 				say "[helptxt entry][line break]";
-			else if point is false:
-				say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
+			else if point is false or debug-state is true:
+				say "[if debug-state is true]DEBUG ONLY: [end if]You feel a slight psychic push-pull coming from [where-pull of itm]. Keep at it.";
 			d "There is a spechelp entry for this.";
 			break;
-	if got-spec is false:
+	if got-spec is false: [this should not happen, but it was useful weeding out clues.]
 		d "Add something to the table of spechelp for [the itm], maybe? Search for to[r]sh.";
-		say "You feel a slight psychic push-pull coming from [the itm]. Keep at it.";
+		say "You feel a slight psychic push-pull coming from [where-pull of itm]. Keep at it.";
+		say "[line break](NOTE: I forgot to provide a specific clue, here. Can you let me know about [the itm] at [email]?)";
 	if pointcue is false:
 		say "[i][bracket]NOTE: You can toggle detailed nudges when you're on the right track with OPT IN (to get them) and NO TIP (to hide them,) though they may give more hints than you want. You will always get this generic message, at least, in any case.[close bracket][roman type][line break]";
 		pad-rec "opt in/no tip";
