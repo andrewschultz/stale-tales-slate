@@ -2321,7 +2321,7 @@ heaps	"You figure the heaps are at a point where you can't change them for the b
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
-thin hint	"The ruby's hidden well. No need to tinker."
+thin hint	"The thin hint doesn't reveal anything else. You've hidden the ruby well enough."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 old ice	"Twist the ice too much, it might not look right." [START towers]

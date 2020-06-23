@@ -35700,6 +35700,22 @@ blurb
 
 table of Leo-Rand chitchat [xxp3]
 blurb
+"[l-n-r] begin construing trouncings, but not anyone. Just abstractly." [x]
+"[l-n-r] discuss the wrestling event: Mean Nils's Nine-Slams Manliness." [x]
+"[l-n-r] figure at least they tried, unlike Quit-Goon Quitongo." [x]
+"[l-n-r] grit flesh so. 'Fight losers. Griefs. Sloth.'" [x]
+"[l-n-r] half-heartedly laugh recounting [i]To Crudest Destructo[r]." [x]
+"[l-n-r] half-heartedly recap favorite moments in [i]OK, at a TKO[r]." [x]
+"[l-n-r] mention Police Pec-Oil HAS to work." [x]
+"[l-n-r] moan they're no Brooks KO Bros." [x]
+"[l-n-r] realize they're no Rad Ryno and Rory." [x]
+"[l-n-r] regret picking on Pinko Ann Pankonin."
+"[l-n-r] regret picking on Pinko Sal Polanski."
+"[l-n-r] regret picking on Pinko Shon Hopkinson."
+"[l-n-r] suddenly see the sad side of [i]Sucker-Punch Checkup Runs[r]." [x]
+"[l-n-r] suddenly sympathize with the losers in [i]Booyahs: Oh, Ay, Sob[r]." [x]
+"[l-n-r] try and fail to make that move from Neat-KO Keaton." [x]
+"[l-n-r] wonder if Gus Funk Kung-Fus work THAT well." [x]
 "[l-r] admits he couldn't handle the regimen of Thickener Kent Reich-Kitchener." [x]
 "[l-r] considers ordering Buffs to Bust Off." [x]
 "[l-r] considers re-reading [i]The New You, Thou Weeny[r], by Huey Towne." [x]
@@ -35717,22 +35733,6 @@ blurb
 "[l-r] vows to read My Abs By Sam." [x]
 "[l-r] wonder about the Of Abs So Fab regimen."
 "[l-r] wonders if Invig-Givin['] is too good to be true." [x]
-"[l-n-r] begin construing trouncings, but not anyone. Just abstractly." [x]
-"[l-n-r] discuss the wrestling event: Mean Nils's Nine-Slams Manliness." [x]
-"[l-n-r] figure at least they tried, unlike Quit-Goon Quitongo." [x]
-"[l-n-r] grit flesh so. 'Fight losers. Griefs. Sloth.'" [x]
-"[l-n-r] half-heartedly laugh recounting [i]To Crudest Destructo[r]." [x]
-"[l-n-r] half-heartedly recap favorite moments in [i]OK, at a TKO[r]." [x]
-"[l-n-r] mention Police Pec-Oil HAS to work." [x]
-"[l-n-r] moan they're no Brooks KO Bros." [x]
-"[l-n-r] realize they're no Rad Ryno and Rory." [x]
-"[l-n-r] regret picking on Pinko Ann Pankonin."
-"[l-n-r] regret picking on Pinko Sal Polanski."
-"[l-n-r] regret picking on Pinko Shon Hopkinson."
-"[l-n-r] suddenly see the sad side of [i]Sucker-Punch Checkup Runs[r]." [x]
-"[l-n-r] suddenly sympathize with the losers in [i]Booyahs: Oh, Ay, Sob[r]." [x]
-"[l-n-r] try and fail to make that move from Neat-KO Keaton." [x]
-"[l-n-r] wonder if Gus Funk Kung-Fus work THAT well." [x]
 "'Adrena-Andrea? Rad?! Nae!'" [x]
 "'Big Nox Boxing?! Bing! XO!'" [x]
 "'Capt. Boom Combat-Op Boot Camp? Apt combo!'"

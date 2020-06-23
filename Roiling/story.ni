@@ -6413,6 +6413,7 @@ check touching:
 	if noun is maze walls, say "[if player is in Grey Gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]." instead;
 	if noun is lawl wall, say "You're not playing tag, here." instead;
 	if noun is tubs, say "They seem to be made of something fragile, something you could break--porcelain, maybe? You hear something rattling inside." instead; [oyster]
+	if noun is replay player, say "Odd. It feels ... really papery." instead;
 	if noun is lone duck, say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead; [towers]
 	if noun is pryer bars, say "They feel like spry rebar." instead; [others]
 	say "You don't need to touch anything in A Roiling Original. Okay, you need to touchstuff, but not use the TOUCH verb." instead;
@@ -10294,7 +10295,7 @@ after doing something with pamphlets:
 	set pronoun it to pamphlets;
 	continue the action;
 
-description of pamphlets is "It's a list of thirty-odd sentences beginning I USED TO. It's in hard-hitting simple language but no less painful to read for all that. I will spare you the details--a brochure's such a borer."
+description of pamphlets is "It's a list of thirty-odd sentences beginning I USED TO. It's in hard-hitting simple language but no less painful to read for all that. I will spare you the details--a brochure's such a borer[one of][or], but the second time through, you read it faster. FASTER. HAHAHAHA[stopping]."
 
 a-text of pamphlets is "YYRRYRY". b-text of pamphlets is "YGRRYRY". parse-text of pamphlets is "-[sp]u[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -15980,6 +15981,8 @@ the weeds are vanishing scenery in Treading Gradient. "They look like some sort 
 check taking weeds: say "They spin around you like a garment before picking you up and placing you away." instead;
 
 a-text of weeds is "RYRYR". b-text of weeds is "RGRYR". parse-text of weeds is "x[sp]e[sp]x[sp]e[sp]x". weeds are cheat-spoilable.
+
+section raves saver
 
 the raves saver is a reflexive LLPish thing. the raves saver can be yow-talk, yow-yell, goosey, ducky, or silent. the raves saver is silent.
 

@@ -1372,7 +1372,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gate"	265703647	--	--	"[no-gate]."
 "sagest"	458251579	--	--	"[no-gate]."
 "halt"	196393974	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
-"arena"	286413056	--	--	"[val-chg]."
+"arean"	286413056	--	--	"[val-chg]."
 "nera"	284225238	--	--	"[val-chg]."
 "valence"	506691788	--	--	"[val-chg]."
 "roping"	387642395	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
