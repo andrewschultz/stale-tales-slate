@@ -7877,33 +7877,6 @@ to say warn-inc:
 		now rewarn-val is 0;
 		say ". You may want to use or examine the tagged gadget or maybe ANGLE to see what you can tinker with";
 
-part understanding mistakes
-
-section Ordeal Loader
-
-to say blurby:
-	if location of player is Notices Section:
-		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
-		continue the action;
-	else if location of player is Rested Desert:
-		say "A magnet [if goat is touchable]wouldn't have helped you[else]won't help you[end if] get past the thickets[if goat is not touchable]. Right idea, though. Wrong item[end if].[run paragraph on]";
-		continue the action;
-	else if location of player is Thickest Thickets:
-		say "Magnets don't work on plants. Besides, you wonder if 'a' magnet is cheating a bit.";
-	else:
-		say "'A' magnet would certainly help the nametag stick on easier. Not that you want or need to wear it. Youjust don't want to be caught without it.";
-	say "[reject][run paragraph on]";
-
-section forest
-
-section metros
-
-section resort
-
-section sortie
-
-section other stuff
-
 part parser errors
 
 test lbrk with "gonear hotspot/trio/kilns"
@@ -8460,11 +8433,24 @@ asking generically is an action applying to one topic. Understand "ask about [te
 
 objasking generically is an action applying to one visible thing. Understand "ask about [any thing]" or "talk about [any thing]" or "a [any thing]" as objasking generically.
 
+a-warn is a truth state that varies.
+
+to say if-magnet:
+	if nametag is touchable and word number 2 in the player's command is "magnet":
+		say "In particular, 'a magnet' is a good guess, but it doesn't count. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to connsider instead of 1."
+
+this is the a-warn rule:
+	if a-warn is false and word number 1 in the player's command is "a":
+		say "You never need to use the article 'a' when changing things up[if-magnet]. The A command is shorthand for ASK ABOUT.";
+		now a-warn is true;
+		the rule fails;
+
 check objasking generically (This is the check for only one sensible object converser rule):
 	if the number of NPCish persons is 0:
 		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
+		abide by the a-warn rule;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of NPCish persons is 1:
 		try objasking a random NPCish person about the noun instead;
@@ -8500,6 +8486,7 @@ Check asking generically (This is the check for only one sensible converser rule
 		repeat with X running through touchable scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
+		abide by the a-warn rule;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of NPCish people is 1:
 		try asking a random NPCish person about the topic understood instead;

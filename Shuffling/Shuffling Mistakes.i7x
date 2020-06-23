@@ -20,8 +20,6 @@ book general
 
 understand "use [text]" as a mistake ("Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.")
 
-understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when nametag is touchable.
-
 understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
 
 understand "scan" as a mistake ("[verb-cue].") when Notices Section is unvisited.
@@ -44,7 +42,7 @@ understand "rc" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
 understand "rc [text]" as a mistake ("[verb-cue].") when Notices Section is unvisited.
 
-understand "remove [something] from [something]" as a mistake("To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but it defaults to carried or worn items, and I know no way around that.")
+understand "remove [something] from [something]" as a mistake("To keep things simple for you (and, okay, for my coding efforts,) I recommend TAKE X instead of REMOVE/FROM. REMOVE defaults to carried or worn items, and I'm too lazy to tweak that.")
 
 book intro
 
@@ -52,9 +50,27 @@ chapter Busiest Subsite
 
 to say if-sign-x: say "[if vacate caveat is not examined]. Maybe the sign means something different[end if]"
 
+to say not-a-magnet:
+	if player is in Notices Section:
+		say "Nothing happens. It'd be better to have someone, not something, to help you[if broad board is examined], as the broad board says[else]--the broad board may have more information[end if]. You see red as you strain to think what or who the nametag should be. It's as if you got it all wrong, but then again, knowing you got it all wrong is a clue, too.[run paragraph on]";
+		continue the action;
+	else if player is in Rested Desert:
+		say "A magnet [if goat is touchable]wouldn't have helped you[else]won't help you[end if] get past the (non-metallic) thickets[if goat is not touchable]. Right idea, though. Wrong item[end if].[run paragraph on]";
+		continue the action;
+	else if player is in Thickest Thickets:
+		say "Magnets don't work on plants. Besides, you wonder if 'a' magnet is cheating a bit.[run paragraph on]";
+	else if player is in Busiest Subsite:
+		say "Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it";
+	else:
+		say "[bug-report]. You shouldn't have the nametag, so the 'MAGNET' mistake text shouldn't appear";
+	if player is not in Busiest Subsite:
+		say "[one of][or].[paragraph break]You also wonder if saying 'a magnet' instead of 'magnet' is cheating a bit. It probably is[stopping]"
+
 understand "afos" as a mistake ("You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.") when player is in Busiest Subsite.
 
 understand "faso" as a mistake ("There are even further-away places to explore in this game than Burkina Faso.") when player is in Busiest Subsite.
+
+understand "magnet" as a mistake ("[not-a-magnet].") when magenta nametag is touchable.
 
 understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
 
@@ -91,7 +107,7 @@ understand "mist" as a mistake ("No, those TMIs on the broad board are useful.")
 
 understand "noetics" as a mistake ("There's enough information here.") when player is in Notices Section.
 
-understand "stealin" as a mistake ("You're the good guy, here.") when player has saltine.
+understand "stealin" as a mistake ("You're the good guy, here. You [if player has saltine]didn't[else]don't[end if] need to steal.") when salient saltine is touchable.
 
 book stores
 
