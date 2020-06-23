@@ -2198,6 +2198,8 @@ ana-repeats is a number that varies.
 
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
+to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen"
+
 to say spec-help of (itm - a thing):
 	if rq is active:
 		say "With that conversation, you can't concentrate on much...";
@@ -2210,6 +2212,7 @@ to say spec-help of (itm - a thing):
 		if itm is xtrhelp entry:
 			if there is a helptxt entry:
 				say "[helptxt entry][line break]";
+				if debug-state is true, say "DEBUG ONLY: [pull-from of itm].";
 				if itm is cur-help-item:
 					if can-prog-hint:
 						increment ana-repeats;
@@ -2227,7 +2230,7 @@ to say spec-help of (itm - a thing):
 		say "[if itm is ment]The macks seem to waver a bit, but not enough[else]The macks look at you funny[end if].";
 		continue the action;
 	d "You may want to put in special text here in the table of spechelp, tsh, for ([the itm]). Or not.";
-	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
+	say "[pull-from of itm].";
 
 to decide whether can-prog-hint:
 	if mrlp is oyster, decide no;
@@ -2321,7 +2324,7 @@ heaps	"You figure the heaps are at a point where you can't change them for the b
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
-thin hint	"The thin hint doesn't reveal anything else. You've hidden the ruby well enough."
+thin hint	"It was enough to bury the ruby."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 old ice	"Twist the ice too much, it might not look right." [START towers]
