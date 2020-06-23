@@ -743,7 +743,7 @@ book auxiliary text and rules
 
 section ordeal loader auxiliary
 
-to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
+to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
 
 to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
@@ -939,7 +939,7 @@ to say no-hot:
 	if night thing is not in The Ol Hotel:
 		say "and you got rid of the night thing, anyway";
 	else:
-		say "but you could have a[if The Ol Hotel is visited]nother[else] look around[end if]";
+		say "but you could have a[if The Ol Hotel is visited]nother[end if] look around";
 
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 

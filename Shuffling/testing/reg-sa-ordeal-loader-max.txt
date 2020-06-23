@@ -1,0 +1,52 @@
+
+## reg-sa-ordeal-loader-max.txt
+## GENERATOR FILE: rbr-sa-ordeal-loader.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* ordeal_thru
+
+>opt in
+
+>in
+Rested Desert
+
+>door
+by one point
+
+>bugle
+Your score has just gone up by one point.
+
+>blot
+by one point
+
+>open door
+Thickest Thickets
+
+>slander
+#notana
+by one point
+
+>goat
+Your score has just gone up by one point.
+
+>in
+Notices Section
+
+>attics
+Your score has just gone up by one point.
+
+>gateman
+Your score has just gone up by one point.
+
+>ask gateman about cabinet
+>take gadget
+
+#pre-cabinet-bactine rule
+>bactine
+"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
+
+>in
+Trips Strip

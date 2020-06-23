@@ -1,0 +1,42 @@
+
+## reg-sa-ordeal-loader-min.txt
+## GENERATOR FILE: rbr-sa-ordeal-loader.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* ordeal_thru
+
+>opt in
+
+>in
+Rested Desert
+
+>door
+by one point
+
+>blot
+by one point
+
+>open door
+Thickest Thickets
+
+>slander
+#notana
+by one point
+
+>goat
+Your score has just gone up by one point.
+
+>in
+Notices Section
+
+>gateman
+Your score has just gone up by one point.
+
+>ask gateman about cabinet
+>take gadget
+
+>in
+Trips Strip

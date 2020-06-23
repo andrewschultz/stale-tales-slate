@@ -8437,11 +8437,11 @@ a-warn is a truth state that varies.
 
 to say if-magnet:
 	if nametag is touchable and word number 2 in the player's command is "magnet":
-		say "In particular, 'a magnet' is a good guess, but it doesn't count. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to connsider instead of 1."
+		say ". In particular, 'a magnet' is a good guess, but it's not what the nametag ultimately needs to be. Allowing a leading article might make puzzles potentially trickier, with two word jumbles to consider instead of one."
 
 this is the a-warn rule:
 	if a-warn is false and word number 1 in the player's command is "a":
-		say "You never need to use the article 'a' when changing things up[if-magnet]. The A command is shorthand for ASK ABOUT.";
+		say "You never need to use the article 'a' when changing things up[if-magnet]. The [b]A[r] command is shorthand for ASK ABOUT.";
 		now a-warn is true;
 		the rule fails;
 
