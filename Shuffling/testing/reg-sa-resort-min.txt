@@ -1,0 +1,121 @@
+
+## reg-sa-resort-min.txt
+## GENERATOR FILE: rbr-sa-resort.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* resort_thru
+
+>ts
+>tsf
+
+>opt in
+>poss
+
+>resort
+#notmax
+Your score has just gone up by one point
+
+>enter resort
+Astral Altars
+
+>islet
+Your score has just gone up by one point.
+
+Leis Isle
+
+>score
+You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
+
+>cork
+Your score has just gone up by one point.
+
+>score
+You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
+
+>take leis
+>score
+You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 14
+>e
+>score
+You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+>undo
+>undo
+>undo
+>undo
+#while we subtract 2 after the "e" command, I'll keep this here, so in case anything is added, I don't gloss over the fact we need to deduct 2 points
+
+>e
+Rived Drive
+
+>score
+You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+
+>slope
+by one point
+
+>score
+You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+
+>toeholds
+Your score has just gone up by two points.
+
+>score
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+
+>e
+
+Potshot Hotspot
+
+>score
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+
+>trio
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+
+>ether
+They're not bad people
+
+>ethre
+The trio remains unmoved. Perhaps you can give the protest more constructive aims?
+
+>potters
+Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+
+>pottesr
+You cut the riot down, but you need to change their protest now.
+
+>kilns
+Your score has just gone up by one point.
+
+>score
+You currently have 8 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
+
+>get out
+!Your score has just
+
+>tug toe
+#notana
+by one point
+
+Your score has just gone up by one point.
+
+>score
+You currently have 9 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
+
+>e
+Means Manse
+
+>exist
+#notana
+by one point
+My Adieu to You: Made It!
+

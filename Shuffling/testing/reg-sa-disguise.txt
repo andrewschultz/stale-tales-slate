@@ -1,0 +1,168 @@
+## reg-sa-disguise.txt
+## tests for all the ways to get the disguise
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* everything
+
+#test-2-1
+
+>disas
+>put beard on shades
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-5-1
+
+>disas
+>put beard on nose
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-6-1
+
+>disas
+>put shades on beard
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-1-2
+
+>disas
+>put nose on shades
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-3-2
+
+>disas
+>put shades on nose
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-5-2
+
+>disas
+>put beard on nose
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-7-2
+
+>disas
+>put nose on beard
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-2-3
+
+>disas
+>put beard on shades
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-6-3
+
+>disas
+>put shades on beard
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-7-3
+
+>disas
+>put nose on beard
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-1-5
+
+>disas
+>put nose on shades
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-2-5
+
+>disas
+>put beard on shades
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-6-5
+
+>disas
+>put shades on beard
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-1-6
+
+>disas
+>put nose on shades
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-3-6
+
+>disas
+>put shades on nose
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-5-6
+
+>disas
+>put beard on nose
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-7-6
+
+>disas
+>put nose on beard
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-2-7
+
+>disas
+>put beard on shades
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+
+#test-3-7
+
+>disas
+>put shades on nose
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+
+#test-6-7
+
+>disas
+>put shades on beard
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+

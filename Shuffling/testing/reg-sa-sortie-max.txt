@@ -1,0 +1,298 @@
+
+## reg-sa-sortie-max.txt
+## GENERATOR FILE: rbr-sa-sortie.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* sortie-thru
+
+>opt in
+>ts
+
+>sortie
+by one point
+
+>poss
+
+>in
+
+Trap Part
+
+>sixteen
+#notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
+by one point
+
+>score
+You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>n
+The Nick
+
+>kitchen
+by one point
+
+Kitchen
+
+>score
+You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>s
+Trap Part
+A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
+
+>n
+
+>x fridge
+
+>grits
+Your score has just gone up by one point.
+>score
+You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
+
+>pancake
+Your score has just gone up by one point.
+>score
+You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>tortilla
+Your score has just gone up by one point.
+
+>score
+You currently have 5 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>hotsauce
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>parmesan
+Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>steak
+Your score has just gone up by one point.
+
+>score
+You currently have 8 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>lettuce
+Your score has just gone up by one point.
+
+>score
+You currently have 9 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put lettuce on tortilla
+>put steak on tortilla
+>put parmesan on tortilla
+>put hot sauce on tortilla
+>undo
+
+>put hotsauce on tortilla
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>coat
+Your score has just gone up by one point.
+
+>score
+You currently have 11 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+>s
+Room
+
+>sack
+Your score has just gone up by one point.
+
+>score
+You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>straw
+Your score has just gone up by one point.
+
+>score
+You currently have 13 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put straw in sack
+
+>shoes
+Your score has just gone up by one point.
+
+>score
+You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>moor
+Your score has just gone up by one point.
+
+>score
+You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>mroo
+The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>rifle
+Shooting things up is not the answer.
+
+>peasant
+Your score has just gone up by one point.
+
+>score
+You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>give straw to peasant
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 17 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>room
+"The room's smoother," you muse...
+
+>n
+Stiller Trellis
+
+>w
+
+>e
+
+>put hay in wall
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>hallway
+Your score has just gone up by one point.
+
+>score
+You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+Sacred Cedars
+
+>pour oils
+Fluids would leak through the sack. The cask you had would be better.
+
+>cask
+The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
+
+>pour oils
+Gainly laying the cask under the spout, you pour in some oils.
+!A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
+
+>pour oils
+The cask is already full of oils.
+
+>w
+
+>s
+
+>missile
+Your score has just gone up by one point.
+
+>score
+You currently have 20 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>fold paper
+(the poem)
+You fold the paper, and it looks sort of like a paper plane.
+
+>panel
+Your score has just gone up by one point.
+
+>score
+You currently have 21 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>soil
+Your score has just gone up by one point.
+
+>score
+You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>black door
+Your score has just gone up by one point.
+
+>score
+You currently have 23 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>room
+
+>n
+>e
+
+>pour oils
+Gainly laying the cask under the spout, you pour in some oils.
+A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
+
+>pour oils
+The cask is already full of oils.
+
+>w
+Crashing Archings
+
+>s
+
+>moor
+
+>silo
+Your score has just gone up by one point.
+
+>score
+You currently have 24 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put panel in silo
+The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.
+
+>put door in silo
+The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
+
+>steer
+Your score has just gone up by one point.
+
+>score
+You currently have 25 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>shoot
+Your score has just gone up by one point.
+
+>score
+You currently have 26 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>push steer
+"AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
+
+>push shoot
+#notana
+Your score has just gone up by one point.
+
+>score

@@ -1,0 +1,246 @@
+
+## reg-sa-metros-max.txt
+## GENERATOR FILE: rbr-sa-metros.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* metros-thru
+
+>ts
+>poss
+>opt in
+
+>metros
+Your score has just gone up by one point
+
+>in
+
+Undesired Underside
+
+>gardenia
+by one point
+
+>score
+You currently have 1 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>n
+
+Roarings Garrison
+
+#mostlyskipping the camp right now to get the tomato from the alley
+
+>w
+Bile Libe
+
+>tomato
+Your score has just gone up by one point.
+
+>score
+You currently have 2 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>e
+
+>s
+>w
+The Ol' Hotel
+
+>throw tomato at thing
+#notana
+by one point
+
+>score
+You currently have 3 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>x mattress
+
+>e
+
+>n
+Roarings Garrison
+
+>controls
+The dead beat deadbeat might not beat you dead
+
+>n
+Obtains/Boastin' Bastion
+
+>rentals
+Your score has just gone up by one point.
+>score
+You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>switch emitter
+#notana
+Your score has just gone up by one point.
+>score
+You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>get dry cake
+You take care not to let the cake tear as you pick it up.
+
+>s
+
+>give emitter to deadbeat
+"Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
+#mistake test for tang/tangs
+>tang
+How the angst gnats taste doesn't matter.
+>tangs
+How the angst gnats taste doesn't matter.
+
+##nudge for lost
+>ltso
+It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
+##nudge for corn
+>conr
+It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
+
+>controls
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>keycard
+
+>score
+You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>velcro
+
+>score
+You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+Fo' Real Florae
+
+>give gardenia to faeries
+
+>take heaths
+
+>sheath
+Your score has just gone up by one point.
+
+>sheath
+
+>score
+You currently have 9 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>take brocade
+
+>w
+
+>w
+
+>sword
+
+>score
+You currently have 10 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+
+>barcode
+
+>score
+You currently have 11 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put barcode on keycard
+
+>s
+
+>put card on sensor
+What do you know? It works! The door slides open!
+
+>e
+#notana
+Esoteric Coteries
+
+>score
+You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>w
+
+>put card on sensor
+The door is open. So you just walk east instead.
+
+Esoteric Coteries
+
+>w
+
+>z
+>e
+
+Esoteric Coteries
+
+>w
+>z
+>open metallic door
+
+>e
+Esoteric Coteries
+You can also see a lit-up tulip here.
+The signers' ingress slides shut.
+
+>ask nerds about darkness
+#notana
+"What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
+
+"Logical call. I go." You sneak out back west.
+
+Undesired Underside
+
+>score
+You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
+
+>s
+Elm Train Terminal
+
+>opening
+
+>score
+You currently have 14 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>u
+The Velcro strip is just the thing to climb the cafe face and reach the small recess.
+
+>d
+#we need to test this case so we don't try going east instead.
+>u
+You climb back up the cafe face.
+
+>put controls in opening
+#notana
+
+>score
+You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>d
+>e
+
+Bassy Abyss
+
+>resin
+
+>score
+You currently have 16 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>beast
+
+>score
+You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>take sword
+
+>attack beast
+#notana
+
+Trips Strip
+
+>score
+You have scored 18 out of 18 total points for the Metros region.
+Won now: the Ordeal Loader and Metros regions.
+

@@ -1,32 +1,8 @@
-# rbr-sa-forest.txt
-#
-# this covers maximum points, minimum points and nudges.
-#
-# the nudmis file also covers two alternate ways through the forest.
-#
-# we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
-#
-files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt
-~	nudges,nud,nu,mis,mi	t2
-~	min	t1
-~	max	t0
 
-}}MAX=17
-}}CURMAX=17
-}}SCORE=0
-}}CURMIN=15
+## reg-sa-forest-nudmis.txt
+## GENERATOR FILE: rbr-sa-forest.txt
 
-}$SCOS=You currently have {SCORE} out of {MAX} total points for the Forest region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
-}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
-
-ALSO-IGNORE:rs *,sr *
-
-## *FILE
-## *FORK
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
-
+## walkthrough with all nudges and mistakes
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -39,7 +15,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >opt in
 
-@nud
 #spechelp for store f
 >fretso
 That seemed right but didn't seem quite natural.
@@ -49,14 +24,10 @@ You feel a slight psychic push-pull coming from Store F. Keep at it.
 #notmax
 Your score has just gone up by one point.
 
-@nud
 #done rejects for scented descent
 >fretso
 The scented descent to the forest doesn't need to be changed.
 
-@nud
-############################here we test west then south
-##balance undos
 >rs sw
 >in
 #nudge for whiff
@@ -113,9 +84,6 @@ Self-ID Fields
 >undo
 >undo
 
-@nud
-############################here we test east then north
-##balance undos
 >rs ne
 >in
 #mistake test for sate
@@ -161,9 +129,6 @@ by one point
 >undo
 >undo
 
-@nud
-############################here we test north then east
-##balance undos
 >sr ne
 >in
 #nudge for north
@@ -209,9 +174,6 @@ Self-ID Fields
 >undo
 >undo
 
-@nud
-############################here we test south then west
-##balance undos
 >sr sw
 >in
 #nudge for norht
@@ -256,29 +218,25 @@ Self-ID Fields
 >undo
 >undo
 >undo
-}}SCORE+=2
 
 >sr ne
-\\
+
 >in
-\\
+
 Softer Forest
-\\
+
 >north
 by one point
 Rest of Forest
-}}SCORE++
 >score
-{$SCOS}
+You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 >east
 by one point
 Self-ID Fields
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 4 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #nudge for forest
 >forets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -299,12 +257,10 @@ The scent of teas changes slightly.
 >eta
 The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 
-@nud
 #spectest for thorn
 >ornth
 Your internal compass feels extra jumbled, but--well, you must be close.
 
-@nud
 #renudge for leaves
 >leavse
 You have no time to play with leaves.
@@ -317,19 +273,19 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #spectest for teas
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
-\\
+
 #mistake test for seat
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
-\\
+
 #mistake test for sate
 >sate
 There's nothing around you have to sate, thankfully.
-\\
+
 #mistake test for tase
 >tase
 This game is nonviolent--well, except for a few puns.
-\\
+
 #nudge for south
 >souht
 Your internal compass feels extra jumbled.
@@ -340,7 +296,6 @@ Your internal compass feels extra jumbled, and you remember the thorn, but there
 >wets
 Your internal compass feels extra jumbled. You must have the right general idea.
 
-@nud
 #renudge for forest
 >forets
 You don't want to change a region drastically while you're in it
@@ -386,24 +341,23 @@ Whatever you could do to Corses Crosse, it might do worse to you.
 #mistake test for scorse
 >scorse
 You can't trade with the dead.
-\\
+
 #mistake test for nile
 >nile
 Wrong river for the underworld.
-\\
+
 #mistake test for file
 >file
 It looks like you can just cut in line. No need to stand.
-\\
+
 #mistake test for lien
 >lien
 If they owe something, that's their business. It's too late to change that now.
-\\
+
 #mistake test for olefin
 >olefin
 Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.
 
-@mis
 #mistake test for list
 >list
 There's a list inside the slit, so that's not what it could become.
@@ -411,7 +365,6 @@ There's a list inside the slit, so that's not what it could become.
 >e
 Gnarliest Triangles
 
-@nud
 #nudge for triangles
 >trianglse
 The triangles need no alterings.
@@ -478,58 +431,56 @@ I think this game is hard enough without bringing Calculus into it.
 >integrals
 I think this game is hard enough without bringing Calculus into it.
 
-@mis
 #mistake test for reslating
 >reslating
 While you have all the time in the world, there's no sense deliberately putting things off.
-\\
+
 #mistake test for relating
 >relating
 This isn't really a game about emotional connections.
-\\
+
 #mistake test for alerting/alertings
 >alerting
 There's nobody to alert here.
 >alertings
 There's nobody to alert here.
-\\
+
 #mistake test for altering/alterings
 >altering
 No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
 >alterings
 No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.
-\\
+
 #mistake test for teraglin/teraglins
 >teraglin
 But where would the fish go?
 >teraglins
 But where would the fish go?
-\\
+
 #mistake test for tanglier
 >tanglier
 Things are mixed up enough!
-\\
+
 #mistake test for tone/tones
 >tone
 You aren't sure you need a booming voice telling you what you can EXAMINE.
 >tones
 You aren't sure you need a booming voice telling you what you can EXAMINE.
-\\
+
 #mistake test for destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
-\\
+
 #mistake test for doters
 >doters
 You don't need people oohing and ahing at your skill.
-\\
+
 #mistake test for eon/eons
 >eon
 No, you can't afford to wait that long.
 >eons
 No, you can't afford to wait that long.
 
-@nud
 #spechelp for ones
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
@@ -537,17 +488,14 @@ You feel a slight psychic push-pull coming from the ones. Keep at it.
 
 >nose
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 5 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #done rejects for nose
 >noes
 Don't get that nose bent out of shape.
 
-@nud
 #spechelp for dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
@@ -555,17 +503,14 @@ You feel a slight psychic push-pull coming from the dashes. Keep at it.
 
 >shades
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 6 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #done rejects for shades
 >shadse
 Anything you do to bend the shades might break them.
 
-@nud
 #mistake test for gat
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
@@ -573,7 +518,6 @@ Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
-@nud
 #spechelp for noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
@@ -581,17 +525,14 @@ You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
 >shotgun
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 7 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #done rejects for shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
-@nud
 #mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
@@ -606,7 +547,6 @@ Shotgun: gnu? Tosh!
 >w
 Flesh Shelf
 
-@nud
 #nudge for shelf
 >shefl
 The shelf is frozen that way. Ba dum bum.
@@ -638,12 +578,10 @@ The ring does not bend.
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
-@nu
 #mistake test for inks
 >inks
 The skin sink bleeds no color.
 
-@nud
 #mistake test for helf/helfs
 >helf
 While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
@@ -657,7 +595,6 @@ ers .
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
 ers .
 
-@nud
 #mistake test for debar
 >debar
 If there are any lawyers here, they've already been debarred.
@@ -668,12 +605,10 @@ bread from the Spam
 >eat spam
 spasm
 
-@nud
 #mistake test for amps
 >amps
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
 
-@nud
 #spechelp for spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
@@ -681,21 +616,18 @@ You feel a slight psychic push-pull coming from the Spam. Keep at it.
 
 >maps
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #done rejects for maps
 >masp
 The maps are probably right, you hope. No need to change them.
 
-@nud
 #mistake test for bared
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
-\\
+
 #spechelp for bread
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
@@ -703,12 +635,10 @@ You feel a slight psychic push-pull coming from the bread. Keep at it.
 
 >beard
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-@nud
 #done rejects for beard
 >beadr
 For a beard, it's actually pretty cool.
@@ -720,31 +650,25 @@ You've made a full disguise now!
 
 >e
 
-@nud
 #spechelp for slit
 >ilst
 The slit waxes and wanes a bit.
 
-@!min
 >silt
 by one point
-}}CURMIN++
-}}SCORE++
-\\
+
 >score
-{$SCOS}
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
 >n
 #notana
 Your score has just gone up by one point.
-}}SCORE++
 
 Cruel Ones' Enclosure
 
 >score
-{$SCOS}
+You currently have 11 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
-@nud
 #nudge for cruel
 >crule
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
@@ -761,7 +685,6 @@ You know the scoffer coffers can't be changed, and the more you tried, the worse
 >coffesr
 You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
 
-@nud
 #mistake test for lucre
 >lucre
 If there were any treasure here, it'd probably do something terrible to you once you took it.
@@ -781,21 +704,16 @@ James Spader is pretty cool, but he can't help with supernatural stuff. Okay, ma
 >parsed
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
 
-@nud
 #spechelp for banshee
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 
-@!min
 >hasbeen
 Your score has just gone up by one point.
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SFIXMAX}
 
-@nud
+>score
+You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
 #nudge for bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
@@ -809,7 +727,6 @@ You'll need to be more specific about the meat to poke at.
 >livre
 The one liver seems inactive by itself.
 
-@nud
 #spechelp for liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
@@ -817,15 +734,10 @@ You feel a slight psychic push-pull coming from the liches. Keep at it.
 
 >chisel
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #done rejects for chisel
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
@@ -836,7 +748,6 @@ It's a perfectly good tool. Trying to refine it might break it.
 >peel river ville
 Cr-r-r-r-k.
 
-@nud
 #renudge for liver
 >livre
 C'mon, you have it half right, don't futz with the remaining liver.
@@ -849,7 +760,6 @@ Your thoughts go to the other liver.
 >peel viler liver
 Cr-r-r-r-k.
 
-@nud
 #nudge for ville
 >vilel
 It's just a liver. No need to parse the brand name.
@@ -857,21 +767,20 @@ It's just a liver. No need to parse the brand name.
 >rivre
 It's just a liver. No need to parse the brand name.
 
-@mis
 #mistake test for fire [something] at [something]
 >fire shotgun at grinder
 You can either FIRE the gun, or you can SHOOT the whatever you want.
-\\
+
 #mistake test for shoot [something] with [something]/shoot [something] at [something]
 >shoot grinder with shotgun
 You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.
 >shoot shotgun at grinder
 You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.
-\\
+
 #mistake test for grin
 >grin
 You smile confidently. You'll figure how to use the grinder.
-\\
+
 #mistake test for steam
 >steam
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
@@ -882,16 +791,10 @@ Very good try. But you need to change the meats into something else entirely. So
 #notana
 Your score has just gone up by one point.
 LIVERS.
-}}SCORE++
 
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-
-@nud
 #renudge for canister
 >canistre
 The canister has suffered enough abuse. No need to break it further.
@@ -899,11 +802,10 @@ The canister has suffered enough abuse. No need to break it further.
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and in any case, you broke the canister, anyway.
 
-@mis
 #mistake retest for steam
 >steam
 You've already done enough with the meats.
-\\
+
 #mistake retest for grin
 >grin
 You smirk at the grinder you trashed.
@@ -911,7 +813,6 @@ You smirk at the grinder you trashed.
 >silver
 The livers are too dull to do anything like that with. Yet.
 
-@nud
 #spechelp for livers
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
@@ -919,16 +820,10 @@ You feel a slight psychic push-pull coming from the livers. Keep at it.
 
 >sliver
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-
-@nud
 >silver
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
@@ -936,7 +831,6 @@ The sliver seems to bend, but it snaps back. As if it's impatient to do or be mo
 >e
 >n
 
-@nud
 #spechelp for spread
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
@@ -949,7 +843,6 @@ No, the material of the spread isn't important, here.
 >drapes
 by one point
 
-@nud
 Your score has just gone up by one point.
 >undo
 >n
@@ -964,15 +857,9 @@ You feel a slight psychic push-pull coming from the red asp. Keep at it.
 >drapes
 Your score has just gone up by one point.
 
-}}SCORE++
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-
-@nud
 #renudge for cloth
 >cloht
 No, the material of the drapes isn't important, here.
@@ -990,7 +877,6 @@ revealing a doorway
 >n
 You don't know what's
 
-@nud
 >doorwya
 You can just go through. You don't want it to change any more, really.
 #nudge for cylinder
@@ -1002,28 +888,20 @@ The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
 
 >silver
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 17 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-
-@nud
 #done rejects for silver
 >silvre
 Hard to beat silver. It's what it should be.
 
-@mis
 #mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
 
-@mis
 #mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun.
@@ -1031,7 +909,6 @@ You need to SHOOT the gun.
 >n
 Ghouls' Slough
 
-@nud
 #nudge for slough
 >slouhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
@@ -1045,11 +922,10 @@ The marsh and lake are symptoms of--whatever evil is beyond here.
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
-@mis
 #mistake test for god
 >god
 You want to tempt the supernatural in somewhere this hellish? Phew.
-\\
+
 #mistake test for gob
 >gob
 The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
@@ -1059,7 +935,6 @@ UNDO
 >x maps
 Frost Forts
 
-@nud
 #nudge for frost
 >frots
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
@@ -1091,7 +966,6 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 >bmup
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-@nud
 #spechelp for vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
@@ -1099,15 +973,10 @@ You feel a slight psychic push-pull coming from the vowels. Keep at it.
 
 >wolves
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 18 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #nudge for werewolves
 >werewolvse
 They won't be changed with magic. Thankfully, you've got something more direct.
@@ -1130,12 +999,10 @@ The scenery here's mostly frozen that way. Ha ha ha.
 >wolvse
 You don't need magic. You have a weapon.
 
-@nud
 #mistake test for steel
 >steel
 You'd be crushed if the sleet turned to steel.
 
-@mis
 #mistake test for unpile
 >unpile
 They'd be much less dangerous left in a pile. Maybe you have something that can do that!
@@ -1143,10 +1010,9 @@ They'd be much less dangerous left in a pile. Maybe you have something that can 
 >shoot wolves
 #notana
 Your score has just gone up by one point.
-}}SCORE++
 
 Trips Strip
 
 >score
 
-You have scored {SCORE} out of {MAX} total points for the Forest region.
+You have scored 19 out of 17 total points for the Forest region.

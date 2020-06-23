@@ -1,0 +1,32 @@
+
+## reg-sa-stores-min.txt
+## GENERATOR FILE: rbr-sa-stores.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+>ts
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+Trips Strip
+
+>z
+>opt in
+
+>forest
+by one point
+
+>sortie
+by one point
+
+>metros
+by one point
+
+>n
+hubs bush
+
+>sorbet
+by one point
+

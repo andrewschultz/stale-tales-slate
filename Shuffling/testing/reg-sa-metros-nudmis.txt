@@ -1,28 +1,8 @@
-# rbr-sa-sortie.txt
-#
-# this covers maximum points, minimum points and nudges.
-#
-# the nudmis file also covers two alternate ways through the sortie.
-#
-files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt
-~	nudges,nud,mis,mi	t2
-~	min	t1
-~	max	t0
 
-}}MAX=18
-}}CURMAX=18
-}}SCORE=0
-}}CURMIN=17
+## reg-sa-metros-nudmis.txt
+## GENERATOR FILE: rbr-sa-metros.txt
 
-}$SCOS=You currently have {SCORE} out of {MAX} total points for the Metros region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
-}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
-
-## *FILE
-## *FORK
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
-
+## walkthrough with all nudges and mistakes
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -32,7 +12,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >poss
 >opt in
 
-@nud
 #spechelp for store m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
@@ -40,7 +19,6 @@ Store M shudders slightly. You wonder what sort of rapid transit is behind it.
 >metros
 Your score has just gone up by one point
 
-@nud
 #done rejects for trade tread
 >metrso
 The trade tread doesn't need to be changed. What's behind it, does.
@@ -49,28 +27,26 @@ The trade tread doesn't need to be changed. What's behind it, does.
 
 Undesired Underside
 
-@mis
 #mistake test for grained
 >grained
 Good try, but we're looking for a noun. With an extra A.
-\\
+
 #mistake test for singers
 >singers
 The beats would drown the singers out.
-\\
+
 #mistake test for snores/snore
 >snores
 Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
 >snore
 Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
-\\
+
 #mistake test for resign/resigns
 >resign
 Reverse psychology won't work on the ingress, here.
 >resigns
 Reverse psychology won't work on the ingress, here.
 
-@nud
 #nudge for etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
@@ -90,7 +66,6 @@ The signers' ingress looks forbidding, but it looks hooked up to the friend find
 >signesr
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 
-@nud
 #mistake test for refind
 >refind
 Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.
@@ -100,51 +75,49 @@ The senors you want to see are behind the door.
 >senor
 The senors you want to see are behind the door.
 
-@nud
 #nudge for undesired
 >undesirde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for metros
 >mersto
 You don't want to change a region drastically while you're in it.
-\\
+
 #nudge for metro
 >merto
 You don't want to change a region drastically while you're in it.
-\\
+
 #nudge for metallic
 >metallci
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
-\\
+
 #nudge for optical
 >opticla
 Changing the beam is way out of your league.
-\\
+
 #nudge for beam
 >bema
 Changing the beam is way out of your league.
-\\
+
 #nudge for special
 >specila
 That's not the way to get to the special place. You need special ID
-\\
+
 #nudge for building
 >buildign
 You can't change the hotel,
-\\
+
 #spechelp for drainage
 >gardenai
 The drainage bubbles a bit.
 
-@nud
 >w
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
 #nudge for reading
 >readign
 It's *A* reading you need to worry about.
-\\
+
 #readables for a reading
 >read reading
 On one of several pages, you see: AID ANGER is written. The nonsense makes you see red.
@@ -161,32 +134,28 @@ On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last 
 >read reading
 On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last page. The nonsense makes you see red.
 
-
-
 >gardenia
 by one point
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 1 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-@nud
 #done rejects for gardenia
 >gardenai
 The flowers are fine as-is.
-\\
+
 #nudge for theol
 >hotle
 You can't change the hotel, but you could have a look around.
-\\
+
 #nudge for sensor
 >sensro
 You don't have the skill to hack the friend finder.
-\\
+
 #nudge for door
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
-\\
+
 #renudge for theol
 >theol
 You can't change the hotel, but you could have another look around.
@@ -195,16 +164,14 @@ You can't change the hotel, but you could have another look around.
 
 Roarings Garrison
 
-@mis
 #mistake test for isonome
 >isonome
 The noisome moonies pretend to be all about nature, but as for actually understanding science? Pfft.
-\\
+
 #mistake test for stent
 >stent
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
-@nud
 #nudge for roarings
 >roarinsg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
@@ -220,32 +187,29 @@ He hasn't let the MAN change his designer reedings, and he won't let you. Beside
 
 #mostlyskipping the camp right now to get the tomato from the alley
 
-
 >w
 Bile Libe
 
-@nud
 #nudge for bile
 >ible
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for librayr
 >librayr
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for motto
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
-\\
+
 #nudge for plaque
 >plaqeu
 It's more, it's A MOTTO.
-\\
+
 #nudge for potaot
 >potaot
 The author twisted words enough. Perhaps you could concentrate on the motto.
 
-@nud
 #spechelp for motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
@@ -253,52 +217,48 @@ You feel a slight psychic push-pull coming from the motto. Keep at it.
 
 >tomato
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 2 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-@nud
 #done rejects for tomato
 >tomaot
 It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
 
 >e
 
-####skip the camp again for detail testing. Let's get the
 >s
 >w
 The Ol' Hotel
 
-@nud
 #nudge for thelo
 >helot
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for thing
 >thign
 The night thing is twisted beyond redemption.
-\\
+
 #nudge for potato
 >potaot
 The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
-\\
+
 #nudge for lucre
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
-\\
+
 #nudge for bottel
 >bottel
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
-\\
+
 #nudge for ketchup
 >ketchpu
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
-\\
+
 #nudge for catsup
 >catsup
 You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
-\\
+
 #nudge for mattress
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
@@ -306,36 +266,31 @@ Nothing to change the mattress to, even if you could move the night thing off.
 >throw tomato at thing
 #notana
 by one point
-}}SCORE++
 
 >score
-{$SCOS}
+You currently have 3 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
-
-@nud
 #nudge for bump
 >bupm
 Just search the bump instead.
-\\
+
 #renudge for mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
-\\
+
 #renudge for mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
 >x mattress
 
-@nud
 #nudge for emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
 
 >e
 
-@nud
 #renudge for theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
@@ -343,77 +298,75 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 >n
 Roarings Garrison
 
-@nud
 #nudge for camp
 >capm
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for library
 >library
 could use renovation
-\\
+
 #nudge for cramped
 >crampde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #nudge for redtents
 >redtenst
 Not nice. It's the only home the deadbeats have.
-\\
+
 #nudge for harps
 >harsp
 The harps are kind of annoying, but they've got nothing on the beats.
 #nudge for harp
 >hapr
 The harps are kind of annoying, but they've got nothing on the beats.
-\\
+
 #nudge for lost
 >ltso
 It's not just that it's lost, it's CORN.
 !Perhaps you can
-\\
+
 #nudge for corn
 >conr
 It's not just that it's corn, it's LOST too.
 !Perhaps you can
-\\
+
 #nudge for tent
 >tetn
 As anti-personal property as the deadbeats are, that'd still annoy them.
-\\
+
 #nudge for tents
 >tenst
 As anti-personal property as the deadbeats are, that'd still annoy them.
-\\
+
 #nudge for deadbeat
 >deadbeta
 He may mumble about change, but he's amazingly resistant to change, himself.
-\\
+
 #nudge for dead
 >deda
 He may mumble about change, but he's amazingly resistant to change, himself.
-\\
+
 #nudge for beat
 >beta
 He may mumble about change, but he's amazingly resistant to change, himself.
-\\
+
 #nudge for buttosn
 >buttosn
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
-\\
+
 #nudge for yellow
 >yellwo
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
-\\
+
 #nudge for kernels
 >kernesl
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
-\\
+
 #nudge for kernel
 >kernle
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
-@nud
 #spechelp for lost corn
 >controsl
 You thought you heard electronic beeping from the corn.
@@ -424,7 +377,6 @@ The dead beat deadbeat might not beat you dead
 >n
 Obtains/Boastin' Bastion
 
-@nud
 #nudge for boastin
 >boastni
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
@@ -445,52 +397,48 @@ You feel no 'ope, and nothing opens up.
 The poses posse doesn't need or want a handout.
 >pesos
 The poses posse doesn't need or want a handout.
-\\
+
 #nudge for cordoned
 >cordonde
 You won't need to do anything to the whole room unless you are trapped in a room.
-\\
+
 #nudge for condo
 >conod
 You won't need to do anything to the whole room unless you are trapped in a room.
-\\
+
 #nudge for rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
-\\
+
 #spechelp for antlers
 >rentlas
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
-@!min
 >rentals
 Your score has just gone up by one point.
-}}SCORE++
-}}CURMIN++
 >score
-{$SFIXMAX}
+You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #renudge for rental
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
-\\
+
 #nudge for candelabra
 >candelabar
 Interior decorating is not your strength.
-\\
+
 #nudge for carpets
 >carpest
 Interior decorating is not your strength.
-\\
+
 #nudge for carpet
 >carpte
 Interior decorating is not your strength.
-\\
+
 #nudge for caek
 >caek
 It isn't just any cake. It's dry cake.
-\\
+
 #nudge for dry
 >dyr
 It isn't just any cake. It's dry cake.
@@ -498,19 +446,14 @@ It isn't just any cake. It's dry cake.
 >switch emitter
 #notana
 Your score has just gone up by one point.
-}}SCORE++
 >score
-@min
-{$SCOS}
-@!
-{$SFIXMAX}
+You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >get dry cake
 You take care not to let the cake tear as you pick it up.
 
 >s
 
-@mis,max
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
 #mistake test for tang/tangs
@@ -528,72 +471,54 @@ It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat ab
 
 >controls
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #done rejects for controls
 >controsl
 The controls stay as they are.
-\\
+
 #nudge for control
 >contrlo
 You've already changed the lost corn into the controls, and you don't need to do more.
 
-@nud
 #spechelp for dry cake
 >keycadr
 You feel like can almost identify what the cake can become.
 You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
 >keycard
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #done rejects for keycard
 >keycadr
 The keycard remains stiff. Looks like it's as it should be.
-\\
+
 #nudge for leavse
 >leavse
 It's the whole clover you need to change.
-\\
+
 #nudge for fuzzy
 >fuzyz
 The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
 
-@nud
 #spechelp for clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
 You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
 
 >velcro
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@mis
 #mistake test for smitten
 >smitten
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they could stick really well on the right surface.
 
-@nud
 #done rejects for velcro
 >velcor
 The velcro remains tangled.
@@ -616,22 +541,20 @@ The mittens are as comfortable as they're going to be.
 >e
 Fo' Real Florae
 
-@mis
 #mistake test for loafer
 >loafer
 You're un-magically being a loafer, with ideas like that.
-\\
+
 #mistake test for recount
 >recount
 The faeries aren't interested in what you've done so far, only what you can do.
-\\
+
 #mistake test for trounce/trounce counter
 >trounce
 The faeries have very magic and very demoralizing anti-vandalism spells.
 >trounce counter
 The faeries have very magic and very demoralizing anti-vandalism spells.
 
-@nud
 #mistake retest for bates
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
@@ -680,7 +603,6 @@ The torn cue is just there to direct you to the brocade.
 
 >give gardenia to faeries
 
-@nud
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
@@ -696,11 +618,10 @@ The noise bag rumbles ominously. Best not change it into something worse.
 
 >take heaths
 
-@nud
 #renudge for heath
 >heaht
 They are multiple heaths--so you should try to change just one.
-\\
+
 #spechelp for heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
@@ -709,19 +630,14 @@ You feel a slight psychic push-pull coming from the heaths. Keep at it.
 >sheath
 Your score has just gone up by one point.
 
-@nud
 #done rejects for sheath
 >sheaht
 The sheath remains still.
 
 >sheath
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 9 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take brocade
 
@@ -729,63 +645,48 @@ The sheath remains still.
 
 >w
 
-@nud
 #nudge for word
 >odrw
 You'd need to do something to all the words.
-\\
+
 #spechelp for words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 You feel a slight psychic push-pull coming from the words. Keep at it.
 
 >sword
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 10 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-
-@nud
 #done rejects for sword
 >swodr
 Meddling with the sword right now, you're worried it might poke you.
 
 >e
 
-@nud
 #spechelp for brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 You feel a slight psychic push-pull coming from the brocade. Keep at it.
 
 >barcode
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 11 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #done rejects for barcode
 >barcoed
 The barcode does not shift.
 
 >put barcode on keycard
 
-@nud
 #nudge for ganst
 >ganst
 You don't get rid of angst with just a word.
 
 >s
 
-@nud
 #nudge for beats
 >ebtas
 The beats shift up for a second.
@@ -796,28 +697,22 @@ What do you know? It works! The door slides open!
 >e
 #notana
 Esoteric Coteries
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@mis
 #mistake test for nerd door e
 >odor
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 >rood
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
-\\
+
 #mistake test for up til/uptil
 >up til
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 >uptil
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 
-@nud
 #renudge for friend
 >friedn
 You don't need to futz further with the friend finder.
@@ -831,12 +726,10 @@ Esoteric Coteries
 
 >w
 
-@mis
 #mistake retest for resign/resigns
 >resign
 The ingress already did. You got by.
 
-@nud
 #renudge for special
 >specila
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
@@ -846,11 +739,10 @@ You don't need to perform any tricks, now you've gotten to the Esoteric Coteries
 
 Esoteric Coteries
 
-@nud
 #nudge for esoteric
 >esoterci
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
-\\
+
 #nudge for coterie
 >coterei
 You don't need to explore the coteries. The tulip is good enough.
@@ -864,7 +756,6 @@ Esoteric Coteries
 You can also see a lit-up tulip here.
 The signers' ingress slides shut.
 
-@nud
 #nudge for anticool
 >anticolo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -908,7 +799,6 @@ Oh no. You'd change it for the worse. And the nerds would be mad..
 >toem
 Oh no. You'd change it for the worse. And the nerds would be mad..
 
-`mi
 #mistake test for nerd door w
 >odor
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
@@ -917,7 +807,6 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 >ask nerds about darkness
 #notana
-}}SCORE++
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
 
 "Logical call. I go." You sneak out back west.
@@ -925,19 +814,14 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 Undesired Underside
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 #again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
 
-@mis
 #mistake retest for snores/snore
 >snores
 No need to put the sensor to sleep now you got what you want.
 
-@nud
 #renudge for metallic
 >metallci
 No way. That thing's sturdy. Those nerds know their stuff.
@@ -948,7 +832,6 @@ You got to the Esoteric Coteries. You don't need any tricks like that.
 >s
 Elm Train Terminal
 
-@nud
 #nudge for cafe
 >caef
 The cafe face can't transform into anything.
@@ -995,92 +878,85 @@ The number of liars the rails would create would be shocking.
 #mistake test for lira
 >lira
 But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
-\\
+
 #nudge for tramline
 >tramline
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
+
 #renudge for tulip
 >uptil
 It's handy as is. It gives light. You can't ask for much more.
-\\
+
 #nudge for lairs
 >laisr
 You need to fix the rails electronically.
-\\
+
 #nudge for lair
 >lari
 You need to fix the rails electronically.
-\\
+
 #nudge for track
 >trakc
 You need to fix the rails electronically.
-\\
+
 #nudge for tracks
 >tracsk
 You need to fix the rails electronically.
-\\
+
 #nudge for psa
 >aps
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
-\\
+
 #nudge for pass
 >apss
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
-\\
+
 #nudge for art
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
-\\
+
 #nudge for faded
 >fadde
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
-\\
+
 #nudge for fad
 >adf
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
-\\
+
 #nudge for deda
 >edad
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
-\\
+
 #nudge for fadedad
 >fadedda
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
-\\
+
 #nudge for none
 >noen
 It's not just that it's neon, it's that it's a pig.
-\\
+
 #nudge for pgi
 >pgi
 It's not just that it's a pig, it's that it's neon.
 
-@nud
 #readables for neon pig
 >read neon pig
 Apparently the neon pig is a creation of one INPENGO.
-\\
+
 #spechelp for neon pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
 You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
 >opening
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 14 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@mis
 #mistake retest for smitten
 >smitten
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they stuck really well on the cafe face.
 
-@nud
 #readables for controls
 >read controls
 You notice that it's underwritten (in red) by Orton LSC, whoever they are.
@@ -1103,33 +979,20 @@ You've already made nothing out of something, and instead of reversing that, you
 >u
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
-@max
->d
-#we need to test this case so we don't try going east instead.
->u
-You climb back up the cafe face.
-
-@mis
 #mistake retest for tar
 >tar
 No need. You made it sbove the cafe face with the velcro.
 
-@nud
 #nudge for irwin
 >iinrw
 You don't want to mess with the wirin that way
 
 >put controls in opening
 #notana
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #rereadables for controls
 >read controls
 You remember that it's underwritten (in red) by Orton LSC, whoever they are."
@@ -1151,7 +1014,6 @@ You've already made nothing out of something, and instead of reversing that, you
 
 Bassy Abyss
 
-@nud
 #nudge for aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beats.
@@ -1172,7 +1034,6 @@ You don't need the siren's volume or the beats' volume to have risen. Oh, no.
 >bates
 You don't need to deal with a knife-wielding psycho along with the beats.
 
-@nud
 #nudge for bassy
 >bassy
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -1185,20 +1046,14 @@ The siren continues to blind you--like it's throwing dust in your eyes.
 You feel a slight psychic push-pull coming from the siren. Keep at it.
 
 >resin
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 16 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@mis
 #mistake test for rinse
 >rinse
 Time for that after you get your hands dirty and slay the final enemy, here.
 
-@nud
 #nudge for resin
 >resni
 The dust is dust now.
@@ -1206,22 +1061,16 @@ The dust is dust now.
 >resni
 You could use the resin's stickiness right now.
 
-@nud
 #spechelp for beats
 >betsa
 The beats shift up for a second.
 You feel a slight psychic push-pull coming from the beats. Keep at it.
 
 >beast
-}}SCORE++
 
 >score
-@min
-{$SFIXNOMAX}
-@!
-{$SFIXMAX}
+You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-@nud
 #done rejects for beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
@@ -1231,22 +1080,19 @@ No use messing with the aligns signal when you need to focus on the beast.
 
 >take sword
 
-@nud
 #nudge for hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
 
 >attack beast
 #notana
-}}SCORE++
 
 Trips Strip
 
 >score
-You have scored {SCORE} out of {MAX} total points for the Metros region.
+You have scored 18 out of 18 total points for the Metros region.
 Won now: the Ordeal Loader and Metros regions.
 
-@nud
 * metros-exhaustive-nudge-mistake
 #let's test random things that it's tricky to do with a straight walkthrough
 #thanks for the lovely test commands, Inform!
@@ -1256,7 +1102,6 @@ Won now: the Ordeal Loader and Metros regions.
 >abstract soggy love to terminal
 >purloin noise bag
 
-`mi
 #mistake test for baste/baste beats/baste beast
 >baste
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
@@ -1268,7 +1113,6 @@ I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store
 >rifle
 Shooting things up is not the answer
 
-@nud
 #nudge for noise
 >noies
 Even if you could do anything, that'd rip the noise bag open.
@@ -1276,7 +1120,6 @@ Even if you could do anything, that'd rip the noise bag open.
 >bga
 Even if you could do anything, that'd rip the noise bag open.
 
-`mi
 #mistake test for eosin
 >eosin
 You need the bag, not a dying powder.
