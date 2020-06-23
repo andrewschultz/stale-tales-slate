@@ -113,6 +113,10 @@ But then, since the leis were fake, you shouldn't be surprised the woodland is, 
 >undo
 
 @nud
+#nudge for woodland
+>wooldand
+The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway.
+\\
 #nudge for and
 >adn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
@@ -157,12 +161,13 @@ by one point
 {$SCOS}
 
 @nud
-#renudge for leis
+#note that there is no renudge for leis because before L2 is moot, we go to the table of spechelp. But for lei, we are always in the table of nudges.
+#nudge for leis
 >isel
-You already noticed the leis. Use something one the isle to escape it.
+You already noticed the leis. Use something on the isle to escape it.
 #renudge for lie
 >iel
-You already noticed the leis. Use something one the isle to escape it.
+You already noticed the leis. Use something on the isle to escape it.
 
 
 @mis
@@ -601,7 +606,7 @@ You couldn't slink behind the kilns even if they were here.
 You don't know him that well. No riffing on his initials!
 
 @nud
-#renudge for hotspot
+#renudge for hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 #nudge for red

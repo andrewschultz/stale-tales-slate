@@ -38,7 +38,7 @@ A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough
 A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you strain to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.
 #mistake test for afos
 >afos
-You hum 'And I Ran' to yourself, wishing you had somewhere to run, to get away.
+You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
 #mistake test for faso
 >faso
 There are even further-away places to explore in this game than Burkina Faso.
@@ -54,6 +54,7 @@ Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >use zozimus
 Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
 #mistake test for turn [text]
+>turn zozimus
 You can probably just SWITCH something with two text settings.
 # stuff to test before you get settler
 #mistake test for scan
@@ -150,8 +151,18 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 >doro
 WRONG
 
+@mis
+#mistake test for or do door
+>rood
+This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
+
 >door
 by one point
+
+@mis
+#mistake retest for or do door
+>rood
+You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 @nud
 #done rejects for OR DO door
@@ -394,6 +405,20 @@ You can't change what's in the gateway. You just have to trust whatever is(n't) 
 
 >ask gateman about cabinet
 >take gadget
+
+@mis
+#mistake test for remove [something] from [something]
+>remove phial from cabinet
+To keep things simple, I recommend TAKE as a synonym. REMOVE defaults to carried or worn items, and that is too tricky.
+
+@mis
+#mistake test for angel
+>angel
+You've got enough practical help. You don't need anything supernatural.
+\\
+#mistake test for beatnic
+>beatnic
+The cabinet deserves a better fate than THAT.
 
 @nud
 #spechelp for acne bit cabinet
