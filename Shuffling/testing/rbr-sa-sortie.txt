@@ -35,6 +35,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 #spechelp for store i
 >sortei
 you think, as you see red. Rise to what?
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store I. Keep at it.
 
 >sortie
 by one point
@@ -147,6 +148,7 @@ You don't need to re-stop the centrifuge.
 #spechelp for t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 @mis
 #mistake test for thicken
@@ -236,7 +238,7 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #spechelp for grist
 >grtis
 The grist looks a bit less bland.
-!You feel a slight psychic push-pull coming from the grist. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the grist. Keep at it.
 
 @!min
 >grits
@@ -258,6 +260,7 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #spechelp for cake pan
 >pancaek
 It's a cake pan, backwards and forwards.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
 
 @!min
 >pancake
@@ -279,6 +282,7 @@ Best not to get too crazy with food preparation.
 #spechelp for tall trio
 >tortilal
 The tall trio seem to look interested for a minute.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 #readables for tall trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
@@ -324,6 +328,7 @@ It's the full name brand that really catches your eye.
 #spechelp for cathouse
 >hotsauec
 The CATHOUSE perfume suddenly smells a bit spicier.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -375,6 +380,7 @@ The spearman's name, in red, is MR. SANE PA.
 #spechelp for spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
 
 >parmesan
 Your score has just gone up by one point.
@@ -395,6 +401,7 @@ Best not to get too crazy with food preparation.
 #spechelp for skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the skate. Keep at it.
 
 @mis
 #mistake test for stake
@@ -446,6 +453,7 @@ The steak's just right as is.
 #spechelp for cult tee
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 \\
 #nudge for cult
 >cutl
@@ -499,6 +507,7 @@ You don't need to change the red inn. It supported your cooking efforts.
 #spechelp for taco
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the taco. Keep at it.
 
 @mis
 #mistake test for cato
@@ -543,6 +552,7 @@ The cask is changeable, but not like that. WERE-EWER just clues it can be change
 #spechelp for cask
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cask. Keep at it.
 
 >sack
 Your score has just gone up by one point.
@@ -558,6 +568,7 @@ Your score has just gone up by one point.
 #spechelp for sack
 >cska
 You doubt the sack/cask has a triple purpose.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sack. Keep at it.
 \\
 #nudge for burlap
 >burlpa
@@ -575,6 +586,7 @@ Why zap just one wart? Go for all of them!
 #spechelp for warts
 >strwa
 The warts itch slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the warts. Keep at it.
 
 >straw
 Your score has just gone up by one point.
@@ -606,6 +618,7 @@ You need more than one shoe.
 #spechelp for hoses
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
 
 @mis
 #mistake test for hoes
@@ -639,6 +652,7 @@ But you're wearing the shoes. That might cause problems.
 #spechelp for r2
 >romo
 You almost feel something picking you up for a second. You must have been close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >moor
 Your score has just gone up by one point.
@@ -748,6 +762,7 @@ Shooting things up is not the answer.
 #spechelp for anapest
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the anapest. Keep at it.
 
 >peasant
 Your score has just gone up by one point.
@@ -824,7 +839,7 @@ No, the full roadblock.
 #spechelp for m2
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
-\\
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >room
 "The room's smoother," you muse...
@@ -897,6 +912,7 @@ Your score has just gone up by one point.
 #spechelp for scraped wall
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
 #rereadables for scraped wall
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -1064,6 +1080,7 @@ Moor
 #spechelp for smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 
 @mis
 #mistake retest for mope
@@ -1118,6 +1135,7 @@ It's a plane, now, for sure.
 #spechelp for poem
 >panle
 The plane can probably become something else, but not that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
 
 @mis
 #mistake test for nepal
@@ -1150,6 +1168,7 @@ The panel bleeps a "stop that" sort of warning.
 #spechelp for oils
 >soli
 The oils need a purpose--to build something great. You don't want to waste them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the oils. Keep at it.
 
 >soil
 Your score has just gone up by one point.
@@ -1173,6 +1192,7 @@ There's no other way to change the cask than to and from the sack. WERE-EWER jus
 #spechelp for roadblock
 >black doro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
 
 @mis
 #mistake test for blackdoor
@@ -1352,6 +1372,7 @@ No, you're overthinking it. Just the text.
 #spechelp for trees button
 >teres
 Hmm, that doesn't work, but you bet you can bull your way through things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the trees button. Keep at it.
 \\
 #mistake test for stere
 >stere
@@ -1406,6 +1427,7 @@ Already good.
 #spechelp for hoots button
 >shoto
 You suppress a few minor swears as you realize that can't be right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
 
 @mis
 #mistake test for sooth

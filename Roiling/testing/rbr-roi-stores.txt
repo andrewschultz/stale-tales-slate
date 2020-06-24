@@ -246,6 +246,7 @@ The shells don't move. Perhaps they are just a clue of what Store Y can become.
 #spechelp for store b
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a decent omen.
 
 @!min
 >sorbet
@@ -261,6 +262,7 @@ You're a hero and all, but only one sample per day. Just think of the field day 
 #spechelp for store n
 >nestro
 "Dude, you like must be close!" you hear from Store N.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store N. That's a decent omen.
 >tokers
 by one point
 #nudge for toker
@@ -290,6 +292,7 @@ You rescued him, and that's enough.
 #spechelp for store k
 >tokesr
 An odd sweet smell from Store K, for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a decent omen.
 
 @!min
 >tokers
@@ -340,7 +343,7 @@ It'd get you in trouble around here.
 @nud
 #nudge for blabber
 >blabbre
-The blabber babbler is unchangeable, but perhaps indiectly moving [him-her] will work.
+The blabber babbler is unchangeable, but perhaps indiectly moving him will work.
 \\
 #nudge for rehab
 >rehba
@@ -362,6 +365,7 @@ You can't see the way high highway any more. You're stuck dealing with the Rehab
 #spechelp for blabber babbler
 >outsied
 The blabber babbler coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the blabber babbler. That's a decent omen.
 #mistake test for easting
 >easting
 Compass directions aren't relevant here. You need to upset everything, somehow.
@@ -425,6 +429,7 @@ There's no time for food! Especially fatty, non-brain food!
 #spechelp for store u
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
 
 >routes
 Your score has just gone up by one point
@@ -447,6 +452,7 @@ You don't need to do anything with an individual route. Just go in.
 #spechelp for store v
 >trovse
 A single paper currency flutters off from Store V, lost forever.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a decent omen.
 
 >troves
 Your score has just gone up by one point
@@ -466,6 +472,7 @@ The Tastee Estate can't be changed and doesn't need to be. Just ENTER.
 #spechelp for store w
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store W. That's a decent omen.
 #readables for store w
 >read store w
 WESTOR is the name of the company that built this. There's more, about what method they used
@@ -501,6 +508,7 @@ You don't need to adjust the truster turrets further. They're, well, big enough 
 #spechelp for store y
 >oystre
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a decent omen.
 
 @min
 >zap store y
@@ -520,6 +528,7 @@ You should just enter the balancer barnacle. No need or way to seal it back up.
 #spechelp for store h
 >othesr
 Store H looks totally different for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a decent omen.
 #readables for store h
 >read store h
 "All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth"
@@ -538,6 +547,7 @@ You should just enter the Throes Hoster. No need or way to seal it back up.
 #spechelp for store p
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a decent omen.
 #scannotes for tropes poster
 >scan tropes poster
 I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
@@ -564,6 +574,7 @@ You should just enter the odorant tornado. No need or way to seal it back up.
 #spechelp for store t
 >ottesr
 You hear various unrecognizable animal noises.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store T. That's a decent omen.
 
 >otters
 Your score has just gone up by one point

@@ -312,101 +312,125 @@ Your score has just gone up by one point
 #spechelp for geno
 >geon
 Geno looks around, as if he's about to bolt.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Geno. That's a decent omen.
 >undo
 #spechelp for edwin
 >edwni
 Edwin hiccups.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Edwin. That's a decent omen.
 >undo
 #spechelp for blake
 >blaek
 Blake looks a bit unhappier.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Blake. That's a decent omen.
 >undo
 #spechelp for ernest
 >ernets
 Ernest seizes up.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ernest. That's a decent omen.
 >undo
 #spechelp for andres
 >andrse
 Andres looks a bit more tied up at the moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Andres. That's a decent omen.
 >undo
 #spechelp for cedrick
 >cedrikc
 Cedrick cringes slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Cedrick. That's a decent omen.
 >undo
 ##################################seed 2
 #spechelp for shane
 >ashne
 Some color drains from Shane's face.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Shane. That's a decent omen.
 >undo
 #spechelp for eldon
 >eldno
 Eldon looks slightly wrinkled for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Eldon. That's a decent omen.
 >undo
 #spechelp for bredo
 >breod
 Bredo yawns.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Bredo. That's a decent omen.
 >undo
 #spechelp for marcel
 >marcle
 Marcel breathes slower for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marcel. That's a decent omen.
 >undo
 #spechelp for andrew
 >andrwe
 Andrew suddenly looks as if he's been told he did something wrong.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Andrew. That's a decent omen.
 >undo
 #spechelp for demitri
 >demitir
 Demitri shivers a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Demitri. That's a decent omen.
 >undo
 ##################################seed 3
 #spechelp for tyson
 >tysno
 Tyson looks slightly less emotional.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Tyson. That's a decent omen.
 >undo
 #spechelp for goldy
 >golyd
 Goldy starts to fold his hands in prayer but thinks better of it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Goldy. That's a decent omen.
 >undo
 #spechelp for daryl
 >darly
 Daryl pinches his sides and shakes his head.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Daryl. That's a decent omen.
 >undo
 #spechelp for marlon
 >marlno
 Marlon looks a little less weird for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marlon. That's a decent omen.
 >undo
 #spechelp for archie
 >archei
 Archie looks a bit pained.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Archie. That's a decent omen.
 >undo
 #spechelp for leander
 >leanerd
 Leander makes an a-ha gesture--no, only for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Leander. That's a decent omen.
 >undo
 ##################################seed 4
 #spechelp for wade
 >waed
 Wade's eyes get bigger for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Wade. That's a decent omen.
 >undo
 #spechelp for royce
 >royec
 Royce looks a bit less aggressive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Royce. That's a decent omen.
 >undo
 #spechelp for dewey
 >dewye
 Dewey seems momentarily less muscular.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Dewey. That's a decent omen.
 >undo
 #spechelp for reggie
 >reggei
 Reggie sniffs the air.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reggie. That's a decent omen.
 >undo
 #spechelp for barney
 >barnye
 Barney looks around a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Barney. That's a decent omen.
 >undo
 #spechelp for preston
 >prestno
 Preston almost slips for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Preston. That's a decent omen.
 >pronest
 Your score has just gone up by one point
 >undo
@@ -415,6 +439,7 @@ Your score has just gone up by one point
 #spechelp for terrance
 >terranec
 Terrance looks around as if he wants to run off.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a decent omen.
 >undo
 >undo
 
@@ -435,6 +460,7 @@ Terrance looks around as if he wants to run off.
 #spechelp for rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Rodney. That's a decent omen.
 #renudge for picaros
 >picarso
 You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
@@ -505,6 +531,7 @@ It probably needs less crust, not more. The whole curst palace.
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the curst palace. That's a decent omen.
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 #nudge for deposit
@@ -580,6 +607,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for dreads adders
 >saddre
 The adders look downcast for a minute before resuming a threatening pose.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
 #scannotes for dreads adders
 >scan dreads adders
 Your settler registers RY?RYR--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
@@ -679,6 +707,7 @@ There's more than one yurt there.
 #spechelp for try us yurts
 >yurst
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Try Us Yurts. That's a decent omen.
 #scannotes for bluster butlers
 >scan bluster butlers
 Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out.
@@ -785,6 +814,7 @@ The pastry is for eating, not for changing.
 #spechelp for bluster butlers
 >butlesr
 The bluster butlers cough slightly and look around furtively.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers. That's a decent omen.
 
 >subtler
 Your score has just gone up by one point
@@ -955,13 +985,16 @@ Danger Garden
 #spechelp for snider diners
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the snider diners. That's a decent omen.
 #spechelp for muscly luc sym
 >clumys
 Luc Sym stumbles for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Muscly Luc Sym. That's a decent omen.
 >gs
 #spechelp for muscly ms lucy
 >clumys
 Ms. Lucy stumbles for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Muscly Ms. Lucy. That's a decent omen.
 >gs
 
 @!minh,mini
@@ -998,6 +1031,7 @@ has a refresher,
 #spechelp for keycar
 >creayk
 The keycar sputters momentarily.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the keycar. That's a decent omen.
 
 @!minh,mini
 >creaky
@@ -1069,6 +1103,7 @@ Changing just one pirate would not, you sense, do much. It might even ostracize 
 #spechelp for docile old ice
 >old iec
 The old ice seems to glimmer a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
 #readables for fluster self rut
 >read fluster self rut
 You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
@@ -1079,6 +1114,7 @@ You focus and see that the brand is TRU-SELF. Which would make you see red on ge
 #spechelp for fluster self rut
 >selfrtu
 You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
 #scannotes for fluster self rut
 >scan fluster self rut
 You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
@@ -1114,6 +1150,7 @@ Twist the ice too much, it might not look right.
 #spechelp for pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pirates. That's a decent omen.
 #scannotes for traipse pirates
 >scan traipse pirates
 Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
@@ -1184,6 +1221,7 @@ There's more than one ingrate blocking you.
 #spechelp for ingrates
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ingrates. That's a decent omen.
 #scannotes for angriest ingrates
 >scan angriest ingrates
 Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
@@ -1196,6 +1234,7 @@ The trendies point and laugh at your settler and how it has apparently malfuncti
 #spechelp for resident trendies
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the resident trendies. That's a decent omen.
 #mistake test for granites/granite
 >granites
 They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
@@ -1242,6 +1281,7 @@ This may technically be a detour, but since the area name is "detours," you need
 #spechelp for bogus-detours
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
 @!minh,mini
 >rousted
@@ -1284,6 +1324,7 @@ Work on the whole sled rut.
 #spechelp for strudel
 >strudle
 You almost expect the strudel to hop up into your arms, but the moment passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the strudel. That's a decent omen.
 >take strudel
 You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well.
 >strudle
@@ -1324,6 +1365,7 @@ You'd have to drop the strudel on the ground and get it germy to try that again.
 #spechelp for mardier admirer
 >marride
 The mardier admirer looks askance, then returns to evaluating you some more.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mardier admirer. That's a decent omen.
 >e
 #mistake test for slated
 >slated
@@ -1398,6 +1440,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for asset hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the asset hit atheists. That's a decent omen.
 #scannotes for asset hit atheists
 >scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
@@ -1405,6 +1448,7 @@ Those question marks could be annoying, but with two t's and two s's, that restr
 #spechelp for sweatier wait seer
 >waitsere
 The wait-seer looks bored and distracted for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sweatier wait-seer. That's a decent omen.
 #scannotes for sweatier wait seer
 >scan sweatier wait seer
 The letters blink from red/yellow to purple/green and back.
@@ -1470,6 +1514,7 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 #spechelp for reeds ale
 >reedsael
 Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
 #nudge for lars
 >lasr
 No, Lars's full name. Lars Eede. With Reed's Ale.
@@ -1490,6 +1535,7 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 #spechelp for mel fish
 >mel fihs
 Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
+DEBUG ONLY: You feel a slight psychic push-pull coming from SMH Life Mel Fish. That's a decent omen.
 #nudge for smh
 >shm
 No, you need to deal with all of Mel Fish.
@@ -1569,6 +1615,7 @@ Gumming up one weed wouldn't get the others.
 #spechelp for weeds
 >weesd
 The weeds almost seem to shrug.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weeds. That's a decent omen.
 #mistake test for swede
 >swede
 That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
@@ -1616,6 +1663,7 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 #spechelp for mended mini denim
 >denmi
 The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini denim. That's a decent omen.
 #scannotes for mended mini denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
@@ -1671,6 +1719,7 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 #spechelp for alarming grailman
 >alarmign
 The grailman seems almost average for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the alarming grailman. That's a decent omen.
 #scannotes for alarming grailman
 >scan alarming grailman
 The one letter blinks between green and yellow.
@@ -1683,6 +1732,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 #spechelp for hostile is he lot
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Hostile-Is-He Lot. That's a decent omen.
 #scannotes for hostile is he lot
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
@@ -1690,6 +1740,7 @@ Well, this is tricky. Their sort of double name affords a couple interpretations
 #spechelp for lois the hostile
 >loisthe
 Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Lois the Hostile. That's a decent omen.
 #scannotes for lois the hostile
 >scan lois the hostile
 Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
@@ -1721,6 +1772,7 @@ Your score has just gone up by one point
 #spechelp for dandier arid den
 >dandrie
 The arid den seems less imposing and impressive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dandier arid den. That's a decent omen.
 #scannotes for dandier arid den
 >scan dandier arid den
 Well. That's two things you can't figure to start, but maybe you can, if you think about it.
@@ -1752,6 +1804,7 @@ You get the feeling the natives can be swayed more than one way, here.
 #spechelp for natives site van
 >nativse
 The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the natives' site van. That's a decent omen.
 
 @sli
 #slider test for naivest
@@ -1806,6 +1859,7 @@ Nothing seems to happen. Then you remember organized can be spelled with an s an
 #spechelp for organised ego drains
 >organisde
 The drains sizzle slightly but go back to menacing quiet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
 #scannotes for organised ego drains
 >scan organised ego drains
 With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
@@ -1854,6 +1908,7 @@ You may find it easier to deal with all the ripostes at once.
 #spechelp for sporties ripostes
 >prosiets
 The ripostes seem less cutting for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sporties' ripostes. That's a decent omen.
 #scannotes for sporties ripostes
 >scan sporties' ripostes
 You might have to read through a lot of possibilities even if you can quickly figure what the third letter is.
@@ -1896,6 +1951,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for bonker
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bonker. That's a decent omen.
 
 >broken
 Your score has just gone up by one point
@@ -1908,6 +1964,7 @@ Your score has just gone up by one point
 #spechelp for stinger
 >restign
 The stinger fizzles a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stinger. That's a decent omen.
 
 @sli
 #slider test for resting
@@ -2057,6 +2114,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 #spechelp for fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's a decent omen.
 
 >push retape
 >gt duck
@@ -2067,10 +2125,12 @@ Bizarre animal noises continue to emanate from the fissure. It is beyond your co
 #respechelp for fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's a decent omen.
 >undo
 #spechelp for prison ropins
 >unleckdo
 The ropins remains secure, with no easy way to open it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the prison ropins. That's a decent omen.
 #readables for prison
 >read prison
 Part of the red writing on the prison says
@@ -2290,6 +2350,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don'
 #spechelp for dinger
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reading: a Dinger. That's a decent omen.
 #scannotes for reading a dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
@@ -2323,6 +2384,7 @@ Neither the singular nor the plural version of a pastry can change it. They're f
 #spechelp for raves saver
 >pearyl
 The "replay player" letters brighten for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raves saver. That's a decent omen.
 #renudge for save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But you might've been onto something looking at its brand name. Not that looks ultimately matter.
@@ -2336,10 +2398,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for atblock
 >attentiev
 Scot scrunches his eyes to try to keep even more attention, but it doesn't quite work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Scot Agin. That's a decent omen.
 >gs
 #respechelp for atblock
 >attentiev
 Staci scrunches her eyes to try to keep even more attention, but it doesn't quite work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a decent omen.
 >gs
 #scannotes for raves saver
 >scan raves saver
@@ -2510,6 +2574,7 @@ You fixed the blaster, so maybe you can tackle the turbos.
 #spechelp for eastern shore
 >eastenr
 Maybe it's you, but the eastern shore seemed slightly closer.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eastern shore. That's a decent omen.
 >undo
 >undo
 
@@ -2517,10 +2582,14 @@ Maybe it's you, but the eastern shore seemed slightly closer.
 #spechelp for turbos
 >turbso
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the turbos. That's a decent omen.
 #spechelp for blaster
 >blastre
 Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the blaster. That's a decent omen.
 #readables for blaster
+>read blaster
+ALBERT'S.
 
 @!max
 >robust
@@ -2573,6 +2642,7 @@ You already dealt with both turbos.
 #spechelp for weirder red wire
 >rewirde
 You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weirder red wire. That's a decent omen.
 #scannotes for weirder red wire
 >scan weirder red wire
 Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections.
@@ -2645,9 +2715,11 @@ You're not sure if the serpent's ever been spent, so you can't quite make it re-
 #spechelp for ur pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ur-pine. That's a decent omen.
 #spechelp for pestern serpent
 >presetn
 The serpent calms down for a split-second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pester'n serpent. That's a decent omen.
 >presetn
 The serpent calms down for a split-second, again.
 #scannotes for pestern serpent
@@ -2699,6 +2771,7 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ne
 #spechelp for tetris sitter
 >triset
 The Tetris Sitter breaks her glassy smile for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Tetris Sitter. That's a decent omen.
 #scannotes for tetris sitter
 >scan tetris sitter
 With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice.

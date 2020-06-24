@@ -126,6 +126,7 @@ That's not a way to sneak around and avoid any future knock at the door.
 #spechelp for palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 #mistake retest for odor
 >odor
 No, you need a light source, not a way out.
@@ -152,6 +153,7 @@ Your score has just gone up by one point.
 #spechelp for latches
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's a decent omen.
 #mistake test for chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
@@ -257,6 +259,7 @@ Don't dwell on it. It's lies.
 #spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the meet bans. That's a decent omen.
 #mistake test for net/net beams/beams net
 >net
 But the net would still block you.
@@ -312,6 +315,7 @@ You probably just want to go DOWN to the basement.
 #spechelp for stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a decent omen.
 >undo
 >undo
 
@@ -326,6 +330,7 @@ by one point
 #spechelp for tables
 >stabel
 The tables seem to shift a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a decent omen.
 #nudge for table
 >tabel
 A bleat: "tableS!"
@@ -350,6 +355,7 @@ You probably just want to go IN to the stable.
 #spechelp for niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the niche. That's a decent omen.
 #nudge for ceiling
 >ceilign
 You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
@@ -398,6 +404,7 @@ It's one big giant pin.
 #spechelp for giant pin
 >paintign
 The pin wobbles.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
 #readables for giant pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
@@ -484,6 +491,7 @@ The settler is pretty powerful, but it can't build bridges.
 #spechelp for sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a decent omen.
 #readables for sitar
 >read sitar
 Oh, right. You bought it from Trisa Israt.
@@ -545,6 +553,7 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 #spechelp for pram
 >rapm
 The pram creaks back and forth slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a decent omen.
 
 @!min
 >ramp
@@ -566,21 +575,25 @@ Dusty Study
 #spechelp for pavement
 >event mpa
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pavement. That's a decent omen.
 >event map
 The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
 #spechelp for platform
 >farm plto
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the platform. That's a decent omen.
 >farm plot
 The platform becomes a farm plot.
 #spechelp for pedestal
 >steel pda
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pedestal. That's a decent omen.
 >steel pad
 The pedestal becomes a steel pad.
 #spechelp for crabgrass
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the crabgrass. That's a decent omen.
 >x diorama
 ###skip test checking
 >brass crga
@@ -592,22 +605,26 @@ The crabgrass dries out and becomes a brass crag.
 #spechelp for event map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the event map. That's a decent omen.
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
 #spechelp for brass crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the brass crag. That's a decent omen.
 >crabgrass
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
 #spechelp for farm plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the farm plot. That's a decent omen.
 >platform
 The farm plot switches back to a platform.
 #spechelp for steel pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the steel pad. That's a decent omen.
 >pedestal
 The steel pad intertwines into a marginally artistic pedestal.
 
@@ -672,6 +689,7 @@ Surely a stair is more handy right now.
 #spechelp for ISBN bins
 >snbi
 The ISBN bins creak slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ISBN bins. That's a decent omen.
 #mistake test for bsin/bs in
 >bsin
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
@@ -716,6 +734,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a decent omen.
 #readables for rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
@@ -841,6 +860,7 @@ You're on your own. Perhaps you'd be better off scanning the plaster and twiddli
 #spechelp for plates
 >stapel
 The plates shine slightly and rattle.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel plates. That's a decent omen.
 #readables for pastel plates
 >read pastel plates
 EPSTAL is written as an author's signature.
@@ -884,6 +904,7 @@ Those plates were a mess, and now they're a tidy staple. It's better that way.
 #spechelp for plaster
 >staplre
 The plaster crackles and shines slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter. That's a decent omen.
 
 >stapler
 Your score has just gone up by one point

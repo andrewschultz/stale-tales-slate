@@ -80,6 +80,7 @@ The barley rustles in an imaginary wind--but hardly at all.
 #scannotes for bleary barley
 >scan bleary barley
 That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
 
 @sli
 >slon
@@ -148,6 +149,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 #spechelp for cinders
 >cindesr
 The cinders glow and even warm up for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
 #readables for cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
@@ -176,6 +178,7 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #spechelp for ed riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ed riley. That's a decent omen.
 #mistake test for deli-rye-otters
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
@@ -716,9 +719,11 @@ The parser had trouble understanding that (multi-word) command. While it's possi
 So here is a one-time general guideline on what to do in this area: while some words are rather long, you probably see how to guess a letter or two even when you've got your powers back.
 >seacueb
 The sea cube shakes a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
 #spechelp for eels
 >eesl
 The eels swim a bit faster.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
 
 @max
 >else
@@ -799,9 +804,11 @@ You don't need to riff on any location names to win the game, unless there's not
 #spechelp for ghoul hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
 #spechelp for gore ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the gore ogre. That's a decent omen.
 #nudge for infidel
 >infidle
 The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
@@ -840,6 +847,7 @@ DEBUG INFO: min-up codepath
 #spechelp for vow here
 >howevre
 The vow here quiets down for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
 
 @sli
 #slider test for however
@@ -872,6 +880,7 @@ DEBUG INFO: min-up codepath
 #spechelp for atmo moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo moat. That's a decent omen.
 #scannotes for atmo moat
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
@@ -951,12 +960,15 @@ No, you need a couple more letters... even with your powers back, you still need
 #spechelp for imp1
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
 #spechelp for imp2
 >angriyl
 The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
 #spechelp for imp3
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
 #scannotes for sly imp
 >scan sly imp
 The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down.
@@ -1012,6 +1024,7 @@ You probably want the owls not to swoop low. And you'll want to take care of the
 #spechelp for owls
 >owsl
 Hmm. The owls still swarm and swirl too fast.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
 #mistake test for lows
 >lows
 Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
@@ -1065,18 +1078,23 @@ The ocelots would still be awkward even if they lost the clip-ons.
 #spechelp for ocelots
 >ocelost
 The ocelots squint at you through their clip-ons.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
 \\
 #spechelp for leopard
 >leopadr
 The leopard almost seems to un-cuff its hands.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
 \\
 #spechelp for badger
 >badgre
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
 \\
 #spechelp for satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the satyr. That's a decent omen.
+\\
 #mistake test for ratsy
 >ratsy
 You don't want a rat on your side. Or someone who says rats too much.
@@ -1281,14 +1299,17 @@ The coma camo remains as-is. It's probably made by A-COM, and all their products
 #spechelp for whin1
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
 \\
 #spechelp for whin2
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
 \\
 #spechelp for whin3
 >terseyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
+DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
 \\
 #scannotes for whiners
 >scan whiners
@@ -1343,6 +1364,7 @@ Perverse Preserve
 #spechelp for raptor
 >raptro
 The raptor recoils slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
 
 >parrot
 Your score has just gone up by one point
@@ -1382,6 +1404,7 @@ You can't do anything to the whistle until you have it.
 #spechelp for weltish whistle
 >epelyd
 Probably best to have the whistle before changing it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
 #nudge for preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1406,20 +1429,24 @@ There's more than one throne, but it doesn't matter, really, for what you need t
 #spechelp for thrones
 >thronse
 The thrones seem to buzz a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
 \\
 #spechelp for nails
 >naisl
 One of the nails seems to bend a bit.
 >naisl
 Another one of the nails seems to bend a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a decent omen.
 \\
 #spechelp for pines
 >pinse
 The pines rustle as if an animal climbed through them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
 \\
 #spechelp for corona
 >coroan
 The corona scurries about for a bit before settling down again.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
 #mistake test for slain/as nil
 >slain
 The nails are already dead as a doornail.
@@ -1700,6 +1727,7 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 #spechelp for aside-llp
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
+/DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
 
 @max
 >honestly
@@ -1736,6 +1764,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for holy nest
 >honestyl
 The holy nest flutters silently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
 #renudge for hydra
 >w
 >hydar
@@ -1820,6 +1849,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the medals. That's a decent omen.
 #scannotes for medals
 >scan medals
 Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
@@ -1873,6 +1903,7 @@ You don't see anything happen. Then you note red writing on the whistle which mi
 #respechelp for weltish whistle
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
 >read whistle
 Ed Plye, apparently, made the whistle.
 

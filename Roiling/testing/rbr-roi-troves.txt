@@ -111,6 +111,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 #spechelp for pa egg pea
 >gaep
 You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 #scannotes for pa egg pea
 >scan pa egg pea
 Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
@@ -133,6 +134,7 @@ You probably did what you could. Or not-did.
 #spechelp for eh at heat
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
 #scannotes for eh at heat
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
@@ -160,6 +162,7 @@ Don't need to overheat, or overhate.
 #spechelp for race acre
 >caer
 For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
 #scannotes for race acre
 >scan race acre
 Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
@@ -229,6 +232,7 @@ No, you'll want to zone out the whole verbose distraction.
 #spechelp for sob ever verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
 #scannotes for sob ever verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
@@ -266,6 +270,7 @@ Your score has just gone up by one point
 #spechelp for stop post
 >stpo
 The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
 #nudge for observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
@@ -315,6 +320,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 #spechelp for a sty tasty say
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
 #readables for a sty tasty say
 >read sty
 YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
@@ -347,9 +353,11 @@ The stop post is in the past. No need to p.s. tweaking it.
 #spechelp for evil bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
 #spechelp for snore so arena
 >reasno
 The SNORE SO ARENA flashes weirdly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
 #nudge for roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -443,6 +451,7 @@ Drowning something without reason in reason is unreasonable.
 #spechelp for l clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the L'Clear Cellar. That's a decent omen.
 
 >recall
 by one point
@@ -477,6 +486,7 @@ You would like to be, but you can't just want others to. Change comes from withi
 #spechelp for diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the diapers. That's a decent omen.
 #nudge for ires
 >irse
 It's an ires PAD.
@@ -519,6 +529,7 @@ It's the full song name--I'd Cede.
 #spechelp for id cede
 >decied
 You try to groove to I'd Cede, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a decent omen.
 
 @sli
 #slider test for decide
@@ -555,6 +566,7 @@ You are not rich and consequential enough to snap your fingers and watch your ow
 #spechelp for large regal lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Large Regal Lager. That's a decent omen.
 #scannotes for large regal lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
@@ -596,6 +608,7 @@ You stare into space some more but get distracted.
 #spechelp for lobster
 >bolstre
 That's not quite the way to deserve that lobster.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
 #scannotes for bortles lobster
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
@@ -631,6 +644,7 @@ The lobster nourished you physically. Time to move on, though you could poke at 
 #spechelp for me arts
 >mastre
 That's not quite the way to focus on the ME ARTS.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
 #scannotes for me arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
@@ -661,6 +675,7 @@ The ME ARTS nourished you spiritually. The lobster nourished you physically. Tim
 #spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
+DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD. That's a decent omen.
 #scannotes for lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
@@ -717,6 +732,7 @@ The Miser Emirs' Mires are, well, mired. You need to focus on something else, or
 #spechelp for si reed
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
+DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
 
 @sli
 #slider test for desire
@@ -767,6 +783,7 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 #spechelp for praise spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
 #scannotes for praise spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
@@ -803,6 +820,7 @@ You're wanting praise too much, now.
 #spechelp for rivets
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
 #readables for rivets
 >read rivets
 /The rivets have two messages. One is (RISE, TV|VET, SIR)!
@@ -862,6 +880,7 @@ The card's writing is more important.
 #spechelp for end proner pod
 >erpdon
 The END PRONER POD seems to pulse slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the End Proner Pod. That's a decent omen.
 
 @sli
 #slider test for ponder
@@ -895,6 +914,7 @@ You don't need to riff on any location names to win the game, unless there's not
 #spechelp for red vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
 #readables for red vees
 >read red vees
 Etched into the vees are the names of this motivational device's inventors. One is
@@ -964,6 +984,7 @@ You need all that light for late-night work sessions.
 #spechelp for salt
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
 #scannotes for salt
 >scan salt
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
@@ -1001,6 +1022,7 @@ Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, yo
 #spechelp for marble blamer balmer
 >rambel
 seems slightly taken aback
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer. That's a decent omen.
 >mbb 2
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
@@ -1019,6 +1041,7 @@ Neither you nor Marble Blamer Mr. Beal turns into hay.
 #spechelp for marble blamer mr beal
 >rambel
 seems slightly taken aback
+DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
 #scannotes for marble blamer mr beal
 >scan marble blamer mr beal
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
@@ -1028,6 +1051,7 @@ Wow! Three names. You don't know if, say, Balmer would be easier but, well, you 
 #spechelp for sister tressi siters
 >resits
 Sister Tressi seems a bit more upset than usual.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
 #scannotes for sister tressi siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it.
@@ -1093,6 +1117,7 @@ The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting 
 #spechelp for divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the DIVORCES. That's a decent omen.
 #readables for divorces
 >read divorces
 All sorts of articles that make you see red. This one's about
@@ -1122,6 +1147,7 @@ No! Not another second thinking about that rubbish.
 #spechelp for trance nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the trance nectar. Keep at it.
 
 @mina,minb
 >misses

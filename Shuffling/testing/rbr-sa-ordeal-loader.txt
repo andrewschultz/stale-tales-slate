@@ -333,6 +333,7 @@ Your score has just gone up by one point.
 #spechelp for attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the attics. Keep at it.
 \\
 #nudge for doll
 >dlol

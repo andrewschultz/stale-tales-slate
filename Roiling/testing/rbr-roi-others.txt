@@ -145,21 +145,26 @@ Well, you don't technically need plurals for this, but you're on the right track
 #spechelp for lumps
 >lumsp
 The lumps seem almost ready to burst.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
 #spechelp for pagers
 >pagesr
 The pagers light up slightly. Maybe give it another go.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
 #spechelp for slime
 >sliem
 The slime shifts about slightly, but not enough--yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
 #spechelp for spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
 #readables for mad train
 >read mad train
 DR. NIMATA.
 #spechelp for mad train
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
 @mis
 #mistake test for parse
@@ -214,6 +219,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 #spechelp for moss cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
 
 @sli
 #slider test for compass
@@ -253,6 +259,7 @@ You found enough in the ruts circuits. No need to bring them back.
 #spechelp for harmonicas
 >maraschion
 The harmonicas whistle, as if something happened.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
 \\
 #nudge for harmonica
 >harmonica
@@ -308,18 +315,22 @@ Nothing happens. Perhaps it's the whole item that's important.
 #spechelp for eerie blurbs
 >eerieblursb
 The blurbs turn a few shades of purple before settling again.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
 #spechelp for peanut cola
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the peanut cola. That's a decent omen.
 #readables for peanut cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
 #spechelp for magenta rope
 >magentaroep
 The magenta rope and other items you uncovered briefly seem as one.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
 #spechelp for omen prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
 #nudge for omen
 >omne
 Not just omen, or prism. It's an omen prism.
@@ -478,21 +489,27 @@ The green stain could make just one fruit, but why not think bigger? It could be
 #spechelp for PSA Elp
 >applse
 You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
 #spechelp for riot cap
 >apricto
 Nothing happens. Your magic skills feel like the pits for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
 #spechelp for miser ruble
 >mulberrise
 The miser ruble turns a bit purpler.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
 #spechelp for sorer bogey
 >gooseberyr
 The bogey's tone changes slightly for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
 #spechelp for stucco
 >stucocno
 The stucco looks almost hairy for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
 #spechelp for green stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. That's a decent omen.
 
 >apricot
 Your score has just gone up by one point.
@@ -538,6 +555,7 @@ You're not the tree-mangling type. So you can only exit to the north.
 #spechelp for coin
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
 
 @sli
 #balance undos
@@ -605,6 +623,7 @@ Hmm. You could probably do something with just one coin, or you could do somethi
 #spechelp for coins
 >cisno
 The coins jingle promisingly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
 >sonic
 by one point
 #scannotes for s-c
@@ -614,6 +633,7 @@ You're a pro at all this, now, so two question marks don't bother you. Yes... th
 #spechelp for s-c
 >sonci
 The sonic coins hum almost questioningly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sonic coins. That's a decent omen.
 >undo
 >icons
 by one point
@@ -788,30 +808,38 @@ It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moa
 #spechelp for barren cries
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
 #spechelp for barber sickle
 >barber sickel
 The barber sickle darkens a bit. You must be on the right track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
 #spechelp for mean trowel
 >meantrowle
 You had the seed of an idea there, you thought.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
 #spechelp for pryer bars
 >pryer basr
 The pryer bars briefly turn very red.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
 #spechelp for rapt figure
 >rapt figuer
 The rapt figure frowns as if it's eaten something sour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
 #spechelp for pipe panel lie pen app
 >pineappel
 The pipe panel lie pen app rattles slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
 #scannotes for pipe panel lie pen app
 >scan pipe panel lie pen app
 Hmm. There are a lot of P's. Maybe that helps.
 #spechelp for barriers west
 >strawberrise
 You feel the barriers west pulling towards you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
 #spechelp for buried raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
 #readables for pipe panel lie pen app
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
@@ -858,6 +886,7 @@ Money, or something like it, should not be the guide of you.
 #spechelp for icons
 >icosn
 The icons rattle promisingly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
 #mistake retest for scion
 >scion
 Money, or something like it, should not be the guide of you.
@@ -1008,9 +1037,11 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 #spechelp for quince
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
 #spechelp for auction caution
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly FOR?
+DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
 #scannotes for auction caution
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
@@ -1025,6 +1056,7 @@ Hm, that certainly cuts things down a ton. Just three possibilities.
 #spechelp for peach
 >peahc
 The peach still looks too expensive.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the peach. That's a decent omen.
 
 @!min
 >cinque
@@ -1065,6 +1097,7 @@ The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues pr
 #spechelp for ammo gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ammo gang. That's a decent omen.
 
 @!min
 #not a mistake
@@ -1075,18 +1108,22 @@ Your score has just gone up by one point.
 #spechelp for lemons
 >lemosn
 Len frowns at the lemons.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
 #spechelp for melon
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
 #scannotes for melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
 #spechelp for nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
 #spechelp for prices precis
 >cripse
 Something glints off the prices precis.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
 #scannotes for prices precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
@@ -1246,21 +1283,25 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like D
 #spechelp for a brr hub
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from a brr hub. That's a decent omen.
 #scannotes for a brr hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.
 #spechelp for orange
 >oraneg
 The orange seems a bit closer for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the orange. That's a decent omen.
 #spechelp for a banna
 >nabaan
 The (a) banna' flutters about for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Banna'. That's a decent omen.
 #scannotes for a banna
 >scan a banna
 It must be the/a banna' AND the message on it.
 #spechelp for inapt paint
 >reservde
 You seem to read the inapt paint backwards for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the inapt paint. That's a decent omen.
 #scannotes for inapt paint
 >scan inapt paint
 Whatever this is, well, the vowels don't have much variability. Well, any.
@@ -1414,14 +1455,17 @@ You can't shake the fleeing feeling, and it's not just a general one. It says to
 #spechelp for viewer
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
 \\
 #spechelp for searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
 \\
 #spechelp for fleeing feeling
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
 
 @nud
 >prep

@@ -36,6 +36,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 #spechelp for store m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store M. Keep at it.
 
 >metros
 Your score has just gone up by one point
@@ -49,11 +50,6 @@ The trade tread doesn't need to be changed. What's behind it, does.
 
 Undesired Underside
 
-@mis
-#mistake test for grained
->grained
-Good try, but we're looking for a noun. With an extra A.
-\\
 #mistake test for singers
 >singers
 The beats would drown the singers out.
@@ -69,6 +65,10 @@ Any noise would be better than the beats, but without the sensor, you're probabl
 Reverse psychology won't work on the ingress, here.
 >resigns
 Reverse psychology won't work on the ingress, here.
+\\
+#nudge for theol
+>hotle
+You can't change the hotel, but you could have a look around.
 
 @nud
 #nudge for etch
@@ -89,6 +89,13 @@ The signers' ingress looks forbidding, but it looks hooked up to the friend find
 #nudge for signers
 >signesr
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
+\\
+#nudge for cramped
+>crampde
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+#nudge for camp
+>capm
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 @nud
 #mistake test for refind
@@ -136,6 +143,7 @@ You can't change the hotel,
 #spechelp for drainage
 >gardenai
 The drainage bubbles a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the drainage. Keep at it.
 
 @nud
 >w
@@ -161,7 +169,11 @@ On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last 
 >read reading
 On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last page. The nonsense makes you see red.
 
-
+@mis
+#mistake test for grained
+>grained
+Good try, but we're looking for a noun. With an extra A.
+\\
 
 >gardenia
 by one point
@@ -174,10 +186,6 @@ by one point
 #done rejects for gardenia
 >gardenai
 The flowers are fine as-is.
-\\
-#nudge for theol
->hotle
-You can't change the hotel, but you could have a look around.
 \\
 #nudge for sensor
 >sensro
@@ -249,7 +257,7 @@ The author twisted words enough. Perhaps you could concentrate on the motto.
 #spechelp for motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
-You feel a slight psychic push-pull coming from the motto. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the motto. Keep at it.
 
 >tomato
 Your score has just gone up by one point.
@@ -344,17 +352,9 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 Roarings Garrison
 
 @nud
-#nudge for camp
->capm
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-\\
 #nudge for library
->library
-could use renovation
-\\
-#nudge for cramped
->crampde
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+>librayr
+The library could use renovation, but that's out of the scope of your quest, now.
 \\
 #nudge for redtents
 >redtenst
@@ -379,11 +379,11 @@ It's not just that it's corn, it's LOST too.
 \\
 #nudge for tent
 >tetn
-As anti-personal property as the deadbeats are, that'd still annoy them.
+As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 \\
 #nudge for tents
 >tenst
-As anti-personal property as the deadbeats are, that'd still annoy them.
+As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 \\
 #nudge for deadbeat
 >deadbeta
@@ -417,6 +417,7 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 #spechelp for lost corn
 >controsl
 You thought you heard electronic beeping from the corn.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 
 >controls
 The dead beat deadbeat might not beat you dead
@@ -461,6 +462,7 @@ One antler seems to twitch a bit and pull towards you. Curious--it doesn't look 
 #spechelp for antlers
 >rentlas
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the antlers. Keep at it.
 
 @!min
 >rentals
@@ -549,7 +551,7 @@ You've already changed the lost corn into the controls, and you don't need to do
 #spechelp for dry cake
 >keycadr
 You feel like can almost identify what the cake can become.
-You feel a slight psychic push-pull coming from the dry cake. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
 >keycard
 }}SCORE++
@@ -577,7 +579,7 @@ The fuzziness seems to be part of the clover. It might be, even if you're able t
 #spechelp for clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
-You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the clover. Keep at it.
 
 >velcro
 }}SCORE++
@@ -684,6 +686,7 @@ The torn cue is just there to direct you to the brocade.
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the begonias. Keep at it.
 >noise bag
 by one point
 #altpath
@@ -704,7 +707,7 @@ They are multiple heaths--so you should try to change just one.
 #spechelp for heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
-You feel a slight psychic push-pull coming from the heaths. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the heaths. Keep at it.
 
 >sheath
 Your score has just gone up by one point.
@@ -737,7 +740,7 @@ You'd need to do something to all the words.
 #spechelp for words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
-You feel a slight psychic push-pull coming from the words. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the words. Keep at it.
 
 >sword
 }}SCORE++
@@ -760,7 +763,7 @@ Meddling with the sword right now, you're worried it might poke you.
 #spechelp for brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
-You feel a slight psychic push-pull coming from the brocade. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the brocade. Keep at it.
 
 >barcode
 }}SCORE++
@@ -1064,7 +1067,7 @@ Apparently the neon pig is a creation of one INPENGO.
 #spechelp for neon pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
-You feel a slight psychic push-pull coming from the neon pig. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
 >opening
 }}SCORE++
@@ -1182,7 +1185,7 @@ This racket isn't just one beat.
 #spechelp for siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
-You feel a slight psychic push-pull coming from the siren. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at it.
 
 >resin
 }}SCORE++
@@ -1210,7 +1213,7 @@ You could use the resin's stickiness right now.
 #spechelp for beats
 >betsa
 The beats shift up for a second.
-You feel a slight psychic push-pull coming from the beats. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the beats. Keep at it.
 
 >beast
 }}SCORE++

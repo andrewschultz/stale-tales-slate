@@ -317,6 +317,7 @@ by one point
 #spechelp for store b
 >strebo
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. Keep at it.
 #nudge for depot
 >depto
 You can't do anything to the depots besides ENTER them.

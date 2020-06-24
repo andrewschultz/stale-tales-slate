@@ -177,14 +177,17 @@ Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 #spechelp for sit a nag
 >agastni
 You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
 #spechelp for side art
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
 
 @nud
 #spechelp for worst ad
 >towarsd
 The ad seems slightly nearer, for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
 #readables for worst ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
@@ -209,6 +212,7 @@ You search around for the worst ad some more, but you can't find it, or anything
 #spechelp for scripture picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
 #mistake test for indies
 >indies
 You don't need to worry about art, here.
@@ -389,6 +393,7 @@ Perhaps it's better and simpler to focus on the proper names instead.
 #spechelp for adsorbing signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
 
 >past
 Your score has just gone up by one point
@@ -465,6 +470,7 @@ Pat's is a local small business, not nameless, faceless real estate.
 #spechelp for seed pit
 >despiet
 The seed pit seems to bubble slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
 #readables for cravings carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
@@ -530,6 +536,7 @@ You did well enough to focus on the proper names instead.
 #spechelp for lairage regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
 #nudge for sos
 >sso
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
@@ -589,6 +596,7 @@ This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, w
 #spechelp for pipe soot
 >opposiet
 The soot smells a bit stronger than before for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
@@ -645,6 +653,8 @@ The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may
 #respechelp for sit a nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from
+#the sit a nag. That's a decent omen. ??
 
 @sli
 #slider retest for against
@@ -705,6 +715,9 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 #respechelp for side art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from
+#the side art. That's a decent omen. ??
+
 #mistake retest for ides/rat/tar
 #nudges for ides
 >ides
@@ -763,15 +776,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for woe bow bell
 >belwo
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
+\\
 #nudge for woe
 >weo
 It seems best to deal with the whole WOE BOW BELL.
+\\
 #nudge for bow
 >bwo
 It seems best to deal with the whole WOE BOW BELL.
+\\
 #nudge for bell
 >bell
 It seems best to deal with the whole WOE BOW BELL.
+\\
 #mistake test for bowel/elbow/bowels/elbows
 >bowel
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
@@ -813,6 +831,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for rude n nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
 #scannotes for rude n nuder
 >scan rude 'n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
@@ -829,6 +848,8 @@ Your score has just gone up by one point
 #respechelp for sit a nag
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from
+#the sit a nag. That's a decent omen. ??
 #mistake retest for satired
 >satired
 Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
@@ -891,6 +912,7 @@ Well, you shouldn't be surprised the settler gives weird readings for something 
 #spechelp for morf form
 >frmo
 The MORF-FORM rocks in the air, as if it's about to fall.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF FORM. That's a decent omen.
 
 @sli
 #slider test for from
@@ -919,6 +941,7 @@ THE BEAN has too much gravitas to be just a bean.
 #spechelp for the bean
 >beneaht
 THE BEAN rolls back and forth a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
 #mistake test for bane
 >bane
 You fill yourself with fear for no reason. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--THE BEAN is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.
@@ -978,6 +1001,7 @@ The NULL IT unit seems to leave things double-unlit. But with one ambiguous read
 #spechelp for null it unit
 >litun
 You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL IT UNIT. That's a decent omen.
 
 @sli
 #slider test for until
@@ -1021,6 +1045,7 @@ not something you
 #spechelp for odd run on aura
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
 
 @sli
 #slider test for around
@@ -1044,6 +1069,7 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 #remember "all" bugs the Inform compiler
 >alogn
 You think of how to find a way to No-Lag Logan's boat.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the noon gag. That's a decent omen.
 #scannotes for noon gag
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
@@ -1074,6 +1100,7 @@ Nothing happens. It's a MIST AD, after all.
 #spechelp for admits mist ad
 >amidts
 Hmm, you almost see a way past the admits mist ad.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the admits mist ad. That's a decent omen.
 #scannotes for admits mist ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
@@ -1122,6 +1149,7 @@ No need to alter them. Worth looking at, though.
 #spechelp for thickness sketchins
 >athwatr
 Your craft rocks and makes negligible forward progress. Still, it's a start.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
 #scannotes for thickness sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
@@ -1173,9 +1201,11 @@ It's more the content of the patters that you could deal with, if you wanted.
 #spechelp for bent ewe
 >betwene
 The bent ewe stretches a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
 #spechelp for hurt hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
 #nudge for spheric
 >spherci
 The ciphers cannot be dispelled.
@@ -1218,6 +1248,7 @@ by one point
 #spechelp for raptest patters
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
 
 @!min
 >without
@@ -1256,6 +1287,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for yob den
 >beyodn
 Some different noises from the yob den.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.
 
 @min
 >misses

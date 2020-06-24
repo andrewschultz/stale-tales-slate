@@ -66,6 +66,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >remap
+by one point
 #nudge for remap
 >rempa
 You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
@@ -192,26 +193,32 @@ IT'S P is written in red on the bottom.
 #spechelp for capers recaps
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
 \\
 #spechelp for gins sign
 >igns
 Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
 \\
 #spechelp for tips pits
 >spti
 The tips pits rattle a bit as you try to do ... something ... to them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
 \\
 #spechelp for tines
 >inste
 Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
 \\
 #spechelp for tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
 \\
 #spechelp for trolls
 >strlol
 The trolls laugh at you a bit, but nervously.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr Trolls. That's a decent omen.
 \\
 #scannotes for gins sign
 >scan gins sign
@@ -265,6 +272,7 @@ You can't work on the jukebox as a whole, but maybe you could meddle with its tw
 #spechelp for perma amper
 >rempa
 The tunes grow slightly less annoying, for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the perma amper. That's a decent omen.
 #nudge for unset
 >unste
 The tunes grow slightly less annoying, for a moment.
@@ -400,6 +408,7 @@ The baser braes can't be changed. There is enough to do in the Olde Lode.
 #spechelp for clam
 >caml
 The clam still seems enraged.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a decent omen.
 
 @sli
 #slider test for calm
@@ -420,6 +429,7 @@ Odd! Now, you feel a need to panic and flee after calming the clam.
 #spechelp for urn
 >rnu
 The urn sits there, daring you to walk away.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a decent omen.
 
 @sli
 #slider test for run
@@ -456,14 +466,17 @@ Easier said than done. Perhaps a river craft could help you across. Like the raf
 #spechelp for frat raft
 >ratf
 The frat raft rocks slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
 \\
 #spechelp for oars
 >oasr
 The oars splash around in the water, briefly rising out, as if they don't belong there.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the oars. That's a decent omen.
 \\
 #spechelp for boats
 >bosat
 Perhaps if you were louder and more confident, the boats would hear you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the boats. That's a decent omen.
 \\
 #nudge for seaside
 >seasied
@@ -619,6 +632,7 @@ No way. You're not changing the crays--and if you changed one, the others would 
 #spechelp for pale plea
 >lepa
 Yes, the pale plea is calling and warning you to leave. But how?
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pale plea. That's a decent omen.
 >scan crays
 The crays are still slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.
 !You worry what will happen to you, or the settler, if you pull it out again. You remember seeing RYYR from the pale plea.
@@ -671,6 +685,7 @@ You have no dice to tempt the carps with. Or large amounts of money. Perhaps you
 #spechelp for pre-haun
 >unearht
 You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the !!!!. That's a decent omen.
 #nudge for anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -686,14 +701,17 @@ You start randomly digging, but you don't have a good instrument, and you probab
 #spechelp for carps
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
 \\
 #spechelp for pikes
 >pikse
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
 \\
 #spechelp for trout
 >trotu
 The best way to help the trout at the moment is to deal with the carps and pikes.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a decent omen.
 #mistake test for kepis
 >kepis
 If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
@@ -749,6 +767,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!
+DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
 #nudge for hardest
 >hardets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -778,6 +797,7 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 #spechelp for cans
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a decent omen.
 #mistake test for hatred/hatreds
 >hatred
 There's enough of that going around.
@@ -844,9 +864,11 @@ Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
 #spechelp for dent
 >detn
 Fixing the dent is a tricky business. Get two things out of order, and it might get worse. But you must be close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a decent omen.
 #spechelp for tea
 >tae
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tea. That's a decent omen.
 
 @nud
 #nudge for tuna
@@ -929,6 +951,7 @@ Retutor? Torture. Rot. True!
 #spechelp for wrap
 >wrpa
 That's not quite the way to pop the wrap.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the wrap. That's a decent omen.
 #nudge for bubble
 >bubbel
 It's just wrap, really.
@@ -946,6 +969,7 @@ The pearl is too jagged to change easily, but it seems like it was roughly cut i
 #spechelp for wipes
 >wipse
 You try to take the wipes, but you worry you're not fast enough.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
 
 @!min
 >swipe
@@ -1066,26 +1090,32 @@ It's just a knob. Which thankfully cuts down the possibilities.
 #spechelp for c2
 >traec
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
 \\
 #spechelp for crate
 >reatc
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
 \\
 #spechelp for knob
 >knbo
 The knob rattles slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
 \\
 #spechelp for skis
 >sksi
 The skis momentarily seem more polished.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
 \\
 #spechelp for span pans
 >pasn
 The pans wobble slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
 \\
 #spechelp for bogus-plains
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 \\
 #scannotes for bogus-plains
 >scan
@@ -1178,6 +1208,7 @@ Hmm, no, it's only one crate at a time.
 #respechelp for crate
 >craet
 The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
 
 >react
 Your score has just gone up by one point
@@ -1287,6 +1318,7 @@ Clear ALL the tubs!
 #spechelp for tubs
 >tusb
 Hm. The tubs shake slightly. Maybe if you were more forceful.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a decent omen.
 
 @sli
 #slider test for bust
@@ -1309,6 +1341,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for prod
 >prdo
 You juggle the prod a bit, but it doesn't change into anything new.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
 
 >drop prod
 Your score has just gone up by one point
@@ -1344,6 +1377,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for waste
 >waset
 You make an effort to clean the waste but feel you could do better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
 
 @mis
 #mistake test for sweat [text]
@@ -1367,12 +1401,14 @@ DEBUG INFO: min-up codepath
 #spechelp for lance
 >lanec
 The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
 #nudge for waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
 #spechelp for heaps
 >heasp
 The heaps still look ugly as ever.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
 #nudge for heap
 >hepa
 Change ALL the heaps!
@@ -1406,10 +1442,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #respechelp for lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
 >abstract wipes to lean lane
 #respechelp for lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
 >clean lance
@@ -1494,6 +1532,7 @@ The sardine gives you a weird look, as if you need to stop mumbling. You're not 
 #spechelp for achers chaser arches
 >searhc
 Hm, you almost thought you found something. Well, not QUITE like that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the achers' chaser arches. That's a decent omen.
 #scannotes for achers chaser arches
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
@@ -1547,6 +1586,7 @@ Further searching proves fruitless.
 #spechelp for gleaner
 >gleanre
 The gleaner remains too small to read.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
 #readables for gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
@@ -1640,6 +1680,7 @@ You don't need to riff on any location names to win the game, unless there's not
 #spechelp for ruby
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a decent omen.
 
 @sli
 #slider test for bury
@@ -1703,6 +1744,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for haunter
 >assuaeg
 You're a bit tongue-tied, but that seems close.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the haunter. That's a decent omen.
 #nudge for howler
 >howlre
 Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
@@ -1752,6 +1794,7 @@ It's sort of appropriate now that you're in the north, but it's disrespectful to
 #spechelp for ol trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's a decent omen.
 >s
 >e
 #nudge for hoser
@@ -1837,6 +1880,7 @@ The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe w
 #spechelp for papery yapper
 >yappre
 "Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
+DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. That's a decent omen.
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
 #scannotes for papery yapper
@@ -1890,6 +1934,7 @@ Someone named LAMPERT (written in red) constructed the templar ramplet.
 #spechelp for templar ramplet
 >trampel
 There MUST be a way to storm down the templar ramplet. But not that.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
 #scannotes for templar ramplet
 >scan templar ramplet
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
@@ -1930,9 +1975,11 @@ You grumble a bit. But with just six possibilities, it may be easier to brute fo
 #spechelp for natant ant
 >tna
 There must be a simple way to take down the ant. You haven't quite got it right yet, though.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
 #spechelp for bogus-lamps
 >psaml
 The plasm lamps flicker slightly.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the plasm lamps. That's a decent omen.
 #mistake test for atn
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
@@ -1989,6 +2036,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for lever
 >levre
 You look at the lever, wishing it would be a little more fun to pull.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
 
 @!min
 >revel
@@ -2007,6 +2055,7 @@ You riff on your previous celebrations, but it doesn't feel as cool.
 #spechelp for dialer
 >dilrae
 The dialer seems to click slightly
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
 #readables for dialer
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
@@ -2041,6 +2090,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
 
 @nud
 #mistake test for nips
@@ -2080,6 +2130,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for d2
 >redila
 The dialer must have another setting, but that's not quite it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
 
 #not a mistake
 >redial
