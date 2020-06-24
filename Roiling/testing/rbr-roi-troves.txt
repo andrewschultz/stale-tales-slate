@@ -1147,7 +1147,7 @@ No! Not another second thinking about that rubbish.
 #spechelp for trance nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the trance nectar. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. Keep at it.
 
 @mina,minb
 >misses

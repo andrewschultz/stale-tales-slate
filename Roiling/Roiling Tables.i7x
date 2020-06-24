@@ -164,16 +164,14 @@ USB	USB	false	219798678	Strip of Profits	"sub"	"sub/bus"	--	--	"[sub-bus]!"
 
 book oyster
 
-[because oyster is about verbs, it's tougher to have a one-to-one correspondence between points and lines in the anagram table.
-REMAP/PERMA AMPER is shuffled to TUNES/UNSET. "remap" is listed in the table of oyster nudges.
-]
+[because oyster is about verbs, it's tougher to have a one-to-one correspondence between points and lines in the anagram table.]
 
 table of oyster anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	a rule	a rule	"Saliva avails to show your disdain for the bar staff and for generosity in general. The pesty types, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
 gins sign	gins sign	false	242774022 [not really covered in the default verb SING]	--	"sing"	"sing"	--	--	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly." [not really covered in the default verb SING]
-tunes	tunes	false	501203408	--	"unset"	"unset"	--	--	"You fiddle with the knobs and such on the jukebox according to the instructions[post-remap-unset]."
-tunes	tunes	false	360858842	--	"remap"	"remap"	--	post-amper-remap rule	"You brave the electrical underpinnings of the perma-amper to create an ampish mishap[post-remap-unset]."
+tunes	tunes	false	501203408	--	"unset"	"unset"	--	post-tunes-unset rule	"You fiddle with the knobs and such on the jukebox according to the instructions."
+perma amper	perma amper	false	360858842	--	"remap"	"remap"	--	post-amper-remap rule	"You brave the electrical underpinnings of the perma-amper to create an ampish mishap."
 tines	tines	false	441090447	--	"inset"	"inset" or "inset stein/tines"	--	--	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."
 capers recaps	capers recaps	false	412063240	--	"scrape"	"scrape"	--	--	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The pesty types glare at you for disturbing them, too."
 trolls	trolls	false	466688042	Olde Lode	"stroll"	"stroll" or "stroll past/by trolls"	pre-trolls-stroll rule	--	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the LOLstr trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"
@@ -996,10 +994,14 @@ to say sub-bus:
 
 section oyster auxiliary
 
-to say post-remap-unset: say ". The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect"
+this is the post-tunes-unset rule:
+	say "The perma-amper makes a pop and sparks and flames out. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect.";
+	moot perma amper;
+	moot tunes;
 
 this is the post-amper-remap rule:
 	now remapped is true;
+	process the post-tunes-unset rule;
 
 to say stein-drop:
 	if player has stein:
@@ -2199,10 +2201,10 @@ ana-repeats is a number that varies.
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
 definition: a thing (called itm) is all-around:
-	it itm is bogus-detours, yes;
-	it itm is bogus-plains, yes;
-	it itm is bogus-lamps, yes;
-	it itm is n-t-air, yes;
+	if itm is bogus-detours, yes;
+	if itm is bogus-plains, yes;
+	if itm is bogus-lamps, yes;
+	if itm is n-t-air, yes;
 	no;
 
 to say where-pull of (itm - a thing): say "[if itm is all-around]all around[else][the itm]"

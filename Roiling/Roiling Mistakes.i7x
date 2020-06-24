@@ -98,6 +98,10 @@ book stores
 
 chapter Strip of Profits
 
+understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Trips Strip.
+
+understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
+
 understand "ektor" and "ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
 
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
@@ -757,6 +761,7 @@ understand "dang rite" as a mistake ("Creative, but ineffective, positive colloq
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
+understand "parley" as a mistake ("The raves saver/replay player
 understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is touchable]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are touchable.
 
 chapter shoals aslosh (backdrop)

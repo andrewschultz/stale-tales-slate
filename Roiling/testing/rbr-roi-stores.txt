@@ -258,6 +258,15 @@ DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on L
 >sorbte
 You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
 
+@mis
+#mistake test for destro
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+\\
+#mistake test for doters
+>doters
+You don't need people oohing and ahing at your skill.
+
 @nud
 #spechelp for store n
 >nestro

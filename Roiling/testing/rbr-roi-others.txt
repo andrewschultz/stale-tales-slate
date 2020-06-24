@@ -1290,7 +1290,7 @@ Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give anot
 #spechelp for orange
 >oraneg
 The orange seems a bit closer for a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the orange. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
 #spechelp for a banna
 >nabaan
 The (a) banna' flutters about for a bit.
