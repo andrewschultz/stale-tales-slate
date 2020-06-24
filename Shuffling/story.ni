@@ -4280,7 +4280,7 @@ understand "softer" and "softer forest" as sf when mrlp is forest.
 
 description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
 
-to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell[else if shout is touchable]you hear a shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
+to say vis-hint: say "[if stew is touchable or teas are touchable]there's a[nuthers] smell[else if shout is touchable]you hear a rambling shout[else if thorn is touchable]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
 
 to say nuthers: if player is in rf, say "[if stew is in sf or teas are in sf]nother[end if]"
 
@@ -7916,8 +7916,6 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 						say "The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
 					else if the-to entry is soil and silo is not touchable:
 						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
-					else if the-to entry is potters:
-						say "You cut the riot down, but you need to change their protest now.";
 					else:
 						reject-msg the-to entry;
 				do nothing instead;

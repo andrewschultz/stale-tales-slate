@@ -14,6 +14,10 @@ Going east from Self-ID Fields leads to an area you can clear quickly and ignore
 Going north in the Underside leads to more immediately solvable puzzles.
 ]
 
+section parser administrivia
+
+understand the command "cross" as something new. [this was mapped to ENTER, but with Corses Crosse, it gets confusing.]
+
 book nudge tables
 
 chapter ordeal loader
@@ -179,9 +183,9 @@ table of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "conifer"	446903324	--	first-two-forest rule	"[no-con]."
 "conifers"	543177290	--	first-two-forest rule	"[no-con]."
-"rambling"	370319574	rambling shout	--	"[guider-content]."
-"whiff"	243239710	whiff of stew	--	"[guider-content]."
-"aroma"	228127169	aroma of teas	--	"[guider-content]."
+"rambling"	370319574	rambling shout	--	"[guider-content of shout]."
+"whiff"	243239710	whiff of stew	--	"[guider-content of stew]."
+"aroma"	228127169	aroma of teas	--	"[guider-content of teas]."
 "leaves"	515052661	leaves	--	"You have no time to play with leaves."
 "south"	416124667	--	forest-south rule	"[forest-no of shout]."
 "north"	368976205	--	forest-north rule	"[forest-no of thorn]."
@@ -192,7 +196,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "sandwich"	397613884	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
 "meat"	297179098	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon, you have it half right, don't futz with the remaining liver[else if River Ville liver is not touchable or viler liver is not touchable]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	liv-vis rule	"[if River Ville liver is moot or viler liver is moot]C'mon. You put one liver where it needs to be. No need to futz with the remaining liver[else if River Ville liver is not touchable or viler liver is not touchable]Your thoughts go to the other liver[else][bothlivers][end if]."
 "ville"	387591453	river ville liver	--	"[rivliv]."
 "river"	450611381	river ville liver	--	"[rivliv]."
 "cylinder"	543238031	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -241,8 +245,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "elegy"	464385011	--	--	"The elegy doesn't need to be twisted any more."
 "tacks"	273510565	--	--	"[tack-heap]."
 "tack"	177236599	--	--	"[tack-heap]."
-"notes"	470450178	--	--	"The notes are just for reading."
-"note"	374176212	--	--	"The notes are just for reading."
+"notes"	470450178	--	--	"[stone-read]."
+"note"	374176212	--	--	"[stone-read]."
 "stick"	316315593	--	--	"[vand-art]."
 "figure"	422343163	--	--	"[vand-art]."
 "figures"	518617129	--	--	"[vand-art]."
@@ -790,24 +794,28 @@ this is the first-two-forest rule:
 
 to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
 
-to say guider-content: say "No, that's not the [i]essence[r] of the thing"
+to say guider-content of (th - a thing): say "No, that's not the [i]essence[r] of [the th]"
 
 this is the forest-south rule:
-	if shout is touchable or shout is moot, the rule succeeds;
+	if self id fields is visited, the rule fails;
+	if location of shout is visited, the rule succeeds;
 	the rule fails;
 
-to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is moot]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is in sf]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
 
 this is the forest-north rule:
-	if thorn is touchable or thorn is moot, the rule succeeds;
+	if self id fields is visited, the rule fails;
+	if location of thorn is visited, the rule succeeds;
 	the rule fails;
 
 this is the forest-west rule:
-	if stew is touchable or stew is moot, the rule succeeds;
+	if self id fields is visited, the rule fails;
+	if location of stew is visited, the rule succeeds;
 	the rule fails;
 
 this is the forest-east rule:
-	if teas are touchable or teas are moot, the rule succeeds;
+	if self id fields is visited, the rule fails;
+	if location of teas is visited, the rule succeeds;
 	the rule fails;
 
 to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
@@ -819,6 +827,8 @@ to say line-is-dead: say "They're dead and not interfering with you. Greater pow
 to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
 
 to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
+
+to say stone-read: say "The notes stone is just for reading"
 
 to say vand-art: say "Don't vandalize the art, man"
 
@@ -961,8 +971,6 @@ to say no-poses: say "You can't change who they are. They probably can't, either
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
 this is the angst rule:
-	if player has emitter, say "1.";
-	if emitter is angstgnatted, say "2.";
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
 

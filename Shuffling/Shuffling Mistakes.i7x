@@ -7,7 +7,7 @@ volume Shuffling Mistakes
 
 definition: a thing (called t) is quickvis:
 	if player carries t, yes;
-	if t is in location of player, yes;
+	if t is enclosed by location of player, yes;
 	no;
 
 section understand logic
@@ -83,7 +83,7 @@ understand "rood" as a mistake ("[if OR DO door is in Rested Desert]You already 
 
 chapter Thickest Thickets
 
-understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is quickvis.
+understand "believe" as a mistake ("Yes, but what do you believe you can do or change?") when toga is touchable.
 
 understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in Thickest Thickets.
 
@@ -171,11 +171,11 @@ understand "scorse" as a mistake ("You can't trade with the dead.") when player 
 
 chapter Flesh Shelf
 
-understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is quickvis or maps are quickvis.
+understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is touchable or maps are touchable.
 
-understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is quickvis.
+understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is touchable.
 
-understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is quickvis.
+understand "debar" as a mistake ("If there are any lawyers here, they've already been debarred.") when player has beard or bread is touchable.
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in Flesh Shelf.
 
@@ -193,11 +193,11 @@ understand "alerting" and "alertings" as a mistake ("There's nobody to alert her
 
 understand "altering" and "alterings" as a mistake ("No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.") when player is in Gnarliest Triangles.
 
-understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are quickvis.
+understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are touchable.
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
-understand "gunshot" as a mistake ("[if noughts are touchable]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is touchable and silver is off-stage], but you don't have a bullet yet[else if shotgun is touchable and player has silver], but you need to load it first[end if].") when noughts are quickvis or shotgun is quickvis.
+understand "gunshot" as a mistake ("[if noughts are touchable]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is touchable and silver is off-stage], but you don't have a bullet yet[else if shotgun is touchable and player has silver], but you need to load it first[end if].") when noughts are touchable or shotgun is touchable.
 
 understand "integral" and "integrals" as a mistake ("I think this game is hard enough without bringing Calculus into it.") when player is in Gnarliest Triangles.
 

@@ -19,6 +19,8 @@
 #notmax
 Your score has just gone up by one point.
 
+# start the default (which I picked at random) way through.
+
 >sr ne
 
 >in
@@ -30,6 +32,7 @@ by one point
 Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
 >east
 by one point
 Self-ID Fields
@@ -120,11 +123,17 @@ You currently have 11 out of 17 total points for the Forest region. You have fou
 >peel river ville
 Cr-r-r-r-k.
 
+>e
+#renudge for liver
+>livre
+Your thoughts go to the other liver.
+>w
+
 >peel viler liver
 Cr-r-r-r-k.
 
 >put river ville in canister
-#xc
+
 >put viler liver in canister
 #notana
 Your score has just gone up by one point.
@@ -138,6 +147,9 @@ The livers are too dull to do anything like that with. Yet.
 
 >sliver
 Your score has just gone up by one point.
+
+>srelvi
+WRONG
 
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

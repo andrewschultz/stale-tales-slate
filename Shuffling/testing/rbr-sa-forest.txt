@@ -59,53 +59,60 @@ The scented descent to the forest doesn't need to be changed.
 ##balance undos
 >rs sw
 >in
+##############################################################west 1st
 #nudge for whiff
->whiff
-You suspect it's important that it's a whiff of stew.
+>whfif
+No, that's not the essence of the whiff of stew.
 >undo
 #mistake test for wets
 >wets
 Getting lost in a swamp would be even worse than getting lost in a forest.
+>undo
 #nudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
+>undo
 #nudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
+>undo
 #nudge for west
 >twes
-The stew smells a bit burnt for a minute. No, that can't quite be it.
+Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
+>undo
 #nudge for aest
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
->undo
->undo
->undo
->undo
->west
+>w
+by one point
+##############################################################south 2nd, west 1st
 Rest of Forest
+#nudge for rest
+>rets
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+>undo
 #nudge for rambling
 >ramblign
-No, that's not the essence of the thing.
+No, that's not the essence of the rambling shout.
 >undo
 #renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
+>undo
 #nudge for south
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
+>undo
 #nudge for ewst
 >twes
-Your internal compass feels extra jumbled. You remember the stew, but there's probably a different challenge here. You must have the right general idea.
+Your internal compass feels extra jumbled. You remember the whiff of stew, but there's probably a different challenge here.
+>undo
 #renudge for aest
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
->undo
->undo
->undo
->south
+>s
 by one point
 Self-ID Fields
 >undo
@@ -118,40 +125,73 @@ Self-ID Fields
 ##balance undos
 >rs ne
 >in
-#mistake test for sate
->sate
-There's nothing around you have to sate, thankfully.
+##############################################################east 1st
 #mistake test for seat
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
+>undo
+\\
+#mistake test for sate
+>sate
+There's nothing around you have to sate, thankfully.
+>undo
+\\
 #mistake test for tase
 >tase
 This game is nonviolent--well, except for a few puns.
+>undo
+\\
+#nudge for aroma
+>aroam
+No, that's not the essence of the aroma of teas.
+>undo
+#spectest for teas
+>aest
+Your internal compass feels extra jumbled. The scent of teas changes slightly.
+>undo
+#nudge for eat
+>eta
+The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
+>undo
+#mistake test for sate
+>sate
+There's nothing around you have to sate, thankfully.
+>undo
+#mistake test for seat
+>seat
+You need the opposite of a seat, here. But at the same time, you're also very close.
+>undo
+#mistake test for tase
+>tase
+This game is nonviolent--well, except for a few puns.
+>undo
 #nudge for tea
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
->undo
->undo
->undo
->east
-by one point
-Rest of Forest
 #nudge for north
 >norht
+You think you're on to something, but you still feel stuck.
+>undo
+>e
+by one point
+Rest of Forest
+\\
+#spectest for thorn
+>ornth
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
+>undo
 #renudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for ewst
 >twes
 You think you're on to something, but you still feel stuck.
+>undo
 #nudge for east
 >aest
-Your internal compass feels extra jumbled. You remember the teas, but there's probably a different challenge here. You must have the right general idea.
->undo
->undo
->undo
+Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
 >n
 Self-ID Fields
@@ -169,39 +209,39 @@ by one point
 #nudge for north
 >norht
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
+>undo
 #renudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for ewst
 >twes
 You think you're on to something, but you still feel stuck.
+>undo
 #nudge for aest
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
->undo
->undo
->undo
->east
+>n
 by one point
 Rest of Forest
 #renudge for north
 >norht
-Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here. You must have the right general idea.
+Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here.
+>undo
 #renudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for ewst
 >twes
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for east
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
->undo
->undo
->undo
->north
+>e
 by one point
 Self-ID Fields
 >undo
@@ -217,18 +257,18 @@ Self-ID Fields
 #nudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for souht
 >souht
-Your internal compass feels extra jumbled. You remember the shout, but there's probably a different challenge here. You must have the right general idea.
+Your internal compass feels extra jumbled. The shout wavers for a bit. Maybe you're on to something.
+>undo
 #renudge for ewst
 >twes
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for aest
 >aest
 You think you're on to something, but you still feel stuck.
->undo
->undo
->undo
 >undo
 >s
 by one point
@@ -236,18 +276,18 @@ Rest of Forest
 #renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
+>undo
 #renudge for souht
 >souht
-The shout wavers for a bit. Maybe you're on to something.
+Your internal compass feels extra jumbled. You remember the rambling shout, but there's probably a different challenge here.
+>undo
 #renudge for west
 >twes
 The stew smells a bit burnt for a minute. No, that can't quite be it.
+>undo
 #renudge for aest
 >aest
 You think you're on to something, but you still feel stuck.
->undo
->undo
->undo
 >undo
 >w
 by one point
@@ -256,29 +296,17 @@ Self-ID Fields
 >undo
 >undo
 >undo
-}}SCORE+=2
+
+# start the default (which I picked at random) way through.
 
 >sr ne
-\\
->in
-\\
-Softer Forest
-\\
->north
-by one point
-Rest of Forest
-}}SCORE++
->score
-{$SCOS}
->east
-by one point
-Self-ID Fields
-}}SCORE++
 
->score
-{$SCOS}
+>in
+
+Softer Forest
 
 @nud
+#these are universal to SF/RF
 #nudge for forest
 >forets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
@@ -291,54 +319,23 @@ No conifers appear. Maybe you can just use your senses, and it's easier than tha
 #nudge for leaves
 >leavse
 You have no time to play with leaves.
->n
-#nudge for east
->eats
-The scent of teas changes slightly.
-#nudge for eat
->eta
-The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
+
+>north
+by one point
+Rest of Forest
+}}SCORE++
+>score
+{$SCOS}
+
+>east
+by one point
+Self-ID Fields
+}}SCORE++
+
+>score
+{$SCOS}
 
 @nud
-#spectest for thorn
->ornth
-Your internal compass feels extra jumbled, but--well, you must be close.
-
-@nud
-#renudge for leaves
->leavse
-You have no time to play with leaves.
-#nudge for aroma
->aroam
-No, that's not the essence of the thing.
-#nudge for rest
->rets
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#spectest for teas
->aest
-Your internal compass feels extra jumbled. The scent of teas changes slightly.
-\\
-#mistake test for seat
->seat
-You need the opposite of a seat, here. But at the same time, you're also very close.
-\\
-#mistake test for sate
->sate
-There's nothing around you have to sate, thankfully.
-\\
-#mistake test for tase
->tase
-This game is nonviolent--well, except for a few puns.
-\\
-#nudge for south
->souht
-Your internal compass feels extra jumbled.
-#nudge for north
->norht
-Your internal compass feels extra jumbled, and you remember the thorn, but there's probably a different challenge here.
-#nudge for west
->wets
-Your internal compass feels extra jumbled. You must have the right general idea.
 
 @nud
 #renudge for forest
@@ -348,10 +345,10 @@ You don't want to change a region drastically while you're in it
 >selfdi
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for self
->self
+>sefl
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for field
->self
+>ifdle
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for selves
 >selvse
@@ -361,13 +358,13 @@ The selves vessel is much too sturdy to manipulate.
 The selves vessel is much too sturdy to manipulate.
 #nudge for line
 >lien
-They're dead and not interfering with you.
+If they owe something, that's their business. It's too late to change that now.
 #nudge for life
 >lief
-They're dead and not interfering with you.
+They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for lineof
 >linefo
-They're dead and not interfering with you.
+They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for undead
 >undeda
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
@@ -378,7 +375,7 @@ You can't do much to change the undead. You're not THAT powerful. Well, maybe sp
 >croses
 Whatever you could do to Corses Crosse, it might do worse to you.
 #nudge for cross
->cross
+>crsos
 Whatever you could do to Corses Crosse, it might do worse to you.
 #nudge for crose
 >croes
@@ -419,7 +416,7 @@ The triangles need no alterings.
 >triangel
 No triangle needs altering.
 #nudge for shell
->shell
+>shlel
 It doesn't rattle, but the dashes seem to.
 #nudge for bucket
 >buckte
@@ -469,9 +466,6 @@ The naughts, err, noughts seem zero-y enough to contain an o.
 #nudge for nought
 >nougth
 There's more than one nought.
-#nudge for muzzle
->muzzel
-You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
 #mistake test for integral/integrals
 >integral
 I think this game is hard enough without bringing Calculus into it.
@@ -514,14 +508,6 @@ Things are mixed up enough!
 You aren't sure you need a booming voice telling you what you can EXAMINE.
 >tones
 You aren't sure you need a booming voice telling you what you can EXAMINE.
-\\
-#mistake test for destro
->destro
-It's going to get evil enough even without a high-ranking COBRA officer.
-\\
-#mistake test for doters
->doters
-You don't need people oohing and ahing at your skill.
 \\
 #mistake test for eon/eons
 >eon
@@ -587,6 +573,9 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
+#nudge for muzzle
+>muzzel
+You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
 #done rejects for shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
@@ -638,7 +627,7 @@ The ring does not bend.
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
-@nu
+@nud
 #mistake test for inks
 >inks
 The skin sink bleeds no color.
@@ -648,7 +637,7 @@ The skin sink bleeds no color.
 >helf
 While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
 >helfs
-While you're sort of in a far side, nothing flies by to ignore you because you only said 'helf' and not "help."
+While you're sort of in a far side, nothing flies by to ignore you because you only said "helf" and not "help."
 #mistake test for kin/kins
 >kin
 Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your pow
@@ -661,6 +650,20 @@ ers .
 #mistake test for debar
 >debar
 If there are any lawyers here, they've already been debarred.
+
+@nud
+#nudge for bleads
+>bleasd
+The blades, buried in the grinder, remain lifeless.
+#nudge for meat
+>meta
+You'll need to be more specific about the meat to poke at.
+#nudge for meats
+>meast
+You'll need to be more specific about the meat to poke at.
+#nudge for liver
+>livre
+The one liver seems inactive by itself.
 
 >open sandwich
 bread from the Spam
@@ -798,20 +801,6 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
-#nudge for bleads
->bleasd
-The blades, buried in the grinder, remain lifeless.
-#nudge for meat
->meta
-You'll need to be more specific about the meat to poke at.
-#nudge for meats
->meast
-You'll need to be more specific about the meat to poke at.
-#nudge for liver
->livre
-The one liver seems inactive by itself.
-
-@nud
 #spechelp for liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
@@ -838,10 +827,6 @@ It's a perfectly good tool. Trying to refine it might break it.
 >peel river ville
 Cr-r-r-r-k.
 
-@nud
-#renudge for liver
->livre
-C'mon, you have it half right, don't futz with the remaining liver.
 >e
 #renudge for liver
 >livre
@@ -879,7 +864,12 @@ You smile confidently. You'll figure how to use the grinder.
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
 
 >put river ville in canister
-#xc
+
+@nud
+#renudge for liver
+>livre
+C'mon. You put one liver where it needs to be. No need to futz with the remaining liver.
+
 >put viler liver in canister
 #notana
 Your score has just gone up by one point.
@@ -923,12 +913,14 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the livers. Keep at 
 Your score has just gone up by one point.
 }}SCORE++
 
+>srelvi
+WRONG
+
 >score
 @min
 {$SCOS}
 @!
 {$SFIXMAX}
-
 
 @nud
 >silver
@@ -995,9 +987,6 @@ You don't know what's
 @nud
 >doorwya
 You can just go through. You don't want it to change any more, really.
-#nudge for cylinder
->cylindre
-It's the shape it should be. You don't need to make a key, or a charm.
 #spechelp for sliver
 >silvre
 The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
@@ -1006,6 +995,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sliver. Keep at 
 >silver
 Your score has just gone up by one point.
 }}SCORE++
+
+@nud
+#nudge for cylinder
+>cylindre
+It's the shape it should be. You don't need to make a key, or a charm.
 
 >score
 @min

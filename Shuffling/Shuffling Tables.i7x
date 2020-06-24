@@ -548,7 +548,7 @@ banshee	"The banshee whines, sure someone is trying to kill it! Or send it to a 
 liches	"The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom."
 bread	"A few crumbs fall from the bread and leave a scuzzy growth before vanishing."
 livers	"The livers seem to prick you for a moment, as if to say you're not quite right."
-sliver	"The sliver shines a bit as you focus on it. It suddenly feels slightly more valuable."
+sliver	"The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[end if]."
 spread	"As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away[red-to]."
 red asp	"The red asp strikes at something you can't see, unaware it's you that's trying to change it."
 Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for a moment."
@@ -575,7 +575,7 @@ anapest	"You think you had the right idea, but your execution was poor. Maybe be
 smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
-oils	"The oils need a purpose--to build something great. You don't want to waste them." [separate if statement below takes other cases]
+oils	"[if player is not in moor]The oils need a purpose--to build something great. You don't want to waste them[else if soil is touchable]No, that wouldn't need the soil as a foundation[else]The oils could change the moor into something more fertile, but not that[end if]."
 drainage	"The drainage bubbles a bit." [metros start]
 motto	"Hm, you maybe could bend the/a motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
@@ -707,6 +707,7 @@ slope	"You wouldn't want to make the slope crumble away."
 ropes	"The ropes are useful for climbing, which you need to do to get east."
 grips	"You can't get ahold of anything that would be more useful than the grips."
 protest	"You can deal with three people. But you'll have to change their motivations."
+potters	"You've changed the potters enough. Now you need to give them something interesting to do besides protest."
 
 to say keep-food-simple: say "Best not to get too crazy with food preparation"
 
