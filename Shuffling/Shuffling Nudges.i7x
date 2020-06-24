@@ -434,6 +434,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "mittens"	608275618	Velcro	--	"[mits-are]."
 "beats"	347796816	--	no-beats rule	"The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here."
 "beta"	251522850	beats	--	"This racket isn't just one beat."
+"noise"	412333006	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
+"bag"	53206425	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
+"tulip"	388488469	tulip	--	"[if player has tulip]The tulip is handy as-is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked directly on the tulip, which it won't. The nerds might be able to help you with part of your quest, though[end if]."
+"word"	288640242	words	--	"You'd need to do something to all the words."
+"hilt"	239199002	sword	--	"The hilt serves a purpose, and besides, there's not much to change it to."
+"ganst"	303079012	--	angst rule	"You don't get rid of angst with just a word."
 
 table of Undesired Underside nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -452,8 +458,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "theol"	396364842	--	--	"[no-hot]."
 "etch"	287204011	tech etch	--	"The tech-etch is pretty securely, um, etched on."
 "reading"	382846875	a reading	--	"It's *A* reading you need to worry about."
-"cramped"	400893516	--	--	"You can't do much with or to the camp, here or north."
-"camp"	166734515	--	--	"You can't do much with or to the camp, here or north."
+"cramped"	400893516	--	--	"[und-camp]."
+"camp"	166734515	--	--	"[und-camp]."
 
 table of Roarings Garrison nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -497,16 +503,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "potato"	438578967	night thing	--	"The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it."
 "lucre"	391055143	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
 "emitter"	656224056	emitter	--	"Whatever icky stuff is/was in there might come out. Eww."
-"ganst"	303079012	--	angst rule	"You don't get rid of angst with just a word."
+"bump"	269065824	bump	--	"Just search the bump instead."
 
 table of Bile Libe nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "bile"	245031699	--	--	"[loc-rej]."
 "librayr"	412420266	--	--	"[loc-rej]."
 "plaque"	454785149	--	--	"It's more, it's A MOTTO."
-"word"	288640242	words	--	"You'd need to do something to all the words."
-"hilt"	239199002	sword	--	"The hilt serves a purpose, and besides, there's not much to change it to."
-"bump"	269065824	bump	--	"Just search the bump instead."
 "motto"	419000343	motto	--	"It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it."
 "potaot"	438578967	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
 
@@ -518,15 +521,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "tonr"	331693906	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "cue"	251917501	torn cue	--	"The torn cue is just there to direct you to the brocade."
 "fairies"	428092284	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them."
-"fairy"	281378615	--	--	"The faeries would mangle you back worse."
-"faery"	364191878	--	--	"The faeries would mangle you back worse."
+"fairy"	281378615	--	--	"[fairy-back-worse]."
+"faery"	364191878	--	--	"[fairy-back-worse]."
 "trounce"	583611407	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
 "faeries"	510905547	--	--	"They could CERTAINLY out-magic you back, even if anagramming could have an effect on them."
 "heath"	307668543	heaths	--	"[if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."
 "stems"	487539212	heaths	--	"Deal with the whole flower, not just the stems."
 "begonia"	369265465	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
-"noise"	412333006	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
-"bag"	53206425	noise bag	--	"Even if you could do anything, that'd rip the noise bag open."
 
 table of Esoteric Coteries nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -541,7 +542,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "geek"	341145098	--	--	"[nnww]."
 "asknerds"	550735437	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
 "asknerd"	454461471	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
-"tulip"	388488469	tulip	--	"[if player has tulip]It's handy as is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked, which it won't[end if]."
 "memo"	330308992	--	--	"[memo-tote-no]."
 "tote"	408378722	--	--	"[memo-tote-no]."
 "tome"	369343857	--	--	"[memo-tote-no]."
@@ -566,7 +566,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "nope"	352532153	gin nope opening	--	"[nope-gin]."
 "gin"	146500056	gin nope opening	--	"[nope-gin]."
 "recess"	552489538	gin nope opening	--	"You've already made nothing out of something, and instead of reversing that, [if controls are in gin nope opening]you did what you needed[else]you may need to put something in the opening[end if]."
-"irwin"	352151776	gin nope opening	--	"You don't want to mess with the wirin['] [if controls are in gin nope opening]any further[else]that way[end if]."
 
 table of Bassy Abyss nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -591,7 +590,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "leis"	322886760	--	--	"You already noticed the leis. Use something on the isle to escape it."
-"lie"	226612794	--	--	"[if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something one the isle to escape it[end if]."
+"lie"	226612794	--	--	"[if l2 is not moot]Perhaps you can deal with the leis, or maybe you can use something else to escape the isle[else]You already noticed the leis. Use something on the isle to escape it[end if]."
 "woodland"	423607270	--	--	"The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway."
 "sand"	188398381	--	--	"[the-sand]."
 "and"	92124415	--	--	"[the-sand]."
@@ -941,6 +940,8 @@ to say no-hot:
 	else:
 		say "but you could have a[if The Ol Hotel is visited]nother[end if] look around";
 
+to say und-camp: say "You can't do much with or to the camp, here or north"
+
 to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
 to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
@@ -960,10 +961,14 @@ to say no-poses: say "You can't change who they are. They probably can't, either
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
 this is the angst rule:
+	if player has emitter, say "1.";
+	if emitter is angstgnatted, say "2.";
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
 
-to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough[else]. Maybe the nerds could help you another way, though[end if]"
+to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
+
+to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
 
 to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
 

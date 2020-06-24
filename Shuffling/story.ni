@@ -6215,7 +6215,7 @@ section a reading
 There is a boring thing called A reading. "[one of]A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed[or]A reading still dries out by the drainage. Maybe it holds clues[stopping].". description is "It says A READING in bold red. You could probably READ through it for a lot of clues. The content seems like nonsense, but hey, anything to help you see red.". bore-text is "It's too gross to do anything with except maybe examine it. You figure it's some sort of clue, since a reading, drainage, etc.". bore-check is bore-reading rule.
 
 this is the bore-reading rule:
-	if current action is taking, say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here." instead;
+	if current action is taking, say "Eww. Anyway, the (a) reading is probably a good clue for the drainage here, having gone through it a bit." instead;
 
 after going to undesired underside (this is the reading clue to underside rule):
 	if drainage is not moot and a reading is off-stage:
@@ -6888,6 +6888,10 @@ check opening termite emitter: say "You can't figure how. There's a reason for t
 
 description of termite emitter is "It's a black box the side of maybe two CD cases stacked[if bastion-evac is true]. It's empty now, you hope[else]. It probably holds a lot of termites. You can switch it when you need to[end if]. Someone has scratched a circle with a line through it over a dollar sign[if bastion-evac is false]. You can't hear or see the termites that should be in there, but hey, faith[else if flies-in-emitter is true]. The deadbeat put some angst gnats in it for you[else]. It's probably empty after your hijinks[end if]. It's Mr. Eet-It brand. Of course.".
 
+after examining termite emitter:
+	if termite emitter is not doubleused, say "You can SWITCH the termite emitter to release its, uh, contents.";
+	continue the action;
+
 check examining the termite emitter: ignore the examine devices rule.
 
 understand "black/ box/" and "machine" as termite emitter.
@@ -7329,7 +7333,7 @@ Astral Altars is a room in Resort. last-loc of Resort is Astral Altars. "This is
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
-tiles are plural-named flippable boring scenery in Astral Altars. description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.". bore-text is "There must be some way to magic the stile and/or tiles."
+the tiles are plural-named flippable boring scenery in Astral Altars. description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.". bore-text is "There must be some way to magic the stile and/or tiles."
 
 gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
 
@@ -7351,7 +7355,7 @@ understand "lies isle" as isle when l2 are not in Leis Isle.
 
 section leis
 
-the l2 are privately-named plural-named scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell."
+the l2 are privately-named plural-named scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell.". printed name is "leis".
 
 the lies are a privately-named thing. description of lies is "You should not see the actual lies."
 
@@ -7735,7 +7739,7 @@ to say kicks:
 		now gadget is cert;
 	if player has gadget, now tagged gadget is in Potshot Hotspot;
 
-the chain links are a plural-named thing.
+the chain links are a plural-named thing. printed name of chain links is "[unless china is moot]chain [end if]links".
 
 lgth of chain links is 5. gpos of chain links is 4. rpos of chain links is 5. cert-text of chain links is "-[ast]I[d1][d1][ast]S". rect-text of chain links is "K[d1][d1][d1][ast]S". rgtext of chain links is "[rcn][gc][rc][rc][gc]".
 

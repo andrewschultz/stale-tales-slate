@@ -347,7 +347,7 @@ understand "odor" and "rood" as a mistake ("That door's reinforced. [if Esoteric
 
 understand "refind" as a mistake ("Whether you're trying to act refinEd or to find something again, the friend finder remains unmoved.") when player is in Undesired Underside.
 
-understand "resign" and "resigns" as a mistake ("Reverse psychology won't work on the ingress, here.") when player is in Undesired Underside.
+understand "resign" and "resigns" as a mistake ("[if esoteric coteries are visited]The ingress already did. You got by[else]Reverse psychology won't work on the ingress, here[end if].") when player is in Undesired Underside.
 
 understand "senors" and "senor" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in Undesired Underside.
 
@@ -407,7 +407,7 @@ understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not litera
 
 understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Elm Train Terminal.
 
-understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it sbove the cafe face with the velcro[end if].") when player is in Elm Train Terminal.
+understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it sbove the cafe face with the velcro[end if].") when cafe face is touchable.
 
 chapter Esoteric Coteries
 
