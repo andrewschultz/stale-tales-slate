@@ -34,6 +34,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >a5
 >t
 >otters
+>opt in
 >enter solid idols
 
 @nud,sli
@@ -77,10 +78,10 @@ Your powers are so weak that you need to add a few letters to the word you need.
 #spechelp for bleary barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
 #scannotes for bleary barley
 >scan bleary barley
-That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
+That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess.
 
 @sli
 >slon
@@ -808,7 +809,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That'
 #spechelp for gore ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the gore ogre. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
 #nudge for infidel
 >infidle
 The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
@@ -880,7 +881,7 @@ DEBUG INFO: min-up codepath
 #spechelp for atmo moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo moat. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
 #scannotes for atmo moat
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
@@ -1093,7 +1094,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a
 #spechelp for satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the satyr. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
 \\
 #mistake test for ratsy
 >ratsy

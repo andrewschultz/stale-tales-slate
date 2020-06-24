@@ -204,7 +204,7 @@ It's the censer that's important, not the brand name.
 #spechelp for n e recs censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the N E Recs Censer. That's a decent ome
+DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
 
 @sli
 #slider test for screen
@@ -476,7 +476,7 @@ The number's got more numerals than letters.
 #spechelp for boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Boing Go Bin. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
 #scannotes for boing go bin
 >scan boing go bin
 Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
@@ -793,7 +793,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decen
 #spechelp for odes song
 >nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it, even if it's not REALLY hurting you.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the odes song. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
 #scannotes for sods gone odes song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
@@ -1129,7 +1129,7 @@ Vandalism! For shame!
 #spechelp for hawt thaw
 >whta
 The hawt thaw crackles slightly.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the hawt thaw. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
 #scannotes for hawt thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
@@ -1318,7 +1318,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for starch charts
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the starch charts. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
 #scannotes for starch charts
 >scan starch charts
 Starch is calorically and cosonantally (if that's a word) heavy. This must help.
@@ -1497,7 +1497,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a d
 #spechelp for clack ops locs pack
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the clack ops locs pack. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
 #readables for clack ops locs pack
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC Cloaks are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, Polacck's products are shoddy imitations of, well, this. Don't be fooled!)
@@ -1628,11 +1628,11 @@ It's too small to be a fountain--really, just a fount.
 #spechelp for coal
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the coal. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
 #spechelp for flea
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the flea. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
 #spechelp for fount
 >futno
 Hm, might be FUN TO try another guess. Or useful. Or both.
@@ -1942,7 +1942,7 @@ No need to reboot twice.
 #spechelp for im le cop polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop polemic. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
 
 @sli
 #slider test for compile
@@ -1979,7 +1979,7 @@ After compiling, you often need to make small tweaks, but not like that.
 #spechelp for trim socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the trim socks. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
 #readables for drive a
 >read drive a
 It says DRIVE A/A DRIVE: VARIED

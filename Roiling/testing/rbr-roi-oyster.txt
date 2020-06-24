@@ -218,7 +218,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a 
 #spechelp for trolls
 >strlol
 The trolls laugh at you a bit, but nervously.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr Trolls. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
 \\
 #scannotes for gins sign
 >scan gins sign
@@ -272,7 +272,7 @@ You can't work on the jukebox as a whole, but maybe you could meddle with its tw
 #spechelp for perma amper
 >rempa
 The tunes grow slightly less annoying, for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the perma amper. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
 #nudge for unset
 >unste
 The tunes grow slightly less annoying, for a moment.
@@ -471,7 +471,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That'
 #spechelp for oars
 >oasr
 The oars splash around in the water, briefly rising out, as if they don't belong there.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the oars. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
 \\
 #spechelp for boats
 >bosat
@@ -868,7 +868,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a d
 #spechelp for tea
 >tae
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tea. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the tea tray. That's a decent omen.
 
 @nud
 #nudge for tuna
@@ -951,7 +951,7 @@ Retutor? Torture. Rot. True!
 #spechelp for wrap
 >wrpa
 That's not quite the way to pop the wrap.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the wrap. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the bubble wrap. That's a decent omen.
 #nudge for bubble
 >bubbel
 It's just wrap, really.
@@ -1090,12 +1090,12 @@ It's just a knob. Which thankfully cuts down the possibilities.
 #spechelp for c2
 >traec
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
 \\
 #spechelp for crate
 >reatc
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
 \\
 #spechelp for knob
 >knbo
@@ -1532,7 +1532,7 @@ The sardine gives you a weird look, as if you need to stop mumbling. You're not 
 #spechelp for achers chaser arches
 >searhc
 Hm, you almost thought you found something. Well, not QUITE like that.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the achers' chaser arches. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
 #scannotes for achers chaser arches
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
@@ -1979,7 +1979,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That
 #spechelp for bogus-lamps
 >psaml
 The plasm lamps flicker slightly.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the plasm lamps. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 #mistake test for atn
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
@@ -2014,9 +2014,8 @@ by one point
 You did enough.
 \\
 #nudge for ant
->atn
+>tna
 That's close. Something brutal and direct.
-
 
 @!min
 >tan

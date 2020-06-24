@@ -253,7 +253,7 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
-a guardian has a person called other-g. The other-g of a guardian is usually dreads adders.
+a guardian has a person called other-g. The other-g of a guardian is usually the dreads adders.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
@@ -4543,7 +4543,7 @@ weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make
 curst palace	false	false	false	false	"[scannotes-curst]."
 pestern serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
-bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo aid, you can probably guess." [START otters]
+bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
 t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
@@ -6413,7 +6413,7 @@ check touching:
 	if noun is maze walls, say "[if player is in Grey Gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]." instead;
 	if noun is lawl wall, say "You're not playing tag, here." instead;
 	if noun is tubs, say "They seem to be made of something fragile, something you could break--porcelain, maybe? You hear something rattling inside." instead; [oyster]
-	if noun is replay player, say "Odd. It feels ... really papery." instead;
+	if noun is raves saver, say "Odd. It feels ... really papery." instead;
 	if noun is lone duck, say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead; [towers]
 	if noun is pryer bars, say "They feel like spry rebar." instead; [others]
 	say "You don't need to touch anything in A Roiling Original. Okay, you need to touchstuff, but not use the TOUCH verb." instead;
@@ -11317,7 +11317,7 @@ to decide which number is bedroom-solve:
 
 chapter LEAD
 
-LEAD is a vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: A Deed".
+LEAD is a vanishing thing in Boredom Bedroom. "A copy of LEAD, ALL: A DEED[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here, chock full of self-improvement and stuff.". description of LEAD is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]But if you managed not to worry about style nitpicks, it might help you focus and move on.". printed name of LEAD is "LEAD, All: a Deed".
 
 a-text of LEAD is "RYYR". b-text of LEAD is "???R". parse-text of LEAD is "x[sp]e[sp]a[sp]x". LEAD is parse-spoilable.
 
@@ -11537,7 +11537,7 @@ does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "You notice some trance nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, if not thrilled about it. But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
+the Trance Nectar is a vanishing thing. "You notice some Trance Nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
@@ -12125,7 +12125,7 @@ to say lrblab:
 
 chapter whassuping
 
-the wzup is privately-named reflexive boring scenery in Dirge Ridge. printed name of wzup is "[l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
+the wzup is privately-named proper-named reflexive boring scenery in Dirge Ridge. printed name of wzup is "between [l-n-r]". description of wzup is "You shouldn't be able to see the 'washups' text, so this is a BUG.". bore-text is "You don't need to refer to both [l-n-r] at once. Referring to one is as good as referring to the other.".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16149,7 +16149,7 @@ to ag-fid:
 every turn when player is in Actionless Coastlines and dinger is in Actionless Coastlines:
 	say "[agnostic] continues perusing [i]Reading a Dinger[r], not looking particularly thrilled."
 
-the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
+the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "[Coasting Agnostic]". description is "[bug-report]".
 
 ag-atten is a truth state that varies.
 
@@ -17081,7 +17081,7 @@ book Dourest Detours
 
 Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
 
-bogus-detours is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-detours is "[bug-report]". bore-text is "[bug-report]".
+the bogus-detours is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-detours is "[bug-report]". bore-text is "[bug-report]".
 
 a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -17165,7 +17165,7 @@ chapter Baldest Blasted Saltbed guardians
 
 section fluster self rut
 
-the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way."
+the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way.". printed name is "fluster-self rut".
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
 
@@ -17253,13 +17253,13 @@ a-text of alarming grailman is "RYRRYRYR". b-text of alarming grailman is "RYRRY
 
 section sweatier wait-seer
 
-The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait seer].". printed name of wait seer is "sweatier wait- seer". description of sweatier wait seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
+The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait seer].". printed name of wait seer is "sweatier wait-seer". description of sweatier wait seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
 
 a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
 section reed's ale
 
-the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far.". understand "reed/reeds ale" and "reed/reeds" as Reeds Ale
+the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far.". understand "reed/reeds ale" and "reed/reeds" as Reeds Ale. printed name is "Reed's Ale".
 
 a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text of Reeds Ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
@@ -17286,7 +17286,7 @@ chapter Salted Deltas guardians
 
 section atheists
 
-the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping]."
+the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name is "asset-hit atheists".
 
 printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
@@ -18072,7 +18072,7 @@ section aside-llp
 
 the aside-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure. "[bug-report]"
 
-a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "?[sp]x[sp]-[sp]x[sp]-".
+a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "?[sp]x[sp]-[sp]x[sp]-". printed name is "between [e-n-m]"
 
 understand "aidesllp" as aside-llp when debug-state is true and aside-llp is touchable.
 
@@ -19901,7 +19901,7 @@ the apricot is a fruit. "It's a regular apricot. Nothing special."
 
 chapter PSA Elp / apples
 
-the PSA Elp is boring scenery in Swell Wells. printed name of PSA Elp is "PSA 'Elp". description of PSA Elp is "PSA [']Elp is written in red. You can read it for more details.". bore-text of PSA Elp is "The PSA [']Elp seems like it could be changed into something else.".
+the PSA Elp is boring scenery in Swell Wells. printed name of PSA Elp is "PSA [']Elp". description of PSA Elp is "PSA [']Elp is written in red. You can read it for more details.". bore-text of PSA Elp is "The PSA [']Elp seems like it could be changed into something else.".
 
 a-text of PSA Elp is "YRRRYR". b-text of PSA Elp is "YRRRYR". parse-text of PSA Elp is "-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
@@ -20044,7 +20044,7 @@ an icon is a thing. description is "The icon is designed to be too interesting t
 
 section coins
 
-some coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
+the coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
 
 section singed design
 
@@ -20101,7 +20101,7 @@ a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "
 
 section sonic coins
 
-the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
+the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "the sonic coins".
 
 understand "coin" and "sonic coin" as s-c when player has s-c.
 
@@ -20218,7 +20218,7 @@ after fliptoing when player is in Clangier Clearing:
 
 a tekno token is an improper-named thing. description of tekno token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno token. printed name of tekno token is "Tekno-Token".
 
-the prices precis is proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
+the prices precis is reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
 check taking prices precis: say "That'd leave everyone in the market confused[if prices precis is reflexed] and undo your help fixing the prices[end if]." instead;
 
@@ -20384,7 +20384,7 @@ a raspberry is a fruit.
 
 chapter strawberries
 
-a thing called barriers west is plural-named scenery in Filed Field. "The barriers west seem to mark the end of the Filed Field."
+a thing called the barriers west is plural-named scenery in Filed Field. "The barriers west seem to mark the end of the Filed Field.".
 
 strawberries are a plural-named fruit.
 
@@ -20428,7 +20428,12 @@ the guava is a fruit. [paint gives guava]
 
 chapter banana/a
 
-a banna is boring scenery in Scape Space. description of a banna is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna.
+when play begins:
+	say "[the s-c].";
+	say "[the barriers west].";
+	say "[the banna].";
+
+a banna is boring scenery in Scape Space. description of a banna is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna. printed name is "banna[']". indefinite article of banna is "a".
 
 a-text of a banna is "RYRYRY". b-text of a banna is "R?RY??". parse-text of a banna is "b[sp]-[sp]n[sp]a[sp]-[sp]-". a banna is parse-spoilable.
 

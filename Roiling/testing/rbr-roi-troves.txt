@@ -451,7 +451,7 @@ Drowning something without reason in reason is unreasonable.
 #spechelp for l clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the L'Clear Cellar. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
 
 >recall
 by one point
@@ -486,7 +486,7 @@ You would like to be, but you can't just want others to. Change comes from withi
 #spechelp for diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the diapers. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
 #nudge for ires
 >irse
 It's an ires PAD.
@@ -566,7 +566,7 @@ You are not rich and consequential enough to snap your fingers and watch your ow
 #spechelp for large regal lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Large Regal Lager. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
 #scannotes for large regal lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
@@ -675,7 +675,7 @@ The ME ARTS nourished you spiritually. The lobster nourished you physically. Tim
 #spechelp for lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
-DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
 #scannotes for lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
@@ -880,7 +880,7 @@ The card's writing is more important.
 #spechelp for end proner pod
 >erpdon
 The END PRONER POD seems to pulse slightly.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the End Proner Pod. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. That's a decent omen.
 
 @sli
 #slider test for ponder
@@ -1117,7 +1117,7 @@ The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting 
 #spechelp for divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the DIVORCES. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES magazine. That's a decent omen.
 #readables for divorces
 >read divorces
 All sorts of articles that make you see red. This one's about

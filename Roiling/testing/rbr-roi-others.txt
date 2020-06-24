@@ -319,7 +319,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. Th
 #spechelp for peanut cola
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the peanut cola. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
 #readables for peanut cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
@@ -1056,7 +1056,7 @@ Hm, that certainly cuts things down a ton. Just three possibilities.
 #spechelp for peach
 >peahc
 The peach still looks too expensive.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the peach. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
 
 @!min
 >cinque
@@ -1097,7 +1097,7 @@ The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues pr
 #spechelp for ammo gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the ammo gang. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
 
 @!min
 #not a mistake
@@ -1283,7 +1283,7 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like D
 #spechelp for a brr hub
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from a brr hub. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the brr0hub. That's a decent omen.
 #scannotes for a brr hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.

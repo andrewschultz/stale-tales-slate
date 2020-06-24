@@ -243,7 +243,7 @@ stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting r
 natives site van	natives site van	false	550443085	--	"naivest"	"vainest" or "naivest"	--	--	"[vain-naiv]. Now that the natives have moved on, you can go south."
 asset hit atheists	asset hit atheists	false	611037040	--	"hastiest"	"hastiest"	--	post-agnostic-blocker rule	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right! You probably don't even capitalize Atheist! You bum.' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
-Hostile is He Lot	Hostile is He Lot	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already." [end of guardians.]
+the Hostile is He Lot	Hostile is He Lot	false	537631654	--	"holiest"	"holiest"	--	post-agnostic-blocker rule	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already." [end of guardians.]
 try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 docile old ice	docile old ice	false	341000045	--	"coiled"	"coiled"	--	--	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
@@ -2198,7 +2198,16 @@ ana-repeats is a number that varies.
 
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
-to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen"
+definition: a thing (called itm) is all-around:
+	it itm is bogus-detours, yes;
+	it itm is bogus-plains, yes;
+	it itm is bogus-lamps, yes;
+	it itm is n-t-air, yes;
+	no;
+
+to say where-pull of (itm - a thing): say "[if itm is all-around]all around[else][the itm]"
+
+to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
 
 to say spec-help of (itm - a thing):
 	if rq is active:

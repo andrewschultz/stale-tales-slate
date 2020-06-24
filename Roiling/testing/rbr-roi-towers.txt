@@ -460,7 +460,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 #spechelp for rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Rodney. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Sir Rodney. That's a decent omen.
 #renudge for picaros
 >picarso
 You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
@@ -531,9 +531,9 @@ It probably needs less crust, not more. The whole curst palace.
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight.
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the curst palace. That's a decent omen.
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the curst palace. That's a decent omen.
 #nudge for deposit
 >deposti
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1031,7 +1031,7 @@ has a refresher,
 #spechelp for keycar
 >creayk
 The keycar sputters momentarily.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the keycar. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. That's a decent omen.
 
 @!minh,mini
 >creaky
@@ -1150,7 +1150,7 @@ Twist the ice too much, it might not look right.
 #spechelp for pirates
 >piratse
 The pirates blanch a bit but quickly regain their swagger.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the pirates. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the traipse pirates. That's a decent omen.
 #scannotes for traipse pirates
 >scan traipse pirates
 Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though.
@@ -1221,7 +1221,7 @@ There's more than one ingrate blocking you.
 #spechelp for ingrates
 >ingratse
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the ingrates. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the angriest ingrates. That's a decent omen.
 #scannotes for angriest ingrates
 >scan angriest ingrates
 Hmm, there are some matches, and maybe one of the two variable settings will work itself out.
@@ -1234,7 +1234,7 @@ The trendies point and laugh at your settler and how it has apparently malfuncti
 #spechelp for resident trendies
 >nerdiets
 The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the resident trendies. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
 #mistake test for granites/granite
 >granites
 They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
@@ -1535,7 +1535,7 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 #spechelp for mel fish
 >mel fihs
 Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
-DEBUG ONLY: You feel a slight psychic push-pull coming from SMH Life Mel Fish. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from "SMH, Life" Mel Fish. That's a decent omen.
 #nudge for smh
 >shm
 No, you need to deal with all of Mel Fish.
@@ -2350,7 +2350,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red. Nice, but you don'
 #spechelp for dinger
 >grainde
 Scot Agin blinks and ruffles READING: a Dinger and yawns before flipping a page, slightly less interested than before.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Reading: a Dinger. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from READING: a Dinger. That's a decent omen.
 #scannotes for reading a dinger
 >scan reading a dinger
 Well, this may be more intellectually challenging than the book itself. Lots of reds.
@@ -2715,7 +2715,7 @@ You're not sure if the serpent's ever been spent, so you can't quite make it re-
 #spechelp for ur pine
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the ur-pine. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
 #spechelp for pestern serpent
 >presetn
 The serpent calms down for a split-second.
