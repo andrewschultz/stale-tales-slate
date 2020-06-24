@@ -755,8 +755,10 @@ Pat won't react kindly to modifications of his poem.
 >z
 >z
 
+@mis
+#mistake test for rifle
 >rifle
-Shooting things up is not the answer.
+Shooting things up is not the answer
 
 @nud
 #spechelp for anapest

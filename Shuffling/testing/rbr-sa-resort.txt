@@ -542,9 +542,10 @@ Your score has just gone up by one point.
 #nudge for potter
 >pottre
 Picking one person out of a crowd never works.
-
+\\
+#spechelp for potters
 >pottesr
-You cut the riot down, but you need to change their protest now.
+You've changed the potters enough. Now you need to give them something interesting to do besides protest.
 
 @nud
 #nudge for three
