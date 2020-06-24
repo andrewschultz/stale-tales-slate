@@ -1,3 +1,4 @@
+->c:/Users/Andrew/Documents/GitHub/stale-tales-slate/Shuffling
 out=shuffling-invisiclues.htm
 !Shuffling Around HTML Clues
 ->c:/games/inform/shuffling Materials/Release
@@ -136,6 +137,10 @@ They're in the side areas.
 PUT SHADES ON NOSE
 PUT NOSE ON BEARD
 WEAR DISGUISE.N
+?Can I do anything else with Corses Crosse?
+The slit may be worth examining.
+You don't have to get rid of it, and the list inside, but maybe you can.
+It can become SILT for a bonus point.
 >>Gnarliest Triangles
 ?What do I do with the ones?
 They become a NOSE.
@@ -160,7 +165,7 @@ The bread looks scuzzy.
 It becomes a BEARD.
 The spam has weird lines.
 Because it can be MAPS.
->>CRUEL ONES' ENCLOSURE
+>>EMPTINESS SEPIMENTS
 ?The liches are scary! What do I do?
 Look at them. They may clue a word.
 They become a CHISEL.
@@ -543,7 +548,7 @@ This is a name brand that's become a common accepted word, much like the clover.
 BACTINE.
 ?Where are the LLPs in the forest?
 Well, there's only one.
-In the Cruel Ones' Enclosure, you can deal with the banshee.
+In the Emptiness Sepiments, you can deal with the banshee.
 Put it in the past tense.
 Make it a HAS-BEEN.
 ?Where are the LLPs in the sortie?
@@ -567,7 +572,7 @@ Finally, you can change the chain links to CHINA before turning them into kilns.
 ?Can we get locked out of any LLPs?
 If you solve an area, yes. But also, solving certain puzzles can lock you out of LLPs you didn't get yet.
 Moving on from the desert or thickets loses a maximum point in the Ordeal Loader.
-Moving on from the Cruel Ones' Enclosure loses the bonus point in Store F.
+Moving on from the Emptiness Sepiments means there's no way back to the the bonus points in Store F.
 The LLPs in the fridge are always available in Store I.
 If you clear the Bastion without dealing with the antlers, you lose a maximum point in Store M.
 Moving on from the isle or drive loses a point in store R. In addition, you lose a chance for an LLP in your current location if you take the leis or flip the kilns first.

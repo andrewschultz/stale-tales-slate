@@ -433,9 +433,9 @@ to unsolve-forest:
 	now bread is part of sandwich;
 	now spam is part of sandwich;
 	now maps are off-stage;
-	now liches are in Cruel Ones' Enclosure;
+	now liches are in Emptiness Sepiments;
 	now chisel is off-stage;
-	now spread is in Cruel Ones' Enclosure;
+	now spread is in Emptiness Sepiments;
 	now vowels are in Frost Forts;
 	now wolves are off-stage;
 	now livers are off-stage;

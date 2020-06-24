@@ -876,7 +876,7 @@ this is the forest-hinting rule:
 		if shotgun is off-stage, try objhinting the noughts instead; [this isn't strictly in order, but if the player is in GT they may want to know the noughts are important]
 		if shades are off-stage, try objhinting dashes instead;
 	if player is in Flesh Shelf and bread is part of the sandwich, try objhinting sandwich instead; [this and the above two together mean that you will get local hints first before generic ones]
-	if Cruel Ones' Enclosure is unvisited:
+	if Emptiness Sepiments is unvisited:
 		if coe-clue is false:
 			now coe-clue is true;
 			try objhinting line of no life instead;
@@ -894,9 +894,9 @@ this is the forest-hinting rule:
 		if viler liver is not off-stage, try objhinting viler liver instead;
 		try objhinting River Ville liver instead;
 	if sliver is off-stage, try objhinting livers instead;
-	if spread is in Cruel Ones' Enclosure, try objhinting spread instead;
-	if red asp is in Cruel Ones' Enclosure, try objhinting red asp instead;
-	if drapes are in Cruel Ones' Enclosure:
+	if spread is in Emptiness Sepiments, try objhinting spread instead;
+	if red asp is in Emptiness Sepiments, try objhinting red asp instead;
+	if drapes are in Emptiness Sepiments:
 		if sliver is off-stage, try objhinting livers instead;
 		try objhinting drapes instead;
 	if shotgun is off-stage, try objhinting noughts instead;
@@ -904,7 +904,7 @@ this is the forest-hinting rule:
 	if shotgun is not loaded, try objhinting shotgun instead;
 	if player does not have maps, try objhinting spam instead;
 	if player is in Ghouls Slough, try objhinting maps instead;
-	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Cruel Ones' Enclosure]from the enclosure [end if]now." instead;
+	if player is not in Frost Forts, all-say "You should be able to go north [if player is not in Emptiness Sepiments]from Emptiness Sepiments [end if]now." instead;
 	if player is in Frost Forts:
 		if vowels are touchable, try objhinting vowels instead;
 		if wolves are touchable, try objhinting wolves instead;
@@ -2217,7 +2217,7 @@ preflip	pretodo
 nametag	"nametag -> gateman" [Ordeal Loader]
 cabinet	"cabinet -> Bactine" [stores]
 silver	"[if livers are not moot]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
-drapes	"spread -> [if red asp is in Cruel Ones' Enclosure]RED ASP -> [end if]drapes"
+drapes	"spread -> [if red asp is in Emptiness Sepiments]RED ASP -> [end if]drapes"
 sack	"cask -> sack" [sortie]
 r2	"room -> moor"
 hallway	"[if hay is part of scraped wall]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
@@ -3554,14 +3554,14 @@ carry out gleaning:
 		all-say "You see yourself relaxing in a large manse far from here." instead;
 	if mrlp is forest:
 		if Self ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
-		if Cruel Ones' Enclosure is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
+		if Emptiness Sepiments is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
 		if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
 		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
 		unless drapes are moot, all-say "You see yourself slashing at the drapes, which billow out." instead;
 		if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
 		if spread is touchable, all-say "You see the spread fluttering as if outside an open window." instead;
 		if red asp is touchable, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
-		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Cruel Ones' Enclosure]red asp[else]spread[end if] [if player is not in Cruel Ones' Enclosure]in the Enclosure [end if]into something easier to cut with the sliver." instead;
+		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Emptiness Sepiments]red asp[else]spread[end if] [if player is not in Emptiness Sepiments]in Emptiness Sepiments [end if]into something easier to cut with the sliver." instead;
 		unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
 		if Frost Forts is unvisited:
 			if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
@@ -4341,7 +4341,7 @@ after looking in Self ID Fields:
 
 check going inside in Self ID Fields: try going north instead;
 
-check going north in Self ID Fields when Enclosure is unvisited and player has gadget and tag is part of the gadget (this is the forest gadget checkpoint rule):
+check going north in Self ID Fields when Emptiness Sepiments is unvisited and player has gadget and tag is part of the gadget (this is the forest gadget checkpoint rule):
 	if player has beard or player wears beard:
 		if forest-warn is false and button-locked is false:
 			now forest-warn is true;
@@ -4380,7 +4380,7 @@ Include (-
 	has transparent animate
 -) when defining line of no life.
 
-a thing called line of no life is plural-named boring scenery in Self ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if Cruel Ones' Enclosure is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
+a thing called line of no life is plural-named boring scenery in Self ID Fields. printed name of line of no life is "bearded men". description is "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.". bore-text is "The line of no life is too incorporeal to interact with[if Emptiness Sepiments is unvisited], but maybe you can imitate it partially to go north[end if].". bore-check is bore-line-life rule.
 
 this is the bore-line-life rule:
 	it-them line of no life;
@@ -4389,7 +4389,7 @@ understand "bearded men/guys/figures" and "men/guys/figures" and "undead" as lin
 
 section corses crosse
 
-Corses Crosse is boring scenery in Self ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing[if slit is in Self ID Fields], and there's a menacing looking slit off to one side[end if]. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Cruel Ones' Enclosure is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
+Corses Crosse is boring scenery in Self ID Fields. description is "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing[if slit is in Self ID Fields], and there's a menacing looking slit off to one side[end if]. The top reads TO THE LUPINE LINEUP.". bore-text is "You [if Emptiness Sepiments is visited]already got past Corses Crosse. No need to try doing anything[else]need to figure a clever way past Corses Crosse[end if].". bore-check is bore-crosse rule.
 
 this is the bore-crosse rule:
 	if current action is entering, try going north instead;
@@ -4413,7 +4413,7 @@ check going south in Self ID Fields: say "Given that the people leaving the selv
 
 section random ID field text
 
-every turn when player is in Self ID Fields and Cruel Ones' Enclosure is unvisited (this is the crosse-guys-through rule): say "[guy-by-description]";
+every turn when player is in Self ID Fields and Emptiness Sepiments is unvisited (this is the crosse-guys-through rule): say "[guy-by-description]";
 
 to say guy-by-description: say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. Corses Crosse glows briefly as the undead walks through."
 
@@ -4763,18 +4763,16 @@ Rule for printing room description details:
 		omit contents in listing;
 		stop.
 
-chapter Cruel Ones' Enclosure
+chapter Emptiness Sepiments
 
-There is a room called Cruel Ones' Enclosure.
+Emptiness Sepiments is north of Self ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west, and scoffin['] coffins block the way east[if liches are in Emptiness Sepiments]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Emptiness Sepiments]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Emptiness Sepiments]. A red asp guards the way north[else if spread is in Emptiness Sepiments]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Emptiness Sepiments]. Nothing seems to block the way north now[end if][if banshee is in Emptiness Sepiments]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Emptiness Sepiments is table of Emptiness Sepiments nudges.
 
-Cruel Ones' Enclosure is north of Self ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west and east[if liches are in Cruel Ones' Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Cruel Ones' Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Cruel Ones' Enclosure]. A red asp guards the way north[else if spread is in Cruel Ones' Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Cruel Ones' Enclosure]. Nothing seems to block the way north now[end if][if banshee is in Cruel Ones' Enclosure]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Cruel Ones' Enclosure is table of Cruel Ones Enclosure nudges.
-
-after looking in Cruel Ones' Enclosure:
-	if banshee is in Cruel Ones' Enclosure:
+after looking in Emptiness Sepiments:
+	if banshee is in Emptiness Sepiments:
 		set the pronoun it to banshee;
 		set the pronoun him to banshee;
 		set the pronoun her to banshee;
-	if liches are in Cruel Ones' Enclosure:
+	if liches are in Emptiness Sepiments:
 		set the pronoun them to liches;
 
 to say d-s: say "[if drapes are touchable]drapes make[else if red asp is touchable]red asp makes[else]spread makes[end if]".
@@ -4783,7 +4781,7 @@ Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is LLPish scenery in Cruel Ones' Enclosure. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
+the banshee is LLPish scenery in Emptiness Sepiments. bore-text is "That's just the banshee wants. Attention, even when they are no longer relevant or directly able to make others miserable. You have more important things to do than spend time on the banshee! Though there might be a way to dispel it.". description is "You can't see the banshee, but boy, is it wailing!"
 
 rgtext of banshee is "[rcn][gc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
@@ -4814,13 +4812,13 @@ to check-score (a - indexed text):
 
 section scoffer coffers
 
-the scoffer coffers are boring bounding scenery in Cruel Ones' Enclosure. "The coffers remind you of all the times you were laughed at.". bore-text of scoffer coffers is "You don't want to mess with the scoffer coffers and the horrible laughter contained therein."
+the scoffer coffers are boring bounding scenery in Emptiness Sepiments. "The coffers remind you of all the times you were laughed at.". bore-text of scoffer coffers is "You don't want to mess with the scoffer coffers and the horrible laughter contained therein. Plus, they may be guarding you from worse."
 
 understand "coffer" and "scoffer coffer" as scoffer coffers.
 
 chapter Ghouls' Slough
 
-Ghouls Slough is inside of Enclosure. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough".
+Ghouls Slough is inside of Emptiness Sepiments. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough".
 
 the dog is amusing boring scenery in Ghouls Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
 
@@ -8849,7 +8847,7 @@ understand "cloth" as spread when spread is touchable.
 
 the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 3. rpos of red asp is 5. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". cert-text of red asp is "-[d1][d1][d1][d1][d1]". rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
 
-description of red asp is "It's fortunately attached to the north side of the enclosure, much like the spread was before you disturbed it. It's fast, mean, vicious and very red, and you'd be no match for it even with [if player has sliver]that sliver[else]a weapon[end if]."
+description of red asp is "It's fortunately attached to the north side, much like the spread was before you disturbed it. It's fast, mean, vicious and very red, and you'd be no match for it even with [if player has sliver]that sliver[else]a weapon[end if]."
 
 Include (-
 	has transparent talkable
@@ -8875,7 +8873,7 @@ some maps are plural-named things.
 
 understand "map" as some maps when mrlp is forest.
 
-description of maps is "[if Ghouls Slough is visited]They've worked fine. No need to use them again.[else if Cruel Ones' Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
+description of maps is "[if Ghouls Slough is visited]They've worked fine. No need to use them again.[else if Emptiness Sepiments is visited]You notice the Emptiness Sepiments at the bottom, but you can't make sense of the rest, yet[else]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog. Maybe if you get past Corses Crosse they'll make more sense.[end if]"
 
 the Spam is flippable.
 
@@ -8994,7 +8992,7 @@ Include (-
 	has transparent animate
 -) when defining liches.
 
-The liches are scenery in Cruel Ones' Enclosure. The liches are flippable. rgtext of liches is "[rcn][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1. cert-text of liches is "-[d1][d1][d1][ast]E[d1]". rect-text of liches is "C[d1][d1][d1][d1][ast]L".
+The liches are scenery in Emptiness Sepiments. The liches are flippable. rgtext of liches is "[rcn][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1. cert-text of liches is "-[d1][d1][d1][ast]E[d1]". rect-text of liches is "C[d1][d1][d1][d1][ast]L".
 
 understand "lich" as liches
 
@@ -9004,17 +9002,17 @@ after doing something with liches:
 
 description of liches is "They seem to be moaning about being reduced to a tool of greater evil."
 
-check listening when player is in Cruel Ones' Enclosure:
+check listening when player is in Emptiness Sepiments:
 	if liches are touchable, say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is touchable]. They almost drown out the banshee's screams[end if]." instead;
 	if banshee is touchable, say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
 
 The chisel is a thing. description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
 
-check going inside in Cruel Ones' Enclosure:
-	if liches are in Cruel Ones' Enclosure, say "The liches won't let you past." instead;
-	if drapes are in Cruel Ones' Enclosure, say "The drapes are too thick. They almost seem to enfold you in darkness before you can run away." instead;
-	if red asp is in Cruel Ones' Enclosure, say "You need to get rid of the red asp, first." instead;
-	if spread is in Cruel Ones' Enclosure:
+check going inside in Emptiness Sepiments:
+	if liches are in Emptiness Sepiments, say "The liches won't let you past." instead;
+	if drapes are in Emptiness Sepiments, say "The drapes are too thick. They almost seem to enfold you in darkness before you can run away." instead;
+	if red asp is in Emptiness Sepiments, say "You need to get rid of the red asp, first." instead;
+	if spread is in Emptiness Sepiments:
 		say "As you try to walk through the spread, it reforms into a nasty red asp! You back up quickly.[red-to]";
 		the rule succeeds;
 	if player does not have maps and player does not have Spam, say "[dibb]It's probably dangerous to go there without some sort of guide." instead;
@@ -9063,7 +9061,7 @@ Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once i
 Self ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
-Cruel Ones' Enclosure	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
+Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
@@ -9110,7 +9108,7 @@ carry out gotoing:
 	if noun is Rested Desert, say "The door from Rested Desert was one-way[if player is in Thickest Thickets]. You can't even see it now[end if]." instead;
 	if noun is Thickets, say "You can't see the passage back to the Thickets." instead; [end Ordeal Loader]
 	if noun is sf or noun is rf, say "You can't retrace your steps." instead; [start forest]
-	if player is in Ghouls Slough, say "You've done all you could in the enclosure and before. Onward." instead;
+	if player is in Ghouls Slough, say "You've done all you could in Emptiness Sepiments and before. Onward." instead;
 	if player is in Frost Forts, say "It's time to deal with things, not run." instead; [end forest]
 	if noun is the nick, say "No, you don't want to go back there." instead; [start sortie]
 	if player is in the nick, say "That's not the magic way out. Sorry!" instead;
@@ -9199,7 +9197,7 @@ before cutting:
 	if noun is drapes:
 		say "The drapes vanish as they are cut, revealing a doorway.";
 		moot drapes;
-		now doorway is in Cruel Ones' Enclosure instead;
+		now doorway is in Emptiness Sepiments instead;
 	if noun is wolves, say "You're way outnumbered. And you have a better weapon." instead;
 	if noun is show hows tag or noun is knot:
 		if player has sliver, ask-to-cut instead;
@@ -9228,7 +9226,7 @@ check opening doorway: try going inside instead;
 
 check entering doorway: try going inside instead;
 
-check going north in Cruel Ones' Enclosure: try going inside instead;
+check going north in Emptiness Sepiments: try going inside instead;
 
 part scoring
 
@@ -10369,7 +10367,7 @@ index map with sf mapped west of Trips Strip.
 index map with rf mapped south of sf.
 index map with slough mapped west of sf.
 index map with Frost Forts mapped west of slough.
-index map with slough mapped north of enclosure.
+index map with slough mapped north of Emptiness Sepiments.
 
 [sortie]
 index map with Trap Part mapped north of Notices Section.

@@ -131,7 +131,7 @@ understand "rated" as a mistake ("The trade tread isn't for commenting on, it's 
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in Trips Strip.
 
-understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
+understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is reflexed]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].")
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
 
@@ -158,6 +158,8 @@ understand "wets" as a mistake ("Getting lost in a swamp would be even worse tha
 chapter Self-ID Fields
 
 understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in Self ID Fields.
+
+understand "leif" and "lief" as a mistake ("It is too late to help the line of no life by showing love.") when player is in Self ID Fields.
 
 understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in Self ID Fields.
 
@@ -193,6 +195,8 @@ understand "alerting" and "alertings" as a mistake ("There's nobody to alert her
 
 understand "altering" and "alterings" as a mistake ("No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.") when player is in Gnarliest Triangles.
 
+understand "enos" as a mistake ("A certain deputy sheriff from Hazzard County would be willing to help, but he belongs somewhere much nicer than here.") when player has nose or ones are touchable.
+
 understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are touchable.
 
 understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
@@ -213,17 +217,17 @@ understand "tone" and "tones" as a mistake ("You aren't sure you need a booming 
 
 chapter cruel ones enclosure
 
-understand "cluer" as a mistake ("[if player is in Cruel Ones' Enclosure]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Cruel Ones' Enclosure.
+understand "cluer" as a mistake ("[if player is in Emptiness Sepiments]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Emptiness Sepiments.
 
-understand "lucre" as a mistake ("[if player is in Cruel Ones' Enclosure]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is touchable or player is in Cruel Ones' Enclosure.
+understand "lucre" as a mistake ("[if player is in Emptiness Sepiments]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is touchable or player is in Emptiness Sepiments.
 
-understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Cruel Ones' Enclosure and red asp is not moot.
+understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Emptiness Sepiments and red asp is not moot.
 
-understand "parsed" as a mistake ("You can just read the [if drapes are touchable]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Cruel Ones' Enclosure and red asp is not moot.
+understand "parsed" as a mistake ("You can just read the [if drapes are touchable]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Emptiness Sepiments and red asp is not moot.
 
-understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Cruel Ones' Enclosure and red asp is not moot.
+understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Emptiness Sepiments and red asp is not moot.
 
-understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Cruel Ones' Enclosure and red asp is not moot.
+understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Emptiness Sepiments and red asp is not moot.
 
 understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not moot.
 

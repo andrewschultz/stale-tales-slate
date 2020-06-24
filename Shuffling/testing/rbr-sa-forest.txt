@@ -126,21 +126,6 @@ Self-ID Fields
 >rs ne
 >in
 ##############################################################east 1st
-#mistake test for seat
->seat
-You need the opposite of a seat, here. But at the same time, you're also very close.
->undo
-\\
-#mistake test for sate
->sate
-There's nothing around you have to sate, thankfully.
->undo
-\\
-#mistake test for tase
->tase
-This game is nonviolent--well, except for a few puns.
->undo
-\\
 #nudge for aroma
 >aroam
 No, that's not the essence of the aroma of teas.
@@ -335,7 +320,12 @@ Self-ID Fields
 >score
 {$SCOS}
 
-@nud
+@mis
+#mistake test for leif/lief
+>leif
+It is too late to help the line of no life by showing love.
+>lief
+It is too late to help the line of no life by showing love.
 
 @nud
 #renudge for forest
@@ -357,8 +347,8 @@ The selves vessel is much too sturdy to manipulate.
 >vesle
 The selves vessel is much too sturdy to manipulate.
 #nudge for line
->lien
-If they owe something, that's their business. It's too late to change that now.
+>inle
+They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for life
 >lief
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
@@ -521,9 +511,19 @@ No, you can't afford to wait that long.
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ones. Keep at it.
 
+@mis
+#mistake test for enos
+>enos
+A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.
+
 >nose
 Your score has just gone up by one point.
 }}SCORE++
+
+@mis
+#mistake retest for enos
+>enos
+A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.
 
 >score
 {$SCOS}
@@ -914,7 +914,7 @@ Your score has just gone up by one point.
 }}SCORE++
 
 >srelvi
-WRONG
+The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
 >score
 @min

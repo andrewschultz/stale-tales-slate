@@ -212,13 +212,13 @@ this is the pre-livers-sliver-silver rule:
 
 this is the pre-livers-sliver rule:
 	if sliver is touchable:
-		if doorway is not in Cruel Ones' Enclosure, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+		if doorway is not in Emptiness Sepiments, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
 
 this is the post-slit-silt rule:
 	moot silt;
 
 this is the post-liches-chisel rule:
-	now spread is in Cruel Ones' Enclosure;
+	now spread is in Emptiness Sepiments;
 
 this is the post-banshee-hasbeen rule:
 	moot has been;
@@ -608,7 +608,7 @@ to say m-r-almost:
 		say "You almost feel something picking you up for a second. You must have been close"
 
 to say red-to:
-	now red asp is in Cruel Ones' Enclosure;
+	now red asp is in Emptiness Sepiments;
 	set the pronoun it to red asp;
 	moot spread;
 
@@ -802,10 +802,10 @@ whiff of stew	"[one of]The stew is a clue which way to go. [plus][or]You should 
 thorn	"[one of]The thorn is a clue which way to go. [plus][or]You should go NORTH. [minus][cycling]"
 rambling shout	"[one of]The shout is a clue which way to go. [plus][or]You should go SOUTH. [minus][cycling]"
 aroma of teas	"[one of]The aroma of teas is a clue which way to go. [plus][or]You should go EAST. [minus][cycling]"
-Corses Crosse	"[if Cruel Ones' Enclosure is visited]You can come and go as you need[else]You need a way through Corses Crosse--perhaps you should learn to fit in[end if]."
+Corses Crosse	"[if Emptiness Sepiments is visited]You can come and go as you need[else]You need a way through Corses Crosse--perhaps you should learn to fit in[end if]."
 bread	"[one of]The bread can be changed. [plus][or]It becomes a BEARD. [minus][cycling]"
 sandwich	"[one of]The sandwich[i-fle] is useful for two puzzles. It has 'the usual two parts.' [plus][or]Take BREAD to separate the sandwich from the Flesh Shelf into bread and Spam. [minus][cycling]"
-chisel	"[one of]That chisel might be handy for some items[if player is in Cruel Ones' Enclosure] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
+chisel	"[one of]That chisel might be handy for some items[if player is in Emptiness Sepiments] you'll need to pass the drapes[else]stuck to a wall, or something[end if]. [plus][or]What could it PEEL? [plus][or]Either of the livers[i-fle]. [minus][cycling]"
 liches	"[one of]The liches are a tool of some greater evil, and their descriptions suggest another word (+)[or]Make them into a CHISEL[cycling]."
 River Ville liver	"[put-can]"
 viler liver	"[put-can]"
@@ -828,7 +828,7 @@ red ring	--	grinder
 blades	--	grinder
 elegy	"[if shotgun is off-stage]The elegy, if read correctly, can give you an idea of what the noughts can become[else]The elegy was a hint for the shotgun[end if]."
 gy	--	line of no life
-line of no life	"[if Cruel Ones' Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
+line of no life	"[if Emptiness Sepiments is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
 slit	"[one of]The slit is optional but not particularly difficult. [plus][or]How could it disintegrate? [plus][or]The slit could become SILT. [minus][cycling]"
 banshee	"[one of]You don't need to get rid of the banshee to solve the forest, but you can put it even more in the past. [plus][or]What's a name for something that was? [plus][or]HAS-BEEN. With dash, space or no space. [minus][cycling]"
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"

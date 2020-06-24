@@ -257,15 +257,16 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "naughts"	445467118	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	noughts	--	"There's more than one nought."
 
-table of Cruel Ones Enclosure nudges
+table of Emptiness Sepiments nudges
 this-cmd	hashval	this-item	this-rule	this-clue
-"cruel"	391055143	--	--	"[loc-rej]."
-"ones"	367340160	--	--	"[loc-rej]."
-"enclosure"	758395303	--	--	"[loc-rej]."
 "coffer"	359517866	--	--	"[scof-no]."
 "coffers"	455791832	--	--	"[scof-no]."
 "cloth"	287564318	--	spread-drapes rule	"No, the material of the [if spread is touchable]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	doorway	--	"You can just go through. You don't want it to change any more, really."
+
+["cruel"	391055143	--	--	"[loc-rej]."
+"ones"	367340160	--	--	"[loc-rej]."
+"enclosure"	758395303	--	--	"[loc-rej]."]
 
 table of Ghouls Slough nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -854,8 +855,8 @@ to say rivliv: say "It's just a liver. No need to parse the brand name"
 to say scof-no: say "You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get"
 
 this is the spread-drapes rule:
-	if player is in Cruel Ones' Enclosure:
-		if drapes are in Cruel Ones' Enclosure or spread is in Cruel Ones' Enclosure:
+	if player is in Emptiness Sepiments:
+		if drapes are in Emptiness Sepiments or spread is in Emptiness Sepiments:
 			the rule succeeds;
 	the rule fails;
 
