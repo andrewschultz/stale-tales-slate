@@ -123,7 +123,7 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 14. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib] [non-anagram = staple curtain]
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib, scepter] [non-anagram = staple curtain]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
@@ -1834,6 +1834,7 @@ Rehabs Basher	"[he-she-c] nods at you and the blabber babbler. It's remarkably e
 blabber babbler	"If [he-she] actually heard you, [he-she]'d yell a stunning rebuke to whatever [he-she] could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
+Respect Specter	"'Unfortunately, I don't have time for small talk. The terms of my coming back here were to give helpful advice only if you SCANned me. I need to, um, respect that.'"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
@@ -3149,7 +3150,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 			moot macks;
 			now qbc_litany is table of Gretta comments;
 		else:
-			now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 3;
+			now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 4;
 			move the player to Carven Cavern;	[end Elmo's dialogue]
 	else:
 		debug-fallthrough;
@@ -4443,6 +4444,14 @@ others	"not nouns any more--a different part of speech in each location"
 to say cheatfid:
 	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
 
+to say respect-help:
+	if sb-cur is false:
+		say "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode";
+	else:
+		say "[one of]Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 ad 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
+
+to say g-thru-resp: now got-thru-respect is true;
+
 to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
 [??pad question mark / scan elmer / scan merle]
@@ -4456,6 +4465,7 @@ niche	false	false	false	true	"[cheatfid]."
 beams	false	false	false	true	"[cheatfid]."
 meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
 palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
+Respect Specter	false	false	false	false	"'[respect-help].'"
 tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
@@ -5462,6 +5472,8 @@ after reading a command:
 	if the player's command includes "smell" and word number 1 in the player's command is not "smell":
 		say "You can just type SMELL.";
 		reject the player's command;
+	if player is in Carven Cavern and Respect Specter is touchable:
+		if the player's command includes "spectre", say "The Respect Specter winces slightly and opens its mouth as if to say 'Er...'[paragraph break]";
 
 to towers-plurcheck:
 	if butlers are plurcheck:
@@ -5873,7 +5885,7 @@ to say trolls-mood:
 	else if silly-acts is 1:
 		say "The LOLstr trolls hesitate a bit, though. Your behavior wasn't perfect. Maybe if you did more, they'd be glad to see the back of you";
 	else if silly-acts is 0:
-		say "The LOLstr trolls, convinced you're the sort of square who can be pushed into doing what you're told, blocking you from going out";
+		say "So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image";
 	else:
 		say "BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this"
 
@@ -8446,11 +8458,20 @@ check going inside in Carven Cavern:
 	if act ruin curtain is in Carven Cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
+	if respect specter is touchable, say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness, before vanishing.[paragraph break]";
 	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot satchel;
 	moot teariest treatise;
 	solve-region Ordeal Reload;
 	the rule succeeds;
+
+chapter Respect Specter
+
+the Respect Specter is a vanishing LLPish person in Carven Cavern. "[one of]You hear a rustly, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
+
+a-text of respect specter is "RRYRRYR". b-text of respect specter is "?RY?R??". parse-text of respect specter is "x[sp]x[sp]-[sp]?[sp]x[sp]?[sp]?".
+
+got-thru-respect is a truth state that varies.
 
 chapter plaster psalter
 

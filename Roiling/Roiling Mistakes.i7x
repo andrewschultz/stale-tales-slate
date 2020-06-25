@@ -92,7 +92,13 @@ understand "petals" as a mistake ("That's already been done, and quite well, by 
 
 understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates-staple-touch.
 
+understand "spectre" as a mistake ("[spelling-matters of true].") when Respect Specter is touchable.
+
+understand "sceptre" as a mistake ("[spelling-matters of false].") when Respect Specter is touchable.
+
 understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in Carven Cavern]scanning the plaster and [end if][if player has staple]making use of the staple[else]twiddling the plates[end if] to get on with things.") when player is in Carven Cavern. [?? respect specter is not here for that]
+
+to say spelling-matters of (ts - a truth state): say "'Spelling matters, here. If [if ts is true]I[else]it[end if] were a spectre, I'd give a different cheat reading. Slots six and seven would turn [if ts is true]yellow and red[else]red and yellow[end if], respectfully. Err, respectively,' says the Respect Specter.[paragraph break]You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time"
 
 book stores
 
