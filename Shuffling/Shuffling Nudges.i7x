@@ -275,16 +275,15 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "send"	314016672	dimness	--	"[dimness-unchangeable]."
 "nde"	217742706	dimness	--	"[dimness-unchangeable]."
 
-["cruel"	391055143	--	--	"[loc-rej]."
-"ones"	367340160	--	--	"[loc-rej]."
-"enclosure"	758395303	--	--	"[loc-rej]."]
-
 table of Ghouls Slough nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "slough"	399428190	--	--	"[loc-rej]."
 "lough"	303154224	--	--	"[loc-rej]."
 "marsh"	285143039	--	--	"[marsh-lake]."
 "lake"	236740944	--	--	"[marsh-lake]."
+"cruel"	391055143	--	--	"[coe-no]."
+"ones"	367340160	--	--	"[coe-no]."
+"enclosure"	758395303	--	--	"[coe-no]."
 
 table of Frost Forst nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -876,6 +875,8 @@ this is the spread-drapes rule:
 to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
 
 to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is beyond here"
+
+to say coe-no: say "The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead"
 
 section sortie auxiliary
 

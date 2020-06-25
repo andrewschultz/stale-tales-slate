@@ -4828,15 +4828,7 @@ understand "coffin" and "scoffin coffin" as scoffin coffins.
 
 chapter Ghouls' Slough
 
-Ghouls Slough is inside of Emptiness Sepiments. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping].". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough".
-
-the dog is amusing boring scenery in Ghouls Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
-
-the bog is amusing boring scenery in Ghouls Slough. description is "The bog is pretty much all around. Maybe something could help you through it, though.". bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it. Maybe something could help you through it, though."
-
-to say end-it: end the story.
-
-check going nowhere in Ghouls Slough: say "Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.[if player has maps]. Hey, those maps might be useful to look at, though[end if]." instead;
+Ghouls Slough is inside of Emptiness Sepiments. It is in Forest. "This is as ethereal as its inhabitants, whom you cannot see or hear[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL. Guh, SLO[or][stopping]. A cruel ones['] enclosure is nearby, but it can't be where you want to go.". nowhere is south of Ghouls Slough. roomnud of Ghouls Slough is table of Ghouls Slough nudges. understand "ghoul slough" and "ghoul" as ghouls slough. printed name is "Ghouls['] Slough".
 
 check examining maps in Ghouls Slough:
 	say "The maps make sense, now you have somewhere to go and seem lost. You note places and things to avoid: [randbla], [randbla], and [randbla]. New ways to go off of fog. And you take a direst stride, past all manner of stown towns. Then the chilling cries of 'BRAAINS, SABRINA!' distract you...[paragraph break]";
@@ -4844,6 +4836,28 @@ check examining maps in Ghouls Slough:
 	if banshee is not moot, poss-d;
 	if slit is not moot, poss-d;
 	move player to Frost Forts instead;
+
+section Cruel Ones' Enclosure
+
+the Cruel Ones' Enclosure is boring scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4 from the room you just left to, well, this less relevant outpost here. You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "It looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
+
+understand "cruel ones" and "ones enclosure" and "cruel ones enclosure" and "ones" as Cruel Ones' Enclosure when player is in Ghouls Slough.
+
+understand "coe" as cruel ones' enclosure when debug-state is true.
+
+check going inside in Ghouls Slough: try entering Cruel Ones' Enclosure instead.
+
+this is the bore-enclosure rule:
+	if current action is taking or current action is entering, say "The cruel ones would take out their frustrations on being demoted to mere scenery on, well, you. That doesn't make sense, but then, cruelty rarely does." instead;
+	if current action is attacking, say "You hear an ol['] gush: 'Slug! Ho!'" instead;
+
+section dog and bog
+
+the dog is amusing boring scenery in Ghouls Slough. description of dog is "You can't see the dog, but it seems creepier than your average house pet.". bore-text is "The dog! Where was it? Where is it? Eegh. You don't REALLY want to think about it.".
+
+the bog is amusing boring scenery in Ghouls Slough. description is "The bog is pretty much all around. Maybe something could help you through it, though.". bore-text is "The bog feels like a big old gob that could suck you in. You just want to find a way away from it. Maybe something could help you through it, though."
+
+to say end-it: end the story.
 
 chapter Frost Forts
 
@@ -9028,6 +9042,10 @@ check going inside in Emptiness Sepiments:
 	if player does not have maps and player does not have Spam, say "[dibb]It's probably dangerous to go there without some sort of guide." instead;
 	if player does not have shotgun, say "[dibb]You've got maps to help you, but man. That's scary. You need a weapon." instead;
 	if shotgun is not loaded, say "You don't know what's to the north. [if prep paper is examined]You remember something about a lupine lineup[else if player has prep paper]You read the prep paper to note something about a lupine lineup[else]Things will probably only get more creepy and dangerous[end if], and that unloaded shotgun won't be enough[if silver is off-stage], and you don't have anything that works against them[else], but maybe you can refashion what you have into a different sort of weapon[end if]." instead;
+	say "As you stumble through, a gust of wind makes you turn your head and clutch your belongings. Your disguise goes flying off! Well, you won't need to fool anyone with it any more, anyway.";
+	moot nose;
+	moot shades;
+	moot beard;
 
 to say dibb: say "A voice booms 'Dash in, be banished!' "
 
@@ -9072,6 +9090,7 @@ Self ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
+Ghouls Slough	"Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog[if player has maps]. Hey, those maps might be useful to look at, though[end if]."
 Trap Part	"[if centrifuge-stopped is false]That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first[else][dmm]. You can only go north to the kitchen or east[or-room][end if]."
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
 Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."

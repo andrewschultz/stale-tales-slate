@@ -215,11 +215,7 @@ understand "teraglin" and "teraglins" as a mistake ("But where would the fish go
 
 understand "tone" and "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in Gnarliest Triangles.
 
-chapter cruel ones enclosure
-
-understand "cluer" as a mistake ("[if player is in Emptiness Sepiments]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Emptiness Sepiments.
-
-understand "lucre" as a mistake ("[if player is in Emptiness Sepiments]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is touchable or player is in Emptiness Sepiments.
+chapter Emptiness Sepiments
 
 understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Emptiness Sepiments and red asp is not moot.
 
@@ -229,13 +225,21 @@ understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably nee
 
 understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Emptiness Sepiments and red asp is not moot.
 
-understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not moot.
+understand "spared" as a mistake ("That is too passive, to ask to be spared.") when player is in Emptiness Sepiments and red asp is not moot.
 
 chapter Ghouls' Slough
 
-understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.[end-it]") when player is in Ghouls Slough.
+understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
+
+understand "gob" as a mistake("The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.[paragraph break]Oh, and you can undo this, too.[end-it]") when player is in Ghouls Slough.
 
 understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in Ghouls Slough.
+
+understand "lough" and "loughs" as a mistake("That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.") when player is in Ghouls Slough.
+
+understand "lucre" as a mistake ("[if player is in Ghouls Slough]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
+
+understand "ulcer" as a mistake ("Giving yourself or the cruel ones an ulcer would be pointless.") when player is in Ghouls Slough.
 
 chapter Frost Forts
 
