@@ -25992,7 +25992,6 @@ blurb
 "'Bovine vibe? No!'"
 "'Boy, just jot...' / 'BUSY!'"
 "'Brag on, bro! Nag! No, grab!'" []
-"'Breeze? Beezer!'"
 "'Bri, how hi-brow!'"
 "'Bribe to be IT, bro!'"
 "'Bro, I'll rib, LOL.'"

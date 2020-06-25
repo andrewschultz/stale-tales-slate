@@ -1010,7 +1010,7 @@ to say stein-drop:
 
 this is the pre-trolls-stroll rule:
 	if silly-acts >= 3, continue the action;
-	say "The LOLstr trolls [if silly-acts is 0]seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty][else if silly-acts is 1]seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty][else if silly-acts is 2]make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty]. They're not fully on their game, though. Maybe you can be even more annoying[end if].";
+	say "The LOLstr trolls [if silly-acts is 0]seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty][else if silly-acts is 1]seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty][else if silly-acts is 2]make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty].[paragraph break]Maybe one more disruption, and you won't be worth bothering with[end if].";
 	preef trolls;
 	the rule succeeds;
 

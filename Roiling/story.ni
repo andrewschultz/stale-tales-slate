@@ -5823,7 +5823,7 @@ Marines Seminar Remains	"While you're impressed with people who can navigate spo
 Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
 Unwary Runway	"The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?"
 Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
-Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The LOLstr trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the LOLstr trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The LOLstr trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The LOLstr trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]." [troves]
+Posh Hops Shop	"[posh-cant-exit]." [oyster]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
 Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
@@ -5858,6 +5858,24 @@ Filed Field	"[if barriers west are touchable and noun is west]The barriers west 
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
+
+to say posh-cant-exit:
+	if noun is not outside:
+		say "You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them";
+		continue the action;
+	say "'This ain't the E-Z Beer Breeze-Beezer, here,' one of the LOLstr trolls says. You haven't paid, and you have no money, but you need to leave somehow. And straight-up exiting doesn't seem to be the way.[paragraph break][trolls-mood]";
+
+to say trolls-mood:
+	if silly-acts is 3:
+		say "You get the feeling the LOLstr trolls wouldn't mind seeing you go since you might be bad for business";
+	else if silly-acts is 2:
+		say "Yet, the LOLstr trolls aren't that enthusiastic. They remember that disruption you caused and, in some weird way, respect your own trolling";
+	else if silly-acts is 1:
+		say "The LOLstr trolls hesitate a bit, though. Your behavior wasn't perfect. Maybe if you did more, they'd be glad to see the back of you";
+	else if silly-acts is 0:
+		say "The LOLstr trolls, convinced you're the sort of square who can be pushed into doing what you're told, blocking you from going out";
+	else:
+		say "BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this"
 
 to say curtis-next: say "[if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]"
 
