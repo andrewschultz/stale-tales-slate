@@ -10208,7 +10208,7 @@ tedious-cue is a truth state that varies.
 
 to say tedcue: now tedious-cue is true;
 
-section seats
+section teasing seating
 
 tried-seating is a truth state that varies.
 
@@ -10219,6 +10219,8 @@ the teasing seating is useless boring scenery in Cruelest Lectures. "Some of it 
 this is the bore-seating rule:
 	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or the Rehabs Basher. Or the blabber babbler." instead;
 	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls the Rehabs Basher, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
+
+the speaker parkees are boring scenery in Cruelest Lectures. "They sit there staring at [bab-name], the blabber babbler, go on and on. If you didn't know better, you'd think it was a drug-induced trance, but if they weren't staring, they'd get zinged for no attention span.". bore-text is "The speaker parkees are helpless and can't help you. You need to find another way to release them, and yourself."
 
 section passage
 
@@ -20441,11 +20443,6 @@ a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?". parse-
 the guava is a fruit. [paint gives guava]
 
 chapter banana/a
-
-when play begins:
-	say "[the s-c].";
-	say "[the barriers west].";
-	say "[the banna].";
 
 a banna is boring scenery in Scape Space. description of a banna is "It's a banna['] (yeah, banner,) with the juvenile taunt NAA-NA-B... written on it, in shades grom greenish to yellow to brown.". bore-text is "The NAA-NA-B juvenile taunt seems to mock you. But perhaps there is a simple way to figure out what to do with a/the banna['].". understand "banner" as banna. printed name is "banna[']". indefinite article of banna is "a".
 

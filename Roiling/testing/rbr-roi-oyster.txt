@@ -69,7 +69,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 #nudge for remap
 >rempa
-You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+You already got a temporary escape from the bad music. You can't really do any more, there.
+#nudge for unset
+>unste
+You already got a temporary escape from the bad music. You can't really do any more, there.
 >undo
 >undo
 
@@ -283,10 +286,12 @@ by one point
 >unset
 !(tunes)
 You already dealt with the tunes.
+#renudge for unset
 >unste
-You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+You already got a temporary escape from the bad music. You can't really do any more, there.
+#renudge for remap
 >rempa
-You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+You already got a temporary escape from the bad music. You can't really do any more, there.
 #renudge for jukebox
 >jukebxo
 The jukebox is already temporarily out of commission.

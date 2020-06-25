@@ -422,6 +422,14 @@ You don't need to riff on any location names to win the game, unless there's not
 #nudge for lecture
 >lectuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+\\
+#nudge for parkee
+>pareek
+The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious.
+\\
+#nudge for parkees
+>parkese
+The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious.
 
 @!min
 >outside

@@ -169,9 +169,9 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 
 chapter Same Mesa
 
-understand "aint" as a mistake ("You don't need to make the [sit a nag] any sturdier. And calling it ain't-sag would be false advertising.") when anti sag sit a nag is touchable.
-
 understand "aint gas" and "gas" as a mistake ("The [sit a nag] is plenty solid and will stay that way, with or without you.") when anti sag sit a nag is touchable.
+
+understand "aint" as a mistake ("You don't need to make the [sit a nag] any sturdier. And calling it ain't-sag would be false advertising.") when anti sag sit a nag is touchable.
 
 understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in Same Mesa.
 

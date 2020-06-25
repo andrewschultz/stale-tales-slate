@@ -173,6 +173,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pamphlet"	551207154	--	--	"[pamph-ana]."
 "rehab"	271018934	--	--	"[rehab-no]."
 "rehabs"	367292900	--	--	"[rehab-no]."
+"parkee"	477522976	--	--	"[no-park]."
+"parkees"	573796942	--	--	"[no-park]."
 
 chapter routes nudges
 
@@ -1637,6 +1639,8 @@ to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
 to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead"
+
+to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious"
 
 section routes auxiliary
 
