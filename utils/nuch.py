@@ -60,6 +60,14 @@ def usage():
 def alf(x):
     return ''.join(sorted(x))
 
+def trivial_anagram(x):
+    for y in range(len(x)-2, 0, -1):
+        if x[y] == x[-1]: continue
+        retval = x[:y] + x[-1] + x[y+1:-1] + x[y]
+        return retval
+    print("WARNING could not trivially anagram", x)
+    return x
+
 def pre_process(sts):
     gm =  i7.hdr(sts, 'nu')
     dupes = 0
@@ -136,7 +144,7 @@ def poke_nudge_files(gm):
     cur_file = nudge_files[gm]
     excess_nudges = 0
     dupe_nudges = 0
-    short_file = re.sub(".*[\\\/]", "", cur_file)
+    short_file = os.path.basename(cur_file)
     if not os.path.exists(cur_file):
         print("WARNING", cur_file, "does not exist.")
         return
@@ -169,7 +177,12 @@ def poke_nudge_files(gm):
                 if "\\" in ll:
                     ll = re.sub(r"\\{2,}.*", "", ll)
                 if ll not in got_nudges[gm].keys():
-                    print("Bad renudge", ll, "line", line_count, "need nudge first")
+                    print("Renudge-without-nudge", ll, "line", line_count, short_file)
+                    renudges += 1
+                    count2 += 1
+                    count3 += 1
+                elif not got_nudges[gm][ll]:
+                    print("Renudge-before-nudge", ll, "line", line_count, short_file)
                     renudges += 1
                     count2 += 1
                     count3 += 1
@@ -187,6 +200,7 @@ def poke_nudge_files(gm):
                         mt.add_post(nudge_files[gm], line_count)
                     got_nudges[gm][ll] = line_count
                 else:
+                    sys.exit(list(got_nudges))
                     print("Unmatched #NUDGE FOR in", short_file, "line", line_count, ':', ll)
                     excess_nudges += 1
                     count2 += 1
@@ -243,10 +257,11 @@ def poke_nudge_files(gm):
                 tweak_text = poss_tweak(nudge_text[proj][j])
                 tweak_array = i7.if_oneof_crude_convert(tweak_text)
                 for t in range(0, len(tweak_array)):
+                    ja = trivial_anagram(j)
                     if t == 0:
-                        fout.write("#nudge for {:s}\n>{:s}\n{:s}\n".format(j, j[:-2] + j[-1] + j[-2], tweak_array[t]))
+                        fout.write("#nudge for {:s}\n>{:s}\n{:s}\n".format(j, ja, tweak_array[t]))
                     else:
-                        fout.write("\\\\\n#renudge for {:s}\n>{:s}\n{:s}\n".format(j, j[:-2] + j[-1] + j[-2], tweak_array[t]))
+                        fout.write("\\\\\n#renudge for {:s}\n>{:s}\n{:s}\n".format(j, ja, tweak_array[t]))
                 fout.write("\n")
         try:
             fout.close()
