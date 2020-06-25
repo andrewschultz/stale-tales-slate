@@ -4097,7 +4097,7 @@ to decide whether you-can-advance:
 	if number of not unsolved regions is 3 and gadget-secured is false, decide no;
 	decide yes.
 
-description of roster is "The roster on the front of store R reads: 'People who have earned a vacation: you[if you-can-advance] (well, go on!)[else] (well, soon!)[end if]'"
+description of roster is "The roster on the front of store R reads: 'People who have earned a vacation: you (well, [if you-can-advance]go on[else]soon[end if]!)'"
 
 section store s
 
@@ -4264,7 +4264,7 @@ the ogled lodge is a portal. go-region of ogled lodge is Resort. description of 
 understand "resort" as ogled lodge when player is in Trips Strip and ogled lodge is in Trips Strip.
 
 this is the resort-entry rule:
-	say "'You! Find! Unify! Do!' a voice booms. You stride into the ogled lodge thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
+	say "'You! Find! Unify! Do!' a voice booms. You stride into the ogled lodge thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise. You wind up somewhere ethereal. Have you been made a deity? A high priest? Even without defeating Red Bull Burdell?";
 
 volume Forest
 
@@ -7708,7 +7708,7 @@ to hello-bull:
 	if talk-quiet is true:
 		say "[line break]Boy, he's pretty loud. So loud, you can't tune him out every turn.";
 		now talk-quiet is false;
-	say "[wfak][line break]'Armed with a dream, I forged my RESPECT SCEPTER--an alum-maul--went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
+	say "[wfak][line break]'Dream-armed, I took my alum-maul and went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
 	set the pronoun it to cruelty cutlery;
