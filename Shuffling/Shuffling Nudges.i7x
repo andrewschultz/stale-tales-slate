@@ -270,8 +270,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "dimness"	519358637	dimness	--	"[dimness-unchangeable]."
 "mis"	205341965	dimness	--	"[dimness-unchangeable]."
 "miss"	301615931	dimness	--	"[dimness-unchangeable]."
-"dimness"	519358637	dimness	--	"[dimness-unchangeable]."
-"dimness"	519358637	dimness	--	"[dimness-unchangeable]."
 "send"	314016672	dimness	--	"[dimness-unchangeable]."
 "nde"	217742706	dimness	--	"[dimness-unchangeable]."
 

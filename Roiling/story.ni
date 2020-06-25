@@ -475,7 +475,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 770.
+use MAX_VERBS of 780.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -493,7 +493,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 790. [delta=20]
+use MAX_VERBS of 800. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -2089,7 +2089,7 @@ LOLstr trolls	Casper	"[one of]'A great man! We're sure his books are great, if y
 LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
 LOLstr trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 LOLstr trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
-LOLstr trolls	tunes	"[if song buttons are reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
+LOLstr trolls	tunes	"[if tunes are moot][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
 LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lotsa people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 LOLstr trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 LOLstr trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
@@ -10521,10 +10521,22 @@ check entering adsorbing signboard: try entering resto store instead;
 
 chapter bench
 
-the anti sag sit a nag is reflexive scenery in Same Mesa. "[if Gast is in Same Mesa][Gast]'s on it, and [he-she] covers enough of it, you could only half squeeze in between [him-her] and the armrests[else if Gast is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe they will arrive[else][Gast] probably won't be around here any more[end if].". printed name of anti sag sit a nag is "anti-sag sit-a-nag".
+the anti sag sit a nag is reflexive scenery in Same Mesa. "[if Gast is in Same Mesa][Gast]'s on it, and [he-she] covers enough of it, you could only half squeeze in between [him-her] and the armrests[else if Gast is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe they will arrive[touch-sag-clue][else][Gast] probably won't be around here any more[end if].". printed name of anti sag sit a nag is "anti-sag sit-a-nag".
+
+nag-touched is a truth state that varies.
+
+to say touch-sag-clue:
+	if sit a nag is prefigured, continue the action;
+	if nag-touched is true, continue the action;
+	say ". Perhaps TOUCHing it would give a clue, too"
 
 check entering the anti sag sit a nag:
-	say "[if Gast is moot]You don't need to fool with the [sit a nag] any more.[else if Gast is in Same Mesa]You don't quite have room. And you're not going to get [Gast] to scootch over.[else]From the size, the [sit a nag] seems to be [i]a giant's[r]. If [he-she] came along, [he-she] could sit on you pretty easily.[end if]" instead;
+	say "[if Gast is moot]You don't need to fool with the [sit a nag] any more.[else if Gast is touchable][Gast] is more worth focusing on, now[else]From the size, the [sit a nag] seems to be [i]a giant's[r]. If [he-she] came along, [he-she] could sit on you pretty easily.[end if]" instead;
+
+check touching sit a nag:
+	if gast is touchable and sit a nag is reflexive:
+		now nag-touched is true;
+		say "You see red and pull your hand back, reflexively screaming 'Sting! Aa!'" instead;
 
 check taking sit a nag: say "The [sit a nag] is too big." instead;
 
@@ -13349,15 +13361,15 @@ check taking tunes: say "Ironically, they're the sort of tunes you really can't 
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "u[sp]x[sp]x[sp]e[sp]x". tunes is cheat-spoilable.
 
-The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
+The jukebox is uncluing boring thing in Posh Hops Shop. It is fixed in place. description of jukebox is "[if tunes are reflexed or perma amper is reflexed]The jukebox is finally silent, but the pesty types aren't.[else]It has the usual bunch of song buttons and a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]". bore-text is "You [if tunes are moot]did[else]probably need to do[end if] something special to bust the jukebox."
 
 a-text of tips pits is "RRYR". b-text of tips pits is "RRYR". parse-text of tips pits is "x[sp]x[sp]i[sp]x". tips pits are cheat-spoilable.
 
 check scaning jukebox:
-	if tunes are in Posh Hops Shop:
-		say "You wind up scanning the tunes that come from the jukebox.";
-		try scaning tunes instead;
-	say "The jukebox gives nothing with the tunes gone." instead;
+	if perma amper is touchable:
+		say "You wind up scanning the perma-amper in the jukebox.";
+		try scaning perma amper instead;
+	say "The jukebox gives nothing with the tunes and perma-amper gone." instead;
 
 chapter perma amper
 
@@ -13374,7 +13386,7 @@ this is the bore-perma-amper rule:
 
 the song buttons are part of the jukebox. description is "They're number and letter, though you're not familiar with the song, so no one button seems worse than any other. You hope."
 
-check pushing the song buttons: say "They're probably all pretty terrible. You need to focus on exactly what you want to do, to muck with the tunes." instead;
+check pushing the song buttons: say "[if tunes are moot]The jukebox is already out of order[else]They're probably all pretty terrible. You need to focus on exactly what you want to do, to muck with the tunes[end if]." instead;
 
 does the player mean doing something with song buttons when player is in Posh Hops Shop: it is likely.
 
@@ -13452,12 +13464,16 @@ understand "remap [something]" as remaping.
 does the player mean remaping the perma amper: it is very likely.
 
 rule for supplying a missing noun when remaping:
-	if player is in Posh Hops Shop, now noun is perma amper;
+	if player is in Posh Hops Shop:
+		now noun is perma amper;
+	else:
+		say "You already dealt with the tunes and perma-amper.";
+		reject the player's command;
 
 carry out remaping:
 	if noun is perma amper:
-		if tunes are moot, say "The tunes have already been altered. Remapping won't do any good. Or bad." instead;
-		try fliptoing tunes instead;
+		if tunes are moot, say "The perma-amper has already been destroyed. Re-remapping won't do any good. Or bad." instead;
+		try fliptoing perma amper instead;
 	say "There's only one thing to remap in the game." instead;
 
 remapped is a truth state that varies.
@@ -13511,7 +13527,7 @@ rule for supplying a missing noun when unseting:
 	if tunes are touchable:
 		now noun is tunes;
 	else:
-		say "You already dealt with the tunes.";
+		say "You already dealt with the tunes and perma-amper.";
 		reject the player's command;
 
 does the player mean unseting tunes: it is very likely.
@@ -17286,9 +17302,7 @@ chapter Salted Deltas guardians
 
 section atheists
 
-the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name is "asset-hit atheists".
-
-printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
+the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
 a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 

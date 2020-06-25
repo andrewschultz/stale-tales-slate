@@ -98,9 +98,9 @@ book stores
 
 chapter Strip of Profits
 
-understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Trips Strip.
+understand "destro" as a mistake ("It's going to get evil enough even without a high-ranking COBRA officer.") when player is in Strip of Profits.
 
-understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Trips Strip.
+understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Strip of Profits.
 
 understand "ektor" and "ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
 
@@ -169,6 +169,10 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 
 chapter Same Mesa
 
+understand "aint" as a mistake ("You don't need to make the [sit a nag] any sturdier. And calling it ain't-sag would be false advertising.") when anti sag sit a nag is touchable.
+
+understand "aint gas" and "gas" as a mistake ("The [sit a nag] is plenty solid and will stay that way, with or without you.") when anti sag sit a nag is touchable.
+
 understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in Same Mesa.
 
 understand "apts" as a mistake ("Pat's is a local small business, not nameless, faceless real estate.") when player is in Same Mesa or player is in Idle Deli.
@@ -182,6 +186,8 @@ understand "beneath" as a mistake ("Nice try, but wrong preposition for the situ
 understand "bowel" and "elbow" and "bowels" and "elbows" as a mistake ("The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
 
 understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.") when player is in Same Mesa.
+
+understand "gats" and "tags" as a mistake ("This game is not violent enough for tags with gats.") when Gast is touchable.
 
 understand "ides" and "rat" and "tar" as a mistake ("It's the whole side art you need[if tirades are moot]ed[end if] to deal with.") when player is in Same Mesa and side art is in Same Mesa.
 
@@ -198,6 +204,8 @@ understand "satired" as a mistake ("[if gast is off-stage]You find nothing to sa
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if THE BEAN is in location of player], except maybe under THE BEAN. Wait, not quite UNDER[end if].") when player is in Same Mesa.
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
+
+understand "stag" as a mistake ("[gast] does not deserve to be changed into an animal.") when Gast is touchable.
 
 understand "staider" as a mistake ("[if gast is off-stage]Nothing has gotten too riotous yet[else if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when player is in Same Mesa.
 
@@ -761,7 +769,8 @@ understand "dang rite" as a mistake ("Creative, but ineffective, positive colloq
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
-understand "parley" as a mistake ("The raves saver/replay player
+understand "parley" as a mistake ("The raves saver/replay player [if saver is reflexed]can be[else]has already been[end if] parleyed into something shinier.") when raves saver is touchable.
+
 understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is touchable]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are touchable.
 
 chapter shoals aslosh (backdrop)
