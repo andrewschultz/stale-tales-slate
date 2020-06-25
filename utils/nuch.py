@@ -7,6 +7,8 @@
 # to do: permute something until we get something new, if there is a conflict
 # bkoo or sign at the end (?)
 
+# we would like to separate general nudges from regular nudges. This case came about when testing the forest paths in shuffling.
+
 from collections import defaultdict
 from itertools import permutations
 import i7
@@ -177,10 +179,11 @@ def poke_nudge_files(gm):
                 if "\\" in ll:
                     ll = re.sub(r"\\{2,}.*", "", ll)
                 if ll not in got_nudges[gm].keys():
-                    print("Renudge-without-nudge", ll, "line", line_count, short_file)
-                    renudges += 1
-                    count2 += 1
-                    count3 += 1
+                    if not ("shuffling" in gm and ll in got_nudges["shuffling-general"]):
+                        print("Renudge-without-nudge", ll, "line", line_count, short_file)
+                        renudges += 1
+                        count2 += 1
+                        count3 += 1
                 elif not got_nudges[gm][ll]:
                     print("Renudge-before-nudge", ll, "line", line_count, short_file)
                     renudges += 1
@@ -199,8 +202,15 @@ def poke_nudge_files(gm):
                         print("Duplicate nudge comment line", ll, 'line', line_count, 'duplicates', got_nudges[gm][ll])
                         mt.add_post(nudge_files[gm], line_count)
                     got_nudges[gm][ll] = line_count
+                elif "shuffling" in gm and ll in got_nudges["shuffling-general"].keys():
+                    if got_nudges["shuffling-general"][ll] > 0:
+                        count2 += 1
+                        count3 += 1
+                        dupe_nudges += 1
+                        print("Duplicate nudge comment line", ll, 'line', line_count, 'duplicates', got_nudges["shuffling-general"][ll])
+                        mt.add_post(nudge_files[gm], line_count)
+                    got_nudges["shuffling-general"][ll] = line_count
                 else:
-                    sys.exit(list(got_nudges))
                     print("Unmatched #NUDGE FOR in", short_file, "line", line_count, ':', ll)
                     excess_nudges += 1
                     count2 += 1

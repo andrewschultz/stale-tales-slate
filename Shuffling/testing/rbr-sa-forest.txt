@@ -743,21 +743,12 @@ by one point
 Your score has just gone up by one point.
 }}SCORE++
 
-Cruel Ones' Enclosure
+Emptiness Sepiments
 
 >score
 {$SCOS}
 
 @nud
-#nudge for cruel
->crule
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for ones
->onse
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for enclosure
->enclosuer
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for coffer
 >coffre
 You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
@@ -973,7 +964,6 @@ No, the material of the drapes isn't important, here.
 #done rejects for drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
-#nudge for doorway
 
 >n
 The drapes are too thick.
@@ -982,6 +972,10 @@ The drapes are too thick.
 revealing a doorway
 
 @nud
+#nudge for doorway
+>doorway
+The dimness is unchangeable from out here. You'll have to find a way in.
+\\
 #nudge for mis
 >msi
 The dimness is unchangeable from out here. You'll have to find a way in.
@@ -1056,6 +1050,15 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #nudge for lough
 >louhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+#nudge for cruel
+>crule
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+#nudge for ones
+>onse
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+#nudge for enclosure
+>enclosuer
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
 #nudge for marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
@@ -1064,6 +1067,16 @@ The marsh and lake are symptoms of--whatever evil is beyond here.
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
 @mis
+#mistake test for lough/loughs
+>lough
+That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.
+>loughs
+That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.
+\\
+#mistake test for ulcer
+>ulcer
+Giving yourself or the cruel ones an ulcer would be pointless.
+\\
 #mistake test for god
 >god
 You want to tempt the supernatural in somewhere this hellish? Phew.
