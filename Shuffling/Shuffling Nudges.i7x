@@ -262,7 +262,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "coffer"	359517866	--	--	"[scof-no]."
 "coffers"	455791832	--	--	"[scof-no]."
 "cloth"	287564318	--	spread-drapes rule	"No, the material of the [if spread is touchable]spread[else]drapes[end if] isn't important, here."
-"doorway"	487539889	doorway	--	"You can just go through. You don't want it to change any more, really."
+"doorway"	487539889	dimness	--	"[dimness-unchangeable]."
+"dimness"	519358637	dimness	--	"[dimness-unchangeable]."
+"mis"	205341965	dimness	--	"[dimness-unchangeable]."
+"miss"	301615931	dimness	--	"[dimness-unchangeable]."
+"dimness"	519358637	dimness	--	"[dimness-unchangeable]."
+"dimness"	519358637	dimness	--	"[dimness-unchangeable]."
+"send"	314016672	dimness	--	"[dimness-unchangeable]."
+"nde"	217742706	dimness	--	"[dimness-unchangeable]."
 
 ["cruel"	391055143	--	--	"[loc-rej]."
 "ones"	367340160	--	--	"[loc-rej]."
@@ -853,6 +860,8 @@ to say bothlivers: say "The one liver seems inactive by itself"
 to say rivliv: say "It's just a liver. No need to parse the brand name"
 
 to say scof-no: say "You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get"
+
+to say dimness-unchangeable: say "The dimness is unchangeable from out here. You'll have to find a way in"
 
 this is the spread-drapes rule:
 	if player is in Emptiness Sepiments:

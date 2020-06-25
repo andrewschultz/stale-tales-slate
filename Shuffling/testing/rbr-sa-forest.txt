@@ -981,6 +981,27 @@ The drapes are too thick.
 >cut drapes
 revealing a doorway
 
+@nud
+#nudge for mis
+>msi
+The dimness is unchangeable from out here. You'll have to find a way in.
+\\
+#nudge for miss
+>mssi
+The dimness is unchangeable from out here. You'll have to find a way in.
+\\
+#nudge for dimness
+>dimnsse
+The dimness is unchangeable from out here. You'll have to find a way in.
+\\
+#nudge for send
+>sedn
+The dimness is unchangeable from out here. You'll have to find a way in.
+\\
+#nudge for nde
+>ned
+The dimness is unchangeable from out here. You'll have to find a way in.
+
 >n
 You don't know what's
 

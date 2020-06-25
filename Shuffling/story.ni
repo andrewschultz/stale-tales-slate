@@ -4765,7 +4765,7 @@ Rule for printing room description details:
 
 chapter Emptiness Sepiments
 
-Emptiness Sepiments is north of Self ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west, and scoffin['] coffins block the way east[if liches are in Emptiness Sepiments]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Emptiness Sepiments]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Emptiness Sepiments]. A red asp guards the way north[else if spread is in Emptiness Sepiments]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Emptiness Sepiments]. Nothing seems to block the way north now[end if][if banshee is in Emptiness Sepiments]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Emptiness Sepiments is table of Emptiness Sepiments nudges.
+Emptiness Sepiments is north of Self ID Fields. It is in Forest. "A creepy acre, yep. Immovable scoffer coffers block the way west, and scoffin['] coffins block the way east[if liches are in Emptiness Sepiments]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Emptiness Sepiments]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Emptiness Sepiments]. A red asp guards the way north[else if spread is in Emptiness Sepiments]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Emptiness Sepiments]. That missend dimness acts as a sort of doorway north--you'll have to go through it eventually[end if][if banshee is in Emptiness Sepiments]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields.". roomnud of Emptiness Sepiments is table of Emptiness Sepiments nudges.
 
 after looking in Emptiness Sepiments:
 	if banshee is in Emptiness Sepiments:
@@ -9195,9 +9195,9 @@ before cutting:
 	if player does not have sliver, say "You have nothing sharp enough to cut." instead;
 	if noun is spread, say "As you get close to the spread, it turns bright red and bursts into something else--a red asp! You jump away[red-to]." instead;
 	if noun is drapes:
-		say "The drapes vanish as they are cut, revealing a doorway.";
+		say "The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers 'Enter the missend dimness ... if you dare.' Mis-send or miss-end? Either way, you probably need to be prepared.";
 		moot drapes;
-		now doorway is in Emptiness Sepiments instead;
+		now mis send dimness is in Emptiness Sepiments instead;
 	if noun is wolves, say "You're way outnumbered. And you have a better weapon." instead;
 	if noun is show hows tag or noun is knot:
 		if player has sliver, ask-to-cut instead;
@@ -9216,15 +9216,15 @@ to ask-to-cut:
 	else:
 		say "Good choice.";
 
-the doorway is scenery.
+the mis send dimness is scenery. printed name is "mis-send dimness". "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
 
-understand "door" as doorway when doorway is touchable.
+understand "doorway" as dimness when dimness is touchable.
 
-description of doorway is "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
+understand "miss end" and "miss/end dimness" and "miss end dimness" and "miss/end" as dimness when dimness is touchable.
 
-check opening doorway: try going inside instead;
+check opening dimness: try going inside instead;
 
-check entering doorway: try going inside instead;
+check entering dimness: try going inside instead;
 
 check going north in Emptiness Sepiments: try going inside instead;
 
