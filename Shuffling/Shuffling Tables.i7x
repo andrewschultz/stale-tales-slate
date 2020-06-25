@@ -212,7 +212,7 @@ this is the pre-livers-sliver-silver rule:
 
 this is the pre-livers-sliver rule:
 	if sliver is touchable:
-		if doorway is not in Emptiness Sepiments, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
+		if mis send dimness is not in Emptiness Sepiments, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
 
 this is the post-slit-silt rule:
 	moot silt;
@@ -839,7 +839,7 @@ spam	"[one of]The Spam isn't particularly edible. [plus][or]It's more useful as 
 silver	"[if silver is part of shotgun]It's ready to fire when needed[else if shotgun is off-stage]It'd be nice to have something to put the silver in[else]Put the silver in the shotgun[end if]."
 shotgun	"[if player has silver and silver is not in shotgun]Put the silver in the shotgun.[else if silver is off-stage]You need to create a bullet for the shotgun.[else if wolves are touchable]SHOOT the wolves.[else]You need to find a target, one vulnerable to silver, maybe.[end if]"
 muzzle	"It's the shotgun you need to worry about."
-doorway	"It's not terribly intimidating, but you'll want to be prepared with a guide and possibly self-defense. Things will only get tougher than the liches."
+mis send dimness	"The dimness is treacherous. You'll want to be prepared with a guide and possibly self-defense. Things will only get tougher than the liches."
 maps	"[if player is in Ghouls Slough]You need to READ the MAPS[else]The maps will be useful to read when you get somewhere unknown[end if]."
 vowels	"[one of]The vowels seem to be hiding a great evil, a Halloweeny menace. They seem to be saying 'We're Vowels.' [plus][or]Two solutions: WEREWOLVES or WOLVES. [minus][cycling]"
 wolves	"They're due for a violent end."

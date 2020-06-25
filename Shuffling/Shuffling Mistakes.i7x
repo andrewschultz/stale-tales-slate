@@ -131,7 +131,7 @@ understand "rated" as a mistake ("The trade tread isn't for commenting on, it's 
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in Trips Strip.
 
-understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is reflexed]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].")
+understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is touchable]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].") when player is in Trips Strip.
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
 

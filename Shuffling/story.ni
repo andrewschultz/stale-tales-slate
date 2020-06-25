@@ -4812,9 +4812,19 @@ to check-score (a - indexed text):
 
 section scoffer coffers
 
-the scoffer coffers are boring bounding scenery in Emptiness Sepiments. "The coffers remind you of all the times you were laughed at.". bore-text of scoffer coffers is "You don't want to mess with the scoffer coffers and the horrible laughter contained therein. Plus, they may be guarding you from worse."
+to say scoffy-desc: say "The [item described] remind you of all the times you were laughed at and how even the tritest titters hurt."
+
+to say scoffy-bore: say "You don't want to mess with [the item described] and the horrible laughter contained therein. Plus, they may be guarding you from worse"
+
+the scoffer coffers are boring bounding scenery in Emptiness Sepiments. "[scoffy-desc].". bore-text of scoffer coffers is "[scoffy-bore]."
 
 understand "coffer" and "scoffer coffer" as scoffer coffers.
+
+section scoffin coffins
+
+the scoffin coffins are boring bounding scenery in Emptiness Sepiments. "[scoffy-desc].". bore-text of scoffin coffins is "[scoffy-bore].". printed name is "scoffin['] coffins".
+
+understand "coffin" and "scoffin coffin" as scoffin coffins.
 
 chapter Ghouls' Slough
 
