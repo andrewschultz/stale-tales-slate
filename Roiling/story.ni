@@ -28,7 +28,7 @@ TNW  = messages for "you can't go that way"
 TRE  = table of readables
 TSX  = differences between sexes
 TSH  = table of spechelp, so you can see the specialized help for an item
-TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
+TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it a-ny more
 TQT  = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO  = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT  = dome tables, text from Demo Dome section
@@ -8469,7 +8469,7 @@ chapter Respect Specter
 
 the Respect Specter is a vanishing LLPish person in Carven Cavern. "[one of]You hear a rustly, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
 
-a-text of respect specter is "RRYRRYR". b-text of respect specter is "?RY?R??". parse-text of respect specter is "x[sp]x[sp]-[sp]?[sp]x[sp]?[sp]?".
+a-text of respect specter is "RRYRRYR". b-text of respect specter is "?R?????". parse-text of respect specter is "x[sp]x[sp]-[sp]?[sp]x[sp]?[sp]?".
 
 got-thru-respect is a truth state that varies.
 

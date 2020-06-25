@@ -640,8 +640,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "tune"	404929442	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
 "pti"	229568823	tips pits	--	"You [if tips pits are reflexed]already dealt with the tips pits[else]can't pick out which pit to do something to. Maybe there's an action to apply to all of them[end if]."
 "jukebox"	540345182	--	--	"[if tunes are in posh hops shop]You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper[else]The jukebox is already temporarily out of commission[end if]."
-"remap"	360858842	--	--	"You can't change the bad music selection. You already got a temporary escape, and that should be good enough."
-"unset"	501203408	--	--	"You can't change the bad music selection. You already got a temporary escape, and that should be good enough."
+"remap"	360858842	--	--	"[jukebox-overkill]."
+"unset"	501203408	--	--	"[jukebox-overkill]."
 
 table of Olde Lode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1886,6 +1886,8 @@ section oyster auxiliary
 to say tro-clo: say "Focus on the trolls, not their clothes"
 
 to say no-pesty: say "The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society"
+
+to say jukebox-overkill: say "You already got a temporary escape from the bad music. You can't really do any more, there"
 
 this is the clam-gone rule:
 	if player is in Olde Lode and clam is not in Olde Lode, the rule succeeds;

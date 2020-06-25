@@ -37,7 +37,7 @@ meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-b
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	--	--	"'Here. That's it. You don't really need a scepter, though. Probably more important to have that boost before moving on, right? [scep-scan-track].'"
+Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	--	"'Here. That's it. You don't really need a scepter, though. Probably more important to have that boost before moving on, right? [scep-scan-track].'"
 plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtainb appears behind, a stapler falls out. You take it[if plates are touchable] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
@@ -468,6 +468,19 @@ to say dust-b:
 
 this is the post-bins-snib rule:
 	move snib to Largely All Grey Gallery;
+
+scepter-nag is a truth state that varies.
+
+this is the pre-specter-scepter rule:
+	if scepter-nag is false and Respect Specter is not bscanned:
+		now scepter-nag is true;
+		say "The Respect Specter coughs. 'You may wish to scan me in [if specter is ncscanned]cheat[else if specter is cscanned]non-cheat[else]cheat and non-cheat[end if] mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?'";
+		if the player direct-consents:
+			say "'Thank you for respecting my presence and purpose here.'";
+			preef Respect Specter;
+			the rule fails;
+			continue the action;
+		say "'I respect your choice.'";
 
 this is the post-psalter-stapler rule:
 	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;

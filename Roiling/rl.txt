@@ -40,6 +40,15 @@ These won't always get you to the right answer, but they'll often get you closer
 No. That'd be a jerk move. But there are some in the game invisiclues file proper.
 >ORDEAL RELOAD
 >>CARVEN CAVERN
+# logic for respect specter
+?How do I make sense of the cheat readings for the Respect Specter?
+If you scan it several times, it gives hints.
+The ambiguous readings also cut things down a lot.
+(RS)(CRST)(ES)(CP)(ET)(CE)(RT) looks like a mess, but note that there are only three places (3, 5, 6) that can be vowels and E. We can go through them case-by-case.
+Slot 3 is a consonant: (RS)(CRST)S(CP)EE(RT) becomes RCSPEET.
+Slot 6 is a consonant: (RS)(CRST)(ES)(CP)(ET)C(RT) becomes (RS)(RST)EPEC(RT) and the only thing that doesn't clog at the start is STEPECR.
+Slot 5 is a consonant: (RS)(CRST)E(CP)(T)E(RT) becomes SCEPTER. This works.
+We could also immediately notice letter R being 1 clogs everything immediately, giving R(CS)(ES)P(E)(CE)T or RSEPECT/RCSPEET. So slot 1 is S. But that doesn't cut much down. Still, it's useful to know for later.
 # logic for palest pastel plates
 ?How do I decode the palest pastel plates?
 RR?RRY shows up. The question mark must be a vowel, since palest etc. have two vowels and four consonants. The only one that could fit is A. That leaves E in slot 6.
@@ -116,11 +125,17 @@ This is a relatively tricky one. But we know where the second vowel is. It must 
 The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
 CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
 We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
-#logic for i'm le cop polemic
+#logic for im le cop polemic
 ?The I'm Le Cop Polemic seems sticky. What gives?
 Seven letters is a lot! But we can make progress with the one question mark. It needs to be a vowel, so it must be O and not M.
 From here, you may need to look at red text, because neither of the remaining vowels gets a clue to cancel it out. But you my be able to guess the computer term involved.
 MEL COPI in red means I can't be in slot 7. -O--I-E. (CL)O(CMP)(LMP)I(CLM)E.
+#logic for peels speel
+?What is the peels speel trying to tell me?
+It gives ?RG?R. That gives us a couple definitive slots right away. --E-P.
+The others are (SP)(LS)E(EL)P.
+But we can knock off, in order, slots 1, 2 and 4.
+SLEEP.
 #logic for bub dude egg
 ?What is with Bub Dude Egg?
 You have BUBDU and DEEGG. They give ???Y?. This looks like a tall task.
@@ -151,7 +166,7 @@ That means the others must be consonants. Now we should probably be conservative
 Slot 6 is D, and that makes things easier. (RT)(OA)(RW)(OA)(RST)D(RSW). We can make an educaated guess that S is the last letter, since .....D(RW) would be nonsense.
 That helps a few things fall out: (RT)(OA)(RW)(OA)(RT)DS, or (RT)(OA)W(RT)DS.
 The RADWOST red text leaves us with TOWARDS.
-#logic for pat's stap
+#logic for pats stap
 ?How do I enter Pat's Stap?
 The ??RR suggests that there is one vowel in the first two letters.
 But the first letter is P or S, so the second letter is the vowel.
@@ -170,7 +185,7 @@ ACROSS.
 It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).
 We can try some gimmicks like placing G in slot 6, giving NGS or NGT or SGN or SGT, none of which make promising words. So AG(AI)(AI)(NS)(NST)(NST) and then SNT/STN clog up a bit, so AG(AI)(AI)N(ST)(ST).
 There are also a few red clues, but AGAINST comes out of all this.
-#logic for rude 'n nuder
+#logic for rude n nuder
 ?How do I decipher what to do with Rude 'N Nuder?
 The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.
 So, U--E(NR) has D in slot 3, and thus U(NR)DE(NR). URDEN is not a word, but UNDER is.
@@ -226,11 +241,17 @@ Here is how things look:\n<pre>PAEG\nGPEA\nPEGA\nPAGE</pre>
 The third slot is red and can't be G, so it's P.
 The first letter is P or G, meaning G.
 That leaves GEPA and GAPE. GAPE.
-# logic for race acer
-?How can I be a race acer?
-The two question marks in R?R? must be vowels. That leaves A in slot 2 and E in slot 4.
-Now consonant 1 can't be R and 3 can't be C, because of the red letters.
-CARE.
+# logic for eh at heat
+?What can I do to move beyond Eh, At Heat?
+The ?YRY suggests a consonant in alot 1. H or E means H. Then slot 3 is T, the other consonant.
+Since slot 2 can't be E, it is A, making slot 4 E.
+HATE.
+# logic for race acre
+?How can I get motivated to face the Race Acre?
+The two question marks don't matter, because the red and green can be found logically.
+The red is a consonant but not R, and the green is E. So, C??E.
+That means we are left with C(AC)(CR)E.
+CARE, since slot 2 and 3 can't be C.
 >>BUSTLE SUBLET
 # logic for sob ever verbose
 ?What about the Sob Ever Verbose?
@@ -254,7 +275,7 @@ The first two letters can be figured logically: a consonant, but not T, is S. Th
 Now one of A, S and T must be in slot 3. Only A is left.
 You could also have figured Y was in slot 4 right away, since S and T, the only two consonants, must be in the first two slots.
 So STAY it is.
-# logic for l'clear cellar
+# logic for l clear cellar
 ?How do I see L'Clear Cellar?
 You can't, because it's clear. Oh, you mean if you scan it.
 R?RYRR is what you get, so the ? must be a vowel, and since slot 4 cannot be E and most be A, slot 2 is E. So we have -E-A--.
@@ -410,11 +431,11 @@ That leaves ADRRIEM or MARRIED. MARRIED.
 # logic for replay player
 ?How do I tweak the Raves Saver, with its six letter clue?
 It's not quite a raves saver. It's a REPLAY PLAYER according to the scanner.
-This is one where having the non-cheat version shows a lot more. But we'll go strictly with cheat mode for as long as possible.
+This is one where having the non-cheat version shows a lot more, immediately. But going with cheat mode and a bit of logic can break things open.
 First we note that Y is in slot 6. Since there is no O anywhere, and slot 4 (Y in Player) shows red, and no other question mark contains a possible Y, the Y must be in slot 6.
-If we go through the question marks, we get (PR)(EL)(PA)(PL)(RPL)Y. But then slots 2 and 3 are the only ones with E and A. That makes things easier. (PR)EA(RL)(PLR)Y.
+If we go through the question marks, we get (PR)(EL)(PA)(PL)(RPL)Y. But then slots 2 and 3 are the only ones that could possibly have vowels. So they must be E and A. That makes things easier. (PR)EA(RL)(PLR)Y.
 So if we try R in slot 1, we get REALPY, which is not a word. PEA(RL)(RL)Y gives PEARLY.
-# logic for sweatier wait-seer
+# logic for sweatier wait seer
 ?What can I learn about the sweatier wait-seer?
 The two question marks don't tell as much as we'd hoped: ?YYRY?RR gives SW in slot 1, IE in slot 6. But then, A must be in slot 3, since I and E are out. (SW)(IE)A(SWR)(IE)(IE)(SWRT)(SWT).
 From here you may just need to grind out letters that can't work (W in slots 7/8 clogs, and W in 4 gives SEAWEERT with one E replaced by an I.) Then I in slot 2 gives WIA(SR)EE(SRT)(ST) which seems like nonsense.
@@ -425,7 +446,7 @@ The two question marks in the Mended Mini Denim don't turn out to be very myster
 But wait! Slots 2 and 4 are the vowels, meaning 1 and 3 must both be consonants. That makes slot 3 N. Slot 2 must be E, and slot 4 must be I. This, -INE-.
 Since slot 5 can't be M, we get MINED.
 >>DANGER GARDEN
-# logic for natives' site van
+# logic for natives site van
 ?How does the natives' site van work?
 There are two solutions.
 The ?GYRYRR gives some clues right away. The first letter may or may not be N, but we can cheat and guess it must be, for one of the solutions. The second must be A.
@@ -437,7 +458,7 @@ It's trickier to find the other solution, but talking to them gives a bunch of r
 With RYRRYR?R we can determine the remaining question mark is a vowel. Since the possible letters are N and A, it is A. That makes things -(AI)--(AI)-A-.
 At this point, you may need to look for red letter clues. Liam Garn, his name, knocks out the vowels. -A--I-A-. Unfortunately, these were tricky to find, so I wasn't able to give many hints.
 >>LOST LOTS
-# logic for sporties' ripostes
+# logic for sporties ripostes
 ?How do I deflect the sporties' ripostes?
 First, note there are two vowels at positions 5 and 6, and one question mark in RR?RYYRR. So that question mark must be a vowel, O.
 Slot 6 can't be I, so that gives us the vowels: --O-IE--.
@@ -445,7 +466,7 @@ Now, if you listen a lot, eliminating all the possibilities will lead to how to 
 Or you can use brute force on the S's. Slots 2, 4 and 7 contain the two S's.
 Now look at slot #4. If it is P, then -SOPIES- with (RT) doesn't work. If it is T, -SOTIES- again doesn't work. So let's try R in 7. -SOSIER- also has P/T left, which means no sensible words. This, S must be in the 7th place and R is in the 2nd. -ROSIES- is PROSIEST.
 >>ACTIONLESS COASTLINES (GUARDING)
-# logic for asset-hit atheists
+# logic for asset hit atheists
 ?How do I get past the atheists?
 The asset-hit atheists are tricky. RY?R?YR?: You can see the fifth entry must be a vowel, because the third and eighth are choices between consonants.
 That's a decent start, but the rest is tricky. Still, it gives you this: (HST)(AE)(SH)(HST)I(AE)(HS)(ST).
@@ -454,7 +475,7 @@ If you talk to them, "Set, it has" giving redness means the final entry must be 
 ?What can the settler tell me about Lois the Hostile?
 Lois the Hostile also has a question mark to start. ?GRYYRR means the first letter is a consonant, so, H or L. Then O is letter 2. (HL)O(HLT)(OIE)(OE)(ST)(HLST).
 The vowels fall here. (HL)O(HLT)IE(ST)(HLST) and now if T is in slot 3, we get (HOL/LOH)IETS, which is nothing. So (HL)O(HTL)IES(HTL). Similarly L in the first slot gives two nonsense words. So we get HOLIEST.
-# logic for hostile-is-he lot
+# logic for hostile is he lot
 ?What can the settler tell me about Hostile-Is-He Lot?
 The Hostile-Is-He Lot has ??RYYR?. Now this looks like a mess, until you realize that there must be two consonants and one vowel in the questions. Each of slot 1, 2 and 7 could be a consonant or vowel.
 So what if 1 and 2 are consonants? Then we'd have HS----E, which is a mess. So 7 is a consonant, or T.
@@ -478,7 +499,7 @@ The dourest detours need to be more exciting. They are, at first, R??RRYR.
 Each question mark must be a vowel, since we already have four consonant slots known. That makes slot 3 U.
 So (RST)(OE)U(DST)(DRST)(OE)(DR) is left. Listening helps here to get a lot of red. Or you could guess the first letter right.
 >>MISLIT LIMITS
-# logic for pester'n serpent
+# logic for pestern serpent
 ?How do I interpret the pester'n serpent scans?
 The ?RYRG?? leaves a lot of question marks, but since the only vowel is E, you can knock that off quickly. And you also know all the ?'s are consonants.
 So, --E-E-- is a start, even before navigating the question marks.
@@ -487,9 +508,10 @@ For instance, N in the final slot gives PTESERN. That's not a word, so we can pu
 Now we can pick off slot 4 a bit if we want. S gives PSE(RN)(RN)T, not a word, N gives PNESERT, and R gives PRESENT. PRESENT.
 # logic for curst palace
 ?What can I do with the curst palace?
-There's not much with the settler's question mark. Castle Apcur/Curst Palace has a question at the end.
+Maybe not much with the clues ahead. This is a final puzzle and meant to be tricky. If you scan along the way, you notice slot 5 and then slot 11 have question marks.
 Counting vowels and consonants--and noting slot 5 must be a consonant though it's a question mark--tells you a consonant is at the end, so you have an R there. That's a decent start.
-You'll need a few more clues from the surrounding scenery to fix stuff, if you want to do more scanning..
+In cheat mode the game also notifies you that the purples blink on alternately. So if R is right, then L is wrong. ----T-----R.
+You'll need a few more clues from the surrounding scenery to fix stuff, if you want to do more scanning. If you help the Tetris Sitter, you can ASK her about anything and go in and out.
 >>MESPRISE PREMISES
 # logic for tetris sitter
 ?How can I decipher the Tetris Sitter?
@@ -498,7 +520,7 @@ But what of the others? The fourth slot is a consonant, too, but it cannot be R 
 Since TT clogs things up, you get TR-ST-. TRISTE is a word, but TRESTI isn't.
 >STORE Y
 >>POSH HOPS SHOP
-# logic for Li'l P's Pills
+# logic for Lil Ps Pills
 ?How do I use Li'l P's Pills?
 RRY?R gives us a lot to work with. Slot 1 can't be L or P, so it is S. Slot 3 is the only vowel, so it is I.
 The rest are P, L or L, but there are only 3 possibilities where the P can be.
@@ -508,7 +530,7 @@ Of SLILP/SLIPL/SPILL, SPILL is the only actual word.
 A reading of ?G?R means that you have -I-(consonant) but you can figure the consonant.
 It can't be S or N so it's G.
 Now G can't be in slot 1 or 3, so it has to be the other letters--N for gins, S for sign. SING.
-# logic for perma-amper
+# logic for perma amper
 ?How do I neutralize the perma-amper?
 The Perma-Amper shows you R?RYR in cheat mode. So there must be a vowel at location 2: a choice between E or M.
 M's not a vowel, so slot 2 is E, but that leaves A (the other vowel) for slot 4.
@@ -539,14 +561,14 @@ You need to FART.
 You have ?R?R, which can nail down slot 4: a consonant that's not N or S. P.
 Since P is taken, slot 1 can't be P, so it's S. S--P.
 Now there must be a vowel, but it's not slot 2, so it's slot 3. S-AP. SNAP.
-# logic for lapsin' plains
+# logic for lapsin plains
 ?What else can I do in the plains?
 The LAPSIN PLAINS give RRRY??. There is thus one vowel and one consonant to cover.
 However, the only possible vowel is the I, which is in slot 5. This also determines slot 4. ---AI-, or ---AI(NS).
 (NS)(NSP)(NSL)AI(NS) is what is left if you go through what LAPSIN and PLAINS eliminate. So then slot 2 is P, and 3 is L.
 NPLAIS is not a word, but SPLAIN is, though slightly slangy. That's why it's an LLP.
 >>ACHERS' ARCHES
-# logic for achers' chaser arches
+# logic for achers chaser arches
 ?How do I navigate the achers' arches?
 This seems confusing if you take the arches literally. RY?RRR needs a vowel in the third slot, but it should be H or C according to the question on the settler--except that they are also CHASER arches.
 That gives you the vowel you need, and it drops the other vowel in place. (CHRS)EA(CR)(CHS)(CH) is left.
@@ -596,8 +618,8 @@ You may need a bit of word-logic here, but the R?RR??R leaves two vowels. If the
 Here you may also notice that one of the two verbs must have E in the fifth slot, because of the question mark, putting I in the second.
 -I--E-- and with Sr Indec and Nrdices as clues, you can get close. The last lousy point is trickier, but once you know DISCERN, you know that all the question marks are because DISCERN is right. DISCERN will give you a few hints, but what about the other?
 This requires a bit more trial and error. However, we know that slot 5 can't be E and slot 6 can't be R, or there wouldn't be question marks. That cuts things down. Also, we can assume that slot 2 is a vowel, but it can't be I, or the question mark would be definite. So it is E. The result is probably the trickiest puzzle of the game. You may have to do some guessing. But it IS a last lousy point.
->>FRONTAGE
-# logic for atmo-moat
+>>DISOWNED DOWNSIDE
+# logic for atmo moat
 ?How do I destroy the atmo-moat?
 This one may be guessable, but let's look at it anyway.
 With ??YR for atmo/moat, we know A can't be in slot 3, but since slot 2 is T or O, that leaves just slot 1 for A. Then slot 2 must be a consonant, or T.
@@ -625,7 +647,14 @@ S(INT)(ILY)(EI)(LNT)(LT)(LEI)Y if we go strictly by the book.
 But we can guess L is in slot 7, because these are adverbs, and E is thus forced into slot 4.
 A bit of trial and error can help here. S(INT)(ILT)E(LNT)(LT)LY is left. Let's place L in slot 5, giving us SNIELTLY. That doesn't work. What about T? SNIETLLY.
 So N is in slot 5. S(IT)(ILT)EN(LT)LY is left. But T in slot 1 gives STIENLLY, so SI(LT)EN(LT)Y is SILENTLY.
->>COEVALS' ALCOVE
+>>LAMER REALM
+#logic for stray satyr
+?What can the stray satyr become?
+The two question marks look tough, but the vowel is defined (slot 1) and the Y must be in slot 3 or 5 according to the question marks.
+But slot 3 is R or T, so slot 5 is Y. That leaves A(RS)(RT)(RST)Y.
+You can READ the satyr to find his name, or you can just try the three remaining possibilities based on slot 4: ASTRY, ARTSY, ASRTY.
+ARTSY it is.
+>>RECLUSION INCLOSURE
 # logic for ideas aides
 ?Can I deal with Elmer and Merle as ideas' aides?
 Yes. ?RYRY leaves us with (IA)/S/(AI)/(SD)/(AIE).
@@ -645,6 +674,16 @@ The sonic coins need to be converted to something else. YRY?? leaves two consona
 So one of I or N is the right consonant in slot 4: N. One of C or S is the right consonant in slot 5.
 And also, the vowel in slot 3 can't be I, so it is O. That leaves I as the vowel in slot 1.
 I(CS)ON(CS) remains, where ICONS wins over ISONC.
+# logic for iqluckyluckyiq
+?How do I power up the medals?
+First of all, they're not primarily to be seen as medals. They say IQ and Lucky, which go back and forth.
+So we have LUCKYIQ and IQLUCKY making some anagram. It scans R?YRRR?. So the question marks must be a Y and a vowel,
+Since a Y is not possible in slot 2, it must be in slot 7. So slot 2 must be, between Q or U, a vowel. So it is U. Slot 3 is I, the remaining vowel.
+And now, here's a fact you may or may not have been waiting all game to apply: U always comes after Q! In any case, Q would come before a consonant if it were anywhere else but in slot 1, which would be totally garbled. That gives us QUI---Y, or QUI(CL)(KL)(CL)Y.
+That makes slot 5 K. QUILKCY doesn't work. QUICKLY it is.
+but with a Y only possible in slot 7, we have ------Y. That means U must be in slot 2, leaving I in slot 3.
+You may or may not have been waiting all game to use Q-U logic, but whether or not you did, well ... it's safe to try or assume QUI---Y.
+Then QUI(CL)(KL)(CL)Y gives QUI(CL)K(CL)Y, or QUICKLY.
 >>FILED FIELD
 # logic for pipe panel lie pen app
 ?What does the pipe panel lie pen app become?

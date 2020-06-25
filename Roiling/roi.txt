@@ -122,6 +122,15 @@ Now that you've shown your powers, your former (apparent) antagonist will be mor
 You can solve the game without Elmo, but he can tell you how to use the settler if you're not sure. It's a de facto tutorial about the settler
 You can also ask Elmo about the areas ahead.
 >>CARVEN CAVERN
+?Why is the Respect Specter here? Is it useful?
+You can complete the game without figuring what it has for you.
+You can immediately figure what it has for you and be none the wiser about why it is there.
+The Respect Specter is there to help you understand ambiguous readings on the settler in cheat mode.
+It throws up six of seven in cheat mode.
+The specter will help you decipher what this means without too many complications.
+In this case, almost all letter entries are ambiguous, because they match up with RESPECT or SPECTER.
+You can scan the specter a lot to figure things out.
+And whenever you want, you can get the SCEPTER for the bonus point.
 ?What's with the plates?
 They appear to be embedded in the plaster.
 They are sort of square, with metal trim around them.
