@@ -275,29 +275,54 @@ chapter hintalling
 
 [* HINTALL detects which items still need hinting]
 
+the skip hinting rules are an object based rulebook.
+
+a skip hinting rule for a thing (called th):
+	if th is useless or th is amusing or th is bounding or th is abstract, the rule succeeds;
+
 hintalling is an action out of world.
 
 understand the command "hintall" as something new.
 
 understand "hintall" as hintalling.
 
+to say hint-type of (th - a thing): say "[if th is universal]universal[else if th is useless]useless[else if th is amusing]amusing[else if th is cluey]cluey[else if th is unimportant]unimportant[else if th is abstract]abstract[else if th is bounding]bounding[else if th is practical]practical[else]other[end if]"
+
+after printing the name of a thing (called th) while hintalling: say " ([hint-type of th][if th is privately-named]--privately named[end if])";
+
 carry out hintalling:
 	let mycount be 0;
 	let times-found be 0;
+	let this-row be 0;
 	let should-find be true;
+	say "Running HINTALL to find which items need hinting.";
+	say "You may wish to define something as AMUSING, USELESS or BOUNDING if it pops up here and doesn't need a hint.[paragraph break]";
 	repeat with VTH running through all things:
 		now should-find is true;
 		now times-found is 0;
-		if VTH is useless or VTH is amusing or VTH is cluey or VTH is abstract or VTH is bounding, now should-find is false;
+		follow the skip hinting rules for VTH;
+		if the rule succeeded:
+			[say "skip rules succeeded for [vth].";]
+			now should-find is false;
+		else if the rule failed:
+			[say "skip rules failed for [vth].";]
+			do nothing;
+		else:
+			[say "skip rules no action for [vth].";]
+			do nothing;
+		now this-row is 0;
 		repeat through table of hintobjs:
-			if hint-entry entry is VTH, increment times-found;
-		if should-find is true:
-			if times-found is not 1:
-				increment mycount;
-				say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
-		else if times-found > 0:
+			increment this-row;
+			if hint-entry entry is not VTH, next;
+			increment times-found;
+			if should-find is true and times-found > 1, say "Row [this-row]: duplicate [VTH].";
+			if should-find is false and times-found > 1, say "Row [this-row]: shouldn't be here [VTH].";
+		if should-find is true and times-found is 0:
 			increment mycount;
-			say "Need to delete [VTH] from table of hintobjs ([mycount]).";
+			say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
+		else if should-find is false and times-found > 0:
+			increment mycount;
+			say "Need to delete [VTH] from table of hintobjs as its hinting code-path is covered elsewhere.";
 	if mycount is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!";
 	the rule succeeds;
 
