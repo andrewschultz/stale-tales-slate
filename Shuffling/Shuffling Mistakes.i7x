@@ -169,6 +169,8 @@ understand "nile" as a mistake ("Wrong river for the underworld.") when player i
 
 understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in Self ID Fields.
 
+understand "scores" as a mistake ("Yes, there are scores and scores in the line of no life.") when player is in Self ID Fields.
+
 understand "scorse" as a mistake ("You can't trade with the dead.") when player is in Self ID Fields.
 
 chapter Flesh Shelf

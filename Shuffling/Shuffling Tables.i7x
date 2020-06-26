@@ -966,7 +966,8 @@ beast	"You need to attack the beast with a weapon! You [if sword is off-stage]do
 emitter	"[if dry cake is in Obtains Boastin Bastion]The emitter is useful to lower property values. Specifically, the Bastion's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
 stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET. [minus][cycling]"
-l2	"They're not what you want to be after. You may or may not notice an anagram, here."
+l2	"They're not ultimately what you want to be after. You may or may not notice an anagram here for a bonus point, though."
+lies	"The lies are the result of exposing the Leis Isle. You can't do anything with them."
 swing	"[one of]The swing can get you up in the air, but maybe you can go even higher. [plus][or]The swing can become WINGS, too. [minus][cycling]"
 wings	"The wings will let you go up or east over the water."
 cork	"The cork will let you go east over the water."
@@ -990,9 +991,6 @@ potters	"[if kilns are off-stage]The potters need something to work with--those 
 kilns	"[if potters are off-stage]They need people to operate them--perhaps the ones around you can be changed[else]Just fine as they are now[end if]."
 Burdell	"[one of]Red Bull Burdell does like yelling GET OUT. [plus][or]And changing stuff won't help you here. [plus][or]So maybe you need to change what he says? [plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds. [plus][or]He has but one weakness, blah blah blah... [plus][or]TUG TOE. [minus][cycling]"
 toe	--	Red Bull Burdell
-crass scars	"Helps make Red Bull Burdell more intimidating. I hope."
-cutlery	--	crass scars
-thirst	--	crass scars
 [toh end]
 
 to say no-sto: say "Nothing is hidden in that store".

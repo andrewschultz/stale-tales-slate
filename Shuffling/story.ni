@@ -247,7 +247,7 @@ use MAX_ACTIONS of 250.
 
 use MAX_VERBS of 450. [-40 from debug]
 
-use MAX_VERBSPACE of 4800.
+use MAX_VERBSPACE of 4900.
 
 use MAX_SYMBOLS of 34000.
 
@@ -259,7 +259,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 490.
 
-use MAX_VERBSPACE of 5100.
+use MAX_VERBSPACE of 5200.
 
 use MAX_SYMBOLS of 35000.
 
@@ -2895,7 +2895,7 @@ description of cratered bits is "The acne-bit parts are very red. Interesting."
 
 check closing the acne bit cabinet: say "You don't need to hide anything in there from anyone." instead;
 
-the tenibac is boring scenery. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
+the tenibac is boring abstract scenery. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
 
 section prep paper
 
@@ -4400,11 +4400,11 @@ section list
 
 a slit is LLPish scenery in Self ID Fields. description is "Peeking through the slit, you see a list ... of horribly named places, each with its own image too disturbing to describe here. You shudder at [randbla] and [randbla][one of].[paragraph break]Scary! Perhaps if there were some way to neutralize the slit, you'd feel comfort, even if you didn't make progress[or][stopping].". rgtext of slit is "[gcn][rc][rc][gc]". lgth of slit is 4. gpos of slit is 1. rpos of slit is 4. cert-text of slit is "S[d1][d1][ast]T". rect-text of slit is "S[d1][d1][ast]T".
 
-the silt is scenery. description is "You shouldn't be able to see the silt or the slit now."
+the silt is abstract scenery. description is "You shouldn't be able to see the silt or the slit now."
 
 section selves vessel
 
-The selves vessel is boring scenery in Self ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is bore-selves-vessel rule.
+The selves vessel is boring bounding scenery in Self ID Fields. "It's nondescript but imposing. The line of no life flows out of it from the south.". bore-text is "It's part of a weird magic you don't understand. You're pretty sure you didn't enter through it, but you really don't want to mess with it.". bore-check is bore-selves-vessel rule.
 
 this is the bore-selves-vessel rule:
 	if current action is entering, try going south instead;
@@ -4839,7 +4839,7 @@ check examining maps in Ghouls Slough:
 
 section Cruel Ones' Enclosure
 
-the Cruel Ones' Enclosure is boring scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4 from the room you just left to, well, this less relevant outpost here. You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "It looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
+the Cruel Ones' Enclosure is boring amusing scenery in Ghouls Slough. "Oh my. It's got all sorts of cruel, but cleatly irrelevant, invective against whoever demoted them after release 4 from the room you just left to, well, this less relevant outpost here. You'd think they'd be happy to be featured at all, but noooo.". bore-check of Cruel Ones' Enclosure is bore-enclosure rule. bore-text of Cruel Ones' Enclosure is "It looks a bit too small-time to be the source of all the evil here. You only have one shot in your shotgun, and you want to make it count.". [no way around the apostrophe here. It clashes with ones, otherwise.]
 
 understand "cruel ones" and "ones enclosure" and "cruel ones enclosure" and "ones" as Cruel Ones' Enclosure when player is in Ghouls Slough.
 
@@ -7708,7 +7708,7 @@ to hello-bull:
 	if talk-quiet is true:
 		say "[line break]Boy, he's pretty loud. So loud, you can't tune him out every turn.";
 		now talk-quiet is false;
-	say "[wfak][line break]'Dream-armed, I took my alum-maul and went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
+	say "[wfak][line break]'Dream-armed, I took my alum-maul and upgraded to an [']ullberd. I went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
 	set the pronoun it to cruelty cutlery;
@@ -7730,7 +7730,7 @@ description of Red Bull Burdell is "His face is covered with crass scars, and he
 
 section cutlery
 
-the cruelty cutlery is boring scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it.". bore-check is bore-cutlery rule.
+the cruelty cutlery is boring amusing scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it.". bore-check is bore-cutlery rule.
 
 this is the bore-cutlery rule:
 	if current action is taking, say "No, Red Bull Burdell's not letting go. He must have another weakness." instead;
@@ -7796,7 +7796,7 @@ carry out tuging:
 		if the player's command matches the regular expression "^(tug)? *toe":
 			reg-inc;
 			say "'It's ju-jitsu!' you yell, grabbing his toe.[paragraph break]'Gritty try, git,' he says, with a sporting pig snort. 'Ha! Inept!' ... 'Ho-ho! Oohh! ... Oh-oh.'[run paragraph on]";
-			say "[wfak][paragraph break]'THE PAIN! HEAP'N IT! AH, INEPT!' Burdell's toe yellows, and he yells 'OW!' A raw 'EEK' proves he's getting weaker. 'Rematch, Mr. Cheat!' he squeaks, failing to reobtain his baritone or, indeed, consider your gender. 'My buffs! FFS, Y'bum!'[paragraph break]'No go, goon! No terms, monster!' You ignore the predator's teardrops through a rain of 'No fair!' and 'Violent, not evil!'[paragraph break]Then he moans 'No Mas,' and a wan NAW! 'I predate adepter. I...'[paragraph break]'Who? How?' you reply. He has no answer.[paragraph break]Ya won! No way![paragraph break]The area feels more ... suburban, now. There's even a name for the street you're on!";
+			say "[wfak][paragraph break]'THE PAIN! HEAP'N IT! AH, INEPT!' Burdell's toe yellows, and he yells 'OW!' A raw 'EEK' proves he's getting weaker. 'Rematch, Mr. Cheat!' he squeaks, failing to reobtain his baritone or, indeed, consider your gender. 'My buffs! FFS, Y'bum!'[paragraph break]'No go, goon! No terms, monster!' You ignore the predator's teardrops through a rain of 'No fair!' and 'Violent, not evil!'[paragraph break]Then he moans 'No Mas,' and a wan NAW! 'I predate adepter. I...'[paragraph break]'Who? How?' you reply. He has no answer. He runs off, presumably to see Dr. Buell for that foot pain.[paragraph break]Ya won! No way![paragraph break]The area feels more ... suburban, now. There's even a name for the street you're on!";
 			if gadget is in Potshot Hotspot:
 				say "[line break]You pick up your gadget, not because you need any more puzzles, but because you may need proof you're, well, you.";
 				now player has gadget;
@@ -9285,9 +9285,7 @@ to say decide-rank:
 	choose row player-rank in table of ranks;
 	say "[my-rank entry]";
 
-understand "scores" as requesting the score.
-
-check requesting the score for the first time: say "Tips on points: worthless as Pintos. But since you asked..."
+understand "scores" as requesting the score when player is not in Self ID Fields.
 
 to say and-bypass:
 	if number of bypassed regions is 0, continue the action;
