@@ -276,7 +276,7 @@ You can't work on the jukebox as a whole, but maybe you could meddle with its tw
 >rempa
 The tunes grow slightly less annoying, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
-#nudge for unset
+#renudge for unset
 >unste
 The tunes grow slightly less annoying, for a moment.
 #not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)

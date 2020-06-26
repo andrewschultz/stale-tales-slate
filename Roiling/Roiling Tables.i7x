@@ -2405,6 +2405,11 @@ to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You nee
 
 volume table of hints
 
+a skip hinting rule for a thing (called th):
+	if th is a fruit and th is off-stage, the rule succeeds;
+
+[ntotes on the skip hinting rules: mack ideas are abstract, since we always hint Greta and can't refer to the mack ideas individually.]
+
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
 red writing	"The red writing provides a clue of what the letters can't be."

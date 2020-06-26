@@ -14,8 +14,8 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ~	nudges,nud,nu,mis	t3
 ~	sli	t4
 
-}}MAX=51
-}}CURMAX=51
+}}MAX=52
+}}CURMAX=52
 }}SCORE=0
 }}CURMIN=25
 
@@ -1244,9 +1244,9 @@ The resident trendies sniff a bit. No, that's uncool, they say. But they look a 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
 #mistake test for granites/granite
 >granites
-They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
+They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
 >granite
-They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't 'til they're gone.
+They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
 
 @max
 >gonear leveraged everglade
@@ -2746,6 +2746,11 @@ That is a lot of blinks, but those blinks have to be almost as good as a purple 
 >laek
 You're beyond the lake now.
 
+@nud
+#scannotes for nastier stainer retinas
+>scan retinas
+Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
+
 @!minh,mini
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST.
@@ -2761,6 +2766,8 @@ Your score has just gone up by one point
 by one point
 }}SCORE++
 }}CURMIN++
+>score
+{$SCOS}
 
 @sli
 #slider test for antsier

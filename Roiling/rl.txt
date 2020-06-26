@@ -506,6 +506,12 @@ So, --E-E-- is a start, even before navigating the question marks.
 Then (PS)(PSTRN)E(RSN)E(RN)(NT) is left. That's really not too bad, despite slot 2 looking like it has a lot of possibilities. If you pick off the other ones, it goes quickly.
 For instance, N in the final slot gives PTESERN. That's not a word, so we can put T there. (PS)(PSRN)E(RSN)E(RN)T.
 Now we can pick off slot 4 a bit if we want. S gives PSE(RN)(RN)T, not a word, N gives PNESERT, and R gives PRESENT. PRESENT.
+# logic for nastier stainer retinas
+?How do I interpret the jumble from the nastier stainer retinas?
+Ouch. Nasty! Four question marks seem like a lot. But if we deduce what we can from the question marks, we get this: (AEI)(NRS)(AST)(NRS)(IN)(AE)(RS).
+Looking at slots 2, 4 and 7, though, these are the only places NRS can occur. So ... I is in slot 5, and T is in slot 3. (AE)(NRS)T(NRS)I(AE)(RS).
+That's it for the question mark logic. So let's look at individual slots. If S is in slot 2, ASTNIER or ESTNIAR. If R is, ARTNIES or ERTNIAS. So N is in slot 2. (AE)NT(RS)I(AE)(RS).
+ENTRIAS, ANTRIES, ANTSIER, ENTSIAR remain. ANTSIER.
 # logic for curst palace
 ?What can I do with the curst palace?
 Maybe not much with the clues ahead. This is a final puzzle and meant to be tricky. If you scan along the way, you notice slot 5 and then slot 11 have question marks.

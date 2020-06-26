@@ -3611,6 +3611,8 @@ definition: a thing (called muso) is mult-sol:
 
 slider-diorama is a truth state that varies.
 
+slider-specter is a truth state that varies.
+
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		process the show blues rule;
@@ -3639,14 +3641,21 @@ to say reject:
 					if the-from entry is part of the diorama and slider-diorama is true:
 						say "You already got some data from the slider on the diorama. You may want to save it for other things down the road.";
 						continue the action;
+					if the-from entry is Respect Specter and slider-specter is true:
+						say "You don't know if you want to put the Respect Specter or yourself through that right now. The Respect Specter is there to help you with the cheat function, not the slider.";
+						continue the action;
 					let old-headaches be headaches;
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
 					else:
 						match-process word number 1 in the player's command and the right-word entry;
-					if old-headaches > headaches and the-from entry is part of the diorama and slider-diorama is false:
-						say "[line break]Since the diorama has instructions on what changes to what, and it is only a teaching instrument, you probably don't want to use up any more slider charges on any part of it.";
-						now slider-diorama is true;
+					if old-headaches > headaches:
+						if the-from entry is part of the diorama and slider-diorama is false:
+							say "[line break]Since the diorama has instructions on what changes to what, and it is only a teaching instrument, you probably don't want to use up any more slider charges on any part of it.";
+							now slider-diorama is true;
+						else if the-from entry is Respect Specter and slider-specter is false:
+							say "[line break]The Respect Specter cringes a bit. You notice this and, after switching the slider off, you figure it'd be better to stick to scanning the Respect Specter, if need be.";
+							now slider-specter is true;
 				else:
 					if Elmo is touchable and the-from entry is not rifle:
 						say "You need to [if Elmo carries rifle]disarm[else]talk to[end if] Elmo instead.";
@@ -4554,6 +4563,7 @@ natives site van	true	true	false	false	"You get the feeling the natives can be s
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	false	false	false	false	"[scannotes-curst]."
 pestern serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
+nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
@@ -5535,7 +5545,7 @@ this is the trailing-a rule: [this is because A REC should be in mstakes but it 
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
-		if nastier stainer retinas are touchable and the player's command exactly matches "in tears":
+		if nastier stainer retinas are touchable and the player's command exactly matches the text "in tears":
 			say "Clever, but maybe you can make them so they feel a need to be in tears.";
 			the rule succeeds;
 	else if mrlp is others and Dr Lola Ollard is touchable:
@@ -11409,7 +11419,7 @@ Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like
 
 chapter Miser Emirs Mires
 
-the Miser Emirs Mires are plural-named boring scenery in Browse Bowers. "The mires aren't literal mire. They're just, well, full of people who are socially mire. Perhaps you would've been satisfied there once, but just being in the Browse Bowers makes you want to do more. Perhaps someone or something closer can help you. No daydreaming and gazing off into the distance!". bore-text of Miser Emirs Mires is "You don't need to do anything with the Mires except move on from them.". printed name is "Miser Emirs['] Mires".
+the Miser Emirs Mires are plural-named boring bounding scenery in Browse Bowers. "The mires aren't literal mire. They're just, well, full of people who are socially mire. Perhaps you would've been satisfied there once, but just being in the Browse Bowers makes you want to do more. Perhaps someone or something closer can help you. No daydreaming and gazing off into the distance!". bore-text of Miser Emirs Mires is "You don't need to do anything with the Mires except move on from them.". printed name is "Miser Emirs['] Mires".
 
 chapter dour tan rotunda
 
@@ -11617,7 +11627,7 @@ the Desk Sked is boring scenery. description of Desk Sked is "You browse some st
 
 printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked.
 
-the wonga wagon is boring scenery. description of wonga wagon is "The wonga wagon is utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
+the wonga wagon is boring amusing scenery. description of wonga wagon is "The wonga wagon is utterly useless and tacky. I mean, wonga is tacky slang for money as it is, and it's just, well, there. It's engraved CEO FOR US? OF COURSE!". bore-text is "Maybe the wonga wagon is worth scanning, but that's it.". bore-check of wonga wagon is bore-wagon rule.
 
 this is the bore-wagon rule:
 	if current action is opening, say "It's already open." instead;
@@ -17059,6 +17069,8 @@ a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". pars
 chapter Nastier Stainer Retinas
 
 the nastier stainer retinas are a plural-named boring vanishing LLPish thing. description is "They must be guarding ... well, something. They stare at you intensely.". "Nastier Stainer Retinas, which you uncovered by removing the unripe ur-pine, seem to be guarding something.". bore-text is "The retinas continue their, uh, stare-in.". bore-check of nastier stainer retinas is bore-retinas rule.
+
+a-text of nastier stainer retinas is "YRRRYYR". b-text of nastier stainer retinas is "YR?R???". parse-text of nastier stainer retinas is "-[sp]x[sp]?[sp]x[sp]?[sp]?[sp]?".
 
 this is the bore-retinas rule:
 	if current action is attacking, say "You'd suffer, uh, tearins[']." instead;
