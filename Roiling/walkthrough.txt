@@ -78,7 +78,7 @@ And there's something in the latches! The teariest treatise from Gateman Nat Ega
 
 > SATCHEL
 
-(This can be done later. But if you put it off, you can't exit the manor until you figure it out.)
+(This can be done later. But if you put it off, you can't exit your home until you figure it out.)
 
 The giant pin is a last lousy point. It is probably harder than the three ways out, which it clues. I'll save it and other LLPs for the end.
 
@@ -153,7 +153,7 @@ Now, Elmo's complaints may be funny, or they may not. Let's skip them for now.
 
 (ALT) >2
 
-So now you're in the carven cavern. There are plates on a plaster psalter. The plates are squarish, with metal half way around ... sort of like a...
+So now you're in the carven cavern. At any time, you can deal with the Respect Specter for a bonus point that is intended as a tutorial. There are plates on a plaster psalter. The plates are squarish, with metal half way around ... sort of like a...
 
 > STAPLE
 
@@ -223,7 +223,7 @@ The Strip of Profits is the central hub of the rest of the game. There are a lot
 
 The basic flow of the game, then, is as follows.
 
-manor -> others -> 2 of (p u v w y) if you use the patcher -> t. K/N is an optional puzzle we'll go through now. It's optional because of the slang involved and because it's a silly, minor joke.
+ordeal reload -> stores -> 2 of (p u v w y) if you use the patcher -> t. K/N is an optional puzzle we'll go through now. It's optional because of the slang involved and because it's a silly, minor joke.
 
 Also, if you are curious about the main "theme" of each store, I have it in ROT13 below.
 
@@ -307,7 +307,7 @@ Now, a clue is how the tokers spoke. What did they use while speaking? Adjective
 
 > OUTSIDE
 
-And you get something for later. The munchies let you use the slider more often. Testers didn't use the slider much, but it's nice for seeing red on all-bad guesses. You can even purposely guess wrong to see if any letters are right.
+And you get something for later. The munchies let you use the slider more often. Testers didn't use the slider much, but it gives you an additional hint. If you guess an anagram all wrong, it stays silent. If you guess one letter right, it cues you there. You can even purposely try nonsense guesses to see if any letters are right.
 
 
 
@@ -361,11 +361,11 @@ Oh, look, you get a self-help book about thinking right! And how, if you think r
 
 At any time, you can get a point from Peg A. Page's book.
 
-Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
+You've been kicked out of Eh, At Heat. Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
 
 > HATE
 
-Oh no! Hate blinded you to your wallet getting stolen! But you can't race because you don't feel up to it, yet.
+Oh no! Hate blinded you to your wallet getting stolen! But you can't visit the Race Acre because you don't feel up to it, yet. So you need to ...
 
 > CARE
 
@@ -420,7 +420,7 @@ or
 > STRIVE
 (or both, for a bonus point!)
 
-Hm, that Pernod dropped in the fray is tempting. But you can't enter the lodgings with your current sales pitch.
+Hm, that END PRONER POD needs to be avoided somehow. You can't enter the lodgings until you ignore it properly.
 
 > PONDER
 
@@ -1395,7 +1395,7 @@ Now, in the mislit limits, you can straight-out win the game. But what if you wa
 
 > PUNIER
 
-The crocus goes in the flowerpot. But now the Pester'n Serpent won't let go until you make it just...
+The crocus goes in the top opt pot. But now the Pester'n Serpent won't let go until you make it just...
 
 > PRESENT
 
@@ -1405,9 +1405,9 @@ The Tetris Sitter is waiting for you. But she is very disconnected.
 
 > TRISTE
 
-Give her the flowerpot, and she will give you hints if you go in and out.
+Give her the top opt pot, and she will give you hints if you go in and out.
 
-> GIVE FLOWERPOT TO SITTER
+> GIVE POT TO SITTER
 
 > E
 
@@ -1879,14 +1879,14 @@ Known Comp vs Post-comp walkthrough differences (this is largely for puzzles and
 
 General: Trizbort map included with release 3. Last Lousy Points at very end, in ROT13.
 
-1 MANSE/MANOR:
+1 ORDEAL RELOAD:
   * release 2: the chimney is now available for escape. Gunter's options are different. Elmo's are too. Elmo is moved, as are the plaster and plates. Elmo has a tutorial.
   * release 3: Gunter does not stop by until you examine a few things. So you have more time to activate the two new areas, and you also can figure what you're supposed to be doing. Plus you are forced to talk to Gunter for an overview, but you can skip the rest. You can also freely flip diorama things but nothing else, but flipping something that should create an exit brings Gunter closer. Elmo's tutorial is tuned up.
-  * release 4: MANOR is now MANSE. New LLP in the Gallery with the ISBN bins.
+  * release 4: MANOR is now ORDEAL RELOAD. New LLP in the Gallery with the ISBN bins. New tutorial LLP with the Respect Specter.
 2 TROVES:
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs WEST)
- * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the second room that kept changing its name. The skyscraper is now the godlings' lodgings. The Upscale Capsule is rearranged so the red vees are the first puzzle (IGNORE REGION became a general jump command) with Sister Tressi and Blamer Balmer at the end. The final puzzle, the Trance Nectar, is new, and Eddie C's song is sent to the Drain Nadir.
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the second room that kept changing its name. The skyscraper is now the godlings' lodgings. The END PRONER POD replaces the Pernod. The Upscale Capsule is rearranged so the red vees are the first puzzle (IGNORE REGION became a general jump command) with Sister Tressi and Blamer Balmer at the end. The final puzzle, the Trance Nectar, is new, and Eddie C's song is sent to the Drain Nadir.
 3 ROUTES:
   * release 4: optional ways through various areas are now disabled. The end puzzle is now in an area past the Cripple Clipper. The two mutually exclusive winning words are now both necessary, and there is an additional command, too. ABOARD is no longer a solution. The raptest patters are a new LLP.
 4 PRESTO:
@@ -1987,13 +1987,15 @@ Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough,
 
 LAST LOUSY POINTS
 
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
+Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden.
 
 Hints are in ROT13. If you aren't sure what ROT13 is, or you don't want to do the translation in your head, it can be translated at ROT13.com.
 
-MANOR:
+ORDEAL RELOAD:
 
 FAVO for the ISBN bins.
+
+The Respect Specter will give up a FPRCGRE.
 
 STORES:
 
@@ -2058,7 +2060,7 @@ The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
 You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 
-Across Leak Lake, there is the quest for the flowerpot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, and the Tetris Sitter can become GEVFGR.
+Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer etinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR.
 
 You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N CNFGEL LBH PNA FGVYY TRG GUVF CBVAG.
 

@@ -137,7 +137,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 
 Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 51. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 52. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -166,7 +166,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=20 for tentative (agnostic meets dr yow)
 1=21 for rewired (bot-boat)
 1=22 for giving Tetris Sitter the top opt pot NON-ANAGRAM
-3=25 for unripe ur-pine/serpent/triste in Mislit Limits
+4=26 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
@@ -475,7 +475,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 780.
+use MAX_VERBS of 790.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -493,7 +493,9 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 800. [delta=20]
+use MAX_DICT_ENTRIES of 3100.
+
+use MAX_VERBS of 810. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -5532,6 +5534,9 @@ this is the trailing-a rule: [this is because A REC should be in mstakes but it 
 	else if mrlp is towers and player is not in Loftier Trefoil:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
+			the rule succeeds;
+		if nastier stainer retinas are touchable and the player's command exactly matches "in tears":
+			say "Clever, but maybe you can make them so they feel a need to be in tears.";
 			the rule succeeds;
 	else if mrlp is others and Dr Lola Ollard is touchable:
 		if the player's command exactly matches the text "a lol":
@@ -16753,10 +16758,8 @@ no-pastries is a truth state that varies.
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
 	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
-	if mended mini denim is in Scope Copse, d "Left mended mini denim.";
-	if old ice is not moot, d "Left old ice.";
 	if sporties ripostes are not moot, d "Left sporties['] ripostes.";
-	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give top opt pot]
+	now poss-score of towers is cur-score of towers + 6; [SPECTACULAR (required), punier, antsier, present, triste, give top opt pot]
 	now min-score of towers is cur-score of towers + 1; [spectacular]
 	unless turbos are reflexed and blaster is reflexed:
 		increment poss-score of towers; [dropping the player in Rawest Waters means we haven't gotten the second boat point yet.]
@@ -17052,6 +17055,13 @@ this is the bore-ur-pine rule:
 	if current action is attacking, say "[one of]'I prune!' you think to yourself, involuntarily, seeing red.[or]'Re-up-in[']?' you hear a voice say, and you see red at how vernacular and contrived it sounds.[in random order]" instead;
 
 a-text of unripe ur pine is "RYRYYR". b-text of unripe ur pine is "RYRGYR". parse-text of unripe ur pine is "x[sp]-[sp]x[sp]i[sp]-[sp]x".
+
+chapter Nastier Stainer Retinas
+
+the nastier stainer retinas are a plural-named boring vanishing LLPish thing. description is "They must be guarding ... well, something. They stare at you intensely.". "Nastier Stainer Retinas, which you uncovered by removing the unripe ur-pine, seem to be guarding something.". bore-text is "The retinas continue their, uh, stare-in.". bore-check of nastier stainer retinas is bore-retinas rule.
+
+this is the bore-retinas rule:
+	if current action is attacking, say "You'd suffer, uh, tearins[']." instead;
 
 chapter pester'n serpent
 

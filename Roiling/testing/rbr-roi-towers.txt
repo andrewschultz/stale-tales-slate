@@ -513,6 +513,13 @@ Topside Deposit
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
 
+@mis
+#mistake test for wist led/its lewd
+>wist led
+Editorializing about the Wildest Wilteds won't help.
+>its lewd
+Editorializing about the Wildest Wilteds won't help.
+
 @nud
 #mistake test for posited
 >posited
@@ -1582,7 +1589,7 @@ Creative, but ineffective, positive colloquialism.
 @nud
 >sewed
 by one point
-#renudge for gradient
+#nudge for gradient
 >gradietn
 You can't change the treading gradient, but maybe you can get
 out of the way.
@@ -1606,7 +1613,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#nudge for gradient
+#renudge for gradient
 >gradietn
 While you can't change the Treading Gradient, perhaps you can deal with the weeds.
 #nudge for weed
@@ -2409,6 +2416,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Staci Ong. That's a 
 >scan raves saver
 Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about.
 
+@mis
+#mistake test for parley
+>parley
+The raves saver/replay player can be parleyed into something shinier.
+
 @!minh,mini
 >pearly
 Your score has just gone up by one point
@@ -2422,6 +2434,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@mis
+#mistake retest for parley
+>parley
+The raves saver/replay player has already been parleyed into something shinier.
 
 @nud
 #renudge for save
@@ -2739,6 +2756,18 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+\\
+>antsier
+by one point
+}}SCORE++
+}}CURMIN++
+
+@sli
+#slider test for antsier
+>nasteri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!minh, mini
 >present
 Your score has just gone up by one point
 # add minimum point here

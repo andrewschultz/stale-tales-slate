@@ -4,7 +4,7 @@
 files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt,reg-roi2-ordeal-reload-slider.txt
 ~	max	t0
 ~	min	t1
-~	nudges,nud,nu	t2
+~	nudges,nud,nu,mis	t2
 ~	sli	t3
 
 ALSO-IGNORE:c,t
@@ -18,8 +18,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * ordeal-reload-thru
 
-}}MAX=14
-}}CURMAX=14
+}}MAX=15
+}}CURMAX=15
 }}SCORE=0
 }}CURMIN=8
 
@@ -707,7 +707,7 @@ all the secrets here
 }}CURMIN++
 }}SCORE++
 >score
-{$SCOMAX}
+{$SCOS}
 
 @nud
 #renudge for bni
@@ -786,7 +786,7 @@ by one point
 @min
 {$SCOS}
 @!
-{$SCOMAX}
+{$SCOS}
 
 @nud
 #renudge for elmo
@@ -830,12 +830,25 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 >2
 Carven Cavern
 
+@max
+>scepter
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOMAX}
+>undo
+>undo
+
 @sli
 #slider test for staple
 >tspael
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for stapler
 >tspaerl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for respect specter
+>eestrcp
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -889,7 +902,7 @@ Your score has just gone up by one point
 @min
 {$SCOMISS}
 @!
-{$SCOMAX}
+{$SCOS}
 
 
 @nud
@@ -914,7 +927,7 @@ Your score has just gone up by one point
 @min
 {$SCOMISS}
 @!
-{$SCOMAX}
+{$SCOS}
 
 @nud
 #renudge for terrain
@@ -939,6 +952,81 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >put staple in stapler
 
 >staple curtain
+
+@max
+>au 2
+>scepter
+"You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
+"I respect your choice."
+!by one point
+>scepter
+!You may wish
+by one point
+>undo
+>undo
+>undo
+
+@mis
+#mistake test for spectre
+>spectre
+"Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.
+You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
+#mistake test for sceptre
+>sceptre
+"Spelling matters, here. If it were a spectre, I'd give a different cheat reading. Slots six and seven would turn red and yellow, respectfully. Err, respectively," says the Respect Specter.
+You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
+
+@max
+>in
+"I respect your need not to make me talk too much. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own."
+>undo
+>scan specter
+"Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can scan again if you want more hints."
+>in
+"While you didn't get the definitive hints from non-cheat scanning, I can suspect you see how it could work, combining both ways to scan."
+>undo
+>undo
+>t
+>scan specter
+"With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
+>in
+"While you avoided the cheat-scanning I came here for, but I respect your intrepid stance agsinst cheating, even if it really isn't cheating."
+>undo
+>t
+>scan specter
+"Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can scan again if you want more hints."
+>in
+"I hope scanning me both ways revealed that cheat mode has some limitations for those who want to proceed without too much mental gymnastics, and non-cheat may reveal ambiguous readings from cheat mode."
+>undo
+>scan specter
+"You may notice slots 1 ad 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
+>scan specter
+"You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities."
+>scan specter
+"In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6."
+>scan specter
+"I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I won't say anything specific."
+>in
+>undo
+>scan scepter
+"This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities."
+>scan scepter
+"That's all. Thanks for listening. I can repeat things one step at a time if you need a recap."
+>in
+"Thank you for being respectful and listening to my whole pitch, Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+>undo
+
+@max
+>x spectre
+The Respect Specter winces slightly and opens its mouth as if to say "Er..."
+
+@!min
+>scepter
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOMAX}
 
 @max
 >x 1

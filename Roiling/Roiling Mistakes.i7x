@@ -755,11 +755,15 @@ understand "file" as a mistake ("You wish you could file Mel Fish away and put h
 
 understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty landlocked here.") when Mel Fish is in location of player.
 
+understand "lief" and "leif" as a mistake ("Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.") when Mel Fish is in location of player.
+
 chapter Anemic Cinema
 
-understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't [']til they're gone.") when ingrates are in location of player.
+understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. Whether or not you need to go west, you can't [']til they're gone.") when angriest ingrates are touchable.
 
 understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in Anemic Cinema.
+
+understand "tasering" as a mistake ("You don't want to make the ingrates even angrier.") when angriest ingrates are touchable.
 
 chapter Fringe Finger
 
@@ -833,11 +837,25 @@ understand "prays" as a mistake ("Too late to be a prayers sprayer.") when playe
 
 chapter Mislit Limits
 
+understand "its near" and "sit near" as a mistake ("The retinas care not for physical proximity. They will just stare.") when nastier stainer retinas are touchable.
+
 understand "occurs" as a mistake ("You need to make something occur.") when succor crocus is touchable.
+
+understand "purine" as a mistake ("You can change the ur-pine without getting too far into organic chemistry.") when ur pine is touchable.
+
+understand "ranties" as a mistake ("Oh, no. Their icy gazes are quite enough.") when nastier stainer retinas are touchable.
 
 understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is touchable.
 
 understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is touchable.
+
+understand "restain" as a mistake ("The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.") when nastier stainer retinas are touchable.
+
+understand "retain" and "retains" as a mistake ("You want them to STOP retaining you from getting behind them, here.") when nastier stainer retinas are touchable.
+
+understand "stearin" as a mistake ("The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.") when nastier stainer retinas are touchable.
+
+understand "taserin" as a mistake ("The retinas are more likely to zap you.") when nastier stainer retinas are touchable.
 
 chapter Mesprise Premises
 

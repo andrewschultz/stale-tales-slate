@@ -109,6 +109,18 @@ Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys fro
 #mistake test for seam
 >seam
 You can't find any crack in the Same Mesa that you could follow.
+\\
+#mistake test for aint
+>aint
+You don't need to make the anti-sag sit-a-nag any sturdier. And calling it ain't-sag would be false advertising.
+\\
+#mistake test for aint gas/gas
+>aint gas
+The anti-sag sit-a-nag is plenty solid and will stay that way, with or without your efforts.
+>gas
+The anti-sag sit-a-nag is plenty solid and will stay that way, with or without your efforts.
+
+@nud
 #nudge for poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
@@ -680,6 +692,16 @@ Your score has just gone up by one point
 
 >score
 {$SCOS}
+
+@mis
+#mistake test for gats/tags
+>gats
+This game is not violent enough for tags with gats.
+>tags
+This game is not violent enough for tags with gats.
+#mistake test for stag
+>stag
+Ian Gast already came alone and does not deserve to be changed into an animal.
 
 @nud
 #mistake retest for staider
