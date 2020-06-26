@@ -5382,7 +5382,9 @@ the red inn is scenery in kitchen. "It's for rendin['] dinner[if taco is not off
 
 section fridge
 
-the griefd fridge is scenery in kitchen. understand "refrigerator" as fridge. understand "grief fridge" and "grief" as griefd fridge.
+the griefd fridge is scenery in kitchen. understand "refrigerator" as fridge. understand "grief fridge" and "grief" as griefd fridge. printed name is "[if fridge-score < 2]grief'd fridge[else]fig'red fridge[end if]".
+
+understand "fig/red/figred fridge" and "fig red fridge" as fridge when fridge-score is 2.
 
 the griefd fridge is an opaque openable container.
 

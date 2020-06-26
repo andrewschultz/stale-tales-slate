@@ -247,6 +247,7 @@ this is the post-fridgey-flip rule:
 			now fridge-open is true;
 			now fridge is transparent;
 		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+		if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
 
 this is the pre-cask-sack rule:
 	if cask is touchable:
