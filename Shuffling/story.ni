@@ -7933,15 +7933,12 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					the rule succeeds;
 			if the-to entry is touchable and the-to entry is not reversible:
 				d "(VERB GUESS CODE) the-to [myh] [the-to entry] visible.";
-				if there is a dubdip entry:
-					say "[dubdip entry][line break]";
+				if the-to entry is sliver:
+					say "The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
+				else if the-to entry is soil and silo is not touchable:
+					say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
 				else:
-					if the-to entry is sliver:
-						say "The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
-					else if the-to entry is soil and silo is not touchable:
-						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
-					else:
-						reject-msg the-to entry;
+					reject-msg the-to entry;
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
 	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]
