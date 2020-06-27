@@ -175,6 +175,10 @@ when play begins:
 
 volume verbs
 
+chapter score (first time)
+
+check requesting the score for the first time (this is the cheesy points piston joke rule) : if mrlp is not frivolous, say "You hear a points postin['] piston rev up. It quickly drifts into background noise, fortunately not followed by the sound of combusting Pintos.[paragraph break]";
+
 chapter diagonal movements
 
 check going when noun is not planar (this is the reject diagonals and up/down rule):

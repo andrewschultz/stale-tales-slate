@@ -291,15 +291,19 @@ to say hint-type of (th - a thing): say "[if th is universal]universal[else if t
 after printing the name of a thing (called th) while hintalling: say " ([hint-type of th][if th is privately-named]--privately named[end if])";
 
 carry out hintalling:
-	let mycount be 0;
+	let my-count be 0;
 	let times-found be 0;
 	let this-row be 0;
+	let last-row be 0;
+	let stuff-to-find be a list of things;
+	let stuff-to-delete be a list of things;
 	let should-find be true;
-	say "Running HINTALL to find which items need hinting.";
+	say "Running HINTALL to find which items need hinting. This may take a [if is-roiling is true]long [end if]while.";
 	say "You may wish to define something as AMUSING, USELESS or BOUNDING if it pops up here and doesn't need a hint.[paragraph break]";
 	repeat with VTH running through all things:
 		now should-find is true;
 		now times-found is 0;
+		now last-row is 0;
 		follow the skip hinting rules for VTH;
 		if the rule succeeded:
 			[say "skip rules succeeded for [vth].";]
@@ -315,15 +319,23 @@ carry out hintalling:
 			increment this-row;
 			if hint-entry entry is not VTH, next;
 			increment times-found;
-			if should-find is true and times-found > 1, say "Row [this-row]: duplicate [VTH].";
-			if should-find is false and times-found > 1, say "Row [this-row]: shouldn't be here [VTH].";
+			if should-find is true and times-found > 1:
+				say "Row [this-row]: duplicate [VTH] in table of hintobjs from row [last-row].";
+				increment my-count;
+			if should-find is false:
+				say "Row [this-row]: [VTH] shouldn't be in the table of hintobjs at all.";
+				increment my-count;
+			now last-row is this-row;
 		if should-find is true and times-found is 0:
-			increment mycount;
-			say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
+			add VTH to stuff-to-find;
+			increment my-count;
 		else if should-find is false and times-found > 0:
-			increment mycount;
-			say "Need to delete [VTH] from table of hintobjs as its hinting code-path is covered elsewhere.";
-	if mycount is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!";
+			add VTH to stuff-to-delete;
+			increment my-count;
+	if my-count is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!" instead;
+	say "[my-count] total things to fix.";
+	say "[if number of entries in stuff-to-find > 0]Stuff to put in table of hintobjects ([number of entries in stuff-to-find]): [stuff-to-find][else]Table of Hintobjects needs no entries[end if].";
+	say "[if number of entries in stuff-to-delete > 0]Stuff to remove from table of hintobjects ([number of entries in stuff-to-delete]): [stuff-to-delete][else]Table of Hintobjects has no excess entries[end if].";
 	the rule succeeds;
 
 section so hintall works ok
