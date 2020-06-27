@@ -2471,6 +2471,7 @@ Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad
 stop post	"POP'S TOTS is written in red on the stop post."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+RESIDE RESIDE	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees, you don't have the energy to find out."
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
@@ -5061,7 +5062,7 @@ this is the troves-hinting rule:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting me arts instead;
 		try objhinting LEAD instead;
-	if player is in Browse Bowers, try objhinting Si Reed instead;
+	if player is in Browse Bowers, try objhinting RESIDE RESIDE instead;
 	if location of player is Econ Cone:
 		if cone-points is 0:
 			if rivets-first is true, try objhinting rivets instead;
@@ -5750,7 +5751,9 @@ check taking inventory:
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
-	if hows-show-tools is true:
+	if number of warpable things enclosed by player is 0:
+		say "Nothing else is in your super purse.";
+	else if hows-show-tools is true:
 		if player has super purse:
 			now super purse is unmarked for listing;
 			say "Other things in your super purse";
@@ -5840,7 +5843,7 @@ Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to 
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
-Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. Maybe you should focus on Si Reed's advice."
+Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
 Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
@@ -8009,9 +8012,7 @@ a-text of meet bans is "RYRYRYRR". b-text of meet bans is "RYRYRYPR". parse-text
 
 chapter ten beams
 
-the beams are auxiliary boring scenery in Dusty Study. description of ten beams is "You count them, to make sure ... ten beams.". bore-text is "The ten beams are too sturdy to mannipulate meaningfully.". understand "ten" and "ten beams" as beams when mrlp is Ordeal Reload. printed name of beams is "ten beams"
-
-description of beams is "You count the beams. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they and the MEET BANS be hiding?"
+the beams are auxiliary boring scenery in Dusty Study. "You count the beams. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they and the MEET BANS be hiding?". bore-text is "The ten beams are too sturdy to mannipulate meaningfully.". understand "ten" and "ten beams" as beams when mrlp is Ordeal Reload. printed name of beams is "ten beams"
 
 a-text of beams is "RYRYRYRR". b-text of beams is "RYRYRYRR". parse-text of beams is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]N[sp]x".
 
@@ -10274,7 +10275,7 @@ this is the bore-seating rule:
 	if current action is scaning, say "You consider scanning them, but it'd freak out the audience. Or the Rehabs Basher. Or the blabber babbler." instead;
 	if current action is entering or current action is climbing, say "[seat-try]'If you'd gotten here earlier, you might've gotten one,' growls the Rehabs Basher, as you move towards empty seating. You're not sure that'd make sense even if you actually [i]were[r] stoned. The seating is apparently reserved for others. Or maybe nobody's allowed to sit in it, to show how drugs make you miss out on life." instead;
 
-the speaker parkees are boring scenery in Cruelest Lectures. "They sit there staring at [bab-name], the blabber babbler, go on and on. If you didn't know better, you'd think it was a drug-induced trance, but if they weren't staring, they'd get zinged for no attention span.". bore-text is "The speaker parkees are helpless and can't help you. You need to find another way to release them, and yourself."
+the speaker parkees are boring useless scenery in Cruelest Lectures. "They sit there staring at [bab-name], the blabber babbler, go on and on. If you didn't know better, you'd think it was a drug-induced trance, but if they weren't staring, they'd get zinged for no attention span.". bore-text is "The speaker parkees are helpless and can't help you. You need to find another way to release them, and yourself."
 
 section passage
 
@@ -10954,7 +10955,7 @@ after looking in Harms Marsh:
 
 section Sheol Holes
 
-the Sheol Holes are plural-named reflexive boring scenery in Harms Marsh. description of Sheol Holes is "You can't nail down where the Sheol Holes are, but you do know you need to be careful.". bore-text is "The Sheol Holes are to be avoided by moving, well, some unusual way or other."
+the Sheol Holes are plural-named reflexive boring bounding scenery in Harms Marsh. description of Sheol Holes is "You can't nail down where the Sheol Holes are, but you do know you need to be careful[one of].[paragraph break]They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK![or].[stopping]". bore-text is "The Sheol Holes are to be avoided by moving, well, some unusual way or other."
 
 understand "hole" and "sheol hole" as sheol holes when player is in Harms Marsh.
 
@@ -11429,11 +11430,9 @@ chapter Si Reed
 
 Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheery and dressed in bright red.". "[one of]'Hey! I'm Si Reed. I'll help with your mental attitude so you deserve better than the Shmoe Homes, here.'[or]Si Reed continues to pump his fist and Believe In You.[stopping]"
 
-["[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads:[paragraph break]RESIDE! RESIDE! RESIDE! - Sir Dee."]
-
 a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
 
-RESIDE RESIDE is boring scenery in Browse Bowers. description of RESIDE RESIDE is "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers.". RESIDE RESIDE is cheat-spoilable.
+RESIDE RESIDE is boring scenery in Browse Bowers. description of RESIDE RESIDE is "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers[if RESIDE RESIDE is not read-yet]. It may be worth reading[end if].". RESIDE RESIDE is cheat-spoilable.
 
 a-text of RESIDE RESIDE is "RYRYRY". b-text of RESIDE RESIDE is "RGPGRG". parse-text of RESIDE RESIDE is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
 
@@ -11617,7 +11616,7 @@ The nerf fern is useless boring scenery. description of nerf fern is "It saves t
 
 section pharos phasor
 
-the pharos phasor is boring scenery. description of pharos phasor is "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
+the pharos phasor is boring amusing scenery. description of pharos phasor is "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
 
 chapter desk sked, wonga wagon, cark rack
 
@@ -15735,7 +15734,7 @@ after looking in Loftier Trefoil:
 	set the pronoun them to w-p;
 	continue the action;
 
-w-p is privately-named plural-named boring scenery in Loftier Trefoil. printed name of w-p is "picaros". description of w-p is "Deal with the picaros individually.". bore-check of w-p is bore-picaros rule. bore-text of w-p is "Deal with the picaros individually."
+w-p is privately-named plural-named boring abstract scenery in Loftier Trefoil. printed name of w-p is "picaros". description of w-p is "Deal with the picaros individually.". bore-check of w-p is bore-picaros rule. bore-text of w-p is "Deal with the picaros individually."
 
 understand "picaros/picaro" as w-p.
 
@@ -18163,7 +18162,7 @@ chapter useless scenery
 
 section coevals' alcoves
 
-the coevals alcoves are boring scenery in Reclusion Inclosure. description of coevals alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.". printed name of coevals alcoves is "coevals['] alcoves".
+the coevals alcoves are boring amusing scenery in Reclusion Inclosure. description of coevals alcoves is "You can't see the alcoves, but they can't be a fun place to go.". bore-text is "The alcoves are not worth visiting. It's west where the payoff is.". printed name of coevals alcoves is "coevals['] alcoves".
 
 check going when player is in Reclusion Inclosure:
 	if noun is inside, try going west instead;
@@ -18173,7 +18172,7 @@ check going east in Reclusion Inclosure: if medals are reflexed and Rancho Archo
 
 section forces fresco
 
-the forces fresco is boring scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves recs of f-score, with its disturbing violence and amorality.". bore-text of forces fresco is "The fresco is just there to taunt and annoy people not aligned with Elvira."
+the forces fresco is boring amusing scenery in Reclusion Inclosure. description of forces fresco is "One glance tells you it deserves recs of f-score, with its disturbing violence and amorality.". bore-text of forces fresco is "The fresco is just there to taunt and annoy people not aligned with Elvira."
 
 section animals' laminas
 
@@ -18545,7 +18544,7 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 
 section sample maples
 
-the sample maples are boring scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved, but the information doesn't seem important.". bore-text is "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
+the sample maples are boring amusing scenery in Disowned Downside. "Well, they're, uh, trees. You could READ one that's been carved, but the information doesn't seem important.". bore-text is "No need to mess with the maples. They aren't particularly lovely trees, but they're the best thing about the Disowned Downside."
 
 understand "elm sap" as sample maples.
 
@@ -21140,17 +21139,20 @@ check objhinting when absolutely-no-hints is true:
 the force hint blocking rule is listed first in the check hinting rulebook.
 
 check hinting:
-	if have-objhinted is false:
-		now have-objhinted is true;
-		if player is not in Rancho Archon Anchor:
-			if hint-to-file is false and hint-to-display is false:
-				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
-				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
-				if the player direct-consents:
-					say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
-				else:
-					say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
-				ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
+	abide by the hint-toggle-warn rule;
+
+this is the hint-toggle-warn rule:
+	if have-objhinted is true, continue the action;
+	now have-objhinted is true;
+	if player is not in Rancho Archon Anchor:
+		if hint-to-file is false and hint-to-display is false:
+			say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
+			ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
+			if the player direct-consents:
+				say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
+			else:
+				say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
+			ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
 
 carry out hinting:
 	[if hintblock is true, all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
@@ -21246,9 +21248,6 @@ definition: a thing (called hintcand) is hintrelevant:
 
 objhinting is an action applying to one visible thing.
 
-check objhinting a deregioned object:
-	say "Nothing like that is in the immediate vicinity or region." instead;
-
 understand the command "hint/hints/info/help [any thing]" as something new.
 
 understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
@@ -21282,91 +21281,99 @@ a thing can be thruhinted. a thing is usually not thruhinted. [This is to check 
 
 cur-item is a thing that varies.
 
+check objhinting (this is the sort out generic hintables rule):
+	if noun is deregioned, say "Nothing like that is in the immediate vicinity or region." instead;
+	abide by the hint-toggle-warn rule;
+
+this is the hint certain object groups rule:
+	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
+	if noun is a portal and noun is not solid idols, all-say "You can just enter [the noun]." instead;
+	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
+	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
+	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
+	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
+	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
+	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
+	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
+	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
+	if noun is a fruit and player has noun, say "[frootz]" instead;
+	if noun is not a backdrop and noun is not scenery:
+		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
+
+this is the hint-moot-objects rule:
+	if noun is disk:
+		if map region of location of skid is presto:
+			all-say "(Hinting the skid instead, though you'll need to flip the disk back.)";
+			try objhinting skid instead;
+	if noun is skid:
+		if drab yoke is not off-stage:
+			all-say "(Hinting the disk instead, though you'll need to flip the skid back.)";
+			try objhinting disk instead;
+	all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
+
+this is the spoil-hints rule:
+	if spoilit is false, continue the action;
+	if there is hint-entry of noun in table of hintobjs:
+		now spoilit is false;
+		choose row with hint-entry of noun in the table of hintobjs;
+		if there is no spoil-entry entry:
+			d "Oops fix [hint-entry entry].[line break]";
+		if player has curst crust:
+			if there is no spoil-entry entry:
+				say "Before you eat the crust, you mutter a naughty word. You may need to use HINT to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
+				ital-say "this is a bug. If you have a transcript/game state, I'd love to know.";
+				do nothing instead;
+			if noun is thruhinted, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
+			if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think of [spoil-entry entry][else]once again thing [spoil-entry entry][end if]." instead;
+			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
+			say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";
+			if scams is false, decrement swears;
+			now undo-code is 1;
+			now noun is cheatitemed;
+			prevent undo;
+			if swears is 0:
+				say "The crust is all gone, now.";
+				moot crust instead;
+			say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
+		if player has snoop spoon:
+			if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe you can just go [spoil-entry entry]." instead;
+			moot snoop spoon;
+			prevent undo;
+			now undo-code is 6;
+			now noun is cheatitemed;
+			say "You angle your spoon a bit, and you realize you, or things, are or need to be [spoil-entry entry].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
+		if player has fretful truffle:
+			if noun is thruhinted or noun is prefigured, say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [spoil-entry entry]." instead;
+			moot fretful truffle;
+			prevent undo;
+			now undo-code is 4;
+			now noun is cheatitemed;
+			say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
+		if player has cinders:
+			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
+			say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
+			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
+			if noun is cinder-dissolve:
+				if scams is false:
+					cinders-bye;
+				else:
+					say "You activated SCAMS, so I won't block undo.";
+			now noun is cheatitemed;
+			the rule succeeds;
+
 carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if scams is true:
 		d "SCAM command says to hint [the noun].";
 	else if spoilit is false:
 		d "[noun] hinting.";
-	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
-	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
-	if noun is a fruit and player has noun, say "[frootz]" instead;
-	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
-	if noun is the player, all-say "[if cur-score of Ordeal Reload < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
-	if noun is a fruit and player has noun, say "The [noun] is a fruit. You can return it to Curtis." instead;
 	now ever-obj-hinted is true;
-	if noun is big-let, all-say "[one of]It's kind of a hint[if r10 is unvisited], and you'll find more later in the maze[else if Unwary Runway is unvisited], and you've certainly seen a lot through the maze, which seems to end here[else], and they seem to be in alphabetical order[end if].[or]I've said a lot with that clue. If you've gotten through the maze, you'll know it's from L to V.[or]Maze, L to V, don't congratulate yourself?[or]MAZEL TOV.[cycling]" instead;
-	if noun is question mark, all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
-	if noun is snatchier chantries:
-		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
-		all-say "The church isn't so special now you've been in it." instead;
-	if noun is closets, all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
-	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
-	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
-	if noun is moot:
-		if noun is disk:
-			if map region of location of skid is presto:
-				all-say "(Hinting the skid instead, though you'll need to flip the disk back.)";
-				try objhinting skid instead;
-		if noun is skid:
-			if drab yoke is not off-stage:
-				all-say "(Hinting the disk instead, though you'll need to flip the skid back.)";
-				try objhinting disk instead;
-		all-say "[noun]: [if noun is a male person]He's[else if noun is a female person]She's[else if noun is plural-named]They've[else]That's[end if] been dealt with. I'm pretty sure." instead;
-	if noun is not a backdrop and noun is not scenery:
-		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
+	if noun is the player, all-say "[if cur-score of Ordeal Reload < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead; [ couldn't put the player in the table of hintobjs]
+	abide by the hint certain object groups rule;
+	if noun is question mark, all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
+	if noun is moot, abide by the hint-moot-objects rule;
 	if noun is cluey, say "The [noun] provides clues for something else you need to flip." instead;
-	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
-	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
-	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
-	if spoilit is true:
-		if there is hint-entry of noun in table of hintobjs:
-			now spoilit is false;
-			choose row with hint-entry of noun in the table of hintobjs;
-			if there is no spoil-entry entry:
-				d "Oops fix [hint-entry entry].[line break]";
-			if player has curst crust:
-				if there is no spoil-entry entry:
-					say "Before you eat the crust, you mutter a naughty word. You may need to use HINT to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
-					ital-say "this is a bug. If you have a transcript/game state, I'd love to know.";
-					do nothing instead;
-				if noun is thruhinted, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
-				if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think of [spoil-entry entry][else]once again thing [spoil-entry entry][end if]." instead;
-				if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
-				say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";
-				if scams is false, decrement swears;
-				now undo-code is 1;
-				now noun is cheatitemed;
-				prevent undo;
-				if swears is 0:
-					say "The crust is all gone, now.";
-					moot crust instead;
-				say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
-			if player has snoop spoon:
-				if noun is thruhinted or noun is prefigured, say "Hmm, wait. Maybe you can just go [spoil-entry entry]." instead;
-				moot snoop spoon;
-				prevent undo;
-				now undo-code is 6;
-				now noun is cheatitemed;
-				say "You angle your spoon a bit, and you realize you, or things, are or need to be [spoil-entry entry].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
-			if player has fretful truffle:
-				if noun is thruhinted or noun is prefigured, say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [spoil-entry entry]." instead;
-				moot fretful truffle;
-				prevent undo;
-				now undo-code is 4;
-				now noun is cheatitemed;
-				say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
-			if player has cinders:
-				if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
-				say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
-				say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
-				if noun is cinder-dissolve:
-					if scams is false:
-						cinders-bye;
-					else:
-						say "You activated SCAMS, so I won't block undo.";
-				now noun is cheatitemed;
-				the rule succeeds;
+	abide by the spoil-hints rule;
 	if there is hint-entry of noun in the table of hintobjs:
 		if noun is reflexed: [first check if it's solved already]
 			repeat through table of dont-need-hints:
@@ -21386,8 +21393,6 @@ carry out objhinting (this is the pick object to hint rule) :
 		else if noun is prefigured:
 			ital-say "these hints may lead you to something you already guessed and wrote in your notepad.";
 		all-say "[advice-entry entry]" instead;
-	if noun is a portal, all-say "You can just enter it." instead;
-	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
 
 definition: a thing (called disc-tar) is cinder-dissolve:
@@ -21436,8 +21441,7 @@ check objhinting a quest-item when mrlp is routes (this is the redirect hints in
 	if list o toils is unexamined, say "[if noun is pipe soot]The pipe soot from the ashtray[else]That[end if] is one of the items on the list you haven't examined yet. In the Cleric Circle." instead;
 	if noun is held, say "[The noun] is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]." instead;
 
-to say yerg-ok:
-	say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
+to say sitter-ok: say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 
 to say give-croc:
 		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the premises to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
