@@ -4,6 +4,8 @@ Version 1/170918 of STS tests by Andrew Schultz begins here.
 
 "Some parts are based heavily on Emily Short's very useful Property Checking extension but modified to count what is done and ignore certain important cases."
 
+include Full Monty Testing by Andrew Schultz.
+
 chapter bcheing - not for release
 
 bcheing is an action out of world.
@@ -64,7 +66,7 @@ carry out etuing:
 	if nu is 0:
 		say "[if oldcmd is 0]Already testing nothing[else]Resetting[end if]." instead;
 	else:
-		if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now have-objhinted is true;
+		if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now first-hint-check is true;
 		say "Now [cur-act] every turn.";
 	the rule succeeds;
 
@@ -502,6 +504,18 @@ this is the check nudge tables rule:
 		if "[X]" exactly matches the text "softer forest", case insensitively: [Softer Forest has nothing specific to it, shares with Rest of Forest]
 			next;
 		say "Define table of nudges for [X].";
+
+section monty stuff
+
+table of monties (continued)
+montopic (topic)	on-off	test-title (text)	test-action	topic-as-text (text)
+"hint/hints"	false	"SHOWING BASIC HINTS"	try-hinting rule	"hint/hints"
+
+this is the try-hinting rule: try hinting;
+
+check montying:
+	if the topic understood matches "hint" or the topic understood matches "hints":
+		now first-hint-check is true;
 
 STS tests ends here.
 

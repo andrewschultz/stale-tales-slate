@@ -123,6 +123,8 @@ Table of No Nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 text	a number	a thing	a rule	text
 
+to say here-there of (rm - a room): say "[if player is in rm]here[else][rm][end if]"
+
 section region scoring
 
 to poss-d:
@@ -145,7 +147,11 @@ definition: a person (called pe) is npcish:
 	if pe is touchable, yes;
 	decide no;
 
-chapter debug variables that need to be in release
+chapter hint variables
+
+first-hint-check is a truth state that varies.
+
+section debug variables that need to be in release
 
 hintfull is a truth state that varies. hintfull is usually false.
 
