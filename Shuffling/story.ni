@@ -245,25 +245,25 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 250.
 
-use MAX_VERBS of 450. [-40 from debug]
+use MAX_VERBS of 460. [-40 from debug]
 
 use MAX_VERBSPACE of 4900.
 
 use MAX_SYMBOLS of 34000.
 
-use MAX_PROP_TABLE_SIZE of 220000.
+use MAX_PROP_TABLE_SIZE of 230000.
 
 section compiler adjust constant section - not for release
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 490.
+use MAX_VERBS of 500.
 
 use MAX_VERBSPACE of 5200.
 
 use MAX_SYMBOLS of 35000.
 
-use MAX_PROP_TABLE_SIZE of 240000.
+use MAX_PROP_TABLE_SIZE of 250000.
 
 use MAX_STATIC_DATA of 300000.
 
@@ -689,14 +689,7 @@ just-print is a truth state that varies. just-print is usually true.
 
 carry out hinting:
 	if location of player is Busiest Subsite, say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go." instead;
-	if have-objhinted is false:
-		now have-objhinted is true;
-		say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
-		if player direct-consents:
-			say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
-			try mainhelping instead;
-		else:
-			say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
+	abide by the first-time-hint-check rule;
 	if hintfull is false:
 		try mainhelping;
 	else:
@@ -805,8 +798,20 @@ cur-item is a thing that varies.
 to say that-those-is-are of (x - a thing):
 	say "[if x is plural-named]That is[else]Those are[end if]"
 
+this is the first-time-hint-check rule:
+	if first-hint-check is true, continue the action;
+	now first-hint-check is true;
+	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
+	if player direct-consents:
+		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
+		try mainhelping instead;
+	else:
+		say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
+
 carry out objhinting:
 	if hintsoff is true, say "Hints are disabled for this session." instead;
+	if debug-state is true, say "DEBUG: [noun] being objhinted.";
+	abide by the first-time-hint-check rule;
 	now ever-obj-hinted is true;
 	now cur-item is noun;
 	if noun is location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
@@ -832,6 +837,7 @@ this is the ordeal-loader-hinting rule:
 	if player is in Busiest Subsite, all-say "[one of]Look around. Most of the standard directions don't really seem to get you anywhere--going east with the crowd doesn't count. [plus][or]There's a passage that's not quite so prominent. [if vacate caveat is examined]You've already read the sign[else]The sign has an odd message that's not quite stopping you entering[end if]. [plus][or]You can go IN, ENTER, or ENTER PASSAGE. [minus][cycling]" instead;
 	if player is in Rested Desert:
 		if odor is touchable, try objhinting odor instead;
+		if blot is moot, try objhinting OR DO door instead; [?? can enter door?]
 		if bolt is touchable and bulge is touchable:
 			if blot-first is true, try objhinting bolt instead;
 			try objhinting bulge instead;
@@ -853,7 +859,7 @@ this is the stores-hinting rule:
 		if store r is in Trips Strip:
 			if store r is prefigured, all-say "You already figured what this is--a resort." instead;
 			try objhinting store r instead;
-		all-say "The way is clear[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead;
+		all-say "The way is clear. You can just enter the ogled lodge[if store m is in Trips Strip or store f is in Trips Strip or store i is in Trips Strip]. You could try the remaining store, but it's not necessary[end if]." instead; [?? specify store?]
 	if scented descent is in Trips Strip or posted depots are in Trips Strip or trade tread is in Trips Strip, say "You can just enter the [list of portals in Trips Strip]. If you want or need help with a particular store, HINT STORE Q." instead;
 	if store f is in Trips Strip, try objhinting store f instead;
 	if store i is in Trips Strip, try objhinting store i instead;
@@ -867,10 +873,8 @@ this is the forest-hinting rule:
 	if location of player is rf or location of player is sf:
 		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random touchable guider instead;
-	if location of player is Self ID Fields:
-		if Gnarliest Triangles is unvisited, all-say "Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
-		if Flesh Shelf is unvisited, all-say "Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room." instead;
-		if ones are off-stage or shades are off-stage, all-say "You need to solve a puzzle to the east." instead;
+	if Gnarliest Triangles is unvisited or Flesh Shelf is unvisited, all-say "Go [if triangles is visited]west[else if shelf is visited]east[else]east and west[end if] and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations." instead;
+	if ones are off-stage or shades are off-stage, all-say "You need to solve a puzzle to the east." instead;
 	if player is in Gnarliest Triangles:
 		if nose is off-stage, try objhinting ones instead;
 		if shotgun is off-stage, try objhinting the noughts instead; [this isn't strictly in order, but if the player is in GT they may want to know the noughts are important]
@@ -885,8 +889,8 @@ this is the forest-hinting rule:
 		if bread is part of the sandwich, try objhinting sandwich instead;
 		if beard is off-stage, try objhinting the bread instead;
 		if shades are off-stage, try objhinting dashes instead;
-		if beard is not wearable, all-say "You have everything you need to enter Corses Crosse, now. You can worry about stuff to the west later. PUT (item) ON (item) to create the full disguise." instead;
-		all-say "You should be able to walk NORTH from the Self-ID Fields now [if beard is worn]with your disguise[else]once you wear your disguise[end if]." instead;
+		if beard is not wearable, all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] to the west later. PUT (item) ON (item) [unless shades are part of beard or nose is part of beard]twice[end if] to create the full disguise." instead;
+		all-say "You should be able to walk NORTH from [here-there of Self ID Fields] now with your disguise." instead;
 	if chisel is off-stage, try objhinting liches instead;
 	if livers are off-stage:
 		if player does not have River Ville liver and player does not have viler liver, try objhinting chisel instead;
@@ -925,7 +929,9 @@ this is the metros-hinting rule:
 		if night thing is in The Ol Hotel, try objhinting night thing instead;
 		if player has termite emitter, all-say "Your work in the ol['] hotel is done." instead;
 		all-say "Why not search the mattress? Something's in there." instead;
-	if player is in Obtains Boastin Bastion, try objhinting dry cake instead;
+	if player is in Obtains Boastin Bastion:
+		if poses posse is touchable, try objhinting poses posse instead;
+		all-say "The only thing you need to do is to [if player does not have dry cake]get the dry cake and [end if]get out." instead;
 	if player has heaths, try objhinting heaths instead;
 	if player has begonias, try objhinting begonias instead;
 	if player is in Undesired Underside:
@@ -934,14 +940,14 @@ this is the metros-hinting rule:
 		if Bile Libe is not visited, all-say "You can go west from the camp to a library." instead;
 		if dry cake is in Obtains Boastin Bastion, all-say "You should try going [if Obtains Boastin Bastion is visited]back north to the Obtains Boastin['] Bastion[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Esoteric Coteries are not visited:
-			if keycard-put is true, say "Just go east." instead;
+			if keycard-put is true, all-say "Just go east." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			if player has brocade, try objhinting brocade instead;
 			if player has keycard:
 				if barcode is part of the keycard, all-say "Nothing except badly hinted verbs should be stopping you from PUTting the keycard on the friend finder." instead;
 				try objhinting keycard instead;
 			if player has barcode:
-				if dry cake is in Obtains Boastin Bastion, all-say "You need something to put the barcode on. Maybe check out what's north of the Roarings Garrison." instead;
+				if dry cake is in Obtains Boastin Bastion, all-say "You need something to put the barcode on. Maybe check out [if bastion is visited]the Bastion[else]north of the Roarings Garrison[end if]." instead;
 			if player has dry cake, try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
 		if nerds-unwelcome is true, all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in Fo Real Florae and begonias are in Fo Real Florae]Maybe check out the flower shop northeast[else if words are touchable or sword is touchable]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
@@ -1050,18 +1056,21 @@ this is the sortie-hinting rule:
 		if ingred-check is false and taco is off-stage:
 			now ingred-check is true;
 			all-say "It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm." instead;
-		if number of touchable pregredients > 0, try objhinting a random touchable pregredient instead;
+		if number of touchable pregredients > 0:
+			repeat with P running through kitchen-hint-list:
+				if P is touchable, try objhinting P instead;
+			all-say "OOPS bug. Pre-gredient was flagged as being in the kitchen, but it's not." instead;
 		all-say "You just need to combine ingredients you've already made and PUT them on each other." instead;
 	if warts are touchable, try objhinting warts instead;
 	if roomroom is visited and sack is off-stage, try objhinting cask instead;
 	if player is in roomroom:
 		if hoses are in roomroom, try objhinting hoses instead;
-		if r2 is prefigured, all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does. [plus][or]The MOOR. [minus][cycling]" instead;
+		if r2 is not prefigured, all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does. [plus][or]The MOOR. [minus][cycling]" instead;
 		if player does not have coat:
 			if kitchen is unvisited, all-say "If you're cold, look around a bit more. There's a room you haven't been to yet." instead;
 			if player does not have taco, all-say "You may want to go to the kitchen to prepare something." instead;
 			try objhinting taco;
-		all-say "Nothing more to do here, though you may find yourself passing by." instead;
+		all-say "Nothing more to do here, other than pass between the moor and other rooms you may need to visit." instead;
 	if player is in Stiller Trellis:
 		if roomroom is unvisited, all-say "You can still visit the room to the south." instead;
 		if crashing archings are in Stiller Trellis, say "You don't need to do anything more here. Or in Sacred Cedars." instead;
@@ -1071,8 +1080,8 @@ this is the sortie-hinting rule:
 	if player is in Sacred Cedars:
 		if caskfillings is 2, all-say "You have gotten all the oils you need here. Maybe you can pour them in the moor, again, with a different result." instead;
 		if oils are in cask, all-say "You can't pour the oils anywhere in this enclosed area. Try going back to the moor." instead;
-		if caskfillings is 0, all-say "[if sack is not moot]Once you change the sack to a cask, y[else if player does not have cask]Once you get the cask, y[else]Y[end if]ou can FILL CASK here, to start." instead;
-		if caskfillings is 1, all-say "You can fill the cask with more oils once more." instead;
+		if caskfillings is 0, all-say "[if sack is touchable]Once you change the sack to a cask, y[else if player does not have cask]Once you get a cask, y[else]Y[end if]ou can FILL CASK here, to start." instead;
+		if caskfillings is 1, all-say "You can refill the cask with oils." instead;
 	if player is in moor:
 		if anapest is touchable, try objhinting anapest instead;
 		if peasant is touchable, try objhinting peasant instead;
@@ -1100,8 +1109,6 @@ this is the sortie-hinting rule:
 
 check hinting:
 	if hintfull is true, say "Ignoring hint nag due to hint-every-move debug flag set. Only testers should see this. [bug-report] in final release." instead;
-
-have-objhinted is a truth state that varies.
 
 to say hintblah: say "(To resist the temptation of summoning the Hint Fairy later, you can use the HINTS OFF command to disable hints until you restart.)".
 
@@ -2044,6 +2051,11 @@ after fliptoing (this is the set pronouns rule) :
 		if noun provides the property female and noun is female, set the pronoun her to noun;
 	continue the action;
 
+section monty testing - not for release
+
+after fliptoing:
+	process the full monty test rule;
+
 chapter special cases
 
 check fliptoing when player is in kitchen (this is the tortilla check rule):
@@ -2381,6 +2393,8 @@ to place-random-garbage:
 	d "[random guider in sf] in SF.";
 	move random off-stage guider to rf;
 	d "[random guider in rf] in RF.";
+	now kitchen-hint-list is the list of all pregredients;
+	sort kitchen-hint-list in random order.
 
 check going when player is in sf or player is in rf:
 	let mygu be a random touchable guider;
@@ -4092,10 +4106,15 @@ the roster is part of store r. the roster is auxiliary. rgtext of roster is "[gc
 
 check taking the roster: say "It's taped inside the front door, and besides, it's just there for information." instead;
 
+definition: a region (called reg) is passed-up:
+	unless reg is forest or reg is sortie or reg is metros, no;
+	if reg is solved, yes;
+	no;
+
 to decide whether you-can-advance:
-	if number of not unsolved regions < 3, decide no;
-	if number of not unsolved regions is 3 and gadget-secured is false, decide no;
-	decide yes.
+	if number of passed-up regions is 3, yes;
+	if number of passed-up regions is 2 and gadget-secured is true, yes;
+	decide no.
 
 description of roster is "The roster on the front of store R reads: 'People who have earned a vacation: you (well, [if you-can-advance]go on[else]soon[end if]!)'"
 
@@ -4199,7 +4218,7 @@ section forest portal
 
 does the player mean entering the scented descent: it is likely. [forest is first in alphabet and easiest]
 
-the scented descent is a portal. go-region of scented descent is Forest. the printed name of scented descent is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". solved-text of scented descent is "You already [if forest is bypassed]bypassed[else]solved[end if] the forest. Maybe you should look elsewhere?". entry-rule of scented descent is the forest-entry rule.
+the scented descent is a portal. go-region of scented descent is Forest. "There's a scented descent to a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". solved-text of scented descent is "You already [if forest is bypassed]bypassed[else]solved[end if] the forest. Maybe you should look elsewhere?". entry-rule of scented descent is the forest-entry rule.
 
 understand "forest" as scented descent when scented descent is touchable.
 
@@ -5162,6 +5181,8 @@ to say gad: say "Your gadget's not near anything, but it's registering ".
 chapter Kitchen
 
 Kitchen is north of Trap Part. Kitchen is in Sortie. roomnud of kitchen is table of kitchen nudges.
+
+kitchen-hint-list is a list of things variable.
 
 after choosing notable locale objects when player is in kitchen:
 	if straw is in kitchen and straw is not enclosed by player, set the locale priority of the straw to 9;
@@ -6541,7 +6562,7 @@ check going inside in Obtains Boastin Bastion: say "You're already inside." inst
 
 check going outside in Obtains Boastin Bastion: try going south instead;
 
-the poses posse are plural-named amusing scenery in Obtains Boastin Bastion. understand "poso" and "pose posse" as poses posse.
+the poses posse are plural-named auxiliary scenery in Obtains Boastin Bastion. understand "poso" and "pose posse" as poses posse.
 
 after looking in Obtains Boastin Bastion:
 	if poses posse are in Obtains Boastin Bastion, set the pronoun them to poses posse;
@@ -7710,7 +7731,7 @@ to hello-bull:
 	if talk-quiet is true:
 		say "[line break]Boy, he's pretty loud. So loud, you can't tune him out every turn.";
 		now talk-quiet is false;
-	say "[wfak][line break]'Dream-armed, I took my alum-maul and upgraded to an [']ullberd. I went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!' Bad time to maunder unarmed.[line break][wfak]";
+	say "[wfak][line break]'Dream-armed, I took my alum-maul and upgraded to an [']ullberd. I went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet inside his rage gear and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]He points at you, booming 'BRED? LUL. DULL REB!'[paragraph break]You muse to yourself: 'Maunder unarmed? Me? Un-rad.' But perhaps Red Bull Burdell has a non-obvious weakness.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
 	set the pronoun it to cruelty cutlery;
@@ -9050,6 +9071,20 @@ to say dibb: say "A voice booms 'Dash in, be banished!' "
 
 book reg-verbs
 
+part entering
+
+rule for supplying a missing noun when entering:
+	if or do door is touchable:
+		now noun is or do door;
+	else if number of touchable portals is 1:
+		try entering a random touchable portal;
+	else if mis send dimness is touchable:
+		try entering mis send dimness;
+	else if player is in self id fields:
+		try going north instead;
+	say "I couldn't determine anything to enter. This may be the fault of imprecise code, so you may have to stat what you specifically want to enter.";
+	reject the player's command;
+
 part talking to
 
 Talking to is an action applying to one visible thing.  Understand "talk to [something]" as talking to.
@@ -9291,7 +9326,7 @@ to say and-bypass:
 	say " with [list of bypassed regions] bypassed";
 
 carry out requesting the score:
-	d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved. Current rank in numbers is [player-rank].";
+	[d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved. Current rank in numbers is [player-rank].";]
 	if mrlp is nothing, say "[bug-report]: This location needs a region." instead;
 	say "You currently have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region. ";
 	if possibles is true:
