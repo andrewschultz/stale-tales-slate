@@ -7570,6 +7570,10 @@ carry out fliptoing (this is the main fliptoing rule):
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
 	the rule succeeds;
 
+after fliptoing (this is the monty after flipping rule):
+	process the full monty test rule;
+	continue the action;
+
 The look around once light available rule is not listed in the for printing the announcement of light rulebook. [only used in Dusty Study]
 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
@@ -13430,7 +13434,7 @@ chapter perma amper
 
 the perma amper is part of the jukebox. printed name of perma amper is "perma-amper".
 
-the perma amper is an auxiliary boring thing. description of perma amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.". bore-check is bore-perma-amper rule.
+the perma amper is a reflexive boring thing. description of perma amper is "It's--well, I'm not big on electronics, but futz with it wrong and you'll get a perm. Or worse.". bore-text is "You really aren't sure of the right way to fiddle with it. Maybe there is one.". bore-check is bore-perma-amper rule.
 
 a-text of perma amper is "RYRYR.". b-text of perma amper is "R?RYR". parse-text of perma amper is "x[sp]-[sp]m[sp]a[sp]x". perma amper is cheat-spoilable.
 
@@ -14400,8 +14404,6 @@ to say ho-he:
 
 to say are-were-hedron: say "[if player is in end den]are[else]were[end if]"
 
-to say here-there of (rm - a room): say "[if player is in rm]here[else][rm][end if]"
-
 a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
 find-base is a truth state that varies.
@@ -14689,7 +14691,7 @@ carry out spining:
 
 chapter redialing
 
-the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed name of d2 is "dialer[if debug-state is true] (part 2)[end if]"
+the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed name of d2 is "dialer[if debug-state is true] (DEBUG: part 2)[end if]"
 
 a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
@@ -16196,7 +16198,7 @@ to say vis-guar:
 
 to say agnostic-first: say "[if agnostic is male]Scot[else]Staci[end if]"
 
-the Coasting Agnostic is a person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if]."
+the Coasting Agnostic is a proper-named person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if]."
 
 understand "idk/kid" and "idk kid" as Coasting Agnostic.
 
@@ -18146,7 +18148,7 @@ chapter two LLPs
 
 section aside-llp
 
-the aside-llp is privately-named vanishing LLPish scenery in Reclusion Inclosure. "[bug-report]"
+the aside-llp is privately-named proper-named vanishing LLPish scenery in Reclusion Inclosure. "[bug-report]"
 
 a-text of aside-llp is "YRYRY". b-text of aside-llp is "?RYRY". parse-text of aside-llp is "?[sp]x[sp]-[sp]x[sp]-". printed name is "between [e-n-m]"
 
@@ -20103,8 +20105,6 @@ a coin is a thing. description is "The coin really looks more omen-y than money.
 
 a thing can be final-puz. a thing is usually not final-puz.
 
-s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz. tekno token is final-puz.
-
 check giving a final-puz thing to when mrlp is others:
 	if second noun is storage, try inserting noun into second noun instead;
 	if second noun is curtis, say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
@@ -20211,6 +20211,12 @@ check inserting into lost slot:
 	now player has popstar passport;
 	process the retract halt lath rule;
 	the rule succeeds;
+
+section final-puzness defined here after thing definitions so articles are right
+
+s-i is final-puz. s-c is final-puz. the coin is final-puz. the coins are final-puz. the icon is final-puz. the icons are final-puz. the tekno token is final-puz.
+
+chapter passport
 
 the popstar passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too.[paragraph break]Written on the bottom is some blather about the makers['] commitment to user-friendly GUI, so you should be able to figure what to do with the viewer and searcher". printed name is "popstar's passport". understand "popstar/popstars" and "popstar/popstars passport" as popstar passport.
 
@@ -21148,7 +21154,7 @@ this is the hint-toggle-warn rule:
 		if hint-to-file is false and hint-to-display is false:
 			say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
 			ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
-			if the player direct-consents:
+			if the player yes-consents:
 				say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
 			else:
 				say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
@@ -21166,6 +21172,8 @@ to all-say-x (xx - indexed text):
 	else:
 		say "[xx]";
 
+general-hint is a truth state that varies.
+
 to all-say (xx - indexed text):
 	if auto-hint-proc is true:
 		if hint-to-file is true:
@@ -21179,6 +21187,7 @@ to all-say (xx - indexed text):
 			continue the action;
 		if hint-to-display is false:
 			say "[xx][line break]";
+			now general-hint is false;
 			continue the action;
 	else:
 		say "[xx][line break]";
@@ -21295,8 +21304,8 @@ this is the hint certain object groups rule:
 	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
 	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
 	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
-	if noun is a badbook, say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
-	if noun is a fruit and player has noun, say "[frootz]" instead;
+	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
+	if noun is a fruit and player has noun, all-say "[frootz]" instead;
 	if noun is not a backdrop and noun is not scenery:
 		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
 
