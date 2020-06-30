@@ -779,7 +779,7 @@ section objhinting
 
 objhinting is an action applying to one visible thing.
 
-check objhinting a deregioned object: say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
+check objhinting a deregioned object: say "[if debug-state is true]DEBUG: ([noun])[line break]That's not a thing or person in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
 
 understand the command "hint/hints/info/help [any thing]" as something new.
 
@@ -874,23 +874,23 @@ this is the forest-hinting rule:
 		if number of touchable guiders is not 1, all-say "There's a problem here--you should have a clue which direction to go, but you don't." instead;
 		try objhinting a random touchable guider instead;
 	if Gnarliest Triangles is unvisited or Flesh Shelf is unvisited, all-say "Go [if triangles is visited]west[else if shelf is visited]east[else]east and west[end if] and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations." instead;
-	if ones are off-stage or shades are off-stage, all-say "You need to solve a puzzle to the east." instead;
+	if ones are off-stage or shades are off-stage and player is not in Gnarliest Triangles, all-say "You need to solve a [if ones are off-stage and shades are off-stage]couple puzzles[else]puzzle[end if] to the east." instead;
 	if player is in Gnarliest Triangles:
 		if nose is off-stage, try objhinting ones instead;
-		if shotgun is off-stage, try objhinting the noughts instead; [this isn't strictly in order, but if the player is in GT they may want to know the noughts are important]
 		if shades are off-stage, try objhinting dashes instead;
+		if shotgun is off-stage, try objhinting the noughts instead;
 	if player is in Flesh Shelf and bread is part of the sandwich, try objhinting sandwich instead; [this and the above two together mean that you will get local hints first before generic ones]
 	if Emptiness Sepiments is unvisited:
 		if coe-clue is false:
 			now coe-clue is true;
 			try objhinting line of no life instead;
-		if player has beard and shades are part of beard and nose is part of beard, all-say "You've got what you need for the next bit[if player wears beard]. You are even wearing it[else]. You should just WEAR it, now[end if]. Then go through Corses Crosse." instead;
+		if player has beard and shades are part of beard and nose is part of beard, say "You should be able to walk NORTH from [here-there of Self ID Fields] now with your disguise." instead;
 		if nose is off-stage, try objhinting ones instead;
+		if shades are off-stage, try objhinting dashes instead;
+		if noughts are off-stage, try objhinting noughts instead;
 		if bread is part of the sandwich, try objhinting sandwich instead;
 		if beard is off-stage, try objhinting the bread instead;
-		if shades are off-stage, try objhinting dashes instead;
-		if beard is not wearable, all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] to the west later. PUT (item) ON (item) [unless shades are part of beard or nose is part of beard]twice[end if] to create the full disguise." instead;
-		all-say "You should be able to walk NORTH from [here-there of Self ID Fields] now with your disguise." instead;
+		all-say "You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in [here-there of Flesh Shelf] later. PUT (item) ON (item)[unless shades are part of beard or nose is part of beard] twice[end if] to create the full disguise." instead;
 	if chisel is off-stage, try objhinting liches instead;
 	if livers are off-stage:
 		if player does not have River Ville liver and player does not have viler liver, try objhinting chisel instead;
@@ -1057,19 +1057,21 @@ this is the sortie-hinting rule:
 			now ingred-check is true;
 			all-say "It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm." instead;
 		if number of touchable pregredients > 0:
-			repeat with P running through kitchen-hint-list:
-				if P is touchable, try objhinting P instead;
+			repeat with pg running through kitchen-hint-list:
+				if pg is touchable, try objhinting pg instead;
 			all-say "OOPS bug. Pre-gredient was flagged as being in the kitchen, but it's not." instead;
 		all-say "You just need to combine ingredients you've already made and PUT them on each other." instead;
 	if warts are touchable, try objhinting warts instead;
 	if roomroom is visited and sack is off-stage, try objhinting cask instead;
 	if player is in roomroom:
 		if hoses are in roomroom, try objhinting hoses instead;
-		if r2 is not prefigured, all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does. [plus][or]The MOOR. [minus][cycling]" instead;
 		if player does not have coat:
 			if kitchen is unvisited, all-say "If you're cold, look around a bit more. There's a room you haven't been to yet." instead;
 			if player does not have taco, all-say "You may want to go to the kitchen to prepare something." instead;
 			try objhinting taco;
+		if moor is not visited:
+			if r2 is prefigured, all-say "You are fully ready to go to the MOOR now, as you tried before." instead;
+			all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does.[plus][or]The MOOR.[minus][cycling]" instead;
 		all-say "Nothing more to do here, other than pass between the moor and other rooms you may need to visit." instead;
 	if player is in Stiller Trellis:
 		if roomroom is unvisited, all-say "You can still visit the room to the south." instead;
@@ -1097,7 +1099,7 @@ this is the sortie-hinting rule:
 		if black door is not part of the silo, try objhinting black door instead;
 		if missile is not in silo, all-say "You can PUT MISSILE IN SILO." instead;
 		if poem is touchable:
-			if poem is folded, all-say "[one of]The plane is useless. What can it become? [plus][or]It can become a PANEL. [minus][cycling]" instead;
+			if poem is folded, all-say "[one of]The plane is useless. What can it become?[plus][or]It can become a PANEL.[minus][cycling]" instead;
 			try objhinting poem instead;
 		if panel is not part of the silo, try objhinting panel instead;
 		if hoots button is touchable, try objhinting hoots button instead;
@@ -2053,8 +2055,9 @@ after fliptoing (this is the set pronouns rule) :
 
 section monty testing - not for release
 
-after fliptoing:
+after fliptoing (this is the monty after flipping rule):
 	process the full monty test rule;
+	continue the action;
 
 chapter special cases
 
@@ -5415,7 +5418,7 @@ rule for printing room description details of fridge: omit contents in listing.
 
 the manila animal is an amusing boring thing. it is part of the griefd fridge. understand "lamina" as manila animal. bore-text of manila animal is "You've torn up a [if stos-down > 1]couple stores[else]store[end if] already, but you draw the line at aesthetically altering a fridge. Someone surely put love into decorating it!". description of manila animal is "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
 
 after examining griefd fridge:
 	pad-rec-q "warts";
@@ -10753,6 +10756,7 @@ carry out tsing:
 		solve-region forest;
 		decrease curstuff by 1;
 		reg-inc;
+	process the full monty test rule;
 	the rule succeeds;
 
 chapter tsfing
