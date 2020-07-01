@@ -1,11 +1,12 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just means manse
 
-files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt,reg-roi2-ordeal-reload-slider.txt
+files=reg-roi2-ordeal-reload-max.txt,reg-roi2-ordeal-reload-min.txt,reg-roi2-ordeal-reload-nudmis.txt,reg-roi2-ordeal-reload-slider.txt,reg-roi2-ordeal-reload-hints.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
+~	hints,hin	t4
 
 ALSO-IGNORE:c,t
 
@@ -30,6 +31,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 
 >poss
+
+@hin
+>monty hints
 
 @nud
 #nudge for ordeal
@@ -703,9 +707,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @!min
 >snib
-all the secrets here
 }}CURMIN++
 }}SCORE++
+in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
+
+@max
+>in
+You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
+!Hands up
+
+@hin
+!Nothing left to do here in your manse. You should be able to go IN to start your adventures.
+>x settler
+Nothing left to do here in your manse. You should be able to go IN to start your adventures.
+
+@!min
 >score
 {$SCOS}
 
@@ -722,7 +738,10 @@ Now, now! This game is strictly about logic! Nothing frivolous, if you please! O
 >bs in
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 
+@!hin
 >x settler
+###skip test checking
+
 >in
 
 @sli
@@ -819,15 +838,18 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 >1
 >1
 >1
->1
->1
 
-@nud
+@!nud
 >1
-###skip test checking
+>1
+#brackets ok
+[1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
+#brackets ok
+[2] Finish Fishin'.
 
 # note option 2 just hooks around meaningless babble here
 >2
+
 Carven Cavern
 
 @max
@@ -1022,6 +1044,8 @@ The Respect Specter winces slightly and opens its mouth as if to say "Er..."
 
 @!min
 >scepter
+The Respect Specter coughs.
+>y
 by one point
 }}SCORE++
 }}CURMIN++

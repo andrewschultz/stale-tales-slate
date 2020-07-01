@@ -2,12 +2,13 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt
+files=reg-roi2-routes-max.txt,reg-roi2-routes-min.txt,reg-roi2-routes-nudmis.txt,reg-roi2-routes-slider.txt,reg-roi2-routes-hints.txt
 
 ~	min	t1
 ~	max	t0
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
+~	hints,hin	t4
 
 }}MAX=22
 }}CURMAX=22
@@ -35,6 +36,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter routes
 >score
 {$SCOS}
+
+@hin
+>monty hints
+You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
 
 @sli
 >slon
@@ -116,9 +121,9 @@ You don't need to make the anti-sag sit-a-nag any sturdier. And calling it ain't
 \\
 #mistake test for aint gas/gas
 >aint gas
-The anti-sag sit-a-nag is plenty solid and will stay that way, with or without your efforts.
+The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 >gas
-The anti-sag sit-a-nag is plenty solid and will stay that way, with or without your efforts.
+The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 
 @nud
 #nudge for poison
@@ -214,6 +219,11 @@ Hm! The worst ad seems like it should be simple, but maybe you need to READ the 
 Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 21.
+
+@hin
+DEBUG INFO: scripture picturers hinting.
+
+@!min
 >score
 {$SCOS}
 

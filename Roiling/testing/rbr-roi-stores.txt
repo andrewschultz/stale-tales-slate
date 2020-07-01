@@ -1,11 +1,12 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just stores
 
-files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt
+files=reg-roi2-stores-max.txt,reg-roi2-stores-min.txt,reg-roi2-stores-nudmis.txt,reg-roi2-stores-slider.txt,reg-roi2-stores-hints.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
+~	hints,hin	t4
 
 ## *FILE
 
@@ -34,6 +35,9 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 
 >ts
 >t
+
+@hin
+>monty hints
 
 @sli
 >slon
