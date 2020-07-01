@@ -766,7 +766,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Plasm Lamps nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "plam"	201542769	--	--	"[if bogus-lamps are reflexed]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
-"ant"	174205344	--	--	"That's close. Something brutal and direct."
 
 table of den loft nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

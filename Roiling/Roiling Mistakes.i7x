@@ -175,7 +175,7 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 
 chapter Same Mesa
 
-understand "aint gas" and "gas" as a mistake ("The [sit a nag] is plenty solid and will stay that way, with or without you.") when anti sag sit a nag is touchable.
+understand "aint gas" and "gas" as a mistake ("The [sit a nag] is plenty solid and will stay that way, independent of your efforts.") when anti sag sit a nag is touchable.
 
 understand "aint" as a mistake ("You don't need to make the [sit a nag] any sturdier. And calling it ain't-sag would be false advertising.") when anti sag sit a nag is touchable.
 
@@ -211,7 +211,7 @@ understand "seam" as a mistake ("You can't find any crack in the Same Mesa that 
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "stag" as a mistake ("[gast] does not deserve to be changed into an animal.") when Gast is touchable.
+understand "stag" as a mistake ("[gast] already came alone and does not deserve to be changed into an animal.") when Gast is touchable.
 
 understand "staider" as a mistake ("[if gast is off-stage]Nothing has gotten too riotous yet[else if side art is reflexed]You already did your best with the tirades and side art[else][Gast] fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit[end if].") when player is in Same Mesa.
 
@@ -779,7 +779,7 @@ understand "dang rite" as a mistake ("Creative, but ineffective, positive colloq
 
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in location of player.
 
-understand "parley" as a mistake ("The raves saver/replay player [if saver is reflexed]can be[else]has already been[end if] parleyed into something shinier.") when raves saver is touchable.
+understand "parley" as a mistake ("The raves saver/replay player [if saver is reflexive]can be[else]has already been[end if] parleyed into something shinier.") when raves saver is touchable.
 
 understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is touchable]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are touchable.
 

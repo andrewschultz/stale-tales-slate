@@ -976,6 +976,7 @@ to place-warrior (myp - a number) and (myi - a number):
 			now QQ is in Loftier Trefoil;
 			say "[QQ] to Loftier Trefoil.";
 			the rule succeeds;
+	pick-a-picaro;
 	say "BUG: didn't get anything for pod [myp] index [myi2]."
 
 to place-idea (myp - a number) and (myi - a number):
