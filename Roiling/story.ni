@@ -4100,7 +4100,7 @@ when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now rivets-first is true;
 	if a random chance of 1 in 2 succeeds, now lobster-first is true;
 	if a random chance of 1 in 2 succeeds, now sister-first is true;
-	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal; [troves random puzzle]
+	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal;
 	if a random chance of 1 in 2 succeeds, now goshy is true; [presto random clues]
 	if a random chance of 1 in 2 succeeds, now pikes-clue is true;
 	sort byebyes in random order; [Phat Path ways to say goodbye]
@@ -5205,33 +5205,37 @@ this is the towers-hinting rule:
 	if Treading Gradient is unvisited, all-say "There's an important location in the center of the Wildest Wilteds, [to-center] of here. You'll want to [if Treading Gradient is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is off-stage or ragged dagger is off-stage, all-say "See about the weeds in the Treading Gradient." instead;
 	if Danger Garden is unvisited, all-say "You need to work your way to the east corner of the map[seen-scope]." instead;
-	if Obscurest Subsector is unvisited, all-say "[if stinger is moot]Go east of where the bonker and stinger were.[else if bonker is moot]You need a way past the stinger[else]You need a way past the bonker[end if]" instead;
+	if Obscurest Subsector is unvisited, all-say "[if stinger is moot]Go east of [in-here-there of Danger Garden][else if bonker is moot]You need a way past the stinger[else]You need a way past the bonker[end if]." instead;
 	if Shaven Havens are unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit[seen-scope].[end if]" instead;
 	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof, all-say "[one of]That duck [if duck is not touchable]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]The duck won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or]The raves saver you saw is useful.[or]The raves saver is a tape recorder.[or]The raves saver has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
-	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
-	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
-	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
-	if dinger is in Actionless Coastlines, try objhinting dinger instead;
-	if Outer Route is not visited, all-say "You need to visit west of the Scope Copse[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
 		if weeds are in Treading Gradient, all-say "The item you want is behind the weeds in the Treading Gradient." instead;
 		if gizmo is off-stage, try objhinting rapier repair instead;
+	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
+	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
+	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
+	if dinger is touchable, try objhinting dinger instead;
+	if Outer Route is not visited, all-say "You need to visit west of the Scope Copse[if butlers are not moot]. The bluster butlers guard that area[end if]." instead;
 	if player has gizmo, try objhinting gizmo instead;
 	if Dr Yow is not moot, all-say "You need to ASK AGNOSTIC ABOUT DR YOW, then make Dr. Yow ROWDY." instead; [?? flesh out]
-	if location of player is not Actionless Coastlines, all-say "You'll want to head to the coastlines to make it across the water." instead;
 	unless across-leak-lake:
+		if location of player is not Actionless Coastlines, all-say "You'll want to head to the coastlines to make it across the water." instead;
+		if boat-score is 1, all-say "NOTE: you don't strictly need to fix the boat entirely.[paragraph break]";
 		if t-or-b is reflexive, try objhinting t-or-b instead;
 		if turbos are reflexive, try objhinting turbos instead;
 		if blaster is reflexive, try objhinting blaster instead;
+		all-say "You can enter a bot boat and go safely across Leak Lake." instead;
 	if player is in Mesprise Premises:
 		if crocus is in top opt pot or player has crocus, try objhinting crocus instead;
 		if Tetris Sitter is reflexive, try objhinting Tetris Sitter instead;
 		if player has top opt pot, all-say "You should GIVE the succor crocus to [the tetris sitter] for hints." instead;
 	if player is in Mislit Limits, try objhinting curst palace instead;
-	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
+	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything. Try moving around." instead;
+
+to decide what number is boat-score: decide on boolval of (whether or not turbos are reflexive) + boolval of (whether or not blaster is reflexive);
 
 to say seen-scope:
 	if spec o scope is examined, say " you saw in the Spec-O-Scope"
