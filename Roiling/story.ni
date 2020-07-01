@@ -3766,7 +3766,7 @@ to reg-inc:
 		say "BUG NOTE: This location needs a map region!";
 	else:
 		increment the cur-score of mrlp;
-		if mrlp is Ordeal Reload and rifle is off-stage and cur-score of Ordeal Reload is max-score of Ordeal Reload - 4:
+		if mrlp is Ordeal Reload and rifle is off-stage and poss-score of Ordeal Reload is max-score of Ordeal Reload - 1:
 			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
@@ -4093,6 +4093,8 @@ definition: a person (called per) is guardianish:
 
 last-wall is a thing that varies. last-wall is usually allow lots tools wall.
 
+pikes-clue is a truth state that varies.
+
 when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now evil-bee-second is true; [troves random clues]
 	if a random chance of 1 in 2 succeeds, now rivets-first is true;
@@ -4100,6 +4102,7 @@ when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now sister-first is true;
 	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal; [troves random puzzle]
 	if a random chance of 1 in 2 succeeds, now goshy is true; [presto random clues]
+	if a random chance of 1 in 2 succeeds, now pikes-clue is true;
 	sort byebyes in random order; [Phat Path ways to say goodbye]
 	now a random badbook is in Hacks Shack;
 	sort shop-hint-items in random order; [Posh Hops Shop items] [oyster random clues]
@@ -4206,7 +4209,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if pre-haun is in Anger Range:
 				now noun is pre-haun;
 				continue the action;
-			if haunter is in Anger Range and haunter is reflexive:
+			if haunter is touchable and haunter is reflexive:
 				now noun is haunter;
 				continue the action;
 		if player is in Hardest Trashed Dearths:
@@ -4215,7 +4218,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is eeks;
 			continue the action;
-		if player is in Horned Hedron and walleyes are moot and ol trap is in Horned Hedron:
+		if ol trap is touchable and walleyes are moot:
 			now noun is ol trap;
 			continue the action;
 		if player is in Plasm Lamps:
@@ -4731,7 +4734,9 @@ this is the ordeal-reload-hinting rule:
 		if act ruin curtain is touchable, try objhinting act ruin curtain instead;
 		if player has latches, try objhinting latches instead;
 	if player has settler and settler is not examined, say "You should probably examine the settler." instead;
-	all-say "Nothing left to do here. You should be able to get going to the next part."
+	if Elmo is touchable, say "Elmo has some hints about the settler, but you can ignore him and still solve the game with maximum points. The small talk in particular can be ignored, unless you enjoy anagrams." instead;
+	if player is in Carven Cavern, all-say "You can just go IN to the main hub area." instead;
+	all-say "Nothing left to do here in your manse. You should be able to go IN to start your adventures." instead;
 
 book others-hinting
 
@@ -4876,7 +4881,7 @@ this is the presto-hinting rule:
 		if spoilit is true, now spoilit is false;
 		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in Dirge Ridge and ether is not moot]. Maybe [l-n-r]'s combined muscle could help you somewhere[end if]." instead;
 	if boing is reflexive and popgun is touchable, try objhinting boing go bin instead;
-	if popgun is touchable:
+	if popgun is touchable and ether is not moot:
 		if dart is not touchable, all-say "You need to find ammo for your popgun." instead;
 		if dart is not in popgun and dart is not moot:
 			if spoilit is true, now spoilit is false;
@@ -4912,8 +4917,14 @@ this is the presto-hinting rule:
 			now spoilit is false;
 			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
 		if ye hoop is in austerer and austerer is visited, all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
-	if coal is touchable, try objhinting coal instead;
+	if disk is touchable and skid is off-stage, try objhinting disk instead;
+	if yak is touchable and spoilit is false, try objhinting yak instead;
 	if flea is touchable, try objhinting flea instead;
+	if Clack Ops Locs Pack is touchable, try objhinting Clack Ops Locs Pack instead; [these are not the easiest, but they are listed in order of optimally solving the game.]
+	if drab yoke is touchable:
+		if yak is touchable, say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not touchable]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
+		try objhinting drab yoke instead;
+	if coal is touchable, try objhinting coal instead;
 	if gum is touchable, try objhinting gum instead;
 	if ALocalCo cola is touchable:
 		if spoilit is true:
@@ -4921,17 +4932,11 @@ this is the presto-hinting rule:
 			now spoilit is false instead;
 		try objhinting ALocalCo cola instead;
 	if fount is touchable, try objhinting fount instead;
-	if Clack Ops Locs Pack is touchable, try objhinting Clack Ops Locs Pack instead;
-	if disk is touchable and skid is off-stage, try objhinting disk instead;
-	if yak is touchable and spoilit is false, try objhinting yak instead;
-	if drab yoke is touchable:
-		if yak is touchable, say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not touchable]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
-		try objhinting drab yoke instead;
 	if Hacks Shack is visited:
 		if hump is not moot, try objhinting hump instead;
 		if censer is not moot, try objhinting censer instead;
 		if yak is not moot: [?! rearrange this]
-			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak[if yak is not in Hacks Shack] you left back...wherever[end if]." instead;
+			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in[location of yak]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in Hacks Shack:
 		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
@@ -4991,7 +4996,7 @@ this is the routes-hinting rule:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
 		if side art is reflexive, try objhinting side art instead;
-		if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
+		if WOE BOW BELL is touchable, try objhinting WOE BOW BELL instead;
 		if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
 		if Cleric Circle is unvisited, 	try objhinting scripture picturers instead;
@@ -5093,7 +5098,7 @@ trolls-hinted is a truth state that varies.
 to decide which thing is oyster-item:
 	if player is in Posh Hops Shop:
 		if trolls-hinted is false and cur-score of oyster is 0, decide on LOLstr trolls;
-		if number of entries in shop-hint-items is 2, decide on LOLstr trolls;
+		if cur-score of oyster is 3, decide on LOLstr trolls;
 		decide on entry 1 of shop-hint-items;
 	if player is in Olde Lode:
 		if clam is in Olde Lode, decide on clam;
@@ -5104,7 +5109,9 @@ to decide which thing is oyster-item:
 		decide on frat raft;
 	if player is in Fighter Freight, decide on plea;
 	if player is in Anger Range:
-		if pikes are in Anger Range, decide on carps;
+		if pikes are in Anger Range:
+			if pikes-clue is true, decide on pikes;
+			decide on carps;
 		if haunter is off-stage, decide on pre-haun;
 		if haunter is reflexive, decide on haunter;
 	if haunter is reflexed and location of player is location of haunter, decide on haunter;
@@ -5113,15 +5120,11 @@ to decide which thing is oyster-item:
 		if crate is reflexive, decide on crate;
 		if skis are in Lapsin Plains, decide on skis;
 		if knob is touchable, decide on knob;
-		if pans are reflexive, decide on pans;
+		if pans are touchable, decide on pans;
 	if player is in Hardest Trashed Dearths, decide on eeks;
 	if player is in Shuttle Hutlets:
 		if tubs are in Shuttle Hutlets, decide on tubs;
 		if prod is touchable, decide on prod;
-		if aunt-tuna-cross is false or wipes are not in Lean Lane: [hint the side quest ONLY IF you can still get the wipes]
-			if waste is in Shuttle Hutlets, decide on waste;
-			if lance is reflexive and lance is in Shuttle Hutlets, decide on lance;
-			if heaps are reflexive and heaps are in Shuttle Hutlets, decide on heaps;
 	if player is in Lean Lane:
 		if tea tray is touchable, decide on tea tray;
 		if trout is reflexive, decide on trout;
@@ -5140,6 +5143,7 @@ to decide which thing is oyster-item:
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
+		if pins are touchable, decide on pins;
 		if d2 is in Tenfold Teflond Den Loft, decide on d2;
 		decide on dialer;
 	decide on the player;
@@ -5155,8 +5159,22 @@ this is the oyster-hinting rule:
 	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
 	if location of player is Rascal Craals and ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
 	if location of player is End Den, all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]" instead;
-	all-say "There's nothing to do with anything in this location. Maybe hint something specific from your inventory or move to another place.";
+	if haunter is moot and ol trap is not moot:
+		all-say "You can now go further in to the Hedron." instead;
+	repeat through table of oyster-done:
+		if location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]" instead;
+	all-say "BUG. You should never have fallen through here in the hint code." instead;
 	the rule succeeds;
+
+table of oyster-done
+oyster-rm	oyster-txt
+Lean Lane	"You helped Tortu and got a paler pearl. That's all you need to do here"
+Lapsin Plains	"With the way inside open, you no longer have anything you need to do here"
+Horned Hedron	"You've found a way further in, and that's all you need here"
+Sclerous Closures	"You've gotten passage north and found something important, so you're done here"
+Shuttle Hutlets	"You've found what you needed here"
+Anger Range	"You've gotten all you need from the haunter. [anger range] has nothing left to offer you"
+--	"You've done all you need to do here to solve the Oyster region. If you'd like more specific clues, you can HINT something in your inventory or move elsewhere"
 
 book towers-hinting
 
@@ -5177,8 +5195,9 @@ this is the towers-hinting rule:
 	if stinger is touchable, try objhinting stinger instead;
 	if weeds are touchable, try objhinting weeds instead;
 	if guar-here > 0:
-		d "Looking for mr hinty = [mr-hinty].";
-		if mr-hinty is touchable, try objhinting mr-hinty instead;
+		d "[list of touchable guardians].";
+		d "Guardian we are looking for = [guardian-to-hint].";
+		if guardian-to-hint is touchable, try objhinting guardian-to-hint instead;
 		d "Oops! A bug!";
 		any-guardian-hint instead;
 	if player is in Loftier Trefoil, try objhinting h-p instead;
@@ -5224,6 +5243,13 @@ to decide what indexed text is the vul of (pi - a picaro):
 to decide which direction is the psgdir of (gu - a guardian):
 	if gualoc of gu is not location of player, decide on the opposite of the guadir of gu;
 	decide on the guadir of gu;
+
+to decide which room is guarded-room of (gu - a guardian):
+	decide on the room (gualoc of gu) of gu;
+
+to decide which room is other-room of (gu - a guardian):
+	if player is in gualoc of gu, decide on gualoc of gu;
+	decide on guarded-room of gu;
 
 gua-warn is a truth state that varies.
 
@@ -12182,9 +12208,11 @@ for writing a paragraph about a bruisin person:
 	if Leo is eager, say "[l-n-r] are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if harpings phrasing is touchable] to further adventure, though you don't know if you want to share a mutism summit with them. They don't seem like they'd enjoy keeping quiet[end if]." instead;
 	if Rand is washed up and Leo is washed up, say "[l-n-r] are here[r][one of], commiserating. Maybe a bit of a talking and listening would cue you to help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
-every turn when player is in Dirge Ridge:
-	if Leo is fightin, say "Leo bulls at you, but you're easily able to outrun and outwit him. Maybe you can easily discourage him, too." instead;
-	if Rand is fightin, say "Rand charges at you straightforwardly, but as lumbering as Leo. He can probably be tricked by a similar fake-out." instead;
+every turn when player is in Dirge Ridge (this is the fight rand or leo rule):
+	if Leo is fightin:
+		say "Leo bulls at you, but you're easily able to outrun and outwit him. Maybe you can easily discourage him, too.";
+	else if Rand is fightin:
+		say "Rand charges at you straightforwardly, but he's as lumbering as Leo. He can probably be tricked by a similar fake-out.";
 
 check dropping while in Dirge Ridge:
 	say "You have nothing worthless enough to leave lying around in or by here." instead;
@@ -14384,7 +14412,7 @@ after scaning tray:
 		say "Hm, three letters. You reckon it's the tea on the tray, not the tray itself.";
 	continue the action;
 
-the paler pearl is an undesc. description is "It's a nice pearl but too small to be valuable on its own."
+the paler pearl is an undesc. description is "It might be valuable if it weren't cut jaggedly in half. Where could the other half be?"
 
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][else]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
@@ -17575,7 +17603,8 @@ to shuffle-guardians (goner - a guardian):
 	d "Blues left = [list of not moot blue guardians].";
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if guar-here > 0:
-		now mr-hinty is a random touchable guardian;
+		now guardian-to-hint is a random touchable guardian;
+		if debug-state is true, say "Choosing [guardian-to-hint] from [list of touchable guardians].";
 	if MR is Salted Deltas:
 		now Artist Traits Strait is tower-accessible;
 		now Actionless Coastlines is accessible;
@@ -17624,7 +17653,7 @@ any-cleared is a truth state that varies;
 	d "[new-br-needed] is the new br needed. [br-needed] is the old.";
 	d "Blue = [number of not moot blue guardians] Red = [number of not moot red guardians], overall = [new-br-needed].";]
 
-mr-hinty is a guardian that varies.
+guardian-to-hint is a guardian that varies.
 
 check going (this is the guardian reposition before rule):
 	if mrlp is Towers:
@@ -17637,10 +17666,10 @@ check going (this is the guardian reposition before rule):
 					now QQ is passtried;
 					if loc entry is location and blockdir entry is noun:
 						if blockdir entry is neuter, set the pronoun it to blockdir entry;
-						now mr-hinty is QQ;
+						now guardian-to-hint is QQ;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 					if loc entry is not location and blockdir entry is opposite of noun:
-						now mr-hinty is QQ;
+						now guardian-to-hint is QQ;
 						if blockdir entry is neuter, set the pronoun it to blockdir entry;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 		if number of taunty guardians > 0:
@@ -17659,7 +17688,7 @@ after going (this is the guardian reposition after rule):
 	if mrlp is Towers:
 		now guardians-seen is 0;
 		reposition-guardians;
-		if guar-here > 0, now mr-hinty is a random touchable guardian;
+		if guar-here > 0, now guardian-to-hint is a random touchable guardian;
 	continue the action;
 
 chapter reposition-guardians
@@ -17739,7 +17768,7 @@ after fliptoing a picaro (this is the loftier trefoil exit rule):
 	else if vw is 4:
 		say "Rodney's followers look a bit shaken. If you got rid of him by saying [if roddro is true and rodyon is true]YONDER or DRONEY[else if rodyon is true]YONDER[else if roddro is true]DRONEY[else]something to shoo him[end if], you might be able to clear the lot. Or you can mess with all his pals, first. Your choice.";
 	if vw > 1:
-		now h-p is a random not leaderly picaro in Loftier Trefoil;
+		pick-a-picaro;
 	else:
 		say "Time to put Rodney out of his misery. Okay, he'll still be miserable, so just put [i]yourself[r] out of the range of his misery.";
 		now h-p is rodney;
@@ -17880,7 +17909,9 @@ when play begins (this is the distribute picaros rule) :
 		repeat with QQ running through picaros:
 			if pod-num of QQ is mypod and pod-ord of QQ is H:
 				now QQ is in Loftier Trefoil;
-	now h-p is a random not leaderly picaro in Loftier Trefoil;
+	pick-a-picaro;
+
+to pick-a-picaro: now h-p is a random not leaderly picaro in Loftier Trefoil;
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
@@ -21298,7 +21329,7 @@ this is the hint certain object groups rule:
 	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if noun is a portal and noun is not solid idols, all-say "You can just enter [the noun]." instead;
 	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
-	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
+	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
 	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
@@ -21429,9 +21460,9 @@ to say yak-worry:
 check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
 	if side art is reflexive, try objhinting side art instead;
-	if WOE BOW BELL is reflexive, try objhinting WOE BOW BELL instead;
+	if WOE BOW BELL is touchable, try objhinting WOE BOW BELL instead;
 	if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
-	say "[bug-report]" instead;
+	say "Failed to redirect hinting Gast to something else. [bug-report]" instead;
 
 to say in-hovels:
 	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shuttle Hutlets and lance is off-stage] that might be buried under here[else if player is in Shuttle Hutlets] like that lance, with the right verb[else] in a dingier area than this[end if]";
