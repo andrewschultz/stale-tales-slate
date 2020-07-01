@@ -535,12 +535,12 @@ when play begins (this is the screenread gender swears and precursor rule) :
 	process the check-skip-intro rule;
 	let skip-stuff be whether or not the rule succeeded;
 	say "A Roiling Original has some features that can be adjusted for screen readers. Are you using a screen reader?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "Accessibility is turned on. It is something I had trouble meaningfully planning and testing, so please let me know at [email] if you feel it could be improved. Thank you!";
 		now screenread is true;
 		now setspace is true;
 	say "You can alternate accessibility mode with the ACCESS command.[paragraph break]Also, A Roiling Original contains some minor profanity. Unfortunately, it can't wipe out some implied profanity that results, but nothing is intended to be malicious. Disable profanity?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		now censor-minor is true;
 	say "Also, this is not critical to game mechanics and only gives minor differences, but you can play as a male (M) or female (F) -- case insensitive. Which will it be?";
 	let cholet be 0;
@@ -554,7 +554,7 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		choose-male;
 	if skip-stuff is true, continue the action;
 	say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Ordeal Reload as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
 		if the player consents: [start of game]
 			say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
@@ -2835,7 +2835,7 @@ before quipping when player is in Disowned Downside (this is the Gretta checks r
 					now missed-one is true;
 			if missed-one is true:
 				say "'Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you,' Gretta says. Stay and ask a bit more?";
-				if the player direct-consents:
+				if the player regex-prompt-consents:
 					say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
 					now hold-it-up is true;
 				say "OK.";
@@ -2918,14 +2918,14 @@ hold-it-up is a truth state that varies.
 before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you back for hints rule):
 	if got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
 		say "Elmo checks you for a second. 'You sure you know how to use the settler?'";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "You nod. 'No clues counsel.'";
 			continue the action;
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
 		now hold-it-up is true instead;
 	if interr-quip is not mowered:
 		say "Hm, maybe Elmo has something useful to say. Skip to that part of the conversation?";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
 			enact bye-elmo-quip;
 			disable the interr-quip quip;
@@ -5489,7 +5489,7 @@ after reading a command:
 						reject the player's command;
 					if old-rel entry > 0:
 						say "The [go-region of portdest entry] region for this final command may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Go ahead?";
-						if the player direct-consents:
+						if the player regex-prompt-consents:
 							do nothing;
 						else:
 							say "It'll be fun. And worth it. I hope!";
@@ -6200,7 +6200,7 @@ check eating fretful truffle:
 	if truf-warn is false and scams is false:
 		now truf-warn is true;
 		ital-say "this chocolate is a cool cheat that tells you what to [if cur-score of troves is 0]type[else]think next[end if]. Are you sure you want to do this?";
-		unless the player direct-consents, say "Okay. This warning won't appear again." instead;
+		unless the player regex-prompt-consents, say "Okay. This warning won't appear again." instead;
 	now spoilit is true;
 	process the troves-hinting rule;
 	now spoilit is false instead;
@@ -7171,7 +7171,7 @@ understand "nothin" as nothining.
 carry out nothining:
 	if absolutely-no-hints is true, say "You've already shut down hints for this saved game." instead;
 	say "Disabling hints for the entirety of play is a drastic step, so [one of][or]once again I want to note [stopping]NO HINT may be better than the drastic NOTHING. Do you still wish to disable hints completely?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		now absolutely-no-hints is true;
 	say "Okay[if absolutely-no-hints is true]. Hints are now disabled even if you save and restore[end if].";
 	if session-hints-off:
@@ -7264,7 +7264,7 @@ carry out abouting:
 	if mrlp is routes and cur-score of mrlp > 0:
 		say "You push your luck, but no u-boat shows up. [if Ripe Pier is unvisited]Good thing you're above-ground[else if player is in Ripe Pier]A ship is already there[else if player is in Cripple Clipper]That's the last thing you'd need now[else][end if].";
 		say "Oh, wait, did you want to see the ABOUT message for real? I should note here you don't need ABOUT to win the Routes area.";
-		unless the player direct-consents:
+		unless the player regex-prompt-consents:
 			say "OK." instead;
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
 	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, but you don't get anything special for that beyond a feeling of accomplishment.";
@@ -8183,7 +8183,7 @@ does the player mean examining the steel pad: it is unlikely.
 to say dior-scan:
 	if screenread is true:
 		say "This may be an info dump if you are visually impaired. Go ahead?";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			do nothing;
 		else:
 			continue the action;
@@ -8242,7 +8242,7 @@ understand "my niche" and "my" as niche
 
 after examining niche:
 	say "It sounds like there's whistling from the niche, but only if you listen very closely. Have a listen?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "A haunting ice-hymn coming through the dotted outline--or maybe the words you imagine--leaves you red-eyed.";
 	else:
 		say "Okay.";
@@ -8293,7 +8293,7 @@ after examining event map:
 	let bluh be false;
 	if screenread is false:
 		say "Do you want a text-map view (yes or no)?";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "[fixed letter spacing]?????
 [line break]  |     t
 [line break]  v   s r
@@ -8499,7 +8499,7 @@ check going nowhere in Carven Cavern (this is the cavern check rule):
 	say "The only way to make progress is inward, through that [if act ruin curtain is moot]ex-[end if]curtain.";
 	if act ruin curtain is moot:
 		say "[line break]Go through?";
-		if the player direct-consents, try going inside instead;
+		if the player regex-prompt-consents, try going inside instead;
 		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
 	do nothing instead;
 
@@ -8863,7 +8863,7 @@ check going outside in Farming Framing:
 	if backcheck is true:
 		now backcheck is false;
 		say "You don't really need to go back inside unless you're unsure of how your powers work[if satchel is off-stage]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is touchable]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
-		if the player direct-consents, continue the action;
+		if the player regex-prompt-consents, continue the action;
 		say "Okay, onward." instead;
 
 check going inside in Dusty Study: if tables are in Dusty Study, say "Hm, maybe those tables on the wall provide a clue where 'in' leads[if Dusty Study is not lit], or they would, if you could see them[end if]." instead;
@@ -8909,7 +8909,7 @@ check entering closets:
 		if backcheck is false:
 			now backcheck is true;
 			say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
-			if the player direct-consents:
+			if the player regex-prompt-consents:
 				now gallery-been is true;
 				say "[if meet bans are in Dusty Study]You go back through the closets to your study[else]Woo! You save the effort of climbing up stairs[end if].";
 				now player is in Dusty Study instead;
@@ -8929,7 +8929,7 @@ description of pram is "It was a painfully obvious hint of a gift from someone v
 
 to say painful-memory:
 	say "[one of]You see red at a further painful memory. Relive it?[or]Re-relive the painful memory associated with it?[stopping]";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "[one of]The person who gave it to you said it would help you [if player is female]meet[else]feel like[end if] Mr. Pa. You see red as you cringe at the memory.[or]The memory of encouragement to [if player is female]meet[else]be[end if] Mr. Pa still makes you see red after all this time.[stopping][run paragraph on]";
 	else:
 		say "Yeah, you probably don't need to, to figure what to do with the pram.[no line break]";
@@ -9838,7 +9838,7 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 				now RP is EP;
 				now curdif is diffic of EP;
 		say "[line break]The [RP] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
-		if the player direct-consents, try entering RP instead;
+		if the player regex-prompt-consents, try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
 	if mangiest steaming is in strip, try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
@@ -10326,7 +10326,7 @@ e-revealed is a truth state that varies.
 check entering passage:
 	if e-revealed is true, say "No. Regardless of how cynical you are, you don't need to see that again. But you remember YYRRGRG." instead;
 	say "You sense that you may uncover a deeply disturbing truth if you enter. Or, you might just get a too-spoilery hint that gets you out of here. Care to continue?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "You step into studio E. There, you see well-known pharmaceutical industry barons discussing perfectly legal and safe substitutes to various illegal drugs, along with perfectly air-tight patents and tax avoidance schemes. You also see 'DORI'S ROIDS' bottled (for the Rehabs Basher) with a so-tired needle beside it.[paragraph break]You rush out of Studio E before you see anything more--although you quickly [if cheat-on is false]switch your gadget back and forth and note it[else]note your gadget[end if] flashes YYRRGRG.";
 		now e-revealed is true;
 	else:
@@ -10783,7 +10783,7 @@ check examining snoop spoon:
 		if snoop-warn is false:
 			now snoop-warn is true;
 			say "Examine the spoon at just the right angle, for a hint?";
-			unless the player direct-consents:
+			unless the player regex-prompt-consents:
 				continue the action;
 	now spoilit is true;
 	abide by the routes-hinting rule;
@@ -10865,7 +10865,7 @@ the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of reg
 
 check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
-	unless the player direct-consents, say "Okay. This warning will vanish next time." instead;
+	unless the player regex-prompt-consents, say "Okay. This warning will vanish next time." instead;
 	say "Man! Whoever wrote this is a grouch. You have morals and all, but geez."
 
 check asking Brother Horbert about: say "Brother Horbert shrugs. 'I should know more about the exotic outside world, but it's hard, with the poison stripe.'" instead;
@@ -13821,7 +13821,7 @@ carry out spilling:
 	if player is in Shuttle Hutlets:
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
-			if the player direct-consents:
+			if the player regex-prompt-consents:
 				do nothing;
 			else:
 				say "[if oi is heaps]Yeah. Maybe writers and musicians need to pop pills to do their work, but sculptors don't. Maybe you can make the heaps more beautiful on your own[else]Yeah, it's not wise to put off general sanitation tasks with pills[end if]." instead;
@@ -15908,7 +15908,7 @@ before examining Spec O Scope for the first time: say "A telescope! Place to see
 
 check examining Spec O Scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the Spec-O-Scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the Spec-O-Scope to a visual one?[close bracket][r][line break]";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
 description of Spec O Scope is "You look into the Spec-O-Scope and see:[paragraph break][fixed letter spacing]
@@ -16476,7 +16476,7 @@ before scaning (this is the check for cheats the player doesn't want rule):
 	if cheat-on is true and noun is spoilable-now:
 		if squee is true:
 			say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
-			if the player direct-consents, continue the action;
+			if the player regex-prompt-consents, continue the action;
 			say "OK." instead;
 		if squee-warn is false and equals-pushed is false:
 			now squee-warn is true;
@@ -18327,7 +18327,7 @@ carry out playing:
 			reg-inc;
 			force-status;
 			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him later. Or, if you're interested right now, would you like to go back to the Strip of Profits?";
-			unless the player direct-consents:
+			unless the player regex-prompt-consents:
 				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
 				note-denial;
 				end the story finally saying "A MONSTER ROTS. AMEN.";
@@ -20189,7 +20189,7 @@ the icons are plural-named things. description is "The icons are designed to be 
 
 check sbing coins: [can't find any way else to do this]
 	say "The settler is all over the place. Maybe it would be better to scan just one coin?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "Your settler registers YRY (R and P).";
 	else:
 		say "The final of the five entries stays on red in non-cheat mode, but everything else is scrambled.";
@@ -20198,7 +20198,7 @@ check sbing coins: [can't find any way else to do this]
 check scaning coins:
 	say "The settler flashes back, with [if cheat-on is true]all five entries changing[else]all but the last entry--which stays red--changing[end if]. ";
 	say "This is odd. Maybe it would be better to scan just one coin?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		let mytext be indexed text;
 		if cheat-on is true:
 			now mytext is b-text of coin;
@@ -20777,7 +20777,7 @@ check going south in Peek Keep:
 		end the story;
 	else:
 		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
 			end the story saying "Epilogue's Up! Lie, Ego";
 		else:
@@ -21798,7 +21798,7 @@ Rule for amusing a victorious player:
 	repeat through table of big yucks:
 		if others is solved or there is no reg-needed entry or reg-needed entry is solved, say "[2da][yux entry][line break]";
 	say "[line break]Would you like to see a list of the least tedious non-game-critical anagram jokes?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		repeat through table of anayux:
 			if others is solved or there is no reg-needed entry or reg-needed entry is solved:
 				if there is no do-i-print entry:

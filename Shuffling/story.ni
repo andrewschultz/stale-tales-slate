@@ -802,7 +802,7 @@ this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
 	now first-hint-check is true;
 	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
-	if player direct-consents:
+	if player regex-prompt-consents:
 		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
 		try mainhelping instead;
 	else:
@@ -1125,7 +1125,7 @@ understand "help off" and "info off" and "hint off" and "hints off" as helpoffin
 carry out helpoffing:
 	if hintsoff is true, say "Hints are already disabled." instead;
 	say "This will shut off hints for the remainder of the play session. You will need to restart to see them again. Are you sure?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "Done.";
 		now hintsoff is true;
 	else:
@@ -1933,7 +1933,7 @@ carry out retrying:
 		if red bull burdell is in Potshot Hotspot, say "No wimping out now. You can do it!" instead;
 		if red bull burdell is moot, say "You've disposed of Red Bull Burdell[if number of solved regions < 4], so if you want to explore another region, you'll need to restart the game[end if]." instead;
 		say "You don't really need to[if number of solved regions is 4]. In fact, you have nowhere else to go[else], though there's one more region to solve[end if]. Are you sure?";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			do nothing;
 		else:
 			say "Okay, back to the endgame." instead;
@@ -3040,11 +3040,11 @@ carry out xmxing:
 		try xmxing nametag instead;
 	if noun is thruhinted:
 		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
-		unless the player direct-consents:
+		unless the player regex-prompt-consents:
 			say "Ok." instead;
 	if noun is static:
 		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
-		unless the player direct-consents:
+		unless the player regex-prompt-consents:
 			say "OK." instead;
 		say "[v-b]the static seems to form attics near the doll house[if gateman is touchable]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
@@ -3435,7 +3435,7 @@ check taking the show hows tag:
 	say "If it were a mattress tag, you'd laugh and pull it off, but everything's gotten a bit weird. You don't know about the warranty on it, but the tag seems pretty important. It's made of some weird plastic you can't just rip[one of].[paragraph break]Plus, embarrassingly, you've no clue how to undo the knot tying the tag to the handle--and you're not strong enough to pull the tag off[or][stopping].";
 	if player does not have the gadget:
 		say "[line break]By the way, it seems you don't even have the gadget. Did you mean to take the tagged gadget instead?";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "Ok, taking the gadget.";
 			try taking the gadget instead;
 		else:
@@ -3931,7 +3931,7 @@ to say store-overview:
 
 to say sto-desc:
 	say "There are 26 of them. Would you like a general overview?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "[store-overview]";
 		the rule succeeds;
 	else:
@@ -8704,7 +8704,7 @@ protest	kilns	"'If we were artsy, we'd use [']em. But we're not. Take some magic
 
 to say tip-dialogue:
 	say "'Well, one of rectify or certify is overall better than the other. Would you like to know which[one of][or], again[stopping]?'";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		say "'Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see.'";
 		pad-rec-lump "certify";
 		pad-rec "rectify";
@@ -9273,7 +9273,7 @@ before cutting:
 
 to ask-to-cut:
 	say "You could cut the tag off the gadget with that, but this might break the gadget. Are you sure?";
-	if the player direct-consents:
+	if the player regex-prompt-consents:
 		now printed name of tagged gadget is "a gadget";
 		now tagged gadget is broken;
 		say "With a sad BOOOOP, the gadget shuts down. The tag flutters off. Hooray for adding to the challenge!";
