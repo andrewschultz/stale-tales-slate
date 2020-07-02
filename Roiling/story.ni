@@ -4081,7 +4081,7 @@ when play begins (this is the basic initialization rule):
 
 definition: a room (called myrm) is ominous:
 	if map region of myrm is in Otters, no;
-	if myrm is Minded Midden and bleary barley is reflexive, no;
+	if myrm is Minded Midden and bleary barley is touchable, no;
 	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
 	yes;
@@ -4242,7 +4242,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			continue the action;
 	else if mrlp is otters:
 		if player is in Minded Midden:
-			if bleary barley is reflexive:
+			if bleary barley is touchable:
 				now noun is bleary barley;
 				continue the action;
 			if ed riley is in Minded Midden:
@@ -4433,7 +4433,7 @@ check scaning location of the player (this is the location scan rule):
 		say "The air's full of eeks, which your settler picks up.";
 		try scaning eeks instead;
 	if location of player is plains and bogus-plains is reflexive, say "[full-monty of bogus-plains]" instead;
-	if location of player is Minded Midden and bleary barley is reflexive, try scaning bleary barley instead; [start otters]
+	if location of player is Minded Midden and bleary barley is touchable, try scaning bleary barley instead; [start otters]
 	if location of player is clangier: [start others]
 		if mango is off-stage, say "As you listen to the crowds, you notice [full-monty of Ammo Gang] on your settler." instead;
 	if location of player is Swell Wells:
@@ -4747,17 +4747,18 @@ viewer-first is a truth state that varies.
 enuf-fruit-poke is a truth state that varies.
 
 this is the others-hinting rule:
-	if player is in Clangier Clearing and cur-score of others >= 3 and ruts circuits are unexamined, try objhinting ruts circuits instead;
 	if player has moss cap, try objhinting moss cap instead;
-	if player has s-i and player has storage, all-say "You probably want to put the icons in the storage." instead;
+	if player has s-i and player has storage, all-say "You probably want to put the sonic icons in the slot." instead;
 	if player has s-c, try objhinting s-c instead;
 	if player has icons, try objhinting icons instead;
 	if player has coin, try objhinting coin instead;
 	if player has coins, try objhinting coins instead;
-	if curtis-level < 4 and moss cap is moot:
+	if curtis-level < 4 and moss cap is moot and player is not in Rustic Citrus:
 		let levdelt be (fruits-flipped / 4) - curtis-level;
 		say "Flipped [fruits-flipped] Level [curtis-level] delta [levdelt].";
-		if levdelt > 1, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 2]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if]." instead;
+		if levdelt > 1, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 2]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if].";
+		if first-hint-check is false, the rule succeeds;
+		say "Falling through to check the fruit we would've hinted for test scripts...";
 	if player is in Gates Stage and passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
 	if droll dollar is not off-stage and enuf-fruit-poke is false:
 		now enuf-fruit-poke is true;
@@ -4774,7 +4775,8 @@ this is the others-hinting rule:
 		if droll dollar is off-stage, say "You'll eventually want to get that So-Great Storage down the road.";
 		if So Great Storage is in Scape Space and player has droll dollar, try objhinting So Great Storage instead;
 	abide by the fruit-hint rule;
-	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in Gates Stage]. There are no more fruits to scrounge up here[end if].";
+	if player is in Rustic Citrus and ruts circuits are touchable, all-say "You can EXAMINE the ruts circuits to discover more things to change to fruits." instead;
+	all-say "Nothing specific [if player is in Scape Space or player is in Rustic Citrus]left [end if]to do here[if curtis-level < 4], but there are other places where you can make fruits to give to Curtis[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left-here > 0]. There [fruits-to-clear] you can still pick off here[end if].";
 	the rule succeeds;
 
 to say fruits-to-clear: say "[if fruits-left-here is 1]is[else]are[end if] [fruits-left-here in words] fruit[if fruits-left-here > 1]s[end if]"
@@ -5067,7 +5069,7 @@ this is the troves-hinting rule:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting me arts instead;
 		try objhinting LEAD instead;
-	if player is in Browse Bowers, try objhinting See Dir instead;
+	if player is in Browse Bowers, try objhinting Si Reed instead;
 	if location of player is Econ Cone:
 		if cone-points is 0:
 			if rivets-first is true, try objhinting rivets instead;
@@ -5144,8 +5146,7 @@ to decide which thing is oyster-item:
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
-		if pins are touchable, decide on pins;
-		if d2 is in Tenfold Teflond Den Loft, decide on d2;
+		if pins are touchable and pins are reflexive, decide on pins;
 		decide on dialer;
 	decide on the player;
 
@@ -5165,7 +5166,7 @@ this is the oyster-hinting rule:
 	if haunter is moot and ol trap is not moot:
 		all-say "You can now go further in to the Hedron." instead;
 	repeat through table of oyster-done:
-		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]" instead;
+		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]." instead;
 	all-say "BUG. You should never have fallen through here in the hint code." instead;
 	the rule succeeds;
 
@@ -5283,10 +5284,11 @@ to say current-mackiness:
 
 to decide which thing is otters-cur-item:
 	if player is in Minded Midden:
-		if bleary barley is reflexive, decide on bleary barley;
+		if bleary barley is touchable, decide on bleary barley;
 		if Ed Riley is in Minded Midden, decide on Ed Riley;
 	if player is in Disowned Downside:
-		if Macks are in Disowned Downside, decide on Gretta;
+		if Macks are touchable, decide on Macks;
+		if Gretta is touchable, decide on Gretta;
 		if atmo moat is in Disowned Downside and power-back is true, decide on atmo moat;
 	if player is in Bran Barn:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
@@ -5336,22 +5338,37 @@ shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, 
 
 cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, whin3}.
 
+to decide whether in-extra-powers:
+	if power-back is false, no;
+	if player is in Loop Pool and eels are reflexive, yes;
+	if player is in Bran Barn and Gore Ogre is not moot, yes;
+	no;
+
+to decide whether got-extra-powers:
+	if player is in Loop Pool and eels are reflexed, yes;
+	if player is in Bran Barn and Gore Ogre is moot, yes;
+	no;
+
+to say other-power-room: say "[if player is in Loop Pool]Bran Barn[else]Loop Pool[end if]"
+
 this is the otters-hinting rule:
 	if player is in Loop Pool or player is in Bran Barn:
 		if gore ogre is moot and eels are moot, all-say "You found both ways to regain your powers. You don't need to do anything else." instead;
 	if player is in Shiner Shrine and imp is moot, all-say "The path north is cleared[tho-work]." instead;
 	if player is in Clarthead Cathedral and shrewin whiners are moot, all-say "The path south is cleared[tho-work]." instead;
-	if player is in Minded Midden, all-say "You made a way west. You're done here." instead;
+	if player is in Minded Midden and Ed Riley is moot, all-say "You made a way west. You're done here." instead;
 	if player is in Disowned Downside:
-		if Gretta is in Disowned Downside, all-say "Gretta's advice may prove useful. You can win without it, since she will give you an important item no matter what.";
-		all-say "Gretta's gone. You're done here, but you need to [if power-back is false]go north or south to regain your powers[else if enough-animals-solved-here]find your destiny west[else]go back east for help[end if]." instead;
+		if Gretta is moot and power-back is false, all-say "Gretta's gone. The first thing to do is to go north or south to regain your powers.";
+		if atmo moat is moot, say "Gretta's gone. [if medals-shiny is 2]Fulfill your destiny to the west[else]Go back east for help[end if]." instead;
+	if in-extra-powers, all-say "The [location of player] isn't critical since you've solved the [other-power-room], but the puzzle may still interest you.";
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
 	if player is in Lamer Realm or player is in Perverse Preserve:
 		if power-back is false, all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of the barley[end if]." instead;
 		if player is in Perverse Preserve, all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random touchable pre-animal thing][end if]." instead;
 		all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random touchable reflexive animal][end if]." instead;
+	if got-extra-powers, all-say "You got your powers back. You don't need to do anything else here." instead;
 	if player is in Reclusion Inclosure, all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
-	all-say "There seems to be nothing to do here.";
+	all-say "It seems like you did everything you needed to here to defeat Elvira.";
 	the rule succeeds;
 
 definition: a thing (called X) is pre-animal:
@@ -9006,7 +9023,7 @@ check examining settler (this is the examine to scan under duress rule) :
 	if raptor is touchable:
 		say "You reflexively point the settler at the charging raptor as it attacks.";
 		try scaning raptor instead;
-	if player is in Minded Midden and bleary barley is reflexive:
+	if player is in Minded Midden and bleary barley is touchable:
 		say "The barley seems to be causing readings on your settler.";
 		try scaning bleary barley instead;
 
@@ -10123,7 +10140,7 @@ this is the enter-otters rule:
 		d "[list of otters-blocking regions].";
 		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 	if Minded Midden is unvisited, say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]The idols create a sort of bumper-maze, and from the feeling in your stomach you know it has gone through Old Warpy.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.[paragraph break]";
-	say "[if bleary barley is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
+	say "[if bleary barley is moot]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Minded Midden is visited]You stumble back into the Minded Midden and when you turn around, you can't see the otters anywhere.[else]As you walk through, you feel a tingling, like giant wasp paws. Your powers feel dormant but hopefully not mordant. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]";
 	pad-rec-q "asking";
 
 chapter store u
@@ -14219,7 +14236,7 @@ rule for supplying a missing noun when unearthing:
 	else:
 		say "You need to worry about the carps and pikes, first." instead;
 
-the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
+the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "HUNTER HUNT AREA". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
 
 to say h-not-yet: say "You need the right action to deal with the haunter"
 
@@ -14630,7 +14647,7 @@ check giving the gleaner to the papery yapper:
 check giving something to the papery yapper:
 	say "'Bribe? Sigh. Gibberish. Maybe we could reclassify the donation with creative financing[if noun is not gleaner], and make it a better donation, too[end if].' You're not sure if he rolled his eyes." instead;
 
-the dialer is reflexive scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are in Tenfold Teflond Den Loft]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
+the dialer is reflexive scenery in Tenfold Teflond Den Loft. "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. [if pins are reflexive and pins are touchable]You jammed it, somehow--some pins look a bit stuck[else]It looks like you could shift the dialer[shift-dialer][end if]. You also see some red writing, in small print."
 
 to say shift-dialer:
 	if dialer is reflexed, say " again"
@@ -18393,17 +18410,17 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is reflexive]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
-check going east in Minded Midden when bleary barley is reflexed: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
+check going east in Minded Midden when bleary barley is moot: say "The dune is too big and tough to climb. There's nothing that way, anyway." instead;
 
 [glow red as you want to get rid of them]
 
 check going in Minded Midden:
 	if noun is up or noun is down, continue the action;
-	if bleary barley is reflexive, say "The bleary barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
+	if bleary barley is touchable, say "The bleary barley is nearly everywhere. Without knowing where you're going, you'll get lost." instead;
 	if Ed Riley is in Minded Midden:
 		if noun is south or noun is north:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
@@ -18411,7 +18428,7 @@ check going in Minded Midden:
 
 chapter bleary barley
 
-the bleary barley is reflexive scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
+the bleary barley is scenery in Minded Midden. description of bleary barley is "It ranges expansively--but the weird thing is, it hasn't flowered. And it's not all planted. Someone must have placed it very carefully or deliberately so you'd progress slowly."
 
 a-text of bleary barley is "RYRYRO". b-text of bleary barley is "P??YRB". parse-text of bleary barley is "b[sp]?[sp]?[sp]e[sp]l[sp]y". bleary barley is cheat-spoilable.
 
@@ -19516,6 +19533,8 @@ citrus-score is a number that varies. non-citrus-score is a number that varies.
 
 a start-pre-fruit is a kind of thing. a start-pre-fruit has text called locale-text.
 
+a generic-rut-pre is a kind of thing.
+
 check taking a start-pre-fruit: say "Maybe [the noun] would be more useful and easier to carry in some other form." instead;
 
 book Rustic Citrus
@@ -19526,6 +19545,8 @@ after choosing notable locale objects when player is in Rustic Citrus:
 	set the locale priority of Curtis to 2;
 	repeat with spf running through all touchable start-pre-fruits:
 		set the locale priority of spf to 1;
+	repeat with grp running through all touchable generic-rut-pres:
+		set the locale priority of grp to 3;
 
 fruits-flipped is a number that varies.
 
@@ -19561,6 +19582,11 @@ to decide which number is touch-val of (x - a thing):
 	decide on 0;
 
 a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
+
+for printing a locale paragraph about a generic-rut-pre (called pr) in Rustic Citrus:
+	if pr is not mentioned:
+		say "The circuits ruts also turned up [list of touchable generic-rut-pres].";
+		now all generic-rut-pres are mentioned;
 
 chapter augural arugula
 
@@ -19722,7 +19748,7 @@ the maraschino cherry is a fruit.
 
 chapter tamarind
 
-The mad train is a start-pre-fruit in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.". locale-text is "a mad train (not full size, just a model)"
+A mad train is a generic-rut-pre. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
 
 a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR". parse-text of mad train is "x[sp]a[sp]x[sp]-[sp]r[sp]-[sp]x[sp]x".
 
@@ -19852,7 +19878,7 @@ check going north in Rustic Citrus:
 
 chapter ruts circuits
 
-the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
+the ruts circuits are boring plural-named scenery in Rustic Citrus. "A lot has fallen into the ruts. Not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are moot], and plans for a megaton pear,[end if] under some magenta rope. A weird omen prism, a mad train, some eerie blurbs etched into hard ground, and two harmonicas rusted together also turn up.". bore-text of ruts circuits is "They're not worthwhile by themselves, but they are worth examining to find things [if number of touchable start-pre-fruits is 0]though you haven't[else]now you have[end if] picked off all the, uh, low-hanging fruit here that you can.".
 
 after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 conditions should be all true or all false, but just in case...]
 	move peanut cola to Rustic Citrus;
@@ -19862,6 +19888,7 @@ after examining ruts circuits (this is the reveal ruts circuits rule) : [all 3 c
 	move mopeage rant to Rustic Citrus;
 	move omen prism to Rustic Citrus;
 	move harmonicas to Rustic Citrus;
+	move mad train to Rustic Citrus;
 	move eerie blurbs to Rustic Citrus;
 	moot ruts circuits;
 	say "Tracing the ruts circuits to find useful items wore them down. You can no longer see them any more. But it's still a net gain.";
@@ -19881,7 +19908,7 @@ chapter cantaloupe
 
 the cantaloupe is a fruit.
 
-the can of peanut cola is a boring thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
+the can of peanut cola is a boring thing. "A can of peanut cola turned up from the ruts circuits. Surely it can become something a bit tastier.". description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
 
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
@@ -19892,7 +19919,7 @@ chapter persimmon
 
 the persimmon is a fruit.
 
-the omen prism is a boring thing. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
+the omen prism is a boring generic-rut-pre. description of omen prism is "The omen prism is red. It looks like you could probably READ it to find text, which may give nonsensical esoteric clues, if you need them.". bore-text is "The omen prism is only good for EXAMINEing or READing."
 
 a-text of omen prism is "RYRRYRRYR". b-text of omen prism is "RYRRYRRYR". parse-text of omen prism is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -22383,16 +22410,16 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
 		if vow here is not moot, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in [location of vow here] with HOWEVER after you regained your powers.";
 	else if myreg is others:
+		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become limes.";
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";
-		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
 		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
 		if ruts circuits is unexamined:
-			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more pre-fruits.";
+			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 		else:
+			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
 			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
 			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
-			if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
 			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
 			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a PERSIMMON.";

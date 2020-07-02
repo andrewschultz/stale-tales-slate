@@ -200,13 +200,13 @@ span pans	span pans	false	248835251	--	"snap"	"snap"	pre-snap-span-pans rule	--	
 bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	--	--	"[if span pans are in Lapsin Plains]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 wrap	ruby	false	276912353	--	"warp"	"warp"	pre-warp-wrap rule	post-warp-wrap rule	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 Achers Chaser Arches	Achers Chaser Arches	false	367879580	--	"search"	"search"	pre-search-arches rule	post-search-arches rule	"'Reach, acher,' you say, stretching a bit more to find something interesting."
-ol trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	post-patrol-ol-trap rule	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap springs and cannibalizes the rigged digger. As the ol['] trap vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, you've got somewhere new to go."
+ol trap	pol art portal	false	400254014	--	"patrol"	"patrol"	pre-patrol-ol-trap rule	--	"You realize you need a sort of minesweeper, so you sneak back to the Rascal Craals and get the rigged digger. You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You hear a sound of slid lids from the ground--and the ol['] trap springs and cannibalizes the rigged digger. As the ol['] trap vanishes, a pol art portal appears in its place. Some of the art is very bad indeed, but hey, you've got somewhere new to go."
 tubs	tubs	false	322908696	--	"bust"	"bust"	--	post-bust-tubs rule	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	--	--	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. Too dirty to take."
 lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."
-ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
+ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to. You also bury the digger, because you don't want any evidence you were the one who hid the ruby."
 pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
@@ -1194,9 +1194,6 @@ this is the pre-patrol-ol-trap rule:
 		preef ol trap;
 		do nothing instead;
 
-this is the post-patrol-ol-trap rule:
-	moot digger;
-
 this is the post-seek-eeks rule:
 	now Hardest Trashed Dearths is shunned;
 	now Anger Range is mapped west of Lean Lane;
@@ -1227,6 +1224,9 @@ this is the pre-bury-ruby rule:
 	if player does not have rigged digger:
 		if player has prod, say "Your prod from the Shuttle Hutlets should be able to bury stuff if you tinker right. Jar it the right way." instead;
 		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shuttle Hutlets is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+
+this is the post-bury-ruby rule:
+	moot digger;
 
 this is the post-yapper-prepay rule:
 	moot gleaner;
@@ -2735,7 +2735,7 @@ jumble	"The jumble reorganizes when you set the dialer."
 pins	"[one of]There are two solutions here to get them out of the way. One is more sensible, given your inventory, but both work.[plus][or]The pins are tangled together, and you can use force or finesse.[plus][or]SPIN them, or SNIP them.[minus][cycling]"
 lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
 d2	--	dialer
-dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can REDIAL, but what else can you have it do?[plus][or][unless d2 is reflexed]DERAIL. [else]Here's what's left: [end if][if lev-pull is false]PULL LEVER. [end if]REDIAL.[minus][cycling]"	[end OYSTER hinting]
+dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can DERAIL, but what else can you have it do?[plus][or]The dialer can REDIAL after you DERAIL, though there is an in-between action, too.[minus][cycling]"	[end OYSTER hinting]
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
 top opt pot	"[if succor crocus is off-stage]The blub bulb can't really be changed until the very end[else]Now that the pot has a succor crocus in it, the person you want to give the pot to is inside[end if]."
 blub bulb	--	top opt pot
@@ -2846,8 +2846,8 @@ Last Acre Cup	"[fin-pal-clue]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
-Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
-macks	--	Gretta
+Gretta	"Gretta has an important item for you once you [if macks are not moot]dispose of the macks[else]finish chatting[end if]."
+macks	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
