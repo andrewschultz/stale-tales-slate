@@ -2471,7 +2471,7 @@ Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad
 stop post	"POP'S TOTS is written in red on the stop post."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
-RESIDE RESIDE	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees, you don't have the energy to find out."
+See Dir	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
 Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
@@ -5067,7 +5067,7 @@ this is the troves-hinting rule:
 			if lobster-first is true, try objhinting lobster instead;
 			try objhinting me arts instead;
 		try objhinting LEAD instead;
-	if player is in Browse Bowers, try objhinting RESIDE RESIDE instead;
+	if player is in Browse Bowers, try objhinting See Dir instead;
 	if location of player is Econ Cone:
 		if cone-points is 0:
 			if rivets-first is true, try objhinting rivets instead;
@@ -11455,7 +11455,7 @@ check taking lager: say "No, touching or holding a can almost always leads to dr
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called RESIDE RESIDE advertises upscale housing.". roomnud of Browse Bowers is table of Browse Bowers nudges.
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called a See Dir advertises upscale housing.". roomnud of Browse Bowers is table of Browse Bowers nudges.
 
 chapter Miser Emirs Mires
 
@@ -11471,11 +11471,11 @@ Si Reed is a vanishing person in Browse Bowers. description is "Impossibly cheer
 
 a-text of Si Reed is "RYRYRY". b-text of Si Reed is "RYRYRY". parse-text of Si Reed is "x[sp]-[sp]x[sp]-[sp]x[sp]-". Si Reed is cheat-spoilable.
 
-RESIDE RESIDE is boring scenery in Browse Bowers. description of RESIDE RESIDE is "RESIDE RESIDE advertises [randbla].". bore-text is "RESIDE RESIDE is just there for the (useless) advertising. And a clue to get out of the Browse Bowers[if RESIDE RESIDE is not read-yet]. It may be worth reading[end if].". RESIDE RESIDE is cheat-spoilable.
+the See Dir is boring scenery in Browse Bowers. description of See Dir is "One random real estate ad in the See Dir advertises [randbla]. You could also READ the See Dir [if See Dir is read-yet]again [end if]for anything that might catch your eye.". bore-text is "The See Dir is just there for the (useless) advertising. And a clue, along with Si Reed, to get out of the Browse Bowers[if See Dir is not read-yet]. It may be worth reading[end if].".
 
-a-text of RESIDE RESIDE is "RYRYRY". b-text of RESIDE RESIDE is "RGPGRG". parse-text of RESIDE RESIDE is "-[sp]e[sp]s[sp]i[sp]-[sp]e".
+a-text of See Dir is "RYRYRY". b-text of See Dir is "RGRYRY". parse-text of See Dir is "-[sp]e[sp]-[sp]-[sp]-[sp]-".
 
-understand "exhibit" as RESIDE RESIDE when player is in Browse Bowers.
+understand "exhibit" as See Dir when player is in Browse Bowers.
 
 book Econ Cone
 
