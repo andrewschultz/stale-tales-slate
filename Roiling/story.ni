@@ -3766,8 +3766,6 @@ to reg-inc:
 		say "BUG NOTE: This location needs a map region!";
 	else:
 		increment the cur-score of mrlp;
-		if mrlp is Ordeal Reload and rifle is off-stage and poss-score of Ordeal Reload is max-score of Ordeal Reload - 1:
-			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
 			now last-solved-region is stores;
@@ -4767,8 +4765,7 @@ this is the others-hinting rule:
 	if player has passport:
 		if Gates Stage is unvisited, all-say "You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport." instead;
 		if gate-level is 2, all-say "Go north to win!" instead;
-		if gate-level < 2:
-			if viewer-first is true and viewer is not reflexed, try objhinting viewer instead;
+		if viewer-first is true and viewer is not reflexed, try objhinting viewer instead;
 		if searcher is not reflexed, try objhinting searcher instead;
 		if viewer is not reflexed, try objhinting viewer instead;
 		try objhinting passport instead;
@@ -4815,8 +4812,8 @@ clearing-hintables is a list of things variable. clearing-hintables is { Ammo Ga
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, inapt paint, orange }
 
 to decide which list of things is my-fruit-list:
-	if moss cap is off-stage, decide on rustic-easy-items;
-	if moss cap is moot, decide on rustic-hard-items;
+	if moss cap is not moot, decide on rustic-easy-items;
+	if player is in Rustic Citrus, decide on rustic-hard-items;
 	if player is in Swell Wells, decide on wells-hintables;
 	if player is in Filed Field, decide on field-hintables;
 	if player is in Clangier Clearing, decide on clearing-hintables;
@@ -4838,7 +4835,7 @@ this is the stores-hinting rule:
 		all-say "(Note: you've cleared all the stores you need to[if number of unsolved regions > 0], though you still have work to do behind them[end if].)[line break]";
 		if Store K is touchable, try objhinting Store K instead;
 		if Store N is touchable, try objhinting Store N instead;
-		all-say "You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
+		all-say "[if debug-state is true]DEBUG: [list of unsolved regions][end if] You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
 	if number of portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
 		if Store U is in Strip of Profits:
@@ -4861,17 +4858,20 @@ to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
 
 book presto-hinting
 
+to say maze-or-pass:
+	say "[if ether is moot][Saps Pass][else]the volt maze[end if]"
+
 this is the presto-hinting rule:
 	if cur-score of presto is 0 and spoilit is false, all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]The yelling and the curst crust are clues. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
 	if hump is touchable, try objhinting hump instead;
 	if plebe is touchable:
 		if spoilit is true and player does not wear tsar star:
-			all-say "The plebe grimaces as you try to eat the crust. He doesn't seem to respect your authority enough to keep a straight face yet.";
+			all-say "The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.";
 			now spoilit is false instead;
 		try objhinting plebe instead;
 	if player is in austerer:
 		if ye hoop is in austerer, try objhinting ye hoop instead;
-		if spoilit is false, all-say "You are done here in Austerer Treasure." instead;
+		if spoilit is false, all-say "You are done here in Austerer Treasure[if censer is not prefigured]. You can do something with the censer, but only on the other side of [maze-or-pass][end if]." instead;
 	if tsar star is touchable and tsar star is in Char Arch, try objhinting tsar star instead;
 	if dart is touchable and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -4905,7 +4905,7 @@ this is the presto-hinting rule:
 			try objhinting ether instead;
 	if player is in Grey Gyre or player is in Char Arch:
 		if Hacks Shack is unvisited:
-			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch] (the yak can be helped later,)[else],[end if] so you maybe should [if Saps Pass is unvisited]go north[else if lawl wall is not moot]go see about getting past the lawl wall [hereish of Saps Pass][else if Hacks Shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+			if spoilit is false, all-say "You're all done here for now[if player is in Char Arch]. The yak can be helped later[end if]. You will want to [if ether is not moot]figure a way past the ether to the north[else if Saps Pass is not visited]see what's north[else if lawl wall is not moot]get by the lawl wall[else if hacks shack is unvisited]enter the shack to the north[else]take care of business in the [shack][end if]." instead;
 	if player is in Saps Pass:
 		if lawl wall is touchable, try objhinting lawl wall instead;
 		if Hacks Shack is unvisited:
@@ -5140,6 +5140,7 @@ to decide which thing is oyster-item:
 	if player has gleaner and gleaner is reflexive, decide on gleaner;
 	if player is in Rascal Craals:
 		if player has digger and player has ruby, decide on ruby;
+		if thin hint is touchable, decide on thin hint;
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
@@ -5157,12 +5158,14 @@ this is the oyster-hinting rule:
 	if player is in Sclerous Closures and bubble wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
 	if player is in Anger Range and eeks are in Hardest Trashed Dearths, all-say "You may want to visit the trout to the east." instead;
 	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
-	if location of player is Rascal Craals and ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
+	if location of player is Rascal Craals:
+		if ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
+		if thin hint is off-stage, say "There's something to do here, but it's not just anagramming." instead;
 	if location of player is End Den, all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]" instead;
 	if haunter is moot and ol trap is not moot:
 		all-say "You can now go further in to the Hedron." instead;
 	repeat through table of oyster-done:
-		if location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]" instead;
+		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]" instead;
 	all-say "BUG. You should never have fallen through here in the hint code." instead;
 	the rule succeeds;
 
@@ -5249,7 +5252,7 @@ to decide which direction is the psgdir of (gu - a guardian):
 	decide on the guadir of gu;
 
 to decide which room is guarded-room of (gu - a guardian):
-	decide on the room (gualoc of gu) of gu;
+	decide on the room (guadir of gu) of (gualoc of gu);
 
 to decide which room is other-room of (gu - a guardian):
 	if player is in gualoc of gu, decide on gualoc of gu;
@@ -5307,10 +5310,6 @@ to decide which thing is otters-cur-item:
 	if current quip is final-quip, decide on elvira;
 	decide on the player;
 
-to say loop-pool-already: say "[one of]The Bran Barn isn't critical since you've solved the Loop Pool, but it'll get extra points.[paragraph break][or][stopping]";
-
-to say bran-barn-already: say "[one of]The Loop Pool isn't critical since you've solved the Bran Barn, but it'll get extra points.[paragraph break][or][stopping]";
-
 to say tho-work: say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
 
 table of animal randomness
@@ -5338,12 +5337,15 @@ shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, 
 cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, whin3}.
 
 this is the otters-hinting rule:
+	if player is in Loop Pool or player is in Bran Barn:
+		if gore ogre is moot and eels are moot, all-say "You found both ways to regain your powers. You don't need to do anything else." instead;
+	if player is in Shiner Shrine and imp is moot, all-say "The path north is cleared[tho-work]." instead;
+	if player is in Clarthead Cathedral and shrewin whiners are moot, all-say "The path south is cleared[tho-work]." instead;
+	if player is in Minded Midden, all-say "You made a way west. You're done here." instead;
+	if player is in Disowned Downside:
+		if Gretta is in Disowned Downside, all-say "Gretta's advice may prove useful. You can win without it, since she will give you an important item no matter what.";
+		all-say "Gretta's gone. You're done here, but you need to [if power-back is false]go north or south to regain your powers[else if enough-animals-solved-here]find your destiny west[else]go back east for help[end if]." instead;
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
-	if player is in Minded Midden, all-say "You made a way west. You're done here." instead; [if there is no item, see what to do next based on where we can go]
-	if player is in Disowned Downside, all-say "[if gretta is in Disowned Downside]Gretta's advice may prove useful. [else]Gretta's gone. [end if]You're done here[if Reclusion Inclosure is unvisited], so you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if]." instead;
-	if player is in Loop Pool or player is in Bran Barn, all-say "You recovered your powers, so there's nothing more to do here." instead;
-	if player is in Shiner Shrine, all-say "The path north is cleared[tho-work]." instead;
-	if player is in Clarthead Cathedral, all-say "The path south is cleared[tho-work]." instead;
 	if player is in Lamer Realm or player is in Perverse Preserve:
 		if power-back is false, all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of the barley[end if]." instead;
 		if player is in Perverse Preserve, all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random touchable pre-animal thing][end if]." instead;
@@ -7592,6 +7594,9 @@ carry out fliptoing (this is the main fliptoing rule):
 			if the-to entry is touchable:
 				set the pronoun it to the-to entry; [assume that we are focused on the item we just flipped]
 				if the-to entry is plural-named, set the pronoun them to the-to entry;
+			if the-to entry is LLPish:
+				d "General LLPish min-up for [noun].";
+				min-up;
 			if there is a post-rule entry, process the post-rule entry;
 			process the show blues rule instead; [for debugging]
 			the rule succeeds;

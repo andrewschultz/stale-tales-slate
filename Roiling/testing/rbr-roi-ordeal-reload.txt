@@ -974,6 +974,10 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >put staple in stapler
 
 >staple curtain
+}}SCORE++
+
+>score
+{$SCOS}
 
 @max
 >au 2
@@ -1050,7 +1054,7 @@ by one point
 }}SCORE++
 }}CURMIN++
 >score
-{$SCOMAX}
+Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 @max
 >x 1

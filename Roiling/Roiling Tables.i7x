@@ -479,7 +479,7 @@ this is the pre-specter-scepter rule:
 	if scepter-nag is false and Respect Specter is not bscanned:
 		now scepter-nag is true;
 		say "The Respect Specter coughs. 'You may wish to scan me in [if specter is ncscanned]cheat[else if specter is cscanned]non-cheat[else]cheat and non-cheat[end if] mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?'";
-		if the player direct-consents:
+		if the player regex-prompt-consents:
 			say "'I respect your choice.'";
 			continue the action;
 		say "'Thank you for respecting my presence and purpose here.'";
@@ -1715,10 +1715,9 @@ a medal check rule for a thing (called x):
 
 section general
 
-report fliptoing (this is the general min up rule):
-	if noun is LLPish:
-		d "General LLPish min-up for [noun].";
-		min-up;
+after fliptoing when mrlp is Ordeal Reload (this is the tell player to move on rule):
+	if rifle is off-stage and min-score of Ordeal Reload is max-score of Ordeal Reload - 1:
+		say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 	continue the action;
 
 volume demo dome tables
@@ -2235,7 +2234,13 @@ definition: a thing (called itm) is all-around:
 	if itm is n-t-air, yes;
 	no;
 
-to say where-pull of (itm - a thing): say "[if itm is all-around]all around[else][the itm]"
+to say where-pull of (itm - a thing):
+	if itm is all-around:
+		say "all around";
+	else if itm is maze walls and player is in Grey Gyre:
+		say "the volt maze";
+	else:
+		say "[the itm]"
 
 to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
 
@@ -2707,7 +2712,7 @@ span pans	"[one of]The span pans are a five-part puzzle. You may guess the final
 shut huts	--	span pans
 tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, or crush them, ...[plus][or]...or BUST them.[minus][cycling]"
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"
-rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[minus][cycling]"
+rigged digger	"[if ruby is off-stage]The rigged digger is used to hide something underground and to remove something from underground, but you're not ready to do either, yet[else if player has ruby][one of]The rigged digger can hide something underground.[plus][or]There's a good candidate for hiding in your inventory. Well, not quite hiding.[plus][or]You can do something with the ruby.[minus][cycling][else][one of]The rigged digger can still be used to excavate something.[plus][or]The digger allows access to the haunter in Anger Rangere's something in Anger Range, if you use the digger right. Hint the hunter hunt area for what verb to use.[minus][cycling]"
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not moot][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 OH NERD HERD NO	"That's just a warning you aren't welcome in the Horned Hedron."
 Achers Chaser Arches	"[if Achers Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
@@ -2754,7 +2759,7 @@ muscly ms lucy	"[muscly-clue]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]The wait-seer also doesn't seem to be getting tired.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
-lois the hostile	"[lois-or-lot]" [I can't link one to the other because the story will look for whichever is moot then say "oops"
+lois the hostile	"[lois-or-lot]" [I can't link one to the other because the story will look for whichever is moot then say "oops" -- well, I could, but it'd be a lot for just one such twiddle.]
 Hostile is He Lot	"[lois-or-lot]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
@@ -2847,14 +2852,14 @@ Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphaticall
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
-Mr Lee	"[loop-pool-already][if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in Bran Barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
-ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
-Gore Ogre	"[loop-pool-already][if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjunction that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or]ERGO.[minus][cycling]"	--	"you can say ERGO"
+Mr Lee	"[if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in Bran Barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
+ghoul hat	"[one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
+Gore Ogre	"[if ghoul hat is not moot]Deal with the ghoul hat first.[else][one of]The gore ogre doesn't seem violent, but maybe there's a conjunction that works on it.[plus][or]Maybe something that can outsmart the Gore Ogre and claim you're right.[plus][or]ERGO.[minus][cycling]"	--	"you can say ERGO"
 Vow Here	"[one of]You don't need to deal with the vow here, but since it appears in an area where you've used conjunctions, you need one more.[plus][or]Listening to the vow here may help a bit.[plus][or]You can say HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
 atmo moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an ATOM"
 le mer	--	sea cube
-sea cube	"[bran-barn-already][one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
-eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
+sea cube	"[one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
+eels	"[one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
 allot atoll	"The allot atoll [if eels are reflexed]was just there to get you your reward[else]in is not helpful on its own, but you'll get there if you help the eels[end if]. You don't need to do anything to it."
 imp1	"[bug-report]"
 imp2	"[bug-report]"

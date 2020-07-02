@@ -125,6 +125,8 @@ text	a number	a thing	a rule	text
 
 to say here-there of (rm - a room): say "[if player is in rm]here[else][rm][end if]"
 
+to say in-here-there of (rm - a room): say "[if player is in rm]here[else]in [rm][end if]"
+
 section region scoring
 
 to poss-d:
