@@ -2,12 +2,13 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt
+files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt,reg-roi2-presto-slider.txt,reg-roi2-presto-hints.txt
 
 ~	min	t1
 ~	max	t0
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
+~	hints,hin	t4
 
 }}MAX=41
 }}CURMAX=41
@@ -35,6 +36,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >presto
 >enter tornado
 Grey Gyre
+
+@hin
+>monty hints
+You haven't gotten any points yet, so you probably want to find what sort of word is used here.
 
 @max
 #pre-plebe-bleep rule
@@ -65,7 +70,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for volt maze
+#spechelp for maze walls
 >veltamoz
 The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That's a decent omen.
@@ -129,6 +134,9 @@ You don't need to levitate the hump. You need a way to jump over it.
 Your score has just gone up by one point
 Austerer Treasure
 
+@hin
+DEBUG INFO: Ye Hoop hinting.
+
 >score
 {$SCOS}
 
@@ -188,6 +196,10 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
+@hin
+>z
+You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
+
 >score
 {$SCOS}
 
@@ -229,6 +241,9 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 
 >e
 
+@hin
+DEBUG INFO: plebe hinting.
+
 @nud
 #nudge for hump
 >umhp
@@ -236,6 +251,9 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 
 >s
 Char Arch
+
+@hin
+DEBUG INFO: tsar star hinting.
 
 @nud
 #mistake test for tars
@@ -361,6 +379,9 @@ You are just trolling now. No further clues for you.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: dart hinting.
+
 @nud
 #mistake retest for tars
 >tars
@@ -372,6 +393,9 @@ But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 >drat
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
 
 >score
 {$SCOS}
@@ -409,14 +433,14 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: volt maze hinting.
+
 >score
 {$SCOS}
 
 @nud
-#spechelp for maze walls
->mazeltvo
-The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
+##balance undos
 >n
 >w
 #respechelp for maze walls
@@ -432,6 +456,9 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 
 >e
 Marines Seminar Remains
+
+@hin
+DEBUG INFO: boing-go bin hinting.
 
 @nud
 #mistake test for oppugn [text]/oppugn
@@ -492,6 +519,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >rpsto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
 >bingo
 #pre-boing-bingo rule
 (taking the popgun first while you mess with the boing-go bin)
@@ -772,6 +800,9 @@ No chance.
 >whupass
 No chance.
 
+@hin
+DEBUG INFO: Leo hinting.
+
 >ole
 }}SCORE++
 by one point
@@ -832,6 +863,10 @@ by one point
 >darn
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
+
 >score
 {$SCOS}
 
@@ -878,6 +913,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >whassup
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
 
 >score
 {$SCOS}
@@ -933,6 +971,9 @@ You need to fix the popgun.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: PG-on-up popgun hinting.
+
 >score
 {$SCOS}
 
@@ -972,6 +1013,9 @@ THERE, you think, realizing you're not effectively armed yet.
 
 >load gun with dart
 
+@hin
+DEBUG INFO: ether hinting.
+
 @nud
 #spechelp for ether
 >theer
@@ -986,6 +1030,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >there
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+You will want to see what's north.
+>n
+>s
+You will want to get by the lawl wall.
 
 >score
 {$SCOS}
@@ -1102,11 +1152,17 @@ Despite being dangerous to walk into, Deil's Slide serves an important ecologica
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
+@hin
+DEBUG INFO: lawl wall hinting.
+
 >syke
 }}SCORE++
 Your score has just gone up by one point
 
 Phat Path
+
+@hin
+DEBUG INFO: harpings phrasing hinting.
 
 @nud
 #mistake test for ptah
@@ -1300,6 +1356,9 @@ Dat was a good dust-up
 @min
 #GOODNESS is no longer available
 }}CURMAX--
+
+@hin
+You're all done here in the Phat Path. Go north to the shack.
 
 >score
 {$SCOS}
@@ -2000,7 +2059,7 @@ Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
 #spechelp for drive e
 >drivee
-Hmm. Drive E (the E drive) has omething wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
+Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
 #mistake test for redive
 >redive
@@ -2133,6 +2192,9 @@ The mug is already somehow generating infinite cola. Don't want to mess with tha
 >debug
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: USB hinting.
 
 >score
 @min

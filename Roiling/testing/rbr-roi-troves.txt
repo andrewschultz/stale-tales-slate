@@ -724,7 +724,8 @@ Your score has just gone up by one point
 Browse Bowers
 
 @hin
-DEBUG INFO: Dir See hinting.
+DEBUG INFO: Si Reed hinting.
+!DEBUG INFO: See Dir hinting.
 
 @mina,minb
 }}CURMAX-=2
