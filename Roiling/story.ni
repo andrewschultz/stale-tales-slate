@@ -17510,6 +17510,7 @@ after fliptoing a guardian (this is the guardian taunt and track progress rule) 
 			continue the action;
 
 after fliptoing a guardian (this is the recalculate minimums no matter what rule) :
+	choose-new-hint-guardian;
 	shuffle-guardians noun;
 	continue the action;
 
@@ -17628,9 +17629,6 @@ to shuffle-guardians (goner - a guardian):
 	d "Reds left = [list of not moot red guardians].";
 	d "Blues left = [list of not moot blue guardians].";
 	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
-	if guar-here > 0:
-		now guardian-to-hint is a random touchable guardian;
-		if debug-state is true, say "Choosing [guardian-to-hint] from [list of touchable guardians].";
 	if MR is Salted Deltas:
 		now Artist Traits Strait is tower-accessible;
 		now Actionless Coastlines is accessible;
@@ -17681,23 +17679,18 @@ any-cleared is a truth state that varies;
 
 guardian-to-hint is a guardian that varies.
 
-check going (this is the guardian reposition before rule):
+check going (this is the guardian taunt and block rule):
 	if mrlp is Towers:
 		if noun is not a direction, say "You need to specify a direction, not a place." instead;
 		if Mislit Limits is visited, continue the action; [probably not necessary but due to a silly hack with the stinger, I just want to make sure of things]
 		repeat with QQ running through guardians:
 			if QQ is touchable:
-				choose row with guy of QQ in table of guard-org;
-				if QQ is not moot:
+				if (gualoc of QQ is location of player and guadir of QQ is noun) or (gualoc of QQ is not location of player and guadir of QQ is opposite of noun):
 					now QQ is passtried;
-					if loc entry is location and blockdir entry is noun:
-						if blockdir entry is neuter, set the pronoun it to blockdir entry;
-						now guardian-to-hint is QQ;
-						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
-					if loc entry is not location and blockdir entry is opposite of noun:
-						now guardian-to-hint is QQ;
-						if blockdir entry is neuter, set the pronoun it to blockdir entry;
-						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
+					if QQ is neuter, set the pronoun it to QQ;
+					now guardian-to-hint is QQ;
+					choose row with guy of QQ in table of guard-org;
+					say "You're blocked going [noun] by [the QQ]. [blokzorz entry][line break]" instead;
 		if number of taunty guardians > 0:
 			let QQ be a random taunty guardian;
 			choose row with guy of QQ in table of guard-org;
@@ -17710,11 +17703,15 @@ definition: a guardian (called myg) is taunty:
 	if there is a taunt entry, decide yes;
 	decide no;
 
+to choose-new-hint-guardian:
+	if guar-here is 0, continue the action;
+	now guardian-to-hint is a random touchable guardian; [more detailed choosing later]
+
 after going (this is the guardian reposition after rule):
 	if mrlp is Towers:
 		now guardians-seen is 0;
 		reposition-guardians;
-		if guar-here > 0, now guardian-to-hint is a random touchable guardian;
+		choose-new-hint-guardian;
 	continue the action;
 
 chapter reposition-guardians
@@ -17758,20 +17755,6 @@ carry out allranding:
 		say "Moved all picaros to Loftier Trefoil.";
 	now all picaros are in Loftier Trefoil;
 	the rule succeeds.
-
-chapter warwaring - not for release
-
-warwaring is an action applying to nothing.
-
-understand the command "warwar" as something new.
-
-understand "warwar" as warwaring when player is in Loftier Trefoil.
-
-carry out warwaring:
-	repeat with WA running through not leaderly picaros in Loftier Trefoil:
-		try fliptoing WA;
-	try fliptoing Rodney;
-	the rule succeeds;
 
 chapter picaros
 

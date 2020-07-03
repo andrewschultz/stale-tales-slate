@@ -836,6 +836,22 @@ carry out roming:
 		oscan rb;
 	say "All things in Ordeal Reload are now scanned both ways.";
 
+chapter picpicing
+
+picpicing is an action applying to nothing.
+
+understand the command "picpic" as something new.
+understand the command "warwar" as something new. ["warrior" backwards compatibility]
+
+understand "picpic" as picpicing when player is in Loftier Trefoil.
+understand "warwar" as picpicing when player is in Loftier Trefoil.
+
+carry out picpicing:
+	repeat with pic running through not leaderly picaros in Loftier Trefoil:
+		try fliptoing pic;
+	try fliptoing Rodney;
+	the rule succeeds;
+
 chapter otwin
 
 [* OTWIN almost-wins otters]
