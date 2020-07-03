@@ -1,12 +1,13 @@
 # run this file with rbr.py
 #
-files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt,reg-roi2-otters-slider.txt
+files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt,reg-roi2-otters-altpath.txt,reg-roi2-otters-slider.txt,reg-roi2-otters-hints.txt
 
 ~	max	t0
 ~	min	t1
 ~	nudmis,nudges,nud,nu,mis	t2
 ~	alt	t3
 ~	sli	t4
+~	hints,hin	t5
 
 }}MAX=32
 }}CURMAX=32
@@ -29,6 +30,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >posf
 
+@hin
+>monty hints
+
 >seed 1
 >ts
 >a5
@@ -36,6 +40,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >otters
 >opt in
 >enter solid idols
+
+@hin
+DEBUG INFO: bleary barley hinting.
 
 @nud,sli
 >allrand
@@ -93,6 +100,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >barely
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: Ed Riley hinting.
 
 >score
 {$SCOS}
@@ -179,7 +189,7 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 #spechelp for ed riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
-DEBUG ONLY: You feel a slight psychic push-pull coming from the ed riley. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
 #mistake test for deli-rye-otters
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
@@ -221,6 +231,9 @@ DEBUG INFO: min-up codepath
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+You made a way west. You're done here.
+
 @nud
 #nudge for cinders
 >cindesr
@@ -231,6 +244,9 @@ The cinders are gone for good.
 
 >w
 Disowned Downside
+
+@hin
+DEBUG INFO: macks hinting.
 
 @nud
 #nudge for bossy
@@ -580,6 +596,9 @@ Wow! Three things to consider here. This might be tricky.
 Well, you have a feeling you know what that question mark should be.
 >undo
 
+@hin
+!DEBUG INFO: Gretta
+DEBUG INFO: macks hinting.
 
 @nud
 #note these are not shown in the table of spechelp since these are generic rejects for any mack-idea
@@ -604,9 +623,13 @@ Your score has just gone up by one point.
 >blearily
 Your score has just gone up by one point.
 }}SCORE++
+
+@hin
+DEBUG INFO: Gretta Garett-Tatger hinting.
+Gretta has an important item for you once you finish chatting.
+
 >score
 {$SCOS}
-
 >au -1
 
 @nud
@@ -616,9 +639,17 @@ Gretta's been manipulated enough.
 !macks
 
 >1
+
+@hin
+DEBUG INFO: Gretta Garett-Tatger hinting.
+
 >3
 
->n
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+@hin
+Gretta's gone. The first thing to do is to go north or south to regain your powers.
 
 @nud
 #mistake retest for slap em
@@ -731,15 +762,27 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a d
 You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
 !by one point
 
+@hin
+DEBUG INFO: sea cube hinting.
+!The Loop Pool isn't critical since you've solved the Bran Barn, but the puzzle may still interest you.
+
 >because
 by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: eels hinting.
+
 >score
 {$SCOS}
 
 >else
 by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: medals hinting.
+
 >score
 {$SCOS}
 
@@ -773,6 +816,9 @@ min-up
 >undo
 
 >s
+
+@hin
+DEBUG INFO: atmo-moat hinting.
 
 @nud
 #renudge for ly
@@ -819,13 +865,17 @@ The infidel infield is Mr. Lee's, and it expresses things from his perspective. 
 Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
 !by one point
 
+@hin
+DEBUG INFO: ghoul hat hinting.
+The Bran Barn isn't critical since you've solved the Loop Pool, but the puzzle may still interest you.
+
 @!min
 >although
 by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
-\\
+{--hin}DEBUG INFO: Gore Ogre hinting.
 >score
 {$SCOS}
 
@@ -891,9 +941,15 @@ You feel sheepish having used the settler, but it's been a long journey.
 >tamo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@hin
+DEBUG INFO: atmo-moat hinting.
+
 >atom
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+Gretta's gone. Go back east for help.
 
 >score
 {$SCOS}
@@ -902,6 +958,9 @@ Your score has just gone up by one point
 
 >n
 Shiner Shrine
+
+@hin
+DEBUG INFO: simply sly imp hinting.
 
 @sli
 #slider test for brutely
@@ -1001,12 +1060,20 @@ You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger P
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: simply sly imp hinting.
+You may need yet another adverb. (+)
+
 >score
 {$SCOS}
 
 >angrily
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+!DEBUG INFO: medals hinting.
+The path north is cleared, though you still have work there.
 
 >score
 {$SCOS}
@@ -1038,6 +1105,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >slow
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
 
 >score
 {$SCOS}
@@ -1161,12 +1231,18 @@ PAROLED
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+/DEBUG INFO: (leopard|stray satyr|badger) hinting\.
+
 >score
 {$SCOS}
 
 >paroled
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/DEBUG INFO: (stray satyr|badger) hinting\.
 
 >score
 {$SCOS}
@@ -1182,6 +1258,9 @@ You see TSYRA branded under the stray satyr's shoulder.
 >artsy
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: medals hinting.
 
 >score
 {$SCOS}
@@ -1254,6 +1333,10 @@ The badger no longer feels second-rate, so it needs no more help.
 >s
 
 Clarthead Cathedral
+
+@hin
+DEBUG INFO: shrewin' whiners hinting.
+The whiners have a lot of energy and exercise it many different ways. (+)
 
 @mis
 #mistake test for sherwin
@@ -1343,6 +1426,10 @@ You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: shrewin' whiners hinting.
+You can soften them up a bit more. (+)
+
 >score
 {$SCOS}
 
@@ -1350,6 +1437,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 They find another place where rioters roister.
 }}SCORE++
+
+@hin
+!DEBUG INFO: medals hinting.
+The path south is cleared, though you still have work there.
 
 >score
 {$SCOS}
@@ -1367,9 +1458,15 @@ Perverse Preserve
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
 
+@hin
+DEBUG INFO: raptor hinting.
+
 >parrot
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/DEBUG INFO: (snipe|thrones|corona|nails) hinting\.
 
 >score
 {$SCOS}
@@ -1527,6 +1624,9 @@ min-up
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+/DEBUG INFO: (snipe|thrones|corona) hinting\.
+
 >score
 {$SCOS}
 
@@ -1539,12 +1639,18 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+/DEBUG INFO: (thrones|corona) hinting\.
+
 >score
 {$SCOS}
 
 >racoon
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: medals hinting.
 
 >score
 {$SCOS}
@@ -1597,6 +1703,9 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 >n
 >w
 
+@hin
+Gretta's gone. Fulfill your destiny to the west.
+
 @max
 #pre-parrot-raptor rule
 >raptor
@@ -1605,6 +1714,9 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 
 >w
 Reclusion Inclosure
+
+@hin
+DEBUG INFO: parrot hinting.
 
 @nud
 #nudge for inclosure
@@ -1822,6 +1934,9 @@ The parrot can be changed back into a raptor, but not into anything new.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: weltish whistle hinting.
+
 @min
 }}CURMAX-=2
 
@@ -1924,6 +2039,9 @@ You already got a boost from the medals.
 >deeply
 Your score has just gone up by one point
 }}SCORE++
+
+DEBUG INFO: Elvira hinting.
+Just PLAY THE WHISTLE to defeat her.
 
 >w
 

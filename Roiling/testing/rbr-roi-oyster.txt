@@ -1,11 +1,12 @@
 # run this file with rbr.py
 #
-files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt,reg-roi2-oyster-slider.txt
+files=reg-roi2-oyster-max.txt,reg-roi2-oyster-min.txt,reg-roi2-oyster-nudmis.txt,reg-roi2-oyster-slider.txt,reg-roi2-oyster-hints.txt
 
 ~	max	t0
 ~	min	t1
 ~	nudmis,nudges,nud,nu,mis	t2
 ~	sli	t3
+~	hints,hin	t4
 
 }}MAX=42
 }}CURMAX=42
@@ -32,6 +33,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter barnacle balancer
 Posh Hops Shop
 >posf
+
+@hin
+>monty hints
 
 >score
 {$SCOS}
@@ -65,6 +69,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+##balance undos
 >remap
 by one point
 #nudge for remap
@@ -73,6 +78,7 @@ You already got a temporary escape from the bad music. You can't really do any m
 #nudge for unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
+>undo
 >undo
 >undo
 
@@ -356,6 +362,9 @@ by one point
 
 Olde Lode
 
+@hin
+DEBUG INFO: clam hinting.
+
 >thisalt
 @min
 are the other actions that would've annoyed Posh Hops Shop pesty types instead of SPILLing the pills.
@@ -423,6 +432,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >calm
 Your score has just gone up by one point
 
+@hin
+DEBUG INFO: urn hinting.
+
 >score
 }}SCORE++
 {$SCOS}
@@ -445,6 +457,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 Disease Seaside
+
+@hin
+DEBUG INFO: boats hinting.
+>enter raft
+DEBUG INFO: frat raft hinting.
+>fart
+DEBUG INFO: interlocking oars hinting.
+>undo
+>undo
 
 >score
 }}SCORE++
@@ -610,6 +631,9 @@ Your score has just gone up by one point
 
 Fighter Freight
 
+@hin
+DEBUG INFO: pale plea hinting.
+
 >score
 {$SCOS}
 
@@ -651,6 +675,9 @@ The pale plea already sort of is. You need a stronger action than that.
 >leap
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+/DEBUG INFO: (pikes|carps) hinting.
 
 Anger Range
 
@@ -730,9 +757,9 @@ Silly internet slang isn't active enough, here.
 >renga
 Now is not the time for poetry.
 
+@max
 >spike
 Your score has just gone up by one point
-}}SCORE++
 >thisalt
 --you could've tried to SCRAP with the carps to rescue Tortu.
 !--you could've tried to SPIKE the pikes to rescue Tortu.
@@ -743,6 +770,14 @@ Your score has just gone up by one
 >thisalt
 !--you could've tried to SCRAP with the carps to rescue Tortu.
 --you could've tried to SPIKE the pikes to rescue Tortu.
+@!
+>scrap
+Your score has just gone up by one
+
+}}SCORE++
+
+@hin
+DEBUG INFO: HUNTER HUNT AREA hinting.
 
 @nud
 #readables for scrawl
@@ -758,7 +793,10 @@ It's probably not just any scrawl. What the scrawl says may be important.
 Nothing to unearth the haunter with.
 
 >e
-Dearths
+Hardest Trashed Dearths
+
+@hin
+DEBUG INFO: eeks hinting.
 
 @sli
 #slider test for seek
@@ -835,6 +873,9 @@ Your score has just gone up by one point
 
 Lean Lane
 
+@hin
+DEBUG INFO: tea tray hinting.
+
 >score
 {$SCOS}
 
@@ -902,6 +943,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: trout hinting.
+
 >score
 {$SCOS}
 
@@ -932,6 +976,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tutor
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
+
 
 >score
 {$SCOS}
@@ -993,6 +1041,10 @@ You will need to use them all at once, and on something else
 >w
 >n
 Lapsin' Plains
+
+@hin
+DEBUG INFO: wherever the crate is coming from hinting.
+DEBUG INFO: crate hinting.
 
 @max
 >warp
@@ -1190,6 +1242,10 @@ Hmm, no, it's only one crate at a time.
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+!DEBUG INFO: wherever the crate is coming from hinting.
+DEBUG INFO: crate hinting.
+
 >score
 {$SCOS}
 
@@ -1219,6 +1275,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a 
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: skis hinting.
+
 >score
 {$SCOS}
 
@@ -1242,6 +1301,9 @@ Not worth messing with the fragments any more.
 >kiss
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: knob hinting.
 
 >score
 {$SCOS}
@@ -1293,6 +1355,9 @@ The message was corny, but the door was a piece of cake since you figured what t
 
 Shuttle Hutlets
 
+@hin
+DEBUG INFO: tubs hinting.
+
 @nud
 #mistake test for auth
 >auth
@@ -1333,6 +1398,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bust
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: prod hinting.
 
 >score
 {$SCOS}
@@ -1512,6 +1580,9 @@ You need an organized way to reveal what's under the ground with your rigged dig
 >w
 Sclerous Closures
 
+@hin
+DEBUG INFO: bubble wrap hinting.
+
 @nud
 #mistake test for rasche
 >rasche
@@ -1559,12 +1630,18 @@ A snider near-dis from the sardine keeps you in check. You'll need to get rid of
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: Achers' Chaser Arches hinting.
+
 >score
 {$SCOS}
 
 >search
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: general gleaner hinting.
 
 >score
 {$SCOS}
@@ -1630,6 +1707,9 @@ It's already been made bigger. Not much more you can do with it except examine i
 >n
 Horned Hedron
 
+@hin
+DEBUG INFO: weaselly walleyes hinting.
+
 @max
 #pre-patrol-ol-trap rule
 >patrol
@@ -1674,6 +1754,9 @@ The walleyes are a bad crowd, past redemption.
 
 >w
 Rascal Craals
+
+@hin
+DEBUG INFO: ruby hinting.
 
 @nud
 #nudge for craals
@@ -1737,6 +1820,9 @@ by one point
 by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: haunter hinting.
+
 >score
 {$SCOS}
 
@@ -1771,11 +1857,22 @@ You can't change the haunter, but maybe you can show it something.
 by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: ol' trap hinting.
+
 >score
 {$SCOS}
 
 >w
+
+@hin
+DEBUG INFO: ol' trap hinting.
+
 >n
+
+@hin
+DEBUG INFO: ol' trap hinting.
+
 >w
 
 >e
@@ -1847,6 +1944,9 @@ You see a map of all the paths in the Horned Hedron.
 It's already been made bigger. Not much more you can do with it.
 
 >in
+
+@hin
+DEBUG INFO: papery yapper hinting.
 
 Tenfold Teflon'd Den Loft
 
@@ -1920,6 +2020,9 @@ Your score has just gone up by one
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: dialer hinting.
+
 >score
 {$SCOS}
 
@@ -1955,7 +2058,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 }}CURMIN+=2
 \\
 Plasm Lamps
-\\
+
+@hin
+DEBUG INFO: natant ant hinting.
+
+@!min
 >score
 {$SCOS}
 
@@ -2017,17 +2124,17 @@ by one point
 #renudge for plam
 >plma
 You did enough.
-\\
-#nudge for ant
->tna
-That's close. Something brutal and direct.
 
 @!min
 >tan
 #notana 'nudge for ant'
 Your score has just gone up by one point
 }}SCORE++
-\\
+
+@hin
+DEBUG INFO: dialer hinting.
+
+@!min
 >score
 {$SCOS}
 
@@ -2072,6 +2179,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >derail
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: pins hinting.
 
 >score
 @min
@@ -2118,6 +2228,9 @@ Your score has just gone up by one
 >spin pins
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: dialer hinting.
 
 >score
 @min
