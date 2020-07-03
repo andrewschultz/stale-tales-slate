@@ -275,14 +275,44 @@ check objasking a guardian about a guardian (this is the guardian general chat r
 	if second noun is moot, say "Threats or reminiscing won't get you anywhere." instead;
 	say "Your grilling runs up against plausible deniability. Who? What? Where?" instead;
 
-the specification of guardian is "A person that blocks your way through the towers area until you describe him correctly."
+the specification of guardian is "A person that blocks your way through the towers area until described correctly."
 
-after doing something with a guardian:
+after doing something with a guardian (this is the set guardian pronouns rule):
 	if noun is organised or noun is hostile is he lot:
 		set the pronoun them to noun;
 	else:
 		set the pronoun it to noun;
 	continue the action;
+
+section guardian stubs
+
+to decide which direction is the psgdir of (gu - a guardian):
+	if gualoc of gu is not location of player, decide on the opposite of the guadir of gu;
+	decide on the guadir of gu;
+
+to decide which room is far-room of (gu - a guardian):
+	decide on the room (guadir of gu) of (gualoc of gu);
+
+to decide which room is other-room of (gu - a guardian):
+	if player is in gualoc of gu, decide on far-room of gu;
+	decide on gualoc of gu;
+
+gua-warn is a truth state that varies.
+
+to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a generic and deprecated way to find a hint. It's only used if my other code falls through.]
+	let Z be north;
+	if gua-warn is false:
+		ital-say "in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to HINT (guardian) instead.";
+		now gua-warn is true;
+	if guar-here is 1:
+		let myg be a random touchable guardian;
+		try objhinting myg;
+		continue the action;
+	repeat with D running through { north, east, west, south }:
+		repeat with VG running through touchable guardians:
+			if psgdir of VG is d:
+				try objhinting VG;
+				continue the action;
 
 chapter rules on stub
 
@@ -306,6 +336,7 @@ every turn when Strip of Profits is visited (this is the region-hint on no score
 [				reject the player's command;]
 
 before going north when block-north is true:
+	say "This is a weird case where I blocked going north in cases like Z.Z.Z.N as I couldn't quite wangle with the parser--the command could be NO or NORTH. It should almost never come up. Sorry about that. Try going north again.";
 	do nothing instead; [?! hack to get rid of z.z.z.z. and answer n]
 
 the player is terse.
@@ -5199,7 +5230,7 @@ this is the towers-hinting rule:
 	if stinger is touchable, try objhinting stinger instead;
 	if weeds are touchable, try objhinting weeds instead;
 	if guar-here > 0:
-		d "[list of touchable guardians].";
+		d "Touchable guardians: [list of touchable guardians].";
 		d "Guardian we are looking for = [guardian-to-hint].";
 		if guardian-to-hint is touchable, try objhinting guardian-to-hint instead;
 		d "Oops! A bug!";
@@ -5247,34 +5278,6 @@ to say seen-scope:
 to decide what indexed text is the vul of (pi - a picaro):
 	choose row with the-from of pi in table of towers anagrams;
 	decide on "[right-word entry]";
-
-to decide which direction is the psgdir of (gu - a guardian):
-	if gualoc of gu is not location of player, decide on the opposite of the guadir of gu;
-	decide on the guadir of gu;
-
-to decide which room is guarded-room of (gu - a guardian):
-	decide on the room (guadir of gu) of (gualoc of gu);
-
-to decide which room is other-room of (gu - a guardian):
-	if player is in gualoc of gu, decide on gualoc of gu;
-	decide on guarded-room of gu;
-
-gua-warn is a truth state that varies.
-
-to any-guardian-hint: [note: we are assured there is > 1 guardian]
-	let Z be north;
-	if gua-warn is false:
-		ital-say "in the Towers area, when multiple guardians are potentially visible, I can only guess which you mean. You may wish to HINT (guardian) instead.";
-		now gua-warn is true;
-	if guar-here is 1:
-		let myg be a random touchable guardian;
-		try objhinting myg;
-		continue the action;
-	repeat with D running through { north, east, west, south }:
-		repeat with VG running through touchable guardians:
-			if psgdir of VG is d:
-				try objhinting VG;
-				continue the action;
 
 book otters-hinting
 
@@ -17705,7 +17708,31 @@ definition: a guardian (called myg) is taunty:
 
 to choose-new-hint-guardian:
 	if guar-here is 0, continue the action;
-	now guardian-to-hint is a random touchable guardian; [more detailed choosing later]
+	let max-priority be 0;
+	let guardian-list be a list of things;
+	repeat with gcand running through touchable guardians:
+[		if debug-state is true, say "[gcand]: [other-room of gcand], [guard-hint-prio of gcand] vs max [max-priority].";]
+		if guard-hint-prio of gcand < max-priority, next;
+		if guard-hint-prio of gcand > max-priority:
+			now guardian-list is {};
+			now max-priority is guard-hint-prio of gcand;
+		add gcand to guardian-list;
+	sort guardian-list in random order;
+	let RND be a random number from 1 to number of entries in guardian-list;
+	now guardian-to-hint is entry RND of guardian-list;
+	if debug-state is true, say "DEBUG: guardian hint choice is [guardian-to-hint] from [guardian-list].";
+
+to decide which number is guard-hint-prio of (gu - a guardian): [I use "other-room" here to make clear what map squares we need to go. "if gu is butlers" would be shorter code, but it wouldn't quite say what the guardian guarded, which is more important]
+	if other-room of gu is lost lots or other-room of gu is fringe finger, decide on 1; [these are totally optional.]
+	if other-room of gu is shaven havens or other-room of gu is obscurest subsector, decide on 10; [these feature the big Dr Yow quest]
+	if other-room of gu is outer route: [take care of scope copse special case. One of diners/muscly if all 3 there, then butlers take priority]
+		if diners are moot or muscly luc sym is moot, decide on 9;
+		decide on 2;
+	if other-room of gu is actionless coastlines, decide on 7; [whether or not AC is visited, it's important. You need to bump off both guardians. But unlocking corner/center rooms comes first. Then unlocking AC. Then other passages.]
+	if other-room of gu is not tower-accessible: ["unvisited" almost works but if we, say, DINERS, E, DRAINED, HIMSELF, N, RELEASED, E, we want to point north to open up Coastlines]
+		if other-room of gu is treading gradient or other-room of gu is anemic cinema or other-room of gu is danger garden, decide on 8; [all critical rooms]
+		decide on 6;
+	decide on 5; [the number values themselves don't matter. We want to direct the player to the most important areas.]
 
 after going (this is the guardian reposition after rule):
 	if mrlp is Towers:
