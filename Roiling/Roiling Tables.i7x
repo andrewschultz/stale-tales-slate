@@ -2994,7 +2994,7 @@ to say where-is-digger:
 	else:
 		say "Your digger should do the job[if ruby is moot], but it has another use elsewhere, first[end if]"
 
-to say muscly-clue: say "[one of]Being muscly is nice, but if [he-she] were to get too tangled up to use [his-her] strength...[no line break][plus][or]Maybe if [he-she] weren't so coordinated, [his-her] muscle would be ineffective?[plus][or]CLUMSY.[minus][cycling]"
+to say muscly-clue: say "[one of]Being muscly is nice, but if [he-she] were to get too tangled up to use [his-her] strength...[no line break][plus][or]Maybe if [he-she] weren't so coordinated, [his-her] muscle would be ineffective?[no line break][plus][or]CLUMSY.[minus][cycling]"
 
 to say lois-or-lot: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 

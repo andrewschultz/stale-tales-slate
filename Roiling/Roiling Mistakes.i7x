@@ -108,7 +108,7 @@ understand "destro" as a mistake ("It's going to get evil enough even without a 
 
 understand "doters" as a mistake ("You don't need people oohing and ahing at your skill.") when player is in Strip of Profits.
 
-understand "ektor" and "ektors" as a mistake ("There is not any crossover with Marco Innocenti's Andromeda Collection here. I'd feel kind of cyanotic putting too much in.") when Store K is in location of player or tokers are in location of player.
+understand "ektor" and "ektors" as a mistake ("There's only one Ektor Mastiff, and to find him, you'd need to visit Marco Innocenti's most un-cyanotic Andromeda Collection.") when Store K is in location of player or tokers are in location of player.
 
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is in location of player.
 
@@ -700,6 +700,8 @@ chapter Loftier Trefoil
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
 
 understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when Edwin is touchable.
+
+understand "nerd yo" and "nerdy o" and "yo nerd" as a mistake ("Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.") when Rodney is touchable. [O NERDY doesn't work, as it becomes OOPS NERDY.]
 
 understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when Daryl is touchable.
 

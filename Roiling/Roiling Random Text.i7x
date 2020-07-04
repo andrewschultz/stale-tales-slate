@@ -39359,6 +39359,7 @@ blurb
 "hi-scan chains" []
 "hostler holster"
 "increm-mincer" []
+"inerter terrine"
 "Informed-Mo['] Finder" []
 "Infra-Depth Pathfinder"
 "InReal Linear-Aliner" []
@@ -39470,7 +39471,7 @@ blurb
 "emulating Clasher Charles" [x]
 "everyone being a little stouter than Frail Ralfi" [x]
 "everyone being more attentive than Lax Axl" [x]
-"exhorts his team to be more together than Envier Vernie" [x]
+"being more together than Envier Vernie" [x]
 "following the leadership lessons of Steerin['] Steiner" [x]
 "getting grittier than Vain Ivan" [x]
 "getting out in the real world unlike Cyber-Bryce" [x]
@@ -39479,7 +39480,6 @@ blurb
 "having more discipline than Beerin['] Bernie" [x]
 "having more of a clue than Mess-it-Up Septimus" [x]
 "having top skills like Eagle Algee" [x]
-"an inerter terrine"
 "keeping in shape unlike Lardo Roald" [x]
 "keeping it simple as possible, like Able Abel" [x]
 "keeping motivated unlike Jader Jared"

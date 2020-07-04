@@ -1257,7 +1257,9 @@ carry out gotoing:
 		elvira-flee-taunt;
 	if mrlp is demo dome, say "You rush, despite having nothing urgent to do.";
 	move player to noun;
-	if mrlp is towers and can-see-map, draw-my-loc;
+	if mrlp is towers:
+		if can-see-map, draw-my-loc;
+		choose-new-hint-guardian;
 
 when play begins (this is the seed room progress for GO TO rule) :
 	repeat through table of progvals:
@@ -17765,9 +17767,9 @@ to reposition-guardians:
 
 to move-with-aux (myg - a guardian):
 	let ai be aux-item of myg;
-	if debug-state is true, say "DEBUG: [ai] is an auxiliary item. We put it in play, too.";
 	move myg to location of player;
 	if ai is letters settler, continue the action;
+	if debug-state is true, say "DEBUG: [ai] is an auxiliary item. We put it in play, too.";
 	if ai is Reeds Ale:
 		now myg carries ai;
 	else:
@@ -17959,7 +17961,9 @@ when play begins (this is the distribute picaros rule) :
 				now QQ is in Loftier Trefoil;
 	pick-a-picaro;
 
-to pick-a-picaro: now h-p is a random not leaderly picaro in Loftier Trefoil;
+to pick-a-picaro:
+	now h-p is a random not leaderly picaro in Loftier Trefoil;
+	if debug-state is true, say "DEBUG INFO: [h-p] is the next prosaic picaro to hint.";
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 

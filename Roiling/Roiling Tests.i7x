@@ -852,6 +852,36 @@ carry out picpicing:
 	try fliptoing Rodney;
 	the rule succeeds;
 
+chapter gforceing
+
+gforceing is an action applying to one visible thing.
+
+understand "gf [any room]" as gforceing.
+
+definition: a room (called rm) is deadendy:
+	let temp be 0;
+	repeat with DI running through cardinal directions:
+		unless the room DI of rm is nowhere, increment temp;
+	if temp is 1, yes;
+	no;
+
+carry out gforceing:
+	if mrlp is not towers, say "GFORCE only works in TOWERS." instead;
+	if map region of noun is not towers, say "GFORCE only works moving to another room in TOWERS." instead;
+	if progval of noun is not 2, say "[noun] is not a mainland room." instead;
+	if noun is deadendy, say "[noun] is a dead end room. The only way to get there is to remove its only guardian." instead;
+	repeat with QQ running through guardians:
+		unless QQ gendermatches:
+			if QQ is in noun, now QQ is off-stage;
+			next;
+		if gualoc of QQ is noun or far-room of QQ is noun:
+			move QQ to noun;
+		else:
+			now QQ is off-stage;
+	move the player to noun;
+	choose-new-hint-guardian;
+	say "(You may wish to UNDO once you see the debug text.)";
+
 chapter otwin
 
 [* OTWIN almost-wins otters]
@@ -992,8 +1022,6 @@ to place-warrior (myp - a number) and (myi - a number):
 			now QQ is in Loftier Trefoil;
 			say "[QQ] to Loftier Trefoil.";
 			the rule succeeds;
-	pick-a-picaro;
-	say "BUG: didn't get anything for pod [myp] index [myi2]."
 
 to place-idea (myp - a number) and (myi - a number):
 	let temp-ord be 0;
@@ -1048,7 +1076,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 				assign-fixed-mack-priority;
 	if the remainder after dividing seedflags by 4 < 2:
 		if Loftier Trefoil is visited and number of moot picaros > 0: [first, seed the start of TOWERS]
-			say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
+			say "Skipping Trefoil seeding as you've already disposed of [number of moot picaros] warrior[if number of moot picaros > 1]s[end if]. Restart if you wish to re-seed.";
 		else:
 			if act-index > 5:
 				say "Decreasing index to 5 for the Trefoil.";
@@ -1056,6 +1084,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 			now all picaros are off-stage;
 			repeat with J running from 1 to 7:
 				place-warrior J and act-index;
+			pick-a-picaro;
 
 chapter palling
 
