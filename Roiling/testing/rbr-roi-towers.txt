@@ -7,12 +7,13 @@
 # spechelp should be right before @!minh,mini
 # what is towers-f for? Can we delete it?
 
-files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt
+files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.txt,reg-roi2-towers-nudmis.txt,reg-roi2-towers-slider.txt,reg-roi2-towers-hints.txt
 ~	max	t0
 ~	minh	t1
 ~	mini	t2
 ~	nudges,nud,nu,mis	t3
 ~	sli	t4
+~	hints,hin	t5
 
 }}MAX=52
 }}CURMAX=52
@@ -38,9 +39,15 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 >posf
 >towers
 
+@hin
+>monty hints
+
 >seed 1
 >enter turrets
 >z
+
+@hin
+/DEBUG INFO: (Cedrick|Andres|Ernest|Blake|Edwin|Geno) hinting\.
 
 @max
 #pre-rodney rule
@@ -445,14 +452,17 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 
 >gone
 }}SCORE++
+{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest|Blake|Edwin) hinting\.
 >score
 {$SCOS}
 >wined
 }}SCORE++
+{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest|Blake) hinting\.
 >score
 {$SCOS}
 >bleak
 }}SCORE++
+{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest) hinting\.
 >score
 {$SCOS}
 
@@ -470,18 +480,21 @@ You've already thinned the picaros' ranks a bit--it can't be bad to tackle the o
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+{--hin}/DEBUG INFO: (Cedrick|Andres) hinting\.
 >score
 {$SCOS}
 >snared
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+{--hin}DEBUG INFO: Cedrick hinting.
 >score
 {$SCOS}
 >cricked
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+{--hin}DEBUG INFO: Sir Rodney hinting.
 >score
 {$SCOS}
 
@@ -498,6 +511,9 @@ Your score has just gone up by one point
 >yonder
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+DEBUG INFO: dreads adders hinting.
 
 @minh,mini
 }}CURMAX-=3
@@ -540,7 +556,7 @@ So here is a one-time general guideline on what to do in this area: one word wil
 !Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
 >curst palaec
 Hmm...that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the curst palace. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Curst Palace. That's a decent omen.
 #nudge for deposit
 >deposti
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -647,10 +663,12 @@ Ooh! A couple more lights, now.
 >undo
 >undo
 
-
 >sadder
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+You can just go north, though you can hint the tarts in the toaster if you want.
 
 >score
 {$SCOS}
@@ -759,6 +777,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >gs
 
+@hin
+/DEBUG INFO: (Muscly Luc Sym|snider diners) hinting\.
+>gf salted deltas
+/DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from sweatier wait-seer and Resident Trendies\.
+>undo
+
 @!minh,mini
 >rusty
 Your score has just gone up by one point
@@ -822,6 +846,15 @@ The pastry is for eating, not for changing.
 >butlesr
 The bluster butlers cough slightly and look around furtively.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers. That's a decent omen.
+
+@hin
+>rinsed
+DEBUG: guardian hint choice is bluster butlers from bluster butlers.
+>undo
+>clumsy
+by one point
+>undo
+DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 
 >subtler
 Your score has just gone up by one point
@@ -1014,6 +1047,7 @@ Your score has just gone up by one point
 \\
 >rinsed
 Your score has just gone up by one point
+{--hin}There's an important location in the center of the Wildest Wilteds, northeast of here. You'll want to make a path there.
 }}SCORE++
 }}CURMIN++
 \\
@@ -1076,6 +1110,9 @@ They're not just bottles! They're bottles of NERD-AID!
 
 @!minh,mini
 >n
+
+@hin
+/DEBUG: guardian hint choice is (fluster-self rut|traipse pirates) from fluster-self rut and traipse pirates.
 
 @sli
 #slider test for coiled
@@ -1144,11 +1181,26 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@hin
+>pastier
+by one point
+>gf deltas
+DEBUG: guardian hint choice is sweatier wait-seer from sweatier wait-seer.
+>undo
+>undo
+
+@!minh,mini
 >restful
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@hin
+>gf strait
+DEBUG: guardian hint choice is alarming grailman from alarming grailman.
+>undo
 
 @nud
 #done rejects for old ice
@@ -1173,6 +1225,12 @@ Your score has just gone up by one point
 >n
 \\
 Anemic Cinema
+
+@hin
+DEBUG INFO: mardier admirer hinting.
+>married
+DEBUG INFO: Resident Trendies hinting.
+>undo
 
 @sli
 #slider test for angstier
@@ -1424,6 +1482,12 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >s
 >e
 
+Salted Deltas
+
+@hin
+#getting rid of the rut made the gradient available, so we hint the atheists.
+DEBUG: guardian hint choice is asset-hit atheists from asset-hit atheists.
+
 @nud
 #nudge for shoals
 >shoasl
@@ -1447,7 +1511,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for asset hit atheists
 >atheisst
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the asset hit atheists. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the asset-hit atheists. That's a decent omen.
 #scannotes for asset hit atheists
 >scan asset hit atheists
 Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot.
@@ -1483,6 +1547,7 @@ Ooh! Another light, now.
 >hastiest
 Your score has just gone up by one point
 }}SCORE++
+{--hin}DEBUG INFO: sweatier wait-seer hinting.
 >score
 {$SCOS}
 >weariest
@@ -1546,8 +1611,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from "SMH, Life" Mel Fish
 #nudge for smh
 >shm
 No, you need to deal with all of Mel Fish.
-#nudge for life
+#mistakes for leif/lief
+>leif
+Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
 >lief
+Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
+#nudge for life
+>ilfe
 No, you need to deal with all of Mel Fish.
 #nudge for mel
 >mle
@@ -1561,6 +1631,9 @@ No, you need to deal with all of Mel Fish.
 >ereledas
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: released.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@hin
+DEBUG INFO: weeds hinting.
 
 @!minh,mini
 >resealed
@@ -1632,6 +1705,7 @@ That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
 >sewed
 Your score has just gone up by one point
 }}SCORE++
+{--hin}You need to work your way to the east corner of the map.
 >score
 {$SCOS}
 
@@ -1739,7 +1813,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 #spechelp for hostile is he lot
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Hostile-Is-He Lot. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
 #scannotes for hostile is he lot
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
@@ -1774,6 +1848,9 @@ Your score has just gone up by one point
 >n
 >s
 >s
+
+@hin
+DEBUG INFO: bonker hinting.
 
 @nud
 #spechelp for dandier arid den
@@ -1834,6 +1911,9 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >w
+
+@hin
+You need a way past the bonker
 
 @nud
 >leveragde
@@ -1964,6 +2044,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bonker. That's a
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: stinger hinting.
+
 >score
 {$SCOS}
 
@@ -1981,6 +2064,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >resting
 Your score has just gone up by one point
 }}SCORE++
+
+@hin
+Go east of here.
 
 >score
 {$SCOS}
@@ -2000,6 +2086,9 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 >e
 
 Obscurest Subsector
+
+@hin
+Dr. Yow can be manipulated.
 
 @nud
 #mistake test for goal
@@ -2103,6 +2192,9 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it home?
+
 >score
 {$SCOS}
 
@@ -2124,6 +2216,10 @@ Bizarre animal noises continue to emanate from the fissure. It is beyond your co
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's a decent omen.
 
 >push retape
+
+@hin
+The duck won't follow you. It doesn't trust your voice.
+
 >gt duck
 >push repeat
 >gt subsector
@@ -2165,6 +2261,9 @@ by one point
 >unlocked
 by one point
 }}SCORE++
+
+@hin
+Hm, the agnostic at the coastlines seems technically inclined but restless.
 
 >score
 {$SCOS}
@@ -2232,6 +2331,9 @@ The machine is complicated enough. You probably just need to figure what to put 
 #nudge for shiny
 >shiyn
 The machine is complicated enough. You probably just need to figure what to put in it.
+
+@hin
+DEBUG INFO: rapier repair machine hinting.
 
 >put dagger in repair
 #notana
@@ -2378,6 +2480,9 @@ Your score has just gone up by one point
 #notana
 !Your score has just gone up by one point
 
+@hin
+Dr. Yow is versatile. You need him to be exciting around the agnostic.
+
 @nud
 #nudge for solve
 >solev
@@ -2459,6 +2564,9 @@ Scot is fully attentive. Don't ruin a good thing!
 Your score has just gone up by one point
 }}SCORE++
 
+@hin
+DEBUG INFO: I ZOMG Gizmo hinting.
+
 @mini,minh
 }}CURMAX--
 
@@ -2467,6 +2575,8 @@ Your score has just gone up by one point
 
 >gt coastlines
 >give gizmo to agnostic
+
+/DEBUG INFO: (turbos|blaster) hinting\.
 
 @sli
 #slider test for robust
@@ -2686,7 +2796,7 @@ Mislit Limits
 }}CURMIN=SCORE
 }}CURMIN++
 }}CURMAX=SCORE
-}}CURMAX+=5
+}}CURMAX+=6
 
 @!minh,mini
 }}CURMAX++
@@ -2746,11 +2856,6 @@ That is a lot of blinks, but those blinks have to be almost as good as a purple 
 >laek
 You're beyond the lake now.
 
-@nud
-#scannotes for nastier stainer retinas
->scan retinas
-Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
-
 @!minh,mini
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST.
@@ -2761,7 +2866,13 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
-\\
+
+@nud
+#scannotes for nastier stainer retinas
+>scan retinas
+Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
+
+@!minh,mini
 >antsier
 by one point
 }}SCORE++
@@ -2774,7 +2885,7 @@ by one point
 >nasteri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@!minh, mini
+@!minh,mini
 >present
 Your score has just gone up by one point
 # add minimum point here
