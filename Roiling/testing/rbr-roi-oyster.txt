@@ -714,10 +714,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
-#spechelp for pre-haun
+#spechelp for HUNTER HUNT AREA
 >unearht
 You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the !!!!. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 #nudge for anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -727,9 +727,6 @@ You need to deal with all the bullies at once, somehow, not just one at a time.
 #nudge for carp
 >capr
 You need to deal with all the bullies at once, somehow, not just one at a time.
-#nudge for haunter
->hauntre
-You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
 #spechelp for carps
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
@@ -780,12 +777,12 @@ Your score has just gone up by one
 DEBUG INFO: HUNTER HUNT AREA hinting.
 
 @nud
-#readables for scrawl
+#readables for HUNTER HUNT AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
 #nudge for scrawl
 >scralw
-It's probably not just any scrawl. What the scrawl says may be important.
+It's a HUNTER HUNT AREA, which seems more important.
 
 @max
 >unearth
@@ -1805,7 +1802,7 @@ It was enough to bury the ruby.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#respechelp test for pre-haun
+#respechelp test for HUNTER HUNT AREA
 >hauntre
 You need an organized way to reveal what's under the ground with your rigged digger.
 

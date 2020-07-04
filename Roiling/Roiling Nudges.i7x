@@ -683,10 +683,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "anger"	316824940	--	--	"[locname]."
 "hoser"	421038754	--	now-shore rule	"[hero-er-oh]."
 "hero"	324764788	--	now-shore rule	"[hero-er-oh]."
-"scrawl"	364539784	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
+"scrawl"	364539784	HUNTER HUNT AREA	--	"It's a HUNTER HUNT AREA, which seems more important."
 "pike"	307198092	pikes	--	"[all-fish]."
 "carp"	187983165	carps	--	"[all-fish]."
-"haunter"	529723362	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]You can't change the haunter, but maybe you can show it something.[end if]"
 
 table of Hardest Trashed Dearths nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

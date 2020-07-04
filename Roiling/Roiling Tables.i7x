@@ -207,7 +207,7 @@ waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You mak
 lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to. You also bury the digger, because you don't want any evidence you were the one who hid the ruby."
-pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
+HUNTER HUNT AREA	haunter	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
@@ -1065,14 +1065,13 @@ this is the post-spike-pikes rule:
 	process the post-scrap-carps rule;
 
 to say spike-and-scrap:
-	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
+	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. It says HUNTER HUNT AREA. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
 this is the post-scrap-carps rule:
 	now trout is in Lean Lane;
 	moot carps;
 	moot pikes;
-	now scrawl is in Anger Range;
-	now pre-haun is in Anger Range;
+	now HUNTER HUNT AREA is in Anger Range;
 
 this is the post-trample-ramplet rule:
 	min-up; [you get at least another point for TANing the ant]
@@ -1087,24 +1086,21 @@ this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
 	if player does not have digger:
 		say "Nothing to unearth the haunter with.";
-		preef pre-haun;
+		preef HUNTER HUNT AREA;
 		do nothing instead;
 	d "UNEARTHING FAILED. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
 	if haunter is not off-stage, say "The haunter has been unearthed." instead;
 	say "Ravage a grave!";
 	if ruby is off-stage:
 		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
-		preef pre-haun;
+		preef HUNTER HUNT AREA;
 		do nothing instead;
 	if player has ruby:
 		say "[line break]As you begin to dig, you hear 'My...jewel...close...thieves...pay.'[paragraph break]It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.";
-		preef pre-haun;
+		preef HUNTER HUNT AREA;
 		do nothing instead;
 
 this is the post-unearth-haunter rule:
-	moot scrawl;
-	now haunter is unfigured;
-	now haunter is in Anger Range;
 	it-him-her haunter;
 
 this is the post-enlarge-gleaner rule:
@@ -2038,7 +2034,7 @@ trout	"[if player is in Anger Range]The best way to help the trout at the moment
 tea	"You anticipate Aunt Tuna telling you to stop playing with your food, already."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
-pre-haun	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
+HUNTER HUNT AREA	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
@@ -2639,7 +2635,7 @@ gum	"[one of]Gum comes in more than six flavors at your local supermarket, but t
 mug	"[if ALocalCo Cola is moot]You will be able to drink from the mug when the time is right.[else][mug-detail][end if]"
 skid	"[if yak is moot][one of]The skid has done what it needs.[plus][or]You should change it back to a DISK now.[minus][cycling][else if skid has not been in Saps Pass]The skid can be pushed from place to place. You will need to.[else if yak is not on skid][one of]The skid can move things that won't budge.[plus][or]There's one thing that won't budge that has something you might need.[plus][or]The yak.[plus][or]You need to bribe the yak with something else.[plus][or][leaf-or-flea][plus][or]Put the leaf on the skid, and the yak will hop aboard.[minus][cycling][else if skid is not in Hacks Shack]You need to push the skid to the shack.[else]It's the yak you need to worry about, now.[end if]"
 oper rope	"The oper rope isn't useful on its own, but it lets you PULL the skid."
-disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now] you've got a full computer constructed."	--	"make a SKID"
+disk	"[if skid is off-stage][one of]You can change the disk to something else.[plus][or]The disk can become a SKID.[minus][cycling][else if disk is in Drive A]The disk is taken care of.[else]The disk can go in Drive A, [once-now-shack] you've got a full computer constructed."	--	"make a SKID"
 keyboard	"[one of]The keyboard belongs on the table[unless caps lock is part of keyboard], and it's missing a piece[end if].[plus][or][if caps lock is touchable]Put the caps lock in the keyboard.[else]See what you can do with the Clack Ops Locs Pack.[end if][minus][cycling]"
 leaf	"[if leaf is not on skid]You can put the leaf on the skid to tempt the yak.[else]The leaf's where it should be.[end if]"
 TBA key	"[if TBA key is reflexive]The tab key's what it needs to be.[else][one of]The TBA key is not a regular keyboard key. You can change it.[plus][or]The TBA key can become TAB.[minus][cycling][end if]"
@@ -2716,12 +2712,11 @@ rigged digger	"[if ruby is off-stage]The rigged digger is used to hide something
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not moot][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 OH NERD HERD NO	"That's just a warning you aren't welcome in the Horned Hedron."
 Achers Chaser Arches	"[if Achers Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
-pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
+HUNTER HUNT AREA	"[if hunter hunt area is prefigured][one of]You need something to UNEARTH the haunter with.[plus][or]Inside of the Lapsin['] Plains, you will find the tool you need to unearth the haunter.[plus][or]You'll also need a reason to have unearthed the haunter, which you can create elsewhere. You may need to hint other places or things for that.[minus][cycling][else][one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT. If you attack, you see a HATE URN.[plus][or]You should be able to UNEARTH the haunter, [once-now-digger].[plus][or][where-is-digger].[minus][cycling][end if]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
 ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[minus][cycling]"
 pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[minus][cycling]"
-scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
@@ -2993,6 +2988,14 @@ talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
 
+to say once-now-digger: say "[if player has rigged digger]now you've got the rigged digger[else]once you have the right equipment[end if]"
+
+to say where-is-digger:
+	if digger is off-stage:
+		say "What you want is inside the shut huts of Lapsin['] Plains to the north";
+	else:
+		say "Your digger should do the job[if ruby is moot], but it has another use elsewhere, first[end if]"
+
 to say muscly-clue: say "[one of]Being muscly is nice, but if [he-she] were to get too tangled up to use [his-her] strength...[no line break][plus][or]Maybe if [he-she] weren't so coordinated, [his-her] muscle would be ineffective?[plus][or]CLUMSY.[minus][cycling]"
 
 to say lois-or-lot: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
@@ -3069,7 +3072,7 @@ to say leaf-or-flea: say "[if leaf is off-stage]You need to change the flea in t
 
 to say kboard-blah: say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
 
-to say once-now: say "[if keyboard is on slab and disk is in Drive]now[else]once[end if]"
+to say once-now-shack: say "[if keyboard is on slab and disk is in Drive]now[else]once[end if]"
 
 to say a-t-check:
 	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";

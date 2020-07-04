@@ -2126,11 +2126,11 @@ LOLstr trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it som
 LOLstr trolls	tunes	"[if tunes are moot][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
 LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lotsa people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 LOLstr trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
-LOLstr trolls	pre-haun	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
+LOLstr trolls	HUNTER HUNT AREA	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
 pesty types	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
 pesty types	LOLstr trolls	"'They rather keep us in and make us spend more than kick us out.'"
 pesty types	Elvira	"You endure annoying pro- and anti-Elvira half-drunken banter for a bit."
-Casper	pre-haun	"'I heard it's buried on the other side of the shore. Need to bring it something lost.'"
+Casper	HUNTER HUNT AREA	"'I heard it's buried on the other side of the shore. Need to bring it something lost.'"
 Casper	LOLstr trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
 Casper	capers recaps	"Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers."
 Casper	Elvira	"'She certainly knows how to seek out power. She showed that anagram chump what's what. [if player is female]She's no woman[else]He's no man[end if] of action.'"
@@ -2138,13 +2138,13 @@ carps	trout	"[mean-fish]!" [chum=pikes]
 carps	Aunt Tuna	"[mean-fish]!"
 carps	Casper	"They probably like books more violent than Casper Spacer's. If they read at all."
 carps	Elvira	"'All the cool kids look up to her.'"
-carps	pre-haun	"They are probably too coo-ool for ghost stories."
+carps	HUNTER HUNT AREA	"They are probably too coo-ool for ghost stories."
 carps	pikes	"You could maybe set them against each other, but really, you're the strongest...life form here."
 pikes	carps	"You could maybe set them against each other, but really, you're the strongest...life form here."
 pikes	Elvira	"'All the cool kids look up to her.'"
 trout	carps	"[if player is in Anger Range]You can ask about them later. They're pretty clearly picking on him here[else if trout is reflexive]He gives a blank look of fear[else]He feels like he can handle them and their taunts now[end if]."
 trout	Elvira	"'I heard those carps and pikes liked her.'"
-trout	pre-haun	"'S-s-s-scary[if trout is reflexed], even after you helped me[end if]!'"
+trout	HUNTER HUNT AREA	"'S-s-s-scary[if trout is reflexed], even after you helped me[end if]!'"
 trout	pikes	"[if player is in Anger Range]You can ask about them later. They're pretty clearly picking on him here[else if trout is reflexive]He gives a blank look of fear[else]He feels like he can handle them and their taunts now[end if]."
 trout	aunt tuna	"[if carps are touchable]The carps are already asking mean questions.[else]'She sure is grateful you rescued me.'[end if]"
 trout	Casper	"'I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway.'"
@@ -2152,7 +2152,7 @@ aunt tuna	casper	"'Those books of his! I cannot approve.'"
 aunt tuna	tea	"'[if tea is moot]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
 aunt tuna	pikes	"[bbbullies]."
 aunt tuna	carps	"[bbbullies]."
-aunt tuna	pre-haun	"'It is searching for a stolen treasure. They say it will wreak terrible havoc on the possessor.'"
+aunt tuna	HUNTER HUNT AREA	"'It is searching for a stolen treasure. They say it will wreak terrible havoc on the possessor.'"
 aunt tuna	walleyes	"[fish-these-days]."
 aunt tuna	sardine	"[fish-these-days]."
 aunt tuna	yapper	"[fish-these-days]."
@@ -2166,7 +2166,7 @@ sardine	Elvira	"'I wouldn't have this job if it weren't for her.'"
 sardine	Horned Hedron	"'I work here. Well, I guard the outside.'"
 haunter	ruby	"It acts all ghostly and asks you to take it where the ruby might be."
 haunter	Elvira	"'Already marked for...' the haunter abruptly stops."
-walleyes	pre-haun	"'Anything to keep the sheeple scared.'"
+walleyes	HUNTER HUNT AREA	"'Anything to keep the sheeple scared.'"
 walleyes	ruby	"'Bet we could sell it to raise funds for the Base! But we'd keep a nice cut.'"
 walleyes	sardine	"'We'll have fun narcing him out for letting you in. What? He's already gone? Eh.'"
 walleyes	Casper	"'Nice books, love the violence, but too many big words.'"
@@ -2520,7 +2520,7 @@ peels speel	"Through the jargon, you read [']E Elps! [']E Elps! a lot. It's emph
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tips pits	"IT'S P is written in red on the bottom."
-scrawl	"[if carps are touchable][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
+HUNTER HUNT AREA	"Etahn Ru. Near-Hut Haunter."
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
@@ -4233,10 +4233,10 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				continue the action;
 		if player is in Anger Range:
 			if pikes are moot and haunter is off-stage:
-				now noun is pre-haun;
+				now noun is HUNTER HUNT AREA;
 				continue the action;
-			if pre-haun is in Anger Range:
-				now noun is pre-haun;
+			if HUNTER HUNT AREA is in Anger Range:
+				now noun is HUNTER HUNT AREA;
 				continue the action;
 			if haunter is touchable and haunter is reflexive:
 				now noun is haunter;
@@ -5145,7 +5145,7 @@ to decide which thing is oyster-item:
 		if pikes are in Anger Range:
 			if pikes-clue is true, decide on pikes;
 			decide on carps;
-		if haunter is off-stage, decide on pre-haun;
+		if haunter is off-stage, decide on HUNTER HUNT AREA;
 		if haunter is reflexive, decide on haunter;
 	if haunter is reflexed and location of player is location of haunter, decide on haunter;
 	if player is in Lapsin Plains:
@@ -6045,6 +6045,7 @@ LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. Y
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
 boats	"Sabot? Batso!"
 frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
+HUNTER HUNT AREA	"As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing."
 carps	"That sounds so--brutal. And nonspecific."
 pikes	"That sounds so--brutal. And nonspecific."
 trout	"This game's kind of topsy turvy, but not like THAT."
@@ -9206,8 +9207,7 @@ rubbish story	--
 praise	"the praise floating in the air"
 rivets	"the rivets spelling PRAISE"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
-pre-haun	"an outline of where something is buried" [oyster]
-eeks	"some cartoony representation of EEKS"
+eeks	"some cartoony representation of EEKS" [oyster]
 atblock	"an aura of tentativeness about [agnostic-first]" [towers]
 agnostic	"[agnostic-first]"
 aside-llp	"rays of energy between [e-n-m]" [otters]
@@ -13780,7 +13780,7 @@ gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gl
 ol trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
-scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
+HUNTER HUNT AREA	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
 yapper	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
 d2	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
@@ -13839,7 +13839,7 @@ carry out spilling:
 		move player to Olde Lode instead;
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
-		if pre-haun is in Anger Range:
+		if HUNTER HUNT AREA is in Anger Range:
 			if thin hint is not in Rascal Craals, say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
 	if player is in Horned Hedron and walleyes are in Horned Hedron, say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead; [walleyes can't really be flipped. You need to go through the sausage.]
 	if oi is the player, say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
@@ -13857,12 +13857,11 @@ carry out spilling:
 			now player has lance;
 			now cheated-guy is lance;
 			min-and instead;
-	if oi is pre-haun:
+	if oi is HUNTER HUNT AREA:
 		if ruby is not moot, say "As you turn the pill jar upside-down, the pills stay in--as if some supernatural force is pushing them up, because they aren't ready to come out yet.[paragraph break]Hmm. Maybe you have more to do before you find what's under, here." instead;
-		now cheated-guy is pre-haun;
 		say "The pills attach to your digger with a clang. They can't be removed normally, so you start to dig and dig.";
-		now cheated-guy is pre-haun;
-		try fliptoing pre-haun instead;
+		now cheated-guy is HUNTER HUNT AREA;
+		try unearthing HUNTER HUNT AREA instead;
 	if oi is ant:
 		now cheated-guy is ant;
 		try taning ant instead;
@@ -14099,7 +14098,7 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if haunter is moot]no longer [end if]manages to n-rage you, [if haunter is moot]and the area seems to have calmed down[else if carps are touchable]as well as the fish who live here[else]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
+Anger Range is a room in Oyster. "This place [if haunter is moot]no longer [end if]manages to n-rage you, [if haunter is moot]and the area seems to have calmed down[else if carps are touchable]as well as the fish who live here[else if haunter is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
 
 understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when haunter is moot.
 
@@ -14119,11 +14118,6 @@ to say rub-wr:
 	say "[if player has ruby]ruby[else]wrap[end if]";
 
 check going south in Anger Range: say "You don't want to go back over Saccade Cascade. Your goal must be here." instead;
-
-the scrawl is scenery. "[if carps are touchable][reject][else]All in red:[paragraph break]Etahn Ru. Near-Hut Haunter.[end if]"
-
-check scaning scrawl:
-	say "Nothing from your settler. Maybe it's what the scrawl says." instead;
 
 carps-pref is a truth state that varies.
 
@@ -14234,29 +14228,29 @@ rule for supplying a missing noun when unearthing:
 			now noun is location;
 	else if player is not in Anger Range:
 		say "Nothing worth unearthing here." instead;
-	else if pre-haun is touchable:
-		now the noun is the pre-haun;
+	else if HUNTER HUNT AREA is touchable:
+		now the noun is HUNTER HUNT AREA;
 	else:
 		say "You need to worry about the carps and pikes, first." instead;
 
-the pre-haun is privately-named proper-named vanishing boring scenery. printed name of pre-haun is "HUNTER HUNT AREA". description of pre-haun is "You can't see it, but you can feel it.". bore-text of pre-haun is "[h-not-yet].". bore-check is bore-haun rule.
+The HUNTER HUNT AREA is boring vanishing scenery. "You feel hate pulsing from it, even an odd urge to attack it. You can also READ its details.". bore-text of HUNTER HUNT AREA is "The HUNTER HUNT AREA is hiding something potentially malevolent. But what?". bore-check is bore-hunter-hunt-area rule.
 
-to say h-not-yet: say "You need the right action to deal with the haunter"
+understand "scrawl" as HUNTER HUNT AREA.
 
-this is the bore-haun rule:
+this is the bore-hunter-hunt-area rule:
 	if current action is unearthing, now boring-exception is true;
 
-a-text of pre-haun is "YRYYRRR". b-text of pre-haun is "YRYYRRR". parse-text of pre-haun is "-[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
+a-text of HUNTER HUNT AREA is "YRYYRRR". b-text of HUNTER HUNT AREA is "??Y??R?". parse-text of HUNTER HUNT AREA is "?[sp]?[sp]-[sp]?[sp]?[sp]x[sp]?".
 
-understand "haunter" as pre-haun when pre-haun is in Anger Range.
+understand "haunter" as HUNTER HUNT AREA when HUNTER HUNT AREA is in Anger Range.
 
-does the player mean unearthing the pre-haun: it is very likely.
+does the player mean unearthing the HUNTER HUNT AREA: it is very likely.
 
 carry out unearthing:
 	if mrlp is not oyster, say "[reject]" instead;
 	if player does not have rigged digger:
 		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
-		preef pre-haun;
+		preef HUNTER HUNT AREA;
 		do nothing instead;
 	if noun is haunter, say "It already is." instead;
 	if player is in Rascal Craals:
@@ -14264,9 +14258,9 @@ carry out unearthing:
 		if noun is ruby, say "That is wasted work." instead;
 		if noun is thin hint, say "That would be wasted work, unearthing the thin hint[if haunter is not moot] and the ruby below it[end if]." instead;
 	if player is not in Anger Range, say "Nothing to unearth here. Maybe somewhere more wide-open." instead;
-	if noun is pre-haun, try fliptoing pre-haun instead;
+	if noun is HUNTER HUNT AREA, try fliptoing HUNTER HUNT AREA instead;
 	say "Not worth unearthing, but that's the right idea.";
-	preef pre-haun;
+	preef HUNTER HUNT AREA;
 	the rule succeeds;
 
 the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon.". "The haunter is here--it's disturbingly shaped like a sausage[if haunter is reflexive]. You should really get on good terms with it[end if]."
@@ -21476,10 +21470,15 @@ carry out objhinting (this is the pick object to hint rule) :
 		if noun is cheatitemed:
 			ital-say "these hints may be redundant, with the hint spoiler item you used.";
 			now noun is cheathinted;
-		else if noun is prefigured:
+		else if noun is prefigured-spoiled:
 			ital-say "these hints may lead you to something you already guessed and wrote in your notepad.";
 		all-say "[advice-entry entry]" instead;
 	all-say "[noun]: I don't have any hints for that. That means it is not important to the game, or this is a bug." instead;
+
+definition: a thing (called th) is prefigured-spoiled:
+	unless th is prefigured, no;
+	if th is HUNTER HUNT AREA, no; [the hints branch if this is prefigured, because you need to prepare for it e.g. what do you UNEARTH it with?]
+	yes;
 
 definition: a thing (called disc-tar) is cinder-dissolve:
 	if disc-tar is medals:
@@ -22279,7 +22278,7 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is HUNTER HUNT AREA]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
