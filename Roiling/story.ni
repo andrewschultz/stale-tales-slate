@@ -1704,7 +1704,7 @@ check objasking it about (This is the check for object information rule):
 	say "There is an awkward silence due to--err, my forgetting this case.[paragraph break][bug-report]" instead;
 
 definition: a thing (called th) is to-gen-blather:
-	if th is bonker or th is stinger or th is fluster self rut, yes;
+	if th is bonker or th is grin set stinger or th is fluster self rut, yes;
 	no;
 
 check asking about (This is the check for specific topics rule):
@@ -1961,7 +1961,7 @@ ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You
 pestern serpent	"[serp-say]."
 alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
 bonker	"You try to chat but feel like a, er, knob."
-stinger	"As you start to talk, you almost see a grin set in the stinger, which makes you see red."
+stinger	"The grin set in the stinger distracts you from what you meant to say. You feel almost drunk, and hear a weird voice in your head. 'Ginster! Ginster!' You see red."
 Lois the Hostile	"She complains[hostile-red]!"
 Hostile Is He Lot	"They complain[hostile-red]!"
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
@@ -2542,6 +2542,7 @@ Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 blaster	"ALBERT'S."
+stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
@@ -17447,9 +17448,9 @@ retrytext of REB NOK bonker is ", poised to re-bonk"
 
 section stinger
 
-The stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it."
+The grin set stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively. It's got a grin set in it. You could also READ its brand.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it.". printed name of grin set stinger is "grin-set stinger".
 
-a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+a-text of grin set stinger is "RYRRYRR". b-text of grin set stinger is "RYRRYRR". parse-text of grin set stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 chapter Artist Traits Strait guardians
 
@@ -17556,7 +17557,7 @@ snider diners	"The snider diners sniff at the distraction."
 Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
-stinger	"The stinger continues to fizz and buzz."
+stinger	"The grin-set stinger continues to fizz and buzz with mslicious glee."
 natives site van	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep blue sea."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"

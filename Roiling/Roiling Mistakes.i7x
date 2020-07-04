@@ -699,9 +699,9 @@ chapter Loftier Trefoil
 
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
 
-understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when Edwin is touchable.
-
 understand "nerd yo" and "nerdy o" and "yo nerd" as a mistake ("Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.") when Rodney is touchable. [O NERDY doesn't work, as it becomes OOPS NERDY.]
+
+understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when Edwin is touchable.
 
 understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when Daryl is touchable.
 
