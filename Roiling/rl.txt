@@ -446,6 +446,11 @@ The two question marks in the Mended Mini Denim don't turn out to be very myster
 But wait! Slots 2 and 4 are the vowels, meaning 1 and 3 must both be consonants. That makes slot 3 N. Slot 2 must be E, and slot 4 must be I. This, -INE-.
 Since slot 5 can't be M, we get MINED.
 >>DANGER GARDEN
+# logic for REB NOK bonker
+?How do I sort out the (REB-NOK) bonker?
+The unclear readings say little. There are two consonants and one vowel. We know the vowel must be in slot 5, but that doesn't help enough.
+So let's look at what the possible options are: (BR)(BKNR)(EO)(KN)(EO)(BN). If we start with R, though, any word we make clogs at the start.
+So we get BR(EO)K(EO)N. BREKON doesn't work, so BROKEN it is.
 # logic for natives site van
 ?How does the natives' site van work?
 There are two solutions.

@@ -17437,11 +17437,11 @@ understand "native" and "native site/van" and "native site van" as natives site 
 
 section bonker
 
-The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker][one of]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Gotta be something interesting that way[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping]."
+The REB NOK bonker is a purple guardian. "You [one of]recognize a[or]still see that[stopping] REB-NOK bonker guarding the way [psgdir of bonker][one of]. Something must be behind--while they're usually just for intimidation, they can, well, knock rebels like you[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping].". printed name of REB NOK bonker is "REB-NOK bonker".
 
-a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
+a-text of REB NOK bonker is "RRYRYR". b-text of REB NOK bonker is "?RY??R". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
 
-retrytext of bonker is ", poised to re-bonk"
+retrytext of REB NOK bonker is ", poised to re-bonk"
 
 section stinger
 
@@ -17467,7 +17467,7 @@ other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
 chapter guardian org table (deprecated)
 
-gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.". [no taunt-text or aux item]
+gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.".
 
 gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here."
 
