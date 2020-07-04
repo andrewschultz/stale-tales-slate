@@ -865,6 +865,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "trefoil"	515914088	--	--	"[towersloc]."
 "picaro"	307328588	--	--	"[picaro-note]."
 "picaros"	403602554	--	--	"[picaro-note]."
+"deny"	340101958	--	--	"[all-rodney]."
+"rend"	303066509	--	--	"[all-rodney]."
 
 table of Topside Deposit nudges [1 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1953,6 +1955,8 @@ to say towersloc:
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
 to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
+
+to say all-rodney: say "Deal with Rodney, not any part of his chosen sub-names"
 
 to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Wildest Wilteds will come back to life"
 

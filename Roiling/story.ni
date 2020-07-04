@@ -514,7 +514,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 790.
+use MAX_VERBS of 800.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -534,7 +534,7 @@ section compiler non-syntax section - not for release
 
 use MAX_DICT_ENTRIES of 3100.
 
-use MAX_VERBS of 810. [delta=20]
+use MAX_VERBS of 820. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -1941,7 +1941,7 @@ Shane	"[war-duh]"
 Terrance	"[war-duh]"
 Tyson	"[war-duh]"
 Wade	"[war-duh]"
-Sir Rodney	"This standoff won't be resolved with diplomacy."
+Rodney	"This standoff won't be resolved with diplomacy."
 muscly luc sym	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
 muscly ms lucy	"She kind of stumbles with dialogue. Maybe you can make her stumble physically."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
@@ -6027,6 +6027,7 @@ check attacking: [this takes responses for general types. The table below it is 
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
 	if player has lance, say "[if noun is a person]Wrong enemy for the lance[else]." instead;
+	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
 	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
@@ -6621,7 +6622,7 @@ check listening:
 	if noun is papery yapper, say "Mindless materialistic babble." instead;
 	if noun is dialer, say "[if pins are in Tenfold Teflond Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if noun is Rodney, say "Rodney's intimidating enough, he can keep this place quiet." instead; [towers]
-	if player is in Loftier Trefoil, say "Ugh. Sir Rodney is a dry one, barking out complaints that make you see red." instead;
+	if player is in Loftier Trefoil, say "Ugh. as Rodney barks out complaints, you think 'dry one' and see red." instead;
 	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if noun is diners, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
 	if noun is butlers, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
@@ -15811,7 +15812,7 @@ after printing the locale description for Loftier Trefoil when Loftier Trefoil i
 rule for printing a locale paragraph about a picaro (called pp):
 	if pp is not Rodney, The rule succeeds;
 	now Rodney is mentioned;
-	say "Sir Rodney, still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
+	say "[Rodney], still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
 	now all touchable picaros are mentioned;
 
 to say they-just:
@@ -15819,10 +15820,10 @@ to say they-just:
 
 section escaping or not
 
-check asking Sir Rodney about: say "He yells 'None shall pass!' [one of]when you get close[or]and thus lives up to his name[stopping]." instead;
+check asking Rodney about: say "He stares at you, seeming to ask rhetorically, 'Redo? Y/N!' You see red at this." instead;
 
 check going outside in Loftier Trefoil:
-	if Sir Rodney is in Loftier Trefoil, say "Sir Rodney is blocking the way[if vw > 1], and he has help[end if]." instead;
+	if Rodney is in Loftier Trefoil, say "Rodney is blocking the way[if vw > 1], and he has help[end if]." instead;
 	say "BUG! you should have been kicked out after talking to Renato.";
 	wfak;
 	move player to Topside Deposit;
@@ -17834,9 +17835,9 @@ check objhinting a not leaderly picaro (this is the poke Rodney but don't spoil 
 
 check taking a picaro: say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
 
-Sir Rodney is a leaderly picaro. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1.
+Yo Rend Or Deny Rodney is a leaderly picaro. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1. printed name of Rodney is "Yo-Rend-Or-Deny Rodney".
 
-a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR". parse-text of rodney is "y[sp]o[sp]x[sp]x[sp]e[sp]x". rodney is cheat-spoilable.
+a-text of Yo Rend or Deny Rodney is "OYRRYR". b-text of Yo Rend or Deny Rodney is "??RR?R". parse-text of Yo Rend or Deny Rodney is "y[sp]o[sp]x[sp]x[sp]e[sp]x". rodney is cheat-spoilable.
 
 the chum of a picaro is usually Andres. [moved here so Rodney appears first when iterating through picaros]
 
