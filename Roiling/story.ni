@@ -263,6 +263,14 @@ a guardian has a room called gualoc.
 
 a guardian has a direction called guadir.
 
+a guardian has text called block-text.
+a guardian has text called clue-text.
+a guardian has text called taunt-text.
+
+to decide which thing is aux-item of (gu - a guardian):
+	if gu is lars eede or gu is elsa erde, decide on Reeds Ale;
+	decide on letters settler.
+
 a guardian can be grey, blue, red, white or purple. a guardian is usually purple. [blue guardians are one minimal path. red are another. white = unnecessary, purple = necessary. Color blends! Also, grey is for Lars Eede/Elsa Erde.]
 
 check objasking a guardian about a guardian (this is the guardian general chat rule):
@@ -4138,7 +4146,6 @@ when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now carps-pref is true;
 	now t-or-b is turbos;
 	if a random chance of 1 in 2 succeeds, now t-or-b is blaster; [towers random clues]
-	sort the table of guard-org in random order; [for first-time-view clues]
 	sort table of animal randomness in random order; [otters hinting]
 	sort shrine-imp-items in random order;
 	sort cathedral-items in random order;
@@ -15488,11 +15495,8 @@ book all about guardians
 section initalization
 
 when play begins (this is the place guardians rule):
-	repeat through table of guard-org:
-		now guadir of guy entry is blockdir entry;
-		now gualoc of guy entry is loc entry;
-		if there is a kloozorz entry:
-			now guy entry is clueneedy;
+	repeat with myg running through guardians:
+		if clue-text of myg is not empty, now myg is clueneedy;
 
 book which room is how far
 
@@ -15571,19 +15575,19 @@ to draw-towers-map:
 		now myx is tow-x-start + (tow-delta * my-x entry) - square-from-center;
 		now myy is tow-y-start + (tow-delta * my-y entry) - square-from-center;
 		draw a rectangle (current foreground-color) in current graphics window at myx by myy with size sqsz by sqsz;
-	repeat through table of guard-org:
-		if guy entry is stinger and bonker is not moot, next; [the stinger is tricky because it's artificially placed a bit]
-		[if debug-state is true, say "Gendermatching [guy entry].";]
-		unless guy entry gendermatches, next;
-		if guy entry is moot:
+	repeat with myg running through guardians:
+		if myg is stinger and bonker is not moot, next; [the stinger is tricky because it's artificially placed a bit]
+		[if debug-state is true, say "Gendermatching [myg].";]
+		unless myg gendermatches, next;
+		if myg is moot:
 			change current foreground-color to (R 42 G 210 B 42);
 		else:
 			change current foreground-color to (R 210 G 42 B 42);
-		if guy entry is stinger:
+		if myg is stinger:
 			draw-line Obscurest Subsector and west;
 			continue the action;
 		[if debug-state is true, say "[loc entry] [blockdir entry] [current foreground-color].";]
-		draw-line loc entry and blockdir entry;
+		draw-line (gualoc of myg) and (guadir of myg);
 
 to draw-line (lcc - a room) and (bd - a direction):
 	choose row with my-loc of lcc in table of towers-locs;
@@ -15693,7 +15697,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		if adude is clueneedy and any-reveal is false:
 			now adude is not clueneedy;
 			now any-reveal is true;
-			say "[kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
+			say "[clue-text of adude][paragraph break]";
 	if rm is unvisited and rm is a towloc listed in the table of towercomments:
 		choose row with towloc of rm in table of towercomments;
 		if there is a towquo entry:
@@ -15949,12 +15953,12 @@ to decide whether (g - a guardian) gendermatches:
 
 to say pc of (myr - a room) and (myd - a direction): [passage character]
 	let maybe be true;
-	repeat through table of guard-org:
+	repeat with myg running through guardians:
 		now maybe is false;
-		if myr is loc entry and myd is blockdir entry, now maybe is true;
-		if myr is the room myd of loc entry and myd is opposite of blockdir entry, now maybe is true;
-		if maybe is true and guy entry gendermatches:
-			say "[if guy entry is not moot]x[else if myd is west or myd is east]-[else]|[end if]";
+		if myr is gualoc of myg and myd is guadir of myg, now maybe is true;
+		if myr is far-room of myg and myd is opposite of (guadir of myg), now maybe is true;
+		if maybe is true and myg gendermatches:
+			say "[if myg is not moot]x[else if myd is west or myd is east]-[else]|[end if]";
 			continue the action;
 	say "[qr]"
 
@@ -16228,7 +16232,7 @@ Danger Garden is a room in Towers. Danger Garden is east of Leveraged Everglade.
 
 understand "gander" as geese when geese are in Danger Garden.
 
-understand "gander garden" as Danger Garden when mrlp is towers and geese are in Danger Garden..
+understand "gander garden" as Danger Garden when mrlp is towers and geese are in Danger Garden.
 
 the geese are useless boring plural-named scenery. description of geese is "You can't get a glimpse of the gander for all their noise.". bore-text is "The gander is noisy but not worth poking for. None of the geese can help you."
 
@@ -17461,32 +17465,51 @@ a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he l
 
 other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
-chapter guardian org table
+chapter guardian org table (deprecated)
 
-table of guard-org [organized going 1st north then east. W, N, E, S in each room, depending on what's not covered.]
-guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
-Dreads Adders	Topside Deposit	north	"The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads."	"From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think."
-bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
-muscly Luc Sym	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"Looking again at muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity."
-muscly Ms Lucy	Scope Copse	north	"She shows surprising dexterity for someone so muscly as she forces you back."	"Looking again at muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity."
-snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
-pirates	Baldest Blasted Saltbed	north	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
-fluster self rut	Baldest Blasted Saltbed	east	"You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active."	"You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back."
-Mel Fish	Leveraged Everglade	north	"Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free Mel Fish from nationality and his past to individuality."
-arid den	Leveraged Everglade	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-wait seer	Treading Gradient	north	"The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you."	"Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too."
-ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
-mardier admirer	Anemic Cinema	north	"The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!"
-Resident Trendies	Anemic Cinema	east	"The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!"	"Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind."
-Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	Reeds Ale
-Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	Reeds Ale
-atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted."
-grailman	Danger Garden	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there."	"The grailman is the first you've ever met, but he seems more than adequate enough to block your way."
-bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
-stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker]
-natives site van	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting."
-lois the hostile	Artist Traits Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
-hostile is he lot	Artist Traits Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers."	"Boy! The Lot sure could use some down-home kindness."
+gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.". [no taunt-text or aux item]
+
+gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here."
+
+gualoc of muscly Luc Sym is Scope Copse. guadir of muscly Luc Sym is north. block-text of muscly Luc Sym is "He shows surprising dexterity for someone so muscly as he forces you back.". clue-text of muscly Luc Sym is "Looking again at Muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity.".
+
+gualoc of muscly Ms Lucy is Scope Copse. guadir of muscly Ms Lucy is north. block-text of muscly Ms Lucy is "She shows surprising dexterity for someone so muscly as she forces you back.". clue-text of muscly Ms Lucy is "Looking again at Muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity.".
+
+gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-text of snider diners is "They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if].". clue-text of snider diners is "The diners mutter about how bad weather can ruin the ambience of open-air meals.". taunt-text of snider diners is "The diners smack their lips, and you think you hear the zhk of silverware."
+
+gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north. block-text of traipse pirates is "'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this.". clue-text of traipse pirates is "You can't make the pirates less in-shape, but maybe something more cosmetic will work.". taunt-text of traipse pirates is "A wry, wary 'Yawr!' from the pirates makes you feel awry."
+
+gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.".
+
+gualoc of Mel Fish is Leveraged Everglade. guadir of Mel Fish is north. block-text of Mel Fish is "Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go.". clue-text of Mel Fish is "Perhaps you can free Mel Fish from nationality and his past to individuality."
+
+gualoc of dandier arid den is Leveraged Everglade. guadir of dandier arid den is east. block-text of dandier arid den is "There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats.". clue-text of dandier arid den is "The arid den won't evaporate, but maybe you can get rid of it another way.".
+
+gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.".
+
+gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.".
+
+gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!".
+
+gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.".
+
+gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.".
+
+gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.".
+
+gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.".
+
+gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.".
+
+gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.".
+
+gualoc of stinger is Mislit Limits. guadir of stinger is east. block-text of stinger is "The stinger needles at you menacingly. You back off.". clue-text of stinger is "The stinger looks unusually active.". taunt-text of stinger is "Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker.]
+
+gualoc of natives site van is Danger Garden. guadir of natives site van is south. block-text of natives site van is "The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better.". clue-text of natives site van is "That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting.".
+
+gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.".
+
+gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text of he lot is "They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers.". clue-text of he lot is "Boy! The Lot sure could use some down-home kindness.".
 
 chapter guardian taunt tables
 
@@ -17577,13 +17600,12 @@ to shuffle-guardians (goner - a guardian):
 	else if goner is natives site van:
 		now MR is Lost Lots;
 	else:
-		choose row with guy of goner in table of guard-org;
-		now room blockdir entry of loc entry is tower-accessible;
-		now loc entry is tower-accessible;
-		if location of player is loc entry:
-			now G is blockdir entry;
+		now far-room of goner is tower-accessible;
+		now gualoc of goner is tower-accessible;
+		if location of player is gualoc of goner:
+			now G is guadir of goner;
 		else:
-			now G is opposite of blockdir entry;
+			now G is opposite of (guadir of goner);
 		now MR is the room G of location of player;
 	if debug-state is true, say "DEBUG: opening path to [MR]. It is [unless MR is accessible]not [end if]accessible.";
 	now goner is prodded;
@@ -17680,25 +17702,21 @@ check going (this is the guardian taunt and block rule):
 	if mrlp is Towers:
 		if noun is not a direction, say "You need to specify a direction, not a place." instead;
 		if Mislit Limits is visited, continue the action; [probably not necessary but due to a silly hack with the stinger, I just want to make sure of things]
-		repeat with QQ running through guardians:
-			if QQ is touchable:
-				if (gualoc of QQ is location of player and guadir of QQ is noun) or (gualoc of QQ is not location of player and guadir of QQ is opposite of noun):
-					now QQ is passtried;
-					if QQ is neuter, set the pronoun it to QQ;
-					now guardian-to-hint is QQ;
-					choose row with guy of QQ in table of guard-org;
-					say "You're blocked going [noun] by [the QQ]. [blokzorz entry][line break]" instead;
+		repeat with QQ running through touchable guardians:
+			if (gualoc of QQ is location of player and guadir of QQ is noun) or (gualoc of QQ is not location of player and guadir of QQ is opposite of noun):
+				now QQ is passtried;
+				if QQ is neuter, set the pronoun it to QQ;
+				now guardian-to-hint is QQ;
+				say "You're blocked going [noun] by [the QQ]. [block-text of QQ][line break]" instead;
 		if number of taunty guardians > 0:
 			let QQ be a random taunty guardian;
-			choose row with guy of QQ in table of guard-org;
-			say "[taunt entry][line break]";
+			say "[taunt-text of QQ][line break]";
 			continue the action;
 
 definition: a guardian (called myg) is taunty:
 	if location of myg is not location of player, decide no;
-	choose row with guy of myg in table of guard-org;
-	if there is a taunt entry, decide yes;
-	decide no;
+	if taunt-text of myg is empty, no;
+	yes;
 
 to choose-new-hint-guardian:
 	if guar-here is 0, continue the action;
@@ -17739,21 +17757,21 @@ chapter reposition-guardians
 
 to reposition-guardians:
 	[say "Repositioning guardians.";]
-	repeat through table of guard-org:
-		if guy entry is moot, next;
-		if bad-gender-match of guy entry, next;
-		if other-g of guy entry is not dreads adders and other-g of guy entry is moot, next; [this is for testing purposes. If we moot the Hostile Lot and gender flip, Lois may turn up in the Hostile Lot's place. Since the player cannot change gender mid-game, this should not matter in the release build.]
-		if location of player is loc entry:
-			move guy entry to location of player;
-			if there is an aux entry:
-				if debug-state is true, say "DEBUG: [aux entry] is an auxiliary item.";
-				if aux entry is Reeds Ale:
-					now guy entry carries aux entry;
-				else:
-					move aux entry to location of player;
-		if the room blockdir entry of loc entry is location of player:
-			move guy entry to location of player;
-			if there is an aux entry, move aux entry to location of player;
+	repeat with myg running through guardians:
+		if myg is moot, next;
+		if bad-gender-match of myg, next;
+		if other-g of myg is not dreads adders and other-g of myg is moot, next; [this is for testing purposes. If we moot the Hostile Lot and gender flip, Lois may turn up in the Hostile Lot's place. Since the player cannot change gender mid-game, this should not matter in the release build.]
+		if location of player is gualoc of myg or location of player is far-room of myg, move-with-aux myg;
+
+to move-with-aux (myg - a guardian):
+	let ai be aux-item of myg;
+	if debug-state is true, say "DEBUG: [ai] is an auxiliary item. We put it in play, too.";
+	move myg to location of player;
+	if ai is letters settler, continue the action;
+	if ai is Reeds Ale:
+		now myg carries ai;
+	else:
+		move ai to location of player;
 
 chapter allranding
 

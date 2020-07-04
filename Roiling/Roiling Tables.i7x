@@ -1260,8 +1260,6 @@ section towers auxiliary
 this is the post-bonker-broken rule:
 	now stinger is in Danger Garden;
 	now gualoc of stinger is Danger Garden;
-	choose row with guy of stinger in table of guard-org;
-	now loc entry is Danger Garden; [need to undo the silly hack I have for the stinger being not-really in Mislit Limits according to the table]
 
 this is the post-stinger-resting rule:
 	now geese are in Danger Garden;
