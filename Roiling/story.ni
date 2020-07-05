@@ -7378,6 +7378,26 @@ understand "verbs" as verbing.
 carry out verbing:
 	try padding "verbs" instead;
 
+chapter xtraing
+
+xtraing is an action applying to nothing.
+
+understand the command "xtra" as something new.
+
+understand "trax" as xtraing.
+understand "xtra" as xtraing.
+understand "xtra trax" as xtraing.
+
+xtra-trax is a truth state that varies.
+
+xtra-trax-warn is a truth state that varies.
+
+carry out xtraing:
+	now xtra-trax is whether or not xtra-trax is false;
+	say "Toggling correct-anagram nudges to [if xtra-trax is false]generic[else]detailed[end if].";
+	now xtra-trax-warn is true;
+	the rule succeeds.
+
 chapter opt in/no tip
 
 section notiping

@@ -452,6 +452,7 @@ this is the post-sitar-or-stria-to-stair rule:
 	moot stria;
 	moot sitar;
 	move stair backdrop to all stairy rooms;
+	process the tag backdrops for hinting rule;
 
 this is the post-my-niche-chimney rule:
 	now Highest Heights are mapped above Dusty Study;
@@ -1447,6 +1448,7 @@ this is the post-barley-barely rule:
 	move ed riley to Minded Midden;
 	move cinders to Minded Midden;
 	move Edictal Citadel backdrop to all ominous rooms;
+	process the tag backdrops for hinting rule;
 
 this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
@@ -2254,29 +2256,30 @@ to say spec-help of (itm - a thing):
 	if itm is a mack-idea:
 		say "You feel you're on the right track to expose the macks. But that's not quite it.";
 		continue the action;
-	repeat through table of spechelp:
-		if itm is xtrhelp entry:
-			if there is a helptxt entry:
-				say "[helptxt entry][line break]";
-				if debug-state is true, say "DEBUG ONLY: [pull-from of itm].";
-				if itm is cur-help-item:
-					if can-prog-hint:
-						increment ana-repeats;
-						if ana-repeats is 3:
-							now ana-repeats is 0;
-							say "[line break]This guessing is getting a bit frustrating. You note the idlers['] slider on the settler[one of][or]again[stopping]. Maybe it could help you a bit.";
-							continue the action;
+	if xtra-trax is true:
+		repeat through table of spechelp:
+			if itm is xtrhelp entry:
+				if there is a helptxt entry:
+					say "[helptxt entry][line break]";
+					if debug-state is true, say "DEBUG ONLY: [pull-from of itm].";
+					if itm is cur-help-item:
+						if can-prog-hint:
+							increment ana-repeats;
+							if ana-repeats is 3:
+								now ana-repeats is 0;
+								say "[line break]This guessing is getting a bit frustrating. You note the idlers['] slider on the settler[one of][or]again[stopping]. Maybe it could help you a bit.";
+								continue the action;
+					else:
+						now ana-repeats is 0;
+					now cur-help-item is itm;
+					continue the action;
 				else:
-					now ana-repeats is 0;
-				now cur-help-item is itm;
-				continue the action;
-			else:
-				break;
-	if itm is a mack-idea:
-		say "[if itm is ment]The macks seem to waver a bit, but not enough[else]The macks look at you funny[end if].";
-		continue the action;
-	d "You may want to put in special text here in the table of spechelp, tsh, for ([the itm]). Or not.";
+					break;
+		d "You may want to put in special text here in the table of spechelp, tsh, for ([the itm]). Or not.";
 	say "[pull-from of itm].";
+	if xtra-trax-warn is false:
+		say "[line break]You can use the command XTRA TRAX to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
+		now xtra-trax-warn is true;
 
 to decide whether can-prog-hint:
 	if mrlp is oyster, decide no;
@@ -2445,6 +2448,7 @@ farm plot	"[dio-part]."
 event map	"[dio-part]."
 steel pad	"[dio-part]."
 brass crag	"[dio-part]."
+painting	"The painting clues all the ways out of the Dusty Study, but you don't need to do anything more to it."
 niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a household accoutrement that leads up? If you use the settler, you may know what the last letter is.[plus][or]'My niche' can be a chimney.[minus][cycling]"
 closest closets	"The closets [if closets are touchable]are[else]were[end if] just for transporting around the Means Manse quicker, to or from the Dusty Study."
 vertical stripe	--	act ruin curtain
@@ -2468,7 +2472,7 @@ satchel	"The satchel might be useful for carrying things, but your super purse i
 letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
 equals sign	"[one of]The equals sign is useful if you don't want things to be too easy.[plus][or]The equals sign will give squealings if you scan something and the information might make the puzzle trivial.[plus][or]You can override the equals sign with SY (scan with correct letters) or SN.[line break][sy-sn][minus][cycling]"
-ISBN Bins	"[one of]The ISBN Bins are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a SNIB.[minus][cycling]"
+ISBN Bins	"[if isbn bins are reflexed]You figured how to secure the ISBN bins. Nothing more to do.[else][one of]The ISBN Bins are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a SNIB.[minus][cycling][end if]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
 super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
 evac cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
