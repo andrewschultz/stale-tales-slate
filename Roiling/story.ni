@@ -4117,7 +4117,7 @@ when play begins (this is the basic initialization rule):
 			else if PE is not a him-who listed in the table of default-sub-blather and PE is not terse:
 				if 1 > 2:
 					say "[PE] might want default-sub-blather.";
-			if PE is not terse:
+			if PE is not terse and PE is not a guardian:
 				if PE is not a him-who listed in the table of subject-blather:
 					if litany of PE is Table of No Conversation and PE is not terse:
 						say "[PE] has nothing special or specific to say.";
@@ -4565,8 +4565,9 @@ sods gone odes song	true	true	false	false	"My heavens, that's not a lot of posit
 sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
 hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
 alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
-starch charts	true	true	false	false	"Starch is calorically and cosonantally (if that's a word) heavy. This must help."
+starch charts	true	true	false	false	"Starch is calorically and consonantally (if that's a word) heavy. This must help."
 Clack Ops Locs Pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
+be troo e robot	true	true	false	false	"You wonder if you need a step back to take a new look at the ambiguous clues."
 Im Le Cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
 bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
@@ -4581,12 +4582,14 @@ Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particu
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
-general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
+HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
+general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguoua readings aren't so bad."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
 papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
 templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
 natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
+Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title will wind up being a weakness."
 dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
@@ -4607,6 +4610,7 @@ organised ego drains	true	true	false	false	"With nine letters, it was never goin
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
 hostile is he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
+reb nok bonker	true	true	false	false	"Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
@@ -8554,7 +8558,11 @@ check going inside in Carven Cavern:
 	if act ruin curtain is in Carven Cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
-	if respect specter is touchable, say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness, before vanishing.[paragraph break]";
+	if respect specter is touchable:
+		say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness.";
+		wfak;
+		process the post-specter-scepter rule;
+		say "[line break]";
 	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	moot satchel;
 	moot teariest treatise;
@@ -8563,11 +8571,86 @@ check going inside in Carven Cavern:
 
 chapter Respect Specter
 
-the Respect Specter is a vanishing LLPish person in Carven Cavern. "[one of]You hear a rustly, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
+the Respect Specter is a vanishing LLPish terse person in Carven Cavern. "[one of]You hear a rustly, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
 
 a-text of respect specter is "RRYRRYR". b-text of respect specter is "?R?????". parse-text of respect specter is "x[sp]x[sp]-[sp]?[sp]x[sp]?[sp]?".
 
 got-thru-respect is a truth state that varies.
+
+section Inducted Deductin
+
+Inducted Deductin is a warpable boring thing. printed name is "Inducted Deductin[']". initial appearance is "(bug)". description is "Inducted Deductin['] has [number of deduction-pages in words] pages of brief examples. You can read them by saying X X1, X X2, X X3, and X X4. Explicitly READing them goes back to the start.[paragraph break]You can also DROP it if you feel you don't need it.". bore-check of Inducted Deductin is bore-deduct rule.
+
+a deduction-page is a kind of thing. it is usually boring and cluey. bore-text of a deduction-page is usually "You can really only examine or read the Inducted Deductin['] pages to see their sample logic.". a deduction-page has a number called deduct-part. a deduction-page has a table name called logic-table. bore-check of a deduction-page is usually bore-deduct rule.
+
+this is the bore-deduct rule:
+	if current action is dropping:
+		say "Are you sure you wish to drop [deductin]? You should only do so if you fully understand what ambiguous cheat mode readings do, or you're worried that learning might spoil too many puzzles.";
+		if the player regex-prompt-consents:
+			say "Ok. It's gone now.";
+			moot inducted deductin;
+		say "Ok. The nag will appear if you try again, but you can still drop it." instead;
+
+carry out examining a deduction-page:
+	now noun is read-yet;
+	if deduct-part of noun is 0:
+		say "You read the first logical step. It looks like there are [logic-steps of noun in words] total.[line break]";
+	increment deduct-part of noun;
+	if deduct-part of noun > logic-steps of noun:
+		say "You go back to the top and begin rereading.[line break]";
+		now deduct-part of noun is 1;
+	choose row (deduct-part of noun) in logic-table of noun;
+	say "[cheat-clue entry][line break]";
+	if deduct-part of noun is logic-steps of noun, say "[line break]Well, that's the end of that example.";
+	the rule succeeds;
+
+to decide which number is logic-steps of (dp - a deduction-page):
+	decide on number of rows in logic-table of dp;
+
+check reading a deduction-page:
+	if deduct-part of noun < logic-steps of noun and deduct-part of noun > 0, say "You interrupt your reading and go to the top.[line break]";
+	try examining the noun instead;
+
+X1 is a deduction-page. it is part of Inducted Deductin. logic-table of X1 is table of X1 reasoning.
+
+table of X1 reasoning
+cheat-clue
+"Example 1 gives the example of APES['] APSE and RYY?."
+"The fourth letter of APES/APSE must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S."
+"Knowing slot 4 is S, then slot 1 is P."
+"But then since slot 3 is yellow, it can't be E. That gives us PEAS."
+
+X2 is a deduction-page. it is part of Inducted Deductin. logic-table of X2 is table of X2 reasoning.
+
+table of X2 reasoning
+cheat-clue
+"Example 2 is MERE MOOR scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram EMOR-EMOR, twice."
+"So the final word is an anagram of EMOR. Figuring the 'right' anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?"
+"You may note both slots 2 and 4 must be vowels, so the final word has two vowels and two consonants."
+"Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O."
+"Slot 1 can't be M, so it is R. ROME. Note that this is a proper name, which should not show up except for optional points."
+
+X3 is a deduction-page. it is part of Inducted Deductin. logic-table of X3 is table of X3 reasoning.
+
+table of X3 reasoning
+cheat-clue
+"Example 3 is of the SACRED CEDARS you visited on your trip to Yorpwald, and if, hypothetically, it scanned six question marks. Which seems completely unhelpful. But it is not!"
+"Each ambiguous reading has two possibilities, giving SC/AE/CD/RA/ER/DS."
+"Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total."
+"SACRED, SECARD. CADRES, CEDRAS."
+"Since SACRED is an original word, it can't work, but CADRES does."
+
+X4 is a deduction-page. it is part of Inducted Deductin. logic-table of X4 is table of X4 reasoning.
+
+table of X4 reasoning
+cheat-clue
+"Example 4 is an ESPRIT STRIPE. The clue is ?R??R?."
+"Believe it or not, nearly everything falls into place quickly here."
+"The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/P/S, and the sixth is E/T."
+"If letter 4 were R, #2 and 3 would both be P. So #4 is I."
+"Also, #5 is T, because if it were R or P, that'd leave only one option for letter 2 or 3. But since #6 must be E or T, it is E."
+"Since #1 is E or S, so it must be S. That leaves SRPITE or SPRITE."
+"At some point, strict logic isn't quite enough, and common sense will eliminate the last few answers. Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE."
 
 chapter plaster psalter
 
@@ -12972,9 +13055,9 @@ this is the bore-robot rule:
 
 understand "oberto" as Be Troo E Robot when Be Troo E Robot is read-yet.
 
-a-text of Be Troo E Robot is "RYRYYR". b-text of Be Troo E Robot is "RYPYGR". parse-text of Be Troo E Robot is "x[sp]-[sp]b[sp]-[sp]o[sp]x". be troo e robot is cheat-spoilable.
+a-text of Be Troo E Robot is "RYRYYR". b-text of Be Troo E Robot is "R?RYG?". parse-text of Be Troo E Robot is "x[sp]-[sp]b[sp]-[sp]o[sp]x". be troo e robot is cheat-spoilable.
 
-description of Be Troo E Robot is "[if robot is reflexive]It looks back up at you, eager for an order[else]You check where it's hidden. It looks to be sleeping after performing a task for you[end if]."
+description of Be Troo E Robot is "[if robot is reflexive]It looks back up at you, eager for an order[else]You check where it's hidden. It looks to be sleeping after helping you reboot[end if]."
 
 understand "code/program" as screen when be troo e robot is reflexed and player is in Hacks Shack.
 
@@ -15853,7 +15936,7 @@ to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]
 
 chapter dreads adders
 
-The dreads adders are a plural-named purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north. [one of]If you look at them again, you may remember the two people who created them[or][sade-sard][stopping].". description is "They look like they're trying to invoke fear, but perhaps there's another emotion?" [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are. And it'd take longer to rewrite the rules than just to add what room the adders are in.]
+The dreads adders are a plural-named terse purple guardian in Topside Deposit. "Dreads adders may or may not be lethal, but you're scared of passing them to the north. [one of]If you look at them again, you may remember the two people who created them[or][sade-sard][stopping].". description is "They look like they're trying to invoke fear, but perhaps there's another emotion?" [unfortunately the move-to rule fires before the reorg-guardians rule so we need to specify where the dreads adders are. And it'd take longer to rewrite the rules than just to add what room the adders are in.]
 
 to say sade-sard:
 	say "[one of]Dr. Sade[or]Ed Sard[in random order] was one of their creators, you remember now, as you see red"
@@ -17323,7 +17406,7 @@ chapter Anemic Cinema guardians
 
 section resident trendies
 
-some Resident Trendies are plural-named red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
+some Resident Trendies are plural-named terse red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
 
 a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
 
@@ -17442,7 +17525,7 @@ retrytext of REB NOK bonker is ", poised to re-bonk"
 
 section stinger
 
-The grin set stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively. It's got a grin set in it. You could also READ its brand.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it.". printed name of grin set stinger is "grin-set stinger".
+The grin set stinger is a purple terse guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively. It's got a grin set in it. You could also READ its brand.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it.". printed name of grin set stinger is "grin-set stinger".
 
 a-text of grin set stinger is "RYRRYRR". b-text of grin set stinger is "RYRRYRR". parse-text of grin set stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
@@ -21467,7 +21550,6 @@ carry out objhinting (this is the pick object to hint rule) :
 	now ever-obj-hinted is true;
 	if noun is the player, all-say "[if cur-score of Ordeal Reload < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead; [ couldn't put the player in the table of hintobjs]
 	abide by the hint certain object groups rule;
-	if noun is question mark, all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
 	if noun is moot, abide by the hint-moot-objects rule;
 	if noun is cluey, say "The [noun] provides clues for something else you need to flip." instead;
 	abide by the spoil-hints rule;

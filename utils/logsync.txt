@@ -121,6 +121,7 @@ stria>stair
 ####highest heights
 pram>ramp
 isbn bins>snib
+respect specter>scepter
 rifle>flier
 plaster psalter>stapler
 palest pastel plates>staple
@@ -196,7 +197,7 @@ me arts~me arts mr east stream tamers>master
 lead~lead all a deed>deal
 ####browse bowers
 si reed>desire
-reside reside>desire
+see dir>desire
 ####Econ Cone
 praise spirea>aspire
 rivets>strive
@@ -302,7 +303,7 @@ pale plea>leap
 ####anger range
 carps>scrap
 pikes>spike
-pre-haun~haunter>unearth
+hunter hunt area>unearth
 haunter~sausage>assuage
 ####hardest trashed dearths
 cans>scan
@@ -364,7 +365,7 @@ marcel>calmer
 marlon>normal
 reggie>eggier
 andres>snared
-rodney>yonder
+yo rend or deny rodney>yonder
 andrew>warned
 archie>achier
 barney>nearby
@@ -410,8 +411,8 @@ reeds ale>released
 elsa erde>released
 ####danger garden
 alarming grailman>marginal
-bonker>broken
-stinger>resting
+REB NOK bonker>broken
+grin set stinger>resting
 natives site van>naivest
 ####shaven havens
 lone duck>unlocked
@@ -436,6 +437,7 @@ eastern shore~eastern>nearest
 ####mislit limits
 pestern serpent>present
 unripe ur pine>punier
+nastier stainer retinas>antsier
 accurst leap>spectacular
 clear catsup>spectacular
 pest accrual>spectacular
@@ -585,7 +587,6 @@ AFT=rivets
 #presto
 AFT=maze walls
 #oyster
-AFT=pale plea
 #towers
 AFT=prison ropins
 AFT=dr yow

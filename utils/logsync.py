@@ -83,7 +83,7 @@ def match_score(my_l, my_a, lc, str):
     retval = 0
     for q in my_a:
         if q in my_l: retval += 1
-        if q + "is " in my_l: print("WARNING", str, lc, "should have", q, "of <NAME> and not", q, "is")
+        if q + "is " in my_l: print("WARNING", str, lc, "should have", q + "of <NAME> and not", q + "is")
     return retval
 
 def read_data_file():
@@ -483,7 +483,7 @@ def aro_settler_check():
                             else: sys.exit("Uh oh couldn't find anything to add to " + s + " of " + ','.join(sary))
                         if v != the_string:
                             b_count += 1
-                            print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v, "as the given b-text but should have", the_string)
+                            print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v.upper(), "as the given b-text but should have", the_string.upper())
                     if 'parse-text' is q:
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw

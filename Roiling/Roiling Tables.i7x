@@ -39,7 +39,7 @@ meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-b
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	--	"'Here. That's it. You don't really need a scepter, though. Probably more important to have that boost before moving on, right? [scep-scan-track].'"
+Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done. Wait, oops, sorry.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops. Well, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
 plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtain appears behind, a stapler falls out. You take it[if plates are touchable] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
@@ -486,6 +486,11 @@ this is the pre-specter-scepter rule:
 		preef Respect Specter;
 		the rule fails;
 
+this is the post-specter-scepter rule:
+	say "'Oh. One more thing. Instead of the scepter you could've had, have [deductin]. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is.'";
+	now player has Inducted Deductin;
+	set the pronoun it to Inducted Deductin;
+
 this is the post-psalter-stapler rule:
 	if act ruin curtain is not in Carven Cavern, now act ruin curtain is in Carven Cavern;
 
@@ -502,9 +507,9 @@ to say scep-scan-track:
 	else if Specter is cscanned:
 		say "While you didn't get the definitive hints from non-cheat scanning, I can suspect you see how it could work, combining both ways to scan";
 	else if Specter is ncscanned:
-		say "You kind of avoided the cheat-scanning I came here for, but I respect your intrepid stance against cheating, even if it really isn't cheating.";
+		say "You kind of avoided the cheat-scanning I came here for, but I respect your intrepid stance against cheating, even if it really isn't cheating";
 	else:
-		say "I respect your need not to make me talk too much. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own."
+		say "I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way";
 
 section stores auxiliary
 
@@ -2423,7 +2428,7 @@ Urgent Gunter	"You can pump him for information if you want."
 isolani liaison	"The isolani liaison is just a door. It isn't there for any puzzles but just to communicate with the outside world[if gunter is not off-stage]. But after taking to Gunter, it's not useful[end if]."
 notice	"For reading."
 beams	"[one of]It's important there are TEN BEAMS.[plus][or]The ten beams lead somewhere below.[plus][or]What is a place that's below in a house?[plus][or]Open the BASEMENT.[minus][cycling]"
-question mark	"[one of]A question mark in cheat mode for the settler is not as hopeless as you think.[plus][or]For starters, you may find something more direct than a question mark if you switch to non-cheat mode. That way you'll know if the confusing letter is a vowel or consonant.[plus][or]However, the question mark can also indicate that one of two letters in a description works. There's a simple example ahead.[plus][or]So if, for instance, APES['] APSE gives RYY?, you know the last letter must be E or S.[plus][or]But RYY? tells us more: APES and APSE have two consonants, and so must the product. So letter 4 is a consonant, or S. So the question mark wasn't really a question mark. That doesn't always work, but it can help. In this case, we also find slot 3 is A, making 2 E and 1 P. PEAS.[plus][or]More abstractly, if ABCDE EBACD needs to be EDABC, we would have ?R?RR. But the two remaining slots would have to be vowels.[plus][or]Similarly, if we have two question marks and one is a choice between only consonants or only vowels, you can figure what the other is by counting consonants and vowels.[plus][or]Thus, question marks may not give immediate clues, but they may provide a bit more than just standard colors. Restart to see this again.[minus][cycling]"
+question mark	"[if player has inducted deductin][deductin] has more detailed information on how to read a question mark.[line break][else if inducted deductin is off-stage]There'll be a hint item later that explains how to sort out ambiguous readings from the settler in cheat mode.[line break][else][end if][one of]A question mark in cheat mode for the settler is not as hopeless as you'd think. In fact, it may cut down the possibilities. It may occur when there are two possible solutions or, more likely, when something to change has a double-anagram, e.g. TAPES SPATE, a matching anagram, or MERE MOOR, which is (EMOR) times two.[plus][or]So if you have an eight-letter word, an ambiguous reading may leave two possibilities, but a vowel or consonant may turn up four. Thus, an ambiguous reading works out better.[plus][or]You can also switch to non-cheat mode to clear up ambiguities, but often, you don't need to. I'll use the TAPES SPATE sample below.[plus][or]If TAPES SPATE gives R?R??, we have a good bit to work with. The first letter must be P, since it is a consonant.[plus][or]The second letter must be A. This is the sort of jump that makes cheat mode with ambiguity powerful. Slot 3 must be a consonant, and slots 4 or 5 can be E or a consonant. That leaves A for slot 2.[plus][or]However, for the end bit, there is ambiguity. E can go in slot 4 or 5.[plus][or]You thus have PATES or PASTE, so TAPES SPATE is potentially ambiguous. No critical puzzles will be in A Roiling Original. But you can also see how ambiguous readings can drastically cut down possibilities.[minus][cycling]"
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
 whichs shwich	"[one of]The whichs shwich button toggles whether or not you know characters are in the right position. Details on what the colors mean will follow if you HINT again.[plus][or]More specifically, red/yellow=wrong, purple/green=right.[minus][cycling]"
 decal	"[one of]The Y's on the decal are orange. This seems like a clue.[plus][or]Orange is red and yellow.[plus][or]Y is the only letter of the alphabet that is...[plus][or]...a consonant and a vowel![minus][cycling]"
@@ -2467,6 +2472,7 @@ ISBN Bins	"[one of]The ISBN Bins are pretty hefty, but they're easy to enter.[pl
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
 super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
 evac cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
+rifle	"[one of]The rifle's more powerful than words. OR IS IT.[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless FLIER.[minus][cycling]"
 Gird Grid	"The Gird Grid has information on the various stores to explore."
 Respect Specter	"[one of]The Respect Specter isn't necesary to solve the game, but it can help you with puzzles if you use cheat mode.[plus][or]First, the actual thing to change to is easy.[plus][or]Make, or ask for, a SCEPTER. Spelling is important. But you can do more.[plus][or]The specter may give more information about ambiguous readings if you scan it different ways.[minus][cycling]"
 plaster psalter	"[one of]Plaster generally covers up holes. You need to bust through that plaster.[plus][or]If you used the settler, you might notice it, uh, settles a lot about the plaster.[plus][or]The plaster becomes a STAPLER.[minus][cycling]"
@@ -2474,7 +2480,11 @@ palest pastel plates	"[one of]The plates are embedded, but they have a metal rim
 staple	"[one of]What does a staple go in?[plus][or][if plaster is touchable]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 stapler	"[one of]What goes in a stapler?[plus][or][if plates is touchable]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 act ruin curtain	"[one of]What does the act-ruin curtain--with its design--remind you of?[plus][or]The act-ruin curtain is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is touchable or plates are touchable]You've got some work to do before you can do any stapling[else]You've got what you need to staple the curtain and peel it back[end if].[plus][or]STAPLE CURTAIN[if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
-rifle	"[one of]The rifle's more powerful than words. OR IS IT.[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless FLIER.[minus][cycling]"
+Inducted Deductin	"[in-ded-hint]."
+X1	"[in-ded-hint]."
+X2	"[in-ded-hint]."
+X3	"[in-ded-hint]."
+X4	"[in-ded-hint]."
 Curtis	"[if moss cap is off-stage][one of]Curtis will help you if you get him enough fruits. Actually, just four.[plus][or]Look around a bit and look at the scenery. A few things have just a few letters. The rest are an exercise.[plus][or]He is good at delegating but not conversation.[minus][cycling][else if player has moss cap]You won't get more than the moss cap from him. Now, what to do with it?[else]Curtis [up-to-l3].[end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."
 high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end ORDEAL RELOAD hints]
@@ -2987,6 +2997,8 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+
+to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
 
 to say once-now-digger: say "[if player has rigged digger]now you've got the rigged digger[else]once you have the right equipment[end if]"
 
