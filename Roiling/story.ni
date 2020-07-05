@@ -52,6 +52,8 @@ Are the two modified, and there may be a problem with naming Flexible Windows.i7
 
 volume globals and initializers
 
+chapter general includes and notes
+
 include Reactable Quips by Michael Martin.
 
 include Quip-based Conversation by Michael Martin. [his extensions must be listed in this order]
@@ -83,7 +85,7 @@ the release number is 4.
 [for the purposes of amusement, I'd like to list the release updates.
 --Gasp! Rude Upgrades!]
 
-section game specific stuff
+chapter game specific includes
 
 include Intro Restore Skip by Andrew Schultz.
 
@@ -106,6 +108,10 @@ bore-check of a thing is usually bore-eat-check rule.
 this is the bore-eat-check rule:
 	unless mrlp is others, continue the action;
 	if noun is a fruit, try eating the noun;
+
+section game specific testing includes - not for release
+
+include STS tests by Andrew Schultz.
 
 chapter region specs
 
@@ -1751,6 +1757,7 @@ table of reflexive-blather	[ask x about x] [tor] [trb] [xxtalk1]
 him-asked	him-told
 Gunter	"His views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
+Respect Specter	"'I'll give you help if you SCAN me. But as an undead, I can't talk much beyond what's allowed.'"
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is touchable]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 blabber babbler	--
@@ -1872,6 +1879,7 @@ to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is fo
 table of default-gen-blather	[ask x about nonsense] [tod] [xxtalk2]
 default-talker	gen-blah
 yourself	"You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints."
+Respect Specter	"'My past is not important. I can help you now, though, if you SCAN me.'"
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
 Rehabs Basher	"[he-she-c] nods at you and the blabber babbler. It's remarkably effective psychological warfare, to repress you and all."
 blabber babbler	"If [he-she] actually heard you, [he-she]'d yell a stunning rebuke to whatever [he-she] could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
@@ -2524,6 +2532,7 @@ volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz
 sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 Clack Ops Locs Pack	"The [locs pack] mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
+Be Troo E Robot	"OBERTO, in red. That's its name."
 drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
 drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
 peels speel	"Through the jargon, you read [']E Elps! [']E Elps! a lot. It's emphasized in red."
@@ -4110,7 +4119,7 @@ when play begins (this is the basic initialization rule):
 					say "[PE] might want default-sub-blather.";
 			if PE is not terse:
 				if PE is not a him-who listed in the table of subject-blather:
-					if litany of PE is Table of No Conversation and PE is not a guardian:
+					if litany of PE is Table of No Conversation and PE is not terse:
 						say "[PE] has nothing special or specific to say.";
 				if PE is not a him-asked listed in the table of reflexive-blather:
 					if litany of PE is Table of No Conversation:
@@ -4984,7 +4993,7 @@ this is the presto-hinting rule:
 	if player is in Hacks Shack:
 		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
 		if can-put-on-slab, all-say "You [if spoilit is true]would rather[else]can[end if] put the [k-and-c] on the slab." instead;
-		if blue button is reflexive, try objhinting blue button instead;
+		if be troo e robot is reflexive, try objhinting be troo e robot instead;
 		if Clack Ops Locs Pack is not moot, try objhinting Clack Ops Locs Pack instead;
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
@@ -8716,8 +8725,9 @@ check talking to a person:
 	display the QBC options;
 
 check talking to:
-	repeat through table of default-gen-blather:
-		if noun is default-talker entry and there is a gen-blah entry, say "[gen-blah entry][line break]" instead;
+	if noun is not terse:
+		repeat through table of default-gen-blather:
+			if noun is default-talker entry and there is a gen-blah entry, say "[gen-blah entry][line break]" instead;
 	if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
 
 check talking to Mole Elmo (this is the can't talk while Elmo has the rifle rule) : if rifle is not moot, say "'Hostages['] hot gases!' Elmo booms, waving his rifle." instead;
@@ -10221,7 +10231,7 @@ this is the enter-towers rule:
 		else:
 			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in Strip of Profits is 1]stores[else if number of stos in Strip of Profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Wildest Wilteds! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Wildest Wilteds again.[stopping]"
+	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Wildest Wilteds! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you. But unfortunately it is a marauder of whom you have only heard rumors: Yo-Rend-or-Deny Rodney! He has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Wildest Wilteds again.[stopping]"
 
 chapter store x
 
@@ -12645,7 +12655,7 @@ understand "bottle" as ALocalCo Cola when ALocalCo Cola is touchable.
 
 check inserting into mug:
 	if noun is ALocalCo Cola:
-		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.";
+		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.[paragraph break]The [e robot][if robot is reflexed], from under the labs slab,[end if] clicks reprovingly. Probably because it's a bot o['] root beer.";
 		moot ALocalCo cola;
 		the rule succeeds;
 	say "Only liquids would belong there." instead;
@@ -12683,7 +12693,7 @@ to decide whether cpuready:
 	if computer screen is not on slab, decide no;
 	if caps lock is not part of keyboard, decide no;
 	if disk is not in drive a, decide no;
-	if blue button is reflexive, decide no;
+	if Be Troo E Robot is reflexive, decide no;
 	decide yes.
 
 chapter locs pack
@@ -12738,7 +12748,7 @@ a-text of BUB DUDE EGG is "RYRYR". b-text of BUB DUDE EGG is "???Y?". parse-text
 check scaning computer screen: if BUB DUDE EGG is touchable, try scaning BUB DUDE EGG instead;
 
 check restarting the game when player is in Hacks Shack:
-	say "[if blue button is reflexive]You look over at Drive A--and the blue and orange buttons--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
+	say "[if Be Troo E Robot is reflexive]You look over at Drive A--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
 
 after printing the locale description for shack when shack is unvisited:
 	if computer screen is in Austerer Treasure:
@@ -12953,25 +12963,20 @@ check scaning USB:
 		else:
 			say "Good sport!" instead;
 
-description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status."
+description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a a golden dongle you don't want to mess with. You can also READ it for its status."
 
-The small blue button is part of Drive A. understand "reboot/ button" as small blue button. it is flippable. it is reflexive.
+The Be Troo E Robot is a boring reflexive thing in Hacks Shack. "A Be Troo E Robot waits here for an important order.". bore-text of Be Troo E Robot is "[if robot is reflexed]It needs a special command[else]The [robot] has no more work to do[end if].". bore-check of Be Troo E Robot is bore-robot rule. printed name is "Be-Troo E-Robot".
 
-The small orange button is part of Drive A.
+this is the bore-robot rule:
+	if current action is taking, say "[if robot is reflexed]It's resting. Don't bother it[else]The [robot] inches away. It's a servant, not a pet[end if]." instead;
 
-a-text of small blue button is "RYRYYR". b-text of small blue button is "RYPYGR". parse-text of blue button is "x[sp]-[sp]b[sp]-[sp]o[sp]x". blue button is cheat-spoilable.
+understand "oberto" as Be Troo E Robot when Be Troo E Robot is read-yet.
 
-description of small blue button is "'To be or'"
+a-text of Be Troo E Robot is "RYRYYR". b-text of Be Troo E Robot is "RYPYGR". parse-text of Be Troo E Robot is "x[sp]-[sp]b[sp]-[sp]o[sp]x". be troo e robot is cheat-spoilable.
 
-description of small orange button is "'Not to be'"
+description of Be Troo E Robot is "[if robot is reflexive]It looks back up at you, eager for an order[else]You check where it's hidden. It looks to be sleeping after performing a task for you[end if]."
 
-check pushing small blue button:
-	if small blue button is reflexive and the player's command does not include "reboot", say "You're not sure what that button does. You see red thinking it's a [i]bore to[r] push again. Or I'm not sure you are, and I'm looking out for my fellow computers, here." instead;
-	try fliptoing small blue button instead;
-
-understand "code/program" as screen when blue button is reflexed and player is in Hacks Shack.
-
-check pushing small orange button: say "It's too bent to push. Seems like the blue button [if blue button is reflexed]was[else]is[end] more worth pushing." instead;
+understand "code/program" as screen when be troo e robot is reflexed and player is in Hacks Shack.
 
 check taking (this is the can't remove computer parts from labs slab rule):
 	if noun is in Drive A, say "The disk is where it should be." instead;
@@ -12994,7 +12999,7 @@ a-text of drive e is "RYRYRY". b-text of drive e is "?Y???G". parse-text of driv
 
 understand "e drive" as drive e.
 
-check inserting into drive e: say "Drive E is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive a may be able to hold stuff[end if]." instead;
+check inserting into drive e: say "Drive E is too small. It's just an auxiliary drive. [if disk is in drive a]You already put the disk in drive a, anyway[else]Drive A may be able to hold stuff[end if]." instead;
 
 to decide which number is drive-llp:
 	let temp be 0;
@@ -13082,18 +13087,6 @@ check pouring it into:
 	if noun is ALocalCo cola, try inserting noun into second noun instead;
 	say "That won't work. You need to pour a liquid (a small amount) into something." instead;
 
-chapter rebooting
-
-rebooting is an action applying to nothing.
-
-understand the command "reboot" as something new.
-
-understand "reboot" as rebooting.
-
-carry out rebooting:
-	if player is not in Hacks Shack, say "There's nothing to reboot here." instead;
-	try pushing blue button instead;
-
 chapter clock sap
 
 chapter disk
@@ -13179,7 +13172,7 @@ a-text of peels speel is "RRYYR". b-text of peels speel is "?RG?R". parse-text o
 understand "peels speel" and "peels/speel" as peels speel when can-name-speel.
 
 to decide whether can-name-speel:
-	if blue button is reflexed and polemic is not reflexed, yes;
+	if be troo e robot is reflexed and polemic is not reflexed, yes;
 	no;
 
 check inserting into the keyboard (this is the insert-keyboard rule):
@@ -22625,8 +22618,6 @@ index map with Sparse Spares mapped south of Peek Keep.
 index map with Meatier Emerita Emirate mapped east of Lost Lots.
 
 volume beta testing - not for release
-
-include STS tests by Andrew Schultz.
 
 section instructions
 

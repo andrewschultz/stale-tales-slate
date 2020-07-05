@@ -578,7 +578,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ops"	252092502	Clack Ops Locs Pack	--	"[full-pack]."
 "locs"	243445967	Clack Ops Locs Pack	--	"[full-pack]."
 "pack"	155592540	Clack Ops Locs Pack	--	"[full-pack]."
-"nottobe"	570057712	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if blue button is reflexed]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "caps"	198933328	caps lock	--	"[caps-no]."
 "lock"	200105179	caps lock	--	"[caps-no]."
 "tbakey"	426815280	TBA key	--	"[tba-key-jazz]."

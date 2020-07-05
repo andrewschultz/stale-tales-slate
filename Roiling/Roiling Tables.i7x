@@ -149,15 +149,15 @@ disk	skid	false	215229079	--	"skid"	"skid"	--	post-disk-skid rule	"[one of]By so
 skid	disk	true	215229079	--	"disk"	"disk"	--	--	"The skid changes back into the familiar disk, which you take." [there was a pre-skid-disk rule, but it was trumped by the SHATTER THREATS rule]
 flea	leaf	true	210322662	--	"leaf"	"leaf"	--	--	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."
 gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be, because they have odd special abilities. Maybe if you examine this mug, you can see if it does."
-coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira tried to corner the market with the deceptively named All-Cocoa Cola."
-blue button	blue button	false	483363989	--	"reboot"	"reboot"	pre-reboot rule	post-reboot rule	"The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen. But ... it still doesn't work. There's a peels speel on the screen that explains the peels you slipped on."
+coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira failed to corner the market with the deceptively named All-Cocoa Cola and 'ironic' Ol['] Cloaca Cola, which also got a cease and desist letter from a bunch of weird stick figures in a totally different fantasy realm."
+be troo e robot	be troo e robot	false	483363989	--	"reboot"	"reboot"	pre-reboot rule	post-reboot rule	"The [robot] whizzes around Drive A for a moment. It taps around and under. Then it[if player has rom sticks] takes your ROM sticks and puts them in Drive A before it[end if] produces a thin needle so it pokes Drive A just so ... and Drive A reboots! While the software updates, the [robot], looking exhausted, hides on the underside of the Labs Slab. It's done its job. [if player has rom sticks]Those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp. [end if]. Drives A and E hum for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen. But ... it still doesn't work. There's a peels speel on the screen that explains what, uh, peels you slipped on."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if Im Le Cop polemic is reflexive], though you're not really tired yet[end if]."
 censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
 Im Le Cop polemic	Im Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
 peels speel	peels speel	false	487165982	--	"sleep"	"sleep"	pre-peels-speel-sleep rule	--	"'Fun to...' you muse, looking at the futon. You lie down and immediately feel -- yes, a smarter armrest. That's a good sign! During this purest rest-up, you osmose the max-sleep examples, and even the smartest mattress would only have given smatters of what your subconscious soaks up via from-cot comfort. You lose fatigue and even a potential ague fit. 'Real day already?' you remark. 'Up, coder! Produce!'"
-trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
+trim socks	ROM sticks	true	636341092	--	"romsticks"	"romsticks/romstick" or "rom stick/sticks"	--	post-rom-sticks rule	"The socks unravel and re-ravel into a pair of ROM sticks that [if robot is reflexed]the [robot] takes after whizzing out from under the Labs Slab. In they go to Drive A, bfore your mechanical friend returns to its sleep under the slab. Your work will go faster now[else]will surely fit into the right place when you need them to[end if]."
 escaroles	casserole	false	682843772	--	"casserole"	"casserole"	--	--	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."
 trim socks	ROM sticks	true	540067126	--	"romstick"	"romstick" or "rom stick"	--	--	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."
 BUB DUDE EGG	BUB DUDE EGG	false	304959612	--	"debug"	"debug"	pre-bub-dude-egg rule	post-bub-dude-egg rule	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Features ... use after...' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if TBA key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, taking the mug with it and revealing a plain old USB. You need a way out!"
@@ -182,7 +182,7 @@ clam	clam	false	139082395	--	"calm"	"calm"	--	post-calm-clam rule	"You try some 
 urn	urn	false	259337118	Disease Seaside	"run"	"run"	--	--	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."
 boats	boats	false	294343284	Fighter Freight	"boast"	"boast" or "boast at/to boats"	pre-boats-boast rule	--	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a Fighter Freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"
 pale plea	pale plea	false	265273725	Anger Range	"leap"	"leap" or "leap at plea" or "leap at pale plea"	--	--	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."
-oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend with a roar (as so,) landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"
+oars	oars	false	258138164	Anger Range	"soar"	"soar"	pre-oars-soar rule	--	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the frat raft dances, and you ascend with a roar (as so,) landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. As you stumble out of the raft, it drifts off, maybe to Rah-Bro Harbor. When you land, a fish growls, 'Weirdo. I rowed.'"
 frat raft	frat raft	false	217136535	--	"fart"	"fart" or "fart on raft"	pre-raft-fart rule	--	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"
 carps	carps	false	284257131	--	"scrap"	"scrap" or "scrap carps"	--	post-scrap-carps rule	"[spike-and-scrap]."
 pikes	pikes	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-spike-pikes rule	"[spike-and-scrap]."
@@ -904,21 +904,22 @@ this is the post-disk-skid rule:
 this is the pre-reboot rule:
 	if player has keyboard and keyboard is not on slab:
 		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
-		preef small blue button instead;
+		preef be troo e robot instead;
 	if disk is not in Drive A:
 		say "It's risky to boot without a disk, like that [if disk is in Hacks Shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
-		preef small blue button instead;
+		preef be troo e robot instead;
 	if computer screen is not on slab:
 		say "You wouldn't know if anything happened, since there's no screen on the table[if player has computer screen]. The one in your inventory should do[end if].";
-		preef small blue button instead;
+		preef be troo e robot instead;
 	if keyboard is not touchable:
 		say "You have nothing to type with, so it doesn't do much good.";
-		preef small blue button instead;
+		preef be troo e robot instead;
 	set the pronoun it to computer screen;
-	if player has rom sticks:
-		moot rom sticks;
 
-this is the post-reboot rule: move peels speel to Hacks Shack.
+this is the post-reboot rule:
+	if rom sticks are touchable, moot rom sticks;
+	now be troo e robot is scenery;
+	move peels speel to Hacks Shack;
 
 this is the pre-censer-screen rule:
 	if censer is touchable:
@@ -975,7 +976,7 @@ this is the pre-polemic-compile rule:
 	if disk is not in Drive A:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if].";
 		preef Im Le Cop polemic instead;
-	if blue button is reflexive:
+	if be troo e robot is reflexive:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
 		preef Im Le Cop polemic instead;
 	if peels speel is reflexive:
@@ -989,7 +990,6 @@ this is the post-polemic-compile rule:
 	if sport ports are reflexive, poss-d;
 	if starch charts are in Saps Pass, poss-d;
 	if odes song is in Dirge Ridge, poss-d;
-	if player has rom sticks, moot rom sticks;
 
 this is the pre-bub-dude-egg rule:
 	if ALocalCo Cola is not moot:
@@ -1011,6 +1011,9 @@ this is the pre-peels-speel-sleep rule:
 		say "Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from assembling the computer! Yet.";
 		preef peels speel;
 		do nothing instead;
+
+this is the post-rom-sticks rule:
+	if be troo e robot is reflexed, moot rom sticks;
 
 this is the post-drive-flip rule:
 	if usb is not off-stage, say "Well, flipping [noun] didn't help speed up your programming, but hooray for generally satisfying your curiosity!";
@@ -2003,7 +2006,7 @@ trim socks	"You don't have the available memory in your head to see all the poss
 Clack Ops Locs Pack	"NO, REARRANGE AND TRY AGAIN, you think."
 fount	"Hm, might be FUN TO try another guess. Or useful. Or both."
 gum	"Ugg... umm... you stare at the gum. Not many ways it COULD be stretched."
-small blue button	"You need to give that computer another (figurative) kick."
+be troo e robot	"The [robot] gives a futile kick, but it's trying. Some sort of command like that must work."
 peels speel	"Whatever you thought seemed a bit of a tired mess."
 Im Le Cop polemic	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
@@ -2342,7 +2345,7 @@ caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if ALocalCo cola is moot]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
-small blue button		"No need to reboot twice."
+be troo e robot		"No need to reboot twice."
 TBA key	"No, the TAB key is what it should be."
 Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 peels speel	"You've had enough comforts from cots to do the programming you need. You might re-wake weaker."
@@ -2648,8 +2651,7 @@ USB	"[one of]The USB is pretty universal. It can become either of two things.[pl
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
 yak	"[if Hacks Shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in Hacks Shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
 catechism	"[if yak is moot]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something.[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
-blue button	"[if blue button is reflexed]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
-orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
+be troo e robot	"[if be troo e robot is reflexed]The [robot] has helped you enough. The rest is up to you.[else][one of]The [robot] can do something which is tricky for you.[plus][or]There appear to be no major control buttons, but the [robot] may be able to take an order.[plus][or]What is something you should try when any computer is acting strange?[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the E-Robot"
 Clack Ops Locs Pack	"[one of]The locs pack is allegedly for making things quieter.[plus][or]But why is so much of its text in LETTERS LIKE THESE?[plus][or]Because it can become CAPS LOCK buttons.[minus][cycling]"	--	"make a CAPS LOCK key"
 flea	"[one of]The flea is surprisingly brightly and multicolored for something dead.[plus][or]What else like FLEA is colorful when it's dead?[plus][or]The flea can become a LEAF.[minus][cycling]"	--	"make a LEAF"
 coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can become cheap dirty energy for people.[plus][or]What do hackers like to drink?[plus][or]Mountain Dew, Pepsi, Dr. Pepper...[plus][or]COLA.[minus][cycling]"	--	"make COLA"
@@ -3050,8 +3052,8 @@ to say frootz:
 
 check objhinting drive:
 	if disk is in Drive A:
-		if blue button is reflexed, all-say "You have the disk drive working." instead;
-		try objhinting blue button instead;
+		if be troo e robot is reflexed, all-say "You have the disk drive working." instead;
+		try objhinting be troo e robot instead;
 
 to say h-d: [??]
 	if disk is in drive:
