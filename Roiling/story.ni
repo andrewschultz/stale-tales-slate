@@ -7835,7 +7835,7 @@ this is the bore-pin rule:
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
-the abstract painting is a useless LLPish boring thing. "That painting you changed from a giant pin hangs here.". description of the abstract painting is
+the abstract painting is a cluey LLPish boring thing. "That painting you changed from a giant pin hangs here.". description of the abstract painting is
  "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
 
 this is the bore-painting rule:
@@ -8221,7 +8221,7 @@ before examining when Gunter is off-stage and stuff-found is 3:
 to say gtmn:
 	say "[one of]Tan Mage Nat Egam[or]Nat Egam[stopping]"
 
-the diorama is a backdrop. "[one of]Yes, you remember when Tan Mage Nat Egam gave it to you. You've half forgotten it's here, now, but he said one day, just in case, it'd be useful. For simpler prelims than your first time shuffling around.[paragraph break][or][stopping]It's a loose conglomeration of [if platform is part of diorama]a platform[else]a farm plot[end if], [if pavement is part of diorama]some pavement[else]an event map[end if], [if pedestal is part of diorama]a pedestal[else]a steel pad[end if], and [if crabgrass is part of diorama]some crabgrass[else]a brass crag[end if]. A notice down the center reveals what these items can become."
+the diorama is a backdrop. drop-region of diorama is Ordeal Reload. "[one of]Yes, you remember when Tan Mage Nat Egam gave it to you. You've half forgotten it's here, now, but he said one day, just in case, it'd be useful. For simpler prelims than your first time shuffling around.[paragraph break][or][stopping]It's a loose conglomeration of [if platform is part of diorama]a platform[else]a farm plot[end if], [if pavement is part of diorama]some pavement[else]an event map[end if], [if pedestal is part of diorama]a pedestal[else]a steel pad[end if], and [if crabgrass is part of diorama]some crabgrass[else]a brass crag[end if]. A notice down the center reveals what these items can become."
 
 after scaning when player is in Dusty Study (this is the pad-diorama rule) :
 	if noun is part of diorama:
@@ -8460,7 +8460,7 @@ a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "
 
 check taking stria: say "Too high up." instead;
 
-the stair is a boring backdrop. description of stair is "It leads [if player is in Largely All Grey Gallery]up[else]down[end if].". bore-text of stair is "Can't do much but go up or down a stair.".
+the stair is a boring backdrop. drop-region of stair is Ordeal Reload. description of stair is "It leads [if player is in Largely All Grey Gallery]up[else]down[end if].". bore-text of stair is "Can't do much but go up or down a stair.".
 
 does the player mean climbing the stair: it is very likely.
 
@@ -8581,7 +8581,7 @@ section Inducted Deductin
 
 Inducted Deductin is a warpable boring thing. printed name is "Inducted Deductin[']". initial appearance is "(bug)". description is "Inducted Deductin['] has [number of deduction-pages in words] pages of brief examples. You can read them by saying X X1, X X2, X X3, and X X4. Explicitly READing them goes back to the start.[paragraph break]You can also DROP it if you feel you don't need it.". bore-check of Inducted Deductin is bore-deduct rule.
 
-a deduction-page is a kind of thing. it is usually boring and cluey. bore-text of a deduction-page is usually "You can really only examine or read the Inducted Deductin['] pages to see their sample logic.". a deduction-page has a number called deduct-part. a deduction-page has a table name called logic-table. bore-check of a deduction-page is usually bore-deduct rule.
+a deduction-page is a kind of thing. it is usually boring and cluey. bore-text of a deduction-page is usually "You can really only examine or read the Inducted Deductin['] pages to see their sample logic.". a deduction-page has a number called deduct-part. a deduction-page has a table name called logic-table. bore-check of a deduction-page is usually bore-deduct rule. description of a deduction-page is usually "BUG.".
 
 this is the bore-deduct rule:
 	if current action is dropping:
@@ -9020,7 +9020,7 @@ after going when heights are visited and Strip of Profits is unvisited:
 		if location of player is dusty study, now study-closeted is true;
 	continue the action;
 
-the closest closets are a backdrop. "You can't quite see where they are going. They are weird to look inside. St. Cole's designed them meticulously. But they probably lead back to the [if player is in Dusty Study]Highest Heights[else]Dusty Study[end if]."
+the closest closets are a backdrop. drop-region of closest closets is Ordeal Reload. "You can't quite see where they are going. They are weird to look inside. St. Cole's designed them meticulously. But they probably lead back to the [if player is in Dusty Study]Highest Heights[else]Dusty Study[end if]."
 
 understand "closet" as closets.
 
@@ -13392,11 +13392,11 @@ the big l is scenery in Nowt Town. "It's a decent enough example of an L[if r00 
 
 [is a mazeroom/a mazeroom is usually in presto]
 
-big-let is a privately-named backdrop. big-let is in r10, r00, r01, r02, r12, r22, r32, r33, r23, Unwary Runway. printed name of big-let is "the big letter"
+big-let is a privately-named backdrop. drop-region of big-let is presto. big-let is in r10, r00, r01, r02, r12, r22, r32, r33, r23, Unwary Runway. printed name of big-let is "the big letter"
 
-the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+the maze walls are a reflexive plural-named uncluing useless backdrop. drop-region of maze walls is presto. the walls are in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
-n-t-air is a reflexive plural-named privately-named backdrop. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+n-t-air is a reflexive plural-named privately-named backdrop. drop-region of n-t-air is presto. description is "[bug-report]". n-t-air is in Grey Gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, Nowt Town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
 a-text of maze walls is "RYRYRRYR". b-text of maze walls is "RYRYRRYR". parse-text of maze walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16759,14 +16759,14 @@ printed name of solve a loaves is "solve-a-loaves".
 
 section Maturation Natatorium
 
-the Maturation Natatorium is a boring backdrop. the Maturation Natatorium is in Actionless Coastlines and Salted Deltas. description is "It extends [if player is in Actionless Coastlines]west[else]east[end if]. There's no clear way in[if atheists are moot], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT.". bore-check is bore-maturation-natatorium rule. bore-text is "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.".
+the Maturation Natatorium is a boring backdrop. drop-region of Maturation Natatorium is towers. the Maturation Natatorium is in Actionless Coastlines and Salted Deltas. description is "It extends [if player is in Actionless Coastlines]west[else]east[end if]. There's no clear way in[if atheists are moot], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT.". bore-check is bore-maturation-natatorium rule. bore-text is "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.".
 
 this is the bore-maturation-natatorium rule:
 	if current action is entering and player is in Salted Deltas, say "[if atheists are moot]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical. Perhaps a one-hour lecture on why not to waste time with religion. Ugh[end if]." instead;
 
 section Thearchy Hatchery
 
-the Thearchy Hatchery is a boring backdrop. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait. bore-text of thearchy hatchery is "There's nothing much to do with the Hatchery. It's just a gaudy structure.". bore-check of thearchy hatchery is bore-thearchy-hatchery rule.
+the Thearchy Hatchery is a boring backdrop. drop-region of Thearchy Hatchery is towers. Thearchy Hatchery is in Actionless Coastlines and Artist Traits Strait. bore-text of thearchy hatchery is "There's nothing much to do with the Hatchery. It's just a gaudy structure.". bore-check of thearchy hatchery is bore-thearchy-hatchery rule.
 
 this is the bore-thearchy-hatchery rule:
 	if current action is entering:
@@ -17224,7 +17224,7 @@ rule for supplying a missing second noun when showing:
 
 chapter curst palace
 
-The Curst Palace is a reflexive boring backdrop. description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word...". bore-text of Curst Palace is "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.".
+The Curst Palace is a reflexive boring backdrop. drop-region of Curst Palace is towers. description of Curst Palace is "The curst palace Castle Apcur towers high enough to see across the lake. But perhaps it could be much nicer...with just one word...". bore-text of Curst Palace is "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.".
 
 towers-min-flag is a truth state that varies;
 
@@ -17274,7 +17274,7 @@ check going west in Mislit Limits:
 
 book Leak Lake (backdrop)
 
-Leak Lake is a proper-named useless boring backdrop. It is in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable.". bore-check is bore-leak-lake rule. bore-text is "[cross-leak-lake].".
+Leak Lake is a proper-named useless boring backdrop. It is in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. drop-region of Leak Lake is towers. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable.". bore-check is bore-leak-lake rule. bore-text is "[cross-leak-lake].".
 
 this is the bore-leak-lake rule:
 	if the current action is drinking, say "Yo, sick! So icky!" instead;
@@ -17290,7 +17290,7 @@ to say cross-leak-lake: say "The [noun] [is-are of noun] just there. Not much to
 
 book shoals aslosh (backdrop)
 
-the shoals aslosh are a useless boring plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos.". bore-check is the bore-leak-lake rule. bore-text is "[cross-leak-lake]."
+the shoals aslosh are a useless boring plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos.". bore-check is the bore-leak-lake rule. bore-text is "[cross-leak-lake].". drop-region of Shoals Aslosh is towers.
 
 book Dourest Detours
 
@@ -18602,7 +18602,7 @@ after printing the locale description for Disowned Downside when Disowned Downsi
 
 section edictal citadel
 
-the Edictal Citadel is a boring backdrop in Disowned Downside. description is "It takes up a huge chunk of space to the west.". bore-text of Edictal Citadel is "[if player is in Reclusion Inclosure or player is in Rancho Archon Anchor]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if].".
+the Edictal Citadel is a boring backdrop in Disowned Downside. drop-region of Edictal Citadel is otters. description is "It takes up a huge chunk of space to the west.". bore-text of Edictal Citadel is "[if player is in Reclusion Inclosure or player is in Rancho Archon Anchor]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if].".
 
 section sad elm
 
@@ -19264,7 +19264,7 @@ check going north in Shiner Shrine:
 
 chapter coma camo
 
-the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent. And yet--you bet you could see a pattern of letters in it, if you look closely enough.". bore-text of coma camo is "You won't be able to dispel the coma camo, and you won't need to.".
+the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthead Cathedral. drop-region of coma camo is otters. description is "You're clever enough to see the coma camo. Most people are. But it's still an effective deterrent. And yet--you bet you could see a pattern of letters in it, if you look closely enough.". bore-text of coma camo is "You won't be able to dispel the coma camo, and you won't need to.".
 
 book Lamer Realm
 
@@ -21372,48 +21372,19 @@ before objhinting for the first time:
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
 
 definition: a thing (called hintcand) is hintrelevant:
+	if hintcand is red writing, yes;
+	if hintcand is a backdrop:
+		if mrlp is not drop-region of hintcand, no;
+		if touched-yet of hintcand is false, no;
+		yes;
 	if hintcand is question mark and questions-not-flagged is true, yes;
 	if hintcand is off-stage, no;
 	if hintcand is moot, no;
 	if hintcand is useless, no;
 	if hintcand is the location, no;
 	if hintcand is Gast and mrlp is routes, yes; [Gast is known-about before he comes on stage officially]
-	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?] [this and below is for backdrops. I don't have a better way to do things.]
-		if player is in Largely All Grey Gallery or player is in Dusty Study, yes;
-		no;
-	if hintcand is closest closets:
-		if mrlp is Ordeal Reload and Highest Heights is visited, yes;
-	if hintcand is red writing, yes;
-	if hintcand is Thearchy Hatchery or hintcand is Maturation Natatorium:
-		if mrlp is towers:
-			if Actionless Coastlines is visited or Artist Traits Strait is visited, yes;
-		no;
-	if hintcand is n-t-air:
-		if mrlp is presto and zany meter is in Grey Gyre, yes;
-		no;
-	if hintcand is curst palace:
-		if mrlp is towers, yes;
-		no;
-	if hintcand is big-let:
-		if Nowt Town is visited, yes;
-		no;
-	if hintcand is snatchier chantries:
-		if mrlp is routes, yes;
-		no;
-	if hintcand is closest closets:
-		if mrlp is not Ordeal Reload, no;
-		if Highest Heights is visited, yes;
-		no;
-	if hintcand is Edictal Citadel:
-		if mrlp is otters and Disowned Downside is visited, yes;
-		no;
-	if hintcand is coma camo:
-		if mrlp is otters:
-			if Clarthead Cathedral is visited or Shiner Shrine is visited, yes;
-		no;
-	if hintcand is leak lake or hintcand is shoals aslosh:
-		if mrlp is towers:
-			if Salted Deltas is visited or Actionless Coastlines is visited or Artist Traits Strait is visited, yes;
+	if hintcand is part of the diorama:
+		if mrlp is ordeal reload, yes;
 		no;
 	[d "[hintcand] before.";]
 	let R1 be map region of location of hintcand;
@@ -21448,7 +21419,12 @@ does the player mean objhinting a hintrelevant object:
 does the player mean objhinting a moot object: it is unlikely.
 
 definition: a thing (called hthing) is deregioned:
-	if mrlp is routes and hthing is giant pin, yes;
+	if hthing is a backdrop:
+		if hthing is touchable, no;
+		if hthing is red writing, no;
+		if hthing is off-stage, yes;
+		if drop-region of hthing is mrlp, no;
+		yes;
 	if location of hthing is nothing, no;
 	if hthing is moot, no;
 	if mrlp is not map region of location of hthing, yes;
@@ -21462,7 +21438,7 @@ a thing can be thruhinted. a thing is usually not thruhinted. [This is to check 
 cur-item is a thing that varies.
 
 check objhinting (this is the sort out generic hintables rule):
-	if noun is deregioned, say "Nothing like that is in the immediate vicinity or region." instead;
+	if noun is deregioned, say "[if debug-state is true][noun] [location of noun]: [end if]Nothing like that is in the immediate vicinity or region." instead;
 	abide by the hint-toggle-warn rule;
 
 this is the hint certain object groups rule:
