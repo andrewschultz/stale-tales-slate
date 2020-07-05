@@ -58,6 +58,16 @@ the can't push scenery rule is not listed in any rulebook.
 the can't pull people rule is not listed in any rulebook.
 the can't pull scenery rule is not listed in any rulebook.
 
+chapter backdrop basics
+
+a backdrop has a truth state called touched-yet.
+
+a backdrop has a region called drop-region.
+
+every turn (this is the tag backdrops for hinting rule):
+	repeat with BD running through touchable backdrops:
+		now touched-yet of BD is true;
+
 chapter portal basics
 
 a portal is a kind of thing. a portal is usually fixed in place. the specification of portal is "A thing that allows you access to vulnerable areas of Yorpwald."
@@ -285,6 +295,7 @@ definition: a thing (called th) is thing-goable:
 	yes;
 
 carry out gotothinging:
+	if noun is a backdrop, say "Unfortunately, since [the noun] can be seen from or in more than one place, I can't go there." instead;
 	if debug-state is true, say "Going to [location of noun], where [the noun] is.";
 	try gotoing location of noun instead;
 
