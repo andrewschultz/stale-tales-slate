@@ -742,29 +742,24 @@ does the player mean objhinting a moot object: it is unlikely. [ic]
 definition: a thing (called hthing) is deregioned:
 	if location of hthing is nothing, decide no;
 	if hthing is moot, decide no;
+	if hthing is a backdrop:
+		if drop-region of hthing is mrlp, no;
+		yes;
 	if mrlp is not map region of location of hthing, decide yes;
 	decide no.
 
 definition: a thing (called hintcand) is hintrelevant:
+	if hintcand is a backdrop:
+		if mrlp is not drop-region of hintcand, no;
+		if touched-yet of hintcand is true, yes;
+		no;
+	if hintcand is tech etch or hintcand is signers ingress: [this isn't a backdrop, but it's the only door in the game.]
+		if mrlp is metros, yes;
+		decide no;
 	if hintcand is off-stage, decide no;
 	if hintcand is moot, decide no;
 	if hintcand is abrod, decide yes;
 	if hintcand is location of player, decide no;
-	if hintcand is beats: [start of backdrops which will throw errors otherwise]
-		if mrlp is metros, decide yes;
-		decide no;
-	if hintcand is tech etch:
-		if player is in Esoteric Coteries or player is in Undesired Underside, decide yes;
-		decide no;
-	if hintcand is r2:
-		if player is in roomroom, decide yes;
-		decide no;
-	if hintcand is m2:
-		if player is in moor, decide yes;
-		decide no; [end of backdrops]
-	if hintcand is a backdrop:
-		if debug-state is true, say "WARNING [hintcand] not flagged as backdrop. You probably don't need to, but just in case...";
-		decide no;
 	let reg1 be map region of location of hintcand;
 	let reg2 be mrlp;
 	if reg1 is not reg2, decide no;
@@ -804,7 +799,7 @@ this is the first-time-hint-check rule:
 	say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
 	if player regex-prompt-consents:
 		say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
-		try mainhelping instead;
+		continue the action;
 	else:
 		say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
 
@@ -5697,7 +5692,7 @@ to say cask-full: say "The cask is already full of oils"
 
 section moor
 
-r2 is a privately-named proper-named backdrop. description of r2 is "[bug-report]". r2 is useless. rgtext of r2 is "[rc][gc][gc][rc]". lgth of r2 is 4. gpos of r2 is 4. rpos of r2 is 1. the cert-text of r2 is "-[ast]O[ast]O[d1]". the rect-text of r2 is "M[d1][d1][ast]R".
+r2 is a privately-named proper-named backdrop. drop-region of r2 is Sortie. description of r2 is "[bug-report]". r2 is useless. rgtext of r2 is "[rc][gc][gc][rc]". lgth of r2 is 4. gpos of r2 is 4. rpos of r2 is 1. the cert-text of r2 is "-[ast]O[ast]O[d1]". the rect-text of r2 is "M[d1][d1][ast]R".
 
 printed name of r2 is "the room". r2 is in roomroom.
 
@@ -6285,7 +6280,7 @@ the initial appearance of the signers ingress is "[one of]A metallic door labele
 
 to say prob-reads: say "[if Esoteric Coteries are unvisited]. Probably reads something-or-other to let you in[end if]"
 
-the tech etch is part of the signers ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
+the tech etch is a part of the signers ingress. understand "sod" and "figure" and "stick figure" and "stick-figure" as tech etch. the tech etch is amusing.
 
 check taking the tech etch: say "Since it's part of the door, you take the tech etch in the metaphorical sense and vow not to act like the poor schelps depicted on it." instead;
 
@@ -7339,7 +7334,7 @@ section beats-beast
 
 to say b-b: say "[if beast is in Bassy Abyss]beast[else]beats[end if]"
 
-the beats are a plural-named backdrop. rgtext of beats is "[gcn][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. cert-text of beats is "B[ast]E[ast]A[d1][d1]". rect-text of beats is "B[d1][d1][d1][ast]T".
+the beats are a plural-named backdrop. drop-region of beats is Metros. rgtext of beats is "[gcn][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. cert-text of beats is "B[ast]E[ast]A[d1][d1]". rect-text of beats is "B[d1][d1][d1][ast]T".
 
 understand "thumping" as beats.
 
