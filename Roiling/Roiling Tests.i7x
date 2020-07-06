@@ -733,6 +733,36 @@ to decide which thing is rev-item of (f - a fruit):
 		if the-to entry is f, decide on the-from entry;
 	decide on nothing;
 
+chapter xring
+
+xring is an action applying to one thing.
+
+understand the command "xr" as something new.
+
+understand "xr [something]" as xring.
+
+carry out xring:
+	now xraytrump is true;
+	try xraying the noun;
+	the rule succeeds;
+
+chapter xaing
+
+xaing is an action out of world.
+
+understand the command "xa" as something new.
+
+understand "xa" as xaing.
+
+carry out xaing:
+	now xraytrump is true;
+	repeat with xc running through all touchable things:
+		if xc is not curst palace and xc is not the player:
+			say "[xc]:[line break]";
+			try xraying xc;
+	now xraytrump is false;
+	the rule succeeds.
+
 chapter scaming
 
 [* SCAM enables scams for areas with hints that should only work once. Spoon Crust Pills Cinders (?) Xray (?) ]

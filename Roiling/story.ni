@@ -15479,7 +15479,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else: [only for non guardians/non picaros] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is retinas]ANTSIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -15547,8 +15547,9 @@ check xraying:
 		say "You remember trying to make things [big-hint of noun], so you won't waste your x-ray vision here." instead;
 	else:
 		say "You have a good gaze, and you know what to do and say and think. Gotta be [big-hint of noun].";
-	if used-ray is false, poss-d;
-	now used-ray is true;
+	if xraytrump is false:
+		if used-ray is false, poss-d;
+		now used-ray is true;
 	now noun is rayed;
 	if scams is false:
 		now xrayvision is false;
@@ -15561,34 +15562,6 @@ check xraying:
 used-ray is a truth state that varies.
 
 xraytrump is a truth state that varies.
-
-chapter xring - not for release
-
-xring is an action out of world.
-
-understand the command "xr" as something new.
-
-understand "xr" as xring.
-
-carry out xring:
-	now xraytrump is true;
-	the rule succeeds;
-
-chapter xaing - not for release
-
-xaing is an action out of world.
-
-understand the command "xa" as something new.
-
-understand "xa" as xaing.
-
-carry out xaing:
-	now xraytrump is true;
-	repeat with xc running through all touchable things:
-		if xc is not curst palace and xc is not the player:
-			say "[xc]:[line break]";
-			try xraying xc;
-	the rule succeeds.
 
 book all about guardians
 
