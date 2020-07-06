@@ -252,8 +252,8 @@ mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
-fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The prison ropins slide inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
-luck node	luck node	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. Somehow, as it pokes its bill at the luck node, it finds the right combination! The fissure makes a few odd clicks and vanishes. The prison ropins clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more. I guess you, uh, made your own luck."
+fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. I guess the fissure was vulnersble to ... fursies."
+luck node	luck node	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. Somehow, as it pokes its bill at the luck node, it finds the right combination. Now that's luck!"
 dinger	solve a loaves	false	382846875	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! [how-safe]."
@@ -1332,6 +1332,7 @@ this is the pre-fussier rule:
 		do nothing instead;
 
 this is the post-yow-free rule:
+	say "[line break]The prison ropins slither to the ground and vanish, along with the luck node and fissure. Out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more.";
 	if noun is fissure, now fissure-flip is true;
 	now Dr Yow is in Obscurest Subsector;
 	moot fissure;
@@ -2101,7 +2102,7 @@ Mel Fish	"Mel Fish mutters, 'No, that's not how to be me. Gotta be something sim
 fluster self rut	"You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will."
 strudel	"You almost expect the strudel to hop up[if player does not have strudel] into your arms[end if], but the moment passes."
 ingrates	"The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up."
-fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is touchable], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
+fissure	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is touchable], but the duck seems to look curiously at it[else], and you wonder who or what could tinker with it[end if]."
 bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!'"
 stinger	"The stinger fizzles a bit."
 weeds	"The weeds almost seem to shrug."

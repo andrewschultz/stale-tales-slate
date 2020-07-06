@@ -2551,6 +2551,7 @@ fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make
 Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
+luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
 blaster	"ALBERT'S."
 stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
@@ -16516,7 +16517,7 @@ check taking the duck:
 
 description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if luck node is not moot].[paragraph break]You see red at how lonely it seems[end if]."
 
-the ID tag is a boring thing. it is part of the lone duck. description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if fissure is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
+the ID tag is a boring thing. it is part of the lone duck. description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if luck node is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
 
 the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
@@ -16543,7 +16544,7 @@ after choosing notable locale objects when player is in Obscurest Subsector:
 to say no-rips:
 	say "[if player has dagger]The dagger is too ragged[else if player has gizmo]The gizmo is too unwieldy to fit between the mesh. You try to cut it, but the blade squeaks against the steel[else]You have nothing that could cut anything[end if]."
 
-The prison ropins are a plural-named transparent container in Obscurest Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
+The prison ropins are a plural-named transparent container in Obscurest Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) and are tied together with a sturdy luck node. There's some writing on the ropins, too."
 
 check taking ropins: say "WAY too heavy and big." instead;
 
@@ -16558,8 +16559,8 @@ description of ropins is "[if duck is returned]The prison ropins are open now, n
 check examining ropins: ignore the examine containers rule;
 
 check scaning ropins:
-	say "The settler does very little until you get near [if ropins are examined]a fissure you didn't see at first[else]the fissure[end if]. The result makes you think you don't need to do anything to the prison as a whole.";
-	now ropins are examined;
+	say "The settler does very little until you get near the luck node.";
+	try scaning luck node instead;
 
 to decide whether (n - a thing) is spoilable-now:
 	if n is cheat-spoilable, decide yes;
@@ -16614,7 +16615,7 @@ check unlocking it with duck:
 		say "Almost. You're going about it wrong, though. What do you want the prison ropins to BE? Or be described AS?" instead;
 
 before locking (this is the yow unlock rule) :
-	if noun is ropins or noun is fissure, say "[if Dr Yow is in prison ropins]It already is, and two locks won't make an unlock[else]No need to fuss any more[end if]." instead;
+	if noun is ropins or noun is luck node or noun is fissure, say "It already is, and two locks won't make an unlock." instead;
 	say "There's no need to lock anything in this game." instead;
 
 does the player mean unlocking with dagger: it is very likely;
@@ -16629,7 +16630,7 @@ the can't unlock without a lock rule is not listed in any rulebook.
 
 check unlocking:
 	if player is in Obscurest Subsector:
-		if noun is prison ropins or noun is fissure:
+		if noun is prison ropins or noun is fissure or noun is luck node:
 			if luck node is moot, say "The prison is already open." instead;
 			if second noun is gizmo, say "You fumble with the gizmo but have utterly no luck. The prison remains locked." instead;
 			if duck is touchable, say "The duck looks curiously at what you're trying to do. You can't pick it up, but maybe you can coax the duck with the right word..." instead;
@@ -16641,9 +16642,11 @@ check unlocking:
 	if noun is prison ropins, say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
 
-the fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint. A name by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]". the fissure is vanishing and auxiliary.
+the fires us fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint, and from what you know about that sort of fissure, it does fire up people who try and fail to unlock it.". the fissure is vanishing and auxiliary. printed name is "Fires-Us Fissure"
 
-a-text of fissure is "RYRRYYR". b-text of fissure is "PYPPYYR". parse-text of fissure is "f[sp]u[sp]s[sp]s[sp]i[sp]e[sp]r". fissure is parse-spoilable.
+a-text of fires us fissure is "RYRRYYR". b-text of fires us fissure is "PY??YYR". parse-text of fires us fissure is "f[sp]u[sp]s[sp]s[sp]-[sp]-[sp]r". fires us fissure is parse-spoilable.
+
+check entering fissure: say "The fissure is much too small and narrow." instead;
 
 fissure-flip is a truth state that varies.
 
@@ -16672,11 +16675,9 @@ understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
 Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
-check entering fissure: say "It's not the right size or shape for you." instead;
-
 section luck node
 
-the luck node is boring vanishing scenery in Obscurest Subsector. "It's one of those combination dealies that will pop up if you get the right combination. You just need a little luck. Though, actually, there are probably a few million combinations, so you need a lot of luck. Just knowing that one combination works, though, has suckered many a Yorpwaldian to try and keep trying, without any, err, luck.". bore-text of luck node is "You fiddle with the luck node a bit, but ... no luck."
+the luck node is boring vanishing scenery in Obscurest Subsector. "It's bright red and one of those combination dealies that will pop up if you get the right combination. You just need a little luck. Though, actually, there are probably a few million combinations, so you need a lot of luck. Just knowing that one combination works, though, has suckered many a Yorpwaldian to try and keep trying, without any, err, luck. There's also a fissure (a Fires-Us Fissure) which looks almost like a mouth. If you could manipulate the fissure or node, you could probably rescue Dr. Yow. You also notice red writing on the back.". bore-text of luck node is "You fiddle with the luck node a bit, but ... no luck."
 
 a-text of luck node is "YRRYRRYR". b-text of luck node is "YRRYRRYR". parse-text of luck node is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -22279,7 +22280,7 @@ this is the towers-alt rule:
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
 	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 
-to say ff of (j - a truth state): say "[if j is fissure-flip]making the fissure FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
+to say ff of (j - a truth state): say "[if j is fissure-flip]making the fires-us fissure FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
