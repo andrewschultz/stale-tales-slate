@@ -2,12 +2,12 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
-files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt
-~	nudges	t2
-~	nud,nu	t2
-~	mis,mi	t2
-~	min	t1
+files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-sa-resort-hints.txt
 ~	max	t0
+~	min	t1
+~	nudges,nud,nu	t2
+~	mis,mi	t2
+~	hints,hin	t3
 
 }}MAX=15
 }}CURMAX=15
@@ -30,6 +30,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >ts
 >tsf
+
+@hin
+>monty hints
 
 >opt in
 >poss
@@ -504,9 +507,16 @@ No, the clay is a clue to what the trio really wants to do.
 #nudge for protesters
 >ersprotest
 They're just a simple protest.
-
+\\
+#mistake test for ether
 >ether
-They're not bad people
+They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
+>kilns
+by one point
+>ether
+They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
+>undo
+>undo
 
 >ethre
 The trio remains unmoved. Perhaps you can give the protest more constructive aims?

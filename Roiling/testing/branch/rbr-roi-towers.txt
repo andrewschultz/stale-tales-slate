@@ -2271,10 +2271,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's 
 >unleckdo
 The ropins remains secure, with no easy way to open it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prison ropins. That's a decent omen.
-#readables for prison
+#readables for prison ropins
 >read prison
-Part of the red writing on the prison says
-There're two other bits to read.
+/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK). There're three other bits to read\.
+>read prison
+/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK). There're three other bits to read\.
+#readables for luck node
+>read luck node
+/One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
+>read luck node
+/One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
 #scannotes for prison ropins
 >scan prison ropins
 Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle...
@@ -2328,7 +2334,7 @@ You don't need to fiddle with the lock now.
 #mistake retest for goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
-#done rejects for prison ropins
+#done rejects for luck node
 >unlockde
 It already is. Dr. Yow is free.
 #renudge for ropins

@@ -4,10 +4,11 @@
 #
 # the nudmis file also covers two alternate ways through the sortie.
 #
-files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt
-~	nudges,nud,mis,mi	t2
-~	min	t1
+files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-sa-metros-hints.txt
 ~	max	t0
+~	min	t1
+~	nudges,nud,mis,mi	t2
+~	hints,hin	t3
 
 }}MAX=18
 }}CURMAX=18
@@ -32,6 +33,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >poss
 >opt in
 
+@hin
+>monty hints
+
 @nud
 #spechelp for store m
 >metrso
@@ -50,6 +54,10 @@ The trade tread doesn't need to be changed. What's behind it, does.
 
 Undesired Underside
 
+@hin
+DEBUG: drainage being objhinted.
+
+@mis
 #mistake test for singers
 >singers
 The beats would drown the singers out.
@@ -267,6 +275,9 @@ The author twisted words enough. Perhaps you could concentrate on the motto.
 Hm, you maybe could bend the/a motto a bit differently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the motto. Keep at it.
 
+@hin
+DEBUG: motto being objhinted.
+
 >tomato
 Your score has just gone up by one point.
 }}SCORE++
@@ -285,6 +296,9 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >s
 >w
 The Ol' Hotel
+
+@hin
+DEBUG: Night Thing being objhinted.
 
 @nud
 #nudge for thelo
@@ -455,6 +469,10 @@ The poses posse doesn't need or want a handout.
 >pesos
 The poses posse doesn't need or want a handout.
 \\
+#mistake test for spose
+>spose
+Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.
+\\
 #nudge for rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
@@ -463,6 +481,9 @@ One antler seems to twitch a bit and pull towards you. Curious--it doesn't look 
 >rentlas
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
 DEBUG ONLY: You feel a slight psychic push-pull coming from the antlers. Keep at it.
+
+@hin
+DEBUG: poses posse being objhinted.
 
 @!min
 >rentals
@@ -507,6 +528,9 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
+@hin
+!DEBUG: poses posse being objhinted.
+
 >get dry cake
 You take care not to let the cake tear as you pick it up.
 
@@ -515,6 +539,8 @@ You take care not to let the cake tear as you pick it up.
 @mis,max
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
+
+@mis
 #mistake test for tang/tangs
 >tang
 How the angst gnats taste doesn't matter.
@@ -618,6 +644,11 @@ The mittens are as comfortable as they're going to be.
 >e
 Fo' Real Florae
 
+@hin
+The brocade is free, whether or not you've helped the faeries. Why not take it?
+>take brocade
+The faeries want a flower. You have one in your inventory.
+
 @mis
 #mistake test for loafer
 >loafer
@@ -694,7 +725,15 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 
+>take begonias
+@hin
+DEBUG: begonias being objhinted.
+>undo
+
 >take heaths
+
+@hin
+DEBUG: heaths being objhinted.
 
 @nud
 #renudge for heath
@@ -708,6 +747,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the heaths. Keep at 
 
 >sheath
 Your score has just gone up by one point.
+
+@hin
+You've transformed your flower, but you need to use your new item in the Bile Libe.
 
 @nud
 #done rejects for sheath
@@ -793,10 +835,16 @@ The beats shift up for a second.
 >put card on sensor
 What do you know? It works! The door slides open!
 
+@hin
+Just go east.
+
 >e
 #notana
 Esoteric Coteries
 }}SCORE++
+
+@hin
+DEBUG: nerds being objhinted.
 
 >score
 @min
@@ -1098,6 +1146,9 @@ You've already made nothing out of something, and instead of reversing that, you
 >u
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
+@hin
+DEBUG: the gin-nope opening being objhinted.
+
 @max
 >d
 #we need to test this case so we don't try going east instead.
@@ -1141,6 +1192,9 @@ You've already made nothing out of something, and instead of reversing that, you
 
 Bassy Abyss
 
+@hin
+DEBUG: siren being objhinted.
+
 @nud
 #nudge for aligns
 >aligsn
@@ -1177,6 +1231,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at i
 >resin
 }}SCORE++
 
+@hin
+DEBUG: beats being objhinted.
+
 >score
 @min
 {$SFIXNOMAX}
@@ -1184,7 +1241,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at i
 {$SFIXMAX}
 
 @mis
-#mistake test for rinse
+#mistake retest for rinse
 >rinse
 Time for that after you get your hands dirty and slay the final enemy, here.
 

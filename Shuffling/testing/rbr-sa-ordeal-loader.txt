@@ -4,12 +4,13 @@
 #
 # hch.py ti check help-stuff, mist.py to check mistakes, nuch.py to check nudges
 #
-files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-loader-nudmis.txt
+files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-loader-nudmis.txt,reg-sa-ordeal-loader-hints.txt
 ~	max	t0
 ~	min	t1
 ~	nud	t2
 ~	mis	t2
 ~	nudmis	t2
+~	hints,hin	t3
 
 ## *FILE
 ## *FORK
@@ -23,6 +24,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >opt in
 
+@hints
+>monty hints
+You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.
+!Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+
 @nud
 #nudge for ordeal
 >ordela
@@ -33,7 +39,7 @@ The Oafs' Sofa is there, and there's nothing you can do about it.
 #nudge for oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
-#mistake test for magnet/a magnet
+#mistake test for magnet
 >magnet
 Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it.
 >a magnet
@@ -128,6 +134,17 @@ A voice in your head tells you that sort of mental wandering is what got you can
 >in
 Rested Desert
 
+@hin
+What can the odor turn into? Your random thoughts are not so random. (+)
+Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+>z
+The clues and distractions collapse to anagrams. (+)
+>z
+If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? (+)
+>z
+A door. (-)
+A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
+
 @nud
 #nudge for rested
 >restde
@@ -135,9 +152,6 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #mistake test for deters
 >deters
 No! You're trying to make progress here.
-#mistake test for rood
->rood
-This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 @nud
 #nudge for breeze
@@ -160,6 +174,9 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 
 >door
 by one point
+
+@hin,hints
+/DEBUG: (bolt|bulge) being objhinted\.
 
 @mis
 #mistake retest for or do door
@@ -208,6 +225,9 @@ by one point
 >open door
 Thickest Thickets
 
+@hin
+DEBUG: toga being objhinted.
+
 @nud
 #nudge for thickets
 >thicktes
@@ -238,7 +258,7 @@ I award you zero points for that anagramming try, and may God have mercy on your
 by one point
 
 @mis
-#mistake test for landers
+#mistake retest for landers
 >landers
 There will be better hints than a manners advice column once you move on.
 #mistake retest for sandler
@@ -278,6 +298,9 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 >goat
 Your score has just gone up by one point.
 
+@hin
+You can just go IN, now.
+
 @nud
 #done rejects for goat
 >gota
@@ -289,6 +312,9 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 
 >in
 Notices Section
+
+@hin
+DEBUG: magenta nametag being objhinted.
 
 @nud
 #readables for gateway
@@ -409,8 +435,18 @@ You feel nothing from either attic. Perhaps you need to consider both the attics
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
+@hin
+You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
+>take gadget
+It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+You need to ASK GATEMAN ABOUT CABINET.
+>undo
+
 >ask gateman about cabinet
 >take gadget
+
+@hin
+You can just enter the gate now.
 
 @mis
 #mistake test for remove [something] from [something]

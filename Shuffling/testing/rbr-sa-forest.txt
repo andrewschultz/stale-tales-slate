@@ -6,10 +6,11 @@
 #
 # we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
 #
-files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt
-~	nudges,nud,nu,mis,mi	t2
-~	min	t1
+files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-sa-forest-hints.txt
 ~	max	t0
+~	min	t1
+~	nudges,nud,nu,mis,mi	t2
+~	hints,hin	t3
 
 }}MAX=17
 }}CURMAX=17
@@ -36,6 +37,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
 >poss
+
+@hin
+>monty hints
 
 >opt in
 
@@ -68,11 +72,11 @@ No, that's not the essence of the whiff of stew.
 >wets
 Getting lost in a swamp would be even worse than getting lost in a forest.
 >undo
-#nudge for norht
+#renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for souht
+#renudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -80,7 +84,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#nudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -104,11 +108,11 @@ You think you're on to something, but you still feel stuck.
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
 >undo
-#nudge for ewst
+#renudge for ewst
 >twes
 Your internal compass feels extra jumbled. You remember the whiff of stew, but there's probably a different challenge here.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -150,7 +154,7 @@ You need the opposite of a seat, here. But at the same time, you're also very cl
 >tase
 This game is nonviolent--well, except for a few puns.
 >undo
-#nudge for tea
+#renudge for eat
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
@@ -191,7 +195,7 @@ by one point
 ##balance undos
 >sr ne
 >in
-#nudge for north
+#renudge for north
 >norht
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
@@ -203,7 +207,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -239,7 +243,7 @@ Self-ID Fields
 ##balance undos
 >sr sw
 >in
-#nudge for norht
+#renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -251,7 +255,7 @@ Your internal compass feels extra jumbled. The shout wavers for a bit. Maybe you
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -270,7 +274,7 @@ Your internal compass feels extra jumbled. You remember the rambling shout, but 
 >twes
 The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -284,9 +288,22 @@ Self-ID Fields
 
 # start the default (which I picked at random) way through.
 
+@hin
+>sr sw
+>in
+DEBUG: rambling shout being objhinted.
+>s
+DEBUG: whiff of stew being objhinted.
+>undo
+>undo
+>undo
+
 >sr ne
 
 >in
+
+@hin
+DEBUG: thorn being objhinted.
 
 Softer Forest
 
@@ -305,17 +322,25 @@ No conifers appear. Maybe you can just use your senses, and it's easier than tha
 >leavse
 You have no time to play with leaves.
 
->north
+>n
 by one point
 Rest of Forest
 }}SCORE++
 >score
 {$SCOS}
 
->east
+>e
 by one point
 Self-ID Fields
 }}SCORE++
+
+@mis
+#mistake test for scores
+>scores
+Yes, there are scores and scores in the line of no life.
+
+@hin
+Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
 
 >score
 {$SCOS}
@@ -390,13 +415,28 @@ If they owe something, that's their business. It's too late to change that now.
 >olefin
 Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.
 
+@hin
+>e
+>ones
+Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+>undo
+>undo
+
 @mis
 #mistake test for list
 >list
 There's a list inside the slit, so that's not what it could become.
 
+@hin
+>w
+Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+>e
+
 >e
 Gnarliest Triangles
+
+@hin
+DEBUG: ones being objhinted.
 
 @nud
 #nudge for triangles
@@ -520,6 +560,9 @@ A certain deputy sheriff from Hazzard County would be more than willing to help,
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+DEBUG: dashes being objhinted.
+
 @mis
 #mistake retest for enos
 >enos
@@ -532,24 +575,6 @@ A certain deputy sheriff from Hazzard County would be more than willing to help,
 #done rejects for nose
 >noes
 Don't get that nose bent out of shape.
-
-@nud
-#spechelp for dashes
->shadse
-The dashes seemed to rattle a bit, but you feel slightly uncool.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dashes. Keep at it.
-
->shades
-Your score has just gone up by one point.
-}}SCORE++
-
->score
-{$SCOS}
-
-@nud
-#done rejects for shades
->shadse
-Anything you do to bend the shades might break them.
 
 @nud
 #mistake test for gat
@@ -565,9 +590,33 @@ You need something more tangible than that. Something that could make a gunshot,
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
+@nud
+#spechelp for dashes
+>shadse
+The dashes seemed to rattle a bit, but you feel slightly uncool.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dashes. Keep at it.
+
+>shades
+Your score has just gone up by one point.
+}}SCORE++
+
+@hin
+DEBUG: noughts being objhinted.
+
+>score
+{$SCOS}
+
+@nud
+#done rejects for shades
+>shadse
+Anything you do to bend the shades might break them.
+
 >shotgun
 Your score has just gone up by one point.
 }}SCORE++
+
+@hin
+DEBUG: bearded men being objhinted.
 
 >score
 {$SCOS}
@@ -594,6 +643,9 @@ Shotgun: gnu? Tosh!
 >w
 >w
 Flesh Shelf
+
+@hin
+DEBUG: sandwich being objhinted.
 
 @nud
 #nudge for shelf
@@ -668,6 +720,13 @@ The one liver seems inactive by itself.
 >open sandwich
 bread from the Spam
 
+@hin
+>beard
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
+!DEBUG: Spam being objhinted.
+>undo
+
+@nud
 >eat spam
 spasm
 
@@ -708,6 +767,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bread. Keep at i
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
+
 >score
 {$SCOS}
 
@@ -718,8 +780,14 @@ For a beard, it's actually pretty cool.
 
 >put shades on beard
 
+@hin
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) to create the full disguise.
+
 >put nose on beard
 You've made a full disguise now!
+
+@hin
+You should be able to walk NORTH from Self-ID Fields now with your disguise.
 
 >e
 
@@ -745,10 +813,29 @@ Your score has just gone up by one point.
 
 Emptiness Sepiments
 
+@hin
+DEBUG: liches being objhinted.
+
 >score
 {$SCOS}
 
 @nud
+#nudge for emptiness
+>emptinsse
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+\\
+#nudge for sepiment
+>sepimetn
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+\\
+#nudge for scoffin
+>scoffni
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
+\\
+#nudge for coffin
+>coffni
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
+\\
 #nudge for coffer
 >coffre
 You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
@@ -801,6 +888,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the liches. Keep at 
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+DEBUG: chisel being objhinted.
+
 >score
 @min
 {$SCOS}
@@ -818,10 +908,16 @@ It's a perfectly good tool. Trying to refine it might break it.
 >peel river ville
 Cr-r-r-r-k.
 
+@hin
+DEBUG: RiverVille Liver being objhinted.
+
 >e
+
+@nud
 #renudge for liver
 >livre
 Your thoughts go to the other liver.
+
 >w
 
 >peel viler liver
@@ -867,6 +963,9 @@ Your score has just gone up by one point.
 LIVERS.
 }}SCORE++
 
+@hin
+DEBUG: livers being objhinted.
+
 >score
 @min
 {$SCOS}
@@ -904,8 +1003,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the livers. Keep at 
 Your score has just gone up by one point.
 }}SCORE++
 
+@nud
 >srelvi
-The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
+The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+
+@hin
+DEBUG: spread being objhinted.
 
 >score
 @min
@@ -933,6 +1036,9 @@ No, the material of the spread isn't important, here.
 
 >drapes
 by one point
+
+@hin
+DEBUG: drapes being objhinted.
 
 @nud
 Your score has just gone up by one point.
@@ -969,7 +1075,10 @@ They look forbidding, but you might turn them into something worse. Maybe you ca
 The drapes are too thick.
 
 >cut drapes
-revealing a doorway
+The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
+
+@hin
+DEBUG: sliver being objhinted.
 
 @nud
 #nudge for doorway
@@ -1011,6 +1120,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sliver. Keep at 
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+DEBUG: shotgun being objhinted.
+
 @nud
 #nudge for cylinder
 >cylindre
@@ -1021,7 +1133,6 @@ It's the shape it should be. You don't need to make a key, or a charm.
 {$SCOS}
 @!
 {$SFIXMAX}
-
 
 @nud
 #done rejects for silver
@@ -1039,6 +1150,22 @@ You need to SHOOT the gun, but you need to load it first.
 #mistake retest for gunshot
 >gunshot
 You need to SHOOT the gun.
+
+@hin
+##balance undos
+>banish maps
+>purloin spam
+>hint
+DEBUG: Spam being objhinted.
+>maps
+You should be able to go north now.
+>n
+DEBUG: maps being objhinted.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 >n
 Ghouls' Slough
@@ -1083,9 +1210,13 @@ You want to tempt the supernatural in somewhere this hellish? Phew.
 \\
 #mistake test for gob
 >gob
-The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
+The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.
+Oh, and you can undo this, too.
 UNDO
 >undo
+
+@hin
+DEBUG: maps being objhinted.
 
 >x maps
 Frost Forts
@@ -1132,6 +1263,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the vowels. Keep at 
 Your score has just gone up by one point.
 }}SCORE++
 
+@hin
+DEBUG: wolves being objhinted.
+
 >score
 @min
 {$SFIXNOMAX}
@@ -1177,6 +1311,9 @@ Your score has just gone up by one point.
 }}SCORE++
 
 Trips Strip
+
+@hin
+DEBUG: Store I being objhinted.
 
 >score
 

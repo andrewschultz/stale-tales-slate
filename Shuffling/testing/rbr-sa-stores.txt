@@ -6,10 +6,11 @@
 #
 # we have a lot of things mapped to t2 so we can see what SORT of thing is being checked, nudge or mistake.
 #
-files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt
+files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-sa-stores-hints.txt
 ~	max	t0
 ~	min	t1
 ~	nudmis,nud,mis	t2
+~	hints,hin	t3
 
 ## *FILE
 ## *FORK
@@ -21,12 +22,36 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 * stores-thru
 
->ts
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+
+@hin
+>monty hints
+##balance undos
+>ts 1
+DEBUG: Store I being objhinted.
+>sortie
+You can just enter the posted depots. If you want or need help with a particular store, HINT STORE Q.
+>undo
+>metros
+You can just enter the trade tread.
+>undo
+>undo
+>ts 3
+DEBUG: Store M being objhinted.
+>undo
+>ts 7
+DEBUG: Store R being objhinted.
+>resort
+You can just enter the ogled lodge.
+>undo
+>undo
+
+>ts
 Trips Strip
 
->z
->opt in
+@hin
+DEBUG: Store F being objhinted.
 
 @nud
 #nudge for trips
@@ -300,6 +325,9 @@ Hmm...you get the feeling the store itself holds more adventure.
 >forest
 by one point
 
+@hin
+You can just enter the scented descent. If you want or need help with a particular store, HINT STORE Q.
+
 @nud
 #nudge for scented
 >scentde
@@ -380,6 +408,12 @@ That should work--but it doesn't! Maybe the towers would be too big to tackle in
 #mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
+#mistake test for destro
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+#mistake test for doters
+>doters
+You don't need people oohing and ahing at your skill.
 
 >n
 hubs bush
@@ -400,6 +434,11 @@ You don't need to change the marquee, but maybe it'd be fun to see what's inside
 >sorbet
 by one point
 
+@mis
+#mistake retest for strobe
+>strobe
+You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
+
 @nud
 #renudge for marquee
 >marquee
@@ -411,6 +450,6 @@ WARNING
 >resort
 by one point
 \\
-#nudge for ogled
+#nudge for lodge
 >lodeg
 The lodge is as good as it can be. Better ENTER it.

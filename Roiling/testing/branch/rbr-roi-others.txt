@@ -649,7 +649,6 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 >undo
 >undo
 #slider test for icons
-##balance undos
 >purloin icons
 >cisno
 Your settler begins to make noises: a low hum, but nothing really piercing.
