@@ -1,0 +1,54 @@
+
+## reg-sa-stores-hints.txt
+## GENERATOR FILE: rbr-sa-stores.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+
+>monty hints
+>ts 1
+DEBUG: Store I being objhinted.
+>sortie
+You can just enter the posted depots. If you want or need help with a particular store, HINT STORE Q.
+>undo
+>metros
+You can just enter the trade tread.
+>undo
+>undo
+>ts 3
+DEBUG: Store M being objhinted.
+>undo
+>ts 7
+DEBUG: Store R being objhinted.
+>resort
+You can just enter the ogled lodge.
+>undo
+>undo
+
+>ts
+Trips Strip
+
+DEBUG: Store F being objhinted.
+
+>forest
+by one point
+
+You can just enter the scented descent. If you want or need help with a particular store, HINT STORE Q.
+
+>sortie
+by one point
+
+>metros
+by one point
+
+>n
+hubs bush
+
+>sorbet
+by one point
+

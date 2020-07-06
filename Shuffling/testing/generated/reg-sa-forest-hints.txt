@@ -1,0 +1,277 @@
+
+## reg-sa-forest-hints.txt
+## GENERATOR FILE: rbr-sa-forest.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* forest-thru
+
+>ts
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+>poss
+
+>monty hints
+
+>opt in
+
+>forest
+#notmax
+Your score has just gone up by one point.
+
+# start the default (which I picked at random) way through.
+
+>sr sw
+>in
+DEBUG: rambling shout being objhinted.
+>s
+DEBUG: whiff of stew being objhinted.
+>undo
+>undo
+>undo
+
+>sr ne
+
+>in
+
+DEBUG: thorn being objhinted.
+
+Softer Forest
+
+>n
+by one point
+Rest of Forest
+>score
+You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>e
+by one point
+Self-ID Fields
+
+Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+
+>score
+You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>e
+>ones
+Go west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+>undo
+>undo
+
+>w
+Go east and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+>e
+
+>e
+Gnarliest Triangles
+
+DEBUG: ones being objhinted.
+
+>nose
+Your score has just gone up by one point.
+
+DEBUG: dashes being objhinted.
+
+>score
+You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>shades
+Your score has just gone up by one point.
+
+DEBUG: noughts being objhinted.
+
+>score
+You currently have 4 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>shotgun
+Your score has just gone up by one point.
+
+DEBUG: bearded men being objhinted.
+
+>score
+You currently have 5 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>w
+>w
+Flesh Shelf
+
+DEBUG: sandwich being objhinted.
+
+>open sandwich
+bread from the Spam
+
+>beard
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
+!DEBUG: Spam being objhinted.
+>undo
+
+>maps
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>beard
+Your score has just gone up by one point.
+
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
+
+>score
+You currently have 7 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>put shades on beard
+
+You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) to create the full disguise.
+
+>put nose on beard
+You've made a full disguise now!
+
+You should be able to walk NORTH from Self-ID Fields now with your disguise.
+
+>e
+
+>silt
+by one point
+
+>score
+You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>n
+#notana
+Your score has just gone up by one point.
+
+Emptiness Sepiments
+
+DEBUG: liches being objhinted.
+
+>score
+You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>hasbeen
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>chisel
+Your score has just gone up by one point.
+
+DEBUG: chisel being objhinted.
+
+>score
+You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#xc
+>s
+>w
+>peel river ville
+Cr-r-r-r-k.
+
+DEBUG: RiverVille Liver being objhinted.
+
+>e
+
+>w
+
+>peel viler liver
+Cr-r-r-r-k.
+
+>put river ville in canister
+
+>put viler liver in canister
+#notana
+Your score has just gone up by one point.
+LIVERS.
+
+DEBUG: livers being objhinted.
+
+>score
+You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>silver
+The livers are too dull to do anything like that with. Yet.
+
+>sliver
+Your score has just gone up by one point.
+
+DEBUG: spread being objhinted.
+
+>score
+You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#xc
+>e
+>n
+
+>drapes
+by one point
+
+DEBUG: drapes being objhinted.
+
+>score
+You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>n
+The drapes are too thick.
+
+>cut drapes
+The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
+
+DEBUG: sliver being objhinted.
+
+>n
+You don't know what's
+
+>silver
+Your score has just gone up by one point.
+
+DEBUG: shotgun being objhinted.
+
+>score
+You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put silver in shotgun
+
+>banish maps
+>purloin spam
+>hint
+DEBUG: Spam being objhinted.
+>maps
+You should be able to go north now.
+>n
+DEBUG: maps being objhinted.
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>n
+Ghouls' Slough
+
+DEBUG: maps being objhinted.
+
+>x maps
+Frost Forts
+
+>wolves
+Your score has just gone up by one point.
+
+DEBUG: wolves being objhinted.
+
+>score
+You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>shoot wolves
+#notana
+Your score has just gone up by one point.
+
+Trips Strip
+
+DEBUG: Store I being objhinted.
+
+>score
+
+You have scored 17 out of 17 total points for the Forest region.

@@ -1,0 +1,77 @@
+
+## reg-sa-ordeal-loader-hints.txt
+## GENERATOR FILE: rbr-sa-ordeal-loader.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* ordeal_thru
+
+>opt in
+
+>monty hints
+You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.
+!Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+
+>in
+Rested Desert
+
+What can the odor turn into? Your random thoughts are not so random. (+)
+Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
+>z
+The clues and distractions collapse to anagrams. (+)
+>z
+If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? (+)
+>z
+A door. (-)
+A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
+
+>door
+by one point
+
+/DEBUG: (bolt|bulge) being objhinted\.
+
+>bugle
+Your score has just gone up by one point.
+
+>blot
+by one point
+
+>open door
+Thickest Thickets
+
+DEBUG: toga being objhinted.
+
+>slander
+#notana
+by one point
+
+>goat
+Your score has just gone up by one point.
+
+You can just go IN, now.
+
+>in
+Notices Section
+
+DEBUG: magenta nametag being objhinted.
+
+>attics
+Your score has just gone up by one point.
+
+>gateman
+Your score has just gone up by one point.
+
+You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
+>take gadget
+It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+You need to ASK GATEMAN ABOUT CABINET.
+>undo
+
+>ask gateman about cabinet
+>take gadget
+
+You can just enter the gate now.
+
+>in
+Trips Strip
