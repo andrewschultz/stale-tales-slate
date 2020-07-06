@@ -631,15 +631,17 @@ You're not the tree-mangling type. So you can only exit to the north.
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
 
+@mis
+#mistake test for sonic
+>sonic
+Maybe if you had more than one coin.
+
 @sli
 #balance undos
 #detour for slider testing misses for "icon" and "icons"
 #slider test for icon
 >cino
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#mistake test for sonic
->sonic
-Maybe if you had more than one coin.
 #slider test for sonic icons
 >purloin coins
 >ocsin
@@ -651,7 +653,6 @@ You hear weird static from the settler. Perhaps there is more than one solution,
 >purloin icons
 >cisno
 Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
 >undo
 #note if we switch to "cinso" above we don't undo PURLOINing the icons. I'm not sure what's going on here. Check this once test runs are more stable. ??
 

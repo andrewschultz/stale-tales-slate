@@ -20,6 +20,21 @@ print_details = False
 err_max = 0
 quiet = 0
 
+valids = { 'slider': [ 'slider' ],
+  'nudmis': [ 'scannotes', 'spechelp', 'done rejects' ],
+  '' : []
+}
+
+valids_reverse = defaultdict(str)
+
+for x in valids:
+    for y in valids[x]:
+        if y:
+            valids_reverse[y] = x
+            valids_reverse["re" + y] = x
+valids_reverse['nudge'] = 'nudmis'
+valids_reverse['mistake'] = 'nudmis'
+
 sync_detail = defaultdict(str)
 
 rbr_warn = defaultdict(int)
@@ -129,10 +144,6 @@ def match_slider_tests():
 def verify_reg_files(my_proj):
     i7.go_proj(my_proj)
     x = glob.glob("reg-{}*.txt".format(my_proj))
-    valids = { 'slider': [ 'slider' ],
-      'nudmis': [ 'scannotes', 'spechelp', 'done rejects' ],
-      '' : []
-    }
     flaggable = defaultdict(bool)
     for q in valids:
         for r in valids[q]:
@@ -190,6 +201,22 @@ def rbr_of(loc_proj, x):
     ary = os.path.basename(x).split('-')
     the_name = '-'.join(ary[2:-1])
     return "rbr-{}-{}.txt".format(loc_proj, the_name)
+
+def catch_bad_reg():
+    reg_pattern = "reg-*.txt"
+    for x in glob.glob(reg_pattern):
+        if 'sa-thru' in x: continue
+        with open(x) as file:
+            for (line_count, line) in enumerate(file, 1):
+                if not line.startswith('#'): continue
+                ll = line.lower().strip()
+                if ll.startswith("#re"): ll = ll[3:]
+                if ll.startswith("#"): ll = ll[1:]
+                for y in valids_reverse:
+                    if ll.startswith(y) and valids_reverse[y] not in x:
+                        print("Misplaced test case", x, line_count, line.lower().strip())
+                if 'hints' not in x and ll.startswith("DEBUG INFO") and "objhinting" in ll:
+                    print("Erroneous hint check", x, line_count, line.lower().strip())
 
 def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = []):
     for_pattern = "for pattern {} in {}.".format(pattern, b)
@@ -353,6 +380,8 @@ while count < len(sys.argv):
     count += 1
 
 if rbr_before: os.system("rbr.py")
+
+catch_bad_reg()
 
 if verify_roi or verify_sa:
     if verify_roi: verify_reg_files('roi')

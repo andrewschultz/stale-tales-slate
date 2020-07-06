@@ -1575,7 +1575,7 @@ Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is c
 >scan drive a
 It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
 >x drive a
-It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with. You can also READ it for its status.
+It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a golden dongle you don't want to mess with. You can also READ it for its status.
 >scan drive a
 It's DRIVE A, A DRIVE and VARIED, which may be what's causing the whole jumble.
 #nudge for clack
@@ -1914,13 +1914,15 @@ You need to get rid of that uppercase to successfully compile your code.
 fits in perfectly
 
 @nud
-#nudge for nottobe
->nottoeb
-Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
-#spechelp for small blue button
+#spechelp for be troo e robot
 >reboto
-You need to give that computer another (figurative) kick.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the small blue button. That's a decent omen.
+The robot gives a futile kick, but it's trying. Some sort of command like that must work.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
+
+@mis
+#mistake test for to be or
+>to be or
+The Be-Troo E-Robot isn't interested in monologues.
 
 @max
 >compile
@@ -1943,8 +1945,16 @@ You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this v
 
 @sli
 #slider test for reboot
->oberto
+>obreto
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#readables for be troo e robot
+>read
+OBERTO, in red. That's its name.
+#scannotes for be troo e robot
+>scan robot
+You wonder if you need a step back to take a new look at the ambiguous clues.
 
 >reboot
 Your score has just gone up by one point
@@ -1962,7 +1972,7 @@ You get a NEED IF-DEFINE error
 That stupid NEED IF-DEFINE and that peels speel, still.
 
 @nud
-#done rejects for small blue button
+#done rejects for be troo e robot
 >toober
 No need to reboot twice.
 #scannotes for peels speel
@@ -1992,12 +2002,6 @@ Your score has just gone up by one point
 #done rejects for peels speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
-#renudge for nottobe
->nottoeb
-Even more nothing happens than you expected. The blue button really is too broken. You got the orange button to work, anyway.
-#done rejects for reboot
->reboto
-No need to reboot twice.
 #spechelp for im le cop polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.

@@ -462,6 +462,7 @@ Disease Seaside
 DEBUG INFO: boats hinting.
 >enter raft
 DEBUG INFO: frat raft hinting.
+#not a mistake
 >fart
 DEBUG INFO: interlocking oars hinting.
 >undo
@@ -684,10 +685,12 @@ Anger Range
 >score
 {$SCOS}
 
-@max
+@mis
 #mistake test for boast
 >boast
 Batso.
+
+@max
 #pre-tutor-trout rule
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
@@ -775,6 +778,11 @@ Your score has just gone up by one
 
 @hin
 DEBUG INFO: HUNTER HUNT AREA hinting.
+
+@nud
+#scannotes for HUNTER HUNT AREA
+>scan hunter hunt area
+You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
 
 @nud
 #readables for HUNTER HUNT AREA
