@@ -8,12 +8,11 @@
 
 * stores-thru
 
->ts
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
-Trips Strip
-
 >z
->opt in
+
+>ts
+Trips Strip
 
 >forest
 by one point

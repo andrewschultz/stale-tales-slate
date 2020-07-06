@@ -38,11 +38,11 @@ No, that's not the essence of the whiff of stew.
 >wets
 Getting lost in a swamp would be even worse than getting lost in a forest.
 >undo
-#nudge for norht
+#renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for souht
+#renudge for souht
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -50,7 +50,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#nudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -73,11 +73,11 @@ You think you're on to something, but you still feel stuck.
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
 >undo
-#nudge for ewst
+#renudge for ewst
 >twes
 Your internal compass feels extra jumbled. You remember the whiff of stew, but there's probably a different challenge here.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -91,21 +91,6 @@ Self-ID Fields
 
 >rs ne
 >in
-#mistake test for seat
->seat
-You need the opposite of a seat, here. But at the same time, you're also very close.
->undo
-
-#mistake test for sate
->sate
-There's nothing around you have to sate, thankfully.
->undo
-
-#mistake test for tase
->tase
-This game is nonviolent--well, except for a few puns.
->undo
-
 #nudge for aroma
 >aroam
 No, that's not the essence of the aroma of teas.
@@ -130,7 +115,7 @@ You need the opposite of a seat, here. But at the same time, you're also very cl
 >tase
 This game is nonviolent--well, except for a few puns.
 >undo
-#nudge for tea
+#renudge for eat
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
@@ -168,7 +153,7 @@ by one point
 
 >sr ne
 >in
-#nudge for north
+#renudge for north
 >norht
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
@@ -180,7 +165,7 @@ You think you're on to something, but you still feel stuck.
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#nudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -213,7 +198,7 @@ Self-ID Fields
 
 >sr sw
 >in
-#nudge for norht
+#renudge for norht
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -225,7 +210,7 @@ Your internal compass feels extra jumbled. The shout wavers for a bit. Maybe you
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -244,7 +229,7 @@ Your internal compass feels extra jumbled. You remember the rambling shout, but 
 >twes
 The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
-#renudge for aest
+#renudge for eats
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -278,18 +263,24 @@ No conifers appear. Maybe you can just use your senses, and it's easier than tha
 >leavse
 You have no time to play with leaves.
 
->north
+>n
 by one point
 Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
->east
+>e
 by one point
 Self-ID Fields
 
 >score
 You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+#mistake test for leif/lief
+>leif
+It is too late to help the line of no life by showing love.
+>lief
+It is too late to help the line of no life by showing love.
 
 #renudge for forest
 >forets
@@ -310,8 +301,8 @@ The selves vessel is much too sturdy to manipulate.
 >vesle
 The selves vessel is much too sturdy to manipulate.
 #nudge for line
->lien
-If they owe something, that's their business. It's too late to change that now.
+>inle
+They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for life
 >lief
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
@@ -470,8 +461,16 @@ No, you can't afford to wait that long.
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ones. Keep at it.
 
+#mistake test for enos
+>enos
+A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.
+
 >nose
 Your score has just gone up by one point.
+
+#mistake retest for enos
+>enos
+A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.
 
 >score
 You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
@@ -479,6 +478,18 @@ You currently have 3 out of 17 total points for the Forest region. Your minimum 
 #done rejects for nose
 >noes
 Don't get that nose bent out of shape.
+
+#mistake test for gat
+>gat
+Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
+#mistake test for gunshot
+>gunshot
+You need something more tangible than that. Something that could make a gunshot, perhaps
+
+#spechelp for noughts
+>shotgnu
+Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
 #spechelp for dashes
 >shadse
@@ -494,18 +505,6 @@ You currently have 4 out of 17 total points for the Forest region. Your minimum 
 #done rejects for shades
 >shadse
 Anything you do to bend the shades might break them.
-
-#mistake test for gat
->gat
-Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
-#mistake test for gunshot
->gunshot
-You need something more tangible than that. Something that could make a gunshot, perhaps
-
-#spechelp for noughts
->shotgnu
-Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
 >shotgun
 Your score has just gone up by one point.
@@ -665,20 +664,27 @@ You currently have 8 out of 17 total points for the Forest region. Your minimum 
 #notana
 Your score has just gone up by one point.
 
-Cruel Ones' Enclosure
+Emptiness Sepiments
 
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
-#nudge for cruel
->crule
+#nudge for emptiness
+>emptinsse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for ones
->onse
+
+#nudge for sepiment
+>sepimetn
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#nudge for enclosure
->enclosuer
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+
+#nudge for scoffin
+>scoffni
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
+
+#nudge for coffin
+>coffni
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
+
 #nudge for coffer
 >coffre
 You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
@@ -738,9 +744,11 @@ It's a perfectly good tool. Trying to refine it might break it.
 Cr-r-r-r-k.
 
 >e
+
 #renudge for liver
 >livre
 Your thoughts go to the other liver.
+
 >w
 
 >peel viler liver
@@ -812,7 +820,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the livers. Keep at 
 Your score has just gone up by one point.
 
 >srelvi
-WRONG
+The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -859,13 +867,36 @@ No, the material of the drapes isn't important, here.
 #done rejects for drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
-#nudge for doorway
 
 >n
 The drapes are too thick.
 
 >cut drapes
-revealing a doorway
+The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
+
+#nudge for doorway
+>doorway
+The dimness is unchangeable from out here. You'll have to find a way in.
+
+#nudge for mis
+>msi
+The dimness is unchangeable from out here. You'll have to find a way in.
+
+#nudge for miss
+>mssi
+The dimness is unchangeable from out here. You'll have to find a way in.
+
+#nudge for dimness
+>dimnsse
+The dimness is unchangeable from out here. You'll have to find a way in.
+
+#nudge for send
+>sedn
+The dimness is unchangeable from out here. You'll have to find a way in.
+
+#nudge for nde
+>ned
+The dimness is unchangeable from out here. You'll have to find a way in.
 
 >n
 You don't know what's
@@ -910,6 +941,15 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #nudge for lough
 >louhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
+#nudge for cruel
+>crule
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+#nudge for ones
+>onse
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
+#nudge for enclosure
+>enclosuer
+The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
 #nudge for marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
@@ -917,13 +957,24 @@ The marsh and lake are symptoms of--whatever evil is beyond here.
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
+#mistake test for lough/loughs
+>lough
+That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.
+>loughs
+That would make things less intimidating and ugly, but you still wouldn't know where to go, and you might end up in the middle of the lake or lakes you made, anyway.
+
+#mistake test for ulcer
+>ulcer
+Giving yourself or the cruel ones an ulcer would be pointless.
+
 #mistake test for god
 >god
 You want to tempt the supernatural in somewhere this hellish? Phew.
 
 #mistake test for gob
 >gob
-The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
+The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.
+Oh, and you can undo this, too.
 UNDO
 >undo
 

@@ -15,6 +15,7 @@
 #spechelp for store m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store M. Keep at it.
 
 >metros
 Your score has just gone up by one point
@@ -26,10 +27,6 @@ The trade tread doesn't need to be changed. What's behind it, does.
 >in
 
 Undesired Underside
-
-#mistake test for grained
->grained
-Good try, but we're looking for a noun. With an extra A.
 
 #mistake test for singers
 >singers
@@ -46,6 +43,10 @@ Any noise would be better than the beats, but without the sensor, you're probabl
 Reverse psychology won't work on the ingress, here.
 >resigns
 Reverse psychology won't work on the ingress, here.
+
+#nudge for theol
+>hotle
+You can't change the hotel, but you could have a look around.
 
 #nudge for etch
 >ethc
@@ -65,6 +66,13 @@ The signers' ingress looks forbidding, but it looks hooked up to the friend find
 #nudge for signers
 >signesr
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
+
+#nudge for cramped
+>crampde
+You can't do much with or to the camp, here or north.
+#nudge for camp
+>capm
+You can't do much with or to the camp, here or north.
 
 #mistake test for refind
 >refind
@@ -110,6 +118,7 @@ You can't change the hotel,
 #spechelp for drainage
 >gardenai
 The drainage bubbles a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the drainage. Keep at it.
 
 >w
 >e
@@ -134,6 +143,10 @@ On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last 
 >read reading
 On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last page. The nonsense makes you see red.
 
+#mistake test for grained
+>grained
+Good try, but we're looking for a noun. With an extra A.
+
 >gardenia
 by one point
 
@@ -143,10 +156,6 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 #done rejects for gardenia
 >gardenai
 The flowers are fine as-is.
-
-#nudge for theol
->hotle
-You can't change the hotel, but you could have a look around.
 
 #nudge for sensor
 >sensro
@@ -185,6 +194,14 @@ He hasn't let the MAN change his designer reedings, and he won't let you. Beside
 >reedign
 He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be .
 
+#nudge for cordoned
+>cordonde
+You should probably just go north to look at the condo instead.
+
+#nudge for condo
+>conod
+You should probably just go north to look at the condo instead.
+
 #mostlyskipping the camp right now to get the tomato from the alley
 
 >w
@@ -213,7 +230,7 @@ The author twisted words enough. Perhaps you could concentrate on the motto.
 #spechelp for motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
-You feel a slight psychic push-pull coming from the motto. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the motto. Keep at it.
 
 >tomato
 Your score has just gone up by one point.
@@ -298,17 +315,9 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 >n
 Roarings Garrison
 
-#nudge for camp
->capm
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
-
 #nudge for library
->library
-could use renovation
-
-#nudge for cramped
->crampde
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+>librayr
+The library could use renovation, but that's out of the scope of your quest, now.
 
 #nudge for redtents
 >redtenst
@@ -333,23 +342,23 @@ It's not just that it's corn, it's LOST too.
 
 #nudge for tent
 >tetn
-As anti-personal property as the deadbeats are, that'd still annoy them.
+As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 
 #nudge for tents
 >tenst
-As anti-personal property as the deadbeats are, that'd still annoy them.
+As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 
 #nudge for deadbeat
 >deadbeta
-He may mumble about change, but he's amazingly resistant to change, himself.
+The deadbeat may mumble about change, but changing oneself? Not so fast.
 
 #nudge for dead
 >deda
-He may mumble about change, but he's amazingly resistant to change, himself.
+The deadbeat may mumble about change, but changing oneself? Not so fast.
 
 #nudge for beat
 >beta
-He may mumble about change, but he's amazingly resistant to change, himself.
+The deadbeat may mumble about change, but changing oneself? Not so fast.
 
 #nudge for buttosn
 >buttosn
@@ -370,6 +379,7 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 #spechelp for lost corn
 >controsl
 You thought you heard electronic beeping from the corn.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 
 >controls
 The dead beat deadbeat might not beat you dead
@@ -384,7 +394,7 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >obtani
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
 #nudge for poses
->posse
+>essop
 You can't change who they are. They probably can't, either. It's sad.
 #nudge for pose
 >poes
@@ -398,21 +408,14 @@ The poses posse doesn't need or want a handout.
 >pesos
 The poses posse doesn't need or want a handout.
 
-#nudge for cordoned
->cordonde
-You won't need to do anything to the whole room unless you are trapped in a room.
-
-#nudge for condo
->conod
-You won't need to do anything to the whole room unless you are trapped in a room.
-
 #nudge for rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
 #spechelp for antlers
 >rentlas
-One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
+You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
+DEBUG ONLY: You feel a slight psychic push-pull coming from the antlers. Keep at it.
 
 >rentals
 Your score has just gone up by one point.
@@ -456,6 +459,7 @@ You take care not to let the cake tear as you pick it up.
 
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
+
 #mistake test for tang/tangs
 >tang
 How the angst gnats taste doesn't matter.
@@ -486,7 +490,7 @@ You've already changed the lost corn into the controls, and you don't need to do
 #spechelp for dry cake
 >keycadr
 You feel like can almost identify what the cake can become.
-You feel a slight psychic push-pull coming from the dry cake. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
 >keycard
 
@@ -508,7 +512,7 @@ The fuzziness seems to be part of the clover. It might be, even if you're able t
 #spechelp for clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
-You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
 
 >velcro
 
@@ -521,10 +525,10 @@ No matter how hard you try to convince yourself they are lovely, you're not smit
 
 #done rejects for velcro
 >velcor
-The velcro remains tangled.
+The Velcro remains tangled.
 #nudge for string
 >strign
-No need to mess with the string joining the velcro mittens.
+No need to mess with the string joining the Velcro mittens.
 #nudge for glove
 >gloev
 The mittens are as comfortable as they're going to be.
@@ -567,9 +571,6 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #nudge for fare
 >faer
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start constantly giving readings then, anyway.
-#mistake retest for bates
->bates
-You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
 #nudge for heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
@@ -581,10 +582,10 @@ Probably best not to do stuff to even one begonia while the faeries have them.
 They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
 #nudge for fairy
 >faiyr
-The rest would mangle you back worse.
+If you mangled one of them, the rest of the fairies would mangle you back worse.
 #nudge for faery
 >faeyr
-The rest would mangle you back worse.
+If you mangled one of them, the rest of the fairies would mangle you back worse.
 #nudge for stems
 >stesm
 Deal with the whole flower, not just the stems.
@@ -595,7 +596,7 @@ You don't need to do anything to the counter, and it's probably protected by a s
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 #nudge for tonr
->torn
+>tron
 The torn cue is just there to direct you to the brocade.
 #nudge for cue
 >ceu
@@ -606,15 +607,18 @@ The torn cue is just there to direct you to the brocade.
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the begonias. Keep at it.
 >noise bag
 by one point
 #altpath
 #done rejects for noise bag
->noise bga
+>noisebga
 The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 >undo
+
+>take begonias
 
 >take heaths
 
@@ -625,7 +629,7 @@ They are multiple heaths--so you should try to change just one.
 #spechelp for heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
-You feel a slight psychic push-pull coming from the heaths. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the heaths. Keep at it.
 
 >sheath
 Your score has just gone up by one point.
@@ -652,7 +656,7 @@ You'd need to do something to all the words.
 #spechelp for words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
-You feel a slight psychic push-pull coming from the words. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the words. Keep at it.
 
 >sword
 
@@ -668,7 +672,7 @@ Meddling with the sword right now, you're worried it might poke you.
 #spechelp for brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
-You feel a slight psychic push-pull coming from the brocade. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the brocade. Keep at it.
 
 >barcode
 
@@ -713,11 +717,11 @@ The lit-up tulip is useful for providing light for all-night sessions of playing
 >uptil
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 
+>w
+
 #renudge for friend
 >friedn
 You don't need to futz further with the friend finder.
-
->w
 
 >put card on sensor
 The door is open. So you just walk east instead.
@@ -745,7 +749,7 @@ You don't need to explore the coteries. Maybe the nerds could help you another w
 
 #nudge for coterie
 >coterei
-You don't need to explore the coteries. The tulip is good enough.
+You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 
 >w
 >z
@@ -763,8 +767,8 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 #nudge for tulip
->uptil
-The nerds would gang up on you and take it back, if anything worked, which it won't.
+>uptli
+The nerds would gang up on you and take it back, if anything worked directly on the tulip, which it won't. The nerds might be able to help you with part of your quest, though.
 #nudge for nerd
 >nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
@@ -791,13 +795,13 @@ The nerds look at you, then remark they can't decipher THAT. But maybe if you re
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
 #nudge for memo
 >meom
-Oh no. You'd change it for the worse. And the nerds would be mad..
+Oh no. You'd change it for the worse. And the nerds would be mad.
 #nudge for tote
 >toet
-Oh no. You'd change it for the worse. And the nerds would be mad..
+Oh no. You'd change it for the worse. And the nerds would be mad.
 #nudge for tome
 >toem
-Oh no. You'd change it for the worse. And the nerds would be mad..
+Oh no. You'd change it for the worse. And the nerds would be mad.
 
 #mistake test for nerd door w
 >odor
@@ -824,7 +828,7 @@ No need to put the sensor to sleep now you got what you want.
 
 #renudge for metallic
 >metallci
-No way. That thing's sturdy. Those nerds know their stuff.
+You got to the Esoteric Coteries. You don't need any tricks like that.
 #renudge for signer
 >signre
 You got to the Esoteric Coteries. You don't need any tricks like that.
@@ -884,8 +888,8 @@ But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which do
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 #renudge for tulip
->uptil
-It's handy as is. It gives light. You can't ask for much more.
+>ulipt
+The tulip is handy as-is. It gives light. You can't ask for much more.
 
 #nudge for lairs
 >laisr
@@ -946,16 +950,12 @@ Apparently the neon pig is a creation of one INPENGO.
 #spechelp for neon pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
-You feel a slight psychic push-pull coming from the neon pig. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
 >opening
 
 >score
 You currently have 14 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
-#mistake retest for smitten
->smitten
-No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they stuck really well on the cafe face.
 
 #readables for controls
 >read controls
@@ -979,13 +979,13 @@ You've already made nothing out of something, and instead of reversing that, you
 >u
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
 
+#mistake retest for smitten
+>smitten
+No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they stuck really well on the cafe face.
+
 #mistake retest for tar
 >tar
 No need. You made it sbove the cafe face with the velcro.
-
-#nudge for irwin
->iinrw
-You don't want to mess with the wirin that way
 
 >put controls in opening
 #notana
@@ -995,16 +995,12 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 
 #rereadables for controls
 >read controls
-You remember that it's underwritten (in red) by Orton LSC, whoever they are."
-tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit.
+The opening isn't really an opening any more, what with the controls fitting in nicely.
 #renudge for gin
 >gni
 You already transformed the neon pig to the gin-nope opening. And you put the controls in. Better not do any more.
 >openign
 You don't need to close up the opening. The controls are in, and they fill it well enough.
-#renudge for irwin
->iinrw
-You don't want to mess with the wirin any further
 #renudge for recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
@@ -1043,14 +1039,14 @@ This racket isn't just one beat.
 #spechelp for siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
-You feel a slight psychic push-pull coming from the siren. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at it.
 
 >resin
 
 >score
 You currently have 16 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#mistake test for rinse
+#mistake retest for rinse
 >rinse
 Time for that after you get your hands dirty and slay the final enemy, here.
 
@@ -1059,12 +1055,12 @@ Time for that after you get your hands dirty and slay the final enemy, here.
 The dust is dust now.
 #done rejects for resin
 >resni
-You could use the resin's stickiness right now.
+The dust is dust now.
 
 #spechelp for beats
 >betsa
 The beats shift up for a second.
-You feel a slight psychic push-pull coming from the beats. Keep at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the beats. Keep at it.
 
 >beast
 
@@ -1109,9 +1105,6 @@ I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 >baste beast
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
-#mistake test for rifle
->rifle
-Shooting things up is not the answer
 
 #nudge for noise
 >noies

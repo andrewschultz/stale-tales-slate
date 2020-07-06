@@ -8,12 +8,11 @@
 
 * stores-thru
 
->ts
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
-Trips Strip
-
 >z
->opt in
+
+>ts
+Trips Strip
 
 #nudge for trips
 >trisp
@@ -299,6 +298,7 @@ by one point
 #spechelp for store b
 >strebo
 You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. Keep at it.
 #nudge for depot
 >depto
 You can't do anything to the depots besides ENTER them.
@@ -359,6 +359,12 @@ That should work--but it doesn't! Maybe the towers would be too big to tackle in
 #mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
+#mistake test for destro
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+#mistake test for doters
+>doters
+You don't need people oohing and ahing at your skill.
 
 >n
 hubs bush
@@ -377,6 +383,10 @@ You don't need to change the marquee, but maybe it'd be fun to see what's inside
 >sorbet
 by one point
 
+#mistake retest for strobe
+>strobe
+You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. They weren't as good as the sorbet you got from Store B.
+
 #renudge for marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
@@ -386,6 +396,6 @@ WARNING
 >resort
 by one point
 
-#nudge for ogled
+#nudge for lodge
 >lodeg
 The lodge is as good as it can be. Better ENTER it.

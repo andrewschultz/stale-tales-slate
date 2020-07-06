@@ -19,7 +19,7 @@ The Oafs' Sofa is there, and there's nothing you can do about it.
 #nudge for oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
-#mistake test for magnet/a magnet
+#mistake test for magnet
 >magnet
 Your magenta nametag is on securely enough. Not that you actually like having it on, but you'd get scolded for not having it.
 >a magnet
@@ -118,9 +118,6 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #mistake test for deters
 >deters
 No! You're trying to make progress here.
-#mistake test for rood
->rood
-This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 #nudge for breeze
 >breeez
@@ -210,7 +207,7 @@ I award you zero points for that anagramming try, and may God have mercy on your
 #notana
 by one point
 
-#mistake test for landers
+#mistake retest for landers
 >landers
 There will be better hints than a manners advice column once you move on.
 #mistake retest for sandler
@@ -295,6 +292,7 @@ Your score has just gone up by one point.
 #spechelp for attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the attics. Keep at it.
 
 #nudge for doll
 >dlol

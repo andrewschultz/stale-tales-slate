@@ -92,9 +92,6 @@ Your score has just gone up by one point.
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
->ether
-They're not bad people
-
 >ethre
 The trio remains unmoved. Perhaps you can give the protest more constructive aims?
 
@@ -103,9 +100,6 @@ Your score has just gone up by one point.
 
 >score
 You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
-
->pottesr
-You cut the riot down, but you need to change their protest now.
 
 >china
 #notana

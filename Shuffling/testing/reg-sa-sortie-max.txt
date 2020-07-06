@@ -38,13 +38,8 @@ Kitchen
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
->s
-Trap Part
-A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
-
->n
-
 >x fridge
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see grist and cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 
 >grits
 Your score has just gone up by one point.
@@ -106,6 +101,7 @@ Your score has just gone up by one point.
 You currently have 11 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >e
+
 >s
 Room
 
@@ -157,9 +153,6 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >z
 >z
 >z
-
->rifle
-Shooting things up is not the answer.
 
 >peasant
 Your score has just gone up by one point.
@@ -216,6 +209,8 @@ The cask is already full of oils.
 >w
 
 >s
+
+>moor
 
 >missile
 Your score has just gone up by one point.

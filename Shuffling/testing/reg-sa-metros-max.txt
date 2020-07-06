@@ -84,11 +84,6 @@ You take care not to let the cake tear as you pick it up.
 
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
-#mistake test for tang/tangs
->tang
-How the angst gnats taste doesn't matter.
->tangs
-How the angst gnats taste doesn't matter.
 
 ##nudge for lost
 >ltso
@@ -117,6 +112,8 @@ You currently have 8 out of 18 total points for the Metros region. You have foun
 Fo' Real Florae
 
 >give gardenia to faeries
+
+>take begonias
 
 >take heaths
 

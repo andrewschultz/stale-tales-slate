@@ -38,14 +38,6 @@ Kitchen
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
->s
-Trap Part
-A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
-
->n
-
->x fridge
-
 >tortilla
 Your score has just gone up by one point.
 
@@ -96,6 +88,7 @@ Your score has just gone up by one point.
 You currently have 9 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
 >e
+
 >s
 Room
 
@@ -148,9 +141,6 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >z
 >z
 
->rifle
-Shooting things up is not the answer.
-
 >peasant
 Your score has just gone up by one point.
 
@@ -200,6 +190,8 @@ Gainly laying the cask under the spout, you pour in some oils.
 >w
 
 >s
+
+>moor
 
 >missile
 Your score has just gone up by one point.
