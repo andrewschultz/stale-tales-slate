@@ -622,8 +622,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills.[slider-activate]" [slider test spill]
 "digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
 "howler"	486513400	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
-"bubble"	341982470	bubble wrap	--	"It's just wrap, really."
-"bubblewrap"	618894823	bubble wrap	--	"It's just wrap, really."
+"bubble"	341982470	paw r wrap	--	"It's just wrap, really."
+"bubblewrap"	618894823	paw r wrap	--	"It's just wrap, really."
 "pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 
 table of posh hops shop nudges
@@ -966,8 +966,8 @@ table of Obscurest Subsector nudges [4 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "obscurest"	725670736	--	--	"[towersloc]."
 "locked"	348940377	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
-"gol"	160766118	--	--	"[if fissure is touchable]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
-"gaol"	162953936	--	--	"The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer."
+"gol"	160766118	--	--	"[if luck node is not moot]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
+"gaol"	162953936	--	--	"The gaol can't be changed, [if luck node is not moot]but maybe you could solve the luck node[else]and all you really needed to do was release Dr. Yow[end if]."
 "loggaol"	323720054	--	--	"Nah, you're pretty sure you're overthinking things now. You [if duck is returned]opened[else]may want to open[end if] the prison."
 "jail"	149955028	--	--	"It's not just any jail--but prison ropins."
 "ropin"	355042693	--	--	"[no-ropin]."
