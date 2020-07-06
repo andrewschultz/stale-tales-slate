@@ -1,0 +1,458 @@
+## reg-roi-others-curtis.txt
+## testing all possible combinations of what Curtis gives you, when. Others-#### tells the levels when you go back to Curtis.
+##
+y
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _others-intro
+
+>gonear rustic citrus
+
+>maraschino
+Your score has just gone up by one point
+
+>grapes
+Your score has just gone up by one point
+>tamarind
+Your score has just gone up by one point
+>pears
+Your score has just gone up by one point
+north is usually up
+
+>compass
+moss flattens and clears
+Your score has just gone up by one point
+
+>plums
+Your score has just gone up by one point
+
+>x drinks
+>limes
+Your score has just gone up by one point
+
+>pomegranate
+Your score has just gone up by one point
+
+* _others-124
+
+>persimmon
+>i
+tekno-token
+
+>blueberries
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>s
+>i
+coin
+>n
+>w
+>blackberries
+>raspberry
+>cranberries
+>pineapple
+>grapefruit
+>strawberries
+>e
+>e
+>cheap
+>w
+>s
+Curtis hands you another coin
+that's all you'll get
+>i
+coins
+droll dollar
+tekno-token
+>n
+>d
+
+* _others-24
+
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>d
+>go near
+>rhubarb
+>nab an a
+>u
+>s
+>i
+coin
+>persimmon
+>n
+>w
+>blackberries
+>raspberry
+>cranberries
+>pineapple
+>grapefruit
+>strawberries
+>e
+>e
+>solemn
+>mo len
+>w
+>s
+Curtis hands you another coin
+that's all you'll get
+>i
+coins
+droll dollar
+tekno-token
+>n
+>d
+
+* _others-14
+
+>blueberries
+>i
+tekno-token
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>d
+>go near
+>rhubarb
+>nab an a
+>u
+>w
+>blackberries
+>raspberry
+>cranberries
+>pineapple
+>grapefruit
+>e
+>s
+Spurtin' turnips!
+here's the rest of my junk
+>i
+coins
+tekno-token
+droll dollar
+>n
+>d
+
+* _others-4
+
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>d
+>go near
+>rhubarb
+>nab an a
+>u
+>w
+>blackberries
+>raspberry
+>cranberries
+>pineapple
+>grapefruit
+>strawberries
+>e
+>s
+Wow! Impressive! I'm half curious if you cheated somehow!
+>i
+coins
+tekno-token
+droll dollar
+>n
+>d
+
+* _others-34
+
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>d
+>go near
+>rhubarb
+>nab an a
+>u
+>w
+>blackberries
+>raspberry
+>e
+>s
+Surprised you can lug all that back
+>n
+>w
+>cranberries
+>pineapple
+>grapefruit
+>strawberries
+>e
+>s
+It's all I have for you.
+>n
+>d
+
+
+* _others-134
+
+>cantaloupe
+Take on a token
+
+>n
+>apples
+>apricot
+>gooseberry
+>mulberries
+>e
+>cheap
+>cinque
+>ancienter
+>solemn
+>len,mo
+
+>among
+>papayas
+>w
+>s
+So much done at once.
+hands you two coins
+>i
+coins
+>persimmon
+currency I never could quite spend
+>i
+droll dollar
+>n
+>d
+
+* _others-234
+
+>n
+>apples
+Your score has just gone up by one point
+>apricot
+Your score has just gone up by one point
+>mulberries
+Your score has just gone up by one point
+>gooseberry
+Your score has just gone up by one point
+
+>w
+>blackberries
+Your score has just gone up by one point
+
+>e
+>s
+tekno-token AND a coin
+>i
+a coin
+a tekno-token
+
+>n
+>e
+>solemn
+Your score has just gone up by one point
+>mo len
+Your score has just gone up by one point
+>ancienter
+Your score has just gone up by one point
+>cinque
+Your score has just gone up by one point
+>w
+>s
+>i
+coins
+>sonic
+Your score has just gone up by one point
+>undo
+>icons
+Your score has just gone up by one point
+>undo
+>sonic icons
+Your score has just gone up by two points
+>i
+sonic icons
+>undo
+>undo
+
+>n
+>e
+>cheap
+Your score has just gone up by one point
+
+>among
+Your score has just gone up by one point
+>papayas
+Your score has just gone up by one point
+
+>cripes
+Your score has just gone up by one point
+
+>w
+>s
+>i
+a droll dollar
+>n
+>d
+
+* _others-1234
+
+>blueberries
+Take on a token
+
+>i
+tekno-token
+
+>n
+>apricot
+Your score has just gone up by one point
+
+>mulberries
+Your score has just gone up by one point
+
+>apples
+Your score has just gone up by one point
+
+>w
+>blackberries
+Your score has just gone up by one point
+
+>watermelon
+Your score has just gone up by one point
+
+>raspberry
+Your score has just gone up by one point
+
+>e
+>s
+scru-it. We're getting somewhere
+
+>i
+a coin
+
+>cantaloupe
+Your score has just gone up by one point
+
+>persimmon
+Your score has just gone up by one point
+citric critic
+
+>i
+coins
+
+>n
+>e
+
+>solemn
+Your score has just gone up by one point
+
+>len mo
+Your score has just gone up by one point
+
+>cheap
+Your score has just gone up by one point
+
+>ancienter
+Your score has just gone up by one point
+
+>w
+>s
+I never could quite spend. It looks kind of illegal.
+
+>n
+>d
+
+* _others-endgame
+
+#icons here causes line break ???
+>icons
+Your score has just gone up by one point
+
+>sonic
+Your score has just gone up by one point
+
+>give dollar
+# should not say to yourself ??
+#needs line break after you take the storage box ??
+#give dollar
+
+>put icons in slot
+
+>i
+passport
+
+>u
+>n
+>n
+
+>prep
+Your score has just gone up by one point
+
+>undo
+>research
+Your score has just gone up by one point
+>review
+Your score has just gone up by one point
+
+>n
+You Did Great
+
+###############################everything below here is a full test
+# search for (asterisk) (underscore)full and replace it with (asterisk) full, or vice versa
+
+* full-4
+
+>{include} _others-intro
+>{include} _others-4
+>{include} _others-endgame
+
+* full-14
+
+>{include} _others-intro
+>{include} _others-14
+>{include} _others-endgame
+
+* full-24
+
+>{include} _others-intro
+>{include} _others-24
+>{include} _others-endgame
+
+* full-124
+
+>{include} _others-intro
+>{include} _others-124
+>{include} _others-endgame
+
+* full-34
+
+>{include} _others-intro
+>{include} _others-34
+>{include} _others-endgame
+
+* full-134
+
+>{include} _others-intro
+>{include} _others-134
+>{include} _others-endgame
+
+* full-234
+
+>{include} _others-intro
+>{include} _others-234
+>{include} _others-endgame
+
+* full-1234
+
+>{include} _others-intro
+>{include} _others-1234
+>{include} _others-endgame
