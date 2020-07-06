@@ -71,7 +71,7 @@ Slots 4 and 5 must be E. That leaves few possibilities for ---EE-.
 You have (RS)(CNRS)(NR)EE(CN). But guesing R gives us RSNEEC. So the first letter is S.
 Similarly, R in the second place gives SRNEEC. So it is in the third. That leaves SNEERC or SCREEN. SCREEN.
 >>DIRGE RIDGE
-#logic for sods gone odes song
+# logic for sods gone odes song
 ?What do I do about the sods gone odes song?
 The question mark must be a vowel, if you count vowels and consonants in "sodsgone" versus what is on the settler. So it is O.
 Slot 3 is a vowel, too, and it can't be E, so it's O. That makes slot 6 E.
@@ -105,7 +105,7 @@ You have RY???. The three question marks look troublesome, but since there are o
 RY (ET)(ER)(RT). That leaves L and A as the first two letters, so...
 LA (ET)(ER)(RT). That leaves LAERT or LATER.
 LATER.
-#logic for starch charts
+# logic for starch charts
 ?What should I do about the starch charts?
 This is a bit of internet slang at the end.
 But you know where the vowel is, and that's a start.
@@ -113,43 +113,49 @@ The first two consonants only have so many possibilities, and some aren't very s
 TR is really the only sensible sound to start that still fits (HRT)(CRS).
 TRA(CHS)(HS)(CS) can be found by trial and error. Trasch.
 >>HACKS' SHACK
-#logic for usb
+# logic for usb
 ?Why does the USB give question marks?
 That's because there are two solutions.
 But since it's a three letter word, I didn't feel too guilty allowing for this.
 The vowel in the middle leaves two possibilities.
 You can leave via SUB or BUS.
-#logic for clack ops locs pack
+# logic for clack ops locs pack
 ?What's with the Clack Ops Locs Pack?
 This is a relatively tricky one. But we know where the second vowel is. It must be in slot 6, since that is the only one that has a vowel as a candidate. Since slot 2 can't be A, we have -a---o--. That is a good start, and having two c's helps, too.
 The big question is, where are the c's? CL/A/PSLK/CS/CLS/O/CP/SK is what we have. This looks really sticky, but we can do some educated guessing. For starters, S cannot be in slot 8. If it were, we'd have CL/A/PLK/C/CL/O/CP/S. Then 1 or 5 would have to be C, and then 7 is P and 3 is K. (CL)/AKC/(CL)/OPS.
 CL/A/PSL/CS/CLS/O/CP/K is left. Now if P is in slot 7, we get CL/A/SL/CS/CLS/O/P/K. LASCCOPK, CAL(CS/SC)OPK aren't words, so try our luck with L in slov 5. C/A/PS/CS/L/O/CP/K is what is left. This is CASCLOPK or CAPSLOCK. CAPSLOCK.
 We can also use the red letter clues to make things a bit easier. PC Cloaks eliminates S in slot 8. POLACCKS puts L in slot 5 immediately. But it's still a bit tricky. Still, there are other clues that I hope makes up for it.
-#logic for im le cop polemic
+# logic for be troo e robot
+?What can the Be-Troo E-Robot to?
+Scanning it gives a few question marks, but they (as usual) make things easier.
+Cheat-scanning gives the raw data of (RT)(ER)(BR)(EO)O(OT).
+B must be in slot 3, but the real clue here is noting that if O is in slot 6, we get TRBEOO. That puts T in slot 6.
+Further process of elimination gives us REBOOT.
+# logic for im le cop polemic
 ?The I'm Le Cop Polemic seems sticky. What gives?
 Seven letters is a lot! But we can make progress with the one question mark. It needs to be a vowel, so it must be O and not M.
 From here, you may need to look at red text, because neither of the remaining vowels gets a clue to cancel it out. But you my be able to guess the computer term involved.
 MEL COPI in red means I can't be in slot 7. -O--I-E. (CL)O(CMP)(LMP)I(CLM)E.
-#logic for peels speel
+# logic for peels speel
 ?What is the peels speel trying to tell me?
 It gives ?RG?R. That gives us a couple definitive slots right away. --E-P.
 The others are (SP)(LS)E(EL)P.
 But we can knock off, in order, slots 1, 2 and 4.
 SLEEP.
-#logic for bub dude egg
+# logic for bub dude egg
 ?What is with Bub Dude Egg?
 You have BUBDU and DEEGG. They give ???Y?. This looks like a tall task.
 (BD)(EU)(BE)(EU)(UG) pops out. Then you can try the usual logic tricks.
 D and G are only possible one place, giving us D(EU)(BE)(EU)G.
 But now B is only possible one place! D(EU)B(EU)G. DUBEG doesn't quite work.
 DEBUG.
-#logic for drive a / a drive / varied
+# logic for drive a / a drive / varied
 ?Why does Drive A throw out all these question marks?
 It's A Drive, Varied, as well. This presents a lot of potential conflicts, but it makes some things easy, too.
 The ?R?R?R clue tells you where the vowels are, and slot 1 must be A, 3 must be I, and 5 must be E, since one of the letters must be right, and these are the only vowels.
 Then slot 2 is forced to be V.
 Slot 6 must be R. AVIDER.
-#logic for drive e / e drive
+# logic for drive e / e drive
 ?Why does Drive E throw out all these question marks?
 It's not only Drive E but also E Drive. The puzzle might be too easy with question marks, so I threw this curve ball in.
 But actually, it's still not too bad, as the question marks fall out quickly. The green at the end is a nice help.
@@ -159,73 +165,73 @@ Now you can either read Drive E to see "I'd Veer" in red, or you can try each po
 DIRVEE doesn't quite work, so DERIVE it is.
 >STORE U
 >>SAME MESA
-#logic for warts do sow drat
+# logic for warts do sow drat
 ?Why does the worst ad give questions? It's only one set of letters.
 READ it carefully. The worst ad reads WARTS DO SOW, DRAT, and it gives R??Y??R. This looks awful, but slot 2 must be O or A, so it is a vowel.
 That means the others must be consonants. Now we should probably be conservative and assume WORSTAD does nothing to help us, giving (DRT)(OA)(RW)(OA)(RST)(AD)(DRSW).
 Slot 6 is D, and that makes things easier. (RT)(OA)(RW)(OA)(RST)D(RSW). We can make an educaated guess that S is the last letter, since .....D(RW) would be nonsense.
 That helps a few things fall out: (RT)(OA)(RW)(OA)(RT)DS, or (RT)(OA)W(RT)DS.
 The RADWOST red text leaves us with TOWARDS.
-#logic for pats stap
+# logic for pats stap
 ?How do I enter Pat's Stap?
 The ??RR suggests that there is one vowel in the first two letters.
 But the first letter is P or S, so the second letter is the vowel.
 The fourth letter gives a red reading, so it can't be S or P. It is T.
 This leaves two possibilities, PAST or SAPT.
 Go PAST.
-#logic for Oscar's SOS ARC
+# logic for Oscar's SOS ARC
 ?How do I enter Oscar's SOS Arc?
 The YRRYR? reading means the final letter is a consonant, but we already kmew it was S or C, so that's not really helpful. But having the SOS ARC helps us place a lot of letters.
 The first letter is a vowel, so it must be O. That means the fourth letter must be A. (We could also solve the fourth, then the first.)
 S cannot be in positions 2 or 3. That leaves 5 and 6.
 So with A--OSS, you may be able to guess, but just in case, position 3 can't be C. That solves everything.
 ACROSS.
-#logic for anti sag sit a nag
+# logic for anti sag sit a nag
 ?What's with the Anti Sag Sit a Nag?
 It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).
 We can try some gimmicks like placing G in slot 6, giving NGS or NGT or SGN or SGT, none of which make promising words. So AG(AI)(AI)(NS)(NST)(NST) and then SNT/STN clog up a bit, so AG(AI)(AI)N(ST)(ST).
 There are also a few red clues, but AGAINST comes out of all this.
-#logic for rude n nuder
+# logic for rude n nuder
 ?How do I decipher what to do with Rude 'N Nuder?
 The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.
 So, U--E(NR) has D in slot 3, and thus U(NR)DE(NR). URDEN is not a word, but UNDER is.
-#logic for a bev o be ova
+# logic for a bev o be ova
 ?What's this? A Bev O' Be Ova?
 It has three question marks, but it is not bad at all.
 Note that V must be in slot 4, and the vowel in slot 5 can't be A or O. That leaves E.
 With E in slot 5, slots 2 and 3 can't be E, so that leaves -BOVE, or ABOVE.
-#logic for morf form
+# logic for morf form
 ?What's with the morf form giving question marks?
 The ?RY? notation shows where the vowel is: O is in the third slot. That's a start.
 Similarly, slots 1 and 4 are F or M, leaving slot 2 as R.
 FROM is more likely than MROF. So there you go.
 >>HARMS MARSH
-#logic for null it unit
+# logic for null it unit
 ?How does the NULL IT unit operate?
 The YRR?R suggests slot 4 is a vowel. As it is I or L, that makes it I. That makes slot 1 U.
 So with U--I-, slot 3 cn't be L or N, so it is T.
 That leaves ULTIN or UNLIT, so, UNLIT.
-#logic for odd run on aura
+# logic for odd run on aura
 ?How do I deal with the odd run on aura?
 The YRY?RR means there is a vowel in the fourth slot. R or U is, then, U.
 Since slot 1 is a vowel but not O, is is A. So slot 3 is U. A-OU--.
 Slot 2 can't be D or N, so it is R.
 Slot 6 can't be N, which logically eliminates all but AROUND.
-#logic for all noon gag
+# logic for all noon gag
 ?What do we do with the all noon gag reading?
 The ??Y?? looks intimidating, but the question marks give lots of clues:\n<pre>ALLNO\nONGAG\n??Y??</pre>
 That leaves possibilities of (AO)(LN)(AO)(AN)(OG).
 But only 1 and 3 can be A and O, so that makes 4 and 5 N and G, respectively.
 Then 2 must be L. ONALG or ALONG are the only two left. ALONG is the only word of these two.
 >>RIPE PIER
-#logic for admits mist ad
+# logic for admits mist ad
 ?How do I get around the admits mist ad?
 While the red text clinches it, you can also make hay with the settler readings.
 The ?RYRRR is a big help, since we then know slot 1 must be a vowel, which must be A. That makes slot 3 I. A-I---.
 Now A(MST)I(DMS)(DMS)(MT) is left, and this is tricky. The M in slot 4 or 5 respectively gives ASMIDT/ASIDMT. Things clump if it is in slot 6, ending with DSM or SDM. So it is in slot 2, making slot 6 T.
 AMISDT or AMIDST means AMIDST.
 >>CRIPPLE CLIPPER
-#logic for whattar tawrath thatraw artthaw
+# logic for whattar tawrath thatraw artthaw
 ?What is with the thickness sketchins?
 Logan's poem on the Cripple Clipper may be confusing, too,but let's break it down.
 <pre>WHATTAR\nTAWRATH\nTHATRAW\nARTTHAW\n?RRR?RR</pre>
@@ -337,7 +343,7 @@ Therefore, A is in slot 2. Now we can see the possibilities left: (RL)A(BM)(BM)(
 You can look for the red Mr. Beal and LeBram clues to nail things down.
 Or you can notice there are only four choices: RABMLE, RAMBLE, LABMER, and LAMBER.
 Ramble it is.
-#logic for marble blamer mr beal
+# logic for marble blamer mr beal
 ?How do I figure Blamer Mr Beal?
 R?R??? looks unpromising, but if you write out the possibilities, you'll note a few things: RL/ARL/RLM/BME/AEL/ERL is what you have. If slot 2 is R or L, we get RLM/LRM..., which is not promising, especially since B must then go in slot 4. So A is in slot 2.
 RL/A/BRLM/B/EL/ERL is left. That puts M in slot 3. RL/amb/EL/ERL can be guessed, but note L in slot 1 means LAMBER, then you have RAMBEL/RAMBLE. RAMBLE.
@@ -348,6 +354,14 @@ Here a minimal bit of guesswork and grinding it out works.
 -RA--- would mean CRAE(NT/TN) as there's a vowel in the fourth slot, and the first can't be N/T or R. So that doesn't work.
 -EC--- would mean RECA(NT/TN) or RECANT.
 >STORE W
+>>LOFTIER TREFOIL
+# logic for yo rend or deny rodney
+?What is the deal with Rodney?
+He is Yo-Rend-or-Deny Rodney.
+With ??RR?R the letter Y has to be in slot 1.
+There must be vowels in slot 2 and 5. Since 2 is O or R, make it O.
+But now slot 3 can't be R or D, so it is N. Slot 6 can't be D, so it is R. Slot 4 must be D.
+YONDER.
 >>TOPSIDE DEPOSIT
 # logic for dreads adders
 ?What to do with the ambiguous Dreads Adders readings?
@@ -420,7 +434,7 @@ The R?RRY?R? presents a problem if we look at strict logic: slot 6 is a vowel, E
 We have (NDS)(ER)(DNRT)(DRTS)(IE)(IE)(DRTS)(ST). But note if slot 2 is a vowel, we have a lot of clogging, so we can call that E.
 (NDS)E(DNRT)(DRTS)(IE/EI)(DRTS)(ST). Now this is where you may need to look at a lot of the clues. This has plenty, if you listen to what they have to say.
 It can cut things down for you to where you have NERDIEST.
-#logic for mardier admirer
+# logic for mardier admirer
 ?How do I get rid of the mardier admirer?
 There are a lot of question marks!
 The green is a big help, but you should also note there need to be 3 vowels total. So ???R?GR has a consonant in slot 3 (R or M), and that narrows things down.
@@ -566,6 +580,22 @@ So, L is in slot 5. -T-OLL, RTSOLL or STROLL. It's STROLL.
 Well, it does give you one exact letter, which is T.
 That leaves (FR)(RA)(AF)T. But the RAFT is already there.
 You need to FART.
+>>ANGER RANGE
+# logic for hunter hunt area
+?What to do to or with the HUNTER HUNT AREA?
+This is a slightly intricate one, with all those question marks. Perhaps we can use some heuristics, though.
+First, U is in slot 1 or 2. It could be in slot 3, but then we'd have HNU, which is very unlikely. That's a big help, as now we know there is only an E or A left to match with a question mark.
+But what if slot 7 is A? Then we have --E--(HTN)A and, eliminating E and A from slots 4 and 5, --ETR(HN)A. UNETRHA or HUETRNA. So that doesn't work. So slot 7 is H.
+But that gives us slot 1 and 2 by elimination. UNE---H, or UNE(AT)(ER)(NTH)H.
+Then only slot 4 can hold A, slot 5 must hold R, and then slot 6 is left with T. UNEARTH. Though we need other preparation to progress in the game, this is the logic.
+We could also note HAUNTER is in red, which helps with slots 1 and 2 immediately.
+>>LEAN LANE
+# logic for paw r wrap
+?What to do with the Paw-R-Wrap?
+The increased information from name brand actually makes the puzzle more difficult. Trivially more difficult, but more difficult.
+The first thing to note is that A is in slot 2. It can't be in slot 3, which is a consonant, and the only undefined slot it could be in is slot 2.
+But if we figure the remaining possibilities, we see (PW)A(RP)(RP).
+WAPR isn't a word, but WARP is an action.
 >>LAPSIN' PLAINS
 # logic for span pans
 ?What's with the span pans' double clue?
@@ -591,12 +621,12 @@ SEARCH.
 The gleaner gives YRR??RY to start. That means slot 4 is a or e, and slot 5 is n or r. That at least letsus know if a consonant or vowel is in each question slot.
 Here we're going to cheat a bit and assume A is in slot 4, because that forces 1 and 7 to E. E(nrg)(lrg)A(nr)(nrlg)E and here you may have to rely on some red text to cut things down. Al Green helps a bit. E(nrg)(lr)A(nr)(nrlg)E. You may need to brute force here: If R is in slot 3, you get EGRANLE, so it's L. From there, poking around should give ENLARGE.
 >>PSALM LAMPS
-#logic for natant ant
+# logic for natant ant
 ?Why does the ant give a question mark when I scan it?
 Because it isn't just an ant but a NATANT ANT.
 There are only six possibilities total, with two once you figure the A is in slot number 2.
 And NAT would be a bit trivial. TAN it is.
-#logic for plasm lamps
+# logic for plasm lamps
 ?What is with the general scanning here?
 You get ?R?R?R, which looks confusing, but you can figure where the vowel must be.
 Slot 3, as the A's are in slot 2 and 3, but 2 is a consonant. That cuts down the possibilities a lot, especially since slot 4 must be L or P.
@@ -659,7 +689,7 @@ But we can guess L is in slot 7, because these are adverbs, and E is thus forced
 A bit of trial and error can help here. S(INT)(ILT)E(LNT)(LT)LY is left. Let's place L in slot 5, giving us SNIELTLY. That doesn't work. What about T? SNIETLLY.
 So N is in slot 5. S(IT)(ILT)EN(LT)LY is left. But T in slot 1 gives STIENLLY, so SI(LT)EN(LT)Y is SILENTLY.
 >>LAMER REALM
-#logic for stray satyr
+# logic for stray satyr
 ?What can the stray satyr become?
 The two question marks look tough, but the vowel is defined (slot 1) and the Y must be in slot 3 or 5 according to the question marks.
 But slot 3 is R or T, so slot 5 is Y. That leaves A(RS)(RT)(RST)Y.
@@ -728,7 +758,7 @@ With more than five letters, it's what it says.
 The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all three vowels are green in cheat mode, and one consonant even works out, giving you
 -E-ER-E-
 (dr)E(sv)ER(sv)E(dr) is rather easy to sift through, since there are only four possibilities. REVERSED.
-#logic for naa na b a banna
+# logic for naa na b a banna
 ?Is a banna that tough, with all those question marks?
 Not really. Naa Na b / a banna has only one vowel, A. So you can figure a bit out.
 #skipstart

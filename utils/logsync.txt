@@ -313,7 +313,7 @@ trout>tutor
 tea tray~tea>eat
 dent>tend
 wipes>swipe
-wrap>warp
+paw r wrap>warp
 ####lapsin' plains
 c2~crate>trace
 crate>react

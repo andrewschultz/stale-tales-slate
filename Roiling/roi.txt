@@ -1209,7 +1209,7 @@ Etahn Ru is its name. Lots of red letters!
 You need to UNEARTH it.
 But you also need to help it recover its ruby.
 Don't go on 'til you've found a jewel.
-There's one inside the bubble wrap.
+There's one inside the Paw-R-Wrap.
 He will take revenge on whoever stole it.
 What can you do with a ruby?
 BURY it.
@@ -1255,9 +1255,9 @@ SWIPE them.
 ?Is the dent in the desk useful?
 No, except for getting one more point.
 It's a rather easy point. Let's just say if you scan it in cheat mode, it falls out.
-?What do I do with the Bubble Wrap?
+?What do I do with the Paw-R-Wrap?
 You WARP it.
-Well, not here. But it's useful against someone.
+Well, not in front of Aunt Tuna. But someone else will deserve and loathe it more.
 ?What can I ask Aunt Tuna about?
 She will tell you about her friend Valeri who gave her a packet.
 Which you can get, or you do have.
@@ -1332,7 +1332,7 @@ You could make it respect you if you told it tut, snob...
 Yes. Examining's not enough.
 You have to SEARCH. But the sardine will block you.
 ?How do I get rid of the sandier sardine?
-He hates noises.
+The sardine hates noises.
 You need something that makes noises.
 Here's where you WARP the bubble wrap.
 Now you can SEARCH.

@@ -5185,7 +5185,7 @@ to decide which thing is oyster-item:
 	if player is in Lean Lane:
 		if tea tray is touchable, decide on tea tray;
 		if trout is reflexive, decide on trout;
-		if bubble wrap is off-stage, decide on drawer;
+		if Paw R Wrap is off-stage, decide on drawer;
 	if player is in Sclerous Closures:
 		if sardine is in Sclerous Closures:
 			if player has wrap, decide on wrap;
@@ -5211,7 +5211,7 @@ this is the oyster-hinting rule:
 		all-say "The Posh Hops Shop is full of action. So that gives you a clue as to the commands to use." instead;
 	if oyster-item is not player, try objhinting oyster-item instead;
 	if haunter is reflexed and location of haunter is location of player, all-say "You need to show the haunter where the ruby is buried, now." instead;
-	if player is in Sclerous Closures and bubble wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
+	if player is in Sclerous Closures and Paw R Wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
 	if player is in Anger Range and eeks are in Hardest Trashed Dearths, all-say "You may want to visit the trout to the east." instead;
 	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
 	if location of player is Rascal Craals:
@@ -5697,10 +5697,6 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the didn't understand error:
-	if player has wrap:
-		if the player's command includes "wrap" or the player's command includes "bubble":
-			say "Hm, maybe that's not quite what to do with the wrap. As fun as it'd be to pop all those bubbles one by one, you may need to just rip them all up at once.";
-			the rule succeeds;
 	repeat through regana of mrlp:
 		if the player's command matches right-cmd entry:
 			if the-from entry is fungible:
@@ -6042,7 +6038,8 @@ check attacking: [this takes responses for general types. The table below it is 
 	if noun is a target listed in the table of attack-specific:
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
-	if player has lance, say "[if noun is a person]Wrong enemy for the lance[else]." instead;
+	if player has lance, say "[if noun is not ant]Wrong enemy for the lance[else]You need something more succinct[end if]." instead;
+	if player has paw r wrap, say "Alas, the Paw-R-Wrap is nor Wap-R-Wrap." instead;
 	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
 	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
@@ -13884,7 +13881,7 @@ tubs	"You spill the pills and slip on them, because no bathmat is around. In the
 prod	"You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger."
 heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
 waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
-wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.[paragraph break]The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it."
+wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, the Paw-R-Wrap falls. He flees, and as you run after him, you step on the Paw-R-Wrap, causing it to tear and pop.[paragraph break]You ruined the Paw-R-Wrap, but you do notice a ruby inside. It seems valuable. So you take it."
 Achers Chaser Arches	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
 gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 ol trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
@@ -13926,19 +13923,19 @@ carry out spilling:
 		unless the player yes-consents, do nothing instead;
 		say "Okay.";
 	if player is in Lean Lane:
-		if bubble wrap is off-stage:
+		if Paw R Wrap is off-stage:
 			if produce-redo-cup is false:
 				if dent is moot, poss-d; [can't fix dent again]
 				if wipes are in Lean Lane, decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 			now player has wrap;
-			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
+			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
 			guy-cheat trout;
 			now aunt-tuna-cross is true;
 			move player to Anger Range;
 			pearl-check;
 			do nothing instead;
 		else:
-			say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
+			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
 	if player is in Posh Hops Shop: [special case for spilling pills. This overrides the current hint item and takes out the trolls]
 		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
 		increase min-score of oyster by cur-score of oyster;
@@ -14603,18 +14600,18 @@ carry out seeking:
 	try searching noun instead;
 	the rule succeeds.
 
-chapter bubble wrap
+chapter Paw-R-Wrap wrap
 
 warp-try is a truth state that varies.
 
 After printing the name of the wrap while taking inventory:
 	if warp-try is true, say " (to warp in the right place)";
 
-some bubble wrap is a singular-named flippable thing. indefinite article of bubble wrap is "some". understand "bubbles" as bubble wrap.
+some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R Wrap is "some". understand "bubble/bubbles" and "bubble wrap" as Paw R Wrap.
 
-a-text of wrap is "RYRR". b-text of wrap is "PYRP". parse-text of wrap is "w[sp]a[sp]r[sp]p". wrap is parse-spoilable.
+a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of Paw R Wrap is "w[sp]a[sp]r[sp]p". Paw R Wrap is parse-spoilable.
 
-description of wrap is "It's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually."
+description of Paw R Wrap is "Paw-R-Wrap has been a great commercial succeess in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually."
 
 chapter warping
 
@@ -14624,10 +14621,10 @@ understand the command "warp" as something new.
 
 understand "warp [something]" as warping.
 
-does the player mean warping the bubble wrap: it is very likely.
+does the player mean warping the Paw R Wrap: it is very likely.
 
 carry out warping:
-	if noun is bubble wrap, try fliptoing ruby instead;
+	if noun is Paw R Wrap, try fliptoing ruby instead;
 	if sardine is moot, say "You already warped what you needed to" instead;
 	say "There's only one thing you can warp, and [if noun is plural-named]those aren't[else]that's not[end if] it.";
 	the rule succeeds;
@@ -14884,7 +14881,7 @@ carry out trampleing:
 
 check entering templar ramplet: say "You need to enter the right way." instead;
 
-book bubble wrap and drawer
+book Paw R Wrap and drawer
 
 section dent
 
@@ -14897,7 +14894,7 @@ section raw red drawer
 the raw red drawer is boring scenery in Lean Lane. description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if wipes are in Lean Lane]. There are also some wipes on it[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if].". bore-text of the raw red drawer is "'Disturb? I'd burst!' says Aunt Tuna[if dent is touchable], as she mentions that DENT is ugly enough[end if].". bore-check of raw red drawer is bore-drawer rule.
 
 this is the bore-drawer rule:
-	if current action is opening, say "[if bubble wrap is not off-stage]There's no secret compartment or anything. No need to be greedy[else if trout is not reflexed]Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief[else]Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow[end if]." instead;
+	if current action is opening, say "[if Paw R Wrap is not off-stage]There's no secret compartment or anything. No need to be greedy[else if trout is not reflexed]Aunt Tuna mentions subtly-not-so-subtly that a guest is not a thief[else]Aunt Tuna exclaims 'Re-treat? Retreat!' Abashed, you assure yourself she shuffled the duplicate letters around, somehow[end if]." instead;
 
 understand "warder drawer" as raw red drawer when trout is reflexive.
 understand "raw/red warder drawer" as raw red drawer when trout is reflexive.
