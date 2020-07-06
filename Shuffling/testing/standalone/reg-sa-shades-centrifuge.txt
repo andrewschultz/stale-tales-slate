@@ -1,5 +1,5 @@
-## reg-sa-annoying.txt
-## tests for all the ways through the two "annoying" puzzles (to test), the centrifuge and shades
+## reg-sa-shades-centrifuge.txt
+## tests for all the ways through the two tricky puzzles (to test), the centrifuge and shades
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
