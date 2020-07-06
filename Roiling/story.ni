@@ -2550,7 +2550,7 @@ keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]propert
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
-prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
+prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
 luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
 blaster	"ALBERT'S."
 stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
@@ -5043,13 +5043,19 @@ check objhinting when player is in Same Mesa (this is the hide Gast hints rule):
 
 does the player mean objhinting Gast when mrlp is routes: it is very likely;
 
+the hintstub rules are an object-based rulebook.
+
+a hintstub rule for a thing (called th) (this is the point-to-mesa rule):
+	if th is in Same Mesa:
+		if player is in Same Mesa, try objhinting th instead;
+		all-say "[if spoilit is true]The spoon points[else]You should go[end if] back outside.";
+		now spoilit is false instead;
+
 this is the routes-hinting rule:
 	if cur-score of routes is 0 and prep-spoil is false, all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
-	if MORF FORM is in Same Mesa:
-		if player is in Same Mesa, try objhinting MORF FORM instead;
-		all-say "[if spoilit is true]The spoon points[else]You should go[end if] outside to the commotion.";
-		now spoilit is false instead;
-	if THE BEAN is in Same Mesa and Harms Marsh is unvisited, try objhinting THE BEAN instead;	[end global stuff]
+	abide by the point-to-mesa rule for bev o be ova;
+	abide by the point-to-mesa rule for MORF FORM;
+	abide by the point-to-mesa rule for THE BEAN;
 	if location of player is Same Mesa:
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
@@ -5057,7 +5063,7 @@ this is the routes-hinting rule:
 		if WOE BOW BELL is touchable, try objhinting WOE BOW BELL instead;
 		if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
-		if Cleric Circle is unvisited, 	try objhinting scripture picturers instead;
+		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
 		if Idle Deli is unvisited, try objhinting adsorbing signboard instead;
 		if Adobe Abode is unvisited, try objhinting lairage regalia instead;
 	if location of player is Cleric Circle:
@@ -5079,8 +5085,8 @@ this is the routes-hinting rule:
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
 		if NULL IT unit is in Harms Marsh, try objhinting NULL IT unit instead;
+		if odd run on aura is in Harms Marsh, try objhinting odd run on aura instead;
 		if noon gag is in Harms Marsh, try objhinting noon gag instead;
-		try objhinting un road instead;
 	if location of player is Ripe Pier, try objhinting admits mist ad instead;
 	if location of player is Cripple Clipper, try objhinting thickness sketchins instead;
 	if location of player is Sonancy Canyons:
