@@ -1079,5 +1079,352 @@ The Wildest Wilteds are not to be traversed lightly. People protecting their ter
 >x 6
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 
+@nud
+#nudge for terry
+>ryter
+!You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
+\\
+#nudge for lalw
+>llaw
+You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
+\\
+#nudge for walls
+>llaws
+You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
+\\
+#mistake for aliver
+>aliver
+You don't want to risk anything that would make Elvira more powerful.
+\\
+#nudge for elvira
+>alvire
+Changing Elvira is impossible, and you certainly don't want to summon her.
+\\
+#nudge for ground
+>groudn
+Changing the ground beneath your feet is too dangerous a proposition.
+\\
+#nudge for jump
+>jupm
+You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so.
+\\
+#nudge for souht
+>south
+This game almost never requires you to mess with cardinal directions.
+\\
+#nudge for ewts
+>ewst
+This game almost never requires you to mess with cardinal directions.
+\\
+#nudge for norht
+>ronth
+This game almost never requires you to mess with cardinal directions.
+\\
+#nudge for eats
+>esta
+This game almost never requires you to mess with cardinal directions.
+\\
+#nudge for down
+>donw
+This game doesn't usually require you to mess with directions you can go.
+\\
+#nudge for southwets
+>southwets
+This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
+\\
+#nudge for northwest
+>northwets
+This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
+\\
+#nudge for northeast
+>northeats
+This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
+\\
+#nudge for southeast
+>southeats
+This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
+\\
+#nudge for gadget
+>gagdet
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+\\
+#nudge for xyyzz
+>xyyzz
+A hollow voice booms, "Lo! Of..."
+\\
+#nudge for plugh
+>pluhg
+A hollow voice booms, "Lo! Of..."
+\\
+#nudge for plover
+>plovre
+A hollow voice booms, "Lo! Of..."
+\\
+#nudge for iths
+>iths
+You're not fooling ME. Shame on you!
+\\
+#nudge for kcuf
+>kcuf
+You're not fooling ME. Shame on you!
+\\
+#nudge for mand
+>mand
+You're not fooling ME. Shame on you!
+\\
+#nudge for lelh
+>lleh
+You're not fooling ME. Shame on you!
+\\
+#nudge for parc
+>parc
+You're not fooling ME. Shame on you!
+\\
+#nudge for heck
+>hcek
+You're not fooling ME. Shame on you!
+\\
+#nudge for teach
+>echat
+Aw, man, a third option for the settler wouldn't be fair. Trust me, it's powerful enough as-is.
+\\
+#nudge for igns
+>ings
+You don't need to mess around with the sign on the settler, or any sign, except maybe one place, which you'll know when you see it.
+\\
+#nudge for slider
+>idlers
+You can just switch the slider if you want to manipulate it.
+\\
+#nudge for purse
+>pruse
+The purse is just fine as it is.
+\\
+#nudge for sacep
+>aspec
+You don't want to mess with the space-capes. They work.
+\\
+#nudge for treatise
+>treaties
+The treatise was there as help to discover the satchel. It has only sentimental value, now.
+\\
+>purloin gird grid
+#nudge for gird
+>drig
+The grid already contains pretty much everything Elmo was able to find out.
+\\
+#nudge for writing
+>writign
+Red writing is a just clue of what to change.
+\\
+#nudge for redwriting
+>redwritign
+Red writing is a just clue of what to change.
+\\
+#nudge for edr
+>erd
+Red writing is a just clue of what to change.
+\\
+#nudge for warning
+>warning
+You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
+\\
+#nudge for pedanto
+>pedanto
+You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
+\\
+#rernudge for pedanto
+>pedanto
+!But to do that
+\\
+#nudge for curses
+>cusser
+You're not fooling ME. Shame on you!
+\\
+#nudge for bother
+>obther
+You're not fooling ME. Shame on you!
+\\
+#nudge for bastard
+>astarbd
+You're not fooling ME. Shame on you!
+\\
+#nudge for parse
+>pesar
+There's no in-between for the PARSE and SPARE commands for the settler.
+\\
+#nudge for verb
+>ervb
+There's no secret verb or verbs to find trying that.
+\\
+#nudge for verbs
+>ervbs
+There's no secret verb or verbs to find trying that.
+\\
+#nudge for think
+>knith
+Whenever you just try to too hard to think, things always get jumbled.
+\\
+#nudge for score
+>cores
+There's no way to scramble your score. And scoring another point won't help you solve things, anyway.
+\\
+#nudge for poss
+>opss
+You can't jumble the possible scores any other way.
+\\
+#nudge for listen
+>istlen
+Trying to change how you listen gives no intels.
+\\
+#nudge for about
+>abotu
+The "about" section has no easter eggs.
+\\
+#nudge for credit
+>credti
+The "credits" section has no easter eggs.
+\\
+#nudge for credits
+>credtis
+The "credits" section has no easter eggs.
+\\
+#nudge for history
+>histoyr
+The "history" section has no easter eggs.
+\\
+#nudge for hush
+>huhs
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for spaceson
+>spacenos
+Meta-commands don't have any easter eggs, sadly
+\\
+#nudge for spaceon
+>spacoen
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for spaces
+>spaces
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for paces
+>epcas
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for son
+>sno
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for hitn
+>hitn
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for hints
+>hitns
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for access
+>accses
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for exits
+>extis
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for exit
+>exti
+Meta-commands don't have any easter eggs, sadly.
+\\
+#nudge for opts
+>opst
+Meta-commands don't have any easter eggs, sadly
+\\
+#nudge for options
+>optiosn
+Meta-commands don't have any easter eggs, sadly
+\\
+#nudge for version
+>versino
+Meta-commands don't have any easter eggs, sadly
+\\
+#nudge for something
+>semithong
+Instead of messing with SOMETHING, maybe you can examine what the something is on.
+
 >in
 Strip of Profits
+
+@nud
+#renudge for terry
+>ryter
+You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
+\\
+#nudge for yorpwald
+>yalpdrow
+You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
+\\
+#nudge for settler
+>ettlers
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for which
+>whihc
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+\\
+#nudge for whichs
+>whicsh
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
+\\
+#nudge for mark
+>kram
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for recoded
+>recodde
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for deviser
+>deviser
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for backside
+>backside
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for decla
+>decal
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for buntot
+>button
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for receptor
+>receptor
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for receptors
+>receptors
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for output
+>outptu
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for displya
+>displya
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for equals
+>quales
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for logo
+>gool
+You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+\\
+#nudge for point
+>poitn
+There's no secret cheat between NO TIP and OPT IN.
