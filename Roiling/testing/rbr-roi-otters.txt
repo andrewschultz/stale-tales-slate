@@ -44,9 +44,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 @hin
 DEBUG INFO: bleary barley hinting.
 
-@nud,sli
->allrand
-
 @nud
 #this is a general test of a regex with a bad bug--I forgot to test for word boundaries
 >stuffly
@@ -249,6 +246,8 @@ Disowned Downside
 DEBUG INFO: macks hinting.
 
 @nud
+##balance undos
+>allrand
 #nudge for bossy
 >bosys
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
@@ -397,6 +396,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >despairign
 Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
 >undo
+>undo
 
 @max
 #pre-moat-atom rule
@@ -462,6 +462,8 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 
 @sli
 ################################this tests all the possible macks' poses. We simply dump all the "items" in the downside, then test and undo them one by one.
+##balance undos
+>allrand
 #slider test for bossily
 >ssbolyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -594,6 +596,97 @@ Wow! Three things to consider here. This might be tricky.
 >undo
 >scan tsteamily
 Well, you have a feeling you know what that question mark should be.
+>undo
+>undo
+
+@max
+##balance undos
+>allrand
+#this makes sure we can score all points for all macks.
+>blearily
+by one point
+>undo
+>bossily
+by one point
+>undo
+>cattily
+by one point
+>undo
+>coitally
+by one point
+>undo
+>despairingly
+by one point
+>undo
+>drawlingly
+by one point
+>undo
+>emotionally
+by one point
+>undo
+>formally
+by one point
+>undo
+>irately
+by one point
+>undo
+>martially
+by one point
+>undo
+>modestly
+by one point
+>undo
+>nastily
+by one point
+>undo
+>ribaldly
+by one point
+>undo
+>seedily
+by one point
+>undo
+>shabbily
+by one point
+>undo
+>shadily
+by one point
+>undo
+>shoddily
+by one point
+>undo
+>silently
+by one point
+>undo
+>sincerely
+by one point
+>undo
+>snidely
+by one point
+>undo
+>sobbingly
+by one point
+>undo
+>starkly
+by one point
+>undo
+>steamily
+by one point
+>undo
+>stupidly
+by one point
+>undo
+>suddenly
+by one point
+>undo
+>tearily
+by one point
+>undo
+>tediously
+by one point
+>undo
+>wearingly
+by one point
+>undo
 >undo
 
 @hin
