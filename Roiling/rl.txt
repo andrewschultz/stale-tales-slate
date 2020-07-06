@@ -476,6 +476,12 @@ It's trickier to find the other solution, but talking to them gives a bunch of r
 ?How do I navigate the alarming grailman?
 With RYRRYR?R we can determine the remaining question mark is a vowel. Since the possible letters are N and A, it is A. That makes things -(AI)--(AI)-A-.
 At this point, you may need to look for red letter clues. Liam Garn, his name, knocks out the vowels. -A--I-A-. Unfortunately, these were tricky to find, so I wasn't able to give many hints.
+>>OBSCUREST SUBSECTOR
+?What is with the fries-us fissure's reading?
+The PY??YYR  gives us one known letter, the F in slot 1, so that's a good start.
+The two ambiguous readings must also be consonants. F-SS---.
+We have F(EU)SS(IE)(IE)(FR) left, then.
+U can only be in slot 2, R in slot 7. FUSS--R. FUSSIER.
 >>LOST LOTS
 # logic for sporties ripostes
 ?How do I deflect the sporties' ripostes?
