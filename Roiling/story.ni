@@ -559,6 +559,7 @@ section debug on - not for release
 when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
+	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
 [every turn when player is in Dusty Study and Gunter is off-stage and debug-state is true:
 	say "Found: [stuff-found].";]
 
@@ -1495,7 +1496,7 @@ persuasion rule for asking a picaro to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Dr Yow to try doing something:
-	say "Dr. Yow [if ropins is reflexive]mopes silently. [he-she-c]'s already in prison--no need to order [him-her][else]still looks exhausted from [his-her] ordeal. Maybe you should just let [him-her] be [him-her]self[end if].";
+	say "Dr. Yow [if luck node is not moot]mopes silently. [he-she-c]'s already in prison--no need to order [him-her][else]still looks exhausted from [his-her] ordeal. Maybe you should just let [him-her] be [him-her]self[end if].";
 	persuasion fails;
 
 [here are some shortcuts to speed up moving the agnostic around. I suspect there are more, but we'll see]
@@ -1974,7 +1975,7 @@ Lois the Hostile	"She complains[hostile-red]!"
 Hostile Is He Lot	"They complain[hostile-red]!"
 atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 agnostic	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not moot]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]"
-Dr Yow	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
+Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much with grunt work, but [he-she] could help someone technical help you.[end if]"
 Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
@@ -5265,12 +5266,14 @@ this is the towers-hinting rule:
 	if Danger Garden is unvisited, all-say "You need to work your way to the east corner of the map[seen-scope]." instead;
 	if Obscurest Subsector is unvisited, all-say "[if stinger is moot]Go east of [in-here-there of Danger Garden][else if bonker is moot]You need a way past the stinger[else]You need a way past the bonker[end if]." instead;
 	if Shaven Havens are unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit[seen-scope].[end if]" instead;
-	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
+	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow can be manipulated, even behind the prison ropins.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof, all-say "[one of]That duck [if duck is not touchable]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]The duck won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or]The raves saver you saw is useful.[or]The raves saver is a tape recorder.[or]The raves saver has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
+	if player is not in Obscurest Subsector, say "You need to release Dr. Yow in the Obscurest Subsector next." instead;
+	if luck node is not moot, try objhinting luck node instead;
 	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
 	if player is in Outer Route:
-		if weeds are in Treading Gradient, all-say "The item you want is behind the weeds in the Treading Gradient." instead;
+		if weeds are in Treading Gradient, all-say "The item that fits in the rapier repair is behind the weeds in the Treading Gradient." instead;
 		if gizmo is off-stage, try objhinting rapier repair instead;
 	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
 	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
@@ -10334,7 +10337,7 @@ this is the enter-towers rule:
 		else:
 			say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of portals in Strip of Profits is 1]stores[else if number of stos in Strip of Profits is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the balancer barnacle[end if]. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Wildest Wilteds! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you. But unfortunately it is a marauder of whom you have only heard rumors: Yo-Rend-or-Deny Rodney! He has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Wildest Wilteds again.[stopping]"
+	say "[one of]As you attempt to enter the truster turrets, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, and of course you feel that churning sensation that only happens when you discovered Old Warpy accidentally, and you can't tell when you're out for a while, but eventually you realize you have arrived at the Wildest Wilteds! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][line break]Someone is willing to talk to you. But unfortunately it is a marauder of whom you have only heard rumors: Yo-Rend-or-Deny Rodney! He has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Wildest Wilteds again.[stopping]"
 
 chapter store x
 
@@ -16030,7 +16033,7 @@ check searching Spec O Scope: try examining Spec O Scope instead;
 before examining Spec O Scope for the first time: say "A telescope! Place to see!"
 
 check examining Spec O Scope:
-	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the Spec-O-Scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a textual summary of the map in the Spec-O-Scope to a visual one?[close bracket][r][line break]";
+	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the Spec-O-Scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a full-text summary of the map in the Spec-O-Scope to a text map?[close bracket][r][line break]";
 	if the player regex-prompt-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
@@ -16541,7 +16544,7 @@ check taking the duck:
 	if lone duck is returned, say "It's Dr. Yow's. No stealing." instead;
 	say "It gives you a wobbly blowby [if lone duck is friendly]despite your raves saver[else]and gives a warning honk. Maybe you need to find some way to befriend it[end if]." instead;
 
-description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if ropins are reflexive].[paragraph break]You see red at how lonely it seems[end if]."
+description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if luck node is not moot].[paragraph break]You see red at how lonely it seems[end if]."
 
 the ID tag is a boring thing. it is part of the lone duck. description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if fissure is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
 
@@ -16549,7 +16552,11 @@ the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
 chapter Obscurest Subsector
 
-Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]you so neatly diapatched with the duck's help[else]are holding someone in captivity[end if]. A log-gaol blocking every way but west keeps the subsector obscurest[if dr yow is moot], and with Dr. Yow gone, you don't need to do anything else here[end if].". roomnud of Obscurest Subsector is table of Obscurest Subsector nudges.
+Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]you so neatly diapatched with the duck's help[else]are holding someone in captivity, with the help of a most devious luck node[end if]. A log-gaol blocking every way but west keeps the subsector obscurest[if dr yow is moot], and with Dr. Yow gone, you don't need to do anything else here[end if].". roomnud of Obscurest Subsector is table of Obscurest Subsector nudges.
+
+check scaning prison ropins:
+	say "Nothing happens until you scan the luck node.";
+	try scaning luck node instead; [??]
 
 a log gaol is bounding scenery in Obscurest Subsector. "It surrounds the subsector on four sides, helping keep it obscure."
 
@@ -16566,7 +16573,7 @@ after choosing notable locale objects when player is in Obscurest Subsector:
 to say no-rips:
 	say "[if player has dagger]The dagger is too ragged[else if player has gizmo]The gizmo is too unwieldy to fit between the mesh. You try to cut it, but the blade squeaks against the steel[else]You have nothing that could cut anything[end if]."
 
-The prison ropins are a reflexive plural-named transparent container in Obscurest Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
+The prison ropins are a plural-named transparent container in Obscurest Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
 
 check taking ropins: say "WAY too heavy and big." instead;
 
@@ -16575,8 +16582,6 @@ understand "jail" as prison ropins.
 check entering prison ropins: say "It's not very full of fun or useful things. If it were, Dr. Yow would've gone all MacGyver and burrowed out without your help." instead;
 
 check going inside in Obscurest Subsector: try entering prison ropins instead; [?? make sure this isn't short circuited]
-
-a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text of prison ropins is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 description of ropins is "[if duck is returned]The prison ropins are open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
@@ -16633,7 +16638,10 @@ check opening prison ropins:
 
 check opening ropins: say "It's too sturdy, and you've no reason to believe what's behind it is worth visiting." instead;
 
-check unlocking ropins with duck: if prison ropins is reflexed, say "Almost. You're going about it wrong, though. What do you want the prison ropins to BE? Or be described AS?" instead;
+check unlocking it with duck:
+	if noun is luck node or noun is ropins or noun is log gaol:
+		if luck node is moot, say "You already UNLOCKED things, here." instead;
+		say "Almost. You're going about it wrong, though. What do you want the prison ropins to BE? Or be described AS?" instead;
 
 before locking (this is the yow unlock rule) :
 	if noun is ropins or noun is fissure, say "[if Dr Yow is in prison ropins]It already is, and two locks won't make an unlock[else]No need to fuss any more[end if]." instead;
@@ -16652,7 +16660,7 @@ the can't unlock without a lock rule is not listed in any rulebook.
 check unlocking:
 	if player is in Obscurest Subsector:
 		if noun is prison ropins or noun is fissure:
-			if prison ropins is reflexed, say "The prison is already open." instead;
+			if luck node is moot, say "The prison is already open." instead;
 			if second noun is gizmo, say "You fumble with the gizmo but have utterly no luck. The prison remains locked." instead;
 			if duck is touchable, say "The duck looks curiously at what you're trying to do. You can't pick it up, but maybe you can coax the duck with the right word..." instead;
 			if noun is fissure, say "Nothing you have seems to fit in there." instead;
@@ -16695,6 +16703,12 @@ understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
 check entering fissure: say "It's not the right size or shape for you." instead;
+
+section luck node
+
+the luck node is boring vanishing scenery in Obscurest Subsector. "It's one of those combination dealies that will pop up if you get the right combination. You just need a little luck. Though, actually, there are probably a few million combinations, so you need a lot of luck. Just knowing that one combination works, though, has suckered many a Yorpwaldian to try and keep trying, without any, err, luck.". bore-text of luck node is "You fiddle with the luck node a bit, but ... no luck."
+
+a-text of luck node is "YRRYRRYR". b-text of luck node is "YRRYRRYR". parse-text of luck node is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 section rowdying
 
@@ -17499,7 +17513,7 @@ the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, 
 a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text of Reeds Ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 to say deal-seer:
-	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reeds Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
+	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
 
 Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
@@ -22466,6 +22480,9 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		let xxx be unripe ur pine;
 		if number of not moot guardians > 0:
 			repeat with gua running through not moot guardians:
+				if gua is natives site van:
+					say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
+					next;
 				if bad-gender-match of gua, next;
 				now xxx is gua;
 				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reeds Ale;
@@ -22476,13 +22493,12 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if dourest detours are unvisited, say "[2dmiss of myreg]You could have [one of](MISSED again for spoiler) [or]made yourself ROUSTED after you[stopping] visited Dourest Detours east of Anemic Cinema or south of Danger Garden.";
+		if dourest detours are unvisited, say "[2dmiss of myreg]You could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
 		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
 		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
-		if natives site van is not moot, say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
 		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";

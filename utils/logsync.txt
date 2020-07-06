@@ -277,7 +277,7 @@ peels speel>sleep
 usb>sub,bus
 tba key~tba>tab
 bub dude egg>debug
-small blue button~to be or>reboot
+be troo e robot>reboot
 im le cop polemic>compile
 ########REGION oyster
 lolstr trolls>stroll
@@ -422,7 +422,7 @@ asset hit atheists>hastiest
 lois the hostile>holiest
 he lot~hostile is he lot>holiest
 ####obscurest subsector
-prison ropins~ednulcok>unlocked
+luck node>unlocked
 fissure>fussier
 dr yow>wordy
 dr yow2~dr yow>rowdy

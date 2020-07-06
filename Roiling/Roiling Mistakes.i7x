@@ -523,6 +523,8 @@ understand "rived" as a mistake ("You don't need to do that sort of hacking.") w
 
 understand "soda" as a mistake ("It's cola. It has to be. Soda could make you into a sod, of course.") when player has ALocalCo cola.
 
+understand "to be or" as a mistake ("The [robot] isn't interested in monologues.") when player is in Hacks Shack.
+
 book oyster
 
 chapter Posh Hops Shop
@@ -806,6 +808,8 @@ understand "slot" as a mistake ("If you made it, you might fall in the slot and 
 understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.") when ripostes are in location of player.
 
 chapter Obscurest Subsector
+
+understand "clonk due" and "due clonk" and "conk duel" and "cold nuke" and "nuke cold" as a mistake("The luck node can and should be defeated nonviolently.") when luck node is touchable.
 
 understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
 

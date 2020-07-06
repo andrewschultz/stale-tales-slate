@@ -49,6 +49,16 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 @hin
 /DEBUG INFO: (Cedrick|Andres|Ernest|Blake|Edwin|Geno) hinting\.
 
+@nud
+#nudge for deny
+>deyn
+Deal with Rodney, not any part of his chosen sub-names.
+\\
+#nudge for rend
+>redn
+Deal with Rodney, not any part of his chosen sub-names.
+
+
 @max
 #pre-rodney rule
 >yonder
@@ -502,6 +512,18 @@ Your score has just gone up by one point
 #renudge for picaros
 >picarso
 There's only one picaro left, and his name is Rodney.
+#scannotes for yo rend or deny rodney
+>scan rodney
+Perhaps Rodney's over-florid title will wind up being a weakness.
+
+@mis
+#mistake test for nerd yo/nerdy o/yo nerd
+>nerd yo
+Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
+>nerdy o
+Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
+>yo nerd
+Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
 
 @max
 >droney
@@ -853,8 +875,8 @@ DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 >undo
 >clumsy
 by one point
->undo
 DEBUG: guardian hint choice is bluster butlers from bluster butlers.
+>undo
 
 >subtler
 Your score has just gone up by one point
@@ -1669,6 +1691,13 @@ out of the way.
 >undo
 >undo
 
+@mis
+#mistake test for lief/leif
+>lief
+Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
+>leif
+Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
+
 @!minh,mini
 >himself
 Your score has just gone up by one point
@@ -1850,7 +1879,7 @@ Your score has just gone up by one point
 >s
 
 @hin
-DEBUG INFO: bonker hinting.
+DEBUG INFO: REB-NOK bonker hinting.
 
 @nud
 #spechelp for dandier arid den
@@ -2040,6 +2069,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bonker. That's a decent omen.
 
+@nud
+#scannotes for reb nok bonker
+>scan bonker
+Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse.
+
 >broken
 Your score has just gone up by one point
 }}SCORE++
@@ -2055,6 +2089,9 @@ DEBUG INFO: stinger hinting.
 >restign
 The stinger fizzles a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stinger. That's a decent omen.
+#readables for stinger
+>read stinger
+The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess.
 
 @sli
 #slider test for resting
@@ -2256,6 +2293,19 @@ Dr. Yow is an intellectual. She needs a breakout, not material things or romance
 >fussier
 by one point
 >undo
+
+@mis
+#mistake test for clonk due/due clonk/conk duel/cold nuke/nuke cold
+>clonk due
+The luck node can and should be defeated nonviolently.
+>due clonk
+The luck node can and should be defeated nonviolently.
+>conk duel
+The luck node can and should be defeated nonviolently.
+>cold nuke
+The luck node can and should be defeated nonviolently.
+>nuke cold
+The luck node can and should be defeated nonviolently.
 
 #not a mistake
 >unlocked
@@ -2833,6 +2883,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for purine
+>purine
+You can change the ur-pine without getting too far into organic chemistry.
 #mistake test for repents
 >repents
 The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.
@@ -2871,6 +2924,33 @@ Your score has just gone up by one point
 #scannotes for nastier stainer retinas
 >scan retinas
 Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
+
+@mis
+#mistake test for tasering
+>tasering
+You don't want to make the ingrates even angrier.
+#mistake test for its near/sit near
+>its near
+The retinas care not for physical proximity. They will just stare.
+>sit near
+The retinas care not for physical proximity. They will just stare.
+#mistake test for ranties
+>ranties
+Oh, no. Their icy gazes are quite enough.
+#mistake test for restain
+>restain
+The retinas haven't stained you yet. You don't want to be stained, much less re-stained. You see red at the thought.
+#mistake test for retain/retains
+>retain
+You want them to STOP retaining you from getting behind them, here.
+>retains
+You want them to STOP retaining you from getting behind them, here.
+#mistake test for stearin
+>stearin
+The retinas are probably full of all kinds of indescribable weird organic compounds. But there may be a practical way to describe them better.
+#mistake test for taserin
+>taserin
+The retinas are more likely to zap you.
 
 @!minh,mini
 >antsier
@@ -3060,6 +3140,7 @@ Strip of Profits
 >score
 , Towers ({SCORE}/{MAX})
 
+@mis
 #this can't be easily tested elsewhere without cheating e.g. gonear limits, spectacular
 #mistake retest for tortes
 >tortes

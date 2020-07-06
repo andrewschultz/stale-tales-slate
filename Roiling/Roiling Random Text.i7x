@@ -39462,6 +39462,7 @@ blurb
 "being lackluster like Not-Very Treyvon"
 "being Le Bad Blade" [x]
 "being less demoralizing than Jader Jared" [x]
+"being more together than Envier Vernie" [x]
 "being ruthless like Levelin['] Neville" [x]
 "being sweatier but cleaner than Grody Gordy" [x]
 "being team players like Nobler LeBron" [x]
@@ -39471,7 +39472,6 @@ blurb
 "emulating Clasher Charles" [x]
 "everyone being a little stouter than Frail Ralfi" [x]
 "everyone being more attentive than Lax Axl" [x]
-"being more together than Envier Vernie" [x]
 "following the leadership lessons of Steerin['] Steiner" [x]
 "getting grittier than Vain Ivan" [x]
 "getting out in the real world unlike Cyber-Bryce" [x]

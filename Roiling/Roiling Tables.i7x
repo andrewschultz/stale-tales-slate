@@ -239,7 +239,7 @@ organised ego drains	organised ego drains	false	553473418	--	"grandiose"	"grandi
 sweatier wait seer	sweatier wait seer	false	695435442	--	"weariest"	"weariest"	--	--	"The wait-seer blinks as if enlightened, followed by a head-shake and a nod in your direction. The wait-seer trudges off to find somewhere more scenic to meditate, or perhaps someone else to block and, eventually, enlighten."
 Reeds Ale	Reeds Ale	false	642046842	--	"released"	"resealed/released"	--	post-reeds-ale rule	"[rscheck]You concentrate, and suddenly [el-la-full] [if rese is false]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 alarming grailman	alarming grailman	false	354088487	--	"marginal"	"marginal"	--	--	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak. Then he decides not to risk holding his ground any more."
-bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
+bonker	bonker	false	427742080	--	"broken"	"broken"	--	post-bonker-broken rule	"'No! Kerb... er, bonk...' It starts wheezing and whirring and coughing and bleeping frantically, far more than such a simple machine really should. 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. But from the wreckage of the bonker rises ... a STINGER!"
 stinger	stinger	false	559013952	--	"resting"	"resting"	--	post-stinger-resting rule	"The stinger whirs around, wheezes, then flops on the ground and rolls off. You wait a minute, wondering if something tougher than the stinger will appear. But you only hear a gander that has flown in, no longer scared by a bonker or stinger. The path east is clear now! "
 natives site van	natives site van	false	550443085	--	"naivest"	"vainest" or "naivest"	--	--	"[vain-naiv]. Now that the natives have moved on, you can go south."
 asset hit atheists	asset hit atheists	false	611037040	--	"hastiest"	"hastiest"	--	post-agnostic-blocker rule	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right! You probably don't even capitalize Atheist! You bum.' They run off for someone else to harass."
@@ -253,7 +253,7 @@ raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver sh
 sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	pre-fussier rule	post-yow-free rule	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The prison ropins slide inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
-prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
+luck node	luck node	false	522953692	--	"unlocked"	"unlocked"	pre-unlocked rule	post-yow-free rule	"The duck sees you fiddling with the ropins. Somehow, as it pokes its bill at the luck node, it finds the right combination! The fissure makes a few odd clicks and vanishes. The prison ropins clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more. I guess you, uh, made your own luck."
 dinger	solve a loaves	false	382846875	--	"grained"	"grained"	--	post-dinger-grained rule	"Suddenly, [i]Reading a Dinger[r] loses the sheen on its cover, the bold elevated authors['] names. 'Ugh,' says the Agnostic. 'Why [i]was[r] I reading this? Surely there are better things to do, things to actually LEARN. Oh, speaking of learning, here are some solve-a-loaves that didn't work for me. Apparently they are more for immediate help, not long-term projects and stuff. Plus they taste icky cold.'" [this is the end of the weird stuff for LLPs. The rest deals with the agnostic. ]
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	--	post-tentative-attentive rule	"[agnostic] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	--	--	"The turbos whir a bit and grow shinier. Robust or bust! [how-safe]."
@@ -1333,19 +1333,19 @@ this is the pre-fussier rule:
 
 this is the post-yow-free rule:
 	if noun is fissure, now fissure-flip is true;
-	if noun is fissure or noun is prison ropins:
-		now duck is unfigured;
-		now prison ropins is unfigured;
-		now fissure is unfigured;
-		moot fissure;
-		now prison ropins is reflexed;
-		now Dr Yow is in Obscurest Subsector;
-		now duck is returned;
+	now Dr Yow is in Obscurest Subsector;
+	moot fissure;
+	moot prison ropins;
+	moot luck node;
+	now duck is unfigured;
+	now luck node is unfigured;
+	now fissure is unfigured;
+	now duck is returned;
 
 this is the pre-unlocked rule:
 	if duck is not touchable:
 		say "You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
-		preef prison ropins;
+		preef luck node;
 		do nothing instead;
 
 this is the post-tentative-attentive rule:
@@ -2379,7 +2379,7 @@ lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 old ice	"Twist the ice too much, it might not look right." [START towers]
 raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
-prison ropins	"It already is. Dr. Yow is free."
+luck node	"It already is. Dr. Yow is free."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
@@ -2800,7 +2800,8 @@ raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT 
 gizmo	"[if agnostic has gizmo][agnostic-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][agnostic] [hereish of Actionless Coastlines].[plus][or][ag-yow-lect], but now [he-she] needs a tool.[plus][or]Give [agnostic-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
-ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
+prison ropins	"The prison ropins are held together by the luck node, so you may want to see about that, instead."
+luck node	"[one of]The luck node binds the prison ropins, and you can't really open them with the luck node attacked.[plus][or]You could say the prison ropins are stuckkm in place.[plus][or]Or you could say that Dr. Yow is fenced in. No, not quite fenced.[plus][or]Dr. Yow is locked in. Dr. Yow needs to be...[plus][or]UNLOCKED. But you can't just say it. You need some preparation.[minus][cycling]"
 atblock	"[one of][agnostic-first] can do a bit better, but this LLP is not critical for the game.[plus][or][agnostic-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [agnostic-first] ATTENTIVE.[minus][cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help [if agnostic is off-stage]someone somewhere[else]the agnostic[end if] with a construction project.[minus][cycling]"
