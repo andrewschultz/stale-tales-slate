@@ -16,8 +16,8 @@ table of bastion dialogue	true	0	30	talk-in-bastion rule	"Obtains Boastin Bastio
 table of psas	false	0	30	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last one[post-brk]"
 table of nerd natter	true	0	30	in-mensa rule	"Esoteric Coteries chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][if showtabname is true]BLANK. [end if][in random order]"	""	"For a second this anti-cool location ain't loco. Then, LO, ACTION.[line break]"
 table of job searcher names	false	0	100	x-namelist rule	"Names of other job applicants (Ordeal Loader)"	""	""	". That's the last. Boy--you can't imagine you'll ever fit in[make-cycle]"	--	--	--	5
-table of riot slogans	true	0	30	protests rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
-table of red bull taunts	true	0	30	burdell rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
+table of riot slogans	true	0	30	protest-rant rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
+table of red bull taunts	true	0	30	burdell-taunt rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
 
 to say make-cycle:
 	now cycled-yet is false;
@@ -4437,13 +4437,13 @@ this is the in-mensa rule:
 
 section resort rules
 
-this is the protests rule:
+this is the protest-rant rule:
 	if player is in Potshot Hotspot:
-		if riot is in Potshot Hotspot or protest is in Potshot Hotspot, the rule succeeds;
+		if riot is touchable or protest is touchable, the rule succeeds;
 	the rule fails;
 
-this is the burdell rule:
-	if player is in Potshot Hotspot and burdell is in Potshot Hotspot, the rule succeeds;
+this is the burdell-taunt rule:
+	if Red Bull Burdell is touchable, the rule succeeds;
 	the rule fails;
 
 Shuffling Random Text ends here.

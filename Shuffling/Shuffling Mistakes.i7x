@@ -367,7 +367,7 @@ understand "snores" and "snore" as a mistake ("[if esoteric coteries is visited]
 
 chapter Roarings Garrison
 
-understand "isonome" as a mistake ("The noisome moonies pretend to be all about nature, but as for actually understanding science? Pfft.") when player is in Roarings Garrison.
+understand "isonome" as a mistake ("The noisome Moonies pretend to be all about nature, but as for actually understanding science? Pfft.") when player is in Roarings Garrison.
 
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they [if cafe-climbed is true]stuck really well on the cafe face[else]could stick really well on the right surface[end if].") when player has Velcro.
 
@@ -380,6 +380,8 @@ chapter Obtains Boastin' Bastion
 understand "opes" as a mistake ("You feel no [']ope, and nothing opens up.") when poses posse is touchable.
 
 understand "peso" and "pesos" as a mistake ("The poses posse doesn't need or want a handout.") when poses posse is touchable.
+
+understand "spose" as a mistake ("Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.") when poses posse is touchable.
 
 chapter Fo' Real Florae
 
