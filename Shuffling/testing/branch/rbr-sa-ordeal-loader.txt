@@ -447,6 +447,15 @@ You need to ASK GATEMAN ABOUT CABINET.
 
 @hin
 You can just enter the gate now.
+>get saltine
+Got it. You'd have liked a beefier freebie, but with calm opining, you see no use complaining.
+!Taken.
+>eat saltine
+coughs
+\\
+>eat saltine
+You reckon you can wait
+
 
 @mis
 #mistake test for remove [something] from [something]

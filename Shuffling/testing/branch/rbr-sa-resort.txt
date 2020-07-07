@@ -33,6 +33,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+>xc
 
 >opt in
 >poss
@@ -94,6 +95,12 @@ The tiles blur a bit as you (de)-focus just right. You see subtleties in the blu
 >altra
 While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
+@hin
+>xx stile
+As your vision blurs, the stile seems to stand over a small islet.
+>xx tiles
+As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
+
 >islet
 Your score has just gone up by one point.
 }}SCORE++
@@ -102,6 +109,14 @@ Leis Isle
 
 >score
 {$SCOS}
+
+@hin
+>xx rock
+Your vision blurs a bit, and instead you see cork.
+>xx swing
+Your vision blurs a bit, and instead you see wings.
+>xx leis
+Your vision blurs as you recall people you thought you trusted telling you lies.
 
 @mis
 #mistake test for download
@@ -314,6 +329,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the poles. Keep at i
 >prose
 There's not much of that left in this game, and more of it won't help you up the poles. The spore can be something sturdier. You see red wondering what.
 
+@hin
+>xx sprig
+Your vision blurs a bit, and instead you see grips.
+>xx poles
+Your vision blurs a bit, and instead you see a slope.
+>xx spore
+Your vision blurs a bit, and instead you see ropes.
+>xx toolshed
+Your vision blurs a bit, and instead you see toeholds.
+
 >slope
 by one point
 }}SCORE++
@@ -434,6 +459,10 @@ Those are already useful.
 
 Potshot Hotspot
 
+@hin
+>xx riot
+Your vision blurs a bit, and instead you see a trio.
+
 @max
 >trio
 by one point
@@ -541,6 +570,10 @@ No, you see 'em, you just need a better way to disperse 'em.
 >lacy
 No, the clay is a clue to what the protest really wants to do.
 
+@hin
+>xx protest
+You see the trio stopping their protest to get to work as potters.
+
 >potters
 Your score has just gone up by one point.
 }}SCORE++
@@ -576,6 +609,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the chain links. Kee
 >achin
 You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
+@hin
+>xx chain links
+Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
+
 @!min
 >china
 #notana
@@ -604,6 +641,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at i
 >kilsn
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at it.
+
+@hin
+>xx links
+Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
 >kilns
 Your score has just gone up by one point.
@@ -686,6 +727,10 @@ Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
+@hin
+>xx toe
+You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells "GET OUT." Maybe you could pull it...no, not pull...well, there are only six possibilities...
+
 >tug toe
 #notana
 by one point
@@ -740,6 +785,12 @@ You don't need to change the manors. You just need to be able to get there.
 
 >e
 Means Manse
+
+@hin
+>xx exits
+They just seem to EXIST. Maybe you can, too.
+>xx
+Your vision blurs a bit, and you see names and hear AMENs.
 
 @nud
 #nudge for manse

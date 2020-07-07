@@ -31,6 +31,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >opt in
 >ts
+>xc
 
 @hin
 >monty hints
@@ -57,6 +58,10 @@ The posted depots doen't need to be changed. What's behind them, does.
 DEBUG: dial being objhinted.
 
 Trap Part
+
+@hin
+>xx dial
+The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
 
 @mis
 #mistake retest for turn [text]
@@ -133,6 +138,9 @@ The Nick
 
 @hin
 DEBUG: great grate being objhinted.
+>xx great grate
+You let your eyes wander.
+Your vision swirls, and you see a kitchen.
 
 @nud
 #readables for great grate
@@ -173,6 +181,24 @@ Kitchen
 
 @hin
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
+>open fridge
+grist and a cake pan
+>xx
+Nothing really sticks out. You may have to XX something specific.
+>xx grist
+Your vision blurs a bit, and instead you see grits.
+>xx cake pan
+Your vision blurs a bit, and instead you see a pancake.
+>xx cathouse
+Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
+>xx tall trio
+Your vision blurs a bit, and instead you see a tortilla.
+>xx cult tee
+Your vision blurs a bit, and instead you see a head of lettuce.
+>xx skate
+Your vision blurs a bit, and instead you see cut-up steak.
+>xx spearman
+Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 
 >score
 {$SCOS}
@@ -551,6 +577,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the taco. Keep at it
 >cato
 You don't need to know your classics, here.
 
+@hin
+>xx taco
+Your vision blurs a bit, and instead you see a coat.
+
 >coat
 Your score has just gone up by one point.
 }}SCORE++
@@ -595,6 +625,10 @@ The cask is changeable, but not like that. WERE-EWER just clues it can be change
 Nothing happens. Maybe you are trying to do too much to change the cask.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cask. Keep at it.
 
+@hin
+>xx cask
+Your vision blurs a bit, and instead you see a sack.
+
 >sack
 Your score has just gone up by one point.
 }}SCORE++
@@ -604,6 +638,10 @@ Your score has just gone up by one point.
 {$SCOS}
 @!
 {$SFIXMAX}
+
+@hin
+>xx sack
+After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
 
 @nud
 #spechelp for sack
@@ -628,6 +666,10 @@ Why zap just one wart? Go for all of them!
 >strwa
 The warts itch slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the warts. Keep at it.
+
+@hin
+>xx warts
+You can't see them, but you remember the palindrome "No, too stupid a fad. I put soot on ..."
 
 >straw
 Your score has just gone up by one point.
@@ -670,6 +712,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of hoses. K
 >hoes
 One, there's more than one hose. Two, this isn't that sort of game. Innuendo only, if you please!
 
+@hin
+>xx hoses
+Your vision blurs a bit, and instead you see shoes.
+
 >shoes
 Your score has just gone up by one point.
 }}SCORE++
@@ -702,12 +748,18 @@ But you're wearing the shoes. That might cause problems.
 You almost feel something picking you up for a second. You must have been close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
 
+@hin
+>xx
+Your vision swirls, and you see a moor.
+
 >moor
 Your score has just gone up by one point.
 }}SCORE++
 
 @hin
 DEBUG: anapest being objhinted.
+>xx
+Your vision blurs a bit, and instead you see a peasant.
 
 @mis
 #mistake test for tap/tap [text]
@@ -823,6 +875,8 @@ Your score has just gone up by one point.
 
 @hin
 DEBUG: peasant being objhinted.
+>xx
+You have a very non-magical vision of the room you were in before you jumped to the moor.
 
 >score
 @min
@@ -982,6 +1036,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the scraped wall. Ke
 #rereadables for scraped wall
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
+
+@hin
+>xx haywall
+You imagine the scraped wall, already being a haywall, becomes a haywall.
 
 >hallway
 Your score has just gone up by one point.
@@ -1168,6 +1226,12 @@ Adding similes would mean the limerick wouldn't scan. They'd be more forced than
 
 >moor
 
+@hin
+>xx oils
+Your vision blurs a bit, and instead you see soil, then a silo.
+>xx smilies
+Your vision blurs a bit, and instead you see a missile.
+
 >missile
 Your score has just gone up by one point.
 }}SCORE++
@@ -1218,6 +1282,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the folded paper pla
 #mistake test for nepal
 >nepal
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
+
+@hin
+>xx plane
+You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.
 
 >panel
 Your score has just gone up by one point.
@@ -1275,6 +1343,10 @@ Hm, no, keep religion out of it.
 Hm, no, keep religion out of it.
 >blackrood
 Hm, no, keep religion out of it.
+
+@hin
+>xx roadblock
+Your vision blurs a bit, and instead you see a black door.
 
 >black door
 Your score has just gone up by one point.
@@ -1362,6 +1434,10 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 >s
 
 >moor
+
+@hin
+>xx oils
+Your vision blurs a bit, and instead you see a silo.
 
 >silo
 Your score has just gone up by one point.
@@ -1455,6 +1531,12 @@ Units of measurements are abstract. We need something concrete.
 #mistake test for terse
 >terse
 All five wrong.
+
+@hin
+>xx trees
+Your vision blurs a bit, and instead you see a steer button.
+>xx hoots
+Your vision blurs a bit, and instead you see a shoot button.
 
 @mis
 #mistake test for reset/reset button

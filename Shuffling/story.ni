@@ -456,8 +456,11 @@ to decide whether the action is procedural: [aip]
 	if requesting the score, yes;
 	if taking inventory, yes;
 	if gotothinging, yes;
+	if xmxing, yes;
 [	if out of world, yes;]
 	no;
+
+xmxing is an action applying to one thing. [xmxing is a debug-only command, but we need it to be procedural for automated testing.]
 
 book megachatter
 
@@ -2907,7 +2910,7 @@ description of cratered bits is "The acne-bit parts are very red. Interesting."
 
 check closing the acne bit cabinet: say "You don't need to hide anything in there from anyone." instead;
 
-the tenibac is boring abstract scenery. it is privately-named. description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
+the tenibac is boring abstract scenery. it is privately-named. printed name is "some Bactine". description of tenibac is "The acne-bit cabnet doesn't need a double dose of Bactine.". bore-text is "BUG.". [this is the dummy flip to thing for the cabinet LLP]
 
 section prep paper
 
@@ -2948,7 +2951,7 @@ rule for deciding whether to allow undo:
 			say "[bug-report] I've disabled undo on this command for some reason I can't figure.";
 			deny undo;
 
-section xmxing
+section xmxing - not for release
 
 to ditch-saltine:
 	if xray-cheat is false:
@@ -2957,8 +2960,6 @@ to ditch-saltine:
 		now undo-code is 1;
 		pad-del "xx";
 		prevent undo;
-
-xmxing is an action applying to one thing.
 
 understand the command "xx" as something new.
 
@@ -2979,7 +2980,7 @@ rule for supplying a missing noun when xmxing:
 			now noun is m2;
 		continue the action;
 	if player is in Means Manse:
-		now noun is X ITES exits;
+		now noun is spire;
 		continue the action;
 	say "Nothing really sticks out. You may have to XX something specific.";
 	reject the player's command;
@@ -2989,6 +2990,10 @@ xray-cheat is a truth state that varies.
 tag-warn is a truth state that varies.
 
 check xmxing:
+	if xray-cheat is true:
+		if xray-vision is false:
+			d "** DING DING ** RELOADING XRAY VISION!";
+		now xray-vision is true;
 	if xray-vision is false:
 		if saltine is moot:
 			say "You lost your x-ray vision, so you can only just examine, instead.";
@@ -2996,13 +3001,10 @@ check xmxing:
 	if noun is a direction, say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going [noun] instead[end if]." instead;
 
 carry out xmxing:
-	if xray-cheat is true:
-		if xray-vision is false:
-			d "** DING DING ** RELOADING XRAY VISION!";
-		now xray-vision is true;
 	if xray-vision is false:
 		if saltine is moot, say "You lost your x-ray vision." instead;
 		try examining the noun instead;
+	if noun is a reading, try xmxing drainage instead;
 	if noun is r2:
 		if moor is visited:
 			say "You non-magically space out and realize you can go back to the moor.";
@@ -3035,8 +3037,11 @@ carry out xmxing:
 		try xmxing nametag instead;
 	if noun is thruhinted:
 		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
-		unless the player regex-prompt-consents:
-			say "Ok." instead;
+		if xray-cheat is true:
+			say "BYPASSING FOR TESTING.";
+		else:
+			unless the player regex-prompt-consents:
+				say "Ok." instead;
 	if noun is static:
 		say "[if gateman is touchable]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player regex-prompt-consents:
@@ -3067,7 +3072,7 @@ carry out xmxing:
 		try xmxing ones instead;
 	if noun is River Ville liver or noun is viler liver, say "It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains." instead;
 	if noun is banshee:
-		say "The banshee seems to howl about being a has-been.";
+		say "The banshee seems to howl about becoming a has-been.";
 		ditch-saltine instead;
 	if noun is livers:
 		say "[v-b]you see a silver sliver.";
@@ -3127,8 +3132,11 @@ carry out xmxing:
 	if noun is tiles: [start resort]
 		say "As your vision blurs, the tiles['] blue, green and brown re-form to make an islet.";
 		ditch-saltine instead;
-	if noun is tiles: [start resort]
+	if noun is stile:
 		say "As your vision blurs, the stile seems to stand over a small islet.";
+		ditch-saltine instead;
+	if noun is l2:
+		say "Your vision blurs as you recall people you thought you trusted telling you lies.";
 		ditch-saltine instead;
 	if noun is protest:
 		say "You see the trio stopping their protest to get to work as potters.";
@@ -3142,14 +3150,18 @@ carry out xmxing:
 	if noun is X ITES exits:
 		say "They just seem to EXIST. Maybe you can, too.";
 		ditch-saltine instead;
+	if noun is spire:
+		say "Your vision blurs a bit, and you see names and hear AMENs.";
+		ditch-saltine instead;
 	if noun is a teleporter:
 		if noun is t-n, say "[v-b]you see a kitchen." instead;
-	if noun is flippable: [start general stuff]
-		if there is a the-to corresponding to the-from of noun in regana of mrlp:
-			say "[v-b]you see [salt-text of noun][the-to corresponding to the-from of noun in regana of mrlp].";
-			ditch-saltine instead;
-		else:
-			say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
+	if noun is flippable: [start general case]
+		repeat through regana of mrlp:
+			if the-from entry is the noun:
+				if debug-state is true, say "DEBUG EXPERIMENT: article is [indefinite article of the-to entry].";
+				say "[v-b]you see [salt-text of noun][if the-to entry is a portal][printed name of go-region of the-to entry in lower case][else][the-to entry][end if].";
+				ditch-saltine instead;
+		say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
 	if player is in the nick and noun is not t-n:
 		say "You let your eyes wander.[paragraph break]";
 		try xmxing t-n instead;
@@ -3157,20 +3169,21 @@ carry out xmxing:
 	try examining the noun instead;
 	the rule succeeds.
 
-to say salt-text of (xxx - a thing):
-	if xxx is cabinet or xxx is store f or xxx is store i or xxx is store r, say "a "; [stores]
-	if xxx is ones or xxx is noughts, say "a "; [forest]
-	if xxx is cake pan or xxx is cult tee or xxx is tall trio or xxx is spearman or xxx is taco, say "a "; [sortie]
-	if xxx is anapest or xxx is roadblock or xxx is smilies, say "a ";
-	if xxx is trees button or noun is hoots button, say "a ";
-	if xxx is cask, say "a ";
-	if xxx is beats or xxx is dry cake or xxx is brocade, say "a "; [metros]
-	if xxx is heaths or xxx is begonias or xxx is words, say "a ";
-	if xxx is poles or xxx is riot, say "a "; [resort]
+to say salt-text of (sal - a thing): [I couldn't seem to get indefinite articles to work, so I just hard coded it]
+	if sal is store f or sal is store i or sal is store r, say "a "; [stores]
+	if sal is bread or sal is ones or sal is noughts or sal is liches, say "a "; [forest]
+	if sal is cake pan or sal is cult tee or sal is tall trio or sal is spearman or sal is taco, say "a "; [sortie]
+	if sal is anapest or sal is roadblock or sal is smilies, say "a ";
+	if sal is trees button or noun is hoots button, say "a ";
+	if sal is cask, say "a ";
+	if sal is beats or sal is dry cake or sal is brocade, say "a "; [metros]
+	if sal is drainage or sal is heaths or sal is begonias or sal is words, say "a ";
+	if sal is poles or sal is riot, say "a "; [resort]
 
 to say v-b: say "Your vision blurs a bit, and instead ".
 
 check eating the saltine:
+	if gateman is off-stage, say "Maybe you should find someone who can tell you what it does, first." instead;
 	if gateman is touchable:
 		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is moot or attics are moot]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
@@ -3178,7 +3191,7 @@ check eating the saltine:
 	if faeries are touchable, say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
 	choose row with short of "xx" in table of pad-stuff;
 	if known entry is false:
-		say "You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.";
+		say "You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them. In other words, XX THING instead of X THING.";
 		pad-rec "xx";
 	else:
 		say "Gulp. It tastes decent enough.";
@@ -7359,7 +7372,7 @@ section siren-resin
 the siren is boring scenery in Bassy Abyss. description of siren is "Blue and red and flashing and very loud. You'd love to pound it into a powder.". rgtext of siren is "[rcn][rc][rc][rc][gc]". lgth of siren is 5. rpos of siren is 5. gpos of siren is 3. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N". bore-check of siren is bore-siren rule. bore-text is "The siren is too darn loud, even a few feet away. Getting close to it would incapacitate you.";
 
 this is the bore-siren rule:
-	if current action is xmxing or current action is attacking, now boring-exception is true instead;
+	if current action is attacking, now boring-exception is true instead;
 
 some resin is singular-named boring thing. printed name of resin is "some resin[if resin is held] (all over your hands)[end if]". description of resin is "It feels sticky on your hands.". bore-check is bore-resin rule.
 
@@ -7950,14 +7963,10 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 					now ignore-line-break is true;
 					try fliptoing the-from entry;
 					the rule succeeds;
+				if the-from entry is sliver, break;
+				if the-from entry is oils and the-to entry is silo and soil is touchable, break;
 			if the-to entry is touchable and the-to entry is not reversible:
-				d "(VERB GUESS CODE) the-to [myh] [the-to entry] visible.";
-				if the-to entry is sliver:
-					say "The sliver seems to bend, but it snaps back[unless drapes are moot]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
-				else if the-to entry is soil and silo is not touchable:
-					say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
-				else:
-					reject-msg the-to entry;
+				reject-msg the-to entry;
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
 	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]

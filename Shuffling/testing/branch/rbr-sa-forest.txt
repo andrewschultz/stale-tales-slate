@@ -40,6 +40,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+>xc
 
 >opt in
 
@@ -292,8 +293,14 @@ Self-ID Fields
 >sr sw
 >in
 DEBUG: rambling shout being objhinted.
+>xx shout
+Your vision blurs, and you see a compass rose pointed south.
+>undo
 >s
 DEBUG: whiff of stew being objhinted.
+>xx stew
+Your vision blurs, and you see a compass rose pointed west.
+>undo
 >undo
 >undo
 >undo
@@ -302,10 +309,12 @@ DEBUG: whiff of stew being objhinted.
 
 >in
 
+Softer Forest
+
 @hin
 DEBUG: thorn being objhinted.
-
-Softer Forest
+>xx thorn
+Your vision blurs, and you see a compass rose pointed north.
 
 @nud
 #these are universal to SF/RF
@@ -328,6 +337,10 @@ Rest of Forest
 }}SCORE++
 >score
 {$SCOS}
+
+@hin
+>xx teas
+Your vision blurs, and you see a compass rose pointed east.
 
 >e
 by one point
@@ -437,6 +450,12 @@ Gnarliest Triangles
 
 @hin
 DEBUG: ones being objhinted.
+>xx ones
+Your vision blurs a bit, and instead you see a nose.
+>xx dashes
+Your vision blurs a bit, and instead you see shades.
+>xx noughts
+Your vision blurs a bit, and instead you see a shotgun.
 
 @nud
 #nudge for triangles
@@ -721,6 +740,10 @@ The one liver seems inactive by itself.
 bread from the Spam
 
 @hin
+>xx bread
+Your vision blurs a bit, and instead you see a beard.
+>xx spam
+Your vision blurs a bit, and instead you see maps.
 >beard
 You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
 !DEBUG: Spam being objhinted.
@@ -869,6 +892,10 @@ You can just read the spread instead. The messages here aren't cryptic enough to
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banshee. Keep at it.
 
+@hin
+>xx banshee
+The banshee seems to howl about becoming a has-been.
+
 @!min
 >hasbeen
 Your score has just gone up by one point.
@@ -883,6 +910,10 @@ Your score has just gone up by one point.
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the liches. Keep at it.
+
+@hin
+>xx liches
+Your vision blurs a bit, and instead you see a chisel.
 
 >chisel
 Your score has just gone up by one point.
@@ -902,7 +933,6 @@ DEBUG: chisel being objhinted.
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
-#xc
 >s
 >w
 >peel river ville
@@ -910,6 +940,10 @@ Cr-r-r-r-k.
 
 @hin
 DEBUG: RiverVille Liver being objhinted.
+>xx river ville
+It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains.
+>xx viler
+It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains.
 
 >e
 
@@ -965,6 +999,8 @@ LIVERS.
 
 @hin
 DEBUG: livers being objhinted.
+>xx livers
+Your vision blurs a bit, and instead you see a silver sliver.
 
 >score
 @min
@@ -1009,6 +1045,8 @@ The sliver wobbles but stays firm. Maybe it has a purpose before you turn it int
 
 @hin
 DEBUG: spread being objhinted.
+>xx sliver
+The sliver turns silver for a moment.
 
 >score
 @min
@@ -1020,9 +1058,17 @@ DEBUG: spread being objhinted.
 >silver
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
-#xc
 >e
 >n
+
+@hin
+>xx spread
+Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+>undo
+>drepsa
+As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+>xx red asp
+Your vision blurs a bit, and instead drapes seem to flutter in front of the red asp.
 
 @nud
 #spechelp for spread
@@ -1039,6 +1085,8 @@ by one point
 
 @hin
 DEBUG: drapes being objhinted.
+>xx drapes
+Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.
 
 @nud
 Your score has just gone up by one point.
@@ -1258,6 +1306,10 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vowels. Keep at it.
+
+@hin
+>xx vowels
+Your vision blurs, and instead you see wolves.
 
 >wolves
 Your score has just gone up by one point.

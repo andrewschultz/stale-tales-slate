@@ -52,6 +52,21 @@ Trips Strip
 
 @hin
 DEBUG: Store F being objhinted.
+>xc
+>eat saltine
+>xx cabinet
+Your vision blurs a bit, and instead you see some Bactine.
+>xx store b
+Your vision blurs a bit, and instead you see sorbet.
+>xx store f
+Are you sure
+Your vision blurs a bit, and instead you see a forest.
+>xx store i
+Your vision blurs a bit, and instead you see a sortie.
+>xx store m
+Your vision blurs a bit, and instead you see metros.
+>xx store r
+Your vision blurs a bit, and instead you see a resort.
 
 @nud
 #nudge for trips

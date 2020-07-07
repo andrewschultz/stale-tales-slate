@@ -33,8 +33,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >poss
 >opt in
 
+
 @hin
 >monty hints
+>eat saltine
+>xc
 
 @nud
 #spechelp for store m
@@ -56,6 +59,10 @@ Undesired Underside
 
 @hin
 DEBUG: drainage being objhinted.
+>xx drainage
+Your vision blurs a bit, and instead you see a gardenia.
+>xx beats
+Your vision blurs a bit, and instead you see a beast.
 
 @mis
 #mistake test for singers
@@ -277,6 +284,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the motto. Keep at i
 
 @hin
 DEBUG: motto being objhinted.
+>xx motto
+You thought you saw a tomato whiz by "a motto," there.
 
 >tomato
 Your score has just gone up by one point.
@@ -579,6 +588,10 @@ You've already changed the lost corn into the controls, and you don't need to do
 You feel like can almost identify what the cake can become.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
+@hin
+>xx cake
+Your vision blurs a bit, and instead you see a keycard.
+
 >keycard
 }}SCORE++
 
@@ -606,6 +619,10 @@ The fuzziness seems to be part of the clover. It might be, even if you're able t
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+
+@hin
+>xx clover
+Your vision blurs a bit, and instead you see Velcro.
 
 >velcro
 }}SCORE++
@@ -745,6 +762,12 @@ They are multiple heaths--so you should try to change just one.
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
 DEBUG ONLY: You feel a slight psychic push-pull coming from the heaths. Keep at it.
 
+@hin
+>xx begonias
+Your vision blurs a bit, and instead you see a noise bag.
+>xx heaths
+Your vision blurs a bit, and instead you see a sheath.
+
 >sheath
 Your score has just gone up by one point.
 
@@ -781,6 +804,10 @@ You'd need to do something to all the words.
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the words. Keep at it.
 
+@hin
+>xx words
+Your vision blurs a bit, and instead you see a sword.
+
 >sword
 }}SCORE++
 
@@ -803,6 +830,10 @@ Meddling with the sword right now, you're worried it might poke you.
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brocade. Keep at it.
+
+@hin
+>xx brocade
+Your vision blurs a bit, and instead you see a barcode.
 
 >barcode
 }}SCORE++
@@ -845,6 +876,8 @@ Esoteric Coteries
 
 @hin
 DEBUG: nerds being objhinted.
+>xx nerds
+You suddenly feel darkness, along with an urge to ask the nerds about it.
 
 >score
 @min
@@ -1114,6 +1147,10 @@ Apparently the neon pig is a creation of one INPENGO.
 The neon pig blinks as if in last-ditch defiance.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
+@hin
+>xx neon pig
+Your vision blurs a bit, and instead you see an opening where the pig is.
+
 >opening
 }}SCORE++
 
@@ -1227,6 +1264,10 @@ This racket isn't just one beat.
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at it.
+
+@hin
+>xx siren
+Your vision blurs a bit, and instead you see some resin.
 
 >resin
 }}SCORE++
