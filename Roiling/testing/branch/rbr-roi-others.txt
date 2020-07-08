@@ -4,13 +4,14 @@
 #
 # this does not cover the special cases of all the ways you can return stuff to Curtis.
 #
-files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt,reg-roi2-others-hints.txt
+files=reg-roi2-others-max.txt,reg-roi2-others-min.txt,reg-roi2-others-nudmis.txt,reg-roi2-others-slider.txt,reg-roi2-others-hints.txt,reg-roi2-others-spoiler.txt
 
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
 ~	hints,hin	t4
+~	spoi,spo	t5
 
 ALSO-IGNORE:t
 
@@ -54,6 +55,20 @@ Rustic Citrus
 >t
 >z
 >z
+
+@spoi
+>gx me
+You don't want to change. Well, not in that way.
+>gx curtis
+A person shouldn't and can't be changed into a fruit.
+>gx pagers
+You focus and squint, and letters appears in your sight: GRAPES. The aftertaste of arugula finally dissipates.
+>gx slime
+You focus and squint, and letters appears in your sight: LIMES. The aftertaste of arugula finally dissipates.
+>gx spear
+You focus and squint, and letters appears in your sight: PEARS. The aftertaste of arugula finally dissipates.
+>gx lumps
+You focus and squint, and letters appears in your sight: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for boarder
@@ -226,6 +241,10 @@ Your score has just gone up by one point.
 @hin
 DEBUG INFO: moss cap hinting.
 
+@spoi
+>gx moss cap
+moss cap: You focus and squint, and letters appears in your sight: COMPASS. The aftertaste of arugula finally dissipates.
+
 >score
 }}SCORE++
 {$SCOS}
@@ -272,6 +291,29 @@ The needle is working fine. No need to meddle.
 
 @hin
 /DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
+
+@spoi
+>gx eerie blurbs
+You focus and squint, and letters appears in your sight: BLUEBERRIES. The aftertaste of arugula finally dissipates.
+>gx peanut cola
+You focus and squint, and letters appears in your sight: CANTALOUPE. The aftertaste of arugula finally dissipates.
+>gx harmonicas
+You focus and squint, and letters appears in your sight: MARASCHINO. The aftertaste of arugula finally dissipates.
+>gx omen prism
+You focus and squint, and letters appears in your sight: PERSIMMON. The aftertaste of arugula finally dissipates.
+>gx magenta rope
+You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+>gx megaton pear
+You blink and wind up refocusing on the magenta rope.
+You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+>gx rampage note
+You blink and wind up refocusing on the magenta rope.
+You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+>gx mopeage rant
+You blink and wind up refocusing on the magenta rope.
+You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+>gx mad train
+You focus and squint, and letters appear in your vision: TAMARIND. The aftertaste of arugula finally dissipates.
 
 @sli
 #slider test for tamarind
@@ -424,6 +466,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @min
+##balance undos
 # here we want to make a detour to check rejecting going east in Swell Wells. There are two cases based on whether or not you are carrying enough fruits.
 >n
 >e
@@ -434,7 +477,8 @@ by one point
 The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you can go see Curtis for remuneration. You've done a good bit.
 >undo
 >undo
->s
+>undo
+>undo
 
 >persimmon
 Take on a token
@@ -472,6 +516,22 @@ Swell Wells
 
 @hin
 /DEBUG INFO: (green stain|miser ruble|PSA 'Elp|riot cap|sorer bogey|stucco) hinting\.
+
+@spoi
+>gx silly shirt
+You focus and squint, and letters appears in your sight: APPLES. The aftertaste of arugula finally dissipates.
+>gx riot cap
+You focus and squint, and letters appears in your sight: APRICOT. The aftertaste of arugula finally dissipates.
+>gx stucco
+You focus and squint, and letters appears in your sight: COCONUTS. The aftertaste of arugula finally dissipates.
+>gx sorer bogey
+You focus and squint, and letters appears in your sight: GOOSEBERRY. The aftertaste of arugula finally dissipates.
+>gx miser ruble
+You focus and squint, and letters appears in your sight: MULBERRIES. The aftertaste of arugula finally dissipates.
+>gx green stain
+You focus and squint, and letters appears in your sight: TANGERINES. The aftertaste of arugula finally dissipates.
+>gx mound
+Nothing happens. Try something else.
 
 @sli
 #slider test for apricot
@@ -611,6 +671,18 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 >s
 Curtis hands you a coin
 scru-it
+
+@spoi
+##balance undos
+>gx coin
+You focus and squint, and letters appears in your sight: ICON. The aftertaste of arugula finally dissipates.
+>icon
+by one point
+>gx icon
+Nothing happens. Try something else.
+>undo
+>undo
+>undo
 
 @mis
 #mistake test for deign/deigns
@@ -757,6 +829,25 @@ Nothing specific to do here, but there are other places where you can make fruit
 >s
 You fiddle with the coin you got
 
+@spoi
+##balance undos
+>gx coins
+You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
+>icons
+by one point
+>gx icons
+You focus and squint, and letters appears in your sight: SONIC. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>sonic
+by one point
+>gx sonic coins
+You focus and squint, and letters appears in your sight: ICONS. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>undo
+
+
 @hin
 DEBUG INFO: icons hinting.
 >sonic
@@ -773,6 +864,26 @@ The singed design on the icons reads, when you look close, property of NISCO.
 
 >w
 Filed Field
+
+@spoi
+>gx barber sickle
+You focus and squint, and letters appears in your sight: BLACKBERRIES. The aftertaste of arugula finally dissipates.
+>gx buried raft
+You focus and squint, and letters appears in your sight: BREADFRUIT. The aftertaste of arugula finally dissipates.
+>gx briar screen
+You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
+>gx barren cries
+You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
+>gx rapt figure
+You focus and squint, and letters appears in your sight: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
+>gx pipe panel fence
+You focus and squint, and letters appears in your sight: PINEAPPLE. The aftertaste of arugula finally dissipates.
+>gx pryer bars
+You focus and squint, and letters appears in your sight: RASPBERRY. The aftertaste of arugula finally dissipates.
+>gx barriers west
+You focus and squint, and letters appears in your sight: STRAWBERRIES. The aftertaste of arugula finally dissipates.
+>gx mean trowel
+You focus and squint, and letters appears in your sight: WATERMELON. The aftertaste of arugula finally dissipates.
 
 @hin
 /DEBUG INFO: (barber sickle|barren cries|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
@@ -1074,6 +1185,28 @@ Clangier Clearing
 @hin
 /DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
 
+@spoi
+>gx len craig
+Nothing, despite all Len Craig has to sell.
+>gx ammo gang
+You focus and squint, and letters appears in your sight: AMONG. The aftertaste of arugula finally dissipates.
+>gx nectarine
+You focus and squint, and letters appears in your sight: ANCIENTER. The aftertaste of arugula finally dissipates.
+>gx nectarine
+You've already changed the nectarine.
+>gx peach
+You focus and squint, and letters appears in your sight: CHEAP. The aftertaste of arugula finally dissipates.
+>gx quince
+You focus and squint, and letters appears in your sight: CINQUE. The aftertaste of arugula finally dissipates.
+>gx prices precis
+You focus and squint, and letters appears in your sight: CRIPES. The aftertaste of arugula finally dissipates.
+>gx melon
+You focus and squint, and letters appears in your sight: MO LEN. The aftertaste of arugula finally dissipates.
+>gx auction caution
+You focus and squint, and letters appears in your sight: PAPAYAS. The aftertaste of arugula finally dissipates.
+>gx lemons
+You focus and squint, and letters appears in your sight: SOLEMN. The aftertaste of arugula finally dissipates.
+
 @nud
 #mistake test for sell/sell [text]
 >sell
@@ -1344,6 +1477,16 @@ You can trade the dollar for the So-Great Storage.
 >give dollar
 You probably want to put the sonic icons in the slot.
 
+@spoi
+>gx a banna'
+You focus and squint, and letters appears in your sight: BANANA. The aftertaste of arugula finally dissipates.
+>gx orange
+You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
+>gx a brr hub
+You focus and squint, and letters appears in your sight: RHUBARB. The aftertaste of arugula finally dissipates.
+>gx inapt paint
+You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
+
 @nud
 #mistake test for lots
 >lots
@@ -1607,6 +1750,14 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 
 >n
 PERP
+
+@spoi
+>gx viewer
+No. You don't want to use the arugula on this. It's got to be pretty simple.
+>gx searcher
+No. You don't want to use the arugula on this. It's got to be pretty simple.
+>gx fleeing feeling
+No. You don't want to use the arugula on this. It's got to be pretty simple.
 
 @nud
 #nudge for feeling
