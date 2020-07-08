@@ -13,7 +13,7 @@ files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.tx
 ~	nudges,nud,nu,mis	t3
 ~	sli	t4
 ~	slider	t4
-~	hints,hin	t5
+~	hints,hin,spoi	t5
 #~	pad	t5
 
 }}MAX=25
@@ -44,7 +44,14 @@ TSV:## maximum walkthrough	## minimum walkthrough with first alternate	## minimu
 >ts
 >t
 >troves
+
+@spoi
+>scam
+
 >enter tastee
+
+@spoi
+Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
 
 @hin
 >monty hints
@@ -144,11 +151,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's 
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
 
-
 #not a mistake
 >hate
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+In particular, you feel the need to HATE right now.
 
 @hin
 DEBUG INFO: Race Acre hinting.
@@ -271,9 +280,15 @@ That should work, but you--your eyes are wandering now. You're not taking it all
 >esbover
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@spoi
+In particular, you feel the need to OBSERVE right now.
+
 >observe
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+In particular, you feel the need to SPOT right now.
 
 @hin
 DEBUG INFO: stop post hinting.
@@ -302,6 +317,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >spot
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+/In particular, you feel the need to (REASON|BELIEVE) right now\.
 
 @hin
 /DEBUG INFO: (SNORE SO ARENA|evil bee) hinting.
@@ -409,6 +427,14 @@ Your score has just gone up by one point
 }}SCORE-=2
 }}CURMIN--
 
+@spoi
+>believe
+In particular, you feel the need to RECALL right now.
+>undo
+>reason
+In particular, you feel the need to RECALL right now.
+>undo
+
 @max
 #pre-cellar-recall rule
 >recall
@@ -481,6 +507,9 @@ DEBUG INFO: box of diapers hinting.
 
 Drain Nadir
 
+@spoi
+In particular, you feel the need to DESPAIR right now.
+
 @mina,minb
 #lose believe/reason max point
 }}CURMAX--
@@ -525,6 +554,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >despair
 Your score has just gone up by one point
 
+@spoi
+In particular, you feel the need to DECIDE right now.
+
 @hin
 DEBUG INFO: I'd Cede hinting.
 
@@ -567,6 +599,9 @@ Your score has just gone up by one point
 
 @hin
 /DEBUG INFO: (BORTLES Lobster|ME ARTS) hinting.
+
+@spoi
+/In particular, you feel the need to (BOLSTER|MASTER) right now\.
 
 Boredom Bedroom
 
@@ -657,6 +692,14 @@ The ME ARTS nourished you spiritually. Time to move on, though you could poke at
 >deal
 That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.
 !by one point
+
+@spoi
+>bolster
+In particular, you feel the need to DEAL right now.
+>undo
+>master
+In particular, you feel the need to DEAL right now.
+>undo
 
 @!minb
 >bolster
@@ -779,6 +822,9 @@ Nothing catches your eye except an article on ridees, captioned in red. Whether 
 >ederis
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@spoi
+In particular, you feel the need to DESIRE right now.
+
 >desire
 Your score has just gone up by one point
 
@@ -786,8 +832,11 @@ Your score has just gone up by one point
 
 Econ-Cone
 
+@spoi
+/In particular, you feel the need to (STRIVE|ASPIRE) right now\.
+
 @hin
-/DEBUG INFO: (rivets|praise spirea) hinting.
+/DEBUG INFO: (Trevis Vister|praise spirea) hinting.
 
 }}SCORE++
 >score
@@ -878,6 +927,9 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+In particular, you feel the need to PONDER right now.
+
 @!mina,minb
 }}CURMIN++
 
@@ -941,6 +993,9 @@ DEBUG INFO: red vees hinting.
 
 Upscale Capsule
 
+@spoi
+In particular, you feel the need to DESERVE right now.
+
 @mina,minb
 }}CURMAX--
 
@@ -975,6 +1030,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >deserve
 Your score has just gone up by one point
+
+@spoi
+In particular, you feel the need to LAST right now.
 
 @hin
 DEBUG INFO: St. Al Salt hinting.
@@ -1048,6 +1106,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >last
 Your score has just gone up by one point
+
+@spoi
+/In particular, you feel the need to (RAMBLE|RESIST) right now\.
 
 @hin
 /DEBUG INFO: (Marble Blamer Balmer|Sister Tressi Siters) hinting\.
@@ -1145,6 +1206,14 @@ It ... you know you should drink the trance nectar, for the good of society and 
 by one point
 >undo
 >undo
+>undo
+
+@spoi
+>ramble
+In particular, you feel the need to RECANT right now.
+>undo
+>resist
+In particular, you feel the need to RECANT right now.
 >undo
 
 @!minb
