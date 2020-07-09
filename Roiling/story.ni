@@ -5295,7 +5295,7 @@ to decide which thing is oyster-item:
 		if tubs are in Shuttle Hutlets, decide on tubs;
 		if prod is touchable, decide on prod;
 	if player is in Lean Lane:
-		if tea tray is touchable, decide on tea tray;
+		if tea at a tee is touchable, decide on tea at a tee;
 		if trout is reflexive, decide on trout;
 		if Paw R Wrap is off-stage, decide on drawer;
 	if player is in Sclerous Closures:
@@ -6374,8 +6374,8 @@ check eating fretful truffle:
 	now spoilit is false instead;
 
 rule for supplying a missing noun when eating:
-	if player is in Lean Lane and tea tray is in Lean Lane:
-		now the noun is the tea tray;
+	if player is in Lean Lane and tea at a tee is in Lean Lane:
+		now the noun is the tea at a tee;
 
 this is the can-i-heat rule:
 	if diners are touchable:
@@ -13979,7 +13979,7 @@ every turn when mrlp is oyster and debug-state is true:
 
 to decide which thing is oyster-spill-item:
 	if player is in posh hops shop, decide on LOLstr trolls;
-	if player is in Lean Lane and tea tray is in Lean Lane, decide on tea tray;
+	if player is in Lean Lane and tea at a tee is in Lean Lane, decide on tea at a tee;
 	let temp be oyster-item;
 	if temp is thin hint, decide on the player;
 	decide on temp;
@@ -14006,7 +14006,7 @@ check spilling (this is the specific game state spill reject rule):
 			if thin hint is not in Rascal Craals, say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
 	if player is in Lean Lane:
 		if Paw R Wrap is not off-stage:
-			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
+			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea at a tee is not moot]. Though it would seem polite--and straightforward--to try something from the [tea][end if]." instead;
 	if player is in Rascal Craals:
 		if ruby is off-stage or digger is off-stage, say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
 	if player is in Horned Hedron and walleyes are in Horned Hedron, say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead; [walleyes can't really be flipped. You need to go through the sausage.]
@@ -14043,7 +14043,7 @@ carry out spilling:
 	now flip-spill-flag is false;
 	the rule succeeds;
 
-to say endgame-spill-insteadl: say "Instead of spilling the pills, you could've tried to [how-pills-used]"
+to say endgame-spill-instead: say "Instead of spilling the pills, you could've tried to [how-pills-used]"
 
 this is the ant-side-quest-check rule:
 	say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
@@ -14580,29 +14580,24 @@ this is the bore-eeks rule:
 
 book Lean Lane
 
-Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [rew-war] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private.". roomnud of Lean Lane is table of Lean Lane nudges.
+Lean Lane is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [rew-war] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private[if tea at a tee is touchable]. A Tea-At-A-Tee provides refreshment for once you've helped your friend the trout[end if].". roomnud of Lean Lane is table of Lean Lane nudges.
 
 to say wipes-too: if wipes are in Lean Lane, say ", and you notice some wipes on it";
 
 after looking in Lean Lane:
-	if tea tray is in Lean Lane, set the pronoun it to tea tray;
+	if tea at a tee is in Lean Lane, set the pronoun it to tea at a tee;
 	if wipes are in Lean Lane, set the pronoun them to wipes;
 	continue the action;
 
-Aunt Tuna is a female person in Lean Lane. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is touchable]. She occasionally motions to the tea tray she laid out for you[end if]."
+Aunt Tuna is a female person in Lean Lane. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea at a tee is touchable]. She occasionally motions to the [tea] she laid out for you[end if]."
 
-does the player mean eating the tea tray: it is very likely;
+does the player mean eating the tea at a tee: it is very likely;
 
 chapter tea (eat)
 
-The tea tray is edible vanishing scenery in Lean Lane. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
+The tea at a tee is edible vanishing scenery in Lean Lane. description is "Not quite an arty tray, but it is the Yorpwaldian quasi-mini-table of choice. It has tea on it: the meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for.". printed name is "Tea-at-a-Tee"
 
-a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
-
-after scaning tray:
-	if the player's command includes "tray":
-		say "Hm, three letters. You reckon it's the tea on the tray, not the tray itself.";
-	continue the action;
+a-text of tea at a tee is "YYR". b-text of tea at a tee is "YYR". parse-text of tea is "e[sp]a[sp]t". tea at a tee is parse-spoilable.
 
 the paler pearl is an undesc. description is "It might be valuable if it weren't cut jaggedly in half. Where could the other half be?"
 
@@ -14698,17 +14693,16 @@ carry out warping:
 
 chapter eat stub
 
-check taking the tea tray: say "'Goodness me, no! It is rude to TAKE all the tea! You can have it without taking it!' says Aunt Tuna." instead;
+check taking the tea at a tee: say "'Goodness me, no! It is rude to TAKE all the tea! You can have it without taking it!' says Aunt Tuna." instead;
 
-check eating tea tray:
-	if the player's command includes "tray", say "You probably just want the tea on the tray. Not the tray." instead;
+check eating tea at a tee:
 	if the player's command does not include "eat", say "Be straightforward, here." instead;
 	if trout is reflexive, say "You feel slightly guilty eating before helping the trout, but Aunt Tuna nods, it's okay for you to eat first.";
-	try fliptoing tea tray instead;
-	moot tea tray;
+	try fliptoing tea at a tee instead;
+	moot tea at a tee;
 	reg-inc;
 
-to say tray-sez: say "[if trout is reflexive]hints you've got enough nourishment to help Tortu stand up to the bullies as you did[else]thanks you for doing so much. She can't imagine anything more you could do for Tortu[end if]";
+to say tee-details: say "[if trout is reflexive]hints you've SURELY got enough nourishment now to help Tortu stand up to the bullies as you did[else]thanks you for doing so much. She can't imagine anything more you could do for Tortu[end if]";
 
 tuna-first is a truth state that varies.
 
@@ -21310,7 +21304,7 @@ check burning:
 		now burn-check is true instead;
 	if noun is an animal, say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
 	if noun is a person, say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile is he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
-	if noun is a fruit or noun is lobster or noun is tea tray, say "Good thing this game isn't a cooking sim." instead;
+	if noun is a fruit or noun is lobster or noun is tea at a tee, say "Good thing this game isn't a cooking sim." instead;
 	if noun is chair, say "You think 'I char a rich chair' but have nothing to burn it with." instead; [introduction]
 	if noun is sitar, say "That's not the way to recover rock-star status." instead;
 	if noun is a sto, say "[if noun is flippable]Even if it didn't look important, no[else]No senseless vandalism, please[end if]." instead;

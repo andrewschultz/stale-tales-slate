@@ -597,13 +597,13 @@ understand "thread" and "threads" as a mistake ("There are no clothing stores ar
 
 chapter Lean Lane
 
-understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea tray is in location of player
+understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea at a tee is in location of player
 
-understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea tray is in location of player.
+understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea at a tee is in location of player.
 
 understand "elan" as a mistake ("Lean Lane will never be pretty, and it doesn't need to be.") when player is in Lean Lane.
 
-understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is in location of player.
+understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea at a tee is in location of player.
 
 understand "neal" as a mistake ("It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.") when player is in Lean Lane.
 

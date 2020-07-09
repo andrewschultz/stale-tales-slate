@@ -702,9 +702,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "reward"	429605395	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "dent"	320852724	--	dent-gone rule	"You already fixed the dent. It's gone."
 "tuna"	279311151	tuna	--	"She is a bit fussy, but she is more than okay as she is."
-"eat"	233103945	tea tray	--	"Quit playing with your food, already."
-"tray"	312980891	tea tray	--	"[just-tea]."
-"teatray"	546084836	tea tray	--	"[just-tea]."
 "wipe"	362199687	wipes	--	"[unless player has wipes]It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring[else]You will need to use them all at once, and on something else[end if]."
 
 table of Lapsin' Plains nudges
