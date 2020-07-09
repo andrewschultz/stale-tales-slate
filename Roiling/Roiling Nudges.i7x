@@ -994,15 +994,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of Rawest Waters nudges [4 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"waster"	522636487	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better."
+"waster"	522636487	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. The [neaters] still seem to want to help you, though."
 "spray"	387610798	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
-"water"	426362521	--	--	"The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to a shore?"
-"northern"	651013625	--	--	"The northern shore does not waver. Maybe try the eastern shore."
-"shore"	421038754	--	--	"You need to focus on one specific shore."
-"shores"	517312720	--	--	"You need to focus on one shore."
-"north"	368976205	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
-"east"	329377911	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
-"southwest"	851249533	--	--	"[diag-dir-rej]."
+"water"	426362521	--	--	"The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the [neaters]?"
+"neater"	515141365	--	--	"You need more than one Neater to help you."
 
 table of Mislit Limits nudges [4 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

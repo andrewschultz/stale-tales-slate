@@ -4396,7 +4396,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			continue the action;
 	else if mrlp is towers:
 		if player is in Rawest Waters:
-			now noun is eastern shore;
+			now noun is Earnest Eastern Neaters;
 			continue the action;
 	else if mrlp is otters:
 		if player is in Minded Midden:
@@ -6069,6 +6069,7 @@ Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to y
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back south might drive you too far from the palace."
+Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]."
 Clarthead Cathedral	"[no-coma]." [otters]
 Shiner Shrine	"[no-coma]."
@@ -17000,31 +17001,18 @@ to towers-min-adj: [this is when you leave the mainland]
 
 to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
 
-check going in Rawest Waters:
-	say "Spirited riptides! You panic a bit, unsure which shore would take the least time to get to--northern, southwestern or eastern. They all seem about the same distance. If only you could force the issue somehow--the [i]eastern[r] looks a bit more pleasant." instead;
-
 book Rawest Waters
 
-Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back southwest, and unable to decide if the northern or eastern shore is closer.". roomnud of Rawest Waters is table of Rawest Waters nudges.
+Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waters is table of Rawest Waters nudges.
 
 every turn when player is in Rawest Waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
-section eastern shore
+section Earnest Eastern Neaters
 
-the eastern shore is boring reflexive scenery in Rawest Waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
+the Earnest Eastern Neaters are boring plural-named reflexive scenery in Rawest Waters. "The Earnest Eastern Neaters can help you, but they just feel a bit too far away. You may need to help them, too."
 
-does the player mean doing something with eastern shore: it is very likely.
-
-a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". parse-text of eastern is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
-
-section southwestern shore
-
-the southwestern shore is boring scenery in Rawest Waters. description of southwestern shore is "You can barely see it--the agnostic isn't there either.". bore-text is "No way to get back to the southwestern shore, really."
-
-section northern shore
-
-the northern shore is boring scenery in Rawest Waters. description of northern shore is "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". bore-text is "It's too far to swim or do much more than magick."
+a-text of Earnest Eastern Neaters is "RYYRYRR". b-text of Earnest Eastern Neaters is "???RG??". parse-text of Earnest Eastern Neaters is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
 
 section raspy spray
 
@@ -22321,8 +22309,8 @@ this is the towers-alt rule:
 	if Reeds Ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
 	if towers is not solved and natives site van is not moot, say "[2da]Two solutions for the natives['] site van.";
 	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
-	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
-	if towers is not solved and otters is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming at Mislit Limits.";
+	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+	if towers is not solved and otters is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming before crossing Leak Lake.";
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
 	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 

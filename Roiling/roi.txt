@@ -1071,11 +1071,10 @@ But it is a Last Lousy Point.
 It can be reorganized...
 ...or REWIRED.
 >>RAWEST WATERS
-?Help! Which shore?
-Northern, Eastern and Northeast(ern).
-The settler gives seven letters.
-What can be done to get closer to the eastern shore?
-Make it NEAREST.
+?I need help from the Earnest Eastern Neaters!
+If only they were a bit closer...
+What can be done to get closer to them?
+Make them, and you, NEAREST.
 ?Hey! I never saw this location. What gives? Is this a fake clue?
 You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed it, you'd have landed here. The puzzle is about as easy as the other two, and I figured it'd be neat to have two ways through.
 >>LEAK LAKE

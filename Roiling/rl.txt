@@ -523,6 +523,13 @@ There are three possibilities left, but RERIWED and WERIRED aren't words. REWIRE
 The dourest detours need to be more exciting. They are, at first, R??RRYR.
 Each question mark must be a vowel, since we already have four consonant slots known. That makes slot 3 U.
 So (RST)(OE)U(DST)(DRST)(OE)(DR) is left. Listening helps here to get a lot of red. Or you could guess the first letter right.
+>>RAWEST WATERS
+# logic for earnest eastern neaters
+?How can I call for the Earnest Eastern Neaters?
+Grinding through the possibilities, we get (EN)(AE)(ARS)(RS)E(RS)(NST) to start.
+But that lets a lot fall out. Since slots 4 and 6 are R or S, slot 3 must be A.
+That makes slot 2 E. Then slot 1 is N. Then slot 7 is T.
+NEA(RS)E(RS)T is NEASERT or NEAREST. NEAREST.
 >>MISLIT LIMITS
 # logic for pestern serpent
 ?How do I interpret the pester'n serpent scans?
