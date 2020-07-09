@@ -4017,7 +4017,7 @@ to show-rank:
 	if mrlp is others or roved is true or otters is solved:
 		say "Procured Producer.";
 		continue the action;
-	let Q be number of rank-increasing regions + number of bypassed regions + 1;
+	let Q be number of rank-increasing regions + number of bypassed regions + 1 + boolval of power-back;
 	if Q > number of rows in table of ranks:
 		d "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
 		now Q is number of rows in table of ranks;
@@ -4041,6 +4041,7 @@ rank-name
 "Rifeness Finesser" [3]
 "Lengthier Lightener" [4]
 "Truculenter Unclutterer" [5 strip stores solved, ready for otters]
+"Unresting Insurgent" [In Otters, got power back]
 
 to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
@@ -5358,7 +5359,7 @@ to say current-mackiness:
 	choose row with the-from of current-idea in table of otters anagrams;
 	say "[right-word entry in upper case]";
 
-to decide which thing is otters-cur-item:
+to decide which thing is otters-cur-item: [this does not include LLPs. I don't want to distract the player.]
 	if player is in Minded Midden:
 		if bleary barley is touchable, decide on bleary barley;
 		if Ed Riley is in Minded Midden, decide on Ed Riley;
@@ -5366,10 +5367,10 @@ to decide which thing is otters-cur-item:
 		if Macks are touchable, decide on Macks;
 		if Gretta is touchable, decide on Gretta;
 		if atmo moat is in Disowned Downside and power-back is true, decide on atmo moat;
-	if player is in Bran Barn:
+	if player is in Bran Barn and power-back is false:
 		if Mr Lee wears ghoul hat, decide on ghoul hat;
 		if gore ogre is in Bran Barn, decide on gore ogre;
-	if player is in Loop Pool:
+	if player is in Loop Pool and power-back is false:
 		if sea cube is not moot, decide on sea cube;
 		if eels are not reflexed, decide on eels;
 	if player is in Shiner Shrine and sly imp is in Shiner Shrine, decide on sly imp;
@@ -5385,10 +5386,18 @@ to decide which thing is otters-cur-item:
 	if power-back is false, decide on the player;
 	if player has whistle and whistle is not reflexed, decide on whistle;
 	if player has medals and medals are not reflexed and medals are not prefigured, decide on medals;
-	if current quip is final-quip, decide on elvira;
+	if Rancho Archon Anchor is visited, decide on Elvira;
 	decide on the player;
 
-to say tho-work: say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
+to say tho-work of (rm - a room):
+	if power-back is false:
+		say ", but you might not be ready without your powers back";
+	else if rm is Lamer Realm and adjsolve >= 3:
+		say ", though you've done what you needed[if adjsolve is 4] and then some[end if]";
+	else if rm is Perverse Preserve and nounsolve >= 3:
+		say ", though you've done what you needed[if nounsolve is 4] and then some[end if]";
+	else:
+		say ", and you feel ready to challenge yourself there[if rm is visited] this time[end if]";
 
 table of animal randomness
 this-animal
@@ -5430,21 +5439,21 @@ to say other-power-room: say "[if player is in Loop Pool]Bran Barn[else]Loop Poo
 this is the otters-hinting rule:
 	if player is in Loop Pool or player is in Bran Barn:
 		if gore ogre is moot and eels are moot, all-say "You found both ways to regain your powers. You don't need to do anything else." instead;
-	if player is in Shiner Shrine and imp is moot, all-say "The path north is cleared[tho-work]." instead;
-	if player is in Clarthead Cathedral and shrewin whiners are moot, all-say "The path south is cleared[tho-work]." instead;
+	if player is in Shiner Shrine and imp is moot, all-say "The path north is cleared[tho-work of Lamer Realm]." instead;
+	if player is in Clarthead Cathedral and shrewin whiners are moot, all-say "The path south is cleared[tho-work of Perverse Preserve]." instead;
 	if player is in Minded Midden and Ed Riley is moot, all-say "You made a way west. You're done here." instead;
 	if player is in Disowned Downside:
-		if Gretta is moot and power-back is false, all-say "Gretta's gone. The first thing to do is to go north or south to regain your powers.";
+		if Gretta is moot and power-back is false, all-say "Gretta's gone. The first thing to do is to go north or south to regain your powers." instead;
 		if atmo moat is moot, say "Gretta's gone. [if medals-shiny is 2]Fulfill your destiny to the west[else]Go back east for help[end if]." instead;
 	if in-extra-powers, all-say "The [location of player] isn't critical since you've solved the [other-power-room], but the puzzle may still interest you.";
 	unless otters-cur-item is player, try objhinting otters-cur-item instead;
 	if player is in Lamer Realm or player is in Perverse Preserve:
-		if power-back is false, all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of the barley[end if]." instead;
+		if power-back is false, all-say "You need to get your powers back before you do anything. Look around [if Disowned Downside is visited]the Disowned Downside[else if ed riley is in Minded Midden]and try to get past Ed Riley[else]west of Burnt Brunt[end if]." instead;
 		if player is in Perverse Preserve, all-say "You've re-summoned all the animals you need to[if number of pre-animal things in Perverse Preserve is 1], though you can also try to fix the [random touchable pre-animal thing][end if]." instead;
 		all-say "You've helped all the animals you need to[if number of reflexive animals in Lamer Realm > 0], but you can still try to help the [random touchable reflexive animal][end if]." instead;
 	if got-extra-powers, all-say "You got your powers back. You don't need to do anything else here." instead;
 	if player is in Reclusion Inclosure, all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
-	all-say "It seems like you did everything you needed to here to defeat Elvira.";
+	all-say "It seems like you [if power-back is false]can't do anything to get your powers back here[else]did everything you needed here to defeat Elvira[end if].";
 	the rule succeeds;
 
 definition: a thing (called X) is pre-animal:
@@ -18209,6 +18218,14 @@ rescind-cinders is a truth state that varies.
 
 discern-warn is a truth state that varies.
 
+to decide whether conditional-llp-present:
+	if power-back is true:
+		if player is in Bran Barn and Gore Ogre is touchable, yes;
+		if player is in Loop Pool and eels are touchable, yes;
+		if player is in Perverse Preserve and nounsolve is 3, yes;
+		if player is in Lamer Realm and adjsolve is 3, yes;
+	no;
+
 carry out discerning:
 	if mrlp is not otters, say "[reject]" instead;
 	if player is in Minded Midden and cinders are in Minded Midden:
@@ -18226,13 +18243,15 @@ carry out discerning:
 		if noun is prefigured, say "You already found what to do, there. PAD FLIPS to see what." instead;
 		repeat through table of hintobjs:
 			if noun is hint-entry entry:
+				if there is no spoil-entry entry:
+					break;
 				if there is a parallel-entry entry:
 					try discerning parallel-entry entry instead;
 				cinders-bye;
 				say "The cinders swirl away into the air. You have a revelation. [spoil-entry entry].";
 				the rule succeeds;
-		say "You discern nothing. The cinders stay where they are." instead;
-	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You have everything you need." instead;
+		say "You discern nothing. The cinders stay where they are. But that's a sort of clue in itself." instead;
+	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You are fully prepared to take on Elvira." instead;
 	if otters-cur-item is player, say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
 	process the otters-hinting rule; [note: this takes care of decrementing the region maximum if we found anything.]
@@ -18311,7 +18330,7 @@ to say animals-left:
 
 book Reclusion Inclosure
 
-Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can leave the Edictal Citadel via a [if elmer is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] passage to the east, or in to the west, [if hydra-known is true and hydra is in archon anchor]though you'll need to get rid of that hardy hydra[else]if you dare[end if]. The ways north and south lead to coevals['] alcoves which are probably distractions.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges.
+Reclusion Inclosure is a room in Otters. Reclusion Inclosure is west of Disowned Downside. "A monstery monastery. Mythical or extinct animals['] laminas of populate the walls here, along with a forces fresco. You can leave the Edictal Citadel via a [if elmer is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] passage to the east, or in to the west, [if hydra-known is true and hydra is in archon anchor]though you'll need to get rid of that hardy hydra[else]if you dare[end if]. The ways north and south lead to coevals['] alcoves which are probably distractions.". roomnud of Reclusion Inclosure is table of Reclusion Inclosure nudges. printed name is "[if elmer is moot]Hidings Dishing Shindig[else]Reclusion Inclosure[end if]".
 
 section going west
 
@@ -18329,7 +18348,7 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 	if hydra is in Rancho Archon Anchor:
 		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of [e-n-m] first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
 		now hydra-known is true;
-		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead;
+		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Nemesis seems in. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
 chapter two LLPs
@@ -19025,9 +19044,9 @@ to decide which mack-idea is mack-hint:
 	let got-mack be false;
 	let cur-mack be t-despairingly;
 	repeat with QQ running through ment reflexive mack-ideas in Disowned Downside:
-		d "Considering [QQ] for hints.";
+		d "(DEBUG considering [QQ]) ";
 		if mack-prio of QQ < cur-prio:
-			d "Potentially choosing [QQ].";
+[			d "(DEBUG potentially choosing [QQ]) ";]
 			now cur-mack is QQ;
 			now cur-prio is mack-prio of QQ;
 			now got-mack is true;
@@ -19226,16 +19245,6 @@ chapter otters flipto and min points
 
 section get your powers back
 
-to de-inhib:
-	now power-back is true;
-	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' But they are overtaken ... by a vow here.";
-	move vow here to location of player;
-	if atmo moat is prefigured:
-		say "[line break]You feel strong enough to tackle the moat, now";
-		if try-fail-animal:
-			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-cathedral-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
-		say ".";
-
 the medal check rules are an object-based rulebook.
 
 book Shiner Shrine
@@ -19386,6 +19395,7 @@ check going north in Perverse Preserve: if raptor is in Perverse Preserve, say "
 every turn (this is the owls kill you rule):
 	if owls were touchable and owls are touchable:
 		unless the action is procedural:
+			if debug-state is true, say "[the current action].";
 			say "You were not fast enough to dispel the owls. They peck you to a death so horrible even an unemotional computer type is willing to give you a chance to change it with UNDO.";
 			get-dead;
 		else:
@@ -21538,6 +21548,7 @@ this is the spoil-hints rule:
 			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
 			say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
 			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
+			if conditional-llp-present, say "[line break]You also feel there's something more to do here, if you want, but isn't critical.";
 			if noun is cinder-dissolve:
 				if scams is false:
 					cinders-bye;
@@ -21649,13 +21660,13 @@ to decide whether one-whine-down:
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in Perverse Preserve]see what you can do here[else if player is in Shiner Shrine or player is in Clarthead Cathedral]go north or south[else]explore north or south of the barley[end if]";
+		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in Perverse Preserve]see what you can do here[else if player is in Shiner Shrine or player is in Clarthead Cathedral]go north or south[else]explore north or south of Burnt Brunt[end if]";
 	else if nounsolve >= 3:
 		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in Lamer Realm] is optional now,)[else],[end if] but maybe you can go [if Lamer Realm is unvisited]north[else]to the Lamer Realm[end if] to do more";
 	else if adjsolve >= 3:
 		say "You've done good work in the Lamer Realm, but maybe you can go [if Lamer Realm is unvisited]north[else]to the preserve[end if] to do more";
 	else if nounsolve is 0 or adjsolve is 0:
-		say "You've done something in the [if nounsolve is 0]Lamer Realm[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of the barley, too";
+		say "You've done something in the [if nounsolve is 0]Lamer Realm[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of Burnt Brunt, too";
 	else:
 		say "You've done work in the Lamer Realm and preserve, but not enough"
 

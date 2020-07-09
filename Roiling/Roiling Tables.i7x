@@ -300,7 +300,7 @@ table of otters anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly re-tally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, you're able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
 cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
-Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."
+Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, acting less impressively and more permissively. He slinks away in embarrassment."
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
 imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
@@ -344,7 +344,7 @@ t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	-
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
-parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
+parrot	raptor	false	431763978	--	"raptor"	"raptor"	pre-parrot-raptor rule	post-parrot-raptor rule	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west![paragraph break]'Coren,' Elvira cries over a loud squish and pop, and you almost feel sorry for her.[paragraph break]'Clergies! A sacrilege!' [e-n-m] cry, but nobody comes to help. They are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]Before you can consider whether you should return the raptor back to its normal form, it crashes through the narrow exit to the east. The Edictal Citadel will be easier to enter![paragraph break]The raptor totters under its own weight. You change it back to a parrot.[paragraph break]'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]As you contemplate a new name for the Reclusion Inclosure, you realize that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
 pines	snipe	false	419446388	--	"snipe"	"snipe"	--	post-perverse-preserve-flip rule	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."
 corona	racoon	false	324129868	--	"racoon"	"racoon/raccoon"	--	post-perverse-preserve-flip rule	"[extra-c]The corona grows wider, becoming a living thing."
 nails	snail	false	266175977	--	"snail"	"snail"	--	post-perverse-preserve-flip rule	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."
@@ -1493,6 +1493,16 @@ this is the pre-ogre-ergo rule:
 this is the post-ogre-ergo rule:
 	de-inhib;
 	if eels are reflexed, min-up;
+
+to de-inhib:
+	now power-back is true;
+	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' But they are overtaken ... by a vow here.";
+	move vow here to location of player;
+	if atmo moat is prefigured:
+		say "[line break]You feel strong enough to tackle the moat, now";
+		if try-fail-animal:
+			say ", and maybe even the [if try-fail-pit-north is false]loud roar[else if try-fail-cathedral-south is false]owls[else]owls and loud roar[end if] that chased you away back east, too"; [note that try-fail-animal means 1 of pit-north ansd cathedral-south must be true]
+		say ".";
 
 to say tgw:
 	say "that dude[if player is female], uh, dudess[end if], with those powers";
@@ -2905,7 +2915,7 @@ Look Kool	"You can't do much but admire them."
 Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Rancho Archon Anchor is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY the whistle by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped.[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"
-Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
+Elvira	"[if current quip is final-quip]Just [play-whistle] to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just [play-whistle]"
 a border arbored	"It's just there to establish you can't walk any which way."
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[plus][or]What's a fruit that has pits and a stem?[plus][or]A cherry, but this is a much brighter red than usual.[plus][or]MARASCHINO.[minus][cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[plus][or]What can green dishwashing detergent smell like?[plus][or]LIMES.[minus][cycling]"
@@ -3004,6 +3014,8 @@ talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
 
+to say play-whistle: say "PLAY THE WHISTLE[if qbc_litany is table of elvira comments] after chatting (pick any options)[end if]"
+
 to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
 
 to say once-now-digger: say "[if player has rigged digger]now you've got the rigged digger[else]once you have the right equipment[end if]"
@@ -3044,15 +3056,15 @@ to say medals-do:
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
 	if nounsolve >= 3:
-		say "[if Lamer Realm is visited]Lamer Realm[else]area north of the barley[end if]";
+		say "[if Lamer Realm is visited]Lamer Realm[else]area north of Burnt Brunt[end if]";
 	else if adjsolve >= 3:
-		say "[if Perverse Preserve is visited]Perverse Preserve[else]area south of the barley[end if]";
+		say "[if Perverse Preserve is visited]Perverse Preserve[else]area south of Burnt Brunt[end if]";
 	else if Lamer Realm is unvisited and preserve is visited:
-		say "Preserve or north of the barley";
+		say "Preserve or north of Burnt Brunt";
 	else if Perverse Preserve is unvisited and Lamer Realm is visited:
-		say "Lamer Realm or south of the barley";
+		say "Lamer Realm or south of Burnt Brunt";
 	else:
-		say "areas north and south of the barley";
+		say "areas north and south of Burnt Brunt";
 
 to say but-in-inclosure:
 	if player is not in Reclusion Inclosure:

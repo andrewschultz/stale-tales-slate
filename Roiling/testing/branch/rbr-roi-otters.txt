@@ -38,8 +38,14 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >a5
 >t
 >otters
+
+>scam
+
 >opt in
 >enter solid idols
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
 
 @hin
 DEBUG INFO: bleary barley hinting.
@@ -97,6 +103,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >barely
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
 @hin
 DEBUG INFO: Ed Riley hinting.
@@ -228,7 +237,7 @@ DEBUG INFO: min-up codepath
 Your score has just gone up by one point
 }}SCORE++
 
-@hin
+@hin,spoi
 You made a way west. You're done here.
 
 @nud
@@ -241,6 +250,9 @@ The cinders are gone for good.
 
 >w
 Disowned Downside
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling the parleys splayer players can talk SPARELY.
 
 @hin
 DEBUG INFO: macks hinting.
@@ -718,6 +730,9 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 }}SCORE++
 
+@spoi
+That can wait until you've finished talking.
+
 @hin
 DEBUG INFO: Gretta Garett-Tatger hinting.
 Gretta has an important item for you once you finish chatting.
@@ -741,6 +756,10 @@ DEBUG INFO: Gretta Garett-Tatger hinting.
 
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
+
+@spoi
+#We don't want to hint the moat right now. That would be a waste of cinders.
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
 
 @hin
 Gretta's gone. The first thing to do is to go north or south to regain your powers.
@@ -803,8 +822,32 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
 
+@spoi
+##balance undos
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+>although
+As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+>ergo
+>n
+>n
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+>because
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
 >n
 Loop Pool
+
+@spoi
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 
 @sli
 #slider test for because
@@ -864,6 +907,10 @@ DEBUG INFO: sea cube hinting.
 by one point
 }}SCORE++
 
+You pause, realizing you do not need to discern. Perhaps now is a good time to remember you can make an ATOM.
+@spoi
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+
 @hin
 DEBUG INFO: eels hinting.
 
@@ -911,6 +958,9 @@ min-up
 
 >s
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
+
 @hin
 DEBUG INFO: atmo-moat hinting.
 
@@ -937,6 +987,10 @@ It's what the medals say that makes them special.
 >s
 \\
 Bran Barn
+
+@spoi
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
 
 @nud
 #nudge for barn
@@ -1053,6 +1107,19 @@ Gretta's gone. Go back east for help.
 >n
 Shiner Shrine
 
+@spoi
+##balance undos
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
+>enragedly
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
+>undo
+>angrily
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY)\.
+>undo
+>brutely
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|REMOTELY)\.
+>undo
+
 @hin
 DEBUG INFO: simply sly imp hinting.
 
@@ -1165,9 +1232,9 @@ You may need yet another adverb. (+)
 Your score has just gone up by one point
 }}SCORE++
 
-@hin
+@hin,spoi
 !DEBUG INFO: medals hinting.
-The path north is cleared, though you still have work there.
+The path north is cleared, and you still have work there.
 
 >score
 {$SCOS}
@@ -1196,9 +1263,15 @@ Actually, you'd like the owls NOT to reach lows like you are. Or not to get ther
 >lswo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
+
 >slow
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 @hin
 /DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
@@ -1325,6 +1398,9 @@ PAROLED
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED|leopard PAROLED)\.
+
 @hin
 /DEBUG INFO: (leopard|stray satyr|badger) hinting\.
 
@@ -1334,6 +1410,9 @@ Your score has just gone up by one point
 >paroled
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED)\.
 
 @hin
 /DEBUG INFO: (stray satyr|badger) hinting\.
@@ -1352,6 +1431,10 @@ You see TSYRA branded under the stray satyr's shoulder.
 >artsy
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
 
 @hin
 DEBUG INFO: medals hinting.
@@ -1412,6 +1495,7 @@ Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
+{--spoi}As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.\n!You also feel there's something more to do here, if you want, but isn't critical.
 >score
 {$SCOS}
 
@@ -1427,6 +1511,11 @@ The badger no longer feels second-rate, so it needs no more help.
 >s
 
 Clarthead Cathedral
+
+@spoi
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|.
+>loathingly
+>undo
 
 @hin
 DEBUG INFO: shrewin' whiners hinting.
@@ -1534,7 +1623,7 @@ They find another place where rioters roister.
 
 @hin
 !DEBUG INFO: medals hinting.
-The path south is cleared, though you still have work there.
+The path south is cleared, and you still have work there.
 
 >score
 {$SCOS}
@@ -1552,12 +1641,18 @@ Perverse Preserve
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
+
 @hin
 DEBUG INFO: raptor hinting.
 
 >parrot
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
 
 @hin
 /DEBUG INFO: (snipe|thrones|corona|nails) hinting\.
@@ -1718,6 +1813,9 @@ min-up
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|HORNETS)\.
+
 @hin
 /DEBUG INFO: (snipe|thrones|corona) hinting\.
 
@@ -1733,6 +1831,9 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a RACOON|a SNIPE)\.
+
 @hin
 /DEBUG INFO: (thrones|corona) hinting\.
 
@@ -1742,6 +1843,10 @@ Your score has just gone up by one point
 >racoon
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
+You also feel there's something more to do here, if you want, but isn't critical.
 
 @hin
 DEBUG INFO: medals hinting.
@@ -1776,8 +1881,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
+{--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\n!You also feel there's something more to do here, if you want, but isn't critical.
 >score
 {$SCOS}
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
+!You also feel there's something more to do here, if you want, but isn't critical.
 
 @nud
 #nudge for uprate
@@ -1808,6 +1918,9 @@ Gretta's gone. Fulfill your destiny to the west.
 
 >w
 Reclusion Inclosure
+
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
 
 @hin
 DEBUG INFO: parrot hinting.
@@ -2028,6 +2141,9 @@ The parrot can be changed back into a raptor, but not into anything new.
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
+
 @hin
 DEBUG INFO: weltish whistle hinting.
 
@@ -2067,6 +2183,11 @@ Hmm. You're an old hat by now, and the questionable slots seem -- well, not as b
 ###skip test checking
 >scan medals
 Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
+
+@spoi
+>deeply
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY.
+>undo
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
@@ -2134,6 +2255,10 @@ You already got a boost from the medals.
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+Your destiny awaits to the west! You are fully prepared to take on Elvira.
+
+@hin
 DEBUG INFO: Elvira hinting.
 Just PLAY THE WHISTLE to defeat her.
 

@@ -1208,8 +1208,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lamina"	236164982	--	--	"[no-lam]."
 "forces"	429276936	--	--	"[fresc]."
 "forec"	333002970	--	--	"[fresc]."
-"hidings"	346078256	--	hidings-dishing rule	"[loc-name]."
-"hiding"	249804290	--	hidings-dishing rule	"[loc-name]."
+"hidings"	346078256	--	hidings-dishing rule	"[locname]."
+"hiding"	249804290	--	hidings-dishing rule	"[locname]."
 
 table of Rancho Archon Anchor nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

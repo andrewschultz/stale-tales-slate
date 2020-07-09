@@ -505,13 +505,36 @@ this is the check nudge tables rule:
 			next;
 		say "Define table of nudges for [X].";
 
+chapter haling
+
+haling is an action applying to nothing.
+
+understand the command "hal" as something new.
+
+understand "hal" as haling.
+
+carry out haling:
+	say "Mass hinting [list of all mass-hint-appropriate things].";
+	let count be 0;
+	repeat with myobj running through all mass-hint-appropriate things:
+		increment count;
+		say "([count])Mass-hinting [myobj]:[line break]";
+		try objhinting myobj;
+	the rule succeeds.
+
 section monty stuff
 
 table of monties (continued)
 montopic (topic)	on-off	test-title (text)	test-action	topic-as-text (text)
 "hint/hints"	false	"SHOWING BASIC HINTS"	try-hinting rule	"hint/hints"
 
-this is the try-hinting rule: try hinting;
+this is the try-hinting rule:
+	let Q be scams;
+	if scams is true:
+		say "Turning scams off to hint.";
+	now scams is false;
+	try hinting;
+	now scams is Q;
 
 check montying:
 	if the topic understood matches "hint" or the topic understood matches "hints":
