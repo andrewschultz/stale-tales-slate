@@ -129,19 +129,76 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. [giant pin, stable/stair, chimney/ramp, basement, snib, scepter] [non-anagram = staple curtain]
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8.
+[BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
+1/9=giant pin
+2/10=stable
+3/11=stair from stria/sitar (stable/stair = another way down)
+4/12=chimney
+5/13=ramp (ramp/chimney = another way down)
+6/14=snib
+7/15=scepter]
+[non-anagram = staple curtain]
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. max-score of stores is 11. min-score of Stores is 3.
+[BONUS STUFF: (basics are Store T and two others--call them U and V)
+Store K=1/4
+Store N=2/5
+OUTSIDE=3/6 (unavoidable if you enter mangiest steaming)
+Three other stores without patcher=6/9 +3
+Store B=Sorbet
+Store H=Others (you can get the point but you can't enter)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. max-score of Troves is 25. min-score of Troves is 17. [Pa Egg Pea / stay / bee / lager, lobster/ME ARTS, Trevis Vister/praise , DIVORCES, Sister Tressi/Blamer Balmer-Mr Beal]
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. max-score of Troves is 25. min-score of Troves is 17.
+[LLP list:
+1/18=Pa Egg Pea
+2?19=A Tasty Sty, Say
+3/20=both of evil bee or SNORE SO ARENA
+4/21=lager
+5/22=both of BORTLES lobster/ME ARTS stream,
+6/23=both of Trevis Vister/praise
+7/24=DIVORCES
+8/25=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
+]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. max-score of Routes is 22. min-score of Routes is 20. [worst ad, without]
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. max-score of Routes is 22. min-score of Routes is 20.
+[List of min points:
+1/21=worst ad in Same Mesa
+2/22=without in Sonancy Canyons
+]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. max-score of presto is 41. min-score of presto is 28. [hawt thaw, rom stick, lamb, ye hoop, sport ports, odes song, tba, escaroles, 1-2 for Mazel Tov vs Won't/avoiding hints for Mazel Tov, Drive E/E Drive, Drive A/A Drive, starch charts]
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. max-score of presto is 41. min-score of presto is 28.
+[List of boosts:
+1/29=lamb
+2/30=ye hoop vs hoop
+3/31=odes song
+4/32=sport ports
+5/34=Mazel Tov unhinted vs Won't
+7/35=hawt thaw
+8/36=starch charts
+9/37=drive a
+10/38=drive e
+11/39=TBA key
+12/40=ROM stick
+13/41=escaroles
+]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28. [scan cans, tend dent, SPLAIN in the plains, shape heaps, waste/lance/wipes/trample/ant subquest=6, PSALM in the Plasm Lamps, revel/lever=1, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28.
+[There are actually 31 points overall if you don't use the pills.
+1/32=scan cans
+2/33=tend dent
+3/34=SPLAIN in the plains
+4/35=shape heaps
+9/40=waste/lance/wipes/trample/ant subquest
+10/41=PSALM in the Plasm Lamps
+11/42=revel/lever=1
+Special spill rules:
+you get -3 if you use the pills right away in the shop.
+you get -1 if you use the pills on Tortu before EAT.
+You get a non-anagram point for framing the bad guys so the haunter chases them.
+]
 
 Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 52. min-score of towers is 25.
 [Necessary points:
@@ -175,9 +232,20 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=26 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=27 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24.
+[
+1=25 for RESCIND
+3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
+4=28 HOWEVER after second power-back above
+5=29 for all Lamer Realm animals
+6=30 for all Uprates Pasture animals
+7=31 for ASIDE around Elmer/Merle
+8=32 for HONESTLY after ASIDE
+]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. max-score of Others is 42. min-score of others is 25.
+[There are so many possibilities--36 choose 20--I won't go through them all. Well, technically, (10 choose 4) * (26 choose 16)
+only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule.
 
