@@ -8,7 +8,7 @@ files=reg-roi2-presto-max.txt,reg-roi2-presto-min.txt,reg-roi2-presto-nudmis.txt
 ~	max	t0
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
-~	hints,hin	t4
+~	hints,hin,spoi	t4
 
 }}MAX=41
 }}CURMAX=41
@@ -129,13 +129,24 @@ You don't need to levitate the hump. You need a way to jump over it.
 >up hm
 You don't need to levitate the hump. You need a way to jump over it.
 
+@spoi
+>scam
+You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 >umph
 }}SCORE++
 Your score has just gone up by one point
 Austerer Treasure
 
+@spoi
+You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 @hin
 DEBUG INFO: Ye Hoop hinting.
+
+@spoi
+>scam
+You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
 {$SCOS}
@@ -196,6 +207,9 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
+@spoi
+Before taking a bite, you wonder if you've visited everywhere you can yet.
+
 @hin
 >z
 You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
@@ -241,6 +255,9 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 
 >e
 
+@spoi
+The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.
+
 @hin
 DEBUG INFO: plebe hinting.
 
@@ -251,6 +268,9 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 
 >s
 Char Arch
+
+@spoi
+You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
 DEBUG INFO: tsar star hinting.
@@ -379,6 +399,9 @@ You are just trolling now. No further clues for you.
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 @hin
 DEBUG INFO: dart hinting.
 
@@ -393,6 +416,9 @@ But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 >drat
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+Before taking a bite, you wonder if you've visited everywhere you can yet.
 
 @hin
 You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
@@ -415,6 +441,9 @@ The dart's just fine as-is.
 
 >n
 
+@spoi
+You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 @nud
 #spechelp for plebe
 >blepe
@@ -432,6 +461,12 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 >bleep
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+>n
+You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+>undo
 
 @hin
 DEBUG INFO: volt maze hinting.
@@ -456,6 +491,9 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 
 >e
 Marines Seminar Remains
+
+@spoi
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
 DEBUG INFO: boing-go bin hinting.
@@ -527,6 +565,13 @@ Your score has just gone up by one point
 >undo
 
 >get popgun
+
+@spoi
+You can just put the dart in the popgun.
+>put dart in popgun
+You wince and prepare to take a bite...
+Ugh. The crust feels like army rations. Not now.
+>undo
 
 @nud
 #spechelp for sport ports
@@ -755,6 +800,9 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@spoi
+The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+
 @max
 #pre-ether-there rule
 >there
@@ -764,8 +812,11 @@ You suspect someone is in the mist where the maze was. "THERE!" you yell. But yo
 >blma
 That's not something
 
-
 >s
+
+@spoi
+You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
+
 >s
 Dirge Ridge
 
@@ -800,12 +851,18 @@ No chance.
 >whupass
 No chance.
 
+@spoi
+You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 @hin
 DEBUG INFO: Leo hinting.
 
 >ole
 }}SCORE++
 by one point
+
+@spoi
+You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
 {$SCOS}
@@ -864,6 +921,9 @@ by one point
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 @hin
 /DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
 
@@ -914,6 +974,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@spoi
+You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
+
 @hin
 /You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
 
@@ -936,6 +999,9 @@ You don't need to combine them physically, but their physical strengths combined
 
 >n
 >n
+
+@spoi
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @max
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
@@ -1051,6 +1117,9 @@ The ether is gone. You can just go north.
 >n
 Saps' Pass
 
+@spoi
+/You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
@@ -1160,6 +1229,9 @@ DEBUG INFO: lawl wall hinting.
 Your score has just gone up by one point
 
 Phat Path
+
+@spoi
+/You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @hin
 DEBUG INFO: harpings phrasing hinting.
@@ -1353,6 +1425,9 @@ Hut! Go!
 Dat was a good dust-up
 }}SCORE++
 
+@spoi
+(Favorite bad word,) you think, I'd rather see what's in that shack.
+
 @min
 #GOODNESS is no longer available
 }}CURMAX--
@@ -1398,6 +1473,9 @@ by one point
 
 >n
 Hacks' Shack
+
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
 
 @nud
 >s
@@ -1633,14 +1711,32 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >acclskpo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->capslock
+>skid
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
->skid
+
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
+
+>leaf
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
+
+>score
+{$SCOS}
+
+>capslock
+Your score has just gone up by one point
+}}SCORE++
+
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
+
 >score
 {$SCOS}
 
@@ -1714,12 +1810,6 @@ Your score has just gone up by one point
 {$SCOS}
 
 >mug
-Your score has just gone up by one point
-}}SCORE++
->score
-{$SCOS}
-
->leaf
 Your score has just gone up by one point
 }}SCORE++
 >score
