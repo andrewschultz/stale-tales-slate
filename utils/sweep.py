@@ -1,4 +1,6 @@
-# sweep.py: this sweeps through source code to look for potential anagrams and red-writing verification
+# sweep.py: this sweeps through source code to look for potential double anagrams and red-writing verification
+#
+# the slashes in output text indicate before/after space removal
 
 import os
 import i7
@@ -33,6 +35,7 @@ file_list = [ i7.main_src(my_proj), i7.hdr(my_proj, 'nu'), i7.hdr(my_proj, 'ta')
 
 with open("sweep.txt") as file:
     for line in file:
+        if line.startswith(";"): break
         if line.lower().startswith("ignore:"):
             for x in line[7:].strip().lower().split(','):
                 if x in ignore_words:
@@ -74,7 +77,7 @@ def print_red_letters(string1, wordary, double_first = False):
     clash = []
     for x in range(0, len(s1)):
         if s1[x] == s2[x]: clash.append(str(x+1))
-    return("{} RED: {} vs {}/{} {}\n".format("NOT" if len(clash) else "   ", string1, s2, s3, ' ' + '/'.join(clash) if len(clash) else ''))
+    return("{}RED: {} vs {}/{} {}\n".format("NOT " if len(clash) else "   ", string1, s2, s3, ' ' + '/'.join(clash) if len(clash) else ''))
 
 def find_reasonable_hashes(file_base, my_line):
     if '"' not in my_line: return
@@ -102,7 +105,7 @@ def find_reasonable_hashes(file_base, my_line):
                         output_string[cand] += "{} L{}: {}".format(file_base, line_count, line)
                     last_line_and_file[cand] = (line_count, file)
                     output_string[cand] += print_red_letters(cand, comp_word, double_first = True)
-            continue
+                continue
             if j in nums_to_flag:
                 if ignorable(comp_word):
                     continue
