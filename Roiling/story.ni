@@ -3395,8 +3395,6 @@ uber-rand-cheat is a truth state that varies.
 
 chapter regions
 
-you-used-pills is a truth state that varies.
-
 to solve-region (sre - a region):
 	process the notify score changes rule;
 	now sre is solved;
@@ -3411,8 +3409,6 @@ to solve-region (sre - a region):
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre, moot po;
 		check-the-store po;
-	if sre is oyster and pills are moot:
-		now you-used-pills is true;
 	item-warp;
 	let wiped-any-out be false;
 	repeat through table of pad-stuff:
@@ -7679,14 +7675,6 @@ check fliptoing when player is in Dusty Study and gunter is off-stage (this is t
 					preef the-from entry;
 					do nothing instead;
 
-to pill-list (pilly - a thing):
-	if pilly is not a pill-thing listed in table of pill-comments:
-		say "**Need pill entry for [pilly].";
-	else:
-		choose row with pill-thing of pilly in table of pill-comments;
-		say "[pill-do entry]";
-	guy-cheat pilly;
-
 definition: a thing (called th) is pronoun-settable:
 	if th is a guardian, no;
 	if th is vanishing, no;
@@ -7725,10 +7713,10 @@ carry out fliptoing (this is the main fliptoing rule):
 				if the-to entry provides the property male and the-to entry is male, set the pronoun him to the-to entry;
 				if the-to entry provides the property female and the-to entry is female, set the pronoun her to the-to entry;
 			now last-hash is 0;
-			if pill-use is true and there is a pill-msg entry:
-				if debug-state is true and pill-use is true, say "(DEBUG) NO PILL USE MESSAGE FOR [the-from entry] -> [the-to entry].";
+			if flip-spill-flag is true and there is a pill-msg entry:
 				say "[pill-msg entry][line break]";
 			else if suppress-score is false:
+				if debug-state is true and flip-spill-flag is true, say "(DEBUG) NO PILL USE MESSAGE FOR [the-from entry] -> [the-to entry].";
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
 				if the-from entry is Store T or the-from entry is blabber babbler: [you need to get rid of the blabber babbler to leave Cruelest Lectures, so no min-up]
@@ -13967,55 +13955,23 @@ understand "spill [something]" as spilling.
 
 does the player mean spilling pills: it is very likely;
 
-cheated-guy is an object that varies. cheated-guy is nothing.
+spill-target is an object that varies. spill-target is nothing.
 
 after spilling:
-	if pills are moot and cheated-guy is nothing:
+	if pills are moot and spill-target is nothing:
 		d "BUG I mistracked a pill spill.[line break]";
 	else if scams is true:
-		say "[if cheated-guy is nothing]PILLS NOT USED SUCCESSFULLY[else][how-pills-used][end if].";
+		say "[if spill-target is nothing]PILLS NOT USED SUCCESSFULLY[else]HOW PILLS WERE USED: [how-pills-used][end if].";
 	continue the action;
 
 to guy-cheat (gc - a thing):
+	now spill-target is gc; [this is for testing MISSES without going to the end]
 	if produce-redo-cup is false:
-		now cheated-guy is gc;
 		now jar-empty is true;
 		now undo-code is 3;
 	else:
 		say "You blink and notice the jar of Li'L P's Pills has filled up again. It's probably less safe to eat the pills than ever, but they could still hint stuff.";
 		now player has the pills;
-
-table of pill-comments
-pill-thing	pill-do
-eeks	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna shakes her head but invites you up."
-c2	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
-crate	"The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away."
-knob	"The pills gravitate to the knob and turn it forcefully. It won't act up again."
-skis	"The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame."
-clam	"The pills form a large maze with no dead ends. The clam goes after the bouncing pills and eats some, zigzags crazily, and runs himself tired tracking new ones down. Then, suddenly, it looks as if it's seen a ghost. It shrivels to a point with a sad deflating noise, then vanishes with a pop!"
-urn	"The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on."
-boats	"A boat pulls over as you spill the pills. 'If ye need a ride, come aboard! We'll collect yer coins...'[paragraph break]Before you can protest, you're aboard. You hear yelling as several of the fish realize the 'coins' are pills. They don't like freeloaders..."
-oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts the frat raft into the air to the other side! With a bump, you tumble out and walk a bit..."
-plea	"Some of the crays are dumb enough to think that the pills might be coins. In the ensuing hubbub of arguments between smart fish and dumb fish, you jump over the edge and swim to shore."
-carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
-tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
-prod	"You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger."
-lance	"The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it."
-heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
-waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
-wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, the Paw-R-Wrap falls. He flees, and as you run after him, you step on the Paw-R-Wrap, causing it to tear and pop.[paragraph break]You ruined the Paw-R-Wrap, but you do notice a ruby inside. It seems valuable. So you take it."
-Achers Chaser Arches	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
-gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
-ol trap	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
-ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
-ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
-HUNTER HUNT AREA	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
-haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
-yapper	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
-d2	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
-dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
-
-pill-use is a truth state that varies.
 
 every turn when mrlp is oyster and debug-state is true:
 	d "Current hint item = [oyster-item].";
@@ -14069,14 +14025,16 @@ after fliptoing when flip-spill-flag is true:
 spill-block is a truth state that varies.
 
 carry out spilling:
-	now cheated-guy is nothing;
+	now spill-target is nothing;
 	let oi be oyster-spill-item;
 	d "Spilling [oi].";
 	now flip-spill-flag is true;
 	if spill-block is true, say "SPILL directed me to [the oi], but it's currently blocked. This should never happen outside of testing." instead;
 	repeat through table of oyster anagrams:
 		if the-from entry is oi:
-			try fliptoing the-to entry instead;
+			try fliptoing the-to entry;
+			guy-cheat the-to entry;
+			the rule succeeds;
 	say "WARNING could not flip-from [oi].";
 	now flip-spill-flag is false;
 	the rule succeeds;
@@ -14109,7 +14067,7 @@ carry out produceredocuping:
 	if pills are moot, say "Through magic, you get your pills back.";
 	say "[if produce-redo-cup is true]You already said the magic words[else]The jar of Li'l P's Pills is now un-lose-able[end if].";
 	now produce-redo-cup is true;
-	if pills are in Posh Hops Shop, say "(Also, giving you the pills even though [if player is in Posh Hops Shop]you didn't take them[else]they're back in the Posh Hops Shop[end if].";
+	if pills are in Posh Hops Shop, say "(Also, giving you the pills even though [if player is in Posh Hops Shop]you didn't take them[else]they're back in the Posh Hops Shop[end if].)";
 	now player has pills;
 	the rule succeeds;
 
@@ -15082,6 +15040,8 @@ Lapsin Plains is north of Anger Range. Lapsin Plains is in oyster. "Boy, it's de
 the sloppy polyps are plural-named bounding boring scenery in Lapsin Plains. description of sloppy polyps is "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why.". bore-text is "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond.".
 
 c2 is vanishing privately-named scenery in Lapsin Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
+
+understand "c2" as c2 when debug-state is true.
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
@@ -22325,7 +22285,7 @@ this is the oyster-alt rule:
 	say "[eqls]OYSTER[line break]";
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if Olde Lode is visited:
-		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if cheated-guy is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
+		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if spill-target is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
 		if tunes are moot, say "[2da]You could have also [if remapped is true]UNSET the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
@@ -22439,7 +22399,11 @@ to say d-then:
 		say "pull the lever then ";
 [?? need to spill pills vs span pans and pins as well]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is Achers Chaser Arches]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over Saccade Cascade[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is ol trap]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is HUNTER HUNT AREA]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	repeat through table of hintobjs:
+		if spill-target is hint-entry entry:
+			say "[if there is a spoil-entry entry][spoil-entry entry][else]<BUG, SORRY, FORGOT TO FILL IN A TABLE CELL>[end if]";
+			continue the action;
+	say "BUG should've found something but didn't"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
@@ -22508,8 +22472,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A AVIDER.";
 		if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to DERIVE how to improve Drive E.";
 	else if myreg is oyster:
-		if you-used-pills is true, say "[how-pills-used].";
-		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 0].";
+		if spill-target is not nothing, say "[2dmiss of myreg]Instead of spilling the pills, you could've tried to [how-pills-used].";
+		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
 		if cans are not moot, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not moot, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
 		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
