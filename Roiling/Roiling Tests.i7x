@@ -293,6 +293,14 @@ test dome-spares with "d/x clasper/x bolt case/x ladder/x filter/x dustpan/x pla
 
 test dome-all with "demo dome/x ad shelf/test dome-inlet/test dome-show/test dome-dens/test dome-nov/test dome-spares"
 
+volume definitions
+
+definition: a thing (called th) is mass-hint-appropriate: [this is a definition that the STS test file needs]
+	unless th is touchable, no;
+	yes;
+
+volume verbs
+
 chapter coffing
 
 [* COFF 1 tests if you are in the Strip of Profits, handy if you want to test if something's solved, and forces you to the strip so you can do another test. It logs things, too.]
@@ -735,8 +743,6 @@ to decide which thing is rev-item of (f - a fruit):
 
 chapter xring
 
-xring is an action applying to one thing.
-
 understand the command "xr" as something new.
 
 understand "xr [something]" as xring.
@@ -770,8 +776,10 @@ chapter scaming
 scaming is an action applying to nothing.
 
 understand the command "scam" as something new.
+understand the command "scams" as something new.
 
 understand "scam" as scaming.
+understand "scams" as scaming.
 
 carry out scaming: [?! doesn't quite work for otters]
 	now scams is whether or not scams is false;

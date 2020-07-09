@@ -1208,6 +1208,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lamina"	236164982	--	--	"[no-lam]."
 "forces"	429276936	--	--	"[fresc]."
 "forec"	333002970	--	--	"[fresc]."
+"hidings"	346078256	--	hidings-dishing rule	"[loc-name]."
+"hiding"	249804290	--	hidings-dishing rule	"[loc-name]."
 
 table of Rancho Archon Anchor nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2155,6 +2157,10 @@ to say eelmry:
 		say "You think back to whom you've met so far once past the Disowned Downside"
 
 to say e-m-aux: say "That's just focusing on the trappings of [e-n-m] being ideas aides[if aside-llp is reflexed], and anyway, you pushed [e-n-m] aside, already[end if]"
+
+this is the hidings-dishing rule:
+	if elmer is moot, the rule succeeds;
+	the rule fails;
 
 this is the realm-saved rule:
 	if player is in Lamer Realm and adjsolve >= 3, the rule succeeds;

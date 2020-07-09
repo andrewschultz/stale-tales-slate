@@ -2557,7 +2557,7 @@ be ova	"[one of][be ova] doesn't signal the end. Maybe the end of the beginning,
 THE BEAN	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since THE BEAN landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH THE BEAN.[minus][cycling]"	--	"BENEATH"
 NULL IT unit	"[one of]The NULL IT unit is producing the darkness and has for a while.[plus][or]You need an adjective of time.[plus][or]The are was unlit, but now it is...[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
 darkness	--	NULL IT unit
-odd run on aura	"[one of]The odd run on aura gives directions of a sort. It will help you look. Where? How?[plus][or]Use the odd run on aura to look AROUND.[minus][cycling]"
+odd run on aura	"[one of]The odd run on aura gives directions of a sort. It will help you look. Where? How?[plus][or]Use the odd run on aura to look AROUND.[minus][cycling]"	--	"AROUND"
 un road	"You need to follow the un-road, but the all noon gag has better clues for that."
 noon gag	"[one of]The all noon gag provides a new quasi-direction you need to go in, to see No-Lag Logan.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]Go ALONG.[minus][cycling]"	--	"ALONG"
 Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but it is a slightly odd preposition.[plus][or]You just need to go around. All over the place.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
@@ -2590,8 +2590,8 @@ See Dir	--	Si Reed
 Si Reed	"[one of]Si Reed wants to help you focus on certain mental stuff.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
 dour tan rotunda	"It's what the Browse Bowers used to be called."
 praise	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
-rivets	--	Trevis Vister
-Trevis Vister	"[one of]Trevis Vister (and the rivets) can help you want to be your best. Or well, worth your most.[plus][or]Scanning Trevis Vister in cheat mode doesn't turn up any question marks.[plus][or]The rivets give a critical abstract clue that Trevis doesn't, since they are red. They help with the vowels.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE" [?? hint before and after]
+rivets	"[one of]Trevis Vister (and the rivets) can help you want to be your best. Or well, worth your most.[plus][or]Scanning Trevis Vister in cheat mode doesn't turn up any question marks.[plus][or]The rivets give a critical abstract clue that Trevis doesn't, since they are red. They help with the vowels.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE" [?? hint before and after]
+Trevis Vister	--	rivets
 Desk Sked	"Useful for organizing tasks much trickier than playing dumb computer games."
 cark rack	"Just part of the scenery."
 godlings lodgings	"[if END PRONER POD is off-stage]You can't think of getting into [the lodgings] until you are in tune with Trevis Vister.[else]The END PRONER POD holds a clue how to get into [the lodgings].[end if]"

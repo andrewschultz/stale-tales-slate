@@ -761,11 +761,15 @@ understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty land
 
 understand "lief" and "leif" as a mistake ("Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.") when Mel Fish is in location of player.
 
+understand "organdies" as a mistake ("The ego-drains remain made of sturdy material.") when organised ego drains are touchable.
+
 chapter Anemic Cinema
 
 understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. Whether or not you need to go west, you can't [']til they're gone.") when angriest ingrates are touchable.
 
 understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in Anemic Cinema.
+
+understand "inserted" as a mistake ("You see red realizing the resident trendies already inserted themselves here.") when resident trendies are touchable.
 
 understand "tasering" as a mistake ("You don't want to make the ingrates even angrier.") when angriest ingrates are touchable.
 
@@ -832,6 +836,8 @@ understand "slated" as a mistake ("You're not sure why the Salted Deltas could b
 chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
+
+understand "eoliths" as a mistake ("Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for [lois-or-lot] to be.") when lois is touchable or he lot is touchable.
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
