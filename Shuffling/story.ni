@@ -794,7 +794,7 @@ to realize (th - a thing): now th is realized;
 cur-item is a thing that varies.
 
 to say that-those-is-are of (x - a thing):
-	say "[if x is plural-named]That is[else]Those are[end if]"
+	say "[if x is plural-named]Those are[else]That is[end if]"
 
 this is the first-time-hint-check rule:
 	if first-hint-check is true, continue the action;
@@ -1906,8 +1906,6 @@ carry out sging:
 		say "You switch the gadget to certify.";
 		now gadget is cert;
 	the rule succeeds;
-
-report taking tagged gadget for the first time: say "Nat Egam nods. 'Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo.'";
 
 book area-save
 
@@ -3218,10 +3216,10 @@ after printing the name of the tagged gadget when taking inventory:
 
 check taking gadget: if gadget is in Potshot Hotspot and red bull is in Potshot Hotspot, say "Red Bull Burdell kicks it out of the way." instead;
 
-after taking the tagged gadget:
-	say "[one of]It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget[or]You pick up the gadget, again[stopping].";
-		the rule succeeds;
-	continue the action;
+report taking the tagged gadget:
+	say "As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.";
+	if gateman is touchable, say "[line break]Nat Egam nods. 'Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo.'";
+	the rule succeeds;
 
 to say buz-help: say "[if gateman is touchable][one of]. 'That means you can't change the item back,' says the gateman.[or].[stopping][else].[end if]".
 
@@ -3462,7 +3460,7 @@ section blue lube and phail phial
 
 the PHAIL phial is a thing in acne bit cabinet. the phial is warpable.
 
-description of PHAIL phial is "It feels tingly and looks glinty. It contains some blue lube that sloshes about a bit[if phial is not in cabinet]. You see the words GLEAN/ANGLE scratched on it, and it also reads, in small print, PROACTIVELY HELPING ADVENTURERS IN LIMBO. Geez, acronyms can be so contrived[else]. It looks like you could read it, if you took it from the cabinet[end if]."
+description of PHAIL phial is "It looks glinty and[if phial is in cabinet], you imagine,[end if] feels tingly. It contains some blue lube that sloshes about a bit[if phial is not in cabinet]. You see the words GLEAN/ANGLE scratched on it, and it also reads, in small print, PROACTIVELY HELPING ADVENTURERS IN LIMBO. Geez, acronyms can be so contrived[else]. It looks like you could read it, if you took it from the cabinet[end if]."
 
 the blue lube is a boring thing. it is part of the phail phial. description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Nat Egam said. You can either ANGLE or GLEAN as you look at it, which may help your quest[end if].". bore-check of blue lube is bore-lube rule. bore-text of blue lube is "The lube's really only good for staring at."
 
@@ -3558,88 +3556,105 @@ understand the command "glean/hanker/nk/kr/hnr/hkr" as something new.
 
 understand "glean" and "hanker" and "nk" and "kr" and "hnr" and "hkr" as gleaning.
 
+this is the ordeal-glean rule:
+	if location of player is Notices Section:
+		if nametag is touchable, all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
+		if player does not have gadget, all-say "You see yourself taking the tagged gadget inside the cabinet." instead;
+		all-say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
+
+this is the stores-glean rule:
+	repeat with myp running through portals:
+		if myp is ogled lodge and not you-can-advance, next;
+		if myp is touchable, say "You see yourself exploring [the myp] you created." instead;
+	if store f is touchable, all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
+	if store i is touchable, all-say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
+	if store m is touchable, all-say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
+	if number of solved regions < 3, all-say "You see yourself entering [the random touchable portal]." instead;
+	if store r is touchable, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
+	all-say "You see yourself relaxing in a large home far from here." instead;
+
+this is the forest-glean rule:
+	if Self ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
+	if Emptiness Sepiments is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
+	if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
+	if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
+	if spread is in Emptiness Sepiments, all-say "You see the spread fluttering as if outside an open window." instead;
+	if red asp is in Emptiness Sepiments, all-say "You see a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
+	if drapes are in Emptiness Sepiments, all-say "You see yourself slashing at the drapes, which billow out." instead;
+	if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
+	if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Emptiness Sepiments]red asp[else]spread[end if] [if player is not in Emptiness Sepiments]in Emptiness Sepiments [end if]into something easier to cut with the sliver." instead;
+	unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
+	if Frost Forts is unvisited:
+		if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
+	if location of player is Frost Forts:
+		if vowels are in Frost Forts, all-say "You see the vowels grow slavering teeth." instead;
+		all-say "You are about to look in the phial, but it's survival time, here." instead;
+
+to say in-here of (rm - a room): say "[if player is in rm]here[else]in [rm][end if]"
+
+this is the sortie-glean rule:
+	if centrifuge-stopped is false, all-say "You see yourself flipping the dial back and forth about six or seven times[sortie-end]." instead;
+	if the nick is unvisited, all-say "Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here." instead;
+	if player is in the nick, all-say "You see yourself patting your stomach." instead;
+	if warts are part of the player, all-say "You see your face clear again, pleased you reversed the warts." instead;
+	if taco is off-stage and coat is off-stage, all-say "You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal." instead;
+	if hoses are touchable, all-say "You see yourself smiling at your feet with pride!" instead;
+	if moor is unvisited, all-say "You see yourself [if player is not in roomroom]going to the southeast room and [end if]disappearing!" instead;
+	if anapest is in moor, all-say "You see a rough but friendly fellow scaring Pat away." instead;
+	if hay is not part of scraped wall, all-say "You see yourself filling up [if stiller trellis is visited]the wall [in-here of Stiller Trellis][else]a wall you don't recognize yet[end if] then making it disappear." instead;
+	if scraped wall is not moot, all-say "You see the haywall vanishing." instead;
+	if silo is not in moor, all-say "You see yourself building a huge structure [if player is not in moor]in the moor [end if]without saying anything." instead;
+	if black door is not part of the silo or panel is not part of the silo or missile is not in silo, all-say "You see yourself assembling the silo further." instead;
+	if hoots button is touchable or trees button is touchable, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
+	all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
+
+this is the metros-glean rule:
+	if night thing is in The Ol Hotel, all-say "You see yourself giving something reddish to [if The Ol Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
+	if dry cake is in Obtains Boastin Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
+	if brocade is in Florae, all-say "You see yourself taking a free sample of some cloth." instead;
+	if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
+	if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
+	if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
+	if Esoteric Coteries are unvisited:
+		d "dry cake: [location of dry cake].";
+		d "keycard: [location of keycard].";
+		all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the friend finder [in-here of Underside][if barcode is not part of keycard]. Nothing works until you put them together[end if]." instead;
+	if player does not have tulip:
+		if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
+		if termite emitter is angstgnatted, all-say "You see yourself opening the termite emitter so it swarms over the nerds." instead;
+		all-say "You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd." instead;
+	if player is not in Bassy Abyss, all-say "You see yourself (finally) walking east from Elm Train Terminal now that you have a light source." instead;
+	if siren is touchable, all-say "You see yourself pounding the siren, then clapping your hands and creating a swarm of dust." instead;
+	if beats are touchable, all-say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if], and the monster collapses before you touch it." instead;
+	if sword is touchable, all-say "A quick swordfight, and the beast is vanquished!" instead;
+	all-say "Words morph into a sword that overpowers the beast." instead;
+
+this is the resort-glean rule:
+	if player is in Astral Altars, all-say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
+	if player is in Leis Isle, all-say "You see yourself either swimming or flying east[if cork is off-stage and wings are off-stage], but not without proper gear[end if]." instead;
+	if player is in Rived Drive:
+		if poles are in Rived Drive, all-say "You see the poles to the east bend at an angle." instead;
+		if toeholds are touchable or (ropes are touchable and grips are touchable), all-say "You see yourself climbing east without much trouble." instead;
+		all-say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
+	if player is in Potshot Hotspot:
+		if red bull burdell is touchable, all-say "You see yourself somehow managing to defeat Red Bull Burdell while still on the ground." instead;
+		if red bull burdell is moot, all-say "You see yourself walking east." instead;
+		all-say "You see the [if riot is in Potshot Hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
+	if player is in Means Manse, all-say "You ... well, you see lots of possibilities. Just sitting around, avoiding the exits, or making the Means Manse feel more like home." instead;
+
 carry out gleaning:
 	if phial is not touchable, say "[reject]" instead;
 	if phial is in cabinet:
 		if lube-asked is true:
+			say "(taking the phial first)[paragraph break]";
 			try taking phail phial;
 			if player does not have phail phial, all-say "[bug-report] Please let me know how this happened." instead;
-		all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
+		else:
+			all-say "You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe [if gateman is off-stage]find someone to ask[else]ask the gateman[end if]." instead;
 	if blue lube is not touchable, all-say "[reject]" instead;
 	all-say "You stare into the blue lube for a bit. You see a small story unfold.[line break]";
-	if location of player is Notices Section:
-		if nametag is touchable, all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
-		all-say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
-	if location of player is Trips Strip:
-		if store f is touchable, all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
-		if store i is touchable, all-say "You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch." instead;
-		if store m is touchable, all-say "You see yourself examining the map on store M. You hear a subway--or maybe just a busy city street." instead;
-		if number of solved regions < 3, all-say "You see yourself entering [random touchable portal]." instead;
-		if store r is touchable, all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
-		all-say "You see yourself relaxing in a large manse far from here." instead;
-	if mrlp is forest:
-		if Self ID Fields is unvisited, all-say "You see yourself considering all four compass directions before picking the right one." instead;
-		if Emptiness Sepiments is unvisited, all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through Corses Crosse with ease." instead;
-		if livers are off-stage, all-say "You see the liches working their way under the meats, which fall into the grinder." instead;
-		if sliver is off-stage, all-say "You see the livers narrowing to a sharp, semi-metallic point." instead;
-		unless drapes are moot, all-say "You see yourself slashing at the drapes, which billow out." instead;
-		if shotgun is off-stage, all-say "You see yourself reading the Notes Stone poem and carrying something stick-like." instead;
-		if spread is touchable, all-say "You see the spread fluttering as if outside an open window." instead;
-		if red asp is touchable, all-say "You see the a snake-skin patterned cloth hanging and swaying from an unseen wind." instead;
-		if drapes are off-stage, all-say "You see yourself changing the [if red asp is in Emptiness Sepiments]red asp[else]spread[end if] [if player is not in Emptiness Sepiments]in Emptiness Sepiments [end if]into something easier to cut with the sliver." instead;
-		unless silver is moot, all-say "You see yourself [if silver is off-stage]molding the sliver into something more compact and glowing and then [end if]loading your shotgun." instead;
-		if Frost Forts is unvisited:
-			if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
-		if location of player is Frost Forts:
-			if vowels are in Frost Forts, all-say "You see the vowels grow slavering teeth." instead;
-			all-say "You are about to look in the phial, but it's survival time, here." instead;
-	if mrlp is sortie:
-		if centrifuge-stopped is false, all-say "You see yourself flipping the dial back and forth about six or seven times[sortie-end]." instead;
-		if the nick is unvisited, all-say "You see yourself walking north from the centrifuge and being captured!" instead;
-		if player is in the nick, all-say "You see yourself patting your stomach." instead;
-		if taco is off-stage and coat is off-stage, all-say "You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal." instead;
-		if warts are part of the player, all-say "You see your face clear again, pleased you reversed the warts." instead;
-		if hoses are in roomroom, all-say "You see yourself smiling at your feet with pride!" instead;
-		if moor is unvisited, all-say "You see yourself [if player is not in roomroom]going to the southeast room and [end if]disappearing!" instead;
-		if anapest is in moor, all-say "You see a rough but friendly fellow scaring Pat away." instead;
-		if hay is not part of scraped wall, all-say "You see yourself filling up a wall then making it disappear." instead;
-		if silo is not in moor, all-say "You see yourself building a huge structure without saying anything." instead;
-		if black door is off-stage or panel is off-stage or missile is off-stage, all-say "You see yourself programming the silo, seeing it moving. It has something in it, a way to get in, and it's programmable." instead;
-		if hoots button is touchable or trees button is touchable, all-say "You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar." instead;
-		all-say "The blue lube shows you nothing. You probably just need to push a button or something." instead;
-	if mrlp is metros:
-		if night thing is in The Ol Hotel, all-say "You see yourself giving something reddish to [if The Ol Hotel is visited]the night thing in the hotel[else]some weird monster[end if] before it runs off." instead;
-		if cake is in Obtains Boastin Bastion, all-say "You see bugs crawling over rich people, while you sit in the center, smiling." instead;
-		if player has heaths, all-say "You see a weapon at your side, as if tied to a belt." instead;
-		if player has begonias, all-say "You are holding a bag with one hand and plugging an ear with another." instead;
-		if neon pig is in Elm Train Terminal and Elm Train Terminal is visited, all-say "You see the neon pig exploding, the empty space being filled with--an ear of corn?!" instead;
-		if Esoteric Coteries are unvisited:
-			d "dry cake: [location of dry cake].";
-			d "keycard: [location of keycard].";
-			all-say "You see yourself putting the [if brocade is moot]barcode[else]brocade[end if] and the [if player has keycard]keycard[else]dry cake[end if] on the friend finder in the Underside. Nothing works until you put them together." instead;
-		if player does not have tulip:
-			if player has noise bag or player has begonias, all-say "You see yourself grabbing the tulip as the nerds close their ears!" instead;
-			all-say "You see yourself opening the termite emitter so it swarms over the nerds[if emitter is not ungnatted]. You wonder who would be dirty enough to give you a quick refill[end if]." instead;
-		if player is not in Bassy, all-say "You see yourself (finally) walking across the tracks." instead;
-		if siren is touchable, all-say "You see yourself pounding the siren and then doing various gymnastic tricks--wait, no, that'd be cray. Too many verbs to guess." instead;
-		if beats are touchable, all-say "You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your [if player has noise bag]noise bag[else]sheath[end if] and it collapses before you touch it." instead;
-		if sword is touchable, all-say "A quick swordfight, and the beast is vanquished!" instead;
-		all-say "Words morph into a sword that overpowers the beast." instead;
-	if mrlp is resort:
-		if player is in Astral Altars, all-say "You watch as the tiles shrink from a large land mass to a smaller one." instead;
-		if player is in Leis Isle, all-say "You see yourself either swimming or flying east, but not without proper gear." instead;
-		if player is in Rived Drive:
-			if poles are in Rived Drive, all-say "You see the poles to the east bend at an angle." instead;
-			all-say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
-			if toeholds are touchable, all-say "You see yourself walking east." instead;
-			if ropes are touchable and grips are touchable, all-say "You see yourself walking east." instead;
-			all-say "You see yourself struggling with the tool shed, or with things around, to find a way to climb the slope." instead;
-		if player is in Potshot Hotspot:
-			if red bull burdell is touchable, all-say "You somehow manage to defeat Red Bull Burdell while still on the ground." instead;
-			if red bull burdell is moot, all-say "You see yourself walking east." instead;
-			all-say "You see the [if riot is in Potshot Hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
-		if player is in Means Manse, all-say "You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive." instead;
-	all-say "[bug-report] This part needs a story.";
+	abide by glean-rule of mrlp;
+	all-say "BUG. The current game state needs a story.";
 	the rule succeeds;
 
 report gleaning (this is the angle-glean check rule):
@@ -3846,6 +3861,7 @@ to pad-rec (q - text):
 		if there is no short entry:
 			say "[bug-report] need short entry for [q].";
 		else if short entry is q:
+			if debug-state is true, say "DEBUG: pad-reccing [q].";
 			if known entry is false:
 				now known entry is true;
 				if there is no verify entry or verify entry is true or number of characters in recbuffer > 0:
@@ -6026,6 +6042,7 @@ check pushing trees button:
 	say "Trees begin growing out of the side of the silo. The Trees button switches to a reset button which starts blinking violently. You push it before the trees crash down on you. They vanish, and it's a trees button again. Whew." instead;
 
 check pushing steer button:
+	if missile is not in silo, say "Nothing happens. Presumably, the silo needs something to steer inside it." instead;
 	if missile-steered is true:
 		say "That'd be overkill. You imagine it's [if shoot button is touchable]the other[else]another[end if] one you need to push to launch.";
 	else:
@@ -6106,11 +6123,11 @@ check putting it on (this is the silo-put rule):
 	if noun is the missile, say "You roll the missile around, but you can't find anywhere to put it." instead;
 
 before doing something with the missile when the missile is touchable:
-	if missile is moot, say "It's where it needs to be. No need to worry about it." instead;
+	if missile is in silo, say "It's where it needs to be. No need to worry about it." instead;
 
 check inserting missile into silo:
 	if black door is part of silo:
-		say "You schlep the missile through the door. You hear some mechanics and whizzing, then 'SMILIES MISSILE PROPERLY ALIGNED FOR DEALING A RESULT WITH LUSTER.'";
+		say "You schlep the missile through the door. You hear some mechanics and whizzing. A luster-result rustle, if you will. Then 'SMILIES MISSILE DEALING-ALIGNED!'";
 		set the pronoun it to silo;
 		now missile is in silo instead;
 	else:
@@ -9663,12 +9680,15 @@ to say that-those of (p - a thing): say "[if p is plural-named]those[else]that[e
 
 section regional manip
 
-a region has a sto called reg-sto. a region has a portal called reg-ent.
+a region has a sto called reg-sto. a region has a portal called reg-ent. a region has a rule called glean-rule.
 
-reg-sto of forest is store f. reg-ent of forest is scented descent.
-reg-sto of sortie is store i. reg-ent of sortie is posted depots.
-reg-sto of metros is store m. reg-ent of metros is trade tread.
-reg-sto of resort is store r. reg-ent of resort is ogled lodge.
+glean-rule of ordeal loader is ordeal-glean rule.
+glean-rule of stores is stores-glean rule.
+
+reg-sto of forest is store f. reg-ent of forest is scented descent. glean-rule of forest is forest-glean rule.
+reg-sto of sortie is store i. reg-ent of sortie is posted depots. glean-rule of sortie is sortie-glean rule.
+reg-sto of metros is store m. reg-ent of metros is trade tread. glean-rule of metros is metros-glean rule.
+reg-sto of resort is store r. reg-ent of resort is ogled lodge. glean-rule of resort is resort-glean rule.
 
 to solve-region (sre - a region):
 	process the notify score changes rule;
@@ -10968,3 +10988,16 @@ carry out disasing:
 		now player has Q;
 	say "The three beard parts are now all disassembled.";
 	the rule succeeds;
+
+section extra monty test - not for release
+
+table of monties (continued)
+montopic (topic)	on-off	test-title (text)	test-action	topic-as-text (text)
+"glean"	false	"GLEANing"	try-gleaning rule	"glean"
+
+this is the try-gleaning rule: try gleaning;
+
+check montying:
+	if the topic understood matches "glean":
+		now first-hint-check is true;
+
