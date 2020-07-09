@@ -154,7 +154,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=17 for weeds
 2=19 for Dr Yow's two voices
 1=20 for lone duck
-1=21 for gifted/fidget
+1=21 for READING A DINGER/grained
 1=22 for using the ragged dagger on the rapier repair NON-ANAGRAM
 2=24 for a bot boat
 1=25 for the palace]
@@ -173,7 +173,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=21 for rewired (bot-boat)
 1=22 for giving Tetris Sitter the top opt pot NON-ANAGRAM
 4=26 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
-1=26 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=27 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24. [2 for the extra conjunction pair, 1 for "however" after first conjunction pair, 1 for dissing Elmer/Merle with 'ly' and 1 without, 2 for all animals in both N and S animal regions, 1 for cinders.]
 
@@ -232,6 +232,47 @@ a person can be superchatty, subject-talking or terse. a person is usually subje
 a person can be terse-warned. a person is usually not terse-warned.
 
 a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All picaros' chums are Andres. And so on.]
+
+chapter action
+
+To decide whether the current action is no-timely: (- meta -)
+
+xring is an action applying to one thing. [this is a test command but we need it in release to label it as "procedural"]
+
+to decide whether the action is procedural: [aip]
+	if the current action is no-timely, yes;
+	if fliptoing, yes; [game progress verbs]
+	if scaning, yes; [hint verbs]
+	if sbing, yes;
+	if ss0ing, yes;
+	if ssing, yes;
+	if scanlasting, yes;
+	if objhinting, yes;
+	if taking inventory, yes;
+	if dropping, yes;
+	if objasking about, yes; [talking, because this often fails]
+	if asking about, yes;
+	if objasking generically, yes;
+	if asking generically, yes;
+	if xraying, yes; [cheat verbs]
+	if discerning, yes;
+	if guruing, yes;
+	if gxing, yes;
+	if swearing obscenely, yes; [silly verbs]
+	if swearing mildly, yes;
+	if saying yes, yes;
+	if saying no, yes;
+	if reading, yes; [senses]
+	if examining, yes;
+	if looking, yes;
+	if attacking, yes;
+	if smelling, yes;
+	if listening, yes;
+	if qbc_litany is table of no conversation: [we can goto something boring with no problen]
+		if gotoing, yes;
+		if gotothinging, yes;
+	if xring, yes; [this is a debug command]
+	no;
 
 chapter portals
 
@@ -520,7 +561,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 800.
+use MAX_VERBS of 810.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -540,7 +581,7 @@ section compiler non-syntax section - not for release
 
 use MAX_DICT_ENTRIES of 3100.
 
-use MAX_VERBS of 820. [delta=20]
+use MAX_VERBS of 830. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -4951,7 +4992,7 @@ this is the presto-hinting rule:
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
 	if player is in a mazeroom or player is in Nowt Town or player is in Unwary Runway:
 		if spoilit is false, all-say "[maze-solve]." instead;
-		try objhinting volt maze instead;
+		try objhinting n-t-air instead;
 	if player is in Grey Gyre:
 		if volt maze is in Grey Gyre, try objhinting volt maze instead;
 		if ether is not moot:
@@ -5056,16 +5097,15 @@ this is the routes-hinting rule:
 	abide by the point-to-mesa rule for bev o be ova;
 	abide by the point-to-mesa rule for MORF FORM;
 	abide by the point-to-mesa rule for THE BEAN;
-	if location of player is Same Mesa:
+	if location of player is Same Mesa: [this is in no particular order, other than pointing the player to the easier reagents first]
 		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
+		if Idle Deli is unvisited, try objhinting adsorbing signboard instead;
+		if Adobe Abode is unvisited, try objhinting lairage regalia instead;
 		if sit a nag is reflexive, try objhinting sit a nag instead;
 		if side art is reflexive, try objhinting side art instead;
 		if WOE BOW BELL is touchable, try objhinting WOE BOW BELL instead;
 		if Rude N Nuder is touchable, try objhinting Rude N Nuder instead;
 		if Gast is in Same Mesa, try objhinting Gast instead;
-		if Cleric Circle is unvisited, try objhinting scripture picturers instead;
-		if Idle Deli is unvisited, try objhinting adsorbing signboard instead;
-		if Adobe Abode is unvisited, try objhinting lairage regalia instead;
 	if location of player is Cleric Circle:
 		if list o toils is unexamined:
 			all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
@@ -11662,10 +11702,7 @@ chapter Trevis Vister
 Trevis Vister is proper-named scenery in Econ Cone. "[one of]The statue of Trevis Vister is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Red rivets lie at the bottom of the statue[one of]. It is not a statue of limitations, for sure. [paragraph break]But at least it is not an oil'd idol, or an acts-cast showing Trevis Vister closing a business deal. Sadly, those exist here in Yorpwald, thanks to Elvira's promotions[or][stopping]." [?? X TREVIS when I get a chance ]
 
 to decide which number is cone-points:
-	let temp be 0;
-	if rivets are reflexed, increment temp;
-	if praise spirea is reflexed, increment temp;
-	decide on temp;
+	decide on (boolval of whether or not rivets are reflexed) + (boolval of whether or not praise spirea is reflexed);
 
 Include (-
 	has transparent talkable
@@ -11682,10 +11719,9 @@ this is the bore-rivets rule:
 
 rivets-first is a truth state that varies.
 
-check objhinting rivets:
-	if rivets-first is false and praise spirea is reflexive, try objhinting praise instead;
-	if rivets are reflexed and praise spirea is reflexive, try objhinting praise instead;
-	if cone-points is 2, all-say "You learned all you could from the statue." instead;
+check objhinting when player is in Econ Cone:
+	if cone-points is 2:
+		if noun is Trevis Vister or noun is rivets or noun is praise spirea, all-say "You learned all you could from the statue." instead;
 
 the praise spirea is reflexive scenery in Econ Cone. "It's beautiful and inspiring and all, but you don't want to be caught staring at it just because it's pretty."
 
@@ -15475,18 +15511,23 @@ understand "xray [something]" as xraying.
 understand "x-ray [something]" as xraying.
 understand "xray" as xraying.
 
-rule for supplying a missing noun when xraying:
-	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat.";
+rule for supplying a missing noun when xraying or xring:
+	if player is in dourest detours:
+		now the noun is bogus-detours;
+		continue the action;
+	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat in a non-empty room.";
 	reject the player's command;
 
 to say if-duck: if duck is not touchable, say "--but nothing [if Shaven Havens is visited]here [end if]seems to fit with UNLOCKED";
 
 to say big-hint of (rayx - a thing) :
-	if rayx is a guardian or rayx is a picaro:
-		choose row with the-from of rayx in the table of towers anagrams;
-		say "[right-word entry in upper case]";
-	else: [only for non guardians/non picaros] [the order is southeastish and north, 1st place you can use something]
-		say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is retinas]ANTSIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";
+	repeat through table of towers anagrams:
+		if the-from entry is rayx:
+			say "[right-word entry in upper case]";
+			continue the action;
+	say "NOTHING--sorry, this is a bug, but it won't cost your x-ray vision.";
+	now xray-bug-sorry is true;
+[	say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is retinas]ANTSIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";]
 
 xray-warn is a truth state that varies.
 
@@ -15499,6 +15540,8 @@ check giving hintpastry to a guardian:
 	say "Bribery won't work." instead;
 
 palace-warn is a truth state that varies.
+
+xray-bug-sorry is a truth state that varies.
 
 check xraying:
 	if noun is crocus, say "The succor crocus reveals no molecular biological secrets. It is probably good as-is." instead;
@@ -15535,25 +15578,34 @@ check xraying:
 		if t-or-b is reflexive, try xraying t-or-b instead;
 		if blaster is reflexive, try xraying blaster instead;
 		if turbos are reflexive, try xraying turbos instead;
-	if noun is reflexed or noun is nonreflexive, say "[if noun is plural-named]Those don't[else]That doesn't[end if] seem to need internal changing. Maybe find something or someone else to x-ray." instead;
+	if noun is reflexed or noun is nonreflexive, say "Your x-ray vision doesn't seem to work. So you probably don't have to do anything, there. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
 			now palace-warn is true;
-			say "Boy! This is a big one. You are overwhelmed by the superlativeness of the way to describe the castle. You are pretty sure you can handle that word being spoiled. Well, I'm pretty sure you are pretty sure. Are you pretty sure you can handle the spoiler?";
+			say "Boy! This is a big one. You are overwhelmed by the superlativeness of the way to describe the castle. You are pretty sure you can handle that word being spoiled. Well, I'm pretty sure you are pretty sure. uAre you pretty sure you can handle the spoiler?";
 			if the player yes-consents:
 				do nothing;
 			else:
 				say "You decide to be pretty sure you can figure it on your own, instead." instead;
+	now xray-bug-sorry is false;
+	if noun is LLPish:
+		say "You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?";
+		unless the player regex-prompt-consents:
+			say "OK. Save it for something else.";
+			continue the action;
 	if noun is guardian:
 		say "Hmm. You bet you could get past if [the noun] were [big-hint of noun].";
 	else if noun is picaro: [do I need this? Since picaros moved to start]
-		say "Boy! Sure would be nice if [noun] were [big-hint of noun].";
+		say "Boy! [noun] might be less oppressive if he were [big-hint of noun].";
 	else if noun is rayed:
 		say "You remember you could still think [big-hint of noun]." instead;
 	else if noun is prefigured or noun is thruhinted:
 		say "You remember trying to make things [big-hint of noun], so you won't waste your x-ray vision here." instead;
 	else:
-		say "You have a good gaze, and you know what to do and say and think. Gotta be [big-hint of noun].";
+		say "After a thoughtful gaze, you reckon [the noun] could be [big-hint of noun].";
+	if xray-bug-sorry is true:
+		now xray-bug-sorry is false;
+		continue the action;
 	if xraytrump is false:
 		if used-ray is false, poss-d;
 		now used-ray is true;
@@ -17054,42 +17106,6 @@ to say a-bunch: say "[if vw is 2]an ex-bunch[else]a bunch[end if]"
 definition: a room (called twr) is towery:
 	if twr is Loftier Trefoil, decide no;
 	if map region of twr is towers, decide yes;
-
-To decide whether the current action is no-timely: (- meta -)
-
-to decide whether the action is procedural: [aip]
-	if the current action is no-timely, yes;
-	if fliptoing, yes; [game progress verbs]
-	if scaning, yes; [hint verbs]
-	if sbing, yes;
-	if ss0ing, yes;
-	if ssing, yes;
-	if scanlasting, yes;
-	if objhinting, yes;
-	if taking inventory, yes;
-	if dropping, yes;
-	if objasking about, yes; [talking, because this often fails]
-	if asking about, yes;
-	if objasking generically, yes;
-	if asking generically, yes;
-	if xraying, yes; [cheat verbs]
-	if discerning, yes;
-	if guruing, yes;
-	if gxing, yes;
-	if swearing obscenely, yes; [silly verbs]
-	if swearing mildly, yes;
-	if saying yes, yes;
-	if saying no, yes;
-	if reading, yes; [senses]
-	if examining, yes;
-	if looking, yes;
-	if attacking, yes;
-	if smelling, yes;
-	if listening, yes;
-	if qbc_litany is table of no conversation: [we can goto something boring with no problen]
-		if gotoing, yes;
-		if gotothinging, yes;
-	no;
 
 definition: a thing is followy:
 	if it is rodney, no;
@@ -21481,8 +21497,10 @@ this is the hint-moot-objects rule:
 this is the spoil-hints rule:
 	if spoilit is false, continue the action;
 	if there is hint-entry of noun in table of hintobjs:
-		now spoilit is false;
 		choose row with hint-entry of noun in the table of hintobjs;
+		if there is a parallel-entry entry:
+			try objhinting parallel-entry entry instead;
+		now spoilit is false;
 		if there is no spoil-entry entry:
 			d "Oops fix [hint-entry entry].[line break]";
 		if player has curst crust:
@@ -21492,7 +21510,7 @@ this is the spoil-hints rule:
 				do nothing instead;
 			if noun is thruhinted, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
 			if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think of [spoil-entry entry][else]once again thing [spoil-entry entry][end if]." instead;
-			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
+			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to [spoil-entry entry]." instead;
 			say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";
 			if scams is false, decrement swears;
 			now undo-code is 1;
@@ -21508,7 +21526,7 @@ this is the spoil-hints rule:
 			prevent undo;
 			now undo-code is 6;
 			now noun is cheatitemed;
-			say "You angle your spoon a bit, and you realize you, or things, are or need to be [spoil-entry entry].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
+			say "You angle your spoon a bit, and you realize you, or something, should be [spoil-entry entry].[paragraph break]The spoon fizzles and dissolves once you see how next to get around." instead;
 		if player has fretful truffle:
 			if noun is thruhinted or noun is prefigured, say "You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to [spoil-entry entry]." instead;
 			moot fretful truffle;
