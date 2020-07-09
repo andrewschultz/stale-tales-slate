@@ -5314,6 +5314,7 @@ to decide which thing is oyster-item:
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
 		if pins are touchable and pins are reflexive, decide on pins;
+		if pins are reflexed, decide on d2;
 		decide on dialer;
 	decide on the player;
 
@@ -13964,7 +13965,7 @@ after spilling:
 		say "[if spill-target is nothing]PILLS NOT USED SUCCESSFULLY[else]HOW PILLS WERE USED: [how-pills-used][end if].";
 	continue the action;
 
-to guy-cheat (gc - a thing):
+to tag-spill-cheated (gc - a thing):
 	now spill-target is gc; [this is for testing MISSES without going to the end]
 	if produce-redo-cup is false:
 		now jar-empty is true;
@@ -13979,9 +13980,11 @@ every turn when mrlp is oyster and debug-state is true:
 to decide which thing is oyster-spill-item:
 	if player is in posh hops shop, decide on LOLstr trolls;
 	if player is in Lean Lane and tea tray is in Lean Lane, decide on tea tray;
-	decide on oyster-item;
+	let temp be oyster-item;
+	if temp is thin hint, decide on the player;
+	decide on temp;
 
-check spilling (this is the general spill reject rule):
+check spilling (this is the general game state spill reject rule):
 	if noun is not pills, say "You can't spill that. Or you can, but it won't help you or distract anyone or anything blocking you." instead;
 	if jar-empty is true, say "You already spilled the pills. None are left." instead;
 	if pills are not touchable, say "Nothing to spill here.";
@@ -13992,11 +13995,11 @@ check spilling (this is the general spill reject rule):
 		if the player's command does not include "pills":
 			say "You can't spill the jar--just what's in it.";
 
-check spilling (this is the specific spill reject rule):
+check spilling (this is the specific game state spill reject rule):
 	if player is in Sclerous Closures:
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of haunter is location of player:
-		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around." instead;
+		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around[if player is not in anger range] some more[end if]." instead;
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if HUNTER HUNT AREA is in Anger Range:
@@ -14033,11 +14036,14 @@ carry out spilling:
 	repeat through table of oyster anagrams:
 		if the-from entry is oi:
 			try fliptoing the-to entry;
-			guy-cheat the-to entry;
+			tag-spill-cheated the-from entry;
+			if debug-state is true, say "DEBUG: MISSES will show [endgame-spill-instead].";
 			the rule succeeds;
 	say "WARNING could not flip-from [oi].";
 	now flip-spill-flag is false;
 	the rule succeeds;
+
+to say endgame-spill-insteadl: say "Instead of spilling the pills, you could've tried to [how-pills-used]"
 
 this is the ant-side-quest-check rule:
 	say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
@@ -14607,6 +14613,10 @@ after examining gleaner when player is in end den and gleaner is reflexed:
 	move player to Tenfold Teflond Den Loft;
 	continue the action;
 
+after examining gleaner when end den is visited and Tenfold Teflond Den Loft is not visited:
+	say "You take note of the way through, so you don't wind up back in the End Den next time.";
+	continue the action;
+
 after printing the name of the general gleaner while taking inventory:
 	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
 	continue the action;
@@ -14624,6 +14634,7 @@ find-base is a truth state that varies.
 
 to say oy-can-win:
 	now find-base is true;
+	if aunt-tuna-cross is true and wipes are in lean lane, say ", but it's dimmed, as if the place is off-limits"
 
 chapter enlargeing
 
@@ -22472,7 +22483,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A AVIDER.";
 		if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to DERIVE how to improve Drive E.";
 	else if myreg is oyster:
-		if spill-target is not nothing, say "[2dmiss of myreg]Instead of spilling the pills, you could've tried to [how-pills-used].";
+		if spill-target is not nothing, say "[2dmiss of myreg][endgame-spill-instead].";
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
 		if cans are not moot, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not moot, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
