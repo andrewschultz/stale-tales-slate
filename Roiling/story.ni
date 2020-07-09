@@ -7630,7 +7630,7 @@ check fliptoing (this is the check off preconditions before flipping rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
 			if the-from entry is reflexed, say "[reject]" instead;
-			if there is a pre-rule entry, abide by the pre-rule entry;
+			if there is a pre-rule entry and flip-spill-flag is false, abide by the pre-rule entry;
 
 check fliptoing (this is the check region ending flip rule):
 	if noun is a thisflip listed in table of end-flips:
@@ -7657,8 +7657,9 @@ carry out fliptoing (this is the main fliptoing rule):
 				if the-to entry provides the property male and the-to entry is male, set the pronoun him to the-to entry;
 				if the-to entry provides the property female and the-to entry is female, set the pronoun her to the-to entry;
 			now last-hash is 0;
-			if pill-use is true:
-				pill-list the-from entry;
+			if pill-use is true and there is a pill-msg entry:
+				if debug-state is true and pill-use is true, say "(DEBUG) NO PILL USE MESSAGE FOR [the-from entry] -> [the-to entry].";
+				say "[pill-msg entry][line break]";
 			else if suppress-score is false:
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
@@ -13931,6 +13932,7 @@ plea	"Some of the crays are dumb enough to think that the pills might be coins. 
 carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
 tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
 prod	"You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger."
+lance	"The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it."
 heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
 waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, the Paw-R-Wrap falls. He flees, and as you run after him, you step on the Paw-R-Wrap, causing it to tear and pop.[paragraph break]You ruined the Paw-R-Wrap, but you do notice a ruby inside. It seems valuable. So you take it."
@@ -13950,97 +13952,73 @@ pill-use is a truth state that varies.
 every turn when mrlp is oyster and debug-state is true:
 	d "Current hint item = [oyster-item].";
 
-carry out spilling:
+to decide which thing is oyster-spill-item:
+	if player is in posh hops shop, decide on LOLstr trolls;
+	if player is in Lean Lane and tea tray is in Lean Lane, decide on tea tray;
+	decide on oyster-item;
+
+check spilling (this is the general spill reject rule):
 	if noun is not pills, say "You can't spill that. Or you can, but it won't help you or distract anyone or anything blocking you." instead;
 	if jar-empty is true, say "You already spilled the pills. None are left." instead;
+	if pills are not touchable, say "Nothing to spill here.";
 	if player does not have pills:
 		say "(Taking them first, to be pedantic.)";
 		now player has pills;
 	if the player's command includes "jar":
 		if the player's command does not include "pills":
 			say "You can't spill the jar--just what's in it.";
-	now cheated-guy is nothing;
+
+check spilling (this is the specific spill reject rule):
 	if player is in Sclerous Closures:
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of haunter is location of player:
-		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
+		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around." instead;
+	if player is in Anger Range and carps are moot:
+		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
+		if HUNTER HUNT AREA is in Anger Range:
+			if thin hint is not in Rascal Craals, say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
+	if player is in Lean Lane:
+		if Paw R Wrap is not off-stage:
+			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
 	if player is in Rascal Craals:
 		if ruby is off-stage or digger is off-stage, say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
+	if player is in Horned Hedron and walleyes are in Horned Hedron, say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead; [walleyes can't really be flipped. You need to go through the sausage.]
 	if player is in End Den, say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
-	let oi be oyster-item;
-	d "Spilling [oi].";
+	let oi be oyster-spill-item;
+	if oi is the player, say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
 	if pill-warned is false and scams is false:
 		say "[if Anger Range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
 		now pill-warned is true;
 		unless the player yes-consents, do nothing instead;
 		say "Okay.";
-	if player is in Lean Lane:
-		if Paw R Wrap is off-stage:
-			if produce-redo-cup is false:
-				if dent is moot, poss-d; [can't fix dent again]
-				if wipes are in Lean Lane, decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
-			now player has wrap;
-			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
-			guy-cheat trout;
-			now aunt-tuna-cross is true;
-			move player to Anger Range;
-			pearl-check;
-			do nothing instead;
-		else:
-			say "That would be a rude parting gift. You've claimed your reward--the Paw-R-Wrap bubble wrap[if tea tray is not moot]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
-	if player is in Posh Hops Shop: [special case for spilling pills. This overrides the current hint item and takes out the trolls]
-		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
-		increase min-score of oyster by cur-score of oyster;
-		guy-cheat trolls;
-		reg-inc;
-		if cur-score of oyster < 3:
-			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you can skip up to 3 points but will not lose a point using the pills later to tutor Tortu the trout if you use the pills now. So really the maximum to lose is 2.]
-		move player to Olde Lode instead;
-	if player is in Anger Range and carps are moot:
-		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
-		if HUNTER HUNT AREA is in Anger Range:
-			if thin hint is not in Rascal Craals, say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
-	if player is in Horned Hedron and walleyes are in Horned Hedron, say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead; [walleyes can't really be flipped. You need to go through the sausage.]
-	if oi is the player, say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
-	if player is in Shuttle Hutlets:
-		if oi is waste or oi is heaps or oi is lance:
-			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
-			if the player regex-prompt-consents:
-				do nothing;
-			else:
-				say "[if oi is heaps]Yeah. Maybe writers and musicians need to pop pills to do their work, but sculptors don't. Maybe you can make the heaps more beautiful on your own[else]Yeah, it's not wise to put off general sanitation tasks with pills[end if]." instead;
-		if oi is lance:
-			say "The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it.";
-			now lance is reflexed;
-			now lance is unfigured;
-			now player has lance;
-			now cheated-guy is lance;
-			min-and instead;
-	if oi is HUNTER HUNT AREA:
-		if ruby is not moot, say "As you turn the pill jar upside-down, the pills stay in--as if some supernatural force is pushing them up, because they aren't ready to come out yet.[paragraph break]Hmm. Maybe you have more to do before you find what's under, here." instead;
-		say "The pills attach to your digger with a clang. They can't be removed normally, so you start to dig and dig.";
-		now cheated-guy is HUNTER HUNT AREA;
-		try unearthing HUNTER HUNT AREA instead;
-	if oi is ant:
-		now cheated-guy is ant;
-		try taning ant instead;
-	if oi is haunter and haunter is reflexed, say "As you go to spill the pills, the haunter moans 'My ruby!' You won't need memory pills to recall where you buried it." instead;
-	if oi is d2 and lev-pull is false:
-		say "Nothing happens, so you pull the lever...";
-		now lev-pull is true;
-	if oi is a pill-thing listed in table of pill-comments:
-		now pill-use is true;
-		repeat through table of oyster anagrams:
-			if oi is the-from entry:
-				if oi is ruby, move ruby to location of player;
-				try fliptoing the-to entry;
-				now pill-use is false;
-				the rule succeeds;
-		say "I should've tried to flip something, but I couldn't. BUG.";
-		d "[oi] was not a the-from in the oyster anagrams.";
-	else:
-		say "You should be able to spill the pills to work on the [oi] but you can't. This is a BUG and I need to put an entry in a table for the [oi].";
+	if oi is waste or oi is heaps or oi is lance, abide by the ant-side-quest-check rule;
+
+flip-spill-flag is a truth state that varies.
+
+after fliptoing when flip-spill-flag is true:
+	now flip-spill-flag is false;
+
+spill-block is a truth state that varies.
+
+carry out spilling:
+	now cheated-guy is nothing;
+	let oi be oyster-spill-item;
+	d "Spilling [oi].";
+	now flip-spill-flag is true;
+	if spill-block is true, say "SPILL directed me to [the oi], but it's currently blocked. This should never happen outside of testing." instead;
+	repeat through table of oyster anagrams:
+		if the-from entry is oi:
+			try fliptoing the-to entry instead;
+	say "WARNING could not flip-from [oi].";
+	now flip-spill-flag is false;
 	the rule succeeds;
+
+this is the ant-side-quest-check rule:
+	say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
+	if the player regex-prompt-consents:
+		do nothing;
+	else:
+		say "You save the pills for a real emergency." instead;
 
 report spilling pills:
 	if scams is true:

@@ -920,6 +920,19 @@ carry out gforceing:
 	choose-new-hint-guardian;
 	say "(You may wish to UNDO once you see the debug text.)";
 
+chapter spbing
+
+spbing is an action out of world.
+
+understand the command "spb" as something new.
+
+understand "spb" as spbing.
+
+carry out spbing:
+	now spill-block is whether or not spill-block is false;
+	say "Blocking the consequences of SPILL is now [on-off of spill-block].";
+	the rule succeeds.
+
 chapter otwin
 
 [* OTWIN almost-wins otters]

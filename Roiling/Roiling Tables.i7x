@@ -170,8 +170,8 @@ book oyster
 [because oyster is about verbs, it's tougher to have a one-to-one correspondence between points and lines in the anagram table.]
 
 table of oyster anagrams
-the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	a rule	a rule	"Saliva avails to show your disdain for the bar staff and for generosity in general. The pesty types, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."
+the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg	pill-msg
+tips pits	tips pits	false	325842789	--	"spit"	"spit" or "spit on the/ tips"	a rule	a rule	"Saliva avails to show your disdain for the bar staff and for generosity in general. The pesty types, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."	text
 gins sign	gins sign	false	242774022 [not really covered in the default verb SING]	--	"sing"	"sing"	--	--	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly." [not really covered in the default verb SING]
 tunes	tunes	false	501203408	--	"unset"	"unset"	--	post-tunes-unset rule	"You fiddle with the knobs and such on the jukebox according to the instructions."
 perma amper	perma amper	false	360858842	--	"remap"	"remap"	--	post-amper-remap rule	"You brave the electrical underpinnings of the perma-amper to create an ampish mishap."
@@ -189,7 +189,7 @@ pikes	pikes	false	403472058	--	"spike"	"spike" or "spike pikes"	--	post-spike-pi
 cans	cans	false	186374877	--	"scan"	"scan"	--	--	"You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet or ultra-red rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up the Hardest Trashed Dearths."
 eeks	eeks	false	404819362	Lean Lane	"seek"	"seek"	--	post-seek-eeks rule	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule	"You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and you can't see it in the drawer any more. Aunt Tuna is pleased, and Tortu is impressed."
-tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"
+tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel and don't know how. Not too much. Anyway, once you left, she kept muttering how she wanted to get rid of this Paw-R-Wrap to somebody before I popped it. So I snuck it for you.'"
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	post-tutor-trout rule	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
@@ -1052,6 +1052,12 @@ this is the pre-trolls-stroll rule:
 	preef trolls;
 	the rule succeeds;
 
+this is the post-trolls-stroll rule:
+	say "[flip-spill-flag].";
+	if flip-spill-flag is true:
+		decrease poss-score of oyster by (3 - cur-score of oyster);
+		reg-inc;
+
 this is the post-calm-clam rule:
 	now urn is in Olde Lode;
 	set the pronoun it to urn;
@@ -1188,6 +1194,11 @@ this is the pre-search-arches rule:
 		do nothing instead;
 
 this is the post-eat-tea rule:
+	if flip-spill-flag is true:
+		if dent is not moot, poss-d; [can't fix dent again]
+		if wipes are in Lean Lane, decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
+		now aunt-tuna-cross is true;
+		move player to Anger Range;
 	pearl-check;
 
 this is the post-search-arches rule:
@@ -1707,13 +1718,13 @@ check fliptoing when player is in Posh Hops Shop: if noun is not trolls and sill
 
 report fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
-		annoy-trolls;
+		annoy-trolls; [this also gives min-up]
 		remove noun from shop-hint-items, if present;
 	continue the action;
 
 report fliptoing (this is the oyster min score annoying details rule):
-	if noun is trolls and player does not have pills, min-up;
-	if noun is trout and player has pills and jar-empty is false, min-up;
+	if noun is trolls and flip-spill-flag is false, min-up; [if you SPILL PILLS to ditch the trolls, you can't skip EAT below.]
+	if noun is trout and flip-spill-flag is false, min-up; [SPILL PILLS with trout untutored lets you skip EAT, but you can't now.]
 	continue the action;
 
 section towers
