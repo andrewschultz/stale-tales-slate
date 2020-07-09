@@ -617,9 +617,9 @@ chapter Lapsin' Plains
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is in location of player.
 
-understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to shift letters and not sixes, here.") when crate is in location of player or c2 is in location of player.
+understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to shift letters and not sixes, here.") when crate is in location of player or bogus-trace is in location of player.
 
-understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is in location of player or c2 is in location of player.
+understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is in location of player or bogus-trace is in location of player.
 
 understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin Plains.
 
@@ -685,7 +685,7 @@ chapter Tenfold Teflon'd Den Loft
 
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when pins are touchable.
 
-understand "redial" as a mistake ("[if papery yapper is touchable]You can't even dial with the yapper around[else]You need use the dialer meaningfully first[end if].") when player is in Tenfold Teflond Den Loft and d2 is off-stage.
+understand "redial" as a mistake ("[if papery yapper is touchable]You can't even dial with the yapper around[else]You need use the dialer meaningfully first[end if].") when player is in Tenfold Teflond Den Loft and bogus-redial is off-stage.
 
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflond Den Loft and pins are in Tenfold Teflond Den Loft.
 

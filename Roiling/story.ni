@@ -3478,7 +3478,7 @@ thisflip	thatflip	warned-yet	my-prog	pointwarn
 yob den	yob den	false	routes-left rule	"The raptest patters are still slightly a nuisance, if you want to fix them."
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in Grey Gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
 trance nectar	trance nectar	false	troves-left rule	"You tidied your Upscale Capsule up pretty well, but you could do a bit more."
-d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
+bogus-redial	bogus-redial	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
 curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that top opt pot you got from Renato."
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
 
@@ -4348,8 +4348,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if crate are in Lapsin Plains and crate is reflexive:
 				now noun is crate;
 				continue the action;
-			else if c2 is in Lapsin Plains:
-				now noun is c2;
+			else if bogus-trace is in Lapsin Plains:
+				now noun is bogus-trace;
 				continue the action;
 			else if bogus-plains are reflexive:
 				now noun is bogus-plains;
@@ -4392,7 +4392,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if dialer is reflexive:
 				now noun is dialer;
 			else:
-				now noun is d2;
+				now noun is bogus-redial;
 			continue the action;
 	else if mrlp is towers:
 		if player is in Rawest Waters:
@@ -5285,7 +5285,7 @@ to decide which thing is oyster-item:
 		if haunter is reflexive, decide on haunter;
 	if haunter is reflexed and location of player is location of haunter, decide on haunter;
 	if player is in Lapsin Plains:
-		if c2 is in Lapsin Plains, decide on c2;
+		if bogus-trace is in Lapsin Plains, decide on bogus-trace;
 		if crate is reflexive, decide on crate;
 		if skis are in Lapsin Plains, decide on skis;
 		if knob is touchable, decide on knob;
@@ -5314,7 +5314,7 @@ to decide which thing is oyster-item:
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
 		if pins are touchable and pins are reflexive, decide on pins;
-		if pins are reflexed, decide on d2;
+		if pins are reflexed, decide on bogus-redial;
 		decide on dialer;
 	decide on the player;
 
@@ -6112,7 +6112,7 @@ to say unless-max:
 		decrement my-tot;
 	if dialer is reflexive:
 		decrement my-tot;
-	if d2 is reflexive:
+	if bogus-redial is reflexive:
 		decrement my-tot;
 	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
 
@@ -9476,7 +9476,7 @@ definition: a thing (called candi) is bluable:
 	if player is in Plasm Lamps and candi is ant, yes;
 	if candi is haunter and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in Lapsin Plains:
-		if c2 is in Lapsin Plains, yes;
+		if bogus-trace is in Lapsin Plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in Gates Stage and gate-level is 2: [others specific]
 		if candi is fleeing feeling or candi is searcher or candi is viewer, no;
@@ -9828,7 +9828,7 @@ LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyst
 haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
 Achers Chaser Arches	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
-d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
+bogus-redial	oyster	"You should be able to REDIAL the dialer with the proper preparation."
 lance	oyster	"CLEAN the lance once you have something to wash it with."
 duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]." [towers]
 ropins	towers	"It would be nice if something made the prison ropins UNLOCKED[if duck is prefigured], like, maybe the duck[end if]."
@@ -14510,10 +14510,10 @@ does the player mean traceing the crate: it is very likely.
 
 carry out traceing:
 	if noun is not crate, say "[reject]" instead;
-	if c2 is moot, say "You already did that. If you retrace, you might get lost at a terrace." instead;
-	try fliptoing c2 instead;
+	if bogus-trace is moot, say "You already did that. If you retrace, you might get lost at a terrace." instead;
+	try fliptoing bogus-trace instead;
 
-check scaning crate: if c2 is in Lapsin Plains, try scaning c2 instead;
+check scaning crate: if bogus-trace is in Lapsin Plains, try scaning bogus-trace instead;
 
 check opening span pans: try going inside instead;
 
@@ -14839,7 +14839,7 @@ the jumble is a boring thing. it is part of the dialer. description of jumble is
 
 check scaning jumble: try scaning dialer instead;
 
-check scaning dialer: if dialer is reflexed, try scaning d2 instead;
+check scaning dialer: if dialer is reflexed, try scaning bogus-redial instead;
 
 a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYYR[else]RYRYYR[end if]". parse-text of dialer is "[if dialer is reflexive]d[sp]-[sp]x[sp]-[sp]-[sp]x[else]x[sp]e[sp]x[sp]-[sp]-[sp]l[end if]".
 
@@ -14916,9 +14916,9 @@ carry out spining:
 
 chapter redialing
 
-the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed name of d2 is "dialer[if debug-state is true] (DEBUG: part 2)[end if]"
+the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "dialer[if debug-state is true] (DEBUG: part 2)[end if]"
 
-a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
+a-text of bogus-redial is "RYRYYR". b-text of bogus-redial is "RYRYYR". parse-text of bogus-redial is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
 chapter templar ramplet
 
@@ -15050,11 +15050,11 @@ Lapsin Plains is north of Anger Range. Lapsin Plains is in oyster. "Boy, it's de
 
 the sloppy polyps are plural-named bounding boring scenery in Lapsin Plains. description of sloppy polyps is "Maybe the polyps are holding the plains together, but crossing them would be inadvisable. You can guess why.". bore-text is "It's more likely the sloppy polyps would do something with you instead of the other way around. You don't need to go beyond.".
 
-c2 is vanishing privately-named scenery in Lapsin Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
+bogus-trace is vanishing privately-named scenery in Lapsin Plains. bogus-trace is undesc. printed name of bogus-trace is "wherever the crate is coming from"
 
-understand "c2" as c2 when debug-state is true.
+understand "bogus-trace" as bogus-trace when debug-state is true.
 
-a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
+a-text of bogus-trace is "RRYRY". b-text of bogus-trace is "RPGRG". parse-text of bogus-trace is "x[sp]r[sp]a[sp][sp]e". bogus-trace is parse-spoilable.
 
 does the player mean opening the span pans: it is likely.
 

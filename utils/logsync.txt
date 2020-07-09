@@ -315,7 +315,7 @@ dent>tend
 wipes>swipe
 paw r wrap>warp
 ####lapsin' plains
-c2~crate>trace
+bogus-trace~crate>trace
 crate>react
 skis>kiss
 span pans>snap
@@ -341,7 +341,7 @@ pins>spin
 >IGNORE=dialer
 dialer1~dialer>derail
 lever>revel
-d2~dialer>redial
+bogus-redial~dialer>redial
 ####plasm lamps
 bogus-lamps~plasm lamps>psalm
 natant ant>tan

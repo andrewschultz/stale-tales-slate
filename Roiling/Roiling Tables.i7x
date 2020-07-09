@@ -192,7 +192,7 @@ dent	dent	false	320852724	--	"tend"	"tend dent" or "tend"	--	post-tend-dent rule
 tea	tea	false	233103945	--	"eat"	"eat tea" or "eat"	--	post-eat-tea rule	"Gosh, tea, and you don't feel hostage[if aunt tuna is touchable] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is touchable]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]"	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of Paw-R-Wrap bubble wrap[if tea is not moot] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel and don't know how. Not too much. Anyway, once you left, she kept muttering how she wanted to get rid of this Paw-R-Wrap to somebody before I popped it. So I snuck it for you.'"
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	pre-tutor-trout rule	post-tutor-trout rule	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	--	--	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
-c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
+bogus-trace	bogus-trace	false	337433333	--	"trace"	"trace" or "trace crate"	--	--	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	pre-crate-react rule	--	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	"The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away."
 skis	skis	false	290473956	--	"kiss"	"kiss"	pre-kiss-skis rule	--	"As you kiss them, they pull up--and dissolve."	"The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame."
 knob	knob	false	214612168	--	"bonk"	"bonk"	pre-bonk-knob rule	--	"BONK! You hit the knob just right. It falls from between the pans and rolls off...well, somewhere."	"The pills gravitate to the knob and turn it forcefully. It won't act up again."
@@ -216,7 +216,7 @@ templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" 
 natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."	"The pills get caught up in the dialer, and they hook on the pins. Just the right chemical reaction dissolves the pins, and the dialer is operational again."
-d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
+bogus-redial	bogus-redial	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	dialer	false	335153504	--	"derail"	"derail"	pre-dialer-derail rule	post-dialer-derail rule	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the Horned Hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins."	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
 
 book towers
@@ -1124,13 +1124,13 @@ this is the post-enlarge-gleaner rule:
 		now gleaner is unexamined;
 
 this is the pre-crate-react rule:
-	if c2 is in Lapsin Plains:
+	if bogus-trace is in Lapsin Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
 		the rule succeeds;
 
 this is the pre-kiss-skis rule:
-	if c2 is in Lapsin Plains:
+	if bogus-trace is in Lapsin Plains:
 		say "[one of]That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
 		now bonkies is true;
@@ -1258,7 +1258,7 @@ this is the pre-lever-revel rule:
 		preef lever instead;
 
 this is the post-spin-pins rule:
-	now d2 is in Tenfold Teflond Den Loft;
+	now bogus-redial is in Tenfold Teflond Den Loft;
 
 this is the pre-dialer-derail rule:
 	if yapper is touchable:
@@ -1267,13 +1267,13 @@ this is the pre-dialer-derail rule:
 		do nothing instead;
 
 this is the post-dialer-derail rule:
-	now d2 is in tenfold;
+	now bogus-redial is in tenfold;
 	now pins are in tenfold;
 
 this is the pre-dialer-redial rule:
 	if pins are reflexive:
 		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
-		preef d2;
+		preef bogus-redial;
 		do nothing instead;
 
 section towers auxiliary
@@ -2066,7 +2066,7 @@ tea	"You anticipate Aunt Tuna telling you to stop playing with your food, alread
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the wrap."
 HUNTER HUNT AREA	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
-c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
+bogus-trace	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
@@ -2086,7 +2086,7 @@ papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You 
 dialer	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
 pins	"You look at the pins. They're in the way, but they don't look particularly sturdy."
-d2	"[di-cli]."
+bogus-redial	"[di-cli]."
 templar ramplet	"There MUST be a way to storm down the templar ramplet. But not that."
 bogus-lamps	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
@@ -2724,8 +2724,8 @@ carps	"[one of]You're bigger than they are, and your arms have more reach. You c
 pikes	"[one of]They, or the carps, can be beaten. It doesn't make any difference whom you attack.[plus][or]The pikes require a slightly odd verb. You can brawl, tussle, or...[plus][or]SPIKE the pikes.[minus][cycling]"	--	"SPIKE the pikes"
 skis	"[one of]The skis are blocking the door.[plus][or]They can't be moved by force.[plus][or]You need to KISS the skis.[minus][cycling]"	--	"KISS the skis"
 knob	"[if crate is reflexive]You need to deal with a crate first, but the knob will be easier.[else][one of]The knob won't budge. It doesn't seem to have a lock.[plus][or]You need to do something with it.[plus][or]BONK the knob.[minus][cycling][end if]"	--	"BONK the knob"
-crate	"[if c2 is reflexive][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else if crate is reflexive][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else]Nothing more to do with the crates.[end if]"	--	"REACT to the crate"
-c2	--	crate	"TRACE the crate"
+crate	"[if bogus-trace is reflexive][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else if crate is reflexive][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else]Nothing more to do with the crates.[end if]"	--	"REACT to the crate"
+bogus-trace	--	crate	"TRACE the crate"
 fragments	--	crate
 bogus-plains	"[one of]You can talk about how great you are, to all who would hear.[plus][or]What can you do in the lapsin['] plains?[plus][or]SPLAIN.[minus][cycling]"
 waste	"[one of]The waste puzzle is optional.[plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"	--	"SWEAT by the waste"
@@ -2766,7 +2766,7 @@ intercom	"The intercom is controlled by the dialer."
 jumble	"The jumble reorganizes when you set the dialer."
 pins	"[one of]There are two solutions here to get them out of the way. One is more sensible, given your inventory, but both work.[plus][or]The pins are tangled together, and you can use force or finesse.[plus][or]SPIN them, or SNIP them.[minus][cycling]"
 lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
-d2	--	dialer	"REDIAL with the dialer"
+bogus-redial	--	dialer	"REDIAL with the dialer"
 dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can DERAIL, but what else can you have it do?[plus][or]The dialer can REDIAL after you DERAIL, though there is an in-between action, too.[minus][cycling]"	--	"DERAIL with the dialer" [end OYSTER hinting]
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
 top opt pot	"[if succor crocus is off-stage]The blub bulb can't really be changed until the very end[else]Now that the pot has a succor crocus in it, the person you want to give the pot to is inside[end if]."
