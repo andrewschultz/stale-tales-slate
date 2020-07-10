@@ -1,3 +1,5 @@
+import re
+import math
 from collections import defaultdict
 
 sts_hash = {
@@ -29,6 +31,33 @@ sts_hash = {
   "z" : 122969618 }
 
 rev_word = sorted(sts_hash, key=sts_hash.get, reverse = True)
+
+def letters_only(my_word):
+    return re.sub("[^a-z]", "", my_word.lower())
+
+def ana_alf(my_word):
+    return ''.join(sorted(list(my_word)))
+
+def roi_poss(my_word, count_duplicates = False, full_factorial = False):
+    count = defaultdict(int)
+    my_word = letters_only(my_word)
+    vowels = sum([my_word.count(x) for x in 'aeiou'])
+    ys = my_word.count('y')
+    consonants = sum([my_word.count(x) for x in 'bcdfghjklmnpqrstvwxz'])
+    for x in my_word:
+        count[x] += 1
+    if full_factorial:
+        ret_val = math.factorial(len(my_word))
+        for x in count:
+            if count[x] > 1:
+                ret_val //= math.factorial(count[x])
+        return ret_val
+    ret_val = math.factorial(vowels)*math.factorial(ys)*math.factorial(consonants)
+    if not count_duplicates:
+        for x in count:
+            if count[x] >= 2:
+                ret_val //= math.factorial(count[x])
+    return ret_val
 
 def word_hash_match(my_word):
     temp = 0
