@@ -1,0 +1,35 @@
+#ordeal loader not in anagram table
+noan:slander #LLP doesn't use standard anagrams, since darnels don't vanish as other LLPs
+nometrics:static #covered by attics
+#forest not in anagram table
+noan:east,west,south,north
+#sortie not in anagram table
+nometrics:room,cask #reverses
+noan:sixteen #puzzle answer
+#metros not in anagram table
+noan:darkness
+#resort not in anagram table
+noan:tugtoe #RBB's 'get out' was not easily anagrammable
+noan:exist #there are also AMENS and NAMES with the same number of chances
+############################################################
+#ordeal reload no metrics (diorama)
+nometrics:eventmap,pavement,brasscrag,crabgrass,farmplot,platform,steelpad,pedestal
+#presto no metrics
+nometrics:disk #known reverse flip
+nometrics:romstick #duplicate solution since there are trim socks
+#oyster no metrics
+noan:spill
+nometrics:spit,sing,remap
+#towers no metrics (unused picaros)
+#picaro pod 1
+nometrics:coyer,awed
+#picaro pod 2
+nometrics:lardy,godly
+#picaro pod 3
+#picaro pod 4
+#picaro pod 5
+#picaro pod 6
+noan:rowdy,wordy # Dr Yow's talking state
+#others no metrics (double-guess sonic icons)
+nometrics:sonicicons
+;
