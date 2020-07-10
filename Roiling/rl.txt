@@ -418,7 +418,7 @@ DR---E- seems much more manageable. Since slot 3 is a vowel and can't be I, it's
 DRAI-E- now has red in slot 5, so it can't be D from the arid den. It's N. DRAINED.
 # logic for organised ego drains
 ?Those organised ego drains look tough!
-That's part of why they are an LLP.
+That's part of why they are an LLP. They have the most possibilities, according to the script I wrote, of anything with ambiguous readings.
 R?YRR?YRY has 2 as a forced consonant, R or G, and 6 is a forced vowel, A or I. That's not a lot of clues.
 So there's not much you can do except examine them for red text. NO EGAD SIR and so forth work, but they take a while.
 They eventually become GRANDIOSE.
@@ -474,14 +474,18 @@ NA(IE)(VS)(IE)(ST)T becomes NA(IE)V(IE)ST, or NAIVEST.
 It's trickier to find the other solution, but talking to them gives a bunch of red text. That's a bit beyond deciphering the settler, but you get (NV)AI(NVS)E(NVS)T if you go through all the possibilities.
 # logic for alarming grailman
 ?How do I navigate the alarming grailman?
+He may be the second-trickiest of all the ambiguous-reading puzzles. He is the trickiest guardian/
 With RYRRYR?R we can determine the remaining question mark is a vowel. Since the possible letters are N and A, it is A. That makes things -(AI)--(AI)-A-.
-At this point, you may need to look for red letter clues. Liam Garn, his name, knocks out the vowels. -A--I-A-. Unfortunately, these were tricky to find, so I wasn't able to give many hints.
+At this point, you may need to look for red letter clues. Liam Garn, his name, knocks out the vowels. -A--I-A-.
+Unfortunately, anagrams were tricky to find, so I wasn't able to give many logic hints.
 >>OBSCUREST SUBSECTOR
+# logic for fries us fissure
 ?What is with the fries-us fissure's reading?
 The PY??YYR  gives us one known letter, the F in slot 1, so that's a good start.
-The two ambiguous readings must also be consonants. F-SS---.
+The two ambiguous readings must also be consonants, to make a total of four in the final word. F-SS---.
 We have F(EU)SS(IE)(IE)(FR) left, then.
-U can only be in slot 2, R in slot 7. FUSS--R. FUSSIER.
+U can only be in slot 2, R in slot 7.
+FUSS--R gives FUSSEIR or FUSSIER, so, FUSSIER.
 >>LOST LOTS
 # logic for sporties ripostes
 ?How do I deflect the sporties' ripostes?
@@ -653,8 +657,8 @@ But now slot 4 is a question mark, so it's E or P. E is taken, so it's P.
 YPEPAR or PREPAY are the only two choices. PREPAY.
 # logic for templar ramplet
 ?The templar ramplet that appeared--how to finagle it?
-The templar ramplet gives ?RYRRRY. This is a tough hand, logically.
-You may guess that RM/RL/RT/RP are all highly unlikely starts for words, and you would be right. There are no such words of length 7. So T it is.
+The templar ramplet gives ?RYRRRY. This is a tough hand, logically. It has the third most possibilities of anything with ambiguous readings in the game. But paying attention to how letters work together, a lot drops out.
+You may guess that RM/RL/RT/RP are all highly unlikely starts for words, and you would be right. There are no such words of length 7. So T it is in the first slot.
 Then the next letter is very likely R. Again, TL and TM and TP don't start any words of length 7. Well, there's tmesis, but that's the wrong length.
 TR(AE)(ML)(MP)(MLP)(AE) remains and has six possibilities. You can guess, or reading will kill off possibilities.
 LAMPERT as red text leaves TRAMPLE.
@@ -765,7 +769,7 @@ Divide the words as NOAMM / OGANG. Then O can't be in slot 1, which is a vowel. 
 Also, G must be in slot 5. It can't be in slot 2, and the question mark means MN is in slot 4.
 That leaves ANOMG or AMONG. Now, AN OMG is ... possible, but AMONG is a better way to mingle.
 >>SCAPE SPACE
-# logic for reserved deserver
+# logic for reserved deserver dr severe
 ?What should the inapt paint become?
 With more than five letters, it's what it says.
 The inapt paint says DESERVER RESERVED. It has a lot of question marks, but all three vowels are green in cheat mode, and one consonant even works out, giving you

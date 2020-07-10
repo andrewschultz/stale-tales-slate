@@ -397,7 +397,7 @@ lemons	lemons	true	485229152	--	"solemn"	"solemn"	--	--	"Thinking all 'I frown f
 a banna	small yellow banana	true	162797375	--	"banana"	"banana"	--	--	"The (a) banna['] folds up neatly into a small banana."
 orange	orange	true	391177517	--	"go near"	"go near"	--	--	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!" [start scape space]
 a brr hub	rhubarb	true	352061340	--	"rhubarb"	"rhubarb"	--	--	"The brr hub expands and lengthens. It turns a bit greener. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Even weird fruit like rhubarb."
-inapt paint	guava	true	778533808	--	"reversed"	"reversed"	--	--	"The section of wall containing inapt paint does a 360. A long guava rolls out from behind. You pick it up. [greedy-person] nods, impressed."
+Dr Severe	guava	true	778533808	--	"reversed"	"reversed"	--	--	"Dr. Severe's expression suddenly changes. 'I hadn't thought of it that way... or that. I haven't been very helpful, can I? Well, instead of complaining about what can't be fixed, I should try to, uh, fix stuff. Hey, however you helped me, I'm grateful Have this guava.'"
 coin	icon	false	207258516	--	"icon"	"icon"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money." [start curtis gift flips]
 coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip rule	"Blam! The coins begin to rattle gently and don't stop."
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
@@ -2228,7 +2228,7 @@ quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
 a banna	"The (a) banna['] flutters about for a bit."
 a brr hub	"The (a) brr hub seems to swirl closed for a bit."
 orange	"The orange seems a bit closer for a bit."
-inapt paint	"You seem to read the inapt paint backwards for a second."
+Dr Severe	"Dr. Severe looks thoughtful for a second."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though."
@@ -2972,7 +2972,7 @@ quince	"[one of]How do you count in Italian, to name a price for the quince?[plu
 a banna	"[one of]A banna['] says Naa-Na-B.[plus][or]Non-cheat mode might help things to drop out more easily, but with six letters, it can't be that hard.[plus][or]You can make a BANANA.[minus][cycling]" [Scape Space fruit hints]
 orange	"[one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
 a brr hub	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
-inapt paint	"[one of]DESERVER-RESERVED.[plus][or]The settler makes the vowels in the paint pretty clear.[plus][or]How do you make the paint the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
+Dr Severe	"[one of]RESERVED DESERVER Dr. Severe is quite a mouthful, and the settler in cheat mode may be confusing.[plus][or]Dr. Severe could use a change in perspective.[plus][or]Perhaps if Dr. Severe got REVERSED.[minus][cycling]"
 augural arugula	"The augural arugula will help you GURU something."
 miser ruble	"[one of]It's purplish.[plus][or]And to think that a change could happen on such-and-such street.[plus][or]MULBERRIES.[minus][cycling]"
 nameless salesmen	"They used to be a puzzle in towers, and I didn't have the heart to get rid of them entirely, but fortunately they fit in the Clangier Clearing. They're not terribly useful."

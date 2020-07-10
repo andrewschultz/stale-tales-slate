@@ -752,6 +752,7 @@ to choose-female:
 	now Red Rat is off-stage;
 	now Dr Tera is in Scape Space;
 	now greedy-person is Dr Tera;
+	now Dr Severe is female;
 
 to choose-male:
 	now the player is male; [begin intro changes]
@@ -770,6 +771,7 @@ to choose-male:
 	now Red Rat is in Scape Space;
 	now Dr Tera is off-stage;
 	now greedy-person is Red Rat;
+	now Dr Severe is male;
 
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
@@ -2118,6 +2120,7 @@ Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he s
 Ammo Gang	"The No Ammo Gang seems vaguely interested, but you didn't insert yourself enough as part of the conversation."
 Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
+Reserved Deserver Dr Severe	"[he-she-c] doesn't have much to say."
 arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
 passport	"Try using its features instead."
 
@@ -4750,7 +4753,7 @@ melon	false	false	false	false	"Now this is weird. It looks like there should be 
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
 a banna	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-inapt paint	true	true	false	false	"Whatever this is, well, the vowels don't have much variability. Well, any."
+Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'"
 
 [?? test qmh toggling and scanning stuff]
 
@@ -4973,7 +4976,7 @@ field-hintables is a list of things variable. field-hintables is { barber sickle
 
 clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince }.
 
-scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, inapt paint, orange }
+scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, Dr Severe, orange }
 
 to decide which list of things is my-fruit-list:
 	if moss cap is not moot, decide on rustic-easy-items;
@@ -16721,9 +16724,9 @@ check unlocking:
 	if noun is prison ropins, say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
 
-the fires us fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint, and from what you know about that sort of fissure, it does fire up people who try and fail to unlock it.". the fissure is vanishing and auxiliary. printed name is "Fires-Us Fissure"
+the fries us fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint, and from what you know about that sort of fissure, it does fire up people who try and fail to unlock it.". the fissure is vanishing and auxiliary. printed name is "Fries-Us Fissure"
 
-a-text of fires us fissure is "RYRRYYR". b-text of fires us fissure is "PY??YYR". parse-text of fires us fissure is "f[sp]u[sp]s[sp]s[sp]-[sp]-[sp]r". fires us fissure is parse-spoilable.
+a-text of fries us fissure is "RYRRYYR". b-text of fries us fissure is "PY??YYR". parse-text of fries us fissure is "f[sp]u[sp]s[sp]s[sp]-[sp]-[sp]r". fries us fissure is parse-spoilable.
 
 check entering fissure: say "The fissure is much too small and narrow." instead;
 
@@ -16756,7 +16759,7 @@ Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
 section luck node
 
-the luck node is boring vanishing scenery in Obscurest Subsector. "It's bright red and one of those combination dealies that will pop up if you get the right combination. You just need a little luck. Though, actually, there are probably a few million combinations, so you need a lot of luck. Just knowing that one combination works, though, has suckered many a Yorpwaldian to try and keep trying, without any, err, luck. There's also a fissure (a Fires-Us Fissure) which looks almost like a mouth. If you could manipulate the fissure or node, you could probably rescue Dr. Yow. You also notice red writing on the back.". bore-text of luck node is "You fiddle with the luck node a bit, but ... no luck."
+the luck node is boring vanishing scenery in Obscurest Subsector. "It's bright red and one of those combination dealies that will pop up if you get the right combination. You just need a little luck. Though, actually, there are probably a few million combinations, so you need a lot of luck. Just knowing that one combination works, though, has suckered many a Yorpwaldian to try and keep trying, without any, err, luck. There's also a fissure (a Fries-Us Fissure) which looks almost like a mouth. If you could manipulate the fissure or node, you could probably rescue Dr. Yow. You also notice red writing on the back.". bore-text of luck node is "You fiddle with the luck node a bit, but ... no luck."
 
 a-text of luck node is "YRRYRRYR". b-text of luck node is "YRRYRRYR". parse-text of luck node is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -17952,13 +17955,15 @@ a-text of Yo Rend or Deny Rodney is "OYRRYR". b-text of Yo Rend or Deny Rodney i
 
 the chum of a picaro is usually Andres. [moved here so Rodney appears first when iterating through picaros]
 
+section picaro pod 1
+
 Geno is a picaro. description is "Well, Geno is ... here. He hasn't left yet. He may ordinary even among the prosaic picaros, but he's still stronger than you.". pod-num of Geno is 1. pod-ord of Geno is 1.
 
 a-text of Geno is "RYRY". b-text of Geno is "PYPY". parse-text of geno is "g[sp]-[sp]n[sp]-". geno is any-spoilable.
 
-Shane is a picaro. description is "Shane looks well-tanned, but a bit reddish-faced.". pod-num of Shane is 1. pod-ord of Shane is 2.
+Royce is a picaro. description is "Royce seems to be muttering-not-muttering about what a tough guy he is.". pod-num of Royce is 1. pod-ord of Royce is 2.
 
-a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". parse-text of shane is "-[sp]x[sp]x[sp]-[sp]x".
+a-text of Royce is "RYOYR". b-text of royce is "RGBYR". parse-text of royce is "c[sp]o[sp]y[sp]e[sp]r". royce is parse-spoilable.
 
 Tyson is a picaro. description is "Tyson keeps snarling at people, red-faced.". pod-num of Tyson is 1. pod-ord of Tyson is 3.
 
@@ -17968,21 +17973,25 @@ Wade is a picaro. description is "Wade looks confident, as if nothing can drain 
 
 a-text of Wade is "YRYR". b-text of wade is "YRYR". parse-text of wade is "-[sp]x[sp]-[sp]x". wade is cheat-spoilable.
 
-Edwin is a picaro. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". pod-num of Edwin is 2. pod-ord of Edwin is 1.
+section picaro pod 2
 
-a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
+Daryl is a picaro. description is "Daryl appears to be in tremendous physical shape.". pod-num of Daryl is 2. pod-ord of Daryl is 1.
 
-Eldon is a picaro. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 2. pod-ord of Eldon is 2.
+a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". parse-text of daryl is "x[sp]a[sp]r[sp]x[sp]y". daryl is parse-spoilable.
 
-a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable.
+Dewey is a picaro. description is "Dewey is solidly build, almost less just a man than a big tree.". pod-num of Dewey is 2. pod-ord of Dewey is 2.
+
+a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". parse-text of dewey is "w[sp]e[sp]e[sp]d[sp]y". dewey is any-spoilable.
 
 Goldy is a picaro. description is "Goldy has an amoral, mercenary look about him.". pod-num of Goldy is 2. pod-ord of Goldy is 3.
 
 a-text of Goldy is "RYRRO". b-text of Goldy is "PGRRB". parse-text of goldy is "g[sp]o[sp]d[sp]l[sp]y". goldy is parse-spoilable.
 
-Royce is a picaro. description is "Royce seems to be muttering-not-muttering about what a tough guy he is.". pod-num of Royce is 2. pod-ord of Royce is 4.
+Shane is a picaro. description is "Shane looks well-tanned, but a bit reddish-faced.". pod-num of Shane is 2. pod-ord of Shane is 4.
 
-a-text of Royce is "RYOYR". b-text of royce is "RGBYR". parse-text of royce is "c[sp]o[sp]y[sp]e[sp]r". royce is parse-spoilable.
+a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". parse-text of shane is "-[sp]x[sp]x[sp]-[sp]x".
+
+section picaro pod 3
 
 Blake is a picaro. description is "Blake beams, likely a paragon of positive thinking.". pod-num of Blake is 3. pod-ord of Blake is 1.
 
@@ -17992,29 +18001,33 @@ Bredo is a picaro. description is "Bredo seems unusually focused and interested.
 
 a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". parse-text of bredo is "b[sp]-[sp]x[sp]-[sp]x". bredo is cheat-spoilable.
 
-Daryl is a picaro. description is "Daryl appears to be in tremendous physical shape.". pod-num of Daryl is 3. pod-ord of Daryl is 3.
+Edwin is a picaro. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". pod-num of Edwin is 3. pod-ord of Edwin is 3.
 
-a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". parse-text of daryl is "x[sp]a[sp]r[sp]x[sp]y". daryl is parse-spoilable.
+a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
 
-Dewey is a picaro. description is "Dewey is solidly build, almost less just a man than a big tree.". pod-num of Dewey is 3. pod-ord of Dewey is 4.
+Eldon is a picaro. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 3. pod-ord of Eldon is 4.
 
-a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". parse-text of dewey is "w[sp]e[sp]e[sp]d[sp]y". dewey is any-spoilable.
+a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable.
 
-Ernest is a picaro. description is "Ernest looks relaxed and ready to gaffle tavernlings.". pod-num of Ernest is 4. pod-ord of Ernest is 1.
+section picaro pod 4
+
+Archie is a picaro. description is "Archie looks free of pain, big or small.". pod-num of Archie is 4. pod-ord of Archie is 1.
+
+a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". parse-text of archie is "a[sp]x[sp]x[sp]-[sp]-[sp]x". archie is cheat-spoilable.
+
+Barney is a picaro. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". pod-num of Barney is 4. pod-ord of Barney is 2.
+
+a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". parse-text of barney is "x[sp]-[sp]-[sp]x[sp]x[sp]y". barney is cheat-spoilable.
+
+Ernest is a picaro. description is "Ernest looks relaxed and ready to gaffle tavernlings.". pod-num of Ernest is 4. pod-ord of Ernest is 3.
 
 a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". parse-text of ernest is "x[sp]-[sp]n[sp]x[sp]-[sp]x".
-
-Marcel is a picaro. description is "Marcel looks just plain agitated, which can't hurt in his line of work.". pod-num of Marcel is 4. pod-ord of Marcel is 2.
-
-a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". parse-text of marcel is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
-
-Marlon is a picaro. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". pod-num of Marlon is 4. pod-ord of Marlon is 3.
-
-a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". parse-text of marlon is "x[sp]-[sp]r[sp]x[sp]-[sp]x". marlon is cheat-spoilable.
 
 Reggie is a picaro. description is "Reggie looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". pod-num of Reggie is 4. pod-ord of Reggie is 4.
 
 a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". parse-text of reggie is "-[sp]x[sp]g[sp]-[sp]-[sp]x". reggie is cheat-spoilable.
+
+section picaro pod 5
 
 Andres is a picaro. description is "Andres's movements are carefree as he sways back and forth.". pod-num of Andres is 5. pod-ord of Andres is 1.
 
@@ -18024,13 +18037,15 @@ Andrew is a picaro. description is "Andrew has a careless look in his eyes. He d
 
 a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". parse-text of andrew is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
-Archie is a picaro. description is "Archie looks free of pain, big or small.". pod-num of Archie is 5. pod-ord of Archie is 3.
+Marcel is a picaro. description is "Marcel looks just plain agitated, which can't hurt in his line of work.". pod-num of Marcel is 5. pod-ord of Marcel is 3.
 
-a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". parse-text of archie is "a[sp]x[sp]x[sp]-[sp]-[sp]x". archie is cheat-spoilable.
+a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". parse-text of marcel is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
-Barney is a picaro. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". pod-num of Barney is 5. pod-ord of Barney is 4.
+Marlon is a picaro. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". pod-num of Marlon is 5. pod-ord of Marlon is 4.
 
-a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". parse-text of barney is "x[sp]-[sp]-[sp]x[sp]x[sp]y". barney is cheat-spoilable.
+a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". parse-text of marlon is "x[sp]-[sp]r[sp]x[sp]-[sp]x". marlon is cheat-spoilable.
+
+section picaro pod 6
 
 Cedrick is a picaro. description is "Cedrick stretches effortlessly, without any hitches.". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
 
@@ -19792,7 +19807,7 @@ carry out guruing:
 				say "Whoah! A compass begins spinning. ";
 			else if noun is coins:
 				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
-			else if noun is a fruit or noun is inapt paint:
+			else if noun is a fruit or noun is Dr Severe:
 				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. ";
 			else:
 				say "You have a vision of a fruit: [right-word entry in upper case]. ";
@@ -20696,24 +20711,19 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna is in Scape Space]. A banna['] takes up one part of the wall[end if][inapt-in-space].". roomnud of Scape Space is table of Scape Space nudges.
-
-to say inapt-in-space: if inapt paint is in Scape Space, say ". You notice inapt paint on [if a banna is moot]one wall[else]another wall, too[end if]"
+Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna is in Scape Space]. A banna['] takes up one part of the wall[end if].". roomnud of Scape Space is table of Scape Space nudges. printed name is "[if greedy-person is moot]Paces[else]Scape[end if] Space".
 
 chapter warding drawing
 
 warding drawing is bounding boring scenery in Scape Space. description of warding drawing is "This is a family game, so I can't fully explain the threats contained in the warding drawing for honest people who explore the Scape Space more deeply.". bore-text is "[greedy-person] might not be able to do anything if you messed with the drawing, but [he-she] could call on people who could. The drawing doesn't need to be altered."
 
-chapter paint/guava
+chapter Dr Severe
 
-The inapt paint is boring scenery in Scape Space. description of inapt paint is "DESERVER RESERVED.". bore-text is "The paint is just there. There's got to be some way to get rid of it.". bore-check is bore-paint rule.
+Reserved Deserver Dr Severe is a boring terse person. description is "Kvetching and muttering to themselves about how good it is Elvira is gone, but that doesn't solve any REAL problems. [he-she-c] looks worried, maybe almost guilty the way they treated you. You're not n the mood to argue, but maybe they have something for you. A peace offering. If you're interested.". "Reserved Deserver Dr. Severe paces (of course) around here, complaining things aren't good enough yet.". bore-text is "Dr. Severe seems interested only in complaining right now.". printed name is "Reserved Deserver Dr. Severe".
 
-this is the bore-paint rule:
-	if current action is taking, say "The inapt paint is stuck to the wall. Maybe there's some way to change it around so it's not there. Or on the other side, or something." instead;
+a-text of Reserved Deserver Dr Severe is "RYRYRRYR". b-text of Reserved Deserver Dr Severe is "??RG?R??". parse-text of Reserved Deserver Dr Severe is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
 
-a-text of inapt paint is "RYRYRRYR". b-text of inapt paint is "?GRGPRG?". parse-text of inapt paint is "x[sp]e[sp]x[sp]e[sp]r[sp]x[sp]e[sp]x".
-
-the guava is a fruit. [paint gives guava]
+the guava is a fruit. [Dr Severe gives guava]
 
 chapter banana/a
 
@@ -20754,7 +20764,7 @@ to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]
 to say trader-clue: say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
 
 to say gree-app:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if So Great Storage is in Scape Space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping]--[he-she]'s sort of hold onto a box labeled So-Great Storage"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
@@ -20776,8 +20786,11 @@ check giving something to greedy-person:
 	if player has storage, say "You've already traded." instead;
 	if noun is coin or noun is coins, say "'[one of]No redeem. Need more.'[or]Too heavy.' Hey! A veto![in random order]" instead;
 	if noun is dollar:
-		say "[he-she-c] consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, he cries 'Monies so mine!'[paragraph break]You take the So-Great Storage.";
+		say "[he-she-c] consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, [he-she] cries 'Monies so mine!' and runs off.[paragraph break]You take the So-Great Storage. As you do, you hear an argument between [greedy-person] ans ..., well, someone else. Then you hear running. That someone comes out of, well, maybe a spec-space. You recognize them! They whined about Elvira but suggested you might be worse: [dr severe]! Dr. Severe begins pacing back and forth.";
 		now greedy-person has dollar;
+		moot Dr Tera;
+		moot Red Rat;
+		move Dr Severe to Scape Space;
 		if player has s-i:
 			say "[line break]";
 			slot-appear;
@@ -20789,14 +20802,14 @@ check opening slot: say "It will fit if you give it the right thing." instead;
 
 check closing slot: say "It needs to be open--or how will you pass the gate?" instead;
 
-section orange
+chapter ENGARO orange
 
-the ENGARO orange is a boring reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name.". bore-check of ENGARO orange is bore-orange rule. description of ENGARO orange is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping].". bore-text of ENGARO orange is "You [if ENGARO orange is reflexed]don't need to do anything more with the orange except maybe return it to Curtis[else]think you'll have to do something unusual to get that orange[end if]."
+the ENGARO orange is a boring reflexive fruit in Scape Space. "An orange lies here. It looks like you could read the orange to find its brand name.". bore-check of ENGARO orange is bore-orange rule. description of ENGARO orange is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it. [one of]Or examine it again and maybe you'll see red[or]'One? Arg!' you think, seeing red and wishing there were more[stopping].". bore-text of ENGARO orange is "You [if ENGARO orange is reflexed]don't need to do anything more with the orange except maybe return it to Curtis[else]think you'll have to do something unusual to get that orange[end if]."
 
 a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO orange is "RY*RYYR". parse-text of ENGARO orange is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
 this is the bore-orange rule:
-	if current action is taking, say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her] hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she] goes back to semi-dozing. You think, 'an ogre' and see red. Maybe you need to sneak up somehow." instead;
+	if current action is taking, say "The orange bounces away, to become a goner. You must have tried to grab it too quickly. You see red and feel like an ogre for grabbing it so unsubtly." instead;
 
 chapter gonearing
 
@@ -22314,7 +22327,7 @@ this is the towers-alt rule:
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
 	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 
-to say ff of (j - a truth state): say "[if j is fissure-flip]making the fires-us fissure FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
+to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure] FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
@@ -22577,7 +22590,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if orange is not dislodged, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
 		if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
 		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub RHUBARB.";
-		if inapt paint is not moot, say "[2drm of Scape Space]you could've made the inapt paint ('DESERVER RESERVED') REVERSED.";
+		if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments REVERSED.";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";

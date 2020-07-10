@@ -819,6 +819,8 @@ understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is th
 
 understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]willing pupil[else]breakout[end if], not material things or romance.") when Dr Yow is touchable.
 
+understand "fires" as a mistake ("Fries, fires, it'll still hurt anyone who goes poking at it. Maybe there's a way to make it seem less of a trap?") when Fries Us Fissure is touchable.
+
 understand "goal" as a mistake ("You fantasize briefly about being a sports star instead of a text adventurer[if Dr Yow is in ropins]. But it changes nothing. You look at the poor figure in the gaol[else]. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal[end if].") when player is in Obscurest Subsector.
 
 understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposite...[else]You don't need to fiddle with the lock now.[end if]") when player is in Obscurest Subsector.
@@ -1023,8 +1025,6 @@ understand "lots" as a mistake ("You only need the one slot.") when player has S
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
 understand "sonic" as a mistake ("Maybe if you had more than one [if player has coin]coin[else]icon[end if].") when player has coin or player has icon.
-
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when inapt paint is in location of player.
 
 chapter Gates Stage
 

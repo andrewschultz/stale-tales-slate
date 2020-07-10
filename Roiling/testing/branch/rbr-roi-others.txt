@@ -1484,7 +1484,7 @@ You focus and squint, and letters appears in your sight: BANANA. The aftertaste 
 You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
 >gx a brr hub
 You focus and squint, and letters appears in your sight: RHUBARB. The aftertaste of arugula finally dissipates.
->gx inapt paint
+>gx dr severe
 You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
 
 @nud
@@ -1508,7 +1508,7 @@ You might break what is in the storage. Then it would be neither great nor so gr
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
 >banish passport
 >z
-/DEBUG INFO: (banna'|brr-hub|inapt paint|ENGARO orange)
+/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
 
 @nud
 #mistake test for gorean
@@ -1576,6 +1576,10 @@ Dr. Tera is tarred real good. That's the point of tarring. But she might trade t
 >gs
 male
 
+>give dollar
+!Your score has just gone up by one point.
+Dr. Severe
+
 @nud
 #nudge for banna
 >naban
@@ -1602,21 +1606,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a
 #scannotes for a banna
 >scan a banna
 It must be the/a banna' AND the message on it.
-#spechelp for inapt paint
+#spechelp for Reversed Deserver Dr Severe
 >reservde
-You seem to read the inapt paint backwards for a second.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the inapt paint. That's a decent omen.
-#scannotes for inapt paint
->scan inapt paint
+You seem to see mirror image of Dr. Severe for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reversed Deserver Dr. Severe. That's a decent omen.
+#scannotes for reserved deserver Dr. Severe
+>scan dr severe
 Whatever this is, well, the vowels don't have much variability. Well, any.
 #nudge for brrhub
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
-#mistake test for tap in/tapin
->tap in
-You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
->tapin
-You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
 
 @sli
 #slider test for banana
@@ -1632,24 +1631,29 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ereredvs
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@hin
+>z
+You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
+
+
 @!min
 >banana
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|inapt paint|ENGARO orange)
+{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
 >score
 }}SCORE++
 }}CURMIN++
 {$SCOS}
 >go near
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|inapt paint)
+{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
 >score
 }}SCORE++
 }}CURMIN++
 {$SCOS}
 >rhubarb
 Your score has just gone up by one point.
-{--hin}DEBUG INFO: inapt paint
+{--hin}DEBUG INFO: Reversed Deserver Dr. Severe
 >score
 }}SCORE++
 }}CURMIN++
@@ -1664,11 +1668,6 @@ You look around and don't see any way to pick off more fruits here. Maybe there'
 }}CURMIN++
 {$SCONOFIND}
 
-@hin
->purloin passport
->z
-You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
-
 @min
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
@@ -1676,7 +1675,7 @@ Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourse
 >guru orange
 You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
 >undo
->guru inapt paint
+>guru dr severe
 You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
 >undo
 >guru brr hub
@@ -1685,10 +1684,6 @@ You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipa
 {$SCOS}
 }}CURMAX--
 You can't get the maximum score, since you used the arugula
-
-@!hin
->give dollar
-!Your score has just gone up by one point.
 
 @nud
 #nudge for guava
