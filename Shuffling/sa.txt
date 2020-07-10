@@ -114,8 +114,9 @@ You can't do anything with it right away.
 It can become a RESORT once you've solved two stores--three if you SECUREd the gadget.
 ?The cabinet is back! Can I do anything with/to it?
 It's a sort of obscure last point.
-It could be an animal. A nice one.
-Specifically, a NICE BAT.
+It requires you to know a relatively common brand name.
+Something that might ease its pain from the acne.
+Specifically, BACTINE.
 >STORE F
 >>SOFTER FOREST
 ?How do I go anywhere?
