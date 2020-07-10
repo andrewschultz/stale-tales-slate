@@ -1,10 +1,10 @@
-Hello there! Welcome to the sequel to Shuffling Around! I hope you're just reading this due to a lack of time, or curiosity about a point you may have missed, and not due to frustration.
+Hello there! This is my walkthrough for A Roiling Original, a sequel to Shuffling Around. I hope you're just reading this due to a lack of time, or curiosity about a point you may have missed, and not due to frustration. Whatever the case, you don't need to have played Shuffling Around to solve A Roiling Original. There are some references to Shuffling Around, but they shouldn't distract from the story too much. The big ones? Nat Egam, gateman, helped you at the start of your journey to defeat Red Bull Burdell. In Shuffling Around, you changed things to other things. In A Roiling Original, well ... you will see.
 
 Whether you just want to make sure you missed a silly gag, or you're stuck on a specific section, welcome I hope this walkthrough helps without spoiling too much! I wanted to try to weave the story in without making it too big, so you didn't feel like you were just typing commands, or maybe you could see one last hint before revealing the answer.
 
 If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will do a better job. (TLDR: question marks usually help you, if you think about them right!)
 
-I've semi-hidden some Last Lousy Points to give you one more chance, but they are at the very end. You can cut and paste text to ROT13.com for those.
+I've semi-hidden some Last Lousy Points to give you one more chance at getting them on your own and also to focus on th walkthrough. They are at the very end. You can cut and paste text to ROT13.com for those.
 
 If you're a bit more worried about spoilers, you may want the HTML version, which has expandable InvisiClues. These should both have similar content, and they should be in the bundle with this file and the game file.
 
@@ -12,41 +12,45 @@ If you're the technical type, you can use the command
 
 type roil-thru.txt | grep -iE "^>" | sed "s/^>//g"
 
-To delete my comments and have a list of commands you can cut and paste. You can also replace ^[^>].* with nothing and \r\n\r\n with \r\n if you have a text editor that accepts regular expression replacement. This will zap everything without a > to start, then lump the lines together.
+Or, since I label some alternate paths with (ALT),
 
-The above method will ignore alternate solutions and last lousy points, which are sort of clued in the walkthrough.
+type roil-thru.txt | grep -iE "^.ALT. >" | sed "s/^>//g"
+
+To delete my comments and have a list of commands you can cut and paste. You can also replace ^[^>].* with nothing and \r\n\r\n with \r\n if you have a text editor that accepts regular expression replacement. This will zap everything without a > to start, then lump the lines together.
 
 Also, using periods between commands is possible, but only for directions. The "special" commands for this game cause the Inform parser a lot of problems. My programming found no way to correct this, and it was fixed in a later version of Inform, too late for me to port my project over.
 
 Any comments on this game, or transcripts, can go to blurglecruncheon@gmail.com. While I've tested to tackle the big stuff, bugs slip through--and hopefully they are not too much. But any help from a transcript is appreciated, for matters subjective or objective. My pre- and post- comp testers found a lot of stuff, but that sometimes just reveals other hidden problems.
 
-Conversely you can also report issues at https://github.com/andrewschultz/stale-tales-slate/ and they don't have to be in any professional format or anything. I'd appreciate typos/stylistic stuff being lumped together, but other than that, individual bugs--or feature requests--that aren't obviously similar can be chopped up.
+Conversely you can also report issues at https://github.com/andrewschultz/stale-tales-slate/ and they don't have to be in any professional format or anything. I'd appreciate typos/stylistic stuff being lumped together, but other than that, individual bugs--or feature requests--that aren't obviously similar can be chopped up. The organization would be up to me.
 
 This walkthrough is for version 4 of the game, which I recommend, as the puzzles and cluing make much more sense, and the hints are more detailed. Major differences in the walkthrough are labeled at the end. Version 4's main changes are different room names, and NPCs may be named differently. Some are female if you are. But the abstract puzzles have mostly not changed, except where I thought I found one clearly more sensible.
 
-For those who played the comp version and want to see the new area(s) at the end, you can skip to that area to see the command to start the game with before you chat with Gunter. The implication being, the knocker's come back to snivel his way into your good graces.
+For those who played the (long-ago) comp version and want to see the new area(s) at the end, you can skip to that area to see the command to start the game with before you chat with Gunter. The implication being, the knocker's come back to snivel his way into your good graces.
 
 You can also access the new area(s) that appeared in releases 2 and 3 by playing through the game proper, but I think a shortcut is fair, since the game is rather long. And, in the case of the comp release, more abstruse and occasionally unfair.
+
+So ... ROVE OVER and DEMO DOME MODE don't actually spoil any of the game's main puzzles.
 
   Thanks,
   Andrew Schultz
 
 --------------------------------------------------------------------------------------
 
-I recommend that you search for the section you want to visit--this document is divided that way. The stores are organized in alphabetical order. I put in whitespace so one store doesn't spoil the next. Currently, you can search for
+I recommend that you search for the section you want to visit--this document is divided that way. The stores are organized in alphabetical order in the list below, but the walkthrough displays them in approximate order of difficulty (V, U, P, Y, W) before going to the final one (T) and postscript (H). I put in whitespace so one store doesn't spoil the next.
 
 ORDEAL RELOAD
-STORE P
-STORE T
-STORE U
-STORE V
-STORE W
-STORE Y
-STORE H
+STORE P WALKTHROUGH
+STORE T WALKTHROUGH
+STORE U WALKTHROUGH
+STORE V WALKTHROUGH
+STORE W WALKTHROUGH
+STORE Y WALKTHROUGH
+STORE H WALKTHROUGH
 
-Also, I don't cover Last Lousy Points (LLPs) in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
+Also, for release 3, I wrote up some metrics of how big areas are. More details should be included in metrics.htm.
 
-The ORDEAL RELOAD has three separate minimal ways through. I'll list them all.
+The ORDEAL RELOAD has three separate minimal ways to leave your Means Manse. I'll list them all.
 
 You need to do semi-constructive things so that Gunter bugs you and you have a chance to see the game's mechanics. There are a lot of things you can do, like try to figure something or look at your notepad. Seven, to be precise.
 
@@ -59,6 +63,13 @@ May be the most natural way, though a quicker way is
 
 > LAMP
 > X ADS
+
+or
+
+> X BOOKSHELF
+> THINK
+
+The isolani liaison is really just a fancy name for a door. Yorpwald is like that.
 
 > OPEN DOOR
 > 1
@@ -94,6 +105,10 @@ The sitar is as useless as a hole in the ground.
 
 Now, you can go OUT to go back and pick up all the points if you want. You can skip down to "how to get out?" if you don't want maximum points. "My niche" looks suspicious.
 
+> GT STUDY
+
+(Note: you can GO TO/GT somewhere available if you want to shave off a few turns. Sometimes it might not save keystrokes, but it saves thought.)
+
 > CHIMNEY
 > UP
 
@@ -106,6 +121,8 @@ Now you can go back out again one last time to get full points.
 
 The third way is to examine the beams. Ten of them!
 
+> GT STUDY
+
 > BASEMENT
 > D
 
@@ -113,13 +130,13 @@ You can't go IN right now, as the game tells you to look at the settler. So,
 
 > X SETTLER
 
-Mess around with what you want. There's a tutorial anyway.
+Mess around with what you want. There's a tutorial anyway in a bit. Two, actually.
 
-You can also do something with the ISBN bins. That's a last lousy point.
+You can also do something with the ISBN bins. That's a last lousy point, so I'll ignore it here. It's an odd word, but there are only twenty-two possibilities. Well, six if you use the settler. And actually, in cheat mode, the settler lets you deduce the answer logically.
 
 > IN
 
-Oh no. You're under the gun. Err, the rifle.
+Oh no. You're under the gun. Err, the rifle. But Mole Elmo doesn't seem to want to attack you! In fact, he's gesturing for you to change his rifle.
 
 > FLIER
 
@@ -153,11 +170,13 @@ Now, Elmo's complaints may be funny, or they may not. Let's skip them for now.
 
 (ALT) >2
 
-So now you're in the carven cavern. At any time, you can deal with the Respect Specter for a bonus point that is intended as a tutorial. There are plates on a plaster psalter. The plates are squarish, with metal half way around ... sort of like a...
+So now you're in the carven cavern. At any time, you can deal with the Respect Specter for a bonus point that is intended, not as a huge puzzle, but as a tutorial for the letters settler on cheat mode and its ambiguous readings.
+
+There are palest pastel plates.
 
 > STAPLE
 
-What goes with a staple? Well, you can remake the psalter.
+What goes with a staple? Well, you can remake the plaster psalter.
 
 > STAPLER
 
@@ -168,7 +187,7 @@ The act-ruin curtain looks like lined paper, so you can just...
 
 > IN
 
-The Strip of Profits is the central hub of the rest of the game. There are a lot of stores, but the game should note which are the most interesting for your purposes. You need to complete two of them to be able to open up Store T. You can use the item that falls out after two wins to "ZAP" the other stores--or the portals you created from them--in order to skip them. But one way or another, the Trips Strip must be clear of portal stores before you enter Store T.
+The Strip of Profits is the central hub of the rest of the game. There are a lot of stores, but the game should note which are the most interesting for your purposes. You need to complete a very minimum of two of them to be able to open up Store T. You can use the item that falls out after two wins to "ZAP" the other stores--or the portals you created from them--in order to skip them. But one way or another, the Trips Strip must be clear of portal stores before you enter Store T.
 
 
 
@@ -227,12 +246,16 @@ ordeal reload -> stores -> 2 of (p u v w y) if you use the patcher -> t. K/N is 
 
 Also, if you are curious about the main "theme" of each store, I have it in ROT13 below.
 
-The optional stores are organized alphabetically, so you may wish to search for store (letter). The exception: H is a post-victory store, so I put it at the end.
+The optional stores are organized alphabetically, so you may wish to search for store (letter). The exception: H can't be opened until you defeat Elvira, so I put it at the end.
 
-You will get a warning before solving an area if you can still gain a few points. But if something is unachievable, then the game will not warn you. This may happen in store V, where there are a few with points you may miss. POSS will trigger when you miss them.
+You will get a warning before solving an area if you can still gain a few points. But you may have shut yourself out from getting the maximum. One way to track this is by toggling possible score notification with POSS.
 
-U = cercbfvgvbaf
+Below is a ROT13'd list of the themes of each store. The stores are organized in approximate orders of difficulty and length. There may be debate as to which of U and V are tougher. U has fewer possibilities for words and was, for a while, smaller than the minimum path through V. But V has more optional points and a greater pool of possible words. Similarly, there may be debate as to which of store Y and P is tougher. Testers seemed to find Y easier because there were so many short puzzles and also because, at some point, P switched back to nouns.
+
+Spoilers below.
+
 V = cnffvir ireof
+U = cercbfvgvbaf
 Y = npgvir ireof
 P = vagrewrpgvbaf
 W = nqwrpgvirf
@@ -289,7 +312,7 @@ T = nqireof
 
 
 
-Stores K and N form a silly puzzle which is not necessary, so you may want to skip it.
+Stores K and N form a silly puzzle which is not necessary, so you may want to skip it. And while I said I put most LLPs at the end, I'll reverse myself here, since the Strip of Profits is not a big area.
 
 Store K can be entered. Store N holds someone. They are related.
 
@@ -303,11 +326,11 @@ TOKERS are the people in store K.
 
 > ENTER STEAMING
 
-Now, a clue is how the tokers spoke. What did they use while speaking? Adjectives. You can look around at Studio E and the 'I Used To' pamphlet to figure you need to go...
+You need a weird word here. One that could be more than one figure of speech.
 
 > OUTSIDE
 
-And you get something for later. The munchies let you use the slider more often. Testers didn't use the slider much, but it gives you an additional hint. If you guess an anagram all wrong, it stays silent. If you guess one letter right, it cues you there. You can even purposely try nonsense guesses to see if any letters are right.
+And you get something for later. The nice mush munchies let you use the slider more often. Testers didn't use the slider much, but it gives you an additional hint. If you guess an anagram all wrong, it stays silent. If you guess one letter right, it cues you there. You can even purposely try nonsense guesses to see if any letters are right.
 
 
 
@@ -352,14 +375,21 @@ And you get something for later. The munchies let you use the slider more often.
 
 
 
-STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though it and STORE U both have the same number of maximum puzzles.
+STORE V WALKTHROUGH
+
+STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are seven rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. When this happens, I will list them both. Neither is "better" than the other.
 
 > TROVES
-> ENTER TROVES
+
+The portal name doesn't matter, but I hope you find my choices amusing. In fact, if there is just one, you can go IN to save keystrokes.
+
+> ENTER TASTEE ESTATE
+
+The Loather Rathole.
 
 Oh, look, you get a self-help book about thinking right! And how, if you think right, doing the right thing will come naturally. You're paralyzed by the hustle and bustle of the city and all that modernist stuff.
 
-At any time, you can get a point from Peg A. Page's book.
+Or, more reductively, you can get a last lousy point from Peg A. Page's book at any time.
 
 You've been kicked out of Eh, At Heat. Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
 
@@ -369,16 +399,18 @@ Oh no! Hate blinded you to your wallet getting stolen! But you can't visit the R
 
 > CARE
 
-There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
+So you've made it to the Boarded Roadbed. There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
+
+There's a last lousy point with the sty.
 
 > OBSERVE
 > SPOT
 
-This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. They are polar opposites but both equally valuable to positive thinking, you see. Using both gets you an extra point, so why not?
+This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. You can also deal with the SNORE SO ARENA. Both verbs are polar opposites but both equally valuable to positive thinking, you see.
 
-> REASON
-or
 > BELIEVE
+or
+(ALT) > REASON
 
 Doing both gets you an extra point.
 
@@ -396,13 +428,14 @@ You've hit rock bottom. Time to pull yourself up a bit...the tune from Eddie C w
 
 > DECIDE
 
-Boredom Bedroom! You may be able to figure what to do with the lager, but it's a Last Lousy Point.
+Boredom Bedroom! You may be able to figure what to do with the lager, which is another Last Lousy Point.
 
-You need to do one of the two below to have confidence you can move beyond the Boredom Bedroom. There's the lobster and the ME ARTS.
+You need to do one of the two below to have confidence you can move beyond the Boredom Bedroom. There's the BORTLES lobster and the ME ARTS stream.
 
 > MASTER
 or
 > BOLSTER
+
 (or both, for a bonus point!)
 
 Now, you are THAT close to believing you can lead, but not quite. That book by Dale Elda and Leda Adle may help.
@@ -417,7 +450,7 @@ In the Econ-Cone, you need to enter the godlings' lodgings. But it's for people 
 
 > ASPIRE
 or
-> STRIVE
+(ALT) > STRIVE
 (or both, for a bonus point!)
 
 Hm, that END PRONER POD needs to be avoided somehow. You can't enter the lodgings until you ignore it properly.
@@ -430,18 +463,18 @@ Wow! An office. But it's not properly stocked for being Numero Uno. Just the red
 
 DIVORCES magazine is a bonus point.
 
-What to do now? To be worth your salt?
+What to do now? To be worth your salt? Or the St. Al Salt?
 
 > LAST
 
-Now to be productive, with either the Marble Blamer or Sister Tressi watching you.
+Now to stop needing to be super-productive, despite either the Marble Blamer or Sister Tressi Siters watching you.
 
 > RAMBLE
 or
-> RESIST
+(ALT) > RESIST
 (or both, for a bonus point!)
 
-You're tired. There's that Trance Nectar which can help you be more productive. It's totally different from the Large Regal Lager! But you still don't want to drink it. Maybe break free...
+You're tired. There's that Trance Nectar which can help you be more productive. It's totally different from the Large Regal Lager! But you still don't want to drink it. One last action or thought will help you break free.
 
 > RECANT
 
@@ -491,18 +524,19 @@ You're tired. There's that Trance Nectar which can help you be more productive. 
 
 
 
-STORE U is the one with the fewest puzzles to win.
+STORE U is the one with the fewest puzzles needed to get a maximum score.
 
 > ROUTES
-> IN
 
-What is going on here? You can't go in any direction. They don't make sense. And you can't even easily enter the places listed. Perhaps the church sign provides a clue. You shouldn't need the letters settler, though you can flip the letters on the church sign for an additional clue in cheat mode.
+The Worst Ad is a Last Lousy Point. It's not necessary, so I won't spoil it here. You probably will guess it, since there are only so many words it can be, based on the words you use here. You can guess it at any time before you leave the Same Mesa for good, unless a certain someone is distracting you.
 
-The Worst Ad is a Last Lousy Point. It's not necessary, so I won't spoil it here. You probably will guess it, since there are only so many words it can be, based on the words you use here.
+> ENTER COURSE SOURCE
 
-The church sign says DIE SIN or SIN DIE. And going IN doesn't work.
+What is going on here? You can't go in any direction. They don't make sense. And you can't even easily enter the places listed. Perhaps the scripture picturers provide a clue. They say three different things.
 
 > INSIDE
+
+Ah, there we go. Something a little more formal for a place of worship.
 
 > X LIST
 
@@ -526,6 +560,8 @@ Rude 'N Nuder?
 
 > UNDER
 
+Hooray! The first reagent.
+
 How to get into Pat's?
 
 > PAST
@@ -534,7 +570,7 @@ And what to do about the seed pit?
 
 > DESPITE
 
-Yay, mushrooms.
+Yay, mushrooms. The second reagent!
 
 > EXIT
 
@@ -542,7 +578,7 @@ Oscar's?
 
 > ACROSS
 
-How to get the pipe soot?
+How to get the pipe soot, the final reagent?
 
 > OPPOSITE
 
@@ -550,6 +586,10 @@ How to get the pipe soot?
 
 > IN (INSIDE is not necessary now that you've gained the priest's trust)
 > EXIT
+
+Okay. A Bev O' Be Ova' clues you to a direction.
+
+> ABOVE
 
 Oh no! A MORF-FORM! Maybe you can't change it, but you can change WHERE it is.
 
@@ -571,7 +611,7 @@ And No-Lag Logan.
 
 > ALONG
 
-Da Mist is certainly intimidating!
+The admits-mist ad is hiding something, as is Da Mist.
 
 > AMIDST
 
@@ -587,7 +627,7 @@ Now help the hurt hog.
 
 > THROUGH
 
-There's a chance for the LLP with the patters. Not changing them but their content. Or you can just deal with the yob den.
+There's a chance for the LLP with the patters. Not changing them but their content. Or you can just deal with the yob den to seal the deal.
 
 > BEYOND
 
@@ -637,10 +677,12 @@ That will do it! Since you've solved two store regions, you can now zap stores w
 
 
 
-STORE Y seems to be something underwater-ish. It's overall probably a bit easier than Store P, though there are more points to gain. Shorter words.
+STORE Y seems to be something underwater-ish. There are more points to gain than in STORE P, but guessing the right words seem easier. I find it ironic that the "guess the verb" area seemed to have caused testers the least frustration. Perhaps having to ask "what do I do next" automatically makes people think of verbs, too. I don't know.
+
+In a case where a verb can take an object, you should get a point for either command, e.g. PASTE TAPES or PASTE should both work. I won't label all the cases here.
 
 > OYSTER
-> IN
+> ENTER BALANCER BARNACLE
 
 Okay, you're in an action-packed bar. It's totally action-filled, and you need to take evasive action. But first, how to get in there?
 
@@ -686,7 +728,7 @@ And you'll be picked up. You then need to get out...
 
 Lots of violence in Anger Range. First things first. Protect that trout! Two ways. Either opens up the east.
 
-> SCRAP (with the CARPS) or
+> SCRAP (the CARPS) or
 (ALT) > SPIKE (the pikes)
 
 > E
@@ -703,24 +745,19 @@ Now Aunt Tuna is happy. Reward in the drawer! You can also fix the dent for a la
 
 You can get the wipes if you want. They lead to a side quest I will detail at the end.
 
-But you want to be a good guest. The food isn't bad.
+But you want to be a good guest. The tea-at-a-tee should be pretty straightforward.
 
 > EAT TEA
 
-You will find the other half of the paler pearl later.
+You will not be surprised to learn that you will find the other half of the paler pearl later. In fact, you could do so in short order now. But it's slightly quicker to go somewhere else first.
 
 > W
 
 > N
 
-At any time here in the plains you can just sound off for a LLP based on the location name. There are a few silly guesses, too.
+At any time here in the plains you can just sound off for a LLP based on the location name. There are a few silly guesses, too, that the game responds to.
 
-The skis are blocking the span pans. The knob is jammed.
-
-> KISS SKIS
-> BONK KNOB
-
-Oh no! You keep getting hit by a crate.
+Your first order of business is to stop getting hit by a crate.
 
 > TRACE
 > REACT
@@ -742,9 +779,9 @@ The tubs are probably hiding something.
 
 The prod needs something simple to jar and open it. It's a command that's generally pointless in the game, except now.
 
->DROP
+> DROP
 
-You can do part of the side quest here to find a shiny weapon. Or just go out. Let's go west of the plains.
+There's something under the waste and another LLP once you deal with the waste. But this walkthrough is about getting through the game. So let's go west of the plains.
 
 > OUT
 
@@ -756,7 +793,9 @@ That sardine is nosey but sensitive to noise.
 
 > WARP
 
-Did you examine the arches? How about examining more thoroughly?
+Did you examine the arches?
+
+How about examining more thoroughly? Some games force you to do this instead of EXAMINE to find everything, which is a nuisance. But I hope it "works" here.
 
 > SEARCH ARCHES
 
@@ -764,6 +803,8 @@ The two paler pearls fit to become a general gleaner...which is too small to rea
 
 > ENLARGE
 > X GLEANER
+
+This will help later.
 
 > N
 
@@ -781,6 +822,10 @@ With the ruby buried, you can summon the ghost in Anger Range, now.
 > S
 > E
 
+You can maybe save time if not keystrokes with...
+
+(ALT) > GT ANGER
+
 Okay, you need to dig up the spirit...
 
 > UNEARTH
@@ -792,6 +837,8 @@ What's this? It's a sausage? Well, there's only one way to calm it down.
 > W
 > N
 > W
+
+(ALT) > ASK HAUNTER ABOUT RUBY
 
 ...this shows it where the ruby was! You framed the weaselly walleyes. The ghost scares them away.
 
@@ -807,11 +854,13 @@ You find a portal behind it!
 
 > IN
 
-You can probably figure what to do with the ant, if you're doing the side quest.
+Now there is a rather long side quest. You need to have a shiny lance. This quest spans two areas.
 
-The lever can be used. Or, rather, not used. For a bonus point. But here is what you really want to do, in the Loft/Den.
+The Templar Ramplet accounts for three points: figuring how to climb it, beating the enemy behind, and performing the right action in the side area.
 
-The papery yapper is adamant you can't bribe it--as such...
+The lever can also be used or, rather, not used for a bonus point. But here is what you need to do in the Tenfold Teflon'd Loft/Den.
+
+The papery yapper is adamant you can't bribe it, as such. Let's find a euphemism!
 
 > PREPAY
 
@@ -819,15 +868,15 @@ Oh dear! You need to do something with the dialer.
 
 > DERAIL
 
-That's a warning from Elvira! And now the pins are in the way!
+That's a warning from Elvira! You could call back, but the pins are in the way at the moment.
 
 > SPIN PINS
 
-Or SNIP them, even if you aren't carrying a sharp object.
+Note: you can't SNIP them. You don't have anything surgical enough. Now to bug Elvira again.
 
 > REDIAL
 
-This solves the oyster but doesn't get you through the side quest, which is detailed in the appendix.
+This solves the Oyster area.
 
 
 
@@ -886,7 +935,7 @@ STORE P can be transformed and entered, too.
 
 You can eat the curst crust for a clue in the next zone. The crust will make you Say Stuff.
 
-> ENTER SPOT
+> ENTER ODORANT TORNADO
 
 That lamb is too scared to move. Or not scared enough. It is a last lousy point but not a hard one. The maze has two solutions: a cheap short one and a cheap long one.
 
@@ -926,10 +975,15 @@ Hmm, a guy named Rand, a lot like Leo.
 That wasn't too bad! But they might be good in another fight. Be nice to them, now. They aren't really washups. Talk to them if you want, then...
 
 > WHASSUP
+
+The sods gone odes song can be repelled for an LLP.
+
 > N
 > N
 
 The volt maze is not worth going through manually. You can solve it just reading the zany meter and seeing the maze's name. Or, just notice the name of the rooms and say to yourself, I really don't want to go through!
+
+This isn't technically an interjection, but it can be said like one. Hence, it doesn't deserve full points. The interjection that gets full points is a bit longer.
 
 > WONT
 
@@ -944,16 +998,16 @@ If you try going north, you still get smoked. Even if you know what to do with t
 > BLEEP
 > E
 
-Now you can do something with the Sport Ports for a last lousy point. It's an obscure word, and in fact it's an interjection I didn't know until I started really poking around, but it turned up and felt appropriate.
+Now you can do something with the Sport Ports for a last lousy point. It's an obscure and foreign-ish word, and in fact it's an interjection I didn't know until I started really poking around, but it turned up and felt appropriate.
 
-Gun doesn't go boing?
+The boing-go bin needs fixing.
 
 > BINGO
 > PUT DART IN POPGUN
 > W
 > N
 
-Hmm, fight to the north through ether.
+Hmm, fight to the north through ether. How to rally your friends?
 
 > THERE
 
@@ -970,17 +1024,29 @@ Neither is better than the other.
 Now Saps' Pass is the Phat Path. But now you need to ditch Rand and Leo, who want to visit the shack. Three ways--choose two.
 
 > LATER
-> SO LONG
+> TOUGH
 or
-(ALT) > TOUGH
+(ALT) > SO LONG
 
-Oh, you can deal with that hawt thaw if you want, too, but it's a last lousy point. It was an extremely badly clued puzzle in version 1, so it's a sort of inside joke with myself, but I doubt it's too opaque. You probably know what to do.
+Oh, you can deal with that hawt thaw if you want, too, but it's a last lousy point. It was an extremely badly clued puzzle in version 1, so it's a sort of inside joke with myself.
+
+I think it's far less opaque now. You probably can figure what to do.
+
+Trickier are the Starch Charts. They signal a change from interjections to something else. They are a LLP, and a bit of an obscure one.
 
 > N
 
-Read the schematic catechism a few times if you want--I sort of generated a lot of doctor names from a script. And some of the longer anagrams were fun. Originally, it was part of the puzzle to fix up the computer, but things didn't quite work right. So now it's just a silly prop to hold more anagrams.
+The angrier earring becomes something new, something too heavy to carry.
+
+Read the schematic catechism a few times if you want--I sort of generated a lot of doctor names from a script. And some of the longer anagrams were fun. Originally, it was part of the puzzle to fix up the computer, but that felt convoluted. The game is convoluted enough, so now it's just a silly prop to hold more anagrams.
 
 The trim socks are a last lousy point. This one is not meant to be easy, but if you know about computer hardware, maybe it is.
+
+The escaroles provide an optional way to save a turn on a puzzle later. They are another last lousy points.
+
+You can also twiddle Drive A and Drive E.
+
+So what is necessary?
 
 The Clack Ops Locs Pack is useless in its present form.
 
@@ -994,6 +1060,14 @@ Giant flea?
 
 > LEAF
 
+You will, later, need fuel for thought.
+
+> COLA
+
+And a place to rest.
+
+> FUTON
+
 Disk with a reversible compression algorithm? Portability?
 
 > SKID
@@ -1004,17 +1078,20 @@ Disk with a reversible compression algorithm? Portability?
 The drab yoke looks like...a keyboard. But how to get the yak to move?
 
 > PUT LEAF ON SKID
+
+If you changed the escaroles,
+
+(ALT) > PUSH SKID S
+
+or
+
+(ALT) > S
+
 > PUSH SKID N
 > G
 > G
 
-Okay. So the YrNet Entry detached the drab yoke from the yak. Now you need fuel for thought.
-
-> COLA
-
-And a place to rest.
-
-> FUTON
+Okay. So the YrNet Entry detached the drab yoke from the yak.
 
 > KEYBOARD
 
@@ -1025,16 +1102,16 @@ Okay, put it all together.
 > PUT KEYBOARD ON TABLE
 > PUT CAPS LOCK IN KEYBOARD
 
-The TBA key is optional. But obviously, it will save time if you change it to what it should be. This is easier than the ROM sticks.
+The TBA key is optional. But obviously, it will save time if you change it to what it should be. This is considerably easier than the ROM sticks.
 
-Now for a monitor.
+Now for a monitor. The N-E-Recs Censer...
 
 > SCREEN
 > PUT SCREEN ON TABLE
 
-What are the buttons for? To be or...(not to be/too bent)
+The Be-Troo E-Robot has one job. It's simple, but you can't do it.
 
-> PUSH REBOOT
+> REBOOT
 
 Slipping on peels? Probably use the futon.
 
@@ -1048,12 +1125,12 @@ Oh no! It works, but it doesn't work right. It won't...BUDGE.
 
 > DEBUG
 
-Okay, how to get out of here? The UBS must be really universal. Because it can also be...
+Okay, how to get out of here? The USB must be really universal, because it can also be two things...
 
 > SUB (or...)
 (ALT) > BUS
 
-(As with the hogs, neither option is better than the other. Though you can undo and try the other for slightly different text.)
+(As with other multiple-choice verbs, neither option is better than the other. Though you can undo and try the other for slightly different text.)
 
 
 
@@ -1103,12 +1180,14 @@ Okay, how to get out of here? The UBS must be really universal. Because it can a
 
 
 
-STORE W has the most puzzles, with some of the longest words, but a ton of them are optional. Also, you can figure what to do with the Curst Palace Castle Apcur right away, but you still have to get there.
+STORE W has the most puzzles, with some of the longest words, but a ton of them are optional. Also, you can figure what to do with the Curst Palace Castle Apcur right away, but you still have to get close to perform your magic effectively.
 
-The GT command may be particularly useful here to save dealing with trivia.
+Also, I will get rid of all the guardians in the main three-by-three area even though you only need to take down seven. You need access to the corners and center and to clear the northeast.
+
+The GT command may be particularly useful here to save dealing with longer tasks and treks.
 
 > TOWERS
-> ENTER TOWERS
+> ENTER TRUSTER TURRETS
 
 Now, a clue is what the towers inspired. Adjectives. You've got a bunch of prosaic picaros to deal with here in the Trefoil. Seven, to be exact, though you only need to get rid of four, including Rodney. Rodney's babble should give you a clue as to what to do.
 
@@ -1169,7 +1248,7 @@ What to do with Rodney hanging around?
 
 > YONDER
 
-or (iffy word here, but why not?)
+or (iffy word here, but since it's plausible, I decided to allow it)
 
 (ALT) > DRONEY
 
@@ -1192,9 +1271,9 @@ If you want to see a map in the Scope Copse,
 
 > X SCOPE
 
-It updates as you knock off guardians. You can check this after your first challenges.
+It updates in the top window as you knock off guardians. You can check this after your first challenges.
 
-The yurts are an LLP. I'll let you guess.
+The Try-Us Yurts are an LLP. It's not meant to be difficul;t.
 
 Those bluster butlers are guarding something important, but maybe you can make them better butlers. You can't do anything west, yet, but let's get them out of the way.
 
@@ -1210,9 +1289,11 @@ The snider diners are sure you can't get past them. The dry wit!
 
 North or east doesn't really matter, but let's go east first. It's slightly shorter.
 
+By the way, the yacker keycar that appears here? It actually appears in the first non-Coastlines place that is free of guardians. It's possible to clear the area without seeing the keycar, but not very. The keycar is an LLP. To avoid it altogether, you could avoid changing Muscly, the wait-seer, the reed's ale deal seer, the trendies, and the drained arid den. This is probably harder to work out than just disposing of a few more guardians, but in case you were wondering, it is possible.
+
 > E
 
-The man who is not Flemish just wants to be...
+"SMH, Life" Mel Fish is not Flemish. He just wants to be...
 
 > HIMSELF
 
@@ -1226,15 +1307,15 @@ The weeds are free to move until they're...
 
 > SEWED
 
-You can do something with the denim, too.
+You can do something with the denim, too. Another Last Lousy Point. They're all over the Towers.
 
-The pirates are ruddier than you? Maybe you need to make it so they need a tan.
+The fluster-self rut leaves you agitated.
 
-> PASTIER
+> RESTFUL
 
-The alarming grailman is good at his job.
+The sweatier wait-seer blocks you with patience.
 
-> MARGINAL
+> WEARIEST
 
 The Reed's Ale vendor (differs if you're male or female) can't decide if he should stay or go. To break Lars/Else free from obligations,
 
@@ -1248,24 +1329,17 @@ Now whether you are facing Lois the Hostile or the Hostile-is-He Lot, they reall
 
 > HOLIEST
 
-The ego-drains are organised. You are crushed with feelings of inadequacy, until they're overblown.
+The alarming grailman is good at his job.
 
-> GRANDIOSE
+> MARGINAL
 
 > S
 
-The natives' site van won't budge, but maybe you can convince them to move...
-
-> VAINEST
-(ALT) > NAIVEST
-
-There's no real difference. Also, there's nothing really to the south except a hint-pastry, which you won't need with this walkthrough. But you can get an LLP point in the Lost Lots to the south, taking the strudel the right way.
-
-The bonker is working fine until it's...
+The REB-NOK Bonker is working fine until it's...
 
 > BROKEN
 
-Oh no! But a stinger takes its place! And it's active! There must be something important behind!
+Oh no! But a grin-set stinger takes its place! And it's active! There must be something important behind!
 
 > RESTING
 
@@ -1287,43 +1361,31 @@ Dr. Yow can also be something else, but you don't need that, yet.
 
 > N
 
-The atheists can talk nice and slow and patiently, until you disrupt them a bit.
+The atheists are all nice and slow and patient, until you disrupt them a bit.
 
 > HASTIEST
 
-The Coasting Agnostic will help you later.
+We can help the Coasting Agnostic a bit. They'll help us later. But first, make Reading: a Dinger completely unpalatable.
+
+> GRAINED
 
 > W
 
-The Sweatier Wait-Seer does not get tired until you force it...
-
-> WEARIEST
-
-> W
-
-Now there are three guardians.
-
-Let's take care of the resident trendies to make passage easier.
+The Resident Trendies are too cool to let you past.
 
 > NERDIEST
 
-The ingrates were angriest, but now they're...
+> W
 
-> ANGSTIER
-
-Now you can detour for an LLP. There are two ways to take the Strudel in Lost Lots.
-
-The admirer is unattached until...
+Now there are three guardians. We only need to clear one. The mardier admirer.
 
 > MARRIED
 
-or, if you're mean,
+Let's clear the traipse pirates so we aren't blocked. They are ruddier than you. Maybe you need to make it so they need a tan.
 
-(ALT) > MARDIER
+> PASTIER
 
-(As with the natives' site van, choosing one over the other has no effect on gameplay.)
-
-By the way, the keycar appears in the first place that is free of guardians. It's possible to clear the area without seeing the keycar, but not very. The keycar is an LLP. To avoid it altogether, you could avoid changing Muscly, the wait-seer, the reed's ale and the drained arid den. This is probably harder to work out than just disposing of a few more guardians, but in case you were wondering, it is possible.
+Now you can detour for an LLP. There are two ways to take the Strudel in Lost Lots.
 
 > N
 
@@ -1331,11 +1393,16 @@ By the way, the keycar appears in the first place that is free of guardians. It'
 
 The duck hears Dr. Yow's voice, and that establishes trust.
 
-(Note: you can GO TO somewhere if you want to shave off a few turns. In this case, GO TO SUBSECTOR or GO TO YOW or even GT YOW. So let's do that now. It's easier than S.S.S.E.E.E etc. You save a few keystrokes and maybe a second or two.)
+> S
+> S
+> S
+> E
+> E
+> E
 
-> GT YOW
+(ALT) > GT YOW
 
-The fissure can be messed with, and so can the (locked) gate.
+The fries-us fissure can be messed with, and so can the luck node.
 
 > UNLOCKED works, because the lone duck is an anagram, and you know it's Dr. Yow's.
 
@@ -1350,13 +1417,17 @@ The fissure can be messed with, and so can the (locked) gate.
 
 > PUT DAGGER IN REPAIR
 
-(GT AGNOSTIC is possible instead of the below moves, too. Again, it may cost a few keystrokes!)
+The gizmo needs someone more technical.
+
+(Note: you could've gone west earlier, then GT ROUTE.)
 
 > E
 > E
 > E
 > N
 > N
+
+(ALT) > GT AGNOSTIC
 
 The Coasting Agnostic is engrossed in a faux-intellectual book. Let's give 'em something better to do by making the book less palatable.
 
@@ -1382,18 +1453,22 @@ Incidentally, you can do something with the raves saver, since it calls itself a
 
 > GIVE GIZMO TO AGNOSTIC
 
-Now there are two ways to do things. You can repair the boat all the way, or you fix it one way and get stuck in the water. Each way gives the same amount of points.
+Now there are two ways to do things. You can repair the boat all the way, or you fix it one way and get stuck in the water. Each way gives the same amount of points. If you want, you can also fix the weirder red wire first.
 
 > STABLER
 > ROBUST
 
-If you only do one, you go to Rawest Waters, where the eastern shore looks almost reachable.
+If you only do one, you go to Rawest Waters, where the Earnest Eastern Neaters want to help you, but you have to help yourself.
 
-> NEAREST
+(ALT) > NEAREST
 
-Now, in the mislit limits, you can straight-out win the game. But what if you want to help Renato's quest? There's that unripe ur-pine.
+Now, in the mislit limits, you can straight-out win the game. But what if you want to help Renato's quest? This is self-contained enough, I'll spoil these optional points.
 
 > PUNIER
+
+Oh no! Nastier stainer retinas!
+
+> ANTSIER
 
 The crocus goes in the top opt pot. But now the Pester'n Serpent won't let go until you make it just...
 
@@ -1564,7 +1639,7 @@ Now you can get rid of the moat.
 
 > ATOM
 
-The next part with Mr. Lee is an alternate solution, or just a way to get full points. Longer words, though.
+The next part with Mr. Lee is an alternate solution, if you went south first. It's also a way to get full points. Longer words, though.
 
 (XTR) > S
 
@@ -1574,7 +1649,7 @@ The next part with Mr. Lee is an alternate solution, or just a way to get full p
 
 (XTR) > N
 
-Okay, back to the main line.
+The "vow here" is an LLP. But back to the main line...
 
 > E
 
@@ -1590,11 +1665,11 @@ The imp needs to be provoked. There are three ways, based on its description. Yo
 
 > N
 
-The owls will kill you!
+The owls plan to kill you with speed!
 
 > SLOW
 
-The other animals follow this, uh, mechanic. You only need three of them, but why not get all four?
+The other animals follow this, uh, mechanic. You only need three of them, and it doesn't matter whom you leave, but why not get all four?
 
 Leopard, Ocelots, Satyr, Badger.
 
@@ -1629,7 +1704,7 @@ You need to fix that raptor.
 
 > PARROT
 
-Nails, thrones, pines, corona. You actually only need three of these, but I hope they are not too hard.
+Nails, thrones, pines, corona. Again, you actually only need three of these, and it doesn't matter which gets left, but I hope they are not too hard.
 
 > SNAIL
 
@@ -1657,7 +1732,7 @@ You have enough allies now. Time to kill the hardy hydra.
 
 > W
 
-You can get an LLP shutting Elmer and Merle up before getting rid of them, if you want.
+You can get two LLPs noting Elmer and Merle are ideas aides, then taking care of the holy nest behind them.
 
 But hmm, what could beat a hydra? Something you already saw! Something like...what the parrot was!
 
@@ -1673,7 +1748,7 @@ You may need to use those medals before visiting Elvira. Hm, IQ + Lucky = ...
 
 > W
 
-The repartee is just there for your amusement. But Elvira won't kill you ASAP, since you disabled her weapons. Unless you wait helplessly, and she regains confidence. You just need to make sure you have enough backup. If you didn't fix the whistle, you can retreat and do so.
+The repartee is just there for your amusement. Now, Elvira won't kill you ASAP, since you deflected her atack. Unless you wait helplessly, and she regains confidence. You just need to make sure you have enough backup. If you didn't fix the whistle, you can retreat and do so.
 
 > 7
 
@@ -1765,7 +1840,7 @@ Yay, a tekno-token for money.
 > CANTALOUPE
 > PERSIMMON
 
-And now a coin!
+And now a coin! It can be changed now or later.
 
 > N
 
@@ -1799,7 +1874,7 @@ There's a lot more to do here and elsewhere, and you can probably guess a lot of
 > SONIC
 > ICONS
 
-(Note: this should be doable in any order, e.g. coin->icon first and so forth.)
+(Note: this should be doable in any order, e.g. coin->icon first and so forth. Or even SONIC ICONS and SONIC COINS.)
 
 > N
 > D
@@ -1875,20 +1950,20 @@ OR IS IT? Well, there is still Demo Dome Mode, which isn't an adventure but more
 
 There is not much to do in the DEMO DOME MODE other than to examine everything. The game keeps track of how much you have left to examine in any one room and nags you if you leave before examining everything fully.
 
-Known Comp vs Post-comp walkthrough differences (this is largely for puzzles and does not cover changing location names, which are documented in the release notes)
+Known Comp vs Post-comp walkthrough differences (this is largely for puzzles and does not cover changing location names.)
 
 General: Trizbort map included with release 3. Last Lousy Points at very end, in ROT13.
 
 1 ORDEAL RELOAD:
   * release 2: the chimney is now available for escape. Gunter's options are different. Elmo's are too. Elmo is moved, as are the plaster and plates. Elmo has a tutorial.
   * release 3: Gunter does not stop by until you examine a few things. So you have more time to activate the two new areas, and you also can figure what you're supposed to be doing. Plus you are forced to talk to Gunter for an overview, but you can skip the rest. You can also freely flip diorama things but nothing else, but flipping something that should create an exit brings Gunter closer. Elmo's tutorial is tuned up.
-  * release 4: MANOR is now ORDEAL RELOAD. New LLP in the Gallery with the ISBN bins. New tutorial LLP with the Respect Specter.
+  * release 4: INTRO/MANOR is now ORDEAL RELOAD. New LLP in the Gallery with the ISBN bins. New tutorial LLP with the Respect Specter.
 2 TROVES:
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs WEST)
  * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the second room that kept changing its name. The skyscraper is now the godlings' lodgings. The END PRONER POD replaces the Pernod. The Upscale Capsule is rearranged so the red vees are the first puzzle (IGNORE REGION became a general jump command) with Sister Tressi and Blamer Balmer at the end. The final puzzle, the Trance Nectar, is new, and Eddie C's song is sent to the Drain Nadir.
 3 ROUTES:
-  * release 4: optional ways through various areas are now disabled. The end puzzle is now in an area past the Cripple Clipper. The two mutually exclusive winning words are now both necessary, and there is an additional command, too. ABOARD is no longer a solution. The raptest patters are a new LLP.
+  * release 4: optional ways through various areas are now disabled. The end puzzle is now in an area past the Cripple Clipper. The two mutually exclusive former winning words are now both necessary, and there is an additional command, too. ABOARD is no longer a solution. The raptest patters are a new LLP.
 4 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron (moved to Oyster) with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
@@ -1902,7 +1977,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where it makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also two other LLPs to get a proper gift. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP.
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
@@ -1973,7 +2048,7 @@ Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher.
 
 Store V has a minimum of 95 and a maximum of 138. The seven Last Lousy Points account for all the difference. There used to be alternate ways through, but not any more.
 
-Store U has a minimum of 115 and a maximum of 129. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, but V may be a bit tougher to clear completely, since the optional points can get skipped.
+Store U has a minimum of 115 and a maximum of 129. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, but V may be a bit ` to clear completely, since the optional points can get skipped.
 
 Store P has a minimum of 132 and a maximum of 185. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 15 letters with the crust (volt maze, washups.) How you deal with Ye Hoop also means 4 or 6 letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack.
 
@@ -2043,8 +2118,14 @@ The docile old ice can be PBVYRQ.
 In the Leveraged Everglade:
 TENAQVBFR for the organised ego drains.
 
+Before visiting either of the Lost Lots or Fringe Finger for the first time, you are sent to the Dourest Detours.
+EBHFGRQ helps you get refocused.
+
 In the Lost Lots:
 CEBFVRFG for the sporties' ripostes.
+
+In the Fringe Finger:
+The strudel can be EHFGYRQ for an extra point, though you can just take it.
 
 In the Treading Gradient:
 The mended mini denim can be ZVARQ for a new pastry.
@@ -2052,15 +2133,11 @@ The replay player can be CRNEYL.
 
 Once you've cleared everything in one of the main square, a keycar appears. It can become PERNXL.
 
-In the otherwise inconsequential corner areas:
-The strudel in Fringe Finger can be EHFGYRQ for an extra point, though you can just take it.
-The organised ego drains in Lost Lots can be TENAQVBFR.
-
 The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
 You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 
-Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer etinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR.
+Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer etinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR. Give the top opt pot for a non-anagram point.
 
 You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N CNFGEL LBH PNA FGVYY TRG GUVF CBVAG.
 
@@ -2082,10 +2159,11 @@ As in Troves and Towers, multiple passages through mean that solving one way mak
 You can ERFPVAQ the cinders instead of using them for a clue.
 
 There are also two ways to annoy Elmer and Merle.
-UBARFGYL is in tune with the area's theme, an -LY adverb.
-But Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR.
+Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR.
+After the holy nest appears, UBARFGYL is in tune with the area's theme, an -LY adverb.
 
 OTHERS:
+
 Don't use the arugula to "guru" any item successfully.
 
 Fruits not covered in walkthrough:
@@ -2111,7 +2189,7 @@ Peach:
 Quince:
 > PVADHR
 
-The inapt paint saying "DESERVER RESERVED".
+Reserved Deserver Dr. Severe:
 > ERIREFRQ
 
 Now for the fruits that can be directly named.
