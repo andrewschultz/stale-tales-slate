@@ -1,28 +1,28 @@
 Ordeal Loader (min)
-door/bolt/toga/nametag
+door/blot/goat/gateman
 Ordeal Loader (max)
-door/bolt/bugle/toga/slander/nametag/attics
+door/blot/bugle/goat/slander/gateman/attics
 Stores (min)
 forest/sortie/metros/resort
 Stores (max)
-forest/sortie/metros/resort/sorbet/nicebat
+forest/sortie/metros/resort/sorbet/bactine
 Forest (min)
 east/west/nose/shades/shotgun
 beard/chisel
-silver/sliver/spread
+silver/sliver/drapes
 maps/wolves
 Forest (max)
 north/south/nose/shades/shotgun
 beard/chisel
-silver/sliver/spread/hasbeen
+silt/silver/sliver/drapes/hasbeen
 maps/wolves
 Metros (min)
 gardenia/tomato/keycard
-sheath/sword/barcode/controls/velcro/darkness/opening
+sheath/sword/barcode/controls/velcro/opening
 resin/beast
 Metros (max)
 gardenia/tomato/rentals/keycard
-sheath/sword/barcode/controls/velcro/darkness/opening
+noisebag/sword/barcode/controls/velcro/darkness/opening
 resin/beast
 Sortie (min)
 sixteen/kitchen/straw/sack
@@ -39,23 +39,24 @@ Resort (min)
 islet
 cork
 slope/ropes/grips
-trio/potters/kilns/getout
+trio/potters/kilns/tugtoe
 exist
 Resort (max)
 islet
-leis/cork/wings
+lies/cork/wings
 toeholds/slope/ropes/grips
-trio/potters/kilns/chain/getout
+trio/potters/kilns/china/tugtoe
 exist
 ========
-Means Manse (min)
+Ordeal Reload (min)
 lamp/satchel
 stable/stair
 flier/staple/stapler
-Means Manse (max)
+Ordeal Reload (max)
 lamp/satchel
 basement/stable/chimney/ramp/painting/stair/snib
 flier/staple/stapler
+scepter
 Stores1 (min)
 routes/troves/otters
 Stores1 (max)
@@ -77,24 +78,26 @@ desire
 aspire/strive/ponder
 deserve/discover/last/resist/ramble/recant
 Routes (min)
-inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
+inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 Routes (max)
-inside/against/astride/below/under/past/despite/across/opposite/from/beneath/until/around/along/amidst/athwart/between/through/beyond
+inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 towards/without
 Presto (min)
-wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
+wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/tough/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
 Presto (max)
-blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/goodness/bleep/bingo/prost/there/syke/what/later/solong/trasch/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/derive/sub
+blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/goodness/bleep/bingo/prost/there/gosh/what/later/solong/trasch/capslock/mug/leaf/skid/cola/futon/keyboard/screen/romsticks/casserole/reboot/tab/sleep/compile/debug/derive/avider/sub
 Oyster (min)
+#we use the pills at the start
 spill
 calm/run/fart/soar
-scrap/seek/eat/tutor
+spike/seek/eat/tutor
 trace/react/kiss/bonk/snap
 bust/drop
 warp/bury/unearth/assuage
 search/enlarge/patrol
 prepay/derail/spin/redial
 Oyster (max)
+#remap could've been chosen too but it has as many possibilities as unset
 unset/inset/scrape/stroll
 calm/run/boast/leap
 scrap/scan/seek/eat/tutor/tend/swipe
@@ -102,30 +105,30 @@ trace/react/kiss/bonk/snap/splain
 bust/drop/sweat/clean/shape
 warp/bury/unearth/assuage
 search/enlarge/patrol/prepay
-trample/psalm/revel/derail/spin/redial
+trample/psalm/tan/revel/derail/spin/redial
 Towers (min)
-awed/coyer/weedy/yonder
+gone/weedy/bleak/yonder
 # North/H guardians
-clumsy/nerdiest/pastier/resealed/restful
+clumsy/nerdiest/pastier/released/restful
 # guardians you have to get
 punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
 wordy/rowdy/fussier/grained/stabler/robust/spectacular
 Towers (max)
 # 7 warriors
-ashen/coyer/weedy/tenser/achier/recreant/yonder
+stony/ashen/bored/achier/snared/recreant/yonder
 # guardians you have to get (7)
 sadder/subtler/holiest/married/hastiest/broken/resting
 # North/H guardians (5)
-clumsy/nerdiest/pastier/resealed/restful
+clumsy/nerdiest/pastier/released/restful
 # East/I guardians (5 extra)
-rinsed/himself/drained/alarming/sweatier
+rinsed/himself/drained/marginal/weariest
 # other stuff to do (robust < nearest)
 sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
-rusty/naivest/angstier/mined/creaky/pearly/docile/rustled/grandiose/prosiest/attentive/rewired/
+rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted
 # more LLPs
-punier/present/triste
+punier/antsier/present/triste
 Otters adjusted (min)
 bare/reedi
 seedi/steami/tedious
@@ -158,40 +161,42 @@ Otters (max)
 barely/rescind/reedily
 sobbingly/emotionally/despairingly
 because/else/atom/although/ergo/however
-angrily/brutely
+angrily/enragedly
 slow/paroled/coolest/artsy/garbed
 loathingly/stoically
 parrot/snail/hornets/snipe/racoon
 honestly/aside/raptor/deeply/quickly
 Others (min)
 limes/grapes/pears/plums/compass
-apples/apricot/nabana/gonear
-cheap/cripes/solemn/molen
-rhubarb/tamarind/tangerines/nectarine
-raspberry/pineapple/reversed/mango
-sonic/icons/prep/review
+#4 easiest from wells/space/field open up clearing
+apples/apricot/banana/gonear
+#now the rest
+among/cheap/cripes/molen
+cinque/solemn/papayas/rhubarb
+#small detail here: raspberry/pineapple have more letters but fewer possibilities than tamarind
+reversed/tamarind
+coconuts/ancienter/raspberry/pineapple
+icon/sonic/prep/review
 Others (max)
 limes/grapes/pears/plums/compass
-apples/apricot/nabana/gonear/mulberries/coconuts
-cheap/cripes/solemn/molen
-rhubarb/tamarind/tangerines/nectarine
-raspberry/pineapple/reversed/mango/persimmon
+blueberries/maraschino/tamarind/pomegranate/persimmon/cantaloupe
+tangerines/mulberries/apples/apricot/gooseberry/coconuts
+blackberries/cranberries/strawberries/breadfruit/watermelon/pineapple/raspberry/grapefruit
+among/papayas/solemn/molen/ancienter/cheap/cripes/cinque
+rhubarb/reversed/banana/gonear
 sonic/icons/research/review
-blackberries/blueberries/strawberries/cantaloupe
-maraschino/cranberries/pomegranate/watermelon
-gooseberry/grapefruit/papayas/breadfruit/cinque
 ;
 ######For reference, all the Store T stuff
-Store Q (min)
-tacitly/saintly/seedily/tearily/snidely/ladyish/starkly
-steamily/formally/bridally/silently/locality/blearily/stupidly/modestly/shoddily/suddenly/shabbily
+Store Q (max)
+cattily/nastily/seedily/irately/snidely/shadily/starkly/bossily
+steamily/formally/ribaldly/silently/coitally/blearily/stupidly/modestly/shoddily/suddenly/shabbily
 sincerely/sobbingly/wearingly/martially/tediously
-drywalling/emotionally/despairingly
-Store Q2 (max)
-tacit/saint/seedi/teari/snide/shadi/stark
-steami/formal/bridal/silent/coital/bleari/stupid/modest/shoddi/sudden/shabbi
-sincere/sobbing/wearing/martial/tedious/
-drawling/emotional/despairing
+drawlingly/emotionally/despairingly/desperately
+Store Q2 (min)
+catti/nasti/seedi/irate/snide/shadi/stark/bossi
+steami/formal/ribald/silent/coital/bleari/stupid/modest/shoddi/sudden/shabbi
+sincere/sobbing/wearing/martial/tedious
+drawling/emotional/despairing/desperate
 ;
 Warrior Stuff (max)
 gone/ashen/stony/awed
