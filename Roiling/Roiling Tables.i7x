@@ -302,9 +302,9 @@ the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	pos
 bleary barley	nude dune	false	409909726	--	"barely"	"barely"	a rule	post-barley-barely rule	"You alertly re-tally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the top of the barley becomes ragin['] grain, seared, then erased. Fortunately, you're able to dance around to avoid the rife fire. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. A nude dune, however, blocks progress from all around.[paragraph break]Also, cinders remain from the fallout. They seem useless, but you didn't really expect or need, say, a beryl."
 cinders	cinders	false	463338906	--	"rescind"	"rescind" or "rescind cinders"	--	post-rescind-cinders rule	"You formally scatter the cinders all about. You will not rely on luck or fate or cheats in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."
 Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, acting less impressively and more permissively. He slinks away in embarrassment."
-imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
-imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
-imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
+motleyer	motleyer	false	758646860	--	"remotely"	"remotely"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
+butlery	butlery	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
+legendary	legendary	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
 callosity	callosity	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
 tallyhoing	tallyhoing	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
 jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
@@ -1478,12 +1478,12 @@ this is the post-rescind-cinders rule:
 	now rescind-cinders is true;
 
 this is the post-imp-flip rule:
-	if imp-frustration is 2:
+	if imp-score is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
 		moot imp;
-		moot imp1;
-		moot imp2;
-		moot imp3;
+		moot motleyer;
+		moot butlery;
+		moot legendary;
 	else:
 		set the pronoun it to sly imp;
 		remove noun from shrine-imp-items, if present;
@@ -2208,9 +2208,9 @@ ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
-imp1	"[imp-nag]."
-imp2	"[imp-nag]."
-imp3	"[imp-nag]."
+motleyer	"[imp-nag]."
+butlery	"[imp-nag]."
+legendary	"[imp-nag]."
 callosity	"[whin-nag]."
 tallyhoing	"[whin-nag]."
 jollity	"[whin-nag]."
@@ -2939,9 +2939,9 @@ le mer	--	sea cube
 sea cube	"[one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
 allot atoll	"The allot atoll [if eels are reflexed]was just there to get you your reward[else]in is not helpful on its own, but you'll get there if you help the eels[end if]. You don't need to do anything to it."
-imp1	"[bug-report]"
-imp2	"[bug-report]"
-imp3	"[bug-report]"
+motleyer	"[one of]The [imp]'s motleyness gets in your face, sort of.[plus][or]If you could push the motleyness back, that would work.[plus][or]The [imp] can be made to move REMOTELY.[minus][cycling]"
+butlery	"[one of]The [imp]'s butlery air is unflappable in its present form.[plus][or]You could make the imp a bit more direct.[plus][or]The [imp] can be made to act BRUTELY.[minus][cycling]"
+legendary	"[one of]The [imp] seems too legendary. It's good at what it does, unflappable.[plus][or]Perhaps you could make the imp upset with its work.[plus][or]The [imp] can be made to behave ENRAGEDLY.[minus][cycling]"
 callosity	"[one of]The callosity can become less oppressive if it is less noisy.[plus][or]A synonym for quiet can be converted to an adverb, but you need -ally, not -ly.[plus][or]STOICALLY.[minus][cycling]"
 tallyhoing	"[one of]Tallyhoing shows enthusiasm, so maybe you can reduce enthusiasm.[plus][or]Maybe you could even get the whiners to dislike what they are doing.[plus][or]Have them talk LOATHINGLY.[minus][cycling]"
 jollity	"[one of]The jollity actually requires minimal switching. It is uninterrupted, smooth, consistent.[plus][or]You need an adjective to break up the smoothness.[plus][or]JOLTILY.[minus][cycling]"

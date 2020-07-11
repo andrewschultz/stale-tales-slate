@@ -3705,9 +3705,6 @@ to say good-enuf of (goody - a thing):
 			if goody is not the parrot:
 				say "No need to tweak [the goody] again. [if goody is plural-named]They're[else if goody is neuter]It's[else if goody is female]She's[else]He's[end if] fine as is.[no line break]";
 				continue the action;
-	if goody is imp1 or goody is imp2 or goody is imp3:
-		say "The imp's already been compromised that way.";
-		continue the action;
 	if goody is part of the diorama:
 		if dio-other of goody is not off-stage:
 			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.";
@@ -4541,8 +4538,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 			the rule succeeds;
 	the rule succeeds;
 
-to decide which thing is scannote-idx of (th - a thing):
-	if th is imp1 or th is imp2 or th is imp3, decide on sly imp;
+to decide which thing is scannote-idx of (th - a thing): [this used to be for N and S of the Midden. I may (very unlikely) need it in the future, so it stays, despite being trivial.]
 	decide on th;
 
 to say sb-choose:
@@ -5487,7 +5483,7 @@ to decide which thing is animal-to-hint:
 	d "bad fallthrough in animal-to-hint.";
 	decide on the player; [this should never happen]
 
-shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
+shrine-imp-items is a list of things variable. shrine-imp-items is {motleyer, butlery, legendary}.
 
 cathedral-items is a list of things variable. cathedral-items is {callosity, tallyhoing, jollity}.
 
@@ -19278,10 +19274,7 @@ book Shiner Shrine
 
 Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Minded Midden. "This north-south passage is [if sly imp is touchable]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west.". roomnud of Shiner Shrine is table of Shiner Shrine nudges.
 
-to decide which number is imp-frustration:
-	decide on (boolval of whether or not imp1 is reflexed) + (boolval of whether or not imp2 is reflexed) + (boolval of whether or not imp3 is reflexed);
-
-The simply sly imp is a flippable neuter person in Shiner Shrine. "A simply sly imp zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
+The simply sly imp is a flippable neuter person in Shiner Shrine. "A simply sly imp zooms about [list of touchable block-concepts], causing vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
 after looking in Shiner Shrine:
 	if sly imp is in Shiner Shrine, it-him-her sly imp;
@@ -19296,19 +19289,19 @@ check taking imp:
 
 check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it does things and scan those." instead;
 
-[These are all dummy items. imp1 = brutely, imp2 = angrily, imp3 = enragedly]
+section imp's block ideas
 
-imp1 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp1 is "the imp's actions". description of imp1 is "[bug-report].".
+motleyer is a vanishing block-concept in Shiner Shrine.
 
-imp2 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp2 is "the imp's actions". description of imp2 is "[bug-report].".
+a-text of motleyer is "RYRYRYRO". b-text of motleyer is "YRRRGPB". parse-text of motleyer is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". motleyer is cheat-spoilable. [remotely]
 
-imp3 is privately-named unscannable reflexive ssno scenery in Shiner Shrine. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
+butlery is a vanishing block-concept in Shiner Shrine.
 
-a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB". parse-text of imp1 is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". imp1 is cheat-spoilable. [angrily]
+a-text of butlery is "RRYRYRO". b-text of butlery is "PRYRGRB". parse-text of butlery is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". butlery is cheat-spoilable. [brutely]
 
-a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". imp2 is cheat-spoilable. [brutely]
+legendary is a vanishing block-concept in Shiner Shrine.
 
-a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [enragedly]
+a-text of legendary is "YRRYRYRRO". b-text of legendary is "YRRYRYRRB". parse-text of legendary is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [enragedly]
 
 try-fail-pit-north is a truth state that varies.
 try-fail-cathedral-south is a truth state that varies.
@@ -19319,13 +19312,13 @@ to decide whether try-fail-animal:
 	decide no;
 
 check going north in Shiner Shrine:
-	if imp is touchable, say "The imp gives a sidle-slide, then idles in front of you. It's [if imp-frustration is 1]still a bit [end if]too smooth for you right now." instead;
+	if imp is touchable, say "The imp gives a sidle-slide, then idles in front of you. It's [if one-imp-down]still a bit [end if]too smooth for you right now." instead;
 	if power-back is false:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
 to decide which number is imp-score:
-	decide on (boolval of whether or not imp1 is moot) + (boolval of whether or not imp2 is moot) + (boolval of whether or not imp3 is moot)
+	decide on (boolval of whether or not motleyer is moot) + (boolval of whether or not butlery is moot) + (boolval of whether or not legendary is moot)
 
 chapter coma camo
 
@@ -19471,12 +19464,6 @@ jollity is a vanishing block-concept in Clarthead Cathedral.
 
 a-text of jollity is "RYRRYRO". b-text of jollity is "PGPPYPB". parse-text of jollity is "j[sp]o[sp]l[sp]l[sp]i[sp]t[sp]y". jollity is cheat-spoilable. [joltily]
 
-section debug - not for release
-
-understand "i1" as imp1 when debug-state is true and player is in Shiner Shrine.
-understand "i2" as imp2 when debug-state is true and player is in Shiner Shrine.
-understand "i3" as imp3 when debug-state is true and player is in Shiner Shrine.
-
 book Perverse Preserve
 
 Perverse Preserve is south of Clarthead Cathedral. Perverse Preserve is a room in Otters. "[pre-desc][atleast-evenbetter].". roomnud of Perverse Preserve is table of Perverse Preserve nudges.
@@ -19573,10 +19560,7 @@ section snail
 
 the snail is a southy puzanimal. description is "It's quite spiky and seems to move faster than your average snail.". locale-text is "a snail slithering slowly in a circle". "A snail slithers slowly and saltlessly here."
 
-check scaning imp:
-	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if imp-frustration is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is reflexed]patience is legendary and butlery[else if imp3 is reflexed]It has a butlery air as it moves rangily[else if imp2 is reflexed]patience feels legendary as it moves rangily[else]here but shouldn't be. This is a BUG[end if].";
-	try scaning entry 1 of shrine-imp-items;
-	the rule succeeds;
+check scaning imp: say "Nothing. You may wish to think about how the imp is acting and then try to scan that." instead;
 
 chapter raptor trap
 
@@ -21643,7 +21627,7 @@ to say casp-cap:
 	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or]SCRAPE the blackboard.[minus][cycling]"
 
 to decide whether one-imp-down:
-	if imp-frustration >= 1, yes;
+	if imp-score >= 1, yes;
 	no;
 
 to decide whether one-whine-down:
@@ -22313,7 +22297,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
-	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've spoken [if callosity is not moot]LOATHINGLY[else if tallyhoing is not moot]STOICALLY[else]TERSELY[end if].";
+	say "[2da]you could've made the imp act [list of block-concepts in Shiner Shrine], and the whiners could've spoken [list of block-concepts in Clarthead Cathedral].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";

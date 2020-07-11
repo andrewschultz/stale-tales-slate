@@ -1129,10 +1129,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "imp"	190533958	sly imp	--	"[imp-sly]."
 "averts"	521866534	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "avert"	425592568	sly imp	--	"You need to focus on HOW the imp averts, vaster."
-"brute"	439764642	imp1	--	"[add-ly]."
-"angry"	311378083	imp2	--	"[add-ly]."
-"angri"	234011677	imp2	--	"[add-ly]."
-"enraged"	465660138	imp3	--	"[add-ly]."
+"brute"	439764642	butlery	--	"[add-ly]."
+"enraged"	465660138	legendary	--	"[add-ly]."
+"remote"	582473769	motleyer	--	"[add-ly]."
 
 table of Clarthead Cathedral nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

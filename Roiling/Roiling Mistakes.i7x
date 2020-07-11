@@ -922,7 +922,7 @@ understand "whoever" as a mistake ("You wonder whoever could be saying the vow h
 
 chapter Shiner Shrine
 
-understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is in location of player.
+understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when legendary is touchable.
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is touchable.
 
