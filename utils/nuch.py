@@ -180,18 +180,18 @@ def poke_nudge_files(gm):
                     ll = re.sub(r"\\{2,}.*", "", ll)
                 if ll not in got_nudges[gm].keys():
                     if not ("shuffling" in gm and ll in got_nudges["shuffling-general"]):
-                        print("Renudge-without-nudge", ll, "line", line_count, short_file)
+                        print("Renudge-without-(matched-)nudge", ll, "line", line_count, short_file)
                         renudges += 1
                         count2 += 1
                         count3 += 1
                 elif not got_nudges[gm][ll]:
-                    print("Renudge-before-nudge", ll, "line", line_count, short_file)
+                    print("Renudge-before-nudge {} line {}: {}.".format(short_file, line_count, ll))
                     renudges += 1
                     count2 += 1
                     count3 += 1
             elif re.search('#( )?nudge (for|of) ', ll):
                 if nudge_comment:
-                    print("Uh oh duplicate nudge comments at line", line_count)
+                    print("Script warning: consecutive nudge comments {} line {}".format(gb, line_count))
                 nudge_comment = True
                 ll = re.sub("#( )?nudge (for|of) ", "", ll)
                 if ll in got_nudges[gm].keys():
@@ -199,7 +199,7 @@ def poke_nudge_files(gm):
                         count2 += 1
                         count3 += 1
                         dupe_nudges += 1
-                        print("Duplicate nudge comment line", ll, 'line', line_count, 'duplicates', got_nudges[gm][ll])
+                        print("Duplicate nudge comment {} line {}: {} duplicates {}.".format(gb, line_count, ll, got_nudges[gm][ll]))
                         mt.add_post(nudge_files[gm], line_count)
                     got_nudges[gm][ll] = line_count
                 elif "shuffling" in gm and ll in got_nudges["shuffling-general"].keys():
@@ -207,7 +207,7 @@ def poke_nudge_files(gm):
                         count2 += 1
                         count3 += 1
                         dupe_nudges += 1
-                        print("Duplicate nudge comment line", ll, 'line', line_count, 'duplicates', got_nudges["shuffling-general"][ll])
+                        print("Duplicate general nudge comment {} line {} duplicates {}.".format(ll, line_count, got_nudges[gm][ll]))
                         mt.add_post(nudge_files[gm], line_count)
                     got_nudges["shuffling-general"][ll] = line_count
                 else:
