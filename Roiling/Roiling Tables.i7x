@@ -1761,8 +1761,8 @@ volume demo dome tables
 [xxdmt]
 
 table of calparts
-thiscal [x calendar] [tdm1]
-"Part one: Protean[paragraph break]There's no compelling personal story here. I just had fun trying to make the sort of game I'd have liked when I was younger, the sort Infocom might've done better if the Apple didn't have its limitations.[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, Andrew Schultz doesn't really anagram well, except to CRAWLS, ZEN, THUD."
+thistext [x calendar] [tdm1]
+"Part one: Protean[paragraph break]There's no compelling personal story here. I just had fun trying to make the sort of game I'd have liked when I was younger, the sort Infocom might've done better if the Apple didn't have its limitations.[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, the best I found for Andrew Schultz was CRAWLS, ZEN, THUD, until Hanon Ondricek pointed out (in 2014) Dawn Churlzest worked, too."
 "Part two: Wrapt to[paragraph break]I realized that it was probably best to go with nouns-to-nouns. Well, until the last puzzle. This kicked out all but F and I. I didn't know what else to do, or where the finale would be. I eventually decided on R, once I figured a resort would be a good place. It only had the Means Manse, and you just had to EXIST. I think your enemy was Too-Apt Pa Otto, and you had to make him into a POTATO. But that was a bit mean. Then METROS began to take shape, and I liked the underside and hotel, and then other locations fell into place."
 "Part three: Trap there? Er, phatter[paragraph break]The big problem I had was that I couldn't disambiguate how to flip items, and I had no encouragement for guesses for anagrams. This was a pretty big fault, and there were others, too. Nevertheless, I found a lot with the help of my testers, and I even had the bright idea of trying to provide an alternate way through Metros. One sub-try got the player stuck. Nevertheless, I was able to identify ways to take care of this throughout the comp, and I had plans for post-release stuff. Every mistake I made served to give me an idea to make things easier for the player. The game needed it. I also settled on the idea for the new hint device. I didn't want to reuse what I had from SA, but I also wanted to make things simpler and more powerful. People had trouble seeing if they could take both devices, so I merged them. And I started on the settler, once people said they wanted something a bit more Master Mind like."
 "Part four: tap furor[paragraph break]Nobody was really furious at the game, but I certainly got to work when I learned about David White's hashing. Immediately it made ARO more accessible, in theory. I had a lot to whip into shape. I tried to fix a few things per day. I was disappointed in the bigger mistakes I made, and after getting SA into a decent beta (or so I thought,) I started on ARO."
@@ -1780,7 +1780,7 @@ thiscal [x calendar] [tdm1]
 [teenager pith part eighteen]
 
 table of passeparts
-thispass
+thistext
 "(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload."
 "(ORDEAL RELOAD) You see the basement renamed the Largely All-Grey Gallery and the Stable renamed Farming Framing."
 "(ORDEAL RELOAD) You see the Collapsed Old Places before the Strip of Profits replaced by Carven Cavern and moved to where you hide the ruby in Oyster, then renamed Rascal Craals."
@@ -1816,7 +1816,7 @@ thispass
 "There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, for those interested in that sort of thing."
 
 table of informcode
-thiscode [x inform wall] [tdm2]
+thistext [x owl decal code wall] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
 "You stare at the start of the Tables of Nudges. There's, like, 1000+! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages. You even see how they were broken into regions, and a region has a table name called table of routes anagrams/nudges, and so forth."
@@ -1827,7 +1827,7 @@ thiscode [x inform wall] [tdm2]
 "You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
 table of perlcode
-thiscode [x allow-lots-tools wall] [tdm3]
+thistext [x allow-lots-tools wall] [tdm3]
 "#things to do before release:[line break]1. alphabetize tables and check for duplicates[line break]2. make sure anagrams are valid, especially books[line break]3. make sure duplicate anagrams are weeded out or checked[line break]4. check punctuation"
 "#generating silly names with honorific titles cheaply[line break]for ($x in %firstNames) { if ($isLastNameAnagram{alf('$x$ext')}) { print '$ext $x $isLastNameAnagram{alf('$x$ext')}'; # print for instance Mean Roy Maroney"
 "$alf = join('', sort(split(//, lc($a)))); if ($ana{$alf}) { print '$a=$ana{$alf}'; } $ana{$alf} .= ' $a'; # anagram find code"
@@ -1844,7 +1844,7 @@ thiscode [x allow-lots-tools wall] [tdm3]
 "The rest is too archaic, but it includes other things I put on [ghsite] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
 
 table of observations
-obser [from chic loner chronicle] [tdm4]
+thistext [from chic loner chronicle] [tdm4]
 "I found so many ridiculous anagrams just reading a book on the way to work, or working out, and then I'd just feed them into the anagram server. If ten thousand seems like a lot, well, that is over two years, so that is fifteen per day. That is not so bad when you consider one takes a minute, and I can waste a lot of time in any case."
 "One of the best parts of using the anagram server was that I kept seeing cool quotes on the right. These added up to ideas for future games, or even funny jokes, or even more authors to read. It's always a treat when one project gives you spin-off projects."
 "A simple I <3 BLOCKSITE FOR FIREFOX. AND GOOGLE CHROME. Well, that's not very philosophical or motivational, but it could be practical."
@@ -1862,7 +1862,7 @@ obser [from chic loner chronicle] [tdm4]
 "Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate."
 
 table of pagelist [from novella] [tdm5]
-pgtxt	page-read-yet	comprehensible
+thistext	page-read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true
 "Page Two: 'Pa, we got top wage!'"
 "'Gape there? Ah, pert age!'"
@@ -1941,26 +1941,26 @@ pgtxt	page-read-yet	comprehensible
 "Sexist envy, just as nine pages ago. Apparently, it's an important issue."
 "'Even envy sets' is the moral here."
 "Hey, vignettes! Eighty events!"
-"Intense envy."
+"intense envy."
 "'Tea, eh, piggy?'"
 "Hot eyeing to hygiene."
 "'Yo, we tight! Got whitey!'"
 "Tree high, yet. Eye the girth. 'Hi, greyteeth!'"
-"'You fighter!' cries a character."
+"'You fighter! Fry, toughie! Grief, youth or thief-guy!'"
 "If they give, vie ye! Fight!"
 ""
-"Description of a hygiene vest."
+"a description of a hygiene vest."
 "Yeti get high! Hey, hit it, egg."
-"Eye-hinting a hygiene nit."
+"eye-hinting a hygiene nit."
 "-"
 "'Yo, teen inn?' / 'Not ye nine!'"
 "Tiny Towne? None witty."
 "'Thinner yet? Inherent yet?'"
 "Dramatic dialogue at the end: 'Funnier toy unto finery, intone fury!'"
-"Finite envy is discussed here."
-"A disappointing rehash of 27 pages ago."
-"A disappointing rehash of 18 pages ago."
-"This has been nonsense so far--and no hinting yet."
+"finite envy."
+"a disappointing rehash of 27 pages ago."
+"a disappointing rehash of 18 pages ago."
+"NO HINTING YET."
 "Ninny Nite."
 "Undone herd endured, hon. Oh! Run Ended!"
 

@@ -20887,6 +20887,32 @@ chapter exhibit definitions
 
 an exhibit is a kind of thing. an exhibit can be unnoted, perused or exhausted. an exhibit is usually unnoted. an exhibit is usually boring. an exhibit is always scenery.
 
+an exhibit has a table name called notes-table. The notes-table of an exhibit is usually table of no notes.
+
+an exhibit has a number called notes-row.
+
+table of no notes
+thistext
+text
+
+to say-thru: ital-say "you've read all the way through.";
+
+after examining an exhibit (called xh):
+	if xh is novella, continue the action;
+	if notes-table of xh is table of no notes:
+		now xh is exhausted;
+		continue the action;
+	if xh is unnoted, now xh is perused;
+	let xh-rows be number of rows in notes-table of xh;
+	increment notes-row of xh;
+	choose row notes-row of xh in notes-table of xh;
+	say "[thistext entry][line break]";
+	if notes-row of xh is xh-rows:
+		now notes-row of xh is 0;
+		now xh is exhausted;
+		say-thru;
+	continue the action;
+
 to left-to-see:
 	if scams is false, say "[line break]";
 	if number of unnoted exhibits is 0:
@@ -20973,7 +20999,7 @@ to say unex-left:
 	if Y is 0, continue the action;
 	say ", ignoring the [if Y is 1][random unexamined thing in Sparse Spares][else]final [number of unexamined things in Sparse Spares in words] things[end if] in Sparse Spares,";
 
-check going up in Peek Keep: say "The great grate is there so you can see but not touch things[if great gate is unexamined it]. You should examine it to see what's there[end if]." instead;
+check going up in Peek Keep: say "The great grate is there so you can see but not touch things[if great grate is unexamined]. You should examine it to see what's there[end if]." instead;
 
 table of xibits [since ORWT is randomly changed, it's nontrivial to convert this table to number properties for each exhibit.]
 exhib	orwt
@@ -21033,8 +21059,6 @@ section Flashed Ad Shelf
 
 The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, then to someone walking around on a cube in a cavern, then someone walking between Grebeberg and Yelpley to defeat the Diktat Kid in the Dirge Grid, then someone named Kerry Kyle defeating a Very Vile Fairy File.". bore-text is "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
 
-check examining Flashed Ad Shelf: now Flashed Ad Shelf is exhausted;
-
 book Evoc-Cove
 
 Evoc Cove is east of Peek Keep. printed name of Evoc Cove is "Evoc-Cove". Evoc Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella[nov-pro] is propped up against the wall by some invisible force. You can go back west if you want.". roomnud of Evoc Cove is table of Evoc Cove nudges.
@@ -21046,7 +21070,7 @@ check going in Evoc Cove: if noun is east or noun is north or noun is south, say
 
 section novella
 
-The novella is an exhibit in Evoc Cove. description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]RR[r].". bore-check is bore-novella rule. bore-text is "You can really only examine or read the novella, or speed-read it with RR."
+The novella is an exhibit in Evoc Cove. description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]RR[r].". bore-check is bore-novella rule. bore-text is "You can really only examine or read the novella, or speed-read it with RR.". notes-table of novella is table of pagelist.
 
 this is the bore-novella rule:
 	if current action is taking, say "Don't take the art." instead;
@@ -21112,8 +21136,8 @@ carry out numreading:
 	if the number understood > 100, say "The book is only 100 pages long." instead;
 	choose row number understood in table of pagelist;
 	now page-read-yet entry is true;
-	if number of characters in pgtxt entry > 2:
-		say "You glance over page [number understood]. The most interesting bit seems to be [pgtxt entry][line break]";
+	if number of characters in thistext entry > 2:
+		say "You glance over page [number understood]. The most interesting bit seems to be [thistext entry][line break]";
 	else:
 		say "The author strained not to be incomprehensible and failed.";
 	now novella is examined;
@@ -21127,7 +21151,7 @@ carry out numreading:
 when play begins (this is the seed novella rule) :
 	repeat through table of pagelist:
 		now page-read-yet entry is false;
-		if number of characters in pgtxt entry > 2:
+		if number of characters in thistext entry > 2:
 			now comprehensible entry is true;
 		else:
 			now comprehensible entry is false;
@@ -21153,7 +21177,7 @@ any-walls is a truth state that varies.
 
 section inform wall
 
-the owl decal code wall is a proper-named exhibit in Hows Show. description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.[paragraph break][this-inform]". bore-text of owl decal code wall is "Not much to do with the owl decal code wall except examine it."
+the owl decal code wall is a proper-named exhibit in Hows Show. description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.". bore-text of owl decal code wall is "Not much to do with the owl decal code wall except examine it.". notes-table of owl decal code wall is table of informcode.
 
 printed name of owl decal code wall is "the owl-decal code wall"
 
@@ -21164,27 +21188,9 @@ after doing something with owl decal code wall:
 	now last-wall is owl decal code wall;
 	continue the action;
 
-inform-row is a number that varies.
-
-to say this-inform:
-	increment inform-row;
-	if owl decal code wall is unnoted:
-		now owl decal code wall is perused;
-	choose row inform-row in table of informcode;
-	say "[thiscode entry]";
-
-after examining owl decal code wall:
-	if inform-row is number of rows in table of informcode:
-		say-thru;
-		now inform-row is 0;
-		now owl decal code wall is exhausted;
-	continue the action;
-
-to say-thru: ital-say "you've read all the way through.";
-
 section allow-lots-tools wall
 
-the allow lots tools wall is a proper-named exhibit in Hows Show. description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.[paragraph break][this-perl]". bore-text of allow lots tools wall is "The tools wall is just there to be read.".
+the allow lots tools wall is a proper-named exhibit in Hows Show. description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.". bore-text of allow lots tools wall is "The tools wall is just there to be read.". notes-table of allow lots tools wall is table of perlcode.
 
 printed name of allow lots tools wall is "the allow-lots-tools wall".
 
@@ -21193,23 +21199,6 @@ understand "allow-lots-tools wall" as tools wall.
 after doing something with allow lots tools wall:
 	now any-walls is true;
 	now last-wall is allow lots tools wall;
-	continue the action;
-
-perl-row is a number that varies.
-
-to say this-perl:
-	if allow lots tools wall is unnoted:
-		now allow lots tools wall is perused;
-	increment perl-row;
-	d "[perl-row] of [number of rows in table of perlcode].";
-	choose row perl-row in table of perlcode;
-	say "[thiscode entry]";
-
-after examining allow lots tools wall:
-	if perl-row is number of rows in table of perlcode:
-		say-thru;
-		now perl-row is 0;
-		now allow lots tools wall is exhausted;
 	continue the action;
 
 book Intel Inlet
@@ -21222,41 +21211,17 @@ chapter shiest thesis
 
 The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. It's engrossing enough to read in one go, but you don't remember any details, just that mistakes happen.". bore-text is "THe shiest thesis is only for reading.".
 
-after examining shiest thesis: [?? drop "continue the action?"]
-	now shiest thesis is exhausted;
-	continue the action;
-
 chapter CareLand Calendar
 
-The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.[paragraph break][one-calendar]".
+The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.". notes-table of CareLand Calendar is table of calparts.
 
 calendar-part is a number that varies.
 
-to say one-calendar:
-	if calendar-part is 0, now careland calendar is perused;
-	increment calendar-part;
-	if calendar-part > number of rows in table of calparts, now calendar-part is 1;
-	choose row calendar-part in table of calparts;
-	say "[thiscal entry][line break]";
-	if calendar-part is number of rows in table of calparts:
-		say "[line break]That's the end of the CareLand Calendar.";
-		now careland calendar is exhausted;
-
 chapter Passe Apses
 
-The Passe Apses are a plural-named exhibit in Intel Inlet. description of Passe Apses is "[one of]The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a[or]You observe another[stopping] page of former content:[paragraph break][one-passe]".
+The Passe Apses are a plural-named exhibit in Intel Inlet. description of Passe Apses is "[one of]The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a[or]You observe another[stopping] page of former content:". notes-table of passe apses is table of passeparts.
 
 passe-part is a number that varies.
-
-to say one-passe:
-	if passe-part is 0, now passe apses are perused;
-	increment passe-part;
-	if passe-part > number of rows in table of calparts, now passe-part is 1;
-	choose row passe-part in table of passeparts;
-	say "[thispass entry][line break]";
-	if passe-part is number of rows in table of passeparts:
-		say "[line break]That's the end of the Passe Apses.";
-		now Passe Apses are exhausted;
 
 book Ned's Dens
 
@@ -21266,19 +21231,7 @@ to say clc-pro: set the pronoun it to chic loner chronicle;
 
 chapter Chic Loner Chronicle
 
-The Chic Loner Chronicle is an exhibit in Neds Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]". bore-text is "The Chic Loner Chronicle is only there for reading or examining."
-
-chron-row is a number that varies.
-
-to say one-chron:
-	increment chron-row;
-	if chic loner chronicle is unnoted, now chic loner chronicle is perused;
-	if chron-row > number of rows in table of observations, now chron-row is 1;
-	choose row chron-row in table of observations;
-	say "[obser entry]";
-	if chron-row is number of rows in table of observations:
-		now chic loner chronicle is exhausted;
-		say "[paragraph break]That's the end of the Chronicle. You can read it again, if you want.[no line break]";
+The Chic Loner Chronicle is an exhibit in Neds Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads:". bore-text is "The Chic Loner Chronicle is only there for reading or examining.". notes-table of chic loner chronicle is table of observations.
 
 book Sparse Spares
 

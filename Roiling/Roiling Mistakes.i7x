@@ -1084,6 +1084,8 @@ understand "dali" as a mistake ("Not surreal enough for you?") when player is in
 
 understand "laid" as a mistake ("The spy dial is already laid out.") when player is in Peek Keep.
 
+understand "singed" as a mistake ("You already saw one when you helped Curtis. Plus, arson is bad.") when Design Deigns is touchable.
+
 chapter Sparse Spares
 
 understand "clasp" as a mistake ("If there were a puzzle for stealing stuff, that'd work. But there isn't.") when player is in Sparse Spares.
