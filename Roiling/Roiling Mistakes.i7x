@@ -699,6 +699,8 @@ understand "crust" as a mistake ("It probably needs less crust, not more. The wh
 
 chapter Loftier Trefoil
 
+understand "clear it" as a mistake ("The recital article stays in place. You see red, upset the brute-force magic didn't work.") when recital article is touchable.
+
 understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is in location of player.
 
 understand "nerd yo" and "nerdy o" and "yo nerd" as a mistake ("Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.") when Rodney is touchable. [O NERDY doesn't work, as it becomes OOPS NERDY.]

@@ -15,7 +15,7 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ~	sli	t4
 ~	hints,hin,spoi	t5
 
-}}MAX=52
+}}MAX=53
 }}CURMAX=52
 }}SCORE=0
 }}CURMIN=25
@@ -612,6 +612,9 @@ Now, now. Maybe Rodney dishes out insults like that without a shred of self-awar
 >droney
 Your score has just gone up by one point
 >undo
+>talcier
+by one point
+}}CURMIN++
 
 >yonder
 Your score has just gone up by one point
@@ -621,7 +624,7 @@ Your score has just gone up by one point
 DEBUG INFO: dreads adders hinting.
 
 @minh,mini
-}}CURMAX-=3
+}}CURMAX-=4
 
 Topside Deposit
 
@@ -2912,26 +2915,6 @@ The spray will still drown you if you don't figure a way to move somewhere.
 >watre
 The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to a shore?
 >undo
-#nudge for northern
->northenr
-The northern shore does not waver. Maybe try the eastern shore.
->undo
-#nudge for shore
->shoer
-You need to focus on one specific shore.
->undo
-#nudge for shores
->shorse
-You need to focus on one shore.
->undo
-#nudge for north
->norht
-Hmm. Concentrate on a shore--northern or eastern--not a direction.
->undo
-#nudge for east
->eats
-Hmm. Concentrate on a shore--northern or eastern--not a direction.
->undo
 #mistake test for earnest
 >earnest
 The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.
@@ -2940,9 +2923,9 @@ The shore wants to get physically closer to you now. You can feel it. But that d
 >prays
 Too late to be a prayers sprayer.
 >undo
-#nudge for southwest
->southwets
-This game doesn't require you to mess with diagonal directions, so maybe you should consider the other shores.
+#nudge for neater
+>neatre
+You need more than one Neater to help you.
 >undo
 >undo
 

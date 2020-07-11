@@ -223,7 +223,8 @@ book towers
 
 table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
-dreads adders	dreads adders	false	353649874	--	"sadder"	"sadder"	a rule	a rule	"The adders suddenly become less aggressive. You wonder if they feel bad about all the other people they may've obstructed, as they slide harmlessly away."
+recital article	recital article	false	436240018	--	"talcier"	"talcier"	a rule	a rule	"The recital article suddenly cracks a bit, then crumbles. [Rodney] looks over for a minute, disgusted he has been distracted. Oppression and intimidation are mentally and physically taxing. Especially for the oppressors and intimidators! Anyway, that's one less thing to clean up once you've dealt with Rodney."
+dreads adders	dreads adders	false	353649874	--	"sadder"	"sadder"	--	--	"The adders suddenly become less aggressive. You wonder if they feel bad about all the other people they may've obstructed, as they slide harmlessly away."
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
 Muscly Luc Sym	Muscly Luc Sym	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Luc Sym's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
 Muscly Ms Lucy	Muscly Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Ms. Lucy's muscles shrink, and she loses coordination. 'A hokey KO. Yeah.' But she still stumbles away in embarrassment."
@@ -1399,6 +1400,7 @@ this is the pre-rodney rule:
 this is the post-rodney rule:
 	now all picaros in Loftier Trefoil are pinko;
 	if vw > 0, decrease poss-score of towers by vw;
+	if recital article is not moot, poss-d;
 	mootl list of all picaros in Loftier Trefoil;
 	now player has top opt pot;
 	reposition-guardians;

@@ -154,7 +154,7 @@ Store H=Others (you can get the point but you can't enter)]
 Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. max-score of Troves is 25. min-score of Troves is 17.
 [LLP list:
 1/18=Pa Egg Pea
-2?19=A Tasty Sty, Say
+2?19=A Sty: Tasty, Say
 3/20=both of evil bee or SNORE SO ARENA
 4/21=lager
 5/22=both of BORTLES lobster/ME ARTS stream,
@@ -200,7 +200,7 @@ you get -1 if you use the pills on Tortu before EAT.
 You get a non-anagram point for framing the bad guys so the haunter chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 52. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 53. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -217,20 +217,23 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=25 for the palace]
 [BONUS:
 3=3 for the extra picaros
-5=8 for the H/I beyond needing to clear the coastlines
-2=10 for the ingrates/natives to get to the edge
-1=11 for the yurts, 1=12 for the mended mini denim
-1=13 for sporties' ripostes, 1=14 for old ice
-1=15 for keycar wherever it appears
-1=16 for making the replay player shiny
-1=17 for Dourest Detours
-1=18 for strudel (Fringe Finger)
-1=19 for organised ego drains (Lost Lots)
-1=20 for tentative (agnostic meets dr yow)
-1=21 for rewired (bot-boat)
-1=22 for giving Tetris Sitter the top opt pot NON-ANAGRAM
-4=26 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
-1=27 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=4 for the recital article
+5=9 for the H/I beyond needing to clear the coastlines
+2=11 for the ingrates/natives to get to the edge
+1=12 for the yurts
+1=13 for the mended mini denim
+1=14 for sporties' ripostes
+1=15 for old ice
+1=16 for keycar wherever it appears
+1=17 for making the replay player shiny
+1=18 for Dourest Detours
+1=19 for strudel (Fringe Finger)
+1=20 for organised ego drains (Lost Lots)
+1=21 for tentative (agnostic meets dr yow)
+1=22 for rewired (bot-boat)
+1=23 for giving Tetris Sitter the top opt pot NON-ANAGRAM
+4=27 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
+1=28 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24.
 [
@@ -2657,7 +2660,8 @@ span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
-strudel	"DR. ELTUS recommends this strudel!"	[towers]
+recital article	"This version was written by some lovely chap named ALTERIC."	[towers]
+strudel	"DR. ELTUS recommends this strudel!"
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
@@ -15725,7 +15729,7 @@ to draw-towers-map:
 		else if my-loc entry is sideview:
 			change current foreground-color to (R 168 G 168 B 42);
 		else if my-loc entry is mightaswell:
-			change current foreground-color to (R 84 G 84 B 84);
+			change current foreground-color to (R 120 G 120 B 120);
 		else:
 			change current foreground-color to (R 210 G 42 B 42);
 		now myx is tow-x-start + (tow-delta * my-x entry) - square-from-center;
@@ -15766,7 +15770,7 @@ to draw-line (lcc - a room) and (bd - a direction):
 	linedraw (current foreground-color) in current graphics window from x-start by y-start to x-end by y-end with 1;
 [To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number):]
 
-table of towers-locs [arranged n to s then w to e]
+table of towers-locs [arranged n to s then w to e. Dourest Detours is not included, as it would draw something in an odd position.]
 my-loc	my-x	my-y
 Shaven Havens	1	0
 Fringe Finger	0	1
@@ -15970,7 +15974,7 @@ rule for printing a locale paragraph about a picaro (called pp):
 to say they-just:
 	say "[if vw is 2]Well, there's just one, now:[else]They include[end if]"
 
-section escaping or not
+chapter escaping or not
 
 check asking Rodney about: say "He stares at you, seeming to ask rhetorically, 'Redo? Y/N!' You see red at this." instead;
 
@@ -15984,6 +15988,12 @@ check going up in Loftier Trefoil: say "One stare at the rates for an overnight 
 
 check going down in Loftier Trefoil:
 	say "'Don't loot the wines. Swine.' someone calls. Harsh." instead;
+
+chapter recital article
+
+a recital article is boring vanishing LLPish scenery in Loftier Trefoil. "It's the sort of thing Elvira's allies paste up on walls to show ownership and be intimidating or whatever. Even though it looks firmly attached to the wall, perhaps you could magic it down by yourself and save people the trouble once Rodney's gone, or you could, well, just get rid of [Rodney].[paragraph break]Also, the author's name is in red writing at the bottom.". bore-text of recital article is "You probably need to change the recital article somehow, with your powers, to get rid of it."
+
+a-text of recital article is "RYRRYYR". b-text of recital article is "RYRRYYR". parse-text of recital article is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 book Topside Deposit
 
@@ -22470,6 +22480,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
+		if recital article is not moot, say "[2dmiss of myreg]you could've made the recital article TALCIER.";
 		if number of pinko picaros > 0:
 			repeat with pk running through pinko picaros:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
@@ -22486,17 +22497,18 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
-			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
+			if number of not moot guardians > 1, say "(that's all for the central guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
+		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
+		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
-		if dourest detours are unvisited, say "[2dmiss of myreg]You could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
-		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
-		if old ice are not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
-		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
-		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
+		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
 		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
-		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
+		if natives site van is not moot, say "[2dmiss of myreg]the [site van] in [danger garden] could've been turned NAIVEST or VAINEST.";
+		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
+		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
+		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
