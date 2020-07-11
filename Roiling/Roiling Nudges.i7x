@@ -1139,9 +1139,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cathedral"	451746378	--	--	"[locname]."
 "whiner"	472247338	--	--	"[whiney]."
 "whiners"	568521304	--	--	"[whiney]."
-"loathing"	417246607	whin1	--	"[add-ly]."
-"stoic"	337734992	whin2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
-"stoical"	393736649	whin2	--	"[add-ly]."
+"loathing"	417246607	tallyhoing	--	"[add-ly]."
+"stoic"	337734992	callosity	--	"Usually, you'd need to add two letters, but here you'd need to add four."
+"stoical"	393736649	callosity	--	"[add-ly]."
 "jolli"	275933626	--	--	"[add-ly]"
 "jolly"	353300032	--	--	"[add-li]"
 

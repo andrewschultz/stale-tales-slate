@@ -3708,9 +3708,6 @@ to say good-enuf of (goody - a thing):
 	if goody is imp1 or goody is imp2 or goody is imp3:
 		say "The imp's already been compromised that way.";
 		continue the action;
-	if goody is whin1 or goody is whin2 or goody is jollity:
-		say "The whiners were already slowed up that way.";
-		continue the action;
 	if goody is part of the diorama:
 		if dio-other of goody is not off-stage:
 			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.";
@@ -4546,7 +4543,6 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 
 to decide which thing is scannote-idx of (th - a thing):
 	if th is imp1 or th is imp2 or th is imp3, decide on sly imp;
-	if th is whin1 or th is whin2 or th is jollity, decide on whiners;
 	decide on th;
 
 to say sb-choose:
@@ -5493,7 +5489,7 @@ to decide which thing is animal-to-hint:
 
 shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
 
-cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, jollity}.
+cathedral-items is a list of things variable. cathedral-items is {callosity, tallyhoing, jollity}.
 
 to decide whether in-extra-powers:
 	if power-back is false, no;
@@ -19453,7 +19449,7 @@ check going south in Clarthead Cathedral:
 		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
 to decide which number is whiner-score:
-	decide on (boolval of whether or not whin1 is moot) + (boolval of whether or not whin2 is moot) + (boolval of whether or not jollity is moot)
+	decide on (boolval of whether or not callosity is moot) + (boolval of whether or not tallyhoing is moot) + (boolval of whether or not jollity is moot)
 
 the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
@@ -19463,13 +19459,13 @@ check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it 
 
 chapter what the whiners do
 
-whin1 is a vanishing block-concept in Clarthead Cathedral.
+callosity is a vanishing block-concept in Clarthead Cathedral.
 
-a-text of whin1 is "RRYYRYRRO". b-text of whin1 is "RRYYRYRRB". parse-text of whin1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
+a-text of callosity is "RRYYRYRRO". b-text of callosity is "RRYYRYRRB". parse-text of callosity is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
 
-whin2 is a vanishing block-concept in Clarthead Cathedral.
+tallyhoing is a vanishing block-concept in Clarthead Cathedral.
 
-a-text of whin2 is "RYRRYRO". b-text of whin2 is "RGRRYPO". parse-text of whin2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". whin2 is cheat-spoilable. [tersely]
+a-text of tallyhoing is "RYYRRYRRRO". b-text of tallyhoing is "RYYRRYRRRO". parse-text of tallyhoing is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
 
 jollity is a vanishing block-concept in Clarthead Cathedral.
 
@@ -22317,7 +22313,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
-	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've spoken [if whin1 is reflexive]LOATHINGLY[else if whin2 is reflexive]STOICALLY[else]TERSELY[end if].";
+	say "[2da]you could've made the imp act [if imp1 is reflexive]ANGRILY[else if imp2 is reflexive]BRUTELY[else]ENRAGEDLY[end if], and the whiners could've spoken [if callosity is not moot]LOATHINGLY[else if tallyhoing is not moot]STOICALLY[else]TERSELY[end if].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";

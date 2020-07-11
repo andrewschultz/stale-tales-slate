@@ -305,8 +305,8 @@ Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...
 imp1	imp1	false	410184768	--	"angrily"	"angrily"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
 imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
-whin1	whin1	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
-whin2	whin2	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
+callosity	callosity	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
+tallyhoing	tallyhoing	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
 jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
 Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre vanishes! Mr. Lee blinks. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He perks up. ' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
@@ -1492,15 +1492,15 @@ this is the post-whiners-flip rule:
 	if whiner-score is 2:
 		say "[line break]As they sulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post--kissing up to Elvira so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
-		moot whin1;
-		moot whin2;
+		moot callosity;
+		moot tallyhoing;
 		moot jollity;
 	else:
 		set the pronoun them to whiners;
 		remove noun from cathedral-items, if present;
 
 to say shout-check:
-	say "[one of]The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
+	say "[one of]The din loses speed, energy, nastiness, variety and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
 
 this is the pre-ghoul-hat-although rule: abide by the medal check rules for ghoul hat;
 
@@ -2211,8 +2211,8 @@ Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertas
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
 imp3	"[imp-nag]."
-whin1	"[whin-nag]."
-whin2	"[whin-nag]."
+callosity	"[whin-nag]."
+tallyhoing	"[whin-nag]."
 jollity	"[whin-nag]."
 raptor	"The raptor recoils slightly."
 cinders	"The cinders glow and even warm up for a bit."
@@ -2942,8 +2942,8 @@ allot atoll	"The allot atoll [if eels are reflexed]was just there to get you you
 imp1	"[bug-report]"
 imp2	"[bug-report]"
 imp3	"[bug-report]"
-whin1	"[bug-report]"
-whin2	"[bug-report]"
+callosity	"[one of]The callosity can become less oppressive if it is less noisy.[plus][or]A synonym for quiet can be converted to an adverb, but you need -ally, not -ly.[plus][or]STOICALLY.[minus][cycling]"
+tallyhoing	"[one of]Tallyhoing shows enthusiasm, so maybe you can reduce enthusiasm.[plus][or]Maybe you could even get the whiners to dislike what they are doing.[plus][or]Have them talk LOATHINGLY.[minus][cycling]"
 jollity	"[one of]The jollity actually requires minimal switching. It is uninterrupted, smooth, consistent.[plus][or]You need an adjective to break up the smoothness.[plus][or]JOLTILY.[minus][cycling]"
 owls	"[one of]You only have one move to tackle the owls.[plus][or]They are too fast now.[plus][or]Make them SLOW. This hints what else to do here.[minus][cycling]"	--	"you can make the owls SLOW"
 satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of it.[plus][or]Make him less violent?[plus][or]A bit ARTSY?[minus][cycling]"	--	"you can make the satyr ARTSY"
