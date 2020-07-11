@@ -1353,6 +1353,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "space"	326739437	--	--	"[locname]."
+"pace"	230465471	--	trader-gone rule	"[locname]."
 "trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape space]you got what you wanted[else][he-she] might trade that So-Great Storage[end if]."
 "drawing"	362975539	--	--	"The drawing can't be changed. It's stuck to the wall as a warning."
 "art"	190621639	Art Erd	--	"[1st-name]."
@@ -1360,6 +1361,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "tera"	318427748	Tera Darter	--	"[1st-name]."
 "brrhub"	349873522	a brr hub	--	"[hub-a]."
 "banna"	160609557	banna	--	"It's [i]a[r] banna[']. The puzzle here is criminally corny, but it's not criminal like [greedy-person]."
+"severe"	672180916	Dr Severe	--	"You need to change Dr. Severe, title and all."
 
 table of Gates Stage nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1433,6 +1435,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "intel"	398630320	--	--	"[dome-rm]."
 "calendar"	380261569	--	--	"[these-docs]."
 "thesis"	505739204	--	--	"[these-docs]."
+"passe"	404007818	--	--	"[passe-control]."
+"apse"	307733852	--	--	"[passe-control]."
 
 table of Sparse Spares nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2241,6 +2245,10 @@ to say papay: say "[if auction caution is reflexive]You're probably over-thinkin
 
 to say just-c: say "Just return the fruit to Curtis. No need for another change"
 
+this is the trader-gone rule:
+	if art erd is moot or dr tera is moot, the rule succeeds;
+	the rule fails;
+
 to say 1st-name: say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be, especially since you [if So Great Storage is in Scape Space]want to get [else]got[end if] that So-Great Storage";
 
 to say hub-a: say "It's a burr hub, not the burr hub. A small but important distinction"
@@ -2255,13 +2263,15 @@ section demo dome auxiliary
 
 to say dome-rm: say "You don't need to flip anything here, really. Certainly not a room"
 
-to say its-a-museum: say "This is a museum! This is a museum! Messing with the exhibits would be very bad form";
+to say its-a-museum: say "This is a museum! Messing with the exhibits would be very bad form"
 
 to say no-mess: say "No need to mess with the helpful sign";
 
 to say no-no: say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
 
-to say these-docs: say "These are documents of historical records! Revisionism is so Elvira";
+to say passe-control: say "I have full creative control over the Passe Apses, and I'm not giving it up"
+
+to say these-docs: say "These are documents of historical records! Revisionism is so Elvira"
 
 section general auxiliary
 

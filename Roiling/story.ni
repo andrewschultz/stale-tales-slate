@@ -20973,9 +20973,9 @@ to say unex-left:
 	if Y is 0, continue the action;
 	say ", ignoring the [if Y is 1][random unexamined thing in Sparse Spares][else]final [number of unexamined things in Sparse Spares in words] things[end if] in Sparse Spares,";
 
-check going up in Peek Keep: say "The great grate blocks you." instead;
+check going up in Peek Keep: say "The great grate is there so you can see but not touch things[if great gate is unexamined it]. You should examine it to see what's there[end if]." instead;
 
-table of xibits
+table of xibits [since ORWT is randomly changed, it's nontrivial to convert this table to number properties for each exhibit.]
 exhib	orwt
 owl decal code wall	10
 allow lots tools wall	10
@@ -20984,6 +20984,7 @@ Calendar	10
 Novella	20
 Flashed Ad Shelf	1
 shiest thesis	10
+Passe Apses	10
 
 section Great Grate
 
@@ -21030,7 +21031,7 @@ a talks stalk is boring scenery. "From what you see on the other side of the Gre
 
 section Flashed Ad Shelf
 
-The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, then to someone walking around on a cube in a cavern, and finally to someone walking between Grebeberg and Yelpley to defeat the Diktat Kid in the Dirge Grid.". bore-text is "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
+The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, then to someone walking around on a cube in a cavern, then someone walking between Grebeberg and Yelpley to defeat the Diktat Kid in the Dirge Grid, then someone named Kerry Kyle defeating a Very Vile Fairy File.". bore-text is "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
 
 check examining Flashed Ad Shelf: now Flashed Ad Shelf is exhausted;
 
@@ -21213,29 +21214,49 @@ after examining allow lots tools wall:
 
 book Intel Inlet
 
-Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there.". roomnud of Intel Inlet is table of Intel Inlet nudges.
+Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there. Passe Apses[one of], of puzzles that made the cut in earlier releases before being weeded out or moved, [or][stopping] also wait here for your perusal.". roomnud of Intel Inlet is table of Intel Inlet nudges.
 
 to say the-pro: set the pronoun it to shiest thesis;
 
-The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. He's obviously still a little embarrassed about it all.". bore-text is "THe shiest thesis is only for reading.".
+chapter shiest thesis
+
+The shiest thesis is an exhibit in Intel Inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. It's engrossing enough to read in one go, but you don't remember any details, just that mistakes happen.". bore-text is "THe shiest thesis is only for reading.".
 
 after examining shiest thesis: [?? drop "continue the action?"]
 	now shiest thesis is exhausted;
 	continue the action;
 
-The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.[paragraph break][part-one-thru]".
+chapter CareLand Calendar
+
+The CareLand Calendar is an exhibit in Intel Inlet. description of Calendar is "The CareLand Calendar is divided into several parts based on what is there. You read through one.[paragraph break][one-calendar]".
 
 calendar-part is a number that varies.
 
-to say part-one-thru:
+to say one-calendar:
 	if calendar-part is 0, now careland calendar is perused;
 	increment calendar-part;
 	if calendar-part > number of rows in table of calparts, now calendar-part is 1;
 	choose row calendar-part in table of calparts;
 	say "[thiscal entry][line break]";
 	if calendar-part is number of rows in table of calparts:
-		say "[line break]That's the end of the calendar.";
+		say "[line break]That's the end of the CareLand Calendar.";
 		now careland calendar is exhausted;
+
+chapter Passe Apses
+
+The Passe Apses are a plural-named exhibit in Intel Inlet. description of Passe Apses is "[one of]The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a[or]You observe another[stopping] page of former content:[paragraph break][one-passe]".
+
+passe-part is a number that varies.
+
+to say one-passe:
+	if passe-part is 0, now passe apses are perused;
+	increment passe-part;
+	if passe-part > number of rows in table of calparts, now passe-part is 1;
+	choose row passe-part in table of passeparts;
+	say "[thispass entry][line break]";
+	if passe-part is number of rows in table of passeparts:
+		say "[line break]That's the end of the Passe Apses.";
+		now Passe Apses are exhausted;
 
 book Ned's Dens
 

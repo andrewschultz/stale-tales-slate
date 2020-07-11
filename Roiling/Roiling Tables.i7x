@@ -1779,6 +1779,42 @@ thiscal [x calendar] [tdm1]
 
 [teenager pith part eighteen]
 
+table of passeparts
+thispass
+"(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload."
+"(ORDEAL RELOAD) You see the basement renamed the Largely All-Grey Gallery and the Stable renamed Farming Framing."
+"(ORDEAL RELOAD) You see the Collapsed Old Places before the Strip of Profits replaced by Carven Cavern and moved to where you hide the ruby in Oyster, then renamed Rascal Craals."
+"(ORDEAL RELOAD) Curtis, whatever he was doing in Collapsed Old Places, is moved to the epilogue in Store H, in Rustic Citrus, of course. Elmo is moved from Collapsed Old Places to before you exit the Largely All-Grey Gallery."
+"(STORES) You see the Trips Strip replaced by the Strip of Profits."
+"(STORES) You see a limestone milestone becoming a Megaton Magneto-Montage."
+"(STORES) You see Ian/Nia (a Drug Guardian) become the Rehabs Basher, and a lecturer becoming Max P Lee, Example (later Pam Exel if you are female) then acquiring the title Blabber Babbler."
+"(W) A weirder bot was originally a guardian to be REWIRED, but it was replaced. Only much later did I put the red wire in a bot boat."
+"(P/Y) You see the hawt thaw was just thaw before, and also, the Horned Hedron was north of the start of Presto before it was promoted to Oyster's main bad-guy area. You also see the north/south PRESTO areas were named Spumed Tar, Permadust, Purest Dam and A Dumpster."
+"(U) You see the Poison Stripe demoted to scenery, because Same Mesa gives more of a feel you're Stuck Here."
+"(U) You see Unearthed [']N Underneath becoming Sun-Spared Underpass becoming Harms Marsh."
+"(U) You see the Rigged Red Gig becoming the Cripple Clipper. Also, BEHIND and WITHIN are puzzles that vanish, and HUG THOR is replaced by Hurt Hog. Oscar's and Pat's are also renamed to the Adobe Abode and Idle Deli."
+"(V) You see Poverty renamed the Loather Rathold, Bad Velour Boulevard being renamed A Sidewalk Laid Askew, then Rustin['] Ruin St. (in Ruts), then Loudest Used Lot and finally Boarded Roadbed. Perky Crass Skyscraper is renamed the Econ-Cone."
+"(V) You watch Boredom Bedroom being renamed Pallil Li'l Pad, before it switches back, with Drain Nadir spun off."
+"(V) You watch as A Rotund Rotunda is renamed Dour Tan Rotunda, then finally Browse Bowers."
+"(V) You watch as Very Top is renmed FiefCo Office, then Upscale Capsule."
+"(Y) You watch as Marc's is changed to the Posh Hops Shop, changing the initial flee command from SCRAM with Trolls as bodyguards. Also, Oyster D is renamed the Den Loft, and DIE THOU Hideout becomes the Horned Hedron. Acher's Arches becomes scenery. Shovel Hovels becomes the Shuttle Hutlets. The Blowfish Fishbowl becomes Helots['] Hostel before settling on Lean Lane, which was formerly inserted as a room before. Hero's Shore is changed to Saccade Cascade but reserved as the post-haunter name for Anger Range."
+"(W) You watch as the Servant Taverns are moved from after Rawest Waters and placed at the start of the Towers area. It is renamed the Loftier Trefoil."
+"(W) You see a wholesale switching of locations in the Wildest Wilteds, even when they were the Bland Sad Badlands and before. Danger/Gander Garden is moved from the start to guarding Dr. Yow. Unblest Sunbelt becomes the Leveraged Everglade. Campiest Campsite is moved west of Scope Copse and demoted to scenery for Outer Route, which is moved south and replaced by Fringe Finger. Shaven Havens is moved north of the admirer, with Savager Ravages demoted to bounding scenery. Dopiest Topside is the new introductory name. Heron Isle Shoreline goes through several iterations: Ole Shrine Shoreline, Strati Strait, and finally Artist Traits Strait. Ruffian Funfair becomes Baldest Blasted Saltbed."
+"(T) The Maiden Median becomes Gent-Fora/Frat-Gone Frontage, then Disowned Downside."
+"(T) Less Nice Silences becomes Tapering Anger Pit/Inert Gap, then Shiner Shrine."
+"(T) Southward Shout Ward becomes Rote-Moan/Near-Moot Anteroom, then Clarthead Cathedral."
+"(T) A Stocked Stockade becomes Reclusion Inclosure, then Rancho Archon Anchor. Coevals['] Alcoves becomes the new Reclusion Inclosure, with the Alcoves demoted to scenery."
+"(T) Wickeder Wire Deck becomes Lamer Realm/Blest Belts. Perverse Preserve becomes Uprates Pasture once you've done enough."
+"(P/T) Burnt Brunt in Presto becomes the Char Arch. Bleary Barley in Otters becomes Minded Midden/Burnt Brunt."
+"(W) The serpent is moved from the start of towers to an optional puzzle near the end. It becomes pester'n."
+"(W) Some coiled old ice becomes docile, flipping a puzzle, and neural pulses becoming unreal pluses is scrapped. Similarly, ice sheets that were rimiest becoming rimiest are replaced with something firmer."
+"(W) A perfect prefect who needs to become porcine is given walking papers as a guardian. So is a greedy gnome guardian who becomes Ed Yerg east of the Mislit Limits. Ed replaces Old Hat Daltho, who is no longer dying/dingy but moved to the start and renamed Ornate Atoner Renato. Eventually, Ed Yerg is cashiered for the Tetris Sitter."
+"(W) A papery yapper formerly seen as Angriest is thrilled to be promoted to the end of the Oyster area, especially since it will be bribed, sort of."
+"(W/H) Nameless salesmen are sent to the post-script episode. They were formerly dandier, replaced by the arid den to be drained."
+"(W) Other guardians are a nebula (unable,) deacons (who become Lois the Hostile and the Hostile-is-He Lot,) an orc replaced with a proper alarming grailman, a grandiose swarm (moved to ego-drains.)"
+"(W) The smart kid is replaced by a Coasting Agnostic, who doesn't FIDGET (gifted) any more but is absorbed in Reading: a Dinger."
+"There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, for those interested in that sort of thing."
+
 table of informcode
 thiscode [x inform wall] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."

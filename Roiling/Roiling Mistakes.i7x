@@ -1022,6 +1022,8 @@ understand "allo" as a mistake ("Lola says nothing back.") when player has dolla
 
 understand "lots" as a mistake ("You only need the one slot.") when player has So Great Storage and lost slot is part of So Great Storage.
 
+understand "reeves" as a mistake ("You don't need to guess Dr. Severe's last name or have any medieval bailiff escort [him-her] away.") when Dr Severe is touchable.
+
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
 understand "sonic" as a mistake ("Maybe if you had more than one [if player has coin]coin[else]icon[end if].") when player has coin or player has icon.
