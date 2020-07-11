@@ -1459,9 +1459,9 @@ The message is what this room--or the cathedral--was called in previous releases
 The camo just stops you from going west or east.
 >>CLARTHEAD CATHEDRAL
 ?The shrewin' whiners block me noisily!
-They restyle, tallyhoing with callosity.
-Tune their volume down.
-You need two of three. TERSELY and STOICALLY cost the fewest keystrokes.
+Their tallyhoing, callosity and jollity get in the way.
+Tune their volume down. Disrupt them. Make them take a break.
+You need two of three. JOLTILY and STOICALLY cost the fewest keystrokes.
 LOATHINGLY is the other solution.
 >>LOOP POOL
 ?The sea cube...

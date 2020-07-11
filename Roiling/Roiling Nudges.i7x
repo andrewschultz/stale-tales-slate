@@ -222,8 +222,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "giatn"	251797892	Gast	--	"[Gast] is too old and set in [his-her] ways. You may just need to listen to [him-her] from [if nuder is touchable]one more angle[else]several different angles[end if]."
 "ides"	290102010	side art	--	"[whole-side]."
 "tra"	190621639	side art	--	"[whole-side]."
+"gast"	234171504	Gast	--	"You can't change [gast] permanently. You just have to work around [him-her]."
 "tirade"	384449683	Gast	--	"[if side art is reflexive]There's more than one tirade[else]You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	sit a nag	--	"The [sit a nag] is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
+"anti"	219198190	--	--	"[whole-sitanag]"
+"sag"	131061486	--	--	"[whole-sitanag]"
 "die"	193828044	--	--	"[die-sin]."
 "sin"	210174320	--	--	"[die-sin]."
 "poison"	440345433	--	--	"[not-stripe]."
@@ -539,8 +542,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Austerer Treasure nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "austerer"	732937433	--	--	"[locname]."
-"recs"	328409463	censer	--	"[full-cens]."
-"rec"	232135497	censer	--	"[full-cens]."
 
 table of Marines Seminar Remains nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -571,6 +572,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hack"	111408880	--	--	"[locname]."
 "algorithm"	497738055	--	--	"[no-txtbk]."
 "algorithms"	594012021	--	--	"[no-txtbk]."
+"recs"	328409463	censer	--	"[full-cens]."
+"rec"	232135497	censer	--	"[full-cens]."
 "labs"	170694528	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "alb"	74420562	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "dead"	172052105	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
@@ -1059,12 +1062,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Minded Midden nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "midden"	347839794	bleary barley	--	"[locname]."
-"bare"	233736635	bleary barley	--	"[adj-needs-ly]."
+"bare"	233736635	bleary barley	--	"[add-ly]."
 "burtn"	380866041	nude dune	--	"[locname]."
 "dune"	322848513	nude dune	--	"You can't really shift the dune, but you don't need to."
 "lyier"	434295849	Ed Riley	--	"Ed's full name, please!"
-"reedi"	406957956	Ed Riley	--	"[adj-needs-ly]."
-"reedy"	484324362	Ed Riley	--	"[adj-needs-li]."
+"reedi"	406957956	Ed Riley	--	"[add-ly]."
+"reedy"	484324362	Ed Riley	--	"[add-li]."
 "steward"	543665576	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
 "asteward"	545853394	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
 "rye"	335489164	deli rye	--	"[del-ry]."
@@ -1076,43 +1079,44 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "downside"	562325957	--	--	"[locname]."
 "sample"	425622844	--	--	"[maples-no]."
 "maple"	329348878	--	--	"[maples-no]."
-"bossy"	407678666	t-bossily	--	"[adj-needs-li]."
-"bossi"	330312260	t-bossily	--	"[adj-needs-ly]."
-"nasti"	315472156	t-nastily	--	"[adj-needs-ly]."
-"nasty"	392838562	t-nastily	--	"[adj-needs-li]."
-"seedi"	417908119	t-seedily	--	"[adj-needs-ly]."
-"seedy"	495274525	t-seedily	--	"[adj-needs-li]."
-"shadi"	201766018	t-shadily	--	"[adj-needs-ly]."
-"shady"	279132424	t-shadily	--	"[adj-needs-li]."
-"snide"	359009518	t-snidely	--	"[adj-needs-ly]."
-"stark"	339828783	t-starkly	--	"[adj-needs-ly]."
-"tacit"	272406285	t-cattily	--	"[adj-needs-ly]."
-"catty"	349772691	t-cattily	--	"[adj-needs-li]."
-"teari"	363420594	t-tearily-irately	--	"[adj-needs-ly]."
-"teary"	440787000	t-tearily-irately	--	"[adj-needs-li]."
-"bleayr"	409909726	t-blearily	--	"[adj-needs-li]."
-"bleari"	332543320	t-blearily	--	"[adj-needs-ly]."
-"ribald"	225766300	t-ribaldly	--	"[adj-needs-ly]."
-"formal"	306268086	t-formally	--	"[adj-needs-ly]."
-"coital"	297462683	t-coitally	--	"[adj-needs-ly]."
-"modest"	486646912	t-modestly	--	"[adj-needs-ly]."
-"shabbi"	217574739	t-shabbily	--	"[adj-needs-ly]."
-"shabby"	294941145	t-shabbily	--	"[adj-needs-li]."
-"shoddi"	294959866	t-shoddily	--	"[adj-needs-ly]."
-"shoddy"	372326272	t-shoddily	--	"[adj-needs-li]."
-"silent"	494904286	t-silently	--	"[adj-needs-ly]."
-"steami"	438445910	t-steamily	--	"[adj-needs-ly]."
-"steamy"	515812316	t-steamily	--	"[adj-needs-li]."
-"sudden"	440151568	t-suddenly	--	"[adj-needs-ly]."
-"stupdi"	451977685	t-stupidly	--	"[adj-needs-ly]."
-"martial"	355691295	t-martially	--	"[adj-needs-ly]."
-"sincere"	570115926	t-sincerely	--	"[adj-needs-ly]."
-"sobbing"	353964409	t-sobbingly	--	"[adj-needs-ly]."
-"tedious"	572670412	t-tediously	--	"[adj-needs-ly]."
-"wearing"	469752559	t-wearingly	--	"[adj-needs-ly]."
-"drawling"	416789378	t-drawlingly	--	"[adj-needs-ly]."
-"emotional"	613598445	t-emotionally	--	"[adj-needs-ly]."
-"despairing"	605579646	t-despairingly	--	"[adj-needs-ly]."
+"terse"	540320005	--	--	"[add-ly]."
+"bossy"	407678666	t-bossily	--	"[add-li]."
+"bossi"	330312260	t-bossily	--	"[add-ly]."
+"nasti"	315472156	t-nastily	--	"[add-ly]."
+"nasty"	392838562	t-nastily	--	"[add-li]."
+"seedi"	417908119	t-seedily	--	"[add-ly]."
+"seedy"	495274525	t-seedily	--	"[add-li]."
+"shadi"	201766018	t-shadily	--	"[add-ly]."
+"shady"	279132424	t-shadily	--	"[add-li]."
+"snide"	359009518	t-snidely	--	"[add-ly]."
+"stark"	339828783	t-starkly	--	"[add-ly]."
+"tacit"	272406285	t-cattily	--	"[add-ly]."
+"catty"	349772691	t-cattily	--	"[add-li]."
+"teari"	363420594	t-tearily-irately	--	"[add-ly]."
+"teary"	440787000	t-tearily-irately	--	"[add-li]."
+"bleayr"	409909726	t-blearily	--	"[add-li]."
+"bleari"	332543320	t-blearily	--	"[add-ly]."
+"ribald"	225766300	t-ribaldly	--	"[add-ly]."
+"formal"	306268086	t-formally	--	"[add-ly]."
+"coital"	297462683	t-coitally	--	"[add-ly]."
+"modest"	486646912	t-modestly	--	"[add-ly]."
+"shabbi"	217574739	t-shabbily	--	"[add-ly]."
+"shabby"	294941145	t-shabbily	--	"[add-li]."
+"shoddi"	294959866	t-shoddily	--	"[add-ly]."
+"shoddy"	372326272	t-shoddily	--	"[add-li]."
+"silent"	494904286	t-silently	--	"[add-ly]."
+"steami"	438445910	t-steamily	--	"[add-ly]."
+"steamy"	515812316	t-steamily	--	"[add-li]."
+"sudden"	440151568	t-suddenly	--	"[add-ly]."
+"stupdi"	451977685	t-stupidly	--	"[add-ly]."
+"martial"	355691295	t-martially	--	"[add-ly]."
+"sincere"	570115926	t-sincerely	--	"[add-ly]."
+"sobbing"	353964409	t-sobbingly	--	"[add-ly]."
+"tedious"	572670412	t-tediously	--	"[add-ly]."
+"wearing"	469752559	t-wearingly	--	"[add-ly]."
+"drawling"	416789378	t-drawlingly	--	"[add-ly]."
+"emotional"	613598445	t-emotionally	--	"[add-ly]."
+"despairing"	605579646	t-despairingly	--	"[add-ly]."
 "mack"	138201734	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
 "gretta"	454137468	Gretta	--	"Gretta's been manipulated enough[if macks are touchable]. Deal with the macks['] arguments, instead[end if]."
@@ -1138,7 +1142,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "loathing"	417246607	whin1	--	"[add-ly]."
 "stoic"	337734992	whin2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
 "stoical"	393736649	whin2	--	"[add-ly]."
-"terse"	540320005	whin3	--	"[add-ly]."
+"jolli"	275933626	--	--	"[add-ly]"
+"jolly"	353300032	--	--	"[add-li]"
 
 table of Loop Pool nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1663,6 +1668,8 @@ this is the has-reag rule:
 
 to say fol-reag: say "[if player is in Cleric Circle][follow-the-list][else]Brother Horbert will do [i]his[r] magic on the reagents at the right time";
 
+to say whole-sitanag: say "The whole [sit a nag]."
+
 to say die-sin: say "[if Cleric Circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
 
 to say not-stripe: say "The poison stripe is too incorporeal to do bend to your will"
@@ -2097,13 +2104,17 @@ this is the cppc rule:
 
 section otters auxiliary
 
-to say adj-needs-ly: say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley"
+to say add-li: say "No, you need a couple more letters, but not the usual ones... [adv-help]"
+
+to say add-ly: say "No, you need a couple more letters... [adv-help]"
+
+to say adv-help: say "[if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
 
 this is the cinders-gone rule:
 	if cinders are moot, the rule succeeds;
 	the rule fails.
 
-to say adj-needs-li: say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
+to say add-li: say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
 
 to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
 
@@ -2113,13 +2124,11 @@ to say both-medals: say "No, it's a combination of what's on both medals"
 
 to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
 
-to say add-ly: say "No, you need a couple more letters... [if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
-
 this is the midden-n-s rule:
 	if player is in Clarthead Cathedral or player is in Shiner Shrine, the rule succeeds;
 	the rule fails;
 
-to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if whin3 is moot or whin2 is moot or whin1 is moot]even [end if]less...effectively"
+to say whiney: say "You can't change who whiners are, but maybe you can make them whine [if whiner-score > 0]even [end if]less...effectively"
 
 to say cube-whole: say "The sea cube is unmoved. You may need to concentrate on the whole thing";
 

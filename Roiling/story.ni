@@ -3708,7 +3708,7 @@ to say good-enuf of (goody - a thing):
 	if goody is imp1 or goody is imp2 or goody is imp3:
 		say "The imp's already been compromised that way.";
 		continue the action;
-	if goody is whin1 or goody is whin2 or goody is whin3:
+	if goody is whin1 or goody is whin2 or goody is jollity:
 		say "The whiners were already slowed up that way.";
 		continue the action;
 	if goody is part of the diorama:
@@ -4546,7 +4546,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 
 to decide which thing is scannote-idx of (th - a thing):
 	if th is imp1 or th is imp2 or th is imp3, decide on sly imp;
-	if th is whin1 or th is whin2 or th is whin3, decide on whiners;
+	if th is whin1 or th is whin2 or th is jollity, decide on whiners;
 	decide on th;
 
 to say sb-choose:
@@ -5493,7 +5493,7 @@ to decide which thing is animal-to-hint:
 
 shrine-imp-items is a list of things variable. shrine-imp-items is {imp1, imp2, imp3}.
 
-cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, whin3}.
+cathedral-items is a list of things variable. cathedral-items is {whin1, whin2, jollity}.
 
 to decide whether in-extra-powers:
 	if power-back is false, no;
@@ -6683,7 +6683,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, macks, vow here, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, macks, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6796,8 +6796,8 @@ check listening:
 	if noun is macks, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
-	if noun is whiners, say "The volume and speed they're at, the actual words don't matter. You need to bite the men's style somehow." instead;
-	if noun is sly imp, say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
+	if noun is whiners, say "It's hard not to hear what the [whiners] have to say, actually." instead;
+	if noun is sly imp, say "The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now." instead;
 	if player is in Perverse Preserve, say "You hear no monotremes you could turn into metronomes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
@@ -18107,6 +18107,13 @@ to pick-a-picaro:
 
 volume otters
 
+a block-concept is a kind of thing. a block-concept is usually scenery. a block-concept is usually vanishing. a block-concept is usually boring. bore-text of a block-concept is usually "That [if noun is in Shiner Shrine]evaluation[else]activity[end if] is nothing you can observe or manipulate physically, but if you focus on [the noun], you might be able to SCAN it if you need to.". description of a block-concept is usually "Well, [the item described] is there, and it's definitely distracting you from going [past-barley-vert].". a block-concept is usually ssno. bore-check of a block-concept is usually the bore-concept rule.
+
+this is the bore-concept rule:
+	if current action is taking, say "Well, the problem is, you can't take [the noun]. You'd like to get rid of it." instead;
+
+to say past-barley-vert: say "[if player is in Shiner Shrine]north[else if player is in Clarthead Cathedral]south[else]somewhere you haven't been[end if]"
+
 section turn rules
 
 after going (this is the parrot follows you rule):
@@ -18584,7 +18591,7 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Who put it there? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
@@ -19284,15 +19291,14 @@ after looking in Shiner Shrine:
 	if sly imp is in Shiner Shrine, it-him-her sly imp;
 	continue the action;
 
-after doing something with imp:
-	set the pronoun him to the imp;
-	set the pronoun her to the imp;
+after doing something with imp (this is the imp gender neutralize imp rule):
+	it-him-her sly imp;
 	continue the action;
 
 check taking imp:
 	say "Simply much too fast." instead;
 
-a-text of sly imp is "BUG". b-text of sly imp is "BUG". parse-text of sly imp is "BUG".
+check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it does things and scan those." instead;
 
 [These are all dummy items. imp1 = brutely, imp2 = angrily, imp3 = enragedly]
 
@@ -19321,6 +19327,9 @@ check going north in Shiner Shrine:
 	if power-back is false:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
+
+to decide which number is imp-score:
+	decide on (boolval of whether or not imp1 is moot) + (boolval of whether or not imp2 is moot) + (boolval of whether or not imp3 is moot)
 
 chapter coma camo
 
@@ -19433,18 +19442,9 @@ every turn (this is the raptor kills you rule):
 		else:
 			ital-say "You'll get a mulligan for instantaneous actions like examining, but you may want to deal with that raptor, or flee.";
 
-section debug - not for release
-
-understand "i1" as imp1 when debug-state is true and player is in Shiner Shrine.
-understand "i2" as imp2 when debug-state is true and player is in Shiner Shrine.
-understand "i3" as imp3 when debug-state is true and player is in Shiner Shrine.
-understand "w1" as whin1 when debug-state is true and player is in Shiner Shrine.
-understand "w2" as whin2 when debug-state is true and player is in Shiner Shrine.
-understand "w3" as whin3 when debug-state is true and player is in Shiner Shrine.
-
 book Clarthead Cathedral
 
-Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise here is just unbearable[else]This room is quieter now, just a north-south passage[end if]. You recognize coma camo to the east and west.". roomnud of Clarthead Cathedral is table of Clarthead Cathedral nudges.
+Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise in this north-south passage just unbearable[else]With the [whiners] gone, this is a relatively plain north-south passage[end if]. You recognize coma camo to the east and west.". roomnud of Clarthead Cathedral is table of Clarthead Cathedral nudges.
 
 check going south in Clarthead Cathedral:
 	if whiners are touchable, say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
@@ -19453,32 +19453,33 @@ check going south in Clarthead Cathedral:
 		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
 to decide which number is whiner-score:
-	decide on (boolval of whether or not whin1 is reflexed) + (boolval of whether or not whin2 is reflexed) + (boolval of whether or not whin3 is reflexed)
+	decide on (boolval of whether or not whin1 is moot) + (boolval of whether or not whin2 is moot) + (boolval of whether or not jollity is moot)
 
-the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if whin1 is reflexive]tallyhoing[else]babbling[end if][if whin2 is reflexive] with great callosity[end if] here[if whin3 is reflexive]. They restyle why they can't let you go south, and they depress you so much, you almost forget you can go back north[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
+the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
 
-check scaning whiners:
-	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if whin1 is reflexive]restyle[else]continue[end if] [if whin2 is reflexive]tallyhoing[else]their noisiness[end if] [if whin3 is reflexive]with callosity[end if]";
-	try scaning entry 1 of cathedral-items;
-	the rule succeeds;
+check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it does things and scan those." instead;
 
-section dummy scenery
+chapter what the whiners do
 
-[3 dummy sceneries. Loathingly, stoically, tersely]
-
-whin1 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin1 is undesc. printed name of whin1 is "the whiners['] shrewin[']".
+whin1 is a vanishing block-concept in Clarthead Cathedral.
 
 a-text of whin1 is "RRYYRYRRO". b-text of whin1 is "RRYYRYRRB". parse-text of whin1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
 
-whin2 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin2 is undesc. printed name of whin2 is "the whiners['] shrewin[']".
+whin2 is a vanishing block-concept in Clarthead Cathedral.
 
 a-text of whin2 is "RYRRYRO". b-text of whin2 is "RGRRYPO". parse-text of whin2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". whin2 is cheat-spoilable. [tersely]
 
-whin3 is privately-named unscannable reflexive ssno scenery in Clarthead Cathedral. whin3 is undesc. printed name of whin3 is "the whiners['] shrewin[']".
+jollity is a vanishing block-concept in Clarthead Cathedral.
 
-a-text of whin3 is "RYYRRYRRRO". b-text of whin3 is "RYYRRYRRRO". parse-text of whin3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
+a-text of jollity is "RYRRYRO". b-text of jollity is "PGPPYPB". parse-text of jollity is "j[sp]o[sp]l[sp]l[sp]i[sp]t[sp]y". jollity is cheat-spoilable. [joltily]
+
+section debug - not for release
+
+understand "i1" as imp1 when debug-state is true and player is in Shiner Shrine.
+understand "i2" as imp2 when debug-state is true and player is in Shiner Shrine.
+understand "i3" as imp3 when debug-state is true and player is in Shiner Shrine.
 
 book Perverse Preserve
 

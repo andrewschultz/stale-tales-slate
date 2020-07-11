@@ -7,7 +7,7 @@ files=reg-roi2-otters-max.txt,reg-roi2-otters-min.txt,reg-roi2-otters-nudmis.txt
 ~	nudmis,nudges,nud,nu,mis	t2
 ~	alt	t3
 ~	sli	t4
-~	hints,hin	t5
+~	hints,hin,spoi	t5
 
 }}MAX=32
 }}CURMAX=32
@@ -829,6 +829,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say AL
 >although
 As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
 >ergo
+by one point
 >n
 >n
 As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
@@ -1515,6 +1516,8 @@ Clarthead Cathedral
 @spoi
 /As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|.
 >loathingly
+by one point
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
 >undo
 
 @hin
@@ -2140,6 +2143,15 @@ The parrot can be changed back into a raptor, but not into anything new.
 >raptor
 Your score has just gone up by one point
 }}SCORE++
+
+@nud
+#nudge for hidings
+>hidinsg
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+\\
+#nudge for hiding
+>hidign
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.

@@ -307,7 +307,7 @@ imp2	imp2	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp 
 imp3	imp3	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
 whin1	whin1	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
 whin2	whin2	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
-whin3	whin3	false	716493096	--	"tersely"	"tersely"	--	post-whiners-flip rule	"[shout-check]"
+jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
 Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre vanishes! Mr. Lee blinks. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He perks up. ' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
@@ -1494,7 +1494,7 @@ this is the post-whiners-flip rule:
 		moot whiners;
 		moot whin1;
 		moot whin2;
-		moot whin3;
+		moot jollity;
 	else:
 		set the pronoun them to whiners;
 		remove noun from cathedral-items, if present;
@@ -2213,7 +2213,7 @@ imp2	"[imp-nag]."
 imp3	"[imp-nag]."
 whin1	"[whin-nag]."
 whin2	"[whin-nag]."
-whin3	"[whin-nag]."
+jollity	"[whin-nag]."
 raptor	"The raptor recoils slightly."
 cinders	"The cinders glow and even warm up for a bit."
 aside-llp	"[e-n-m] rock back and forth a bit."
@@ -2944,7 +2944,7 @@ imp2	"[bug-report]"
 imp3	"[bug-report]"
 whin1	"[bug-report]"
 whin2	"[bug-report]"
-whin3	"[bug-report]"
+jollity	"[one of]The jollity actually requires minimal switching. It is uninterrupted, smooth, consistent.[plus][or]You need an adjective to break up the smoothness.[plus][or]JOLTILY.[minus][cycling]"
 owls	"[one of]You only have one move to tackle the owls.[plus][or]They are too fast now.[plus][or]Make them SLOW. This hints what else to do here.[minus][cycling]"	--	"you can make the owls SLOW"
 satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of it.[plus][or]Make him less violent?[plus][or]A bit ARTSY?[minus][cycling]"	--	"you can make the satyr ARTSY"
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
