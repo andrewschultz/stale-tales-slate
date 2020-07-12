@@ -439,11 +439,12 @@ chapter presto nudges
 
 table of presto nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
+"storep"	568332432	--	degen-true rule	"[not-the-reg]."
 "crust"	408819179	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
 "mazeltov"	655479952	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	ether-gone rule	"The ether is gone. You can just go [if Saps Pass is visited]back [end if]north."
 "mazeroom"	615142808	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
-"storep"	568332432	--	degen-true rule	"[not-the-reg]."
+"earring"	447141589	angrier earring	--	"The earring pulses a bit more, but you doubt you can do anything with it on your own."
 "floor"	314357692	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
 "serial"	410398381	popgun	--	"[is-boing]."
 "number"	469637285	popgun	--	"[is-boing]."

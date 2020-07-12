@@ -1655,11 +1655,10 @@ The "vow here" is an LLP. But back to the main line...
 
 > N
 
-The imp needs to be provoked. There are three ways, based on its description. You only need two, and they're all functinally equivalent. Again, let's save a couple keystrokes.
-
-> ANGRILY
+The imp needs to be provoked. There are three ways, based on its description. You only need two, and they're all functinally equivalent. Again, let's save a couple keystrokes by using the shortest ways through. It's actually a bit tougher than its colleagues to the south.
 
 > BRUTELY
+> REMOTELY
 
 (ALT) > ENRAGEDLY
 
@@ -1691,9 +1690,9 @@ You may notice one of your medals has changed now.
 
 > S
 
-You need to get by the shrewin' whiners. Three ways to do that. But, as above, any pair works the same.
+You need to get by the shrewin' whiners. Three ways to do that. They have jollity, callosity, and tallyhoing. But, as above, any of the three pairs is equally good.
 
-> TERSELY
+> JOLTILY
 > STOICALLY
 
 (ALT) > LOATHINGLY

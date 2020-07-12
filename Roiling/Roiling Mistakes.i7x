@@ -436,6 +436,8 @@ understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of 
 
 understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps you need something more straightforward and universal.") when player is in Austerer Treasure and ye hoop is in Austerer Treasure.
 
+understand "rangier" and "rearing" as a mistake ("The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.") when angrier earring is touchable.
+
 chapter Marines Seminar Remains
 
 understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is touchable.

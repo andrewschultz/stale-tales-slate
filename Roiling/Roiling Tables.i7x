@@ -132,8 +132,8 @@ odes song	odes song	false	591595494	--	"goodness"	"goodness"	--	--	"You manage t
 Leo	Leo	false	255972525	--	"ole"	"ole"	--	post-leo-ole rule	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."
 Rand	Rand	false	177448218	--	"darn"	"darn"	--	post-rand-darn rule	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break][l-n-r] begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	--	post-wzup rule	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble.[paragraph break]'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
-ye hoop	censer	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-censer]."
-ye hoop	censer	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-censer]."
+ye hoop	angrier earring	true	267453412	--	"pooh"	"pooh"	--	post-pooh-phooey rule	"[get-earring]."
+ye hoop	angrier earring	true	517618773	--	"phooey"	"phooey"	--	post-pooh-phooey rule	"[get-earring]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	pre-solve-maze rule	post-nowt-town-wont rule	"[wont-maze]."
 maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	pre-solve-maze rule	post-mazeltov rule	"You decide to congratulate yourself [if maze-index is 0]before you get[else]despite not FULLY getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if Nowt Town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if mazeguide-scanned is true]saying you should not have had to scan that nice man or men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	pre-ether-there rule	post-ether-there rule	"[l-n-r] look at you as you whisper. 'Er...the three... the mist, it's them!'[paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' [l-n-r], busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
@@ -152,7 +152,7 @@ gum	mug	true	201780662	--	"mug"	"mug"	--	--	"The gum, being gum, morphs easily i
 coal	ALocalCo cola	true	149359819	--	"cola"	"cola"	--	--	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, and not just any cola. ALocalCo cola, the surprisingly invigorating caffeine drink outlawed in Yorpwald ever since Elvira failed to corner the market with the deceptively named All-Cocoa Cola and 'ironic' Ol['] Cloaca Cola, which also got a cease and desist letter from a bunch of weird stick figures in a totally different fantasy realm."
 be troo e robot	be troo e robot	false	483363989	--	"reboot"	"reboot"	pre-reboot rule	post-reboot rule	"The [robot] whizzes around Drive A for a moment. It taps around and under. Then it[if player has rom sticks] takes your ROM sticks and puts them in Drive A before it[end if] produces a thin needle so it pokes Drive A just so ... and Drive A reboots! While the software updates, the [robot], looking exhausted, hides on the underside of the Labs Slab. It's done its job. [if player has rom sticks]Those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp. [end if]. Drives A and E hum for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen. But ... it still doesn't work. There's a peels speel on the screen that explains what, uh, peels you slipped on."
 fount	futon	false	377990806	--	"futon"	"futon"	--	--	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if Im Le Cop polemic is reflexive], though you're not really tired yet[end if]."
-censer	computer screen	true	525123080	--	"screen"	"screen"	pre-censer-screen rule	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
+censer	computer screen	true	525123080	--	"screen"	"screen"	--	post-censer-screen rule	"The black N-E-Recs censer and its green dots swirl around and reform into a black screen! With green text!"
 drab yoke	keyboard	true	504410731	--	"keyboard"	"keyboard" or "key board"	pre-yak-keyboard rule	post-yak-keyboard rule	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."
 TBA key	TBA key	false	123716741	--	"tab"	"tab" or "tab key"	--	--	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."
 Im Le Cop polemic	Im Le Cop polemic	false	465512068	--	"compile"	"compile"	pre-polemic-compile rule	post-polemic-compile rule	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge [']til then[if ALocalCo Cola is not moot]. And the task seems daunting, without energy[else if ALocalCo Cola is touchable]. The ALocalCo cola doesn't give enough energy[end if]."
@@ -815,12 +815,12 @@ this is the post-pooh-phooey rule:
 	else:
 		poss-d;
 
-to say get-censer:
+to say get-earring:
 	if the player's command includes "pooh":
-		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab the hoop! It falls from the wall, revealing an N-E-Recs censer from a hidden compartment. Wow! Maybe you didn't get full style points, but you got what you needed";
+		say "You convince yourself reaching the hoop can't be that bad. You jump up, and you grab it! It falls from the wall, shrinking in the process into a quivering, smaller hoop. An angrier earring. Wow! Maybe you didn't get full style points, but you got what you needed";
 	else:
-		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, revealing an N-E-Recs censer from a hidden compartment. Wow";
-	if Leo is touchable, say "! [l-n-r] applaud your agility";
+		say "You decide to give up, but then you think, heck, why can't I drop my items for a minute? Why can't I jump off the wall and risk annoying some ancient spirit? You do so, and you grab the hoop! It falls from the wall, shrinking into an angrier earring. Wow";
+	say "[if leo is touchable]! [l-n-r] applaud your agility[end if]![paragraph break]The angrier earring quivers as you pick it up. You think of various epithets it might anagram to, but you can't find any. Maybe you should save it for later";
 
 this is the pre-solve-maze rule:
 	if noun is maze walls and cur-score of presto < 3:
@@ -928,12 +928,6 @@ this is the post-reboot rule:
 	now be troo e robot is scenery;
 	move peels speel to Hacks Shack;
 
-this is the pre-censer-screen rule:
-	if censer is touchable:
-		if Hacks Shack is unvisited:
-			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
-			preef censer instead;
-
 this is the post-censer-screen rule:
 	if Hacks Shack is visited and player is not in Hacks Shack:
 		say "That screen would go great with Drive A in the shack. So you go back there.";
@@ -949,7 +943,6 @@ this is the pre-yak-keyboard rule:
 
 this is the post-yak-keyboard rule:
 	moot leaf;
-	check-trivial-presto-llp;
 
 this is the pre-polemic-compile rule:
 	if player is not in Hacks Shack:
@@ -1699,17 +1692,6 @@ check fliptoing when mrlp is presto (this is the warn against SHATTER THREATS ru
 				else:
 					say "You can't see much more to do with the skid now, though.";
 					do nothing instead;
-			if noun is screen and shack is visited:
-				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
-				if the player yes-consents:
-					say "Great!";
-					move player to shack;
-					now player has censer;
-					continue the action;
-				else:
-					say "OK, but you'll need to do so anyway to get out of here.";
-					preef screen;
-					do nothing instead;
 			if noun is keyboard and yak is moot:
 				say "You probably want to [go-ret-shack] before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
 				if the player yes-consents:
@@ -2405,7 +2387,6 @@ praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 tsar star	"No need for additional arts."	[START presto]
 dart	"The dart's just fine as-is."
-n e recs censer	"You can't shut the censer up back where the hoop was, but maybe you can change it to something more practical than treasure."
 boing go bin	"You can't force another revelation, but you don't need to."
 sport ports	"You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism."
 Leo	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
@@ -2683,6 +2664,7 @@ Lev Tzoma	"You can scan Lev for hints. He's not much for conversation."	--	"MAZE
 Zo Mavelt	"You can scan Zo for hints. He's not much for conversation."	--	"MAZEL TOV"
 Tom Avlez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
+angrier earring	"The angrier earring will do what it needs when the time is right. You haven't explored [if saps pass is visited]quite [end if]enough, yet."
 censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"
 tsar star	"[one of]The tsar star is stuck in the tars, and taking it is too frustrating.[plus][or]Sticky, eh? The tars and the tsar star.[plus][or]What's a good clean word of frustration?[plus][or]Four letters, but not FOUR LETTERS.[plus][or]RATS.[minus][cycling]"	--	"RATS"

@@ -218,40 +218,16 @@ You are done here in Austerer Treasure. You can do something with the censer, bu
 {$SCOS}
 
 @nud
-#scannotes for n e recs censer
->scan n e recs censer
-This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
-#nudge for recs
->resc
-It's the censer that's important, not the brand name.
-#nudge for rec
->rce
-It's the censer that's important, not the brand name.
-#spechelp for n e recs censer
->screne
-That feels right, but it's not enough yet. You don't need anything grumbly, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
+#nudges for earring
+>rreagin
+The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
-@sli
-#slider test for screen
->ercsne
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!min
-#pre-censer-screen rule
->screen
-You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den.
-
-@sli
-#reslider test for screen
->ercsne
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-!Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#done rejects for n e recs censer
->screne
-You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
+@mis
+#mistake test for rangier/rearing
+>rangier
+The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.
+>rearing
+The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.
 
 >e
 
@@ -1426,7 +1402,7 @@ Dat was a good dust-up
 }}SCORE++
 
 @spoi
-(Favorite bad word,) you think, I'd rather see what's in that shack.
+(Favorite bad word,) you think, I'd rather see what's to the north.
 
 @min
 #GOODNESS is no longer available
@@ -1475,7 +1451,38 @@ by one point
 Hacks' Shack
 
 @spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
+
+@nud
+#scannotes for n e recs censer
+>scan n e recs censer
+This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
+#nudge for recs
+>resc
+It's the censer that's important, not the brand name.
+#nudge for rec
+>rce
+It's the censer that's important, not the brand name.
+#spechelp for n e recs censer
+>screne
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
+
+>screen
+by one point
+}}SCORE++
+
+@spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
+
+>score
+{$SCOS}
+
+@sli
+#slider test for screen
+>ercsne
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 
 @nud
 >s
@@ -1483,23 +1490,6 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
-
-@min
->s
->s
->w
->screen
-by one point
-}}SCORE++
->score
-{$SCOS}
->e
->n
-@!
-}}SCORE++
-
->score
-{$SCOS}
 
 @max
 >au 2

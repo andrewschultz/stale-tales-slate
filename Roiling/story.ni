@@ -5034,7 +5034,7 @@ this is the presto-hinting rule:
 		try objhinting plebe instead;
 	if player is in austerer:
 		if ye hoop is in austerer, try objhinting ye hoop instead;
-		if spoilit is false, all-say "You are done here in Austerer Treasure[if censer is not prefigured]. You can do something with the censer, but only on the other side of [maze-or-pass][end if]." instead;
+		if spoilit is false, all-say "You are done here in Austerer Treasure." instead;
 	if tsar star is touchable and tsar star is in Char Arch, try objhinting tsar star instead;
 	if dart is touchable and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -5074,7 +5074,7 @@ this is the presto-hinting rule:
 		if Hacks Shack is unvisited:
 			if harpings phrasing is touchable and shack is unvisited:
 				if Leo is touchable, try objhinting harpings phrasing instead;
-				all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's in that shack[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
+				all-say "[if spoilit is true](Favorite bad word,) you think, I'd rather see what's to the north[else]You're all done here in the Phat Path. Go north to the shack[end if]." instead;
 	if spoilit is true:
 		if Dirge Ridge is not visited or Austerer Treasure is not visited or Marines Seminar Remains is not visited:
 			now spoilit is false;
@@ -7746,7 +7746,7 @@ carry out fliptoing (this is the main fliptoing rule):
 					two-up;
 				else if the-to entry is meet bans:
 					if Largely All Grey Gallery is unvisited, two-up;
-				else if the-to entry is censer and the player's command includes "phooey":
+				else if the-to entry is angrier earring and the player's command includes "phooey":
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
@@ -9820,8 +9820,7 @@ Sister Tressi	Troves	"You can RESIST Sister Tressi."
 Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
 Blamer Mr Beal	Troves	"You can RAMBLE to ignore Blamer Mr Beal."
 DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
-censer	presto	"The censer can become a SCREEN once you've found a place to put it." [presto]
-plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative."
+plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative." [presto]
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 peels speel	presto	"You tried to SLEEP, but the time wasn't right."
 LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
@@ -12220,7 +12219,7 @@ understand the command "place" as "put".
 
 check putting it on (this is the yak-skid rule):
 	if second noun is skid:
-		if noun is censer, say "The censer isn't flat enough to stay on the skid over all the bumps. Maybe it could become something flatter." instead;
+		if noun is censer, say "The censer isn't flat enough to stay on the skid over all the bumps. It doesn't seem like it needs moving at all. Changing. maybe." instead;
 	if noun is yak and second noun is skid:
 		ignore the can't put what's not held rule;
 		say "[if yak is on skid]It already is.[else]The yak doesn't want to budge. Maybe if you had something tasty.[end if]" instead;
@@ -12229,6 +12228,7 @@ check putting it on (this is the yak-skid rule):
 			now yak is on skid;
 			now leaf is on skid;
 			say "The yak walks up to the leaf you dropped, sniffs, climbs on the skid and begins munching[if yak-badbook is true]. Maybe it will trust you enough to eat that really awful book, now[end if]." instead;
+	say "You don't need the skid to tranaport [the noun]." instead;
 
 the yak-skid rule is listed before the can't put what's not held rule in the check putting it on rulebook;
 
@@ -12513,6 +12513,10 @@ after looking in Austerer Treasure:
 	if ye hoop is in Austerer Treasure, set the pronoun it to ye hoop;
 	continue the action;
 
+check going outside in Austerer Treasure: try going east instead;
+
+chapter Ye Hoop
+
 Ye Hoop is proper-named vanishing boring scenery in Austerer Treasure. description of Ye Hoop is "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is.". bore-check of Ye Hoop is bore-hoop rule.
 
 this is the bore-hoop rule:
@@ -12547,24 +12551,19 @@ to decide whether ye-rec:
 	if the player's command includes "ye", decide yes;
 	decide no;
 
-check going outside in Austerer Treasure: try going east instead;
-
 phooeyed is a truth state that varies.
+
+chapter angrier earring
+
+the angrier earring is a thing. "It pulses in your hands. Perhaps it has some purpose you haven't discovered yet."
+
+chapter N E Recs Censer
 
 the N E Recs censer is a thing. description of censer is "N-E-Recs is a popular brand name in Yorpwald for stuff you can pass off as classier or more vintage or whatever than it is. It's black with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "The N-E-Recs censer, black with flecks of black green, rests here.". printed name of censer is "N-E-Recs Censer"
 
 a-text of n e recs censer is "RRRYYR". b-text of n e recs censer is "RR???R". parse-text of n e recs censer is "x[sp]x[sp]x[sp]e[sp]e[sp]x".
 
-after printing the name of the censer while taking inventory:
-	if censer is prefigured:
-		say " (which could become a screen)";
-	continue the action;
-
-the switch computer pieces rule is listed before the can't switch on unless switchable rule in the check switching on rules.
-
-check switching on (this is the switch computer pieces rule) :
-	if noun is drive a, say "There [if drive a is reflexed]was[else]is[end if] a button for that." instead;
-	if noun is computer screen or noun is keyboard or noun is dongle, say "You don't need to switch any auxiliary equipment on or off." instead;
+check taking N E Recs censer: say "It's too heavy and bulky. You see no need to lug it around. Perhaps whatever it could change into will be more manageable." instead;
 
 the computer screen is a thing. description is "The brand name is scratched up, but really, there's no difference between the SEEN-CR, SEER-CN, CN-SEER and CR-SEEN that all fight over market share.[paragraph break]Technical details? [if computer screen is not on labs slab]Vid-o-Void, since it's not hooked up to anything[else if BUB DUDE EGG is part of the computer screen]Ugh. It's got BUB DUDE EGG on the screen. You've compiled, but there's one more thing to do[else]A bunch of nonsense code that might not even work[end if]."
 
@@ -12801,8 +12800,16 @@ book Hacks' Shack
 
 Hacks Shack is an innie room in Presto. Hacks Shack is north of Saps Pass. "[if Hacks Shack was unvisited]You feel a sense of peace here but also one of mission. You feel the magnetic magic-net, the rebuff-buffer that will let you change stuff to stuff and keep out of E-Viral's snooping eye, but all those interjections you've been using need to give way to problem solving[else]You're in the shack where you probably need to write a program or something[end if][if Im Le Cop polemic is reflexed]. You feel obliged not to [i]budge[r] [']til you figure out that computer. You must be close[end if][if starch charts are in Hacks Shack]. [one of]Some starch charts are tacked to the side of the hacks['] shack[or]Those starch charts are still here to solve, if you want[stopping][end if].". roomnud of Hacks Shack is table of Hacks' Shack nudges. printed name of Hacks Shack is "Hacks['] Shack".
 
-after looking in Hacks Shack for the first time:
-	say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
+shack-looked-yet is a truth state that varies.
+
+after looking in Hacks Shack (this is the angrier earring to censer check rule):
+	if shack-looked-yet is false:
+		say "Yes. It is nice and quiet here. No need for interjections. Back to ... well, other ways to do things.";
+		if player has angrier earring, say "[line break]But the quiet is shattered for a moment! ";
+	if player has angrier earring:
+		say "The angrier earring shakes violently--rangier rearing, I garner. Then it flies out of your hands and sticks into a recess in a wall you hadn't noticed. A secret compartment opens up, and out tumbles ... a censer! And not just any censer, an N-E-Recs Censer, flecked with black and green![paragraph break]'Err ... gain?' you ask, bemused. A censer seems bulky and impractical. But perhaps it can become something else.";
+		moot angrier earring;
+		move N E Recs censer to Hacks Shack;
 	continue the action;
 
 to say my-auth: say "[author of random touchable badbook]";
@@ -12963,19 +12970,6 @@ check scaning computer screen: if BUB DUDE EGG is touchable, try scaning BUB DUD
 check restarting the game when player is in Hacks Shack:
 	say "[if Be Troo E Robot is reflexive]You look over at Drive A--it doesn't quite need a restart. Hmm, what's the word, now. However, if you actually want to restart the game, I'll let you.[else]You've already restarted the computer. So if you're trying to restart it and not the game, you don't need to, any more.[end if]";
 
-after printing the locale description for shack when shack is unvisited:
-	if computer screen is in Austerer Treasure:
-		say "Drive A could use a screen. Like the one you uncovered in the treasure room. Which you run back and get.";
-		now player has computer screen;
-	else if censer is in Austerer Treasure and censer is prefigured:
-		say "You remember that censer it would've been awkward to carry around. You decide to go back for it.";
-		moot censer;
-		now player has computer screen;
-		reg-inc;
-	else:
-		say "Drive A on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--but you remember trying to change the censer into a acreen before. Here seems like a better place.[else if player has the screen]--yours would do.[else if player has censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
-	continue the action;
-
 to go-back (rm - a room):
 	say "[line break][bold type]Back at [rm][roman type][paragraph break]";
 	move player to rm, without printing a room description;
@@ -13000,40 +12994,16 @@ check going in Hacks Shack (this is the maybe lock player in rule):
 	if noun is not south and keyboard is not off-stage and censer is not off-stage, say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
 	abide by the shack-south rule;
 
-after printing the locale description for Hacks Shack (this is the auto-screen rule):
-	if player has censer:
-		if censer is prefigured:
-			now Hacks Shack is visited;
-			try fliptoing screen;
-	check-trivial-presto-llp;
-	continue the action;
-
-pt-discounted is a truth state that varies.
-
-to check-trivial-presto-llp:
-	if pt-discounted is true, continue the action;
-	if player has censer or player has screen:
-		if yak is moot and player is in Hacks Shack:
-			if keyboard is in Hacks Shack or keyboard is on slab:
-				if lamb is in Grey Gyre:
-					poss-d;
-					now pt-discounted is true;
-				if sport ports are reflexed:
-					poss-d;
-					now pt-discounted is true;
-				if hawt thaw is in Saps Pass:
-					poss-d;
-					now pt-discounted is true;
-	continue the action;
-
 this is the shack-south rule:
 	if Im Le Cop polemic is reflexed:
 		say "You're so close. You must be. You can't [i]budge[r] until you...";
 		the rule fails;
 	if keyboard is not off-stage and screen is not off-stage:
-		say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
-		the rule fails;
-	if screen is off-stage:
+		say "You should have what you need. It might be distracting to go back out with all this computer work.";
+		if hawt thaw is moot and starch charts are moot and lamb is moot and sport ports are reflexed:
+			say "You've done everything else you could've, including some weird small detaila. You probably want to focus on things here.";
+			the rule fails;
+	else if screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
 	else if keyboard is off-stage:
 		if yak is not moot:
@@ -13142,6 +13112,8 @@ description of labs slab is "It's far from a plain old table, but you can call i
 to decide which number is drive-score:
 	decide on boolval of (whether or not Drive A is reflexed) + boolval of (whether or not Drive E is reflexed);
 
+chapter Drive A
+
 Drive A is proper-named reflexive LLPish container on the labs slab. understand "disk drive" and "eco-trump computer" and "computer" and "hard" and "hard drive" as Drive A.
 
 understand "a drive" as drive a.
@@ -13153,6 +13125,12 @@ does the player mean inserting the disk into Drive A: it is likely.
 does the player mean doing something with Drive A: it is likely.
 
 check opening Drive A: say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive." instead;
+
+the switch computer pieces rule is listed before the can't switch on unless switchable rule in the check switching on rules.
+
+check switching on (this is the switch computer pieces rule) :
+	if noun is drive a, say "There [if drive a is reflexed]was[else]is[end if] a button for that." instead;
+	if noun is computer screen or noun is keyboard or noun is dongle, say "You don't need to switch any auxiliary equipment on or off." instead;
 
 the golden dongle is a boring thing. it is part of Drive A. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it.". bore-text is "You don't need to do anything fancy with the dongle. It's there to connect Drive A to other computer parts, and it works."
 
@@ -13204,7 +13182,7 @@ check inserting it into (this is the disk in drive and wired computer rule):
 		if keyboard is off-stage, say "You don't have enough pieces to the computer to make it work. Specifically, no input device." instead;
 		if computer screen is off-stage, say "(Protip: you might want to get something like a screen to figure what's going on.)" instead;
 
-chapter drive e
+chapter Drive E
 
 Drive E is proper-named reflexive LLPish boring scenery in Hacks Shack. description of drive e is "It reads DRIVE E and E DRIVE. Maybe both are right in their own way. It's [if drive e is reflexive]making sluggish noises right now, so maybe there's a way to fix it and save some time, but it's probably not critical[else]humming along nicely now you figured how to fix it[end if].". bore-text is "[if drive e is reflexed]You already improved Drive E[else]There's probably a way to make Drive E more efficient, but it's probably some irregular action[end if].".
 
@@ -14782,10 +14760,7 @@ Tenfold Teflond Den Loft is an innie room in Oyster. "[one of]You're at the cent
 
 understand "loft den" as Tenfold Teflond Den Loft.
 
-lev-pull is a truth state that varies.
-
-check going outside in Tenfold Teflond Den Loft:
-	if lev-pull is true, say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
+check going outside in Tenfold Teflond Den Loft: if min-score of oyster is poss-score of oyster, say "You can't leave now. You're so close. There's nothing left to do elsewhere." instead;
 
 chapter papery yapper
 
@@ -22366,9 +22341,7 @@ doublecheat is a truth state that varies.
 to say d-then:
 	if doublecheat is true:
 		say "DERAIL then ";
-	if lev-pull is false:
-		say "pull the lever then ";
-[?? need to spill pills vs span pans and pins as well]
+
 to say how-pills-used:
 	repeat through table of hintobjs:
 		if spill-target is hint-entry entry:
