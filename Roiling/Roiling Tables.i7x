@@ -541,8 +541,8 @@ this is the pre-babbler-outside rule: [there are no conditions here. We just wan
 		let A be pod-num of t-tediously;
 		now pod-num of t-tediously is 0; [disable "tediously" in otters]
 		now t-tediously is off-stage;
-		let B be a random number from 1 to mack-count of A - 1; [I'm hard coding things here... assuming t-tediously has the highest pod number. Otherwise I am writing lots of code for one special case.]
-		place-a-mack A and B;
+		let B be a random number from 1 to pickup-pod-size of A - 1; [I'm hard coding things here... assuming t-tediously has the highest pod number. Otherwise I am writing lots of code for one special case.]
+		install-pickup-line A and B;
 
 section routes auxiliary
 
@@ -2305,7 +2305,7 @@ to say spec-help of (itm - a thing):
 		say "With that conversation, you can't concentrate on much...";
 		continue the action;
 	now itm is attempted;
-	if itm is a mack-idea:
+	if itm is a pickup-line:
 		say "You feel you're on the right track to expose the macks. But that's not quite it.";
 		continue the action;
 	if xtra-trax is true:
@@ -2471,7 +2471,7 @@ a skip hinting rule for a thing (called th):
 	if th is a fruit and th is off-stage, the rule succeeds; [fruits you reveal are covered in the objhinting rule]
 	if th is a badbook, the rule succeeds; [ditto for bad books in Hacks Shack]
 
-[notes on the skip hinting rules: mack ideas are abstract, since we always hint Greta and can't refer to the mack ideas individually.]
+[notes on the skip hinting rules: they are for testing purposes only. Pickup lines are abstract, since we always hint Gretta and can't refer to the pickup lines individually, but we still want to see them. However, if we have a fruit or bad book, there's nothing where we need to see hints every turn..]
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -2907,7 +2907,7 @@ Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn'
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"Gretta has an important item for you once you [if macks are not moot]dispose of the macks[else]finish chatting[end if]."
-macks	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
+macks	"[one of]The macks are [if gretta-score > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [full-pickup-hint].[minus][cycling]"	--	"the macks can talk [full-pickup-hint]"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
@@ -3109,8 +3109,8 @@ to say but-in-inclosure:
 	if player is not in Reclusion Inclosure:
 		say ", but maybe not here";
 
-to say mackiness-hint:
-	choose row with the-from of mack-hint in table of otters anagrams;
+to say full-pickup-hint:
+	choose row with the-from of pickup-to-hint in table of otters anagrams;
 	say "[right-word entry in upper case]";
 
 to say dome-blab:

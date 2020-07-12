@@ -3694,7 +3694,7 @@ to say good-enuf of (goody - a thing):
 		if skid is moot or disk is moot:
 			say "[sk2dsk].";
 			continue the action;
-	if goody is a mack-idea:
+	if goody is a pickup-line:
 		say "You've already dealt with the macks that way.[no line break]";
 		continue the action;
 	if goody is a fruit:
@@ -3731,7 +3731,7 @@ to decide whether (tn - a table name) is hash-found:
 				if cmdhash is hashval entry or firstwordhash is hashval entry:
 					if there is a this-item entry:
 						if this-item entry is touchable:
-							unless this-item entry is a mack-idea and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
+							unless this-item entry is a pickup-line and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
 								now print-this-clue is true;
 					else if there is a this-rule entry:
 						say "[run paragraph on]";
@@ -17882,7 +17882,7 @@ carry out allranding:
 		say "WARNING macks are moot so moving all mack pickup lines to [downside] may be useless or woese.";
 	else:
 		say "Moved all mack pickup lines to disowned downside.";
-	now all mack-ideas are in Disowned Downside;
+	now all pickup-lines are in Disowned Downside;
 	if Loftier Trefoil is visited and player is not in Loftier Trefoil:
 		say "WARNING you passed the Loftier Trefoil. This may result in odd behavior from the game.";
 	else:
@@ -18639,7 +18639,7 @@ check entering atmo moat: say "It's too gulfy. Things'd get fugly. You've no div
 after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
 		moot macks;
-		now all mack-ideas are in Meatier Emerita Emirate;
+		now all pickup-lines are in Meatier Emerita Emirate;
 		try talking to gretta;
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
@@ -18657,7 +18657,7 @@ this is the bore-sad-elm rule:
 
 chapter macks
 
-the macks are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
+the macks are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
 understand "mack" as macks.
 
@@ -18669,9 +18669,9 @@ rule for printing a locale paragraph about macks:
 	now macks are mentioned;
 
 to say how-macked:
-	if macked-out is 1:
+	if gretta-score is 1:
 		say ", though not as much as when they started, since you got them";
-	else if macked-out is 2:
+	else if gretta-score is 2:
 		say ", but they're wavering a bit. If you blow up their flow once more, you could probably get rid of them"
 
 Gretta Garett Tatger is a female person in Disowned Downside. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore.". printed name of Gretta Garett Tatger is "Gretta Garett-Tatger".
@@ -18767,7 +18767,7 @@ understand the command "boot" as something new.
 
 understand "boot" as booting.
 
-definition: a mack-idea (called mi) is smackable:
+definition: a pickup-line (called mi) is smackable:
 	if mi is not in Disowned Downside, no;
 	if mi is not reflexive, no;
 	yes;
@@ -18775,14 +18775,14 @@ definition: a mack-idea (called mi) is smackable:
 carry out booting:
 	unless player is in Disowned Downside and macks are in Disowned Downside, say "Need the macks around." instead;
 	let count be 0;
-	let SI be number of smackable mack-ideas;
+	let SI be number of smackable pickup-lines;
 	while macks are in Disowned Downside and count < 5:
-		let rmi be a random smackable mack-idea in Disowned Downside;
+		let rmi be a random smackable pickup-line in Disowned Downside;
 		try fliptoing rmi;
 		increment count;
 	if count is 5:
 		say "OOPS. Something went wrong.";
-		say "[SI] before, [number of smackable mack-ideas] after.";
+		say "[SI] before, [number of smackable pickup-lines] after.";
 	the rule succeeds;
 
 chapter smacking
@@ -18840,13 +18840,13 @@ ladying is an action applying to nothing.
 
 irately is a truth state that varies.
 
-check fliptoing a mack-idea (this is the NO ESP rule):
+check fliptoing a pickup-line (this is the NO ESP rule):
 	if debug-state is true, continue the action;
 	if noun is not ment, say "[ly-ish]." instead;
 
-after fliptoing a mack-idea:
+after fliptoing a pickup-line:
 	if uber-rand-cheat is true:
-		if number of mack-ideas in Disowned Downside is 0:
+		if number of pickup-lines in Disowned Downside is 0:
 			say "You're done!";
 			moot macks;
 			try talking to Gretta;
@@ -18859,16 +18859,16 @@ after fliptoing a mack-idea:
 			now irately is true;
 	if noun is not ment:
 		say "(Wow, you did this without seeing the macks act anything like that!) ";
-	increment macked-out;
-	if macked-out is 1:
+	increment gretta-score;
+	if gretta-score is 1:
 		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic for a moment.[paragraph break]";
-	otherwise if macked-out is 2:
+	otherwise if gretta-score is 2:
 		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.[paragraph break]";
 	else:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		moot macks;
-		mootl list of all mack-ideas;
+		mootl list of all pickup-lines;
 		try talking to Gretta;
 		continue the action;
 	process the macks hitting on rule;
@@ -18877,7 +18877,7 @@ after fliptoing a mack-idea:
 		continue the action;
 	continue the action;
 
-macked-out is a number that varies. macked-out is usually 0.
+gretta-score is a number that varies. gretta-score is usually 0.
 
 check talking to Gretta when macks are in Disowned Downside:
 	say "The macks are monopolizing the conversation. They outnumber you." instead;
@@ -18898,16 +18898,16 @@ check going west in Disowned Downside:
 
 chapter nasty things guys do
 
-to decide which number is mack-count of (mc - a number):
+to decide which number is pickup-pod-size of (mc - a number):
 	let temp be 0;
-	repeat with QQ running through mack-ideas:
+	repeat with QQ running through pickup-lines:
 		if pod-num of QQ is mc:
 			increment temp;
 	decide on temp.
 
-to place-a-mack (x1 - a number) and (x2 - a number):
+to install-pickup-line (x1 - a number) and (x2 - a number):
 	let one-yet be false;
-	repeat with XX running through mack-ideas:
+	repeat with XX running through pickup-lines:
 		if pod-num of XX is x1 and pod-ord of XX is x2:
 			if one-yet is true:
 				say "Oops [XX] is a duplicate.";
@@ -18915,133 +18915,133 @@ to place-a-mack (x1 - a number) and (x2 - a number):
 				now XX is in Disowned Downside;
 				now one-yet is true;
 	if one-yet is false:
-		say "Oops [x1] pod [x2] ord had no mack idea.";
+		say "Oops [x1] pod [x2] ord had no pickup line.";
 
 when play begins (this is the mack-randomize rule):
 	let my-wt be 0;
 	repeat with X running from 1 to max-pod-num:
 		now cur-pod-num is X;
-		let G be the mack-count of X;
+		let G be the pickup-pod-size of X;
 		[say "[G] mack things in pod [X + 6].";]
 		let H be a random number from 1 to G;
-		place-a-mack X and H;
+		install-pickup-line X and H;
 	assign-random-mack-priority;
 	now cur-pod-num is 0;
 
-definition: a mack-idea (called mm) is unprioritized:
+definition: a pickup-line (called mm) is unprioritized:
 	if mack-prio of mm is 0 and mm is in Disowned Downside, decide yes;
 	decide no;
 
 to assign-fixed-mack-priority:
 	now cur-mack-blab is 0;
-	repeat with B running through mack-ideas:
+	repeat with B running through pickup-lines:
 		if B is in Disowned Downside:
 			now mack-prio of B is pod-num of B;
 
 to assign-random-mack-priority:
 	now cur-mack-blab is 0;
-	repeat with B running through mack-ideas:
+	repeat with B running through pickup-lines:
 		now mack-prio of B is 0;
-	let C be number of mack-ideas in Disowned Downside; [should be 7, but yeah]
+	let C be number of pickup-lines in Disowned Downside; [should be 7, but yeah]
 	repeat with B running from 1 to C:
-		let thismack be a random unprioritized mack-idea;
+		let thismack be a random unprioritized pickup-line;
 		now mack-prio of thismack is B;
 
-a mack-idea is a kind of undesc. a mack-idea is usually privately-named. a mack-idea is usually reflexive. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
+a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called mack-move. a pickup-line has text called mack-brief.
 
-rule for deciding whether all includes mack-ideas:
+rule for deciding whether all includes pickup-lines:
 	it does not.
 
-a mack-idea has a number called mack-prio. mack-prio of a mack-idea is usually 0. a mack-idea is usually abstract.
+a pickup-line has a number called mack-prio. mack-prio of a pickup-line is usually 0. a pickup-line is usually abstract.
 
-a mack-idea can be ment. a mack-idea is usually not ment. a mack-idea can be passed-on. a mack-idea is usually not passed-on.
+a pickup-line can be ment. a pickup-line is usually not ment. a pickup-line can be passed-on. a pickup-line is usually not passed-on.
 
 max-pod-num is a number that varies. max-pod-num is 7. cur-mack-blab is a number that varies. cur-mack-blab is 0.
 
-current-idea is a mack-idea that varies. cur-pod-num is a number that varies. ever-loop-mack is a truth state that varies.
+current-idea is a pickup-line that varies. cur-pod-num is a number that varies. ever-loop-mack is a truth state that varies.
 
-For printing a locale paragraph about a mack-idea (called the item):
+For printing a locale paragraph about a pickup-line (called the item):
 	set the locale priority of the item to 0;
 	continue the activity.
 
 [pod 1 is 7-letters repeating]
-t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
+t-bossily is a pickup-line. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
 
-t-cattily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-cattily is a pickup-line. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 
-t-seedily is a mack-idea. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
 
-t-tearily-irately is a mack-idea. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-tearily-irately is a pickup-line. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
-t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
+t-nastily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
 
-t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
+t-shadily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
 
-t-snidely is a mack-idea. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
+t-snidely is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
 
-t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
+t-starkly is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
 
 [pod 3 is 8-letters repeating]
-t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text of t-blearily is "RRYYRYRO". b-text of t-blearily is "RRYYRYPB". parse-text of t-blearily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
+t-blearily is a pickup-line. pod-num is 3. pod-ord is 1. a-text of t-blearily is "RRYYRYRO". b-text of t-blearily is "RRYYRYPB". parse-text of t-blearily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 
-t-coitally is a mack-idea. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
+t-coitally is a pickup-line. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
 
-t-formally is a mack-idea. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
 
-t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-ribaldly is a pickup-line. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
 
-t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-shabbily is a pickup-line. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
 
-t-shoddily is a mack-idea. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
+t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
 
-t-silently is a mack-idea. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
 
-t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
+t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
 
 [pod 4 is 8-letters non-repeating]
-t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
+t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
 
-t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
 
-t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
 [pod 5 is 9 letters]
-t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally". t-martially is parse-spoilable.
+t-martially is a pickup-line. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally". t-martially is parse-spoilable.
 
-t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
+t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
 
-t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
+t-sobbingly is a pickup-line. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
 
-t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
+t-tediously is a pickup-line. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
 
-t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+t-wearingly is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
 
 [pod 6 is 10-11 letters.]
-t-desperately is a mack-idea. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
+t-desperately is a pickup-line. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
 
-t-drawlingly is a mack-idea. pod-num is 6. pod-ord is 2. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
+t-drawlingly is a pickup-line. pod-num is 6. pod-ord is 2. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
 
-t-emotionally is a mack-idea. pod-num is 6. pod-ord is 3. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
+t-emotionally is a pickup-line. pod-num is 6. pod-ord is 3. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
 
 [pod5 is a trivial pod. You will always get "despairingly," but you will also get 2 7's and 2 8's]
-t-despairingly is a mack-idea. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
+t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
 
 to decide whether (n - a number) is unworkable:
 	decide yes;
 
-this is the find-mack-idea rule:
-	repeat with QQ running through mack-ideas:
+this is the find-pickup-line rule:
+	repeat with QQ running through pickup-lines:
 		if QQ is in Disowned Downside and mack-prio of QQ is cur-mack-blab:
 			now current-idea is QQ;
 			the rule succeeds;
 	the rule fails;
 
-to decide which mack-idea is mack-hint:
+to decide which pickup-line is pickup-to-hint:
 	let cur-prio be 10;
 	let got-mack be false;
 	let cur-mack be t-despairingly;
-	repeat with QQ running through ment reflexive mack-ideas in Disowned Downside:
+	repeat with QQ running through ment reflexive pickup-lines in Disowned Downside:
 		d "(DEBUG considering [QQ]) ";
 		if mack-prio of QQ < cur-prio:
 [			d "(DEBUG potentially choosing [QQ]) ";]
@@ -19049,11 +19049,11 @@ to decide which mack-idea is mack-hint:
 			now cur-prio is mack-prio of QQ;
 			now got-mack is true;
 	if got-mack is false:
-		say "(BUG in mack-idea code) ";
+		say "(BUG in pickup-line code) ";
 	decide on cur-mack.
 
 every turn when player is in Disowned Downside and macks are in Disowned Downside (this is the macks hitting on rule):
-[	repeat with QQ running through reflexive mack-ideas in Disowned Downside:
+[	repeat with QQ running through reflexive pickup-lines in Disowned Downside:
 		if debug-state is true:
 			say "DEBUG NOTES: [qq]: [mack-prio of qq].";]
 	let loop be false;
@@ -19065,12 +19065,12 @@ every turn when player is in Disowned Downside and macks are in Disowned Downsid
 				continue the action;
 			now loop is true;
 			now cur-mack-blab is 1;
-		process the find-mack-idea rule;
+		process the find-pickup-line rule;
 		if the rule succeeded:
 			if loop is true:
 				if ever-loop-mack is false:
 					now ever-loop-mack is true;
-					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if].[paragraph break]";
+					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if gretta-score > 0], except for what you managed to alter[end if].[paragraph break]";
 			now current-idea is ment;
 			say "[mack-move of current-idea][line break]";
 			continue the action;
@@ -22302,7 +22302,7 @@ to say presto-3 of (n - a number):
 
 to say how-macks:
 	let got-yet be false;
-	repeat with QQ running through passed-on mack-ideas:
+	repeat with QQ running through passed-on pickup-lines:
 		say "[unless got-yet is true] or [end if]";
 		now got-yet is true;
 		if QQ is t-tearily-irately:
@@ -22698,10 +22698,11 @@ understand the command "gret" as something new.
 understand "gret" as greting.
 
 carry out greting:
-	now macked-out is 2;
 	move player to Disowned Downside;
 	say "==CHEATING TO DEFEAT MACKS";
-	try fliptoing a random touchable mack-idea;
+	try fliptoing a random touchable pickup-line;
+	try fliptoing a random touchable pickup-line;
+	try fliptoing a random touchable pickup-line;
 	the rule succeeds;
 
 chapter blaaing
