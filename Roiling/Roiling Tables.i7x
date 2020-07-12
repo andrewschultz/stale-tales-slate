@@ -314,34 +314,35 @@ vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the 
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if]."
 atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
-t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
+parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're peaking. Gretta looks relieved for a moment."
+t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The  [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
-t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."
+t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the  [pla-ma]s accuse each other of being too obvious."
 t-shadily	t-shadily	false	377939109	--	"shadily"	"shadily"	--	--	"You manage to make them let slip a mean dis of other maidens."
-t-snidely	t-snidely	false	535182609	--	"snidely"	"snidely"	--	--	"The macks refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."
-t-starkly	t-starkly	false	516001874	--	"starkly"	"starkly"	--	--	"The macks finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."
-t-cattily	t-cattily	false	448579376	--	"cattily"	"cattily"	--	--	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."
+t-snidely	t-snidely	false	535182609	--	"snidely"	"snidely"	--	--	"The  [pla-ma]s refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."
+t-starkly	t-starkly	false	516001874	--	"starkly"	"starkly"	--	--	"The  [pla-ma]s finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."
+t-cattily	t-cattily	false	448579376	--	"cattily"	"cattily"	--	--	"The  [pla-ma]s each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."
 t-tearily-irately	t-tearily-irately	false	539593685	--	"irately"	"irately" or "tearily"	--	--	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."
-t-blearily	t-blearily	false	508716411	--	"blearily"	"blearily"	--	--	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin MACKS 8]
-t-ribaldly	t-ribaldly	false	401939391	--	"ribaldly"	"ribaldly"	--	--	"The macks move from courtship to...well, less than courtly desires. She wanted to believe they would not, but they couldn't help it."
-t-formally	t-formally	false	482441177	--	"formally"	"formally"	--	--	"The macks over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."
+t-blearily	t-blearily	false	508716411	--	"blearily"	"blearily"	--	--	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin DOWNSIDE 8]
+t-ribaldly	t-ribaldly	false	401939391	--	"ribaldly"	"ribaldly"	--	--	"The  [pla-ma]s move from courtship to...well, less than courtly desires. She wanted to believe they would not, but they couldn't help it."
+t-formally	t-formally	false	482441177	--	"formally"	"formally"	--	--	"The  [pla-ma]s over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."
 t-coitally	t-coitally	false	473635774	--	"coitally"	"coitally"	--	--	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."
-t-modestly	t-modestly	false	662820003	--	"modestly"	"modestly"	--	--	"Modesty is a good thing--well, in the long term. In the short term, the macks['] backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio."
-t-shabbily	t-shabbily	false	393747830	--	"shabbily"	"shabbily"	--	--	"The mack discussing his lab tries to supply details, but the more he makes up, the easier it is for others to pounce on his inconsistencies--but their trolling is so crude, nobody comes out looking too good."
-t-shoddily	t-shoddily	false	471132957	--	"shoddily"	"shoddily"	--	--	"The two macks can't keep up their production. They mutter 'D'oh! Sly is...' realizing they've worked into a dead end."
-t-silently	t-silently	false	671077377	--	"silently"	"silently"	--	--	"The macks run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."
-t-steamily	t-steamily	false	614619001	--	"steamily"	"steamily"	--	--	"The macks begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."
-t-suddenly	t-suddenly	false	616324659	--	"suddenly"	"suddenly"	--	--	"The macks['] timing is ruined. They started well, but the slightest disruption and--wham! They're just not as good as the paid actors who've been practicing way more."
-t-stupidly	t-stupidly	false	628150776	--	"stupidly"	"stupidly"	--	--	"The macks reiterate how they don't let duty slip, but it's way too heavy-handed. Gretta has to laugh a bit."
-t-martially	t-martially	false	531864386	--	"martially"	"martially"	--	--	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up." [begin MACKS 9]
-t-sincerely	t-sincerely	false	746289017	--	"sincerely"	"sincerely"	--	--	"Gretta nods as the macks make a complete u-turn and discuss what they really think of celery. While it's probably good, long-term, for them to be more sincere, their immediate aims have been foiled."
-t-sobbingly	t-sobbingly	false	530137500	--	"sobbingly"	"sobbingly"	--	--	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it's pathetic enough, their plucky efforts to persuade without logic fall to pieces."
-t-tediously	t-tediously	false	748843503	--	"tediously"	"tediously"	--	--	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."
-t-wearingly	t-wearingly	false	645925650	--	"wearingly"	"wearingly"	--	--	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."
-t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	--	--	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin MACKS 10-11]
+t-modestly	t-modestly	false	662820003	--	"modestly"	"modestly"	--	--	"Modesty is a good thing--well, in the long term. In the short term, the  [pla-ma]s['] backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio."
+t-shabbily	t-shabbily	false	393747830	--	"shabbily"	"shabbily"	--	--	"The  [pla-ma] discussing his lab tries to supply details, but the more he makes up, the easier it is for others to pounce on his inconsistencies--but their trolling is so crude, nobody comes out looking too good."
+t-shoddily	t-shoddily	false	471132957	--	"shoddily"	"shoddily"	--	--	"The two  [pla-ma]s can't keep up their production. They mutter 'D'oh! Sly is...' realizing they've worked into a dead end."
+t-silently	t-silently	false	671077377	--	"silently"	"silently"	--	--	"The  [pla-ma]s run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."
+t-steamily	t-steamily	false	614619001	--	"steamily"	"steamily"	--	--	"The  [pla-ma]s begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."
+t-suddenly	t-suddenly	false	616324659	--	"suddenly"	"suddenly"	--	--	"The  [pla-ma]s['] timing is ruined. They started well, but the slightest disruption and--wham! They're just not as good as the paid actors who've been practicing way more."
+t-stupidly	t-stupidly	false	628150776	--	"stupidly"	"stupidly"	--	--	"The  [pla-ma]s reiterate how they don't let duty slip, but it's way too heavy-handed. Gretta has to laugh a bit."
+t-martially	t-martially	false	531864386	--	"martially"	"martially"	--	--	"The [pla-ma]s, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the  [pla-ma]s up." [begin DOWNSIDE 9]
+t-sincerely	t-sincerely	false	746289017	--	"sincerely"	"sincerely"	--	--	"Gretta nods sarcastically as the [pla-ma]s make a complete u-turn and discuss what they really think of celery. While it's probably good, long-term, for them to be more sincere, their immediate aims have been foiled."
+t-sobbingly	t-sobbingly	false	530137500	--	"sobbingly"	"sobbingly"	--	--	"The [pla-ma]s change up the mood, but it is for the worst. One starts crying, then others do--and it's pathetic enough, their plucky efforts to persuade without logic fall to pieces."
+t-tediously	t-tediously	false	748843503	--	"tediously"	"tediously"	--	--	"The [pla-ma]s begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."
+t-wearingly	t-wearingly	false	645925650	--	"wearingly"	"wearingly"	--	--	"The [pla-ma]s start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."
+t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	--	--	"The [pla-ma]s begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin DOWNSIDE 10-11]
 t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	--	--	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
-t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--	"The macks['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
-t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
+t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--	"The [pla-ma]s['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
+t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The [pla-ma]s become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the [pla-ma]s." [begin DOWNSIDE 12]
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
@@ -1441,6 +1442,39 @@ to say what-about-ed:
 
 section otters auxiliary
 
+after fliptoing a pickup-line (this is the post-gretta-help rule):
+	if uber-rand-cheat is true:
+		if number of pickup-lines in Disowned Downside is 0:
+			say "You're done!";
+			moot parleys splayer players;
+			try talking to Gretta;
+			continue the action;
+		else:
+			say "Skipping standard text as we're just wiping the [players].";
+			continue the action;
+	if noun is t-tearily-irately:
+		if the player's command matches "irately":
+			now irately is true;
+	if noun is not ment:
+		say "(Wow, you did this without seeing the [players] act anything like that!) ";
+	increment gretta-score;
+	if gretta-score is 1:
+		say "Gretta looks a bit unsure but less engaged than before, and the [players] seem off-stride and unenthusiastic for a moment.[paragraph break]";
+	otherwise if gretta-score is 2:
+		say "Gretta nods, able to reject the worst of the [players]['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the [players].[paragraph break]";
+	else:
+		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
+		now hold-it-up is true;
+		moot players;
+		mootl list of all pickup-lines;
+		try talking to Gretta;
+		continue the action;
+	process the how players hit on Gretta rule;
+	if debug-state is true and noun is not ment:
+		say "NOTE: The player can't have known this yet, but since you're testing, I'll let it fly.";
+		continue the action;
+	continue the action;
+
 this is the post-lamer-realm-flip rule:
 	let temp be number of touchable reflexed animals;
 	increment adjsolve;
@@ -1542,8 +1576,8 @@ this is the post-eels-else rule:
 	if gore ogre is moot, min-up;
 
 this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
-	if macks are in Disowned Downside:
-		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
+	if players are in Disowned Downside:
+		say "That'd definitely tip the [pla-ma]s off to who you were, even if your powers were back.";
 		preef atmo moat;
 		do nothing instead;
 	else if power-back is false:
@@ -2306,7 +2340,7 @@ to say spec-help of (itm - a thing):
 		continue the action;
 	now itm is attempted;
 	if itm is a pickup-line:
-		say "You feel you're on the right track to expose the macks. But that's not quite it.";
+		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
 		continue the action;
 	if xtra-trax is true:
 		repeat through table of spechelp:
@@ -2435,6 +2469,7 @@ turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
 bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
+parleys splayer players	"You've already made the players talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
@@ -2906,8 +2941,8 @@ Last Acre Cup	"[fin-pal-clue]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
-Gretta	"Gretta has an important item for you once you [if macks are not moot]dispose of the macks[else]finish chatting[end if]."
-macks	"[one of]The macks are [if gretta-score > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [full-pickup-hint].[minus][cycling]"	--	"the macks can talk [full-pickup-hint]"
+Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
+parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s' parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARSELY"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"

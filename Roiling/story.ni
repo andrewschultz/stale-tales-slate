@@ -186,14 +186,18 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 ]
 
 Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28.
-[There are actually 31 points overall if you don't use the pills.
+[There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
 2/33=tend dent
 3/34=SPLAIN in the plains
 4/35=shape heaps
-9/40=waste/lance/wipes/trample/ant subquest
-10/41=PSALM in the Plasm Lamps
-11/42=revel/lever=1
+5/36=swipe wipes (start side quest)
+6/37=sweat (over waste)
+7/38=clean lance
+8/39=trample templar ramplet
+9/40=PSALM in the Plasm Lamps
+10/41=TAN ant (not optional once in Plasm Lamps)
+11/42=REVEL by the lever
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
@@ -549,7 +553,7 @@ the-person	yessaying	nosaying
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
 Gunter	"Agreeing with Gunter probably wouldn't get him to leave."	"You can't out-argue Gunter or change his mind."
 Gast	"Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation."
-macks	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
+players	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
 Ed Riley	"He doesn't look terribly agreeable."	"Too direct. He'd just reject you to show you he's no YIELDER."
 
 throw-warn is a truth state that varies.
@@ -632,7 +636,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 810.
+use MAX_VERBS of 820.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -652,7 +656,7 @@ section compiler non-syntax section - not for release
 
 use MAX_DICT_ENTRIES of 3100.
 
-use MAX_VERBS of 830. [delta=20]
+use MAX_VERBS of 840. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -1646,8 +1650,8 @@ persuasion rule for asking Le Mer to try doing something:
 	say "You need to communicate less forcefully.";
 	persuasion fails;
 
-persuasion rule for asking macks to try doing something:
-	say "The macks, like any good alpha males, blow you off and show Gretta Garett-Tatger SHE is most important.";
+persuasion rule for asking players to try doing something:
+	say "The [players], like any self-styled alpha males, blow you off with a 'you're not the boss of us' and show Gretta Garett-Tatger SHE is most important and they're too with-it to be repressed by the likes of YOU.";
 	persuasion fails;
 
 persuasion rule for asking Mr Lee to try doing something:
@@ -1666,12 +1670,8 @@ persuasion rule for asking a henchy person to try doing something:
 	say "[noun] makes a huge display of only answering to--HER.";
 	persuasion fails;
 
-persuasion rule for asking macks to try doing something:
-	say "The macks say 'You're not the boss of us!' and go on about breaking free from repression and mind control and so forth, and how if Gretta goes with them, they'll help her not be repressed by you.";
-	persuasion fails;
-
 persuasion rule for asking Gretta to try doing something:
-	say "She's already beset by the macks. Best to help her out with your powers.";
+	say "She's already beset by the [players]. Best to help her out with your powers.";
 	persuasion fails;
 
 persuasion rule for asking Elvira to try doing something:
@@ -1933,7 +1933,7 @@ atheists	"'[one of]This eats...'[or]Set, it has,'[in random order] they muse lan
 Tetris Sitter	"[if top opt pot is moot][The tetris sitter] mentions how happy she is now. Just go out and come back in if you need help with that palace[else if Tetris Sitter is reflexive][The tetris sitter] wants to help, but she can't quite, yet[else][The tetris sitter] ignores you, working on her high score[end if]."
 Ed Riley	"'I'd ... LEERY!' Ed booms, puffing himself up a bit."
 whiners	--
-macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
+players	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
 Gretta	"She's got enough people asking about her right now."
 Elmer	"'Slightly more interesting than my friend.'"
 Merle	"'Slightly more interesting than my friend.'"
@@ -1983,7 +1983,7 @@ check objasking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interr
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
-	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is touchable]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.' [else if macks are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
+	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is touchable]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.' [else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
 to say lrduh: say "'I dunno much about that. I like do stuff not think stuff.'";
 
@@ -2098,8 +2098,8 @@ Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks a
 atmo moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if gore ogre is moot]'You have gained my trust and your powers. Go on!'[else if ghoul hat is moot]You try to convince him you're the good guy, but--that's pretty obvious. You need to convince the Gore Ogre to flee[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and the Gore Ogre, Mr. Lee looks petrified, hopeless[tho-eels].[end if]"
 Gore Ogre	"'EORG EORG EORG!!!'"
-Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
-macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
+Gretta	"[if player is female]The [players] block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The [players] manage to small-talk you down[end if]. Perhaps you need to get rid of them."
+players	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
 Elmer	"[mon-men]"
 Merle	"[mon-men][no line break]"
@@ -2367,7 +2367,7 @@ Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know.
 Tetris Sitter	top opt pot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
 Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if crocus is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
-macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
+players	Elvira	"'She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
 Mr Lee	Elvira	"'She must be defeated[if gore ogre is moot]. You must be the one to lead us[else if ghoul hat is moot]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
@@ -2396,7 +2396,7 @@ Elvira	sly imp	"[if imp is in Shiner Shrine]She's not going to HELP you with the
 sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here.'"
 whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
 Elmer	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'"
-Gretta	Elvira	"[if macks are touchable]Gretta cringes even more at hearing Elvira's name, but she can't do much with those macks around, and neither can you[else]You are already talking about Elvira[end if]." [end OTTERS]
+Gretta	Elvira	"[if players are touchable]Gretta cringes even more at hearing Elvira's name, but she can't do much with those [pla-ma]s around, and neither can you[else]You are already talking about Elvira[end if]." [end OTTERS]
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'" [start OTHERS]
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
@@ -3005,7 +3005,7 @@ before quipping when player is in Disowned Downside (this is the Gretta checks r
 			if missed-one is true:
 				say "'Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you,' Gretta says. Stay and ask a bit more?";
 				if the player regex-prompt-consents:
-					say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
+					say "A bit of awkward silence follows, but it's nowhere near as awkward as the [players]['] conversation.[no line break]";
 					now hold-it-up is true;
 				say "OK.";
 				continue the action;
@@ -3319,7 +3319,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		now player has gird grid;
 		if do-i-chat is true: [this is a cheat bypass]
 			move player to Disowned Downside;
-			moot macks;
+			moot parleys splayer players;
 			now qbc_litany is table of Gretta comments;
 		else:
 			now poss-score of Ordeal Reload is cur-score of Ordeal Reload + 4;
@@ -3683,7 +3683,7 @@ to match-process (it1 - indexed text) and (it2 - indexed text):
 list-headache is a truth state that varies.
 
 to say them-that of (tt - a thing):
-	say "[if tt is a female person]her[else if tt is a neuter person]it[else if tt is a person]him[else]that[end if]";
+	say "[if tt is plural-named]them[else if tt is a female person]her[else if tt is a neuter person]it[else if tt is a person]him[else]that[end if]";
 
 to say good-enuf of (goody - a thing):
 	repeat through table of done rejects:
@@ -3695,7 +3695,7 @@ to say good-enuf of (goody - a thing):
 			say "[sk2dsk].";
 			continue the action;
 	if goody is a pickup-line:
-		say "You've already dealt with the macks that way.[no line break]";
+		say "You've already dealt with the [players] that way.[no line break]";
 		continue the action;
 	if goody is a fruit:
 		say "[just-c].[no line break]";
@@ -3731,7 +3731,7 @@ to decide whether (tn - a table name) is hash-found:
 				if cmdhash is hashval entry or firstwordhash is hashval entry:
 					if there is a this-item entry:
 						if this-item entry is touchable:
-							unless this-item entry is a pickup-line and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
+							unless this-item entry is a pickup-line and this-item entry is not ment and debug-state is false: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
 								now print-this-clue is true;
 					else if there is a this-rule entry:
 						say "[run paragraph on]";
@@ -4421,7 +4421,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if gore ogre is in Bran Barn:
 				now noun is gore ogre;
 				continue the action;
-		if player is in Disowned Downside and atmo moat is in Disowned Downside and macks are not in Disowned Downside:
+		if player is in Disowned Downside and atmo moat is in Disowned Downside and parleys splayer players are not in Disowned Downside:
 			now noun is atmo moat;
 			continue the action;
 		if player is in Perverse Preserve and raptor is in Perverse Preserve:
@@ -4730,7 +4730,7 @@ nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are 
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
-t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things."
+t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
@@ -5419,16 +5419,21 @@ to decide what indexed text is the vul of (pi - a picaro):
 
 book otters-hinting
 
-to say current-mackiness:
-	choose row with the-from of current-idea in table of otters anagrams;
-	say "[right-word entry in upper case]";
+pickup-hint-warn is a truth state that varies.
 
 to decide which thing is otters-cur-item: [this does not include LLPs. I don't want to distract the player.]
 	if player is in Minded Midden:
 		if bleary barley is touchable, decide on bleary barley;
 		if Ed Riley is in Minded Midden, decide on Ed Riley;
 	if player is in Disowned Downside:
-		if Macks are touchable, decide on Macks;
+		if parleys splayer players are touchable:
+			if parleys splayer players are reflexive, decide on parleys splayer players;
+			if last-thing-hinted is touchable and last-thing-hinted is a pickup-line:
+				if spoilit is false and pickup-hint-warn is false:
+					say "NOTE: ARO will take the most recent pickup line and continue to hint that one until you figure it out. Unfortunately, it can't specifically hint pickup lines easily from the parser, due to the ways the [pla-ma] express them.";
+					now pickup-hint-warn is true;
+				decide on last-thing-hinted;
+			decide on pickup-to-hint;
 		if Gretta is touchable, decide on Gretta;
 		if atmo moat is in Disowned Downside and power-back is true, decide on atmo moat;
 	if player is in Bran Barn and power-back is false:
@@ -6214,7 +6219,7 @@ lone duck	"The poor thing at least doesn't have a clonk due. You can see red at 
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 Tetris Sitter	"Rest it! (Feel free to see red at this.)"
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]
-macks	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
+players	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
 Mr Lee	"Be nice. He's on your side."
 eels	"Be nice. They're on your side."
 hornets	"[nice-to-animals]."
@@ -6522,7 +6527,7 @@ check kissing:
 	if noun is agnostic, say "Okay, we're close to creepy territory here.";
 	if noun is not a person, say "That can't really respond to your affection." instead;
 	if noun is guardian, say "Creeping out whatever's blocking your way won't work." instead;
-	if noun is macks, say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead; [start OTTERS]
+	if noun is parleys splayer players, say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead; [start OTTERS]
 	if noun is Gretta, say "You imagine her all 'Tricky try. Ick.'" instead;
 	if noun is an animal, say "Yay you for loving animals. Or claiming to." instead;
 	if noun is Elvira:
@@ -6675,7 +6680,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, macks, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, parleys splayer players, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6785,7 +6790,7 @@ check listening:
 		say "The babble from the natives['] site van doesn't stop.";
 		try objasking natives site van about natives site van instead;
 	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
-	if noun is macks, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
+	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
 	if noun is whiners, say "It's hard not to hear what the [whiners] have to say, actually." instead;
@@ -6848,7 +6853,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if noun is Nerd Aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
-	if player is in Disowned Downside, say "You can [if macks are touchable]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
+	if player is in Disowned Downside, say "You can [if parleys splayer players are touchable]still [end if]smell the [players]['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
 	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin['] cyanide, too." instead;
@@ -6892,8 +6897,8 @@ chapter taking
 
 check taking a person: [?? see about unblocking basic rule if this isn't triggered]
 	if noun is the player, say "I'm the only one who gets to be self-referential, here. Got it? Good." instead;
-	if noun is the macks, say "They're the pick-up artists, here." instead;
-	if noun is Gretta, say "You might be worse at picking Gretta up than the macks." instead;
+	if noun is the parleys splayer players, say "They're the pick-up artists, here." instead;
+	if noun is Gretta, say "You might be worse at picking Gretta up than the [players]." instead;
 	if noun is eels, say "[if power-back is true]They already gave you a charge[else]That might get you the wrong sort of charge[end if]." instead;
 	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate." instead;
 
@@ -6979,7 +6984,7 @@ check swearing obscenely:
 		if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in Rawest Waters:
 		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
-	if player is in Disowned Downside and macks are in Disowned Downside, say "The conversation is horrid enough." instead;
+	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
 	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
 	say "[randbla][line break]" instead;
@@ -8930,7 +8935,7 @@ a-text of rifle is "RRYYR". b-text of rifle is "RRYYR". parse-text of rifle is "
 selftalk-warn is a truth state that varies.
 
 check talking to Gretta:
-	if macks are touchable, say "The macks are monopolizing the conversation. Maybe you should get rid of them." instead;
+	if parleys splayer players are touchable, say "The [players] are monopolizing the conversation. Maybe you should get rid of them." instead;
 
 check talking to a person:
 	if litany of noun is table of no conversation:
@@ -12555,7 +12560,7 @@ phooeyed is a truth state that varies.
 
 chapter angrier earring
 
-the angrier earring is a thing. "It pulses in your hands. Perhaps it has some purpose you haven't discovered yet."
+the angrier earring is a thing. description is "It pulses in your hands. Perhaps it has some purpose you haven't discovered yet."
 
 chapter N E Recs Censer
 
@@ -16660,7 +16665,7 @@ after scaning (this is the tell us about x in parse mode rule) :
 
 before scaning a clue-used thing: say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
 
-before scaning a reflexed thing: if noun is not dialer and noun is not sit a nag, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
+before scaning a reflexed thing: if noun is not dialer and noun is not sit a nag and noun is not players, say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
 
 check opening prison ropins:
 	say "[if Dr Yow is in prison ropins]You rattle it a bit, but it's too strong. Probably dead-bolted too, so it's physically impossible to use brute force[else]It's got nothing you want there any more[end if].";
@@ -17510,7 +17515,13 @@ understand "deal seer" and "deal/seer" as Lars Eede when player is male.
 
 understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
 
-rese is a truth state that varies. [resealed or released in point-scoring command?]
+rese is a truth state that varies. [checks if our point scoring command was resealed (true) or released (false)]
+
+to say el-la-full:
+	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
+
+to say el-la-first:
+	say "[if player is female]Elsa[else]Lars[end if]"
 
 chapter Salted Deltas guardians
 
@@ -17564,49 +17575,49 @@ chapter guardian org table (deprecated)
 
 gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.".
 
-gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here."
+gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here.". taunt-text of bluster butlers is "The bluster butlers cough far too loudly, almost half-laughing, before babbling about the importance of teams working together to guard important places. Perhaps they have no clue they might be next."
 
-gualoc of muscly Luc Sym is Scope Copse. guadir of muscly Luc Sym is north. block-text of muscly Luc Sym is "He shows surprising dexterity for someone so muscly as he forces you back.". clue-text of muscly Luc Sym is "Looking again at Muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity.".
+gualoc of muscly Luc Sym is Scope Copse. guadir of muscly Luc Sym is north. block-text of muscly Luc Sym is "He shows surprising dexterity for someone so muscly as he forces you back.". clue-text of muscly Luc Sym is "Looking again at Muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity.". taunt-text of muscly Luc Sym is "Luc Sym flexes briefly."
 
-gualoc of muscly Ms Lucy is Scope Copse. guadir of muscly Ms Lucy is north. block-text of muscly Ms Lucy is "She shows surprising dexterity for someone so muscly as she forces you back.". clue-text of muscly Ms Lucy is "Looking again at Muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity.".
+gualoc of muscly Ms Lucy is Scope Copse. guadir of muscly Ms Lucy is north. block-text of muscly Ms Lucy is "She shows surprising dexterity for someone so muscly as she forces you back.". clue-text of muscly Ms Lucy is "Looking again at Muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity.". taunt-text of muscly ms lucy is "Ms. Lucy flexes briefly."
 
 gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-text of snider diners is "They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if].". clue-text of snider diners is "The diners mutter about how bad weather can ruin the ambience of open-air meals.". taunt-text of snider diners is "The diners smack their lips, and you think you hear the zhk of silverware."
 
 gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north. block-text of traipse pirates is "'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this.". clue-text of traipse pirates is "You can't make the pirates less in-shape, but maybe something more cosmetic will work.". taunt-text of traipse pirates is "A wry, wary 'Yawr!' from the pirates makes you feel awry."
 
-gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.".
+gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
 
-gualoc of Mel Fish is Leveraged Everglade. guadir of Mel Fish is north. block-text of Mel Fish is "Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go.". clue-text of Mel Fish is "Perhaps you can free Mel Fish from nationality and his past to individuality."
+gualoc of Mel Fish is Leveraged Everglade. guadir of Mel Fish is north. block-text of Mel Fish is "Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go.". clue-text of Mel Fish is "Perhaps you can free Mel Fish from nationality and his past to individuality.". taunt-text of Mel Fish is "Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 
-gualoc of dandier arid den is Leveraged Everglade. guadir of dandier arid den is east. block-text of dandier arid den is "There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats.". clue-text of dandier arid den is "The arid den won't evaporate, but maybe you can get rid of it another way.".
+gualoc of dandier arid den is Leveraged Everglade. guadir of dandier arid den is east. block-text of dandier arid den is "There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats.". clue-text of dandier arid den is "The arid den won't evaporate, but maybe you can get rid of it another way.". taunt-text of dandier arid den is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
 
-gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.".
+gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
 
-gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.".
+gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.". taunt-text of ingrates is "The ingrates seem almost upset they are not important enough to get rid of."
 
-gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!".
+gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!". taunt-text of mardier admirer is "'Good job, I guess,' calls the mardier admirer."
 
-gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.".
+gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.". taunt-text of trendies is "The trendies say you did okay but also they are sure they could've done that, too, if they had nothing better to do."
 
-gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.".
+gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
 
-gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.".
+gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Elsa Erde is "Elsa Erde reaches for a hidden bottle of Reed's Ale and takes a swig."
 
-gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.".
+gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.". taunt-text of atheists is "The atheists commend your logic. Piffling, compared to theirs. But a start."
 
-gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.".
+gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.". taunt-text of grailman is "The grailman stands a bit taller, as if challenging you to remove him, or seeing proof he is even more above average than he thought he was."
 
-gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.".
+gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.". taunt-text of bonker is "'THE BONKER IS NOT DESTROYED SO EASILY!'".
 
 gualoc of stinger is Mislit Limits. guadir of stinger is east. block-text of stinger is "The stinger needles at you menacingly. You back off.". clue-text of stinger is "The stinger looks unusually active.". taunt-text of stinger is "Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker.]
 
-gualoc of natives site van is Danger Garden. guadir of natives site van is south. block-text of natives site van is "The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better.". clue-text of natives site van is "That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting.".
+gualoc of natives site van is Danger Garden. guadir of natives site van is south. block-text of natives site van is "The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better.". clue-text of natives site van is "That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting.". taunt-text of natives is "The natives mention no TRUE resident of the Wildest Wilteds would be displaced so easily."
 
-gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.".
+gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.". taunt-text of lois the hostile is "Lois the Hostile sniffs as if to say, they deserved what they got. Then she looks at you askance."
 
-gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text of he lot is "They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers.". clue-text of he lot is "Boy! The Lot sure could use some down-home kindness.".
+gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text of he lot is "They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers.". clue-text of he lot is "Boy! The Lot sure could use some down-home kindness.". taunt-text of he lot is "The Hostile-is-He Lot sniffs as if to say, they deserved what they got. Then they look at you askance."
 
-chapter guardian taunt tables
+chapter rules for flipping guardians
 
 after fliptoing a guardian (this is the guardian taunt and track progress rule) :
 	if guar-here is 0:
@@ -17615,14 +17626,15 @@ after fliptoing a guardian (this is the guardian taunt and track progress rule) 
 			move keycar to location of player;
 		continue the action;
 	if other-g of noun is not dreads adders, moot other-g of noun;
-	repeat through table of ggt:
-		if guaname entry is touchable and guaname entry is not prevtaunt:
+	repeat through table of gst:
+		if noun is guagone entry and guaname entry is touchable and guaname entry is not prevtaunt:
 			deliver-taunt guaname entry and noun;
 			continue the action;
-	repeat through table of ggt:
-		if guaname entry is touchable:
-			deliver-taunt guaname entry and noun;
-			continue the action;
+	let tauntgar be the list of touchable not prevtaunt guardians;
+	if number of entries in tauntgar > 0:
+		sort tauntgar in random order;
+		say "[taunt-text of entry 1 in tauntgar][line break]";
+		now entry 1 in tauntgar is prevtaunt;
 
 after fliptoing a guardian (this is the recalculate minimums no matter what rule) :
 	choose-new-hint-guardian;
@@ -17633,51 +17645,16 @@ to deliver-taunt (g1 - a guardian) and (g2 - a guardian):
 	repeat through table of gst:
 		if g1 is guaname entry and g2 is guagone entry:
 			say "[guatext entry][line break]";
+			now g1 is prevtaunt;
 			continue the action;
-	repeat through table of ggt:
-		if g1 is guaname entry:
-			say "[guatext entry][line break]";
+	say "[taunt-text of g1][line break]";
 
-section generic taunts
-
-table of ggt - guardian generic taunts
-guaname	guatext
-bluster butlers	"The bluster butlers loudly mention the strength of working in teams to guard important places."
-muscly Luc Sym	"Luc Sym beats his chest for NOT being removed like that."
-muscly Ms Lucy	"Ms. Lucy beats her chest for NOT being removed like that."
-snider diners	"The snider diners sniff at the distraction."
-Mel Fish	"Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
-arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
-bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
-stinger	"The grin-set stinger continues to fizz and buzz with mslicious glee."
-natives site van	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
-pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep blue sea."
-grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
-fluster self rut	"The fluster self rut buzzes to remind you that, well, you haven't cleared EVERYONE and EVERYTHING."
-Lars Eede	"[reedale].'"
-Elsa Erde	"[reedale].'"
-lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
-hostile is he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
-ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
-mardier admirer	"The mardier admirer oohs and ahhs but then considers, hmm, maybe there were only so many possibilities, really."
-trendies	"The resident trendies whisper that they're too cool to be disappeared like that."
-wait seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
-atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
-
-to say reedale:
-	say "[el-la-full] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
-
-to say el-la-full:
-	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
-
-to say el-la-first:
-	say "[if player is female]Elsa[else]Lars[end if]"
-
-section specific taunts
+section specific taunt table
 
 table of gst - guardian specific taunts
 guaname	guagone	guatext
-atheists	grailman	"The atheists sniff that the grailman would be good at guarding any grail, since it PROBABLY DOESN'T EXIST."
+Lois	grailman	"Lois the Hostile sniffs that the grailman probably wasn't even guarding a very holy grail."
+he lot	grailman	"The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very holy grail."
 
 chapter min-score-of-towers
 
@@ -17878,10 +17855,10 @@ understand "allrand" as allranding.
 
 carry out allranding:
 	say "ALLRAND dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
-	if macks are moot:
-		say "WARNING macks are moot so moving all mack pickup lines to [downside] may be useless or woese.";
+	if parleys splayer players are moot:
+		say "WARNING you cleared the players/macks, so moving all pickup lines to [downside] may be useless or woese.";
 	else:
-		say "Moved all mack pickup lines to disowned downside.";
+		say "Moved all players/macks['] pickup lines to Disowned Downside.";
 	now all pickup-lines are in Disowned Downside;
 	if Loftier Trefoil is visited and player is not in Loftier Trefoil:
 		say "WARNING you passed the Loftier Trefoil. This may result in odd behavior from the game.";
@@ -18256,63 +18233,6 @@ carry out discerning:
 	now spoilit is false;
 	the rule succeeds;
 
-[	if ed riley is touchable:
-		say "You discern Ed Riley could speak more reedily.";
-	else if player is in Bran Barn:
-		if macks are in Disowned Downside:
-			say "You discern you don't really have Mr. Lee's trust. Maybe if you got rid of some obvious nastiness, like to the north, you could.";
-			now do-i-dis is false;
-		else:
-			say "You discern an argument [if ghoul hat is in Bran Barn]going although...however[else]finishing HOWEVER[end if].";
-	else if player is in Loop Pool and eels are touchable:
-		if macks are in Disowned Downside:
-			say "You discern you haven't really proved yourself in these parts. Maybe if you got rid of some obvious nastiness, like to the south, you could.";
-			now do-i-dis is false;
-		else:
-			say "You discern an argument [if sea cube is touchable]going because...else[else]finishing ELSE[end if].";
-	else if macks are touchable:
-		say "You listen to the macks and discern you could make them act and talk more [mack-actions].";
-	else if sly imp is touchable:
-		say "You discern the imp would look ridiculous moving [rand-to-go].";
-	else if whiners are touchable:
-		say "You discern the men could be less intimidating acting [rand-to-go].";
-	else if player is in Perverse Preserve:
-		if raptor is touchable:
-			say "You discern that the raptor could become a parrot[if power-back is false] with your powers back[end if].";
-		else if nounsolve < 4:
-			say "You discern what you can still rescue. [if racoon is off-stage]A racoon. [end if][if nails are in Perverse Preserve]A snail. [end if][if thrones are in Perverse Preserve]Hornets. [end if][if pines are in Perverse Preserve]A snipe. [end if][line break]";
-		else:
-			now do-i-dis is false;
-	else if player is in Lamer Realm:
-		if owls are touchable:
-			say "You discern that you make the owls slow[if power-back is false] with your powers back[end if].";
-		else if adjsolve < 4:
-			say "You discern which animals can get which help. [if leopard is reflexive]The leopard can be PAROLED. [end if][if ocelots are reflexive]The ocelots can become the COOLEST. [end if][if satyr is reflexive]The satyr can become ARTSY. [end if][if badger is reflexive]The badger can be GARBED. [end if][line break]";
-		else:
-			now do-i-dis is false;
-	else if player is in Reclusion Inclosure:
-		if parrot is in Reclusion Inclosure:
-			say "[e-n-m] [if elmer-merle-bonus is 0]can be taken down a couple pegs for fun[else if elmer-merle-bonus is 1]can be tweaked beyond ASIDE--focus on the holy nest[else]have been psyched-out enough[end if]. More importantly, you discern the parrot can become a RAPTOR again.";
-		else if Merle is in Reclusion Inclosure and holy nest is not mood:
-			say "There might be [if aside-llp is in Reclusion Inclosure]a way or two[else]another way[end if] to make them less annoying or push back at them a bit, but you discern that annoying isn't as bad as evil, so you won't get wrapped up in their hang-ups.";
-			now do-i-dis is false;
-	else if parrot is moot and medals are reflexive:
-		say "You discern you need to [if player is not in Reclusion Inclosure]go to the Reclusion Inclosure and [end if]see the medals can make you go QUICKLY.";
-	else if player has whistle:
-		if whistle is reflexive:
-			say "You discern you may need [if player is in Rancho Archon Anchor]to leave the rancho [end if]to see how to make the whistle play DEEPLY."; [ic]
-		else if medals-shiny < 2:
-			say "You discern you may not have enough allies after you blow the whistle and have them go quickly. You left some behind in [animals-left].";
-			now do-i-dis is false;
-		else:
-			say "You discern you need to play the whistle [if player is in Rancho Archon Anchor]here[else]in the rancho[end if]."; [ic]
-	else:
-		now do-i-dis is false;
-	if do-i-dis is false, say "The cinders do not dissolve or blow away. Looks like they had nothing super-profound for you to discern." instead;
-	say "[line break]The cinders blow away, having imparted knowledge.";
-	cinders-bye;
-	the rule succeeds.]
-
 to cinders-bye:
 	prevent undo;
 	now undo-code is 7;
@@ -18616,11 +18536,11 @@ check going west in Minded Midden: if Ed Riley is touchable, say "'Re-yield, yie
 
 book Disowned Downside
 
-Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
+Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the [players][end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
 
 after looking in Disowned Downside:
-	if macks are in Disowned Downside:
-		set the pronoun them to macks;
+	if parleys splayer players are in Disowned Downside:
+		set the pronoun them to parleys splayer players;
 		set the pronoun her to gretta;
 	continue the action;
 
@@ -18638,11 +18558,11 @@ check entering atmo moat: say "It's too gulfy. Things'd get fugly. You've no div
 
 after printing the locale description for Disowned Downside when Disowned Downside is unvisited:
 	if do-i-chat is true:
-		moot macks;
+		moot parleys splayer players;
 		now all pickup-lines are in Meatier Emerita Emirate;
 		try talking to gretta;
 		the rule succeeds;
-	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
+	say "[line break]But whatever they call themselves, you know [pla-ma]s['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
 section edictal citadel
 
@@ -18650,25 +18570,31 @@ the Edictal Citadel is a boring backdrop in Disowned Downside. drop-region of Ed
 
 section sad elm
 
-the sad elm is boring useless scenery in Disowned Downside. description of sad elm is "It was probably sad before the macks came along, but it's not really important.". bore-text of sad elm is "You can't make the elm happier[if player had medals], not even if you do something with the damsel medals you got from it[end if].". bore-check is bore-sad-elm rule.
+the sad elm is boring useless scenery in Disowned Downside. description of sad elm is "It was probably sad before the [players] came along, but it's not really important.". bore-text of sad elm is "You can't make the elm happier[if player had medals], not even if you do something with the damsel medals you got from it[end if].". bore-check is bore-sad-elm rule.
 
 this is the bore-sad-elm rule:
 	if current action is climbing, say "[if Gretta is touchable]You can beat [']em, so don't join [']em trying to impress her[else]Yorpwald's still up a tree. Don't join it[end if]." instead;
 
-chapter macks
+chapter parleys splayer players
 
-the macks are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
+the parleys splayer players are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
-understand "mack" as macks.
+printed name of parleys splayer players is "[if parleys splayer players are reflexed]macks[else]parleys splayer players[end if]"
 
-a-text of macks is "BUG". b-text of macks is "BUG". parse-text of macks is "BUG".
+to say players-c: say "[if parleys splayer players are reflexed]Macks[else]Parleys splayer players[end if]"
 
-rule for printing a locale paragraph about macks:
-	say "[one of]Wait a minute. You think you recognize whom the macks are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. But that's how it is, with macks. Or whatever annoying flirters are called these days. And, well, if she ran, they'd probably cut her off[or]The macks continue trying to impress Gretta[how-macked][stopping].";
+to say pla-ma: say "[if parleys splayer players are reflexed]mack[else]player[end if]"
+
+understand "mack/player" as parleys splayer players.
+
+a-text of parleys splayer players is "BUG". b-text of parleys splayer players is "BUG". parse-text of parleys splayer players is "BUG".
+
+rule for printing a locale paragraph about parleys splayer players:
+	say "[one of]Wait a minute. You think you recognize whom the parleys splayer players are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. It's strong enough, they're not just macks, but parleys splayer players. There'a nothing to STOP Gretta from running, but it's easy to feel boxed-in[how-played][stopping].";
 	now Gretta is mentioned;
-	now macks are mentioned;
+	now parleys splayer players are mentioned;
 
-to say how-macked:
+to say how-played:
 	if gretta-score is 1:
 		say ", though not as much as when they started, since you got them";
 	else if gretta-score is 2:
@@ -18676,7 +18602,7 @@ to say how-macked:
 
 Gretta Garett Tatger is a female person in Disowned Downside. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore.". printed name of Gretta Garett Tatger is "Gretta Garett-Tatger".
 
-before doing something when Gretta is touchable and macks are not touchable:
+before doing something when Gretta is touchable and parleys splayer players are not touchable:
 	if current action is examining, say "You should probably talk with Gretta Garett-Tatger a bit." instead;
 	if current action is attacking, say "She's on your side." instead;
 	if action is blathery, say "She's heard enough rambling conversation on others['] terms, here." instead;
@@ -18693,7 +18619,7 @@ to say but-stuck:
 
 table of Gretta comments [tco-gr]
 prompt	response	enabled
-"Boy, those macks, huh?"	gre-macks-quip	1
+"Boy, those players, huh?"	gre-players-quip	1
 "What's your history with Elvira?"	gre-elv-quip	0
 "I sort of lost my powers. Well, most of them. What can I do now?"	gre-what-quip	0
 "[if Loop Pool is visited]What can I do with the pool[else]What's[end if] to the north?"	gre-north-quip	0
@@ -18704,7 +18630,7 @@ prompt	response	enabled
 
 table of quip texts (continued) [tqt-gr]
 quip	quiptext
-gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
+gre-players-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the parleys splayer players without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
 gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the Edictal Citadel from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
@@ -18722,13 +18648,13 @@ to decide which number is optleft of (myp - a person):
 
 after quipping when qbc_litany is the table of Gretta comments (this is the process Gretta chat rule):
 	if hold-it-up is true, continue the action;
-	if current quip is gre-macks-quip:
+	if current quip is gre-players-quip:
 		enact gre-elv-quip;
 		enact gre-what-quip;
 		enact gre-go-quip;
 	else if current quip is gre-elv-quip or current quip is gre-what-quip:
 		if gre-elv-quip is mowered or gre-what-quip is mowered: [this seems a bit odd, but marking a quip as mowered doesn't happen til the "after quipping" which fires afterwards]
-			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the Edictal Citadel, but you can probably grill her for quick information.[paragraph break]";
+			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the players will narc her out to Elvira, even though none of them headed west to the Edictal Citadel, but you can probably grill her for quick information.[paragraph break]";
 			enact gre-north-quip;
 			enact gre-east-quip;
 			enact gre-south-quip;
@@ -18759,7 +18685,7 @@ understand "sample maple" and "maple" as sample maples.
 
 chapter booting - not for release
 
-[ * boot can tell the game to get rid of a mack ]
+[ * boot can tell the game to help Gretta ]
 
 booting is an action applying to nothing.
 
@@ -18773,10 +18699,10 @@ definition: a pickup-line (called mi) is smackable:
 	yes;
 
 carry out booting:
-	unless player is in Disowned Downside and macks are in Disowned Downside, say "Need the macks around." instead;
+	unless player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "Need the parleys splayer players around." instead;
 	let count be 0;
 	let SI be number of smackable pickup-lines;
-	while macks are in Disowned Downside and count < 5:
+	while parleys splayer players are in Disowned Downside and count < 5:
 		let rmi be a random smackable pickup-line in Disowned Downside;
 		try fliptoing rmi;
 		increment count;
@@ -18787,16 +18713,18 @@ carry out booting:
 
 chapter smacking
 
+[ a stub that gives a SMACK MACKS reject ]
+
 smacking is an action applying to one thing.
 
 understand the command "smack" as something new.
 
 understand "smack [thing]" as smacking.
 
-does the player mean smacking the macks: it is likely.
+does the player mean smacking the parleys splayer players: it is likely.
 
 carry out smacking:
-	if noun is macks, say "They really, really deserve it, but keep your cool. Smack their arguments down instead and they may smack each other for you." instead;
+	if noun is parleys splayer players, say "They really, really deserve it, but keep your cool. Smack their arguments down instead and they may smack each other for you." instead;
 	try attacking noun instead;
 	the rule succeeds;
 
@@ -18834,9 +18762,7 @@ check scaning medals:
 
 a-text of medals is "RYYRRRO". b-text of medals is "R?YRRR?". parse-text of medals is "x[sp]?[sp]-[sp]x[sp]x[sp]x[sp]?".
 
-chapter mack flipping
-
-ladying is an action applying to nothing.
+chapter parleys splayer players flipping
 
 irately is a truth state that varies.
 
@@ -18844,59 +18770,26 @@ check fliptoing a pickup-line (this is the NO ESP rule):
 	if debug-state is true, continue the action;
 	if noun is not ment, say "[ly-ish]." instead;
 
-after fliptoing a pickup-line:
-	if uber-rand-cheat is true:
-		if number of pickup-lines in Disowned Downside is 0:
-			say "You're done!";
-			moot macks;
-			try talking to Gretta;
-			continue the action;
-		else:
-			say "Skipping standard text as we're just wiping the macks.";
-			continue the action;
-	if noun is t-tearily-irately:
-		if the player's command matches "irately":
-			now irately is true;
-	if noun is not ment:
-		say "(Wow, you did this without seeing the macks act anything like that!) ";
-	increment gretta-score;
-	if gretta-score is 1:
-		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic for a moment.[paragraph break]";
-	otherwise if gretta-score is 2:
-		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.[paragraph break]";
-	else:
-		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
-		now hold-it-up is true;
-		moot macks;
-		mootl list of all pickup-lines;
-		try talking to Gretta;
-		continue the action;
-	process the macks hitting on rule;
-	if debug-state is true and noun is not ment:
-		say "NOTE: The player can't have known this yet, but since you're testing, I'll let it fly.";
-		continue the action;
-	continue the action;
-
 gretta-score is a number that varies. gretta-score is usually 0.
 
-check talking to Gretta when macks are in Disowned Downside:
-	say "The macks are monopolizing the conversation. They outnumber you." instead;
+check talking to Gretta when players are in Disowned Downside:
+	say "The [players] outnumber you. You won't get a word in." instead;
 
 check going in Disowned Downside when Gretta is in Disowned Downside:
 	if noun is north or noun is south or noun is east, say "[cree-pee].";
 
 to say cree-pee:
-	say "A few macks [if player is male]laugh at how you obviously can't give Gretta Garett-Tatger the attention they can[else]let Gretta Garett-Tatger know she's more worth impressing than you[end if] as you leave"
+	say "A few [players] [if player is male]laugh at how you obviously can't give Gretta Garett-Tatger the attention they can[else]let Gretta Garett-Tatger know she's more worth impressing than you[end if] as you leave"
 
 check taking atmo moat:
 	say "Way too big." instead;
 
 check going west in Disowned Downside:
-	if macks are in Disowned Downside, say "One of the macks stops you from tripping the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
+	if players are in Disowned Downside, say "One of the [players] stops you from falling in the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
 	if atmo moat is in Disowned Downside, say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is touchable, say "[cree-pee]." instead;
 
-chapter nasty things guys do
+chapter parleys splayer players' moves
 
 to decide which number is pickup-pod-size of (mc - a number):
 	let temp be 0;
@@ -18917,166 +18810,174 @@ to install-pickup-line (x1 - a number) and (x2 - a number):
 	if one-yet is false:
 		say "Oops [x1] pod [x2] ord had no pickup line.";
 
-when play begins (this is the mack-randomize rule):
+when play begins (this is the pickup-randomize rule):
 	let my-wt be 0;
 	repeat with X running from 1 to max-pod-num:
 		now cur-pod-num is X;
 		let G be the pickup-pod-size of X;
-		[say "[G] mack things in pod [X + 6].";]
+		[say "[G] pickup lines in pod [X + 6].";]
 		let H be a random number from 1 to G;
 		install-pickup-line X and H;
-	assign-random-mack-priority;
+	assign-random-pickup-priority;
 	now cur-pod-num is 0;
 
 definition: a pickup-line (called mm) is unprioritized:
-	if mack-prio of mm is 0 and mm is in Disowned Downside, decide yes;
+	if pickup-prio of mm is 0 and mm is in Disowned Downside, decide yes;
 	decide no;
 
-to assign-fixed-mack-priority:
-	now cur-mack-blab is 0;
+to assign-fixed-pickup-priority:
+	now cur-player-blab is 0;
 	repeat with B running through pickup-lines:
 		if B is in Disowned Downside:
-			now mack-prio of B is pod-num of B;
+			now pickup-prio of B is pod-num of B;
 
-to assign-random-mack-priority:
-	now cur-mack-blab is 0;
+to assign-random-pickup-priority:
+	now cur-player-blab is 0;
 	repeat with B running through pickup-lines:
-		now mack-prio of B is 0;
+		now pickup-prio of B is 0;
 	let C be number of pickup-lines in Disowned Downside; [should be 7, but yeah]
 	repeat with B running from 1 to C:
-		let thismack be a random unprioritized pickup-line;
-		now mack-prio of thismack is B;
+		let this-pickup be a random unprioritized pickup-line;
+		now pickup-prio of this-pickup is B;
 
-a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called mack-move. a pickup-line has text called mack-brief.
+a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called player-move. a pickup-line has text called pickup-description. a pickup-line has a number called hint-prog.
 
 rule for deciding whether all includes pickup-lines:
 	it does not.
 
-a pickup-line has a number called mack-prio. mack-prio of a pickup-line is usually 0. a pickup-line is usually abstract.
+a pickup-line has a number called pickup-prio. pickup-prio of a pickup-line is usually 0. a pickup-line is usually abstract.
 
 a pickup-line can be ment. a pickup-line is usually not ment. a pickup-line can be passed-on. a pickup-line is usually not passed-on.
 
-max-pod-num is a number that varies. max-pod-num is 7. cur-mack-blab is a number that varies. cur-mack-blab is 0.
+max-pod-num is a number that varies. max-pod-num is 7. cur-player-blab is a number that varies. cur-player-blab is 0.
 
-current-idea is a pickup-line that varies. cur-pod-num is a number that varies. ever-loop-mack is a truth state that varies.
+current-idea is a pickup-line that varies. cur-pod-num is a number that varies. ever-loop-players is a truth state that varies.
 
 For printing a locale paragraph about a pickup-line (called the item):
 	set the locale priority of the item to 0;
 	continue the activity.
 
-[pod 1 is 7-letters repeating]
-t-bossily is a pickup-line. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
+section 7 letters repeating - pod 1
 
-t-cattily is a pickup-line. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-bossily is a pickup-line. pod-num is 1. pod-ord is 1. a-text of t-bossily is "RYRRYRO". b-text of t-bossily is "RYRRYRO". parse-text of t-bossily is "x[sp]-[sp]s[sp]s[sp]-[sp]l[sp]y.". player-move is "Fake plaintiveness makes you see red! 'Sly bois? I? Sly SOB? Si Bloy's...'". pickup-description is "(not) being sly bois".
 
-t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-cattily is a pickup-line. pod-num is 1. pod-ord is 2. a-text of t-cattily is "RYRRYRO". b-text of t-cattily is "RGRRYPB". parse-text of t-cattily is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". player-move is "Each [pla-ma] discusses tacitly why he's got something the others don't.". pickup-description is "acting tacitly".
 
-t-tearily-irately is a pickup-line. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". parse-text of t-seedily is "x[sp]e[sp]e[sp]x[sp]i[sp]l[sp]y". t-seedily is cheat-spoilable. player-move is "A few [pla-ma]s do something stupid with their eyelids to get her attention.". pickup-description is "twiddling their eyelids".
 
-[pod 2 is non-repeating 7-letters]
-t-nastily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
+t-tearily-irately is a pickup-line. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". player-move is "The [players] ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". pickup-description is "defining reality".
 
-t-shadily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
+section 7 letters non-repeating - pod 2
 
-t-snidely is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
+t-nastily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". player-move is "The [players] suddenly start acting very saintly.". pickup-description is "acting saintly".
 
-t-starkly is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
+t-shadily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". player-move is "The [players] try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". pickup-description is "seeming ladyish".
 
-[pod 3 is 8-letters repeating]
-t-blearily is a pickup-line. pod-num is 3. pod-ord is 1. a-text of t-blearily is "RRYYRYRO". b-text of t-blearily is "RRYYRYPB". parse-text of t-blearily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
+t-snidely is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". player-move is "The [players] blather about how she is better than Lindsey.". pickup-description is "negging Lindsey".
 
-t-coitally is a pickup-line. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
+t-starkly is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "Some of the [players] compare her to Krystal, being sort-of favorable to both. Still, it's icky.". pickup-description is "comparing Gretta and Krystal".
 
-t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+section 8 letters repeating - pod 3
 
-t-ribaldly is a pickup-line. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-blearily is a pickup-line. pod-num is 3. pod-ord is 1. a-text of t-blearily is "RRYYRYRO". b-text of t-blearily is "RRYYRYPB". parse-text of t-blearily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". player-move is "The [players] cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". pickup-description is "interrupting each other reliably".
 
-t-shabbily is a pickup-line. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-coitally is a pickup-line. pod-num is 3. pod-ord is 2. a-text of t-coitally is "RYYRYRRO". b-text of t-coitally is "RGYRYRRB". parse-text of t-coitally is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". player-move is "The [players] discuss how nice it is to meet her in this locality.". pickup-description is "'admiring' this locality".
 
-t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
+t-formally is a pickup-line. pod-num is 3. pod-ord is 3. a-text of t-formally is "RYRRYRRO". b-text of t-formally is "?YR?YRRO". parse-text of t-formally is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". player-move is "The [players] manage to seem surprisingly fly, moral. 'A folly, Mr.!' they say, at random. They've got the confidence and pace to pull it off, for now.". pickup-description is "acting too formally".
 
-t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-ribaldly is a pickup-line. pod-num is 3. pod-ord is 4. a-text of t-ribaldly is "RYRYRRRO". b-text of t-ribaldly is "RYRYRRPB". parse-text of t-ribaldly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "The [players] ask if she has been thinking bridally.". pickup-description is "talking bridally".
 
-t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
+t-shabbily is a pickup-line. pod-num is 3. pod-ord is 5. a-text of t-shabbily is "RRYRRYRO". b-text of t-shabbily is "RRYRRYRO". parse-text of t-shabbily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". player-move is "A [pla-ma], going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". pickup-description is "describing things shabbily".
 
-[pod 4 is 8-letters non-repeating]
-t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
+t-shoddily is a pickup-line. pod-num is 3. pod-ord is 6. a-text of t-shoddily is "RRYRRYRO". b-text of t-shoddily is "RRYRRYRO". parse-text of t-shoddily is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]l[sp]y". player-move is "A tag-team effort. One [pla-ma] gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.". pickup-description is "giving an odd sly hi".
 
-t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-silently is a pickup-line. pod-num is 3. pod-ord is 7. a-text of t-silently is "RYRYRRRO". b-text of t-silently is "P??YRR?O". parse-text of t-silently is "s[sp]?[sp]?[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "The [players] perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". pickup-description is "having a snit-yell".
 
-t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-suddenly is a pickup-line. pod-num is 3. pod-ord is 8. a-text of t-suddenly is "RYRRYRRO". b-text of t-suddenly is "RYRRYRRO". parse-text of t-suddenly is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]l[sp]y". player-move is "The [players] incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". pickup-description is "not stopping suddenly.".
 
-[pod 5 is 9 letters]
-t-martially is a pickup-line. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally". t-martially is parse-spoilable.
+section 8 letters non-repeating - pod 4
 
-t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
+t-modestly is a pickup-line. pod-num is 4. pod-ord is 1. a-text of t-modestly is "RYRYRRRO". b-text of t-modestly is "RYRYRRRO". parse-text of t-modestly is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "Three [pla-ma]s put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". pickup-description is "behaving fake-modestly".
 
-t-sobbingly is a pickup-line. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
+t-steamily is a pickup-line. pod-num is 4. pod-ord is 2. a-text of t-steamily is "RRYYRYRO". b-text of t-steamily is "?RYYRY?O". parse-text of t-steamily is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". player-move is "The [players] claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". pickup-description is "mis-discussing Misty Ale".
 
-t-tediously is a pickup-line. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". mack-brief is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
+t-stupidly is a pickup-line. pod-num is 4. pod-ord is 3. a-text of t-stupidly is "RRYRYRRO". b-text of t-stupidly is "RRYRYRRO". parse-text of t-stupidly is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". player-move is "One [pla-ma] idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
-t-wearingly is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+section 9 letters - pod 5
 
-[pod 6 is 10-11 letters.]
-t-desperately is a pickup-line. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". mack-move is "The macks stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". mack-brief is "behaving desperately".
+t-martially is a pickup-line. pod-num is 5. pod-ord is 1. a-text of t-martially is "RYRRYYRRO". b-text of t-martially is "PGPRYGPPB". parse-text of t-martially is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". player-move is "Some of the [players] even begin to talk maritally.". pickup-description is "blabbing maritally". t-martially is parse-spoilable.
 
-t-drawlingly is a pickup-line. pod-num is 6. pod-ord is 2. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
+t-sincerely is a pickup-line. pod-num is 5. pod-ord is 2. a-text of t-sincerely is "RYRRYRYRO". b-text of t-sincerely is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". player-move is "Someone shouts 'Celery's in! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". pickup-description is "speaking too sincerely".
 
-t-emotionally is a pickup-line. pod-num is 6. pod-ord is 3. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
+t-sobbingly is a pickup-line. pod-num is 5. pod-ord is 3. a-text of t-sobbingly is "RYRRYRRRO". b-text of t-sobbingly is "RGPPYRRRO". parse-text of t-sobbingly is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s continuing their lobbyings, far too cheery and confident.". pickup-description is "making lobbyings".
 
-[pod5 is a trivial pod. You will always get "despairingly," but you will also get 2 7's and 2 8's]
-t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
+t-tediously is a pickup-line. pod-num is 5. pod-ord is 5. a-text of t-tediously is "RYRYYYRRO". b-text of t-tediously is "RYRYYYRRO". parse-text of t-tediously is "x[sp]-[sp]x[sp]-[sp]-[sp]-[sp]x[sp]x[sp]y". player-move is "Each [pla-ma] discusses how he outyields someone else with a lousy diet, all, 'Idlest! You!' You see red.". pickup-description is "disparaging a lousy diet". [the pod-ord being 5 is intentional. If we solve "tedious" we don't want "tediously" later.]
+
+t-wearingly is a pickup-line. pod-num is 5. pod-ord is 4. a-text of t-wearingly is "RYYRYRRRO". b-text of t-wearingly is "RYYRYRRRO". parse-text of t-wearingly is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s begin lawyering about why she should probably choose ONE of them. You see red, a bit.". pickup-description is "lawyering".
+
+section 10-11 letters - pod 6
+
+t-desperately is a pickup-line. pod-num is 6. pod-ord is 1. a-text of t-desperately is "RYRRYRYRYRO". b-text of t-desperately is "RYRRYRYRYRO". parse-text of t-desperately is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]y". player-move is "The [pla-ma]s stare deeply as they discuss a variety of subjects. One that makes you see extra red is how Patsy leered.". pickup-description is "continuing to stare deeply".
+
+t-drawlingly is a pickup-line. pod-num is 6. pod-ord is 2. a-text of t-drawlingly is "RRYRRYRRRO". b-text of t-drawlingly is "PPYPRYRRRO". parse-text of t-drawlingly is "d[sp]r[sp]-[sp]w[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "Amazingly, the [pla-ma]s make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". pickup-description is "blabbing about drywalling".
+
+t-emotionally is a pickup-line. pod-num is 6. pod-ord is 3. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". player-move is "One [pla-ma], seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". pickup-description is "behaving emotionally".
+
+section 12 letters - pod 7
+
+t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
 
 to decide whether (n - a number) is unworkable:
 	decide yes;
 
 this is the find-pickup-line rule:
 	repeat with QQ running through pickup-lines:
-		if QQ is in Disowned Downside and mack-prio of QQ is cur-mack-blab:
+		if QQ is in Disowned Downside and pickup-prio of QQ is cur-player-blab:
 			now current-idea is QQ;
 			the rule succeeds;
 	the rule fails;
 
 to decide which pickup-line is pickup-to-hint:
 	let cur-prio be 10;
-	let got-mack be false;
-	let cur-mack be t-despairingly;
+	let got-pickup be false;
+	let cur-pickup be t-despairingly;
 	repeat with QQ running through ment reflexive pickup-lines in Disowned Downside:
 		d "(DEBUG considering [QQ]) ";
-		if mack-prio of QQ < cur-prio:
+		if pickup-prio of QQ < cur-prio:
 [			d "(DEBUG potentially choosing [QQ]) ";]
-			now cur-mack is QQ;
-			now cur-prio is mack-prio of QQ;
-			now got-mack is true;
-	if got-mack is false:
+			now cur-pickup is QQ;
+			now cur-prio is pickup-prio of QQ;
+			now got-pickup is true;
+	if got-pickup is false:
 		say "(BUG in pickup-line code) ";
-	decide on cur-mack.
+	decide on cur-pickup.
 
-every turn when player is in Disowned Downside and macks are in Disowned Downside (this is the macks hitting on rule):
+every turn when player is in Disowned Downside and parleys splayer players are in Disowned Downside (this is the how players hit on Gretta rule):
 [	repeat with QQ running through reflexive pickup-lines in Disowned Downside:
 		if debug-state is true:
-			say "DEBUG NOTES: [qq]: [mack-prio of qq].";]
+			say "DEBUG NOTES: [qq]: [pickup-prio of qq].";]
 	let loop be false;
 	while cur-pod-num is unworkable:
-		increment cur-mack-blab;
-		if cur-mack-blab > max-pod-num:
+		increment cur-player-blab;
+		if cur-player-blab > max-pod-num:
 			if loop is true:
-				say "The macks seem to be out of ideas! [bug-report]";
+				say "The [pla-ma]s seem to be out of ideas! [bug-report]";
 				continue the action;
 			now loop is true;
-			now cur-mack-blab is 1;
+			now cur-player-blab is 1;
 		process the find-pickup-line rule;
 		if the rule succeeded:
 			if loop is true:
-				if ever-loop-mack is false:
-					now ever-loop-mack is true;
-					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if gretta-score > 0], except for what you managed to alter[end if].[paragraph break]";
+				if ever-loop-players is false:
+					now ever-loop-players is true;
+					say "The [pla-ma]s take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if gretta-score > 0], except for what you managed to alter[end if].[paragraph break]";
 			now current-idea is ment;
-			say "[mack-move of current-idea][line break]";
+			say "[player-move of current-idea][line break]";
 			continue the action;
 	continue the action;
 
-check scaning macks:
+check scaning parleys splayer players when parleys splayer players are reflexed:
+	say "You already dealt with the players in general, so you focus on their current method.";
 	try scaning current-idea instead;
 
 section testing synonyms - not for release
@@ -21443,7 +21344,19 @@ this is the hint certain object groups rule:
 	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is a fruit and player has noun, all-say "[frootz]" instead;
 	if noun is not a backdrop and noun is not scenery:
-		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region." instead;
+		if mrlp is not map region of location of noun, all-say "That doesn't seem to be in this region[if players are touchable]. If you're trying to HINT the [pla-ma]s['] pickup lines, ." instead;
+	if noun is a pickup-line:
+		increment hint-prog of noun;
+		if hint-prog of noun is 3, now hint-prog of noun is 1;
+		say "[if hint-prog of noun is 1]You may be able to disrupt how the [pla-ma]s [pickup-description of noun].[plus][else]You can make the [pla-ma] talk more [pickup-spoil of noun].[minus][end if]";
+		the rule succeeds;
+
+to say pickup-spoil of (pl - a pickup-line):
+	repeat through table of otters anagrams:
+		if the-to entry is pl:
+			say "[right-word entry in upper case]";
+			continue the action;
+	say "BUG [pl] not hint-implemented. This should not happen"
 
 this is the hint-moot-objects rule:
 	if noun is disk:
@@ -21531,7 +21444,7 @@ carry out objhinting (this is the pick object to hint rule) :
 			try objhinting parallel-entry entry instead;
 		if player has Pa Egg Pea and eisihint is false:
 			now eisihint is true;
-			all-say "You try and imagine what [i]Pa, Egg, Pea[r] might say if it were actually about helping everyday people. Here's what you come up with.[line break]";
+[			all-say "You try and imagine what [i]Pa, Egg, Pea[r] might say if it were actually about helping everyday people. Here's what you come up with.[line break]";]
 		choose row with hint-entry of noun in the table of hintobjs;
 		now last-thing-hinted is noun; [for the special case HINT LEOPARD.HINT where SATYR might be the first in the random table. Less jarring this way.]
 		if noun is cheatitemed:
@@ -22027,8 +21940,8 @@ examp
 "Lars Eede/Elsa Erde has the Reed's Ale east of Treading Gradient."
 "Luc Sym or Ms. Lucy guards north of the Scope Copse."
 "The Hostile-is-He Lot or Lois the Hostile guards south of Actionless Coastlines."
-"[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Disowned Downside."
-"KISSing Gretta or taking to her with the macks around."
+"[bold type](otters)[r] reactions to KISSing, EXAMINEing the [pla-ma], talking/dispelling/attacking or leaving while they're in the Disowned Downside."
+"KISSing Gretta or taking to her with the [pla-ma] around."
 "Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
 "KISSing Elvira or losing to her in battle."[]
 "The win text."
@@ -22271,7 +22184,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
-	say "[2da]there were several other ways you could've made the macks act (you only needed three of seven): [how-macks].";
+	say "[2da]there were several other ways you could've made the [pla-ma]s act (you only needed three of seven): [how-players].";
 	say "[2da]you could've made the imp act [list of block-concepts in Shiner Shrine], and the whiners could've spoken [list of block-concepts in Clarthead Cathedral].";
 
 this is the others-alt rule:
@@ -22300,7 +22213,7 @@ to say presto-3 of (n - a number):
 	if n is not 2, say "[if n is not 1] and [end if]giving the yak a bad book to eat";
 	if n is not 3, say " and pushing the skid to Dirge Ridge when you [if escaroles are in Hacks Shack]change the escaroles to a casserole[else]have the casserole[end if]";
 
-to say how-macks:
+to say how-players:
 	let got-yet be false;
 	repeat with QQ running through passed-on pickup-lines:
 		say "[unless got-yet is true] or [end if]";
@@ -22689,7 +22602,7 @@ book cheatage
 
 chapter greting
 
-[* this lets you skip over the macks]
+[* this lets you skip over the Downside puzzles and talk to Gretta immediately]
 
 greting is an action applying to nothing.
 
@@ -22699,7 +22612,7 @@ understand "gret" as greting.
 
 carry out greting:
 	move player to Disowned Downside;
-	say "==CHEATING TO DEFEAT MACKS";
+	say "==CHEATING TO DEFEAT THE PLAYERS";
 	try fliptoing a random touchable pickup-line;
 	try fliptoing a random touchable pickup-line;
 	try fliptoing a random touchable pickup-line;
@@ -22845,7 +22758,7 @@ carry out a5ing:
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to OTTERS. I also gave you the settler and purse and notepad, in case.";
 	process the notify score changes rule;
-	ital-say "you may wish to SEED 1 so you can make the macks talk blearily, nastily and bossily, if you are in an automatic testing situation."
+	ital-say "you may wish to SEED 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
 chapter endgameing
 

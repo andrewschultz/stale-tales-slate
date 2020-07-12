@@ -1118,9 +1118,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	t-drawlingly	--	"[add-ly]."
 "emotional"	613598445	t-emotionally	--	"[add-ly]."
 "despairing"	605579646	t-despairingly	--	"[add-ly]."
-"mack"	138201734	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
-"macks"	234475700	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
-"gretta"	454137468	Gretta	--	"Gretta's been manipulated enough[if macks are touchable]. Deal with the macks['] arguments, instead[end if]."
+"amck"	138201734	players	--	"If you messed with one [pla-ma], the others would gang up on you. Work on the argument, instead."
+"amcks"	234475700	players	--	"Hm, you probably can't change the [pla-ma]s. They're dead set in their ways. Perhaps you can reframe what they are saying[if gretta-score > 0] some more[end if]."
+"gretta"	454137468	Gretta	--	"Enough people are trying to manipulate Gretta[if parleys splayer players are touchable]. Deal with them directly[end if]."
 
 table of Shiner Shrine nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

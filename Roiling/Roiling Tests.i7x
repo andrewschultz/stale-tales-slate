@@ -781,7 +781,7 @@ understand the command "scams" as something new.
 understand "scam" as scaming.
 understand "scams" as scaming.
 
-carry out scaming: [?! doesn't quite work for otters]
+carry out scaming:
 	now scams is whether or not scams is false;
 	say "Scams is [on-off of scams].";
 	the rule succeeds;
@@ -992,6 +992,24 @@ carry out miscing:
 	if number of flippable nonreflexive things > 0:
 		say "Flippable nonreflexive: [list of flippable nonreflexive things].";
 
+chapter puh
+
+[ * PUH pickup-hints everything ]
+
+chapter puhing
+
+puhing is an action out of world.
+
+understand the command "puh" as something new.
+
+understand "puh" as puhing.
+
+carry out puhing:
+	repeat with X running through pickup-lines:
+		say "[X]: disrupt the [pla-ma]s [if pickup-description of X is empty]BLANK, FIX THIS[else][pickup-description of X][end if].";
+		say "Make the [pla-ma]s talk more [pickup-spoil of X].";
+	the rule succeeds.
+
 chapter ploping
 
 [* PLOP seeds the towers/otters with everything ]
@@ -1016,11 +1034,11 @@ carry out ploping:
 		now all picaros are in Loftier Trefoil;
 		say "Dumping every warrior in the Trefoil.";
 		say "ts, towers, in, y for towers.";
-	if macked-out > 0:
-		say "Skipping the Disowned Downside as you've already messed with the macks a bit.";
+	if gretta-score > 0:
+		say "Skipping the Disowned Downside as you've already messed with the players/macks/pickup lines a bit.";
 	else:
-		now all mack-ideas are in Disowned Downside;
-		say "Dumping every mack idea in the Disowned Downside.";
+		now all pickup-lines are in Disowned Downside;
+		say "Dumping every pickup line idea in the Disowned Downside.";
 		say "a5, in, barely, reedily, w for otters.";
 	now uber-rand-cheat is true;
 	the rule succeeds;
@@ -1030,9 +1048,9 @@ after fliptoing when uber-rand-cheat is true:
 	process the uber-otters rule;
 	continue the action;
 
-every turn when player is in Disowned Downside and macks are in Disowned Downside and uber-rand-cheat is true (this is the uber-otters rule):
+every turn when player is in Disowned Downside and parleys splayer players are in Disowned Downside and uber-rand-cheat is true (this is the uber-otters rule):
 	say "Adverbs available:";
-	repeat with QQ running through mack-ideas in Disowned Downside:
+	repeat with QQ running through pickup-lines in Disowned Downside:
 		choose row with the-from of QQ in table of otters anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
@@ -1079,14 +1097,14 @@ to place-idea (myp - a number) and (myi - a number):
 	let cur-idea be t-despairingly;
 	let max-pod be 0;
 	let myi2 be myi;
-	repeat with QQ running through mack-ideas:
+	repeat with QQ running through pickup-lines:
 		if pod-num of QQ is myp:
 			if pod-ord of QQ > max-pod:
 				now max-pod is pod-ord of QQ;
 	if myi2 > max-pod:
 		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
 		now myi2 is max-pod;
-	repeat with QQ running through mack-ideas:
+	repeat with QQ running through pickup-lines:
 		if pod-num of QQ is myp and pod-ord of QQ is myi2:
 			if QQ is in Disowned Downside:
 				say "Oops, placed [QQ] twice. [myp] [myi2].";
@@ -1095,13 +1113,13 @@ to place-idea (myp - a number) and (myi - a number):
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
-carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
+carry out seeding: [100 = ordering players, 200 = skip trefoil, 400 = skip Disowned Downside. Most of the time we'll just need the non hundreds.]
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
 	let act-index be the remainder after dividing number understood by 100;
 	let seedflags be number understood / 100;
-	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10=the pod(1..8) for the macks, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
+	say "USAGE NOTES:[line break]1=Balmer 2=Mr Beal[line break], 10 * the pod number (1..8) for the players, 1=the pod number(1..5) for the picaros.[paragraph break]Seed flags can be anything up to 4.";
 	if act-index > 8:
 		say "[b]WARNING: this is probably out of range, but we are rounding down.[r][line break]";
 	if act-index < 1:
@@ -1115,16 +1133,16 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip Disowne
 		else:
 			now mbb is Marble Blamer Mr Beal;
 	if seedflags <= 4:
-		if Disowned Downside is visited and macked-out > 0: [next, seed the macks in OTTERS]
-			say "Skipping Disowned Downside seeding because you already started wiping the macks out.";
+		if Disowned Downside is visited and gretta-score > 0: [next, seed the players' pickup lines in OTTERS]
+			say "Skipping Disowned Downside seeding because you already started wiping the players/macks out.";
 		else:
-			now all mack-ideas are off-stage;
+			now all pickup-lines are off-stage;
 			repeat with J running from 1 to max-pod-num:
 				place-idea J and act-index;
 			if the remainder after dividing seedflags by 2 is 0:
-				assign-random-mack-priority;
+				assign-random-pickup-priority;
 			else:
-				assign-fixed-mack-priority;
+				assign-fixed-pickup-priority;
 	if the remainder after dividing seedflags by 4 < 2:
 		if Loftier Trefoil is visited and number of moot picaros > 0: [first, seed the start of TOWERS]
 			say "Skipping Trefoil seeding as you've already disposed of [number of moot picaros] warrior[if number of moot picaros > 1]s[end if]. Restart if you wish to re-seed.";

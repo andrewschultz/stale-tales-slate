@@ -951,6 +951,8 @@ Or, for an extra point,
 
 (ALT) > PHOOEY
 
+You can't do anything with the angrier earring for a long while, but it's not too heavy, and it'll be useful later.
+
 > E
 > S
 
@@ -1560,7 +1562,7 @@ The cinders are a bonus point. DISCERN will help you get a free pass anywhere, o
 
 > W
 
-How to help Gretta ward off the macks? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs and a 12-word adverb. Since these are random for each playthrough, randomly picking one word in each pod won't work. If you're curious, the strategy requiring the fewest keys to type in involves guessing the 12- and 11-letter words, then either the duplicate or unique seven-letter words.
+How to help Gretta ward off the parleys splayer players? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs, 11-word adverbs, and a 12-word adverb. Since these are random for each playthrough, randomly picking one word in each pod won't work. The adverbs also appear randomly, and you can't guess a pickup line before it's said. So just wait (Z), then go for the seven- or eight-letter words.
 
 You only need three of the seven words.
 
@@ -1595,7 +1597,7 @@ Here are the duplicate-letter eight-word adverbs:
 > SILENTLY
 > SUDDENLY
 
-Here are the unique-letter seven-word adverbs (also called isograms. Knowledge!) :
+Here are the unique-letter seven-word adverbs:
 > SAINTLY
 > SHADILY
 > SNIDELY
@@ -1976,14 +1978,14 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where it makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also two other LLPs to get a proper gift. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also three other LLPs to get a proper gift. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP and another LLP in the Loftier Trefoil.
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
-  * release 4: I added yet a few more ways the macks were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle. The Inclosure is now the anteroom, and the Rancho is now the last room.
+  * release 4: I added yet a few more ways the players were annoying, because it was fun for me. Added another LLP to irritate Elmer and Merle as well as a further one for clearing both north and south of the Downside. The Inclosure is now where Elmer and Merle are, and the Rancho is now the final room. Two ways to dispel the animal guardians were replaced with more thematic words and moved to the Downside.
 8 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it wasn't a good introduction, and I wanted to put it somewhere, but I didn't know where.
  * release 3: added persimmon and breadfruit. I forget if Curtis gave you the token right away in release 2, or you had to wait.
- * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemons each have their own word now.
+ * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemon each have their own word now.
 9 DEMO DOME was added in release 3, so there are no comparisons before.
  * release 3: initial, and you just examine stuff.
  * release 4: testing helped improve the dome.
@@ -2037,33 +2039,35 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 
 METRICS
 
-The game has point totals for each region, but how do they compare in size? I decided to take a look at how many letters you needed to type in for the various anagrams. Despite running a script that counted keystrokes in walkthroughs, I likely made some niggling arithmetic errors here, so if you can correct them, I'd be happy. Big picture comments still stand, I think, and this is largely for curiosity. I also didn't account for using a hint item to reduce the minimum.
+The game has point totals for each region, but how relatively difficult are the puzzles? I decided to take a look at how many letters you needed to type in for the various anagrams. I've tried my best to use a Python script to count the keystrokes and make sure no commands were missed. While there shouldn't be any errors, I hope the big picture observations would still stand, anyway. I also didn't account for using cheat mode to reduce the number of possibilities.
 
-I think that this overview of complexity isn't fully accurate since complexity likely varies more as (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release. WMET.HTM is the file name, for "write metrics."
+I think that this overview of complexity isn't fully accurate since the complexity of a puzzle likely varies more as (letters ^ 2) or even (log(total possibilities in non-cheat mode)) or something. But I don't want to throw too-big numbers at you. If you're very interested, a heat map should be attached with this release. METRICS.HTM is the file name, created by wmet.pl, for "write metrics."
 
-Ordeal Reload has a minimum of 40 and a maximum of 71. Find only one way out of the study and ignore the giant pin for the minimum score.
+Ordeal Reload has a minimum of 37 and a maximum of 78. Find the direct way to the gallery and ignore the giant pin, snib and respect specter for the minimum score. Incidentally, the direct way to the gallery makes the puzzles, on average, tougher. I think there is a very strong case for claiming a four-letter puzzle plus a five-letter puzzle is easier than an eight-letter puzzle. But in this case, I'm going strictly by linear numbers.
 
 Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 
-Store V has a minimum of 95 and a maximum of 138. The seven Last Lousy Points account for all the difference. There used to be alternate ways through, but not any more.
+Store V has a minimum of 95 and a maximum of 142. The eight Last Lousy Points account for most of the difference, but the alternate stream/lobster and bee/arena puzzles provide the other two letters. The siters are technically slightly easier than the marble as well.
 
-Store U has a minimum of 115 and a maximum of 129. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, but V may be a bit ` to clear completely, since the optional points can get skipped.
+Store U has a minimum of 120 and a maximum of 134. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, and V may be a bit longer to clear completely, since the optional points can get skipped. But V is potentially quicker.
 
-Store P has a minimum of 132 and a maximum of 185. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 15 letters with the crust (volt maze, washups.) How you deal with Ye Hoop also means 4 or 6 letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack.
+Store P has a minimum of 131 and a maximum of 198. You can gain or lose a letter with the right good-bye to Leo and Rand. The lamb, TBA, starch charts and ROM sticks go, too, along with drives A and E. You can save 4 letters in the maze. How you deal with Ye Hoop also means a shift of two letters. This has a moderate amount of points, but many solutions are relatively short. Again, the actual parts-of-speech make Store P's choice of words restricted--well, at least until the hacks' shack. But then the necessary things to change are often simple.
 
-Store Y has a minimum of 130 and a maximum of 187. Many solutions are short words. The five-command side quest is a big one. You can spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right bar actions, crossing the river the two-step way, and several LLPs.
+Store Y has a minimum of 130 and a maximum of 202. Many solutions are short words. The five-command side quest is a big one. You can spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right actions in the Posh Hopa Shop and crossing the river via the boats and not the raft. Several LLPa raise the maximum above Store P.
 
-Store W has a minimum of 157-161 and a maximum of 316-318, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That makes for the estimates in the totals. The prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the prosaic picaros, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
+Store W has a minimum of 157-161 and a maximum of 330-339, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. The proof is a bit tricky, but you'll note that guardians with 6 letters guard squares 1N and 1E of Scope Copse. Guardians with 7 letters guard squares 2 away from Scope Copse, and guardians with 8 letters guard squares 3 away. You must pass one guardian with 8 letters, clearly, but trying to avoid passing two (except for the hostile/atheists) means you have to pass six. The basic idea below is that, if you only defeated one eight-letter guardian, you would need to defeat four guardians to link up the six rooms in the southwest diagonal, but that's impossible, since each guardian would only open up one new room as you went through.
 
-Store T has a minimum of 145 and a maximum of 209. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. There's randomness with the adverbs given but not their length. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 123 to 178.
+You can save keystrokes with other alternate puzzles, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two based on randomness since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why the totals are not exact: the prosaic picaros are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip too much to list here. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough.
+Store T has a minimum of 146 and a maximum of 212. The bran barn forces you to use one more letter, and you can LLP Elmer and Merle twice, pick off the vow here and final animal in the preserve and realm, and get rid of the cinders. Also, you can pick the long options for the shrewin' whiners (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The players also can swing from 22 to 31. Since the players' tries are divided into pods, there are many tries to choose from, but the overall length is relatively non-variable. One pod has words with length 10 or 11, but that is it. Also, this range is not fully representative of the difficulty compared to other regions, since you can deduct a lot of points for when letters end in LY. That drops it to 124 to 188. (Only one of the LLPs ends in LY.)
+
+Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough, even though it seems long. The last two puzzles are intentionally silly.
 
 LAST LOUSY POINTS
 
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden.
+Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven picaros in the Trefoil alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden, or the word to solve them may be obscure. (That's why they're not in the main walkthrough.)
 
-Hints are in ROT13. If you aren't sure what ROT13 is, or you don't want to do the translation in your head, it can be translated at ROT13.com.
+Hints are in ROT13. If you aren't sure what ROT13 is, it means moving a letter 13 forward or back in the alphabet. If you don't want to do the translation in your head, and I don't blame you, it can be translated at ROT13.com. I take no responsibility for your being able to figure ROT13 and thus have answers spoiled if you get too good at reading ROT13 clues. If that happens, take time to feel smart. You deserve to.
 
 ORDEAL RELOAD:
 
@@ -2073,31 +2077,42 @@ The Respect Specter will give up a FPRCGRE.
 
 STORES:
 
-FBEORG from Store B. Note that the side trip to Cruelest Lectures means 3 extra points, and doing so gives you a hint item.
+FBEORG from Store B. This is also in Shuffling around. Note that the side trip to Cruelest Lectures means 3 extra points, and doing so gives you a hint item.
 
 PRESTO:
 
-OYNZ scares the lamb. But only enough to send it safely home!
+OYNZ scares the lamb in the Grey Gyre. But only enough to send it safely home!
 
-JUNG gets rid of the hawt thaw. (Neat ROT13, eh?)
-
-The trim socks become EBZ FGVPXF--no space needed. The last letter is optional, too. The escaroles become PNFFREBYR. This allows an alternate way through.
+You can say TBBQARFF to the sods gone odes song.
 
 You can say CEBFG to the sport ports.
+
+JUNG gets rid of the hawt thaw in Phat Path. (Neat ROT13, eh?)
+
+The starch charts in Phat Path can be labeled GENFPU.
+
+The TBA key can become GNO.
+
+The escaroles can become a PNFFREBYR.
+
+The trim socks become EBZ FGVPXF--with or without the space. The last letter is optional, too. The escaroles become PNFFREBYR. This allows an alternate way through.
 
 Drive A and Drive E can also be enhanced. Drive A becomes NIVQRE, while you can QREVIR ways to improve Drive E.
 
 ROUTES:
 
-Go GBJNEQF the worst ad.
+Go GBJNEQF the worst ad before leaving the Same Mesa.
 
-You can also be JVGUBHG the raptest patters.
+You can also be JVGUBHG the raptest patters any time in the Sonancy Canyons.
 
 TROVES:
 
 TNCR at Simple Impels by Peg A. Page.
 
+FGNL around A Sty.
+
 TYNER at the lager (again, interesting ROT13.)
+
 QVFPBIRE something about Divorces magazine. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than Divorces.
 
 Note that troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them, and you may or may not be able to solve both. For instance, Sister Tressi and the Marble Blamer. These are listed in the walkthrough.
@@ -2131,7 +2146,7 @@ The strudel can be EHFGYRQ for an extra point, though you can just take it.
 
 In the Treading Gradient:
 The mended mini denim can be ZVARQ for a new pastry.
-The replay player can be CRNEYL.
+The replay player can become CRNEYL.
 
 Once you've cleared everything in one of the main square, a keycar appears. It can become PERNXL.
 
@@ -2145,28 +2160,36 @@ You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N C
 
 OYSTER:
 
-FPNA the cans in Hardest Trashed Dearths. If you leave to Lean Lane, this LLP will not be available.
+FPNA the cans in Hardest Trashed Dearths. Once you leave to Lean Lane, this LLP will not be available.
 
-GRAQ the dent.
-FCYNVA in the plains.
-ERIRY by the lever.
+GRAQ the dent in Lean Lane.
+
+FCYNVA in the Lapsin' Plains.
 
 Side quest:
-FJVCR wipes, FJRNG (over waste,) PYRNA lance, FUNCR heaps (not necessary for the quest but not available without it,) GNA ant.
+* FJVCR wipes in Lean Lane.
+* FJRNG (over the waste) in Shuttle Hutlets.
+* FUNCR heaps (not necessary for the quest but not available without it) in Shuttle Hutlets.
+* PYRNA the lance.
+* GENZCYR (ooh, another cool ROT13) the templar ramplet (you need the restored lance to do this.)
+* CFNYZ by the Plasm Lamps.
+* GNA ant. (Once in Plasm Lamps, this isn't optional. It's the only way to get out.)
+
+Finally, ERIRY by the lever in the Den Loft.
 
 OTTERS:
 
-As in Troves and Towers, multiple passages through mean that solving one way makes other puzzles LLPs. There are two ways to get your powers back, which get two points, and you have an extra animal in Lamer Realm and Perverse Preserve. That makes four of seven.
+As in Troves and Towers, multiple passages through mean that solving one way makes other puzzles LLPs. There are two ways to get your powers back, which get two points, and you have an extra animal in Lamer Realm and Perverse Preserve. That makes four of the seven LLPs.
 
-You can ERFPVAQ the cinders instead of using them for a clue.
+You can ERFPVAQ the cinders instead of using them for a clue with DISCERN.
 
 There are also two ways to annoy Elmer and Merle.
-Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR.
-After the holy nest appears, UBARFGYL is in tune with the area's theme, an -LY adverb.
+Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This gives another LLP.
+After the holy nest appears, UBARFGYL is in tune with the area's earlier theme, an -LY adverb.
 
 OTHERS:
 
-Don't use the arugula to "guru" any item successfully.
+Resisting the temptation to use the arugula to "guru" any item successfully nets a bonus point once you solve this area.
 
 Fruits not covered in walkthrough:
 
@@ -2174,11 +2197,11 @@ First, the ones you can't directly name.
 
 SCAPE SPACE
 
-A Banna':
-> ONANAN
-
 Orange:
 > TB ARNE
+
+Reserved Deserver Dr. Severe: (appears after you trade)
+> ERIREFRQ
 
 CLANGIER CLEARING
 
@@ -2191,8 +2214,8 @@ Peach:
 Quince:
 > PVADHR
 
-Reserved Deserver Dr. Severe:
-> ERIREFRQ
+Kumquat (from Prices Precis):
+> PEVCRF
 
 Now for the fruits that can be directly named.
 
@@ -2228,10 +2251,13 @@ Rapt figure:
 
 SCAPE SPACE
 
+A Banna':
+> ONANAN
+
 A Brr Hub:
 > EUHONEO
 
 CLANGIER CLEARING
 
-PAY ASAP:
+PAY ASAP: (from reading the auction caution)
 > CNCNLNF

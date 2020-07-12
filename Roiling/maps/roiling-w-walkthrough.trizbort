@@ -56,8 +56,8 @@
 			<dock index="0" id="6" port="ne" />
 			<dock index="1" id="15" port="sw" />
 		</line>
-		<room id="20" name="Get Yow to tutor kid" subtitle="" x="-32" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
-		<room id="21" name="Fidget? &quot;I'd f'get&quot;" subtitle="" x="-32" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="20" name="Get Yow to help Agnostic" subtitle="" x="-32" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="21" name="Tell agnostic about Yow" subtitle="" x="-32" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="22" name="" description="" flow="oneWay">
 			<dock index="0" id="12" port="e" />
 			<dock index="1" id="21" port="w" />
@@ -70,7 +70,7 @@
 			<dock index="0" id="15" port="s" />
 			<dock index="1" id="20" port="n" />
 		</line>
-		<room id="25" name="Dagger in Repair" subtitle="" x="128" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="25" name="Dagger in Repair" subtitle="" x="-32" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="26" name="" description="" flow="oneWay">
 			<dock index="0" id="4" port="e" />
 			<dock index="1" id="25" port="w" />
@@ -81,14 +81,10 @@
 			<dock index="1" id="27" port="sw" />
 		</line>
 		<line id="29" name="" description="" flow="oneWay">
-			<dock index="0" id="25" port="s" />
-			<dock index="1" id="27" port="n" />
+			<dock index="0" id="25" port="se" />
+			<dock index="1" id="27" port="nw" />
 		</line>
 		<room id="30" name="No cheat xrays LLP" subtitle="" x="128" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
-		<line id="31" name="" description="" style="dashed">
-			<dock index="0" id="27" port="s" />
-			<dock index="1" id="30" port="n" />
-		</line>
 		<room id="32" name="2 of turbos/blaster/ eastern" subtitle="" x="288" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="33" name="" description="" flow="oneWay">
 			<dock index="0" id="27" port="se" />
@@ -99,19 +95,19 @@
 			<dock index="0" id="32" port="s" />
 			<dock index="1" id="34" port="n" />
 		</line>
-		<room id="37" name="Curst Palace big word to win" subtitle="" x="128" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="37" name="Curst Palace big word to win" subtitle="" x="128" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="38" name="" description="" flow="oneWay">
-			<dock index="0" id="34" port="sw" />
-			<dock index="1" id="37" port="ne" />
+			<dock index="0" id="34" port="w" />
+			<dock index="1" id="37" port="e" />
 		</line>
-		<room id="41" name="Last chance for LLPs" subtitle="" x="288" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-44" customDown="0">Yurts/denim|Old ice/sporties' ripostes|replay player|remaining guardians (5+2)|ego drains/strudel|</objects>
+		<room id="41" name="Last chance for LLPs" subtitle="" x="128" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects at="e" custom="yes" customRight="0" customDown="-40">Yurts/denim|Old ice/sporties' ripostes|replay player|remaining guardians (5+2)|ego drains/strudel|dourest detours</objects>
 		</room>
 		<line id="42" name="" description="" style="dashed">
-			<dock index="0" id="27" port="ne" />
-			<dock index="1" id="41" port="sw" />
+			<dock index="0" id="27" port="n" />
+			<dock index="1" id="41" port="s" />
 		</line>
-		<room id="43" name="(3) remove remaining warriors" subtitle="" x="-352" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="43" name="(4) extra picaros + recital article" subtitle="" x="-352" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="44" name="" description="" style="dashed" midText="Only at start">
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
@@ -128,14 +124,10 @@
 			<dock index="0" id="27" port="e" />
 			<dock index="1" id="39" port="w" />
 		</line>
-		<room id="47" name="TENTATIVE" subtitle="" x="128" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="47" name="TENTATIVE" subtitle="" x="128" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="48" name="" description="" style="dashed">
-			<dock index="0" id="20" port="e" />
+			<dock index="0" id="21" port="e" />
 			<dock index="1" id="47" port="w" />
-		</line>
-		<line id="35" name="" description="" flow="oneWay">
-			<dock index="0" id="30" port="e" />
-			<dock index="1" id="32" port="w" />
 		</line>
 		<line id="49" name="" description="" flow="oneWay">
 			<dock index="0" id="10" port="ne" />
@@ -145,6 +137,10 @@
 		<line id="51" name="" description="" style="dashed">
 			<dock index="0" id="2" port="n" />
 			<dock index="1" id="50" port="s" />
+		</line>
+		<line id="31" name="" description="" style="dashed">
+			<dock index="0" id="30" port="s" />
+			<dock index="1" id="37" port="n" />
 		</line>
 	</map>
 	<settings>

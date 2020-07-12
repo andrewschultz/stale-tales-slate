@@ -906,7 +906,9 @@ understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Minded Midde
 
 chapter Disowned Downside
 
-understand "slap em" as a mistake ("[if macks are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
+understand "parsley" as a mistake ("Despite your best efforts, they remain meatheads.") when parleys splayer players are touchable.
+
+understand "slap em" as a mistake ("[if parleys splayer players are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
 
 understand "slap me" as a mistake ("That's kind of a silly way to motivate yourself.") when player is in Disowned Downside.
 
