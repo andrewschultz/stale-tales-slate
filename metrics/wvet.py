@@ -120,4 +120,4 @@ for q in got_yet:
             count += 1
             print(count, q, "mentioned", r, "in tables of anagrams without including it in wmet.txt or nometrics: construction.")
 
-if not count: print("No mismatches found.")
+if not count: print("No mismatches found. WMET.TXT looks set to process.")

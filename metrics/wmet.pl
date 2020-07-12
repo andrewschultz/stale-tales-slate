@@ -224,13 +224,13 @@ sub evaluate {
           if ($delta);
       }
     }
-
+    print "$h2 $inHere\n";
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $h2,
-      torgb( $inHere, 3, 49.01, "total puzzles in region" ),
+      torgb( $inHere, 3, 50.01, "total puzzles in region" ),
       $inHere,
-      torgb( $t1, 18, 332.1, "total letters in puzzles" ),
+      torgb( $t1, 18, 339.1, "total letters in puzzles" ),
       $t1,
       torgb( $t2, 97, 2715, "puzzle letter square sum" ),
       $t2,

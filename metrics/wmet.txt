@@ -50,7 +50,7 @@ exist
 ========
 Ordeal Reload (min)
 lamp/satchel
-stable/stair
+basement
 flier/staple/stapler
 Ordeal Reload (max)
 lamp/satchel
@@ -124,44 +124,46 @@ clumsy/nerdiest/pastier/released/restful
 # East/I guardians (5 extra)
 rinsed/himself/drained/marginal/weariest
 # other stuff to do (robust < nearest)
-sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
+talcier/sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
 rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted
 # more LLPs
 punier/antsier/present/triste
+#############################################lumping otters min together
 Otters adjusted (min)
 bare/reedi
 seedi/steami/tedious
 because/else/atom
-angri/brute
+brute/remote
 slow/coolest/artsy/garbed
-stoical/terse
+stoical/jolti
 parrot/snail/snipe/racoon
 raptor/deep/quick
+Otters (min)
+barely/reedily
+seedily/steamily/tediously
+because/else/atom
+brutely/remotely
+slow/coolest/artsy/garbed
+stoically/joltily
+parrot/snail/snipe/racoon
+raptor/deeply/quickly
+#############################################lumping otters max together
 Otters adjusted (max)
 bare/rescind/reedi
 sobbing/emotional/despairing
-because/else/atom/although/ergo
-angri/brute
+because/else/atom/although/ergo/however
+remote/enraged
 slow/paroled/coolest/artsy/garbed
 loathing/stoical
 parrot/snail/hornets/snipe/racoon
 honest/aside/raptor/deep/quick
 # non anagram point = play whistle
-Otters (min)
-barely/reedily
-seedily/steamily/tediously
-because/else/atom
-angrily/brutely
-slow/coolest/artsy/garbed
-stoically/tersely
-parrot/snail/snipe/racoon
-raptor/deeply/quickly
 Otters (max)
 barely/rescind/reedily
 sobbingly/emotionally/despairingly
 because/else/atom/although/ergo/however
-angrily/enragedly
+remotely/enragedly
 slow/paroled/coolest/artsy/garbed
 loathingly/stoically
 parrot/snail/hornets/snipe/racoon
