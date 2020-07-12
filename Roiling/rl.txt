@@ -682,19 +682,24 @@ This requires a bit more trial and error. However, we know that slot 5 can't be 
 This one may be guessable, but let's look at it anyway.
 With ??YR for atmo/moat, we know A can't be in slot 3, but since slot 2 is T or O, that leaves just slot 1 for A. Then slot 2 must be a consonant, or T.
 AT(vowel)(consonant) means ATOM.
+# logic for parleys splayer players
+?How do I deal with the parleys splayer players in general?
+The settler's initial logic gives (PS)(AP)(AR)(SPR)(EY)(SPL)Y. Even without knowing the nature of the area, slot 6 is L. That leaves E for slot 5.
+Now (PS)(AP)(AR)(SPR)ELY has 3 possibilities based on slot 4: PARSELY, SARPELY and SPARELY.
+SPARELY it is.
 # logic for tearily-irately
-?What is up with the macks discussing reality?
+?What is up with the players discussing reality?
 There are two solutions here. From the general theme, you can probably guess things end in LY. But from there, it's less clear. In fact, even the non-cheat settings gives question marks.
 The ??GR?RO for reality suggests --A--LY, and the non-cheat suggests we don't know what the first two letters are. However, the cheat vs. non-cheat suggests that E or I in the fifth slot can be an answer, and general logic says R or T must be in the fourth slot. That gets us pretty close.
 (IT/TI)ARELY, (IR/RI)ATELY, (ET/TE)ARILY, (ER/RE)ATILY.
 From these eight we see TEARILY or IRATELY could both work.
 # logic for formally
-?What about the macks talking fly, moral?
+?What about the players talking fly, moral?
 The settler indicates two question mark entries should be consonants.
 <pre>AFOLLYMR\nFLYMORAL\n?YR?YRRO</pre>\nIndicates the first letter shouly be F, and the second yellow with O in slot 5 tells us where the vowels should be.
 FO--A--Y is remaining. That's twelve possibilities--well, a bit less if we assume it ends in LY. One of L and M is in slot 4, and if we assume L, we get FO(RM)LA(RM)LY, and neither of those work. But the other way we get FO(RL)MA(RL)LY, or FORMALLY.
 # logic for steamily
-?What about the macks talking about Misty Ale?
+?What about the players talking about Misty Ale?
 <pre>MAYISLET\nMISTYALE\nSLIMYTEA</pre>
 The question marks at 1 and 7 can be intuited a bit. M(consonant) clumps. And slot 7 must be a vowel for the letters to add up right. So... S(MT)(AE)(AE)(MT)(EI)LY is left over. That puts I in slot 6, and with 4 guesses, you can use trial and error.
 SMEATILY sounds like it could be a word, and SMAETILY and STAEMILY look weird, but STEAMILY works great.

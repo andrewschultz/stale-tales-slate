@@ -4690,6 +4690,7 @@ LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straight
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
+Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard."
 general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguoua readings aren't so bad."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
@@ -4720,16 +4721,19 @@ hostile is he lot	false	true	false	false	"Well, this is tricky. Their sort of do
 reb nok bonker	true	true	false	false	"Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
+fries us fissure	true	true	false	false	"The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier."
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
 prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle..."
 natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
+earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
 curst palace	false	false	false	false	"[scannotes-curst]."
 pestern serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
+parleys splayer players	true	true	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
 t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
@@ -18587,7 +18591,7 @@ to say pla-ma: say "[if parleys splayer players are reflexed]mack[else]player[en
 
 understand "mack/player" as parleys splayer players.
 
-a-text of parleys splayer players is "BUG". b-text of parleys splayer players is "BUG". parse-text of parleys splayer players is "BUG".
+a-text of parleys splayer players is "RRYRRYO". b-text of parleys splayer players is "???R?RO". parse-text of parleys splayer players is "BUG".
 
 rule for printing a locale paragraph about parleys splayer players:
 	say "[one of]Wait a minute. You think you recognize whom the parleys splayer players are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. It's strong enough, they're not just macks, but parleys splayer players. There'a nothing to STOP Gretta from running, but it's easy to feel boxed-in[how-played][stopping].";
@@ -19169,7 +19173,7 @@ section imp's block ideas
 
 motleyer is a vanishing block-concept in Shiner Shrine.
 
-a-text of motleyer is "RYRYRYRO". b-text of motleyer is "YRRRGPB". parse-text of motleyer is "a[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". motleyer is cheat-spoilable. [remotely]
+a-text of motleyer is "RYRYRYRO". b-text of motleyer is "RYRYRYRO". parse-text of motleyer is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". motleyer is cheat-spoilable. [remotely]
 
 butlery is a vanishing block-concept in Shiner Shrine.
 
@@ -19338,7 +19342,7 @@ a-text of tallyhoing is "RYYRRYRRRO". b-text of tallyhoing is "RYYRRYRRRO". pars
 
 jollity is a vanishing block-concept in Clarthead Cathedral.
 
-a-text of jollity is "RYRRYRO". b-text of jollity is "PGPPYPB". parse-text of jollity is "j[sp]o[sp]l[sp]l[sp]i[sp]t[sp]y". jollity is cheat-spoilable. [joltily]
+a-text of jollity is "RYRRYRO". b-text of jollity is "PGPRGRB". parse-text of jollity is "j[sp]o[sp]l[sp]l[sp]i[sp]t[sp]y". jollity is cheat-spoilable. [joltily]
 
 book Perverse Preserve
 
