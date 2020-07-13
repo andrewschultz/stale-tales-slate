@@ -249,7 +249,8 @@ the Hostile is He Lot	Hostile is He Lot	false	537631654	--	"holiest"	"holiest"	-
 try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 docile old ice	docile old ice	false	341000045	--	"coiled"	"coiled"	--	--	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
-mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life. You take them, but you've left a bit of a hole you might be able to go down." [371276262]
+mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life. You take them, but you've left a bit of a hole you might be able to go down."
+bogus-dandier	bogus-dandier	false	371276262	Dire and Arid Den	"dandier"	"dandier"	--	post-dandier rule	"You feel slightly more cheery about your prospects of getting out. You didn't fall that far. You remember that, although the exit is high above, the treading gradient was, well, a gradient. So you start crawling through various passages until you find one where--yes, there's a bit of sunlight. You could make it up through there. You start digging with your hands, and what do you know? There's a passage out. You fill it once aboveground, then you do the same for where the denim was. You didn't necessarily solve anything, but you showed you could respond positively when in trouble."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -1291,6 +1292,9 @@ this is the post-stinger-resting rule:
 
 this is the post-weeds-sewed rule:
 	now player has raves saver;
+
+this is the post-dandier rule:
+	now Arid Den is shunned;
 
 this is the post-retinas-antsier rule:
 	move blub bulb to location of player; [?? I forget if this is necessary but I am being overcautious]
@@ -2503,12 +2507,6 @@ to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You nee
 
 volume table of hints
 
-a skip hinting rule for a thing (called th):
-	if th is a fruit and th is off-stage, the rule succeeds; [fruits you reveal are covered in the objhinting rule]
-	if th is a badbook, the rule succeeds; [ditto for bad books in Hacks Shack]
-
-[notes on the skip hinting rules: they are for testing purposes only. Pickup lines are abstract, since we always hint Gretta and can't refer to the pickup lines individually, but we still want to see them. However, if we have a fruit or bad book, there's nothing where we need to see hints every turn..]
-
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
 red writing	"The red writing provides a clue of what the letters can't be."
@@ -3181,6 +3179,14 @@ to say once-now-shack: say "[if keyboard is on slab and disk is in Drive]now[els
 
 to say a-t-check:
 	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
+
+section skip hinting rules - not for release
+
+a skip hinting rule for a thing (called th):
+	if th is a fruit and th is off-stage, the rule succeeds; [fruits you reveal are covered in the objhinting rule]
+	if th is a badbook, the rule succeeds; [ditto for bad books in Hacks Shack]
+
+[notes on the skip hinting rules: they are for testing purposes only. Pickup lines are abstract, since we always hint Gretta and can't refer to the pickup lines individually, but we still want to see them. However, if we have a fruit or bad book, there's nothing where we need to see hints every turn..]
 
 Roiling Tables ends here.
 

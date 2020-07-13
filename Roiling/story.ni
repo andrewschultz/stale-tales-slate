@@ -204,7 +204,7 @@ you get -1 if you use the pills on Tortu before EAT.
 You get a non-anagram point for framing the bad guys so the haunter chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 53. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 54. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -226,18 +226,19 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 2=11 for the ingrates/natives to get to the edge
 1=12 for the yurts
 1=13 for the mended mini denim
-1=14 for sporties' ripostes
-1=15 for old ice
-1=16 for keycar wherever it appears
-1=17 for making the replay player shiny
-1=18 for Dourest Detours
-1=19 for strudel (Fringe Finger)
-1=20 for organised ego drains (Lost Lots)
-1=21 for tentative (agnostic meets dr yow)
-1=22 for rewired (bot-boat)
-1=23 for giving Tetris Sitter the top opt pot NON-ANAGRAM
-4=27 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
-1=28 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=14 for escaping Dire and Arid Den
+1=15 for sporties' ripostes
+1=16 for old ice
+1=17 for keycar wherever it appears
+1=18 for making the replay player shiny
+1=19 for Dourest Detours
+1=20 for strudel (Fringe Finger)
+1=21 for organised ego drains (Lost Lots)
+1=22 for tentative (agnostic meets dr yow)
+1=23 for rewired (bot-boat)
+1=24 for giving Tetris Sitter the top opt pot NON-ANAGRAM
+4=28 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
+1=29 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24.
 [
@@ -626,9 +627,9 @@ use MAX_DICT_ENTRIES of 3000.
 
 use MAX_OBJECTS of 980.
 
-use MAX_SYMBOLS of 140000.
+use MAX_SYMBOLS of 150000.
 
-use SYMBOLS_CHUNK_SIZE of 15000.
+use SYMBOLS_CHUNK_SIZE of 16000.
 
 use ALLOC_CHUNK_SIZE of 37500.
 
@@ -658,7 +659,7 @@ use MAX_DICT_ENTRIES of 3100.
 
 use MAX_VERBS of 840. [delta=20]
 
-use SYMBOLS_CHUNK_SIZE of 16000.
+use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
 
 use MAX_OBJECTS of 970. [delta=10]
 
@@ -666,7 +667,7 @@ use MAX_PROP_TABLE_SIZE of 650000. [delta=10000]
 
 use MAX_STATIC_DATA of 760000.
 
-use MAX_SYMBOLS of 150000.
+use MAX_SYMBOLS of 150000. [delta=10000]
 
 section debug on - not for release
 
@@ -7794,10 +7795,6 @@ carry out fliptoing (this is the main fliptoing rule):
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
 	the rule succeeds;
 
-after fliptoing (this is the monty after flipping rule):
-	process the full monty test rule;
-	continue the action;
-
 The look around once light available rule is not listed in the for printing the announcement of light rulebook. [only used in Dusty Study]
 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
@@ -7834,6 +7831,12 @@ after fliptoing (this is the fruit cue rule):
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
+
+section monty rules - not for release
+
+after fliptoing (this is the monty after flipping rule):
+	process the full monty test rule;
+	continue the action;
 
 volume Ordeal Reload
 
