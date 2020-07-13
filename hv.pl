@@ -86,7 +86,7 @@ my $hash         = 0;
 
 my $myRegion = "";
 
-###############probably obsolete with tables broken by regi9on
+###############probably obsolete with tables broken down by room
 $regHash{"-rf"} = "forest";
 $rmHash{"-rf"}  = "fields";
 $regHash{"-ri"} = "sortie";
@@ -197,7 +197,7 @@ for my $this (@toHash) {
     $force = 1;
   }
 
-  $tabString = "$rm\t--\t--";
+  $tabString = "--\t--";
 
   #if ($this > 0)
   #{
@@ -476,16 +476,24 @@ sub dupCheck {
   print "NO INTERNAL DUPLICATES IN $scratch_file\n" if ( !$indup );
   for my $proj ( "shuffling", "roiling" ) {
     for my $hdr ( "nudges", "tables" ) {
+	  my $tab = "<NO TABLE>";
       my $my_file =
 "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$proj $hdr.i7x";
       open( A, $my_file );
       while ( $line = <A> ) {
+		if ($line =~ /^table of/)
+		{
+		  $tab = $line;
+		  chomp($tab);
+		  $tab =~ s/ *[\(\[].*//g;
+		  $tab =~ s/^table of *//;
+		}
         if ( $line =~ /\t[0-9]{6,}\t/ ) {
           chomp($line);
           ( my $temp = $line ) =~ s/.*\t([0-9]{6,})\t.*/$1/g;
           if ( exists( $hvhash{$temp} ) ) {
             print(
-"Duplicate $proj $hdr line $.: $temp, copying $temp/$hvword{$temp} at line $hvhash{$temp} of $scratch_file.\n"
+"Duplicate $proj $hdr ($tab) line $.: $temp, copying $temp/$hvword{$temp} at line $hvhash{$temp} of $scratch_file.\n"
             );
             $the_dup{ $hvhash{$temp} } = 1;
           }
@@ -496,11 +504,17 @@ sub dupCheck {
     }
   }
   if ( keys %the_dup ) {
-    print "Duplicate lines: "
+    print "" . (keys %the_dup) . " duplicate lines: "
       . join( ', ', ( sort { $a <=> $b } keys %the_dup ) ) . "\n";
   }
   else {
     print "No duplicate lines.\n";
+	if (keys %hvhash) {
+	  print("We may wish to delete or evaluate the " . (keys %hvhash) . " remaining sample lines.\n");
+	}
+	else {
+	  print("No suggested lines, either. hv.txt is clean.\n");
+	  }
   }
 }
 

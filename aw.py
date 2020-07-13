@@ -11,6 +11,8 @@ from string import ascii_lowercase
 
 from collections import defaultdict
 
+seen_usage = False
+
 ag = defaultdict(str)
 all_words = defaultdict(bool)
 
@@ -30,7 +32,7 @@ def usage():
     print("-s/-i = get STDIN, can be combined with command line")
     print("?(word) on stdin launches the word in Thefreedictionary. /(word) launches it in thesaurus.com. (123)word sends that word * (123) to the anagram server.")
     print("`/~ searches for the word in the STS source.")
-    exit()
+    if not get_stdin: exit()
 
 def alfy(a):
     return ''.join(sorted(list(a)))
@@ -91,7 +93,6 @@ get_stdin = False
 if len(sys.argv) is 1:
     print("Need an argument. Most common is -s for stdin, if you're running multiple queries. Otherwise, any words will do.")
     usage()
-    exit()
 
 with open("c:/writing/dict/brit-1word.txt") as file:
     for line in file:
@@ -137,19 +138,21 @@ while count < len(sys.argv):
         verbose = False
     elif arg == '?':
         usage()
-        exit()
     else:
         new_arg = new_arg + re.split("[, ]", arg)
     count += 1
 
 def anagram_check(x):
+    global seen_usage
     if x == 'ing':
         do_ings()
         exit()
     if len(x) < 3 or (x.startswith("-") and len(x) < 4):
         print(x, "is an invalid flag.")
-        usage()
-        exit()
+        if not seen_usage:
+            usage()
+        seen_usage = True
+        return
     if minus_twos is True:
         remove_hash = defaultdict(bool)
         twos_count = 0
@@ -222,6 +225,9 @@ if get_stdin:
                 print(sys_string)
                 os.system(sys_string)
             skip = True
+        if ll.startswith('>'):
+            os.system(ll[1:])
+            continue
         if ll.startswith('?') or ll.startswith('/'):
             ll = ll[1:]
             new_arg = re.split("[ ,]", ll.strip())
@@ -234,6 +240,7 @@ if get_stdin:
             print("WARNING: invalid characters. Changing {} to {}.".format(ll_old, ll))
         if not skip:
             new_arg = re.split("[ ,]", ll.strip())
+            seen_usage = False
             for x in new_arg:
                 anagram_check(x)
         print(input_line, end='')
