@@ -10,7 +10,7 @@ files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis,mi	t2
-~	hints,hin,sal,gle,gt	t3
+~	hints,hin,sal,gle,gt,gn	t3
 
 }}MAX=17
 }}CURMAX=17
@@ -344,6 +344,14 @@ You have no time to play with leaves.
 >gt forest1
 You can't retrace your steps.
 
+@gt
+>e
+/You go east a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
+>s
+/You go east a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
+>w
+/You go east a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
+
 >n
 by one point
 Rest of Forest
@@ -377,6 +385,10 @@ Go east and west and look around a bit. There're only three rooms to start, and 
 
 @gle
 You see yourself putting something on your face and then walking through Corses Crosse with ease.
+
+@gn
+>s
+No going back. North or east or west is okay, though.
 
 >score
 {$SCOS}
@@ -610,6 +622,10 @@ DEBUG: dashes being objhinted.
 >enos
 A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.
 
+@gn
+>e
+You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
+
 >score
 {$SCOS}
 
@@ -688,6 +704,10 @@ Flesh Shelf
 
 @hin
 DEBUG: sandwich being objhinted.
+
+@gn
+>w
+It's too steep down every way except back east.
 
 @nud
 #nudge for shelf
@@ -867,6 +887,10 @@ DEBUG: liches being objhinted.
 
 @gle
 You see the liches working their way under the meats, which fall into the grinder.
+
+@gn
+>e
+The scoffer coffers and scoffin' coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind.
 
 >score
 {$SCOS}
@@ -1282,6 +1306,10 @@ Ghouls' Slough
 >gt fields
 You've done all you could in the Emptiness Sepiments and before. Onward.
 
+@gn
+>e
+Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.
+
 @nud
 #nudge for slough
 >slouhg
@@ -1378,6 +1406,10 @@ You see the vowels grow slavering teeth.
 >xx vowels
 Your vision blurs a bit, and instead you see wolves.
 
+@gn
+>e
+The gnash hangs would, err, shnag you.
+
 @gt
 >gt slough
 It's time to deal with things, not run.
@@ -1394,6 +1426,10 @@ You are about to look in the phial, but it's survival time, here.
 
 @hin
 DEBUG: wolves being objhinted.
+
+@gn
+>e
+The werewolves will catch you easily.
 
 >score
 @min

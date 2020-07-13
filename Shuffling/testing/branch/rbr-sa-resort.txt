@@ -7,7 +7,7 @@ files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-s
 ~	min	t1
 ~	nudges,nud,nu	t2
 ~	mis,mi	t2
-~	hints,hin,sal,gle,gt	t3
+~	hints,hin,sal,gle,gt,gn	t3
 
 }}MAX=15
 }}CURMAX=15
@@ -135,6 +135,11 @@ Your vision blurs a bit, and instead you see wings.
 >xx leis
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
+@gn
+>w
+You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
+
+
 @mis
 #mistake test for download
 >download
@@ -198,6 +203,10 @@ by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@gn
+>w
+No, you already saw the woodland was faked, but then, the leis were fake, too.
 
 @nud
 #note that there is no renudge for leis because before L2 is moot, we go to the table of spechelp. But for lei, we are always in the table of nudges.
@@ -287,6 +296,10 @@ Rived Drive
 
 @gle
 You see the poles to the east bend at an angle.
+
+@gn
+>n
+You'd probably get lost that way. Besides, the vague commotion to the east, past the rising poles, seems worth seeing.
 
 @gt
 >gt tiles
@@ -500,6 +513,12 @@ You see the riot, happier now, discussing art and wearing dirty smocks.
 @hin
 >xx riot
 Your vision blurs a bit, and instead you see a trio.
+
+@gn
+>n
+The only way you'll want to try to go is east.
+>e
+That rabble seems mad at you. You'd better disperse them first.
 
 @max
 >trio
@@ -888,6 +907,20 @@ Even if they wouldn't, well, the Means Manse is for you and you alone. You earne
 #mistake test for sex it
 >sex it
 You're not even up for THAT, now. You just want to BE.
+
+@gn
+>n
+You suddenly have ye taxin' any-exit anxiety. Like you're in the middle of an exitstential crisis.
+>n
+I best sit, be, you think.
+>n
+Sit, ex-adventurer.
+>n
+Where would you go? Texis, perhaps
+>n
+Seeing exits just makes you want to...
+>n
+Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
 >exist
 #notana

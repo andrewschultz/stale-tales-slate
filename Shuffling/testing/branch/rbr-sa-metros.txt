@@ -8,7 +8,7 @@ files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin,gle,gt	t3
+~	hints,hin,gle,gt,gn	t3
 
 }}MAX=18
 }}CURMAX=18
@@ -262,6 +262,10 @@ You should probably just go north to look at the condo instead.
 >w
 Bile Libe
 
+@gn
+>w
+Only way out's back east.
+
 @nud
 #nudge for bile
 >ible
@@ -318,6 +322,10 @@ You see yourself giving something reddish to the night thing in the hotel before
 
 @hin
 DEBUG: Night Thing being objhinted.
+
+@gn
+>s
+You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 
 @nud
 #nudge for thelo
@@ -745,6 +753,10 @@ The torn cue is just there to direct you to the brocade.
 >ceu
 The torn cue is just there to direct you to the brocade.
 
+@gn
+>n
+The only safe way out is back west.
+
 >give gardenia to faeries
 
 @nud
@@ -920,6 +932,10 @@ You see yourself asking the nerds about something before a lightbulb goes on ove
 DEBUG: nerds being objhinted.
 >xx nerds
 You suddenly feel darkness, along with an urge to ask the nerds about it.
+
+@gn
+>e
+The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher.
 
 >score
 @min
@@ -1199,6 +1215,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the neon pig. Keep a
 @hin
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
+
+@gn
+>e
+There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there.
+>w
+The tracks lead down east, and the city is back north.
 
 >opening
 }}SCORE++

@@ -8,7 +8,7 @@ files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin,gle,gt	t3
+~	hints,hin,gle,gt,gn	t3
 
 ## *FILE
 ## *FORK
@@ -122,6 +122,10 @@ Changing the dial would leave you stuck.
 >turn zozimus
 You can probably TURN the dial to a number, e.g. 99
 
+@gn
+>w
+That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first
+
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
 by one point
@@ -158,6 +162,11 @@ DEBUG: great grate being objhinted.
 You let your eyes wander.
 Your vision swirls, and you see a kitchen.
 
+@gn
+>e
+You're trapped. If only the nick could be changed to something more to your taste.
+
+@gt
 >gt trap part
 That's not the magic way out. Sorry!
 
@@ -257,6 +266,17 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #nudge for spear
 >spera
 The spearman is what's important.
+
+@gn
+>w
+>w
+Mum, dud mud blocks your way west. You can only go south to the Trap Part or east
+!to the trellis.
+>s
+>w
+Mum, dud mud blocks your way. You can only go north to the kitchen or east.
+>undo
+>undo
 
 @nud
 #####detour to check on UFR
@@ -646,6 +666,12 @@ No need for fashion tweaks.
 @hin
 DEBUG: warts being objhinted.
 
+@gn
+>w
+>w
+Mum, dud mud blocks your way west. You can only go south to the Trap Part or east to the trellis.
+>e
+
 >s
 Room
 
@@ -806,6 +832,10 @@ You see a rough but friendly fellow scaring Pat away.
 DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
+
+@gn
+>s
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
 
 @mis
 #mistake test for tap/tap [text]
@@ -1077,6 +1107,10 @@ You see the haywall vanishing.
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
 
+@gn
+>n
+Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
+
 >score
 @min
 {$SCOS}
@@ -1119,6 +1153,10 @@ Sacred Cedars
 
 @hin
 Once you change the sack to a cask, you can FILL CASK here, to start.
+
+@gn
+>n
+There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
 @mis
 #mistake test for cadres
@@ -1243,6 +1281,10 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >w
 
 >s
+
+@gn
+>s
+Dud, mum mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
 
 @mis
 #mistake retest for pray

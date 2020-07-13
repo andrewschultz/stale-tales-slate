@@ -10,7 +10,7 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 ~	nud	t2
 ~	mis	t2
 ~	nudmis	t2
-~	hints,hin,sal,gle,gt	t3
+~	hints,hin,sal,gle,gt,gn	t3
 
 ## *FILE
 ## *FORK
@@ -176,11 +176,21 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 >gt subsite
 Goodness, no.
 
+@gn
+>n
+The size of the desert, um, deters you. You're steer'd back to the odor.
+!The one you can probably go through.
+
 >door
 by one point
 
 @hin,hints
 /DEBUG: (bolt|bulge) being objhinted\.
+
+@gn
+>n
+The size of the desert, um, deters you. You're steer'd back to the door.
+!The one you can probably go through.
 
 @mis
 #mistake retest for or do door
@@ -226,6 +236,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bolt. Keep at it
 >blot
 by one point
 
+@gn
+>n
+The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
+
 >open door
 Thickest Thickets
 
@@ -257,6 +271,11 @@ There will be better hints than a manners advice column once you move on, though
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
+@gn
+>n
+You hit a snag, and the toga nags you. Or seems to.
+You suppress an insult that would maybe only make sense if the darnels were sentient.
+
 @gt
 >gt subsite
 Goodness, no.
@@ -267,6 +286,10 @@ The door from Rested Desert was one-way. You can't even see it now.
 >slander
 #notana
 by one point
+
+@gn
+>n
+!You suppress an insult that would maybe only make sense if the darnels were sentient.
 
 @mis
 #mistake retest for landers
@@ -368,6 +391,10 @@ You can't see the passage back to the Thickets.
 >gt subsite
 Goodness, no.
 
+@gn
+>n
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
+
 @nud
 #spechelp for static
 >attisc
@@ -424,6 +451,10 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 
 >gateman
 Your score has just gone up by one point.
+
+@gn
+>n
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
 
 @gle
 You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe ask the gateman.
