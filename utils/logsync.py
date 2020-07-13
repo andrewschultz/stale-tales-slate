@@ -468,7 +468,7 @@ def aro_settler_check():
                                         if x[y] == s[y]: matches[y] = 1
                                         else: mismatches[y] = 1
                         except:
-                            print("Matching problem with arrays", wary, sary)
+                            print("Matching problem with arrays", wary, sary, line_count)
                             if '*' in q:
                                 q2 = q.split('"')[1]
                                 print("{}: you {}have an extraneous asterisk that should be a question mark.".format(q2, "probably " if q2.endswith('*') or q2.startswith('*') else "may "))
@@ -484,6 +484,7 @@ def aro_settler_check():
                         if v != the_string:
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v.upper(), "as the given b-text but should have", the_string.upper())
+                            mt.add_open(r_src, line_count)
                     if 'parse-text' is q:
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
@@ -507,6 +508,7 @@ def check_scannotes():
     sug_text = defaultdict(str)
     suggestions = []
     nsl = [ table_shorten(x) for x in need_source_logic ]
+    last_table_line = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
@@ -517,7 +519,9 @@ def check_scannotes():
                 reading_header = True
                 continue
             if not in_table: continue
-            if not line.strip(): break
+            if not line.strip():
+                last_table_line = line_count
+                break
             line = re.sub("[ \t]*\[[^\[]*\]$", "", line.strip())
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
@@ -539,6 +543,7 @@ def check_scannotes():
         if table_shorten(x) not in in_scannotes.keys() and x not in abbrevs.keys():
             print("May need", x, "in scannotes table.")
             mayneedscannote += 1
+            mt.add_postopen(r_src, last_table_line)
     for x in sorted(okay.keys()):
         if x not in in_scannotes.keys():
             print(x, "marked as okay for table of scannotes but doesn't appear there.")
@@ -628,8 +633,8 @@ with open(r_src) as file:
                 force_next = False
                 continue
             if re.search("b-text.*\?.*parse-text", line) or force_next:
-                if re.search("is a mack-idea", line):
-                    scanned = re.sub(" is a mack-idea.*", "", line.strip().lower())
+                if re.search("is a pickup-line", line):
+                    scanned = re.sub(" is a pickup-line.*", "", line.strip().lower())
                 else:
                     scanned = re.sub(" is \".*", "", line.strip().lower())
                     scanned = re.sub("a-text of ", "", scanned)

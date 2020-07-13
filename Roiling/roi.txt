@@ -862,10 +862,10 @@ Yes, make them HASTIEST.
 ?Bluster Butlers
 Making them more circumspect could help them move up in the world, and away from here.
 They can become SUBTLER.
-?Dandier Arid Den
-It won't let you pass without buying its product, NERD-AID.
-It's endorsed by, among others, ED INDAR.
-Make the den, or the bottles, DRAINED.
+?Promise Imposer
+He's good at what he does.
+So smooth. Doesn't do things by half-measures.
+SEMIPRO.
 ?Mel Fish
 His name is Mel Fish, and that's in red.
 SMH Life, his catch phrase, also makes you see red.

@@ -4712,6 +4712,7 @@ resident trendies	true	true	false	false	"The trendies point and laugh at your se
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
 sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
+drained dreadin	true	true	false	false	"Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach."
 sweatier wait seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
 organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
@@ -17336,11 +17337,11 @@ bogus-dandier is privately-named ssno scenery in Arid Den.
 
 a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]x".
 
-section drained-dreadin
+section drained dreadin
 
 drained dreadin is privately-named ssno scenery in Arid Den.
 
-a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "P?YYRYR". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of drained dreadin is "RYRRYRY". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 check scaning the player when player is in Arid Den: try scaning drained dreadin instead;
 
@@ -17348,7 +17349,7 @@ section nerd aid
 
 the Nerd Aid is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
 
-a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYGRYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
+a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RYRPYYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
 this is the bore-nerd-aid rule:
 	if current action is taking or current action is eating or current action is drinking, say "The Nerd-Aid is empty and useless. It was pretty much glorified sugar-water, anyway." instead;

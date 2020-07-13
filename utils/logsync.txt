@@ -310,7 +310,7 @@ cans>scan
 eeks>seek
 ####Lean Lane
 trout>tutor
-tea tray~tea>eat
+tea at a tee>eat
 dent>tend
 wipes>swipe
 paw r wrap>warp
@@ -343,11 +343,12 @@ dialer1~dialer>derail
 lever>revel
 bogus-redial~dialer>redial
 ####plasm lamps
-bogus-lamps~plasm lamps>psalm
+bogus-psalm~plasm lamps>psalm
 natant ant>tan
 ########REGION towers
 yacker keycar>creaky
 ####loftier trefoil
+recital article>talcier
 geno>gone
 shane>ashen
 tyson>stony
@@ -378,6 +379,7 @@ cinders>discern,rescind
 #rodney>droney
 ####topside deposit
 dreads adders>sadder
+####scope copse
 bluster butlers>subtler
 muscly luc sym>clumsy
 muscly ms lucy>clumsy
@@ -390,11 +392,10 @@ sled rut>rustled
 traipse pirates>pastier
 fluster self rut>restful
 docile old ice>coiled
-####unblest sunbelt
+####leveraged everglade
 smh life mel fish>himself
-nerd aid>drained
-dandier arid den>drained
 organised ego drains>grandiose
+promise imposer>semipro
 ####lost lots
 sporties ripostes>prosiest
 ####anemic cinema
@@ -409,6 +410,10 @@ sweatier wait seer>weariest
 lars eede>released
 reeds ale>released
 elsa erde>released
+####den detour
+drained dreadin>dandier
+nerd aid>dandier
+bogus-dandier~dire and arid den>dandier
 ####danger garden
 alarming grailman>marginal
 REB NOK bonker>broken
@@ -423,7 +428,7 @@ lois the hostile>holiest
 he lot~hostile is he lot>holiest
 ####obscurest subsector
 luck node>unlocked
-fires us fissure>fussier
+fries us fissure>fussier
 dr yow>wordy
 dr yow2~dr yow>rowdy
 atblock~tentative>attentive
@@ -433,7 +438,7 @@ blaster>stabler
 weirder red wire>rewired
 reading a dinger>grained
 ####rawest waters
-eastern shore~eastern>nearest
+earnest eastern neaters>nearest
 ####mislit limits
 pestern serpent>present
 unripe ur pine>punier
@@ -451,7 +456,7 @@ talc spa cure>spectacular
 ####mesprise premises
 tetris sitter>triste
 ####dourest detours
-bogus-detours~dourest detours>rousted
+bogus-rousted~dourest detours>rousted
 ########REGION=otters
 ####bleary barley
 bleary barley>barely
@@ -459,6 +464,7 @@ deli rye>reedily
 ed riley>reedily
 ####disowned downside
 atmo moat>atom
+parleys splayer players>sparely
 t-bossily~i sly sob si bloys>bossily
 t-seedily~eyelids>seedily
 t-cattily~tacitly>cattily
@@ -496,9 +502,9 @@ ghoul hat>although
 gore ogre>ergo
 ####Shiner Shrine
 >IGNORE=sly imp
-imp1~rangily>angrily
-imp2~butlery>brutely
-imp3~legendary>enragedly
+motleyer>remotely
+butlery>brutely
+legendary>enragedly
 ####perverse preserve
 corona>racoon
 thrones>hornets
@@ -507,9 +513,9 @@ nails>snail
 raptor%parrot
 ####Clarthead Cathedral
 >IGNORE=whiners
-whin1~callosity>stoically
-whin2~restyle>tersely
-whin3~tallyhoing>loathingly
+callosity>stoically
+tallyhoing>loathingly
+jollity>joltily
 ####lamer realm
 owls>slow
 ocelots>coolest
@@ -571,7 +577,7 @@ no ammo gang>among
 ####scape space
 engaro orange>go near
 a banna~naa na b a banna>banana
-inapt paint~reserved deserver>reversed
+reserved deserver dr severe>reversed
 a brr hub>rhubarb
 ####gates stage
 searcher>research

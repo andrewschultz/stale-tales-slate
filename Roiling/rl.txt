@@ -410,12 +410,6 @@ The R?YRYR scan means letter 2 is O or L. Count the consonants and vowels, and i
 Everything else is a wrong letter. That leaves (CL)O(IE)(CDL)(IE)(CDL), which you may be able to brute force.
 Or you can examine twice, and you're reminded of LiedCo. That forces 1 to C and 3 to I, so COI(DL)E(DL). But 4 can't be D, so, COILED.
 >>UNBLEST SUNBELT
-# logic for dandier arid den
-?How do I decipher the dandier arid den?
-The dandier arid den appears to give two annoying question marks to start in cheat mode. In normal mode, the endorsers should wrap things up, but cheat mode's two question marks make things fall out even more nicely.
-The ??YYRGR gives three known vowels and two consonants, so we need two consonants. A or D in slot 1 is D, and A or R in slot 2 is R. Also, slot 6 is E because of the green.
-DR---E- seems much more manageable. Since slot 3 is a vowel and can't be I, it's A, and slot 4 is the other vowel, I.
-DRAI-E- now has red in slot 5, so it can't be D from the arid den. It's N. DRAINED.
 # logic for organised ego drains
 ?Those organised ego drains look tough!
 That's part of why they are an LLP. They have the most possibilities, according to the script I wrote, of anything with ambiguous readings.
@@ -459,6 +453,19 @@ WEA(SR)(EI/IE)(SRT)(ST) could give Weariest...or you could just listen to what t
 The two question marks in the Mended Mini Denim don't turn out to be very mysterious, with what you know from so far. Slot 1 must be D or M, and slot 3 must be N or I.
 But wait! Slots 2 and 4 are the vowels, meaning 1 and 3 must both be consonants. That makes slot 3 N. Slot 2 must be E, and slot 4 must be I. This, -INE-.
 Since slot 5 can't be M, we get MINED.
+>>DIRE AND ARID DEN
+#logic for dire and arid den
+?What's with the reading if I just scan?
+The dire and arid den gives ?YR?Y?R. We could also scan the nerd-aid or ourselves to give clues, but let's stick to just this reading.
+We get (AD)(AE)(ND)(DE)(EI)(EN)R to start. But there are three possible locations for the D *not* to be, from slots 1, 3 and 4.
+If D is not in slot 1, we get AEDDINR. If it is not in slot 4, we get DADEINR.
+But if it is not in slot 3, we get DANDIER. There we go.
+#logic for drained dreadin
+?What's with the drained dreadin'?
+It isn't quite as useful as scanning the den above.
+The PYRRY?R gives D----(IE)R, to start.
+That becomes D(AEI)(DN)(DN)(AEI)(IE)R. There are a few possibilities left here, but you can use the nerd-aid.
+You could also use this scan in conjunction with above to see that DE in slot 4 means D is in slot 4, and EI in slot 5 is A in slot 2. That helps a lot, since it also places N in slot 3.
 >>DANGER GARDEN
 # logic for REB NOK bonker
 ?How do I sort out the (REB-NOK) bonker?

@@ -1,7 +1,14 @@
 #reds.pl
 #
 # usage: reds.pl -f reds.txt (for all the files)
+#
 # reds.pl knob bonk (to check individual reds)
+# % can also be used for settler clues.
+#
+# for question mark clues,
+# reds.pl antsier YR?RY??=stainer=retinas
+# reds.pl antsier YR?R???=nastier=stainer=retinas
+#
 # requires: reds.txt
 #
 # this determines whether things that clue red do so properly
@@ -416,7 +423,7 @@ sub oneRed {
   assign_onematches();
 
   if ( my $temp = isOops( $sol, $_[0] ) ) {
-    die("Settler/questioning test failed.") if ( $temp == -1 );
+    die("Settler/questioning test failed, value $temp.") if ( $temp == -1 );
     die "Test failed at word "
       . ( $temp & 0xff )
       . " character "
