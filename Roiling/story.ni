@@ -624,7 +624,7 @@ section compiler non-syntax section
 
 use MAX_DICT_ENTRIES of 3000.
 
-use MAX_OBJECTS of 960.
+use MAX_OBJECTS of 980.
 
 use MAX_SYMBOLS of 140000.
 
@@ -640,7 +640,7 @@ use MAX_VERBS of 820.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_PROP_TABLE_SIZE of 630000.
+use MAX_PROP_TABLE_SIZE of 640000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
@@ -662,7 +662,7 @@ use SYMBOLS_CHUNK_SIZE of 16000.
 
 use MAX_OBJECTS of 970. [delta=10]
 
-use MAX_PROP_TABLE_SIZE of 640000. [delta=10000]
+use MAX_PROP_TABLE_SIZE of 650000. [delta=10000]
 
 use MAX_STATIC_DATA of 760000.
 
@@ -4373,8 +4373,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is ol trap;
 			continue the action;
 		if player is in Plasm Lamps:
-			if bogus-lamps are in Plasm Lamps:
-				now noun is bogus-lamps;
+			if bogus-psalm are in Plasm Lamps:
+				now noun is bogus-psalm;
 			else:
 				now noun is ant;
 			continue the action;
@@ -4392,6 +4392,12 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 	else if mrlp is towers:
 		if player is in Rawest Waters:
 			now noun is Earnest Eastern Neaters;
+			continue the action;
+		if player is in Dourest Detours:
+			now noun is bogus-rousted;
+			continue the action;
+		if player is in Arid Den:
+			now noun is bogus-dandier;
 			continue the action;
 	else if mrlp is otters:
 		if player is in Minded Midden:
@@ -5829,6 +5835,11 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
+	if the player's command includes "hint":
+		if montage is deregioned:
+			say "1.";
+		else:
+			say "2.";
 	if the player's command includes "gt" or the player's command includes "go to":
 		say "That's not a room or thing I recognize.";
 	else:
@@ -10488,7 +10499,7 @@ understand "store 26/twentysix" and "26/twentysix" as store z when player is in 
 
 chapter megaton magneto montage
 
-the megaton magneto montage is useless boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it M/MM/MMM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
+the megaton magneto montage is cluey boring scenery in Strip of Profits. printed name of montage is "megaton magneto-montage". bore-text is "The magneto-montage's not good for much besides looking at. But it's a useful guide.". bore-check is the bore-megaton-magneto-montage rule. description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it M/MM/MMM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[line break][one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in Strip of Profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 this is the bore-megaton-magneto-montage rule:
 	if current action is scaning, say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
@@ -14709,19 +14720,19 @@ book Plasm Lamps
 
 Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel like going SPLAM! SPLAM! with it.". roomnud of Plasm Lamps is table of Plasm Lamps nudges.
 
-bogus-lamps is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-lamps is "They light this murky area, [if bogus-lamps are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].".
+bogus-psalm is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-psalm is "They light this murky area, [if bogus-psalm are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].".
 
-a-text of bogus-lamps is "RRYRR". b-text of bogus-lamps is "?R?R?". parse-text of bogus-lamps is "x[sp]x[sp]-[sp]x[sp]x".
+a-text of bogus-psalm is "RRYRR". b-text of bogus-psalm is "?R?R?". parse-text of bogus-psalm is "x[sp]x[sp]-[sp]x[sp]x".
 
 plasm-warn is a truth state that varies.
 
-check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-lamps are reflexed]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
+check going outside in Plasm Lamps: say "C'mon. The natant ant isn't meant to be tough. [if bogus-psalm are reflexed]You already did the bonus preparation[else]Not as tough as the other optional point here[end if]." instead;
 
 after looking in Plasm Lamps:
 	it-him-her the ant;
 	continue the action;
 
-the natant ant is a vanishing animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-lamps are reflexed]. But maybe you can show something for style points, first[end if]."
+the natant ant is a vanishing animal in Plasm Lamps. "Attn: an ant! It is swimming about in the plasm on the floor, making it a NATANT ant. It seems more off-putting than anything, but just to be sure, your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off[if bogus-psalm are reflexed]. But maybe you can show something for style points, first[end if]."
 
 check taking natant ant: say "The action for dealing with the ant is even shorter and easier than TAKE. But not GET." instead;
 
@@ -14744,7 +14755,7 @@ does the player mean taning the natant ant: it is very likely;
 carry out taning:
 	if noun is not natant ant, try attacking noun instead;
 	say "Whack! Pow! 'Scum ant! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!";
-	if bogus-lamps are reflexive:
+	if bogus-psalm are reflexive:
 		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
 	reg-inc; [this is an optional point, but it was already predestined by you entering]
@@ -15507,7 +15518,10 @@ understand "xray" as xraying.
 
 rule for supplying a missing noun when xraying or xring:
 	if player is in dourest detours:
-		now the noun is bogus-detours;
+		now the noun is bogus-rousted;
+		continue the action;
+	if player is in arid den:
+		now the noun is bogus-dandier;
 		continue the action;
 	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat in a non-empty room.";
 	reject the player's command;
@@ -16230,7 +16244,11 @@ to say we-g: say "weeds swaying, despite no wind,"
 
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient: say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
 
-before going down in Treading Gradient: say "[if mended mini denim is in Treading Gradient]The mended mini denim is too thick[else]You try to look into the dark where the mended mini denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
+check going down in Treading Gradient:
+	if arid den is visited, say "You already went down." instead;
+	if mended mini denim is moot:
+		say "You go down into the darkness...";
+		move player to Arid Den;
 
 some mended mini denim is LLPish vanishing singular-named boring scenery in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.".
 
@@ -17305,13 +17323,40 @@ book shoals aslosh (backdrop)
 
 the shoals aslosh are a useless boring plural-named backdrop. they are in Salted Deltas, Actionless Coastlines, Artist Traits Strait, Mislit Limits. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos.". bore-check is the bore-leak-lake rule. bore-text is "[cross-leak-lake].". drop-region of Shoals Aslosh is towers.
 
+book Dire and Arid Den
+
+there is an outie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]Some Nerd-Aid lies here, but the bottle is empty. Of course it is."
+
+section bogus-dandier
+
+bogus-dandier is privately-named ssno scenery in Arid Den.
+
+a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]x".
+
+section drained-dreadin
+
+drained dreadin is privately-named ssno scenery in Arid Den.
+
+a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "P?YYRYR". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
+
+check scaning the player when player is in Arid Den: try scaning drained dreadin instead;
+
+section nerd aid
+
+the Nerd Aid is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
+
+a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYGRYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
+
+this is the bore-nerd-aid rule:
+	if current action is taking or current action is eating or current action is drinking, say "The Nerd-Aid is empty and useless. It was pretty much glorified sugar-water, anyway." instead;
+
 book Dourest Detours
 
-Dourest Detours is a room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
+Dourest Detours is an outie room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
 
-the bogus-detours is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-detours is "[bug-report]". bore-text is "[bug-report]".
+the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]".
 
-a-text of bogus-detours is "RYYRRYR". b-text of bogus-detours is "R??RRYR". parse-text of bogus-detours is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of bogus-rousted is "RYYRRYR". b-text of bogus-rousted is "R??RRYR". parse-text of bogus-rousted is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 check going west in Anemic Cinema when ingrates are moot: abide by the detour-check rule;
 
@@ -17467,15 +17512,6 @@ to say imposer-guard:
 		say "You don't have full documentation why you NEED to get to the other side"
 
 a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
-
-section nerd aid
-
-the Nerd Aid bottle is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
-
-a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYGRYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
-
-this is the bore-nerd-aid rule:
-	if current action is taking or current action is eating or current action is drinking, say "The Nerd-Aid is empty and useless. It was pretty much glorified sugar-water, anyway." instead;
 
 chapter Treading Gradient guardians
 
@@ -17673,7 +17709,7 @@ to shuffle-guardians (goner - a guardian):
 	else if goner is natives site van:
 		now MR is Lost Lots;
 	else:
-		now far-room of goner is tower-accessible;
+		now other-room of goner is tower-accessible;
 		now gualoc of goner is tower-accessible;
 		if location of player is gualoc of goner:
 			now G is guadir of goner;
@@ -21262,6 +21298,8 @@ before objhinting for the first time:
 	now have-objhinted is true;
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
 
+does the player mean objhinting a useless thing: it is unlikely.
+
 definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is red writing, yes;
 	if hintcand is a backdrop:
@@ -21271,7 +21309,6 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is question mark and questions-not-flagged is true, yes;
 	if hintcand is off-stage, no;
 	if hintcand is moot, no;
-	if hintcand is useless, no;
 	if hintcand is the location, no;
 	if hintcand is Gast and mrlp is routes, yes; [Gast is known-about before he comes on stage officially]
 	if hintcand is part of the diorama:
@@ -21304,6 +21341,9 @@ does the player mean objhinting a deregioned object:
 does the player mean objhinting a hintrelevant object:
 	it is likely.
 
+does the player mean objhinting a touchable object:
+	it is likely.
+
 [does the player mean objhinting a visible object:
 	it is likely.]
 
@@ -21318,6 +21358,7 @@ definition: a thing (called hthing) is deregioned:
 		yes;
 	if location of hthing is nothing, no;
 	if hthing is moot, no;
+	if hthing is touchable, no;
 	if mrlp is not map region of location of hthing, yes;
 	no.
 
@@ -22343,7 +22384,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
 		else if templar ramplet is not moot:
 			say "[2dmiss of myreg]you could've tried to TRAMPLE the Templar Ramplet.";
-		else if Plasm Lamps is visited and bogus-lamps are not reflexed:
+		else if Plasm Lamps is visited and bogus-psalm are not reflexed:
 			say "[2dmiss of myreg]you could've tried to PSALM in Plasm Lamps.";
 		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";

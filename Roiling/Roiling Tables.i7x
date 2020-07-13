@@ -214,7 +214,7 @@ papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/
 lever	lever	false	501914680	--	"revel"	"revel"	pre-lever-revel rule	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	pre-trample-ramplet rule	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
 natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
-bogus-lamps	bogus-lamps	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
+bogus-psalm	bogus-psalm	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."	"The pills get caught up in the dialer, and they hook on the pins. Just the right chemical reaction dissolves the pins, and the dialer is operational again."
 bogus-redial	bogus-redial	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	dialer	false	335153504	--	"derail"	"derail"	pre-dialer-derail rule	post-dialer-derail rule	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the Horned Hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins."	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
@@ -267,7 +267,7 @@ nastier stainer retinas	succor crocus	true	528602068	--	"antsier"	"antsier"	--	p
 Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-sitter-triste rule	"She suddenly blinks. 'This high score doesn't mean much. I could just keep playing, but no...I'd actually like to DO something. I'm disappointed I haven't...' She ditches the IT-STER and gets up and shakes your hand. 'People call me St. Teri. Some, even without sarcasm. You...must be someone important. I'll try to help you, if I can.'"
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and rousted detours can appear in radically different places, so we want these near the end.]
-bogus-detours	bogus-detours	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
+bogus-rousted	bogus-rousted	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
 Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Loftier Trefoil. It's nothing lethal, but enough to make him flee." [even though the picaros are at the beginning, I've placed them at the end, because this saves time in the long run.]
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	--	--	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	--	--	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
@@ -1096,7 +1096,7 @@ this is the post-trample-ramplet rule:
 	min-up; [you get at least another point for TANing the ant]
 
 this is the post-tan-ant rule:
-	if bogus-lamps are reflexive:
+	if bogus-psalm are reflexive:
 		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
 	now Plasm Lamps is shunned;
@@ -2152,7 +2152,7 @@ lever	"You look at the lever, wishing it would be a little more fun to pull."
 pins	"You look at the pins. They're in the way, but they don't look particularly sturdy."
 bogus-redial	"[di-cli]."
 templar ramplet	"There MUST be a way to storm down the templar ramplet. But not that."
-bogus-lamps	"The plasm lamps flicker slightly."
+bogus-psalm	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
 Andres	"Andres looks a bit more tied up at the moment." [START towers]
 Andrew	"Andrew suddenly looks as if he's been told he did something wrong."
@@ -2212,7 +2212,7 @@ prison ropins	"The ropins remains secure, with no easy way to open it."
 dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page, slightly less interested than before."
 atblock	"[agnostic-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
-bogus-detours	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
+bogus-rousted	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
 sporties ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
@@ -2319,9 +2319,9 @@ ana-repeats is a number that varies.
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
 definition: a thing (called itm) is all-around:
-	if itm is bogus-detours, yes;
+	if itm is bogus-rousted, yes;
 	if itm is bogus-plains, yes;
-	if itm is bogus-lamps, yes;
+	if itm is bogus-psalm, yes;
 	if itm is n-t-air, yes;
 	no;
 
@@ -2823,7 +2823,7 @@ thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][o
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"	--	"ENLARGE the gleaner"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"
-bogus-lamps	"[one of]The plasm lamps can inspire you to do something else. Something a templar might do.[plus][or]The action for a bonus point is more commonly known as a noun, but it works as a verb, too.[plus][or]PSALM.[minus][cycling]"	--	"TAN the natant ant"
+bogus-psalm	"[one of]The plasm lamps can inspire you to do something else. Something a templar might do.[plus][or]The action for a bonus point is more commonly known as a noun, but it works as a verb, too.[plus][or]PSALM.[minus][cycling]"	--	"TAN the natant ant"
 stupid paper necklace	"The paper necklace gives a clue what to do with the yapper."
 yapper	"[one of]The settler on cheat mode gives confusing readings here because PAPERY and YAPPER clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just PREPAY the yapper.[minus][cycling]"	--	"PREPAY the papery yapper"
 templar ramplet	"[if lance is not reflexed]You can't do what you need to with the ramplet[else if plasm lamps is visited]You can't go back up the ramplet.[else][one of]You need to storm the Templar Ramplet aggressively.[plus][or]Not just walk or run, but ...[plus][or]...TRAMPLE.[minus][cycling]"
@@ -2879,7 +2879,7 @@ Resident Trendies	"[one of]The resident trendies sure are with-it![plus][or]Mayb
 bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Busted...or...[plus][or]BROKEN.[minus][cycling]"
 stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
-bogus-detours	"[one of]The Dourest Detours have left you out of energy, and you need a boost so it returns.[plus][or]You need to get ROUSTED.[minus][cycling]"
+bogus-rousted	"[one of]The Dourest Detours have left you out of energy, and you need a boost so it returns.[plus][or]You need to get ROUSTED.[minus][cycling]"
 repeat button	"REPEAT plays back what you recorded with the retape button."
 retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
