@@ -324,6 +324,8 @@ Your vision blurs, and you see a compass rose pointed north.
 
 @gle
 You see yourself considering all four compass directions before picking the right one.
+>angle
+There's a weird haze in each of the four directions--north, south, east and west.
 
 @nud
 #these are universal to SF/RF
@@ -385,6 +387,8 @@ Go east and west and look around a bit. There're only three rooms to start, and 
 
 @gle
 You see yourself putting something on your face and then walking through Corses Crosse with ease.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) when you do.
 
 @gn
 >s
@@ -491,6 +495,10 @@ Your vision blurs a bit, and instead you see a nose.
 Your vision blurs a bit, and instead you see shades.
 >xx noughts
 Your vision blurs a bit, and instead you see a shotgun.
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts when you do.
 
 @nud
 #nudge for triangles
@@ -705,6 +713,9 @@ Flesh Shelf
 @hin
 DEBUG: sandwich being objhinted.
 
+@gle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam when you do.
+
 @gn
 >w
 It's too steep down every way except back east.
@@ -875,6 +886,9 @@ by one point
 >score
 {$SCOS}
 
+@gle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >n
 #notana
 Your score has just gone up by one point.
@@ -887,6 +901,8 @@ DEBUG: liches being objhinted.
 
 @gle
 You see the liches working their way under the meats, which fall into the grinder.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches when you do.
 
 @gn
 >e
@@ -1050,13 +1066,15 @@ Your score has just gone up by one point.
 LIVERS.
 }}SCORE++
 
-@gle
-You see the livers narrowing to a sharp, semi-metallic point.
-
 @hin
 DEBUG: livers being objhinted.
 >xx livers
 Your vision blurs a bit, and instead you see a silver sliver.
+
+@gle
+You see the livers narrowing to a sharp, semi-metallic point.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the livers when you do.
 
 >score
 @min
@@ -1094,6 +1112,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the livers. Keep at 
 >sliver
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver when you do.
 
 @nud
 >srelvi
@@ -1299,6 +1321,10 @@ DEBUG: maps being objhinted.
 >undo
 >undo
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >n
 Ghouls' Slough
 
@@ -1406,6 +1432,10 @@ You see the vowels grow slavering teeth.
 >xx vowels
 Your vision blurs a bit, and instead you see wolves.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels when you do.
+
 @gn
 >e
 The gnash hangs would, err, shnag you.
@@ -1426,6 +1456,9 @@ You are about to look in the phial, but it's survival time, here.
 
 @hin
 DEBUG: wolves being objhinted.
+
+@gle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 @gn
 >e

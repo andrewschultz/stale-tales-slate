@@ -57,6 +57,8 @@ You already solved that area.
 @gle
 >monty glean
 You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet, Store R, Store M, Store I, Store F and Store B when you do.
 
 @hin
 DEBUG: Store F being objhinted.

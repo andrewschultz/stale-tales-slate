@@ -197,6 +197,10 @@ On one of several pages, you see: an exhortation to RIDE AGAN (sic) on the last 
 Good try, but we're looking for a noun. With an extra A.
 \\
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage when you do.
+
 >gardenia
 by one point
 }}SCORE++
@@ -256,8 +260,11 @@ You should probably just go north to look at the condo instead.
 >conod
 You should probably just go north to look at the condo instead.
 
-#mostlyskipping the camp right now to get the tomato from the alley
+#mostly skipping the garrison right now to get the tomato from the bile libe
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover when you do.
 
 >w
 Bile Libe
@@ -265,6 +272,10 @@ Bile Libe
 @gn
 >w
 Only way out's back east.
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto when you do.
 
 @nud
 #nudge for bile
@@ -523,6 +534,10 @@ Your score has just gone up by one point.
 >score
 {$SFIXMAX}
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake when you do.
+
 @nud
 #renudge for rental
 >rentla
@@ -693,6 +708,10 @@ Fo' Real Florae
 The brocade is free, whether or not you've helped the faeries. Why not take it?
 >take brocade
 The faeries want a flower. You have one in your inventory.
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade when you do.
 
 @mis
 #mistake test for loafer
@@ -1093,6 +1112,8 @@ Elm Train Terminal
 
 @gle
 You see the neon pig exploding, the empty space being filled with--an ear of corn?!
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig when you do.
 
 @nud
 #nudge for cafe
@@ -1309,6 +1330,11 @@ You see yourself pounding the siren, then clapping your hands and creating a swa
 @hin
 DEBUG: siren being objhinted.
 
+@gle
+>angle
+The blue glow pulses with the beats.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the siren when you do.
+
 @gt
 >gt underside
 No going back now. This is the final confrontation.
@@ -1389,6 +1415,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the beats. Keep at i
 
 @gle
 A quick swordfight, and the beast is vanquished!
+>angle
+The blue glow pulses with the beast's roars.
 
 >score
 @min

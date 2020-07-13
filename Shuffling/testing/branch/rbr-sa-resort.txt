@@ -65,6 +65,8 @@ Astral Altars
 
 @gle
 You watch as the tiles shrink from a large land mass to a smaller one.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles when you do.
 
 @mis
 #mistake test for lites
@@ -119,6 +121,15 @@ Leis Isle
 
 @gle
 You see yourself either swimming or flying east, but not without proper gear.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the leis (faint), the swing and the rock when you do.
+>get leis
+DEBUG INFO: Taking away a max point. Max-score now 14.
+The leis wither as you touch them. "I SEE ILLS!" booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the swing and the rock when you do.
+>undo
+>undo
 
 @gt
 >gt tiles
@@ -286,6 +297,10 @@ The tree sits there.
 }}CURMAX+=2
 #while we subtract 2 after the "e" command, I'll keep this here, so in case anything is added, I don't gloss over the fact we need to deduct 2 points
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >e
 Rived Drive
 
@@ -296,6 +311,8 @@ Rived Drive
 
 @gle
 You see the poles to the east bend at an angle.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig when you do.
 
 @gn
 >n
@@ -418,12 +435,26 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tool shed. Keep 
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
 
+@gle
+>ropes
+by one point
+>grips
+by one point
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles and the tool shed when you do.
+>undo
+>undo
+>undo
+
 >toeholds
 Your score has just gone up by two points.
 }}SCORE+=2
 
 @gle
 You see yourself climbing east without much trouble.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the spore (faint) and the sprig (faint) when you do.
+
 
 >score
 {$SCOS}
@@ -503,6 +534,10 @@ You can't get ahold of anything that would be more useful than the grips.
 >pirg
 Those are already useful.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >e
 
 Potshot Hotspot
@@ -574,12 +609,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the riot. Keep at it
 >i rot
 Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot when you do.
+
 >trio
 Your score has just gone up by one point.
 }}SCORE++
 
 @gle
 You see the trio, happier now, discussing art and wearing dirty smocks.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the trio when you do.
 
 >score
 {$SCOS}
@@ -712,6 +753,8 @@ Your score has just gone up by one point.
 
 @gle
 You see yourself somehow managing to defeat Red Bull Burdell while still on the ground.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around Red Bull Burdell when you do.
 
 @min
 }}CURMAX--
@@ -873,6 +916,9 @@ Your vision blurs a bit, and you see names and hear AMENs.
 @gt
 >gt isle
 But you want to NOT go anywhere. NOT take any exits.
+
+@gle
+It's glowing all around here. The X ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
 
 @nud
 #nudge for manse

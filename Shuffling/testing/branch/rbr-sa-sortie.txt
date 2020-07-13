@@ -73,6 +73,10 @@ The number sixteen takes prominence on the dial for a moment. You shake your hea
 >gt trap part
 You're already here. Or there. The precise grammar's neither here nor there.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial when you do.
+
 @mis
 #mistake retest for turn [text]
 >turn zozimus
@@ -133,6 +137,8 @@ by one point
 
 @gle
 Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here.
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 @mis
 #mistake retest for turn [text]
@@ -201,6 +207,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at 
 >thicken
 You might rather thin-nen to slip through the bars, but you can't.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the nick when you do.
+
 >kitchen
 by one point
 }}SCORE++
@@ -234,6 +244,10 @@ No, you don't want to go back there.
 
 >score
 {$SCOS}
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume when you do. Your warts also tingle.
 
 @gle
 >straw
@@ -333,6 +347,12 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 >grtis
 The grist looks a bit less bland.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the grist. Keep at it.
+
+@gle
+>open fridge
+Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 
 @!min
 >grits
@@ -630,6 +650,10 @@ You don't need to know your classics, here.
 >xx taco
 Your vision blurs a bit, and instead you see a coat.
 
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the taco when you do.
+
 >coat
 Your score has just gone up by one point.
 }}SCORE++
@@ -638,6 +662,8 @@ Your score has just gone up by one point.
 >straw
 You see yourself going to the southeast room and disappearing!
 >undo
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do, except for those warts.
 
 >score
 @min
@@ -688,6 +714,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cask. Keep at it
 @hin
 >xx cask
 Your vision blurs a bit, and instead you see a sack.
+
+@gle
+>angle
+The whole room seems lit up.
 
 >sack
 Your score has just gone up by one point.
@@ -746,6 +776,11 @@ DEBUG: pair of hoses being objhinted.
 {$SCOS}
 @!
 {$SFIXMAX}
+
+@gle
+>angle
+The whole room seems lit up.
+There's nothing else, here, than the general glow.
 
 >put straw in sack
 
@@ -832,6 +867,11 @@ You see a rough but friendly fellow scaring Pat away.
 DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
+
+@gle
+>angle
+The whole moor seems lit up, and the glow pulses with the anapest beat of the poem.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the roadblock when you do. Your warts also tingle.
 
 @gn
 >s
@@ -1360,6 +1400,10 @@ The missile emits an almost giggly sound but doesn't actually change.
 (the poem)
 You fold the paper, and it looks sort of like a paper plane.
 
+@gle
+>angle
+WRONG
+
 @nud
 #renudge for folded
 >foldde
@@ -1488,6 +1532,11 @@ Despite the magic you can do, electricity still feels like, well, total magic. P
 >wier
 Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up.
 
+@gle
+>angle
+The whole moor seems lit up.
+There's nothing else, here, than the general glow.
+
 >room
 
 >n
@@ -1505,6 +1554,10 @@ You feel guilt at asking Lois for more.
 @max
 >pour oils
 The cask is already full of oils.
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the oils when you do.
 
 @nud
 #renudge for oil
@@ -1577,6 +1630,10 @@ That silo was pretty big. You probably have little more to do with the oils.
 
 >put panel in silo
 The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.
+
+@gle
+>angle
+WRONG
 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
