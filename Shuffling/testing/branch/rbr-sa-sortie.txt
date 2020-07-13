@@ -8,7 +8,7 @@ files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin	t3
+~	hints,hin,gle	t3
 
 ## *FILE
 ## *FORK
@@ -45,6 +45,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store I. Keep at it.
 >sortie
 by one point
 
+@gle
+>monty glean
+
 >poss
 
 @nud
@@ -53,6 +56,9 @@ by one point
 The posted depots doen't need to be changed. What's behind them, does.
 
 >in
+
+@gle
+You see yourself flipping the dial back and forth about six or seven times. It all seems to end with some sort of rocket hitting a huge building. But there is no explosion, just rainbows and bubbles. Weird.
 
 @hin
 DEBUG: dial being objhinted.
@@ -117,6 +123,9 @@ You can probably TURN the dial to a number, e.g. 99
 by one point
 }}SCORE++
 
+@gle
+Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here.
+
 @mis
 #mistake retest for turn [text]
 >turn zozimus
@@ -135,6 +144,9 @@ You don't need to deal with the dial, now.
 
 >n
 The Nick
+
+@gle
+You see yourself patting your stomach.
 
 @hin
 DEBUG: great grate being objhinted.
@@ -202,6 +214,12 @@ Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 
 >score
 {$SCOS}
+
+@gle
+>straw
+by one point
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
+>undo
 
 @mis
 #mistake test for limes
@@ -585,6 +603,11 @@ Your vision blurs a bit, and instead you see a coat.
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+>straw
+You see yourself going to the southeast room and disappearing!
+>undo
+
 >score
 @min
 {$SCOS}
@@ -667,6 +690,9 @@ Why zap just one wart? Go for all of them!
 The warts itch slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the warts. Keep at it.
 
+@gle
+You see your face clear again, pleased you reversed the warts.
+
 @hin
 >xx warts
 You can't see them, but you remember the palindrome "No, too stupid a fad. I put soot on ..."
@@ -712,6 +738,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of hoses. K
 >hoes
 One, there's more than one hose. Two, this isn't that sort of game. Innuendo only, if you please!
 
+@gle
+You see yourself smiling at your feet with pride!
+
 @hin
 >xx hoses
 Your vision blurs a bit, and instead you see shoes.
@@ -719,6 +748,9 @@ Your vision blurs a bit, and instead you see shoes.
 >shoes
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You see yourself disappearing!
 
 @hin
 The room is just a plain room. You feel like you want to get out, though.
@@ -755,6 +787,9 @@ Your vision swirls, and you see a moor.
 >moor
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You see a rough but friendly fellow scaring Pat away.
 
 @hin
 DEBUG: anapest being objhinted.
@@ -906,6 +941,9 @@ The peasant doesn't need to change himself. Just his possessions. Maybe you can 
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+You see yourself filling up the wall in Stiller Trellis then making it disappear.
+
 >score
 @min
 {$SCOS}
@@ -969,6 +1007,9 @@ You can just walk to the kitchen. There's no need to revisit the nick, and there
 >n
 Stiller Trellis
 
+@gle
+You see yourself filling up the wall here then making it disappear.
+
 @hin
 DEBUG: scraped wall being objhinted.
 
@@ -1018,6 +1059,9 @@ HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+You see the haywall vanishing.
+
 @hin
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
@@ -1044,6 +1088,9 @@ You imagine the scraped wall, already being a haywall, becomes a haywall.
 >hallway
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You see yourself building a huge structure in the moor without saying anything.
 
 >score
 @min
@@ -1443,6 +1490,9 @@ Your vision blurs a bit, and instead you see a silo.
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+You see yourself assembling the silo further.
+
 >score
 @min
 {$SCOS}
@@ -1466,6 +1516,12 @@ The panel fits into that rectangle handily and even starts to glow. Two buttons 
 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
+
+>put missile in silo
+You schlep the missile through the door. You hear some mechanics and whizzing. A luster-result rustle, if you will. Then "SMILIES MISSILE DEALING-ALIGNED!"
+
+@gle
+You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar.
 
 @mis
 #mistake test for otohs
@@ -1622,6 +1678,12 @@ No, the steer button HAS to be right.
 #done rejects for shoot button
 >shtoo
 No, the shoot button HAS to be right.
+
+>purloin missile
+>push steer
+!AMUSING
+>undo
+>undo
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.

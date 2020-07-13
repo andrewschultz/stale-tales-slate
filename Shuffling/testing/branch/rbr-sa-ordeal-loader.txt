@@ -10,7 +10,7 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 ~	nud	t2
 ~	mis	t2
 ~	nudmis	t2
-~	hints,hin	t3
+~	hints,hin,sal,gle,gt	t3
 
 ## *FILE
 ## *FORK
@@ -172,6 +172,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the odor. Keep at it
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
+@gt
+>gt subsite
+Goodness, no.
+
 >door
 by one point
 
@@ -253,6 +257,13 @@ There will be better hints than a manners advice column once you move on, though
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
+@gt
+>gt subsite
+Goodness, no.
+\\
+>gt rested desert
+The door from Rested Desert was one-way. You can't even see it now.
+
 >slander
 #notana
 by one point
@@ -315,6 +326,8 @@ Notices Section
 
 @hin
 DEBUG: magenta nametag being objhinted.
+>monty glean
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe find someone to ask.
 
 @nud
 #readables for gateway
@@ -344,6 +357,16 @@ There's enough information here.
 #nudge for notices
 >noticse
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. There's a hint device here that'll help, then.
+
+@gt
+>gt desert
+You can't see the door to get back.
+\\
+>gt thickets
+You can't see the passage back to the Thickets.
+\\
+>gt subsite
+Goodness, no.
 
 @nud
 #spechelp for static
@@ -402,6 +425,9 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 >gateman
 Your score has just gone up by one point.
 
+@gle
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe ask the gateman.
+
 @nud
 #mistake retest for get a man
 >get a man
@@ -437,16 +463,29 @@ You can't change what's in the gateway. You just have to trust whatever is(n't) 
 
 @hin
 You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
+
 >take gadget
-It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
-You need to ASK GATEMAN ABOUT CABINET.
->undo
+As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
 
 >ask gateman about cabinet
->take gadget
+
+@gle
+(taking the phial first)
+The cabinet's doors seem to waver a bit, but they don't slam on you.
+You stare into the blue lube for a bit. You see a small story unfold.
+(DEBUG GLEAN NOTE) You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
+And a few seconds later, he does. Well, the clairvoyance bit seems to work.
+
+@gle
+>z
+You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
+And a few seconds later, he does. Again. Hooray for double-checking, I think.
 
 @hin
 You can just enter the gate now.
+
+@sal
 >get saltine
 Got it. You'd have liked a beefier freebie, but with calm opining, you see no use complaining.
 !Taken.

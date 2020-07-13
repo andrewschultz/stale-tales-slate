@@ -8,7 +8,7 @@ files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin	t3
+~	hints,hin,gle	t3
 
 }}MAX=18
 }}CURMAX=18
@@ -53,9 +53,16 @@ Your score has just gone up by one point
 >metrso
 The trade tread doesn't need to be changed. What's behind it, does.
 
+@gle
+>monty glean
+You see yourself exploring the trade tread you created.
+
 >in
 
 Undesired Underside
+
+@gle
+You see yourself giving something reddish to some weird monster before it runs off.
 
 @hin
 DEBUG: drainage being objhinted.
@@ -306,6 +313,9 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >w
 The Ol' Hotel
 
+@gle
+You see yourself giving something reddish to the night thing in the hotel before it runs off.
+
 @hin
 DEBUG: Night Thing being objhinted.
 
@@ -346,6 +356,9 @@ Nothing to change the mattress to, even if you could move the night thing off.
 #notana
 by one point
 }}SCORE++
+
+@gle
+You see bugs crawling over rich people, while you sit in the center, smiling.
 
 >score
 {$SCOS}
@@ -542,6 +555,9 @@ Your score has just gone up by one point.
 
 >get dry cake
 You take care not to let the cake tear as you pick it up.
+
+@gle
+You see yourself taking a free sample of some cloth.
 
 >s
 
@@ -742,12 +758,23 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 
+@gle,hin
 >take begonias
+"A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel."
+
+@gle
+You are holding a bag with one hand and plugging an ear with another.
+
 @hin
 DEBUG: begonias being objhinted.
+
+@gle,hin
 >undo
 
 >take heaths
+
+@gle
+You see a weapon at your side, as if tied to a belt.
 
 @hin
 DEBUG: heaths being objhinted.
@@ -770,6 +797,7 @@ Your vision blurs a bit, and instead you see a sheath.
 
 >sheath
 Your score has just gone up by one point.
+}}SCORE++
 
 @hin
 You've transformed your flower, but you need to use your new item in the Bile Libe.
@@ -778,9 +806,6 @@ You've transformed your flower, but you need to use your new item in the Bile Li
 #done rejects for sheath
 >sheaht
 The sheath remains still.
-
->sheath
-}}SCORE++
 
 >score
 @min
@@ -849,12 +874,13 @@ Your vision blurs a bit, and instead you see a barcode.
 >barcoed
 The barcode does not shift.
 
->put barcode on keycard
-
 @nud
 #nudge for ganst
 >ganst
 You don't get rid of angst with just a word.
+#nudge for gnat
+>gnat
+There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter.
 
 >s
 
@@ -862,6 +888,15 @@ You don't get rid of angst with just a word.
 #nudge for beats
 >ebtas
 The beats shift up for a second.
+
+@gle
+You see yourself putting the barcode and the keycard on the friend finder here. Nothing works until you put them together.
+
+>put barcode on keycard
+
+@gle
+You see yourself putting the barcode and the keycard on the friend finder here.
+!Nothing works
 
 >put card on sensor
 What do you know? It works! The door slides open!
@@ -873,6 +908,9 @@ Just go east.
 #notana
 Esoteric Coteries
 }}SCORE++
+
+@gle
+You see yourself asking the nerds about something before a lightbulb goes on over your head. But it is not lit. Odd.
 
 @hin
 DEBUG: nerds being objhinted.
@@ -1028,6 +1066,9 @@ You got to the Esoteric Coteries. You don't need any tricks like that.
 
 >s
 Elm Train Terminal
+
+@gle
+You see the neon pig exploding, the empty space being filled with--an ear of corn?!
 
 @nud
 #nudge for cafe
@@ -1205,6 +1246,9 @@ No need. You made it sbove the cafe face with the velcro.
 #notana
 }}SCORE++
 
+@gle
+You see yourself (finally) walking east from Elm Train Terminal now that you have a light source.
+
 >score
 @min
 {$SFIXNOMAX}
@@ -1228,6 +1272,9 @@ You've already made nothing out of something, and instead of reversing that, you
 >e
 
 Bassy Abyss
+
+@gle
+You see yourself pounding the siren, then clapping your hands and creating a swarm of dust.
 
 @hin
 DEBUG: siren being objhinted.
@@ -1272,6 +1319,9 @@ Your vision blurs a bit, and instead you see some resin.
 >resin
 }}SCORE++
 
+@gle
+You see a crooked musical chord replaced with a monster worse than the night thing. Then you take something from your sheath, and the monster collapses before you touch it.
+
 @hin
 DEBUG: beats being objhinted.
 
@@ -1302,6 +1352,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the beats. Keep at i
 
 >beast
 }}SCORE++
+
+@gle
+A quick swordfight, and the beast is vanquished!
 
 >score
 @min

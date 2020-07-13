@@ -10,7 +10,7 @@ files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis,mi	t2
-~	hints,hin	t3
+~	hints,hin,sal,gle	t3
 
 }}MAX=17
 }}CURMAX=17
@@ -44,11 +44,17 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >opt in
 
+@gle
+>monty glean
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 @nud
 #spechelp for store f
 >fretso
 That seemed right but didn't seem quite natural.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store F. Keep at it.
+
+@gle
 
 >forest
 #notmax
@@ -316,6 +322,9 @@ DEBUG: thorn being objhinted.
 >xx thorn
 Your vision blurs, and you see a compass rose pointed north.
 
+@gle
+You see yourself considering all four compass directions before picking the right one.
+
 @nud
 #these are universal to SF/RF
 #nudge for forest
@@ -342,6 +351,9 @@ Rest of Forest
 >xx teas
 Your vision blurs, and you see a compass rose pointed east.
 
+@gle
+You see yourself considering all four compass directions before picking the right one.
+
 >e
 by one point
 Self-ID Fields
@@ -354,6 +366,9 @@ Yes, there are scores and scores in the line of no life.
 
 @hin
 Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+
+@gle
+You see yourself putting something on your face and then walking through Corses Crosse with ease.
 
 >score
 {$SCOS}
@@ -809,6 +824,9 @@ You have everything you need to enter Corses Crosse, now. You can worry about th
 >put nose on beard
 You've made a full disguise now!
 
+@gle
+You see yourself walking through Corses Crosse with ease.
+
 @hin
 You should be able to walk NORTH from Self-ID Fields now with your disguise.
 
@@ -838,6 +856,9 @@ Emptiness Sepiments
 
 @hin
 DEBUG: liches being objhinted.
+
+@gle
+You see the liches working their way under the meats, which fall into the grinder.
 
 >score
 {$SCOS}
@@ -997,6 +1018,9 @@ Your score has just gone up by one point.
 LIVERS.
 }}SCORE++
 
+@gle
+You see the livers narrowing to a sharp, semi-metallic point.
+
 @hin
 DEBUG: livers being objhinted.
 >xx livers
@@ -1061,7 +1085,17 @@ The sliver seems to bend, but it snaps back. As if it's impatient to do or be mo
 >e
 >n
 
+@gle
+You see the spread fluttering as if outside an open window.
+
+@gle
+##balance undos
+>n
+You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
+>undo
+
 @hin
+##balance undos
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 >undo
@@ -1069,6 +1103,8 @@ Your vision blurs a bit, and instead the spread seems to become a red asp, then 
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 >xx red asp
 Your vision blurs a bit, and instead drapes seem to flutter in front of the red asp.
+>undo
+>undo
 
 @nud
 #spechelp for spread
@@ -1110,7 +1146,6 @@ Your score has just gone up by one point.
 @!
 {$SFIXMAX}
 
-
 @nud
 #renudge for cloth
 >cloht
@@ -1127,6 +1162,14 @@ The drapes vanish as they are cut, revealing ... well, something leading somewhe
 
 @hin
 DEBUG: sliver being objhinted.
+
+@gle
+##balance undos
+>banish shotgun
+>z
+You see yourself reading the Notes Stone poem and carrying something stick-like.
+>undo
+>undo
 
 @nud
 #nudge for doorway
@@ -1156,6 +1199,9 @@ The dimness is unchangeable from out here. You'll have to find a way in.
 >n
 You don't know what's
 
+@gle
+You see yourself molding the sliver into something more compact and glowing and then loading your shotgun.
+
 @nud
 >doorwya
 You can just go through. You don't want it to change any more, really.
@@ -1167,6 +1213,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sliver. Keep at 
 >silver
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You see yourself loading your shotgun.
 
 @hin
 DEBUG: shotgun being objhinted.
@@ -1193,6 +1242,9 @@ Hard to beat silver. It's what it should be.
 You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
+
+@gle
+You see yourself tracing something on the maps and then walking with a purpose.
 
 @mis
 #mistake retest for gunshot
@@ -1307,13 +1359,19 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vowels. Keep at it.
 
+@gle
+You see the vowels grow slavering teeth.
+
 @hin
 >xx vowels
-Your vision blurs, and instead you see wolves.
+Your vision blurs a bit, and instead you see wolves.
 
 >wolves
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You are about to look in the phial, but it's survival time, here.
 
 @hin
 DEBUG: wolves being objhinted.

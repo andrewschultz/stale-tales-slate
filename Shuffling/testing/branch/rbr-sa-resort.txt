@@ -7,7 +7,7 @@ files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-s
 ~	min	t1
 ~	nudges,nud,nu	t2
 ~	mis,mi	t2
-~	hints,hin	t3
+~	hints,hin,sal,gle	t3
 
 }}MAX=15
 }}CURMAX=15
@@ -38,6 +38,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >opt in
 >poss
 
+@gle
+>monty glean
+You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around.
+
 @nud
 #spechelp for store r
 >resotr
@@ -48,6 +52,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store R. Keep at it.
 #notmax
 Your score has just gone up by one point
 
+@gle
+You see yourself exploring the ogled lodge you created.
+
 @nud
 #done rejects for ogled lodge
 >resotr
@@ -55,6 +62,9 @@ You already made passage to the ogled lodge. It's good enough. Why change it?
 
 >enter resort
 Astral Altars
+
+@gle
+You watch as the tiles shrink from a large land mass to a smaller one.
 
 @mis
 #mistake test for lites
@@ -106,6 +116,9 @@ Your score has just gone up by one point.
 }}SCORE++
 
 Leis Isle
+
+@gle
+You see yourself either swimming or flying east, but not without proper gear.
 
 >score
 {$SCOS}
@@ -203,6 +216,9 @@ You reflect on how insidious it was to stick you here in a false paradise.
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+You see yourself either swimming or flying east.
+
 >score
 {$SCOS}
 
@@ -264,6 +280,9 @@ Rived Drive
 }}CURMAX-=2
 >score
 {$SCOS}
+
+@gle
+You see the poles to the east bend at an angle.
 
 @mis
 #mistake test for repos
@@ -343,6 +362,9 @@ Your vision blurs a bit, and instead you see toeholds.
 by one point
 }}SCORE++
 
+@gle
+You see two visions: one, the tool shed being destroyed, and another, you wearing the sprig, modified and the spore, modified. In each, you climb east.
+
 >score
 {$SCOS}
 
@@ -376,6 +398,9 @@ Red writing shows the U-Lock brand is OLD THOSE.
 >toeholds
 Your score has just gone up by two points.
 }}SCORE+=2
+
+@gle
+You see yourself climbing east without much trouble.
 
 >score
 {$SCOS}
@@ -459,6 +484,9 @@ Those are already useful.
 
 Potshot Hotspot
 
+@gle
+You see the riot, happier now, discussing art and wearing dirty smocks.
+
 @hin
 >xx riot
 Your vision blurs a bit, and instead you see a trio.
@@ -520,6 +548,9 @@ Don't give up! Perhaps there are only four or fewer rioters with their heart rea
 >trio
 Your score has just gone up by one point.
 }}SCORE++
+
+@gle
+You see the trio, happier now, discussing art and wearing dirty smocks.
 
 >score
 {$SCOS}
@@ -650,6 +681,9 @@ Your vision blurs a bit, and instead you see kilns, to bake clay in, or somethin
 Your score has just gone up by one point.
 }}SCORE++
 
+@gle
+You see yourself somehow managing to defeat Red Bull Burdell while still on the ground.
+
 @min
 }}CURMAX--
 
@@ -734,6 +768,9 @@ You squint at Red Bull Burdell, trying to notice what he could become, but all y
 >tug toe
 #notana
 by one point
+
+@gle
+You see yourself walking east.
 
 Your score has just gone up by one point.
 }}SCORE++

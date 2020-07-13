@@ -10,7 +10,7 @@ files=reg-sa-stores-max.txt,reg-sa-stores-min.txt,reg-sa-stores-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudmis,nud,mis	t2
-~	hints,hin	t3
+~	hints,hin,sal,gle,gt	t3
 
 ## *FILE
 ## *FORK
@@ -49,6 +49,15 @@ You can just enter the ogled lodge.
 
 >ts
 Trips Strip
+
+@gt
+>gt subsite
+You already solved that area.
+
+
+@gle
+>monty glean
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 @hin
 DEBUG: Store F being objhinted.
@@ -337,11 +346,22 @@ Hmm...you get the feeling the store itself holds more adventure.
 >read roadsign
 /The sign appears to say, in all red, (E FORTS/OSTFER|TRESFO/S EFTRO) before a gust of wind picks it up and flips it around\.
 
+@gle
+>metros
+You see yourself exploring the trade tread you created.
+>undo
+>sortie
+You see yourself exploring the posted depots you created.
+>undo
+
 >forest
 by one point
 
 @hin
 You can just enter the scented descent. If you want or need help with a particular store, HINT STORE Q.
+
+@gle
+You see yourself exploring the scented descent you created.
 
 @nud
 #nudge for scented
