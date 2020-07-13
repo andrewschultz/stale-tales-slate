@@ -8,7 +8,7 @@ files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin,gle	t3
+~	hints,hin,gle,gt	t3
 
 ## *FILE
 ## *FORK
@@ -68,6 +68,10 @@ Trap Part
 @hin
 >xx dial
 The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
+
+@gt
+>gt trap part
+You're already here. Or there. The precise grammar's neither here nor there.
 
 @mis
 #mistake retest for turn [text]
@@ -154,6 +158,9 @@ DEBUG: great grate being objhinted.
 You let your eyes wander.
 Your vision swirls, and you see a kitchen.
 
+>gt trap part
+That's not the magic way out. Sorry!
+
 @nud
 #readables for great grate
 >read great grate
@@ -211,6 +218,10 @@ Your vision blurs a bit, and instead you see a head of lettuce.
 Your vision blurs a bit, and instead you see cut-up steak.
 >xx spearman
 Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
+
+@gt
+>gt nick
+No, you don't want to go back there.
 
 >score
 {$SCOS}
@@ -1458,7 +1469,14 @@ The cask is already full of oils.
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do.
 
+@gt
+>gt kitchen
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+>undo
+
 >w
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+
 Crashing Archings
 
 @nud
@@ -1477,6 +1495,10 @@ The rubble is too dense to rearrange, physically or magically. You should have a
 #renudge for trellis
 >trellsi
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
+
+@gt
+>gt cedars
+You can't go back there.
 
 >s
 

@@ -8,7 +8,7 @@ files=reg-sa-metros-max.txt,reg-sa-metros-min.txt,reg-sa-metros-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
-~	hints,hin,gle	t3
+~	hints,hin,gle,gt	t3
 
 }}MAX=18
 }}CURMAX=18
@@ -561,6 +561,10 @@ You see yourself taking a free sample of some cloth.
 
 >s
 
+@gt
+>gt condo
+You wouldn't be welcome.
+
 @mis,max
 >give emitter to deadbeat
 "Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us."
@@ -1043,6 +1047,10 @@ It would stink to be you if you did that. The nerds outnumber you and would cruc
 
 Undesired Underside
 
+@gt
+>gt coteries
+You got something from the nerds. They've probably had enough of you.
+
 >score
 @min
 {$SFIXNOMAX}
@@ -1278,6 +1286,10 @@ You see yourself pounding the siren, then clapping your hands and creating a swa
 
 @hin
 DEBUG: siren being objhinted.
+
+@gt
+>gt underside
+No going back now. This is the final confrontation.
 
 @nud
 #nudge for aligns

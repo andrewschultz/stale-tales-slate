@@ -7,7 +7,7 @@ files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-s
 ~	min	t1
 ~	nudges,nud,nu	t2
 ~	mis,mi	t2
-~	hints,hin,sal,gle	t3
+~	hints,hin,sal,gle,gt	t3
 
 }}MAX=15
 }}CURMAX=15
@@ -119,6 +119,10 @@ Leis Isle
 
 @gle
 You see yourself either swimming or flying east, but not without proper gear.
+
+@gt
+>gt tiles
+Gotta keep going forward.
 
 >score
 {$SCOS}
@@ -283,6 +287,12 @@ Rived Drive
 
 @gle
 You see the poles to the east bend at an angle.
+
+@gt
+>gt tiles
+Gotta keep going forward.
+>gt isle
+Gotta keep going forward.
 
 @mis
 #mistake test for repos
@@ -693,6 +703,14 @@ You see yourself somehow managing to defeat Red Bull Burdell while still on the 
 @!
 {$SFIXMAX}
 
+@gt
+>gt isle
+He's saying GET OUT just to be obnoxious and intimidating.
+>gt drive
+He's saying GET OUT just to be obnoxious and intimidating.
+>gt altars
+He's saying GET OUT just to be obnoxious and intimidating.
+
 >get out
 !Your score has just
 
@@ -820,6 +838,10 @@ You don't need to change the manors. You just need to be able to get there.
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
 
+@gt
+>gt isle
+But you beat Red Bull Burdell! Just go east!
+
 >e
 Means Manse
 
@@ -828,6 +850,10 @@ Means Manse
 They just seem to EXIST. Maybe you can, too.
 >xx
 Your vision blurs a bit, and you see names and hear AMENs.
+
+@gt
+>gt isle
+But you want to NOT go anywhere. NOT take any exits.
 
 @nud
 #nudge for manse

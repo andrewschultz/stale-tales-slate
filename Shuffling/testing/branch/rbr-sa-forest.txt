@@ -10,7 +10,7 @@ files=reg-sa-forest-max.txt,reg-sa-forest-min.txt,reg-sa-forest-nudmis.txt,reg-s
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis,mi	t2
-~	hints,hin,sal,gle	t3
+~	hints,hin,sal,gle,gt	t3
 
 }}MAX=17
 }}CURMAX=17
@@ -340,6 +340,10 @@ No conifers appear. Maybe you can just use your senses, and it's easier than tha
 >leavse
 You have no time to play with leaves.
 
+@gt
+>gt forest1
+You can't retrace your steps.
+
 >n
 by one point
 Rest of Forest
@@ -353,6 +357,10 @@ Your vision blurs, and you see a compass rose pointed east.
 
 @gle
 You see yourself considering all four compass directions before picking the right one.
+
+@gt
+>gt forest2
+You can't retrace your steps.
 
 >e
 by one point
@@ -1270,6 +1278,10 @@ DEBUG: maps being objhinted.
 >n
 Ghouls' Slough
 
+@gt
+>gt fields
+You've done all you could in the Emptiness Sepiments and before. Onward.
+
 @nud
 #nudge for slough
 >slouhg
@@ -1365,6 +1377,13 @@ You see the vowels grow slavering teeth.
 @hin
 >xx vowels
 Your vision blurs a bit, and instead you see wolves.
+
+@gt
+>gt slough
+It's time to deal with things, not run.
+>gt trips strip
+You may mean to RETRY instead. Do so?
+>n
 
 >wolves
 Your score has just gone up by one point.
