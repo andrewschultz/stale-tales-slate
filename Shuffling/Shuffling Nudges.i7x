@@ -453,6 +453,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "word"	288640242	words	--	"You'd need to do something to all the words."
 "hilt"	239199002	sword	--	"The hilt serves a purpose, and besides, there's not much to change it to."
 "ganst"	303079012	--	angst rule	"You don't get rid of angst with just a word."
+"gnat"	206805046	--	angst rule	"There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter."
 
 table of Undesired Underside nudges
 this-cmd	hashval	this-item	this-rule	this-clue

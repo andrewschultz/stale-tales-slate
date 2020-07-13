@@ -794,6 +794,14 @@ every turn when player has prep paper and show-prep is true (this is the prep-re
 	try examining prep paper;
 	say "====END PREP PAPER[line break]";
 
+chapter check HALing
+
+definition: a thing (called th) is mass-hint-appropriate:
+	unless th is touchable, no;
+	if th is the player or th is pockets or th is dope tan notepad or th is toad pen or th is magenta nametag, no;
+	if th is part of the tagged gadget, no;
+	yes;
+
 Shuffling Tests ends here.
 
 ---- DOCUMENTATION ----

@@ -232,7 +232,7 @@ snider diners	snider diners	false	444333321	--	"rinsed"	"rinsed"	--	--	"The dine
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	--	--	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if Actionless Coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	--	--	"You relax. You stop letting the fluster-self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
 Mel Fish	Mel Fish	false	450759108	--	"himself"	"himself"	--	--	"Mel Fish has a think. 'I'm flesh!' he yells, 'and that's all that matters!' He rejects labels and such, recalling aloud a horrible incident when someone, probably a Burmese bemuser, ungrammatically called him selfish for being hisself. He vows to insult bad grammar more in the future. Then he thanks you and leaves."
-dandier arid den	dandier arid den	false	371276262	--	"drained"	"drained"	--	--	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
+promise imposer	promise imposer	false	574290413	--	"semipro"	"semipro" or "semi pro"	--	--	"The promise imposer looks thoughtful, then mentions some things don't add up. They realize Elvira hasn't followed through on some promises of their own. After thirty seconds of invenctive, it's unclear whether they want to go in for more certification or to complain to Elvira directly, but they decide they don't want to waste their life here. As they walk off, they shout at you not to go wandering off into trouble, because you're obviously a suspicious type. It actually freezes you for five seconds."
 ingrates	ingrates	false	561201770	--	"angstier"	"angstier"	--	--	"The ingrates suddenly develops the mooniest emotions--why bother to stop you from doing whatever? After a final snit-rage about you not caring about their problems, they decide to go whine by themselves."
 mardier admirer	mardier admirer	false	430738621	--	"married"	"married"	--	--	"Your admirer blinks, then looks down a ring on their finger, which may or may not have been there before (the ring, you silly.) They start talking of the old ball and chain, and while it's not clear whether the old ball and chain will help them be a better person, which is how it works in theory, or they are just someone to complain to, well ... the mardier admirer is done with you. Why were they wasting time? Such a leer--a sure lech! Your ex-admirer walks away, spouting spouse opuses."
 resident trendies	resident trendies	false	675249448	--	"nerdiest"	"nerdiest"	--	--	"The resident trendies begin talking less smoothly. Then you hear a nasal laugh. And it is downhill from there. They look around nervously. They realize they are, well, over, and they walk off into the distance. Their last parting shot: you must obviously be the sort of backward person who can't appreciate cutting-edge games that require a fancy-shmancy graphics card."
@@ -249,7 +249,7 @@ the Hostile is He Lot	Hostile is He Lot	false	537631654	--	"holiest"	"holiest"	-
 try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly tarnish and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"
 docile old ice	docile old ice	false	341000045	--	"coiled"	"coiled"	--	--	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
-mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life. You take them, after filling the hole in."
+mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life. You take them, but you've left a bit of a hole you might be able to go down." [371276262]
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -1372,6 +1372,7 @@ to say how-safe: say "You'd feel [if blaster is reflexive or turbos are reflexiv
 
 this is the post-detours-rousted rule:
 	move player to last-detour;
+	now Dourest Detours is shunned;
 
 to say bored-robed:
 	if the player's command includes "bored":
@@ -1828,8 +1829,8 @@ thistext
 "(W) Some coiled old ice becomes docile, flipping a puzzle, and neural pulses becoming unreal pluses is scrapped. Similarly, ice sheets that were rimiest becoming rimiest are replaced with something firmer."
 "(W) A perfect prefect who needs to become porcine is given walking papers as a guardian. So is a greedy gnome guardian who becomes Ed Yerg east of the Mislit Limits. Ed replaces Old Hat Daltho, who is no longer dying/dingy but moved to the start and renamed Ornate Atoner Renato. Eventually, Ed Yerg is cashiered for the Tetris Sitter."
 "(W) A papery yapper formerly seen as Angriest is thrilled to be promoted to the end of the Oyster area, especially since it will be bribed, sort of."
-"(W/H) Nameless salesmen are sent to the post-script episode. They were formerly dandier, replaced by the arid den to be drained."
-"(W) Other guardians are a nebula (unable,) deacons (who become Lois the Hostile and the Hostile-is-He Lot,) an orc replaced with a proper alarming grailman, a grandiose swarm (moved to ego-drains.)"
+"(W/H) Nameless salesmen are sent to the post-script episode. They were formerly dandier, replaced by the arid den to be drained, then by the promise imposer, with the arid den moved to a separate room."
+"(W) Other former guardians are a nebula (unable,) deacons (who become Lois the Hostile and the Hostile-is-He Lot,) an orc replaced with a proper alarming grailman, a grandiose swarm (moved to ego-drains.)"
 "(W) The smart kid is replaced by a Coasting Agnostic, who doesn't FIDGET (gifted) any more but is absorbed in Reading: a Dinger."
 "There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, for those interested in that sort of thing."
 
@@ -2198,7 +2199,7 @@ organised ego drains	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
 natives site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 alarming grailman	"The grailman seems almost average for a moment."
-dandier arid den	"The arid den seems less imposing and impressive."
+promise imposer	"The promise imposer seems a little less intimidating."
 Reeds Ale	"[el-la-full] listens to what you're saying for a minute, but--no, you didn't quite get it right. [he-she-c] goes back to reciting [his-her] tired sales pitch."
 sweatier wait seer	"The wait-seer looks bored and distracted for a second."
 bluster butlers	"The bluster butlers cough slightly and look around furtively."
@@ -2867,8 +2868,8 @@ ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they 
 mardier admirer	"[one of]The mardier admirer needs someone to emote to, hopefully more constructively than with you. To be ... engaged with.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
 natives site van	"[one of]The natives babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to vanquish the natives['] site van.[plus][or]The natives in the site van can become VAINEST, or NAIVEST.[minus][cycling]"
 yurts	"[one of]The yurts look out of place, made of weird metals.[plus][or]You can corrupt them by making them...[plus][or]RUSTY.[minus][cycling]"
-arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
-Nerd Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."
+promise imposer	"[one of]The promise imposer needs taking down a notch from feeling they're the best.[plus][or]You can't take them down all the way, but maybe half.[plus][or]Make them SEMIPRO.[minus][cycling]"
+Nerd Aid	"The Nerd-Aid gives you a better idea of how to get out of the arid den."
 weeds	"[one of]The weeds might be less effective if tied together.[plus][or]Or, more accurately, SEWED.[minus][cycling]"
 Mel Fish	"[one of]Mel Fish says SMH Life, but he's rather tired of his old gig. He wants individuality. Being Flemish or saying I'm Flesh won't work, either.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
 atheists	"[one of]The atheists are willing to explain everything very slowly to you. That's not good. You'd like them to be frustrated with you, to move on.[plus][or]How can you make them super-impatient?[plus][or]Make them HASTIEST.[minus][cycling]"

@@ -30018,7 +30018,6 @@ blurb
 "Pro-Life-of-Peril Flip Ore" []
 "Pro-Viruses Supervisor Rose Purvis"
 "Problematic [if player is male]Bert Campoli[else]Patrice Blom[end if]"
-"Promise Imposer Mo Piers" []
 "Properly-Reply Pro Rory Lepp" []
 "Punitive Evi Putin"
 "Pure Al Lauper"

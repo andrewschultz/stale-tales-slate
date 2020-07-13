@@ -1913,7 +1913,7 @@ hostile is he lot	--
 natives site van	--
 snider diners	"'We are EATING,' they exclaim, dryly. You'd like to rain on their parade, even a little. You seem to have interrupted their talk, and maybe LISTENing would help."
 sweatier wait seer	--
-arid den	--
+promise imposer	--
 bluster butlers	--
 unripe ur pine	--
 resident trendies	--
@@ -2124,7 +2124,7 @@ Ammo Gang	"The No Ammo Gang seems vaguely interested, but you didn't insert your
 Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Reserved Deserver Dr Severe	"[he-she-c] doesn't have much to say."
-arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
+promise imposer	"The promise imposer also seems to like to impose silence."
 passport	"Try using its features instead."
 
 to say hostile-red:
@@ -2331,8 +2331,6 @@ grailman	curst palace	"'You can get there without getting by me, I bet!'"
 Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
 Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
-arid den	Nerd Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
-arid den	Elvira	"'WHETHER YOU LIKE OR HATE ELVIRA, NERD-AID TASTES GREAT!'"
 atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
 lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing out...'"
 hostile is he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
@@ -2360,7 +2358,6 @@ Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to tha
 Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tutor someone!'[else if agnostic is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
-arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
 Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside."
 Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
@@ -2424,9 +2421,6 @@ to say icy-len:
 
 check objasking about Dr Tera when player is female:
 	try objasking noun about Art Erd instead;
-
-to say endorse-aid:
-	say "it's endorsed by [one of]Adi Dern[or]Red Dina[or]Ned Radi[or]Ed Nardi[or]Ed Indar[or]Ed Darin[or]Nerd Ida, of course[or]--well, you can Add Erin, Reid, Dan to the list of endorsers[cycling]--they see red when you ask who THAT is"
 
 check objasking Elvira about an animal:
 	if second noun is in Lamer Realm or second noun is in Perverse Preserve, say "'Elvira scrunches her face up. 'Oh! I love animals! They help me in many...WAYS. Even if they're just...wimpy.'" instead;
@@ -2550,7 +2544,7 @@ topic	right-region	him-say
 "horned/hedron" or "horned hedron"	--	"The horned hedron is just sort of there and needs to be tackled. You suspect you'll need to find out how on your own."
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
-	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the arid den is moot if this is not true]
+	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
 	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
 	if wait seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
@@ -4708,7 +4702,6 @@ fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit,
 angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
 mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
 resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
-dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
 sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
@@ -6389,8 +6382,6 @@ rule for supplying a missing noun when eating:
 this is the can-i-heat rule:
 	if diners are touchable:
 		say "The diners let loose with some dry wit at you eating something like that cold--well, eating that at all.[line break]";
-	else if dandier arid den is touchable:
-		say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den.[line break]";
 	if player has toaster or toaster is touchable:
 		say "You figure you'd better heat [the noun] up in the toaster first. So you do. Mmm, not bad.";
 	else:
@@ -6684,7 +6675,7 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, arid den, natives site van, bonker, stinger, geese, ed riley, parleys splayer players, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese, ed riley, parleys splayer players, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
 
 the ambient sound rule is not listed in any rulebook.
 
@@ -6788,7 +6779,6 @@ check listening:
 	if noun is stinger, say "A menacing buzz spews from the stinger. Or maybe it's just your imagination." instead;
 	if noun is geese, say "Honk, honk." instead;
 	if noun is sporties ripostes, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
-	if noun is dandier arid den, say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
 	if player is in Treading Gradient, say "You'd expect a great din, but you don't hear one, thankfully." instead;
 	if noun is natives site van:
 		say "The babble from the natives['] site van doesn't stop.";
@@ -6855,7 +6845,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
 	if mrlp is towers and leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
-	if noun is Nerd Aid, say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
+	if noun is Nerd Aid, say "The Nerd-Aid smells suspiciously like the very red Rind-Ade drink." instead;
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
 	if player is in Disowned Downside, say "You can [if parleys splayer players are touchable]still [end if]smell the [players]['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
@@ -16287,9 +16277,6 @@ this is the saver-check rule:
 
 check pushing retape button:
 	abide by the saver-check rule;
-	if raves saver is not silent:
-		if arid den is touchable, say "Fortunately no advertisement from the arid den is loud enough for the raves saver to catch it." instead;
-		if guar-here > 0, say "Nothing on your saver is abrasive enough to move a guardian out of your way." instead;
 	if Dr Yow is touchable:
 		if agnostic is touchable, say "You don't need to record the two of them, now." instead;
 		if Dr Yow is calm, say "Recording the awkward silence with Dr. Yow around would do little." instead;
@@ -16317,6 +16304,8 @@ to say prev-rec:
 
 check pushing repeat button:
 	abide by the saver-check rule;
+	if raves saver is not silent:
+		if guar-here > 0, say "Nothing on your saver is abrasive enough to move a guardian out of your way." instead;
 	if agnostic is touchable:
 		if raves saver is goosey or raves saver is ducky, say "'Yawn. The zoo is kind of boring. I like making stuff.'" instead;
 		if raves saver is yow-yell or raves saver is yow-talk, try objasking agnostic about Dr Yow instead;
@@ -17347,7 +17336,6 @@ chapter guardian stubs
 to say gd of (zz - a guardian):
 	if zz is the-hostile, say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists, say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
-	if zz is arid den, say "[one of][or] still hawking Nerd-Aid[stopping]";
 	if zz is natives site van, say "[one of][or] (you assume, by how the people inside are talking about the Wildest Wilteds and looking at you funny)[stopping]";
 
 to say mb-aswell:
@@ -17465,20 +17453,29 @@ a-text of SMH Life Mel Fish is "RYRRYRR". b-text of SMH Life Mel Fish is "RYRRYR
 
 printed name of Mel Fish is "'SMH, Life' Mel Fish".
 
-section dandier arid den
+section promise imposer
 
-The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
+The promise imposer is a blue neuter guardian. "A promise imposer stands [psgdir of promise imposer], not willing to let you by. [imposer-guard][one of]. Promise Imposers are the highest-paid and most esteemed of Elvira's henchmen, assigned to repress potential anti-Elivra types from from doing what they want or need to do[or][stopping].". description of promise imposer is "Looking serious and confident and superior. It's not clear what promises they're impoaing, but the net result is, they just don't want you to get by. But perhaps you could bump its social or job status down a notch."
 
-a-text of dandier arid den is "RRYYRYR". b-text of dandier arid den is "??YYRGR". parse-text of dandier arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
+to say imposer-guard:
+	let rm2 be far-room of promise imposer;
+	if rm2 is visited:
+		say "After all, you've been to [rm2]";
+	else if rm2 is tower-accessible:
+		say "After all, you can to get wherever's behind the imposer, if you think about it";
+	else:
+		say "You don't have full documentation why you NEED to get to the other side"
 
-description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
+a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
-the bottles of Nerd Aid are boring auxiliary plural-named scenery. the arid den carries the Nerd Aid. understand "wares" and "nerd/aid" and "nerdaid" and "nerd aid" as Nerd Aid. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
+section nerd aid
 
-a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYYRYP". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
+the Nerd Aid bottle is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
+
+a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RRYGRYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
 this is the bore-nerd-aid rule:
-	if current action is taking or current action is eating or current action is drinking, say "You'd need to buy the Nerd-Aid, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
+	if current action is taking or current action is eating or current action is drinking, say "The Nerd-Aid is empty and useless. It was pretty much glorified sugar-water, anyway." instead;
 
 chapter Treading Gradient guardians
 
@@ -17593,7 +17590,7 @@ gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self ru
 
 gualoc of Mel Fish is Leveraged Everglade. guadir of Mel Fish is north. block-text of Mel Fish is "Mel Fish grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go.". clue-text of Mel Fish is "Perhaps you can free Mel Fish from nationality and his past to individuality.". taunt-text of Mel Fish is "Mel Fish mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?'"
 
-gualoc of dandier arid den is Leveraged Everglade. guadir of dandier arid den is east. block-text of dandier arid den is "There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats.". clue-text of dandier arid den is "The arid den won't evaporate, but maybe you can get rid of it another way.". taunt-text of dandier arid den is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
+gualoc of promise imposer is Leveraged Everglade. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
 
 gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
 

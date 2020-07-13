@@ -78,7 +78,7 @@ book Metros
 table of Metros anagrams [xxtma]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
 drainage	gardenia	"gardenia"	"drainage"	--	post-drainage-gardenia rule	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
-clover	Velcro	"Velcro"	"clover"	--	--	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
+clover	Velcro	"velcro"	"clover"	--	--	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
 Motto	tomato	"tomato"	"motto" or "a motto"	--	--	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in Bile Libe]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
 lost corn	controls	"controls"	"lost corn"	pre-lostcorn-controls rule	--	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is touchable]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
 heaths	sheath	"sheath"	"heaths"	pre-heaths-sheath rule	post-heaths-sheath rule	"The heath grows, tangles around itself, and lumps into a sheath. It's too bulky to carry, so you wear it."	true	403942509
@@ -728,7 +728,7 @@ odor	"[one of]What can the odor turn into? Your random thoughts are not so rando
 musical chord	"The chord clues what to do [if bulge is moot]with the bugle[else]with the bulge[end if]."
 bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door.[plus][or]The musical chord is a clue.[plus][or]You want to change the bulge into a BUGLE.[minus][cycling]."
 bolt	"[one of]You don't have any key, but that bolt is stopping the door from opening.[plus][or]You want to change the bolt into a BLOT.[minus][cycling]"
-blot	"The blot is a clue what the bulge could become. It's not useful by itself."
+blot	"The blot is there to clue [if bugle is touchable]making the bugle[else]what the bulge could become[end if] for a bonus point. It's not useful by itself, but it can't hinder you as the bolt did."
 bugle	"You [if bolt is moot]can just walk through the door. If you hadn't gotten rid of the bolt, you'd need to[else]can[end if] PLAY the bugle to go through the door."
 OR DO door	"You can just ENTER the door[if bugle-played is false and bolt is touchable] once you figure how to open it[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT.[minus][cycling]"
@@ -736,7 +736,7 @@ shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what y
 brush	--	shrub
 snarled darnels	"[if darn-slan is true]You've already vented your frustrations on the darnels.[else][one of]You don't need to do anything with the darnels, but you'll get an extra point out of it.[plus][or]It may be useful to get mad at them, maybe even say something nasty or nonsensical. For the good of society.[plus][or]It's a bit early for a puzzle this long, but you can import intentions to the plants that aren't there. I think we've all done it.[plus][or]You can SLANDER the darnels.[minus][cycling][end if]"
 goat	"The goat's done its job."
-magenta nametag	"[one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a GATE MAN. With or without the space.[minus][cycling]"
+magenta nametag	"[if notices section is unvisited]You don't need to do anything with the nametag yet, but it's an important introductory puzzle.[else][one of]The magenta nametag needs to become something. Something that can help with the gateway.[plus][or]The broad board, along with trying to enter the gateway, gives hints.[plus][or]Mt. Agena/Egana, a tan gem, and the mega-ant are clues due to their redness that say what you want is -A---A-. You can look up more or note you're dealing with a gate.[plus][or]Thus, you must summon a GATE MAN. With or without the space.[minus][cycling][end if]"
 gadget	"The gadget is kind of complex, so maybe you need to see parts of it."
 Recent Center	"The Recent Center tracks the most recent thing you managed to CERTIFY or RECTIFY."
 blurb	"Just a riff on what's going on with the gadget."
