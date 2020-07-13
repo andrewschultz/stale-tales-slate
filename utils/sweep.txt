@@ -1,6 +1,3 @@
-trample~oyster~templar ramplet
-##############################################
-;
 lamp~ordeal~palm
 chimney~ordeal~my niche
 tables~ordeal~stable
@@ -13,6 +10,7 @@ stapler~ordeal~plaster psalter
 flier~ordeal~elmo's rifle
 ramp~ordeal~pram in highest heights
 ###############################################
+;
 towards~routes~LLP in mesa
 against~routes~gast pt 1
 astride~routes~tirades (gast 2)
@@ -26,6 +24,8 @@ above~routes~A Bev O' Be Ova'
 from~routes~MORF FORM
 until~routes~UNLIT puzzle
 amidst~routes~da mist
+##############################################
+trample~oyster~templar ramplet
 ##############################################
 restful~towers~Fluster Self Rut
 grandiose~towers~Organised Ego Drains

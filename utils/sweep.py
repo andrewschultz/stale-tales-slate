@@ -9,6 +9,9 @@ import re
 import sts
 from collections import defaultdict
 
+dont_print_old = False
+show_max_min = False
+
 description_of = defaultdict(str)
 
 output_string = defaultdict(str)
@@ -22,6 +25,8 @@ ignore_words = defaultdict(bool)
 last_line_and_file = defaultdict(tuple)
 
 region_of = defaultdict(str)
+
+ans_yet = defaultdict(int)
 
 my_proj = 'roi'
 
@@ -59,6 +64,13 @@ with open("sweep.txt") as file:
 for x in stuff_to_flag:
     nums_to_flag[sts.word_hash_match(x)].append(x)
 
+hash_min = min(nums_to_flag.keys())
+hash_max = max(nums_to_flag.keys())
+
+if show_max_min:
+    print(hash_min, nums_to_flag[hash_min])
+    print(hash_max, nums_to_flag[hash_max])
+
 def ignorable(word_array):
     full_word = ' '.join(word_array).lower()
     if full_word in ignore_words: return True
@@ -77,7 +89,11 @@ def print_red_letters(string1, wordary, double_first = False):
     clash = []
     for x in range(0, len(s1)):
         if s1[x] == s2[x]: clash.append(str(x+1))
-    return("{}RED: {} vs {}/{} {}\n".format("NOT " if len(clash) else "   ", string1, s2, s3, ' ' + '/'.join(clash) if len(clash) else ''))
+    ret_val = "{}RED: {} vs {}/{} {}{}\n".format("NOT " if len(clash) else "   ", string1, s2, s3, ' ' + '/'.join(clash) if len(clash) else '', " <NEW>" if s3 not in ans_yet else " <OLD>")
+    if dont_print_old and s3 in ans_yet:
+        return ""
+    ans_yet[s3] += 1
+    return ret_val
 
 def find_reasonable_hashes(file_base, my_line):
     if '"' not in my_line: return
@@ -87,16 +103,27 @@ def find_reasonable_hashes(file_base, my_line):
     x = re.sub("[^a-zA-Z ]", "", x)
     y = [u for u in x.strip().split(' ') if re.search("[a-zA-Z]", u)]
     q = [sts.word_hash_match(my_word) for my_word in y]
-    for z in range(0, len(y)):
-        for w in range(1, min(8, len(y) - z + 1)):
-            j = sum(q[z:w+z])
-            comp_word = y[z:w+z]
+    low_end = 0
+    high_end = 0
+    for low_end in range(0, len(y)):
+        rolling_sum = 0
+        word_length = 0
+        for high_end in range(low_end, len(y)):
+            word_length += len(y[high_end])
+            rolling_sum += q[high_end]
+            if rolling_sum < hash_min:
+                continue
+            if rolling_sum > hash_max * 2:
+                break
+            if word_length > 24:
+                break
+            comp_word = y[low_end:high_end+1]
             nospace = ''.join(comp_word).lower()
             withspace = ' '.join(comp_word).lower()
-            if j/2 in nums_to_flag:
+            if (rolling_sum & 1) and (rolling_sum / 2 in nums_to_flag):
                 if ignorable(comp_word):
                     continue
-                for cand in nums_to_flag[j/2]:
+                for cand in nums_to_flag[rolling_sum/2]:
                     if cand.lower() == ''.join(comp_word).lower(): continue
                     if last_line_and_file[cand] == (line_count, file):
                         pass
@@ -106,10 +133,10 @@ def find_reasonable_hashes(file_base, my_line):
                     last_line_and_file[cand] = (line_count, file)
                     output_string[cand] += print_red_letters(cand, comp_word, double_first = True)
                 continue
-            if j in nums_to_flag:
+            if rolling_sum in nums_to_flag:
                 if ignorable(comp_word):
                     continue
-                for cand in nums_to_flag[j]:
+                for cand in nums_to_flag[rolling_sum]:
                     if cand.lower() == ''.join(comp_word).lower(): continue
                     if last_line_and_file[cand] == (line_count, file):
                         pass
