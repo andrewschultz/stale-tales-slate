@@ -117,6 +117,8 @@ a region has a room called last-loc.
 
 a region has a rule called reg-hint-rule.
 
+a region has a rule called goto-check.
+
 a region has a list of things called item-list.
 
 a region has a list of things called worn-list.
@@ -162,6 +164,8 @@ definition: a person (called pe) is npcish:
 chapter hint variables
 
 first-hint-check is a truth state that varies.
+
+scams is a truth state that varies. [can we do hints every turn like the saltine or snoop spoon?]
 
 section debug variables that need to be in release
 

@@ -106,7 +106,7 @@ tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool sh
 riot	protest	"trio"	"riot"	--	post-riot-protest rule	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters/potter"	"protest" or "riot"	--	post-protest-potters rule	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are touchable]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 chain links	china	"china"	"china"	pre-chain-china rule	post-chain-china rule	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are touchable]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is touchable]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is touchable]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links as well."	false	172376056
-chain links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are touchable]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
+chain links	kilns	"kilns/kiln"	"links"	--	post-links-kilns rule	"The links burst and swell into luxury kilns[if potters are touchable]. 'Ohmigod! I--hm, good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Wow, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 book auxiliary text and rules
 
@@ -226,12 +226,15 @@ this is the post-banshee-hasbeen rule:
 section sortie auxiliary
 
 to say drop-straw:
-	say ", which is too heavy to carry. You drop it";
+	say ", which [if player carries sack]you drop into the sack before it falls out of your arms[else]is too heavy to carry. You drop it[end if]";
 	choose row with short of "warts" in table of pad-stuff;
 	if known entry is true:
 		say ". You run a big line through your entry on warts in your dope tan notepad";
 		now known entry is false;
-	move straw to location of the player;
+	if player carries sack:
+		now straw is in sack;
+	else:
+		move straw to location of the player;
 
 this is the post-thenick-kitchen rule:
 	if straw is in the nick, now straw is in kitchen;
@@ -242,11 +245,11 @@ this is the pre-cathouse-hotsauce rule:
 this is the post-fridgey-flip rule:
 	if noun is pancake or noun is grits:
 		now noun is in fridge;
+		say "[line break]Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 		if fridge-open is false:
-			say "You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
+			say "[line break]You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
 			now fridge-open is true;
 			now fridge is transparent;
-		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is moot or taco is touchable]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of touchable ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 		if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
 
 this is the pre-cask-sack rule:
