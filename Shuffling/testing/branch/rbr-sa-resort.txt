@@ -2,12 +2,13 @@
 #
 # this covers maximum points, minimum points and nudges.
 #
-files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-sa-resort-hints.txt
+files=reg-sa-resort-max.txt,reg-sa-resort-min.txt,reg-sa-resort-nudmis.txt,reg-sa-resort-hints.txt,reg-sa-resort-detail.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu	t2
 ~	mis,mi	t2
 ~	hints,hin,sal,gle,gt,gn	t3
+~	ask,scan,pad	t4
 
 }}MAX=15
 }}CURMAX=15
@@ -46,7 +47,7 @@ You see yourself walking into store R, which temporarily looks like a luxury hot
 #spechelp for store r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Store R. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
 
 >resort
 #notmax
@@ -99,7 +100,7 @@ The feral flare crackles menacingly. You doubt you can change it for the better.
 #spechelp for tiles
 >islte
 The tiles rattle as if to shift but settle down.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tiles. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
 #readables for tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
@@ -112,6 +113,23 @@ While you're sort of trapped here, you don't need to do anything to the location
 As your vision blurs, the stile seems to stand over a small islet.
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
+
+@scan
+#gadget test: tiles to islet
+>rc tiles
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRGGR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: I---T.
+DEBUG INFO: CERT-TEXT: --LE-.
+\\
+#gadget test: stile to islet
+>rc stile
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRGBB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: I---T.
+DEBUG INFO: CERT-TEXT: -----.
 
 >islet
 Your score has just gone up by one point.
@@ -180,7 +198,7 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 #spechelp for l2
 >lesi
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the leis. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
 \\
 #nudge for lie
 >eil
@@ -205,7 +223,32 @@ You notice writing on the rock and swing similar to what you just said. Or tried
 #spechelp for rock
 >crko
 Hmm, a rock, but only so much you can do with it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the rock. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
+
+@scan
+#gadget test: leis to lies
+>rc leis
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
+The gadget beeps once. A series of lights comes across: GRRG.
+DEBUG INFO: RECT-TEXT: L--S.
+DEBUG INFO: CERT-TEXT: L--S.
+\\
+#gadget test: rock to cork
+>rc rock
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: C--K.
+DEBUG INFO: CERT-TEXT: -O-K.
+\\
+#gadget test: swing to wings
+>rc swing
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: W---S.
+DEBUG INFO: CERT-TEXT: -----.
 
 @!min
 >lies
@@ -217,7 +260,8 @@ by one point
 
 @gn
 >w
-No, you already saw the woodland was faked, but then, the leis were fake, too.
+No, you already saw the woodland was faked.
+!but then, the leis were fake, too.
 
 @nud
 #note that there is no renudge for leis because before L2 is moot, we go to the table of spechelp. But for lei, we are always in the table of nudges.
@@ -228,13 +272,21 @@ You already noticed the leis. Use something on the isle to escape it.
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 
-
 @mis
 #mistake test for lies/lie
 >lies
 You reflect on how insidious it was to stick you here in a false paradise.
 >lie
 You reflect on how insidious it was to stick you here in a false paradise.
+
+@min
+>wings
+by one point
+>misses
+!--the swing on the Leis Isle was changeable to WINGS.
+--the rock on the Leis Isle was changeable to CORK.
+>undo
+>undo
 
 >cork
 Your score has just gone up by one point.
@@ -258,7 +310,7 @@ You have a way off this island to the east, though you can make the other for fu
 #spechelp for swing
 >winsg
 The swing goes slightly airborne.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the swing. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
 
 @!min
 >wings
@@ -381,7 +433,7 @@ Only changing one pole would still leave a vertical barrier.
 #spechelp for poles
 >polse
 The poles start to bend at an angle--or maybe that's the light.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the poles. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
 
 @mis
 #mistake test for prose
@@ -397,6 +449,39 @@ Your vision blurs a bit, and instead you see a slope.
 Your vision blurs a bit, and instead you see ropes.
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
+
+@scan
+#gadget test: poles to slope
+>rc poles
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: S---E.
+DEBUG INFO: CERT-TEXT: -----.
+\\
+#gadget test: toolshed to toeholds
+>rc toolshed
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB.
+The gadget beeps once. A series of lights comes across: GGRRRRRR.
+DEBUG INFO: RECT-TEXT: T------S.
+DEBUG INFO: CERT-TEXT: TO------.
+\\
+#gadget test: sprig to grips
+>rc sprig
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: G---S.
+DEBUG INFO: CERT-TEXT: -----.
+\\
+#gadget test: spore to ropes
+>rc spore
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: R---S.
+DEBUG INFO: CERT-TEXT: -----.
 
 >slope
 by one point
@@ -430,18 +515,31 @@ You wonder if YOU are the poser, for not being able to figure what to do.
 #spechelp for tool shed
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
 #readables for u lock
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
 
 @gle
+##balance undos
 >ropes
 by one point
 >grips
 by one point
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles and the tool shed when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tool shed (faint) when you do.
+>undo
+>undo
+>undo
+
+@min
+##balance undos
+>grips
+by one point
+>ropes
+by one point
+>misses
+--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
 >undo
 >undo
 >undo
@@ -453,8 +551,7 @@ Your score has just gone up by two points.
 @gle
 You see yourself climbing east without much trouble.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the spore (faint) and the sprig (faint) when you do.
-
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) when you do.
 
 >score
 {$SCOS}
@@ -467,7 +564,7 @@ The toeholds could be handy for getting up and out of here.
 #spechelp for spore
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the spore. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
 
 @!min
 >ropes
@@ -504,7 +601,7 @@ Those are already useful.
 #spechelp for sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the sprig. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
 
 @mis
 #mistake test for prigs
@@ -602,7 +699,7 @@ No, the clay is a clue to what the protest really wants to do.
 #spechelp for riot
 >troi
 The riot's still a crowd. A BIG crowd.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the riot. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
 
 @mis
 #mistake test for i rot
@@ -613,6 +710,15 @@ Don't give up! Perhaps there are only four or fewer rioters with their heart rea
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot when you do.
 
+@scan
+#gadget test: riot to trio
+>rc riot
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: T--O.
+DEBUG INFO: CERT-TEXT: ----.
+
 >trio
 Your score has just gone up by one point.
 }}SCORE++
@@ -620,7 +726,7 @@ Your score has just gone up by one point.
 @gle
 You see the trio, happier now, discussing art and wearing dirty smocks.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the trio when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest when you do.
 
 >score
 {$SCOS}
@@ -640,11 +746,11 @@ They're just a simple protest.
 \\
 #mistake test for ether
 >ether
-They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
+They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
 >kilns
 by one point
 >ether
-They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
+They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
 >undo
 >undo
 
@@ -655,7 +761,7 @@ The trio remains unmoved. Perhaps you can give the protest more constructive aim
 #spechelp for protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the trio. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
 
 @mis
 #mistake test for roister
@@ -675,6 +781,23 @@ No, the clay is a clue to what the protest really wants to do.
 >xx protest
 You see the trio stopping their protest to get to work as potters.
 
+@scan
+#gadget test: protest to potters
+>rc protest
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB.
+The gadget beeps once. A series of lights comes across: GRRGGRR.
+DEBUG INFO: RECT-TEXT: P-----S.
+DEBUG INFO: CERT-TEXT: P--TE--.
+
+@ask
+>kilns
+by one point
+>ask protest about kilns
+"If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
+>undo
+>undo
+
 >potters
 Your score has just gone up by one point.
 }}SCORE++
@@ -687,7 +810,7 @@ Your score has just gone up by one point.
 >pottre
 Picking one person out of a crowd never works.
 \\
-#spechelp for potters
+#done rejects for potters
 >pottesr
 You've changed the potters enough. Now you need to give them something interesting to do besides protest.
 
@@ -703,7 +826,7 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 #spechelp for chain links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the chain links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
 
 @mis
 #mistake test for achin
@@ -737,15 +860,24 @@ Too many people are watching for you to slink away.
 #respechelp for chain links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the links. Keep at it.
 #respechelp for chain links
 >kilsn
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the links. Keep at it.
 
 @hin
 >xx links
 Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
+
+@scan
+#gadget test: links to kilns
+>rc links
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
+The gadget beeps once. A series of lights comes across: RGRRG.
+DEBUG INFO: RECT-TEXT: K---S.
+DEBUG INFO: CERT-TEXT: -I--S.
 
 >kilns
 Your score has just gone up by one point.
@@ -918,6 +1050,7 @@ Your vision blurs a bit, and you see names and hear AMENs.
 But you want to NOT go anywhere. NOT take any exits.
 
 @gle
+>angle
 It's glowing all around here. The X ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
 
 @nud
@@ -968,21 +1101,55 @@ Seeing exits just makes you want to...
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
+@min
+>misses
+Missed in Resort:
+--you could've said LIES to expose the Leis Isle as an illusion.
+!--the rock on the Leis Isle was changeable to CORK.
+--the swing on the Leis Isle was changeable to WINGS.
+--the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+--the sprig in the Rived Drive was changeable to GRIPS.
+!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+#brackets ok
+--the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+
+@max
+!Missed in Resort:
+!--you could've said LIES to expose the Leis Isle as an illusion.
+!--the rock on the Leis Isle was changeable to CORK.
+!--the swing on the Leis Isle was changeable to WINGS.
+!--the spore in the Rived Drive was changeable to ROPES. The sprig/spore was one way through, but the toolshed was the other.
+!--the sprig in the Rived Drive was changeable to GRIPS.
+!--the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.
+#brackets ok
+!--the chain links could've become china. [Note: to get this point, you need to change the (chain) links to china before making the kilns.]
+
 >exist
 #notana
 by one point
 My Adieu to You: Made It!
 
 @max
+>missed
+You chose EXIST, but there are two other ways to win.
+>missed
+There were three final commands to win the game. You chose EXIST, but you could also have tried NAMES/AMENS.
 >undo
 >amens
 by one point
 My Adieu to You: Made It!
-\\
+>missed
+You chose AMENS, but there are two other ways to win.
+>missed
+There were three final commands to win the game. You chose AMENS, but you could also have tried EXIST/NAMES.
 >undo
 >names
 by one point
 My Adieu to You: Made It!
+>missed
+You chose NAMES, but there are two other ways to win.
+>missed
+There were three final commands to win the game. You chose NAMES, but you could also have tried EXIST/AMENS.
 
 
 ################################################

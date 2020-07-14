@@ -4,11 +4,12 @@
 #
 # the nudmis file also covers two alternate ways through the sortie.
 #
-files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-sa-sortie-hints.txt
+files=reg-sa-sortie-max.txt,reg-sa-sortie-min.txt,reg-sa-sortie-nudmis.txt,reg-sa-sortie-hints.txt,reg-sa-sortie-detail.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,mis,mi	t2
 ~	hints,hin,gle,gt,gn	t3
+~	ask,scan,pad	t4
 
 ## *FILE
 ## *FORK
@@ -40,7 +41,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 #spechelp for store i
 >sortei
 you think, as you see red. Rise to what?
-DEBUG ONLY: You feel a slight psychic push-pull coming from Store I. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store I. Keep at it.
 
 >sortie
 by one point
@@ -128,7 +129,14 @@ You can probably TURN the dial to a number, e.g. 99
 
 @gn
 >w
-That'd be running into a wall, and besides, you have to stop the Trap Part spinning, first
+You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
+Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
+
+@scan
+#gadget test: exitsne to sixteen
+>rc dial
+You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, green flashing between 5 and 7, red flashing between 1 and 6. Hm, exits plus two letters. What number could that be, or become.
+You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, all red except for the middle that flashes green. Hm, exits plus two letters. What number could that be, or become.
 
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
@@ -200,7 +208,7 @@ You don't need to re-stop the centrifuge.
 #spechelp for t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
-DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 @mis
 #mistake test for thicken
@@ -209,7 +217,16 @@ You might rather thin-nen to slip through the bars, but you can't.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the nick when you do.
+The nick glows all around.
+
+@scan
+#gadget test: thenick to kitchen
+>rc the nick
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRRRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: K-----N.
+DEBUG INFO: CERT-TEXT: -------.
 
 >kitchen
 by one point
@@ -219,8 +236,26 @@ Kitchen
 
 @hin
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
+
+@gle
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman and the bottle of CATHOUSE perfume when you do. Your warts also tingle.
+
+@scan
+#gadget test: warts to straw
+>rc warts
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
+The gadget beeps once. A series of lights comes across: RRGRR.
+DEBUG INFO: RECT-TEXT: S---W.
+DEBUG INFO: CERT-TEXT: --R--.
+
+@!min
 >open fridge
-grist and a cake pan
+You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+>open fridge
+You reopen and peer on. You see a grist and a cake pan inside.
+
 >xx
 Nothing really sticks out. You may have to XX something specific.
 >xx grist
@@ -242,12 +277,69 @@ Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 >gt nick
 No, you don't want to go back there.
 
+@scan
+#gadget test: tall trio to tortilla
+>rc tall trio
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+The gadget beeps once. A series of lights comes across: GRRRRRRR.
+DEBUG INFO: RECT-TEXT: T------A.
+DEBUG INFO: CERT-TEXT: T-------.
+\\
+#gadget test: cult tee to lettuce
+>rc cult tee
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
+The gadget beeps once. A series of lights comes across: RRRGRRG.
+DEBUG INFO: RECT-TEXT: L-----E.
+DEBUG INFO: CERT-TEXT: ---T--E.
+\\
+#gadget test: skate to steak
+>rc skate
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
+The gadget beeps once. A series of lights comes across: GRRRR.
+DEBUG INFO: RECT-TEXT: S---K.
+DEBUG INFO: CERT-TEXT: S----.
+\\
+#gadget test: cathouse to hotsauce
+>rc cathouse
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR.
+The gadget beeps once. A series of lights comes across: RRGRRGRG.
+DEBUG INFO: RECT-TEXT: H------E.
+DEBUG INFO: CERT-TEXT: --T--U-E.
+\\
+#gadget test: spearman to parmesan
+>rc spearman
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR.
+The gadget beeps once. A series of lights comes across: RRRRRRGG.
+DEBUG INFO: RECT-TEXT: P------N.
+DEBUG INFO: CERT-TEXT: ------AN.
+\\
+#gadget test: cakepan to pancake
+>rc cakepan
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB.
+The gadget beeps once. A series of lights comes across: RGRRRRR.
+DEBUG INFO: RECT-TEXT: P-----E.
+DEBUG INFO: CERT-TEXT: -A-----.
+\\
+#gadget test: grist to grits
+>rc grist
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
+The gadget beeps once. A series of lights comes across: GGGRR.
+DEBUG INFO: RECT-TEXT: G---S.
+DEBUG INFO: CERT-TEXT: GRI--.
+
 >score
 {$SCOS}
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume when you do. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 
 @gle
 >straw
@@ -346,11 +438,9 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #spechelp for grist
 >grtis
 The grist looks a bit less bland.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the grist. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the grist. Keep at it.
 
 @gle
->open fridge
-Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 
@@ -374,7 +464,7 @@ The fridge has taken enough abuse and can't be changed for the better, but maybe
 #spechelp for cake pan
 >pancaek
 It's a cake pan, backwards and forwards.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
 
 @!min
 >pancake
@@ -396,7 +486,7 @@ Best not to get too crazy with food preparation.
 #spechelp for tall trio
 >tortilal
 The tall trio seem to look interested for a minute.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 #readables for tall trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
@@ -445,7 +535,7 @@ It's the full name brand that really catches your eye.
 #spechelp for cathouse
 >hotsauec
 The CATHOUSE perfume suddenly smells a bit spicier.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -500,7 +590,7 @@ The spearman's name, in red, is MR. SANE PA.
 #spechelp for spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
 
 >parmesan
 Your score has just gone up by one point.
@@ -524,7 +614,7 @@ Best not to get too crazy with food preparation.
 #spechelp for skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the skate. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
 
 @mis
 #mistake test for stake
@@ -579,7 +669,7 @@ The steak's just right as is.
 #spechelp for cult tee
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 \\
 #nudge for cult
 >cutl
@@ -639,7 +729,7 @@ You don't need to change the red inn. It supported your cooking efforts.
 #spechelp for taco
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the taco. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
 
 @mis
 #mistake test for cato
@@ -653,6 +743,15 @@ Your vision blurs a bit, and instead you see a coat.
 @gle
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the taco when you do.
+
+@scan
+#gadget test: taco to coat
+>rc taco
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: C--T.
+DEBUG INFO: CERT-TEXT: ----.
 
 >coat
 Your score has just gone up by one point.
@@ -709,7 +808,7 @@ The cask is changeable, but not like that. WERE-EWER just clues it can be change
 #spechelp for cask
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the cask. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cask. Keep at it.
 
 @hin
 >xx cask
@@ -719,9 +818,27 @@ Your vision blurs a bit, and instead you see a sack.
 >angle
 The whole room seems lit up.
 
+@scan
+#gadget test: cask to sack
+>rc cask
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: S--K.
+DEBUG INFO: CERT-TEXT: -A-K.
+
 >sack
 Your score has just gone up by one point.
 }}SCORE++
+
+@scan
+#gadget test: sack to cask
+>rc sack
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: C--K.
+DEBUG INFO: CERT-TEXT: -A-K.
 
 >score
 @min
@@ -737,7 +854,7 @@ After some thought, that seems like it'd be a waste, since you know what it was.
 #spechelp for sack
 >cska
 You doubt the sack/cask has a triple purpose.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the sack. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
 \\
 #nudge for burlap
 >burlpa
@@ -755,7 +872,7 @@ Why zap just one wart? Go for all of them!
 #spechelp for warts
 >strwa
 The warts itch slightly.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the warts. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the warts. Keep at it.
 
 @gle
 You see your face clear again, pleased you reversed the warts.
@@ -779,8 +896,8 @@ DEBUG: pair of hoses being objhinted.
 
 @gle
 >angle
-The whole room seems lit up.
-There's nothing else, here, than the general glow.
+You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses when you do.
+!There's nothing else, here, than the general glow.
 
 >put straw in sack
 
@@ -803,7 +920,7 @@ You need more than one shoe.
 #spechelp for hoses
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
 
 @mis
 #mistake test for hoes
@@ -817,15 +934,28 @@ You see yourself smiling at your feet with pride!
 >xx hoses
 Your vision blurs a bit, and instead you see shoes.
 
+@scan
+#gadget test: hoses to shoes
+>rc hoses
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
+The gadget beeps once. A series of lights comes across: RRRGG.
+DEBUG INFO: RECT-TEXT: S---S.
+DEBUG INFO: CERT-TEXT: ---ES.
+
 >shoes
 Your score has just gone up by one point.
 }}SCORE++
 
-@gle
-You see yourself disappearing!
-
 @hin
 The room is just a plain room. You feel like you want to get out, though.
+
+@gle
+You see yourself disappearing!
+>angle
+The whole room seems lit up.
+!You stare into the blue lube for a bit, then look around. You notice a weird haze around the pair of hoses when you do.
+There's nothing else, here, than the general glow.
 
 @mis
 #mistake retest for hoes
@@ -850,11 +980,17 @@ But you're wearing the shoes. That might cause problems.
 #spechelp for r2
 >romo
 You almost feel something picking you up for a second. You must have been close.
-DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 @hin
 >xx
 Your vision swirls, and you see a moor.
+
+@scan
+#gadget test: room to moor
+>rc
+Your gadget's not near anything, but it's registering RGGR.
+Your gadget's not near anything, but it's registering RBBG.
 
 >moor
 Your score has just gone up by one point.
@@ -870,8 +1006,16 @@ Your vision blurs a bit, and instead you see a peasant.
 
 @gle
 >angle
-The whole moor seems lit up, and the glow pulses with the anapest beat of the poem.
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the roadblock when you do. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock when you do.
+
+@scan
+#gadget test: anapest to peasant
+>rc anapest
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
+The gadget beeps once. A series of lights comes across: RRGRRRG.
+DEBUG INFO: RECT-TEXT: P-----T.
+DEBUG INFO: CERT-TEXT: --A---T.
 
 @gn
 >s
@@ -929,6 +1073,22 @@ Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 >peot
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
+@ask
+>ask woeful pat about beat
+He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem. Or maybe its meter.
+\\
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this. Here you go, just to make sure."
+\\
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this."
+\\
+>ask woeful pat about peasant
+"There is one who tries his best. But he is too...obvious."
+\\
+>ask woeful pat about anapest
+"I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
+
 >z
 >z
 >z
@@ -983,7 +1143,7 @@ Shooting things up is not the answer
 #spechelp for anapest
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the anapest. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the anapest. Keep at it.
 
 >peasant
 Your score has just gone up by one point.
@@ -993,6 +1153,34 @@ Your score has just gone up by one point.
 DEBUG: peasant being objhinted.
 >xx
 You have a very non-magical vision of the room you were in before you jumped to the moor.
+
+@scan
+#gadget test: moor to room
+>rc
+Your gadget's not near anything, but it's registering RGGR.
+Your gadget's not near anything, but it's registering RBBG.
+
+@ask
+>ask peasant about mean old
+"Used to be much nicer, I'd say!"
+\\
+>ask peasant about poem
+"I try my best at it."
+\\
+>ask peasant about peasant
+"I don't know much about that, that's sure. But I know from hay, being an abler baler."
+\\
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+\\
+>ask peasant about hay
+"Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand..."
+
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+\\
+>ask peasant about Woeful Pat
+"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
 >score
 @min
@@ -1068,7 +1256,7 @@ No, the full roadblock.
 #spechelp for m2
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
-DEBUG ONLY: You feel a slight psychic push-pull coming from all around. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >room
 "The room's smoother," you muse...
@@ -1147,9 +1335,18 @@ You see the haywall vanishing.
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
 
+@scan
+#gadget test: haywall to hallway
+>rc haywall
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB.
+The gadget beeps once. A series of lights comes across: GGRRRRR.
+DEBUG INFO: RECT-TEXT: H-----Y.
+DEBUG INFO: CERT-TEXT: HA-----.
+
 @gn
 >n
-Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
+Mum, dud mud blocks your way. You can only go west or south.
 
 >score
 @min
@@ -1161,7 +1358,7 @@ Mum, dud mud blocks your way north. You can only go west or south or, since you 
 #spechelp for scraped wall
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
 #rereadables for scraped wall
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -1176,6 +1373,10 @@ Your score has just gone up by one point.
 
 @gle
 You see yourself building a huge structure in the moor without saying anything.
+
+@gn
+>n
+Mum, dud mud blocks your way. You can only go west or south or, since you opened the hallway, east.
 
 >score
 @min
@@ -1353,7 +1554,7 @@ Moor
 #spechelp for smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the smilies. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
 
 @mis
 #mistake retest for mope
@@ -1371,6 +1572,15 @@ Adding similes would mean the limerick wouldn't scan. They'd be more forced than
 Your vision blurs a bit, and instead you see soil, then a silo.
 >xx smilies
 Your vision blurs a bit, and instead you see a missile.
+
+@scan
+#gadget test: smilies to missile
+>rc smilies
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB.
+The gadget beeps once. A series of lights comes across: RRRRGRR.
+DEBUG INFO: RECT-TEXT: M-----E.
+DEBUG INFO: CERT-TEXT: ----I--.
 
 >missile
 Your score has just gone up by one point.
@@ -1402,7 +1612,7 @@ You fold the paper, and it looks sort of like a paper plane.
 
 @gle
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the roadblock, the folded paper plane and the oils when you do.
 
 @nud
 #renudge for folded
@@ -1420,7 +1630,7 @@ It's a plane, now, for sure.
 #spechelp for poem
 >panle
 The plane can probably become something else, but not that.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
 
 @mis
 #mistake test for nepal
@@ -1430,6 +1640,15 @@ Whoah! Teleporting there would be too cold even with that coat on. Plus, you hav
 @hin
 >xx plane
 You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.
+
+@scan
+#gadget test: plane to panel
+>rc plane
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
+The gadget beeps once. A series of lights comes across: GRRRR.
+DEBUG INFO: RECT-TEXT: P---L.
+DEBUG INFO: CERT-TEXT: P----.
 
 >panel
 Your score has just gone up by one point.
@@ -1452,8 +1671,17 @@ You mope, but you imagine no poem.
 The panel bleeps a "stop that" sort of warning.
 #spechelp for oils
 >soli
-The oils need a purpose--to build something great. You don't want to waste them.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the oils. Keep at it.
+The oils could change the moor into something more fertile, but not that.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
+
+@scan
+#gadget test: oils to soil
+>rc oils
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: S--L.
+DEBUG INFO: CERT-TEXT: ----.
 
 >soil
 Your score has just gone up by one point.
@@ -1477,7 +1705,7 @@ There's no other way to change the cask than to and from the sack. WERE-EWER jus
 #spechelp for roadblock
 >black doro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
 
 @mis
 #mistake test for blackdoor
@@ -1491,6 +1719,15 @@ Hm, no, keep religion out of it.
 @hin
 >xx roadblock
 Your vision blurs a bit, and instead you see a black door.
+
+@scan
+#gadget test: roadblock to blackdoor
+>rc roadblock
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB.
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR.
+DEBUG INFO: RECT-TEXT: B-------R.
+DEBUG INFO: CERT-TEXT: --A---O--.
 
 >black door
 Your score has just gone up by one point.
@@ -1557,7 +1794,7 @@ The cask is already full of oils.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the oils when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the oils when you do.
 
 @nud
 #renudge for oil
@@ -1603,6 +1840,20 @@ You can't go back there.
 >xx oils
 Your vision blurs a bit, and instead you see a silo.
 
+@nud
+#renudge for lois
+>olsi
+No, that wouldn't need the soil as a foundation.
+
+@scan
+#gadget test: oils to silo
+>rc oils
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
+The gadget beeps once. A series of lights comes across: RGGR.
+DEBUG INFO: RECT-TEXT: S--O.
+DEBUG INFO: CERT-TEXT: -IL-.
+
 >silo
 Your score has just gone up by one point.
 }}SCORE++
@@ -1633,7 +1884,7 @@ The panel fits into that rectangle handily and even starts to glow. Two buttons 
 
 @gle
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the hoots button and the trees button when you do.
 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
@@ -1698,7 +1949,7 @@ No, you're overthinking it. Just the text.
 #spechelp for trees button
 >teres
 Hmm, that doesn't work, but you bet you can bull your way through things.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the trees button. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
 \\
 #mistake test for stere
 >stere
@@ -1740,6 +1991,15 @@ Unfortunately, it's not QUITE as easy as just pushing a reset button. But rearra
 >reset button
 Resetting twice won't get you anywhere. You need a new direction to change the TREES.
 
+@scan
+#gadget test: trees to steer
+>rc trees
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
+The gadget beeps once. A series of lights comes across: RRGGR.
+DEBUG INFO: RECT-TEXT: S---R.
+DEBUG INFO: CERT-TEXT: --EE-.
+
 >steer
 Your score has just gone up by one point.
 }}SCORE++
@@ -1759,12 +2019,21 @@ Already good.
 #spechelp for hoots button
 >shoto
 You suppress a few minor swears as you realize that can't be right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
 
 @mis
 #mistake test for sooth
 >sooth
 Close...what you need to do will sooth, in a bit.
+
+@scan
+#gadget test: hoots to shoot
+>rc hoots
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
+The gadget beeps once. A series of lights comes across: RRGRR.
+DEBUG INFO: RECT-TEXT: S---T.
+DEBUG INFO: CERT-TEXT: --O--.
 
 >shoot
 Your score has just gone up by one point.
@@ -1808,6 +2077,18 @@ No, the shoot button HAS to be right.
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
+
+@min
+>misses
+Missed in Sortie:
+--the cake pan in the fridge could've become a PANCAKE.
+--the grist in the fridge could've become GRITS.
+
+@max
+>misses
+!Missed in Sortie:
+!--the cake pan in the fridge could've become a PANCAKE.
+!--the grist in the fridge could've become GRITS.
 
 >push shoot
 #notana
