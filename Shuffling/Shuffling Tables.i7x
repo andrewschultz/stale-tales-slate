@@ -19,7 +19,7 @@ book Stores
 
 table of Stores anagrams [xxtsa]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
-store b	sorbet	"sorbet"	--	--	post-storeb-sorbet rule	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378 [start trips anagrams]
+store b	sorbet	"sorbet"	--	--	post-storeb-sorbet rule	"The store collapses into a greyish sludge, under which you find a large cup of sorbet. It's surprisingly tasty. Once you've finished, it vanishes with a pop. You're not sure how all that worked, but it was a nice break."	false	505285378 [start trips anagrams]
 store f	scented descent	"forest"	"store f"	--	--	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	posted depots	"sortie"	"store i"	--	--	"The store rumbles, revealing shady posted depots you can enter to somewhere new."	false	531859319
 store m	trade tread	"metros/metro"	"store m"	--	--	"The store rumbles, with the collections of small-scale cities disappearing. A trade tread appears. You can't see where it ends up, but you can ENTER or FOLLOW it."	false	550941626
@@ -455,7 +455,6 @@ to say give-sword:
 section resort auxiliary
 
 this is the post-leis-lies rule:
-	min-up;
 	moot lies;
 	now found-lies is true;
 
@@ -641,7 +640,7 @@ to say spec-help of (itm - a thing):
 			if point is true:
 				say "[helptxt entry][line break]";
 			if point is false or debug-state is true:
-				say "[if debug-state is true]DEBUG ONLY: [end if]You feel a slight psychic push-pull coming from [where-pull of itm]. Keep at it.";
+				say "[if point is true]DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: [end if]You feel a slight psychic push-pull coming from [where-pull of itm]. Keep at it.";
 			d "There is a spechelp entry for this.";
 			break;
 	if got-spec is false: [this should not happen, but it was useful weeding out clues.]

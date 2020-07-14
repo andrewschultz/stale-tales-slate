@@ -702,7 +702,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "parse"	393057655	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
 "angle"	285314976	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
 "yorpwald"	548467110	--	past-loader rule	"[if player is in Notices Section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
-"retry"	523922985	--	past-strip rule	"Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire."
+"retry"	523922985	--	know-retry-yet rule	"[if player is in trips strip or trips strip is unvisited]You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no[else]Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire[end if]."
 "notepad"	478859078	--	degen-true rule	"[what-for]."
 "dope"	304653734	--	degen-true rule	"[what-for]."
 "tan"	174205344	--	degen-true rule	"[what-for]."
@@ -1072,8 +1072,8 @@ this is the past-loader rule:
 	if Notices Section is visited, the rule succeeds;
 	the rule fails;
 
-this is the past-strip rule:
-	if Self ID Fields is visited or underside is visited or Trap Part is visited, the rule succeeds;
+this is the know-retry-yet rule:
+	if retry-known is true, the rule succeeds;
 	the rule fails;
 
 to say what-for: say "[if Notices Section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"

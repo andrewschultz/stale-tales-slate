@@ -131,7 +131,7 @@ understand "rated" as a mistake ("The trade tread isn't for commenting on, it's 
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in Trips Strip.
 
-understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is touchable]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].") when player is in Trips Strip.
+understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].") when player is in Trips Strip.
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
 
@@ -197,7 +197,7 @@ understand "alerting" and "alertings" as a mistake ("There's nobody to alert her
 
 understand "altering" and "alterings" as a mistake ("No alterings or reslating of the scenery is necessary or even desirable here. It's organized so well.") when player is in Gnarliest Triangles.
 
-understand "enos" as a mistake ("A certain deputy sheriff from Hazzard County would be willing to help, but he belongs somewhere much nicer than here.") when player has nose or ones are touchable.
+understand "enos" as a mistake ("A certain deputy sheriff from Hazzard County would be more than willing to help, but he belongs somewhere much nicer than here.") when player has nose or ones are touchable.
 
 understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or ones are touchable.
 
@@ -233,7 +233,7 @@ chapter Ghouls' Slough
 
 understand "cluer" as a mistake ("[if player is in Ghouls Slough]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is touchable or player is in Ghouls Slough.
 
-understand "gob" as a mistake("The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.[paragraph break]Oh, and you can undo this, too.[end-it]") when player is in Ghouls Slough.
+understand "gob" as a mistake("The bog expands into a big ol['] gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. At least you didn't have to suffer through any melodrama from the Bluth family as you died.[paragraph break]Oh, and you can undo this, too.[end-it]") when player is in Ghouls Slough.
 
 understand "god" as a mistake ("You want to tempt the supernatural in somewhere this hellish? Phew.") when player is in Ghouls Slough.
 

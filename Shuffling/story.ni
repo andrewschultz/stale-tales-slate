@@ -247,9 +247,9 @@ use MAX_ACTIONS of 250.
 
 use MAX_VERBS of 460. [-40 from debug]
 
-use MAX_VERBSPACE of 4900.
+use MAX_VERBSPACE of 5000.
 
-use MAX_SYMBOLS of 34000.
+use MAX_SYMBOLS of 35000.
 
 use MAX_PROP_TABLE_SIZE of 230000.
 
@@ -259,9 +259,9 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 500.
 
-use MAX_VERBSPACE of 5200.
+use MAX_VERBSPACE of 5300.
 
-use MAX_SYMBOLS of 35000.
+use MAX_SYMBOLS of 36000.
 
 use MAX_PROP_TABLE_SIZE of 250000.
 
@@ -596,8 +596,10 @@ to say 2da of (rg - a region):
 
 to say 2dn: say "[unless sr-acc is true]--[end if]".
 
-to show-missed (curr - a region):
-	if cur-score of curr is max-score of curr, continue the action;
+to show-miss (curr - a region) and (ts - a truth state):
+	if ts is true and curr is not solved, continue the action;
+	if cur-score of curr is max-score of curr:
+		unless curr is metros or curr is resort, continue the action;
 	now sect-missed is false;
 	if curr is Ordeal Loader:
 		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a BLOT.";
@@ -618,7 +620,7 @@ to show-missed (curr - a region):
 		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
 	if curr is metros:
 		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become RENTALS.";
-		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
+		say "[line break][if max-score of metros is not cur-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	if curr is resort:
@@ -629,7 +631,8 @@ to show-missed (curr - a region):
 		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
 		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
 		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
-		say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+		if curr is solved: [so there are no testing artifacts with MISSES before]
+			say "[line break]There were three final commands to win the game. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
 rule for showing what the player missed:
 	now sect-missed is false;
@@ -641,9 +644,9 @@ rule for showing what the player missed:
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed. There is no special ending if you get them all, so don't bother going through the game unless you really had fun.[paragraph break]";
 	repeat with zq running through solved regions:
-		show-missed zq;
+		show-miss zq and true;
 
-to say toolwood: say "[one of][if tool shed is in Rived Drive]. The sprig/spore was one way through, but the toolshed was the other[end if][or][stopping]"
+to say toolwood: say "[one of]. The sprig/spore was one way through, but the toolshed was the other[or][stopping]"
 
 to say alt-sols:
 	let firsty be false;
@@ -1635,9 +1638,11 @@ chapter angleing
 
 angleing is an action out of world.
 
-understand the command "harken/rk/kn/hkn/angle/hrn" as something new.
+understand the command "harken/rk/kn/hkn/angle/angl/ange/hrn" as something new.
 
 understand "angle" as angleing.
+understand "angl" as angleing. [I made these 2 typos. I bet others will too.]
+understand "ange" as angleing. [I made these 2 typos. I bet others will too.]
 understand "harken" as angleing.
 understand "hkn" as angleing.
 understand "hrn" as angleing.
@@ -1653,7 +1658,9 @@ carry out angleing:
 		say "You'd need to get the phial from the cabinet first." instead;
 	if player does not have phail phial, all-say "[reject]" instead;
 	if player is in sf or player is in rf:
-		if thorn is not touchable, say "There's a weird haze in each of the four directions--north, south, east and west." instead;
+		if thorn is not touchable, say "There's a weird haze in each of the four directions--north, south, east and west. Perhaps something incorporeal is giving a clue." instead;
+	if player is in frost forts and wolves are in frost forts, all-say "You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically." instead;
+	if player is in means manse, say "It's glowing all around here. The X ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here." instead;
 	let ANG be the number of angleable things;
 	let see-others be false;
 	if player is in nick:
@@ -1668,13 +1675,13 @@ carry out angleing:
 	else if player is in Means Manse:
 		all-say "All the exits seem lit up.";
 		now see-others is true;
-	else if beats are touchable:
-		all-say "The blue glow pulses with the beats[if words are touchable], forming angry words[end if].";
+	else if player is in bassy abyss:
+		all-say "The blue glow pulses with the [if beast is touchable]beast's roars[else]beats[end if][if words are touchable], forming angry words[end if].";
 		now see-others is true;
 	if see-others is true:
 		say "[line break]";
 	if ANG is 0:
-		if see-others is false, all-say "You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do." instead;
+		if see-others is false, all-say "You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do[if warts are touchable], except for those warts[end if]." instead;
 		all-say "There's nothing else, here, than the general glow." instead;
 	if ANG > 0:
 		all-say "You stare into the blue lube for a bit, then look around. You notice [if ang is 1]a weird haze[else]weird hazes[end if] around [the list of angleable things] when you do[if warts are part of the player]. Your warts also tingle[end if].";
@@ -1688,12 +1695,21 @@ carry out angleing:
 
 after printing the name of an unnecc thing while angleing: say " (faint)". [unnecc is necessary (heh) because LLPish means you get a point for it, but flipping the attics/static infinitely is possible. ]
 
+rule for printing the name of protest when angleing: say "protest"
+
 definition: a thing (called amiun) is unnecc:
 	if amiun is LLPish, yes;
 	if amiun is attics or amiun is static, yes;
+	if amiun is tool shed:
+		if sprig is moot and spore is moot, yes;
+	if amiun is scraped wall and amiun is not hayfilled, yes;
+	if amiun is sprig or amiun is spore:
+		if tool shed is moot, yes;
 	decide no;
 
 definition: a thing (called cand) is angleable:
+	if cand is cake pan or cand is grist:
+		if fridge-open is false, no;
 	if cand is anapest, decide no;
 	if cand is beats, decide no;
 	if cand is words:
@@ -1702,13 +1718,15 @@ definition: a thing (called cand) is angleable:
 	if cand is poem and cand is not folded, decide no;
 	if cand is r2, decide no;
 	if cand is m2, decide no;
+	if cand is t-n, decide no;
 	if cand is warts, decide no;
 	if cand is oils and oils are in Sacred Cedars, decide no;
 	if cand is heaths:
 		if player has begonias or player has noise bag, decide no;
 	if cand is begonias:
 		if player has heaths or player has sheath, decide no;
-	if cand is touchable and cand is flippable and cand is not flipped-yet, decide yes;
+	if cand is touchable and cand is flippable:
+		if cand is not flipped-yet or cand is protest or cand is sliver, decide yes;
 	decide no;
 
 to h-check:
@@ -1736,10 +1754,11 @@ understand "optin" and "opt in" as optining.
 
 carry out optining:
 	if point is true:
-		say "You're already being pointed to extra hints.";
+		say "You're already being pointed to extra hints when you have the right letter collection.";
 	else:
 		say "Now pointing you with an additional hint when you have the right anagram letters. NO TIP turns this back off.";
 		now point is true;
+		now pointcue is true;
 	the rule succeeds.
 
 chapter notiping
@@ -1752,9 +1771,10 @@ understand "no tip" and "notip" as notiping.
 
 carry out notiping:
 	if point is false:
-		say "You're already requesting no tip.";
+		say "You're already receiving no extra hints beyond knowing you have the right letter collection.";
 	else:
 		say "Now hiding tips in favor of a generic response. OPT IN turns this back on.";
+		now pointcue is true;
 		now point is false;
 	the rule succeeds.
 
@@ -1956,17 +1976,17 @@ Metros	trade tread	"You return to the hustle, bustle, etc."
 
 book region division
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. [both bulge/blot, darnels, static]
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. [both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. [cabinet]
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. [cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. [slit, banshee]
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. [slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. [cake pan, grist]
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. [cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. [antlers]
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. [antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. [Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 orig-region is Ordeal Loader.
 
@@ -2030,6 +2050,7 @@ carry out fliptoing (this is the main flipping rule) :
 				now just-print is false;
 				try mainhelping;
 				now just-print is true;
+			now the-to entry is flipped-yet;
 			process the notify score changes rule;
 			continue the action;
 	say "Something went wrong here with flipping to. It should not have, but it did. To file a bug report, To=[the-to entry] From=[the-from entry]. [bug-report]";
@@ -2443,6 +2464,7 @@ check taking inventory:
 	say "Your general tools include:[line break]";
 	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	if number of things worn by player > 0, say "You are also wearing [a list of things worn by player].";
+	if warts are touchable, say "Those warts are still bugging you, too.";
 	the rule succeeds;
 
 after printing the name of the emitter while taking inventory: say " ([if emitter is angstgnatted]full of angst gnats[else if bastion-evac is false]full. Uh, you think[else]nothing inside[end if])".
@@ -2843,6 +2865,9 @@ the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![para
 to say board-note:
 	pad-rec-q "board";
 	pad-rec "retry";
+	now retry-known is true;
+
+retry-known is a truth state that varies.
 
 understand "billboard" as broad board.
 
@@ -2886,7 +2911,7 @@ description of the attics is "They fit perfectly on what was once the top of the
 
 section acne-bit cabinet
 
-the acne bit cabinet is an open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping].". printed name of cabinet is "acne-bit cabinet". understand "acnebit" and "acnebit cabinet" as cabinet. description of acne bit cabinet is "It's open[if acne bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
+the acne bit cabinet is a LLPish open openable transparent flippable container in Notices Section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The [if acne bit cabinet is not flippable](no longer) [end if]acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in Notices Section]. It contains [a list of things in cabinet][end if][stopping].". printed name of cabinet is "acne-bit cabinet". understand "acnebit" and "acnebit cabinet" as cabinet. description of acne bit cabinet is "It's open[if acne bit cabinet is not flippable], and you can't see the acne that was there[else]. The acne-bit parts do look red--maybe you can get rid of them[velcro-check][end if]. [if number of things in cabinet is 0]It's empty[else]You see [a list of things in cabinet] inside[end if].".
 
 gpos of acne bit cabinet is 3. rpos of acne bit cabinet is 6. lgth of acne bit cabinet is 7. rgtext of acne bit cabinet is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of acne bit cabinet is "-A[d1][d1][d1][d1][d1]". rect-text of acne bit cabinet is "B[d1][d1][d1][d1][d1]E".
 
@@ -3552,9 +3577,9 @@ chapter gleaning
 
 gleaning is an action out of world.
 
-understand the command "glean/hanker/nk/kr/hnr/hkr" as something new.
+understand the command "glean/glen/glea/hanker/nk/kr/hnr/hkr" as something new.
 
-understand "glean" and "hanker" and "nk" and "kr" and "hnr" and "hkr" as gleaning.
+understand "glean" and "glea" and "glen" and "hanker" and "nk" and "kr" and "hnr" and "hkr" as gleaning. [glea/glen are typos I made a lot during manual testing.]
 
 this is the ordeal-glean rule:
 	if location of player is Notices Section:
@@ -3588,7 +3613,7 @@ this is the forest-glean rule:
 		if player has spam or player has maps, all-say "You see yourself tracing something on the [if Spam is moot]maps[else]Spam[end if] and then walking with a purpose." instead;
 	if location of player is Frost Forts:
 		if vowels are in Frost Forts, all-say "You see the vowels grow slavering teeth." instead;
-		all-say "You are about to look in the phial, but it's survival time, here." instead;
+		all-say "A loud blast, then gore splatters everywhere." instead;
 
 to say in-here of (rm - a room): say "[if player is in rm]here[else]in [rm][end if]"
 
@@ -3994,7 +4019,7 @@ understand "store 1/one" and "1/one" as store a when player is in Trips Strip.
 
 section store b
 
-Store B is a sto. description of store b is "It seems to catch a rainbow every now and then, and you smell fruits you can't discern. It looks nowhere near as, well, lively as stores F, I or M, but maybe it holds a small treat.".
+Store B is a LLPish sto. description of store b is "It seems to catch a rainbow every now and then, and you smell fruits you can't discern. It looks nowhere near as, well, lively as stores F, I or M, but maybe it holds a small treat.".
 
 understand "store 2/two" and "2/two" as store b when player is in Trips Strip.
 
@@ -5004,7 +5029,7 @@ check turning the dial:
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][else]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
+description of dial is "[if centrifuge-stopped is false]On the dial at the center of the centrifuge, y[else]Y[end if]ou see EXITS [if numset of dial is 16]N E [else]? ?--you can see two letters, but they're scrolling through the four cardinal directions[end if]. The dial's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[else]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
 
 to say dial-hints:
 	if numset of dial is 16, the rule succeeds;
@@ -5020,7 +5045,7 @@ printed name of Mean Old Mondale Doleman is "Mean Old Mondale-Doleman".
 
 section a lid
 
-a lid is boring scenery. description is "It covers where the dial was, and you probably want to keep it that way.". bore-text is "The lid's okay where it is. It's not pretty, but it's better than if the dial came back.".
+a lid is boring scenery. description is "It covers where the dial was, and you probably want to keep it that way.". bore-text is "The lid's okay where it is. It's not pretty, but it's better than if the dial came back.". understand "dial" as lid when dial is moot.
 
 section dial setting
 
@@ -5442,7 +5467,7 @@ rule for printing room description details of fridge: omit contents in listing.
 
 the manila animal is an amusing boring thing. it is part of the griefd fridge. understand "lamina" as manila animal. bore-text of manila animal is "You've torn up a [if stos-down > 1]couple stores[else]store[end if] already, but you draw the line at aesthetically altering a fridge. Someone surely put love into decorating it!". description of manila animal is "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+description of griefd fridge is "While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything. You could just OPEN it[end if][one of]. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
 
 after examining griefd fridge:
 	pad-rec-q "warts";
@@ -5652,6 +5677,9 @@ check inserting it into (this is the sack-into-wall rule):
 check inserting hay into:
 	if second noun is cask, say "The cask should probably store liquids instead." instead;
 	if hay is part of the scraped wall, say "[if second noun is scraped wall]You already did that[else]That hay fits well. Now if you could just make the haywall into something you could walk through, that'd be awesome[end if]." instead;
+	if second noun is sack:
+		now hay is part of the sack;
+		say "The hay fits in without much trouble." instead;
 	if second noun is not scraped wall, say "You're not sure how the hay could augment anything, there." instead;
 	now hay is part of the scraped wall;
 	now scraped wall is hayfilled;
@@ -5963,7 +5991,8 @@ check taking the hay:
 	if player has sack:
 		say "You can't take it all at once, but it can fit in the sack. So you put it there.";
 		now hay is in sack;
-	say "You couldn't see around it if you carried it in your hands, and you've got nothing that'd hold it." instead;
+		the rule succeeds;
+	say "The hay is too unwieldy and heavy to carry around in your hands. Maybe something could hold it." instead;
 
 chapter poem
 
@@ -6360,7 +6389,7 @@ to say n-of-garrison: say "[if Obtains Boastin Bastion is visited]bastion[else]c
 
 the tents are useless boring scenery in Roarings Garrison. understand "commune" as tents. description of tents is "Decorated with a corny crayon-a-crony.". bore-text is "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
 
-the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. Despite your heroism with the cake in the Bastion, he barely acknowledges you[end if]."
+the dead beat deadbeat is a male person in Roarings Garrison. "A deadbeat is sitting on the ground here, looking dead beat[if bastion-evac is false]. His eyes dart between you and the lost corn. Clearly, he resents the work your presence is forcing on him[else]. He nods at you in solidarity for your work in the Bastion[end if]."
 
 check scaning (this is the antlers and deadbeat silliness rule):
 	if noun is antlers:
@@ -6546,11 +6575,9 @@ check opening noise bag:
 		if location of player is Esoteric Coteries:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
 			moot keycard;
-			get-tulip;
 			reg-inc;
-			choose row 2 in the table of tulip-acq;
-			now chosen entry is true;
-			move player to underside instead;
+			select-nerd-sol 2;
+			the rule succeeds;
 		if location of player is Abyss, say "[if beast is touchable]The beast has no time for words! You need to attack it more directly, with something else[else]The beats will drown the words out[end if]." instead;
 		say "The words currently caught in the bag would do no good here.";
 		the rule succeeds;
@@ -6987,13 +7014,10 @@ check switching on the termite emitter:
 		if player has lit up tulip, say "You already have the tulip. That'd be mean." instead;
 		say "The angst gnats rise, fitful, like fruit-flies or as furies flit. The nerds go from woots to ows, but it isn't [']til they start complaining to each other or worrying about the poor repressed deadbeats they didn't do enough for that you snatch the lit-up tulip as they scalp-clasp and flail about.[paragraph break]Angered, enraged nerdage! En garde! (Gee, darn, no grenade.) 'Why didn't you ASK about the DARKNESS?' one moans as he swipes for the tulip--but only knocks the keycard out of your hand.[paragraph break]They continue moaning, but now it is about economic equality. You hear one point out that all this sensitivity to social stuff will make them more sensitive for the ladies. Then another one argues that it's a Heisenberg Uncertainty Principle sort of thing that if people know you might be angling for that emo stuff, it won't work.[paragraph break]You're almost sucked in, until you realize you have a city to save, and you chuck your keycard at them in frustration over how dumb smart people can be before running out.";
 		now nerds-unwelcome is true;
-		get-tulip;
 		moot keycard;
-		choose row 3 in the table of tulip-acq;
-		now chosen entry is true;
-		reg-inc;
+		select-nerd-sol 3;
 		now emitter is doubleused;
-		move player to underside instead;
+		the rule succeeds;
 	if bastion-evac is true, say "It's empty now." instead;
 	now termite emitter is switched off;
 	if location is Hotel, say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
@@ -7192,14 +7216,20 @@ check switching off tulip:
 
 check switching on tulip: say "It's already lit." instead;
 
+nerd-sol is a number that varies.
+
+to select-nerd-sol (nu - a number):
+	get-tulip;
+	reg-inc;
+	now nerd-sol is nu;
+	choose row nu in the table of tulip-acq;
+	now chosen entry is true;
+	now player is in Undesired Underside;
+
 to say nerd-dark:
 	if player does not have tulip:
 		say "'What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats.'[paragraph break]'Logical call. I go.' You sneak out back west.";
-		get-tulip;
-		reg-inc;
-		choose row 1 in the table of tulip-acq;
-		now chosen entry is true;
-		now player is in Undesired Underside;
+		select-nerd-sol 1;
 	else:
 		say "'What?! We gave you the tulip! We can't solve all you dumb people's problems. We have our own!' They go on to bemoan how only dumb people seem to enter politics.[run paragraph on]";
 
@@ -7428,7 +7458,7 @@ understand "lies isle" as isle when l2 are not in Leis Isle.
 
 section leis
 
-the l2 are privately-named plural-named scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell.". printed name is "leis".
+the l2 are privately-named plural-named LLPish scenery in Leis Isle. "Looking at the leis, you half forget you came through Store R to beat Red Bull Burdell.". printed name is "leis".
 
 the lies are a privately-named thing. description of lies is "You should not see the actual lies."
 
@@ -7486,8 +7516,10 @@ some cork is a thing. "A chunk of cork is here.". description of cork is "It's p
 section going
 
 check going in Leis Isle (this is the Isle escape rule):
-	if player has wings and noun is up, try going east instead;
-	if noun is not east, say "You bounce smack off the woodland! Now that's weird." instead;
+	if noun is up:
+		if player has wings, try going east instead;
+		say "You have no way to fly. At least not yet." instead;
+	if noun is not east, continue the action; [this leads to the going nowhere rule]
 	if player does not have cork and player does not have wings, say "It's too far to swim, and you've got no way to go over the lake or whatever it is." instead;
 	unless rock is moot and swing is moot, poss-d;
 	if l2 is in Leis Isle, poss-d;
@@ -7725,15 +7757,15 @@ before asking protest about: say "You're not going to reason with them. Maybe re
 
 description of the riot is "Well, you have to admit, there's a wide variety of people protesting you, even if they're not explaining why. The riot will probably be blocking your way to the east, but they don't seem to be attacking you, which is nice.[paragraph break]You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them."
 
-the protest is privately-named scenery. printed name of protest is "trio".
+the protest is scenery. printed name of protest is "trio". [sadly we have to do it this way--the trio is already defined with tall trio]
 
 lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of protest is "[gcn][rc][rc][gc][gc][rc][rc]". cert-text of protest is "P[d1][d1][ast]T[ast]E[d1][d1]". rect-text of protest is "P[d1][d1][d1][d1][d1][ast]S".
 
 understand "trio" as protest when riot is not touchable and tall trio is not touchable.
 
-understand "protest/three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is touchable.
+understand "three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is in location of player. ["touchable" here and below causes a nasty infinite loop.]
 
-understand "protest" and "protesters" and "crowd" and "uprisers" and "horde" and "rioters" and "rabble" and "mob" as riot when riot is touchable.
+understand "protest" and "protesters" and "crowd" and "uprisers" and "horde" and "rioters" and "rabble" and "mob" as riot when riot is in location of player.
 
 Include (-
 	has transparent animate
@@ -7909,7 +7941,6 @@ carry out existing:
 		now resort is solved;
 		process the notify score changes rule;
 		say "[line break]Final rank: a smart gamin['] anagrammist.[paragraph break]...well, final, until you feel like playing the second installment in the Stale Tales Slate: [i]A Roiling Original[r].";
-		sort table of megachatter in reverse table-size order;
 		repeat through table of megachatter:
 			sort mytab entry in blurb order;
 			now maxidx entry is number of rows in mytab entry;
@@ -8204,7 +8235,8 @@ after reading a command:
 		if QQ is a the-from listed in regana of mrlp:
 			d "candidate fungible: [QQ].";
 			if the player's command matches exact-text entry:
-				d "Found a fungible, [the-from entry], to [the-to entry].";
+				d "Found fungible. From = [the-from entry].";
+				d "To = [the-to entry].";
 				try fliptoing the-to entry;
 				the rule succeeds;
 	continue the action;
@@ -8458,6 +8490,7 @@ this is the enter-gateway rule:
 		say "'Dang adventurers these days. It's not demo mode out there. If I'd had doohickeys nice as that gadget in the cabinet when I saved that ONE world...I'd of took it! And saved two or three worlds!' He gives a warning, wan grin.";
 		now gadget-warned is true instead;
 	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Nat Egam gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][else]'A fool! Aloof! Ol['] oaf!' cries Nat Egam as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
+	now retry-known is true;
 	if player has gadget:
 		now player has a prep paper;
 		pad-rec-q "retry";
@@ -9141,10 +9174,10 @@ check going nowhere (this is the main can't go that way rule) :
 
 table of nowheres [tnw]
 theloc	thereject
-Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if] is[if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
+Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
 Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
-Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[unless gateman is in Notices Section], though it'd be nice to have some help."
-Self ID Fields	"No going back. Storing's west, sorting's east, and Corses Crosse is north."
+Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
+Self ID Fields	"No going back. North or east or west is okay, though."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
@@ -9164,7 +9197,7 @@ Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more a
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
 Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
 Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
-Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
+Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
 Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
 Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."
 Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.[stopping]"
@@ -9183,32 +9216,47 @@ part gotoing
 
 [see the common file for the main syntax]
 
-carry out gotoing:
+check gotoing (this is the general goto check rule):
 	if noun is Trips Strip and Trips Strip is visited:
 		say "You may mean to RETRY instead. Do so?";
-		if the player yes-consents, try retrying instead;
+		if the player regex-prompt-consents, try retrying instead;
 	if map region of noun is not mrlp:
 		if map region of noun is solved, say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if noun is unvisited, say "You haven't gotten there yet." instead;
+
+this is the ordeal-loader-goto rule:
 	if noun is subsite, say "Goodness, no. [location of player] is way more interesting than the Busiest Subsite." instead; [start Ordeal Loader]
 	if noun is Rested Desert, say "The door from Rested Desert was one-way[if player is in Thickest Thickets]. You can't even see it now[end if]." instead;
-	if noun is Thickets, say "You can't see the passage back to the Thickets." instead; [end Ordeal Loader]
-	if noun is sf or noun is rf, say "You can't retrace your steps." instead; [start forest]
+	if noun is Thickets, say "You can't see the passage back to the Thickets." instead;
+
+this is the stores-goto rule:
+	do nothing;
+
+this is the forest-goto rule:
+	if noun is sf or noun is rf, say "You can't retrace your steps." instead;
 	if player is in Ghouls Slough, say "You've done all you could in Emptiness Sepiments and before. Onward." instead;
-	if player is in Frost Forts, say "It's time to deal with things, not run." instead; [end forest]
-	if noun is the nick, say "No, you don't want to go back there." instead; [start sortie]
+	if player is in Frost Forts, say "It's time to deal with things, not run." instead;
+
+this is the sortie-goto rule:
+	if noun is the nick, say "No, you don't want to go back there." instead;
 	if player is in the nick, say "That's not the magic way out. Sorry!" instead;
 	if player is in Sacred Cedars, check-block-cedars;
-	if noun is cedars and caskfillings is 2, say "You can't go back there." instead; [end sortie]
+	if noun is Sacred Cedars and caskfillings is 2, say "You can't go back there." instead;
+
+this is the metros-goto rule:
 	if noun is Obtains Boastin Bastion and bastion-evac is true, say "You wouldn't be welcome." instead; [start metros]
-	if noun is Esoteric Coteries and player has tulip, say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
+	if noun is Esoteric Coteries and player has tulip, say "[if nerd-sol is 1]You got something from the nerds[else]The nerds probably aren't thrilled with you. They might outnumber you and take the tulip back[end if]. They've probably had enough of you." instead;
 	if player is in Bassy Abyss, say "No going back now. You came here to defeat the [b-b]." instead; [end metros]
-	if mrlp is resort:
-		if red bull burdell is in Potshot Hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
-		if player is in Means Manse, say "But you want to NOT go anywhere. NOT take any exits." instead;
-		if red bull burdell is moot, say "But you beat Red Bull Burdell! Just go east!" instead;
-		say "Gotta [if player is in astral altars]go[else]keep going[end if] forward." instead;
+
+this is the resort-goto rule:
+	if red bull burdell is in Potshot Hotspot, say "He's saying GET OUT just to be obnoxious and intimidating." instead;
+	if player is in Means Manse, say "But you want to NOT go anywhere. NOT take any exits." instead;
+	if red bull burdell is moot, say "But you beat Red Bull Burdell! Just go east!" instead;
+	say "Gotta [if player is in astral altars]go[else]keep going[end if] forward." instead;
+
+carry out gotoing:
+	abide by the goto-check of mrlp;
 	say "You retrace your steps...[line break]";
 	move player to noun;
 
@@ -10398,6 +10446,7 @@ carry out lishing:
 			say "[cur-count]. [blurb entry][line break]";
 		if cur-count < max-count:
 			say "[cur-count] of [big-total] so far. Type q to quit, b to go to the beginning or any other key to continue.";
+			if post-ignore-needkey is true, the rule succeeds;
 			let cholet be the chosen letter;
 			if cholet is 66 or cholet is 98:
 				now cur-count is 0;
@@ -10422,7 +10471,7 @@ to try-ln:
 rule for listlisting:
 	let myrow be 0;
 	let listrows be number of rows in table of megachatter;
-	say "Below are lists of anagram texts that the game sorts randomly at the start. The parentheses are the region, then the number of texts.";
+	say "Below are lists of anagram texts that the game sorts randomly at the start. The parentheses are the region, then the number of texts. They are listed in approximate game order, assuming you go through alphabetically.";
 	repeat through table of megachatter:
 		increment myrow;
 		say "[myrow]. [descr entry] ([table-size entry]) [line break]";
