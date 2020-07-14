@@ -343,7 +343,7 @@ FIMR is just a mnemonic for the places
 
 #nudge for tinfoil
 >tinfoli
-You can't change paranoid ramblings.
+Wrestling with paranoid ramblings helps no-one.
 
 #########################################change world state
 
@@ -359,14 +359,19 @@ You can't change Old Warpy. You have to just trust it
 >saltein
 The saltine's there to help you. Changing it might work against you.
 
+>rerty
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+>x broad board
+
+#nudge for retry
+>rerty
+You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+
 >terry
 !RETRY
 
 >gonear trips strip
-
-#nudge for retry
->rerty
-Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire.
 
 >certify store f
 
@@ -384,10 +389,9 @@ FIMR is just a mnemonic for the stores you need to explore, somehow.
 >forest
 >in
 
-##nudge for terry
 ##nudge for retry
 >ryter
-You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire.
 
 ##nudge for terry
 ##nudge for retry

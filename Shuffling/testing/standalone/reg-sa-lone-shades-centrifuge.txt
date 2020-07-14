@@ -197,7 +197,7 @@ The room seems to spin a bit slower. You think.
 The room seems to spin a bit slower. You think. You feel and hope you're getting there, but maybe dividing and conquering the possible numbers left will work, if you don't understand the dial clues it'd be worth examining.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 8, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 8, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
 
 >turn dial to 9
 The room seems to spin a bit slower. You think.
@@ -310,7 +310,8 @@ The room seems to slow down for a bit before picking up speed and spinning as fa
 If you tried to spin it that high, you'd break the dial.
 
 >turn dial to -1
-This negative attitude isn't helping you solve the puzzle.
+NOTE: found a dash and replaced it with a space. You never need to use dashes in commands. Shuffling Around will replace dashes without nagging you in the future.
+>undo
 
 >turn dial to 0
 The room seems to slow down for a bit before picking up speed and spinning as fast as before.
@@ -358,31 +359,31 @@ Getting colder
 >gonear dial
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Maybe if you knew where the exits were supposed to be, that would help. There are only twelve possibilities.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Maybe if you knew where the exits were supposed to be, that would help. There are only twelve possibilities.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You briefly wonder what numbers have X's in them.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You briefly wonder what numbers have X's in them.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Where, abbreviated, the exits should point.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Where, abbreviated, the exits should point.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The room NEXT IS Easier.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The room NEXT IS Easier.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You may feel square for missing other solutions to this problem.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You may feel square for missing other solutions to this problem.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Worse comes to worst, you can just to a binary search with the numbers: 99, 50, 75, etc.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Worse comes to worst, you can just to a binary search with the numbers: 99, 50, 75, etc.
 
 >x dial
-You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Well, maybe you can brute force things and move the dial one unit at a time. The centrifuge hasn't killed you yet.
+On the dial at the center of the centrifuge, you see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions. The dial's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Well, maybe you can brute force things and move the dial one unit at a time. The centrifuge hasn't killed you yet.
 
 >16
 (turning the dial)
@@ -396,4 +397,4 @@ You find yourself in a round den, unadorned.
 [Your score has just gone up by one point.]
 
 >x dial
-You see EXITS N E written in the center of its circle. It's currently set to 16, and you want to keep it that way, thank you very much.
+It covers where the dial was, and you probably want to keep it that way.
