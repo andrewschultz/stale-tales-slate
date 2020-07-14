@@ -129,7 +129,7 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is ordeal-reload-goto rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -142,7 +142,7 @@ Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal 
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. max-score of stores is 11. min-score of Stores is 3.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is stores-goto rule. max-score of stores is 11. min-score of Stores is 3.
 [BONUS STUFF: (basics are Store T and two others--call them U and V)
 Store K=1/4
 Store N=2/5
@@ -151,7 +151,7 @@ Three other stores without patcher=6/9 +3
 Store B=Sorbet
 Store H=Others (you can get the point but you can't enter)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. max-score of Troves is 25. min-score of Troves is 17.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is troves-goto rule. max-score of Troves is 25. min-score of Troves is 17.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -163,13 +163,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 8/25=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. max-score of Routes is 22. min-score of Routes is 20.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is routes-goto rule. max-score of Routes is 22. min-score of Routes is 20.
 [List of min points:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. max-score of presto is 41. min-score of presto is 28.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is presto-goto rule. max-score of presto is 41. min-score of presto is 28.
 [List of boosts:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -204,7 +204,7 @@ you get -1 if you use the pills on Tortu before EAT.
 You get a non-anagram point for framing the bad guys so the haunter chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. max-score of towers is 54. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 54. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -240,7 +240,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=28 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=29 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. max-score of otters is 32. min-score of otters is 24.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 32. min-score of otters is 24.
 [
 1=25 for RESCIND
 3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
@@ -251,11 +251,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 8=32 for HONESTLY after ASIDE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. max-score of Others is 42. min-score of others is 25.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is Others-goto rule. max-score of Others is 42. min-score of others is 25.
 [There are so many possibilities--36 choose 20--I won't go through them all. Well, technically, (10 choose 4) * (26 choose 16)
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is demo-dome-goto rule.
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -892,8 +892,6 @@ hint-to-file is a truth state that varies.
 
 hint-to-display is a truth state that varies.
 
-scams is a truth state that varies.
-
 ff is a truth state that varies. [flip freeze disabled in release mode]
 
 section scam rule [referred to while scoring]
@@ -1313,14 +1311,16 @@ to item-warp:
 
 chapter going to
 
-carry out gotoing:
+check gotoing:
 	d "Trying location [noun].";
-	let noureg be map region of location of noun;
 	if noun is strip and strip is visited:
 		say "The command you may be looking for is RETRY. Do that now instead?";
 		if the player yes-consents, try retrying instead;
-		say "OK." instead;
+		say "OK. You will want to use RETRY in the future." instead;
+	if qbc_litany is not table of no conversation, say "End your conversation first." instead;
+	let noureg be map region of location of noun;
 	if noureg is solved and noureg is not stores, say "You already solved [noureg]." instead;
+	if noun is unvisited and mrlp is noureg, say "You've never been there yet, so you can't go back." instead;
 	if last-loc of noureg is unvisited:
 		d "[noureg]: [last-loc of noureg].";
 		if mrlp is noureg:
@@ -1329,63 +1329,67 @@ carry out gotoing:
 			say "You haven't made it to that region, yet." instead;
 	if noureg is Meta Team, say "You should've gotten a different reject than this, but somehow you found a way through my code. This is a BUG I'd be interested to hear about, but fortunately, whatever you wanted to visit isn't relevant to solving the game." instead;
 	if noureg is not mrlp, say "You can't jump across game regions." instead;
-	if noun is lectures and player is in Strip of Profits, say "[if stores is solved]You already took care of things there[else]Just enter the mangiest steaming[end if]." instead;
-	if noun is strip and mrlp is not stores:
-		say "This is equivalent to the RETRY command, so that's what I'll do.";
-		try retrying instead;
-	if mrlp is routes: [ROUTES]
-		if player is in Same Mesa:
-			if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
-			if THE BEAN is in Same Mesa, say "You can't go anywhere with the bean and the crowd around!" instead;
-			if MORF FORM is in Same Mesa, say "The MORF-FORM is too big to ignore or walk out on." instead;
-	if mrlp is troves, say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead; [TROVES]
-	if noun is unvisited and mrlp is noureg, say "You've never been there yet, so you can't go back." instead;
-	if mrlp is not noureg, say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
-	if progval of noun > progval of location of player, say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
-	if noun is a mazeroom or noun is Unwary Runway:
-		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
-		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
-	if mrlp is presto: [PRESTO]
-		if noun is Dirge Ridge:
-			if Leo is dismissed:
-				post-wall-arch;
-				do nothing instead;
-		if player is in Hacks Shack, abide by the shack-south rule;
-		if Leo is touchable and Leo is eager:
-			if noun is not a mazeroom:
-				say "([l-n-r] following.)";
-				move Leo to noun;
-				move Rand to noun;
-	if mrlp is oyster: [OYSTER]
-		if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
-		if noun is end den and gleaner is reflexed, say "No need to go back there." instead;
-	if mrlp is towers: [TOWERS]
-		if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
-		if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
-	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
 		repeat through table of progvals:
 			if there is a rm entry and rm entry is noun, say "[why-not entry][line break]" instead;
 			if there is a regs entry and regs entry is mrlp:
 				if rmprog entry is progval of noun, say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug. Let me know about it at [email]." instead;
-	if noun is shunned:
-		if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that the haunter's torn through them. You don't need or want to hang out there, though." instead;
-		if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-		if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
-		say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
+	if progval of noun > progval of location of player, say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
+	abide by the goto-check of mrlp;
+
+this is the routes-goto rule:
+	if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
+
+this is the troves-goto rule:
+	say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
+
+this is the presto-goto rule:
+	if noun is a mazeroom or noun is Unwary Runway:
+		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
+		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
+		if noun is Dirge Ridge:
+			if Leo is dismissed:
+				abide by the post-wall-arch rule;
+		if player is in Hacks Shack, abide by the shack-south rule;
+		if Leo is touchable and Leo is eager:
+			if noun is not a mazeroom:
+				say "([l-n-r] following.)";
+				move Leo to noun;
+				move Rand to noun;
+
+this is the oyster-goto rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
-	if duck is touchable and duck is friendly: [TOWERS]
+	if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
+	if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that the haunter's torn through them. You don't need or want to hang out there, though." instead;
+	if noun is End Den and gleaner is reflexed, say "No need to go back there." instead;
+	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
+	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
+
+this is the towers-goto rule:
+	if noun is Rousted Detours or noun is Arid Den, say "No thanks. Once was enough.";
+	if duck is touchable and duck is friendly:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
-	if player is in Rancho Archon Anchor: [OTTERS]
-		elvira-flee-taunt;
-	if mrlp is demo dome, say "You rush, despite having nothing urgent to do.";
-	move player to noun;
-	if mrlp is towers:
 		if can-see-map, draw-my-loc;
 		choose-new-hint-guardian;
+	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
+	if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
+
+this is the otters-goto rule:
+	if player is in Rancho Archon Anchor, elvira-flee-taunt;
+
+this is the others-goto rule:
+	do nothing;
+
+this is the demo-dome-goto rule:
+	say "You rush, despite having nothing urgent to do.";
+
+carry out gotoing:
+	d "From [progval of location of player] to [progval of noun].";
+	if noun is shunned, say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
+	move player to noun;
 
 when play begins (this is the seed room progress for GO TO rule) :
 	repeat through table of progvals:
@@ -12308,16 +12312,14 @@ to yak-and-yoke:
 
 check going south in Char Arch:
 	if Leo is touchable, say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
-	if Leo is dismissed, post-wall-arch instead;
+	if Leo is dismissed, abide by the post-wall-arch rule;
 
-to post-wall-arch:
+this is the post-wall-arch rule:
 	if casserole is moot:
 		say "You don't have another workout for [l-n-r].";
-		continue the action;
-	if yak is moot:
+	else if yak is moot:
 		say "[if casserole is moot]You don't have another casserole. Or another chore[else]You maybe could've used [l-n-r] to push the yak around, but not now[end if].";
-		continue the action;
-	if yak is on skid:
+	else if yak is on skid:
 		if casserole is in Hacks Shack:
 			say "You offer [l-n-r] the casserole in exchange for pushing the skid north. 'Fuel? Us? Useful!' It's a great workout for them, and though they're a bit careless pulling the skid into the shack, it breaks a safety catch on the drab yoke, which falls to the ground. The yak blinks, nods at all three of you, and runs off. The casserole replenishes vital carbohydrates or something for [l-n-r]. They ask to keep the dish, which is fine with you. The shack's messy enough.";
 			reg-inc;
@@ -12327,10 +12329,10 @@ to post-wall-arch:
 			now drab yoke is in Hacks Shack;
 			moot casserole;
 			move player to Hacks Shack;
-			continue the action;
 		say "You'd like to ask for help, but you don't have enough muscle food for [l-n-r] after they pull the skid. Those escaroles simply aren't meaty enough.";
-		continue the action;
-	say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
+	else:
+		say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
+	the rule fails;
 
 section cretins' cistern
 
@@ -12889,7 +12891,7 @@ understand "bottle" as ALocalCo Cola when ALocalCo Cola is touchable.
 
 check inserting into mug:
 	if noun is ALocalCo Cola:
-		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.[paragraph break]The [e robot][if robot is reflexed], from under the labs slab,[end if] clicks reprovingly. Probably because it's a bot o['] root beer.";
+		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You consider how to use a co-alloc--it finally makes sense! You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.[paragraph break]The [e robot][if robot is reflexed], from under the labs slab,[end if] clicks reprovingly. Probably because it's a bot o['] root beer.";
 		moot ALocalCo cola;
 		the rule succeeds;
 	say "Only liquids would belong there." instead;

@@ -1247,21 +1247,6 @@ carry out misseding:
 	now mrlp is unsolved;
 	the rule succeeds;
 
-chapter missesing
-
-[* MISSES shows what all areas missed]
-
-missesing is an action out of world.
-
-understand the command "misses" as something new.
-
-understand "misses" as missesing.
-
-carry out missesing:
-	say "[miss-types].";
-	show-miss mrlp and false;
-	the rule succeeds;
-
 chapter missalt
 
 [* MISSALT shows alternate routes]
