@@ -439,6 +439,36 @@ carry out showtabing:
 	say "Showing table names in random text is now [on-off of showtabname].";
 	the rule succeeds;
 
+chapter postiging
+
+post-ignore-needkey is a truth state that varies.
+
+postiging is an action applying to nothing.
+
+understand the command "postig" as something new.
+
+understand "postig" as postiging.
+
+carry out postiging:
+	now post-ignore-needkey is whether or not post-ignore-needkey is false;
+	say "Ignoring need-key (and just bailing, for testing purposes) when listing random text is now [if post-ignore-needkey is true]on[else]off[end if].";
+	the rule succeeds.
+
+chapter missesing
+
+[* MISSES shows what all areas missed]
+
+missesing is an action out of world.
+
+understand the command "misses" as something new.
+
+understand "misses" as missesing.
+
+carry out missesing:
+	say "[miss-types].";
+	show-miss mrlp and false;
+	the rule succeeds;
+
 chapter specsing
 
 [ * SPECS tests the spec-help of all items in table of anagrams]

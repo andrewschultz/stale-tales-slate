@@ -325,10 +325,6 @@ check xrooming:
 		try examining location of player instead; [shouldn't happen but just in case]
 	say "[if noun is visited]You've been there, but[else]You haven't gotten there yet, and[end if] you can't see that far[x-room-n].";
 
-instead of doing something with the location of the player:
-	if current action is xrooming or current action is gotoing, continue the action;
-	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
-
 check examining location of player (this is the fake the scenery rule) : try looking instead.
 
 room-look-warn is a truth state that varies.
@@ -453,6 +449,7 @@ volume boring things
 part rooms are sort of boring
 
 instead of doing something with the location of the player (this is the location is too general rule): [no-irp]
+	if current action is gotoing, continue the action;
 	if current action is examining or current action is xrooming or current action is scaning or current action is gotothinging, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
