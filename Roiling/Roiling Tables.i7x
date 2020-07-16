@@ -1579,7 +1579,7 @@ this is the post-eels-else rule:
 
 this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 	if players are in Disowned Downside:
-		say "That'd definitely tip the [pla-ma]s off to who you were, even if your powers were back.";
+		say "Your powers aren't back yet, but if they were, that'd definitely tip the [pla-ma]s off to who you were. They'd let Elvira know quickly.";
 		preef atmo moat;
 		do nothing instead;
 	else if power-back is false:
@@ -1753,7 +1753,7 @@ report fliptoing when player is in Posh Hops Shop:
 	continue the action;
 
 report fliptoing (this is the oyster min score annoying details rule): [??there may also be a problem where SCAMS interferes. I don't know.]
-	if noun is trolls and flip-spill-flag is false and pills are not moot, min-up; [if you SPILL PILLS to ditch the trolls, you can't skip EAT below.]
+	if noun is trolls and flip-spill-flag is true and pills are not moot, min-up; [if you SPILL PILLS to ditch the trolls, you can't skip EAT below.]
 	if noun is trout and flip-spill-flag is false and pills are not moot, min-up; [SPILL PILLS with trout untutored lets you skip EAT, but you can't now.]
 	continue the action;
 
@@ -2209,10 +2209,10 @@ resident trendies	"The resident trendies sniff a bit. No, that's uncool, they sa
 keycar	"The keycar sputters momentarily."
 lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
 Hostile is He Lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
-prison ropins	"The ropins remains secure, with no easy way to open it."
+luck node	"You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better."
 dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page, slightly less interested than before."
 atblock	"[agnostic-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
-mended mini denim	"The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
+mended mini denim	"The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
 bogus-rousted	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
 sporties ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
@@ -2293,7 +2293,7 @@ quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
 a banna	"The (a) banna['] flutters about for a bit."
 a brr hub	"The (a) brr hub seems to swirl closed for a bit."
 orange	"The orange seems a bit closer for a bit."
-Dr Severe	"Dr. Severe looks thoughtful for a second."
+Dr Severe	"You seem to see a mirror image of Dr. Severe for a moment."
 viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though."
@@ -2466,11 +2466,10 @@ lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 old ice	"Twist the ice too much, it might not look right." [START towers]
 raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
-luck node	"It already is. Dr. Yow is free."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
-bleary barley	"You've dealt with the barley. You can move around a lot more, now." [START otters]
+nude dune	"You've dealt with the barley. You can move around a lot more, now." [START otters]
 parleys splayer players	"You've already made the players talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
@@ -2851,8 +2850,8 @@ muscly ms lucy	"[muscly-clue]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]The wait-seer also doesn't seem to be getting tired.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
-lois the hostile	"[lois-or-lot]" [I can't link one to the other because the story will look for whichever is moot then say "oops" -- well, I could, but it'd be a lot for just one such twiddle.]
-Hostile is He Lot	"[lois-or-lot]"
+lois the hostile	"[lois-or-lot-hint]" [I can't link one to the other because the story will look for whichever is moot then say "oops" -- well, I could, but it'd be a lot for just one such twiddle.]
+Hostile is He Lot	"[lois-or-lot-hint]"
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 agnostic	"[if Obscurest Subsector is unvisited][agnostic]'s not important right now.[else if Dr Yow is in prison ropins][agnostic] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if agnostic is lonely][one of][agnostic-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK AGNOSTIC ABOUT DOCTOR.[minus][cycling][else if agnostic is reflexive and agnostic is in Obscurest Subsector][one of][agnostic-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if agnostic does not have gizmo]You need to give [agnostic-first] something to build with. A tool.[else][agnostic-first]'s bot boat is more important.[end if]"
@@ -3100,7 +3099,7 @@ to say where-is-digger:
 
 to say muscly-clue: say "[one of]Being muscly is nice, but if [he-she] were to get too tangled up to use [his-her] strength...[no line break][plus][or]Maybe if [he-she] weren't so coordinated, [his-her] muscle would be ineffective?[no line break][plus][or]CLUMSY.[minus][cycling]"
 
-to say lois-or-lot: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
+to say lois-or-lot-hint: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 
 to say fin-pal-clue: say "You may get a hint what the Curst Palace can become from [the noun]."
 

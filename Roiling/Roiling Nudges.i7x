@@ -1357,7 +1357,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "space"	326739437	--	--	"[locname]."
-"pace"	230465471	--	trader-gone rule	"[locname]."
+"pace"	230465471	--	trader-gone rule	"[locname]." [once reeves appears it is the Paces Space]
 "trader"	424780640	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape space]you got what you wanted[else][he-she] might trade that So-Great Storage[end if]."
 "drawing"	362975539	--	--	"The drawing can't be changed. It's stuck to the wall as a warning."
 "art"	190621639	Art Erd	--	"[1st-name]."

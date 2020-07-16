@@ -2671,7 +2671,7 @@ keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]propert
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
-prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're two other bits to read."
+prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're three other bits to read."
 luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
 blaster	"ALBERT'S."
 stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
@@ -4734,7 +4734,6 @@ reading a dinger	true	true	false	false	"Well, this may be more intellectually ch
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 fries us fissure	true	true	false	false	"The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier."
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
-prison ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle..."
 natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
@@ -4764,7 +4763,7 @@ melon	false	false	false	false	"Now this is weird. It looks like there should be 
 ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
 a banna	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'"
+Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
 
 [?? test qmh toggling and scanning stuff]
 
@@ -15477,6 +15476,10 @@ volume towers
 
 [this is the biggest area of the game, though Oyster has almost as many lines. Guardians are a sort of specific person, as are picaros. Because picaros are only in the Loftier Trefoil, they will be in that section.]
 
+definition: a thing (called th) is noexit-LLPish:
+	if th is bogus-rousted or th is bogus-dandier, yes;
+	no;
+
 book towers specific verbs
 
 chapter toasting
@@ -16270,6 +16273,7 @@ check going down in Treading Gradient:
 	if arid den is visited, say "You already went down." instead;
 	if mended mini denim is moot:
 		say "You go down into the darkness...";
+		min-up; [no matter what happens, you must figure the word to get out, which gives you a point.]
 		move player to Arid Den;
 
 some mended mini denim is LLPish vanishing singular-named boring scenery in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.". printed name of mended mini denim is "mended mini-denim".
@@ -16424,7 +16428,7 @@ to say vis-guar:
 
 to say agnostic-first: say "[if agnostic is male]Scot[else]Staci[end if]"
 
-the Coasting Agnostic is a proper-named person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if]."
+Coasting Agnostic is a proper-named person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if]."
 
 understand "idk/kid" and "idk kid" as Coasting Agnostic.
 
@@ -16558,7 +16562,7 @@ to say what-ag-does: [?? this is orpaned text -- it seems useful for the initial
 
 chapter reading a dinger
 
-a thing called Reading a Dinger is flippable scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves utter nonsense like someone figuring out centuries-old world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. Saner places would reject it, I'm sure.".
+a thing called Reading a Dinger is vanishing scenery. "It's certainly impressively presented, but the writing inside is, well, not so great. It involves utter nonsense like someone figuring out centuries-old world secrets because they know the Fibonacci sequence. But it's popular in Yorpwald. Saner places would reject it, I'm sure.".
 
 printed name of Reading a Dinger is "[i]READING: a Dinger[r]"
 
@@ -17352,13 +17356,13 @@ there is an outie room called Dire and Arid Den. It is in Towers. "You feel drai
 
 section bogus-dandier
 
-bogus-dandier is privately-named ssno vanishing scenery in Arid Den. description is "BUG: you should not see this.". printed name is "Dire and Arid Den".
+the bogus-dandier is privately-named ssno vanishing scenery in Arid Den. description is "BUG: you should not see this.". printed name is "Dire and Arid Den".
 
 a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]x".
 
 section drained dreadin
 
-drained dreadin is ssno scenery in Arid Den.. description is "It works doubly on you to make you feel cheerless.". bore-text is "You need some way to dispel the drained dreadin[']. Replace it with a more positive emotion.". printed name of drained dreadin is "drained dreadin[']".
+drained dreadin is ssno boring scenery in Arid Den.. description is "It works doubly on you to make you feel cheerless.". bore-text is "You need some way to dispel the drained dreadin[']. Replace it with a more positive emotion.". printed name of drained dreadin is "drained dreadin[']".
 
 a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
 
@@ -17377,7 +17381,7 @@ book Dourest Detours
 
 Dourest Detours is an outie room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
 
-the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]". printed name of bogus-rousted is "Rousted Detours".
+the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]". printed name of bogus-rousted is "Rousted Detours". [it is an LLP but not LLPish. Once you've entered the Rousted Detours, you have to solve it to get out, so it can't go through the usual LLPish code paths.]
 
 a-text of bogus-rousted is "RYYRRYR". b-text of bogus-rousted is "R??RRYR". parse-text of bogus-rousted is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -17393,7 +17397,7 @@ this is the detour-check rule:
 		if Lost Lots is not visited or finger fringe is not visited, say "You work through the Dourest Detours much more easily this time.";
 		continue the action;
 	say "Oh no! You get distracted and lost while going down a few side paths. You wind up in...";
-	min-up;
+	min-up; [no matter what happens, you must figure the word to get out, which gives you a point.]
 	move player to Dourest Detours;
 	the rule succeeds;
 
@@ -17616,6 +17620,8 @@ The grin set stinger is a purple terse guardian. "The stinger that replaced the 
 a-text of grin set stinger is "RYRRYRR". b-text of grin set stinger is "RYRRYRR". parse-text of grin set stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 chapter Artist Traits Strait guardians
+
+to say hostile-guardian: say "[if player is female]Lois the Hostile[else]the Hostile-Is-He Lot[end if]"
 
 section lois the hostile
 
@@ -20320,7 +20326,7 @@ a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "
 
 section sonic coins
 
-the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "the sonic coins".
+the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
 
 understand "coin" and "sonic coin" as s-c when player has s-c.
 

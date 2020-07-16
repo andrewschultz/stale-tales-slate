@@ -843,7 +843,7 @@ chapter Actionless Coastlines
 
 understand "coatings" as a mistake ("No, [Agnostic] doesn't need to change like THAT.") when Coasting Agnostic is in location of player.
 
-understand "eoliths" as a mistake ("Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for [lois-or-lot] to be.") when lois is touchable or he lot is touchable.
+understand "eoliths" as a mistake ("Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for [hostile-guardian] to be.") when lois is touchable or he lot is touchable.
 
 understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when weirder red wire is touchable.
 
@@ -1028,7 +1028,7 @@ understand "allo" as a mistake ("Lola says nothing back.") when player has dolla
 
 understand "lots" as a mistake ("You only need the one slot.") when player has So Great Storage and lost slot is part of So Great Storage.
 
-understand "reeves" as a mistake ("You don't need to guess Dr. Severe's last name or have any medieval bailiff escort [him-her] away.") when Dr Severe is touchable.
+understand "reeves" as a mistake ("You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort [him-her] away.") when Dr Severe is touchable.
 
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
