@@ -745,6 +745,7 @@ chapter xring
 
 understand the command "xr" as something new.
 
+understand "xr" as xring.
 understand "xr [something]" as xring.
 
 carry out xring:

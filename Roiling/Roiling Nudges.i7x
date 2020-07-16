@@ -1116,9 +1116,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	t-drawlingly	--	"[add-ly]."
 "emotional"	613598445	t-emotionally	--	"[add-ly]."
 "despairing"	605579646	t-despairingly	--	"[add-ly]."
-"amck"	138201734	players	--	"If you messed with one [pla-ma], the others would gang up on you. Work on the argument, instead."
-"amcks"	234475700	players	--	"Hm, you probably can't change the [pla-ma]s. They're dead set in their ways. Perhaps you can reframe what they are saying[if gretta-score > 0] some more[end if]."
-"gretta"	454137468	Gretta	--	"Enough people are trying to manipulate Gretta[if parleys splayer players are touchable]. Deal with them directly[end if]."
+"parley"	472956780	players	--	"You need[if players are reflexed]ed[end if] to deal with all the players to knock them back a peg."
+"amck"	138201734	--	players-macked rule	"If you messed with one [pla-ma], the others would gang up on you. Work on the argument, instead."
+"amcks"	234475700	--	players-macked rule	"Hm, you probably can't change the [pla-ma]s. They're dead set in their ways. Perhaps you can reframe what they are saying[if gretta-score > 0] some more[end if]."
+"gretta"	454137468	Gretta	--	"Enough people are trying to manipulate Gretta. [if parleys splayer players are touchable]Deal with them directly[else]Listen to what she has to say, instead[end if]."
 
 table of Shiner Shrine nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1140,8 +1141,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "loathing"	417246607	tallyhoing	--	"[add-ly]."
 "stoic"	337734992	callosity	--	"Usually, you'd need to add two letters, but here you'd need to add four."
 "stoical"	393736649	callosity	--	"[add-ly]."
-"jolli"	275933626	--	--	"[add-ly]"
-"jolly"	353300032	--	--	"[add-li]"
+"jolli"	275933626	--	--	"[add-ly]."
+"jolly"	353300032	--	--	"[add-li]."
 
 table of Loop Pool nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2119,6 +2120,11 @@ to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's de
 to say maples-no: say "No need to change the maples. They are the least dreary part of the Downside"
 
 to say both-medals: say "No, it's a combination of what's on both medals"
+
+this is the players-macked rule:
+	if players are not touchable, the rule fails;
+	if players are reflexed, the rule succeeds;
+	the rule fails;
 
 to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
 

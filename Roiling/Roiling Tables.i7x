@@ -250,7 +250,7 @@ try us yurts	brownies	true	512172846	--	"rusty"	"rusty"	--	--	"The yurts quickly
 docile old ice	docile old ice	false	341000045	--	"coiled"	"coiled"	--	--	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	--	post-weeds-sewed rule	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 mended mini denim	Eclairs	true	326810705	--	"mined"	"mined"	--	--	"You hear zzk-zzh noises as the mended mini denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life. You take them, but you've left a bit of a hole you might be able to go down."
-bogus-dandier	bogus-dandier	false	371276262	Dire and Arid Den	"dandier"	"dandier"	--	post-dandier rule	"You feel slightly more cheery about your prospects of getting out. You didn't fall that far. You remember that, although the exit is high above, the treading gradient was, well, a gradient. So you start crawling through various passages until you find one where--yes, there's a bit of sunlight. You could make it up through there. You start digging with your hands, and what do you know? There's a passage out. You fill it once aboveground, then you do the same for where the denim was. You didn't necessarily solve anything, but you showed you could respond positively when in trouble."
+bogus-dandier	bogus-dandier	false	371276262	Treading Gradient	"dandier"	"dandier"	--	post-dandier rule	"You feel slightly more cheery about your prospects of getting out. You didn't fall that far. You remember that, although the exit is high above, the treading gradient was, well, a gradient. So you start crawling through various passages until you find one where--yes, there's a bit of sunlight. You could make it up through there. You start digging with your hands, and what do you know? There's a passage out. You fill it once aboveground, then you do the same for where the denim was. You didn't necessarily solve anything, but you showed you could respond positively when in trouble."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	--	--	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 sporties ripostes	sporties ripostes	false	709599244	--	"prosiest"	"prosiest"	--	--	"The taunts become less vernacular and catchy and more drawn out. Hey! You can deal with these! They make some logical sense if you're not too careful, but you break things down. No, those annoying jibes don't have to bug you any more, not even a little. When you realize this, they disappear, or maybe you can just ignore them now."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	pre-strudel-rustled rule	post-strudel-rustled rule	"You manage to take the strudel without obviously reaching for it[if sled rut is touchable]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -550,11 +550,8 @@ section routes auxiliary
 
 this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
 	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
-	if be ova is in Same Mesa, say "You look down at [be ova]. It seems to indicate there's a new, if not particularly glamorous, direction to consider." instead;
-	if MORF FORM is in Same Mesa, say "That MORF FORM is distracting you. Maybe you should deal with it now." instead;
-	if THE BEAN is in Same Mesa, say "THE BEAN seems to pull you back to it. It's hiding something." instead;
 	if Gast is in Same Mesa:
-		say "Walking away would upset the [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+		say "Walking away would upset [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
 		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
 		do nothing instead;
 	if noun is reflexed: [this covers going back to the place]
@@ -1755,9 +1752,9 @@ report fliptoing when player is in Posh Hops Shop:
 		remove noun from shop-hint-items, if present;
 	continue the action;
 
-report fliptoing (this is the oyster min score annoying details rule):
-	if noun is trolls and flip-spill-flag is false, min-up; [if you SPILL PILLS to ditch the trolls, you can't skip EAT below.]
-	if noun is trout and flip-spill-flag is false, min-up; [SPILL PILLS with trout untutored lets you skip EAT, but you can't now.]
+report fliptoing (this is the oyster min score annoying details rule): [??there may also be a problem where SCAMS interferes. I don't know.]
+	if noun is trolls and flip-spill-flag is false and pills are not moot, min-up; [if you SPILL PILLS to ditch the trolls, you can't skip EAT below.]
+	if noun is trout and flip-spill-flag is false and pills are not moot, min-up; [SPILL PILLS with trout untutored lets you skip EAT, but you can't now.]
 	continue the action;
 
 section towers
@@ -2505,7 +2502,7 @@ to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
 to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
-volume table of hints
+volume table of hintobjs
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -2878,6 +2875,8 @@ bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Bus
 stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 bogus-rousted	"[one of]The Dourest Detours have left you out of energy, and you need a boost so it returns.[plus][or]You need to get ROUSTED.[minus][cycling]"
+bogus-dandier	"[one of]The drained dreadin['] and the arid den leave you feeling down. There must be a way to feel better. That will help you think positively and not feel stuck.[plus][or]Feel cheerier, happier, heartier...[plus][or]DANDIER.[minus][cycling]"
+drained dreadin	--	bogus-dandier
 repeat button	"REPEAT plays back what you recorded with the retape button."
 retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"

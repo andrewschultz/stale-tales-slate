@@ -24,7 +24,7 @@ TOD  = default gen blather, about general nonsense e.g. a misunderstood request
 DSB  = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
 TOB  = read ALL the book titles!
 TOSB = subj-blather, about a specific subject
-TNW  = messages for "you can't go that way"
+TNW  = messages for "you can't go that way"SDASADSADSADSADSADSADSAD
 TRE  = table of readables
 TSX  = differences between sexes
 TSH  = table of spechelp, so you can see the specialized help for an item
@@ -1338,6 +1338,12 @@ check gotoing:
 	if progval of noun > progval of location of player, say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
 	abide by the goto-check of mrlp;
 
+this is the ordeal-reload-goto rule:
+	do nothing;
+
+this is the stores-goto rule:
+	do nothing;
+
 this is the routes-goto rule:
 	if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
 
@@ -1368,7 +1374,7 @@ this is the oyster-goto rule:
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 
 this is the towers-goto rule:
-	if noun is Rousted Detours or noun is Arid Den, say "No thanks. Once was enough.";
+	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough.";
 	if duck is touchable and duck is friendly:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
@@ -5374,6 +5380,8 @@ this is the towers-hinting rule:
 	if bonker is touchable, try objhinting bonker instead;
 	if stinger is touchable, try objhinting stinger instead;
 	if weeds are touchable, try objhinting weeds instead;
+	if player is in Dourest Detours, try objhinting bogus-rousted instead;
+	if player is in Dire and Arid Den, try objhinting drained dreadin instead;
 	if guar-here > 0:
 		d "Touchable guardians: [list of touchable guardians].";
 		d "Guardian we are looking for = [guardian-to-hint].";
@@ -5389,8 +5397,9 @@ this is the towers-hinting rule:
 	if Shaven Havens are unvisited, all-say "[if mardier admirer is moot]You need someone, or something, north of where the mardier admirer was.[else]You need to work your way to the north bit[seen-scope].[end if]" instead;
 	unless Dr Yow has been wordy, all-say "[one of]Dr. Yow can be manipulated, even behind the prison ropins.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof, all-say "[one of]That duck [if duck is not touchable]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]The duck won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or]The raves saver you saw is useful.[or]The raves saver is a tape recorder.[or]The raves saver has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
-	if player is not in Obscurest Subsector, say "You need to release Dr. Yow in the Obscurest Subsector next." instead;
-	if luck node is not moot, try objhinting luck node instead;
+	if luck node is not moot:
+		if player is not in Obscurest Subsector, say "You need to release Dr. Yow in the Obscurest Subsector next." instead;
+		try objhinting luck node instead;
 	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
 	if player is in Outer Route:
@@ -8711,8 +8720,7 @@ check going inside in Carven Cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it." instead;
 	if respect specter is touchable:
-		say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness.";
-		wfak;
+		say "'I offer you much luck and respect in your journey. [if got-thru-respect is true]Thanks for listening. I am impressed your ethical standards were too high to take a bonus point[else]I am impressed you want to get on with things and not worry about silly trivia and points like, um, me[end if],' the Respect Specter calls, with a hint of sadness.[wfak]";
 		process the post-specter-scepter rule;
 		say "[line break]";
 	say "You walk through the former act ruin curtain--and through an obscure part of Old Warpy, the mysterious area of Yorpwald that connects distant and seemingly unrelated parts of Yorpwald. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
@@ -12235,18 +12243,17 @@ check giving to yak:
 
 understand the command "place" as "put".
 
-check putting it on (this is the yak-skid rule):
-	if second noun is skid:
-		if noun is censer, say "The censer isn't flat enough to stay on the skid over all the bumps. It doesn't seem like it needs moving at all. Changing. maybe." instead;
-	if noun is yak and second noun is skid:
-		ignore the can't put what's not held rule;
+check putting it on the skid (this is the yak-skid rule):
+	if noun is censer, say "The censer isn't flat enough to stay on the skid over all the bumps. It doesn't seem like it needs moving at all. Changing. maybe." instead;
+	if noun is yak:
 		say "[if yak is on skid]It already is.[else]The yak doesn't want to budge. Maybe if you had something tasty.[end if]" instead;
 	if noun is leaf:
 		if yak is touchable:
 			now yak is on skid;
 			now leaf is on skid;
 			say "The yak walks up to the leaf you dropped, sniffs, climbs on the skid and begins munching[if yak-badbook is true]. Maybe it will trust you enough to eat that really awful book, now[end if]." instead;
-	say "You don't need the skid to tranaport [the noun]." instead;
+		continue the action;
+	say "You don't need the skid to transport [the noun]." instead;
 
 the yak-skid rule is listed before the can't put what's not held rule in the check putting it on rulebook;
 
@@ -12891,7 +12898,7 @@ understand "bottle" as ALocalCo Cola when ALocalCo Cola is touchable.
 
 check inserting into mug:
 	if noun is ALocalCo Cola:
-		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You consider how to use a co-alloc--it finally makes sense! You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.[paragraph break]The [e robot][if robot is reflexed], from under the labs slab,[end if] clicks reprovingly. Probably because it's a bot o['] root beer.";
+		say "You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.[paragraph break]The [e robot][if robot is reflexed], from under the labs slab,[end if] clicks reprovingly. Probably because it's a bot o['] root beer.";
 		moot ALocalCo cola;
 		the rule succeeds;
 	say "Only liquids would belong there." instead;
@@ -13170,7 +13177,7 @@ check scaning USB:
 		else:
 			say "Good sport!" instead;
 
-description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a a golden dongle you don't want to mess with. You can also READ it for its status."
+description of Drive A is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a golden dongle you don't want to mess with. You can also READ it for its status."
 
 The Be Troo E Robot is a boring reflexive thing in Hacks Shack. "A Be Troo E Robot waits here for an important order.". bore-text of Be Troo E Robot is "[if robot is reflexed]It needs a special command[else]The [robot] has no more work to do[end if].". bore-check of Be Troo E Robot is bore-robot rule. printed name is "Be-Troo E-Robot".
 
@@ -14032,6 +14039,8 @@ carry out spilling:
 			try fliptoing the-to entry;
 			tag-spill-cheated the-from entry;
 			if debug-state is true, say "DEBUG: MISSES will show [endgame-spill-instead].";
+			now flip-spill-flag is false;
+			moot pills;
 			the rule succeeds;
 	say "WARNING could not flip-from [oi].";
 	now flip-spill-flag is false;
@@ -14726,7 +14735,7 @@ book Plasm Lamps
 
 Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel like going SPLAM! SPLAM! with it.". roomnud of Plasm Lamps is table of Plasm Lamps nudges.
 
-bogus-psalm is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-psalm is "They light this murky area, [if bogus-psalm are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].".
+bogus-psalm is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-psalm is "They light this murky area, [if bogus-psalm are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].". printed name of bogus-psalm is "area around".
 
 a-text of bogus-psalm is "RRYRR". b-text of bogus-psalm is "?R?R?". parse-text of bogus-psalm is "x[sp]x[sp]-[sp]x[sp]x".
 
@@ -15535,6 +15544,9 @@ rule for supplying a missing noun when xraying or xring:
 to say if-duck: if duck is not touchable, say "--but nothing [if Shaven Havens is visited]here [end if]seems to fit with UNLOCKED";
 
 to say big-hint of (rayx - a thing) :
+	if noun is lars eede or noun is elsa erde or noun is reeds ale:
+		say "RELEASED or RESEALED";
+		continue the action;
 	repeat through table of towers anagrams:
 		if the-from entry is rayx:
 			say "[right-word entry in upper case]";
@@ -15557,6 +15569,12 @@ palace-warn is a truth state that varies.
 
 xray-bug-sorry is a truth state that varies.
 
+definition: a thing (called th) is xray-warnable:
+	if th is LLPish, yes;
+	if th is yurts, yes;
+	if th is a white guardian, yes;
+	no;
+
 check xraying:
 	if noun is crocus, say "The succor crocus reveals no molecular biological secrets. It is probably good as-is." instead;
 	if noun is top opt pot, say "The top opt pot is sturdy. It can't be changed." instead;
@@ -15574,8 +15592,9 @@ check xraying:
 		say "You already remember trying [right-word entry in upper case]--which seems right, just a matter of getting other things right first. Maybe they already are." instead;
 	if noun is thruhinted:
 		choose row with the-from of noun in table of towers anagrams;
-		say "You remember, from somewhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
-	if noun is the player, say "You might expose yourself to harmful rays and stuff, looking that close." instead;
+		if scams is false, say "You remember, from somewhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
+		say "NOTE: [the noun] was thruhinted, but the 'scam' testing flag is on, so we disabled the fourth-wall nudge to see the hint we would've gotten.";
+	if noun is the player, say "Even if you could, you might expose yourself to harmful rays and stuff." instead;
 	if noun is agnostic:
 		if Dinger is in Actionless Coastlines, try xraying Dinger instead;
 		if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector, say "You realize [agnostic-first] could be a little more ATTENTIVE.";
@@ -15602,7 +15621,7 @@ check xraying:
 			else:
 				say "You decide to be pretty sure you can figure it on your own, instead." instead;
 	now xray-bug-sorry is false;
-	if noun is LLPish:
+	if noun is xray-warnable:
 		say "You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?";
 		unless the player regex-prompt-consents:
 			say "OK. Save it for something else.";
@@ -15613,8 +15632,6 @@ check xraying:
 		say "Boy! [noun] might be less oppressive if he were [big-hint of noun].";
 	else if noun is rayed:
 		say "You remember you could still think [big-hint of noun]." instead;
-	else if noun is prefigured or noun is thruhinted:
-		say "You remember trying to make things [big-hint of noun], so you won't waste your x-ray vision here." instead;
 	else:
 		say "After a thoughtful gaze, you reckon [the noun] could be [big-hint of noun].";
 	if xray-bug-sorry is true:
@@ -15756,7 +15773,7 @@ to draw-line (lcc - a room) and (bd - a direction):
 	linedraw (current foreground-color) in current graphics window from x-start by y-start to x-end by y-end with 1;
 [To linedraw (hue - a number) in (win - a g-window) from (x1 - a number) by/x (y1 - a number) to (x2 - a number) by/x (y2 - a number) with (wgt - a number):]
 
-table of towers-locs [arranged n to s then w to e. Dourest Detours is not included, as it would draw something in an odd position.]
+table of towers-locs [arranged n to s then w to e. Dourest Detours/Arid Den are not included, as that would draw something in an odd position.]
 my-loc	my-x	my-y
 Shaven Havens	1	0
 Fringe Finger	0	1
@@ -15966,8 +15983,7 @@ check asking Rodney about: say "He stares at you, seeming to ask rhetorically, '
 
 check going outside in Loftier Trefoil:
 	if Rodney is in Loftier Trefoil, say "Rodney is blocking the way[if vw > 1], and he has help[end if]." instead;
-	say "BUG! you should have been kicked out after talking to Renato.";
-	wfak;
+	say "BUG! you should have been kicked out after talking to Renato.[wfak]";
 	move player to Topside Deposit;
 
 check going up in Loftier Trefoil: say "One stare at the rates for an overnight room almost leads you to tears. You exit the large inn with a lean grin and no learning." instead;
@@ -16256,7 +16272,7 @@ check going down in Treading Gradient:
 		say "You go down into the darkness...";
 		move player to Arid Den;
 
-some mended mini denim is LLPish vanishing singular-named boring scenery in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.".
+some mended mini denim is LLPish vanishing singular-named boring scenery in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.". printed name of mended mini denim is "mended mini-denim".
 
 a-text of mended mini denim is "RYRYR". b-text of mended mini denim is "?Y?YR". parse-text of mended mini denim is "x[sp]I[sp]x[sp]E[sp]x". mended mini denim is cheat-spoilable.
 
@@ -16430,7 +16446,7 @@ to ag-fid:
 	say "[agnostic-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart. Anyway, I'd f'get...'[paragraph break]Fidget, fidget, fidget.";
 
 every turn when player is in Actionless Coastlines and dinger is in Actionless Coastlines:
-	say "[agnostic] continues perusing [i]Reading a Dinger[r], not looking particularly thrilled."
+	say "[agnostic] continues perusing [dinger], not looking particularly thrilled."
 
 the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "[Coasting Agnostic]". description is "[bug-report]".
 
@@ -17001,7 +17017,8 @@ to towers-min-adj: [this is when you leave the mainland]
 		if number of carried hintpastries is 0, min-up; [no way to cheat if we have no hintpastries]
 	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
 
-to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
+to say mrmamu: say "[if player is female]Ma'
+[else]Mister[end if]";
 
 book Rawest Waters
 
@@ -17335,21 +17352,21 @@ there is an outie room called Dire and Arid Den. It is in Towers. "You feel drai
 
 section bogus-dandier
 
-bogus-dandier is privately-named ssno scenery in Arid Den.
+bogus-dandier is privately-named ssno vanishing scenery in Arid Den. description is "BUG: you should not see this.". printed name is "Dire and Arid Den".
 
 a-text of bogus-dandier is "RYRRYYR". b-text of bogus-dandier is "?YR?Y?R". parse-text of bogus-dandier is "?[sp]-[sp]x[sp]?[sp]-[sp]?[sp]x".
 
 section drained dreadin
 
-drained dreadin is privately-named ssno scenery in Arid Den.
+drained dreadin is ssno scenery in Arid Den.. description is "It works doubly on you to make you feel cheerless.". bore-text is "You need some way to dispel the drained dreadin[']. Replace it with a more positive emotion.". printed name of drained dreadin is "drained dreadin[']".
 
-a-text of drained dreadin is "RYRRYRY". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 check scaning the player when player is in Arid Den: try scaning drained dreadin instead;
 
 section nerd aid
 
-the Nerd Aid is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of bottles of nerd aid is bore-nerd-aid rule.
+the Nerd Aid is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of nerd aid is bore-nerd-aid rule.
 
 a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RYRPYYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
@@ -17360,7 +17377,7 @@ book Dourest Detours
 
 Dourest Detours is an outie room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
 
-the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]".
+the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]". printed name of bogus-rousted is "Rousted Detours".
 
 a-text of bogus-rousted is "RYYRRYR". b-text of bogus-rousted is "R??RRYR". parse-text of bogus-rousted is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -17678,6 +17695,7 @@ after fliptoing a guardian (this is the guardian taunt and track progress rule) 
 		sort tauntgar in random order;
 		say "[taunt-text of entry 1 in tauntgar][line break]";
 		now entry 1 in tauntgar is prevtaunt;
+	continue the action;
 
 after fliptoing a guardian (this is the recalculate minimums no matter what rule) :
 	choose-new-hint-guardian;
@@ -17708,20 +17726,7 @@ a room can be tower-accessible. a room is usually not tower-accessible.
 a room can be accessible, sideview, mightaswell or inaccessible. a room is usually inaccessible.
 
 to shuffle-guardians (goner - a guardian):
-	let G be up;
-	let MR be Topside Deposit;
-	if goner is ingrates:
-		now MR is Fringe Finger;
-	else if goner is natives site van:
-		now MR is Lost Lots;
-	else:
-		now other-room of goner is tower-accessible;
-		now gualoc of goner is tower-accessible;
-		if location of player is gualoc of goner:
-			now G is guadir of goner;
-		else:
-			now G is opposite of (guadir of goner);
-		now MR is the room G of location of player;
+	let MR be other-room of goner;
 	if debug-state is true, say "DEBUG: opening path to [MR]. It is [unless MR is accessible]not [end if]accessible.";
 	now goner is prodded;
 	if goner is dreads adders:
@@ -17735,19 +17740,20 @@ to shuffle-guardians (goner - a guardian):
 			draw-my-loc;
 		continue the action;
 	if goner is purple: [purple guardians must be dispelled]
-		if goner is bonker, continue the action;
+		if goner is bonker, continue the action; [bonker is replaced by stinger]
 		if MR is Actionless Coastlines or player is in Actionless Coastlines:
 			now MR is accessible;
 		else:
 			now MR is sideview;
 		if can-see-map, draw-my-loc;
 		continue the action;
-	if MR is accessible:
-		say "You [if room G of location of player is visited]notice somewhere [G] you already went to, so it'll be a little easier to get around[else]calculate you found a new path to an area you haven't seen yet[end if].";
+	if MR is tower-accessible:
+		say "You [if MR is visited]notice somewhere [G] you already went to, so it'll be a little easier to get around[else]calculate you found a new path to an area you haven't seen yet[end if].";
 		d "You already unlocked [MR].";
 	else:
 		d "You just unlocked [MR].";
 	let gua-before be gua-to-clear;
+	now MR is tower-accessible;
 	if MR is not sideview or MR is not mightaswell:
 		now MR is accessible;
 	if gua-before is gua-to-clear: [if we still need to clear the same number of guardians, increase minimum score]
@@ -17838,7 +17844,7 @@ to choose-new-hint-guardian:
 	let max-priority be 0;
 	let guardian-list be a list of things;
 	repeat with gcand running through touchable guardians:
-[		if debug-state is true, say "[gcand]: [other-room of gcand], [guard-hint-prio of gcand] vs max [max-priority].";]
+		if debug-state is true, say "[gcand]: [other-room of gcand], [guard-hint-prio of gcand] vs max [max-priority].";
 		if guard-hint-prio of gcand < max-priority, next;
 		if guard-hint-prio of gcand > max-priority:
 			now guardian-list is {};
@@ -19696,6 +19702,13 @@ understand "guru [something]" as guruing when mrlp is others.
 
 did-guru is a truth state that varies.
 
+this is the person-to-fruit rule:
+	if noun is not a person, continue the action;
+	if noun is len craig, say "Nothing, despite all Len Craig [if number of entries in clearing-hintables > 0]has[else]had[end if] to sell." instead;
+	if noun is Curtis, say "If Curtis had any materials, he wouldn't hide them from you." instead;
+	if noun is flippable or noun is vanishing, continue the action;
+	if noun is not ammo gang, say "A person shouldn't and can't be changed into a fruit[unless ammo gang is moot or dr severe is moot], though perhaps you could help someone, or trade someone else, for one." instead;
+
 carry out guruing:
 	if can-guru is false:
 		if arugula is moot, say "You lost your guru powers." instead;
@@ -19705,10 +19718,8 @@ carry out guruing:
 		try guruing magenta rope instead;
 	if noun is briar screen, try guruing barren cries instead;
 	if noun is the player, say "You don't want to change. Well, not in that way." instead;
-	if noun is a person:
-		if noun is len craig, say "Nothing, despite all Len Craig [if number of entries in clearing-hintables > 0]has[else]had[end if] to sell." instead;
-		if noun is not ammo gang, say "A person shouldn't and can't be changed into a fruit[unless ammo gang is moot], though perhaps you could trade someone for one." instead;
-	if noun is viewer or noun is searcher or noun is fleeing feeling, say "No. You don't want to use the arugula on this. It's got to be pretty simple." instead;
+	abide by the person-to-fruit rule;
+	if noun is viewer or noun is searcher or noun is fleeing feeling, say "No. You don't want to use the arugula on [the noun]. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
 			if noun is reflexed:
@@ -20690,7 +20701,9 @@ check opening box: say "If brute force worked, it wouldn't be so great for stora
 
 check taking So Great Storage: say "[greedy-s] guards it carefully. 'I need currency. Give me currency.'" instead;
 
-check giving droll dollar to someone: if second noun is not greedy-person, say "[second noun] isn't seedy enough to accept it." instead;
+check giving droll dollar to someone:
+	if second noun is Curtis, say "But Curtis gave it to you in the first place." instead;
+	if second noun is not greedy-person, say "[second noun] isn't seedy enough to accept it." instead;
 
 check giving something to greedy-person:
 	if player has storage, say "You've already traded." instead;
