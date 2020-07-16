@@ -15,8 +15,8 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ~	sli	t4
 ~	hints,hin,spoi	t5
 
-}}MAX=53
-}}CURMAX=52
+}}MAX=54
+}}CURMAX=54
 }}SCORE=0
 }}CURMIN=25
 
@@ -42,12 +42,15 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 @hin
 >monty hints
 
+@spoi
+>scam
+
 >seed 1
 >enter turrets
 >z
 
 @hin
-/DEBUG INFO: (Cedrick|Andres|Ernest|Blake|Edwin|Geno) hinting\.
+/DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl|Geno) hinting\.
 
 @nud
 #nudge for deny
@@ -58,6 +61,10 @@ Deal with Rodney, not any part of his chosen sub-names.
 >redn
 Deal with Rodney, not any part of his chosen sub-names.
 
+@nud
+#readables for recital article
+>read article
+This version was written by some lovely chap named ALTERIC.
 
 @max
 #pre-rodney rule
@@ -90,6 +97,9 @@ Trying to change the current region you're in all at once would be risky, or use
 >slon
 ################################this tests all the possible picaros' changes. We simply dump all the "items" in the downside, then test and undo them one by one.
 >z
+#slider test for talcier
+>atcleri
+Your settler begins to make noises: a low hum, but nothing really piercing.
 ##balance undos
 >allrand
 #slider test for snared
@@ -256,7 +266,7 @@ Boy! Reggie might be less oppressive if he were EGGIER.
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
 >xr andrew #picaro-1
-Boy! Andrew might b8e less oppressive if he were WARNED.
+Boy! Andrew might be less oppressive if he were WARNED.
 >undo
 >xr archie #picaro-19
 Boy! Archie might be less oppressive if he were ACHIER.
@@ -545,17 +555,17 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 
 >gone
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest|Blake|Edwin) hinting\.
+{--hin}/DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl) hinting\.
 >score
 {$SCOS}
->wined
+>lardy
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest|Blake) hinting\.
+{--hin}/DEBUG INFO: (Cedrick|Andres|Archie|Blake) hinting\.
 >score
 {$SCOS}
 >bleak
 }}SCORE++
-{--hin}/DEBUG INFO: (Cedrick|Andres|Ernest) hinting\.
+{--hin}/DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
 >score
 {$SCOS}
 
@@ -563,13 +573,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 #spechelp for rodney
 >rodnye
 Rodney looks around, as if he is sick of this place.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Sir Rodney. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Yo-Rend-Or-Deny Rodney. That's a decent omen.
 #renudge for picaros
 >picarso
 You've already thinned the picaros' ranks a bit--it can't be bad to tackle the others one at a time, by name
 
 @!minh,mini
->tenser
+>achier
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -587,7 +597,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
-{--hin}DEBUG INFO: Sir Rodney hinting.
+{--hin}DEBUG INFO: Yo-Rend-Or-Deny Rodney hinting.
 >score
 {$SCOS}
 
@@ -607,14 +617,20 @@ Now, now. Maybe Rodney dishes out insults like that without a shred of self-awar
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
 >yo nerd
 Now, now. Maybe Rodney dishes out insults like that without a shred of self-awareness, but heroes need to do better.
+#mistake test for clear it
+>clear it
+The recital article stays in place. You see red, upset the brute-force magic didn't work.
 
 @max
 >droney
 Your score has just gone up by one point
 >undo
+
+@!minh,mini
 >talcier
 by one point
 }}CURMIN++
+}}SCORE++
 
 >yonder
 Your score has just gone up by one point
@@ -894,8 +910,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @hin
 /DEBUG INFO: (Muscly Luc Sym|snider diners) hinting\.
 >gf salted deltas
-/DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from sweatier wait-seer and Resident Trendies\.
+/DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from (Resident Trendies and sweatier wait-seer|sweatier wait-seer and Resident Trendies)\.
 >undo
+
+@spoi
+>xr butlers #00w
+Hmm. You bet you could get past if the bluster butlers were SUBTLER.
+>xr yurts #pastry LLP
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
+>xr muscly #00n
+Hmm. You bet you could get past if Muscly Luc Sym were CLUMSY.
+>xr diners #00e
+Hmm. You bet you could get past if the snider diners were RINSED.
 
 @!minh,mini
 >rusty
@@ -922,18 +950,6 @@ DEBUG INFO: Taking away a max point.
 You don't have x-ray vision right now.
 >x ray
 You don't have x-ray vision right now.
-
-@spoi
->xr butlers #00w
-Hmm. You bet you could get past if the bluster butlers were SUBTLER.
->xr yurts #pastry LLP
-You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
->y
-Boy! Sure would be nice if yurts were RUSTY.
->xr muscly #00n
-Hmm. You bet you could get past if Muscly Luc Sym were CLUMSY.
->xr diners #00e
-Boy! Sure would be nice if the snider diners were RINSED.
 
 @minh,mini
 >purloin brownies
@@ -1082,7 +1098,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >e
->drained
+>semipro
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1203,7 +1219,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. T
 @spoi
 >xr keycar #(clearing a room)
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
-Boy! Sure would be nice if the keycar were CREAKY.
+>y
+After a thoughtful gaze, you reckon the yacker keycar could be CREAKY.
 
 @!minh,mini
 >creaky
@@ -1222,34 +1239,19 @@ You wish you could file Mel Fish away and put him in the past.
 #mistake test for hms
 >hms
 No ship comes to take Mel away. It's pretty landlocked here.
-#nudge for casn
->cans
-Concentrate on the Nerd-Aid. In the dandier arid den.
-#nudge for nerd
->nedr
-Concentrate on the Nerd-Aid. In the dandier arid den.
-#nudge for aid
->adi
-Concentrate on the Nerd-Aid. In the dandier arid den.
-#nudge for wears
->weasr
-You suppress a swear as the sales pitch wears on you.
-#nudge for bottles
->bottlse
-They're not just bottles! They're bottles of NERD-AID!
 >w
 
 @!minh,mini
 >n
 
 @hin
-/DEBUG: guardian hint choice is (fluster-self rut|traipse pirates) from fluster-self rut and traipse pirates.
+/DEBUG: guardian hint choice is (fluster-self rut|traipse pirates) from (fluster-self rut and traipse pirates|traipse pirates and fluster-self rut).
 
 @spoi
 >xr old ice
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the oldice could be COILED.
+After a thoughtful gaze, you reckon the docile old ice could be COILED.
 
 @sli
 #slider test for coiled
@@ -1379,11 +1381,13 @@ DEBUG INFO: Resident Trendies hinting.
 
 @spoi
 >xr trendies #02e
-After a thoughtful gaze, you reckon the trendies could be NERDIEST.
+Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 >xr admirer #02n
-After a thoughtful gaze, you reckon the admirer could be MARRIED.
+Hmm. You bet you could get past if the mardier admirer were MARRIED.
 >xr ingrates #02w
-After a thoughtful gaze, you reckon the ingrates could be ANGSTIER.
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+Hmm. You bet you could get past if the angriest ingrates were ANGSTIER.
 
 @sli
 #slider test for angstier
@@ -1491,7 +1495,7 @@ Dourest Detours
 >xr
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the dourest detours could be DOUTERS/OUTREDS/REDOUTS/ROUSTED.
+After a thoughtful gaze, you reckon the dourest detours could be ROUSTED.
 
 @sli
 #slider test for rousted
@@ -1651,7 +1655,7 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 @!minh,mini
 >s
 >e
-
+\\
 Salted Deltas
 
 @hin
@@ -1715,7 +1719,7 @@ Ooh! Another light, now.
 
 @spoi
 >xr atheists #12e
-After a thoughtful gaze, you reckon the atheists could be HASTIEST.
+Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
 >xr sweatier #11n
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 
@@ -1909,8 +1913,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @spoi
->xr player
-After a thoughtful gaze, you reckon the replay player could be PEARLY.
+>xr player #replay player LLP
+You blink
+>y
+After a thoughtful gaze, you reckon the raves saver could be PEARLY.
 
 @sli
 #slider test for pearly
@@ -1976,11 +1982,24 @@ The gradient itself can't be changed, but you can change the last thing that's h
 >gradietn
 You already tweaked so much here in the Treading Gradient. You don't need to change the place itself
 
+@!minh,mini
+>d
+Dire and Arid Den
+{--sli}#slider test for dandier\\>addneri\\Your settler begins to make noises: a low hum, but nothing really piercing.
+{--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
+{--hin}>tc\\scan\\XXX\\>scan me\\YYY\\>dridane\\You feel a slight psychic push-pull coming from all around the Dire and Arid Den. That's a decent omen.
+>dandier
+Treading Gradient
+}}SCORE++
+}}CURMIN++
+\\
+>score
+{$SCOS}
 >e
 
 @spoi
 >xr hostile #21n
-After a thoughtful gaze, you reckon the hostile could be HOLIEST.
+Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 
 @nud
 #nudge for scalier
@@ -2045,7 +2064,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
 >xr grailman #20n
-Hmm. You bet you could get past if the grailman were MARGINAL.
+Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
 @mis
 #mistake test for eoliths
@@ -2057,10 +2076,14 @@ Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a b
 }}SCORE++
 #notmax
 Your score has just gone up by one point
+>score
+{$SCOS}
 >holiest
 #notmax
 }}SCORE++
 Your score has just gone up by one point
+>score
+{$SCOS}
 >n
 >s
 >s
@@ -2068,27 +2091,17 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: REB-NOK bonker hinting.
 
-@nud
-#spechelp for dandier arid den
->dandrie
-The arid den seems less imposing and impressive.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dandier arid den. That's a decent omen.
-#scannotes for dandier arid den
->scan dandier arid den
-Well. That's two things you can't figure to start, but maybe you can, if you think about it.
-#nudge for leveraged
+@spoi
+>xr imposer #10e
+Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 
 @sli
-#slider test for drained
->rddneia
+#slider test for semipro
+>esimrop
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@spoi
->xr dandier #10e
-Hmm. You bet you could get past if the dandier arid den were DRAINED.
-
 @!minh,mini
->drained
+>semipro
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -2119,7 +2132,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >xr natives #20s
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-Hmm. You bet you could get past if the natives were NAIVEST/VAINEST.
+Hmm. You bet you could get past if the natives' site van were NAIVEST.
 
 @!minh,mini
 >vainest
@@ -2186,7 +2199,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >xr organised
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the organised egodrains could be GRANDIOSE.
+After a thoughtful gaze, you reckon the organised ego drains could be GRANDIOSE.
 
 @mis
 #mistake test for organdies
@@ -2241,7 +2254,7 @@ You might have to read through a lot of possibilities even if you can quickly fi
 >xr sporties
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the sporties ripostes could be PROSIEST.
+After a thoughtful gaze, you reckon the sporties' ripostes could be PROSIEST.
 
 @!minh,mini
 >prosiest
@@ -2290,7 +2303,7 @@ Seeing ambiguous readings is probably better than seeing stars from actually get
 
 @spoi
 >xr bonker #20e
-Hmm. You bet you could get past if the bonker were BROKEN.
+Hmm. You bet you could get past if the REB-NOK bonker were BROKEN.
 
 >broken
 Your score has just gone up by one point
@@ -2301,7 +2314,7 @@ DEBUG INFO: stinger hinting.
 
 @spoi
 >xr stinger #20e
-Hmm. You bet you could get past if the stinger were RESTING.
+Hmm. You bet you could get past if the grin-set stinger were RESTING.
 
 >score
 {$SCOS}
@@ -2347,15 +2360,18 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 Obscurest Subsector
 
 @hin
-Dr. Yow can be manipulated.
+Dr. Yow can be manipulated, even behind the prison ropins.
 
 @spoi
 >xr fissure #fussier/unlocked
-After a thoughtful gaze, you reckon the fissure could be FUSSIER.
+After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
 >xr luck node #fussier/unlocked
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
 
-@nud
+@mis
+#mistake test for fires
+>fires
+Fries, fires, it'll still hurt anyone who goes poking at it. Maybe there's a way to make it seem less of a trap?
 #mistake test for goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
@@ -2368,6 +2384,8 @@ No, this is the wrong area for pure action.
 #mistake test for olga
 >olga
 Even if the goal could become a person, they'd be kind of wooden.
+
+@nud
 #nudge for obscurest
 >obscurets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -2864,6 +2882,7 @@ DEBUG INFO: I ZOMG Gizmo hinting.
 >gt coastlines
 >give gizmo to agnostic
 
+@hin
 /DEBUG INFO: (turbos|blaster) hinting\.
 
 @spoi
@@ -3088,7 +3107,7 @@ Mislit Limits
 
 @spoi
 >xr curst palace #final
-After a thoughtful gaze, you reckon the curstpalace could be SPECTACULAR.
+After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 >score
 {$SCOS}
@@ -3152,7 +3171,7 @@ You're beyond the lake now.
 >xr unripe #end bonus
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
-After a thoughtful gaze, you reckon the unripe could be PUNIER.
+After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 
 @!minh,mini
 >thisalt
@@ -3218,7 +3237,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @spoi
 >xr serpent #end bonus
-After a thoughtful gaze, you reckon the serpent could be PENSTER/PRESENT/REPENTS.
+You blink
+>y
+After a thoughtful gaze, you reckon the serpent could be PRESENT.
 
 @!minh,mini
 >present
