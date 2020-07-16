@@ -96,7 +96,8 @@ The LOLstr trolls seem concerned you have been kind of obnoxious, and what bette
 "Job perks: bop jerks," say the trolls. The pesty types have formed a half-circle around you now.
 by one point
 >stroll
-The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in. They're not fully on their game, though. Maybe you can be even more annoying.
+The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
+Maybe one more disruption, and you won't be worth bothering with.
 !by one point
 >remap
 The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
@@ -316,7 +317,7 @@ Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 }}SCORE++
-}}CURMAX-=2
+}}CURMAX-=3
 ==!
 >remap
 #notana 'nudge for remap'
@@ -358,7 +359,6 @@ Perhaps you should've played it cool and fled, instead.
 >stroll
 by one point
 }}SCORE++
-}}CURMIN++
 
 Olde Lode
 
@@ -925,15 +925,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tea tray. That's
 #nudge for tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
-#nudge for eat
->tae
-You anticipate Aunt Tuna telling you to stop playing with your food, already.
-#nudge for tray
->trya
-Best to think of it as just tea.
-#nudge for teatray
->teatrya
-Best to think of it as just tea.
 
 @sli
 #slider test for tend
@@ -982,9 +973,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@!min
+}}CURMIN++
+
 @hin
 You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
-
 
 >score
 {$SCOS}
@@ -992,8 +985,8 @@ You helped Tortu and got a paler pearl. That's all you need to do here. There ma
 @max
 #pre-warp-wrap rule
 >warp
-"Goodness me!" cries Aunt Tuna. "I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!"
-Like all good bubble wrap, maybe it needs to be saved 'til you find the right person to annoy.
+"Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
+Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
 !by one point
 
 @nud

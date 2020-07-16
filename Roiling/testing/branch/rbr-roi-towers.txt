@@ -607,6 +607,7 @@ Your score has just gone up by one point
 There's only one picaro left, and his name is Rodney.
 #scannotes for yo rend or deny rodney
 >scan rodney
+--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
 Perhaps Rodney's over-florid title will wind up being a weakness.
 
 @mis
@@ -757,7 +758,7 @@ The adders look downcast for a minute before resuming a threatening pose.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dreads adders. That's a decent omen.
 #scannotes for dreads adders
 >scan dreads adders
-Your settler registers RY?RYR--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode, or you can also HINT QUESTION MARK for a fuller explanation.
+Your settler registers RY?RYR.
 Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue.
 #mistake test for dopiest
 >dopiest
@@ -1400,6 +1401,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@mis
+#mistake test for tasering
+>tasering
+You don't want to make the ingrates even angrier.
+#mistake test for ice man/iceman
+>ice man
+The iceman cometh, and your life passeth.
+joke death
+>undo
+>iceman
+The iceman cometh, and your life passeth.
+joke death
+>undo
+
 @nud
 #rescannotes for curst palace
 >scan palace
@@ -1413,15 +1428,6 @@ Even if the reds and yellows were all in place, there'd still be a lot of possib
 >scan palace
 !Even if the reds and yellows were all in place, there'd still be a lot of possibilities. But it should still help to get closer ro the Curst Palace.
 >t
-#mistake test for ice man/iceman
->ice man
-The iceman cometh, and your life passeth.
-joke death
->undo
->iceman
-The iceman cometh, and your life passeth.
-joke death
->undo
 #nudge for cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -1492,9 +1498,9 @@ Your score has just gone up by one point
 Dourest Detours
 
 @spoi
+#this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
 >xr
-You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
->y
+!You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 After a thoughtful gaze, you reckon the dourest detours could be ROUSTED.
 
 @sli
@@ -1512,10 +1518,12 @@ You feel slightly more awake, but not quite enough. Yet. The detours do seem a l
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
 @!minh,mini
+}}CURMIN++
+>score
+{$SCOS}
 >rousted
 Your score has just gone up by one point
 }}SCORE++
-}}CURMIN++
 \\
 Fringe Finger
 \\
@@ -1577,6 +1585,11 @@ by one point
 >undo
 >undo
 
+@mis
+#mistake test for inserted
+>inserted
+You see red realizing the resident trendies already inserted themselves here.
+
 @!minh,mini
 >rustled
 Your score has just gone up by one point
@@ -1607,11 +1620,6 @@ You're not sure why the Salted Deltas could be slated, or how. You're not here f
 !You've gotten rid of all nuisances here, anyway.
 >undo
 >undo
-
-@mis
-#mistake test for inserted
->inserted
-You see red realizing the resident trendies already inserted themselves here.
 
 @!minh,mini
 >married
@@ -1952,8 +1960,8 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 @nud
 #spechelp for mended mini denim
 >denmi
-The mended mini denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini denim. That's a decent omen.
+The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mended mini-denim. That's a decent omen.
 #scannotes for mended mini denim
 >scan mended mini denim
 Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues.
@@ -1988,10 +1996,12 @@ Dire and Arid Den
 {--sli}#slider test for dandier\\>addneri\\Your settler begins to make noises: a low hum, but nothing really piercing.
 {--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 {--hin}>tc\\scan\\XXX\\>scan me\\YYY\\>dridane\\You feel a slight psychic push-pull coming from all around the Dire and Arid Den. That's a decent omen.
+}}CURMIN++
+>score
+{$SCOS}
 >dandier
 Treading Gradient
 }}SCORE++
-}}CURMIN++
 \\
 >score
 {$SCOS}
@@ -2294,7 +2304,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for bonker
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bonker. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
 
 @nud
 #scannotes for reb nok bonker
@@ -2310,7 +2320,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-DEBUG INFO: stinger hinting.
+DEBUG INFO: grin-set stinger hinting.
 
 @spoi
 >xr stinger #20e
@@ -2323,7 +2333,7 @@ Hmm. You bet you could get past if the grin-set stinger were RESTING.
 #spechelp for stinger
 >restign
 The stinger fizzles a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the stinger. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the grin-set stinger. That's a decent omen.
 #readables for stinger
 >read stinger
 The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess.
@@ -2396,7 +2406,7 @@ Nothing needs to be locked here, certainly not the gaol which already is.
 The gaol is too sturdy to defeated by a three-word combination. Or a four-word one.
 #nudge for gaol
 >galo
-The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer.
+The gaol can't be changed, but maybe you could solve the luck node.
 #nudge for loggaol
 >loggalo
 Nah, you're pretty sure you're overthinking things now. You may want to open the prison.
@@ -2496,7 +2506,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 #spechelp for fissure
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 
 >push retape
 
@@ -2510,13 +2520,13 @@ The duck won't follow you. It doesn't trust your voice.
 @nud
 #respechelp for fissure
 >fissuer
-Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fissure. That's a decent omen.
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 >undo
-#spechelp for prison ropins
+#spechelp for luck node
 >unleckdo
-The ropins remains secure, with no easy way to open it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the prison ropins. That's a decent omen.
+You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
 #readables for prison ropins
 >read prison
 /Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK). There're three other bits to read\.
@@ -2527,9 +2537,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the prison ropins. T
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
 >read luck node
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
-#scannotes for prison ropins
 >scan prison ropins
-Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to untangle things. No, not quite untangle...
+Nothing happens until you scan the luck node.
 #mistake test for locked
 >locked
 No, the opposite...
@@ -2580,9 +2589,6 @@ You don't need to fiddle with the lock now.
 #mistake retest for goal
 >goal
 You fantasize briefly about being a sports star instead of a text adventurer. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal.
-#done rejects for luck node
->unlockde
-It already is. Dr. Yow is free.
 #renudge for ropins
 >ropisn
 No need to mess with the ropins any more.
@@ -2920,7 +2926,7 @@ Your settler registers RRYR?YRYRY*.
 >undo
 #nudge for waster
 >wastre
-Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
+Ew. Rats. You do feel like a waster, doing something with the waters. The Earnest Eastern Neaters still seem to want to help you, though.
 >undo
 #renudge for lake
 >laek
@@ -2932,7 +2938,7 @@ The spray will still drown you if you don't figure a way to move somewhere.
 >undo
 #nudge for water
 >watre
-The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to a shore?
+The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the Earnest Eastern Neaters?
 >undo
 #mistake test for earnest
 >earnest
@@ -2997,8 +3003,8 @@ You fixed the blaster, so maybe you can tackle the turbos.
 >gonear rawest
 #spechelp for eastern shore
 >eastenr
-Maybe it's you, but the eastern shore seemed slightly closer.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the eastern shore. That's a decent omen.
+You feel less split from everyone else for a second.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
 >undo
 >undo
 
@@ -3175,7 +3181,7 @@ After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 
 @!minh,mini
 >thisalt
---If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST.
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
 >punier
 Your score has just gone up by one point
 # add minimum point here
@@ -3190,9 +3196,6 @@ Your score has just gone up by one point
 Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only "stainer retinas," you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away.
 
 @mis
-#mistake test for tasering
->tasering
-You don't want to make the ingrates even angrier.
 #mistake test for its near/sit near
 >its near
 The retinas care not for physical proximity. They will just stare.

@@ -725,6 +725,16 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 >towards
 !by one point
 
+@nud
+#nudge for anti
+>anit
+The whole anti-sag sit-a-nag.
+\\
+#nudge for sag
+>sga
+The whole anti-sag sit-a-nag.
+
+
 >against
 }}SCORE++
 Your score has just gone up by one point
@@ -746,6 +756,9 @@ This game is not violent enough for tags with gats.
 Ian Gast already came alone and does not deserve to be changed into an animal.
 
 @nud
+#nudge for gast
+>gsta
+You can't change Ian Gast permanently. You just have to work around him.
 #mistake retest for staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit

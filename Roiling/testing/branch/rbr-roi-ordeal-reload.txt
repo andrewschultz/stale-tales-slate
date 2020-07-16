@@ -153,6 +153,10 @@ Your score has just gone up by one point.
 >score
 {$SCOS}
 
+@hin
+>hint lamp
+The lamp will last as long as you need it to.
+
 @nud
 #spechelp for latches
 >satchle
@@ -711,6 +715,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 }}SCORE++
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
+@hin
+>hint bins
+You figured how to secure the ISBN bins. Nothing more to do.
+
 @max
 >in
 You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
@@ -802,9 +810,6 @@ by one point
 
 }}SCORE++
 >score
-@min
-{$SCOS}
-@!
 {$SCOS}
 
 @nud
@@ -850,10 +855,15 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 # note option 2 just hooks around meaningless babble here
 >2
 
+@min
+}}CURMAX-=6
+
 Carven Cavern
 
 @max
 >scepter
+The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
+>yes
 by one point
 }}SCORE++
 }}CURMIN++
@@ -861,6 +871,8 @@ by one point
 {$SCOMAX}
 >undo
 >undo
+}}SCORE--
+}}CURMIN--
 
 @sli
 #slider test for staple
@@ -921,9 +933,6 @@ Your score has just gone up by one point
 
 }}SCORE++
 >score
-@min
-{$SCOMISS}
-@!
 {$SCOS}
 
 
@@ -946,9 +955,6 @@ Your score has just gone up by one point
 
 }}SCORE++
 >score
-@min
-{$SCOMISS}
-@!
 {$SCOS}
 
 @nud
@@ -980,15 +986,14 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 {$SCOS}
 
 @max
->au 2
 >scepter
 "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
-"I respect your choice."
+>no
+"Thank you for respecting my presence and purpose here."
 !by one point
 >scepter
 !You may wish
 by one point
->undo
 >undo
 >undo
 

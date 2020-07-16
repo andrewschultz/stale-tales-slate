@@ -178,12 +178,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a 
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
 #readables for mad train
->read mad train
-DR. NIMATA.
-#spechelp for mad train
->madtrani
-The train emits some fake smoke and seems ready to blow up--but no.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
 @mis
 #mistake test for parse
@@ -322,6 +316,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for maraschino
 >amarcsihon
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+>read mad train
+DR. NIMATA.
+#spechelp for mad train
+>madtrani
+The train emits some fake smoke and seems ready to blow up--but no.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
 @nud
 #renudge for ruts
@@ -1470,12 +1472,14 @@ The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lo
 >d
 Scape Space
 
+@hin
 DEBUG INFO: So-Great Storage hinting.
 You can trade the dollar for the So-Great Storage.
 
 @hin
 >give dollar
 You probably want to put the sonic icons in the slot.
+Dr. Severe
 
 @spoi
 >gx a banna'
@@ -1488,12 +1492,6 @@ You focus and squint, and letters appears in your sight: RHUBARB. The aftertaste
 You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
 
 @nud
-#mistake test for lots
->lots
-You only need the one slot.
-#nudge for lots
->ltso
-After all that work getting it to appear, you don't want to make the lost slot vanish.
 #nudge for storage
 >strogea
 You might break what is in the storage.
@@ -1501,16 +1499,13 @@ You might break what is in the storage.
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
->put icons in slot
-!Your score has just gone up by one point.
-
 @hin
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
 >banish passport
 >z
 /DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
 
-@nud
+@mis
 #mistake test for gorean
 >gorean
 This game isn't about that sort of stuff. Not that there's anything wrong with that.
@@ -1520,6 +1515,8 @@ Art Erd has nowhere to run, and you don't know if you want him taking that So-Gr
 #mistake test for retard
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
+
+@nud
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1576,9 +1573,32 @@ Dr. Tera is tarred real good. That's the point of tarring. But she might trade t
 >gs
 male
 
+@nud
+#nudge for lots
+>ltso
+Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear.
+
+@!hin
 >give dollar
 !Your score has just gone up by one point.
 Dr. Severe
+
+@mis
+#mistake test for lots
+>lots
+You only need the one slot.
+#mistake test for reeves
+>reeves
+You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
+
+@nud
+#nudge for lots
+>ltso
+After all that work getting it to appear, you don't want to make the lost slot vanish.
+
+>put icons in slot
+As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
+!Your score has just gone up by one point.
 
 @nud
 #nudge for banna
@@ -1608,14 +1628,25 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a
 It must be the/a banna' AND the message on it.
 #spechelp for Reversed Deserver Dr Severe
 >reservde
-You seem to see mirror image of Dr. Severe for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Reversed Deserver Dr. Severe. That's a decent omen.
+You seem to see a mirror image of Dr. Severe for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
 #scannotes for reserved deserver Dr. Severe
 >scan dr severe
-Whatever this is, well, the vowels don't have much variability. Well, any.
+Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
+Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities.
 #nudge for brrhub
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
+
+@nud
+>showme art erd
+>showme dr tera
+#nudge for pace
+>paec
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
+#nudge for severe
+>seveer
+You need to change Dr. Severe, title and all.
 
 @sli
 #slider test for banana
@@ -1748,11 +1779,11 @@ PERP
 
 @spoi
 >gx viewer
-No. You don't want to use the arugula on this. It's got to be pretty simple.
+No. You don't want to use the arugula on the viewer. It's got to be pretty simple.
 >gx searcher
-No. You don't want to use the arugula on this. It's got to be pretty simple.
+No. You don't want to use the arugula on the searcher. It's got to be pretty simple.
 >gx fleeing feeling
-No. You don't want to use the arugula on this. It's got to be pretty simple.
+No. You don't want to use the arugula on the fleeing feeling. It's got to be pretty simple.
 
 @nud
 #nudge for feeling
