@@ -4725,6 +4725,7 @@ raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expe
 sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
 drained dreadin	true	true	false	false	"Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach."
+nerd aid diner ad	true	true	false	false	"The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here."
 sweatier wait seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
 organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
@@ -17384,12 +17385,9 @@ check scaning the player when player is in Arid Den:
 
 section nerd aid
 
-the Nerd Aid is boring auxiliary plural-named scenery. printed name of Nerd Aid is "Nerd-Aid". description of Nerd Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best. It's empty, too.". bore-text of nerd aid is "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.". bore-check of nerd aid is bore-nerd-aid rule.
+the Nerd Aid Diner ad is boring auxiliary scenery. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.". bore-check of nerd aid is bore-nerd-aid rule.
 
-a-text of Nerd Aid is "RRYYRYR". b-text of Nerd Aid is "RYRPYYR". parse-text of Nerd Aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
-
-this is the bore-nerd-aid rule:
-	if current action is taking or current action is eating or current action is drinking, say "The Nerd-Aid is empty and useless. It was pretty much glorified sugar-water, anyway." instead;
+a-text of Nerd Aid Diner ad is "RRYYRYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
 
 book Dourest Detours
 
@@ -19118,6 +19116,8 @@ understand "tdrawlingly" as t-drawlingly.
 understand "temotionally" as t-emotionally.
 
 understand "tdespairingly" as t-despairingly.
+
+understand "tindiscreetly" as t-indiscreetly.
 
 book side passages
 
