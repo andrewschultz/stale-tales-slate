@@ -906,6 +906,8 @@ understand "yer" as a mistake ("Yup! It's Ed's!") when player is in Minded Midde
 
 chapter Disowned Downside
 
+understand "indiscretely" as a mistake ("Yes, yes, I am being pedantic here. But discreet and discrete are different enough.") when t-indiscreetly is touchable and t-indiscreetly is playable.
+
 understand "parsley" as a mistake ("Despite your best efforts, they remain meatheads.") when parleys splayer players are touchable.
 
 understand "slap em" as a mistake ("[if parleys splayer players are in Disowned Downside]Violence is not the answer! Be clever, here[else]The maples are harmless[end if].") when player is in Disowned Downside.
@@ -1038,7 +1040,7 @@ chapter Gates Stage
 
 understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.") when player is in Gates Stage.
 
-understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in Gates Stage.
+understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest* Home Videos right now.") when player is in Gates Stage.
 
 chapter Clangier Clearing
 
@@ -1066,9 +1068,9 @@ understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storag
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 
-understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera
+understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera Darter.
 
-understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in Scape Space
+understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in Scape Space.
 
 book demo dome
 

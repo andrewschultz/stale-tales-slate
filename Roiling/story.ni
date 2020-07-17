@@ -757,8 +757,9 @@ to choose-female:
 	now Dr Lola is part of droll dollar; [begin others changes]
 	now coin-person is Dr Lola;
 	now Lord Al is off-stage;
-	now Red Rat is off-stage;
-	now Dr Tera is in Scape Space;
+	if Dr Tera is not moot and Art Erd is not moot:
+		now Dr Tera is in Scape Space;
+		now Red Rat is off-stage;
 	now greedy-person is Dr Tera;
 	now Dr Severe is female;
 
@@ -776,8 +777,9 @@ to choose-male:
 	now Lord Al is part of droll dollar; [begin others changes]
 	now coin-person is Lord Al;
 	now Dr Lola is off-stage;
-	now Red Rat is in Scape Space;
-	now Dr Tera is off-stage;
+	if Dr Tera is not moot and Art Erd is not moot:
+		now Dr Tera is off-stage;
+		now Red Rat is in Scape Space;
 	now greedy-person is Red Rat;
 	now Dr Severe is male;
 
@@ -3712,7 +3714,7 @@ to say good-enuf of (goody - a thing):
 				continue the action;
 	if goody is part of the diorama:
 		if dio-other of goody is not off-stage:
-			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.";
+			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.[no line break]";
 			continue the action;
 	d "The table of done rejects could still use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.[no line break]";
@@ -3736,7 +3738,7 @@ to decide whether (tn - a table name) is hash-found:
 				if cmdhash is hashval entry or firstwordhash is hashval entry:
 					if there is a this-item entry:
 						if this-item entry is touchable:
-							unless this-item entry is a pickup-line and this-item entry is not ment and debug-state is false: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
+							unless this-item entry is a pickup-line and this-item entry is not playable: [debug-state condition is a small hack for guesses that the game hasn't revealed yet but which allow seeded programming tests to run without having to >Z for a few moves]
 								now print-this-clue is true;
 					else if there is a this-rule entry:
 						say "[run paragraph on]";
@@ -4626,10 +4628,10 @@ to say cheatfid:
 	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
 
 to say respect-help:
-	if sb-cur is false:
+	if cheat-on is false:
 		say "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode";
 	else:
-		say "[one of]Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 ad 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
+		say "[one of]Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
 
 to say g-thru-resp: now got-thru-respect is true;
 
@@ -4702,7 +4704,7 @@ frat raft	true	true	false	false	"You're pretty sure you can get this one quickly
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
 Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard."
-general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguoua readings aren't so bad."
+general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
 papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
@@ -7800,7 +7802,9 @@ carry out fliptoing (this is the main fliptoing rule):
 			if the-to entry is LLPish:
 				d "General LLPish min-up for [noun].";
 				min-up;
-			if there is a post-rule entry, process the post-rule entry;
+			if there is a post-rule entry:
+				d "Processing [post-rule entry].";
+				process the post-rule entry;
 			process the show blues rule instead; [for debugging]
 			the rule succeeds;
 	repeat through regana of mrlp:
@@ -8446,7 +8450,7 @@ after examining diorama when player is in Dusty Study and niche-found is false:
 	now niche-found is true;
 	say "Oh, hey, there's some words on the ceiling. MY NICHE. Wonder what those could be." instead;
 
-my niche is flippable boring scenery in Dusty Study. description of my niche is "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.";
+MY NICHE is flippable boring scenery in Dusty Study. description of my niche is "The words MY NICHE have a square dotted outline around them.". bore-text is "It's--well, it's not close enough to do much with.". printed name of my niche is "MY NICHE"
 
 understand "my niche" and "my" as niche
 
@@ -14675,7 +14679,7 @@ some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R
 
 a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of Paw R Wrap is "w[sp]a[sp]r[sp]p". Paw R Wrap is parse-spoilable.
 
-description of Paw R Wrap is "Paw-R-Wrap has been a great commercial succeess in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually."
+description of Paw R Wrap is "Paw-R-Wrap has been a great commercial succeess in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.". printed name of Paw R Wrap is "Paw-R-Wrap".
 
 chapter warping
 
@@ -15536,9 +15540,11 @@ understand "xray" as xraying.
 
 rule for supplying a missing noun when xraying or xring:
 	if player is in dourest detours:
+		say "The settler gets a reading when you scan all around.";
 		now the noun is bogus-rousted;
 		continue the action;
 	if player is in arid den:
+		say "The settler gets a reading when you scan all around.";
 		now the noun is bogus-dandier;
 		continue the action;
 	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat in a non-empty room.";
@@ -15614,7 +15620,12 @@ check xraying:
 		if t-or-b is reflexive, try xraying t-or-b instead;
 		if blaster is reflexive, try xraying blaster instead;
 		if turbos are reflexive, try xraying turbos instead;
-	if noun is reflexed or noun is nonreflexive, say "Your x-ray vision doesn't seem to work. So you probably don't have to do anything, there. Maybe find something or someone else to x-ray." instead;
+	if noun is reflexed or noun is nonreflexive:
+		repeat through table of hintobjs:
+			if noun is hint-entry entry:
+				if there is a parallel-entry entry, try xraying parallel-entry entry;
+				break;
+		say "Your x-ray vision doesn't seem to work. So you probably don't have to do anything, there. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
 			now palace-warn is true;
@@ -16275,6 +16286,7 @@ check going down in Treading Gradient:
 		say "You go down into the darkness...";
 		min-up; [no matter what happens, you must figure the word to get out, which gives you a point.]
 		move player to Arid Den;
+		the rule succeeds;
 
 some mended mini denim is LLPish vanishing singular-named boring scenery in Treading Gradient. bore-text of mended mini denim is "The denim is too tough to get a grip on and too heavy for normal tools to cut or get by. You'll need something magical to make it disappear.". description of mended mini denim is "It seems sturdy, but maybe there's some unorthodox way to cut it.". printed name of mended mini denim is "mended mini-denim".
 
@@ -16452,7 +16464,7 @@ to ag-fid:
 every turn when player is in Actionless Coastlines and dinger is in Actionless Coastlines:
 	say "[agnostic] continues perusing [dinger], not looking particularly thrilled."
 
-the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "[Coasting Agnostic]". description is "[bug-report]".
+atblock is privately-named LLPish vanishing scenery. printed name of atblock is "[Coasting Agnostic]". description is "[bug-report]". [no "the" because if we guess attentiev we want to see from Scot, not from the Scot]
 
 ag-atten is a truth state that varies.
 
@@ -17366,7 +17378,9 @@ drained dreadin is ssno boring scenery in Arid Den.. description is "It works do
 
 a-text of drained dreadin is "RYRRYYR". b-text of drained dreadin is "PYRRY?R". parse-text of drained dreadin is "d[sp]a[sp]x[sp]x[sp]-[sp]-[sp]x".
 
-check scaning the player when player is in Arid Den: try scaning drained dreadin instead;
+check scaning the player when player is in Arid Den:
+	say "You can't escape the feeling of drained dreadin['].";
+	try scaning drained dreadin instead;
 
 section nerd aid
 
@@ -17381,7 +17395,7 @@ book Dourest Detours
 
 Dourest Detours is an outie room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
 
-the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]". printed name of bogus-rousted is "Rousted Detours". [it is an LLP but not LLPish. Once you've entered the Rousted Detours, you have to solve it to get out, so it can't go through the usual LLPish code paths.]
+the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detours. description of bogus-rousted is "[bug-report]". bore-text is "[bug-report]". printed name of bogus-rousted is "Dourest Detours". [it is an LLP but not LLPish. Once you've entered the Dourest Detours, you have to solve it to get out, so it can't go through the usual LLPish code paths.]
 
 a-text of bogus-rousted is "RYYRRYR". b-text of bogus-rousted is "R??RRYR". parse-text of bogus-rousted is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -18632,7 +18646,7 @@ this is the bore-sad-elm rule:
 
 chapter parleys splayer players
 
-the parleys splayer players are plural-named flippable reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
+the parleys splayer players are plural-named reflexive people in Disowned Downside. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "[players-c] dressed all coy-hued are here, [if gretta-score is 0]completely besieging[else if gretta-score is 1]still trying to impress[else]anxiously trying to captivate[end if] Gretta."
 
 printed name of parleys splayer players is "[if parleys splayer players are reflexed]macks[else]parleys splayer players[end if]"
 
@@ -18821,9 +18835,7 @@ chapter parleys splayer players flipping
 
 irately is a truth state that varies.
 
-check fliptoing a pickup-line (this is the NO ESP rule):
-	if debug-state is true, continue the action;
-	if noun is not ment, say "[ly-ish]." instead;
+check fliptoing a pickup-line (this is the NO ESP rule): if noun is not playable, say "[ly-ish]." instead;
 
 gretta-score is a number that varies. gretta-score is usually 0.
 
@@ -18897,6 +18909,12 @@ to assign-random-pickup-priority:
 
 a pickup-line is a kind of undesc. a pickup-line is usually privately-named. a pickup-line is usually reflexive. a pickup-line is usually unscannable. a pickup-line has a number called pod-num. a pickup-line has a number called pod-ord. a pickup-line has text called player-move. a pickup-line has text called pickup-description. a pickup-line has a number called hint-prog.
 
+definition: a pickup-line (called pl) is playable:
+	unless pl is touchable, no;
+	if debug-state is true, yes;
+	if pl is ment, yes;
+	no;
+
 rule for deciding whether all includes pickup-lines:
 	it does not.
 
@@ -18922,15 +18940,19 @@ t-seedily is a pickup-line. pod-num is 1. pod-ord is 3. a-text of t-seedily is "
 
 t-tearily-irately is a pickup-line. pod-num is 1. pod-ord is 4. a-text of t-tearily-irately is "??YRYRO". b-text of t-tearily-irately is "??GR?RB". parse-text of t-tearily-irately is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". player-move is "The [players] ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". pickup-description is "defining reality".
 
+t-tersely is a pickup-line. pod-num is 1. pod-ord is 5. a-text of t-tersely is "RYRRYRO". b-text of t-tersely is "RGRRYPO". parse-text of t-tersely is "x[sp]e[sp]x[sp]x[sp]x[sp]e[sp]l[sp]y". player-move is "The [players] continually restyle and restyle their various positive attributes.". pickup-description is "continuing to restyle and restyle".
+
 section 7 letters non-repeating - pod 2
 
-t-nastily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". player-move is "The [players] suddenly start acting very saintly.". pickup-description is "acting saintly".
+t-angrily is a pickup-line. pod-num is 2. pod-ord is 1. a-text of t-angrily is "YRRRYRO". b-text of t-angrily is "YRRRGPB". parse-text of t-angrily is "-[sp]x[sp]x[sp]x[sp]i[sp]l[sp]y". player-move is "The [players] discuss topics rangily, even saying 'Any girl: I, gnarly!' It's too ridiculous to see red over.". pickup-description is "discoursing rangily".
 
-t-shadily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". player-move is "The [players] try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". pickup-description is "seeming ladyish".
+t-nastily is a pickup-line. pod-num is 2. pod-ord is 2. a-text of t-nastily is "RYRRYRO". b-text of t-nastily is "RGRRYPB". parse-text of t-nastily is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". player-move is "The [players] suddenly start acting very saintly.". pickup-description is "acting saintly".
 
-t-snidely is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". player-move is "The [players] blather about how she is better than Lindsey.". pickup-description is "negging Lindsey".
+t-shadily is a pickup-line. pod-num is 2. pod-ord is 3. a-text of t-shadily is "RRYRYRO". b-text of t-shadily is "RRYRGRO". parse-text of t-shadily is "x[sp]x[sp]a[sp]x[sp]i[sp]x[sp]y". player-move is "The [players] try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". pickup-description is "seeming ladyish".
 
-t-starkly is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "Some of the [players] compare her to Krystal, being sort-of favorable to both. Still, it's icky.". pickup-description is "comparing Gretta and Krystal".
+t-snidely is a pickup-line. pod-num is 2. pod-ord is 4. a-text of t-snidely is "RRYRYRO". b-text of t-snidely is "RRYPYRB". parse-text of t-snidely is "x[sp]x[sp]-[sp]d[sp]-[sp]x[sp]y". player-move is "The [players] blather about how she is better than Lindsey.". pickup-description is "negging Lindsey".
+
+t-starkly is a pickup-line. pod-num is 2. pod-ord is 5. a-text of t-starkly is "RRYRRRO". b-text of t-starkly is "RRYRRRO". parse-text of t-starkly is "x[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". player-move is "Some of the [players] compare her to Krystal, being sort-of favorable to both. Still, it's icky.". pickup-description is "comparing Gretta and Krystal".
 
 section 8 letters repeating - pod 3
 
@@ -18978,9 +19000,13 @@ t-drawlingly is a pickup-line. pod-num is 6. pod-ord is 2. a-text of t-drawlingl
 
 t-emotionally is a pickup-line. pod-num is 6. pod-ord is 3. a-text of t-emotionally is "YRYRYYRYRRO". b-text of t-emotionally is "YRYRYYRYRRO". parse-text of t-emotionally is "-[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". player-move is "One [pla-ma], seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". pickup-description is "behaving emotionally".
 
+t-reactively is a pickup-line. pod-num is 6. pod-ord is 4. a-text of t-reactively is "RYYRRYRYRO". b-text of t-reactively is "RYYRPGPGPB". parse-text of t-reactively is "r[sp]e[sp]a[sp]c[sp]t[sp]i[sp]v[sp]e[sp]l[sp]y". player-move is "The [pla-ma]s keep talking creatively and creatively, looking around to make sure Gretta appreciates it.". pickup-description is "discoursing creatively". t-reactively is cheat-spoilable.
+
 section 12 letters - pod 7
 
 t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
+
+t-indiscreetly is a pickup-line. pod-num is 7. pod-ord is 2. a-text of t-indiscreetly is "YRRYRRRYYPPB". b-text of t-indiscreetly is "GRRYRRRGYPPB". parse-text of t-indiscreetly is "i[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]e[sp]-[sp]t[sp]l[sp]y". player-move is "The [pla-ma]s continue to babble, their clothes shining iridescently.". pickup-description is "wearing clothes shining iridescently".
 
 to decide whether (n - a number) is unworkable:
 	decide yes;
@@ -19218,7 +19244,7 @@ after doing something with imp (this is the imp gender neutralize imp rule):
 check taking imp:
 	say "Simply much too fast." instead;
 
-check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it does things and scan those." instead;
+check scaning sly imp: say "The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down." instead;
 
 section imp's block ideas
 

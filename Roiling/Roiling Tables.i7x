@@ -39,7 +39,7 @@ meet bans	meet bans	false	608585586	--	"basement"	"basement"	--	post-meet-bans-b
 tables	tables	false	401610655	--	"stable"	"stable"	--	post-tables-stable rule	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 ISBN bins	ISBN bins	false	228593225	--	"snib"	"snib"	--	post-bins-snib rule	"You hear a click from the ISBN bins. They're still covered with ISBN numbers, but not as much as before. Some if the ISBNs have become a snib that can keep the bins locked, so your place is a bit safer from looting."
 plates	staple	true	464657709	--	"staple"	"staple"	--	--	"The plates [if plaster is touchable]fall with a clatter from the plaster[else]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done. Wait, oops, sorry.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops. Well, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
+Respect Specter	Respect Specter	false	640791549	--	"scepter"	"scepter"	pre-specter-scepter rule	post-specter-scepter rule	"'Well done.' A scepter appears in the Respect Specter's hands before disappearing with a pop. 'Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. [scep-scan-track].'"
 plaster	stapler	true	549981512	--	"stapler"	"stapler"	--	post-psalter-stapler rule	"As an act-ruin curtain appears behind, a stapler falls out. You take it[if plates are touchable] as the formerly stuck plates fall[end if]. The curtain behind looks lined but seems too solid to run through."
 rifle	rifle	false	338451493	--	"flier"	"flier"	--	post-rifle-flier rule	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
@@ -315,19 +315,21 @@ vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the 
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if]."
 atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
-parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're peaking. Gretta looks relieved for a moment."
-t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The  [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
-t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
-t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the  [pla-ma]s accuse each other of being too obvious."
-t-shadily	t-shadily	false	377939109	--	"shadily"	"shadily"	--	--	"You manage to make them let slip a mean dis of other maidens."
+parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're speaking. Gretta looks relieved for a moment."
+t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
+t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	--	--	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. The [pla-ma]s scramble to assure her they didn't mean it that way, but she's not fooled."
+t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	--	--	"That thing the [pla-ma]s were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the  [pla-ma]s accuse each other of being too obvious."
+t-tersely	t-tersely	false	716493096	--	"tersely"	"tersely"	--	--	"The [pla-ma]s begin talking less expansively, and without big words to make them seem impressive, they really do seem quite one-note. Gretta shrugs and mutters 'Duh, of course.'"
+t-angrily	t-angrily	false	410184768	--	"angrily"	"angrily"	--	--	"The [pla-ma]s become overtly disappointed Gretta is not acknowledging how they know a little something about everything. Each blames someone else for being to dull and narrow."
+t-shadily	t-shadily	false	377939109	--	"shadily"	"shadily"	--	--	"You manage to make the [pla-ma]s let slip a mean dis of other maidens."
 t-snidely	t-snidely	false	535182609	--	"snidely"	"snidely"	--	--	"The  [pla-ma]s refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."
 t-starkly	t-starkly	false	516001874	--	"starkly"	"starkly"	--	--	"The  [pla-ma]s finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."
 t-cattily	t-cattily	false	448579376	--	"cattily"	"cattily"	--	--	"The  [pla-ma]s each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."
-t-tearily-irately	t-tearily-irately	false	539593685	--	"irately"	"irately" or "tearily"	--	--	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."
-t-blearily	t-blearily	false	508716411	--	"blearily"	"blearily"	--	--	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin DOWNSIDE 8]
+t-tearily-irately	t-tearily-irately	false	539593685	--	"irately"	"irately" or "tearily"	--	--	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on none of the [pla-ma]s."
+t-blearily	t-blearily	false	508716411	--	"blearily"	"blearily"	--	--	"The [pla-ma]s interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin DOWNSIDE 8]
 t-ribaldly	t-ribaldly	false	401939391	--	"ribaldly"	"ribaldly"	--	--	"The  [pla-ma]s move from courtship to...well, less than courtly desires. She wanted to believe they would not, but they couldn't help it."
 t-formally	t-formally	false	482441177	--	"formally"	"formally"	--	--	"The  [pla-ma]s over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."
-t-coitally	t-coitally	false	473635774	--	"coitally"	"coitally"	--	--	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."
+t-coitally	t-coitally	false	473635774	--	"coitally"	"coitally"	--	--	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With the [pla-ma]s, it's like you almost didn't have to do anything."
 t-modestly	t-modestly	false	662820003	--	"modestly"	"modestly"	--	--	"Modesty is a good thing--well, in the long term. In the short term, the  [pla-ma]s['] backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio."
 t-shabbily	t-shabbily	false	393747830	--	"shabbily"	"shabbily"	--	--	"The  [pla-ma] discussing his lab tries to supply details, but the more he makes up, the easier it is for others to pounce on his inconsistencies--but their trolling is so crude, nobody comes out looking too good."
 t-shoddily	t-shoddily	false	471132957	--	"shoddily"	"shoddily"	--	--	"The two  [pla-ma]s can't keep up their production. They mutter 'D'oh! Sly is...' realizing they've worked into a dead end."
@@ -341,9 +343,11 @@ t-sobbingly	t-sobbingly	false	530137500	--	"sobbingly"	"sobbingly"	--	--	"The [p
 t-tediously	t-tediously	false	748843503	--	"tediously"	"tediously"	--	--	"The [pla-ma]s begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."
 t-wearingly	t-wearingly	false	645925650	--	"wearingly"	"wearingly"	--	--	"The [pla-ma]s start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."
 t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	--	--	"The [pla-ma]s begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin DOWNSIDE 10-11]
-t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	--	--	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
+t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	--	--	"The [pla-ma]s['] matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
 t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--	"The [pla-ma]s['] deep stares no longer look profound, but a bit creepy and needy. Their concentration is broken."
+t-reactively	t-reactively	false	793570199	--	"reactively"	"reactively"	--	--	"Gretta catches the [pla-ma]s looking around a little too often to see if their words have effect. It ruins the spell.[paragraph break]For your part, you feel you haven't been VERY creative. Cater and Trace and React back in the [plains] has been done, and now, you didn't have to switch too many letters. But then you realize that just underscores how flimsy the [pla-ma]s['] 'creativity' really was."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The [pla-ma]s become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the [pla-ma]s." [begin DOWNSIDE 12]
+t-indiscreetly	t-indiscreetly	false	915420970	--	"indiscreetly"	"indiscreetly"	--	--	"The [pla-ma]s let their wild clothes get the best of them, asking a bit too closely for Gretta's approval. She rejects them out of hand."
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
@@ -505,7 +509,7 @@ this is the post-rifle-flier rule:
 
 to say scep-scan-track:
 	if got-thru-respect is true:
-		say "Thank you for being respectful and listening to my whole pitch, Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through";
+		say "Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through";
 	else if Specter is ncscanned and specter is cscanned:
 		say "I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode";
 	else if Specter is cscanned:
@@ -1444,10 +1448,15 @@ to say what-about-ed:
 
 section otters auxiliary
 
-after fliptoing a pickup-line (this is the post-gretta-help rule):
+after fliptoing a pickup-line (this is the weaken-players rule):
+	process the post-gretta-help rule;
+	continue the action;
+
+this is the post-gretta-help rule:
+	d "Checking progress on flipping [the noun].";
 	if uber-rand-cheat is true:
 		if number of pickup-lines in Disowned Downside is 0:
-			say "You're done!";
+			say "You're done! Somehow. This shou;dnt happen, but you are.";
 			moot parleys splayer players;
 			try talking to Gretta;
 			continue the action;
@@ -1457,23 +1466,24 @@ after fliptoing a pickup-line (this is the post-gretta-help rule):
 	if noun is t-tearily-irately:
 		if the player's command matches "irately":
 			now irately is true;
-	if noun is not ment:
+	if noun is a pickup-line and noun is not ment:
 		say "(Wow, you did this without seeing the [players] act anything like that!) ";
 	increment gretta-score;
+	d "Gretta's score is now [gretta-score].";
 	if gretta-score is 1:
 		say "Gretta looks a bit unsure but less engaged than before, and the [players] seem off-stride and unenthusiastic for a moment.[paragraph break]";
 	otherwise if gretta-score is 2:
 		say "Gretta nods, able to reject the worst of the [players]['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the [players].[paragraph break]";
 	else:
-		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
+		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for interceding. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		moot players;
 		mootl list of all pickup-lines;
 		try talking to Gretta;
 		continue the action;
 	process the how players hit on Gretta rule;
-	if debug-state is true and noun is not ment:
-		say "NOTE: The player can't have known this yet, but since you're testing, I'll let it fly.";
+	if debug-state is true and noun is a pickup-line and noun is not ment:
+		say "NOTE: The player can't have known this yet, but for testing, it can pass, since we can't determine when each pickup line shows up.";
 		continue the action;
 	continue the action;
 
@@ -2129,7 +2139,7 @@ dent	"Fixing the dent is a tricky business. Get two things out of order, and it 
 trout	"[if player is in Anger Range]The best way to help the trout at the moment is to deal with the carps and pikes[else if wrap is off-stage]You try to describe how to fight, but that's not it[end if]."
 tea	"You anticipate Aunt Tuna telling you to stop playing with your food, already."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
-wrap	"That's not quite the way to pop the wrap."
+wrap	"That's not quite the way to pop the [paw r wrap]."
 HUNTER HUNT AREA	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
 bogus-trace	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
@@ -2213,6 +2223,7 @@ luck node	"You twiddle the luck node for a bit, and it seems to be working, unti
 dinger	"[Agnostic] blinks and ruffles [dinger] and yawns before flipping a page, slightly less interested than before."
 atblock	"[agnostic-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 mended mini denim	"The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
+bogus-dandier	"You feel slightly less depressed you tried something. You can't be too far off."
 bogus-rousted	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
 sporties ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
@@ -2331,6 +2342,8 @@ to say where-pull of (itm - a thing):
 		say "all around";
 	else if itm is maze walls and player is in Grey Gyre:
 		say "the volt maze";
+	else if itm is a block-concept:
+		say "[if player is in Shiner Shrine]the imp[else]the shrewin['] whiners[end if]";
 	else:
 		say "[the itm]"
 
