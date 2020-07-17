@@ -1501,7 +1501,7 @@ Dourest Detours
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
 >xr
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
-After a thoughtful gaze, you reckon the dourest detours could be ROUSTED.
+After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 
 @sli
 #slider test for rousted
@@ -1509,10 +1509,13 @@ After a thoughtful gaze, you reckon the dourest detours could be ROUSTED.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#scannotes for bogus-rousted
+>scan
+You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
 #nudge for detour
 >detoru
 This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
-#spechelp for bogus-detours
+#spechelp for bogus-rousted
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -1585,11 +1588,6 @@ by one point
 >undo
 >undo
 
-@mis
-#mistake test for inserted
->inserted
-You see red realizing the resident trendies already inserted themselves here.
-
 @!minh,mini
 >rustled
 Your score has just gone up by one point
@@ -1598,6 +1596,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >e
+{--mis}\\#mistake test for inserted\\>inserted\\You see red realizing the resident trendies already inserted themselves here.\\
 >nerdiest
 Your score has just gone up by one point
 }}SCORE++
@@ -1993,9 +1992,10 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 @!minh,mini
 >d
 Dire and Arid Den
+{--nud}#scannotes for bogus-dandier\\>scan\\You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.\\#scannotes for drained dreadin\\>scan drained dreadin\\Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.\\#scannotes for nerd aid diner ad\\>scan nerd aid diner ad\\The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.\\#spechelp for bogus-dandier\\>adderin\\You feel slightly less depressed you tried something. You can't be too far off.
 {--sli}#slider test for dandier\\>addneri\\Your settler begins to make noises: a low hum, but nothing really piercing.
 {--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
-{--hin}>tc\\scan\\XXX\\>scan me\\YYY\\>dridane\\You feel a slight psychic push-pull coming from all around the Dire and Arid Den. That's a decent omen.
+{--hin}>t\\>scan\\Your settler registers ?YR?Y?R--hmm.\\>scan dreadin\\Your settler registers PYRRY?R.\\>dridane\\You feel slightly less depressed you tried something. You can't be too far off.\\DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
 }}CURMIN++
 >score
 {$SCOS}
@@ -2050,7 +2050,7 @@ THE LOIS SIT HOLE is written on the Thearchy Hatchery in red.
 >esthoil
 The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Hostile-Is-He Lot. That's a decent omen.
-#scannotes for hostile is he lot
+#scannotes for he lot
 >scan hostile is he lot
 Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
 >gs
@@ -2079,7 +2079,7 @@ Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 @mis
 #mistake test for eoliths
 >eoliths
-Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-is-He Lot to be.
+Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a better way for the Hostile-Is-He Lot to be.
 
 @!minh,mini
 >marginal
@@ -2109,6 +2109,11 @@ Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 #slider test for semipro
 >esimrop
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#spechelp for promise imposer
+>semprio
+The promise imposer seems a little less intimidating."
 
 @!minh,mini
 >semipro
@@ -2165,6 +2170,7 @@ Your score has just gone up by one point
 You need a way past the bonker
 
 @nud
+#nudge for leveraged
 >leveragde
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 #nudge for leverage
@@ -2198,7 +2204,7 @@ The drains sizzle slightly but go back to menacing quiet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the organised ego drains. That's a decent omen.
 #scannotes for organised ego drains
 >scan organised ego drains
-With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
+With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!
 
 @sli
 #slider test for grandiose
@@ -2372,6 +2378,11 @@ Obscurest Subsector
 @hin
 Dr. Yow can be manipulated, even behind the prison ropins.
 
+@nud
+#scannotes for fries us fissure
+>scan fries us fissure
+The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier.
+
 @spoi
 >xr fissure #fussier/unlocked
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
@@ -2505,7 +2516,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 @nud
 #spechelp for fissure
 >fissuer
-Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it.
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, and you wonder who or what could tinker with it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 
 >push retape
@@ -2752,7 +2763,7 @@ You don't see any new information about the curst palace this time.
 
 @spoi
 >xr dinger
-After a thoughtful gaze, you reckon Reading: a Dinger could be GRAINED.
+After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 
 @nud
 #scahnotes for curst palace
@@ -2919,6 +2930,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 >gonear rawest waters
+#scannotes for earnest eastern neaters
+>scan earnest eastern neaters
+That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!
 #rescannotes for curst palace
 #palace 10 lights
 >scan palace
@@ -3001,7 +3015,7 @@ You fixed the blaster, so maybe you can tackle the turbos.
 >undo
 >undo
 >gonear rawest
-#spechelp for eastern shore
+#spechelp for earnest eastern neaters
 >eastenr
 You feel less split from everyone else for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Earnest Eastern Neaters. That's a decent omen.
@@ -3242,7 +3256,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >xr serpent #end bonus
 You blink
 >y
-After a thoughtful gaze, you reckon the serpent could be PRESENT.
+After a thoughtful gaze, you reckon the pester'n serpent could be PRESENT.
 
 @!minh,mini
 >present

@@ -1592,7 +1592,7 @@ You only need the one slot.
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
 @nud
-#nudge for lots
+#renudge for lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
@@ -1626,11 +1626,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a
 #scannotes for a banna
 >scan a banna
 It must be the/a banna' AND the message on it.
-#spechelp for Reversed Deserver Dr Severe
+#spechelp for Reserved Deserver Dr Severe
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
-#scannotes for reserved deserver Dr. Severe
+#scannotes for reserved deserver Dr Severe
 >scan dr severe
 Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
 Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities.
@@ -1639,8 +1639,6 @@ Whatever Dr. Severe rattles on about seems less important than how many letters 
 It's a burr hub, not the burr hub. A small but important distinction.
 
 @nud
->showme art erd
->showme dr tera
 #nudge for pace
 >paec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1745,7 +1743,7 @@ Gates Stage
 @nud
 #mistake test for saget
 >saget
-You don't need to be part of Yorpwald's Funniest Home Videos right now.
+You don't need to be part of Yorpwald's Funniest* Home Videos right now.
 #mistake test for poring
 >poring
 You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.

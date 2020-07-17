@@ -129,7 +129,7 @@ joke death
 #mistake test for dialect
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
-#done rejects for bleary barley
+#done rejects for nude dune
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
 #nudge for ly
@@ -160,7 +160,7 @@ You'll need to change more than one cinder.
 Ed's full name, please!
 #nudge for reedi
 >reeid
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 #nudge for reedy
 >reeyd
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
@@ -252,8 +252,8 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 >undo
 >undo
 >s
-#nudge for jolli
->jolil
+#nudge for jolti
+>ojlti
 No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 >undo
@@ -270,25 +270,47 @@ As you gaze into the cinders, they blow away, leaving you feeling the parleys sp
 @hin
 DEBUG INFO: macks hinting.
 
+@nud
+#nudge for parley
+>arpley
+You need to deal with all the players to knock them back a peg.
+
 @mis
 #mistake test for parsley
 >parsley
 Despite your best efforts, they remain meatheads.
 
+@mis
+##balance undos
+>allrand
+#mistake test for indiscretely
+>indiscretely
+Yes, yes, I am being pedantic here. But discreet and discrete are different enough.
+>undo
+>undo
+
 @nud
 ##balance undos
 >allrand
+#nudge for angry
+>angyr
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+>undo
+#nudge for angri
+>angir
+No, you need a couple more letters... a couple to make a word weak enough to control.
+>undo
 #nudge for bossy
 >bosys
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bossi
 >bosis
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for nasti
 >nasit
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for nasty
 >nasyt
@@ -296,7 +318,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for seedi
 >seeid
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for seedy
 >seeyd
@@ -304,7 +326,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for shadi
 >shaid
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for shady
 >shayd
@@ -312,15 +334,19 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for snide
 >snied
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for stark
 >stakr
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
+>undo
+#nudge for terse
+>teres
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for tacit
 >tacti
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for catty
 >catyt
@@ -328,7 +354,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for teari
 >teair
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for teary
 >teayr
@@ -340,27 +366,27 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for bleari
 >bleair
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for ribald
 >ribadl
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for formal
 >formla
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for coital
 >coitla
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for modest
 >modets
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for shabbi
 >shabib
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for shabby
 >shabyb
@@ -368,7 +394,7 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for shoddi
 >shodid
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for shoddy
 >shodyd
@@ -376,11 +402,11 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for silent
 >siletn
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for steami
 >steaim
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for steamy
 >steaym
@@ -388,43 +414,55 @@ Your powers are so weak that you need to add a few letters to the word you need.
 >undo
 #nudge for sudden
 >suddne
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for stupdi
 >stupid
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for martial
 >martila
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for sincere
 >sinceer
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for sobbing
 >sobbign
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for tedious
 >tediosu
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for wearing
 >wearign
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
+>undo
+#nudge for desperate
+>desperaet
+No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 >undo
 #nudge for drawling
 >drawlign
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
 >undo
 #nudge for emotional
 >emotionla
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
+>undo
+#nudge for reactive
+>reactiev
+No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 >undo
 #nudge for despairing
 >despairign
-Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing with Ed and the barley.
+No, you need a couple more letters... a couple to make a word weak enough to control.
+>undo
+#nudge for indiscreet
+>indiscrete
+No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 >undo
 >undo
 
@@ -470,22 +508,16 @@ No need to change the maples. They are the least dreary part of the Downside.
 #nudge for maple
 >mapel
 No need to change the maples. They are the least dreary part of the Downside.
-#nudge for amck
 #readables for sample maples
 >read sample maples
 On one, you read: "Formerly the maiden median, then the gent-fora/frat-gone frontage."
->makc
-If you messed with one mack, the others would gang up on you. Work on the argument, instead.
-#nudge for amcks
->macsk
-Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying.
 #nudge for gretta
 >gretat
-Gretta's been manipulated enough. Deal with the macks' arguments, instead.
+Enough people are trying to manipulate Gretta. Deal with them directly.
 ###############generic rejects. Most mack ideas should give this.
 >bossiyl
 You feel you're on the right track to expose the players. But that's not quite it.
->nastiyl
+>angriyl
 You feel you're on the right track to expose the players. But that's not quite it.
 >bleariyl
 You feel you're on the right track to expose the players. But that's not quite it.
@@ -494,20 +526,33 @@ You feel you're on the right track to expose the players. But that's not quite i
 ################################this tests all the possible macks' poses. We simply dump all the "items" in the downside, then test and undo them one by one.
 ##balance undos
 >allrand
-#slider test for bossily
->ssbolyi
+#slider test for sparely
+>psralye
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
-#slider test for nastily
->antslyi
+############now on to all the adverbs
+#slider test for angrily
+>narglyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for bossily
+>ssbolyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 #slider test for seedily
 >esdelyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
+#slider test for tersely
+>etelrys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
 #slider test for shadily
 >hsdalyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for nastily
+>antslyi
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 #slider test for snidely
@@ -604,21 +649,31 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >edeesarlpyt
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
+#slider test for reactively
+>eretcviayl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
 #slider test for despairingly
 >iseapdirgnyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for indiscreetly
+>eisndrciteyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
 
 @nud
 #here is where we test all the possible mack ideas with ambiguous cheat-scans
+##balance undos
+>allrand
 #scannotes for t-tearily-irately
 >scan ttearily
 Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways.
 #scannotes for t-formally
 >undo
 >scan tformally
-Two question marks in nine letters--well, seven--might be a little sticky. The macks said two things.
+Two question marks in nine letters--well, seven--might be a little sticky. The parleys splayer players said two things.
 #scannotes for t-silently
 >undo
 >scan tsilently
@@ -725,7 +780,29 @@ by one point
 DEBUG INFO: macks hinting.
 
 @nud
-#note these are not shown in the table of spechelp since these are generic rejects for any mack-idea
+#scannotes for parleys splayer players
+>scan parleys splayer players
+The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
+
+@nud
+##balance undos
+>sparely
+by one point
+#done rejects for parleys splayer players
+You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
+#nudge for amcks
+>macsk
+Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
+#nudge for amck
+>makc
+If you messed with one mack, the others would gang up on you. Work on the argument, instead.
+#renudge for parley
+>arpley
+You needed to deal with all the players to knock them back a peg.
+>undo
+>undo
+>undo
+>undo
 
 >bossily
 Your score has just gone up by one point.
@@ -733,12 +810,7 @@ Your score has just gone up by one point.
 >score
 {$SCOS}
 
-@nud
-#nudge for macks
->macsk
-Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
-
->nastily
+>angrily
 Your score has just gone up by one point.
 }}SCORE++
 >score
@@ -762,7 +834,7 @@ Gretta has an important item for you once you finish chatting.
 @nud
 #renudge for gretta
 >gretat
-Gretta's been manipulated enough.
+Enough people are trying to manipulate Gretta. Listen to what she has to say, instead.
 !macks
 
 >1
@@ -1204,20 +1276,20 @@ No, you need a couple more letters... even with your powers back, you still need
 >enragde
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 \\
-#spechelp for imp1
+#spechelp for legendary
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
-#spechelp for imp2
->angriyl
+#spechelp for motleyer
+>remoteyl
 The imp looks slightly annoyed for a second. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
-#spechelp for imp3
+#spechelp for butlery
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the imp's actions. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
 #scannotes for sly imp
 >scan sly imp
@@ -1569,12 +1641,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#renudge for jolli
->jolil
+#renudge for jolti
+>ojlti
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 \\
-#nudge for jolly
->jolyl
+#nudge for jolty
+>ojlty
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 \\
 #nudge for whiner
@@ -1601,28 +1673,24 @@ Usually, you'd need to add two letters, but here you'd need to add four.
 >stoicla
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
 \\
-#nudge for terse
->teres
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
 #renudge for coma
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
 \\
-#spechelp for whin1
+#spechelp for tallyhoing
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
-#spechelp for whin2
+#spechelp for callosity
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
-#spechelp for whin3
->terseyl
+#spechelp for jollity
+>joltiyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
-DEBUG ONLY: You feel a slight psychic push-pull coming from the whiners' shrewin'. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
 #scannotes for whiners
 >scan whiners

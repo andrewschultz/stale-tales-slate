@@ -202,6 +202,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-n
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
+#scannotes for lairage regalia
+>scan lairage regalia
+OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic.
+#scannotes for adsorbing signboard
+>scan adsorbing signboard
+While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
 
 @nud
 #spechelp for worst ad
@@ -254,7 +260,7 @@ It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
 
-@!min
+@nud
 #pre-side-art-astride rule
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
@@ -712,7 +718,7 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 >gaiastn
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
-@!min
+@nud
 #pre-mesa-dir-flip rule
 >past
 !by one point
@@ -1107,6 +1113,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
+@nud
+#pre-unlit-until rule
 >until
 }}SCORE++
 Your score has just gone up by one point
@@ -1285,7 +1293,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
 
-@!min
+@nud
 #pre-hurt-hog-through rule
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.

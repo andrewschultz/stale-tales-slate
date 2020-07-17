@@ -281,7 +281,7 @@ You seem to be fumbling what to do with the pills.
 You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper
 #spechelp for perma amper
 >rempa
-The tunes grow slightly less annoying, for a moment.
+You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
 #renudge for unset
 >unste
@@ -292,7 +292,7 @@ The tunes grow slightly less annoying, for a moment.
 by one point
 >unset
 !(tunes)
-You already dealt with the tunes.
+You already dealt with the tunes and perma-amper.
 #renudge for unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
@@ -717,10 +717,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #mistake test for craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
-#spechelp for HUNTER HUNT AREA
->unearht
-You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 #nudge for anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -778,6 +774,12 @@ Your score has just gone up by one
 
 @hin
 DEBUG INFO: HUNTER HUNT AREA hinting.
+
+@nud
+#spechelp for HUNTER HUNT AREA
+>unearht
+You need an organized way to reveal what's under the ground, and you don't have a digging instrument, either.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 
 @nud
 #scannotes for HUNTER HUNT AREA
@@ -919,7 +921,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a d
 #spechelp for tea
 >tae
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tea tray. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
 
 @nud
 #nudge for tuna
@@ -1001,8 +1003,8 @@ There's nothing else in the drawer and no way to get in by yourself.
 Retutor? Torture. Rot. True!
 #spechelp for wrap
 >wrpa
-That's not quite the way to pop the wrap.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bubble wrap. That's a decent omen.
+That's not quite the way to pop the Paw-R-Wrap.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
 #nudge for bubble
 >bubbel
 It's just wrap, really.
@@ -1142,7 +1144,7 @@ The words on the pans don't change. They are just a generic taunt.
 >doorknbo
 It's just a knob. Which thankfully cuts down the possibilities.
 \\
-#spechelp for c2
+#spechelp for bogus-trace
 >traec
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
@@ -1581,10 +1583,15 @@ Sclerous Closures
 @hin
 DEBUG INFO: bubble wrap hinting.
 
-@nud
+@mis
 #mistake test for rasche
 >rasche
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
+
+@nud
+#scannotes for paw r wrap
+>scan paw r wrap
+Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard.
 #nudge for closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1672,7 +1679,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner.
 The gleaner was made by Al Green, written in red.
 #scannotes for general gleaner
 >scan general gleaner
-The pattern blinks green-red and yellow-purple.
+You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 #mistake test for reangle
 >reangle
 You tilt the gleaner around to try to see it from a different point of view. If there are any differences, they're too small for you to see.
@@ -1848,7 +1855,7 @@ by one point
 @nud
 #done rejects for haunter
 >hauntre
-You can't change the haunter, but maybe you can show it something.
+Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
 
 >ask haunter about ruby
 #notana
@@ -2072,13 +2079,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >nta
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@nud
+@mis
 #mistake test for nat
 >nat
 You don't need to name the ant. It's not a pet.
 #mistake test for splam
 >splam
 There's a simpler way to attack the ant.
+
+@nud
+#scannotes for bogus-psalm
+>scan
+Perhaps finding where the vowel is would be a good start.
 #scannotes for natant ant
 >scan natant ant
 You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
@@ -2086,7 +2098,7 @@ You grumble a bit. But with just six possibilities, it may be easier to brute fo
 >tna
 There must be a simple way to take down the ant. You haven't quite got it right yet, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
-#spechelp for bogus-lamps
+#spechelp for bogus-psalm
 >psaml
 The plasm lamps flicker slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -2242,10 +2254,10 @@ DEBUG INFO: dialer hinting.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#spechelp for d2
+#spechelp for bogus-redial
 >redila
 The dialer must have another setting, but that's not quite it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer (DEBUG: part 2). That's a decent omen.
 
 #not a mistake
 >redial

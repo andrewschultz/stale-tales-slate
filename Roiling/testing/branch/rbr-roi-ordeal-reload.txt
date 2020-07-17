@@ -267,7 +267,7 @@ Don't dwell on it. It's lies.
 #spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the meet bans. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET BANS. That's a decent omen.
 #mistake test for net/net beams/beams net
 >net
 But the net would still block you.
@@ -363,7 +363,7 @@ You probably just want to go IN to the stable.
 #spechelp for niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the niche. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
 #nudge for ceiling
 >ceilign
 You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
@@ -613,26 +613,26 @@ The crabgrass dries out and becomes a brass crag.
 #spechelp for event map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the event map. That's a decent omen.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the event map. That's a decent omen.
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
 #spechelp for brass crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the brass crag. That's a decent omen.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the brass crag. That's a decent omen.
 >crabgrass
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
 #spechelp for farm plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the farm plot. That's a decent omen.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the farm plot. That's a decent omen.
 >platform
 The farm plot switches back to a platform.
 #spechelp for steel pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the steel pad. That's a decent omen.
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the steel pad. That's a decent omen.
 >pedestal
 The steel pad intertwines into a marginally artistic pedestal.
 
@@ -844,9 +844,12 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 >1
 >1
 
-@!nud
 >1
 >1
+
+@nud
+>1
+
 #brackets ok
 [1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
 #brackets ok
@@ -861,6 +864,7 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 Carven Cavern
 
 @max
+#pre-specter-scepter rule
 >scepter
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
 >yes
@@ -999,12 +1003,16 @@ by one point
 
 @nud
 #scannotes for respect specter
->c
+>t
 >scan respect specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
->c
+>t
 >scan respect specter
-"Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+>undo
+>undo
+>undo
+>undo
 
 @mis
 #mistake test for spectre
@@ -1017,50 +1025,155 @@ You're not sure how it was able to detect your mental spelling, but you're a bit
 You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
 
 @max
->in
-"I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way."
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+@max
+# basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
+##balance undos
+>scepter
+The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
+>no
+"Thank you for respecting my presence and purpose here."
+!by one point
+>scepter
+!You may wish
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way."
+by one point
 >undo
+>undo
+>scepter
+The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
+>yes
+"I respect your choice."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+
+###################don't scan at all
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+####################only c-scan the specter
 >scan specter
-"Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can scan again if you want more hints."
+Your settler registers ?R?????
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
 >in
-"While you didn't get the definitive hints from non-cheat scanning, I can suspect you see how it could work, combining both ways to scan."
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+The Respect Specter coughs.
+>y
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. While you didn't get the definitive hints from non-cheat scanning, I can suspect you see how it could work, combining both ways to scan."
+by one point
 >undo
 >undo
+####################only nc-scan the specter
 >t
 >scan specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
 >in
-"While you avoided the cheat-scanning I came here for, but I respect your intrepid stance agsinst cheating, even if it really isn't cheating."
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 >undo
+>scepter
+The Respect Specter coughs.
+>y
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. You kind of avoided the cheat-scanning I came here for, but I respect your intrepid stance against cheating, even if it really isn't cheating."
+by one point
+>undo
+####################c-scan and nc-scan the specter
 >t
 >scan specter
-"Four ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can scan again if you want more hints."
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
 >in
-"I hope scanning me both ways revealed that cheat mode has some limitations for those who want to proceed without too much mental gymnastics, and non-cheat may reveal ambiguous readings from cheat mode."
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
 >undo
+>scepter
+!The Respect Specter coughs.
+by one point
+>undo
+######################c-scan twice
 >scan specter
-"You may notice slots 1 ad 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
+"You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+######################c-scan three times
 >scan specter
 "You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+######################c-scan four times
 >scan specter
 "In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6."
->scan specter
-"I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I won't say anything specific."
 >in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
 >undo
->scan scepter
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+######################c-scan five times
+>scan specter
+"I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+######################c-scan six times
+>scan specter
 "This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities."
->scan scepter
+>in
+"I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+by one point
+>undo
+######################c-scan six times
+>scan specter
 "That's all. Thanks for listening. I can repeat things one step at a time if you need a recap."
 >in
-"Thank you for being respectful and listening to my whole pitch, Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+"I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+by one point
 >undo
 
 @max
 >x spectre
 The Respect Specter winces slightly and opens its mouth as if to say "Er..."
+>scepter
+by one point
 
-@!min
+@!min,max
 >scepter
 The Respect Specter coughs.
 >y
