@@ -175,6 +175,9 @@ understand "scorse" as a mistake ("You can't trade with the dead.") when player 
 
 chapter Flesh Shelf
 
+to say preef-silv:
+	preef silver;
+
 understand "amps" as a mistake ("You are trying to save a magic world, not start a garage band. Besides, there's too much noise [if store m is in Trips Strip]behind store M[else]in the Metros[end if] anyway.") when Spam is touchable or maps are touchable.
 
 understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or bread is touchable.
@@ -188,6 +191,8 @@ understand "helf" and "helfs" as a mistake ("While you're sort of in a far side,
 understand "inks" as a mistake ("The skin sink bleeds no color.") when player is in Flesh Shelf.
 
 understand "kin" and "kins" as a mistake ("Whether you're hoping to see a deceased relative or send a relative you really, really dislike down here, or maybe even show your family what you can do, that's not within your powers .") when player is in Flesh Shelf.
+
+understand "silver" as a mistake ("The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.[paragraph break][preef-silv]") when livers are touchable.
 
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in Flesh Shelf.
 
@@ -276,6 +281,8 @@ understand "limes" as a mistake ("I think you have the wrong food group. Besides
 understand "littoral" as a mistake ("How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.") when player is in kitchen and tortilla is not moot.
 
 understand "pears" as a mistake ("I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.") when spear is touchable.
+
+understand "sauce" as a mistake ("Close, but you need the whole name of the sauce.") when cathouse is touchable.
 
 understand "stake" as a mistake ("A stake would have no use here. So that might be a miskate. Err...") when steak is touchable or skate is touchable.
 
@@ -508,9 +515,10 @@ understand "sex it" as a mistake ("[if player is not in means manse]Quit screwin
 
 volume unsorted
 
-to say fake-clue of (myst - a sto):
+to say fake-clue of (my-sto - a sto):
 	say "[paragraph break]";
-	preef myst;
+	preef my-sto;
+	say "[run paragraph on]";
 
 Shuffling Mistakes ends here.
 

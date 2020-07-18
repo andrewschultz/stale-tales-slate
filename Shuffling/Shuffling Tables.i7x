@@ -35,8 +35,8 @@ ones	nose	"nose"	"ones"	a rule	post-ones-nose rule	"The ones line up next to eac
 dashes	shades	"shades"	"dashes"	--	post-dashes-shades rule	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
 noughts	shotgun	"shotgun"	"noughts"	--	post-noughts-shotgun rule	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
 bread	beard	"beard"	"bread"	--	--	"[process-sandwich]The bread seems to grow a fuzzy dark mold, then narrows into a sickle. It's now a beard, though not a particularly beautiful one. As you pick it up, you shake it for crumbs, and the hairs don't crumble into mold."	true	254765724
-sliver	silver	"silver"	"silver"	pre-livers-sliver-silver rule	--	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
-livers	sliver	"sliver"	"livers"	pre-livers-sliver rule	--	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
+sliver	silver	"silver"	"silver"	pre-sliver-silver rule	--	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
+livers	sliver	"sliver"	"livers"	--	--	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
 liches	chisel	"chisel"	"liches"	--	post-liches-chisel rule	"'Dissolve, vile sods!' you cry for effect. You hear a spectral clapster![paragraph break]As the final shade heads to Hades--sad, eh?--a chisel clatters behind. The chisel doesn't seem to vibrate scarily or anything, so you take it. You're also less distracted now and notice a spread on the north wall--it seems to pulse a bit, as if it could change to something dangerous."	true	379174644
 banshee	has been	"hasbeen" or "has been"	"banshee"	--	post-banshee-hasbeen rule	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
 red asp	drapes	"drapes"	"red asp"	--	--	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
@@ -53,7 +53,7 @@ warts	straw	"straw"	"warts"	--	--	"The warts quickly peel off and lengthen into 
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
-cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	pre-cathouse-hotsauce rule	--	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
+cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	--	--	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
 tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
 grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
 cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
@@ -145,8 +145,8 @@ this is the pre-nametag-gateman rule:
 	else:
 		say "[reject]" instead;
 	if Notices Section is unvisited:
-		say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right." instead;
-		preef nametag;
+		say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.";
+		preef gateman;
 		the rule succeeds;
 	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
 	if player wears the nametag:
@@ -182,8 +182,8 @@ this is the pre-storer-resort rule:
 
 this is the pre-cabinet-bactine rule: [ic]
 	if Trips Strip is unvisited:
-		say "'Hey, that's a good idea,' says the gateman. 'The cabinet's still recovering from its wounds. But it'll be seeing you again. When it does, I think Bactine will work.' He pauses. 'Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox.'";
-		preef cabinet;
+		say "[if gateman is off-stage]That might be a way to heal the cabinet's wounds once they aren't so fresh, but not now.[else]'Hey, that's a good idea,' says the gateman. 'The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work.' He pauses. 'Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox.'[end if]";
+		preef tenibac;
 		the rule fails;
 
 this is the post-cabinet-bactine rule: [ic]
@@ -202,16 +202,11 @@ to say process-sandwich:
 		if the player's command matches the text "maps":
 			now player has bread;
 
-this is the pre-livers-sliver-silver rule:
-	if livers are touchable, say "The livers pulse for a moment, but...nothing happens. Perhaps they have another use, first." instead;
+this is the pre-sliver-silver rule:
 	unless drapes are moot:
 		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
 		preef silver;
 		do nothing instead;
-
-this is the pre-livers-sliver rule:
-	if sliver is touchable:
-		if mis send dimness is not in Emptiness Sepiments, say "The sliver discolors for a moment--but it seems it is not ready yet." instead;
 
 this is the post-slit-silt rule:
 	moot silt;
@@ -238,9 +233,6 @@ to say drop-straw:
 this is the post-thenick-kitchen rule:
 	if straw is in the nick, now straw is in kitchen;
 
-this is the pre-cathouse-hotsauce rule:
-	if the player's command does not include "hot" and the player's command does not include "hotsauce", say "Close, but you need to say the full name of the sauce." instead;
-
 this is the post-fridgey-flip rule:
 	if noun is pancake or noun is grits:
 		now noun is in fridge;
@@ -252,11 +244,7 @@ this is the post-fridgey-flip rule:
 		if fridge-score is 2, say "[line break]I suppose you could also say you fig'red the fridge, too, now.";
 
 this is the pre-cask-sack rule:
-	if cask is touchable:
-		if cask is closed:
-			say "The cask seems to bulge, and you hear a sloshing, but it doesn't do anything. It seems like it should work, though. Perhaps the cask has a safety mechanism against spilling liquid.[paragraph break]Maybe you need to walk around and find someone who can open the cask.";
-			preef sack instead;
-		if oils are in cask, say "That's inadvisable. The oils would leak out." instead;
+	if cask is touchable and oils are in cask, say "That's inadvisable. The oils would leak out." instead;
 
 this is the pre-sack-cask rule:
 	if sack is touchable:
@@ -321,7 +309,7 @@ this is the pre-smilies-missile rule:
 	if smilies are touchable:
 		if player is not in moor:
 			say "[one of]Good idea, but not in here. There'd be more room for that outside where you found the poem[or]Need to get outside to the moor[stopping].";
-			preef smilies;
+			preef missile;
 			do nothing instead;
 
 this is the pre-haywall-hallway rule:
@@ -370,20 +358,24 @@ this is the post-trees-steer rule:
 
 section metros auxiliary
 
+to say modest-around-faeries: say "You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is"
+
+to say no-stealing-flowers: say "are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof"
+
 this is the post-drainage-gardenia rule:
 	if A reading is in Undesired Underside, say "The/a reading blows away once the gardenias appear.";
 	moot a reading;
 
 this is the pre-lostcorn-controls rule:
-	if bastion-evac is false and lost corn is touchable, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere you could complete that legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking stuff from him." instead;
+	if bastion-evac is false and lost corn is touchable, say "The dead beat deadbeat might not beat you dead, but you'd get maligned ere legerdemain.[paragraph break]In other words, you probably need to gain the deadbeat's trust before taking any stuff." instead;
 
 this is the pre-heaths-sheath rule:
 	if player is in Fo Real Florae:
-		if fairy-worthy is false, say "The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof." instead;
+		if fairy-worthy is false, say "The heaths [no-stealing-flowers]." instead;
 		if begonias are not in Fo Real Florae, say "You already got the begonias--don't mess with the merchandise." instead;
 		if player does not have heaths:
 			try taking heaths;
-		say "[rude].[line break]";
+		say "[modest-around-faeries].[line break]";
 
 this is the post-heaths-sheath rule:
 	now player wears sheath;
@@ -391,23 +383,24 @@ this is the post-heaths-sheath rule:
 this is the pre-begonias-noisebag rule:
 	if the player's command does not include "noise", say "Yes, the begonias should become a bag, but you need to state what sort fully. Magic isn't THAT easy." instead;
 	if player is in Fo Real Florae:
-		if fairy-worthy is false, say "The begonias are (still) merchandise. You don't want to know what faeries do to vandals." instead;
+		if fairy-worthy is false, say "The begonias [no-stealing-flowers]." instead;
 		if heaths are not in Fo Real Florae, say "You already got the heaths--don't mess with the merchandise." instead;
 		if player does not have begonias:
 			try taking begonias;
-		say "[rude].[line break]";
+		say "[modest-around-faeries].[line break]";
 
 this is the pre-brocade-barcode rule:
 	if player does not have the brocade:
 		say "You take the brocade first--you're a bit embarrassed your magic seems more, well, applied than theirs.";
 		try taking brocade;
 	if player is in Fo Real Florae:
-		say "[rude].[line break]";
+		say "[modest-around-faeries].[line break]";
 
 this is the pre-drycake-keycard rule:
 	if bastion-evac is false and dry cake is touchable:
-		say "[one of]The chatterers would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
-		preef dry cake instead;
+		say "[one of]The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.[paragraph break]So, though you never know when a keycard is handy, Ix-nay on the agic-may [']til they're gone[or]This would create quite a (negative) scene with people still in the bastion[stopping].";
+		preef keycard;
+		do nothing instead;
 
 this is the post-antlers-rentals rule:
 	moot rentals;
@@ -420,18 +413,28 @@ this is the post-siren-resin rule:
 to say beast-beats: say "[if beast is touchable]beats[else]beats".
 
 this is the pre-beats-beast rule:
-	if player is not in Bassy Abyss and beats are touchable:
-		say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
+	if player is not in Bassy Abyss:
+		if beats are touchable:
+			say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.";
+		else:
+			say "Why bring the beats in here, where it's quiet?";
+		preef beast;
+		the rule fails;
+	if siren is not moot or sword is not touchable:
+		say "You don't feel prepared to face a beast yet.";
+		preef beast;
 		the rule fails;
 
 this is the pre-words-sword rule:
 	if player is in Bile Libe:
 		if player does not have sheath:
 			if player has noise bag:
-				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
-				preef sword instead;
+				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the wordsif you just OPENED it, though, being a noise bag.";
+				preef sword;
+				the rule fails;
 			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";
-			preef sword instead;
+			preef sword;
+			the rule fails;
 		continue the action;
 	if player is not in Bassy Abyss and player does not have sheath, say "The words are sharp enough, but you have nothing to hold a sword in." instead;
 	if player is not in Bassy Abyss, say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
