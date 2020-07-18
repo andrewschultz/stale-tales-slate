@@ -123,21 +123,21 @@ understand "doters" as a mistake ("You don't need people oohing and ahing at you
 
 understand "lost" as a mistake ("No, you need to find your way through individual stores.") when player is in Trips Strip.
 
-understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in Trips Strip.
+understand "oyster" as a mistake ("Nice try, but that's next game![mistake-clue of store y]") when player is in Trips Strip.
 
-understand "presto" as a mistake ("Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]") when player is in Trips Strip.
+understand "presto" as a mistake ("Your magic is not advanced enough to change store p! Well, not this game![mistake-clue of store p]") when player is in Trips Strip.
 
 understand "rated" as a mistake ("The trade tread isn't for commenting on, it's for passage to the metros.") when player is in Trips Strip and trade tread is in Trips Strip.
 
-understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in Trips Strip.
+understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![mistake-clue of store u]") when player is in Trips Strip.
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. [if store b is moot]They weren't as good as the sorbet you got from Store B[else]You suspect Store B may have better refreshment to add[end if].") when player is in Trips Strip.
 
 understand "tories" as a mistake ("I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.") when player is in Trips Strip.
 
-understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]") when player is in Trips Strip.
+understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[mistake-clue of store w]") when player is in Trips Strip.
 
-understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in Trips Strip.
+understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[mistake-clue of store v]") when player is in Trips Strip.
 
 book store f
 
@@ -515,7 +515,7 @@ understand "sex it" as a mistake ("[if player is not in means manse]Quit screwin
 
 volume unsorted
 
-to say fake-clue of (my-sto - a sto):
+to say mistake-clue of (my-sto - a sto):
 	say "[paragraph break]";
 	preef my-sto;
 	say "[run paragraph on]";

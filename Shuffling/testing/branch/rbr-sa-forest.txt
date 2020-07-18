@@ -1282,6 +1282,10 @@ You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 ##balance undos
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+#preefcheck drapes
+>pf
+spread -> drapes
+>undo
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
@@ -1364,6 +1368,9 @@ The drapes are too thick.
 #pre-sliver-silver rule
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+#preefcheck silver
+>pf
+sliver->silver
 
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.

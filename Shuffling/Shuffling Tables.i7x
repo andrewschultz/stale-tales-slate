@@ -178,7 +178,7 @@ this is the pre-storer-resort rule:
 	if you-can-advance, continue the action;
 	if store r is touchable:
 		say "That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.";
-		preef store r instead;
+		preef ogled lodge instead;
 
 this is the pre-cabinet-bactine rule: [ic]
 	if Trips Strip is unvisited:
@@ -429,7 +429,7 @@ this is the pre-words-sword rule:
 	if player is in Bile Libe:
 		if player does not have sheath:
 			if player has noise bag:
-				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the wordsif you just OPENED it, though, being a noise bag.";
+				say "The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.[paragraph break]It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPENED it, though, being a noise bag.";
 				preef sword;
 				the rule fails;
 			say "The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.";

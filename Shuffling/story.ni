@@ -620,7 +620,7 @@ to show-miss (curr - a region) and (ts - a truth state):
 		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
 	if curr is metros:
 		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become RENTALS.";
-		say "[line break][if max-score of metros is cur-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
+		say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	if curr is resort:
@@ -661,7 +661,7 @@ table of tulip-acq
 sol	chosen
 "ASK NERDS ABOUT DARKNESS"	false
 "OPEN NOISE BAG in the Esoteric Coteries after getting the begonias"	false
-"SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries"	false
+"SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries"	false
 
 book section-victory
 
@@ -2001,13 +2001,20 @@ definition: a thing (called xx) is fungible:
 	if xx is touchable, yes;
 	no.
 
+definition: a thing (called xx) is available-to-flip:
+	if xx is held, yes;
+	[if location of xx is location of player, yes;]
+	if xx is touchable, yes;
+	if xx is words and xx is in noise bag, yes;
+	no.
+
 fliptoing is an action applying to one visible thing.
 
 carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
 	repeat through regana of mrlp:
-		if the-to entry is noun and got-yet is false and the-from entry is touchable:
+		if the-to entry is noun and got-yet is false and the-from entry is available-to-flip:
 			if there is a pre-rule entry:
 				if debug-state is true, say "DEBUG: checking [pre-rule entry].";
 				abide by the pre-rule entry;
@@ -2052,7 +2059,7 @@ carry out fliptoing (this is the main flipping rule) :
 			now the-to entry is flipped-yet;
 			process the notify score changes rule;
 			continue the action;
-	say "Something went wrong here with flipping to. It should not have, but it did. To file a bug report, To=[the-to entry] From=[the-from entry]. [bug-report]";
+	say "Something went wrong here with flipping to. It should not have, but it did. To file a bug report, To=[noun]. [bug-report]";
 	the rule succeeds;
 
 after fliptoing (this is the set pronouns rule) :
@@ -2094,10 +2101,7 @@ check fliptoing (this is the enter pray or examine rule):
 check fliptoing (this is the should we bother flipping rule):
 	if noun is not touchable:
 		repeat through regana of mrlp:
-			if the-to entry is noun and the-from entry is touchable, continue the action;
-		if noun is sword and noise bag contains words and location of player is Abyss:
-			now noise bag is open;
-			continue the action;
+			if the-to entry is noun and the-from entry is available-to-flip, continue the action;
 		d "[noun] can't seem to be flipped.";
 		say "You can't see anything here like that[if toga is not in Rested Desert], or changeable into that[end if]." instead;
 
@@ -2250,20 +2254,19 @@ tenibac	"cabinet -> Bactine" [stores]
 store r	"Store R -> Resort"
 silver	"[if livers are not moot]livers[else]sliver[end if] -> SLIVER" [forest]
 drapes	"spread -> [if red asp is in Emptiness Sepiments]RED ASP -> [end if]drapes"
-sack	"cask -> sack" [sortie]
-r2	"room -> moor"
+r2	"room -> moor" [sortie]
 hallway	"[if hay is part of scraped wall]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
 missile	"smilies -> missile"
 soil	"oils -> soil"
 silo	"oils -> silo"
 sword	"words -> sword" [metros]
 keycard	"dry cake -> keycard"
-beats	"beats -> beast"
-store p	"store p -> PRESTO in A Roiling Original" [stores-misc]
-store u	"store u -> routes in A Roiling Original"
-store v	"store v -> troves in A Roiling Original"
-store w	"store w -> towers in A Roiling Original"
-store y	"store y -> oyster in A Roiling Original"
+beast	"beats -> beast"
+store p	"Store P -> PRESTO in A Roiling Original"
+store u	"Store U -> ROUTES in A Roiling Original"
+store v	"Store V -> TROVES in A Roiling Original"
+store w	"Store W -> TOWERS in A Roiling Original"
+store y	"Store Y -> OYSTER in A Roiling Original"
 
 to say what-can-flip:
 	if pf-warn is false:
@@ -2275,15 +2278,14 @@ to say what-can-flip:
 		continue the action;
 	say "Stuff you figured, but you couldn't use it right away: ";
 	repeat with pft running through prefigured things:
+		let got-one be false;
 		repeat through table of preflip clues:
 			if pft is preflip entry:
 				say "[line break][pretodo entry]";
-				continue the action;
-		if pft is a the-to listed in regana of mrlp:
-			d "[line break]NEED AN ENTRY";
-			choose row with the-to of pft in regana of mrlp;
-			say "[line break]Deal with [the-from entry]: [the-to entry]";
-		else:
+				now got-one is true;
+				break;
+		if got-one is false:
+			d "We need an entry in table of preflip clues for [pft].";
 			say "[line break]You remember you need to think [pft] at some time.";
 
 to say tell-macros:
@@ -5839,12 +5841,9 @@ room-flip is a truth state that varies.
 every turn when player is in moor and pat is in moor: say "The poem [one of]establishes its singsong rhythm early[or][drones][stopping].".
 
 after choosing notable locale objects when player is in moor:
-	if roadblock is in moor:
-		set the locale priority of the roadblock to 9;
-	if black door is in moor:
-		set the locale priority of the black door to 9;
-	if Pat is in moor:
-		set the locale priority of Woeful Pat to 8;
+	if roadblock is in moor, set the locale priority of the roadblock to 9;
+	if black door is in moor, set the locale priority of the black door to 9;
+	if Pat is in moor, set the locale priority of Woeful Pat to 8;
 
 reset-already is a truth state that varies.
 
@@ -6591,7 +6590,7 @@ check opening noise bag:
 	if player is in camp, say "The chants are disjointed and not really forceful or annoying anyone. They're talk without action." instead;
 	if player is not in Bassy, say "Nothing's quite focused enough here to go pouring in the bag. The beats are too amorphous, and there're no clear words." instead;
 
-for printing a locale paragraph about the words: set the locale priority of the words to 0.
+for printing a locale paragraph about the words when words are touchable: set the locale priority of the words to 0.
 
 the words are scenery in Bile Libe.
 
@@ -8005,7 +8004,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
 		if myh is hashkey entry or myh2 is hashkey entry:
 			[d "[myh] [the-from entry] [the-to entry] try.";]
-			if the-from entry is touchable:
+			if the-from entry is available-to-flip:
 				[d "the-from [myh] [the-from entry] visible.";]
 				if there is an exact-text entry and the player's command matches exact-text entry:
 					[d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";]

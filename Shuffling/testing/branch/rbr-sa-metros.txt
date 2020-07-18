@@ -227,6 +227,10 @@ DEBUG INFO: CERT-TEXT: --------.
 #pre-beats-beast rule
 >beast
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
+#preefcheck beast
+>pf
+Stuff you figured, but you couldn't use it right away: 
+beats -> beast
 
 >gardenia
 by one point
@@ -389,6 +393,9 @@ DEBUG INFO: CERT-TEXT: -----.
 #pre-words-sword rule
 >sword
 The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
+#preefcheck sword
+>pf
+words -> sword
 
 >tomato
 Your score has just gone up by one point.
@@ -673,8 +680,14 @@ It isn't just any cake. It's dry cake.
 >keycard
 The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.
 So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til they're gone.
+#brackets ok
+[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
 >keycard
 This would create quite a (negative) scene with people still in the bastion.
+#preefcheck keycard
+>pf
+dry cake -> keycard
+
 
 >switch emitter
 #notana
@@ -1820,7 +1833,15 @@ Missed in Metros:
 --the antlers in the Obtains Boastin Bastion could've become RENTALS.
 Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
 --the begonias could've made a noise bag.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries.
+
+@max
+>misses
+!Missed in Metros:
+!--the antlers in the Obtains Boastin Bastion could've become RENTALS.
+While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
+--the begonias could've made a noise bag.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana
@@ -1831,14 +1852,6 @@ Trips Strip
 >score
 You have scored {SCORE} out of {MAX} total points for the Metros region.
 Won now: the Ordeal Loader and Metros regions.
-
-@max
->misses
-!Missed in Metros:
-!--the antlers in the Obtains Boastin Bastion could've become RENTALS.
-While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
---the begonias could've made a noise bag.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries.
 
 @nud
 * metros-exhaustive-nudge-mistake
