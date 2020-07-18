@@ -48,15 +48,15 @@ book Sortie
 
 table of Sortie anagrams [xxtia]
 the-from	the-to	exact-text (topic)	text-back (topic)	pre-rule	post-rule	from-msg	force-take	hashkey	vanish	to-room
+t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	kitchen
 warts	straw	"straw"	"warts"	--	--	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
 skate	steak	"steak"	"skate"	--	--	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
-t-n	teleporter	"kitchen"	"the nick"	--	post-thenick-kitchen rule	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	kitchen
 cult tee	lettuce	"lettuce"	"lettuce"	--	--	"The cult tee crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	--	--	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
 cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	pre-cathouse-hotsauce rule	--	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
+tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
 grist	grits	"grits"	"grist"	--	post-fridgey-flip rule	"With a squelch, the grist in the fridge [if fridge-open is false]you didn't even open yet [end if]refines itself into something more edible. Relatively."	false	362300335
 cake pan	pancake	"pancake"	"cake pan" or "cakepan"	--	post-fridgey-flip rule	"You hear a clatter, and then you poke into the fridge [if fridge-open is false]you didn't even open yet[end if] to see the cake pan is a pancake."	false	354493975
-tall trio	tortilla	"tortilla"	"tall trio"	--	--	"Poof! The doughy fellows maintain their breadiness, but they flatten out into a tortilla."	false	520704758
 taco	coat	"coat"	"taco"	--	--	"Before changing the hot-to-your-tongue taco to a warm-to-your-body coat, you wisely take out a few small bites from the bottom (like adults always said not to) to form the arm-holes. Delicious! You ate just enough to feel fortified, and you've got something to wear, too."	false	198655998
 cask	sack	"sack"	--	pre-cask-sack rule	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	pre-sack-cask rule	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
@@ -144,12 +144,11 @@ this is the pre-nametag-gateman rule:
 		do nothing;
 	else:
 		say "[reject]" instead;
-	if Notices Section is unvisited, say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right." instead;
-	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
-	if player is not in Notices Section:
-		say "That's an idea, but no use summoning a gateman with no gate around.";
+	if Notices Section is unvisited:
+		say "The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right." instead;
 		preef nametag;
 		the rule succeeds;
+	if location of player is not Notices Section and Notices Section is visited, say "Your nametag twitches. Very odd." instead;
 	if player wears the nametag:
 		say "If you really CAN change the nametag, you don't want a gateman in your face--so you chuck the nametag away. Not really believing...";
 	move nametag to location of player;
@@ -178,7 +177,7 @@ this is the post-storeb-sorbet rule:
 this is the pre-storer-resort rule:
 	if you-can-advance, continue the action;
 	if store r is touchable:
-		say "That seems like it should work, but you sense you have not done enough yet[if Leis Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
+		say "That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.";
 		preef store r instead;
 
 this is the pre-cabinet-bactine rule: [ic]

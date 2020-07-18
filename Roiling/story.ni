@@ -4651,6 +4651,8 @@ palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't 
 Respect Specter	false	false	false	false	"'[respect-help].'"
 tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
+lairage regalia	true	false	false	false	"OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic."
+adsorbing signboard	true	false	false	false	"While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk."
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
 Rude N Nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
 a bev o be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
@@ -4710,6 +4712,7 @@ span pans	true	true	false	false	"There are two entries that are ambiguous, but--
 papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
 templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
 natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
+bogus-psalm	true	true	false	false	"Perhaps finding where the vowel is would be a good start."
 Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title will wind up being a weakness."
 dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
@@ -4724,20 +4727,22 @@ resident trendies	true	true	false	false	"The trendies point and laugh at your se
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
 sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
 mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
+bogus-dandier	true	true	false	false	"You cringe, waiting for a voice to boom 'WHAT? YOU EXPECTED A COMPLETE SOLUTION?' You probably have enough to work with."
 drained dreadin	true	true	false	false	"Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach."
 nerd aid diner ad	true	true	false	false	"The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here."
 sweatier wait seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
-asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
-organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
+organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
+asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
+he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
-hostile is he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 reb nok bonker	true	true	false	false	"Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse."
 reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
 docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 fries us fissure	true	true	false	false	"The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier."
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
 natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
+bogus-rousted	true	true	false	false	"You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
 curst palace	false	false	false	false	"[scannotes-curst]."
@@ -12621,7 +12626,10 @@ The PG on up popgun is a container in Marines Seminar Remains. "The only equipme
 
 description of PG on up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing-go bin, now[else]. You notice its boing-go bin, where you put the ammunition, is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
 
-a-text of popgun is "RYRRY". b-text of popgun is "?YRRY". parse-text of popgun is "b[sp]-[sp]x[sp]x[sp]-". popgun is cheat-spoilable.
+check scaning PG on up popgun:
+	if boing go bin is not reflexed:
+		say "Only the boing-go bin shows anything.";
+	try scaning boing go bin instead;
 
 after printing the name of the popgun while taking inventory:
 	say " ([if dart is in popgun]loaded with the dart[else]unloaded[end if])";

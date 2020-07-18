@@ -219,6 +219,8 @@ understand "tone" and "tones" as a mistake ("You aren't sure you need a booming 
 
 chapter Emptiness Sepiments
 
+understand "cliesh" and "cleish" as a mistake ("You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.") when liches are touchable.
+
 understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Emptiness Sepiments and red asp is not moot.
 
 understand "parsed" as a mistake ("You can just read the [if drapes are touchable]drapes[else]spread[end if] instead. The messages here aren't cryptic enough to be parsed.") when player is in Emptiness Sepiments and red asp is not moot.
@@ -474,7 +476,7 @@ understand "achin" as a mistake ("You don't have the ability to dish out an achi
 
 understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in Potshot Hotspot and red bull burdell is in Potshot Hotspot.
 
-understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are touchable]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
+understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are touchable]Maybe they can get a purpose or become able to use those kilns[else]Give them something constructive to do[end if].") when player is in Potshot Hotspot and protest is in Potshot Hotspot.
 
 understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in Potshot Hotspot and riot is in Potshot Hotspot.
 
