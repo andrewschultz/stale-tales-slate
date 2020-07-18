@@ -16,6 +16,15 @@ files=reg-sa-ordeal-loader-max.txt,reg-sa-ordeal-loader-min.txt,reg-sa-ordeal-lo
 ## *FILE
 ## *FORK
 
+}}MAX=7
+}}CURMAX=7
+}}SCORE=0
+}}CURMIN=4
+
+}$SCOS=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
+}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your final possible score is fixed. You missed something you can't go back for.
+
 TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges and mistakes
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
@@ -24,6 +33,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 * ordeal_thru
 
 >opt in
+>poss
 
 @hints
 >monty hints
@@ -56,6 +66,13 @@ There are even further-away places to explore in this game than Burkina Faso.
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+
+@max
+#pre-nametag-gateman rule
+>gateman
+The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
+#brackets ok
+[That's worth noting in your notepad for later, so you do, under FLIPS.]
 
 @nud
 #general stuff
@@ -146,6 +163,15 @@ If you get to the end, you'll notice two rather forced ones. They both anagram o
 A door. (-)
 A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
 
+@pad
+>gateman
+The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
+#brackets ok
+[That's worth noting in your notepad for later, so you do, under FLIPS.]
+>pf
+Stuff you figured, but you couldn't use it right away:
+nametag -> gateman
+
 @nud
 #nudge for rested
 >restde
@@ -184,9 +210,13 @@ The size of the desert, um, deters you. You're steer'd back to the odor.
 
 >door
 by one point
+}}SCORE++
 
 @hin,hints
 /DEBUG: (bolt|bulge) being objhinted\.
+
+>score
+{$SCOS}
 
 @gn
 >n
@@ -216,9 +246,46 @@ It's a pretty complex chord.
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
 
+@max
+>blot
+by one point
+}}SCORE++
+>in
+Thickest Thickets
+}}CURMAX--
+>score
+{$SCOS}
+}}CURMAX++
+>undo
+>undo
+>bugle
+by one point
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
+}}CURMIN--
+}}SCORE-=2
+>undo
+>undo
+>undo
+
 @!min
 >bugle
 Your score has just gone up by one point.
+}}SCORE++
+
+@max
+>play bugle
+The note from the bugle causes the door to swing back and forth, even with the bolt in place. You can probably enter now.
+>in
+Thickest Thickets
+}}CURMAX--
+>score
+{$SCOS}
+}}CURMAX++
+>undo
+>undo
 
 @nud
 #done rejects for bugle
@@ -236,6 +303,13 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 >blot
 by one point
+}}SCORE++
+
+@!min
+}}CURMIN++
+
+>score
+{$SCOS}
 
 @gn
 >n
@@ -243,6 +317,9 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 
 >open door
 Thickest Thickets
+
+@min
+}}CURMAX--
 
 @hin
 DEBUG: toga being objhinted.
@@ -284,9 +361,11 @@ Goodness, no.
 >gt rested desert
 The door from Rested Desert was one-way. You can't even see it now.
 
+@!min
 >slander
-#notana
 by one point
+}}CURMIN++
+}}SCORE++
 
 @gn
 >n
@@ -332,9 +411,13 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 
 >goat
 Your score has just gone up by one point.
+}}SCORE++
 
 @hin
 You can just go IN, now.
+
+>score
+{$SCOS}
 
 @nud
 #done rejects for goat
@@ -347,6 +430,9 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 
 >in
 Notices Section
+
+@min
+}}CURMAX--
 
 @hin
 DEBUG: magenta nametag being objhinted.
@@ -413,9 +499,20 @@ DEBUG INFO: CERT-TEXT: -T----.
 >undo
 #this is so we don't have the gadget later when we TAKE GADGET
 
-==t!1
+>score
+{$SCOS}
+
+@!min
 >attics
 Your score has just gone up by one point.
+}}SCORE++
+}}CURMIN++
+
+>score
+@min
+{$SCOS}
+@!
+{$SFIXMAX}
 
 @scan
 #gadget test: attics to static
@@ -475,12 +572,32 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 >gateman
 Your score has just gone up by one point.
 
+@gle
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe ask the gateman.
+
+@hin
+You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
+
 @gn
 >n
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
 
-@gle
-You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe ask the gateman.
+@!min
+>score
+You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+
+@pad
+>pf
+You have nothing else you figured in advance.
+!Stuff you figured, but you couldn't use it right away:
+!nametag -> gateman
+>bactine
+"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
+#brackets ok
+[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
+>pf
+Stuff you figured, but you couldn't use it right away:
+cabinet -> Bactine
 
 @nud
 #mistake retest for get a man
@@ -515,12 +632,13 @@ You feel nothing from either attic. Perhaps you need to consider both the attics
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
-@hin
-You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
-
 >take gadget
 As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
 Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
+
+@!min
+>score
+You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
 
 @ask
 >get phial
@@ -529,7 +647,7 @@ Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel yo
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
 #brackets ok
-[You record the information about lube/angle/glean in multiple entries in your notepad.]
+[You record the information about lube/angle/glean in multiple entries in your dope tan notepad.]
 >undo
 >undo
 
@@ -619,7 +737,7 @@ You're the good guy, here. You don't need to steal.
 @max
 #pre-cabinet-bactine rule
 >bactine
-"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
+"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 
 @ask
 >ask gateman about xyzzy
@@ -730,7 +848,7 @@ too awesome
 \\
 >ask gateman about nametag
 "Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't at all." He rolls his eyes.
-
+\\
 >ask gateman about yourself
 "We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!"
 \\

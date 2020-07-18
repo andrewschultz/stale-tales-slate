@@ -67,7 +67,7 @@ Astral Altars
 @gle
 You watch as the tiles shrink from a large land mass to a smaller one.
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles for a few seconds.
 
 @mis
 #mistake test for lites
@@ -140,12 +140,12 @@ Leis Isle
 @gle
 You see yourself either swimming or flying east, but not without proper gear.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the leis (faint), the swing and the rock when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the leis (faint), the swing and the rock for a few seconds.
 >get leis
 DEBUG INFO: Taking away a max point. Max-score now 14.
 The leis wither as you touch them. "I SEE ILLS!" booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the swing and the rock when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the swing and the rock for a few seconds.
 >undo
 >undo
 
@@ -364,7 +364,7 @@ Rived Drive
 @gle
 You see the poles to the east bend at an angle.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig for a few seconds.
 
 @gn
 >n
@@ -527,7 +527,7 @@ by one point
 >grips
 by one point
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the tool shed (faint) when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tool shed (faint) for a few seconds.
 >undo
 >undo
 >undo
@@ -551,7 +551,7 @@ Your score has just gone up by two points.
 @gle
 You see yourself climbing east without much trouble.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) for a few seconds.
 
 >score
 {$SCOS}
@@ -708,7 +708,7 @@ Don't give up! Perhaps there are only four or fewer rioters with their heart rea
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot for a few seconds.
 
 @scan
 #gadget test: riot to trio
@@ -726,7 +726,7 @@ Your score has just gone up by one point.
 @gle
 You see the trio, happier now, discussing art and wearing dirty smocks.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
 >score
 {$SCOS}
@@ -847,6 +847,11 @@ Your score has just gone up by one point.
 >score
 {$SFIXMAX}
 
+@max
+#pre-chain-china rule
+>china
+You already shook that out of the links. You need to concentrate on the links, now.
+
 @mis
 #mistake retest for achin
 >achin
@@ -886,7 +891,7 @@ Your score has just gone up by one point.
 @gle
 You see yourself somehow managing to defeat Red Bull Burdell while still on the ground.
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around Red Bull Burdell when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around Red Bull Burdell for a few seconds.
 
 @min
 }}CURMAX--

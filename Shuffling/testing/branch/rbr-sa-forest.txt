@@ -351,7 +351,7 @@ Your vision blurs, and you see a compass rose pointed north.
 @gle
 You see yourself considering all four compass directions before picking the right one.
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn for a few seconds.
 
 @scan
 #gadget test: thorn to north
@@ -428,7 +428,7 @@ Go east and west and look around a bit. There're only three rooms to start, and 
 @gle
 You see yourself putting something on your face and then walking through Corses Crosse with ease.
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
 
 @scan
 #gadget test: slit to silt
@@ -552,7 +552,7 @@ Your vision blurs a bit, and instead you see a shotgun.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts for a few seconds.
 
 @scan
 #gadget test: dashes to shades
@@ -794,7 +794,7 @@ DEBUG: sandwich being objhinted.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam for a few seconds.
 
 @gn
 >w
@@ -999,7 +999,7 @@ DEBUG: liches being objhinted.
 @gle
 You see the liches working their way under the meats, which fall into the grinder.
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches for a few seconds.
 
 @gn
 >e
@@ -1074,6 +1074,13 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 @hin
 >xx liches
 Your vision blurs a bit, and instead you see a chisel.
+
+@mis
+#mistake test for cliesh/cleish
+>cliesh
+You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.
+>cleish
+You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.
 
 >chisel
 Your score has just gone up by one point.
@@ -1180,7 +1187,7 @@ Your vision blurs a bit, and instead you see a silver sliver.
 @gle
 You see the livers narrowing to a sharp, semi-metallic point.
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the livers when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the livers for a few seconds.
 
 @scan
 #gadget test: livers to sliver
@@ -1214,9 +1221,6 @@ You've already done enough with the meats.
 >grin
 You smirk at the grinder you trashed.
 
->silver
-The livers are too dull to do anything like that with. Yet.
-
 @nud
 #spechelp for livers
 >slivre
@@ -1245,7 +1249,7 @@ DEBUG: spread being objhinted.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver for a few seconds.
 
 @hin
 >xx sliver
@@ -1258,8 +1262,9 @@ The sliver turns silver for a moment.
 {$SFIXMAX}
 
 @nud
+#mistake check for silver
 >silver
-The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
 
 >e
 >n
@@ -1354,6 +1359,11 @@ They look forbidding, but you might turn them into something worse. Maybe you ca
 
 >n
 The drapes are too thick.
+
+@max
+#pre-sliver-silver rule
+>silver
+The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
@@ -1585,7 +1595,7 @@ Your vision blurs a bit, and instead you see wolves.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels for a few seconds.
 
 @gn
 >e

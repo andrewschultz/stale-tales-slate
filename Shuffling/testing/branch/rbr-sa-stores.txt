@@ -80,7 +80,7 @@ Your vision blurs a bit, and instead you see a resort.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
 
 @nud
 #nudge for trips
@@ -359,6 +359,11 @@ You see yourself exploring the trade tread you created.
 You see yourself exploring the posted depots you created.
 >undo
 
+@max
+#pre-storer-resort rule
+>resort
+That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
+
 @gn
 >n
 As you try to flee the Trips Strip, a voice boomes "Run off for fun? Urff, no!"
@@ -558,6 +563,11 @@ You're briefly assaulted by the colors of every single colored Starburst and Ski
 #renudge for marquee
 >marquee
 You don't need to change the marquee now that you figured what it means.
+
+@max
+#pre-cabinet-bactine rule
+>bactine
+by one point
 
 @nud
 >tsf

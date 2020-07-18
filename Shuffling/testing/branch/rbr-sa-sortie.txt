@@ -76,7 +76,7 @@ You're already here. Or there. The precise grammar's neither here nor there.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial for a few seconds.
 
 @mis
 #mistake retest for turn [text]
@@ -239,7 +239,7 @@ It's a kitchen. You need to make something. But there are no ingredients around-
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman and the bottle of CATHOUSE perfume when you do. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman and the bottle of CATHOUSE perfume for a few seconds. Your warts also tingle.
 
 @scan
 #gadget test: warts to straw
@@ -339,7 +339,7 @@ DEBUG INFO: CERT-TEXT: GRI--.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
 
 @gle
 >straw
@@ -442,7 +442,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
 
 @!min
 >grits
@@ -536,6 +536,11 @@ It's the full name brand that really catches your eye.
 >hotsauec
 The CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
+
+@max
+#mistake test for sauce
+>sauce
+Close, but you need the whole name of the sauce.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -742,7 +747,7 @@ Your vision blurs a bit, and instead you see a coat.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the taco when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the taco for a few seconds.
 
 @scan
 #gadget test: taco to coat
@@ -896,10 +901,16 @@ DEBUG: pair of hoses being objhinted.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses when you do.
+You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses for a few seconds.
 !There's nothing else, here, than the general glow.
 
 >put straw in sack
+
+@max
+#pre-sack-cask rule
+>cask
+As the sack changes, the straw falls out.
+>undo
 
 @nud
 #done rejects for straw
@@ -943,6 +954,11 @@ The gadget beeps once. A series of lights comes across: RRRGG.
 DEBUG INFO: RECT-TEXT: S---S.
 DEBUG INFO: CERT-TEXT: ---ES.
 
+@max
+#pre-room-moor rule
+>moor
+You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
+
 >shoes
 Your score has just gone up by one point.
 }}SCORE++
@@ -954,7 +970,7 @@ The room is just a plain room. You feel like you want to get out, though.
 You see yourself disappearing!
 >angle
 The whole room seems lit up.
-!You stare into the blue lube for a bit, then look around. You notice a weird haze around the pair of hoses when you do.
+!You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses for a few seconds.
 There's nothing else, here, than the general glow.
 
 @mis
@@ -992,6 +1008,14 @@ Your vision swirls, and you see a moor.
 Your gadget's not near anything, but it's registering RGGR.
 Your gadget's not near anything, but it's registering RBBG.
 
+@max
+#pre-room-moor rule retry
+>banish coat
+>moor
+You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes.
+>undo
+>undo
+
 >moor
 Your score has just gone up by one point.
 }}SCORE++
@@ -1006,7 +1030,7 @@ Your vision blurs a bit, and instead you see a peasant.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock when you do.
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
 
 @scan
 #gadget test: anapest to peasant
@@ -1323,6 +1347,11 @@ The scraped wall doesn't respond or come any closer to being a hallway.
 !You can no longer read
 HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 
+@max
+#pre-haywall-hallway rule
+>hallway
+Hm, that's possible, but you can't make the hallway until you add something to the wall.
+
 >put hay in wall
 #notana
 Your score has just gone up by one point.
@@ -1502,6 +1531,11 @@ Gainly laying the cask under the spout, you pour in some oils.
 @hin
 You can't pour the oils anywhere in this enclosed area. Try going back to the moor.
 
+@max
+#pre-cask-sack rule
+>sack
+That's inadvisable. The oils would leak out.
+
 @mis
 #mistake retest for lois
 >lois
@@ -1511,6 +1545,12 @@ Lois is silent. You must figure what to pour, where.
 The oils need a purpose--to build something great. You don't want to waste them.
 
 @max
+#pre-oils-soil rule
+>soil
+This is not a good place to put soil. Somewhere more wide open, where you can pour the oils, too?
+#pre-oils-silo rule
+>silo
+This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
 >pour oils
 The cask is already full of oils.
 
@@ -1565,6 +1605,11 @@ You try, but the smilies on the poem prevent you.
 >similes
 Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.
 
+@max
+#pre-smilies-missile rule
+>missile
+Good idea, but not in here. There'd be more room for that outside where you found the poem.
+
 >moor
 
 @hin
@@ -1606,13 +1651,18 @@ You can't create something abstract from something concrete. Or plutonium. Or wh
 >missiel
 The missile emits an almost giggly sound but doesn't actually change.
 
+@max
+#pre-plane-panel rule
+>panel
+You'd need to fold the poem into a plane, first.
+
 >fold paper
 (the poem)
 You fold the paper, and it looks sort of like a paper plane.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the roadblock, the folded paper plane and the oils when you do.
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the roadblock, the folded paper plane and the oils for a few seconds.
 
 @nud
 #renudge for folded
@@ -1682,6 +1732,11 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRR.
 DEBUG INFO: RECT-TEXT: S--L.
 DEBUG INFO: CERT-TEXT: ----.
+
+@max
+#pre-oils-silo rule retry
+>silo
+The moor's ground, as is, is not stable enough. You need a foundation first.
 
 >soil
 Your score has just gone up by one point.
@@ -1794,7 +1849,7 @@ The cask is already full of oils.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the oils when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the oils for a few seconds.
 
 @nud
 #renudge for oil
@@ -1884,7 +1939,7 @@ The panel fits into that rectangle handily and even starts to glow. Two buttons 
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the hoots button and the trees button when you do.
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the hoots button and the trees button for a few seconds.
 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.

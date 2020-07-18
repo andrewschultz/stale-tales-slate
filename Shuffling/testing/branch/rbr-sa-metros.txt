@@ -200,7 +200,7 @@ Good try, but we're looking for a noun. With an extra A.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage for a few seconds.
 
 @scan
 #gadget test: drainage to gardenia
@@ -222,6 +222,11 @@ DEBUG INFO: RECT-TEXT: G------A.
 DEBUG INFO: CERT-TEXT: --------.
 >undo
 >undo
+
+@max
+#pre-beats-beast rule
+>beast
+That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
 
 >gardenia
 by one point
@@ -286,7 +291,7 @@ You should probably just go north to look at the condo instead.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover for a few seconds.
 
 @ask
 >ask deadbeat about blozhko
@@ -369,7 +374,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto for a few seconds.
 
 @scan
 #gadget test: words to sword
@@ -379,6 +384,11 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: RRRRR.
 DEBUG INFO: RECT-TEXT: S---D.
 DEBUG INFO: CERT-TEXT: -----.
+
+@max
+#pre-words-sword rule
+>sword
+The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
 
 >tomato
 Your score has just gone up by one point.
@@ -553,8 +563,11 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 You thought you heard electronic beeping from the corn.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 
+@max
+#pre-lostcorn-controls rule
 >controls
-The dead beat deadbeat might not beat you dead
+The dead beat deadbeat might not beat you dead, but you'd get maligned ere legerdemain.
+In other words, you probably need to gain the deadbeat's trust before taking any stuff.
 
 >n
 Obtains/Boastin' Bastion
@@ -603,7 +616,7 @@ Someone puts their hand to their lips. Someone else shakes their head. You don't
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake for a few seconds.
 
 @scan
 #gadget test: antlers to rentals
@@ -654,6 +667,14 @@ It isn't just any cake. It's dry cake.
 #nudge for dry
 >dyr
 It isn't just any cake. It's dry cake.
+
+@max
+#pre-drycake-keycard rule
+>keycard
+The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.
+So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til they're gone.
+>keycard
+This would create quite a (negative) scene with people still in the bastion.
 
 >switch emitter
 #notana
@@ -820,12 +841,13 @@ Fo' Real Florae
 @hin
 The brocade is free, whether or not you've helped the faeries. Why not take it?
 >take brocade
+The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
 The faeries want a flower. You have one in your inventory.
 >undo
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade when you do.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade for a few seconds.
 
 @scan
 #gadget test: heaths to sheath
@@ -942,9 +964,18 @@ The torn cue is just there to direct you to the brocade.
 >n
 The only safe way out is back west.
 
+@max
+#pre-heaths-sheath rule
+>sheath
+The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
+#pre-begonias-noisebag rule
+>noise bag
+The begonias are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
+
 >give gardenia to faeries
 
 @nud
+#balance undos
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
@@ -959,7 +990,27 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 
-@gle,hin
+@max
+#balance undos
+>noise bag
+by one point
+>w
+>w
+>open noise bag
+You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it.
+>sword
+#pre-words-sword rule retry
+The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
+It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPENED it, though, being a noise bag.
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@gle,hin,max
+>barcode
+by one point
 >take begonias
 "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel for a weapon, though."
 
@@ -969,16 +1020,30 @@ You are holding a bag with one hand and plugging an ear with another.
 @hin
 DEBUG: begonias being objhinted.
 
-@gle,hin
+@max
+#pre-heaths-sheath rule retry
+>sheath
+You already got the begonias--don't mess with the merchandise.
+>undo
+
+@gle,hin,max
+>undo
 >undo
 
 >take heaths
+
+@gle,hin
+>barcode
+by one point
 
 @gle
 You see a weapon at your side, as if tied to a belt.
 
 @hin
 DEBUG: heaths being objhinted.
+
+@gle,hin
+>undo
 
 @nud
 #renudge for heath
@@ -996,12 +1061,20 @@ Your vision blurs a bit, and instead you see a noise bag.
 >xx heaths
 Your vision blurs a bit, and instead you see a sheath.
 
+@max
+#pre-begonias-noisebag rule retry
+>noise bag
+You already got the heaths--don't mess with the merchandise.
+
 >sheath
 Your score has just gone up by one point.
 }}SCORE++
 
 @hin
+>barcode
+by one point
 You've transformed your flower, but you need to use your new item in the Bile Libe.
+>undo
 
 @nud
 #done rejects for sheath
@@ -1022,6 +1095,7 @@ The faeries have been generous enough.
 {$SFIXMAX}
 
 >take brocade
+"It is the least we can do for you! Thank you for helping us!"
 
 @ask
 >ask faeries about brocade
@@ -1031,6 +1105,13 @@ by one point
 >ask faeries about brocade
 "You have disposed of it! We hope it was useful."
 >undo
+>undo
+
+@max
+#this is done/undone so that we can verify the brocade/barcode is hinted later.
+#pre-brocade-barcode rule
+>barcode
+You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is
 >undo
 
 >w
@@ -1372,7 +1453,7 @@ Elm Train Terminal
 @gle
 You see the neon pig exploding, the empty space being filled with--an ear of corn?!
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig for a few seconds.
 
 @nud
 #nudge for cafe
@@ -1605,7 +1686,7 @@ DEBUG: siren being objhinted.
 @gle
 >angle
 The blue glow pulses with the beats.
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the siren when you do.
+You stare into the blue lube for a bit, then look around. The blue glow pulses with the beats. You notice a weird haze around the siren for a few seconds.
 
 @gt
 >gt underside
@@ -1664,6 +1745,11 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 The gadget beeps once. A series of lights comes across: GGGRR.
 DEBUG INFO: RECT-TEXT: B---T.
 DEBUG INFO: CERT-TEXT: BEA--.
+
+@max
+#pre-beats-beast retry
+>beast
+You don't feel prepared to face a beast yet.
 
 >resin
 }}SCORE++
@@ -1736,14 +1822,6 @@ Also, while the other regions are linear, the Metros has five paths based on the
 --the begonias could've made a noise bag.
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries.
 
-@max
->misses
-!Missed in Metros:
-!--the antlers in the Obtains Boastin Bastion could've become RENTALS.
-While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
---the begonias could've made a noise bag.
---the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries.
-
 >attack beast
 #notana
 }}SCORE++
@@ -1753,6 +1831,14 @@ Trips Strip
 >score
 You have scored {SCORE} out of {MAX} total points for the Metros region.
 Won now: the Ordeal Loader and Metros regions.
+
+@max
+>misses
+!Missed in Metros:
+!--the antlers in the Obtains Boastin Bastion could've become RENTALS.
+While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
+--the begonias could've made a noise bag.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT once you sacked the Bastion, then use it in the Esoteric Coteries.
 
 @nud
 * metros-exhaustive-nudge-mistake
