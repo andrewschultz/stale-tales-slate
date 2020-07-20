@@ -277,7 +277,7 @@ Blake	Blake	false	255159849	--	"bleak"	"bleak"	--	--	"Blake moans, depressed, wh
 Bredo	Bredo	false	326930483	--	"bored"	"bored/robed"	--	--	"Bredo gives an exasperated look, shrugs, and walks off for someone more [bored-robed] to follow. Or beat up. Or philosophize with. Whichever."
 Cedrick	Cedrick	false	370096195	--	"cricked"	"cricked"	--	--	"Suddenly, Cedrick clutches at his knee, then at his elbow. 'I can't do this anymore!' He whines, as he runs upstairs for some rest."
 Daryl	Daryl	false	284713801	--	"lardy"	"lardy"	--	--	"Suddenly, Daryl grows flabby and is really in no shape for fighting. He excuses himself, and Rodney shrugs."
-Demitri	Demitri	false	491329864	--	"timider"	"timider"	--	--	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if vw > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"
+Demitri	Demitri	false	491329864	--	"timider"	"timider"	--	--	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if here-picaros > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"
 Dewey	Dewey	false	506935332	--	"weedy"	"weedy"	--	--	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow. Don't worry--he'll gain his muscle back. Working out is a habit for him!"
 Edwin	Edwin	false	370670325	--	"wined"	"wined"	--	--	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now to others who drink."
 Eldon	Eldon	false	345909122	--	"olden"	"olden"	--	--	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Loftier Trefoil and free of your magic, his youth comes back, but he bolts in shame. Hopefully he retained some wisdom."
@@ -291,7 +291,7 @@ Preston	Preston	false	637239940	--	"pronest"	"pronest"	--	--	"Preston suddenly l
 Reggie	Reggie	false	451128271	--	"eggier"	"eggier"	--	--	"Reggie suddenly snaps. As do the people next to him. They both mentioned that he smells a little sulfuric, and he runs outside to freshen up. He doesn't come back."
 Royce	Royce	false	428847326	--	"coyer"	"coyer"	--	--	"Royce clams up, and when Rodney isn't looking, hey slips away."
 Shane	Shane	false	332457700	--	"ashen"	"ashen"	--	--	"Suddenly, the color rushes from Shane's face, and he looks a bit embarrassed. He looks at Rodney, realizing 'He's an...' before running away."
-Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if vw is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
+Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if here-picaros is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	--	--	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	--	--	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
 Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Wildest Wilteds are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato hands you a flowerpot. But not any old flowerpot. A top opt pot! It's for an old friend--one who bought property near Castle Apcur, the Curst Palace, and can't bring herself to move. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told, old hat.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut where voices boom 'Stop! Die!' But where you wind up is a bit quieter, but there's someone or something still a bit threatening."
@@ -1062,6 +1062,7 @@ this is the post-calm-clam rule:
 
 this is the pre-boats-boast rule:
 	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
+	now frat raft is unfigured;
 
 this is the pre-oars-soar rule:
 	if raft is not reflexed, say "The oars have no gas, or whatever they might run on[if player is not on raft]. Plus you're not on the raft anyway[end if]." instead;
@@ -1069,7 +1070,7 @@ this is the pre-oars-soar rule:
 
 this is the pre-raft-fart rule:
 	if player is not on raft and raft is reflexive:
-		say "Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.";
+		say "Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.";
 		preef frat raft;
 		the rule succeeds;
 
@@ -1386,7 +1387,7 @@ to say bored-robed:
 		now bredo-bored is false;
 
 this is the pre-rodney rule:
-	if vw > 4:
+	if here-picaros > 4:
 		if the player's command includes "yonder":
 			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
 			now rodyon is true;
@@ -1398,7 +1399,7 @@ this is the pre-rodney rule:
 
 this is the post-rodney rule:
 	now all picaros in Loftier Trefoil are pinko;
-	if vw > 0, decrease poss-score of towers by vw;
+	if here-picaros > 0, decrease poss-score of towers by here-picaros;
 	if recital article is not moot, poss-d;
 	mootl list of all picaros in Loftier Trefoil;
 	now player has top opt pot;
@@ -1407,16 +1408,16 @@ this is the post-rodney rule:
 
 to say rodney-ditch:
 	if the player's command includes "droney":
-		say ". [if vw > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--";
-		if vw > 1:
-			say "his remaining pal[if vw > 2]s[end if] can't be bothered to follow such a dry one";
+		say ". [if here-picaros > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--";
+		if here-picaros > 1:
+			say "his remaining pal[if here-picaros > 2]s[end if] can't be bothered to follow such a dry one";
 		else:
 			say "talking to himself, really, now";
 	else:
 		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
-		if vw is 0:
+		if here-picaros is 0:
 			continue the action;
-		say ". The remaining picaro[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids major self-help cliches, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of picaros in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
+		say ". The remaining picaro[if here-picaros > 1]s[end if] even ask[if here-picaros is 1]s[end if] if you can work your magic to make [if here-picaros > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids major self-help cliches, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of picaros in Loftier Trefoil] thank you profusely before going on [if here-picaros > 1]their ways[else]his way[end if]";
 
 to say add-adj:
 	pad-rec "wilteds";

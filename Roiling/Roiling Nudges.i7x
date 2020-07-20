@@ -1962,7 +1962,7 @@ to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is Mislit Limits]right by you[else if location of player is Mesprise Premises]nearby[else]across Leak Lake[end if]";
 	if number of touchable guardians > 0, say ". You might also want to try to deal with [the list of touchable guardians]";
 
-to say picaro-note: say "[if vw is 1]There's only one picaro left, and his name is Rodney[else if mw > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
+to say picaro-note: say "[if here-picaros is 1]There's only one picaro left, and his name is Rodney[else if moot-picaros > 0]You've already thinned the picaros['] ranks a bit--it can't be bad to tackle the others one at a time, by name[else]One at a time, by name. Each has his own weakness[end if]";
 
 to say all-rodney: say "Deal with Rodney, not any part of his chosen sub-names"
 

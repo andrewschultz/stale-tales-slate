@@ -2524,7 +2524,7 @@ check objasking a picaro about a picaro:
 
 check objasking a picaro about curst palace: say "[noun] only knows he's supposed to defend it from you. He probably wasn't given any secrets to divulge." instead;
 
-to say pick-keep: say "[if mw > 0]keep picking[else]pick[end if] off Rodney's gang [if mw < 3]one by one[else] though you probably don't need to[end if]";
+to say pick-keep: say "[if moot-picaros > 0]keep picking[else]pick[end if] off Rodney's gang [if moot-picaros < 3]one by one[else] though you probably don't need to[end if]";
 
 to say around-gone: say "[if Dr Yow is touchable]around[else]gone"
 
@@ -9841,60 +9841,85 @@ to say prefigured-things:
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
 
-to say once-now-medals:
-	say "[if player has medals]now[else]once[end if] you have material evidence you're trustworthy"
+to say now-once-medals: say "[if player has medals]now[else]once[end if] you have material evidence you're trustworthy"
 
 node-preef is a truth state that varies.
 
 duck-preef is a truth state that varies.
 
-[?? recheck everything in table of preflip clues]
+to say now-once of (ts - a truth state): say "[if ts is true]now[else]once[end if]"
+
+to say now-gast-gone: say "[now-once of whether or not Gast is moot] things are a bit more settled"
+
+to say now-if-dealt of (th - a thing): say "[if th is reflexed or th is moot]now[else]once[end if]"
+
+to say now-if-scored of (num - a number): say "[if num > 0]now[else]once[end if]"
+
+to say now-once-gore-ogre:
+	if player does not have medals:
+		say "[now-once-medals]";
+	else:
+		say "[now-if-dealt of ghoul hat] you've helped Mr. Lee deal with the ghoul hat";
+
+to say now-once-eels-else:
+	if player does not have medals:
+		say "[now-once-medals]";
+	else:
+		say "[now-if-dealt of sea cube] you've made progress with the sea cube"
+
+to decide whether compile-yet:
+	if caps lock is not part of the keyboard, no;
+	if peels speel is reflexive, no;
+	if disk is not in drive a, no;
+	if e robot is reflexive, no;
+	yes;
+
 table of preflip clues [xxpre]
 preflip	thereg	pretodo
 respect specter	ordeal reload	"You can get a SCEPTER from the respect specter at any time." [ordeal reload]
-sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
-side art	routes	"Find a reason to sit ASTRIDE the [sit a nag]."
-lairage regalia	routes	"You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled."
-adsorbing signboard	routes	"You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled."
-worst ad	routes	"You can go TOWARDS the worst ad once things are a bit more settled."
-hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
-stop post	troves	"You can't focus enough to SPOT, yet." [troves]
-l clear cellar	troves	"You can RECALL the cellar once you're a little less distracted."
-LEAD	troves	"You aren't quite able to DEAL, yet."
-trance nectar	troves	"You weren't able to RECANT with both the Sister Tressi Siters and [mbb] watching you."
-plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative." [presto]
-ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
-bored yak	presto	"You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak."
-be troo e robot	presto	"You weren't ready for the [e robot] to REBOOT yet."
-peels speel	presto	"You tried to SLEEP, but the time wasn't right."
-Im Le Cop Polemic	presto	"You weren't ready to COMPILE yet."
+sit a nag	routes	"You can lean AGAINST the [sit a nag] [now-once of whether or not list o toils is examined] you feel less fear and more purpose." [routes]
+side art	routes	"You can sit ASTRIDE the [sit a nag] [now-if-dealt of sit a nag] you have a reason to."
+lairage regalia	routes	"You can go ACROSS the lairage regalia to Oscar's SOS Arc [now-gast-gone]."
+adsorbing signboard	routes	"You can go PAST the adsorbing signboard to Pat's Stap [now-gast-gone]."
+worst ad	routes	"You can go TOWARDS the worst ad [now-gast-gone]."
+hurt hog	routes	"You can go THROUGH [now-if-dealt of bent ewe] you've managed to deal with the bent ewe."
+stop post	troves	"You can SPOT [now-if-dealt of sob ever verbose] you can focus better." [troves]
+l clear cellar	troves	"You can RECALL the cellar [now-if-scored of bee-score] you're a little less distracted."
+LEAD	troves	"You can DEAL [now-if-scored of bedroom-solve] you've gotten an emotional boost."
+trance nectar	troves	"You can RECANT [now-if-scored of mbb-sis-points] you feel less watched."
+plebe	presto	"You can shout BLEEP at the plebe [now-once of whether or not the player wears the tsar star] you look more authoritative." [presto]
+ether	presto	"You can shout THERE [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
+bored yak	presto	"You can change the drab yoke to a KEYBOARD [now-once of whether or not yak is moot] it's free of the bored yak."
+be troo e robot	presto	"You can have [the e robot] REBOOT [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
+peels speel	presto	"You can SLEEP [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your task."
+Im Le Cop Polemic	presto	"You can COMPILE [now-once of whether or not compile-yet] you've started coding."
 BUB DUDE EGG	presto	"You weren't ready to DEBUG yet."
-LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
-frat raft	oyster	"You can get on the frat raft and FART."
+LOLstr trolls	oyster	"You can STROLL past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping." [oyster]
+frat raft	oyster	"You can [if player is not on frat raft]get on the frat raft and [end if]FART."
 trout	oyster	"You should be able to TUTOR the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
 hunter hunt area	oyster	"You can UNEARTH the HUNTER HUNT AREA with the right equipment."
 Achers Chaser Arches	oyster	"SEARCH the arches."
-crate	oyster	"You can REACT to the crate better when you have more data."
-skis	oyster	"You can KISS the skis once you are less distracted."
-span pans	oyster	"You can SNAP to clear the span pans when everything else is out of the way."
+crate	oyster	"You can REACT to the crate better [now-if-dealt of bogus-trace] you have more data."
+skis	oyster	"You can KISS the skis [now-if-dealt of bogus-trace] you are less distracted."
+span pans	oyster	"You can SNAP to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
 ruby	oyster	"You need to figure how and where to BURY the ruby."
-ol trap	oyster	"You can PATROL to find the old trap once the weaselly walleyes are gone."
-dialer	oyster	"With the yapper gone, you should be able to DERAIL."
-bogus-redial	oyster	"You should be able to REDIAL the dialer with the proper preparation."
-lance	oyster	"You'll want to CLEAN the lance once you have something to wash it with."
-templar ramplet	oyster	"Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet."
-rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]." [towers]
+ol trap	oyster	"You can PATROL to find the old trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
+dialer	oyster	"You can use the dialer to DERAIL [now-if-dealt of papery yapper] the papery yapper is gone."
+bogus-redial	oyster	"You can REDIAL the dialer [now-if-dealt of pins] the pins are not in your way."
+lance	oyster	"You'll want to CLEAN the lance [now-once of whether or not player has wipes] you have something to wash it with."
+templar ramplet	oyster	"You can TRAMPLE the templar ramplet [now-if-dealt of wipes] you have a shiny worthy weapon."
+rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if] [now-once of whether or not moot-picaros >= 3] he's lost enough followers." [towers]
 luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be unlocked, with [if duck-preef is true]the lone duck[else]something else you need to figure out[end if]."
-fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at."
-curst palace	towers	"You can't make the Curst Palace SPECTACULAR until you're near it."
-eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness." [otters]
-sea cube	otters	"You can tell the eels in the sea cube BECAUSE [once-now-medals]."
-ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [once-now-medals]."
-gore ogre	otters	"You can say ERGO to deal with the Gore Ogre [if ghoul hat is moot]now[else]once[end if] you've helped Mr. Lee deal with the ghoul hat."
-atmo moat	otters	"You can collapse the atmo moat to an ATOM [if power-back is false]once[else]now[end if] you have the power."
-medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
-parrot	otters	"The parrot can be changed back to a RAPTOR."
-whistle	otters	"Once the parrot has surrendered the whistle, you can play it DEEPLY."
+fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect [now-once of whether or not duck is friendly] there's something it can fuss at."
+curst palace	towers	"You can make the Curst Palace SPECTACULAR [now-once of whether or not player is in mislit limits] you're near it."
+sea cube	otters	"You can tell the eels in the sea cube BECAUSE [now-once-medals]." [otters]
+ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [now-once-medals]."
+eels	otters	"You can tell the eels ELSE [now-once-eels-else]."
+gore ogre	otters	"You can say ERGO to deal with the Gore Ogre [now-once-gore-ogre]."
+atmo moat	otters	"You can collapse the atmo moat to an ATOM [now-once of power-back] you have the power."
+medals	otters	"The medals can help you go QUICKLY [now-once of whether or not medals-worthy] they are restored enough."
+parrot	otters	"You can change the parrot back to a RAPTOR to defeat a formidable foe."
+whistle	otters	"You can play the whistle DEEPLY [now-once of whether or not player has whistle] the parrot has given it to you."
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -14210,7 +14235,7 @@ to say uurrgg:
 
 chapter boats
 
-The boats are vanishing plural-named boring scenery in Disease Seaside. bore-check is bore-boats rule. bore-text is "You're too far away from the boats to do anything to them. Or have them do something to you.".
+The boats are vanishing plural-named boring scenery in Disease Seaside. bore-check is bore-boats rule. bore-text is "You're too far away from the boats to do anything to them. Or have them do something to you. Maybe you could get their attention, though.".
 
 a-text of boats is "RYYRR". b-text of boats is "PGGRR". parse-text of boats is "b[sp]o[sp]a[sp]x[sp]x". boats is cheat-spoilable.
 
@@ -16006,11 +16031,11 @@ w-p is privately-named plural-named boring abstract scenery in Loftier Trefoil. 
 
 understand "picaros/picaro" as w-p.
 
-to decide which number is vw: decide on number of picaros in Loftier Trefoil;
-to decide which number is mw: decide on number of moot picaros;
+to decide which number is here-picaros: decide on number of picaros in Loftier Trefoil;
+to decide which number is moot-picaros: decide on number of moot picaros;
 
 this is the bore-picaros rule:
-	if vw is 1, try objhinting rodney instead;
+	if here-picaros is 1, try objhinting rodney instead;
 
 after printing the locale description for Loftier Trefoil when Loftier Trefoil is unvisited:
 	say "The ambience here makes you think 'Lo, I fret.'";
@@ -16019,18 +16044,18 @@ after printing the locale description for Loftier Trefoil when Loftier Trefoil i
 rule for printing a locale paragraph about a picaro (called pp):
 	if pp is not Rodney, The rule succeeds;
 	now Rodney is mentioned;
-	say "[Rodney], still loud and boastful, is [if vw is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
+	say "[Rodney], still loud and boastful, is [if here-picaros is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of prosaic picaros blocking the way out. [they-just] [list of followy picaros][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
 	now all touchable picaros are mentioned;
 
 to say they-just:
-	say "[if vw is 2]Well, there's just one, now:[else]They include[end if]"
+	say "[if here-picaros is 2]Well, there's just one, now:[else]They include[end if]"
 
 chapter escaping or not
 
 check asking Rodney about: say "He stares at you, seeming to ask rhetorically, 'Redo? Y/N!' You see red at this." instead;
 
 check going outside in Loftier Trefoil:
-	if Rodney is in Loftier Trefoil, say "Rodney is blocking the way[if vw > 1], and he has help[end if]." instead;
+	if Rodney is in Loftier Trefoil, say "Rodney is blocking the way[if here-picaros > 1], and he has help[end if]." instead;
 	say "BUG! you should have been kicked out after talking to Renato.[wfak]";
 	move player to Topside Deposit;
 
@@ -17178,7 +17203,7 @@ blurb
 "Superlative"
 "Unsurpassed"
 
-to say a-bunch: say "[if vw is 2]an ex-bunch[else]a bunch[end if]"
+to say a-bunch: say "[if here-picaros is 2]an ex-bunch[else]a bunch[end if]"
 
 definition: a room (called twr) is towery:
 	if twr is Loftier Trefoil, decide no;
@@ -17983,11 +18008,11 @@ rodyon is a truth state that varies.
 after fliptoing a picaro (this is the loftier trefoil exit rule):
 	if noun is Rodney, continue the action;
 	d "[list of picaros in Loftier Trefoil].";
-	if vw < 4:
+	if here-picaros < 4:
 		min-up;
-	else if vw is 4:
+	else if here-picaros is 4:
 		say "Rodney's followers look a bit shaken. If you got rid of him by saying [if roddro is true and rodyon is true]YONDER or DRONEY[else if rodyon is true]YONDER[else if roddro is true]DRONEY[else]something to shoo him[end if], you might be able to clear the lot. Or you can mess with all his pals, first. Your choice.";
-	if vw > 1:
+	if here-picaros > 1:
 		pick-a-picaro;
 	else:
 		say "Time to put Rodney out of his misery. Okay, he'll still be miserable, so just put [i]yourself[r] out of the range of his misery.";
@@ -18840,6 +18865,10 @@ check scaning medals when cheat-on is true:
 
 to decide which number is medals-shiny:
 	decide on boolval of (whether or not adjsolve >= 3) + boolval of (whether or not nounsolve >= 3);
+
+to decide whether medals-worthy:
+	if medals-shiny is 2, yes;
+	no;
 
 understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
 
