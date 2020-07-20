@@ -1907,7 +1907,7 @@ trolls	"They'd affirm their right to privacy before asking YOU personal question
 pesty types	--
 Casper	"Once he starts, he won't stop. But he's feeling standoffish after his first big lecture."
 clam	"Asking the clam about its feelings is a start."
-boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
+sabot boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
 carps	"Asking these punks who they think they are won't stop them."
 pikes	"Asking these punks who they think they are won't stop them."
 trout	"[if trout is in Anger Range]You don't need to ask if he's being picked on,[else]'Well, I try my best and stuff.'[end if]"
@@ -4703,6 +4703,7 @@ perma amper	true	true	false	false	"It's a perma-amper, so that might account for
 Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
+sabot boats	true	true	false	false	"It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
 Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard."
@@ -5293,7 +5294,7 @@ to decide which thing is oyster-item:
 	if player is in Olde Lode:
 		if clam is in Olde Lode, decide on clam;
 		if urn is in Olde Lode, decide on urn;
-	if player is in Disease Seaside, decide on boats;
+	if player is in Disease Seaside, decide on sabot boats;
 	if player is on frat raft:
 		if frat raft is reflexed, decide on oars;
 		decide on frat raft;
@@ -5764,7 +5765,7 @@ this is the trailing-a rule: [this is because A REC should be in mstakes but it 
 			the rule succeeds;
 	else if player is in Disease Seaside:
 		if the player's command exactly matches the text "a cone":
-			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.";
+			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.";
 			the rule succeeds;
 	else if player is in Lean Lane:
 		if the player's command exactly matches the text "a nut":
@@ -6084,7 +6085,7 @@ Unwary Runway	"The unwary runway is a straight north-south shot. And who knows w
 Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
 Posh Hops Shop	"[posh-cant-exit]." [oyster]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
-Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.[paragraph break]You need to cross to the north for more action."
+Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront. Going back to the Olde Lode or Posh Hops Shop seems pointless, too.[paragraph break]You need to cross to the north for more action."
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
@@ -6223,7 +6224,7 @@ walls	"Brute force is ineffective. As well as all the swears you use with the br
 hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
 LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
-boats	"Sabot? Batso!"
+sabot boats	"O, bats!"
 frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
 HUNTER HUNT AREA	"As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing."
 carps	"That sounds so--brutal. And nonspecific."
@@ -6778,7 +6779,7 @@ check listening:
 	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened." instead; [oyster]
 	if player is in Posh Hops Shop, say "Silence. Awkward silence. An occasional cough." instead;
 	if noun is clam, say "You hear the clam snapping." instead;
-	if player is in Disease Seaside, say "You hear voices from the boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
+	if player is in Disease Seaside, say "You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises." instead;
 	if noun is pale plea, try examining the pale plea instead;
 	if noun is carps or noun is pikes, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
 	if noun is trout, say "[if trout is reflexive]Whimpering slightly[else]Not whimpering any more[end if]." instead;
@@ -7772,7 +7773,7 @@ carry out fliptoing (this is the main fliptoing rule):
 					poss-d;
 				score-notify;
 			else if the-to entry is not moot or the-to entry is satchel: [more than one point here]
-				if the-from entry is boats and frat raft is reflexed:
+				if the-from entry is sabot boats and frat raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
@@ -14206,10 +14207,10 @@ the baser braes are plural-named bounding boring scenery in Olde Lode. descripti
 
 book Disease Seaside
 
-Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
+Disease Seaside is a room in Oyster. "You don't feel sick here, but you'll probably get sick of being on this side of the Saccade Cascade, the most watchably active river in all of Yorpwald. It's packed with sabot boats, and there's a frat raft docked here. A canoe too!". roomnud of Disease Seaside is table of Disease Seaside nudges.
 
 after looking in Disease Seaside:
-	set the pronoun them to boats;
+	set the pronoun them to sabot boats;
 	set the pronoun it to frat raft;
 	continue the action;
 
@@ -14219,7 +14220,7 @@ the canoe is scenery in Disease Seaside. "The canoe is all red and has a fish ca
 
 check taking canoe: try entering canoe instead;
 
-check entering canoe: say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the frat raft or boats can get you across." instead;
+check entering canoe: say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the frat raft or sabot boats can get you across." instead;
 
 a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "-[sp]x[sp]-[sp]-[sp]x".
 
@@ -14233,26 +14234,24 @@ to say uurrgg:
 	now joke-death is true;
 	get-dead;
 
-chapter boats
+chapter sabot boats
 
-The boats are vanishing plural-named boring scenery in Disease Seaside. bore-check is bore-boats rule. bore-text is "You're too far away from the boats to do anything to them. Or have them do something to you. Maybe you could get their attention, though.".
+The sabot boats are vanishing plural-named boring scenery in Disease Seaside. bore-check is bore-boats rule. bore-text is "Sabot is not short for sabotage but a rather small boat. They're moving quickly past, but perhaps you could draw enough attention to yourself that one might see you and dump you at the far shore.".
 
-a-text of boats is "RYYRR". b-text of boats is "PGGRR". parse-text of boats is "b[sp]o[sp]a[sp]x[sp]x". boats is cheat-spoilable.
+a-text of sabot boats is "RYYRR". b-text of sabot boats is "???R?". parse-text of sabot boats is "b[sp]o[sp]a[sp]x[sp]x". sabot boats are cheat-spoilable.
 
 this is the bore-boats rule:
 	if current action is sobating, now boring-exception is true;
 
-description of boats is "They're boats, not shippish, and too dense to swim through[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the boats[end if]."
+description of sabot boats is "They're sabot boats, not shippish, and there are too many to swim through without getting hit[if player is on frat raft]. Probably even to raft through[else][end if][if clam is moot]. You can hear loud voices from the sabot boats[end if]."
 
-Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Boats pass on Saccade Cascade so fast you can't stop blinking and looking around. It's a real arrive-a-river, you could say, though that wouldn't help things.[paragraph break]You probably need to cross it, but you can't expect a groupie pirogue to show up. [if player is on frat raft]Your frat raft bobs gently in the Cascade[else]A frat raft is also docked by[end if].". bore-check of Saccade Cascade is bore-cascade rule.
+Saccade Cascade is boring scenery in Disease Seaside. description of Saccade Cascade is "Sabot boats pass on Saccade Cascade so fast you can't stop blinking and looking around. It's a real arrive-a-river, you could say, though that wouldn't help things.[paragraph break]You probably need to cross it, but you can't expect a groupie pirogue to show up. [if player is on frat raft]Your frat raft bobs gently in the Cascade[else]A frat raft is also docked by[end if].". bore-check of Saccade Cascade is bore-cascade rule.
 
 this is the bore-cascade rule:
 	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
-	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll appropriately avoid, or use, those boats." instead;
+	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll appropriately avoid, or use, those sabot boats." instead;
 
-check going in Disease Seaside:
-	if noun is north, say "You can't cross Saccade Cascade on your own. One of the boats would hit you. Or, if you went underwater, you'd fear strident tridents." instead;
-	say "You're not sure how to get back to the Posh Hops Shop, and you're not sure it's worth it. The boats seem hard to get by, and you're not amphibious enough to speed through the deeps." instead;
+check going north in Disease Seaside: "You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents." instead;
 
 section frat raft
 
@@ -14286,17 +14285,17 @@ understand the command "sob at" as something new.
 
 understand "sob at [something]" as sobating.
 
-does the player mean sobating the boats: it is very likely.
+does the player mean sobating the sabot boats: it is very likely.
 
 carry out sobating:
-	if player is not in Disease Seaside, say "[reject]" instead;
-	if noun is not boats, say "That's not a good thing to sob at. At which to sob. Actually, nothing is." instead;
+	if player is not in Disease Seaside and player is not in Fighter Freight, say "[reject]" instead;
+	if noun is not sabot boats, say "That's not a good thing to sob at. At which to sob. Actually, nothing is." instead;
 	say "Show some confidence! Boats are no places for whining." instead;
 	the rule succeeds;
 
 book Fighter Freight
 
-Fighter Freight is a room in Oyster. "You're near the edge of a Fighter Freight. You're half-paralyzed with fear. With or without that pale plea echoing from below and... well... you think you smell something, too.". roomnud of Fighter Freight is table of Fighter Freight nudges.
+Fighter Freight is a room in Oyster. "You're near the edge of a Fighter Freight--of the RIG-HEFT brand, of course. They got in good with Elvira, fast, to monopolize the market for pointlessly ugly, aggressive boats.[paragraph break]You're close enough to the far shore, you could make it if you fled right. But you're half-paralyzed with fear, With or without that pale plea echoing from below and... well... you think you smell something, too.". roomnud of Fighter Freight is table of Fighter Freight nudges.
 
 after looking in Fighter Freight:
 	set the pronoun it to pale plea;
@@ -22309,8 +22308,8 @@ this is the oyster-alt rule:
 	if Anger Range is unvisited:
 		say "[2da]There is some branching between Disease Seaside and Anger Range.";
 	else:
-		if boats are in Disease Seaside:
-			say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
+		if sabot boats are in Disease Seaside:
+			say "[2da]you could've tried to BOAST to get the sabot boats['] attention, then LEAP.";
 		else:
 			say "[2da]you could've tried to [if frat raft is reflexive]FART on the frat raft, then [end if]SOAR to use the oars.";
 	if pikes are moot:
