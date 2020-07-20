@@ -211,7 +211,7 @@ HUNTER HUNT AREA	haunter	false	529723362	--	"unearth"	"unearth" or "unearth haun
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."	"The haunter/sausage reaches out to grab the pills. It is crushed! The haunter shakes its head sadly. But it seems more empathic towards you."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
-lever	lever	false	501914680	--	"revel"	"revel"	pre-lever-revel rule	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
+lever	lever	false	501914680	--	"revel"	"revel"	--	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	pre-trample-ramplet rule	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
 natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 bogus-psalm	bogus-psalm	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
@@ -557,6 +557,9 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 	if Gast is in Same Mesa:
 		say "Walking away would upset [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
 		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
+		[
+		preef worst ad;
+		]
 		do nothing instead;
 	if noun is reflexed: [this covers going back to the place]
 		if noun is picturers:
@@ -621,7 +624,7 @@ this is the post-athwart rule:
 this is the pre-hurt-hog-through rule:
 	if bent ewe is reflexive:
 		say "That could work later, but the hog and ewe don't trust you to go by yet.";
-		preef noun;
+		preef hurt hog;
 		do nothing instead;
 
 this is the post-hurt-hog-through rule:
@@ -941,7 +944,7 @@ this is the pre-yak-keyboard rule:
 	if yak-around:
 		say "The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.[paragraph break]Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.";
 		now try-keyboard is true;
-		preef keyboard;
+		preef bored yak;
 		do nothing instead;
 
 this is the post-yak-keyboard rule:
@@ -1007,11 +1010,11 @@ this is the post-bub-dude-egg rule:
 
 this is the pre-peels-speel-sleep rule:
 	if futon is not touchable:
-		say "You have nowhere comfortable to sleep. Yet.";
+		say "You haven't yet made anywhere comfortable to sleep.";
 		preef peels speel;
 		do nothing instead;
 	if not cpuready:
-		say "Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from assembling the computer! Yet.";
+		say "Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.";
 		preef peels speel;
 		do nothing instead;
 
@@ -1046,7 +1049,7 @@ to say stein-drop:
 this is the pre-trolls-stroll rule:
 	if silly-acts >= 3, continue the action;
 	say "The LOLstr trolls [if silly-acts is 0]seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside[gloaty][else if silly-acts is 1]seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now[gloaty][else if silly-acts is 2]make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused[gloaty].[paragraph break]Maybe one more disruption, and you won't be worth bothering with[end if].";
-	preef trolls;
+	preef lolstr trolls;
 	the rule succeeds;
 
 this is the post-trolls-stroll rule:
@@ -1067,7 +1070,7 @@ this is the pre-oars-soar rule:
 this is the pre-raft-fart rule:
 	if player is not on raft and raft is reflexive:
 		say "Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.";
-		preef raft;
+		preef frat raft;
 		the rule succeeds;
 
 this is the post-spike-pikes rule:
@@ -1090,7 +1093,7 @@ this is the pre-trample-ramplet rule:
 		if player has lance:
 			say "You'd think your lance would make you worthy of climbing the templar ramplet, but not in its current form. It's too dirty.";
 		else:
-			say "You do not have an item denoting you as worthy to trample the templar ramplet. [if aunt-tuna-cross is true and wipes are in lean lane]And you locked yourself out when you used the pills[else]If you want, you can look around, but it is optional[end if].";
+			say "You do not have anything denoting you as worthy to trample the templar ramplet. [if aunt-tuna-cross is true and wipes are in lean lane]And you locked yourself out when you used the pills[else]If you want, you can look around, but it is optional[end if].";
 		preef templar ramplet;
 		the rule fails;
 
@@ -1258,11 +1261,6 @@ this is the post-yapper-prepay rule:
 		say "As the yapper runs away, you look around a bit more. Hey! There's a templar ramplet in back, too! It might lead to a fun side adventure. You never know.";
 		move templar ramplet to Tenfold Teflond Den Loft;
 
-this is the pre-lever-revel rule:
-	if yapper is touchable:
-		say "Nothing to celebrate yet--dispose of the yapper first."; [?? check to make sure preefing is first. Also, maybe have a post-preef rule?]
-		preef lever instead;
-
 this is the post-spin-pins rule:
 	now bogus-redial is in Tenfold Teflond Den Loft;
 
@@ -1349,7 +1347,7 @@ this is the post-dinger-grained rule: [?? this should not be necessary if take e
 this is the pre-fussier rule:
 	if duck is not touchable:
 		say "The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.";
-		preef fissure;
+		preef fries us fissure;
 		do nothing instead;
 
 this is the post-yow-free rule:
@@ -1359,7 +1357,6 @@ this is the post-yow-free rule:
 	moot fissure;
 	moot prison ropins;
 	moot luck node;
-	now duck is unfigured;
 	now luck node is unfigured;
 	now fissure is unfigured;
 	now duck is returned;
@@ -1367,6 +1364,7 @@ this is the post-yow-free rule:
 this is the pre-unlocked rule:
 	if duck is not touchable:
 		say "You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you[if Shaven Havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
+		now node-preef is true;
 		preef luck node;
 		do nothing instead;
 
@@ -1392,10 +1390,11 @@ this is the pre-rodney rule:
 		if the player's command includes "yonder":
 			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
 			now rodyon is true;
-			preef Rodney instead;
-		say "Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?";
-		now roddro is true;
-		preef Rodney instead;
+		else:
+			say "Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?";
+			now roddro is true;
+		preef Rodney;
+		the rule fails;
 
 this is the post-rodney rule:
 	now all picaros in Loftier Trefoil are pinko;
@@ -1649,7 +1648,7 @@ this is the pre-whistle-deeply rule:
 		get-dead;
 		follow the shutdown rules instead;
 	if parrot is touchable:
-		say "You'll need to earn the whistle from the parrot before you can practice like that.";
+		say "The parrot still has the whistle. You can't play the whistle until it's yours.";
 		preef whistle;
 		do nothing instead;
 	if number of NPCish people > 0:
@@ -1775,8 +1774,15 @@ section otters
 
 a medal check rule for a thing (called x):
 	if player does not have medals:
-		say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
-		preef x; [preef mr lee/le mer]
+		if x is Gore Ogre or X is eels:
+			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
+		else:
+			say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
+		preef x;
+		[
+		preef ghoul hat;
+		preef sea cube;
+		]
 		do nothing instead;
 
 section general

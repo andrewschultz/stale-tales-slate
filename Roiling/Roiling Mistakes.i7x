@@ -817,6 +817,10 @@ understand "tripose" and "triposes" as a mistake ("No organic chemistry, please.
 
 chapter Obscurest Subsector
 
+to say duck-clue:
+	now duck-preef is true;
+	preef luck node;
+
 understand "clonk due" and "due clonk" and "conk duel" and "cold nuke" and "nuke cold" as a mistake("The luck node can and should be defeated nonviolently.") when luck node is touchable.
 
 understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
@@ -831,7 +835,7 @@ understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposi
 
 understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in Obscurest Subsector.
 
-understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[preefsay of duck]") when duck is in location of player and prison ropins is not in location of player.
+understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[duck-clue]") when duck is in location of player and prison ropins is not in location of player.
 
 chapter Salted Deltas
 

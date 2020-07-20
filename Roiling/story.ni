@@ -32,7 +32,7 @@ TDR  = table of done rejects, which gives specialized responses for if you try t
 TQT  = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO  = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT  = dome tables, text from Demo Dome section
-PRE  = table of pres, or information of stuff you figured but don't get points for yet
+PRE  = table of preflip clues, or information of stuff you figured but don't get points for yet
 
 VRT  = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
@@ -3414,7 +3414,7 @@ to solve-region (sre - a region):
 	now sre is solved;
 	now last-solved-region is sre;
 	if sre is Ordeal Reload, now all prefigured things are unfigured;
-	repeat through table of pres:
+	repeat through table of preflip clues:
 		if there is a thereg entry and thereg entry is sre:
 			now preflip entry is unfigured;[wipe stuff from flips]
 	say "Congratulations! [sre] node: done![paragraph break]";
@@ -7648,7 +7648,6 @@ definition: a thing (called mything) is cromulent:
 	if mything is touchable, decide yes;
 	if mything is palm and player is in Dusty Study, decide yes;
 	if mything is curst palace and mrlp is towers, decide yes;
-	if mything is touchable, decide yes;
 	decide no;
 
 to check-get-pad:
@@ -7663,7 +7662,7 @@ to two-up:
 
 section check and carry out rules
 
-to print-the-from (frm - a thing):
+to print-done-reject (frm - a thing):
 	repeat through table of done rejects:
 		if frm is specdone entry:
 			say "[spectalk entry][line break]";
@@ -7673,21 +7672,22 @@ to print-the-from (frm - a thing):
 check fliptoing when mrlp is otters and power-back is false (this is the don't flip animals until they're flippable rule) : if player is in Lamer Realm or player is in Perverse Preserve, say "You can't summon the energy to do that. It seems it should work, but it doesn't. You may need a recharge." instead;
 
 this is the mesa-pass rule:
+	if gast is touchable, continue the action;
 	if noun is lairage regalia and adobe abode is visited, try entering Uhh Tut Hut instead;
 	if noun is adsorbing signboard and Idle Deli is visited, try entering resto store instead;
 	if noun is scripture picturers and Cleric Circle is visited, try entering snatchier chantries instead;
+
+definition: a thing (called th) is gast-affected:
+	if gast is not touchable, no;
+	if noun is lairage regalia or noun is adsorbing signboard or noun is scripture picturers, yes;
+	no;
 
 check fliptoing (this is the see about flipping touchable things rule):
 	d "Trying to flip [noun].";
 	if noun is touchable:
 		if noun is a portal, try entering noun instead;
 		if noun is reflexive or noun is vanishing, continue the action;
-		if mrlp is routes:
-			repeat through regana of mrlp:
-				if noun is the-to entry and the-from entry is reflexed:
-					abide by the mesa-pass rule;
-					print-the-from the-from entry;
-					the rule succeeds;
+		if noun is gast-affected, continue the action; [this is an odd case where we want gast's presence to stop you getting away, but we also want to add your try to PAD FLIPS if it isn't there]
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
 		say "(examining)[line break]";
 		try examining noun instead;
@@ -7718,7 +7718,7 @@ suppress-score is a truth state that varies. [this is used in beta testing]
 check fliptoing (this is the check off preconditions before flipping rule):
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
-			if the-from entry is reflexed, say "[reject]" instead;
+			if the-from entry is reflexed and noun is not gast-affected, say "[reject]" instead;
 			if there is a pre-rule entry and flip-spill-flag is false, abide by the pre-rule entry;
 
 check fliptoing (this is the check region ending flip rule):
@@ -9828,52 +9828,73 @@ to say what-can-flip:
 
 to say prefigured-things:
 	repeat with pft running through not unfigured things:
-		if pft is a preflip listed in table of pres:
-			say "[line break][pretodo entry]";
-		else if pft is a the-from listed in regana of mrlp:
+		let got-it be false;
+		repeat through table of preflip clues:
+			if pft is preflip entry:
+				say "[line break][pretodo entry]";
+				now got-it is true;
+				break;
+		if got-it is true, next;
+		if pft is a the-from listed in regana of mrlp:
 			choose row with the-from of pft in regana of mrlp;
 			say "[line break]Deal with [the-from entry]: [right-word entry].";
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
 
-[?? recheck everything in table of pres]
-table of pres [xxpre]
+to say once-now-medals:
+	say "[if player has medals]now[else]once[end if] you have material evidence you're trustworthy"
+
+node-preef is a truth state that varies.
+
+duck-preef is a truth state that varies.
+
+[?? recheck everything in table of preflip clues]
+table of preflip clues [xxpre]
 preflip	thereg	pretodo
+respect specter	ordeal reload	"You can get a SCEPTER from the respect specter at any time." [ordeal reload]
 sit a nag	routes	"Find a way to be fearless so you can lean AGAINST the [sit a nag]." [routes]
 side art	routes	"Find a reason to sit ASTRIDE the [sit a nag]."
-sheol holes	routes	"You can look AROUND to find the unroad."
-un road	routes	"You can go ALONG the un-road...once you find it."
+lairage regalia	routes	"You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled."
+adsorbing signboard	routes	"You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled."
+worst ad	routes	"You can go TOWARDS the worst ad once things are a bit more settled."
 hurt hog	routes	"You can go THROUGH [if bent ewe is reflexed]once[else]now[end if] you've managed to deal with the bent ewe."
-bent ewe	routes	"You can go BETWEEN the hurt hog and bent ewe."
-yob den	routes	"You need to go BEYOND the yob den."
-[Pa Egg Pea	troves	"You can GAPE at a particularly bad page you may come across in the future."]
 stop post	troves	"You can't focus enough to SPOT, yet." [troves]
+l clear cellar	troves	"You can RECALL the cellar once you're a little less distracted."
 LEAD	troves	"You aren't quite able to DEAL, yet."
-salt	troves	"You can LAST [if ME ARTS is moot or lobster is moot]now[else]once[end if] you have confidence in your skills."
-song	troves	"You can DECIDE to move on from the Drain Nadir."
-Sister Tressi	Troves	"You can RESIST Sister Tressi."
-Blamer Balmer	Troves	"You can RAMBLE to ignore Blamer Balmer."
-Blamer Mr Beal	Troves	"You can RAMBLE to ignore Blamer Mr Beal."
-DIVORCES	troves	"You can DISCOVER what rubbish DIVORCES magazine is."
+trance nectar	troves	"You weren't able to RECANT with both the Sister Tressi Siters and [mbb] watching you."
 plebe	presto	"You can shout BLEEP at the plebe [if player wears tsar star]now[else]once[end if] you look more authoritative." [presto]
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
+bored yak	presto	"You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak."
+be troo e robot	presto	"You weren't ready for the [e robot] to REBOOT yet."
 peels speel	presto	"You tried to SLEEP, but the time wasn't right."
+Im Le Cop Polemic	presto	"You weren't ready to COMPILE yet."
+BUB DUDE EGG	presto	"You weren't ready to DEBUG yet."
 LOLstr trolls	oyster	"You can't quite STROLL past the LOLstr trolls, yet." [oyster]
-haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
+frat raft	oyster	"You can get on the frat raft and FART."
+trout	oyster	"You should be able to TUTOR the trout[if lean lane is unvisited], wherever he went,[end if] with the carps and pikes gone."
+hunter hunt area	oyster	"You can UNEARTH the HUNTER HUNT AREA with the right equipment."
 Achers Chaser Arches	oyster	"SEARCH the arches."
+crate	oyster	"You can REACT to the crate better when you have more data."
+skis	oyster	"You can KISS the skis once you are less distracted."
+span pans	oyster	"You can SNAP to clear the span pans when everything else is out of the way."
+ruby	oyster	"You need to figure how and where to BURY the ruby."
+ol trap	oyster	"You can PATROL to find the old trap once the weaselly walleyes are gone."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 bogus-redial	oyster	"You should be able to REDIAL the dialer with the proper preparation."
-lance	oyster	"CLEAN the lance once you have something to wash it with."
-duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]." [towers]
-ropins	towers	"It would be nice if something made the prison ropins UNLOCKED[if duck is prefigured], like, maybe the duck[end if]."
-rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]."
+lance	oyster	"You'll want to CLEAN the lance once you have something to wash it with."
+templar ramplet	oyster	"Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet."
+rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]." [towers]
+luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be unlocked, with [if duck-preef is true]the lone duck[else]something else you need to figure out[end if]."
+fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at."
+curst palace	towers	"You can't make the Curst Palace SPECTACULAR until you're near it."
 eels	otters	"You can tell the eels ELSE [unless player has medals]once you have[else]now you've got[end if] a token of your goodness." [otters]
-sea cube	otters	"You can tell the eels in the sea cube BECAUSE once you know why."
-ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player has medals]now you've figured[else]once you figure[end if] where the bad guys are."
-gore ogre	otters	"You can say ERGO to deal with the Gore Ogre."
-atmo moat	otters	"You can collapse the atmo moat to an ATOM once you have the power."
+sea cube	otters	"You can tell the eels in the sea cube BECAUSE [once-now-medals]."
+ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [once-now-medals]."
+gore ogre	otters	"You can say ERGO to deal with the Gore Ogre [if ghoul hat is moot]now[else]once[end if] you've helped Mr. Lee deal with the ghoul hat."
+atmo moat	otters	"You can collapse the atmo moat to an ATOM [if power-back is false]once[else]now[end if] you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
-Ammo Gang	others	"You can look AMONG once you have currency to haggle in the clearing." [others]
+parrot	otters	"The parrot can be changed back to a RAPTOR."
+whistle	otters	"Once the parrot has surrendered the whistle, you can play it DEEPLY."
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -10721,7 +10742,9 @@ after looking in Same Mesa:
 	continue the action;
 
 check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
-	if Gast is in Same Mesa, say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
+	if Gast is in Same Mesa:
+		if noun is inside, try fliptoing scripture picturers instead;
+		say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
 	if noun is a direction:
 		if noun is inside:
 			if Cleric Circle is unvisited:
@@ -10799,7 +10822,9 @@ chapter snatchier chantries
 
 the snatchier chantries are scenery in Same Mesa. "The snatchier chantries [if scripture picturers are reflexive]seem to twist about. They don't seem as welcoming as an entry to a place of worship should. Maybe the scripture picturers above can help you out[else]seem more welcoming now that you figured the scripture picturers[end if]."
 
-check entering snatchier chantries: try going inside instead;
+check entering snatchier chantries:
+	if gast is touchable, try fliptoing snatchier chantries instead;
+	try going inside instead;
 
 does the player mean doing something with rs:
 	if player is in Same Mesa, it is likely;
@@ -17393,7 +17418,7 @@ check scaning the player when player is in Arid Den:
 
 section nerd aid
 
-the Nerd Aid Diner ad is boring auxiliary scenery. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.". bore-check of nerd aid is bore-nerd-aid rule.
+the Nerd Aid Diner ad is boring auxiliary scenery. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.".
 
 a-text of Nerd Aid Diner ad is "RRYYRYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
 
@@ -18186,7 +18211,10 @@ to get-dead:
 
 ever-fig is a truth state that varies.
 
-to preef (thi - a thing): [text listed in table of pres]
+to preef (thi - a thing): [text listed in table of preflip clues]
+	if thi is reflexed:
+		if debug-state is true, say "DEBUG: not writing [thi] to pad because it was already reflexed.";
+		continue the action; [so we don't suggest something already done. The main and perhaps only case is in the Same Mesa with Gast present, but it's a pretty big one.]
 	now ever-fig is true;
 	if player is in Dusty Study:
 		check-get-pad;
@@ -22224,7 +22252,7 @@ this is the presto-alt rule:
 	else:
 		say "[2da]There are three ways to get by the maze ahead, each giving a different number of points.";
 	if hogs are moot:
-		say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs.";
+		say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs to get the keys.";
 	else:
 		say "[2da]You'll have two ways to get by Saps['] Pass.";
 	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
