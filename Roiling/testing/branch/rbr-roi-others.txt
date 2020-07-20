@@ -1837,7 +1837,7 @@ No need to over-study or over-think. Through the gates!
 >undo
 >review
 by one point
-#pre-gates-stage-flip rule
+#pre-gates-stage-flip rule retry
 >research
 No need to over-study or over-think. Through the gates!
 >thisalt
@@ -1890,7 +1890,7 @@ Since you've changed all the fruits without using the arugula to GURU, I think y
 !You can't expect anything more from Curtis.
 
 @min
-#pre-gates-stage-flip rule
+#pre-gates-stage-flip rule retry
 >prep
 !No need to over-study or over-think. Through the gates!
 >thisalt

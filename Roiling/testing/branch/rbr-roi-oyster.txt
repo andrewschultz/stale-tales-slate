@@ -83,10 +83,14 @@ You already got a temporary escape from the bad music. You can't really do any m
 >undo
 
 @max
+##balance undos
 #pre-trolls-stroll rule
 >stroll
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
+#preefcheck lolstr trolls
+>pf
+You can't quite STROLL past the LOLstr trolls, yet.
 >sing
 by one point
 >stroll
@@ -102,6 +106,7 @@ Maybe one more disruption, and you won't be worth bothering with.
 >remap
 The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
 by one point
+>undo
 >undo
 >undo
 >undo
@@ -613,7 +618,10 @@ Anger Range
 @max
 #pre-raft-fart rule
 >fart
-Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.
+Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
+#preefcheck frat raft
+>pf
+You can get on the frat raft and FART.
 >enter raft
 You get onto the frat raft.
 #not a mistake
@@ -622,6 +630,10 @@ by one point
 #pre-boats-boast rule
 >boast
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
+!by one point
+>pf
+!FART
+>undo
 >undo
 >undo
 
@@ -695,10 +707,16 @@ Batso.
 >tutor
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
+#preefcheck trout
+>pf
+You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
 #pre-unearth-haunter rule
 >unearth
 !by one point
 You need to worry about the carps and pikes, first.
+#preefcheck hunter hunt area
+>pf
+You can UNEARTH the HUNTER HUNT AREA with the right equipment.
 
 @nud
 #mistake test for fart
@@ -1221,14 +1239,21 @@ You had your say.
 #pre-crate-react rule
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
-#pre-crate-react rule
-That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
->kiss
+#preefcheck crate
+>pf
+You can REACT to the crate better when you have more data.
 #pre-kiss-skis rule
+>kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
+#preefcheck skis
+>pf
+You can KISS the skis once you are less distracted.
 #pre-snap-span-pans rule
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
+#preefcheck span pans
+>pf
+You can SNAP to clear the span pans when everything else is out of the way.
 
 @nud
 #mistake retest for thus
@@ -1250,7 +1275,7 @@ DEBUG INFO: crate hinting.
 {$SCOS}
 
 @max
-#pre-kiss-skis rule
+#pre-kiss-skis rule retry
 >kiss
 You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
 #pre-bonk-knob rule
@@ -1512,6 +1537,7 @@ You don't need or want to futz with one heap to make things super-extra-perfect.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+##balance undos
 #respechelp for lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
@@ -1521,11 +1547,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
+#pre-clean-lance rule
 >clean
 Good idea, but you have nothing that could clean the lance effectively.
+#preefcheck lance
+>pf
+You'll want to CLEAN the lance once you have something to wash it with.
 >clean lance
 Good idea, but you have nothing that could clean the lance effectively.
->purloin wipes
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @!min
 >clean
@@ -1630,6 +1665,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
+#preefcheck achers chaser arches
+>pf
+SEARCH the arches.
 
 >warp
 Your score has just gone up by one point
@@ -1716,15 +1754,25 @@ Horned Hedron
 DEBUG INFO: weaselly walleyes hinting.
 
 @max
+##balance undos
 #pre-patrol-ol-trap rule
 >patrol
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
 #detour to test burying ruby without digger
+#preefcheck ol trap
+>pf
+You can PATROL the ol' trap once the weaselly walleyes are gone.
 >w
 >banish digger
 #pre-bury-ruby rule
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
+#preefcheck ruby
+>pf
+You need to figure how and where to BURY the ruby.
+>undo
+>undo
+>undo
 >undo
 >undo
 >undo
@@ -2010,9 +2058,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >derail
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
-#pre-lever-revel rule
+#preefcheck dialer
+>pf
+With the yapper gone, you should be able to DERAIL.
+#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
 >revel
-#lever used to be there before you got rid of the yapper
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
 
@@ -2056,6 +2106,19 @@ With so little positive information, this might be tough to bulldoze. Still, may
 #slider test for trample
 >rtmalep
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+##balance undos
+>banish lance
+#pre-trample-ramplet rule
+>trample
+You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
+#preefcheck templar ramplet
+>pf
+Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet.
+>undo
+>undo
+>undo
 
 @!min
 >trample
@@ -2204,6 +2267,9 @@ DEBUG INFO: pins hinting.
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
+#preefcheck bogus-redial
+>pf
+You should be able to REDIAL the dialer with the proper preparation.
 
 @sli
 #slider test for spin
@@ -2225,7 +2291,7 @@ You see red at the thought of voluntarily pricking yourself with pins.
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
 >snip pins
 You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do.
-#pre-dialer-redial rule
+#pre-dialer-redial rule retry
 >redial
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 >undo

@@ -274,6 +274,9 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 >spot
 !by one point
 That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.
+#preefcheck stop post
+>pf
+You can't focus enough to SPOT, yet.
 
 @sli
 #slider test for observe
@@ -440,6 +443,9 @@ In particular, you feel the need to RECALL right now.
 >recall
 Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.
 !by one point
+>pf
+#preefcheck l clear cellar
+You can RECALL the cellar once you're a little less distracted.
 
 @!minb
 >believe
@@ -692,6 +698,9 @@ The ME ARTS nourished you spiritually. Time to move on, though you could poke at
 >deal
 That seems right! But you don't have the courage yet! Perhaps you need to start smaller, with the lobster, or the ME ARTS.
 !by one point
+#preefcheck LEAD
+>pf
+You aren't quite able to DEAL, yet.
 
 @spoi
 >bolster
@@ -1190,10 +1199,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
+##balance undos
 #pre-nectar-recant rule
 >recant
 !by one point
 It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
+#preefcheck trance nectar
+>pf
+You weren't able to RECANT with both the Sister Tressi Siters and Marble Blamer Balmer watching you.
 #here we test RAMBLE on the alternate blamer
 >misses
 --you could've tried to RAMBLE to ignore Marble Blamer Balmer.
@@ -1204,6 +1217,9 @@ It ... you know you should drink the trance nectar, for the good of society and 
 --you could've tried to RAMBLE to ignore Marble Blamer Mr. Beal.
 >ramble
 by one point
+>undo
+>undo
+>undo
 >undo
 >undo
 >undo

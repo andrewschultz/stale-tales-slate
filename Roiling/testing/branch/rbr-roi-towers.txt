@@ -71,9 +71,15 @@ This version was written by some lovely chap named ALTERIC.
 >yonder
 Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
 !by one point
+#preefcheck rodney
+>pf
+Rodney can be sent YONDER.
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 !by one point
+#preefcheck rodney retry
+>pf
+Rodney can be sent YONDER or made DRONEY.
 
 @nud
 >t
@@ -653,6 +659,9 @@ Topside Deposit
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
+#preefcheck curst palace
+>pf
+You can't make the Curst Palace SPECTACULAR until you're near it.
 
 @mis
 #mistake test for wist led/its lewd
@@ -2442,10 +2451,16 @@ That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that wou
 >fussier
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
+#preefcheck fries us fissure
+>pf
+The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at.
 #pre-unlocked rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
+#preefcheck luck node
+>pf
+The luck node needs to be unlocked, with something else you need to figure out.
 
 @sli
 #this is faked a bit. Rowdy/Wordy are not flippable things.
@@ -3307,7 +3322,7 @@ No physical sciences are necessary here.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
-#pre-curst-palace-spectacular rule
+#pre-curst-palace-spectacular rule retry
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
 !by one point

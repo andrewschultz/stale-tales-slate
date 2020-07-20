@@ -722,6 +722,7 @@ The whole anti-sag sit-a-nag.
 The whole anti-sag sit-a-nag.
 
 @max
+# here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
 ##balance undos
 >past
 by one point
@@ -742,6 +743,11 @@ DEBUG: not writing lairage regalia to pad because it was already reflexed.
 >inside
 Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
 DEBUG: not writing scripture picturers to pad because it was already reflexed.
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 
 >against

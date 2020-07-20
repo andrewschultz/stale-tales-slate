@@ -46,6 +46,9 @@ You haven't gotten any points yet, so you probably want to find what sort of wor
 >bleep
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
+#preefcheck plebe
+>pf
+You can shout BLEEP at the plebe once you look more authoritative.
 
 @max
 #pre-solve-maze rule
@@ -349,6 +352,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >keyboard
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
+#preefcheck bored yak
+>pf
+You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak.
 
 @nud
 #spechelp for tsar star
@@ -754,7 +760,7 @@ No, his full name is the clue, here.
 >undo
 
 @max
-#pre-solve-maze rule
+#pre-solve-maze rule retry
 >n
 >mazeltov
 You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
@@ -763,7 +769,7 @@ by three points
 >undo
 
 @!min
-#pre-solve-maze rule
+#pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
 }}SCORE+=3
@@ -784,6 +790,9 @@ The ether turns your stomach too much to eat the crust. It's dangerous. You need
 #pre-ether-there rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
+#preefcheck ether
+>pf
+You haven't yet found the right moment to shout THERE into the ether.
 
 @nud
 >blma
@@ -1009,7 +1018,7 @@ THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
 
 >bingo
-#pre-boing-bingo rule
+#pre-boing-bingo rule retry
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 }}SCORE++
@@ -1181,6 +1190,10 @@ Phat Path
 >score
 {$SCOS}
 }}SCORE--
+#pre-hogs-not-keys rule
+>pf
+SYKE was another way around the hogs to get the keys.
+>undo
 >undo
 >undo
 
@@ -1341,7 +1354,7 @@ Dat was a good dust-up
 by one point
 !Hut! Go!
 Dat was a good dust-up
-#pre-harpings-flip rule
+#pre-harpings-flip rule retry
 >so long
 /You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
 >undo
@@ -1517,6 +1530,7 @@ The YrNet entry is secure. You wouldn't know where to start hacking it. Besides,
 >n
 
 @max
+##balance undos
 >au 2
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
@@ -1535,6 +1549,15 @@ Good idea, but tough to program without something to type on.
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+#preefcheck im le cop polemic
+>pf
+You weren't ready to COMPILE yet.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 >undo
 
@@ -1830,11 +1853,29 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@max
+#pre-peels-speel-sleep rule
+>sleep
+You haven't yet made anywhere comfortable to sleep.
+#preefcheck peels speel
+>pf
+You tried to SLEEP, but the time wasn't right.
+#pre-reboot rule
+You have nothing to type with, so it doesn't do much good.
+#preefcheck be troo e robot
+>pf
+You weren't ready for the Be-Troo E-Robot to REBOOT yet.
+
 >futon
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@max
+#pre-peels-speel-sleep rule retry
+>sleep
+Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.
 
 @mis
 #mistake retest for loca
@@ -2129,6 +2170,9 @@ by one point
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
+#preefcheck bub dude egg
+>pf
+You weren't ready to DEBUG yet.
 >undo
 >undo
 >undo
@@ -2252,7 +2296,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #scannotes for bub dude egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
-#pre-bub-dude-egg rule
+#pre-bub-dude-egg rule retry
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
 !by one point

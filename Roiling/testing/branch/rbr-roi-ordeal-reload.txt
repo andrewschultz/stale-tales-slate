@@ -873,6 +873,10 @@ by one point
 }}CURMIN++
 >score
 {$SCOMAX}
+#preefcheck respect specter
+>pf
+You can get a SCEPTER from the respect specter at any time.
+>undo
 >undo
 >undo
 }}SCORE--
