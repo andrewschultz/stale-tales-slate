@@ -71,7 +71,7 @@ sit a nag	Gast	false	350259676	--	"against"	"against"	pre-sitanag-against rule	p
 side art	side art	false	480723649	--	"astride"	"astride"	pre-side-art-astride rule	post-side-art-astride rule	"You sit right on the end of the [sit a nag], prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!'[paragraph break][gast] changes pace. You hear something in the distance. 'The WOE BOW BELL!' [Gast] moans, distracted."
 WOE BOW BELL	Rude N Nuder	false	382326203	--	"below"	"below"	--	post-below rule	"It's worth a shot. You duck below the [sit a nag]. Not actually kneeling, of course, because that would be sort of like bowing. But [Gast] decides, why not join you, just in case? After several minutes, the WOE BOW BELL stops. Perhaps there was a correlation. Perhaps not. But [Gast] has decided to change the subject, pulling out a book labeled Rude [']N Nuder and launching new complaints about how this is what Yorpwald is reduced to these days."
 Rude N Nuder	U NERD ENDUR REDUN	true	408172316	--	"under"	"under"	--	post-under rule	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something REALLY taboo under something that just gets everyone moderately uncomfortable."
-pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	--	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
+pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	--	post-pipesoot-opposite rule	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 be ova	MORF FORM	false	329930229	--	"above"	"above"	--	--	"You look up. There is a giant MORF-FORM! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with the MORF-FORM."
 MORF FORM	THE BEAN	false	250266429	--	"from"	"from"	--	--	"The MORF-FORM suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled THE BEAN.[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'"
@@ -207,13 +207,13 @@ waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You mak
 lance	lance	true	271720859	--	"clean"	"clean" or "clean lance"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."	"The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	--	--	"You channel your inner artist and make something beautiful out of the heaps."	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
 ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to. You also bury the digger, because you don't want any evidence you were the one who hid the ruby."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
-HUNTER HUNT AREA	haunter	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
+HUNTER HUNT AREA	haunter	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. Your destruction of the HUNTER HUNT AREA has brought up ... a weird sausage! You scry a cry as scary: 'My lost ruby!'[paragraph break]After it whines on for a bit, you realize you are not dealing with any old sausage, but a hard-done-by use-saga sausage. It will moan and carry on until satisfied."	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."	"The haunter/sausage reaches out to grab the pills. It is crushed! The haunter shakes its head sadly. But it seems more empathic towards you."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
 lever	lever	false	501914680	--	"revel"	"revel"	--	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 templar ramplet	templar ramplet	false	517782699	Plasm Lamps	"trample"	"trample" or "trample ramplet"	pre-trample-ramplet rule	post-trample-ramplet rule	"You give a bit of a run-up, then make a big show of walking noisily down the templar ramplet. It works! You tumble out in..."
-natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
+natant ant	natant ant	false	174205344	Tenfold Teflond Den Loft	"tan"	"tan" or "tan ant"	--	post-tan-ant rule	"Whack! Pow! 'Scum ant! Sanctum?! Can...must...must tan mutants!' After your glancing clanging, the lance turns into a red-hot hate rod and breaks in the process as the ant runs away. You completed a mini-SOS mission!"	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks and evaporates in the process. Well, it was kind of bulky, anyway."
 bogus-psalm	bogus-psalm	false	297816735	--	"psalm"	"psalm"	--	--	"Having boarded the Templar Ramplet loudly, you take some time for piety before getting back to the natant ant. Have a bonus point!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	--	post-spin-pins rule	"You fiddle with the pins, and after a bit of shifting back and forth, you hear a promising click. The dialer begins to hum again."	"The pills get caught up in the dialer, and they hook on the pins. Just the right chemical reaction dissolves the pins, and the dialer is operational again."
 bogus-redial	bogus-redial	false	335153504	Strip of Profits	"redial"	"redial"	pre-dialer-redial rule	--	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold, but after a brief interview with you, now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."	"You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
@@ -420,6 +420,8 @@ book auxiliary text and rules
 
 section ordeal reload auxiliary
 
+to check-list-realized: if number of held quest-items is 3, now list o toils is realized;
+
 this is the post-palm-lamp rule:
 	now dope op ed is in Dusty Study;
 	now bean-smell is true;
@@ -602,10 +604,14 @@ this is the post-below rule:
 this is the post-under rule:
 	moot Gast;
 	moot tirades;
-	continue the action;
+	check-list-realized;
+
+this is the post-pipesoot-opposite rule:
+	check-list-realized;
 
 this is the post-seedpit-despite rule:
 	now cravings carvings is clue-used;
+	check-list-realized;
 
 this is the post-the-bean-beneath rule:
 	if worst ad is not moot, poss-d;
@@ -643,6 +649,7 @@ to say purse-gone: now purse-stolen is true;
 
 this is the post-heat-hate rule:
 	move Race Acre to Loather Rathole;
+	now eh at heat is realized;
 
 this is the post-race-acre-care rule:
 	now player has fretful truffle;
@@ -655,6 +662,8 @@ this is the pre-spot-stop-post rule:
 
 this is the post-spot-stop-post rule:
 	now purse-stolen is false;
+	now stop post is realized;
+	if tasty sty is reflexive, poss-d;
 
 this is the bee-less-active rule:
 	if bee-score is 2:
@@ -662,6 +671,7 @@ this is the bee-less-active rule:
 		min-up;
 	else:
 		say "You're able to focus on L'Clear Cellar and how to get into it, now[if cellar is prefigured]. Maybe you could focus perfectly if you wanted, or you could just RECALL now[end if].";
+	now noun is realized;
 
 this is the pre-cellar-recall rule:
 	if bee-score is 0:
@@ -1061,7 +1071,7 @@ this is the post-calm-clam rule:
 	set the pronoun it to urn;
 
 this is the pre-sabot-boats-boast rule:
-	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
+	if frat raft is reflexed, say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...";
 	now frat raft is unfigured;
 
 this is the pre-oars-soar rule:
@@ -1105,6 +1115,7 @@ this is the post-tan-ant rule:
 	if bogus-psalm are reflexive:
 		say "[line break]And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.";
 		poss-d;
+	moot lance;
 	now Plasm Lamps is shunned;
 
 this is the pre-unearth-haunter rule:
@@ -1127,6 +1138,7 @@ this is the pre-unearth-haunter rule:
 
 this is the post-unearth-haunter rule:
 	it-him-her haunter;
+	now digger is realized;
 
 this is the post-enlarge-gleaner rule:
 	if gleaner is examined:
@@ -1214,12 +1226,14 @@ this is the post-eat-tea rule:
 
 this is the post-search-arches rule:
 	pearl-check;
+	now Achers Chaser Arches are realized;
 
 this is the pre-patrol-ol-trap rule:
 	if walleyes are not moot:
 		say "Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.";
 		preef ol trap;
 		do nothing instead;
+	moot rigged digger; [this could be in the "after" rules, but since we have a pre- rule, let's put it at the end after we made sure it was the right time.]
 
 this is the post-seek-eeks rule:
 	now Hardest Trashed Dearths is shunned;
@@ -2664,7 +2678,7 @@ Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but 
 	thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
 bad oar	"The thickness sketchins will tell you how to use the bad oar."
 raptest patters	"[one of]'Thou wit!' You don't really need the flattery, but it won't really derail you.[plus][or]It might be better to ignore them.[plus][or]Or not put up with them.[plus][or]Or do WITHOUT.[minus][cycling]"	--	"WITHOUT"
-bent ewe	"[one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling]"	--	"BETWEEN"
+bent ewe	"[if bent ewe is reflexed]Deal with the hurt hog now.[else][one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling][end if]"	--	"BETWEEN"
 hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe.[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
 yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
@@ -2811,7 +2825,7 @@ waste	"[one of]The waste puzzle is optional.[plus][or][one of]The waste is hard 
 lance	"[lance-hints]"	--	"CLEAN the lance"
 heaps	"[one of]The heaps are malleable, but they might be a pain to sift through.[plus][or]If you SHAPE the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"	--	"SHAPE the heaps"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are EEKS. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or]SEEK.[minus][cycling]"	--	"SEEK the eeks"
-aunt tuna	"Aunt Tuna is useful for talking to. She has good information[if tea at a tee is not moot]. Her food is also edible[end if]."
+aunt tuna	"Aunt Tuna may have some good information[if trout is reflexive]. However, it's more important to help Tortu the trout[end if][if tea at a tee is not moot]. Her food is also edible. You'll want to enjoy her hospitality[end if][if trout is reflexed and tea at a tee is moot]. She's given you all she has, though[end if]."
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to TEND the dent.[minus][cycling]"	--
 wipes	"[if player has wipes][one of]The wipes, unsurprisingly, help make something less dirty.[plus][or]What is something that is very dirty?[plus][or][name-the-lance].[minus][cycling][else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling][end if]"
 tea at a tee	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT the tea.[minus][cycling]"	--	"[if trout is reflexive]TUTOR Tortu the trout, then [end if]EAT the [tea]"
@@ -2824,7 +2838,7 @@ span pans	"[one of]The span pans are a five-part puzzle. You may guess the final
 shut huts	--	span pans
 tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, or crush them, ...[plus][or]...or BUST them.[minus][cycling]"	--	"BUST the tubs"
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"	--	"DROP the prod"
-rigged digger	"[if ruby is off-stage]The rigged digger is used to hide something underground and to remove something from underground, but you're not ready to do either, yet[else if player has ruby][one of]The rigged digger can hide something underground.[plus][or]There's a good candidate for hiding in your inventory. Well, not quite hiding.[plus][or]You can do something with the ruby.[minus][cycling][else][one of]The rigged digger can still be used to excavate something.[plus][or]The digger allows access to the haunter in Anger Rangere's something in Anger Range, if you use the digger right. Hint the hunter hunt area for what verb to use.[minus][cycling]"
+rigged digger	"[if ruby is off-stage]The rigged digger is used to hide something underground and to remove something from underground, but you're not ready to do either, yet[else if player has ruby][one of]The rigged digger can hide something underground.[plus][or]There's a good candidate for hiding in your inventory. Well, not quite hiding.[plus][or]You can do something with the ruby.[minus][cycling][else][one of]The rigged digger can still be used to excavate something.[plus][or]The digger allows access to the haunter in Anger Range, if you use the digger right. Hint the hunter hunt area for what verb to use.[minus][cycling]"
 sardine	"[if Paw R Wrap is off-stage]To scare the guard away, you need an item from east of Anger Range. Go there.[else if Paw R Wrap is not moot][one of]The sandier sardine seems to have ear problems.[plus][or]Have anything that might make noise?[plus][or]The Paw-R-Wrap. It's just fancy-named bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 OH NERD HERD NO	"That's just a warning you aren't welcome in the Horned Hedron."
 Achers Chaser Arches	"[if Achers Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"	--	"SEARCH the arches"
@@ -2835,7 +2849,7 @@ ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or
 pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or]SEARCH.[minus][cycling][end if]"
-gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"	--	"ENLARGE the gleaner"
+gleaner	"[if gleaner is reflexed and gleaner is not examined]EXAMINE the general gleaner, now you've enlarged it.[else if gleaner is reflexed]You've done what you needed.[else][one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling][end if]"	--	"ENLARGE the gleaner"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"
 bogus-psalm	"[one of]The plasm lamps can inspire you to do something else. Something a templar might do.[plus][or]The action for a bonus point is more commonly known as a noun, but it works as a verb, too.[plus][or]PSALM.[minus][cycling]"	--	"TAN the natant ant"
 stupid paper necklace	"The paper necklace gives a clue what to do with the yapper."
@@ -2843,7 +2857,7 @@ yapper	"[one of]The settler on cheat mode gives confusing readings here because 
 templar ramplet	"[if lance is not reflexed]You can't do what you need to with the ramplet[else if plasm lamps is visited]You can't go back up the ramplet.[else][one of]You need to storm the Templar Ramplet aggressively.[plus][or]Not just walk or run, but ...[plus][or]...TRAMPLE.[minus][cycling]"
 intercom	"The intercom is controlled by the dialer."
 jumble	"The jumble reorganizes when you set the dialer."
-pins	"[one of]There are two solutions here to get them out of the way. One is more sensible, given your inventory, but both work.[plus][or]The pins are tangled together, and you can use force or finesse.[plus][or]SPIN them, or SNIP them.[minus][cycling]"
+pins	"[one of]You need to futz with the pins to get them out of the way.[plus][or]The pins are tangled together, and they are too small to SNIP.[plus][or]SPIN the pins.[minus][cycling]"
 lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
 bogus-redial	--	dialer	"REDIAL with the dialer"
 dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can DERAIL, but what else can you have it do?[plus][or]The dialer can REDIAL after you DERAIL, though there is an in-between action, too.[minus][cycling]"	--	"DERAIL with the dialer" [end OYSTER hinting]

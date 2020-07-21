@@ -4661,7 +4661,7 @@ null it unit	true	true	false	false	"The NULL IT unit seems to leave things doubl
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 odd run on aura	true	true	false	false	"With only one ambiguous setting, the light should soon go on for you to figure where and how to go."
 admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
-thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all."
+thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all."
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
 eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
 race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
@@ -5858,11 +5858,6 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
-	if the player's command includes "hint":
-		if montage is deregioned:
-			say "1.";
-		else:
-			say "2.";
 	if the player's command includes "gt" or the player's command includes "go to":
 		say "That's not a room or thing I recognize.";
 	else:
@@ -6073,7 +6068,7 @@ Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to 
 Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
-Browse Bowers	"You are definitely going places, but you are going even better places than the Shmoe Homes. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
+Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
 Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
@@ -6089,7 +6084,7 @@ Disease Seaside	"The matterless streamlets, err, don't matter. They might even l
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
+Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south, or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
 Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
@@ -9115,15 +9110,19 @@ carry out gridxing:
 check examining the Gird Grid:
 	now gird grid is examined;
 	say "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).[paragraph break]Just type in the part you wish to examine, (case insensitive) letter or number[one of] (in the future, you can type X # for the number you want)[or][stopping].";
-	let cho be the chosen letter;
-	if cho - 32 is a uc-ascii listed in the table of griddiness: [switch to lower case]
-		now cho is cho - 32;
-	if cho is a uc-ascii listed in the table of griddiness:
-		choose row with uc-ascii of cho in table of griddiness;
-	else if cho is a num-ascii listed in the table of griddiness:
-		choose row with num-ascii of cho in table of griddiness;
+	if debug-state is false:
+		let cho be the chosen letter;
+		if cho - 32 is a uc-ascii listed in the table of griddiness: [switch to lower case]
+			now cho is cho - 32;
+		if cho is a uc-ascii listed in the table of griddiness:
+			choose row with uc-ascii of cho in table of griddiness;
+		else if cho is a num-ascii listed in the table of griddiness:
+			choose row with num-ascii of cho in table of griddiness;
+		else:
+			say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
 	else:
-		say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
+		say "Skipping the number choosing in debug mode, so tests can run.";
+		the rule succeeds;
 	if there is a reg-match entry:
 		if reg-match entry is solved or reg-match entry is bypassed, say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel [if reg-match entry is bypassed]relieved you didn't have to deal with that[else]pleased with what you fixed[end if]." instead;
 	say "[reg-blurb entry][line break]";
@@ -9884,7 +9883,7 @@ lairage regalia	routes	"You can go ACROSS the lairage regalia to Oscar's SOS Arc
 adsorbing signboard	routes	"You can go PAST the adsorbing signboard to Pat's Stap [now-gast-gone]."
 worst ad	routes	"You can go TOWARDS the worst ad [now-gast-gone]."
 hurt hog	routes	"You can go THROUGH [now-if-dealt of bent ewe] you've managed to deal with the bent ewe."
-stop post	troves	"You can SPOT [now-if-dealt of sob ever verbose] you can focus better." [troves]
+stop post	troves	"You should SPOT [now-if-dealt of sob ever verbose] you're able to focus better." [troves]
 l clear cellar	troves	"You can RECALL the cellar [now-if-scored of bee-score] you're a little less distracted."
 LEAD	troves	"You can DEAL [now-if-scored of bedroom-solve] you've gotten an emotional boost."
 trance nectar	troves	"You can RECANT [now-if-scored of mbb-sis-points] you feel less watched."
@@ -9904,7 +9903,7 @@ crate	oyster	"You can REACT to the crate better [now-if-dealt of bogus-trace] yo
 skis	oyster	"You can KISS the skis [now-if-dealt of bogus-trace] you are less distracted."
 span pans	oyster	"You can SNAP to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
 ruby	oyster	"You need to figure how and where to BURY the ruby."
-ol trap	oyster	"You can PATROL to find the old trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
+ol trap	oyster	"You can PATROL to find the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
 dialer	oyster	"You can use the dialer to DERAIL [now-if-dealt of papery yapper] the papery yapper is gone."
 bogus-redial	oyster	"You can REDIAL the dialer [now-if-dealt of pins] the pins are not in your way."
 lance	oyster	"You'll want to CLEAN the lance [now-once of whether or not player has wipes] you have something to wash it with."
@@ -11435,7 +11434,7 @@ printed name of mess up spumes is "mess-up spumes".
 
 book Sonancy Canyons
 
-Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else]With the raptest patters gone, you can probably LISTEN better[end if].[paragraph break]Spheric ciphers surround you and prevent passage out. [if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise and also provides a small break in the ciphers[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if].". roomnud of sonancy canyons is table of sonancy canyons nudges.
+Sonancy Canyons is a room in Routes. "[if patters are in Sonancy Canyons]Raptest patters spatter, distracting you from your goal[else if hurt hog is not moot]With the raptest patters gone, you can probably LISTEN better[else]There can't be much left to do since you helped the hog and ewe[end if].[paragraph break]Spheric ciphers surround you and prevent passage out. [if yob den is in Sonancy Canyons]The yob den nearby now provides most of the noise and also provides a small break in the ciphers[else if hurt hog is reflexive]A hurt hog mumbling 'Urgh! Hot!' and a bent ewe moaning 'We be TEN!' block your progress ahead[else]The hurt hog and bent ewe are gone now. But there is red writing in their place[end if].". roomnud of sonancy canyons is table of sonancy canyons nudges.
 
 chapter hurt hog
 
@@ -14251,7 +14250,7 @@ this is the bore-cascade rule:
 	if current action is taking, say "Saccade Cascade drips through your fingers. You blink." instead;
 	if current action is entering, say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll appropriately avoid, or use, those sabot boats." instead;
 
-check going north in Disease Seaside: "You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents." instead;
+check going north in Disease Seaside: say "You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents." instead;
 
 section frat raft
 
@@ -14510,28 +14509,37 @@ understand "ghost" as haunter when haunter is touchable.
 
 a-text of haunter is "YRRYYRY". b-text of haunter is "YRRYGPG". parse-text of haunter is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". haunter is cheat-spoilable.
 
-check going when location of haunter is location of player: if haunter is reflexive, say "Running would be an admission of guilt. That sausage needs to hear good words." instead;
+this is the wrong-haunter-direction rule:
+	if player is in lapsin plains and noun is not west, say "That'd be leading away from where you buried the ruby." instead;
+	if player is in sclerous closures and noun is not north and noun is not inside, say "No, you need to keep moving towards the Horned Hedron." instead;
+	if player is in horned hedron:
+		if noun is inside, say "Hmm. That might cause some chaos, but too much might alert Elvira. You probably want to finish the frame job you started." instead;
+		if noun is not west, say "You're close to where you buried the ruby. Finish the frame job." instead;
+
+check going when location of haunter is location of player:
+	if haunter is reflexive, say "Running would be an admission of guilt. That sausage needs to hear good words." instead;
+	abide by the wrong-haunter-direction rule;
 
 every turn (this is the track haunter rule):
-	if haunter has been in Anger Range:
-		if location of haunter is adjacent to location of player:
-			say "The haunter follows you.";
-			move haunter to location of player;
-			if location of player is Horned Hedron and walleyes are in Horned Hedron:
-				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
-				the rule succeeds;
-			if location of player is Rascal Craals:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
-				moot walleyes;
-				moot haunter;
-				moot thin hint;
-				move shoer osher to Anger Range;
-				move player to Horned Hedron;
-				now Rascal Craals is shunned;
-				reg-inc;
-				the rule succeeds;
-		else if haunter is touchable:
-			say "The haunter moans impatiently and shifts restlessly, hoping to be led somewhere[one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!";
+	if haunter is moot or haunter has not been in Anger Range, continue the action;
+	if location of haunter is adjacent to location of player:
+		say "The haunter follows you.";
+		move haunter to location of player;
+		if location of player is Horned Hedron and walleyes are in Horned Hedron:
+			say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
+			the rule succeeds;
+		if location of player is Rascal Craals:
+			say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+			moot walleyes;
+			moot haunter;
+			moot thin hint;
+			move shoer osher to Anger Range;
+			move player to Horned Hedron;
+			now Rascal Craals is shunned;
+			reg-inc;
+			the rule succeeds;
+	else if haunter is touchable:
+		say "The haunter moans impatiently and shifts restlessly, hoping [if haunter is reflexive]for a single kind word[else]to be led somewhere[end if][one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!";
 
 [of such extreme action that you may wind up using extra nouns at your own risk]
 
@@ -14667,13 +14675,14 @@ the paler pearl is an undesc. description is "It might be valuable if it weren't
 
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][else]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
-after examining gleaner when player is in end den and gleaner is reflexed:
-	say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
-	move player to Tenfold Teflond Den Loft;
-	continue the action;
-
-after examining gleaner when end den is visited and Tenfold Teflond Den Loft is not visited:
-	say "You take note of the way through, so you don't wind up back in the End Den next time.";
+after examining gleaner when gleaner is not realized and gleaner is reflexed:
+	now gleaner is realized;
+	if player is in end den and gleaner is reflexed:
+		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
+		move player to Tenfold Teflond Den Loft;
+		now gleaner is realized;
+	else if end den is visited and Tenfold Teflond Den Loft is not visited:
+		now gleaner is realized;
 	continue the action;
 
 after printing the name of the general gleaner while taking inventory:
@@ -14689,10 +14698,8 @@ to say are-were-hedron: say "[if player is in end den]are[else]were[end if]"
 
 a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
-find-base is a truth state that varies.
-
 to say oy-can-win:
-	now find-base is true;
+	now gleaner is realized;
 	if aunt-tuna-cross is true and wipes are in lean lane, say ", but it's dimmed, as if the place is off-limits"
 
 chapter enlargeing
@@ -14912,7 +14919,7 @@ The lever is reflexive LLPish boring scenery. description of lever is "You're qu
 a-text of lever is "RYRYR". b-text of lever is "RGPGR". parse-text of lever is "x[sp]e[sp]v[sp]e[sp]x". lever is parse-spoilable.
 
 this is the bore-lever rule:
-	if current action is pushing or current action is pulling or current action is taking, say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead; [??check pulling lever/check pushing lever]
+	if current action is pushing or current action is pulling or current action is taking, say "You try to pull it, but it seems stuck. EVL-ER and EVL-ER, you muse to yourself. [if lever is reflexed]But you had your fun[else]Yet, there may be a way to have fun[end if]." instead; [??check pulling lever/check pushing lever]
 
 check exiting in Tenfold Teflond Den Loft:
 	say "You could finish things off now, but hey, you can always find your way back easily enough.";
@@ -14922,7 +14929,7 @@ chapter pins
 
 [?? if player has pills then reg-inc]
 
-some pins are reflexive boring plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in.". bore-text of pins is "You need to get the pins out of the way, but don't worry, it's pretty simple.". bore-check of pins is bore-pins rule.
+some pins are vanishing boring plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in.". bore-text of pins is "You need to get the pins out of the way, but don't worry, it's pretty simple.". bore-check of pins is bore-pins rule.
 
 this is the bore-pins rule:
 	if current action is sniping or current action is spining, now boring-exception is true;
@@ -15239,7 +15246,7 @@ to say mr-miss: say "[if player is male]Mr.[run paragraph on][else]Miss[end if]"
 
 to say heepy: say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
-Shuttle Hutlets is inside of Lapsin Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside.". roomnud of Shuttle Hutlets is table of Shuttle Hutlets nudges.
+Shuttle Hutlets is inside of Lapsin Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're, [uaah]. A big one[stopping]. [if digger is off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside.". roomnud of Shuttle Hutlets is table of Shuttle Hutlets nudges.
 
 understand "hut" and "huts" and "hutlet" as Shuttle Hutlets.
 
@@ -15349,7 +15356,9 @@ book Sclerous Closures
 
 Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if Achers Chaser Arches is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are so many hidden places you could ambush someone from[end if][if Achers Chaser Arches is reflexive and sardine is moot] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is moot], as well as north[hedron-if-v][end if]. You see a handsome sand home beyond the sclerous closures that block the way south and west.". roomnud of Sclerous Closures is table of Sclerous Closures nudges.
 
-check going in Sclerous Closures: if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
+check going in Sclerous Closures:
+	if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
+	if noun is inside, try going north instead;
 
 the handsome sand home is bounding boring scenery in Sclerous Closures. description of handsome sand home is "It's definitely not mean-shod. But you probaby don't want to disturb a private residence.". bore-text of handsome sand home is "There's not much to do with the handsome sand home.". bore-check is the bore-handsome-sand-home rule.
 
@@ -15479,7 +15488,7 @@ check going north in Horned Hedron:
 check entering pol art portal:
 	if ruby is not moot, say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
 	if walleyes are in Horned Hedron, say "Not with those walleyes waiting and watching." instead;
-	if find-base is true:
+	if gleaner is realized:
 		say "You make your way [if Tenfold Teflond Den Loft is visited]back to the Tenfold Teflon'd Den Loft[else]through the portal maze, guided by what you remember from the gleaner. You wind up somewhere important and final-looking[end if].";
 		move player to Tenfold Teflond Den Loft instead;
 	else:
@@ -21488,16 +21497,22 @@ check objhinting (this is the sort out generic hintables rule):
 	if noun is deregioned, say "[if debug-state is true][noun] [location of noun]: [end if]Nothing like that is in the immediate vicinity or region." instead;
 	abide by the hint-toggle-warn rule;
 
+definition: a thing (called th) is shunloc:
+	if location of th is shunned, yes;
+	no;
+
 this is the hint certain object groups rule:
 	if noun is the location, all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
+	if noun is a room, say "There are no hints available on rooms in general. You can go to a room and HINT, instead." instead;
 	if noun is a portal and noun is not solid idols, all-say "You can just enter [the noun]." instead;
 	if noun is unimportant, all-say "[noun]: [if noun is plural-named]That is[else]Those are[end if]n't needed to solve the game." instead;
 	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
 	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
-	if noun is realized, all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
+	if noun is realized, all-say "Nothing more for you to do with [if noun is plural-named]those[else]that[end if]." instead;
 	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
 	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
+	if noun is shunloc, all-say "You don't need to go back where that is." instead;
 	if noun is a badbook, all-say "[if yak is moot][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is a fruit and player has noun, all-say "[frootz]" instead;
 	if noun is not a backdrop and noun is not scenery:
@@ -21661,7 +21676,7 @@ to say n-o:
 check objhinting a quest-item when mrlp is routes (this is the redirect hints in routes rule) :
 	if Cleric Circle is unvisited, say "You shouldn't know about [the noun] yet." instead;
 	if list o toils is unexamined, say "[if noun is pipe soot]The pipe soot from the ashtray[else]That[end if] is one of the items on the list you haven't examined yet. In the Cleric Circle." instead;
-	if noun is held, say "[The noun] is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]." instead;
+	if noun is held, say "[The noun] [if list o toils is examined]is part of the spiers['] potion that will help let people see directions again[else]has a use, as a reagent of some sort, but maybe you haven't examined anything you need[end if]. Since you found it, you don't need to do anything else with it." instead;
 
 to say sitter-ok: say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 

@@ -778,6 +778,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "intercom"	587573599	intercom	--	"[i-com]."
 "not"	246370103	intercom	--	"Changing the intercom to a ton-crime intercom would be the opposite of what you want to do."
 "crime"	341203496	intercom	--	"[i-com]."
+"spin"	291640279	--	pins-moot rule	"You don't need to bring the pins back."
 
 chapter towers nudges
 
@@ -1953,6 +1954,10 @@ to say ache-plur: say "[if arches are reflexive]There's not just one arch, there
 to say its-msg: say "You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper"
 
 to say i-com: say "The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead"
+
+this is the pins-moot rule:
+	if pins are moot, the rule succeeds;
+	the rule fails;
 
 section towers auxiliary
 
