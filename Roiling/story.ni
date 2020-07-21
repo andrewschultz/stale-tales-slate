@@ -113,6 +113,10 @@ section game specific testing includes - not for release
 
 include STS tests by Andrew Schultz.
 
+section undefine DEBUG
+
+understand the command "debug" as something new.
+
 chapter region specs
 
 a region has a number called max-score. a region has a number called min-score.
@@ -4000,7 +4004,7 @@ to intro-restore-skip:
 
 when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
-	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of solved regions][close bracket][end if]";
+	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of rank-increasing regions][close bracket][end if]";
 	if read-intro is false, continue the action;
 	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
 	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
@@ -4059,6 +4063,7 @@ carry out requesting the score:
 				say ". BUG: your final action should score the final point in this region";
 		else:
 			if mrlp is not solved and possibles is true:
+				if min-score of mrlp > poss-score of mrlp and debug-state is true, say ". Somehow the region's minimum possible score is higher than your current minimum score. This is a BUG";
 				if min-score of mrlp < poss-score of mrlp:
 					say "[lomax of mrlp]";
 				else:
@@ -4117,7 +4122,11 @@ rank-name
 
 to say lomax of (re - a region): say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
-to check-guru: if did-guru is false and fruits-left is 0, say "[line break]Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you [if Gates Stage is unvisited]figure out what to do north of Swell Wells[else]enter the Valence Enclave north of [here-there of Gates Stage][end if]."
+to decide whether guru-bonus-forced:
+	if got-forced-others-min is false and did-guru is false and fruits-left is 0 and s-i are not off-stage, yes;
+	no;
+
+to check-guru: if guru-bonus-forced, say "[line break]Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you [if Gates Stage is unvisited]figure out what to do north of Swell Wells[else]enter the Valence Enclave north of [here-there of Gates Stage][end if]."
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
@@ -7617,9 +7626,6 @@ carry out retrying:
 	if nestor is in Strip of Profits or tokers are in Strip of Profits, say "Fortunately, [if tokers are not in strip]Nestor didn't see[else]none of the tokers saw[end if] you zap back, or you'd probably be forced to explain things, which would take a while.";
 	the rule succeeds;
 
-to say rs-left: [unused]
-	say "[7 - number of solved regions in words] region[if number of solved regions is 5]s[end if] left";
-
 a thing can be warpable. a thing is usually not warpable.
 
 to say get-arug: now player has arugula;
@@ -7684,6 +7690,7 @@ check fliptoing (this is the see about flipping touchable things rule):
 		if noun is a portal, try entering noun instead;
 		if noun is reflexive or noun is vanishing, continue the action;
 		if noun is gast-affected, continue the action; [this is an odd case where we want gast's presence to stop you getting away, but we also want to add your try to PAD FLIPS if it isn't there]
+		if noun is reflexed, say "You did what you needed to with [the noun]. A repeat with it around won't do anything.";
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
 		say "(examining)[line break]";
 		try examining noun instead;
@@ -7836,8 +7843,8 @@ after fliptoing (this is the fruit cue rule):
 	unless noun is a fruit, continue the action;
 	let another-break be false;
 	let ncf be number of carried fruits;
-	if ncf > 5 and remainder after dividing ncf by 3 is 0:
-		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
+	if ncf > 5 and remainder after dividing ncf by 4 is 2:
+		say "You can carry all those fruits in your super purse without them getting mushed, but they are piling up. If you can't find a way to make any more fruits, maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 		now another-break is true;
 	let frr be frroom of noun;
 	repeat with myf running through fruits:
@@ -7846,7 +7853,7 @@ after fliptoing (this is the fruit cue rule):
 				d "[myf] still to do.";
 				continue the action;
 	if another-break is true, say "[line break]";
-	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. [if number of fruit-to-find fruits is 0]Maybe there's more to do elsewhere[else]In fact, you are pretty sure you've found all the fruits[end if].";
+	say "You look around and don't see any way to [if player is in Clangier Clearing]bargain for[else]pick off[end if] more fruits here. [if number of fruit-to-find fruits > 0]Maybe there's more to do elsewhere[else]In fact, you are pretty sure you've found all the fruits[end if].";
 	continue the action;
 
 the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
@@ -8696,7 +8703,7 @@ check going inside in Largely All Grey Gallery:
 
 book Carven Cavern
 
-Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
+Carven Cavern is an innie room in Ordeal Reload. "This is an oddly carved cavern. [if plates are in Carven Cavern and plaster is in Carven Cavern]Palest pastel plates sit on a plaster psalter[else if plates are in Carven Cavern]Palest pastel plates lie here[else if plaster is in Carven Cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is moot]The curtain no longer blocks passage in to, well, wherever IN leads[else if curtain-know is true]The Act-Ruin Curtain blocks passage[else if curtain is in Carven Cavern]An act-ruin curtain may be covering up a passage[else]It looks like there could be something behind the psalter[end if]. You probably don't want to go back outside, even if you found a way.". roomnud of carven cavern is table of carven cavern nudges.
 
 after looking in Carven Cavern (this is the pronouns for cavern rule):
 	if palest pastel plates are in Carven Cavern, set the pronoun them to palest pastel plates;
@@ -12326,7 +12333,7 @@ printed name of yak is "bored yak"
 
 every turn (this is the leaf-yak rule):
 	if yak is not on skid and leaf is on skid and skid is touchable and yak is touchable:
-		say "The yak perks up, walks over and onto the skid, and starts munching away.";
+		say "The yak perks up, walks over and onto the skid, and starts munching away at the leaf.";
 		now yak is on skid;
 
 the yak wears a drab yoke.
@@ -12464,7 +12471,7 @@ carry out plainthrowing:
 
 section tsar star
 
-a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is mired in some tars here. You might be able to take it, if you can bounce back correctly from your first few failures to."
+a tsar star is a reflexive wearable thing in Char Arch. "A tsar star--the sort you pin to your clothes to show authority--is mired in some tars here. You might be able to take it, if you are in the right emotional state: not too confident, not too despondent."
 
 a-text of tsar star is "RYRR". b-text of tsar star is "RYRR". parse-text of tsar star is "x[sp]a[sp]x[sp]x". tsar star is cheat-spoilable.
 
@@ -12497,6 +12504,7 @@ after looking in Dirge Ridge:
 
 check going north in Dirge Ridge:
 	if Leo is fightin or Rand is fightin, say "You're able to run away. [if Rand is in Dirge Ridge]Leo's down, and Rand's only interested in his turf, maybe protecting his new friend[else]Leo doesn't seem up to chasing you, so maybe he's not a real bad guy[end if].";
+	if Leo is eager and sods gone odes song is not moot, poss-d;
 
 check going to Dirge Ridge for the first time: say "A rather big fellow has his back to you, wishfully blubbing 'Oblige Big Leo. I want a twin.' He turns around and sees...you, a lot smaller than him. 'Sneak! Snake!' Leo runs at you! He's a bit slow, fortunately. But he's a bit mad you caught him in a less-than-macho moment."
 
@@ -12667,7 +12675,7 @@ book Marines Seminar Remains
 Marines Seminar Remains is east of Grey Gyre. Marines Seminar Remains is in Presto. "The only way out is back west. The sport ports in the other directions indicate this WAS a busy seminar, but you aren't and won't be equipped to get through them[if popgun is not in Marines Seminar Remains]. Nothing's left, now that you took the popgun[end if].". roomnud of Marines Seminar Remains is table of Marines Seminar Remains nudges.
 
 after printing the locale description for Marines Seminar Remains when Marines Seminar Remains is unvisited:
-	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to lobby for his amnesty once Elvira's out of the way.";
+	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know the plebe's name. You resolve to do what you can to lobby for amnesty once Elvira's out of the way.";
 	continue the action;
 
 chapter PG-on-up popgun
@@ -13205,9 +13213,11 @@ understand "a drive" as drive a.
 
 a-text of drive a is "YRYRYR". b-text of drive a is "?R?R?R". parse-text of drive a is "?[sp]x[sp]?[sp]x[sp]?[sp]x".
 
-does the player mean inserting the disk into Drive A: it is likely.
+does the player mean inserting the disk into Drive A: it is very likely.
+does the player mean inserting the disk into Drive E: it is likely.
 
-does the player mean doing something with Drive A: it is likely.
+does the player mean doing something with Drive A: it is very likely.
+does the player mean doing something with Drive E: it is likely.
 
 check opening Drive A: say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive." instead;
 
@@ -16258,6 +16268,7 @@ check inserting into rapier repair machine:
 	now player has the I ZOMG Gizmo;
 	moot ragged dagger;
 	set the pronoun it to I ZOMG Gizmo;
+	now rapier repair is realized;
 	reg-inc instead;
 
 chapter repairing
@@ -16341,7 +16352,7 @@ to decide which number is grad-points: [?? we could possibly convert this into h
 	decide on temp;
 
 to say grad-by-points:
-	say "[if grad-points < 2]This place is quite messy and busy[else if grad-points is 2]There's a lot to clean up here[else if grad-points is 3]You've got a bit you can clean up here[else if grad-points is 4]This place was a lot busier before you started hacking through it[else if grad-points is 5]You've got very little left to do here[else]This place was busy once, but you fixed that with your mad skills[end if]"
+	say "[if grad-points < 2]This place is quite messy and busy[else if grad-points is 2]There's a lot to clean up here[else if grad-points is 3]You've got a bit you can clean up here[else if grad-points is 4]This place was a lot busier before you started hacking through it[else if grad-points is 5]You've got very little left to do here[else]This place was busy once, but you fixed that with your mad skills[end if][if arid den is unvisited and denim is moot]. You made a way down through the denim. It may not lead anywhere really important, but it might be nice if you like challenge for its own sake[end if]"
 
 to say we-g: say "weeds swaying, despite no wind,"
 
@@ -16394,7 +16405,8 @@ description of ragged dagger is "It can't shag much less gash. For cutting, it's
 does the player mean doing something with repeat button when repeat button is not touchable: it is unlikely.
 
 this is the saver-check rule:
-	if lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
+	if lone duck is friendly, say "Don't mess with the raves saver while the duck is following you." instead;
+	if lone duck is returned or lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
 	if across-leak-lake, say "The saver got bumped around too much when you crossed Leak Lake. Well, you got good use out of it." instead;
 	if saver is touchable and player does not have saver, try silently taking raves saver;
 
@@ -16440,8 +16452,10 @@ check pushing repeat button:
 	if raves saver is yow-yell and duck is touchable, say "The duck seems to walk forward but gets scared by the volume and rapidity of the noise." instead;
 	if raves saver is yow-talk and duck is touchable:
 		if duck is friendly, say "You've already got the duck's attention." instead;
-		say "The duck perks up. It recognizes Dr. Yow's voice! It gives a hankering honk.";
-		now duck is friendly instead;
+		say "The duck perks up. It recognizes Dr. Yow's voice! It gives a hankering honk and comes closer to you and the sound of Dr. Yow's voice.";
+		now duck is friendly;
+		now raves saver is realized;
+		the rule succeeds;
 	say "[if raves saver is silent]Silence. Nothing has been recorded, yet.[else if raves saver is yow-yell]You hear someone yelling.[else if raves saver is ducky]Quack, quack.[else if raves saver is goosey]Honk, honk.[else]You hear Dr. Yow talking.[end if]" instead;
 
 after going somewhere (this is the duck-follows-you rule):
@@ -16593,7 +16607,7 @@ check giving hintpastry to Dr Yow: say "[he-she-c] doesn't seem hungry." instead
 
 check giving hintpastry to duck: say "It turns away as if to say, yuck." instead;
 
-check giving raves saver to agnostic: say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That won't help the agnostic build anything.[stopping]" instead;
+check giving raves saver to agnostic: say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That isn't a useful tool for the agnostic to build anything.[stopping]" instead;
 
 before giving something to Dr Yow when Dr Yow is in prison ropins: say "Nothing fits through the prison ropins." instead;
 
@@ -16611,9 +16625,10 @@ to say heat-remain:
 
 check giving gizmo to agnostic:
 	if Dr Yow is moot:
-		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in Topside Deposit[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
+		say "[he-she-c] takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in Topside Deposit[end if]--the toaster would've caused an electric shock in the water anyway. And you won't be needing the raves saver, either. After frantic craftin['], the spare parts just allow [him-her] to craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
 		now agnostic has gizmo;
 		moot toaster;
+		moot raves saver;
 		now bot boat is in Actionless Coastlines;
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
@@ -17023,7 +17038,7 @@ understand "unorg" and "unorg ground" as unorgd ground.
 
 section strudel
 
-some strudel is a LLPish reflexive hintpastry in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+some strudel is a LLPish reflexive hintpastry in Fringe Finger. it is singular-named. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents['] cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
@@ -17431,7 +17446,7 @@ the shoals aslosh are a useless boring plural-named backdrop. they are in Salted
 
 book Dire and Arid Den
 
-there is an outie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]Some Nerd-Aid lies here, but the bottle is empty. Of course it is."
+there is an outie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here."
 
 section bogus-dandier
 
@@ -17559,7 +17574,7 @@ every turn when traipse pirates are touchable:
 		decrement pirate-countdown;
 	else:
 		if a random chance of 1 in 5 succeeds:
-			say "A pirate swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
+			say "One of the pirates swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
 			now pirate-countdown is 3;
 
 a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
@@ -18640,7 +18655,7 @@ check taking bleary barley: say "Your inventory doesn't expand infinitely." inst
 
 chapter nude dune
 
-the nude dune is useless boring scenery. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
+the nude dune is boring bounding scenery. description of nude dune is "It is impressive and blocks your way east.". bore-check of nude dune is bore-dune rule. bore-text is "The dune is just there, blocking your way east. And you don't need to go east.".
 
 this is the bore-dune rule:
 	if current action is entering, say "That would END U. See what I did there?" instead;
@@ -19726,11 +19741,19 @@ after choosing notable locale objects when player is in Rustic Citrus:
 
 fruits-flipped is a number that varies.
 
+got-forced-others-min is a truth state that varies.
+
+this is the force-others-final-point rule:
+	if guru-bonus-forced:
+		say "[line break]You've done enough work. You deserve to know, for future reference, your final bonus point on completing this journey will be for not using the arugula.";
+		now got-forced-others-min is true;
+		min-up;
+
 after fliptoing a fruit (this is the check minimum fruits and score rule) :
 	if player is in Rustic Citrus:
 		coin-eval;
 	check-fruit-min;
-	if fruits-flipped is number of fruits and arugula is not moot, min-up;
+	process the force-others-final-point rule;
 	continue the action;
 
 to check-fruit-min:
@@ -19739,7 +19762,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if]."
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
 
 for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
 
@@ -19761,7 +19784,7 @@ a border arbored is boring scenery in Rustic Citrus. printed name of a border ar
 
 for printing a locale paragraph about a generic-rut-pre (called pr) in Rustic Citrus:
 	if pr is not mentioned:
-		say "The circuits ruts also turned up [list of touchable generic-rut-pres].";
+		say "The circuits ruts also turned up [a list of touchable generic-rut-pres].";
 		now all generic-rut-pres are mentioned;
 
 chapter augural arugula
@@ -19947,6 +19970,14 @@ to decide which number is curtis-level:
 	if moot-fruit < 20, decide on 3;
 	decide on 4.
 
+curtis-award-level is a number that varies.
+
+to decide which number is room-fruits-left of (rm - a room):
+	let temp be 0;
+	repeat with myf running through fruits:
+		if frr of myf is rm, increment temp;
+	decide on temp;
+
 to coin-eval:
 	if number of touchable fruits is 0, continue the action;
 	let temp be curtis-level;
@@ -19963,6 +19994,7 @@ to coin-eval:
 	if curtis-level > temp:
 		repeat through table of coingiving:
 			if levb4 entry is temp and levaf entry is curtis-level:
+				now curtis-award-level is levaf entry;
 				say "[line break][blabber entry][line break]";
 				if get-token entry is 1:
 					now player has tekno token;
@@ -19990,7 +20022,10 @@ to coin-eval:
 				if get-dollar entry is 1:
 					now player has droll dollar;
 					set the pronoun it to droll dollar;
-				continue the action;
+				break;
+		if player has tekno token and room-fruits-left of Clangier Clearing is 0:
+			say "[line break]You also hand Curtis back the Tekno-Token, since you got everything from the Clangier Clearing."'
+			moot tekno token;
 
 chapter dollar
 
@@ -20150,7 +20185,7 @@ after printing the locale description for Swell Wells:
 		now miser ruble is in Swell Wells;
 	continue the action;
 
-the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down[else]down somewhere new[end if] [what-on-mound]."
+the un mod mound is scenery in Swell Wells. "It's a way [if Scape Space is visited]back down to the scape space[else]down somewhere new[end if][what-on-mound]."
 
 to decide what number is mound-writing:
 	decide on touch-val of stucco + touch-val of stucco + touch-val of PSA Elp;
@@ -20160,9 +20195,9 @@ to say what-on-mound:
 		say ". Many weird and uninterersting things are written on the mound. None are helpful any more. You got enough from it";
 		continue the action;
 		say ". [if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound";
-	if stucco is in swell wells, say ".[line break]There's an advertisement in red for [stucco-ad].";
-	if sorer bogey is in swell wells, say ".[line break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
-	if PSA Elp is in swell wells, say ".[line break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail";
+	if stucco is in swell wells, say ".[paragraph break]There's an advertisement in red for [stucco-ad].";
+	if sorer bogey is in swell wells, say ".[paragraph break]'Ye borers, go!' is written in red. The sorer bogey seems a bit louder as you read this.";
+	if PSA Elp is in swell wells, say ".[paragraph break]There's [if mound-writing > 1]also [end if]some PSA [']Elp (in red) you could read in more detail";
 
 to say what-clear:
 	if sorer bogey is not in Swell Wells and stucco is not in Swell Wells:
@@ -20309,6 +20344,9 @@ check going north in Gates Stage:
 		now player has fleeing feeling;
 	if gate-level is 0, say "You try to sneak through--you're backstage at the Valence Enclave! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	if gate-level is 1, say "[one of]You try to sneak into the Valence Enclave, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
+	if player has tekno token:
+		say "You have a thought as you sneak in--give Curtis his Tekno-Token back first. Complete transparent honesty and all that.[paragraph break]";
+		moot tekno token;
 	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Valence Enclave. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fly-Heart Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragement spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.[paragraph break]Congratulations, REPIREVAL PREVAILER!";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
@@ -20355,7 +20393,9 @@ a thing can be final-puz. a thing is usually not final-puz.
 
 check giving a final-puz thing to when mrlp is others:
 	if second noun is storage, try inserting noun into second noun instead;
-	if second noun is curtis, say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
+	if second noun is curtis:
+		if noun is tekno token, say "Curtis declines. 'Once you're all done, I trust you to give it back to me.'" instead;
+		say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
 	if second noun is len craig, say "[if noun is tekno token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
 	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter, say "[second noun] is probably interested in something much more obviously valuable." instead;
 	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
@@ -20501,7 +20541,9 @@ chapter reviewing
 
 book Clangier Clearing
 
-check going east in swell wells: if player does not have tekno token, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
+check going east in swell wells:
+	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
+	if tekno token is moot, say "You bartered for everything you could inthe Clangier Clearing." instead
 
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
 
@@ -20546,7 +20588,7 @@ after fliptoing when player is in Clangier Clearing:
 	if noun is a fruit or noun is prices precis, increment clearing-fruits;
 	continue the action;
 
-a tekno token is an improper-named thing. description of tekno token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno token. printed name of tekno token is "Tekno-Token".
+a tekno token is an improper-named thing. description of tekno token is "Functionally, it's a credit card. Or a debit card.[paragraph break]It bears the stamp of OKNet, Yorpwald's most trusted purveyors of electronic currency transactions. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". printed name of tekno token is "Tekno-Token".
 
 the prices precis is reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
@@ -21665,10 +21707,14 @@ to say in-hovels:
 	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shuttle Hutlets and lance is off-stage] that might be buried under here[else if player is in Shuttle Hutlets] like that lance, with the right verb[else] in a dingier area than this[end if]";
 
 to say up-to-l3:
-	unless droll dollar is off-stage:
+	if fruits-left is 0:
+		say "has gotten all the fruits you could find";
+	else if droll dollar is not off-stage:
 		say "can only take everything you find, now";
-		continue the action;
-	say "[if curtis-level is 0]needs more fruit for your first reward[else if coin is off-stage]has a reward for you[else if curtis-level is 1]needs more fruit for your second reward[else if coins is off-stage and icons is off-stage]has a second coin for you[else if curtis-level is 2]still needs a few more fruits[else]has not just a coin but a bill[end if]"
+	else if curtis-level is not curtis-award-level:
+		say "has payment for you";
+	else:
+		say "needs more fruit before your next reward";
 
 to say n-o:
 	say "[if atblock is reflexed]now[else]once[end if]";
@@ -21739,9 +21785,9 @@ heaps	"I can't give any artistic advice. They're--good enough, I guess. Better t
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
 gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if Plasm Lamps is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
-turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
-blaster	"You fixed the blaster. Now maybe try the turbos."
-Tetris Sitter	"Now St. Teri's sick of Tetris, [if top opt pot is moot]and you gave her a gift, she can help[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
+turbos	"You fixed the turbos. [if blaster is reflexed]The blaster, too. You can just ENTER BOAT[else]Now maybe try the blaster[end if]." [start TOWERS]
+blaster	"You fixed the blaster. [if blaster is reflexed]The turbos, too. You can just ENTER BOAT[else]Now maybe try the turbos[end if]."
+Tetris Sitter	"Now St. Teri's sick of Tetris, [if top opt pot is moot]and you gave her a gift, she can help. ASK her about the palace, and when you get outside, there'll be a new clue item[else]maybe you can give her a priceless gift of sorts instead[end if]." [end TOWERS]
 bleary barley	"You've cut it down enough. Who needs that much barley anyway?" [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
@@ -22494,7 +22540,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
 		if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said WHAT to the Hawt Thaw.";
-		if starch charts are not reflexed, say "[2drm of Saps Pass]you could've made the starch charts TRASCH.";
+		if starch charts are not moot, say "[2drm of Saps Pass]you could've called the starch charts TRASCH.";
 		if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become ROM STICKS.";
 		if TBA key is reflexive, say "[2drm of Hacks Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a CASSEROLE.";
@@ -22546,12 +22592,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
 		if natives site van is not moot, say "[2dmiss of myreg]the [site van] in [danger garden] could've been turned NAIVEST or VAINEST.";
 		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
-		if mended mini denim is not moot, say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
+		if mended mini denim is not moot:
+			say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
+			if arid den is unvisited, say "[2dmiss of myreg]there was a Dire and Arid Den below the denim. [one of]Type MISSES again to see how to escape[or]You would've gotten out by feeling DANDIER[stopping].";
 		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
+		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:

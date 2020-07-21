@@ -707,16 +707,16 @@ to say f-and-rev of (fr - a fruit):
 carry out fruiing:
 	if mrlp is not others, say "Fruit tracking is not useful outside the others region." instead;
 	repeat with fru running through moot fruits:
-		say "[f-and-rev of fru] has been returned to Curtis. From room = [frroom of fru].";
+		say "[f-and-rev of fru] returned to Curtis. From room = [frroom of fru].";
 	if number of moot fruits > 0, say "========================================[line break]";
 	repeat with fru running through off-stage fruits:
-		say "[f-and-rev of fru] is still off-stage. From room = [frroom of fru].";
+		say "[f-and-rev of fru] still off-stage. From room = [frroom of fru].";
 	if number of off-stage fruits > 0, say "========================================[line break]";
 	repeat with fru running through in-play fruits:
-		say "[f-and-rev of fru] is still in-play, in [location of fru][if location of fru is location of player] [b](HERE)[r].";
+		say "[f-and-rev of fru] still in-play, in [location of fru][if location of fru is location of player] [b](HERE)[r][end if].";
 	if number of in-play fruits > 0, say "========================================[line break]";
 	repeat with fru running through held fruits:
-		say "[f-and-rev of fru] is held.";
+		say "[f-and-rev of fru] held.";
 	if number of held fruits > 0, say "========================================[line break]";
 	let got-error be false;
 	repeat with fru running through fruits:
@@ -733,7 +733,7 @@ carry out fruiing:
 		say "[fru], in [frr], does not have [rev-itm] in a hint list. It doesn't need one, but it'd be nice to have one.";
 		now got-error is true;
 	if got-error is true, say "========================================[line break]";
-	say "[number of fruits] total fruits. [number of moot fruits] to Curtis, [number of off-stage fruits] not here yet, [(number of fruits - number of moot fruits + number of off-stage fruits)] in the area.";
+	say "[number of fruits] total fruits. [number of moot fruits] to Curtis, [number of off-stage fruits] not here yet, [number of held fruits] held, [number of fruits - (number of moot fruits + number of off-stage fruits + number of held fruits)] in the area.";
 	the rule succeeds;
 
 to decide which thing is rev-item of (f - a fruit):
