@@ -252,11 +252,13 @@ understand "lied" as a mistake ("There has been no false advertising.") when pla
 
 understand "pat pat" and "pat" as a mistake ("Pat doesn't need consolation for his lost business.") when player is in Idle Deli.
 
+understand "proust" as a mistake ("Alas, the stupor sprout has nothing in common with [i]madeleine[r].") when stupor sprout is touchable.
+
 understand "pta" as a mistake ("You don't need to attend any school board meetings.") when player is in Idle Deli.
 
 understand "scarving" as a mistake ("Changing the restaurant to a clothes boutique isn't helpful.") when player is in Idle Deli.
 
-understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already, and [if seed pit is reflexive]he's not letting you in that seed pit without argument[else]you don't really need it now that you got the mushrooms[end if].") when player is in Idle Deli.
+understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already, and [if seed pit is reflexive]he's not letting you in that seed pit without argument[else]you don't really need it now that you got the stupor sprout[end if].") when player is in Idle Deli.
 
 chapter Harms Marsh
 

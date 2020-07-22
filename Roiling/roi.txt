@@ -546,7 +546,7 @@ It's where PETS DIE.
 Pat discourages you from entering the seed pit. IT'S DEEP.
 What's a preposition that counters something that's been said?
 DESPITE.
-Now you have the mushrooms--another third of the reagents needed in the church.
+Now you have the stupor sprout--another third of the reagents Brother Horbert needs in the Cleric Circle.
 >>ADOBE ABODE
 ?What should I say to Oscar?
 Not much. It's the pipe soot that's important.
@@ -855,46 +855,49 @@ The agnostic and Dr. Yow also give one clue.
 You can't be a grailman unless you are a cut above.
 He can't imagine being worse than average.
 MARGINAL.
-?Atheists
+?Asset-Hit Atheists
 They're patient and willing to explain their views.
 Could you make them hurry up so they give up?
 Yes, make them HASTIEST.
 ?Bluster Butlers
 Making them more circumspect could help them move up in the world, and away from here.
 They can become SUBTLER.
-?Promise Imposer
-He's good at what he does.
-So smooth. Doesn't do things by half-measures.
-SEMIPRO.
+?(Deal Seer) Lars Eede/Elsa Erde
+The deal seer hits the Reed's Ale quite hard!
+They feel trapped in their life and can't stop drinking.
+You can help them get RELEASED.
+The Reed's ale can also become RESEALED.
+?The fluster-self rut
+It is agitated, and it agitates you.
+How can you calm things down?
+Make everything more RESTFUL.
+?Hostile-is-He Lot/Lois the Hostile
+They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
+Make them feel differently.
+Make them the HOLIEST.
 ?Mel Fish
 His name is Mel Fish, and that's in red.
 SMH Life, his catch phrase, also makes you see red.
 How can you let him be him?
 Well, by letting him be HIMSELF.
-?The fluster-self rut
-It is agitated, and it agitates you.
-How can you calm things down?
-Make everything more RESTFUL.
 ?Muscly (Luc Sym/Ms. Lucy)
 Strength doesn't matter without dexterity.
 So make him or her CLUMSY.
-?Hostile-is-He Lot
-They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
-Make them feel differently.
-Make them the HOLIEST.
-?Pirates
-They have impressive tans they're proud of.
-How to make the pirates lose them?
-Make them PASTIER.
-?Lars Eede/Elsa Erde (deal seer)
-The deal seer hits the Reed's Ale quite hard!
-They feel trapped in their life and can't stop drinking.
-You can help them get RELEASED.
-The Reed's ale can also become RESEALED.
+?Promise Imposer
+He's good at what he does.
+So smooth. Doesn't do things by half-measures.
+SEMIPRO.
+?Snider diners
+They have dry wit.
+Until they're RINSED.
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
 Make him WEARIEST.
-?Hey! What's this keycar doing?
+?Traipse Pirates
+They have impressive tans they're proud of.
+How to make the pirates lose them?
+Make them PASTIER.
+?Hey! What's this yacker keycar doing?
 It appears the first time you clear an area of all the guardians.
 It's pretty easy to dispose of as an LLP.
 It's active and has no mechanical damage...

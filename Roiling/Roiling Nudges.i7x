@@ -188,8 +188,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pipesoot"	683820011	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
 "pipe"	335730873	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
 "soot"	348089138	--	in-horbert-quest rule	"[horb-magic of pipe soot]."
-"mushroom"	600841335	--	in-horbert-quest rule	"[horb-magic of mushrooms]."
-"mushrooms"	697115301	--	in-horbert-quest rule	"[horb-magic of mushrooms]."
+"stupor"	545632130	--	in-horbert-quest rule	"[horb-magic of stupor sprout]."
 "boko"	220057237	--	in-horbert-quest rule	"[horb-magic of U NERD]."
 "runedbook"	628229553	--	in-horbert-quest rule	"[horb-magic of U NERD]."
 "spoon"	395352587	snoop spoon	--	"Instead of bending the spoon, use it to help your magic powers if need be."
@@ -264,10 +263,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of idle deli nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "idle"	247641883	--	--	"[locname]."
-"pta"	186763795	--	--	"You don't need to do anything with Pat[if mushrooms are off-stage], but maybe you can get by him to that seed pit[else], especially now you got the mushrooms[end if]."
+"pta"	186763795	--	--	"You don't need to do anything with Pat[if stupor sprout is off-stage], but maybe you can get by him to that seed pit[else], especially now you got the stupor sprout[end if]."
 "seed"	372915273	--	--	"[pit-full]."
 "pit"	229568823	--	--	"[pit-full]."
-"putcries"	663084093	--	--	"The pictures aren't here, and they're not what you need[if mushrooms are not off-stage]ed[end if] to deal with, anyway."
+"putcries"	663084093	--	--	"The pictures aren't here, and they're not what you need[if stupor sprout is not off-stage]ed[end if] to deal with, anyway."
 "carvings"	456456048	--	--	"[no-carv]."
 "carving"	360182082	--	--	"[no-carv]."
 
@@ -1689,9 +1688,9 @@ to say rev-sum: say "That document is the stone truth! It doesn't need revisioni
 
 to say no-poi: say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
-to say pit-full: say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
+to say pit-full: say "[if stupor sprout is off-stage]The whole seed pit[else]You already got the stupor sprout[end if]"
 
-to say no-carv: say "It's not the carvings that need changing[if mushrooms are not off-stage]. You got the mushrooms from the seed pit, and that's what's important[end if]"
+to say no-carv: say "It's not the carvings that need changing[if stupor sprout is not off-stage]. You got the stupor sprout from the seed pit, and that's what's important[end if]"
 
 this is the in-horbert-quest rule:
 	if list o toils is unexamined, the rule fails;

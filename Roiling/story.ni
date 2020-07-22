@@ -1977,7 +1977,7 @@ passport	--
 
 to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
 
-to say pat-on-pit: say "[if mushrooms are off-stage]Can't even explore the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
+to say pat-on-pit: say "[if stupor sprout is off-stage]Can't even explore the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
 
 check asking Curtis about: if second noun is a fruit, say "'[if second noun is moot]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
 
@@ -2219,7 +2219,7 @@ blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which i
 blabber babbler	blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
 Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
-Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
+Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if stupor sprout is off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
@@ -2235,7 +2235,7 @@ oscar	Brother Horbert	"'[bh-mw].'"
 oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
 oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
 pat	pat	"'Still holding on to the Idle Deli here.'"
-pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
+pat	seed pit	"'[if stupor sprout is off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
 pat	Gast	"'Probably not good for business.'"
 pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
@@ -5230,13 +5230,13 @@ this is the routes-hinting rule:
 		if hurt hog is reflexive, try objhinting hurt hog instead;
 		try objhinting yob den instead;
 	if list o toils is unexamined, all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
-	if player has mushrooms and player has U NERD ENDUR REDUN and player has pipe soot, all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
+	if player has stupor sprout and player has U NERD ENDUR REDUN and player has pipe soot, all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
 	if spoilit is true:
 		now spoilit is false;
 		all-say "You can't angle the spoon productively. Maybe use it later." instead;
 	repeat with QQ running through quest-items:
 		if QQ is off-stage:
-			if QQ is mushrooms, all-say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the mushrooms." instead;
+			if QQ is stupor sprout, all-say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the stupor sprout." instead;
 			if QQ is pipe soot, all-say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
 			if QQ is U NERD ENDUR REDUN, all-say "You need to work out how to sit all over the [Gast]'s [sit a nag] to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
 	all-say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
@@ -6388,7 +6388,7 @@ procedural rule while eating something:
 check eating (this is the general eating rule):
 	if noun is grid, say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead; [ordeal reload]
 	if noun is balancer barnacle, say "It is a balancer barnacle. Another would come along to eat you." instead; [stores]
-	if noun is mushrooms, say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]." instead; [routes]
+	if noun is stupor sprout, say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]." instead; [routes]
 	if noun is Bortles Lobster, say "You don't quite feel you deserve to eat it, yet." instead; [troves]
 	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead; [presto]
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
@@ -9786,7 +9786,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "warp"	true	"[i][bracket]FOURTH WALL NOTE: if you solved Store P, U, V, W, or Y in an earlier release, you can type the final command to bypass it. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.[close bracket][r]"	"warp"	true
 "directions/dirs"	true	"A Roiling Original uses north, south, east and west. You may be able to go in or out, too, especially when only one exit is listed."	"directions/dirs"	false	--
 "casper"	false	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."	"casper"	true	oyster
-"reagents/reagent"	false	"You need three reagents to help Brother Horbert: mushrooms[if player has mushrooms] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
+"reagents/reagent"	false	"You need three reagents to help Brother Horbert: a stupor sprout[if player has stupor sprout] (check)[end if], U NERD ENDUR REDUN[if player has U NERD ENDUR REDUN] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
 "Leo/Rand" or "Leo and Rand"	false	"[l-n-r] may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
 "haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"the haunter"	true	oyster
 "die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"DIE THOU"	true	oyster
@@ -11297,7 +11297,7 @@ check eating pipe soot: say "Well, it doesn't SMELL that bad, but...umm, no." in
 
 book Idle Deli
 
-Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless mushrooms are off-stage], but you already got the mushrooms from there[end if].". roomnud of idle deli is table of idle deli nudges.
+Idle Deli is an innie room in Routes. "This restaurant has no customers and little ambience, not even pie crust pictures by Stu Price. But there are craving carvings, and ants be absent. You can go back out to the outback, err, the Same Mesa.[paragraph break]A seed pit gapes at you[unless stupor sprout is off-stage], but you already got the stupor sprout from there[end if].". roomnud of idle deli is table of idle deli nudges.
 
 after looking in Idle Deli:
 	set the pronoun him to pat;
@@ -11320,17 +11320,15 @@ The cravings carvings are plural-named auxiliary scenery in Idle Deli. "All sort
 
 a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RYRRYRY". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
 
-some mushrooms are a quest-item. description of mushrooms is "They have all different lengths of stems, and you're not sure which are poisonous and which aren't."
+the stupor sprout is a boring quest-item. description of stupor sprout is "Just looking at it makes you feel relaxed and happy and dopey. But not too dopey!". bore-text of stupor sprout is "Best not do anything to alter the stupor sprout. [if toils is examined]Brother Horbert will know what to do with it[else]It looks a bit arcane[end if]."
 
-understand "mushroom" as mushrooms.
-
-the seed pit is reflexive scenery in Idle Deli. "[if mushrooms are off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[else]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
+the seed pit is reflexive scenery in Idle Deli. "[if stupor sprout is off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[else]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
 
 understand "seedpit" as seed pit.
 
 a-text of seed pit is "RYRRYRY". b-text of seed pit is "RGRRYRY". parse-text of seed pit is "x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-check entering seed pit: say "[if mushrooms are off-stage]Pat holds you back, warning 'best SPEED IT away from there!' You see red at the odd-sounding admonition.[else]You already got something from there.[end if]" instead;
+check entering seed pit: say "[if stupor sprout is off-stage]Pat holds you back, warning 'best SPEED IT away from there!' You see red at the odd-sounding admonition[else]You already got the stupor sprout from there. Don't be greedy[end if]." instead;
 
 book Harms Marsh
 
@@ -19975,7 +19973,7 @@ curtis-award-level is a number that varies.
 to decide which number is room-fruits-left of (rm - a room):
 	let temp be 0;
 	repeat with myf running through fruits:
-		if frr of myf is rm, increment temp;
+		if frroom of myf is rm, increment temp;
 	decide on temp;
 
 to coin-eval:
@@ -20024,7 +20022,7 @@ to coin-eval:
 					set the pronoun it to droll dollar;
 				break;
 		if player has tekno token and room-fruits-left of Clangier Clearing is 0:
-			say "[line break]You also hand Curtis back the Tekno-Token, since you got everything from the Clangier Clearing."'
+			say "[line break]You also hand Curtis back the Tekno-Token, since you got everything from the Clangier Clearing.";
 			moot tekno token;
 
 chapter dollar
