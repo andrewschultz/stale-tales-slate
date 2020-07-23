@@ -37,6 +37,31 @@ Posh Hops Shop
 @hin
 >monty hints
 
+@max
+##balance undos
+>spit tips
+by one point
+>undo
+>inset tines
+by one point
+>undo
+>inset stein
+by one point
+>undo
+>scrape casper
+by one point
+>undo
+>scrape capers
+by one point
+>undo
+>remap amper
+by one point
+>undo
+>unset tunes
+by one point
+>undo
+
+
 >score
 {$SCOS}
 
@@ -434,6 +459,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a d
 >acml
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>calm clam
+by one point
+>undo
+
 >calm
 Your score has just gone up by one point
 
@@ -772,6 +802,12 @@ Silly internet slang isn't active enough, here.
 Now is not the time for poetry.
 
 @max
+>scrap carps
+by one point
+>undo
+>spike pikes
+by one point
+>undo
 >spike
 Your score has just gone up by one point
 >thisalt
@@ -877,6 +913,11 @@ There are no clothing stores around, nor is there anything physical to lead you 
 >threads
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
+@max
+>scan cans
+by one point
+>undo
+
 @!min
 >scan
 #notana 'nudge for cans'
@@ -887,6 +928,11 @@ DEBUG INFO: min-up codepath
 \\
 >score
 {$SCOS}
+
+@max
+>seek eeks
+by one point
+>undo
 
 >seek
 Your score has just gone up by one point
@@ -954,6 +1000,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >tea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>eat tea
+by one point
+>undo
+
 >eat
 #notana 'nudge for eat'
 Your score has just gone up by one point
@@ -964,6 +1015,11 @@ DEBUG INFO: trout hinting.
 
 >score
 {$SCOS}
+
+@max
+>tend dent
+by one point
+>undo
 
 @!min
 >tend
@@ -988,6 +1044,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for swipe
 >wspei
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+>tutor trout
+by one point
+>undo
 
 >tutor
 Your score has just gone up by one point
@@ -1041,6 +1102,11 @@ The pearl is too jagged to change easily, but it seems like it was roughly cut i
 >wipse
 You try to take the wipes, but you worry you're not fast enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
+
+@max
+>swipe wipes
+by one point
+>undo
 
 @!min
 >swipe
@@ -1263,6 +1329,11 @@ Your inactive word does nothing to the huts. Perhaps you can do something to the
 >actres
 Hmm, no, it's only one crate at a time.
 
+@max
+>trace crate
+by one point
+>undo
+
 >trace
 Your score has just gone up by one point
 }}SCORE++
@@ -1322,6 +1393,11 @@ Not worth messing with the fragments any more.
 #renudge for fragment
 >fragmetn
 Not worth messing with the fragments any more.
+
+@max
+>kiss skis
+by one point
+>undo
 
 >kiss
 Your score has just gone up by one point
@@ -1420,6 +1496,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a d
 >ubts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>bust tubs
+by one point
+>undo
+
 >bust
 Your score has just gone up by one point
 }}SCORE++
@@ -1441,7 +1522,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You juggle the prod a bit, but it doesn't change into anything new.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
 
+@max
 >drop prod
+Your score has just gone up by one point
+>undo
+
+>drop
 Your score has just gone up by one point
 }}SCORE++
 
@@ -1516,6 +1602,11 @@ Change ALL the heaps!
 >hspea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@max
+>shape heaps
+by one point
+>undo
+
 @!min
 >shape
 Your score has just gone up by one point
@@ -1553,13 +1644,18 @@ Good idea, but you have nothing that could clean the lance effectively.
 #preefcheck lance
 >pf
 You'll want to CLEAN the lance once you have something to wash it with.
->clean lance
+>clean
 Good idea, but you have nothing that could clean the lance effectively.
 >undo
 >undo
 >undo
 >undo
 >undo
+>undo
+
+@max
+>clean lance
+by one point
 >undo
 
 @!min
@@ -1669,6 +1765,11 @@ A snider near-dis from the sardine keeps you in check. You'll need to get rid of
 >pf
 SEARCH the arches.
 
+@max
+>warp wrap
+by one point
+>undo
+
 >warp
 Your score has just gone up by one point
 }}SCORE++
@@ -1678,6 +1779,11 @@ DEBUG INFO: Achers' Chaser Arches hinting.
 
 >score
 {$SCOS}
+
+@max
+>search arches
+by one point
+>undo
 
 >search
 Your score has just gone up by one point
@@ -1726,6 +1832,11 @@ You tilt the gleaner around to try to see it from a different point of view. If 
 #slider test for enlarge
 >neergal
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@max
+>enlarge gleaner
+by one point
+>undo
 
 >enlarge
 Your score has just gone up by one point
@@ -1829,11 +1940,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a d
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
->bury
+>bury ruby
 Your score has just gone up by one
 >undo
 
->bury ruby
+>bury
 Your score has just gone up by one point
 }}SCORE++
 
@@ -1892,6 +2003,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the haunter. That's 
 #nudge for howler
 >howlre
 Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
+
+@max
+>assuage sausage
+by one point
+>undo
 
 >assuage
 by one point
@@ -1961,6 +2077,11 @@ You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have wo
 >undo
 >undo
 >undo
+>undo
+
+@max
+>patrol ol trap
+by one point
 >undo
 
 >patrol
@@ -2067,11 +2188,11 @@ That's not something you can say, do or see here. For a general list of verbs, t
 !by one point
 
 @max
->prepay
+>prepay yapper
 Your score has just gone up by one
 >undo
 
->prepay yapper
+>prepay
 Your score has just gone up by one point
 }}SCORE++
 
@@ -2118,6 +2239,11 @@ You do not have anything denoting you as worthy to trample the templar ramplet. 
 Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet.
 >undo
 >undo
+>undo
+
+@max
+>trample ramplet
+by one point
 >undo
 
 @!min
@@ -2197,6 +2323,11 @@ by one point
 #renudge for plam
 >plma
 You did enough.
+
+@max
+>tan ant
+by one point
+>undo
 
 @!min
 >tan
@@ -2297,11 +2428,11 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 >undo
 
 @max
->spin
+>spin pins
 Your score has just gone up by one
 >undo
 
->spin pins
+>spin
 Your score has just gone up by one point
 }}SCORE++
 
@@ -2324,6 +2455,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer (DEBUG: part 2). That's a decent omen.
+
+@max
+>redial dialer
+by one point
+>undo
 
 #not a mistake
 >redial
