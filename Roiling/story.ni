@@ -3845,7 +3845,10 @@ to say reject:
 						say "With that conversation, you can't concentrate on much...";
 						continue the action;
 					if cmdhash is not the hashkey entry:
-						say "[line break](In particular, the first word seemed to have an effect, and you generally don't need a second word.)[line break]";
+						if firstwordhash is the hashkey entry:
+							say "[line break](In particular, your first word was on the right track.)[line break]";
+						else:
+							say "[line break](Small note: perhaps just the first word may work.You generally don't need a second word to slove a puzzle.)[line break]";
 				continue the action;
 	if roomnud of location of player is hash-found, continue the action;
 	if regnud of mrlp is hash-found, continue the action;
@@ -5894,7 +5897,7 @@ Rule for printing a parser error when the latest parser error is the only unders
 				if the player's command includes "wall", say "You think about jumping off the wall, but you wonder if that'd just be violating something sacred, and you might get zapped for that. You need a way to say, the heck with that." instead;
 				say "That's maybe not how to jump to reach Ye Hoop. Maybe you sort of need to jump a certain way to get there, and not care how." instead;
 	if number of words in the player's command > 1:
-		say "I understood the first word, but you may have thrown on too many words[if number of words in the player's command is 2]. So just '[word number 1 in the player's command]' should work[end if].";
+		say "I understood the first word, but what came after didn't quite work[if number of words in the player's command is 2]. So just '[word number 1 in the player's command]' may work better[end if].";
 	else:
 		say "You wrote in a valid verb, or try, but the game didn't accept it, or maybe you can use the word in a different place. Sorry about that.";
 	the rule succeeds;
@@ -15130,7 +15133,10 @@ does the player mean opening the span pans: it is likely.
 
 section crate
 
-the crate is reflexive boring scenery in Lapsin Plains. description of the crate is "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.".
+the crate is reflexive boring scenery in Lapsin Plains. description of the crate is "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if].". bore-text of crate is "You don't need to fiddle randomly with the debris.". bore-check of crate is bore-crate rule.
+
+this is the bore-crate rule:
+	if current action is traceing, now boring-exception is true;
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
@@ -15215,10 +15221,8 @@ understand the command "snap" as something new.
 understand "snap" as snaping.
 
 carry out snaping:
-	if player is in Lapsin Plains:
-		if span pans are moot, say "After a bit of thought, you decide against 'losing it.'" instead;
-		try fliptoing span pans instead;
-	say "This isn't the time or place to snap. With your fingers or with your brain.";
+	if player is in Lapsin Plains and span pans are touchable, try fliptoing span pans instead;
+	say "This isn't the time or place to snap. Literally or figuratively.";
 	the rule succeeds;
 
 chapter bonk
