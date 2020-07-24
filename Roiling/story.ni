@@ -1188,6 +1188,7 @@ to say full-monty of (myobj - a thing):
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
+		if extra-taxer-warn is false, say "[line break]You can also disable clues for ambiguous/question mark settler-cheat readings with TAXER or TAX ER. You can recover them with EXTRA.";
 	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
@@ -4546,6 +4547,7 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
 	let modnoun be scannote-idx of noun;
+	if taxer-not-extra is true, the rule succeeds;
 	repeat through table of scannotes:
 [	if noun is an thing-to-note in table of scannotes: ?! doesn't work]
 		if modnoun is thing-to-note entry:
@@ -7559,6 +7561,38 @@ carry out xtraing:
 	now xtra-trax-warn is true;
 	the rule succeeds.
 
+chapter extraing
+
+extraing is an action out of world.
+
+understand the command "extra" as something new.
+
+understand "extra" as extraing.
+
+carry out extraing:
+	now extra-taxer-warn is true;
+	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is false]already[else]now[end if] on.";
+	now taxer-not-extra is false;
+	the rule succeeds.
+
+chapter taxering
+
+taxering is an action out of world.
+
+understand the command "taxer" as something new.
+
+understand "taxer" as taxering.
+
+carry out taxering:
+	now extra-taxer-warn is true;
+	say "Extra question-mark information for cheat/teach mode on settler is [if taxer-not-extra is true]already[else]now[end if] off.";
+	now taxer-not-extra is true;
+	the rule succeeds.
+
+extra-taxer-warn is a truth state that varies.
+
+taxer-not-extra is a truth state that varies.
+
 chapter opt in/no tip
 
 section notiping
@@ -9734,6 +9768,8 @@ to say opts-list:
 	verbsplain "parse";
 	verbsplain "poss";
 	verbsplain "opt in/no tip"
+	verbsplain "xtra/trax"
+	verbsplain "extra/taxer"
 
 to verbsplain (t - text):
 	choose row with short of t in table of pad-stuff;
@@ -9802,6 +9838,8 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "wilteds/wildest" or "wildest wilteds"	false	"Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the top opt pot was for...well, someone Renato was sad to miss."	"wilteds"	true	towers
 "guru"	false	"You can GURU something [if arugula is moot]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
+"xtra/trax"	false	"XTRA or XTRA TRAX or TRAX gives more detailed advice if you have the right letters in the wrong order."	"xtra/trax"	false
+"extra/taxer" or "tax er"	false	"EXTRA or TAX ER/TAXER toggles more advice for ambiguous/question mark hints. This is close to XTRA, but it is likely the player will want to set TAXER and not EXTRA back."	"extra/taxer"	false
 
 to say xray-help:
 	if xrayvision is true:

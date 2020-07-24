@@ -2251,7 +2251,7 @@ table of preflip clues [this must have a regular item first due to a small bug i
 preflip	pretodo
 gateman	"nametag -> gateman" [Ordeal Loader]
 tenibac	"cabinet -> Bactine" [stores]
-store r	"Store R -> Resort"
+ogled lodge	"Store R -> Resort"
 silver	"[if livers are not moot]livers[else]sliver[end if] -> SLIVER" [forest]
 drapes	"spread -> [if red asp is in Emptiness Sepiments]RED ASP -> [end if]drapes"
 r2	"room -> moor" [sortie]
