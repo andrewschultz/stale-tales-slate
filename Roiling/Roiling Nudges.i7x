@@ -1264,8 +1264,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Rustic Citrus nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rustic"	453812025	--	--	"You can't change this clearing or Curtis, but you don't need to."
-"border"	412254286	--	--	"[border-arbor]."
-"arbored"	414442104	--	--	"[border-arbor]."
+"greenish"	620992342	--	--	"The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway."
 "arugula"	386324594	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 "pear"	296783689	spear	--	"[plur-fruit]."
 "plum"	304460758	lumps	--	"[plur-fruit]."

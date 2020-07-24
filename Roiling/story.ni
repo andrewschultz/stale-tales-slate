@@ -6123,7 +6123,7 @@ Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Ble
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot![paragraph break]Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
+Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
 Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage, the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
@@ -7021,9 +7021,10 @@ check swearing obscenely:
 		if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in Rawest Waters:
 		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
-	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
+	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead; [OTTERS]
 	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
+	if player is in Rustic Citrus, say "Instead you mumble ... I, curst." instead;
 	say "[randbla][line break]" instead;
 
 to say deth:
@@ -7727,7 +7728,7 @@ check fliptoing (this is the see about flipping touchable things rule):
 		if noun is a portal, try entering noun instead;
 		if noun is reflexive or noun is vanishing, continue the action;
 		if noun is gast-affected, continue the action; [this is an odd case where we want gast's presence to stop you getting away, but we also want to add your try to PAD FLIPS if it isn't there]
-		if noun is reflexed, say "You did what you needed to with [the noun]. A repeat with it around won't do anything.";
+		if noun is reflexed, say "You did what you needed to [if noun is privately-named]there[else]with [the noun][end if]. A repeat won't do anything." instead;
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
 		say "(examining)[line break]";
 		try examining noun instead;
@@ -14087,7 +14088,7 @@ to tag-spill-cheated (gc - a thing):
 		now player has the pills;
 
 every turn when mrlp is oyster and debug-state is true:
-	d "Current hint item = [oyster-item].";
+	d "Current oyster hint/spill item = [oyster-item].";
 
 to decide which thing is oyster-spill-item:
 	if player is in posh hops shop, decide on LOLstr trolls;
@@ -15294,7 +15295,7 @@ book Shuttle Hutlets
 
 to say mr-miss: say "[if player is male]Mr.[run paragraph on][else]Miss[end if]";
 
-to say heepy: say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
+to say heepy: say "[if waste is touchable]waste lying around, though you probably don't need to expend the physical effort to tidy it up unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
 Shuttle Hutlets is inside of Lapsin Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're, [uaah]. A big one[stopping]. [if digger is off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are touchable or waste is touchable]. You see [heepy][end if]. You can only go back outside.". roomnud of Shuttle Hutlets is table of Shuttle Hutlets nudges.
 
@@ -19802,7 +19803,7 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you can see a way through to the north[else]and you don't know which way is which[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
+description of Rustic Citrus is "Grenish sheering surrounds you on all sides. It'd be easy to get lost in, [if player has compass]but your compass will help you keep on track to the north[else]as you'd get turned around quickly[end if][if ruts circuits are in rustic citrus].[paragraph break]Ruts circuits lying around may have random stuff strewn in them, so they may be worth EXAMINEing[end if][if eerie blurbs are in rustic citrus].[paragraph break]Eerie blurbs are scrawled where the ruts circuits were[end if]."
 
 for printing the name of a start-pre-fruit (called spf) while printing the locale description: say "[locale-text of spf]"
 
@@ -19820,7 +19821,7 @@ to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
 
-a border arbored is boring scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored". description of a border arbored is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can find a way out[else][end if].". bore-text is "It's too secure to do anything with. You'd probably get lost in it, anyway."
+reenish sheering is boring scenery in Rustic Citrus. description of greenish sheering is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can get something that will help you find a way out[else][end if].". bore-text is "The greenish sheering has no straight paths. All those twists and turns are easy to get lost in. They probably help keep Curtis secluded for his experiments and such."
 
 for printing a locale paragraph about a generic-rut-pre (called pr) in Rustic Citrus:
 	if pr is not mentioned:

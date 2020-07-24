@@ -1006,6 +1006,8 @@ understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living 
 
 understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
 
+understand "cruits" as a mistake ("Alas, no recruits named Ric or Stu arrive for you to delegate anything to.") when player is in Rustic Citrus.
+
 understand "deign" and "deigns" as a mistake ("The singed design on the [coin-icon] should make you not just want to deign but DO.") when mrlp is others and curtis-level >= 2.
 
 understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in Rustic Citrus and pagers are in Rustic Citrus.

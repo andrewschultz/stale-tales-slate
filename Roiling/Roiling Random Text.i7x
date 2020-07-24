@@ -2505,7 +2505,6 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Egoists['] Stogies"	false
 "Egwin's Sewing"	false
 "Eh, Debtor-Bothered? Bet-Horde!"	true
-"Ehinger's Greenish Sheering"	false []
 "Ehler St. Shelter"	false
 "Elan-Shot Ethanols"	false
 "Eleas Easel-Lease"	false []
@@ -2721,6 +2720,7 @@ blurb	blare [random sad ads: the blare field designates whether you have an excl
 "Grauner's Rare Guns"	false
 "Graydon Organdy"	false
 "Greatest Rates-Get! Gee, Start!"	true
+"Greenish Sheering"	false []
 "GreenSci Generics"	false
 "Greenwood's Newer Goods"	false []
 "Greg Mota's Mortgages"	false
