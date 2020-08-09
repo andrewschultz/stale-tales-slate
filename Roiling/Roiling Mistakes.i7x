@@ -34,6 +34,8 @@ understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT 
 
 book Ordeal Reload
 
+understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Reload.
+
 chapter Dusty Study
 
 to say intro-warn: if urgent gunter is off-stage, say "--well, once you've had an introductory dialogue with an NPC"

@@ -2643,6 +2643,7 @@ Store H	"'All who enter here risk exclusion. Closed for having a truly frighteni
 Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
 worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm." [routes]
 cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
+trashy ashtray	"On this side is [one of]PEST OP, OI[or]PO['] SPITE, O[cycling]. You can read the other side [one of][or]again [stopping]if you want."
 A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
 Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
 stop post	"POP'S TOTS is written in red on the stop post."
@@ -6112,7 +6113,7 @@ Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upse
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
-Shaven Havens	"Any direction but back south might drive you too far from the palace."
+Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrike!'[paragraph break][or][stopping]Not worth it. Any direction but back south might drive you too far from the palace."
 Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]."
 Clarthead Cathedral	"[no-coma]." [otters]
@@ -6207,6 +6208,7 @@ check attacking: [this takes responses for general types. The table below it is 
 	if player has lance, say "[if noun is not ant]Wrong enemy for the lance[else]You need something more succinct[end if]." instead;
 	if player has paw r wrap, say "Alas, the Paw-R-Wrap is nor Wap-R-Wrap." instead;
 	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
+	if noun is imposer, say "That might be RIP-some." instead;
 	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
@@ -6328,7 +6330,7 @@ the block drinking rule is not listed in the check drinking rulebook.
 
 check drinking:
 	if noun is A Bev O Be Ova, say "[bev] is meant to celebrate finishing something, or to despair and not being able to finish. Neither occasion applies here." instead; [routes]
-	if noun is lager, say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way." instead; [troves]
+	if noun is lager, say "One sip is--nope. Next, a liter, retail. Nix to intox! Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way." instead; [troves]
 	if noun is trance nectar, say "No. That can't be it. You want a way to exit, to say this is not me." instead;
 	if noun is fount, say "It's dry, and besides, you need to drink literally of knowledge, not figuratively.[paragraph break]Besides, water doesn't have enough energy for the task ahead." instead; [presto]
 	if noun is ALocalCo cola, say "Not from the bottle! Also, you don't want to guzzle it before you need to. In fact, you wish there would be a way to make more of it, because there really isn't much left. It'd be outstanding to have giant donuts, but you have what you have." instead;
@@ -9761,16 +9763,16 @@ to say verb-list:
 	verbsplain "retry";
 	if in-beta is true:
 		say "BETA COMMANDS BELOW.";
-		say "[2da]MISSED shows what you missed in all regions. MISSES shows this region's. MISSALT shows alternate routes."
+		say "[2da]MISSED shows what you missed in all regions. MISSES shows this region's. MISSALT shows alternate routes.";
 
 to say opts-list:
 	verbsplain "access";
 	verbsplain "random dialogue";
 	verbsplain "parse";
 	verbsplain "poss";
-	verbsplain "opt in/no tip"
-	verbsplain "xtra/trax"
-	verbsplain "extra/taxer"
+	verbsplain "opt in/no tip";
+	verbsplain "xtra/trax";
+	verbsplain "extra/taxer";
 
 to verbsplain (t - text):
 	choose row with short of t in table of pad-stuff;
@@ -11133,7 +11135,7 @@ Cleric Circle is an innie room in Routes. "Things seem less confused here than o
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
 		mootl list of all quest-items;
-		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
+		say "'You have all the reagents! Wonderful!' Brother Horbert sniffs the pipe soot. 'POPE OTIS brand! Wow! Even better than Opie Post or P. S. Pie too!'[paragraph break]The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
 		pad-rec "No-Lag Logan";
 		moot Brother Horbert;
 		pad-del "reagents";
@@ -18456,7 +18458,7 @@ check going west in Reclusion Inclosure (this is the need quick rule):
 	if aside-llp is in Reclusion Inclosure:
 		say "[e-n-m] block you from going west. Perhaps you could use some of your magic to push by them." instead;
 	if hydra is in Rancho Archon Anchor:
-		if hydra-known is true, say "You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of [e-n-m] first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
+		if hydra-known is true, say "A little voice in your head says 'Ohnoes soon, eh?'.[paragraph break]You're pretty sure you need help to tackle the hardy hydra[if elmer is touchable]. You probably need to get rid of [e-n-m] first, too[else if parrot is touchable]. Your parrot squawks slightly[end if]." instead;
 		now hydra-known is true;
 		say "You stroll confidently west, having [if elmer is touchable]pushed [e-n-m] aside[else]gotten rid of [e-n-m][end if]. But you quickly run back east at the sight of a hardy hydra. You make it back before it can breath its HD-Ray on you. Nemesis seems in. Er, dang. Danger![paragraph break][Gretta] talked about needing allies. You suspect she meant someone or something that could beat the hydra.." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
@@ -19821,7 +19823,7 @@ to decide which number is touch-val of (x - a thing):
 	if x is touchable, decide on 1;
 	decide on 0;
 
-reenish sheering is boring scenery in Rustic Citrus. description of greenish sheering is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can get something that will help you find a way out[else][end if].". bore-text is "The greenish sheering has no straight paths. All those twists and turns are easy to get lost in. They probably help keep Curtis secluded for his experiments and such."
+greenish sheering is boring scenery in Rustic Citrus. description of greenish sheering is "Well, it's wooded pretty much all around, here. [if compass is off-stage]Maybe you can get something that will help you find a way out[else][end if].". bore-text is "The greenish sheering has no straight paths. All those twists and turns are easy to get lost in. They probably help keep Curtis secluded for his experiments and such."
 
 for printing a locale paragraph about a generic-rut-pre (called pr) in Rustic Citrus:
 	if pr is not mentioned:
