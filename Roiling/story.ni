@@ -6832,7 +6832,8 @@ check listening:
 	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
-	if noun is whiners, say "It's hard not to hear what the [whiners] have to say, actually." instead;
+	if noun is whiners:
+		say "It's hard not to hear what the [whiners] have to say, actually[if tallyhoing is touchable], with '[one of]All Night, Yo[or]A holy glint[or]Only lag hit[or]Hal Ying-Lot[or]Hatingly, ol['][in random order]' being particularly prominent. It makes you see red[end if]." instead;
 	if noun is sly imp, say "The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now." instead;
 	if player is in Perverse Preserve, say "You hear no monotremes you could turn into metronomes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;

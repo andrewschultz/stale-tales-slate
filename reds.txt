@@ -183,7 +183,7 @@ derive,idveer
 #qver of peels speel
 sleep,?RG?R=peels=speel
 #qver of be troo e robot
-reboot,R?PYG?=betroo=erobot
+reboot,R?RYG?=betroo=erobot
 #qver of im le cop polemic
 compile,R?RRYRY=imlecop=polemic
 #qver of bub dude egg
@@ -212,6 +212,8 @@ ocean,canoe
 #qver of frat raft
 fart,??RP=frat=raft
 soar,oars
+#qver of sabot boats
+boast,???R?=sabot=boats
 #anger range
 unearth,haunter,etahnru,nearhut
 spike,pikes
@@ -233,6 +235,8 @@ splain,RRRY??=lapsin=plains
 #qver of span pans
 snap,?R?R=span=pans
 snap,nans,apps
+#qver of use saga sausage
+assuage,Y?RYGP?=usesaga=sausage
 #qver of templar ramplet
 trample,?RYRRRY=templar=ramplet
 trample,lampert
@@ -277,10 +281,12 @@ restful,truself,furlets
 #hintpastries
 #qver of mended mini denim
 mined,?Y?YR=mende=dmini=denim
+#qver of nerd aid diner ad
+dandier,?Y??YYR=nerdaid=dinerad
 #qver of dire and arid den
-drained,?YR?Y?R=dire=and=arid=den
+dandier,?YR?Y?R=direand=aridden
 #qver of drained dreadin
-drained,PYRRY?R=drained=dreadin
+dandier,PYRRY?R=drained=dreadin
 #this looks very wrong
 #docile,idleco,liedoc,olecid,cledio,ecolid
 strudel,dreltus
@@ -382,9 +388,11 @@ reedily,lyredie,drilyee
 #qver ignore because all 3 clues give no ?'s
 discern,nrdices,icnerds,srindec
 rescind,nrdices,icnerds,srindec
+#clarthead cathedral
+loathingly,allnightyo,aholyglint,onlylaghit,hatinglyol,halyinglot
 #disowned downside
 #qver of parleys splayer players
-sparely=???R?RO=parleys=splayer=players
+sparely,???R?RO=parleys=splayer=players
 #qver of tearily-irately
 tearily/irately,??GR?RB=reality
 #qver of steamily
