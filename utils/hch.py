@@ -13,10 +13,12 @@ import glob
 import i7
 import sys
 import mytools as mt
+import time
 
 debug = False
 ignore_nudmis = False
 print_details = False
+super_quiet = False
 err_max = 0
 quiet = 0
 
@@ -198,11 +200,13 @@ def jump_str(a, b):
     return "*JUMP* {}".format(a-b-1)
 
 def rbr_of(loc_proj, x):
+    x = x.replace("lone-", "")
     ary = os.path.basename(x).split('-')
     the_name = '-'.join(ary[2:-1])
     return "rbr-{}-{}.txt".format(loc_proj, the_name)
 
-def catch_bad_reg():
+def catch_bad_reg(p):
+    i7.go_proj(p)
     reg_pattern = "reg-*.txt"
     for x in glob.glob(reg_pattern):
         if 'sa-thru' in x: continue
@@ -214,6 +218,8 @@ def catch_bad_reg():
                 if ll.startswith("#"): ll = ll[1:]
                 for y in valids_reverse:
                     if ll.startswith(y) and valids_reverse[y] not in x:
+                        if valids_reverse[y] == 'nudmis' and x == 'reg-roi-demo-dome.txt': continue
+                        print(y, valids_reverse[y], x)
                         print("Misplaced test case", x, line_count, line.lower().strip())
                 if 'hints' not in x and ll.startswith("DEBUG INFO") and "objhinting" in ll:
                     print("Erroneous hint check", x, line_count, line.lower().strip())
@@ -228,51 +234,59 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
     for x in glob.glob(pattern) + extras:
         if x.startswith("reg-"):
             rox = rbr_of(loc_proj, x)
+            if not os.path.exists(rox):
+                if "-general" not in rox:
+                    print("WARNING no rbr file for", x)
+                continue
             if mt.last_mod(rox) > mt.last_mod(x):
                 if rox not in rbr_warn:
                     print("WARNING", rox, "modified after", x)
+                    print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(rox))), "vs", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(x))))
                 rbr_warn[rox] += 1
         with open(x) as file:
             if not quiet: print("Checking", x)
             for (line_count, line) in enumerate(file, 1):
-                ll = line.lower().strip()
-                if show_wrongs and line.startswith("WRONG"):
-                    wrong_count += 1
-                    print("WRONG #", wrong_count, "needs to be replaced at", x, "line", line_count)
-                    continue
-                if ll.startswith('#done reject '):
-                    print('PEDANTIC WARNING you want done rejectS to test', no_of_for(line), 'at', x, 'line', line_count)
-                    continue
-                if ll.startswith('#donereject'):
-                    print('PEDANTIC WARNING you want done rejectS (with a space) to test', no_of_for(line), 'at', x, 'line', line_count)
-                    continue
-                if ll.startswith('#' + b + ' of '):
-                    print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
-                    continue
-                if ll.startswith('#re' + b + ' for '):
-                    l = re.sub("#re{:s} for ".format(b), "", ll)
-                    if l not in sync_stuff.keys():
-                        if not region or region in x:
-                            if err_max == 0 or errs <= err_max: print('(RETEST)', l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
-                            errs += 1
-                    elif l not in got_sync_yet.keys():
-                        if not region or region in x:
-                            if err_max == 0 or errs <= err_max: print(l, "is retest without test", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
-                            errs += 1
-                if ll.startswith('#' + b + ' for '):
-                    l = re.sub("#{:s} for ".format(b), "", ll)
-                    if l not in sync_stuff.keys():
-                        if not region or region in x:
-                            if err_max == 0 or errs <= err_max: print(l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
-                            errs += 1
-                    elif l in got_sync_yet.keys():
-                        if not region or region in x:
-                            if err_max == 0 or errs <= err_max: print(l, "is duplicated", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
-                            errs += 1
-                    else:
-                        got_sync_yet[l] = "{:s} line {:d}".format(x, line_count)
-                        # print(l, got_sync_yet[l])
-                elif err_string and err_string in line: print("Common typo flagged for", pattern, "at line", line_count, line.strip())
+                lb = line.lower().strip()
+                if lb.startswith("{"):
+                    lb = re.sub("^.*?\}", "", lb)
+                for ll in lb.split("\\\\"):
+                    if show_wrongs and line.startswith("WRONG"):
+                        wrong_count += 1
+                        print("WRONG #", wrong_count, "needs to be replaced at", x, "line", line_count)
+                        continue
+                    if ll.startswith('#done reject '):
+                        print('PEDANTIC WARNING you want done rejectS to test', no_of_for(line), 'at', x, 'line', line_count)
+                        continue
+                    if ll.startswith('#donereject'):
+                        print('PEDANTIC WARNING you want done rejectS (with a space) to test', no_of_for(line), 'at', x, 'line', line_count)
+                        continue
+                    if ll.startswith('#' + b + ' of '):
+                        print('PEDANTIC WARNING you want', b, 'FOR, not', b, 'OF, to test', no_of_for(line), 'at', x, 'line', line_count)
+                        continue
+                    if ll.startswith('#re' + b + ' for '):
+                        l = re.sub("#re{:s} for ".format(b), "", ll)
+                        if l not in sync_stuff.keys():
+                            if not region or region in x:
+                                if err_max == 0 or errs <= err_max: print('(RETEST)', l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
+                                errs += 1
+                        elif l not in got_sync_yet.keys():
+                            if not region or region in x:
+                                if err_max == 0 or errs <= err_max: print(l, "is retest without test", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
+                                errs += 1
+                    if ll.startswith('#' + b + ' for '):
+                        l = re.sub("#{:s} for ".format(b), "", ll)
+                        if l not in sync_stuff.keys():
+                            if not region or region in x:
+                                if err_max == 0 or errs <= err_max: print(l, "is invalid", b, "in file", x, "at line", line_count, for_pattern)
+                                errs += 1
+                        elif l in got_sync_yet.keys():
+                            if not region or region in x:
+                                if err_max == 0 or errs <= err_max: print(l, "is duplicated", b, "in file", x, "at line", line_count, for_pattern, "duplicating", got_sync_yet[l])
+                                errs += 1
+                        else:
+                            got_sync_yet[l] = "{:s} line {:d}".format(x, line_count)
+                            # print(l, got_sync_yet[l])
+                    elif err_string and err_string in line: print("Common typo flagged for", pattern, "at line", line_count, line.strip())
     last_line = 0
     for q in sorted(list(set(sync_stuff.keys()) | set(got_sync_yet.keys())), key = lambda x: sync_stuff[x] if x in sync_stuff.keys() else -1):
         if q not in got_sync_yet.keys():
@@ -294,7 +308,7 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
             if err_max == 0 or errs <= err_max:
                 print(pattern, ':', q, "in", pattern, sync_stuff[q], "but not in table of", b, '*jump' if sync_stuff[q] - last_line > 1 and last_line else '')
             last_line = sync_stuff[q]
-    print (errs if errs else "No", "errors found", for_pattern)
+    if not super_quiet: print (errs if errs else "No", "errors found", for_pattern)
     return errs
 
 def sync_check(a, b, region=""):
@@ -312,7 +326,7 @@ def sync_check(a, b, region=""):
                     in_syncable_table = True
                     ever_syncable_table = True
                     reading_header = '(continued)' not in line
-                    print("Started", table_to_find, "at line", line_count, "file", os.path.basename(fi))
+                    if not super_quiet: print("Started", table_to_find, "at line", line_count, "file", os.path.basename(fi))
                     continue
                 if not in_syncable_table: continue
                 if reading_header:
@@ -350,8 +364,12 @@ while count < len(sys.argv):
     arg = sys.argv[count]
     if arg[0] == '-': arg = arg[1:]
     if arg == '1' or arg == 'sa': projs = ['sa']
-    elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r': projs = ['roi']
+    elif arg == '2' or arg == 'roi' or arg == 'ro' or arg == 'r':
+        if projs == [ 'roi' ]:
+            print("WARNING: You may have wanted RB instead of R, to run RBR.")
+        projs = ['roi']
     elif arg == 'q': quiet = True
+    elif arg == 'sq' or arg == 'qs': super_quiet = quiet = True
     elif arg == 'rb' or arg == 'br': rbr_before = True
     elif arg == 'o': out_to_file = True
     elif arg == 'w': show_wrongs = True
@@ -381,7 +399,8 @@ while count < len(sys.argv):
 
 if rbr_before: os.system("rbr.py")
 
-catch_bad_reg()
+for p in projs:
+    catch_bad_reg(p)
 
 if verify_roi or verify_sa:
     if verify_roi: verify_reg_files('roi')
@@ -397,7 +416,7 @@ big_error_count = 0
 
 for q in projs:
     for t in tabs[q]:
-        print(">>>>>>>>>>>>>>>>>>>>Sync check for ...", q, t, region_wildcard)
+        if not super_quiet: print(">>>>>>>>>>>>>>>>>>>>Sync check for ...", q, t, region_wildcard)
         big_error_count += sync_check(q, t, region_wildcard)
     if q == 'roi':
         match_slider_tests()
