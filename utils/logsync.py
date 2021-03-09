@@ -540,7 +540,7 @@ def check_scannotes():
                 if verbose: print("Got", ll[0], "in scannotes.")
     if len(suggestions): print("\n".join(sorted(suggestions, key=lambda x:re.sub(".* ", "", x))))
     for x in sorted(need_source_logic.keys()):
-        if table_shorten(x) not in in_scannotes.keys() and x not in abbrevs.keys():
+        if table_shorten(x) not in in_scannotes.keys():# and x not in abbrevs.keys():
             print("May need", x, "in scannotes table.")
             mayneedscannote += 1
             mt.add_postopen(r_src, last_table_line)
@@ -563,7 +563,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
                 print(need_in_logic, y, "is in the source line", need_logic[y], "but needs to be commented in", file_desc)
             if show_code:
                 print(format_string.format(y))
-    t3 = sorted([x for x in gots.keys() if x not in needs.keys()], key=gots.get)
+    t3 = sorted([x for x in gots.keys() if x not in needs.keys() and x not in abbrevs.keys()], key=gots.get)
     if len(t3):
         for y in sorted(t3, key=gots.get):
             need_in_source += 1
@@ -573,7 +573,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
         if launch_message: print("LAUNCH WITH", launch_message)
     else:
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
-    extraneous = list(set(gots) - set(needs))
+    extraneous = list(set(gots) - set(needs) - set(abbrevs))
     if len(extraneous):
         if data_file not in open_line:
             open_line[logic_reds_file] = gots[min(extraneous, key=gots.get)]

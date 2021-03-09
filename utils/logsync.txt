@@ -65,6 +65,7 @@ hoots button~hoots>shoot
 trees button~trees>steer
 #metros
 drainage>gardenia
+a reading>gardenia
 a motto>tomato
 clover>velcro
 lost corn>controls
@@ -81,6 +82,7 @@ beats>beast
 #resort
 stile>islet
 tiles>islet
+l2~leis>lies
 swing>wings
 rock>cork
 tool shed>toeholds
@@ -243,7 +245,6 @@ hoop2~ye hoop>phooey
 hoop1~hoop>pooh
 n e recs censer>screen
 ####marines seminar remains
-popgun~boing go bin>bingo
 sport ports>prost
 boing go bin>bingo
 ####saps' pass
@@ -297,7 +298,7 @@ urn>run
 canoe>ocean
 frat raft>fart
 oars>soar
-boats>boast
+sabot boats>boast
 ####fighter freight
 pale plea>leap
 ####anger range
@@ -412,7 +413,7 @@ reeds ale>released
 elsa erde>released
 ####den detour
 drained dreadin>dandier
-nerd aid>dandier
+nerd aid diner ad>dandier
 bogus-dandier~dire and arid den>dandier
 ####danger garden
 alarming grailman>marginal
@@ -469,6 +470,8 @@ t-bossily~i sly sob si bloys>bossily
 t-seedily~eyelids>seedily
 t-cattily~tacitly>cattily
 t-tearily-irately~reality>irately,tearily
+t-tersely~restyle>tersely
+t-angrily~rangily>angrily
 t-nastily~saintly>nastily
 t-shadily~ladyish>shadily
 t-snidely~lindsey>snidely
@@ -491,8 +494,10 @@ t-wearingly~lawyering>wearingly
 t-tediously~lousy diet idlest you>tediously
 t-drawlingly~drywalling>drawlingly
 t-emotionally~yolo ailment oo tally mine i yell at moon>emotionally
+t-reactively~creatively>reactively
 t-desperately~patsy leered>desperately
 t-despairingly~redisplaying>despairingly
+t-indiscreetly~iridescently>indiscreetly
 ####loop pool
 sea cube>because
 eels>else
@@ -594,7 +599,6 @@ AFT=rivets
 AFT=maze walls
 #oyster
 #towers
-AFT=prison ropins
 AFT=dr yow
 #otters
 AFT=sly imp,medals,whiners
