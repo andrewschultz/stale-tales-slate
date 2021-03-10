@@ -150,7 +150,7 @@ def tricky_verify(target_words, from_words):
             ret_val += 1
             print("Bad length", target_words[0], "vs", x)
     if ret_val: return ret_val
-    settler_read = from_words[0]
+    settler_read = from_words[0].upper()
     from_words_mod = from_words[1:]
     flag_this = False
     correct_str = ""

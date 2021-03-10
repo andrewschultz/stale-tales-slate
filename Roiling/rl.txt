@@ -631,6 +631,7 @@ But what if slot 7 is A? Then we have --E--(HTN)A and, eliminating E and A from 
 But that gives us slot 1 and 2 by elimination. UNE---H, or UNE(AT)(ER)(NTH)H.
 Then only slot 4 can hold A, slot 5 must hold R, and then slot 6 is left with T. UNEARTH. Though we need other preparation to progress in the game, this is the logic.
 We could also note HAUNTER is in red, which helps with slots 1 and 2 immediately.
+# logic for use saga sausage
 ?How can I get on the Use-Saga Sausage's good side?
 You actually have a lot to start with. (AE)(SA)(SG)(SU)AG(AE) is what falls out from the colors.
 U can only be in slot 4, and you need S in 2 slots, so that gives (AE)SSUAG(AE). ESSUAGA is not a word.
