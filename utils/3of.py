@@ -15,6 +15,18 @@ def alfy(a):
     return ''.join(sorted(a))
 
 my_file = "c:/writing/dict/brit-1word.txt"
+
+while cmd_count < len(sys.argv):
+    arg = sys.argv[cmd_count]
+    if arg[0] == 'w':
+        word_spec = int(arg[1:])
+    elif arg[0] == 'm':
+        min_match = int(arg[1:])
+    else:
+        print("Bad argument, w# = word length m# = minimum matches.")
+        exit()
+    cmd_count += 1
+
 try:
     word_spec = int(sys.argv[1])
     my_file = "c:/writing/dict/words-{}.txt".format(word_spec)
