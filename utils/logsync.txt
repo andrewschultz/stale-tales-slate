@@ -305,7 +305,7 @@ pale plea>leap
 carps>scrap
 pikes>spike
 hunter hunt area>unearth
-haunter~sausage>assuage
+haunter~use saga sausage>assuage
 ####hardest trashed dearths
 cans>scan
 eeks>seek

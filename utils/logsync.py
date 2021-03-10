@@ -485,7 +485,7 @@ def aro_settler_check():
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v.upper(), "as the given b-text but should have", the_string.upper())
                             mt.add_open(r_src, line_count)
-                    if 'parse-text' is q:
+                    if q == 'parse-text':
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
                 if global_raw and my_raw != global_raw:
