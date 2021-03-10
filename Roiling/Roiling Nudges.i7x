@@ -624,7 +624,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills.[slider-activate]" [slider test spill]
 "digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
-"howler"	486513400	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
+"howler"	486513400	sausage	--	"A howler or haunter is not specific enough. This is a bug [']ol SAUSAGE, here."
 "bubble"	341982470	paw r wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	paw r wrap	--	"It's just wrap, really."
 "pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
@@ -1913,7 +1913,7 @@ to say dest-esc: say "Destroying the boat would be a bad idea. You need to escap
 to say no-cray: say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out"
 
 this is the now-shore rule:
-	if player is in Anger Range and haunter is moot, the rule succeeds;
+	if player is in Anger Range and sausage is moot, the rule succeeds;
 	the rule fails;
 
 to say hero-er-oh: say "You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better"
@@ -1921,8 +1921,8 @@ to say hero-er-oh: say "You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, 
 to say all-fish: say "You need to deal with all the bullies at once, somehow, not just one at a time"
 
 this is the is-hauntable rule:
-	if player is in Anger Range and haunter is off-stage, the rule succeeds;
-	if haunter is touchable, the rule succeeds;
+	if player is in Anger Range and sausage is off-stage, the rule succeeds;
+	if sausage is touchable, the rule succeeds;
 	the rule fails;
 
 to say to-dig: say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";

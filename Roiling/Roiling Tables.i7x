@@ -206,9 +206,9 @@ prod	digger	true	262171428	--	"drop"	"drop"	--	--	"The prod rattles as you drop 
 waste	waste	false	437312684	--	"sweat"	"sweat"	--	post-sweat-waste rule	"You make real effort to spruce up the waste. Maybe something nice will be buried in it. There is! As you pile the waste into heaps, you find a very dirty lance. Too dirty to take."	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 lance	lance	true	271720859	--	"clean"	"clean"	pre-clean-lance rule	post-clean-lance rule	"The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry."	"The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it."
 heaps	heaps	false	345016151	--	"shape"	"shape"	--	--	"You channel your inner artist and make something beautiful out of the heaps."	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
-ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	--	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to. You also bury the digger, because you don't want any evidence you were the one who hid the ruby."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
-HUNTER HUNT AREA	haunter	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. Your destruction of the HUNTER HUNT AREA has brought up ... a weird sausage! You scry a cry as scary: 'My lost ruby!'[paragraph break]After it whines on for a bit, you realize you are not dealing with any old sausage, but a hard-done-by use-saga sausage. It will moan and carry on until satisfied."	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
-haunter	haunter	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."	"The haunter/sausage reaches out to grab the pills. It is crushed! The haunter shakes its head sadly. But it seems more empathic towards you."
+ruby	thin hint	false	331207767	--	"bury"	"bury" or "bury ruby"	pre-bury-ruby rule	post-bury-ruby rule	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to. You also bury the digger, because you don't want any evidence you were the one who hid the ruby."	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
+HUNTER HUNT AREA	HUNTER HUNT AREA	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	pre-unearth-haunter rule	post-unearth-haunter rule	"A haunter's underneath--[']n unearthed! You're almost unhearted. Your destruction of the HUNTER HUNT AREA has brought up ... a weird sausage! You scry a cry as scary: 'My lost ruby!'[paragraph break]After it whines on for a bit, you realize you are not dealing with any old sausage, but a hard-done-by USE-SAGA SAUSAGE. It will moan and carry on until satisfied."	"The pills slip into the HUNTER HUNT AREA, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby! It moans about the horrid things it's seen and endured. It must be a USE-SAGA SAUSAGE."
+sausage	sausage	false	462435186	--	"assuage"	"assuage"	--	--	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The [sausage] waits on your next move."	"The [sausage] reaches out to grab the pills, hoping they might ease its pain. But they pass through its fingers. Crushing! The [sausage] shakes its head sadly, but then shrugs. It knows you tried, and it seems to trust you more now."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	--	post-enlarge-gleaner rule	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 papery yapper	papery yapper	false	500608900	--	"prepay"	"prepay" or "prepay papery/yapper" or "prepay papery yapper"	--	post-yapper-prepay rule	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' The yapper motions you to slip the gleaner stealthily, like so, before going off to find a prepayable judge. Presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"	"The yapper begins bellyaching about picking up the pills, complaining we all know WHOSE job it is to clean things up, before running off to look for a wastebasket--though one of the pills seemed to go in the yapper's mouth."
 lever	lever	false	501914680	--	"revel"	"revel"	--	--	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
@@ -1119,11 +1119,11 @@ this is the post-tan-ant rule:
 this is the pre-unearth-haunter rule:
 	if player has digger and ruby is moot, continue the action;
 	if player does not have digger:
-		say "Nothing to unearth the haunter with.";
+		say "Nothing to unearth a haunter with.";
 		preef HUNTER HUNT AREA;
 		do nothing instead;
 	d "UNEARTHING FAILED. Has digger = [whether or not player has digger], Ruby moot = [whether or not ruby is moot].";
-	if haunter is not off-stage, say "The haunter has been unearthed." instead;
+	if sausage is not off-stage, say "You managed to unearth the haunter already." instead;
 	say "Ravage a grave!";
 	if ruby is off-stage:
 		say "[line break]You scry a cry as scary... 'My...jewel...off...east...I...feel...don't...disturb...unless...'[paragraph break]You haven't found or discovered a jewel, yet.";
@@ -1135,7 +1135,8 @@ this is the pre-unearth-haunter rule:
 		do nothing instead;
 
 this is the post-unearth-haunter rule:
-	it-him-her haunter;
+	it-him-her sausage;
+	move sausage to anger range;
 	now digger is realized;
 
 this is the post-enlarge-gleaner rule:
@@ -1288,7 +1289,7 @@ this is the post-dialer-derail rule:
 	now pins are in tenfold;
 
 this is the pre-dialer-redial rule:
-	if pins are reflexive:
+	if pins are touchable:
 		say "Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.";
 		preef bogus-redial;
 		do nothing instead;
@@ -2163,7 +2164,7 @@ trout	"[if player is in Anger Range]The best way to help the trout at the moment
 tea	"You anticipate Aunt Tuna telling you to stop playing with your food, already."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 wrap	"That's not quite the way to pop the [paw r wrap]."
-HUNTER HUNT AREA	"You need an organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
+HUNTER HUNT AREA	"You need a slightly more organized way to reveal what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
 bogus-trace	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 knob	"The knob rattles slightly."
@@ -2177,7 +2178,7 @@ prod	"You juggle the prod a bit, but it doesn't change into anything new."
 lance	"The lance glimmers slightly. It has potential to be shiny."
 Achers Chaser Arches	"Hm, you almost thought you found something. Well, not QUITE like that."
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
-haunter	"You're a bit tongue-tied, but that seems close."
+sausage	"You're a bit tongue-tied, but that seems close."
 ol trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
 gleaner	"The gleaner remains too small to read."
 papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
@@ -2495,7 +2496,7 @@ rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
-haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
+sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"It was enough to bury the ruby."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
@@ -2834,7 +2835,7 @@ tea at a tee	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can 
 trout	"[if trout is in Anger Range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
 raw red drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
-ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"	--	"BURY the ruby"
+ruby	"[one of]The ruby isn't yours. It's been stolen.[plus][or]The ruby belongs to the haunter in [anger range].[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"	--	"BURY the ruby" [NOTE: we say haunter not sausage here because you can't see the sausage until the ruby is buried]
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Sclerous Closures will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"	--	"WARP the Paw-R-Wrap"
 span pans	"[one of]The span pans are a five-part puzzle. You may guess the final step, which consists of dissolving the pans.[plus][or]You need to dispose of the knob.[plus][or]You need to get rid of the skis.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues or, if you need help with the pans, see below.[plus][or]You can SNAP.[minus][cycling]"
 shut huts	--	span pans
@@ -2845,11 +2846,11 @@ sardine	"[if Paw R Wrap is off-stage]To scare the guard away, you need an item f
 OH NERD HERD NO	"That's just a warning you aren't welcome in the Horned Hedron."
 Achers Chaser Arches	"[if Achers Chaser Arches is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"	--	"SEARCH the arches"
 HUNTER HUNT AREA	"[if hunter hunt area is prefigured][one of]You need something to UNEARTH the haunter with.[plus][or]Inside of the Lapsin['] Plains, you will find the tool you need to unearth the haunter.[plus][or]You'll also need a reason to have unearthed the haunter, which you can create elsewhere. You may need to hint other places or things for that.[minus][cycling][else][one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT. If you attack, you see a HATE URN.[plus][or]You should be able to UNEARTH the haunter, [once-now-digger].[plus][or][where-is-digger].[minus][cycling][end if]"	--	"UNEARTH the haunter from the HUNTER HUNT AREA"
-haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
+sausage	"[if sausage is reflexed][one of]Now you've gained its trust, you will want to show [the sausage] something.[plus][or]The [sausage] would love to know where the ruby is buried.[minus][cycling][else][one of]The [sausage] seems upset. How would you calm it down?[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
-ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[minus][cycling]"	--	"PATROL the ol['] trap"
+ol trap	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The [sausage] can take care of them.[plus][or]Once [the sausage] has scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[minus][cycling]"	--	"PATROL the ol['] trap"
 pol art portal	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal [']til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[minus][cycling]"
-thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
+thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The [if sausage is off-stage]haunter, once you find it,[else][sausage][end if] will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea at a tee is not moot][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in Lean Lane.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Chaser Arches, in Sclerous Closures.[plus][or]How would you comb through the [arches]?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[if gleaner is reflexed and gleaner is not examined]EXAMINE the general gleaner, now you've enlarged it.[else if gleaner is reflexed]You've done what you needed.[else][one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling][end if]"	--	"ENLARGE the gleaner"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"

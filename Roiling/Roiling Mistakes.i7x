@@ -583,9 +583,9 @@ chapter Anger Range / Hero's Shore
 
 understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in Anger Range and carps are in Anger Range.
 
-understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and haunter is moot.
+understand "horse" as a mistake ("A horse won't help you explore the Hedron.") when player is in Anger Range and sausage is moot.
 
-understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and haunter is moot.
+understand "hoser" as a mistake ("It's sort of appropriate now that you're in the north, but it's disrespectful to Shoer Osher.") when player is in Anger Range and sausage is moot.
 
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
@@ -593,7 +593,7 @@ understand "renga" as a mistake ("Now is not the time for poetry.") when player 
 
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
-understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of haunter.
+understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of sausage.
 
 chapter Hardest Trashed Dearths
 

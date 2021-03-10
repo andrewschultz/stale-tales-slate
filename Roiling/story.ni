@@ -24,11 +24,11 @@ TOD  = default gen blather, about general nonsense e.g. a misunderstood request
 DSB  = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
 TOB  = read ALL the book titles!
 TOSB = subj-blather, about a specific subject
-TNW  = messages for "you can't go that way"SDASADSADSADSADSADSADSAD
+TNW  = messages for "you can't go that way"
 TRE  = table of readables
 TSX  = differences between sexes
 TSH  = table of spechelp, so you can see the specialized help for an item
-TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it a-ny more
+TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
 TQT  = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO  = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT  = dome tables, text from Demo Dome section
@@ -205,7 +205,7 @@ Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
-You get a non-anagram point for framing the bad guys so the haunter chases them.
+You get a non-anagram point for framing the bad guys so the use-saga sausage chases them.
 ]
 
 Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 54. min-score of towers is 25.
@@ -627,7 +627,7 @@ section compiler non-syntax section
 
 [This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in. If something fails, increase from ab0* a(b+1)0*. Or b+2 if I did a lot of work, or whatever.]
 
-use MAX_DICT_ENTRIES of 3000.
+use MAX_DICT_ENTRIES of 3100.
 
 use MAX_OBJECTS of 980.
 
@@ -659,7 +659,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_DICT_ENTRIES of 3100.
+use MAX_DICT_ENTRIES of 3200.
 
 use MAX_VERBS of 840. [delta=20]
 
@@ -1375,7 +1375,7 @@ this is the oyster-goto rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-	if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that the haunter's torn through them. You don't need or want to hang out there, though." instead;
+	if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that [the sausage]'s torn through them. You don't need or want to hang out there, though." instead;
 	if noun is End Den and gleaner is reflexed, say "No need to go back there." instead;
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
@@ -1584,14 +1584,14 @@ persuasion rule for asking Trout to try doing something:
 	say "[if trout is reflexed]You've helped him enough--he needs time to absorb your lessons[else if trout is in Anger Range]He doesn't need orders--he needs help[else]You may need to show, not tell, him what to do[end if].";
 	persuasion fails;
 
-persuasion rule for asking haunter to try gotoing Rascal Craals:
-	try objasking haunter about ruby instead;
+persuasion rule for asking sausage to try gotoing Rascal Craals:
+	try objasking sausage about ruby instead;
 
-persuasion rule for asking haunter to try gotothinging ruby:
-	try objasking haunter about ruby instead;
+persuasion rule for asking sausage to try gotothinging ruby:
+	try objasking sausage about ruby instead;
 
-persuasion rule for asking haunter to try doing something:
-	if the player's command includes "ruby" or the player's command includes "places", try objasking haunter about ruby instead;
+persuasion rule for asking sausage to try doing something:
+	if the player's command includes "ruby" or the player's command includes "places", try objasking sausage about ruby instead;
 
 persuasion rule for asking walleyes to try doing something:
 	say "They begin unglibly bullying. You're not in a bargaining position here.";
@@ -1792,19 +1792,19 @@ check objasking it about (This is the check for object information rule):
 	if noun is duck, say "Quack, quack. It seems like it wants to hear a voice--but not yours." instead;
 	if noun is not a person, try talking to noun instead;
 	if noun is washed up, washup-clue instead;
-	if noun is haunter and second noun is ruby:
-		if haunter is reflexive, say "You need to get the haunter to trust you, first." instead;
+	if noun is sausage and second noun is ruby:
+		if sausage is reflexive, say "You need to get the sausage to trust you, first." instead;
 		if player is not in Rascal Craals:
-			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
-			if player is in Anger Range: [no elses here. This rolls the haunter out to Rascal Craals]
+			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, [the sausage] doesn't seem to care.";
+			if player is in Anger Range: [no elses here. This rolls the Use-Saga Sausage out to Rascal Craals no matter where you are.]
 				try going west;
-				process the track haunter rule;
+				process the track sausage rule;
 			if player is in Sclerous Closures:
 				try going north;
-				process the track haunter rule;
+				process the track sausage rule;
 			if player is in Horned Hedron:
 				try going west;
-				process the track haunter rule;
+				process the track sausage rule;
 			the rule succeeds;
 	if noun is Leo or noun is Rand:
 		if noun is fightin:
@@ -1852,8 +1852,8 @@ check asking about (This is the check for specific topics rule):
 	if noun is duck, say "Quack, quack." instead;
 	if noun is not a person, try talking to noun instead;
 	if noun is washed up, washup-clue instead;
-	if noun is haunter:
-		if the topic understood matches the text "ruby", try objasking haunter about ruby instead;
+	if noun is sausage:
+		if the topic understood matches the text "ruby", try objasking sausage about ruby instead;
 	if noun is Leo or noun is Rand:
 		if noun is fightin:
 			if noun is Rand and Rand-first is false:
@@ -1967,7 +1967,7 @@ satyr	--
 leopard	--
 badger	"[if badger is reflexive]It covers its exposed parts and turns away[else]It fumbles happily with its now-clothed chest[end if]."
 sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
-haunter	"It makes ghostly noises and talks about how it wants its jewel back."
+sausage	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than ur-pines or those discussing yorpberries.'"
 Len Craig	"'I'm a businessman. A trader. All kinds of goods to swap. Let's haggle.'"
@@ -2050,7 +2050,7 @@ pikes	"They snot nots. Tons. Brusque, queer BS. You need to take action, instead
 aunt tuna	"'There is not much to say, with the haunter lurking under Anger Range, and the Horned Hedron assailing innocent people!' Looks like you won't nyet-a-yenta."
 sandier sardine	"He flashes a snider look as he reads in to your talk. 'Ear dins. Wish I worked at Adrien's.'"
 weaselly walleyes	"They snicker menacingly and whisper loudly that you're probably scared of lots of things like ghosts. They aren't. Not even the haunter!"
-haunter	"It does that whoo-whoo thing. WHERE IS MY JEWEL. You think you know which jewel."
+sausage	"It does that whoo-whoo thing. WHERE IS MY JEWEL. You think you know which jewel."
 yapper	"The yapper does not shut up about unbribability but still manages to wink at the same time and coughing. It seems you may need to do things the right way."
 ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
@@ -2313,11 +2313,11 @@ aunt tuna	Elvira	"'A horrible person! No, I have never met her. But Yorpwald is 
 aunt tuna	trout	"'He is a good boy despite no fine uncle influence, [if trout is reflexed]and you have helped him to ward off those weirdos so wired in the future[else]but those weirdos so wired may still pick on him[end if].' Tortu blushes at being treated like he might be eavesdropping."
 aunt tuna	ruby	"Aunt Tuna wouldn't believe you knew anything about the jewel[if player has ruby], and seeing it might cause her heart failure[end if]."
 aunt tuna	Casper Spacer	"'A vile man, I'm sure! And those BOOKS of his! Or so I've heard!'"
-sardine	haunter	"'I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway.'"
+sardine	sausage	"'I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway.'"
 sardine	Elvira	"'I wouldn't have this job if it weren't for her.'"
 sardine	Horned Hedron	"'I work here. Well, I guard the outside.'"
-haunter	ruby	"It acts all ghostly and asks you to take it where the ruby might be."
-haunter	Elvira	"'Already marked for...' the haunter abruptly stops."
+sausage	ruby	"It acts all ghostly and asks you to take it where the ruby might be."
+sausage	Elvira	"'Horrible! Broil her!'"
 walleyes	HUNTER HUNT AREA	"'Anything to keep the sheeple scared.'"
 walleyes	ruby	"'Bet we could sell it to raise funds for the Base! But we'd keep a nice cut.'"
 walleyes	sardine	"'We'll have fun narcing him out for letting you in. What? He's already gone? Eh.'"
@@ -2328,7 +2328,7 @@ yapper	dialer	"'Very complex machinery! Shouldn't be used without proper certifi
 yapper	gleaner	"'Very pretty! I--well, I know a friend who could be bribed by it.' The yapper winks."
 yapper	Casper	"'That one book. About how beating people up was more fun than riches? Rubbish.'"
 yapper	ruby	"'The ruby would've been a good gift, but it's gone, now.'"
-yapper	haunter	"'I'm sure I'm safe from it here. Unless--that pearl's not its jewel? No? Good.'"
+yapper	sausage	"'I'm sure I'm safe from it here. Unless--that pearl's not its jewel? No? Good.'"
 yapper	sardine	"'Pft, foot soldiers, working for mere salary.'"
 yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
@@ -2552,7 +2552,7 @@ Elvira	--	"'Everyone has an opinion about her, that's for sure. But many people 
 settler	--	"You don't think anyone can help you [if Elmo is moot]more than Elmo did [end if]with that."
 pedanto notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
 curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get close[end if]!'"
-haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
+sausage	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
 table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.] [xxtalk7]
 topic	right-region	him-say
@@ -4381,14 +4381,14 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is Achers Chaser Arches;
 				continue the action;
 		if player is in Anger Range:
-			if pikes are moot and haunter is off-stage:
+			if pikes are moot and sausage is off-stage:
 				now noun is HUNTER HUNT AREA;
 				continue the action;
 			if HUNTER HUNT AREA is in Anger Range:
 				now noun is HUNTER HUNT AREA;
 				continue the action;
-			if haunter is touchable and haunter is reflexive:
-				now noun is haunter;
+			if sausage is touchable and sausage is reflexive:
+				now noun is sausage;
 				continue the action;
 		if player is in Hardest Trashed Dearths:
 			if cans are in Hardest Trashed Dearths:
@@ -4721,7 +4721,7 @@ frat raft	true	true	false	false	"You're pretty sure you can get this one quickly
 sabot boats	true	true	false	false	"It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
-haunter	true	true	false	false	"The [haunter]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
+use saga sausage	true	true	false	false	"The [sausage]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
 Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay."
 general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
@@ -5319,9 +5319,9 @@ to decide which thing is oyster-item:
 		if pikes are in Anger Range:
 			if pikes-clue is true, decide on pikes;
 			decide on carps;
-		if haunter is off-stage, decide on HUNTER HUNT AREA;
-		if haunter is reflexive, decide on haunter;
-	if haunter is reflexed and location of player is location of haunter, decide on haunter;
+		if sausage is off-stage, decide on HUNTER HUNT AREA;
+		if sausage is reflexive, decide on sausage;
+	if sausage is reflexed and location of player is location of sausage, decide on sausage;
 	if player is in Lapsin Plains:
 		if bogus-trace is in Lapsin Plains, decide on bogus-trace;
 		if crate is reflexive, decide on crate;
@@ -5361,7 +5361,7 @@ this is the oyster-hinting rule:
 		now verb-warned is true;
 		all-say "The Posh Hops Shop is full of action. So that gives you a clue as to the commands to use." instead;
 	if oyster-item is not player, try objhinting oyster-item instead;
-	if haunter is reflexed and location of haunter is location of player, all-say "You need to show the haunter where the ruby is buried, now." instead;
+	if sausage is reflexed and location of sausage is location of player, all-say "You need to show [the sausage] where the ruby is buried, now." instead;
 	if player is in Sclerous Closures and Paw R Wrap is off-stage, all-say "You need to go [if Lean Lane is visited]back to Lean Lane[else]east of Anger Range[end if] for a small gift." instead;
 	if player is in Anger Range and eeks are in Hardest Trashed Dearths, all-say "You may want to visit the trout to the east." instead;
 	if player is in Rascal Craals and player does not have the digger, all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
@@ -5369,10 +5369,10 @@ this is the oyster-hinting rule:
 		if ruby is off-stage, all-say "This would be a good place to bury something, but you're not sure what." instead;
 		if thin hint is off-stage, say "There's something to do here, but it's not just anagramming." instead;
 	if location of player is End Den, all-say "[one of]You're at a dead end, here. Exiting and re-entering won't make you any luckier. You need some sort of talisman to guide you through.[plus][or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pear.[else]There are two fragments that can combine to form what you need. The arches and Lean Lane contain them[end if].[minus][cycling]" instead;
-	if haunter is moot and ol trap is not moot:
+	if sausage is moot and ol trap is not moot:
 		all-say "You can now go further in to the Hedron." instead;
 	repeat through table of oyster-done:
-		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them[or][stopping]." instead;
+		if there is no oyster-rm entry or location of player is oyster-rm entry, say "[oyster-txt entry][one of]. There may be bonus points, but a generic HINT will not reveal them. You must HINT something specific[or][stopping]." instead;
 	all-say "BUG. You should never have fallen through here in the hint code." instead;
 	the rule succeeds;
 
@@ -5383,7 +5383,7 @@ Lapsin Plains	"With the way inside open, you no longer have anything you need to
 Horned Hedron	"You've found a way further in, and that's all you need here"
 Sclerous Closures	"You've gotten passage north and found something important, so you're done here"
 Shuttle Hutlets	"You've found what you needed here"
-Anger Range	"You've gotten all you need from the haunter. [anger range] has nothing left to offer you"
+Anger Range	"You've gotten all you need from [the sausage]. [anger range] has nothing left to offer you"
 --	"You've done all you need to do here to solve the Oyster region. If you'd like more specific clues, you can HINT something in your inventory or move elsewhere"
 
 book towers-hinting
@@ -5693,7 +5693,7 @@ after reading a command:
 					change the text of the player's command to "under";
 	if player is in Rascal Craals and ruby is moot:
 		if the player's command includes "ruby":
-			say "Don't worry about the ruby any more[if haunter is moot], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
+			say "Don't worry about the ruby any more[if sausage is moot], or [the sausage][else]. It's someone else's worry. Or someTHING's[end if].";
 			reject the player's command;
 	if the player is in Strip of Profits:
 		repeat through table of skipcmds:
@@ -6105,6 +6105,7 @@ Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in S
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
+Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
 Tenfold Teflond Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
@@ -6557,7 +6558,7 @@ check kissing:
 	if player carries the noun, say "Moisten no items." instead; [general]
 	if noun is the player, say "You feel as good-looking as ever after kissing yourself." instead;
 	if noun is skis, try fliptoing skis instead; [start OYSTER]
-	if noun is haunter, say "The ghost can't respond to affection." instead;
+	if noun is sausage, say "The [sausage] can't respond to affection." instead;
 	If noun is aunt tuna, say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
 	if noun is LOLstr trolls, say "There's loving your enemy, then..." instead;
 	if noun is clam, say "It could use a bit of friendship, but not like that." instead;
@@ -6795,7 +6796,7 @@ check listening:
 	if noun is pale plea, try examining the pale plea instead;
 	if noun is carps or noun is pikes, say "You can't help but listen to the carps['] and pikes['] immature, nasty jibes." instead;
 	if noun is trout, say "[if trout is reflexive]Whimpering slightly[else]Not whimpering any more[end if]." instead;
-	if player is in Anger Range and carps are moot and haunter is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
+	if player is in Anger Range and carps are moot and sausage is off-stage, say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
 	if noun is eeks, say "You hear eeks. Arcing caring. Weeps sweep. 'Eek! Eek! Eek!'" instead;
 	if noun is aunt tuna, say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
 	if player is in Sclerous Closures, say "Silence[if sardine is in sclerous closures]--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU[end if]." instead;
@@ -8222,7 +8223,7 @@ answer-warn is a truth state that varies.
 check answering:
 	if answer-warn is false:
 		now answer-warn is true;
-		say "This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices[if haunter is touchable or agnostic is touchable]. However, the X, Y syntax can work here[end if]." instead;
+		say "This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices[if sausage is touchable or agnostic is touchable]. However, the X, Y syntax can work here[end if]." instead;
 	else:
 		try asking noun to try taking inventory instead;
 
@@ -9558,7 +9559,7 @@ definition: a thing (called candi) is bluable:
 		if rivets are reflexive and candi is praise, no; [?? this looks very wrong. We need to look for blues in Econ Cone.]
 	if candi is tunes, no; [oyster specific]
 	if player is in Plasm Lamps and candi is ant, yes;
-	if candi is haunter and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
+	if candi is sausage and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in Lapsin Plains:
 		if bogus-trace is in Lapsin Plains, yes;
 	if candi is elmer, no; [otters specific]
@@ -14028,9 +14029,9 @@ to annoy-trolls:
 	if silly-acts is 1:
 		say "Your singular antic seems to have attracted the attention of a few pesty types, and the trolls look up, too.";
 	else if silly-acts is 2:
-		say "'Job perks: bop jerks,' say the trolls. The pesty types have formed a half-circle around you now.";
+		say "'Job perks: bop jerks,' say the [trolls]. The pesty types have formed a half-circle around you now.";
 	else:
-		say "The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
+		say "The [trolls] and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
 to say gloaty: say "[one of]. The galoots gloat so[or]. They act sore to scare, sure you stole a coaster[or][stopping]. Perhaps if you were more obnoxious, they'd be less inclined to keep you in";
 
@@ -14092,7 +14093,7 @@ to tag-spill-cheated (gc - a thing):
 		now player has the pills;
 
 every turn when mrlp is oyster and debug-state is true:
-	d "Current oyster hint/spill item = [oyster-item].";
+	d "Current oyster hint/spill item = [oyster-item]/[oyster-spill-item].";
 
 to decide which thing is oyster-spill-item:
 	if player is in posh hops shop, decide on LOLstr trolls;
@@ -14115,8 +14116,8 @@ check spilling (this is the general game state spill reject rule):
 check spilling (this is the specific game state spill reject rule):
 	if player is in Sclerous Closures:
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
-	if location of haunter is location of player:
-		if haunter is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around[if player is not in anger range] some more[end if]." instead;
+	if location of sausage is location of player:
+		if sausage is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around[if player is not in anger range] some more[end if]." instead;
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if HUNTER HUNT AREA is in Anger Range:
@@ -14225,7 +14226,7 @@ does the player mean calming the clam: it is very likely.
 carry out calming:
 	if noun is aunt tuna, say "No way." instead;
 	if noun is clam, try fliptoing clam instead;
-	if noun is haunter, say "It's a sausage. It needs more. Like an explanation, or where the ruby is." instead;
+	if noun is sausage, say "It's a sausage. It needs more. Like an explanation, or where the ruby is." instead;
 	if noun is player, say "[if clam is touchable]You can take a good calming, but you need to dish it out[else]That felt nice, if ineffective[end if]." instead;
 	if noun is a person, say "You don't need to calm [if noun is plural-named]them[else if noun is a male person]him[else if noun is a female person]her[else]that[end if]." instead;
 	if noun is marcel, say "Er...close." instead;
@@ -14384,11 +14385,11 @@ carry out leaping:
 
 book Anger Range
 
-Anger Range is a room in Oyster. "This place [if haunter is moot]no longer [end if]manages to n-rage you, [if haunter is moot]and the area seems to have calmed down[else if carps are touchable]as well as the fish who live here[else if haunter is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if haunter is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
+Anger Range is a room in Oyster. "This place [if sausage is moot]no longer [end if]manages to n-rage you, [if sausage is moot]now you helped [the sausage][else if carps are touchable]as well as the fish who live here[else if sausage is not touchable]and you sense there may be something else angré in the area. You see a HUNTER HUNT AREA, which is probably the source of a lot of the hate[hau-clue][else]even without [the sausage]'s whining[end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping][if sausage is moot].[paragraph break]There's even a super cult sculpture of Shoer Osher here. It's perfectly useless, and you feel jobbed you aren't getting credit for calming things down here, but it seems appropriate aesthetically[end if].". roomnud of Anger Range is table of Anger Range nudges.
 
-understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when haunter is moot.
+understand "shero/hero/heros shore" and "shero/hero/heros/shore" as Anger Range when sausage is moot.
 
-printed name of Anger Range is "[if haunter is not moot]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
+printed name of Anger Range is "[if sausage is not moot]Anger Range[else if player is male]Hero's Shore[else]Shero Shore[end if]"
 
 after printing the locale description for Anger Range:
 	if trout is in Anger Range, set the pronoun it to trout;
@@ -14398,7 +14399,7 @@ after printing the locale description for Anger Range:
 	continue the action;
 
 to say hau-clue:
-	say "[if ruby is moot and haunter is off-stage], even more than before you buried the ruby[end if]";
+	say "[if ruby is moot and sausage is off-stage], even more than before you buried the ruby[end if]";
 
 to say rub-wr:
 	say "[if player has ruby]ruby[else]wrap[end if]";
@@ -14439,20 +14440,21 @@ a-text of pikes is "RRYRY". b-text of pikes is "RRYRY". parse-text of pikes is "
 description of pikes is "They are sneering and teasing the poor trout. You're bigger than them, by two feet."
 
 for printing a locale paragraph about a person (called xyzyx) in Anger Range:
+	if xyzyx is sausage, continue the activity;
 	if xyzyx is carps:
 		say "Some carps and pikes re-nag and re-nag a poor little trout here. Another reason for anger!";
 		now trout is mentioned;
 		now carps are mentioned;
 		now the player is mentioned;
 		now pikes are mentioned;
-	else if xyzyx is not haunter:
+	else:
 		set the locale priority of xyzyx to 0;
 		continue the activity;
 
 aunt-tuna-cross is a truth state that varies. aunt-tuna-cross is false.
 
 check going east in Anger Range:
-	if haunter is in Anger Range, say "Aunt Tuna has a weak heart. That would not be nice! To her or the people she'd complain about the haunter to later." instead;
+	if sausage is in Anger Range, say "Aunt Tuna has a weak heart. That would not be nice! To her or the people she'd complain about the haunter to later." instead;
 	if aunt-tuna-cross is true, say "Not after you so rudely spilled those pills." instead;
 
 check going in Anger Range:
@@ -14506,7 +14508,7 @@ understand "unearth" as unearthing.
 understand "unearth [something]" as unearthing.
 
 rule for supplying a missing noun when unearthing:
-	if haunter is not off-stage, say "You already did." instead;
+	if sausage is not off-stage, say "You already did." instead;
 	if player is in Rascal Craals:
 		if thin hint is in Rascal Craals:
 			now noun is thin hint;
@@ -14538,62 +14540,62 @@ carry out unearthing:
 		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
 		preef HUNTER HUNT AREA;
 		do nothing instead;
-	if noun is haunter, say "It already is." instead;
+	if noun is sausage, say "It already is." instead;
 	if player is in Rascal Craals:
 		if noun is location, say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
 		if noun is ruby, say "That is wasted work." instead;
-		if noun is thin hint, say "That would be wasted work, unearthing the thin hint[if haunter is not moot] and the ruby below it[end if]." instead;
+		if noun is thin hint, say "That would be wasted work, unearthing the thin hint[if sausage is not moot] and the ruby below it[end if]." instead;
 	if player is not in Anger Range, say "Nothing to unearth here. Maybe somewhere more wide-open." instead;
 	if noun is HUNTER HUNT AREA, try fliptoing HUNTER HUNT AREA instead;
 	say "Not worth unearthing, but that's the right idea.";
 	preef HUNTER HUNT AREA;
 	the rule succeeds;
 
-the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon.". "The haunter is here--it's disturbingly shaped like a sausage[if haunter is reflexive]. You should really get on good terms with it[end if]."
+the Use Saga Sausage is a neuter reflexive person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon. It looks very put-upon, and it's probably up to you to fix that.". printed name is "Use-Saga Sausage". "The [sausage] moans impatiently and shifts restlessly, hoping [if sausage is reflexive]for a single kind word[else]to be led somewhere[end if][one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!"
 
-check taking haunter:
+check taking sausage:
 	say "It's incorporeal. But maybe you can take it somewhere." instead;
 
-check answering haunter that (this is the ruby answer rule):
-	if the player's command includes "ruby", try objasking haunter about ruby instead;
+check answering sausage that (this is the ruby answer rule):
+	if the player's command includes "ruby", try objasking sausage about ruby instead;
 
-understand "sausage" as haunter.
+understand "haunter" as sausage when sausage is touchable.
 
-understand "ghost" as haunter when haunter is touchable.
+understand "ghost" as sausage when sausage is touchable.
 
-a-text of haunter is "YRRYYRY". b-text of haunter is "Y?RYGP?". parse-text of haunter is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". haunter is cheat-spoilable.
+understand "etahn/ru" and "etahn ru" as sausage when sausage is touchable.
 
-this is the wrong-haunter-direction rule:
-	if player is in lapsin plains and noun is not west, say "That'd be leading away from where you buried the ruby." instead;
+a-text of use saga sausage is "YRRYYRY". b-text of use saga sausage is "Y?RYGP?". parse-text of use saga sausage is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". use saga sausage is cheat-spoilable.
+
+this is the wrong-sausage-direction rule:
+	if player is in anger range and noun is not west, say "That'd be leading away from where you buried the ruby." instead;
 	if player is in sclerous closures and noun is not north and noun is not inside, say "No, you need to keep moving towards the Horned Hedron." instead;
 	if player is in horned hedron:
 		if noun is inside, say "Hmm. That might cause some chaos, but too much might alert Elvira. You probably want to finish the frame job you started." instead;
 		if noun is not west, say "You're close to where you buried the ruby. Finish the frame job." instead;
 
-check going when location of haunter is location of player:
-	if haunter is reflexive, say "Running would be an admission of guilt. That sausage needs to hear good words." instead;
-	abide by the wrong-haunter-direction rule;
+check going when location of sausage is location of player:
+	if sausage is reflexive, say "Running would just make [the sausage] suspicious. Perhaps you could get on its good side." instead;
+	abide by the wrong-sausage-direction rule;
 
-every turn (this is the track haunter rule):
-	if haunter is moot or haunter has not been in Anger Range, continue the action;
-	if location of haunter is adjacent to location of player:
-		say "The haunter follows you.";
-		move haunter to location of player;
+every turn (this is the track sausage rule):
+	if sausage is moot or sausage has not been in Anger Range, continue the action;
+	if location of sausage is adjacent to location of player:
+		say "The sausage follows you.";
+		move sausage to location of player;
 		if location of player is Horned Hedron and walleyes are in Horned Hedron:
-			say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
+			say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as [the sausage] hovers over you protectively.";
 			the rule succeeds;
 		if location of player is Rascal Craals:
-			say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+			say "[line break]The [sausage] sees the thin hint! It gestures as if you should dig. You do. With the ruby, [the sausage] becomes a wholer howler. 'Scaring me?' you hear to the east, then, after [the sausage] flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The [sausage] did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
 			moot walleyes;
-			moot haunter;
+			moot sausage;
 			moot thin hint;
 			move shoer osher to Anger Range;
 			move player to Horned Hedron;
 			now Rascal Craals is shunned;
 			reg-inc;
 			the rule succeeds;
-	else if haunter is touchable:
-		say "The haunter moans impatiently and shifts restlessly, hoping [if haunter is reflexive]for a single kind word[else]to be led somewhere[end if][one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!";
 
 [of such extreme action that you may wind up using extra nouns at your own risk]
 
@@ -14606,13 +14608,13 @@ understand the command "assuage" as something new.
 understand "assuage" as assuageing.
 understand "assuage [something]" as assuageing.
 
-does the player mean assuageing the haunter: it is very likely.
+does the player mean assuageing the sausage: it is very likely.
 
-Rule for clarifying the parser's choice of haunter while assuageing:
+Rule for clarifying the parser's choice of sausage while assuageing:
 		say "(sausage)[line break]";
 
 carry out assuageing:
-	if noun is haunter:
+	if noun is sausage:
 		if number of words in the player's command > 1:
 			if player's command does not include "sausage", say "Right verb, wrong noun. I'm being strict, here." instead;
 		try fliptoing noun instead;
@@ -14903,7 +14905,7 @@ carry out taning:
 
 book Den Loft
 
-Tenfold Teflond Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflond Den Loft], then a lever to pull[end if].". roomnud of den loft is table of den loft nudges. printed name is "Tenfold Teflon'd Den Loft".
+Tenfold Teflond Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in Tenfold Teflond Den Loft], and there's a lever to the side, too[end if].". roomnud of den loft is table of den loft nudges. printed name is "Tenfold Teflon'd Den Loft".
 
 understand "loft den" as Tenfold Teflond Den Loft.
 
@@ -15336,7 +15338,7 @@ a-text of heaps is "RRYRY". b-text of heaps is "RRGPY". parse-text of heaps is "
 the rigged digger is a thing. description is "It is, unsurprisingly, a product of Shovel Hovels. It looks suited to its advertised purpose.". understand "shovel" as digger.
 
 to say dig-purpose:
-	if haunter is moot and ruby is moot:
+	if sausage is moot and ruby is moot:
 		say "You're finished with the digger.";
 		continue the action;
 	if ruby is moot:
@@ -15346,7 +15348,7 @@ to say dig-purpose:
 		say "Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did.";
 		continue the action;
 	say "You need to dig to some purpose";
-	if player is in Anger Range and haunter is off-stage:
+	if player is in Anger Range and sausage is off-stage:
 		say ", like uncovering the haunter";
 	else if player is in Rascal Craals and player has ruby:
 		say ", maybe to hide something here to frame the walleyes";
@@ -15487,7 +15489,7 @@ book Horned Hedron
 
 Horned Hedron is north of Sclerous Closures. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here. [if ol trap is in Horned Hedron]An ol['] trap blocks passage to[else]A portal[end if] leads into the Horned Hedron proper[if ol trap is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are moot]Collapsed old places[else]Rascal Craals[end if] lie west.". roomnud of Horned Hedron is table of Horned Hedron nudges.
 
-check going west when player is in Horned Hedron: if haunter is moot, say "Collapsed old places are that way. No need to go back." instead;
+check going west when player is in Horned Hedron: if sausage is moot, say "Collapsed old places are that way. No need to go back." instead;
 
 thug-tell is a truth state that varies.
 
@@ -15595,7 +15597,7 @@ End Den is an innie room in Oyster. "You look around, but this probably isn't wh
 
 check exiting in End Den:
 	say "You find your way back to the Horned Hedron entrance.";
-	if haunter is touchable, move haunter to Horned Hedron;
+	if sausage is touchable, move sausage to Horned Hedron;
 	now player is in Horned Hedron instead;
 
 volume towers
@@ -15984,8 +15986,7 @@ to guar-pro (g - a person):
 
 guardians-seen is a number that varies.
 
-before looking:
-	now guardians-seen is 0.
+before looking when mrlp is towers (this is the reset-guardian-count rule): now guardians-seen is 0.
 
 towerclose is a number that varies.
 
