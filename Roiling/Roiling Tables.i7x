@@ -2446,7 +2446,7 @@ side art	"[if Gast is moot][giant-over][else if nuder is in Same Mesa]Maybe deal
 Rude N Nuder	"You don't want the WOE BOW BELL to come back."
 U NERD ENDUR REDUN	"You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that."
 pipe soot	"Brother Horbert will work his magic with that."
-seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
+stupor sprout	"That'd be a double negative, to [if player is not in idle deli]go back and [end if]re-enter the seed pit. Your argument would be so won, it's lost."
 THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
 un road	"You know where the un-road is, but how to navigate it?"
 odd run on aura	"The underground is already lit. Un-unlit."

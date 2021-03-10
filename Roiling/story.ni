@@ -7723,7 +7723,6 @@ this is the mesa-pass rule:
 	if noun is scripture picturers and Cleric Circle is visited, try entering snatchier chantries instead;
 
 definition: a thing (called th) is gast-affected:
-	if gast is not touchable, no;
 	if noun is lairage regalia or noun is adsorbing signboard or noun is scripture picturers, yes;
 	no;
 
@@ -7732,10 +7731,16 @@ check fliptoing (this is the see about flipping touchable things rule):
 	if noun is touchable:
 		if noun is a portal, try entering noun instead;
 		if noun is reflexive or noun is vanishing, continue the action;
-		if noun is gast-affected, continue the action; [this is an odd case where we want gast's presence to stop you getting away, but we also want to add your try to PAD FLIPS if it isn't there]
+		if noun is gast-affected:
+			if gast is touchable, continue the action; [this is an odd case where we want gast's presence to stop you getting away, but we also want to add your try to PAD FLIPS if it isn't there]
+			if noun is reflexed, continue the action;
+		repeat through table of done rejects:
+			if noun is specdone entry:
+				say "[spectalk entry][line break]";
+				the rule succeeds;
 		if noun is reflexed, say "You did what you needed to [if noun is privately-named]there[else]with [the noun][end if]. A repeat won't do anything." instead;
 		if debug-state is true, say "DEBUG WARNING: if you hoped to flip [the noun] for a point and failed, maybe [noun] and not whatever you flip it from needs to be reflexive or vanishing.";
-		say "(examining)[line break]";
+		say "(examining--[one of]if you are trying to re-flip anything, this redirect is a sign you don't need to[or][stopping])[line break]";
 		try examining noun instead;
 
 check fliptoing when player is in Dusty Study and gunter is off-stage (this is the don't flip til you should at start rule) :
