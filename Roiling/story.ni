@@ -2026,7 +2026,7 @@ Gast	"[Gast] is sort of controlling the conversation, and [he-she]'s bigger than
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 evil bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
-Si Reed	"Si Reed taps his head. You need to THINK right, here! But you sort of already knew that."
+Si Reed	"Si Reed taps his head. 'Be an id seer like me!' You see red at this stupid exhortation."
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. You'd like to know what Si Reed knows!" [begin troves]
 lamb	"It's a baaaaad conversationalist." [begin presto]
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
@@ -4721,7 +4721,8 @@ frat raft	true	true	false	false	"You're pretty sure you can get this one quickly
 sabot boats	true	true	false	false	"It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
-Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard."
+haunter	true	true	false	false	"The [haunter]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
+Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay."
 general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
@@ -14560,7 +14561,7 @@ understand "sausage" as haunter.
 
 understand "ghost" as haunter when haunter is touchable.
 
-a-text of haunter is "YRRYYRY". b-text of haunter is "YRRYGPG". parse-text of haunter is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". haunter is cheat-spoilable.
+a-text of haunter is "YRRYYRY". b-text of haunter is "Y?RYGP?". parse-text of haunter is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". haunter is cheat-spoilable.
 
 this is the wrong-haunter-direction rule:
 	if player is in lapsin plains and noun is not west, say "That'd be leading away from where you buried the ruby." instead;

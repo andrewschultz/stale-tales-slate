@@ -615,7 +615,7 @@ So, L is in slot 5. -T-OLL, RTSOLL or STROLL. It's STROLL.
 Well, it does give you one exact letter, which is T.
 That leaves (FR)(RA)(AF)T. But the RAFT is already there.
 You need to FART.
-# logic for sabot boast
+# logic for sabot boats
 ?Should I worry the sabot boats give so many question marks?
 Not really. The four question marks in ???R? cause problems, but let's focus on where the vowels have to be.
 From the ambiguous readings, only slots 2 and 3 can contain vowels, which is huge.
@@ -631,6 +631,10 @@ But what if slot 7 is A? Then we have --E--(HTN)A and, eliminating E and A from 
 But that gives us slot 1 and 2 by elimination. UNE---H, or UNE(AT)(ER)(NTH)H.
 Then only slot 4 can hold A, slot 5 must hold R, and then slot 6 is left with T. UNEARTH. Though we need other preparation to progress in the game, this is the logic.
 We could also note HAUNTER is in red, which helps with slots 1 and 2 immediately.
+?How can I get on the Use-Saga Sausage's good side?
+You actually have a lot to start with. (AE)(SA)(SG)(SU)AG(AE) is what falls out from the colors.
+U can only be in slot 4, and you need S in 2 slots, so that gives (AE)SSUAG(AE). ESSUAGA is not a word.
+ASSUAGE it is.
 >>LEAN LANE
 # logic for paw r wrap
 ?What to do with the Paw-R-Wrap?
