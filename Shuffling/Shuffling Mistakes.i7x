@@ -44,7 +44,9 @@ understand "rc [text]" as a mistake ("[verb-cue].") when Notices Section is unvi
 
 understand "remove [something] from [something]" as a mistake("To keep things simple for you (and, okay, for my coding efforts,) I recommend TAKE X instead of REMOVE/FROM. REMOVE defaults to carried or worn items, and I'm too lazy to tweak that.")
 
-book intro
+book Ordeal Loader
+
+understand "laredo" as a mistake ("If you want a Western game situated on the US/Mexico border, this isn't for you.") when mrlp is Ordeal Loader.
 
 chapter Busiest Subsite
 
