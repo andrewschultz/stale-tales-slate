@@ -48,7 +48,7 @@ def see_anagram_or_close(x, oa):
             print(x, "ORIG ANAGRAM(S):" + a2)
     else:
         print(x, "ANAGRAMLESS NON-WORD.")
-    if oa is True:
+    if oa:
         return
     y = list(x)
     for q in range(0,len(x)):
@@ -90,7 +90,7 @@ minus_ones = False
 minus_twos = False
 get_stdin = False
 
-if len(sys.argv) is 1:
+if len(sys.argv) == 1:
     print("Need an argument. Most common is -s for stdin, if you're running multiple queries. Otherwise, any words will do.")
     usage()
 
@@ -153,7 +153,7 @@ def anagram_check(x):
             usage()
         seen_usage = True
         return
-    if minus_twos is True:
+    if minus_twos:
         remove_hash = defaultdict(bool)
         twos_count = 0
         print("Results from skipping 2 letters...")
@@ -173,7 +173,7 @@ def anagram_check(x):
         xc2 = len(x) * (len(x) - 1) // 2
         if twos_count != xc2:
             print("Repeats mean we checked only", twos_count, "unique word combos of", xc2, "total.")
-    if minus_ones is True:
+    if minus_ones:
         print("Results from skipping 1 letter...")
         see_anagram_or_close(x, only_anagram)
         for i in range(0, len(x)):
@@ -184,7 +184,7 @@ def anagram_check(x):
     if x.endswith("ing"):
         x2 = re.sub("g$", "", x, 1)
         see_anagram_or_close(x2, only_anagram)
-    if plural is True:
+    if plural:
         if x.endswith('y'):
             see_anagram_or_close(re.sub("y$", "ies", x), only_anagram)
         see_anagram_or_close(x + 's', only_anagram)
