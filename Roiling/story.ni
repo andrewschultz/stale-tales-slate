@@ -10,7 +10,7 @@ The tables of nudges (nothing that progresses the game, just hints) are in Roili
 There are other tables in Roiling Tables.i7x. They include the hint table, the main anagram tables, specific help, and rejects for finished items.
 The mistakes are in Roiling Mistakes.i7x.
 
-To search for whatever tables you want, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manse (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
+To search for whatever tables you want, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manse (for example, comedians Report Porter Perrot mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
 
 The new Inform IDE may allow you to search this way, too. For A Roiling Original, I stuck with 6G60. I had enough changes to deal with.
 
@@ -29,8 +29,8 @@ TRE  = table of readables
 TSX  = differences between sexes
 TSH  = table of spechelp, so you can see the specialized help for an item
 TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
-TQT  = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
-TCO  = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
+TQT  = table of quip texts for GRetta, elMO, ELvira, PErrot. Separated with hyphen
+TCO  = table of conversations for GRetta, elMO, ELvira, PErrot. Separated with hyphen
 DMT  = dome tables, text from Demo Dome section
 PRE  = table of preflip clues, or information of stuff you figured but don't get points for yet
 
@@ -452,7 +452,7 @@ to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a gen
 chapter rules on stub
 
 every turn when Strip of Profits is visited (this is the region-hint on no score rule):
-	if mrlp is Ordeal Reload and Gunter is moot:
+	if mrlp is Ordeal Reload and Report Porter Perrot is moot:
 		increment turns-spent of mrlp;
 	else if mrlp is unspoiled:
 		increment turns-spent of mrlp;
@@ -556,7 +556,7 @@ to rhet-q:
 table of yesnoes
 the-person	yessaying	nosaying
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
-Gunter	"Agreeing with Gunter probably wouldn't get him to leave."	"You can't out-argue Gunter or change his mind."
+Report Porter Perrot	"Agreeing with Report Porter Perrot probably wouldn't get him to leave."	"You can't out-argue Report Porter Perrot or change his mind."
 Gast	"Passively agreeing with [him-her] might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with [Gast] might make [him-her] too mad. You need to find the right way to ride out the conversation."
 players	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
 Ed Riley	"He doesn't look terribly agreeable."	"Too direct. He'd just reject you to show you he's no YIELDER."
@@ -586,7 +586,7 @@ every-turn-hint is a truth state that varies. every-turn-hint is false.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if].". initial appearance of player is "[bug-report]".
+description of player is "As every[w-man]nish as ever[if player wears tsar star], and wearing a spiffy tsar star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or a Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if].". initial appearance of player is "[bug-report]".
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -681,7 +681,7 @@ when play begins (this is the debug by default when debugging rule) :
 	now bugsquash is true; [be harsh to myself in programmer testing. Sniff out any bugs and kill walkthrough tests.]
 	now debug-state is true; [this is the not-for-release flag for debug state, if I am grepping]
 	now xtra-trax is true; [this is cheap, but it helps testing. I forget to turn it on.]
-[every turn when player is in Dusty Study and Gunter is off-stage and debug-state is true:
+[every turn when player is in Dusty Study and Report Porter Perrot is off-stage and debug-state is true:
 	say "Found: [stuff-found].";]
 
 section test extensions - not for release
@@ -1888,7 +1888,7 @@ to say uf: say "Any attempt at conversation would be banefully unflyable.[no lin
 
 table of reflexive-blather	[ask x about x] [tor] [trb] [xxtalk1]
 him-asked	him-told
-Gunter	"His views would be biased."
+Report Porter Perrot	"Perrot's views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
 Respect Specter	"'I'll give you help if you SCAN me. But as an undead, I can't talk much beyond what's allowed.'"
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
@@ -2001,7 +2001,7 @@ check objasking Dr Yow about: if Dr Yow is wordy or Dr Yow is rowdy, say "Interr
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
-	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is touchable]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.' [else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
+	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Report Porter Perrot is touchable]Report Porter Perrot yells, 'Flounder, foul nerd!'[else if Elmo is touchable]'Evil days.' / 'Ay, devils.' [else if players are touchable]You're not tricky enough to change the conversation drastically.[else if Elvira is touchable]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
 to say lrduh: say "'I dunno much about that. I like do stuff not think stuff.'";
 
@@ -2016,7 +2016,7 @@ Respect Specter	"'My past is not important. I can help you now, though, if you S
 tokers	"The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do." [begin stores]
 Rehabs Basher	"[he-she-c] nods at you and the blabber babbler. It's remarkably effective psychological warfare, to repress you and all."
 blabber babbler	"If [he-she] actually heard you, [he-she]'d yell a stunning rebuke to whatever [he-she] could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff."
-urgent Gunter	"[bug-report]"
+Report Porter Perrot	"[bug-report]"
 Mole Elmo	"[bug-report]"
 Respect Specter	"'Unfortunately, I don't have time for small talk. The terms of my coming back here were to give helpful advice only if you SCANned me. I need to, um, respect that.'"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
@@ -2181,7 +2181,7 @@ before objasking agnostic about bot boat:
 	if bot boat is off-stage, say "'Ooh, I'd like to make one. I just don't know enough, yet.'" instead;
 	try entering bot boat instead;
 
-table of default-sub-blather	[dsb] [ask x about Gunter] [xxtalk3]
+table of default-sub-blather	[dsb] [ask x about Report Porter Perrot] [xxtalk3]
 him-who	him-say
 yourself	"Oh, dear. Is this a hint the game needs better developed NPCs?"
 aunt tuna	"'Oh, that is not relevant with the haunter lurking below and the Absolute Lout Base terrorizing everyone here! My concern is my nephew Tortu.'"
@@ -2537,7 +2537,7 @@ table of general-blather	[ask x about any old unusual subject] [xxtalk5]
 him-who	topic	him-say
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
-Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
+Report Porter Perrot	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 Rehabs Basher	"vitamins/nativism" or "nativism vitamins"	"'Nice an['] crunchy. Taste good too."
 LOLstr trolls	"horned/hedron" or "horned hedron"	"'Even more fun than here. So we hear.'"
@@ -2682,6 +2682,7 @@ Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated
 prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're three other bits to read."
 luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
 blaster	"ALBERT'S."
+bonker	"The bonker was created by KB RENO."
 stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
@@ -2990,7 +2991,7 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 	now cur-act is 0;
 	if debug-state is true and number understood is 0:
 		if Elmo is touchable, deliver the bye-Elmo-quip quip instead;
-		if Gunter is touchable, deliver the leave-quip quip instead;
+		if Report Porter Perrot is touchable, deliver the leave-quip quip instead;
 		if Elvira is touchable, deliver the final-quip quip instead;
 	if current quip is leave-quip:
 		if Elmo is touchable:
@@ -3000,10 +3001,10 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 	if current quip is quip_null:
 		if Elvira is touchable:
 			say "She talks softly, oft-sly.[line break]";
-		if Gunter is touchable:
-			repeat through table of Gunter comments:
+		if Report Porter Perrot is touchable:
+			repeat through table of Perrot comments:
 				increase cur-act by enabled entry;
-			if the number understood is cur-act - 1, say "'So rude!' says Gunter, roused, soured.";
+			if the number understood is cur-act - 1, say "'So rude!' says Report Porter Perrot, roused, soured.";
 
 before quipping when player is in Disowned Downside (this is the Gretta checks rule):
 	now hold-it-up is false;
@@ -3030,7 +3031,7 @@ to decide whether see-rifle:
 	no;
 
 to say convoforce:
-	if Gunter is touchable:
+	if Report Porter Perrot is touchable:
 		say "'Rebuts, buster? Respond! No derps!'[paragraph break]You can't get away, here. But you can RECAP to see your options";
 	else if see-rifle:
 		say "Elmo doesn't seem to want to fire the gun. He doesn't even want to use it. Maybe you can help him get rid of it";
@@ -3048,14 +3049,14 @@ to decide whether the action is blathery:
 	if objasking about, yes;
 	no.
 
-before doing something when Gunter is touchable:
+before doing something when Report Porter Perrot is touchable:
 	if current action is examining:
-		if noun is not Gunter:
-			say "You feel a little guilty not keeping eye contact and all that jazz, but you're still hearing Gunter okay, you guess.";
+		if noun is not Report Porter Perrot:
+			say "You feel a little guilty not keeping eye contact and all that jazz, but you're still hearing Report Porter Perrot okay, you guess.";
 		continue the action;
 	if current action is attacking, say "That'd just give the Penal Panel one more excuse." instead;
-	if action is blathery, say "Gunter's kind of leading the conversation, here." instead;
-	if current action is not talking to urgent Gunter and current action is not QBC responding with:
+	if action is blathery, say "Report Porter Perrot's kind of leading the conversation, here." instead;
+	if current action is not talking to Report Porter Perrot and current action is not QBC responding with:
 		say "[convoforce].";
 		reject the player's command;
 	continue the action.
@@ -3150,7 +3151,7 @@ to open-elmos-hints:
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
-after quipping when qbc_litany is the table of Gunter comments:
+after quipping when qbc_litany is the table of Perrot comments:
 	if current quip is summary-quip:
 		pad-rec-lump "Elvira";
 		pad-rec "SHATTER-THREATS";
@@ -3170,15 +3171,15 @@ after quipping when qbc_litany is the table of Gunter comments:
 	else if current quip is sit-quip or current quip is powers-quip or current quip is clown-quip or current quip is ahem-quip:
 		do nothing;
 	else if current quip is leave-quip:
-		lawnmower the table of Gunter comments;
+		lawnmower the table of Perrot comments;
 		terminate the conversation;
-		moot Gunter;
+		moot Report Porter Perrot;
 		now Dusty Study is dark;
 		if do-i-chat is true:
 			move Elmo to Largely All Grey Gallery;
 			move player to Largely All Grey Gallery;
 			moot rifle;
-			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Gunter's dialogue]
+			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Report Porter Perrot's dialogue]
 	else:
 		debug-fallthrough;
 
@@ -3801,7 +3802,7 @@ to say reject:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
 			if the-from entry is fungible:
-				if Gunter is off-stage and player is in Dusty Study and stuff-found is 3:
+				if Report Porter Perrot is off-stage and player is in Dusty Study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
 				if slider is switched on:
@@ -3922,7 +3923,7 @@ understand "answer [something]" as ansobjing.
 
 ansobjing is an action applying to one thing.
 
-does the player mean ansobjing the isolani liaison when Gunter is off-stage: it is very likely.
+does the player mean ansobjing the isolani liaison when Report Porter Perrot is off-stage: it is very likely.
 
 check ansobjing:
 	if noun is a person, say "Try to ASK a person about something instead." instead;
@@ -4904,8 +4905,8 @@ this is the ordeal-reload-hinting rule:
 			now latches-warn is true;
 		try objhinting latches instead;
 	if location of player is study:
-		if Gunter is in Dusty Study, say "Talk to Gunter. He provides back story." instead;
-		if Gunter is off-stage, try objhinting isolani liaison instead;
+		if Report Porter Perrot is in Dusty Study, say "Talk to [perrot] to get some back story. There's nothing critical, though." instead;
+		if Report Porter Perrot is off-stage, try objhinting isolani liaison instead;
 		if player does not have lamp, try objhinting palm instead;
 		if settler-hint-yet is false:
 			if tables are in Dusty Study and niche is in Dusty Study and meet bans are in Dusty Study:
@@ -5676,7 +5677,7 @@ after reading a command:
 				[save-present-input;]
 				process the hint flags checkoff rule;
 				process the scam rule instead;
-	if Gunter is off-stage and the player's command includes "gunter", say "[if stuff-found >= 3]Who?[else]Gunter's outside, but to interact meaningfully, you should SWITCH the liaison.[end if]" instead;
+	if Report Porter Perrot is off-stage and the player's command includes "perrot", say "[if stuff-found >= 3]Who?[else]Report Porter Perrot's outside, but to interact meaningfully, you should OPEN the liaison.[end if]" instead;
 	if the player's command includes "tickle" and Elmo is in Largely All Grey Gallery, say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in Clangier Clearing and melon is in Clangier Clearing:
 		if the player's command includes "len" and the player's command includes "mo", try fliptoing melon instead;
@@ -6600,7 +6601,7 @@ understand "knock" as knocking.
 
 carry out knocking:
 	if player is in Lapsin Plains or player is in Dusty Study:
-		if urgent Gunter is off-stage and stuff-found is 3, say "Knock knock! / Who's there? / An adventurer who should probably just OPEN the door instead." instead;
+		if Report Porter Perrot is off-stage and stuff-found is 3, say "Knock knock! / Who's there? / An adventurer who should probably just OPEN the door instead." instead;
 		say "A hollow CONKK, but nothing more. You may need to try other actions here." instead;
 	if player is in Gates Stage, say "It'll be a bit tougher than that." instead;
 	say "Knock knock! / Who's there? / An adventurer in a room with no doors!" instead;
@@ -6688,7 +6689,7 @@ check thinking:
 		if stuff-found < 3:
 			say "You begin [one of]a[or]another[stopping] deep think, [one of]all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, and the n-factorial possibilities--and that tagged gadget to give clues was a bit TOO convenient. It passes the time[or]but mulling and rehashing is no fun[stopping].";
 			now thinko is true instead;
-		else if Gunter is off-stage:
+		else if Report Porter Perrot is off-stage:
 			say "Hard to think with that knocking." instead;
 	if player is in Econ Cone and END PRONER POD is in Econ Cone, say "No, you need to think a little differently to move." instead;
 	if mrlp is troves and number of unfigured things is 0, say "Yes, how you think is extra important here. But generic thinking won't get you through." instead;
@@ -6739,7 +6740,7 @@ check listening:
 	if player is in Dusty Study: [Ordeal Reload]
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
-		say "[if Gunter is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
+		say "[if Report Porter Perrot is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if noun is elmo, say "[if rifle is moot]You're in a conversation[else]Awkward silence, what with Elmo holding that rifle[end if]." instead;
 	if noun is odorant tornado, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
@@ -6823,7 +6824,7 @@ check listening:
 	if player is in Rawest Waters, say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
 	if player is in Dourest Detours, say "You hear something that makes you see red. '[one of]OUR DEST[or]OUR DEST: SET, DOUR[or]OUR DEST: SET, DOUR. TROD?! SUE[stopping]!' [one of]There's probably more[or]There may be more[or]That's probably it[stopping]." instead;
 	if noun is bonker, say "A menacing silence spews from the bonker. Or maybe it's just your imagination." instead;
-	if noun is stinger, say "A menacing buzz spews from the stinger. Or maybe it's just your imagination." instead;
+	if noun is stinger, say "A twanging e-string emits from the stinger. You can't even see red at it." instead;
 	if noun is geese, say "Honk, honk." instead;
 	if noun is sporties ripostes, say "The sporties['] ripostes [one of]discuss ripe sots[or]plan a trip to TIP ROSE'S[or] boom 'I SPOTS [']ER'[or]reference spites, or sore tips[in random order], and you see red at the reference." instead;
 	if player is in Treading Gradient, say "You'd expect a great din, but you don't hear one, thankfully." instead;
@@ -6864,7 +6865,7 @@ rule for supplying a missing noun when listening:
 
 check smelling (this is the you can smell some stuff some places rule): [see about smelling things]
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
-	if player is in Dusty Study and Gunter is moot, say "Bean soup. Subpoena is near." instead;
+	if player is in Dusty Study and Report Porter Perrot is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead; [stores]
 	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
@@ -6906,7 +6907,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 chapter sleeping
 
 check sleeping:
-	if player is in Dusty Study, say "[if Gunter is off-stage]But you just woke up![else]Not with that knocking.[end if]" instead;
+	if player is in Dusty Study, say "[if Report Porter Perrot is off-stage]But you just woke up![else]Not with that knocking.[end if]" instead;
 	if player is in Cripple Clipper, say "This is no dreamboat." instead;
 	if mrlp is troves:
 		if player is in Boredom Bedroom, say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
@@ -7743,16 +7744,16 @@ check fliptoing (this is the see about flipping touchable things rule):
 		say "(examining--[one of]if you are trying to re-flip anything, this redirect is a sign you don't need to[or][stopping])[line break]";
 		try examining noun instead;
 
-check fliptoing when player is in Dusty Study and gunter is off-stage (this is the don't flip til you should at start rule) :
+check fliptoing when player is in Dusty Study and Report Porter Perrot is off-stage (this is the don't flip til you should at start rule) :
 	repeat through table of Ordeal Reload anagrams:
 		if noun is the-to entry and the-from entry is cromulent:
-			if player is in Dusty Study and urgent Gunter is off-stage:
+			if player is in Dusty Study and Report Porter Perrot is off-stage:
 				if stuff-found < 3:
 					if the-from entry is not part of the diorama:
 						now tried-flip is true;
 						say "[if the-from entry is palm]You don't need a light source, yet[else if the-from entry is giant pin]There's no need to tidy your study up just now[else if the-from entry is satchel]Hmm, maybe there is something in there if you needed to go adventuring, but you don't, yet[else]Hm, well, that'd be a way to move around if you needed to sneak out. But you don't, yet[end if][one of]. Still, that seems right, so you file that idea away for later[or][stopping].";
 						preef the-from entry;
-						process the Gunter knocks rule;
+						process the Report Porter Perrot knocks rule;
 						do nothing instead;
 				else:
 					say "Worth trying later, but no need to pre-flip, flipper. See about that visitor, first.";
@@ -7849,7 +7850,7 @@ carry out fliptoing (this is the main fliptoing rule):
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
-				process the Gunter Knocks rule;
+				process the Report Porter Perrot Knocks rule;
 			else if the-to entry is not touchable:	[components aren't broken off]
 				if the-to entry is not the-from entry and the-to entry is not a backdrop, move the-to entry to location of player;
 			if the-to entry is not the-from entry and the-from entry is not reflexed, moot the-from entry; [this is to drop a new item in place]
@@ -7916,7 +7917,7 @@ volume Ordeal Reload
 
 book Dusty Study
 
-Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto notepad is in dusty study]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is moot]. After your sleep, you remember you built some secret passages[end if][if gunter is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
+Dusty Study is an innie room in Ordeal Reload. "[one of]Your study here in the corner of your Means Manse is not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto notepad is in dusty study]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Report Porter Perrot is moot]. After your sleep, you remember you built some secret passages[end if][if Report Porter Perrot is moot]. You'll want to take them[else]. An isolani liaison leads to (or, more accurately, blocks you from) the outside world[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]". roomnud of dusty study is table of dusty study nudges.
 
 the player is in Dusty Study.
 
@@ -7927,7 +7928,7 @@ after printing the locale description for Dusty Study when Dusty Study is unvisi
 	continue the action;
 
 to say think-cue:
-	say "[if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if]"
+	say "[if thinko is false and Report Porter Perrot is off-stage]. It's a good place to just THINK[end if]"
 
 to decide which number is dusty-study-outs:
 	let q be 0;
@@ -7936,7 +7937,7 @@ to decide which number is dusty-study-outs:
 	if niche is moot, increment q;
 	decide on q.
 
-after printing the locale description when player is in Dusty Study and gunter is moot:
+after printing the locale description when player is in Dusty Study and Report Porter Perrot is moot:
 	if tables are moot or meet bans are moot or niche is moot:
 		say "You take stock of your way[unless dusty-study-outs is 1]s[end if] out: ";
 		if tables are moot, say "You could probably go [b]in[r], to the stable, with the tables gone. ";
@@ -7949,7 +7950,7 @@ rule for printing the name of a dark room: say "No light-glint, oh!"
 
 section a rich chair
 
-a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if].". bore-text is "[if gunter is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
+a rich chair is boring scenery in Dusty Study. description of a rich chair is "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if].". bore-text is "[if Report Porter Perrot is moot]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if].". bore-check is the bore-chair rule.
 
 this is the bore-chair rule:
 	if current action is searching:
@@ -7965,7 +7966,7 @@ this is the bore-chair rule:
 		say "You climb on the chair to go up.";
 		try going up instead;
 
-does the player mean entering the rich chair when Gunter is off-stage: it is very likely.
+does the player mean entering the rich chair when Report Porter Perrot is off-stage: it is very likely.
 
 carry out examining rich chair: ignore the examine supporters rule.
 
@@ -8021,7 +8022,7 @@ to say book-est:
 the bookshelf is amusing boring scenery in Dusty Study. description of bookshelf is "[one of]It's sturdy enough to withstand any magic transformations. It's far too heavy to move to make a secret passage, what with [book-est] sloven novels (writing and appearance) you just got SENT, somehow, from trailery to literary discouraging infectious fiction use--the titles blur so fast through your mind, the oeuvres overuse--well, YOU know. Story tyros TRY so.[paragraph break]On glancing at some of the more ridiculous pen names, you also remember how FameHints NameShift and Smokiner Monikers were both allegedly a subsidiary of Elvira's MoneyCo. Nothing proven, and the journalist...well, they haven't written anything lately.[paragraph break]One book you won't remember next move is [or]Another book you won't read. [stopping][i][randbla][r].". bore-check of bookshelf is bore-bookshelf rule. bore-text of bookshelf is "There's no secret passage behind it. And if there were, you couldn't move it. It's got about [book-est] books, after all.".
 
 this is the bore-bookshelf rule:
-	if current action is taking, say "[if Gunter is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]." instead;
+	if current action is taking, say "[if Report Porter Perrot is moot]None of the books could really help you[else]You would have trouble choosing just one. You wonder if any are any good[end if]." instead;
 
 understand "shelf" and "books" as bookshelf.
 
@@ -8040,9 +8041,9 @@ every turn when Dusty Study was not lit and lamp is off-stage (this is the clue 
 
 check going nowhere in Dusty Study:
 	if Dusty Study is not lit, say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
-	if Gunter is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
-	if noun is down, say "[if Gunter is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
-	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Gunter is moot], especially after that chat with Gunter[end if]." instead;
+	if Report Porter Perrot is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
+	if noun is down, say "[if Report Porter Perrot is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
+	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Report Porter Perrot is moot], especially after that chat with [perrot][end if]." instead;
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
 Rule for printing the description of a dark room (this is the Dusty Study rule):
@@ -8060,7 +8061,7 @@ the abstract painting is a cluey LLPish boring thing. "That painting you changed
  "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.[paragraph break]Its title is, (semi-)inexplicably, Inapt Gin at Pig Inn.". bore-text is "The painting's really just there to be observed and examined. Like most art.". bore-check is bore-painting rule.
 
 this is the bore-painting rule:
-	if current action is taking or searching or attacking, say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse." instead;
+	if current action is taking or searching or attacking, say "It's a false law there has to be a wall safe behind it. Besides, [if Report Porter Perrot is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse." instead;
 
 propaganda is a kind of thing. propaganda is usually amusing. propaganda is always boring. bore-text of propaganda is usually "The propaganda's not good for much other than reading. It's not really good for reading, either.". bore-check of propaganda is usually the bore-propaganda rule.
 
@@ -8068,7 +8069,7 @@ this is the bore-propaganda rule:
 	if current action is taking, say "You don't need to take that blunt-lie bulletin, or any part of it. You don't need to take the insults therein, either, unless you really want to." instead;
 	if current action is scaning, say "Err, yeah, scanning is MUCH better than close reading in this case.[paragraph break]Oh, wait, you meant with the settler? Nothing shows up." instead;
 
-the dope op ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy.". printed name is "the dope op-ed"
+the dope op ed is propaganda. "That 'dope' op-ed Report Porter Perrot threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy.". printed name is "the dope op-ed"
 
 the Nitro Intro page is propaganda. it is part of the dope op ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
 
@@ -8135,7 +8136,7 @@ carry out rigoneing:
 	if one-rigged is true, say "You already did." instead;
 	if mrlp is not Ordeal Reload, say "You can only IGNORE REGION in the Dusty Study." instead;
 	if player is not in Dusty Study, say "You need to do this in the Dusty Study." instead;
-	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
+	if Report Porter Perrot is not off-stage, say "You need to reset the game to before when Report Porter Perrot knocks at the door." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
 	say "Warping space and time, you move back to the Strip of Profits...";
 	get-cool-stuff;
@@ -8158,7 +8159,7 @@ denial is a truth state that varies.
 
 carry out denialnaileding:
 	let patchies be 0;
-	if mrlp is Ordeal Reload, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if gunter is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead; [?? test IGNORE REGION and LEADIN DENIAL]
+	if mrlp is Ordeal Reload, say "You need to get to the Strip of Profits before you can use this. If you want, you can [if Report Porter Perrot is off-stage]restart and [end if]IGNORE REGION then use LEADIN DENIAL or any of its anagrams." instead; [?? test IGNORE REGION and LEADIN DENIAL]
 	if denial is true, say "You already used this warp." instead;
 	if player is in Strip of Profits:
 		if denial is true and store t is moot, say "You already did." instead;
@@ -8193,9 +8194,9 @@ carry out roveovering:
 	[d "[number of fruits] fruits: [list of fruits]. [list of backdrops] = backdrops.[line break]";]
 	if roved is true, say "You already did." instead;
 	if player is not in Dusty Study, say "You're not sure where to." instead;
-	if Gunter is not off-stage, say "It's not that easy. Maybe once you've returned [if player is in Dusty Study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
+	if Report Porter Perrot is not off-stage, say "It's not that easy. Maybe once you've returned [if player is in Dusty Study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
 	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
-	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to [b]ROVE OVER[r]. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto notepad] and check you have your settler and notepad and super purse[end if].";
+	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to [b]ROVE OVER[r]. Better than Report Porter Perrot's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto notepad] and check you have your settler and notepad and super purse[end if].";
 	now roved is true;
 	now first-good-scan is true;
 	now kind-of-cool is true;
@@ -8234,13 +8235,13 @@ check answering:
 
 check opening isolani liaison:
 	if stuff-found < 3, say "You don't feel like going out without a really good reason." instead;
-	if urgent Gunter is off-stage:
-		say "It's Urgent Gunter, full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
-		now urgent Gunter is in Dusty Study;
-		set the pronoun him to Urgent Gunter;
+	if Report Porter Perrot is off-stage:
+		say "It's Report Porter Perrot, full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
+		now Report Porter Perrot is in Dusty Study;
+		set the pronoun him to Report Porter Perrot;
 		set the pronoun her to Elvira;
 		[pad-del "rove over";] [?? not sure why this is here]
-		try talking to urgent Gunter instead;
+		try talking to Report Porter Perrot instead;
 	say "A rallies sallier? With snipers pressin[']? Better not." instead;
 
 chapter palm and lamp
@@ -8357,13 +8358,13 @@ check going in Dusty Study:
 			now player has pedanto notepad;
 			now sad ads are in Dusty Study;
 
-chapter Urgent Gunter
+chapter Report Porter Perrot
 
-Urgent Gunter is a terse person. "Urgent Gunter is here, but you shouldn't be seeing this text, so that's a bug. [bug-report]"
+Report Porter Perrot is a terse male person. "Report Porter Perrot is here, but you shouldn't be seeing this text, so that's a bug. [bug-report]"
 
-description of Gunter is "He's trying to look genuinely concerned under that smirk, but it's not working. Maybe he's just trying to make it look like he's trying."
+description of Report Porter Perrot is "[Report Porter Perrot] has one of those smirks that aren't even trying to look genuinely concerned. He's not even trying to try, or look like trying."
 
-the litany of Urgent Gunter is the table of Gunter comments.
+the litany of Report Porter Perrot is the table of Perrot comments.
 
 okay-thats-it is a number that varies.
 
@@ -8373,7 +8374,7 @@ tried-flip is a truth state that varies.
 
 to decide which number is stuff-found:
 	let mytemp be 0;
-	if gunter is moot, decide on 3;
+	if Report Porter Perrot is moot, decide on 3;
 	if thinko is true, increase mytemp by 2;
 	if sad ads are examined, increment mytemp;
 	if player has pedanto notepad, increment mytemp;
@@ -8387,7 +8388,7 @@ to decide which number is stuff-found:
 		decide on mytemp;
 	decide on mytemp.
 
-every turn when location of player is Dusty Study and stuff-found >= 3 and Urgent Gunter is off-stage (this is the Gunter Knocks rule):
+every turn when location of player is Dusty Study and stuff-found >= 3 and Report Porter Perrot is off-stage (this is the Report Porter Perrot Knocks rule):
 	increment okay-thats-it;
 	if okay-thats-it is 6:
 		say "You're sick of the knocking, so you just answer the door, already.";
@@ -8397,16 +8398,16 @@ every turn when location of player is Dusty Study and stuff-found >= 3 and Urgen
 
 to say it-liaison: set the pronoun it to the isolani liaison;
 
-section gunter dialogue
+section Report Porter Perrot dialogue
 
-table of Gunter comments [tco-gu]
+table of Perrot comments [tco-pe]
 prompt	response	enabled
 "Say, Mr., um... summary?"	summary-quip	1
 "Elvira...necro-crone recon?"	necro-quip	0
 "Shil-lish. Sit on it, son."	sit-quip	0
 "Powers? Me? Spew more!"	powers-quip	0
 "Why so showy? Calm down, mad clown!"	clown-quip	0
-"Ask Gunter how business is"	gustave-quip	0
+"Ask [porter] how business is"	gustave-quip	0
 "Pouter troupe?"	pouter-quip	0
 "Lighten the mood with a joke"	pun-quip	0
 "Er, ahem, hear me"	ahem-quip	0
@@ -8414,15 +8415,15 @@ prompt	response	enabled
 
 table of quip texts (continued) [tqt-gu]
 quip	quiptext
-summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Not really a compelling personal story, you have to admit! Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
+summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Report Porter Perrot glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Not really a compelling personal story, you have to admit! Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Report Porter Perrot, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start PORTER text]
 powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
-necro-quip	"'No rec!' Gunter goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' Gunter glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
+necro-quip	"'No rec!' [porter] goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' [porter] glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway [']til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
 clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
 sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps us see... 'Mr. Quasi-Marquis...you have to admit, not even a reruns nurser thinks you could save Yorpwald turning stuff into stuff again. Pedants did research! So one do-rite editor rioted.'"
 gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
 pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything.'"
 pun-quip	"'Eh, punt the pun,' you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at [twiddle of table of laughhouses and -3]. 'Rad irony? Ordinary.'"
-ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4]
+ahem-quip	"[porter] intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4]
 trips-quip	"'No shame,' he moans. 'Some? Nah.' ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour."
 media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. '[his-her-c] charisma is archaism.' / 'Cagiest toil made [him-her] egotistical.' / '[he-she-c] will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and EXIST at the end."
 media-quip-2	"You recall Walt Koh's and Kath Low's howl-task host-walk, among other 'informational' shows...[twiddle of table of lame talk shows and 4]Folks co-spit topics, you're mashed, shamed. '[if player is male]He's [else]She... [end if]mad! Trashed, [if player is female]she'd...rat[else]he darts[end if]!' And the rubbish biopics, good ([biop of true]). or bad ([biop of false]). You did nothing to prepare Yorpwald against technically sophisticated attacks like the exciting ones Elvira warns about, the ones that helped her gain a role of Save/Rid Adviser. Many a tearful faulter did not want to blame you--but they had to."
@@ -8431,11 +8432,11 @@ girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend fin
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [w-man]! Ego hurt? Er, tough!'[paragraph break][porter] pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end PORTER text]
 
 book diorama
 
-before examining when Gunter is off-stage and stuff-found is 3:
+before examining when Report Porter Perrot is off-stage and stuff-found is 3:
 	if noun is diorama or noun is part of diorama, say "The diorama is too intricate to observe in any detail with the knocking at the door." instead;
 	if noun is bookshelf, say "You couldn't read--not even just titles--with that knocking at the door." instead;
 
@@ -9806,7 +9807,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "poss"	false	"POSS toggles whether you can see the maximum/minimum score for a region. It is a potential meta-spoiler, but it can be helpful, too."	"poss"	false
 "go to" or "go/gt/goto"	true	"You can [b]GT/GO TO/GOTO[r] a location or thing if it's a bit far away but in the region."	"go to"	false
 "clues"	false	"You can [b]LISTEN[r], [b]ASK[r] people about random stuff, or X/EXAMINE them to figure how to change them."	"clues"	true
-"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	false	"Apparently, appreciating her is what separates us from the animals. According to Gunter[if mrlp is otters]. But you need to know more and ask around about her[end if]."	"Elvira"	true
+"Elvira" or "necro/crone" or "necro-crone" or "necrocrone"	false	"Apparently, appreciating her is what separates us from the animals. According to [porter][if mrlp is otters]. But you need to know more and ask around about her[end if]."	"Elvira"	true
 "gretta"	false	"If you can find Gretta Garett-Tatger, she may give you something to help hit at Elvira."	"Gretta"	true
 "Elmo"	false	"There are areas behind stores P, U, V, W, Y and, most cryptically, T."	"Elmo"	true
 "old warpy" or "old/warpy"	true	"Old Warpy is the force that allows people to move between distant areas of Yorpwald that need help. It aided you so long ago getting to the Trips Strip, and it may aid you again. You always wondered where else it led, but you knew if you found out, Yorpwald would be in trouble."	"Old Warpy"	false
@@ -10047,7 +10048,7 @@ to pad-rec-p (q - text):
 	say "[paragraph break]";
 
 to decide whether need-line-break:
-	if player is in Dusty Study and gunter is in Dusty Study, no;
+	if player is in Dusty Study and Report Porter Perrot is in Dusty Study, no;
 	if player is in Disowned Downside and gretta is in Disowned Downside, no;
 	if player is in Largely All Grey Gallery and elmo is in Largely All Grey Gallery, no;
 	yes;
@@ -11633,7 +11634,7 @@ chapter sob ever verbose
 
 bab-lis is a truth state that varies.
 
-the sob ever verbose is vanishing scenery in Bustle Sublet. "The sob ever verbose just rattles on and on. A sad, stupid, winding story about [one of]how Erv be SO[or]poor, poor Eve Bors[or]that Bev Oser[or]shifty Bo Evers[in random order], which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red."
+the sob ever verbose is vanishing scenery in Bustle Sublet. "The sob ever verbose just rattles on and on. A sad, stupid, winding story about [one of]BEEVOR's[or]how Erv be SO[or]poor, poor Eve Bors[or]that Bev Oser[or]shifty Bo Evers[in random order], which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red."
 
 after doing something with sob ever verbose:
 	if sob ever verbose is not moot:
@@ -16883,7 +16884,7 @@ check unlocking:
 			if noun is fissure, say "Nothing you have seems to fit in there." instead;
 			say "The prison doesn't seem like something you can unlock--well, not with a key. 'Luck...done,' you mumble as you try. 'Done, luck.' You see red. There's nothing that resembles a keyhole. That weird fissure, maybe..." instead;
 	if noun is drab yoke, say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
-	if noun is isolani liaison, say "[if Gunter is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
+	if noun is isolani liaison, say "[if Report Porter Perrot is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
 	if noun is span pans, say "There's no keyhole in the span pans. But there must be some easy way to open the pans!" instead;
 	if noun is prison ropins, say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
@@ -17817,7 +17818,7 @@ gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of a
 
 gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.". taunt-text of grailman is "The grailman stands a bit taller, as if challenging you to remove him, or seeing proof he is even more above average than he thought he was."
 
-gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.". taunt-text of bonker is "'THE BONKER IS NOT DESTROYED SO EASILY!'".
+gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]'No, berk!' the bonker booms, before, um, bonking you. You see red. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.". taunt-text of bonker is "'THE BONKER IS NOT DESTROYED SO EASILY!'".
 
 gualoc of stinger is Mislit Limits. guadir of stinger is east. block-text of stinger is "The stinger needles at you menacingly. You back off.". clue-text of stinger is "The stinger looks unusually active.". taunt-text of stinger is "Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker.]
 
@@ -19498,7 +19499,7 @@ to say might-read-satyr: say "[if satyr is read-yet]. You might be able to READ 
 
 understand "tsyra" as stray satyr when satyr is read-yet.
 
-a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of satyr is "a[sp]-[sp]?[sp]-[sp]?". satyr is cheat-spoilable.
+a-text of stray satyr is "YRRRO". b-text of stray satyr is "YR?R?". parse-text of stray satyr is "a[sp]-[sp]?[sp]-[sp]?". stray satyr is cheat-spoilable.
 
 chapter owls
 
@@ -21079,10 +21080,10 @@ demo-dome is a truth state that varies.
 
 carry out demoing:
 	if mrlp is demo dome, say "You already are in demo dome mode." instead;
-	if Gunter is not off-stage:
+	if Report Porter Perrot is not off-stage:
 		say "[reject]";
-	if player is not in Dusty Study or gunter is moot, say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
-	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You call up a nav-van and then pull out your discreet, secret ID to enter.";
+	if player is not in Dusty Study or Report Porter Perrot is moot, say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
+	say "[if knockage is true]You ignore [perrot]'s emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You call up a nav-van and then pull out your discreet, secret ID to enter.";
 	now demo-dome is true;
 	move player to Peek Keep;
 	now red writing is examined; [this is a silly hack to make sure Sparse Spares is tracked ok]
@@ -21997,7 +21998,7 @@ book amusing
 
 table of big yucks
 reg-needed	yux
---	"KNOCK when Urgent Gunter knocks?"
+--	"KNOCK when Report Porter Perrot knocks?"
 --	"KISSing Elvira or making her ALIVER?"
 --	"TICKLE ELMO?"
 --	"WAITing (Z) or not typing anything in a command a few times?"
@@ -22182,7 +22183,7 @@ examp
 "[bold type](general)[r] Dropping something."
 "Examining yourself."
 "[bold type](Ordeal Reload)[r] The note from [gtmn] about the purse, and the purse itself too"
-"Ditching Gunter."
+"Ditching Report Porter Perrot."
 "Complain about the media to Elmo."
 "Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
 "One page of the dope op-ed is named differently."
@@ -22961,7 +22962,7 @@ carry out tsing:
 
 chapter chating
 
-[* CHAT is a debug command that lets the player jump to the chats with Gunter, Elmo and Elvira]
+[* CHAT is a debug command that lets the player jump to the chats with Report Porter Perrot, Elmo and Elvira]
 
 chating is an action out of world.
 

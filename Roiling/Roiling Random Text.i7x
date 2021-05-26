@@ -24,7 +24,7 @@ table of megachatter (continued) [this is organized by region then by alphabet, 
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of random books	false	0	30	read-books rule	Ordeal Reload	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
 table of ad slogans	true	0	30	blurby rule	Ordeal Reload	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
-table of mob chants	false	0	30	mob-chanting rule	Ordeal Reload	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
+table of mob chants	false	0	30	mob-chanting rule	Ordeal Reload	"Mob chants (LISTEN post-Perrot in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
 table of idiotic babbler points	true	0	15	babbler-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	" [ted-die]"	"The blabber babbler flips back to the start of [his-her] keystone keynotes, resuming [his-her] ol['] mongo monolog.[pre-brk]"	20
 table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if Cruelest Lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The blabber babbler "	""	"The blabber babbler reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
@@ -75,7 +75,7 @@ table of biopics	false	0	30	bzzt rule	Ordeal Reload	"Biopics, good and bad[if me
 table of bad rappers	false	0	60	bzzt rule	Ordeal Reload	"Bad rap music[elv-art]"	--	""
 table of lame computer games	false	0	30	bzzt rule	Ordeal Reload	"Computer games[elv-art]"	--	""
 table of comedians	false	0	30	bzzt rule	Ordeal Reload	"Comedians of Yorpwald[elv-art]"	""	""
-table of laughhouses	false	0	30	bzzt rule	Ordeal Reload	"Comedy joints[unless pun-quip is mowered] (with Gunter, lighten the mood with a joke)[end if]"	""	""
+table of laughhouses	false	0	30	bzzt rule	Ordeal Reload	"Comedy joints[unless pun-quip is mowered] (with Perrot, lighten the mood with a joke)[end if]"	""	""
 table of lame talk shows	false	0	30	bzzt rule	Ordeal Reload	"Bad talk shows[unless media-quip-2 is mowered] (complain about the media some more to Elmo)[end if]"	--	""
 table of lame movies	false	0	30	bzzt rule	Ordeal Reload	"Bad movies[elv-art]"	""	""
 table of lame tv shows	false	0	30	bzzt rule	Ordeal Reload	"Bad TV shows[elv-art]"	""	""
@@ -350,7 +350,7 @@ this is the pun-quip rule:
 	the rule fails.
 
 this is the mob-chanting rule:
-	if current action is listening and player is in Dusty Study and gunter is moot, the rule succeeds;
+	if current action is listening and player is in Dusty Study and Report Porter Perrot is moot, the rule succeeds;
 	the rule fails;
 
 section STRIP random text rules
@@ -12915,7 +12915,7 @@ blurb	prio
 "I, Emma, a Mime[r], by Mamie Emami"
 "I, Empty: Pity Me[r], by Tim Pye"
 "I, Ever Plus Repulsive[r], by Lupe Revis"
-"I Fab a Fib[r], by Fifi Baab"
+"I Fab a Fib[r], by [if player is male]Biff Baia[else]Fifi Baab[end if]"
 "I Fan a Fin[r], by Nina Faif"
 "I, Fan, Naif[r], by Fina Fain" []
 "I, Farm-Fed, Affirmed[r], by Riff Dame"

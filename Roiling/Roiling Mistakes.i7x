@@ -38,7 +38,7 @@ understand "laredo" as a mistake ("If you want a Western game situated on the US
 
 chapter Dusty Study
 
-to say intro-warn: if urgent gunter is off-stage, say "--well, once you've had an introductory dialogue with an NPC"
+to say intro-warn: if Report Porter Perrot is off-stage, say "--well, once you've had an introductory dialogue with an NPC"
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if tables are in Dusty Study]change the tables by saying STABLE[intro-warn][else]go IN to the stable[end if].") when player is in Dusty Study.
 
@@ -52,13 +52,13 @@ understand "net" and "net beams" and "beams net" as a mistake ("But the net woul
 
 understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.") when player is in Dusty Study and giant pin is in Dusty Study.
 
-understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].") when player is in Dusty Study.
+understand "odor" as a mistake ("[if Report Porter Perrot is off-stage]You'd stink as a host, trying that[else if Dusty Study is not lit]No, you need a light source, not a way out[else]The smell would gag you before the shouty youths[end if].") when player is in Dusty Study.
 
 understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when player has lamp
 
 understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in Dusty Study and op ed is in Dusty Study.
 
-understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in Dusty Study.
+understand "rood" as a mistake ("[if Report Porter Perrot is off-stage]No need to surprise a guest like that. Just open the door[else if Dusty Study is not lit]You need a light source[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when player is in Dusty Study.
 
 understand "trestle" as a mistake ("The settler is pretty powerful, but it can't build bridges.") when player has settler.
 

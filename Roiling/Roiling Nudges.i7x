@@ -30,7 +30,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of dusty study nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "study"	447878132	--	--	"[locname]."
-"rove"	394647309	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
+"rove"	394647309	--	perrot-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and Report Porter Perrot is off-stage]the[else]any future[end if] knock at the door."
 "pin"	195366313	giant pin	--	"It's one big giant pin."
 "giant"	251797892	giant pin	--	"It's one big giant pin."
 "isolani"	385521400	--	--	"You don't need to rearrange the isolani liaison. It's all that protects you from the outside world."
@@ -38,7 +38,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "latch"	215399559	latches	--	"Not one latch. All of them."
 "table"	305336689	--	--	"A bleat: 'tableS!'"
 "ceiling"	392118435	--	--	"[if niche is touchable]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
-"subpoena"	574518649	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
+"subpoena"	574518649	--	perrot-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting. The bean soup is just a smell."
 "gape"	244059588	dope op ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	--	x-oped rule	"[vs-oped]."
 "questin"	630601871	--	x-oped rule	"[vs-oped]."
@@ -1559,12 +1559,12 @@ section ordeal reload auxiliary
 
 to say locname: say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is unsolved]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
-this is the gunter-yet rule:
+this is the perrot-yet rule:
 	if player is in Dusty Study and knockage is true, the rule succeeds;
 	the rule fails;
 
-this is the Gunter-left rule:
-	if player is in Dusty Study and Gunter is moot, the rule succeeds;
+this is the perrot-left rule:
+	if player is in Dusty Study and Report Porter Perrot is moot, the rule succeeds;
 	the rule fails.
 
 this is the x-oped rule:

@@ -846,7 +846,7 @@ carry out orfing:
 		repeat through table of Elvira comments:
 			if response entry is qa:
 				now this-found is true;
-		repeat through table of Gunter comments:
+		repeat through table of Perrot comments:
 			if response entry is qa:
 				now this-found is true;
 		if this-found is false:
