@@ -1405,9 +1405,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "talk"	212044853	--	--	"[its-a-museum]."
 "spce"	324551619	--	--	"[its-a-museum]."
 "speca"	326739437	--	--	"[its-a-museum]."
-"display"	422122769	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
-"spy"	300099177	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
-"dial"	122023592	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
+"display"	422122769	spy dial display	--	"[no-fig-code]."
+"spy"	300099177	spy dial display	--	"[no-fig-code]."
+"dial"	122023592	spy dial display	--	"[no-fig-code]."
+
+table of disport tripods nudges
+this-cmd	hashval	this-item	this-rule (rule)	this-clue
+"tripods"	506548258	--	--	"[its-a-museum]"
+"tripdo"	410274292	--	--	"[its-a-museum]"
 
 table of Evoc Cove nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2287,6 +2292,8 @@ to say dome-rm: say "You don't need to flip anything here, really. Certainly not
 to say its-a-museum: say "This is a museum! Messing with the exhibits would be very bad form"
 
 to say no-mess: say "No need to mess with the helpful sign";
+
+to say no-fig-code: say "You won't figure the code. There isn't one. Muahaha"
 
 to say no-no: say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
 

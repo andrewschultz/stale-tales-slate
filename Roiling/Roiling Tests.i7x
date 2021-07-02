@@ -291,7 +291,7 @@ test dome-nov with "e/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/w"
 
 test dome-spares with "d/x clasper/x bolt case/x ladder/x filter/x dustpan/x plastic/x placer/x duster/u"
 
-test dome-all with "demo dome/x ad shelf/test dome-inlet/test dome-show/test dome-dens/test dome-nov/test dome-spares"
+test dome-all with "demo dome/x tripods/test dome-inlet/test dome-show/test dome-dens/test dome-nov/test dome-spares"
 
 volume definitions
 

@@ -1920,7 +1920,10 @@ thistext [from chic loner chronicle] [tdm4]
 "One thing I wish I'd done earlier, that would've given me more shortcuts, was setting up my GitHub account. The simple graph of what you've done today (green vs. grey) is great motivation to do something/anything, and if it isn't much, that's motivation to do more next time."
 "Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate."
 
-table of pagelist [from novella] [tdm5]
+table of tripod games [tdm6]
+thistext [x disport tripods] [tdm3]
+
+table of pagelist [from novella] [tdm6]
 thistext	page-read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true
 "Page Two: 'Pa, we got top wage!'"
@@ -3121,7 +3124,7 @@ owl decal Code Wall	"[dome-blab]"
 written walls	"[dome-blab]"
 allow lots tools wall	"[dome-blab]"
 design deigns	"[dome-blab]"
-flashed ad shelf	"[dome-blab]"
+disport tripods	"[dome-blab]"
 larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
