@@ -1923,6 +1923,7 @@ thistext [from chic loner chronicle] [tdm4]
 table of tripod games [tdm6]
 thistext [x disport tripods] [tdm3]
 
+
 table of pagelist [from novella] [tdm6]
 thistext	page-read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true

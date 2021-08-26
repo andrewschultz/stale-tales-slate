@@ -12729,7 +12729,7 @@ blurb	prio
 "Here as a Sheer Hearse[r], by Rea Esh" []
 "Here Cuts the Curse, Uh, Secret[r], by Ester Chu" []
 "Here I Got Their Ego[r], by Gertie Ho"
-"Here's to the Rose[r], by Ester Ho" []
+"Here's to the Rose She Tore[r], by Ester Ho" []
 "Heretic for Free to Rich[r], by [if player is male]Chet Fierro[else]Cheri Forte[end if]"
 "Heritage's Sheer Gait[r], by Trisha Gee"
 "Hermit, Atone Another Time[r], by [if player is male]Theo Reitman[else]Ettie Harmon[end if]"
@@ -15507,7 +15507,6 @@ blurb	prio
 "Rope This Tire Shop[r], by Si Thorpe" []
 "Roped, Pedro Pored[r], by Red Rod Pope" []
 "The Ropes Stop Here[r], by Hope Rest"
-"The Rose She Tore[r], by Ester Ho" []
 "Rose's Zone: Ones, Zeros[r], by Zoro Essen"
 "Rosie's Osiers Rise So[r], by Rossie O'Reiss"
 "Rot Chalet Tot Rachel[r], by Charlotte Lorch-Tate" []

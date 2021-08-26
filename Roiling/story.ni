@@ -6077,7 +6077,7 @@ Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And a
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
-Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes, far from No-Lag Logan[end if]."
+Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
 Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
@@ -17587,10 +17587,6 @@ description of luc sym is "He's certainly muscly. He looks relatively light on h
 
 a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRR?". parse-text of muscly luc sym is "x[sp]x[sp]u[sp]x[sp]x[sp]?".
 
-section snider diners
-
-The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
-
 Muscly Ms Lucy is a female red guardian. "[one of]Someone muscly named [or][stopping]Ms Lucy flexes while guarding the way [psgdir of muscly ms lucy].".
 
 description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
@@ -17600,6 +17596,10 @@ a-text of muscly ms lucy is "RRYRRO". b-text of muscly ms lucy is "RRYRRB". pars
 printed name of muscly ms lucy is "Muscly Ms. Lucy".
 
 other-g of luc sym is ms lucy. other-g of ms lucy is luc sym.
+
+section snider diners
+
+The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
 
 understand "diner" as diners.
 
@@ -19423,7 +19423,7 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if][atleast-evenbetter]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here, hardly the coxiest[if adjsolve is 4]. There're so many you think Gee, Fur Refuge[end if][atleast-evenbetter]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
 
 to say atleast-evenbetter: say ". [if enough-animals-solved-here]Even better,[else]At least[end if] it's secluded enough you can't see the Edictal Citadel from here"
 
@@ -21096,7 +21096,7 @@ to demo-dome-status:
 
 book Peek Keep
 
-Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage above, but there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The saying ignsay[one of] (yes, I couldn't resist the Pig Latin joke)[or][stopping] here welcomes you[esi-pro].".roomnud of Peek Keep is table of Peek Keep nudges.
+Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage above, but there seems to be a lot behind it. Disport tripods also continually change what they're showing.[paragraph break]The saying ignsay[one of] (yes, I couldn't resist the Pig Latin joke)[or][stopping] here welcomes you[esi-pro].".roomnud of Peek Keep is table of Peek Keep nudges.
 
 the saying ignsay is scenery in Peek Keep. "UNFOLD OLD FUN, MEMOIR: I'M MORE."
 
@@ -21130,7 +21130,7 @@ allow lots tools wall	10
 Chic Loner Chronicle	10
 Calendar	10
 Novella	20
-Flashed Ad Shelf	1
+disport tripods	1
 shiest thesis	10
 Passe Apses	10
 
@@ -21177,9 +21177,9 @@ section talks stalk
 
 a talks stalk is boring scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs.". bore-text is "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day, the author will write those games and write postmortems.";
 
-section Flashed Ad Shelf
+section disport tripods
 
-The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, then to someone walking around on a cube in a cavern, then someone walking between Grebeberg and Yelpley to defeat the Diktat Kid in the Dirge Grid, then someone named Kerry Kyle defeating a Very Vile Fairy File.". bore-text is "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
+The disport tripods are a plural-named exhibit in Peek Keep. description is "The disport tripods advertise another way to enjoyably pass time after you are done.". bore-text is "There's not much to do with the disport tripods except examine them. Or play one of those wonderful advertised games!". notes-table of disport tripods is table of tripod games.
 
 book Evoc-Cove
 
@@ -21438,7 +21438,10 @@ hinting is an action out of world.
 
 understand the command "hint/hints/info/help" as something new.
 
-understand "hint" as hinting. understand "hints" as hinting. understand "info" as hinting. understand "help" as hinting.
+understand "hint" as hinting.
+understand "hints" as hinting.
+understand "info" as hinting.
+understand "help" as hinting.
 
 tri-hint is a truth state that varies.
 

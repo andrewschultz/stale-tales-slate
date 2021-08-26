@@ -631,6 +631,8 @@ understand "lapins" as a mistake ("Cute bunnies can make any game better, but ha
 
 understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are touchable.
 
+understand "nepo" as a mistake ("No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!") when span pans are touchable.
+
 understand "nkob" as a mistake ("[if knob is moot]You already did what you needed with the knob, Step by Step[else]The knob remains Hangin['] Tough. Let's Try it Again, until You Got It[end if].") when player is in Lapsin Plains.
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin Plains.
