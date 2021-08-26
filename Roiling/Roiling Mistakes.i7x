@@ -893,6 +893,8 @@ book otters
 
 understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
 
+understand "deltaic" as a mistake ("Reorganizing the geography around the Edictal Citadel won't help.") when location of player is ominous.
+
 chapter Minded Midden
 
 understand "dim den" as a mistake ("You remain outside in (relative) light.") when player is in Minded Midden and bleary barley is in Minded Midden.
