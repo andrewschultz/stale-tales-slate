@@ -68,21 +68,35 @@ def word_poss(x):
         temp //= math.factorial(freq[q])
     return (factor_of(temp), temp)
 
-with open("towbal.txt") as file:
+old_low = 5
+target_low = 0
+
+with open("c:/games/inform/roiling.inform/source/towbal.txt") as file:
     for (line_count, line) in enumerate(file, 1):
         if line.startswith('#'): continue
+        if line.startswith("target="):
+            if target_low:
+                sys.exit("Redefined target low at line {}. Comment one out.".format(line_count))
+            try:
+                target_low = float(line[7:])
+            except:
+                sys.exit("Bad float for target low defined at line {}. Fix it.".format(line_count))
+            continue
         x = line.lower().strip()
         (fac[x], pos[x]) = word_poss(x)
 
-old_low = 5
 for y in combinations(pos, 5):
     y0 = set(pos) - set(y)
     (fd, pd, this_bigger) = facdif(y, y0)
     this_log = abs(math.log(pd))
     if this_log < math.log(2):
-        print(y, y0, fd, "= {:.4f}".format(pd), this_bigger)
-        if this_log < old_low:
+        if target_low:
+            if this_log < math.log(target_low):
+                print(y, y0, fd, "= {:.4f}".format(pd), "Numerator > Denominator?", this_bigger)
+            continue
+        if this_log < old_low - .00005:
+            print(y, y0, fd, "= {:.4f}".format(pd), "Numerator > Denominator?", this_bigger)
             old_low = this_log
-            print("New low", old_low)
-        elif this_log == old_low:
-            print("Tied low", old_low)
+            print("New low", old_low, pd)
+        elif this_log < old_low + .00005:
+            print("Tied low", old_low, pd)
