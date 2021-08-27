@@ -226,8 +226,7 @@ the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	pos
 recital article	recital article	false	436240018	--	"talcier"	"talcier"	a rule	a rule	"The recital article suddenly cracks a bit, then crumbles. [Rodney] looks over for a minute, disgusted he has been distracted. Oppression and intimidation are mentally and physically taxing. Especially for the oppressors and intimidators! Anyway, that's one less thing to clean up once you've dealt with Rodney."
 dreads adders	dreads adders	false	353649874	--	"sadder"	"sadder"	--	--	"The adders suddenly become less aggressive. You wonder if they feel bad about all the other people they may've obstructed, as they slide harmlessly away."
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	--	--	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
-Muscly Luc Sym	Muscly Luc Sym	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Luc Sym's muscles shrink, and he loses coordination. 'A hokey KO. Yeah.' But he still stumbles away in embarrassment."
-Muscly Ms Lucy	Muscly Ms Lucy	false	460633602	--	"clumsy"	"clumsy"	--	post-muscly rule	"Ms. Lucy's muscles shrink, and she loses coordination. 'A hokey KO. Yeah.' But she still stumbles away in embarrassment."
+denier nereid	denier nereid	false	475865464	--	"clumsy"	"clumsy"	--	--	"The denier nereid feels an irresistible pull back to where she came. As she leaves, she calls out 'I can't stop you...' and, well, she can't."
 snider diners	snider diners	false	444333321	--	"rinsed"	"rinsed"	--	--	"The diners['] dry wit and mood dampen as a water spray erupts from nowhere--and gets them! Their outdoor dining experience has been ruined. As they storm (ha) away, you reckon you managed to reseat the teaser-eaters, and you didn't even have to wait for Easter."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	--	--	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if Actionless Coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 fluster self rut	fluster self rut	false	597948438	--	"restful"	"restful"	--	--	"You relax. You stop letting the fluster-self rut bother you. You let it just be itself, or be, and let go how it may've frustrated you in the past. And what do you know? It narrows to a bright line, then winks out. You feel more self-confident."
@@ -1331,10 +1330,6 @@ to say vain-naiv:
 	else:
 		say "You convince the natives that they're really too good to be guarding THIS spot, and in fact, you cleared out some other areas that are even more fun to guard, but you're sure there're even more fun places if you just go--well, this-a-way and that-a-way. They fall for your flattery and start up the site van in search of somewhere better"
 
-this is the post-muscly rule:
-	moot muscly luc sym;
-	moot muscly ms lucy;
-
 this is the post-reeds-ale rule:
 	moot lars eede;
 	moot elsa erde;
@@ -1922,7 +1917,21 @@ thistext [from chic loner chronicle] [tdm4]
 
 table of tripod games [tdm6]
 thistext [x disport tripods] [tdm3]
-
+"A rather direct mention of andrewschultz.itch.io and githu.com/andrewschultz discusses everything, though a lot more detail is ahead."
+"First, there is a mention of Threediopolis, where you need to find the right path through a 3-d city to certain treasures and acquaintances."
+"After Threediopolis, there is Fourdiopolis, a much larger 3-d city with teleports."
+"There is also a framed invitation to The Problems Compound to watch Alec Smart deal with peers. After that, to Slicker City other places."
+"There are half-written invitations to Buck the Past and Grubbyville, one a sequel to The Problems Compound and the other about a scheming would-be valedictorian."
+"You see a bunch of weird creatures. They call themselves UGLY OAFS."
+"You see a depiction of a cube floating in a cavern."
+"You see an advertisement for AILIHPHILIA, where everything is a palindrome."
+"You see a large tome called the VERY VILE FAIRY FILE. In some unnamed land, maybe you will be able to neutralize it."
+"You see a large assortment of Pig Latin translations and impressions of the Fight-Ite Fey and Factual Actual Fey becoming the Flame-Lame Fey. Under They Thunder!"
+"You see a small five-by-five chessboard that invites you to explore basic endgame checkmates in Fivebyfivia."
+"You see another small five-by-five chessboard that invites you to explore unusal endgame checkmates with minor pieces, bishop and knight. There are apparently many such Fourbyfourias."
+"First of many EctoComp games is A Checkered Haunting, where you walk across a five-by-five city trying to cover all blocks except one without repeating."
+"The land of Uxmulbrufyuz features four other lands, each with only vowel in its name."
+"There is also 69105 More Keys, a tribute to David Welbourn's game."
 
 table of pagelist [from novella] [tdm6]
 thistext	page-read-yet	comprehensible
@@ -2237,8 +2246,7 @@ bonker	"'TANGENTIAL HIT!' blares the bonker. 'THE MARAUDING HORDES ARE ON TO US!
 stinger	"The stinger fizzles a bit."
 weeds	"The weeds almost seem to shrug."
 raves saver	"The 'replay player' letters brighten for a second."
-muscly luc sym	"Luc Sym stumbles for a moment."
-muscly ms lucy	"Ms. Lucy stumbles for a moment."
+denier nereid	"The denier nereid seems to be pulled away towards Leak Lake for a moment."
 organised ego drains	"The drains sizzle slightly but go back to menacing quiet."
 mardier admirer	"The mardier admirer looks askance, then returns to evaluating you some more."
 natives site van	"The natives inside the site van look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
@@ -2891,8 +2899,7 @@ Snider Diners	"[one of]The snider diners have dry wit! They don't want to be int
 Tetris Sitter	"[if Tetris Sitter is reflexive][one of][The tetris sitter] seems absorbed in her IT-STER.[plus][or]Her happiness is a bit of a ruse. You may need to change her emotions, to help her back to being truly happy.[plus][or]She can become TRISTE.[minus][cycling][else if player has top opt pot][one of]St. Teri may still want something, but little of what you have interests her.[plus][or]Changing the unripe ur-pine may give you something that fits nicely in the the top opt pot.[plus][or]Give the top opt pot to [the Tetris Sitter] once you have the crocus.[minus][cycling]"
 itster	--	Tetris Sitter
 sporties ripostes	"[one of]They are very witty, not drawn out.[plus][or]Almost like poetry.[plus][or]If they were less incisive, you might be able to ignore them.[plus][or]Make them PROSIEST.[minus][cycling]"
-muscly luc sym	"[muscly-clue]"
-muscly ms lucy	"[muscly-clue]"
+denier nereid	"[one of]The denier nereid seems to get to close to you. You wish she could stay back.[plus][or]You can't pull her back, but she can be pulled back in general.[plus][or]She can be REINED.[minus][cycling]"
 bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]The wait-seer also doesn't seem to be getting tired.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
@@ -3150,8 +3157,6 @@ to say where-is-digger:
 		say "What you want is inside the shut huts of Lapsin['] Plains to the north";
 	else:
 		say "Your digger should do the job[if ruby is moot], but it has another use elsewhere, first[end if]"
-
-to say muscly-clue: say "[one of]Being muscly is nice, but if [he-she] were to get too tangled up to use [his-her] strength...[no line break][plus][or]Maybe if [he-she] weren't so coordinated, [his-her] muscle would be ineffective?[no line break][plus][or]CLUMSY.[minus][cycling]"
 
 to say lois-or-lot-hint: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 

@@ -1924,8 +1924,7 @@ agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just 
 dreads adders	"The adders sit around and look intimidating."
 pestern serpent	"[serp-say]."
 Mel Fish	--
-muscly luc sym	--
-muscly ms lucy	--
+denier nereid	--
 lois the hostile	--
 hostile is he lot	--
 natives site van	--
@@ -2083,15 +2082,14 @@ Terrance	"[war-duh]"
 Tyson	"[war-duh]"
 Wade	"[war-duh]"
 Rodney	"This standoff won't be resolved with diplomacy."
-muscly luc sym	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
-muscly ms lucy	"She kind of stumbles with dialogue. Maybe you can make her stumble physically."
+denier nereid	"She discourages you from anything too adventurous. She sees you getting mad and says 'END IRE,' which makes you a bit madder. You see red."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 fluster self rut	"You feel agitated just talking to the rut, whether or not it decides to talk back. You press yourself hard to think what to ask, but no. That can't quite work."
 organised ego drains	"The ego drains just aren't to be argued with without getting, uh, drained. Fortunately, they aren't stopping you from going anywhere."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
-Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it."
 mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
 Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
 natives site van	"You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
@@ -2336,8 +2334,7 @@ yapper	Elvira	"'She's called on the dialer a few times.'"
 yapper	Horned Hedron	"'That's where we are.'"
 butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
-muscly luc sym	Elvira	"Luc Sym blinks and shrugs and grunts."
-muscly ms lucy	Elvira	"Ms. Lucy blinks and shrugs and grunts."
+denier nereid	Elvira	"The denier nereid mentions Elvira is one person not worth denying."
 pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts."
 sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
 sweatier	curst palace	"The wait-seer points to the palace and shrugs, as if to say, why?"
@@ -2563,7 +2560,7 @@ topic	right-region	him-say
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
-	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through Muscly, so you need to get to the Saltbed.]
+	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through the denier nereid, so you need to get to the Saltbed.]
 	if wait seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
 	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
@@ -4735,7 +4732,7 @@ Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title
 dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
-muscly luc sym	true	true	false	false	"You've been around thee block enough to know what the variable color must be."
+denier nereid	true	true	false	false	"You can amlmost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
 try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
 traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
 fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
@@ -15941,13 +15938,11 @@ book basic guardian work
 definition: a guardian (called gu) is mas:
 	if gu is lars eede, yes;
 	if gu is hostile is he lot, yes;
-	if gu is muscly luc sym, yes;
 	no;
 
 definition: a guardian (called gu) is fem:
 	if gu is elsa erde, yes;
 	if gu is lois the hostile, yes;
-	if gu is muscly ms lucy, yes;
 	no;
 
 to decide whether bad-gender-match of (myg - a guardian):
@@ -17579,23 +17574,13 @@ description of bluster butlers is "Bluster butlers are known for handling undesi
 
 a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R?RRR??". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
-section muscly
+section denier nereid
 
-Muscly Luc Sym is a red guardian. "[one of]Someone muscly named [or][stopping]Luc Sym flexes while guarding the way [psgdir of muscly luc sym].".
+a denier nereid is a red guardian. "A denier nereid, surprisingly far from shore, blocks your way [psgdir of denier nereid]."
 
-description of luc sym is "He's certainly muscly. He looks relatively light on his toes for his size, too."
+description of denier nereid is "Alluring and all that, but very languid. She's not doing much, and she's doing a lot (for her) to tell you you don't need to do much."
 
-a-text of muscly luc sym is "RRYRRO". b-text of muscly luc sym is "RRYRR?". parse-text of muscly luc sym is "x[sp]x[sp]u[sp]x[sp]x[sp]?".
-
-Muscly Ms Lucy is a female red guardian. "[one of]Someone muscly named [or][stopping]Ms Lucy flexes while guarding the way [psgdir of muscly ms lucy].".
-
-description of muscly ms lucy is "She's certainly muscly. She looks relatively light on her toes for her size, too."
-
-a-text of muscly ms lucy is "RRYRRO". b-text of muscly ms lucy is "RRYRRB". parse-text of muscly ms lucy is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
-
-printed name of muscly ms lucy is "Muscly Ms. Lucy".
-
-other-g of luc sym is ms lucy. other-g of ms lucy is luc sym.
+a-text of denier nereid is "RYYRYR". b-text of denier nereid is "RGYR??". parse-text of denier nereid is "r[sp]e[sp]?[sp]x[sp]?[sp]x". denier nereid is cheat-spoilable.
 
 section snider diners
 
@@ -17788,9 +17773,7 @@ gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. bl
 
 gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here.". taunt-text of bluster butlers is "The bluster butlers cough far too loudly, almost half-laughing, before babbling about the importance of teams working together to guard important places. Perhaps they have no clue they might be next."
 
-gualoc of muscly Luc Sym is Scope Copse. guadir of muscly Luc Sym is north. block-text of muscly Luc Sym is "He shows surprising dexterity for someone so muscly as he forces you back.". clue-text of muscly Luc Sym is "Looking again at Muscly Luc Sym, you briefly remember the giant's paradox, about trading off strength and dexterity.". taunt-text of muscly Luc Sym is "Luc Sym flexes briefly."
-
-gualoc of muscly Ms Lucy is Scope Copse. guadir of muscly Ms Lucy is north. block-text of muscly Ms Lucy is "She shows surprising dexterity for someone so muscly as she forces you back.". clue-text of muscly Ms Lucy is "Looking again at Muscly Ms. Lucy, you briefly remember the giant's paradox, about trading off strength and dexterity.". taunt-text of muscly ms lucy is "Ms. Lucy flexes briefly."
+gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly greatful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
 
 gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-text of snider diners is "They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if].". clue-text of snider diners is "The diners mutter about how bad weather can ruin the ambience of open-air meals.". taunt-text of snider diners is "The diners smack their lips, and you think you hear the zhk of silverware."
 
@@ -18009,8 +17992,8 @@ to choose-new-hint-guardian:
 to decide which number is guard-hint-prio of (gu - a guardian): [I use "other-room" here to make clear what map squares we need to go. "if gu is butlers" would be shorter code, but it wouldn't quite say what the guardian guarded, which is more important]
 	if other-room of gu is lost lots or other-room of gu is fringe finger, decide on 1; [these are totally optional.]
 	if other-room of gu is shaven havens or other-room of gu is obscurest subsector, decide on 10; [these feature the big Dr Yow quest]
-	if other-room of gu is outer route: [take care of scope copse special case. One of diners/muscly if all 3 there, then butlers take priority]
-		if diners are moot or muscly luc sym is moot, decide on 9;
+	if other-room of gu is outer route: [take care of scope copse special case. One of diners/nereid if all 3 there, then butlers take priority]
+		if diners are moot or denier nereid is moot, decide on 9;
 		decide on 2;
 	if other-room of gu is actionless coastlines, decide on 7; [whether or not AC is visited, it's important. You need to bump off both guardians. But unlocking corner/center rooms comes first. Then unlocking AC. Then other passages.]
 	if other-room of gu is not tower-accessible: ["unvisited" almost works but if we, say, DINERS, E, DRAINED, HIMSELF, N, RELEASED, E, we want to point north to open up Coastlines]

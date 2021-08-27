@@ -739,17 +739,11 @@ understand "wist led" and "its lewd" as a mistake ("Editorializing about the Wil
 
 chapter Scope Copse
 
-to decide which guardian is the-muscle:
-	if player is male, decide on Muscly Luc Sym;
-	decide on Muscly Ms Lucy;
-
 understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when butlers are touchable.
 
 understand "copes" as a mistake ("You find it easier to cope, here, with the Spec-O-Scope to guide you, but you need to move on.") when player is in Scope Copse.
 
 understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in Scope Copse.
-
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when the-muscle is touchable.
 
 understand "ursty" and "ur sty" as a mistake ("You're trying to destroy the yurts, not build them up.") when player is in Scope Copse and yurts are in Scope Copse.
 

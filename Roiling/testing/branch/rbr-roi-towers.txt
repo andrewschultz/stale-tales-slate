@@ -908,14 +908,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for subtler
 >ustberl
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for clumsy
->lcmuys
+#slider test for reined
+>eredin
 Your settler begins to make noises: a low hum, but nothing really piercing.
->gs
-#extra slider test for clumsy
->lcmuys
-Your settler begins to make noises: a low hum, but nothing really piercing.
->gs
 
 @hin
 /DEBUG INFO: (Muscly Luc Sym|snider diners) hinting\.
@@ -930,8 +925,8 @@ Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
->xr muscly #00n
-Hmm. You bet you could get past if Muscly Luc Sym were CLUMSY.
+>xr nereid #00n
+Hmm. You bet you could get past if the denier nereid were REINED.
 >xr diners #00e
 Hmm. You bet you could get past if the snider diners were RINSED.
 
@@ -1003,7 +998,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers.
 >rinsed
 DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 >undo
->clumsy
+>reined
 by one point
 DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 >undo
@@ -1016,7 +1011,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @minh
->clumsy
+>reined
 #notmax
 Your score has just gone up by one point
 }}SCORE++
@@ -1190,7 +1185,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Muscly Ms. Lucy. Tha
 >gs
 
 @!minh,mini
->clumsy
+>reined
 Your score has just gone up by one point
 }}SCORE++
 \\
