@@ -742,9 +742,6 @@ to general-gender-towers:
 	unless gen-gone of lars eede:
 		now lars eede is off-stage;
 		now elsa erde is off-stage;
-	unless gen-gone of luc sym:
-		now luc sym is off-stage;
-		now ms lucy is off-stage;
 	if mrlp is towers, reposition-guardians;
 
 to choose-female:
@@ -1923,7 +1920,7 @@ yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid 
 agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 dreads adders	"The adders sit around and look intimidating."
 pestern serpent	"[serp-say]."
-Mel Fish	--
+realist tailers	--
 denier nereid	--
 lois the hostile	--
 hostile is he lot	--
@@ -2091,7 +2088,7 @@ pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. She keeps mumbling a sales pitch under her breath, and maybe if you listen a bit, you can remember it."
 mardier admirer	"They claim they are really impressed with you, though of course you have faults you need to fix! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another backhanded compliment[or]The mardier admirer focuses on comparing you to Red Irma and Ed Mirra. Now THERE's a couple[cycling]."
-Mel Fish	"Mel Fish rants how they set him up to fail: [one of]'Shelf [']im[or]'Eh, Films[or](censored to maximize cluing) 'LES?! F HIM[in random order]! They done me wrong.' he cries as his eyes go red[one of]. He's obviously not finished ranting[or][stopping]."
+realist tailers	"[one of]'It's real,' the realist tailers assure you, whatever it is. You see red.[or]The realist tailers hope for more lit eras, which makes you see red.[or]You see red at the realist tailers['] lists of what may tire Sal.[cycling]"
 natives site van	"You seem unable to convince the natives they are too good to park their site van here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in random order]...' the wait-seer says before going silent again. You see red."
 duck	"It quacks."
@@ -2343,7 +2340,7 @@ mardier admirer	Elvira	"'You both have your faults and your good sides. You migh
 mardier admirer	curst palace	"'Well I bet you could make it there, you're clever enough, but what would you do once you got there?'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
-Mel Fish	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
+realist tailers	Elvira	"'Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!'"
 Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
@@ -2560,7 +2557,7 @@ topic	right-region	him-say
 
 to decide which number is ag-moves: [annotated mostly for my own sake. CHANGEIF guardians shift]
 	if grailman is moot, decide on 2; [if the guardian(s) north of Danger Garden/Artist Traits Strait are both gone, it is a straight jump. And of course lois/lot are moot, since ag-moves is calculated when the kid is present] [also note that the promise imposer is moot if this is not true]
-	if Mel Fish is not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through the denier nereid, so you need to get to the Saltbed.]
+	if realist tailers are not moot, decide on 6; [if 2 adjacent guardians block the east/center ways south, you have to go all the way west. This can't happen with north of the gradient/strati since lois/lot will be gone. Here, the only way south is through the denier nereid, so you need to get to the Saltbed.]
 	if wait seer is not moot:
 		unless gen-gone of lars eede, decide on 6; [this zigzag blocks a clear path east]
 	decide on 4; [the only way 8 would be possible is S W N W S S E E, but that ignores you have cleared the atheists]
@@ -16392,7 +16389,7 @@ to decide which number is grad-points: [?? we could possibly convert this into h
 	let temp be 0;
 	if mended mini denim is moot, increment temp;
 	if weeds are moot, increment temp;
-	if mel fish is moot, increment temp;
+	if realist tailers are moot, increment temp;
 	if fluster self rut is moot, increment temp;
 	if lars eede is moot or elsa erde is moot, increment temp;
 	if sweatier wait seer is moot, increment temp;
@@ -17647,13 +17644,11 @@ to say admsex:
 
 chapter Leveraged Everglade guardians
 
-SMH Life Mel Fish is a blue guardian. "A man to the [psgdir of Mel Fish] mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.' You recognize him...wait, it's 'SMH Life' Mel Fish, the former reality show star (his names--real and stage--both make you see red) who always kept trying crazier and crazier ways to be more individual than you, before he burned out!"
+the realist tailers are blue plural-named guardians. "Realist tailers to the [psgdir of realist tailers] will probably let you pass ... at first. But they will calmly ask if your decision is based on some silly dream or cold, hard logic."
 
-description of Mel Fish is "On his chest, Mel Fish has the word FLEMISH crossed out in red. He sees you staring and yells 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description of realist tailers is "Looking very smug. One or two, you could deal with and dismiss. But a whole deluge? Probably not, even though you know their brand of 'realism' is quite silly. And yet, perhaps you could make them too silly for each other."
 
-a-text of SMH Life Mel Fish is "RYRRYRR". b-text of SMH Life Mel Fish is "RYRRYRR". parse-text of SMH Life Mel Fish is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
-
-printed name of Mel Fish is "'SMH, Life' Mel Fish".
+a-text of realist tailers is "RYRRYYR". b-text of realist tailers is "R?RR?YR". parse-text of realist tailers is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 section promise imposer
 
@@ -17898,7 +17893,6 @@ to shuffle-guardians (goner - a guardian):
 		draw-my-loc;
 	let RG be number of not moot red guardians;
 	if Lars Eede is moot or Elsa Erde is moot, decrement RG; [Lars and Elsa both go]
-	if Ms Lucy is moot or Luc Sym is moot, decrement RG; [both musclies go]
 	let BG be number of not moot blue guardians;
 	d "Reds left = [list of not moot red guardians].";
 	d "Blues left = [list of not moot blue guardians].";

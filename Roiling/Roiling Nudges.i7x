@@ -816,10 +816,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "seer"	437209987	wait seer	--	"[wait-see]."
 "rampant"	407258077	mardier admirer	--	"No, just a mardier admirer, really."
 "womantrap"	589545427	--	see-female-admirer rule	"No, just a mardier admirer, really."
-"smh"	197631418	Mel Fish	--	"[all-of-mel]."
-"life"	253127690	Mel Fish	--	"[all-of-mel]."
-"mel"	245695101	Mel Fish	--	"[all-of-mel]."
-"fshi"	205064007	Mel Fish	--	"[all-of-mel]."
+"tailer"	417234433	--	--	"No, you need to deal with all the tailers."
 "nerd"	303066509	Nerd Aid	--	"[nerd-a]."
 "aid"	68209753	Nerd Aid	--	"[nerd-a]."
 "bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
@@ -2025,8 +2022,6 @@ this is the duck-cant rule:
 to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight you'd lose"
 
 to say no-creche: say "You can't change the screech creches. Well, not until you defeat Elvira"
-
-to say all-of-mel: say "No, you need to deal with all of Mel Fish"
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
 

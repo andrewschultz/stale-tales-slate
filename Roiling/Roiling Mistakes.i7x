@@ -759,13 +759,9 @@ understand "fluters" as a mistake ("This game has no soundtrack, and if I made o
 
 chapter Leveraged Everglade
 
-understand "file" as a mistake ("You wish you could file Mel Fish away and put him in the past. Maybe he wants to do so to his own past, too. Become a new person, sort of.") when Mel Fish is in location of player.
-
-understand "hms" as a mistake ("No ship comes to take Mel away. It's pretty landlocked here.") when Mel Fish is in location of player.
-
-understand "lief" and "leif" as a mistake ("Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.") when Mel Fish is in location of player.
-
 understand "organdies" as a mistake ("The ego-drains remain made of sturdy material.") when organised ego drains are touchable.
+
+understand "retail" and "retails" as a mistake ("The realist tailers have plenty to say about retail shopping, but you don't want to hear it.") when realist tailers are in location of player.
 
 chapter Anemic Cinema
 
@@ -793,7 +789,7 @@ understand "i mend" as a mistake ("You're more interested in doing the opposite-
 
 understand "parley" as a mistake ("The raves saver/replay player [if saver is reflexive]can be[else]has already been[end if] parleyed into something shinier.") when raves saver is touchable.
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if Mel Fish is touchable]. Mel Fish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when weeds are touchable.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.") when weeds are touchable.
 
 chapter shoals aslosh (backdrop)
 
