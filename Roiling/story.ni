@@ -11687,7 +11687,7 @@ chapter A Sty, Tasty, Say
 
 A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
 
-a-text of a sty tasty say is "RRYR". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
+a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
 chapter THE BEE and 2 solutions
 
@@ -17515,7 +17515,7 @@ section nerd aid
 
 the Nerd Aid Diner ad is boring auxiliary scenery. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.".
 
-a-text of Nerd Aid Diner ad is "RRYYRYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
+a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
 
 book Dourest Detours
 
@@ -18773,7 +18773,7 @@ to say pla-ma: say "[if parleys splayer players are reflexed]mack[else]player[en
 
 understand "mack/player" as parleys splayer players.
 
-a-text of parleys splayer players is "RRYRRYO". b-text of parleys splayer players is "???R?RO". parse-text of parleys splayer players is "BUG".
+a-text of parleys splayer players is "RRYRYRO". b-text of parleys splayer players is "???R?RO". parse-text of parleys splayer players is "BUG".
 
 rule for printing a locale paragraph about parleys splayer players:
 	say "[one of]Wait a minute. You think you recognize whom the parleys splayer players are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. It's strong enough, they're not just macks, but parleys splayer players. There'a nothing to STOP Gretta from running, but it's easy to feel boxed-in[how-played][stopping].";
@@ -19127,7 +19127,7 @@ section 12 letters - pod 7
 
 t-despairingly is a pickup-line. pod-num is 7. pod-ord is 1. a-text of t-despairingly is "RYRRYYRYRRRO". b-text of t-despairingly is "RGRRYYRYRRRO". parse-text of t-despairingly is "x[sp]e[sp]x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". player-move is "The [pla-ma]s begin redisplaying and redisplaying why they're so great.". pickup-description is "redisplaying their 'greatness'"
 
-t-indiscreetly is a pickup-line. pod-num is 7. pod-ord is 2. a-text of t-indiscreetly is "YRRYRRRYYPPB". b-text of t-indiscreetly is "GRRYRRRGYPPB". parse-text of t-indiscreetly is "i[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]e[sp]-[sp]t[sp]l[sp]y". player-move is "The [pla-ma]s continue to babble, their clothes shining iridescently.". pickup-description is "wearing clothes shining iridescently".
+t-indiscreetly is a pickup-line. pod-num is 7. pod-ord is 2. a-text of t-indiscreetly is "YRRYRRRYYRRO". b-text of t-indiscreetly is "GRRYRRRGYPPB". parse-text of t-indiscreetly is "i[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]e[sp]-[sp]t[sp]l[sp]y". player-move is "The [pla-ma]s continue to babble, their clothes shining iridescently.". pickup-description is "wearing clothes shining iridescently".
 
 to decide whether (n - a number) is unworkable:
 	decide yes;

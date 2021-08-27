@@ -26,7 +26,6 @@ need_source_logic = defaultdict(int)
 got_logic = defaultdict(int)
 got_logic_invis = defaultdict(int)
 got_logic_reds = defaultdict(int)
-open_line = defaultdict(int)
 sa_flips = defaultdict(str)
 sa_trans = defaultdict(str)
 sa_ignore = defaultdict(str)
@@ -401,29 +400,36 @@ def aro_settler_check():
                         aro_got[my_raw] = True
                         v = val_of(q)
                         vary = aro_flips[my_raw].split(",")
-                        if len(vary) == 1: continue
                         lf = len(vary[0])
                         sp = [0] * lf
                         co = [0] * lf
                         vo = [0] * lf
                         ys = [0] * lf
                         for wd in vary:
-                            for idx in range(0, lf - 1):
+                            for idx in range(0, lf):
                                 if wd[idx] == ' ': sp[idx] = 1
                                 if wd[idx] in vowels: vo[idx] = 1
                                 if wd[idx] in consonants: co[idx] = 1
                                 if wd[idx] == 'y': ys[idx] = 1
-                        for idx in range(0, lf - 1):
+                        got_errors_here = False
+                        wanted_string = ''
+                        for idx in range(0, lf):
                             if sp[idx] + vo[idx] + co[idx] + ys[idx] > 1:
-                                if v[idx] != '?': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                                needed_char = '?'
                             elif sp[idx]:
-                                if v[idx] != '*': print("Need * at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                                needed_char = '*'
                             elif co[idx]:
-                                if v[idx] != 'r': print("Need R at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                                needed_char = 'r'
                             elif vo[idx]:
-                                if v[idx] != 'y': print("Need Y at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                                needed_char = 'y'
                             elif ys[idx]:
-                                if v[idx] != 'o': print("Need O at slot", idx+1, "at line", line_count, "/", aro_line[my_raw], "for", my_thing, ">", aro_flips[my_raw])
+                                needed_char = 'o'
+                            if v[idx] != needed_char:
+                                print("Have {}, need {} at slot {} at line {} source/{} rawfile".format(v[idx], needed_char, idx+1, line_count, aro_line[my_raw]), "for", my_thing, ">", aro_flips[my_raw])
+                                got_errors_here = True
+                            wanted_string += needed_char if v[idx] == needed_char else needed_char.upper()
+                        if got_errors_here:
+                            print("SUMMARY: have {}, need {}.".format(v, wanted_string))
                     if 'b-text' in q:
                         (my_thing, my_raw, my_nosp) = things_of(q)
                         if global_raw and my_raw != global_raw: continue
@@ -484,7 +490,7 @@ def aro_settler_check():
                         if v != the_string:
                             b_count += 1
                             print(b_count, "Uh oh line", line_count, my_thing, "->", sol, "had", v.upper(), "as the given b-text but should have", the_string.upper())
-                            mt.add_open(r_src, line_count)
+                            mt.add_postopen(r_src, line_count)
                     if q == 'parse-text':
                         if global_raw and my_raw != global_raw: continue
                         global_raw = my_raw
@@ -529,7 +535,7 @@ def check_scannotes():
             if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of columns (have {:d} need 6) at line {:d}: {:s}".format(len(ll), line_count, line))
             elif len(ll) == 1:
                 print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
-                open_line[r_src] = line_count
+                mt.add_postopen(r_src, line_count)
             if len(ll) >= 5: sug_text[l0] = ll[5] # I have some filler entries where generic opt-out hints pop up
             if l0 not in nsl:
                 if l0 not in okay.keys() and l0 not in abbrevs.values():
@@ -575,8 +581,8 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
         print("TEST SUCCEEDED:", file_desc, "comments match source definitions exactly.")
     extraneous = list(set(gots) - set(needs) - set(abbrevs))
     if len(extraneous):
-        if data_file not in open_line:
-            open_line[logic_reds_file] = gots[min(extraneous, key=gots.get)]
+        if data_file not in mt.file_post_list:
+            mt.add_open(logic_reds_file, gots[min(extraneous, key=gots.get)])
         print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
 
 show_count = False
@@ -696,7 +702,7 @@ with open(logic_reds_file) as file:
         if re.search("#qver (of|for) ", ll):
             if need_question_mark:
                 print("REDS.TXT: Need question mark in settler results before line", line_count, "to cover last #qver ({:s})".format(last_qver), "at line", need_question_mark)
-                if logic_reds_file not in open_line.keys() or not open_first: open_line[logic_reds_file] = line_count
+                mt.add_open(logic_reds_file, line_count)
                 qm_needed += 1
             scanned = re.sub("#qver (of|for) ", "", ll)
             scanned = re.sub("~.*", "", scanned)
@@ -722,11 +728,8 @@ aro_settler_check()
 sa_r_g_check()
 
 if open_after:
-    for q in open_line.keys():
-        i7.npo(q, open_line[q], bail = False)
-    if not len(open_line.keys()): print("Nothing to open. Everything worked.")
-    exit()
-elif len(open_line):
+    mt.postopen_files()
+    print("Nothing to open.")
+elif len(mt.file_post_list):
     print("You could open automatically with the -a or -oa flag.")
 
-mt.postopen_files()
