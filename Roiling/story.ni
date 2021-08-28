@@ -366,12 +366,13 @@ a portal can be checkedoff or available. a portal is usually available.
 
 definition: a portal is slick if its diffic is 11 or less.
 
-for writing a paragraph about a lumpable portal (called ptl) :
+for writing a paragraph about a touchable lumpable never-entered portal (called ptl) :
+	if number of touchable lumpable never-entered portals is 0, continue the action;
 	say "You have [if number of touchable never-entered portals > 1]new places[else]a new place[end if] to explore![paragraph break]";
-	repeat with Q running through touchable never-entered portals:
+	repeat with Q running through touchable lumpable never-entered portals:
 		 say "[initial appearance of Q] ";
 	say "[paragraph break]";
-	now all never-entered touchable portals are mentioned;
+	now all touchable lumpable portals are mentioned;
 	continue the action;
 
 to say fill-in-here: say "!!!!!!" [this is just so I can compile and concentrate on other things]
@@ -3611,6 +3612,7 @@ check entering a portal (this is the first portal entry rule):
 	if noun is never-entered:
 		d "First visit to [grn]. Can't try recovering items yet.";
 		add-errs grn;
+		now noun is ever-entered;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "Forcing Towers REPO!";
 		move player to last-loc of grn, without printing a room description;
@@ -5995,7 +5997,7 @@ check taking inventory:
 			say "Other things in your super purse";
 		else:
 			say "Your general tools";
-		say " include (toggle with IV):[line break]";
+		say " include (toggle with [b]IV[r]):[line break]";
 		if player has letters settler:
 			now letters settler is unmarked for listing;
 		list the contents of the player, with newlines, indented, with extra indentation, listing marked items only;
@@ -6710,7 +6712,7 @@ chapter listening
 
 to say a-r: say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
-to say next-sonancy: say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the bee[end if]"
+to say next-sonancy: say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the ewe[end if]"
 
 to decide whether can-hear-posh:
 	if player is in Browse Bowers, yes;
@@ -7934,7 +7936,7 @@ to decide which number is dusty-study-outs:
 after printing the locale description when player is in Dusty Study and Report Porter Perrot is moot:
 	if tables are moot or meet bans are moot or niche is moot:
 		say "You take stock of your way[unless dusty-study-outs is 1]s[end if] out: ";
-		if tables are moot, say "You could probably go [b]in[r], to the stable, with the tables gone. ";
+		if tables are moot, say "You could probably go [b]IN[r], to the stable, with the tables gone. ";
 		if meet bans are moot, say "You [if tables are moot]also [end if]cleared a path [b]down[r]. ";
 		if niche is moot, say "There's [if dusty-study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
@@ -14587,7 +14589,8 @@ every turn (this is the track sausage rule):
 			say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as [the sausage] hovers over you protectively.";
 			the rule succeeds;
 		if location of player is Rascal Craals:
-			say "[line break]The [sausage] sees the thin hint! It gestures as if you should dig. You do. With the ruby, [the sausage] becomes a wholer howler. 'Scaring me?' you hear to the east, then, after [the sausage] flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The [sausage] did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+			say "[line break]The [sausage] sees the thin hint! It gestures as if you should dig. You do. With the ruby, [the sausage] becomes a wholer howler. It jets off to the east. As you bury the rigged digger (no need to re-dig, G,) you hear 'Scaring me?' then, after [the sausage] booms 'CRIME SNAG...' SCREAMING, with manic 'ERGs.' 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if ol trap is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The [sausage] did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
+			moot rigged digger;
 			moot walleyes;
 			moot sausage;
 			moot thin hint;
@@ -14732,7 +14735,6 @@ the paler pearl is an undesc. description is "It might be valuable if it weren't
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][else]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
 after examining gleaner when gleaner is not realized and gleaner is reflexed:
-	now gleaner is realized;
 	if player is in end den and gleaner is reflexed:
 		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
 		move player to Tenfold Teflond Den Loft;

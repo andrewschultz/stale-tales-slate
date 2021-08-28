@@ -623,8 +623,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "storey"	609225725	--	degen-true rule	"[not-the-reg]."
 "jar"	136472146	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	pills	--	"You seem to be fumbling what to do with the pills.[slider-activate]" [slider test spill]
-"digger"	344351251	rigged digger	--	"It's what it needs to be, you imagine."
-"howler"	486513400	sausage	--	"A howler or haunter is not specific enough. This is a bug [']ol SAUSAGE, here."
+"digger"	344351251	rigged digger	--	"It's already been, err, rigged, enough."
+"howler"	486513400	sausage	--	"A howler or haunter is not specific enough. This is a big ol['] SAUSAGE, here."
 "bubble"	341982470	paw r wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	paw r wrap	--	"It's just wrap, really."
 "pearl"	350597528	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
