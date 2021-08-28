@@ -11,6 +11,7 @@ track_letter_type = True
 show_all_grids = False
 search_strings = []
 got_one_reading = False
+details = False
 
 red_anagrams = defaultdict(list)
 found_searched = defaultdict(bool)
@@ -65,6 +66,8 @@ def valid_red(word_to_redcheck, my_answer):
     for x in red_anagrams[my_answer]:
         for y in range(0, len(x)):
             if x[y] == word_to_redcheck[y]:
+                if details:
+                    print("red-text {} rejected {}.".format(x, word_to_redcheck))
                 return False
     return True
 
@@ -137,7 +140,9 @@ count = 1
 
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
-    if arg == 'nt' or arg == 'tn': track_letter_type = False
+    if arg == 'd': details = True
+    elif arg == 'nd' or arg == 'dn': details = False
+    elif arg == 'nt' or arg == 'tn': track_letter_type = False
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
     elif arg == 'ns' or arg == 'sn': show_all_grids = False
