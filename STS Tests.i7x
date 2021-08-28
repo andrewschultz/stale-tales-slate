@@ -535,6 +535,30 @@ this is the check nudge tables rule:
 			next;
 		say "Define table of nudges for [X].";
 
+chapter ptsing
+
+ptsing is an action out of world.
+
+understand the command "pts" as something new.
+
+understand "pts" as ptsing.
+
+carry out ptsing:
+	if cur-score of mrlp is 0, say "You've done nothing yet." instead;
+	let any-yet be false;
+	repeat through regana of mrlp:
+		if there is a the-from entry and the-from entry is moot, next;
+		if there is a the-from entry and the-from entry is reflexed, next;
+		if there is a the-to entry and the-to entry is moot, next;
+		if the-from entry is past-flipping-help, next;
+		if any-yet is false:
+			now any-yet is true;
+			say "FIRST (?): ";
+		else:
+			say "UNDONE: ";
+		say "[right-word entry].";
+	the rule succeeds;
+
 chapter haling
 
 haling is an action applying to nothing.

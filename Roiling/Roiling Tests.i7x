@@ -34,7 +34,7 @@ test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/b
 
 test rand-y with "ask casper about xyz/g/g/g/g/g/g/g/sing/inset/remap/stroll/calm/run/boast/leap/z/z/z/z/z/z/z/z/spike/e/scan cans/seek/ask tuna about tuna/g/g/g/g/g/g/g/tutor/eat/w/w/warp/search/n/x theses/g/g/g/retry"
 
-test rand-w with "z/z/z/z/gonear unripe/punier/n/rinsed/e/himself/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
+test rand-w with "z/z/z/z/gonear unripe/punier/n/rinsed/e/saltier/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
 
 [capturing Elvira's text is done in test twi]
 
@@ -108,19 +108,19 @@ chapter towers
 
 [* this includes tests for towers, towers with mistakes, towers min-points and towers max-points]
 
-test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
+test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/reined/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/saltier/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
 
-test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
+test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/reined/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/saltier/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
 
-test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask agnostic about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
+test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/reined/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/saltier/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask agnostic about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
 
-test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/clumsy/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
+test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/reined/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask agnostic about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
 
-test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/himself/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask agnostic about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
+test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/saltier/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask agnostic about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
 
-test towers-part with "towers/towers/enter towers/docile/n/poncier/greyed/punier/n/clumsy/weirder/n/unable/weariest/angstier/e/marginal/s/himself/resealed/get dagger and saver/w/s/w/put dagger in rapier repair/e/e/drained/e/rusty/grandiose/married/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/pastier/n/holiest"
+test towers-part with "towers/towers/enter towers/docile/n/poncier/greyed/punier/n/reined/weirder/n/unable/weariest/angstier/e/marginal/s/saltier/resealed/get dagger and saver/w/s/w/put dagger in rapier repair/e/e/drained/e/rusty/grandiose/married/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/pastier/n/holiest"
 
-test towers-alt with "towers/towers/enter towers/docile/n/poncier/greyed/e/himself/n/get all/s/drained/e/married/wordy/e/push retape/w/w/n/marginal/n/holiest/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/w/w/put dagger in repair/e/e/n/n/e"
+test towers-alt with "towers/towers/enter towers/docile/n/poncier/greyed/e/saltier/n/get all/s/drained/e/married/wordy/e/push retape/w/w/n/marginal/n/holiest/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/w/w/put dagger in repair/e/e/n/n/e"
 
 chapter troves
 
@@ -146,7 +146,7 @@ chapter routes
 
 test fixed with "ts/routes/in/inside/x list/pad/pad reagents/pad"
 
-test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/amidst/athwart/without/between/through/beyond/coff"
+test routes with "routes/enter routes/towards/inside/x list/out/against/astride/below/under/past/despite/exit/across/opposite/exit/inside/exit/above/from/beneath/until/around/along/amidst/athwart/without/between/through/beyond/coff"
 
 test routesord with "routes/enter routes/towards/astride/inside/x list/out/under/below/astride/against/under/below/astride/under/below/under/past/despite/exit/across/opposite/exit/inside/exit/from/beneath/until/around/along/aboard/within/through/coff"
 
@@ -181,7 +181,7 @@ chapter oyster
 
 [* this includes tests for oyster, oyster with mistakes, oyster min-points and oyster max-points ]
 
-test oyster with "oyster/enter oyster/y/z/z/z/ask casper about casper/sing/sing/spit/inset/stroll/calm/run/enter raft/fart/soar/scrap/z/z/e/scan cans/seek/eat tea/tutor/tend/swipe/z/z/w/n/kiss skis/trace/react/bonk knob/splain/in/bust/drop prod/sweat/clean lance/shape/out/s/w/warp/n/w/bury/e/s/e/unearth/assuage/w/search arches/enlarge/n/x theses/w/e/patrol/x gleaner/in/y/tan ant/prepay/revel/derail/pull lever/redial/coff 1"
+test oyster with "oyster/enter oyster/y/z/z/z/ask casper about casper/sing/sing/spit/inset/stroll/calm/run/enter raft/fart/soar/scrap/z/z/e/scan cans/seek/eat tea/tutor/tend/swipe/z/z/w/n/trace/react/bonk knob/kiss skis/snap/splain/in/bust/drop prod/sweat/clean lance/shape/out/s/w/warp/n/w/bury/e/s/e/unearth/assuage/w/search arches/enlarge/n/x theses/w/e/patrol/x gleaner/in/y/tan ant/prepay/revel/derail/pull lever/redial/coff 1"
 
 test oy1 with "oyster/enter oyster/spit/sing/inset/stroll/calm/run".
 test oy2 with "boast/leap/scrap/e/scan/seek/tend/swipe/tutor/eat".
@@ -1700,6 +1700,12 @@ to say list-of-randos:
 		if go-ahead entry is bzzt rule and reps entry > 1:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
+
+volume for the core
+
+definition: a thing (called th) is past-flipping-help:
+	if th is in posh hops shop and olde lode is visited, yes;
+	no;
 
 Roiling Tests ends here.
 

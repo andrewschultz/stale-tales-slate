@@ -808,6 +808,11 @@ definition: a thing (called th) is mass-hint-appropriate:
 	if th is part of the tagged gadget, no;
 	yes;
 
+chapter defined in core
+
+definition: a thing (called th) is past-flipping-help:
+	no;
+
 Shuffling Tests ends here.
 
 ---- DOCUMENTATION ----
