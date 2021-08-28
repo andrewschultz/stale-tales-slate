@@ -10,6 +10,9 @@ import mytools as mt
 track_letter_type = True
 show_all_grids = False
 search_strings = []
+got_one_reading = False
+
+red_anagrams = defaultdict(list)
 
 def alfy(a):
     return ''.join(sorted(a))
@@ -55,12 +58,21 @@ def valid_match(my_answer, my_hints, my_original):
             if my_hints[x] != '?': return False
     return True
 
+def valid_red(word_to_redcheck, my_answer):
+    if my_answer not in red_anagrams:
+        return True
+    for x in red_anagrams[my_answer]:
+        for y in range(0, len(x)):
+            if x[y] == word_to_redcheck[y]:
+                return False
+    return True
+
 def find_poss(word_array, bail=False):
     hints = word_array[1]
     original = word_array[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
-    print(original)
+    print(hints,original,answer)
     for x in original:
         if alfy(x) != alfy(answer):
             print("{} vs {} has different letter lumpings: {} vs {}.".format(answer, x, alfy(answer), alfy(x)))
@@ -80,6 +92,7 @@ def find_poss(word_array, bail=False):
         got_yet[p] = True
         pj = ''.join(p)
         if not valid_match(p, hints, original): continue
+        if not valid_red(p, answer): continue
         count += 1
         if pj == answer:
             got_answer = True
@@ -119,7 +132,7 @@ def find_poss(word_array, bail=False):
 #find_poss(['reversed', '??RG?R??', 'reserved', 'deserver', 'drsevere'], bail=True)
 #find_poss(['inside', '?RRYRY', 'idiein', 'needsi'])
 
-count = 0
+count = 1
 
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
@@ -128,7 +141,12 @@ while count < len(sys.argv):
     elif arg == 's': show_all_grids = True
     elif arg == 'ns' or arg == 'sn': show_all_grids = False
     else:
-        search_strings.append(arg)
+        if ',' in arg:
+            a = arg.split(',')
+            red_anagrams[a[0]] = a[1:]
+            search_strings.append(a[0])
+        else:
+            search_strings.append(arg)
     count += 1
 
 with open("c:/writing/dict/reds.txt") as file:
@@ -146,5 +164,5 @@ with open("c:/writing/dict/reds.txt") as file:
         got_one_reading = True
 
 if not got_one_reading:
-    print("I didn't find a reading for", search_string)
+    print("I didn't find a reading for", search_strings)
 
