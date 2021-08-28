@@ -321,6 +321,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@mina,minb
+#lose a point for not ignoring A Tasty Sty, Say
+}}CURMAX--
+
 @spoi
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
 
@@ -499,7 +503,7 @@ But it's not just any bee. It's a live bee! Though, really, you've already given
 The bee's already taken enough of your in-my-heartitude.
 #done rejects for snore so arena
 >reasno
-Drowning something without reason in reason is unreasonable.
+Drowning something without reason further in reason is unreasonable.
 #spechelp for l clear cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
@@ -517,7 +521,7 @@ Drain Nadir
 In particular, you feel the need to DESPAIR right now.
 
 @mina,minb
-#lose believe/reason max point
+#lose max point for only one of believe/reason
 }}CURMAX--
 
 }}SCORE++
@@ -643,6 +647,11 @@ There's only one unstable color for three names in the Large Regal Lager, so tha
 #mistake test for alger
 >alger
 What would an Alger hero DO to such foul spirits as the lager, though?
+#readables for large regal lager
+>read lager
+The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it.
+>read lager
+Your eyes gloss over all but the red ERGAL AGLER.
 
 @sli
 #slider test for glare
@@ -665,6 +674,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@sli
+#slider test for pleaser leapers
+>erepsal
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #mistake retest for aled
@@ -780,6 +794,8 @@ DEBUG INFO: Si Reed hinting.
 !DEBUG INFO: See Dir hinting.
 
 @mina,minb
+#lose a point for not dealing with lager
+#lose a point for only one of BOLSTER/MASTER
 }}CURMAX-=2
 
 >score
@@ -1006,6 +1022,7 @@ Upscale Capsule
 In particular, you feel the need to DESERVE right now.
 
 @mina,minb
+#lose a maximum point for only one of aspire/strive
 }}CURMAX--
 
 }}SCORE++
@@ -1281,6 +1298,8 @@ by one point
 >score
 @mina,minb
 {$SCOS}
+# this is fixed because it was tricky enough to figure that a few bugs popped up. GAPE/DISCOVER/(other starer) can still be done in the final room. So instead of the minimum of 17, we have 20.
+Maximum score available is 20.
 @!
 {$SCOMAX}
 

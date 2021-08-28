@@ -146,35 +146,38 @@ Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal 
 
 last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is stores-goto rule. max-score of stores is 11. min-score of Stores is 3.
-[BONUS STUFF: (basics are Store T and two others--call them U and V)
-Store K=1/4
-Store N=2/5
-OUTSIDE=3/6 (unavoidable if you enter mangiest steaming)
-Three other stores without patcher=6/9 +3
-Store B=Sorbet
-Store H=Others (you can get the point but you can't enter)]
+[PTS below lists what points you still may get]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is troves-goto rule. max-score of Troves is 25. min-score of Troves is 17.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is stores-goto rule. max-score of stores is 11. min-score of Stores is 3.
+[LLP List:
+1/4=Store K
+2/5=Store N
+3/6=OUTSIDE (unavoidable if you enter mangiest steaming)
+6/9=3 of Store V, Store U, Store P, Store Y, Store W, without patcher=6/9 +3
+7/10=Store B=Sorbet
+8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
+
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is troves-goto rule. max-score of Troves is 26. min-score of Troves is 17.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
 3/20=both of evil bee or SNORE SO ARENA
 4/21=lager
-5/22=both of BORTLES lobster/ME ARTS stream,
-6/23=both of Trevis Vister/praise
-7/24=DIVORCES
-8/25=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
+5/22=pleaser leapers
+6/23=both of BORTLES lobster/ME ARTS stream,
+7/24=both of Trevis Vister/praise
+8/25=DIVORCES
+9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
 Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is routes-goto rule. max-score of Routes is 22. min-score of Routes is 20.
-[List of min points:
+[LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
 Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is presto-goto rule. max-score of presto is 41. min-score of presto is 28.
-[List of boosts:
+[LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
 3/31=odes song
@@ -189,8 +192,9 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 13/41=escaroles
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28.
-[There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 43. min-score of oyster is 28.
+[LLP list:
+There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
 2/33=tend dent
 3/34=SPLAIN in the plains
@@ -223,7 +227,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=22 for using the ragged dagger on the rapier repair NON-ANAGRAM
 2=24 for a bot boat
 1=25 for the palace]
-[BONUS:
+[LLP list:
 3=3 for the extra picaros
 1=4 for the recital article
 5=9 for the H/I beyond needing to clear the coastlines
@@ -245,7 +249,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=29 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 32. min-score of otters is 24.
-[
+[LLP list:
 1=25 for RESCIND
 3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
 4=28 HOWEVER after second power-back above
@@ -256,7 +260,7 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 ]
 
 Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is Others-goto rule. max-score of Others is 42. min-score of others is 25.
-[There are so many possibilities--36 choose 20--I won't go through them all. Well, technically, (10 choose 4) * (26 choose 16)
+[There are so many possibilities--about 36 choose 20, or 7 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is demo-dome-goto rule.
@@ -642,7 +646,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 820.
+use MAX_VERBS of 830.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -662,7 +666,7 @@ section compiler non-syntax section - not for release
 
 use MAX_DICT_ENTRIES of 3200.
 
-use MAX_VERBS of 840. [delta=20]
+use MAX_VERBS of 850. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
 
@@ -2608,7 +2612,6 @@ carry out reading:
 			now noun is read-yet;
 			the rule succeeds;
 		try reading alt-read entry instead;
-	if noun is large regal lager, try examining rubbish story instead;
 	try examining noun instead;
 
 does the player mean reading LEAD: it is very likely.
@@ -2644,6 +2647,8 @@ Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad
 stop post	"POP'S TOTS is written in red on the stop post."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+large regal lager	"[one of]The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
+pleaser leapers	"SAP-LEER is the 'ironic' name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't."
 See Dir	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
@@ -4270,6 +4275,10 @@ definition: a person (called per) is guardianish:
 last-wall is a thing that varies. last-wall is usually allow lots tools wall.
 
 pikes-clue is a truth state that varies.
+
+to decide which thing is not-mbb:
+	if mbb is Mr Beal, decide on Balmer;
+	decide on Mr Beal;
 
 when play begins (this is the hint and other randomization rule):
 	if a random chance of 1 in 2 succeeds, now evil-bee-second is true; [troves random clues]
@@ -9527,8 +9536,7 @@ table of altviews
 altview	alttext
 darkness	"a weird outline in the darkness" [routes]
 L Clear Cellar	"the outline of L'Clear Cellar. You check: nope, not there" [troves]
-lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
-rubbish story	--
+lager	"the can of Large Regal Lager"
 praise	"the praise floating in the air"
 rivets	"the rivets spelling PRAISE"
 wzup	"a pair of hands patting [l-n-r] on the back" [presto]
@@ -9555,8 +9563,6 @@ definition: a thing (called candi) is bluable:
 	if candi is ghostly, no;
 	if candi is uncluing, no;
 	if candi is clue-used, no;
-	if player is in Boredom Bedroom: [troves specific]
-		if candi is rubbish story, decide no; [this gets hidden]
 	if player is in Econ Cone:
 		if rivets are reflexive and candi is praise, no; [?? this looks very wrong. We need to look for blues in Econ Cone.]
 	if candi is tunes, no; [oyster specific]
@@ -11699,7 +11705,7 @@ after looking in Boarded Roadbed:
 	set the pronoun her to evil bee;
 	continue the action;
 
-initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here above a SNORE SO ARENA, against the laws of physics. It's [if bee-score is 0]really[else if bee-score is 1]kind of, but not fatally,[else if bee-score is 2]is no longer[end if] distracting you from the thinking you need to do[if SNORE SO ARENA is reflexed]. There's also noise coming from the SNORE SO ARENA[end if]."
+initial appearance of evil bee is "[one of]An[or]The[stopping] [evil bee] floats here above a SNORE SO ARENA, against the laws of physics. It's [if bee-score is 0]really[else if bee-score is 1]kind of, but not fatally,[else if bee-score is 2]is no longer[end if] distracting you from the thinking you need to do[if SNORE SO ARENA is reflexive]. There's also noise coming from the SNORE SO ARENA[end if]."
 
 a-text of evil bee is "RYRYYRY". b-text of evil bee is "RYRYYRG". parse-text of evil bee is "x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e"
 
@@ -11833,21 +11839,21 @@ check taking LEAD: say "You already have one motivational book. Perhaps you need
 
 chapter lager
 
-The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed.". "A can of Large Regal Lager sits here. Perhaps you can do something more moral than drinking it."
+The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. You can read red writing to see how it was allegedly brewed.". "A can of Large Regal Lager sits here. Perhaps you can do something more moral than drinking it."
 
 check opening Large Regal Lager: try drinking Large Regal Lager instead;
-
-the rubbish story is part of the Large Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]The story on the lager is in red and about how Ergal Agler brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
-
-a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-text of rubbish story is "x[sp]L[sp]-[sp]x[sp]-".
-
-check scaning rubbish story: try scaning Large Regal Lager instead;
 
 a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
 
 check eating lager: say "It drinks like a meal, you're sure, but you need more nourishment than that." instead;
 
 check taking lager: say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it." instead;
+
+chapter pleaser leapers
+
+the pleaser leapers are a plural-named vanishing LLPish thing. "Pleaser Leapers have replaced the Large Regal Lager. They're an addiction of a different sort. Perhaps the right sort of action will help make your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
+
+a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". parse-text of pleaser leapers is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]".
 
 book Browse Bowers
 
@@ -11974,9 +11980,9 @@ Upscale Capsule is an innie room in Troves. "[capsule-desc].". roomnud of Upscal
 
 to say capsule-desc:
 	if red vees are in Upscale Capsule:
-		say "This isn't very well populated yet. Just some red vees here. You need a lot more to help you REALLY think";
+		say "This office isn't very well populated yet. Just some red vees here. You need a lot more to help you REALLY think";
 	else:
-		say "From the nerf fern to the wonga wagon[if divorces is touchable],[else] and[end if] Desk-Sked[if divorces is touchable], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out. [which-capsule-pics][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
+		say "From the nerf fern to the wonga wagon[if divorces is touchable],[else] and[end if] Desk-Sked[if divorces is touchable], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[if salt is moot][which-capsule-pics][end if][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
 
 to decide which number is mbb-sis-points:
 	let temp be 0;
@@ -11985,7 +11991,7 @@ to decide which number is mbb-sis-points:
 	decide on temp;
 
 to say which-capsule-pics:
-	say "[if mbb-sis-points is 0]Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if Sister Tressi is in Upscale Capsule]A likeness of Sister Tressi regards you severely[else if mbb is in Upscale Capsule]A likeness of [mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
+	say "[if mbb-sis-points is 0]. Likenesses of motivational prosperity gospel types, [bb-st], stare at you to keep you busy[else if Sister Tressi is in Upscale Capsule]. A likeness of Sister Tressi regards you severely[else if mbb is in Upscale Capsule]A likeness of [mbb] regards you severely[else]You are no longer hounded by the pictures of [bb-st][end if]"
 
 to say bb-st: say "[one of][mbb] and Sister Tressi[or]Sister Tressi and [mbb][at random]"
 
@@ -12035,7 +12041,7 @@ does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "You notice some Trance Nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive.". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
+the Trance Nectar is a vanishing thing. "Some Trance Nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive, but you now realize both will leave you equally miserable. There must be a way to break free from its influence!". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
@@ -14408,6 +14414,8 @@ to say rub-wr:
 
 check going south in Anger Range: say "You don't want to go back over Saccade Cascade. Your goal must be here." instead;
 
+chapter carps and pikes
+
 carps-pref is a truth state that varies.
 
 understand "fish" and "bullies" as carps when carps-pref is true.
@@ -14418,20 +14426,9 @@ description of carps is "They are sneering and teasing the poor trout. You're bi
 
 a-text of carps is "RRRYR". b-text of carps is "RRPYR". parse-text of carps is "x[sp]x[sp]r[sp]a[sp]x". carps are cheat-spoilable.
 
-The trout is a reflexive person in Anger Range. description is "[if carps are touchable]He is about half your size, cringing in terror from the other fish bullies[else if trout is reflexive]He is looking up at you, as if a thing you could show him how you dealt with those big mean fish[else]He has an air of confidence about him now[end if].". "Your friend [one of][or]Tortu [stopping]the trout is here, looking [if trout is reflexive]timid[else]confident[end if]."
-
-check scaning trout when player is in Anger Range:
-	say "The trout doesn't need that right now. He needs someone who can help him deal with the pikes and carps." instead;
-
-understand "tortu" as trout.
-
-a-text of trout is "RYRYR". b-text of trout is "PYRYR". parse-text of trout is "t[sp]-[sp]x[sp]-[sp]x". trout is cheat-spoilable.
-
 the pikes are plural-named nasty vanishing people in Anger Range. initial appearance of pikes is "[bug-report]"
 
 check taking a nasty person: say "That's the wrong way to 'take' [the noun].'" instead;
-
-check taking trout: say "You can't just take him and run. You need to fight back." instead;
 
 the chum of the pikes is the carps.
 
@@ -14461,6 +14458,19 @@ check going east in Anger Range:
 
 check going in Anger Range:
 	if carps are in Anger Range, say "Nagger-rage fills you as you notice the trout's getting bullied. You could probably take the carps or the pikes or, well, both, really. You're bigger than they are." instead;
+
+chapter trout
+
+The trout is a reflexive person in Anger Range. description is "[if carps are touchable]He is about half your size, cringing in terror from the other fish bullies[else if trout is reflexive]He is looking up at you, as if a thing you could show him how you dealt with those big mean fish[else]He has an air of confidence about him now[end if].". "Your friend [one of][or]Tortu [stopping]the trout is here, looking [if trout is reflexive]timid[else]confident[end if]."
+
+check scaning trout when player is in Anger Range:
+	say "The trout doesn't need that right now. He needs someone who can help him deal with the pikes and carps." instead;
+
+understand "tortu" as trout.
+
+a-text of trout is "RYRYR". b-text of trout is "PYRYR". parse-text of trout is "t[sp]-[sp]x[sp]-[sp]x". trout is cheat-spoilable.
+
+check taking trout: say "You can't just take him and run. You need to fight back." instead;
 
 chapter Shoer Osher
 
@@ -22559,6 +22569,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
 		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO ARENA, too.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
+		if lager is moot and pleaser leapers are not moot, say "[2drm of Boredom Bedroom]you could've tried to RELAPSE around the pleaser leapers.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
 		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister."; [1 of 2]

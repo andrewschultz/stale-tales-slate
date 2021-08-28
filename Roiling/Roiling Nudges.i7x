@@ -382,6 +382,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
 "amrest"	478776867	--	master-moot rule	"[boredom-move-on]."
 "bloters"	559099217	--	lobster-moot rule	"[boredom-move-on]."
+"leaper"	478403637	--	--	"You'll probably want to deal with all the pleaser leapers at once."
 "shmoe"	399790104	--	--	"[shmoe-homes]."
 "home"	303516138	--	--	"[shmoe-homes]."
 

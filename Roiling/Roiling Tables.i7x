@@ -103,7 +103,8 @@ diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair r
 Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-bedroom]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
-large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
+large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER![paragraph break]All the same, your mind harkens to something else to lose yourself in. Beneath an obscure drawer, you pull out pleaser leapers, just as addictive to waste time with as any alcohol -- if less fattening."
+pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"You lose yourself in the pleaser leapers for a while before snapping out of it. 'Danseur dauners, ASUNDER!' you cry, melodramatically, as you realize what a hollow pleasure they are. And yet, at the same time, it was a worthwhile part of your emotional journey. You can't just pitch them out a window, though. They go in the trash, buried deep. Physically and metaphorically. You will look for the approval of real people in the future. Nothing could go wrong that way."
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
@@ -694,6 +695,7 @@ to say further-bedroom: say "[if bedroom-solve is 2]further [end if]"
 
 this is the post-lager-glare rule:
 	set the pronoun it to LEAD;
+	move pleaser leapers to Boredom Bedroom;
 
 this is the pre-deal rule:
 	if lobster is in Boredom Bedroom and me arts are in Boredom Bedroom:
@@ -703,6 +705,7 @@ this is the pre-deal rule:
 
 this is the post-deal rule:
 	if lager is in Boredom Bedroom, poss-d;
+	if pleaser leapers are not moot, poss-d;
 	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
 	set the pronoun them to Browse Bowers;
 
@@ -2469,7 +2472,7 @@ bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. 
 Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
 heat	"Don't need to overheat, or overhate."
 a sty tasty say	"You can't over-stay your staying power, or something."
-SNORE SO ARENA	"Drowning something without reason in reason is unreasonable."
+SNORE SO ARENA	"Drowning something without reason further in reason is unreasonable."
 evil bee	"The bee's already taken enough of your in-my-heartitude."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
@@ -2716,7 +2719,6 @@ lager	"[one of]The Large Regal Lager [if player is in Boredom Bedroom]here [end 
 Id Cede	"[one of]Eddie C, [Id Cede]. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
-rubbish story	"The rubbish story has a name that may help you decide what to do with the lager."
 LEAD	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair.[plus][or]If you can't DEAL, you'll never make it.[minus][cycling]"	--	"DEAL"
 See Dir	--	Si Reed
 Si Reed	"[one of]Si Reed wants to help you focus on certain mental stuff.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"

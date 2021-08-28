@@ -591,6 +591,8 @@ understand "kepis" as a mistake ("If only it were that easy, to have a basket to
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 
+understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
+
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
 understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of sausage.

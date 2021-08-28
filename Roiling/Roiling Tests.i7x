@@ -126,7 +126,7 @@ chapter troves
 
 [* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/reason/believe/recall/despair/decide/glare/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
+test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/decide/glare/relapse/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
 
 test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
 
@@ -1703,8 +1703,29 @@ to say list-of-randos:
 
 volume for the core
 
-definition: a thing (called th) is past-flipping-help:
-	if th is in posh hops shop and olde lode is visited, yes;
+definition: a room (called r) is in-the-past:
+	if r is not visited, no;
+	if location of player is r, no;
+	yes;
+
+definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for regular LLPs but rather for optional stuff like the 3-of-6 at the start of Oyster]
+	if location of th is not nothing and location of th is shunned, yes;
+	if th is in posh hops shop and posh hops shop is shunned, yes;
+	if mrlp is presto:
+		if lawl wall is moot:
+			if th is keys or th is hogs, yes;
+		if Leo is dismissed:
+			if th is log ons letters or th is alert letters or th is ought letters, yes;
+	if mrlp is oyster:
+		if th is carps or th is pikes:
+			if pikes are moot, yes;
+	if mrlp is towers:
+		if rawest waters is visited or mislit limits is visited:
+			if th is turbos or th is blaster or th is earnest eastern neaters, yes;
+	if mrlp is others:
+		if gate-level is 2:
+			if th is viewer or th is searcher or th is fleeing feeling, yes;
+	if th is not-mbb, yes;
 	no;
 
 Roiling Tests ends here.
