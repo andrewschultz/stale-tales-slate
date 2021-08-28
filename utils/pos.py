@@ -13,6 +13,7 @@ search_strings = []
 got_one_reading = False
 
 red_anagrams = defaultdict(list)
+found_searched = defaultdict(bool)
 
 def alfy(a):
     return ''.join(sorted(a))
@@ -109,7 +110,7 @@ def find_poss(word_array, bail=False):
                     fixed_answer[x] = '-'
     if got_answer:
         answers.insert(0, answer.upper())
-        print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(answers), "from", word_array)
+        print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from", word_array)
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
@@ -144,9 +145,9 @@ while count < len(sys.argv):
         if ',' in arg:
             a = arg.split(',')
             red_anagrams[a[0]] = a[1:]
-            search_strings.append(a[0])
+            found_searched[a[0]] = False
         else:
-            search_strings.append(arg)
+            found_searched[arg] = False
     count += 1
 
 with open("c:/writing/dict/reds.txt") as file:
@@ -154,15 +155,23 @@ with open("c:/writing/dict/reds.txt") as file:
         if '?' not in line: continue
         if line.startswith("#"): continue
         do_search = False
-        if search_strings:
-            for x in search_strings:
+        if len(found_searched):
+            for x in found_searched:
                 if x in line.lower():
                     do_search = True
+                    found_searched[x] = True
         if not (show_all_grids or do_search): continue
         ary = re.split("[=,]", line.strip().lower())
         find_poss(ary)
         got_one_reading = True
 
-if not got_one_reading:
-    print("I didn't find a reading for", search_strings)
+y = [x for x in found_searched if found_searched[x]]
+z = [x for x in found_searched if not found_searched[x]]
 
+if not len(y):
+    print("I didn't find a reading for {}. Look in reds.txt to verify this.".format(', '.join(z)))
+elif not len(z):
+    print("Request{} found. Yay.".format('' if len(found_searched) == 1 else 's all'))
+else:
+    print("FOUND:", ', ',join(y))
+    print("NOT FOUND:", ', ',join(z))
