@@ -18794,7 +18794,6 @@ blurb
 "Red-Hot Dr. Theo: the Rod." []
 "Red Lew, Lewder Welder."
 "Red's Vice, Serviced."
-"Relapse, Pleaser."
 "Relishy Shirley."
 "Renita, Terina, Terian." []
 "Rev. Pa, a Perv."

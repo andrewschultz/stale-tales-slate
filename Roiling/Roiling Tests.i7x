@@ -126,7 +126,7 @@ chapter troves
 
 [* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/decide/glare/relapse/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
+test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/relapse/decide/glare/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
 
 test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
 

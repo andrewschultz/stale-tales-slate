@@ -371,6 +371,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spider"	456891772	diapers	--	"The diapers, the Ires Pad--the spider only fits in as *a* spider."
 "ires"	354396724	--	--	"It's an ires PAD."
 "pad"	104682866	--	--	"It's an IRES pad."
+"leaper"	478403637	--	--	"You'll probably want to deal with all the pleaser leapers at once."
 "song"	272133753	Id Cede	--	"[id-cede-full]."
 "cede"	295646892	Id Cede	--	"[id-cede-full]."
 "diapers"	459079590	Id Cede	--	"Don't twist yourself into knots to/from REAL despair." [this relies on I'd Cede replacing the diapers before you move on to the bedroom]
@@ -382,7 +383,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "glare"	301731271	--	glaring-futile rule	"You stare into space some more but get distracted."
 "amrest"	478776867	--	master-moot rule	"[boredom-move-on]."
 "bloters"	559099217	--	lobster-moot rule	"[boredom-move-on]."
-"leaper"	478403637	--	--	"You'll probably want to deal with all the pleaser leapers at once."
 "shmoe"	399790104	--	--	"[shmoe-homes]."
 "home"	303516138	--	--	"[shmoe-homes]."
 

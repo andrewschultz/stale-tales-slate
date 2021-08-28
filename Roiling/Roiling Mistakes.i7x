@@ -320,6 +320,8 @@ understand "aspired" as a mistake ("Now is not the time to fret solely on past d
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
+understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
+
 understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when Id Cede is touchable.
 
 chapter Boredom Bedroom
@@ -590,8 +592,6 @@ understand "hoser" as a mistake ("It's sort of appropriate now that you're in th
 understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in Anger Range and player is in Anger Range.
 
 understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
-
-understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
 
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 

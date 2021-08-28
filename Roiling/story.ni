@@ -162,8 +162,8 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
 3/20=both of evil bee or SNORE SO ARENA
-4/21=lager
-5/22=pleaser leapers
+4/21=pleaser leapers
+5/22=lager
 6/23=both of BORTLES lobster/ME ARTS stream,
 7/24=both of Trevis Vister/praise
 8/25=DIVORCES
@@ -11851,7 +11851,7 @@ check taking lager: say "No, touching or holding a can almost always leads to dr
 
 chapter pleaser leapers
 
-the pleaser leapers are a plural-named vanishing LLPish thing. "Pleaser Leapers have replaced the Large Regal Lager. They're an addiction of a different sort. Perhaps the right sort of action will help make your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
+the pleaser leapers are a plural-named vanishing LLPish thing in Drain Nadir. "Pleaser Leapers[one of], a weird automated toy that give something like cheer if you don't think too hard, frolic around here. You suddenly have a memory of needing them emotionally, even though they gave nothing[or] continue to frolic[stopping]. Perhaps the right sort of action will help make you ditch them for good and your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
 
 a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". parse-text of pleaser leapers is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]".
 
@@ -22568,8 +22568,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
 		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO ARENA, too.";
+		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to RELAPSE around the pleaser leapers.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
-		if lager is moot and pleaser leapers are not moot, say "[2drm of Boredom Bedroom]you could've tried to RELAPSE around the pleaser leapers.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
 		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister."; [1 of 2]
