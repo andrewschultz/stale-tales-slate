@@ -100,7 +100,7 @@ evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule
 L Clear Cellar	L Clear Cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
-Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	--	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
+Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	post-decide rule	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-bedroom]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
 large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER![paragraph break]All the same, your mind harkens to something else to lose yourself in. Beneath an obscure drawer, you pull out pleaser leapers, just as addictive to waste time with as any alcohol -- if less fattening."
@@ -652,6 +652,7 @@ this is the post-heat-hate rule:
 
 this is the post-race-acre-care rule:
 	now player has fretful truffle;
+	now loather rathole is shunned;
 
 this is the pre-spot-stop-post rule:
 	if sob ever verbose is touchable:
@@ -663,6 +664,7 @@ this is the post-spot-stop-post rule:
 	now purse-stolen is false;
 	now stop post is realized;
 	if tasty sty is reflexive, poss-d;
+	now bustle sublet is shunned;
 
 this is the bee-less-active rule:
 	if bee-score is 2:
@@ -680,11 +682,15 @@ this is the pre-cellar-recall rule:
 
 this is the post-cellar-recall rule:
 	if bee-score < 2, poss-d;
+	now boarded roadbed is shunned;
 
 this is the post-diapers-despair rule:
 	moot Ires Pad;
 	moot spider;
 	move Id Cede to Drain Nadir;
+
+this is the post-decide rule:
+	now Drain Nadir is shunned;
 
 this is the post-master-or-bolster rule:
 	if ME ARTS is in Boredom Bedroom, now ME ARTS is LLPish;
@@ -708,6 +714,7 @@ this is the post-deal rule:
 	if pleaser leapers are not moot, poss-d;
 	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
 	set the pronoun them to Browse Bowers;
+	now Boredom Bedroom is shunned;
 
 this is the post-strive-or-aspire rule:
 	if cone-points is 2:
@@ -726,6 +733,7 @@ this is the post-rivets-strive rule:
 
 this is the post-pod-ponder rule:
 	if cone-points < 2, poss-d;
+	now econ cone is shunned;
 
 this is the post-redvees-deserve rule:
 	move wonga wagon to Upscale Capsule;

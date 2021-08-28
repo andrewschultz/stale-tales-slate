@@ -1709,7 +1709,6 @@ definition: a room (called r) is in-the-past:
 	yes;
 
 definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for regular LLPs but rather for optional stuff like the 3-of-6 at the start of Oyster]
-	if location of th is not nothing and location of th is shunned, yes;
 	if th is in posh hops shop and posh hops shop is shunned, yes;
 	if mrlp is presto:
 		if lawl wall is moot:
