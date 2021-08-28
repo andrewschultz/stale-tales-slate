@@ -60,6 +60,15 @@ def valid_match(my_answer, my_hints, my_original):
             if my_hints[x] != '?': return False
     return True
 
+def valid_v_c(guess, target):
+    for x in range(0, len(guess)):
+        for z in ('y', 'aeiou', 'bcdfghjklmnpqrstvwxz'):
+            if (guess[x] in z) != (target[x] in z):
+                if details:
+                    print(guess, 'vs', target, 'bad settler match at slot', x)
+                return False
+    return True
+
 def valid_red(word_to_redcheck, my_answer):
     if my_answer not in red_anagrams:
         return True
@@ -76,7 +85,6 @@ def find_poss(word_array, bail=False):
     original = word_array[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
-    print(hints,original,answer)
     for x in original:
         if alfy(x) != alfy(answer):
             print("{} vs {} has different letter lumpings: {} vs {}.".format(answer, x, alfy(answer), alfy(x)))
@@ -86,7 +94,6 @@ def find_poss(word_array, bail=False):
     x = list(answer)
     perms = [''.join(p) for p in permutations(x)]
     count = 0
-    answet_index = 0
     answers = []
     got_answer = False
     fixed_answer = []
@@ -97,6 +104,7 @@ def find_poss(word_array, bail=False):
         pj = ''.join(p)
         if not valid_match(p, hints, original): continue
         if not valid_red(p, answer): continue
+        if not valid_v_c(p, answer): continue
         count += 1
         if pj == answer:
             got_answer = True
@@ -113,7 +121,10 @@ def find_poss(word_array, bail=False):
                     fixed_answer[x] = '-'
     if got_answer:
         answers.insert(0, answer.upper())
-        print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from", word_array)
+        if len(answers) == 1:
+            print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
+        else:
+            print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from", word_array)
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
