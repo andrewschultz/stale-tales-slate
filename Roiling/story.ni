@@ -212,7 +212,7 @@ you get -1 if you use the pills on Tortu before EAT.
 You get a non-anagram point for framing the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 54. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 55. min-score of towers is 25.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -240,13 +240,14 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 1=17 for keycar wherever it appears
 1=18 for making the replay player shiny
 1=19 for Dourest Detours
-1=20 for strudel (Fringe Finger)
-1=21 for organised ego drains (Lost Lots)
-1=22 for tentative (agnostic meets dr yow)
-1=23 for rewired (bot-boat)
-1=24 for giving Tetris Sitter the top opt pot NON-ANAGRAM
-4=28 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
-1=29 for not using x-ray vision to clear every guardian NON-ANAGRAM]
+1=20 for seismal samiels in Dourest Detours
+1=21 for strudel (Fringe Finger)
+1=22 for organised ego drains (Lost Lots)
+1=23 for tentative (agnostic meets dr yow)
+1=24 for rewired (bot-boat)
+1=25 for giving Tetris Sitter the top opt pot NON-ANAGRAM
+4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
+1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
 Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 32. min-score of otters is 24.
 [LLP list:
@@ -4690,6 +4691,7 @@ sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get 
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 l clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
 a sty tasty say	true	false	false	false	"Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't."
+pleaser leapers	true	false	false	false	"You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves."
 large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
 bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
 me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
@@ -4766,6 +4768,7 @@ fries us fissure	true	true	false	false	"The fissure's jabbering may provide an a
 Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
 natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
 bogus-rousted	true	true	false	false	"You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it."
+seismal samiels	true	true	false	false	"You're almost worried it will be too easy to figure things out, now. Too hard, too easy, too normal ... everything leaves you in the dumps."
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
 curst palace	false	false	false	false	"[scannotes-curst]."
@@ -17550,6 +17553,12 @@ this is the detour-check rule:
 	move player to Dourest Detours;
 	the rule succeeds;
 
+chapter seismal samiels
+
+the seismal samiels are a plural-named LLPish vanishing boring thing in Dourest Detours. description of seismal samiels is "Airy-sounding words, and what an airy mess! And yet, they aren't distracting you. Probably there are some mesails (another airy word) floating in them. The choice is yours: you can disperse with the seismal samiels for a small moral boost, or you can just get on with getting out of here.". "Seismal samiels swirl around here. Lots of hot air for two pretty hot-air-ish words. They sort of seem like they're trying to impede and depress you, and of course they'd be nice to get out of the way for good -- or just ignore completely, to get back to [last-detour]."
+
+a-text of seismal samiels is "YYRRYRR". b-text of seismal samiels is "YY?R?R?". parse-text of seismal samiels is "-[sp]i[sp]?[sp]x[sp]?[sp]x[sp]?".
+
 book Towers specific verbs
 
 chapter guardian stubs
@@ -22633,6 +22642,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
+		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels AIMLESS.";
 		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
 		if natives site van is not moot, say "[2dmiss of myreg]the [site van] in [danger garden] could've been turned NAIVEST or VAINEST.";

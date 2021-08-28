@@ -269,6 +269,7 @@ Tetris Sitter	Tetris Sitter	false	560616760	--	"triste"	"triste"	--	post-tetris-
 Curst Palace	Curst Palace	false	695286307	Strip of Profits	"spectacular"	"spectacular"	pre-curst-palace-spectacular rule	post-curstpalace-spectacular rule	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Wildest Wilteds are already on their way back to being the Reenergise-Greeneries. The towers crumble as you fly back through to the Trips Strip."
 keycar	keycar	false	409615745	--	"creaky"	"creaky"	--	--	"You hear a squeak from the keycar, and its babble begins slowing and warping. Then, suddenly, it zooms off jaggedly out of view, wherever keycars go for repair." [keycar and rousted detours can appear in radically different places, so we want these near the end.]
 bogus-rousted	bogus-rousted	false	613001369	--	"rousted"	"rousted"	--	post-detours-rousted rule	"You summon a burst of mental energy. You are sure the Dourest Detours aren't as still and dead as all that. The wind picks up. You feel confident. You plan your way out. You walk along to somewhere new..."
+seismal samiels	seismal samiels	false	485423697	--	"aimless"	"aimless"	--	--	"The seismal samiels waver a bit and continue to whoosh about, but now, instead of staying near you, they blow off into the distance. Well, that's one less thing to worry about."
 Andres	Andres	false	401528293	--	"snared"	"snared"	--	--	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Loftier Trefoil. It's nothing lethal, but enough to make him flee." [even though the picaros are at the beginning, I've placed them at the end, because this saves time in the long run.]
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	--	--	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
 Archie	Archie	false	316598460	--	"achier"	"achier"	--	--	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."
@@ -1395,6 +1396,7 @@ to say how-safe: say "You'd feel [if blaster is reflexive or turbos are reflexiv
 this is the post-detours-rousted rule:
 	move player to last-detour;
 	now Dourest Detours is shunned;
+	if seismal samiels are not moot, poss-d;
 
 to say bored-robed:
 	if the player's command includes "bored":
@@ -2103,7 +2105,7 @@ raptest patters	"The raptest patters subside a bit, but ... suddenly you miss th
 yob den	"Some different noises from the yob den."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
 Eh At Heat	"You feel slightly less cold but mad at yourself for not doing better."
-Race Acre	"For a second, things almost seem to matter. Then, back to normal. You must have been on to something, though."
+Race Acre	"For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though."
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
 stop post	"The stop post continues its silent defiance. You might need to look at it from a slightly different angle."
 a sty tasty say	"No. You pause. That can't be it. You need to do something, or nothing, differently."
@@ -2274,6 +2276,7 @@ atblock	"[agnostic-first] scrunches [his-her] eyes to try to keep even more atte
 mended mini denim	"The mended mini-denim bends and warps, but you hear no tearing noise. That's not how to expose any flaws in dem. Err, it."
 bogus-dandier	"You feel slightly less depressed you tried something. You can't be too far off."
 bogus-rousted	"You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour."
+seismal samiels	"The seismal samiels change intensity for a bit."
 sporties ripostes	"The ripostes seem less cutting for a moment."
 docile old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
@@ -2934,6 +2937,7 @@ bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Bus
 stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"
 keycar	"[one of]The keycar looks in tip-top shape, but maybe you can change that.[plus][or]In particular, make it sound worse the right way, so it clearly needs repairs.[plus][or]Make it CREAKY.[minus][cycling]"
 bogus-rousted	"[one of]The Dourest Detours have left you out of energy, and you need a boost so it returns.[plus][or]You need to get ROUSTED.[minus][cycling]"
+seismal samiels	"[one of]Make the seismal samiels totally disjointed.[plus][or]The samiels can become AIMLESS.[minus][cycling]"
 bogus-dandier	"[one of]The drained dreadin['] and the arid den leave you feeling down. There must be a way to feel better. That will help you think positively and not feel stuck.[plus][or]Feel cheerier, happier, heartier...[plus][or]DANDIER.[minus][cycling]"
 drained dreadin	--	bogus-dandier
 repeat button	"REPEAT plays back what you recorded with the retape button."
