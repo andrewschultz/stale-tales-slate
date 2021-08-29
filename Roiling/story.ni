@@ -1191,7 +1191,7 @@ to say full-monty of (myobj - a thing):
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
-		if extra-taxer-warn is false, say "[line break]You can also disable clues for ambiguous/question mark settler-cheat readings with TAXER or TAX ER. You can recover them with EXTRA.";
+		if extra-taxer-warn is false, say "[paragraph break]. You can also disable clues for ambiguous/question mark settler-cheat readings with TAXER or TAX ER. You can recover them with EXTRA";
 	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
@@ -6061,6 +6061,15 @@ chapter going
 check going nowhere when mrlp is towers (this is the towers-mis-go rule):
 	if noun is inside or noun is outside, say "You can't go in, here." instead;
 	if shoals are touchable, say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
+	if location of player is detourable:
+		if dourest detours are unvisited:
+			say "You get lost in [the random bounding scenery in location of player] a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.";
+			now last-detour is location of player;
+			move player to Dourest Detours;
+
+definition: a room (called r) is detourable:
+	if r is outer route or r is lost lots or r is shaven havens, yes;
+	no;
 
 upwarned is a truth state that varies.
 
@@ -16282,7 +16291,7 @@ to say pc of (myr - a room) and (myd - a direction): [passage character]
 
 book Outer Route
 
-Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. You can only go back east. Well, you could try other directions, but the sway-ways would be unreliable.". roomnud of Outer Route is table of Outer Route nudges.
+Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. You can only go back east. Sway-ways surround you, which might be too adventurous[note-detour].". roomnud of Outer Route is table of Outer Route nudges.
 
 section sway ways
 
@@ -16746,7 +16755,7 @@ book important side rooms
 
 chapter Shaven Havens
 
-Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, so hooray for small things. Savager ravages impede you any way except back south.". roomnud of Shaven Havens is table of Shaven Havens nudges.
+Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, so hooray for small things. Savager ravages spread out every way except back south[note-detour].". roomnud of Shaven Havens is table of Shaven Havens nudges.
 
 the savager ravages are boring bounding scenery in Shaven Havens. description of savager ravages is "They're pretty forbidding. Trust me, you don't want to go any way but back south.". bore-text is "You don't want to mess with the savager ravages.".
 
@@ -17038,7 +17047,7 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is a dead-end area, without even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if].". roomnud of Lost Lots is table of Lost Lots nudges.
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]There's not much in this area, not even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if][note-detour].". roomnud of Lost Lots is table of Lost Lots nudges.
 
 after looking in Lost Lots:
 	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
@@ -17060,7 +17069,7 @@ this is the bore-ripostes rule:
 
 chapter Fringe Finger
 
-Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n. So there's not much to do except go back east.". roomnud of Fringe Finger is table of Fringe Finger nudges.
+Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n.". roomnud of Fringe Finger is table of Fringe Finger nudges.
 
 understand "loaves" and "loaf" as solve a loaves.
 
@@ -17537,21 +17546,12 @@ the bogus-rousted is a privately-named vanishing boring scenery in Dourest Detou
 
 a-text of bogus-rousted is "RYYRRYR". b-text of bogus-rousted is "R??RRYR". parse-text of bogus-rousted is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-check going west in Anemic Cinema when ingrates are moot: abide by the detour-check rule;
-
-check going south in Danger Garden when natives site van is moot: abide by the detour-check rule;
-
 last-detour is a room that varies.
 
-this is the detour-check rule:
-	now last-detour is the room noun of location of player;
-	if Dourest Detours is visited:
-		if Lost Lots is not visited or finger fringe is not visited, say "You work through the Dourest Detours much more easily this time.";
-		continue the action;
-	say "Oh no! You get distracted and lost while going down a few side paths. You wind up in...";
-	min-up; [no matter what happens, you must figure the word to get out, which gives you a point.]
-	move player to Dourest Detours;
-	the rule succeeds;
+to say note-detour: if dourest detours are unvisited, say ". You could probably get lost exploring [the random bounding scenery in location of player], if you wanted to see ALL of the Wildest Wilteds"
+
+check entering when location of player is detourable:
+	if noun is bounding scenery and dourest detours are unvisited, try going northwest instead;
 
 chapter seismal samiels
 

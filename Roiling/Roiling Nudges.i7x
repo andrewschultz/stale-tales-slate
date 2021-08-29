@@ -1035,6 +1035,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Dourest Detours nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "detour"	516727403	--	--	"This may technically be a detour, but since the area name is 'detours,' you need some way to negate ALL the detours."
+"samiel"	389149731	--	--	"There is more than one samiel to deal with, here."
 
 chapter otters nudges
 
