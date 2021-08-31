@@ -205,47 +205,47 @@ T is not so tough, due to its theme, but it's last. H is hopefully cake once you
 ?What does store H become?
 You can't do anything with it until after you solved the game.
 The "extra good ending" is behind it, but the hoster won't let you in.
-You may've guessed it was OTHERS.
+You may've guessed it was <b>OTHERS</b>.
 ?What does store P become?
 Well, it becomes a sort of vortex, but you need a magic word, according to the poster.
 Store P, Poster...
 P-E--O with the settler on cheat mode. And you can eliminate others to get...
-...PRESTO!
+...<b>PRESTO</b>!
 ?What does store T become?
 Some kind of water animal.
-OTTERS.
+<b>OTTERS</b>.
 ?Why can't I enter store T right away?
 It's the final scenario, where Elvira waits.
 Well, one store has to be.
 ?What does store U become?
 The settler, with cheat mode on, solves the vowels.
 Roads, but with signs.
-ROUTES.
+<b>ROUTES</b>.
 ?What does store V become?
 The settler, with cheat mode on, solves the vowels.
 Something valuable and glittering.
-TROVES.
+<b>TROVES</b>.
 ?What does store W become?
 The settler, with cheat mode on, isn't much help.
 If you look at it right, it seems taller than the others. It's not just an optical illusion.
 It also seems to split in two.
 What's tall and plural?
-TOWERS.
+<b>TOWERS</b>.
 ?What does store Y become?
 The settler, with cheat mode on, solves the vowels. And the letter Y.
 It's something seawatery.
-OYSTER.
+<b>OYSTER</b>.
 >>>STORES K AND N
 ?Why are K and N smaller than the others?
 They're a totally optional subquest.
 ?What's store K?
 This is a bit of slang. I let it go for a reason. Suspicious smelling smoke.
 KT Rose is a clue and it should be enough, abstractly...
-...to get TOKERS.
+...to get <b>TOKERS</b>.
 ?What's store N?
 You need to figure the guy's name.
 Again the settler logics this one, but clues like underwater and Tintin may help.
-NESTOR.
+<b>NESTOR</b>.
 ?What's the mangiest steaming? What's in it?
 The steaming is a byproduct of the tokers' activities.
 Inside the steaming is the start of a small unnecessary side quest. Enter it to find out.
@@ -260,12 +260,12 @@ I USED TO jibes with other things the blabber babbler says.
 They're clues to how to disrupt this whole joint. Ha ha. Joint, geddit?
 This is a wild card word.
 Your settler gives a huge clue if you look in studio E.
-OUTSIDE.
+<b>OUTSIDE</b>.
 ?What's with the munchies now I'm back in the strip?
 They aren't an actual game item, but they will help you use the slider on the settler more often.
 ?What's in Store B?
 Some sort of food. It looks sort of misty--cold misty.
-SORBET.
+<b>SORBET</b>.
 >STORE P
 >>GREY GYRE
 ?What do I do here?
@@ -276,16 +276,16 @@ Interjections are what work here.
 Maybe you can scare him off without being mean.
 Turning him into balm won't give him balm.
 You _can_, however, make a scary noise.
-BLAM.
+<b>BLAM</b>.
 ?How to get over the hump?
 You're grunting wrong.
-UMPH.
+<b>UMPH</b>.
 ?Do I have to tackle that maze to the north?
 You don't even have to set foot in it, if you figure the right word. It's a tricky one, but there are a lot of clues. You may even wish to eat the crust once you've cleared everything else.
 See the Volt Maze section below.
 ?The maze is gone now. Why can't I go north?
 The ether hides enemies. If only you could point them out...
-...saying THERE.
+...saying <b>THERE</b>.
 That doesn't quite work, though, without ammunition.
 Don't continue until you've fixed the popgun.
 Also, did you find the dart?
@@ -293,8 +293,8 @@ PUT DART IN POPGUN.
 >>AUSTERER TREASURE
 ?How do I reach YE HOOP?
 If you try to take it, your possessions weigh you down. You can't find the right way to ditch your possessions for a second.
-Say POOH...
-...or, to really do the job, say PHOOEY.
+Say <b>POOH</b>...
+...or, to really do the job, say <b>PHOOEY</b>.
 ?What can the N-E-Recs censer be?
 Recs and Rec are too short to make a word.
 The green semi-text on black may be a clue.
@@ -324,7 +324,7 @@ You may or may not know what to do with the drab yoke. The exciting conclusion i
 ?What do I do with the pop-gun?
 It's PG-on-up, but twiddling that does nothing.
 The boing-go bin could use a moment of discovery.
-So say BINGO to get it working.
+So say <b>BINGO</b> to get it working.
 ?Are the Sport Ports important?
 To get all the points in the area, yes.
 To complete the game, no.
@@ -338,10 +338,10 @@ He does bull at you.
 OLE.
 ?Oh no! Rand joined in!
 He doesn't look too smart, like he can be fooled by a feint.
-If you say DARN, it will get him.
+If you say <b>DARN</b>, it will get him.
 ?Oh no! I hurt their feelings!
 They do talk about how they're washups. Their dialogue also cues other words.
-Say WHASSUP to get in their good graces.
+Say <b>WHASSUP</b> to get in their good graces.
 ?Are they going to follow me everywhere?
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
@@ -356,13 +356,13 @@ The zany-1 is the easiest, at four letters, but the harder one is eight.
 Nowt Town can be dispelled with a specific word.
 It's not strictly a common interjection, but interjections are used to show intense emotion. Many interjections were once one word, or two words squashed together.
 In this case, you don't want to go through the maze, and you're not going to.
-WONT.
+<b>WONT</b>.
 ?What's the hard way?
 This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
 Scanning the fellows in the Unwary Runway helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
 There should be some clues about Yiddish language or phrases.
-You can say MAZEL TOV at any time. With or without spaces.
+You can say <b>MAZEL TOV</b> at any time. With or without spaces.
 ?Is there any advantage to the hard way?
 You get an extra point, if you're interested in that sort of thing.
 ?I took the hard way but still lost a point from the maximum. What gives?
@@ -386,17 +386,17 @@ Well, Leo and Rand, especially.
 You need to relieve them of their duties. They don't belong in the shack, but they have a hard time leaving. You all had fun together.
 The three sentences anagram to clumps of letters.
 You only need two of these three to move on.
-TOUGH...
-...LATER...
-...SO LONG.
+<b>TOUGH</b>...
+...<b>LATER</b>...
+...<b>SO LONG</b>.
 ?Is the hawt thaw significant?
 Not strictly. It's only necessary to get maximum points.
 It's really weird, though. It barely makes any sense at all!
 It's a last lousy point, based on a puzzle that really didn't work in the first version.
-If you take a good hard look at it, you may want to say WHAT.
+If you take a good hard look at it, you may want to say <b>WHAT</b>.
 ?Are the starch charts significant?
 Not strictly. They're only necessary to get maximum points. They also signal a switch from interjections to something new for the final bit.
-They can be labeled TRASCH. **FIX
+They can be labeled <b>TRASCH</b>.
 >>HACKS' SHACK
 ?There's a lot to do here! What's my ultimate goal?
 Write a computer program.
@@ -404,23 +404,23 @@ Note that you can change stuff to stuff since it is out of the scope of SHATTER-
 ?What's the Clack-Ops Locs Pack for?
 It's in UPPER CASE LETTERS ALL THE WAY. It makes typing quieter, though you're not sure how.
 There are no actual sunglasses, nor locators.
-It makes a CAPS LOCK key.
+It makes a <b>CAPS LOCK</b> key.
 Once you have a keyboard, you can PUT CAPS LOCK IN KEYBOARD.
 ?The gum?
 Aw, c'mon. If you got here, this is a gimme!
 Ugg, umm...
-It becomes a MUG.
+It becomes a <b>MUG</b>.
 ?The flea?
 Something else organic.
-Make it a LEAF.
+Make it a <b>LEAF</b>.
 ?The pile of coal?
 A good source of energy. Dirty and short term, but hey.
 More important it's coal than a pile...
-...so it's COLA.
+...so it's <b>COLA</b>.
 Once you've got the bottle of ALocalCo Cola, POUR COLA IN MUG for an endless supply.
 ?The disk?
 Well, it has portability etc.
-It can become a SKID...
+It can become a <b>SKID</b>...
 ...then flip back later.
 You'll need to move the skid around, unsurprisingly. Use the PUSH command.
 However, once you've gotten rid of the yak, you'll want to flip the skid back to the disk for good.
@@ -429,20 +429,20 @@ Not important by itself, but you can put computer components on it as you find t
 The screen and the keyboard, in particular.
 ?The fount?
 It's dry but restful.
-FUTON.
+<b>FUTON</b>.
 ?The trim socks?
 These aren't critical, but if you figure them, good job.
 They help the computer run a bit faster.
-ROM STICKS.
+<b>ROM STICKS</b>.
 ?The escaroles?
 They are not critical to the game, though they provide a slightly easier alternate solution.
 Make 'em into something more workmanlike, less froufrou. More nourishing.
-CASSEROLE.
+<b>CASSEROLE</b>.
 There is too much for you to eat. Maybe a friend or friends can.
 ?The I'm Le Cop polemic?
 You can't do anything right away, but the signature is another clue.
 Mel Copi will teach you how to build the code...
-...or, well, COMPILE.
+...or, well, <b>COMPILE</b>.
 ?The schematic catechism?
 It's not useful til you need to program, then you'll use it automatically.
 So, yeah, it's mostly for amusement.
@@ -458,21 +458,21 @@ You really need to just connect a bunch of things to it.
 You need the keyboard to work, first. Then it needs to go on the slab.
 You also need to have put the screen on the slab.
 Switch the skid back to the disk, too, and you're ready--but there's a stupid error.
-There's a TO BE OR button. You want to push it, but you're not sure what it's for.
-Once the disk is in, and the keyboard's attached, REBOOT or PUSH REBOOT.
+The Be-Troo E-Robot can do something for you. But what?
+Once the disk is in, and the keyboard's attached, <b>REBOOT</b> or PUSH REBOOT.
 ?How do I change Drive A to be more efficient?
 A DRIVE, DRIVE A, VARIED.
 It seems sluggish, almost unwilling.
-AVIDER.
+<b>AVIDER</b>.
 ?How do I fix Drive E? Do I need to?
 It's a Last Lousy Point.
 You can reverse engineer things...
-...or just DERIVE.
+...or just <b>DERIVE</b>.
 ?How do I get a keyboard?
 See the Char Arch section.
 ?Great. I have the drab yoke. What to do with it?
 Its scratchings contain 26 letters, all the numbers and punctuation.
-It can become a KEYBOARD.
+It can become a <b>KEYBOARD</b>.
 ?What do I do with (what the yoke became)?
 PUT KEYBOARD ON SLAB.
 You can try to run things now, but you run into a case sensitivity error.
@@ -483,20 +483,20 @@ You're far enough along, you don't need to go outside to solve the Presto Area.
 You may be cut off from getting maximum points (for instance, if you didn't help the lamb), but I wanted to ensure the player they were close to the end.
 ?What's the TBA key?
 TBA is not just TBA.
-It's a TAB key. It helps with programming and formatting, but it's not critical.
+It's a <b>TAB </b>key. It helps with programming and formatting, but it's not critical.
 ?Help! I can't work the polemic!
 First, you need to COMPILE, but you're too tired to get it to work. You're annoyed by the Speel, slipping on peels.
 The cola won't help. You need to crash.
-Or SLEEP.
+Or <b>SLEEP</b>.
 ?I have an error message saying BUB DUDE EGG!
 Of course. Code never works at first. Even simple code.
 Random actions leave you saying "BUDGE! BUDGE!"
-Now you're awake, you've got the energy to DEBUG.
+Now you're awake, you've got the energy to <b>DEBUG</b>.
 ?What do I need to do with the USB?
 It'd be nice to have transport out. And you have two options! Lucky you.
 There are only five possibilities. So you have a forty percent chance with a random first guess.
 You have no particular reason to visit Boise State University, the Universal Bank of Switzerland or St. Bonaventure University. (Thanks, acronymfinder.com!)
-You can take a SUB or BUS out for slightly different alternate endings.
+You can take a <b>SUB </b>or <b>BUS </b>out for slightly different alternate endings.
 >STORE U
 >>SAME MESA
 ?Is the worst ad good for anything?
