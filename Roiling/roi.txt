@@ -69,9 +69,9 @@ It means that all the letters in the current object or its description are wrong
 ?How do I get out of here?
 The tables and the ten beams hide ways out. So is "my niche" on the ceiling.
 What are other rooms in a mansion? And what is something that leads up
-The TABLES become a <b>STABLE </b>you can enter, but it's intermediary...
+The TABLES become a <b>STABLE</b> you can enter, but it's intermediary...
 ...and so is the <b>CHIMNEY</b>...
-...because you can just bypass them and go directly to the BASEMENT, which is a longer/harder puzzle to find.
+...because you can just bypass them and go directly to the <b>BASEMENT</b>, which is a longer/harder puzzle to find.
 ?What is the giant pin for?
 It's an optional last lousy point.
 If you use the settler on it, in cheat mode, it may be obvious what it is.
@@ -92,7 +92,7 @@ It familiarizes you with anagramming, the settler in general, and the possibilit
 >>FARMING FRAMING
 ?What's the sitar for?
 It could be sitars...
-Or rather <b>STAIR </b>or stairs.
+Or rather <b>STAIR</b> or stairs.
 ?Can I build the stable/framing back up again?
 No.
 >>HIGHEST HEIGHTS
@@ -123,7 +123,7 @@ Well, it's not just any gun. It's a RIFLE.
 You won't make it to the rifle in time, and he doesn't seem too enthusiastic to shoot it, so maybe you can use some magic?
 The name is in red, which may help eliminate possibilities.
 The rifle with the bullet with your name on it...
-...can become a <b>FLIER </b>with your name on it.
+...can become a <b>FLIER</b> with your name on it.
 Now that you've shown your powers, your former (apparent) antagonist will be more friendly to you.
 ?What can Elmo tell me? Do I need to listen?
 You can solve the game without Elmo, but he can tell you how to use the settler if you're not sure. It's a de facto tutorial about the settler
@@ -137,7 +137,7 @@ It throws up six of seven in cheat mode.
 The specter will help you decipher what this means without too many complications.
 In this case, almost all letter entries are ambiguous, because they match up with RESPECT or SPECTER.
 You can scan the specter a lot to figure things out.
-And whenever you want, you can get the <b>SCEPTER </b>for the bonus point.
+And whenever you want, you can get the <b>SCEPTER</b> for the bonus point.
 ?What's with the plates?
 They appear to be embedded in the plaster.
 They are sort of square, with metal trim around them.
@@ -298,14 +298,14 @@ Say <b>POOH</b>...
 ?What can the N-E-Recs censer be?
 Recs and Rec are too short to make a word.
 The green semi-text on black may be a clue.
-The censer becomes a SCREEN.
+The censer becomes a <b>SCREEN</b>.
 >>CHAR ARCH
 ?What's in the cretins' cistern?
 A dart. It's frustrating to get. You'll probably get it as soon as you give up.
-Or say DRAT.
+Or say <b>DRAT</b>.
 ?How do I get the star?
 Again, you'll probably get it as soon as you give up. But you can't just give up on purpose. You must be legitimately frustrated.
-Say RATS.
+Say <b>RATS</b>.
 ?Can I budge the yak? Or the yoke?
 Not til you've been in the shack. The yoke and yak are no joke. Jack.
 You need to gain the yak's trust. It looks herbivorous.
@@ -330,7 +330,7 @@ To get all the points in the area, yes.
 To complete the game, no.
 This is a slightly obscure word, but it is a toast in German.
 The settler's clue (plus STROP giving red) may tell what it is.
-PROST.
+<b>PROST</b>.
 >>DIRGE RIDGE
 ?Who's this Leo and how can I avoid him?
 He's too clumsy to get you, but maybe you can get him good.
@@ -483,7 +483,7 @@ You're far enough along, you don't need to go outside to solve the Presto Area.
 You may be cut off from getting maximum points (for instance, if you didn't help the lamb), but I wanted to ensure the player they were close to the end.
 ?What's the TBA key?
 TBA is not just TBA.
-It's a <b>TAB </b>key. It helps with programming and formatting, but it's not critical.
+It's a <b>TAB</b> key. It helps with programming and formatting, but it's not critical.
 ?Help! I can't work the polemic!
 First, you need to COMPILE, but you're too tired to get it to work. You're annoyed by the Speel, slipping on peels.
 The cola won't help. You need to crash.
@@ -496,7 +496,7 @@ Now you're awake, you've got the energy to <b>DEBUG</b>.
 It'd be nice to have transport out. And you have two options! Lucky you.
 There are only five possibilities. So you have a forty percent chance with a random first guess.
 You have no particular reason to visit Boise State University, the Universal Bank of Switzerland or St. Bonaventure University. (Thanks, acronymfinder.com!)
-You can take a <b>SUB </b>or <b>BUS </b>out for slightly different alternate endings.
+You can take a <b>SUB</b> or <b>BUS</b> out for slightly different alternate endings.
 >STORE U
 >>SAME MESA
 ?Is the worst ad good for anything?
@@ -1432,17 +1432,17 @@ REDIAL.
 You're severely weakened.
 What's the least powerful type of word in the English language?
 The adverb.
-The bleary 	 covers everything...
-...BARELY.
+The bleary barley covers everything...
+...<b>BARELY</b>.
 ?Ed Riley won't let me by!
 He's not a YIELDER.
 He won't even share his DELI RYE.
 His voice sure booms.
-Not if he speaks REEDILY.
+Not if he speaks <b>REEDILY</b>.
 ?Cinders? What for?
-You can use them to DISCERN what word to use.
+You can use them to <b>DISCERN</b> what word to use.
 Showing you don't need them gets another point.
-You can also RESCIND them.
+You can also <b>RESCIND</b> them.
 >>DISOWNED DOWNSIDE
 ?Why can't I go west?
 You need to help Gretta Garett-Tatger, whom Elmo told you about.
@@ -1452,19 +1452,18 @@ But how they talk it isn't failing yet.
 You can only use adverbs to take them down, so look for words with LY.
 There're many possibilities, but you only need three. You don't have to respond right away, either.
 There's also one word that's available no matter how they talk.
-They can talk SPARELY.
+They can talk <b>SPARELY</b>.
 They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long.
 DESPAIRINGLY is always there. Well, it is once they start redisplaying and redisplaying.
-One of DESPERATELY, DRAWLINGLY, EMOTIONALLY or REACTIVELY will always show up.
-One of MARTIALLY, SINCERELY, SOBBINGLY, TEDIOUSLY and WEARINGLY will also always show up.
-So will one of MODESTLY, STEAMILY and STUPIDLY.
+One of <b>DESPERATELY</b>, <b>DRAWLINGLY</b>, <b>EMOTIONALLY</b> or <b>REACTIVELY</b> will always show up.
+One of <b>MARTIALLY</b>, <b>SINCERELY</b>, <b>SOBBINGLY</b>, <b>TEDIOUSLY</b> and <b>WEARINGLY</b> will also always show up.
+So will one of <b>MODESTLY</b>, <b>STEAMILY</b> and <b>STUPIDLY</b>.
 There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from.
 Pod 1 is seven letters, with some repeating. Pod 2 is seven letters, non-repeating. So you always have two seven-letter words.
-BOSSILY, CATTILY, SEEDILY, TEARILY (or IRATELY) and TERSELY for Pod 1.
-ANGRILY, NASTILY, SHADILY, SNIDELY, STARKLY for Pod 2.
+<b>BOSSILY</b>, <b>CATTILY</b>, <b>SEEDILY</b>, <b>TEARILY</b> (or <b>IRATELY</b>) and <b>TERSELY</b> for Pod 1.
+<b>ANGRILY</b>, <b>NASTILY</b>, <b>SHADILY</b>, <b>SNIDELY</b>, <b>STARKLY</b> for Pod 2.
 Pod 3 is eight letters, repeating. Pod 4 is eight letters, non-repeating. So you always have two eight-letter words.
 Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve. Those are shown above.
-
 The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
 The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need them.
@@ -1475,9 +1474,9 @@ You only need to go one of north or south from the Disowned Downside. The Loop P
 LY-words again.
 With LEGENDARY patience, BUTLERY and MOTLEYER.
 You only need two. Make it lose its cool.
-ENRAGEDLY.
-BRUTELY. And, for the curious...
-REMOTELY.
+<b>ENRAGEDLY</b>.
+<b>BRUTELY</b>. And, for the curious...
+<b>REMOTELY</b>.
 ?What is the coma camo for? And the message?
 The message is what this room--or the cathedral--was called in previous releases.
 The camo just stops you from going west or east.
@@ -1485,78 +1484,78 @@ The camo just stops you from going west or east.
 ?The shrewin' whiners block me noisily!
 Their tallyhoing, callosity and jollity get in the way.
 Tune their volume down. Disrupt them. Make them take a break.
-You need two of three. JOLTILY and STOICALLY cost the fewest keystrokes.
-LOATHINGLY is the other solution.
+You need two of three. <b>JOLTILY</b> and <b>STOICALLY</b> cost the fewest keystrokes.
+<b>LOATHINGLY</b> is the other solution.
 >>LOOP POOL
 ?The sea cube...
 You can't waste words.
 But you can't use adverbs.
 What word is meaningless by itself?
 A conjunction.
-BECAUSE.
+<b>BECAUSE</b>.
 ?The eels aren't convinced...
 Tell them 'Or...
-...ELSE.'
+...<b>ELSE</b>.'
 >>BRAN BARN
 ?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
 ...a word meaningless by itself...
 A conjunction.
-ALTHOUGH.
+<b>ALTHOUGH</b>.
 ?The gore ogre is now in the way!
 You can outfox it with a clever conjunction.
-ERGO.
+<b>ERGO</b>.
 >>LAMER REALM
 ?Owls attack me!
 You need your powers back.
 They are too quick for you.
-Unless they are SLOW.
+Unless they are <b>SLOW</b>.
 ?Why can't I dispel the owls?
 You need your powers back first.
 Visit the Disowned Downside, if you haven't.
 Then clear an area to the north or south.
 ?What of the other animals?
-The leopard can be PAROLED.
-The ocelots can be COOLEST.
-The badger can be GARBED.
-The satyr can be ARTSY.
+The leopard can be <b>PAROLED</b>.
+The ocelots can be <b>COOLEST</b>.
+The badger can be <b>GARBED</b>.
+The satyr can be <b>ARTSY</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>PERVERSE PRESERVE
 ?Whoah! A raptor!
 Brute force won't work.
-Make it a PARROT.
+Make it a <b>PARROT</b>.
 ?Why can't I dispel the raptor?
 You need your powers back first.
 Visit the Disowned Downside, if you haven't.
 Then clear an area to the north or south.
 ?Nails?
 Nothing's slain.
-Just an ex-SNAIL.
+Just an ex-<b>SNAIL</b>.
 ?Thrones?
 Buzzing noises? Sting if you sit on it?
-HORNETS.
+<b>HORNETS</b>.
 ?Pines aren't an animal!
 They have no spine...
-They're not a SNIPE.
+They're not a <b>SNIPE</b>.
 ?The corona is spooky!
-It can be a RACOON.
+It can be a <b>RACOON</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>RECLUSION INCLOSURE
 ?Why are Elmer and Merle doing things on the sly?
 You can get the truth out of them.
 It's a last lousy point but not a trivial one. Plus they have silly things to say if you trigger it.
-You can make them talk HONESTLY.
+You can make them talk <b>HONESTLY</b>.
 ?How do I go west?
 You need something that can beat a hydra. Seen an animal?
 The raptor.
 Your friend the ex-ex-parrot will help you...
-...RAPTOR.
+...once it's a <b>RAPTOR</b> again.
 ?What do I do with the whistle?
 Practice when nobody's around.
 It sounds like someone yelped, but you need to make it less piercing.
-Maybe if you could play it DEEPLY.
+Maybe if you could play it <b>DEEPLY</b>.
 That will help summon animal friends later.
 >>RANCHO ARCHON ANCHOR
 ?Does the conversation with Elvira matter?
@@ -1569,7 +1568,7 @@ See the note in the preserve if you're stuck.
 Have any other gifts?
 The medals, IQ and LUCKY.
 Neither alone speeds you up, but they clinked together when you rescued various animals.
-So go QUICKLY.
+So go <b>QUICKLY</b>.
 ?I need allies!
 If you haven't practiced with the whistle, it won't work.
 You can step outside if you don't know what to do.
@@ -1588,10 +1587,10 @@ ROVE OVER.
 >>RUSTIC CITRUS
 ?What do I need to do for Curtis?
 For starters, get 4 fruits. A few are easy.
-The Spear will be PEARS.
-The Lumps can be PLUMS.
-The Pagers can be GRAPES.
-Examine the ruts circuits, then the slime can be LIMES.
+The Spear will be <b>PEARS</b>.
+The Lumps can be <b>PLUMS</b>.
+The Pagers can be <b>GRAPES</b>.
+Examine the ruts circuits, then the slime can be <b>LIMES</b>.
 There are more potential fruits, which you may be able to guess, but you only need four to start, and I wanted to make them easy.
 ?What's the augural arugula for?
 Well, it's a cheat item. You can EAT it, then GURU something, and if it can become a fruit, there you go.
@@ -1599,7 +1598,7 @@ But you lose a last lousy point at the end if you GURU something. So it's double
 ?What's this stupid moss cap for?
 The moss cap is supposed to help you with directions.
 It doesn't work so well in its present state.
-Try making it a COMPASS.
+Try making it a <b>COMPASS</b>.
 Now you can go north!
 ?Anything else I can do besides make fruit?
 Curtis gives you something new every four fruits. That's a running total, not four fruits since your last transaction.
@@ -1611,39 +1610,39 @@ Another coin (12),
 And a droll dollar (16).
 Beyond that, he just takes stuff. But you don't need it.
 ?Mad Train?
-TAMARIND.
+<b>TAMARIND</b>.
 ?Eerie Blurbs?
 Painted blue-purple.
-BLUEBERRIES.
+<b>BLUEBERRIES</b>.
 ?Peanut Cola?
 Some clues on the can.
-CANTALOUPE.
+<b>CANTALOUPE</b>.
 ?Mopeage rant and other writings?
 They're real pips.
-POMEGRANATE.
+<b>POMEGRANATE</b>.
 ?What's the omen prism for?
 All in red. Clues for a fruit.
 You can READ the omen prism to find various red text.
 For instance, "Nope, Mr. Sim" sounds almost like...
-PERSIMMON.
+<b>PERSIMMON</b>.
 ?Barren cries?
-CRANBERRIES.
+<b>CRANBERRIES</b>.
 ?Harmonicas?
-MARASCHINO (cherry).
+<b>MARASCHINO</b> (cherry).
 >>SWELL WELLS
 ?ScoutCon on Stucco?
-COCONUTS.
+<b>COCONUTS</b>.
 ?'Elp PSA?
 Six letter fruit.
-APPLES.
+<b>APPLES</b>.
 ?What about the riot cap?
-An APRICOT.
+An <b>APRICOT</b>.
 ?And the sorer bogey?
-GOOSEBERRY.
+<b>GOOSEBERRY</b>.
 ?And the miser ruble?
-MULBERRIES.
+<b>MULBERRIES</b>.
 ?And the green stain?
-TANGERINES.
+<b>TANGERINES</b>.
 >>FILED FIELD
 ?Anything besides fruit here?
 No.
@@ -1651,20 +1650,20 @@ No.
 "I fled." He's not coming back.
 ?The buried raft?
 Philip Larkin would figure this out.
-BREADFRUIT.
+<b>BREADFRUIT</b>.
 ?The mean trowel?
-WATERMELON.
+<b>WATERMELON</b>.
 ?Pipe Panel lie pen app?
-PINEAPPLE.
+<b>PINEAPPLE</b>.
 ?Barriers West?
-STRAWBERRIES.
+<b>STRAWBERRIES</b>.
 ?Barber Sickle?
-BLACKBERRIES.
+<b>BLACKBERRIES</b>.
 ?Pryer Bars?
-RASPBERRY.
+<b>RASPBERRY</b>.
 ?The rapt figure?
 White and pink with a weird spoon.
-GRAPEFRUIT.
+<b>GRAPEFRUIT</b>.
 >>SCAPE SPACE
 ?How do I trade for the storage?
 Got any seedy currency?
@@ -1677,19 +1676,19 @@ No, and in fact, they're meant to be a bit tricky.
 ?I can't take the orange!
 You're being too direct about it.
 Perhaps if you get close...
-...or GO NEAR...
+...or <b>GO NEAR</b>...
 ?What to do with the/a banna'?
 The message NAA-NA-B gives you the letters you need. The colors may be a giveaway.
-Get a BANANA.
+Get a <b>BANANA</b>.
 ?What about the brr hub?
 Well, it is actually *a* brr hub, for the purposes of the puzzle.
 Attack and poke at it to get seeing-red clues.
 Look at it--it wants you to attack it.
 Odd things happen. You say odd things.
 Burr, Bah, etc.
-RHUBARB.
+<b>RHUBARB</b>.
 ?What's the RESERVED for DR. SEVERE sign for?
-It can be REVERSED for a fruit.
+It can be <b>REVERSED</b> for a fruit.
 A guava, again, something hard to anagram.
 >>CLANGIER CLEARING
 ?What do I do with Len Craig?
@@ -1706,28 +1705,28 @@ Though there are a lot of adjectives.
 ?Why should I listen?
 A voice says 'go, man.'
 MANGO isn't quite it.
-You need to get AMONG.
+You need to get <b>AMONG</b>.
 ?Lemons?
-SOLEMN.
+<b>SOLEMN</b>.
 ?The melon?
 That's not the only one Len Craig has.
-MO LEN, or any combination should work.
+<b>MO LEN<b> or <b>LEN MO</b> should work.
 ?The peach?
-CHEAP.
+<b>CHEAP</b>.
 ?Nectarine?
 Needs to be older.
-ANCIENTER.
+<b>ANCIENTER</b>.
 ?The auction caution?
 Says PAY ASAP.
-PAPAYAS.
+<b>PAPAYAS</b>.
 ?The prices precis?
 An error makes you want to lash out at the prices precis.
-CRIPES!
+<b>CRIPES</b>!
 The kumquat is just a random fruit that was hard to anagram.
 ?The quince needs something in Italian!
 A price, or a number,
 Uno, duo, tre, quattre, ...
-CINQUE.
+<b>CINQUE</b>.
 >>GATES STAGE
 ?What's behind the gates?
 The happy ending.
@@ -1742,21 +1741,21 @@ But not a coin.
 ?What do I put in the slot?
 Coins don't seem to work. Neither does a coin.
 The thing doesn't like money--maybe more a token?
-Perhaps an ICON would be more your thing.
-Or, if you have two coins, they can be ICONS.
+Perhaps an <b>ICON</b> would be more your thing.
+Or, if you have two coins, they can be <b>ICONS</b>.
 ?Why does the storage spit my offer out with a hum?
 A weird hum. Like sound waves.
 You need something to counteract that.
-Once you have two coins, you can make them SONIC.
-Similarly, ICONS can become SONIC, too.
-You can adjust the coins in any order you please to get SONIC ICONS. Well, you can't make a coin SONIC, but you get the idea.
+Once you have two coins, you can make them <b>SONIC</b>.
+Similarly, ICONS can become <b>SONIC</b>, too.
+You can adjust the coins in any order you please to get <b>SONIC ICONS</b>. Well, you can't make a coin SONIC, but you get the idea.
 ?What do I do with the final item?
 It can take you pretty much anywhere.
 But you need to pay attention to it.
 A viewer and searcher are pretty easy to use. You feel they could be.
-REVIEW or RESEARCH.
+<b>REVIEW</b> or <b>RESEARCH</b>.
 You're also called a PERP if you try to go to the Valence Enclave.
-In that case you could PREP a bit.
+In that case you could <b>PREP</b> a bit.
 You only need to to two of three actions. They were meant to be easy, to emphasize looking stuff up can be easier than abstruse word puzzles.
 Just go through the gates for the finale.
 >DEMO DOME MODE
