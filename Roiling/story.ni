@@ -2680,7 +2680,7 @@ keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]propert
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
 Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
 Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
-prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[cycling]. There're three other bits to read."
+prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[or]Violators have a CLONK DUE[cycling]. There're four other bits to read."
 luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
 blaster	"ALBERT'S."
 bonker	"The bonker was created by KB RENO."
@@ -15686,16 +15686,22 @@ understand "xray [something]" as xraying.
 understand "x-ray [something]" as xraying.
 understand "xray" as xraying.
 
+definition: a thing (called th) is ambient-flip:
+	if th is not touchable, no;
+	if th is bogus-rousted or th is bogus-detours, yes;
+	no;
+
 rule for supplying a missing noun when xraying or xring:
-	if player is in dourest detours:
-		say "The settler gets a reading when you scan all around.";
-		now the noun is bogus-rousted;
+	if number of ambient-flip things is 1:
+		say "Your x-ray vision seems to enlighten ... well, all around you.";
+		now the noun is a random ambient-flip thing;
 		continue the action;
 	if player is in arid den:
 		say "The settler gets a reading when you scan all around.";
 		now the noun is bogus-dandier;
 		continue the action;
-	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat in a non-empty room.";
+	if number of flippable touchable things is 1:
+		say "Because this is a vanishing cheat mechanism, and because some anagrams are only conditionally necessary, I'm going to force you to explicitly refer to [the random flippable touchable thing].";
 	reject the player's command;
 
 to say if-duck: if duck is not touchable, say "--but nothing [if Shaven Havens is visited]here [end if]seems to fit with UNLOCKED";
@@ -15707,10 +15713,11 @@ to say big-hint of (rayx - a thing) :
 	repeat through table of towers anagrams:
 		if the-from entry is rayx:
 			say "[right-word entry in upper case]";
+			if rayx is duck:
+				say "--well, maybe the duck will help something become unlocked";
 			continue the action;
 	say "NOTHING--sorry, this is a bug, but it won't cost your x-ray vision.";
 	now xray-bug-sorry is true;
-[	say "[if rayx is try us yurts]RUSTY[else if rayx is keycar]CREAKY[else if rayx is old ice]COILED[else if rayx is ego drains]ORGANISED[else if rayx is ripostes]PROSIEST[else if rayx is strudel]RUSTLED[else if rayx is mended mini denim]MINED[else if rayx is weeds]SEWED[else if rayx is raves saver]PEARLY[else if rayx is atblock]ATTENTIVE[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is fissure]FUSSIER[else if rayx is Dinger]GRAINED[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is Tetris Sitter]TRISTE[else if rayx is ur pine]PUNIER[else if rayx is retinas]ANTSIER[else if rayx is palace]SPECTACULAR[else]BUG[end if]";]
 
 xray-warn is a truth state that varies.
 
@@ -16166,20 +16173,10 @@ for printing a locale paragraph about a thing (called nongua) in Topside Deposit
 
 check taking a guardian: say "Sadly, you can't just move anyone or anything out of the way in the Wildest Wilteds." instead;
 
-section fire torn frontier
+inside of Topside Deposit is nowhere.
 
-the fire torn frontier is bounding boring scenery in Topside Deposit. description of fire torn frontier is "It's pretty rough. You don't know what's beyond it, but it can't be anything useful.". bore-text is "The frontier is just there to block and intimidate you. You can't do anything with it. [if adders are in Topside Deposit]You should probably find a way past the adders[else]You got rid of the adders, and that's all you need to do[end if].".
-
-section shout so hut
-
-the Shout So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. "It doesn't look that intimidating, but it's noisy enough to keep you away.". printed name of Shout So Hut is "Shout So Hut"
-
-this is the bore-shout-hut rule:
-	if current action is entering, try going south instead;
-
-check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][line break]It's probably got a bunch of those.[or][stopping]" instead;
-
-to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
+check going north in Topside Deposit:
+	if player does not have Rosetta Toaster and dreads adders are not touchable, say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
 chapter dreads adders
 
@@ -16190,12 +16187,7 @@ to say sade-sard:
 
 a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
 
-inside of Topside Deposit is nowhere.
-
-check going north in Topside Deposit:
-	if player does not have Rosetta Toaster and dreads adders are not touchable, say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
-
-a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
+gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.".
 
 section toaster
 
@@ -16219,6 +16211,25 @@ Report taking the Rosetta toaster:
 
 Report taking the strudel:
 	say "You take it from the rut with no problem. Maybe you could've done it fancier, but eh, well." instead;
+
+section start tarts
+
+a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
+
+section fire torn frontier
+
+the fire torn frontier is bounding boring scenery in Topside Deposit. description of fire torn frontier is "It's pretty rough. You don't know what's beyond it, but it can't be anything useful.". bore-text is "The frontier is just there to block and intimidate you. You can't do anything with it. [if adders are in Topside Deposit]You should probably find a way past the adders[else]You got rid of the adders, and that's all you need to do[end if].".
+
+section shout so hut
+
+the Shout So Hut is bounding boring scenery in Topside Deposit. bore-text is "You don't want anything to do with the Shout-So Hut. Onward!".  bore-check is bore-shout-hut rule. "It doesn't look that intimidating, but it's noisy enough to keep you away.". printed name of Shout So Hut is "Shout So Hut"
+
+this is the bore-shout-hut rule:
+	if current action is entering, try going south instead;
+
+check going south in Topside Deposit: say "The Shout-So Hut booms out a reproval: '[one of]Hut! So[or]Oh! Shutouts[or]Shh! Oust! Out[or][huh-uhh], so stout[or][huh-uhh]Huh, toss out[or]Us, shut! Hoot[in random order]!'[one of][line break]It's probably got a bunch of those.[or][stopping]" instead;
+
+to say huh-uhh: say "[if a random chance of 1 in 2 succeeds]Huh[else]Uhh[end if]"
 
 book Scope Copse
 
@@ -17514,7 +17525,7 @@ the shoals aslosh are a useless boring plural-named backdrop. they are in Salted
 
 book Dire and Arid Den
 
-there is an outie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here."
+there is an innie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here."
 
 section bogus-dandier
 
@@ -17592,6 +17603,8 @@ description of bluster butlers is "Bluster butlers are known for handling undesi
 
 a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R?RRR??". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
+gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here.". taunt-text of bluster butlers is "The bluster butlers cough far too loudly, almost half-laughing, before babbling about the importance of teams working together to guard important places. Perhaps they have no clue they might be next."
+
 section denier nereid
 
 a denier nereid is a red guardian. "A denier nereid, surprisingly far from shore, blocks your way [psgdir of denier nereid]."
@@ -17599,6 +17612,8 @@ a denier nereid is a red guardian. "A denier nereid, surprisingly far from shore
 description of denier nereid is "Alluring and all that, but very languid. She's not doing much, and she's doing a lot (for her) to tell you you don't need to do much."
 
 a-text of denier nereid is "RYYRYR". b-text of denier nereid is "RGYR??". parse-text of denier nereid is "r[sp]e[sp]?[sp]x[sp]?[sp]x". denier nereid is cheat-spoilable.
+
+gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly greatful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
 
 section snider diners
 
@@ -17608,6 +17623,8 @@ understand "diner" as diners.
 
 a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
 
+gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-text of snider diners is "They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if].". clue-text of snider diners is "The diners mutter about how bad weather can ruin the ambience of open-air meals.". taunt-text of snider diners is "The diners smack their lips, and you think you hear the zhk of silverware."
+
 chapter Baldest Blasted Saltbed guardians
 
 section fluster self rut
@@ -17615,6 +17632,8 @@ section fluster self rut
 the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way.". printed name is "fluster-self rut".
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
+
+gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
 
 section traipse pirates
 
@@ -17634,6 +17653,8 @@ every turn when traipse pirates are touchable:
 
 a-text of traipse pirates is "RYRRYYR". b-text of traipse pirates is "?YRRY?R". parse-text of traipse pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". traipse pirates are cheat-spoilable.
 
+gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north. block-text of traipse pirates is "'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this.". clue-text of traipse pirates is "You can't make the pirates less in-shape, but maybe something more cosmetic will work.". taunt-text of traipse pirates is "A wry, wary 'Yawr!' from the pirates makes you feel awry."
+
 chapter Anemic Cinema guardians
 
 section resident trendies
@@ -17641,6 +17662,8 @@ section resident trendies
 some Resident Trendies are plural-named terse red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
 
 a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
+
+gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.". taunt-text of trendies is "The trendies say you did okay but also they are sure they could've done that, too, if they had nothing better to do."
 
 section ingrates
 
@@ -17652,11 +17675,15 @@ description of angriest ingrates is "They're spouting some of the angriest ranti
 
 a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of ingrates is "-[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
 
+gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.". taunt-text of ingrates is "The ingrates seem almost upset they are not important enough to get rid of."
+
 section mardier admirer
 
 A mardier admirer is a female purple guardian. "A mardier admirer to the [psgdir of mardier admirer] would rather you stay here and listen to their 'honest' evaluations than go past them."
 
 a-text of mardier admirer is "RYRRYYR". b-text of mardier admirer is "???R?GR". parse-text of mardier admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
+
+gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!". taunt-text of mardier admirer is "'Good job, I guess,' calls the mardier admirer."
 
 description of mardier admirer is "[if mardier admirer is male]He[else]She[end if] seems to be gazing at you with a bizarre mix of reverence and scorn. While [admsex] is too scared to approach you, that doesn't stop a constant stream of dialogue. It's like [admsex] is lonely for that special someone to help share and develop their feelings but doesn't know how to express it."
 
@@ -17670,6 +17697,8 @@ the realist tailers are blue plural-named guardians. "Realist tailers to the [ps
 description of realist tailers is "Looking very smug. One or two, you could deal with and dismiss. But a whole deluge? Probably not, even though you know their brand of 'realism' is quite silly. And yet, perhaps you could make them too silly for each other."
 
 a-text of realist tailers is "RYRRYYR". b-text of realist tailers is "R?RR?YR". parse-text of realist tailers is "x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x".
+
+gualoc of realist tailers is Leveraged Everglade. guadir of realist tailers is north. block-text of realist tailers is "The realist tailers let you by ... at first. But then, from behind, they start pointing out that's not the only way through, and besides, do you really need to go past? Their arguments aren't much, but they bog you down and pull you back.". clue-text of realist tailers is "Perhaps you can subject the realist tailers to too much of their realism, even for them.". taunt-text of realist tailers is "The realist tailers mention that sort of thing happens to people who aren't as living-in-the-real-world as they are."
 
 section promise imposer
 
@@ -17686,21 +17715,17 @@ to say imposer-guard:
 
 a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
+gualoc of promise imposer is Leveraged Everglade. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
+
 chapter Treading Gradient guardians
-
-section alarming grailman
-
-the alarming grailman is a red guardian. understand "liam garn" and "liam/garn" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
-
-description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
-
-a-text of alarming grailman is "RYRRYRYR". b-text of alarming grailman is "RYRRYR?R". parse-text of alarming grailman is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
 section sweatier wait-seer
 
 The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait seer].". printed name of wait seer is "sweatier wait-seer". description of sweatier wait seer is "The wait-seer is sweatier than anyone else you have run across here but has more than enough energy to block you getting by. You glance away, seeing red, after hearing 'I...we...stare.'"
 
 a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+
+gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
 
 section reed's ale
 
@@ -17714,6 +17739,8 @@ to say deal-seer:
 Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
+
+gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
 
 Elsa Erde is a red guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
 
@@ -17733,6 +17760,8 @@ to say el-la-full:
 to say el-la-first:
 	say "[if player is female]Elsa[else]Lars[end if]"
 
+gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Elsa Erde is "Elsa Erde reaches for a hidden bottle of Reed's Ale and takes a swig."
+
 chapter Salted Deltas guardians
 
 section atheists
@@ -17741,7 +17770,19 @@ the asset hit atheists are plural-named purple guardians. "Atheists to the [psgd
 
 a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
+gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.". taunt-text of atheists is "The atheists commend your logic. Piffling, compared to theirs. But a start."
+
 chapter Danger Garden guardians
+
+section alarming grailman
+
+the alarming grailman is a red guardian. understand "liam garn" and "liam/garn" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
+
+description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
+
+a-text of alarming grailman is "RYRRYRYR". b-text of alarming grailman is "RYRRYR?R". parse-text of alarming grailman is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
+
+gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.". taunt-text of grailman is "The grailman stands a bit taller, as if challenging you to remove him, or seeing proof he is even more above average than he thought he was."
 
 section natives' site van
 
@@ -17751,6 +17792,8 @@ a-text of natives site van is "RYYRYRR". b-text of natives site van is "??YRYRR"
 
 understand "native" and "native site/van" and "native site van" as natives site van.
 
+gualoc of natives site van is Danger Garden. guadir of natives site van is south. block-text of natives site van is "The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better.". clue-text of natives site van is "That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting.". taunt-text of natives is "The natives mention no TRUE resident of the Wildest Wilteds would be displaced so easily."
+
 section bonker
 
 The REB NOK bonker is a purple guardian. "You [one of]recognize a[or]still see that[stopping] REB-NOK bonker guarding the way [psgdir of bonker][one of]. Something must be behind--while they're usually just for intimidation, they can, well, knock rebels like you[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping].". printed name of REB NOK bonker is "REB-NOK bonker".
@@ -17759,11 +17802,15 @@ a-text of REB NOK bonker is "RRYRYR". b-text of REB NOK bonker is "?RY??R". pars
 
 retrytext of REB NOK bonker is ", poised to re-bonk"
 
+gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]'No, berk!' the bonker booms, before, um, bonking you. You see red. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.". taunt-text of bonker is "'THE BONKER IS NOT DESTROYED SO EASILY!'".
+
 section stinger
 
 The grin set stinger is a purple terse guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively. It's got a grin set in it. You could also READ its brand.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it.". printed name of grin set stinger is "grin-set stinger".
 
 a-text of grin set stinger is "RYRRYRR". b-text of grin set stinger is "RYRRYRR". parse-text of grin set stinger is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
+
+gualoc of stinger is Mislit Limits. guadir of stinger is east. block-text of stinger is "The stinger needles at you menacingly. You back off.". clue-text of stinger is "The stinger looks unusually active.". taunt-text of stinger is "Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker.]
 
 chapter Artist Traits Strait guardians
 
@@ -17775,6 +17822,8 @@ Lois the Hostile is a female proper-named purple guardian. "You recognize Lois t
 
 a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR". parse-text of lois the hostile is "?[sp]O[sp]x[sp]-[sp]-[sp]x[sp]x".
 
+gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.". taunt-text of lois the hostile is "Lois the Hostile sniffs as if to say, they deserved what they got. Then she looks at you askance."
+
 section hostile is he lot
 
 The Hostile Is He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile is he lot].". description is "It's amazing, the variety of hostile expressions!". printed name of Hostile Is He Lot is "Hostile-Is-He Lot".
@@ -17783,49 +17832,27 @@ a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he l
 
 other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
-chapter guardian org table (deprecated)
-
-gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.".
-
-gualoc of bluster butlers is Scope Copse. guadir of bluster butlers is west. block-text of bluster butlers is "The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme.". clue-text of bluster butlers is "Maybe if the butlers were quieter, they'd have a better place to guard than here.". taunt-text of bluster butlers is "The bluster butlers cough far too loudly, almost half-laughing, before babbling about the importance of teams working together to guard important places. Perhaps they have no clue they might be next."
-
-gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly greatful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
-
-gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-text of snider diners is "They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if].". clue-text of snider diners is "The diners mutter about how bad weather can ruin the ambience of open-air meals.". taunt-text of snider diners is "The diners smack their lips, and you think you hear the zhk of silverware."
-
-gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north. block-text of traipse pirates is "'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this.". clue-text of traipse pirates is "You can't make the pirates less in-shape, but maybe something more cosmetic will work.". taunt-text of traipse pirates is "A wry, wary 'Yawr!' from the pirates makes you feel awry."
-
-gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
-
-gualoc of realist tailers is Leveraged Everglade. guadir of realist tailers is north. block-text of realist tailers is "The realist tailers let you by ... at first. But then, from behind, they start pointing out that's not the only way through, and besides, do you really need to go past? Their arguments aren't much, but they bog you down and pull you back.". clue-text of realist tailers is "Perhaps you can subject the realist tailers to too much of their realism, even for them.". taunt-text of realist tailers is "The realist tailers mention that sort of thing happens to people who aren't as living-in-the-real-world as they are."
-
-gualoc of promise imposer is Leveraged Everglade. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
-
-gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
-
-gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.". taunt-text of ingrates is "The ingrates seem almost upset they are not important enough to get rid of."
-
-gualoc of mardier admirer is Anemic Cinema. guadir of mardier admirer is north. block-text of mardier admirer is "The mardier admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them.". clue-text of mardier admirer is "If only there were a legal or moral reason for the mardier admirer to cool their ardor for you!". taunt-text of mardier admirer is "'Good job, I guess,' calls the mardier admirer."
-
-gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.". taunt-text of trendies is "The trendies say you did okay but also they are sure they could've done that, too, if they had nothing better to do."
-
-gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
-
-gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Elsa Erde is "Elsa Erde reaches for a hidden bottle of Reed's Ale and takes a swig."
-
-gualoc of atheists is Salted Deltas. guadir of atheists is east. block-text of atheists is "The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude.". clue-text of atheists is "The atheists have no shortage of compelling logic, but perhaps their presentation could be adjusted.". taunt-text of atheists is "The atheists commend your logic. Piffling, compared to theirs. But a start."
-
-gualoc of grailman is Danger Garden. guadir of grailman is north. block-text of grailman is "The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. 'Arm! Align!' he booms, making you see red. You're not going that way with him there.". clue-text of grailman is "The grailman is the first you've ever met, but he seems more than adequate enough to block your way.". taunt-text of grailman is "The grailman stands a bit taller, as if challenging you to remove him, or seeing proof he is even more above average than he thought he was."
-
-gualoc of bonker is Danger Garden. guadir of bonker is east. block-text of bonker is "[if bonker was passtried]RE-BONK! You see red and[else]'No, berk!' the bonker booms, before, um, bonking you. You see red. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives site van is touchable]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape.". clue-text of bonker is "'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east.". taunt-text of bonker is "'THE BONKER IS NOT DESTROYED SO EASILY!'".
-
-gualoc of stinger is Mislit Limits. guadir of stinger is east. block-text of stinger is "The stinger needles at you menacingly. You back off.". clue-text of stinger is "The stinger looks unusually active.". taunt-text of stinger is "Fizzing and buzzing from the stinger." [the stinger isn't really in Mislit Limits, but I need this hack for it to replace the bonker.]
-
-gualoc of natives site van is Danger Garden. guadir of natives site van is south. block-text of natives site van is "The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better.". clue-text of natives site van is "That natives['] site van seems ill-placed, here. Maybe you can help it move somewhere more interesting.". taunt-text of natives is "The natives mention no TRUE resident of the Wildest Wilteds would be displaced so easily."
-
-gualoc of lois the hostile is Artist Traits Strait. guadir of lois the hostile is north. block-text of lois the hostile is "She mentions you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that.". clue-text of lois the hostile is "Boy! Lois sure could use some down-home kindness.". taunt-text of lois the hostile is "Lois the Hostile sniffs as if to say, they deserved what they got. Then she looks at you askance."
-
 gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text of he lot is "They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers.". clue-text of he lot is "Boy! The Lot sure could use some down-home kindness.". taunt-text of he lot is "The Hostile-is-He Lot sniffs as if to say, they deserved what they got. Then they look at you askance."
+
+chapter guardian org table (deprecated, now has properties thrown in directly)
+
+section Topside Deposit
+
+section Scope Copse 0 0
+
+section Baldest Blasted Saltbed 0 1
+
+section Leveraged Everglade 1 0
+
+section Anemic Cinema 0 2
+
+section Treading Gradient 1 1
+
+section Danger Garden 2 0
+
+section Salted Deltas 1 2
+
+section Artist Traits Strait 2 1
 
 chapter rules for flipping guardians
 
