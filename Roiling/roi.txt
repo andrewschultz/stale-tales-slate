@@ -335,7 +335,7 @@ The settler's clue (plus STROP giving red) may tell what it is.
 ?Who's this Leo and how can I avoid him?
 He's too clumsy to get you, but maybe you can get him good.
 He does bull at you.
-OLE.
+<b>OLE</b>.
 ?Oh no! Rand joined in!
 He doesn't look too smart, like he can be fooled by a feint.
 If you say <b>DARN</b>, it will get him.
@@ -376,8 +376,8 @@ They're clues, if you scan them.
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
 The hogs look up for heavy duty swears, and they'll probably be annoyed by mild expressions.
-You can pretend you don't really want the keys by saying SYKE...
-...or you can bug the hogs by saying GOSH.
+You can pretend you don't really want the keys by saying <b>SYKE</b>...
+...or you can bug the hogs by saying <b>GOSH</b>.
 Either way, the hogs get mad at you, tire themselves out chasing you, and leave the keys open for Rand and Leo.
 >>PHAT PATH
 ?What are the harpings phrasings for?
@@ -421,7 +421,7 @@ Once you've got the bottle of ALocalCo Cola, POUR COLA IN MUG for an endless sup
 ?The disk?
 Well, it has portability etc.
 It can become a <b>SKID</b>...
-...then flip back later.
+...then you can flip back to a <b>DISK</b> later, once your work area is set.
 You'll need to move the skid around, unsurprisingly. Use the PUSH command.
 However, once you've gotten rid of the yak, you'll want to flip the skid back to the disk for good.
 ?The slab?
@@ -503,44 +503,44 @@ You can take a <b>SUB</b> or <b>BUS</b> out for slightly different alternate end
 It's bad for society in every way. Err, I mean, it's a last lousy point.
 You can pick it off as long as the giant or the bean aren't present. If you get it first, you get a clue to the area. You may not need the clue, but it's there.
 RADWOST or WORST AD shuffled gives...
-TOWARDS.
+<b>TOWARDS</b>.
 ?How do I get into the church?
 Going IN is not formal enough.
 Read the scripture picturers.
 DIE SIN.
 You can switch them to make SIN DIE. Which helps, if you use the settler.
 Going IN is simply not enough.
-You need to go INSIDE.
+You need to go <b>INSIDE</b>.
 ?How do I get into the restaurant or the store?
 Hmm, Pat's and Oscar's.
 If you haven't scored a point yet, you might not know what to do with these.
 If you have, you know this area relies on prepositions.
-Pat's--you need to go PAST.
-Oscar's--you need to go ACROSS.
+Pat's--you need to go <b>PAST</b>.
+Oscar's--you need to go <b>ACROSS</b>.
 ?What is the ant-sag sit-a-nag for?
 It's <i>a giant's</i>. It's for sitting.
-The anagramming suggests you can lean AGAINST it.
+The anagramming suggests you can lean <b>AGAINST</b> it.
 But you need to have visited the cleric circle and seen the reagent list first.
 ?Gast is here. How do I deal?
 Gast blocks trying anything else that moves the story forward.
 You can't climb directly on the sit-a-nag, but you have a different way to listen to Gast.
 Note the side art.
-Get ASTRIDE it.
+Get <b>ASTRIDE</b> it.
 Once you do, you can't leave, but you don't have to.
 Now you need to avoid the WOE BOW BELL.
-You need to go BELOW.
+You need to go <b>BELOW</b>.
 Next, Gast pulls out a copy of Rude 'N Nuder.
-You need to hide UNDER, and Gast will give up and leave it behind.
+You need to hide <b>UNDER</b>, and Gast will give up and leave it behind.
 ?I helped Brother Horbert and came back, but what's that MORF-FORM doing?
 Changing all the time, threatening to arrive.
 Get rid of the threat arriving.
-Make it FROM, and it will come crashing down.
+Make it <b>FROM</b>, and it will come crashing down.
 ?What's with a drama armada?
 They're all staring at the bean. What clue can it hide? Where?
 You need a good first word to tell the crowd what to do.
 THE BEAN holds something under it. Wait, we've done UNDER before.
 Something BELOW it. Wait, that's been done too.
-BENEATH.
+<b>BENEATH</b>.
 >>CLERIC CIRCLE
 ?What is there to do here?
 See on the wall--there's a list of three things you need for a magic potion.
@@ -553,7 +553,7 @@ Not much. Well, just one word. It's the seed pit that's important.
 It's where PETS DIE.
 Pat discourages you from entering the seed pit. IT'S DEEP.
 What's a preposition that counters something that's been said?
-DESPITE.
+<b>DESPITE</b>.
 Now you have the stupor sprout--another third of the reagents Brother Horbert needs in the Cleric Circle.
 >>ADOBE ABODE
 ?What should I say to Oscar?
@@ -561,7 +561,7 @@ Not much. It's the pipe soot that's important.
 ?What about a trashy ashtray?
 It's holding pipe soot! But you can't just up and steal it.
 It's on the other side of Oscar.
-Position yourself OPPOSITE, and you can take it behind your back without him looking.
+Position yourself <b>OPPOSITE</b>, and you can take it behind your back without him looking.
 >>HARMS MARSH
 ?What do I do with the sheol-holes?
 Not fall into them.
@@ -570,39 +570,39 @@ Directions don't help, so you need to be more circumspect.
 This is a three-part puzzle.
 You have no light, and your lamp was broken a long time ago.
 You can say it was dark and <i>unlit</i>, before...
-...I mean, UNTIL.
+...I mean, <b>UNTIL</b>.
 ?Where do I go? How do I find a trail?
 Remember, you were told you need to NAG OL' NO-LAG LOGAN. There's an UN-ROAD you need to use to get there.
-So, first, you need to look AROUND.
+So, first, you need to look <b>AROUND</b>.
 You're on your way to finding him, now.
-Then, you need to go ALONG.
+Then, you need to go <b>ALONG</b>.
 >>RIPE PIER
 ?What's with the mist?
 Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
 One is thinking of DA MIST helps you feel more familiar, and you can go...
-AMIDST.
+<b>AMIDST</b>.
 >>CRIPPLE CLIPPER
 ?How do I need to go?
 Logan's poem will give you some clues.
 It's a weird preposition, a nautical preposition.
 THAT WAR, etc.
-You need to go ATHWART.
+You need to go <b>ATHWART</b>.
 >>SONANCY CANYONS
 ?How do I get past those two animals?
 The order matters.
 The bent ewe comes first.
 Guard it from the hurt hog.
-BETWEEN.
+<b>BETWEEN</b>.
 Then the hurt hog.
 You can leave it now.
-Go THROUGH.
+Go <b>THROUGH</b>.
 ?Should I enter the yob den?
 No. It's a final last distraction.
-You want to go BEYOND.
+You want to go <b>BEYOND</b>.
 ?Are the raptest patters important?
 If you want a full score, yes.
 Actually, they're best ignored. Aggressively.
-Or done WITHOUT.
+Or done <b>WITHOUT</b>.
 >STORE V
 >>LOATHER RATHOLE
 ?What do I do here, in general?
@@ -613,49 +613,49 @@ Spoiloplis is about passive verbs.
 ?How do I get a replacement for heat?
 You were thrown out of Eh, At Heat.
 Burning anger may be literal and figurative.
-Or burning HATE.
+Or burning <b>HATE</b>.
 ?I'm not emotionally invested enough to visit the Race Acre!
 All that hate drained you. You need a new approach.
-You need to CARE.
+You need to <b>CARE</b>.
 The game then mentions that emotion alone won't do it. Time to get more analytical.
 ?What do I do with Pa, Egg, Pea?
 You don't have to do anything.
 It's by Peg A. Page. It's about Peg A. Page. It profited Peg A. Page when sold.
 Okay, I think I beat this into the ground.
-GAPE at it.
+<b>GAPE</b> at it.
 >>BUSTLE SUBLET
 ?What's the stop post for?
 It can't turn into POTS or TOPS. Or expand your OPTS.
 It will help you SPOT. But you need to get rid of the sob ever verbose.
 ?What do I do to ignore/dispel the sob ever verbose?
 You can listen to it for clues. Lots of reds.
-OBSERVE.
+<b>OBSERVE</b>.
 >>BOARDED ROADBED
 ?This stupid evil bee is so near!
 There are two ways to look at it: as so near, or an evil bee. Let's go with the bee itself.
 It's an evil bee. It feeds on your doubt.
-BELIEVE.
+<b>BELIEVE</b>.
 ?Should I do anything with the vile bee?
 You don't have to. But you'll get an extra point.
 It is still SO NEAR. It is a senora. It has no ears.
-REASON that it cannot possibly exist.
+<b>REASON</b> that it cannot possibly exist.
 ?Oh no! Can I do anything with the cellar caller?
 It's broken, but maybe it will help you remember.
 No, that's not quite it...
-With some thinking, you can RECALL.
+With some thinking, you can <b>RECALL</b>.
 >>DRAIN NADIR
 ?A spider, Ires Pad, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
-DESPAIR.
+<b>DESPAIR</b>.
 ?What are the pleaser leapers for?
 They're an optional puzzle.
 You must do something close to despair. It's something that can follow despair or cause it.
-RELAPSE.
+<b>RELAPSE</b>.
 ?What is this song trying to say to me?
 You need to move on from your despair.
 Eddie C, CDEDE ... I
-DECIDE.
+<b>DECIDE</b>.
 >>BOREDOM BEDROOM
 ?I may or may not want to drink the lager!
 Turns out you don't.
@@ -663,23 +663,23 @@ It is upsetting to find it there. Such productivity lost!
 This is a last lousy point.
 The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
-Or you can GLARE at it right away.
+Or you can <b>GLARE</b> at it right away.
 ?Why can't I eat the Bortles Lobster yet?
 You need to feel you can, you deserve it.
 The settler in cheat mode throws a bunch of questions, but actually, that means a lot of things you can clean up.
-BOLSTER.
+<b>BOLSTER</b>.
 ?Why don't I understand the motivational picture of the stream?
 You aren't on top of things yet. The stream should refocus you...
-...if you MASTER things.
+...if you <b>MASTER</b> things.
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
-You need to learn to DEAL.
+You need to learn to <b>DEAL</b>.
 Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have the guts or endurance.
 >>BROWSE BOWERS
 ?What does Si Reed have to offer?
 The See Dir has a list of places to reside.
 It should make you want to reside.
-Want can become DESIRE.
+Want can become <b>DESIRE</b>.
 ?Are the shmoe homes and rotunda important?
 They are just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
@@ -688,44 +688,44 @@ The rotunda is a reference to the Browse Bowers' old name.
 The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS back in Boredom Bedroom.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
-STRIVE.
+<b>STRIVE</b>.
 ?What about the praise floating around?
 This is the other of the two things.
 Re-scan the rivets spelling praise.
-ASPIRE!
+<b>ASPIRE</b>!
 ?What is the END PRONER POD for?
 You need to think your way around it.
 Its title is in red, and if you read it, there's red writing too.
 DENORP is what the letters are in alphabetical order.
 So have a think on what they could be.
-PONDER.
+<b>PONDER</b>.
 >>UPSCALE CAPSULE
 ?What should I do with the red vees?
 Don't overthink it or get too abstract.
 Believe you can and should.
 The names of the creators are Ed Evers and Erv Dees, in red.
-DESERVE it.
+<b>DESERVE</b> it.
 ?I'm not worth my salt!
 You will be, with time.
 If you haven't dealt with the lobster or the stream, you need to.
-Then, you need to LAST.
+Then, you need to <b>LAST</b>.
 ?What do I do with the Trance Nectar?
 It's time to turn your back on all this.
 But first, you must dispose of the Marble Blamer or the Sister Tressi Siters.
-RECANT.
+<b>RECANT</b>.
 ?Is the Marble Blamer relevant?
 Yes.
 It focuses you on grueling work that drains your soul.
-Unless you RAMBLE.
+Unless you <b>RAMBLE</b>.
 ?Are the Sister Tressi Siters relevant?
 Yes.
 She looks down at you as if you say you're a failure.
-You can RESIST.
+You can <b>RESIST</b>.
 ?DIVORCES magazine. Is it useful?
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
 You need to realize something...
 ...there's an actual magazine called the word you need...
-...DISCOVER why the magazine is rubbish.
+...<b>DISCOVER</b> why the magazine is rubbish.
 >STORE W
 >>LOFTIER TREFOIL
 ?How do I get out?
@@ -747,41 +747,41 @@ Cedrick, Demitri, Leander, Preston, Terrance.
 Andrew has a particularly silly description.
 ?Andres
 Roaming freely in his territory...
-...until SNARED
+...until <b>SNARED</b>.
 ?Andrew
 A careless looking fellow. Needs some direction.
-WARNED
+<b>WARNED</b>.
 ?Archie
 Free of pain.
-ACHIER.
+<b>ACHIER</b>.
 ?Barney
 Don't have to make him flee too far.
-NEARBY.
+<b>NEARBY</b>.
 ?Blake
 A positive looking chap.
-But he can be made BLEAK.
+But he can be made <b>BLEAK</b>.
 ?Bredo
 Very interested.
-Til he is BORED.
+Til he is <b>BORED</b>.
 ?Cedrick
 No visible injuries.
-CRICKED.
+<b>CRICKED</b>.
 ?Daryl
 He is in shape for the job. Fix that.
-LARDY.
+<b>LARDY</b>.
 ?Demitri
 Stiffest upper lip here.
-TIMIDER.
+<b>TIMIDER</b>.
 ?Dewey
 He is muscular.
-Not when you make him WEEDY.
+Not when you make him <b>WEEDY</b>.
 ?Edwin
 An anti-alcohol guy?
 A swig might turn him.
-WINED.
+<b>WINED</b>.
 ?Eldon
 Full of boundless youth.
-Until he is OLDEN.
+Until he is <b>OLDEN</b>.
 ?Ernest
 Very relaxed.
 Make him TENSER.
