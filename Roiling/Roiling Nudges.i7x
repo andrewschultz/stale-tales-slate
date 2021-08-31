@@ -1005,7 +1005,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "clays"	293640460	--	--	"[clay-pal]."
 "caly"	197366494	--	--	"[clay-pal]."
 "enip"	323172422	unripe ur pine	--	"It's officially an ur-pine, not a pine."
-"pester"	621785964	serpent	--	"The serpent doesn't just pester, it's pester'n."
+"repent"	594419506	repents serpent	--	"You're probably better of dispelling all the things to repent about at once, not just one."
 "present"	690693472	--	serpent-hiding rule	"The serpent is taken care of."
 "accurst"	430012582	accurst leap	--	"[focus-castle]."
 "leap"	265273725	accurst leap	--	"[focus-castle]."
