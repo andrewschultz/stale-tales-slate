@@ -40,7 +40,7 @@ You probably figured it out by now, but your power is to turn things into anagra
 You have the ability to anagram things magically.
 ?What is the knock at the door?
 Someone to see you. You can find out if you open it, or you can wait a few turns.
-?What should I talk to Gunter about?
+?What should I talk to Report Porter Perrot about?
 The first discussion is the main one. Everything after that is babble.
 You'll discover the latches after you wake up if you didn't already.
 ?It's dark! Where can I get light?
@@ -82,6 +82,13 @@ There are only twenty-three possibilities.
 In fact, with the settler on cheat mode, there is only one. Without it, there are four.
 But wait! Your dusty study doesn't need a sofa...
 ...which is okay since there are no oafs, anyway. However, if you wish to play a game with oafs in it, my IFComp 2014 game Ugly Oafs has lots of them!
+?What do I do with the diorama?
+There are four pairs to change back and forth. You don't get any points for it.
+It familiarizes you with anagramming, the settler in general, and the possibilities of spaces.
+BRASS CRAG and CRABGRASS.
+EVENT MAP and PAVEMENT.
+FARM PLOT and PLATFORM.
+STEEL PAD and PEDESTAL.
 >>FARMING FRAMING
 ?What's the sitar for?
 It could be sitars...
@@ -305,7 +312,7 @@ Seen anything eatable and plant-y?
 The flea, when changed to a leaf, is edible. Well, for a yak.
 But you don't just want to give the leaf to the yak.
 If you've got the skid, you can put the leaf on the skid, then push the skid south to the Char Arch. The yak will walk on it.
-?The yak's moveable now, but how to get rid of the yoke?
+?The yak's movable now, but how to get rid of the yoke?
 The yoke has a safety, so if it's jarred, it'll snap.
 There are three ways to do things.
 First, you can just push the skid back north. The narrow/magnetic entry will unlock the yoke.
@@ -607,7 +614,7 @@ You were thrown out of Eh, At Heat.
 Burning anger may be literal and figurative.
 Or burning HATE.
 ?I'm not emotionally invested enough to visit the Race Acre!
-All that hste drained you. You need a new approach.
+All that hate drained you. You need a new approach.
 You need to CARE.
 The game then mentions that emotion alone won't do it. Time to get more analytical.
 ?What do I do with Pa, Egg, Pea?
@@ -640,6 +647,10 @@ With some thinking, you can RECALL.
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 DESPAIR.
+?What are the pleaser leapers for?
+They're an optional puzzle.
+You must do something close to despair. It's something that can follow despair or cause it.
+RELAPSE.
 ?What is this song trying to say to me?
 You need to move on from your despair.
 Eddie C, CDEDE ... I
@@ -823,10 +834,10 @@ Budget as you need to.
 ?Is there any functional difference between the pastries I find? And how many are there?
 No. They are all the same.
 There are five pastries total.
-?What is the unripe ur-pine doing, and how can I get past it?
-Well, it spreads out and blocks you.
-It's much too big, but you can make it smaller.
-Make it PUNIER.
+?What are the dreads adders for? How can I get by?
+They inspire dread, but maybe you can make them into a less draining emotion. Or an emotion that drains them.
+Make them SADDER.
+Comparative adjectives help a lot, so it's worth looking for those suffixes as a shortcut.
 >>GUARDIANS, GUARDIANS
 ?How many do I need to clear?
 Eleven, minimum, including the serpent.
@@ -875,14 +886,13 @@ Make everything more RESTFUL.
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
 Make them the HOLIEST.
-?Mel Fish
-His name is Mel Fish, and that's in red.
-SMH Life, his catch phrase, also makes you see red.
-How can you let him be him?
-Well, by letting him be HIMSELF.
-?Muscly (Luc Sym/Ms. Lucy)
-Strength doesn't matter without dexterity.
-So make him or her CLUMSY.
+?Realist tailers
+They're not nasty enough to reject outright.
+Maybe you can feel better ditching them, or maybe they will fight each other, if they become ...
+... SALTIER.
+?Denier nereid
+They're too far from shore. They need to be pulled back in.
+Make them REINED.
 ?Promise Imposer
 He's good at what he does.
 So smooth. Doesn't do things by half-measures.
@@ -1091,11 +1101,15 @@ Oh, and before a location people might think was a joke, too. Minor spoiler!
 >>DOUREST DETOURS
 ?Is this location a joke?
 Well, not a total joke. It's there, but it's a bit floating.
-It can be approached from two different rooms: west of Anemic Cinema or south of Danger/Gander garden.
+You can enter it from Outer Route,
 Once you've been through once, you can't return.
 ?Am I trapped?
 No. You need an anagram for dourest and detours.
 You need something that will wake you up, get you going.
+ROUSTED.
+?Can I take care of the seismal semials?
+Yes, but you don't need to.
+They can become AIMLESS.
 ROUSTED.
 >>MISLIT LIMITS
 ?What can I do about the pester'n serpent?
@@ -1431,32 +1445,38 @@ You can also RESCIND them.
 >>DISOWNED DOWNSIDE
 ?Why can't I go west?
 You need to help Gretta Garett-Tatger, whom Elmo told you about.
-?How do I disperse the plarleys splayer players?
+?How do I disperse the parleys splayer players?
 They're talking total rubbish.
 But how they talk it isn't failing yet.
 You can only use adverbs to take them down, so look for words with LY.
 There're many possibilities, but you only need three. You don't have to respond right away, either.
+There's also one word that's available no matter how they talk.
+They can talk SPARELY.
 They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long.
 DESPAIRINGLY is always there. Well, it is once they start redisplaying and redisplaying.
-One of DRAWLINGLY or EMOTIONALLY will always show up.
-One of MODESTLY, STEAMILY or STUPIDLY will also always show up.
+One of DESPERATELY, DRAWLINGLY, EMOTIONALLY or REACTIVELY will always show up.
+One of MARTIALLY, SINCERELY, SOBBINGLY, TEDIOUSLY and WEARINGLY will also always show up.
+So will one of MODESTLY, STEAMILY and STUPIDLY.
 There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from.
-Pod 1 is seven letters, repeating. Pod 2 is seven letters, non-repeating. So you always have two seven-letter words.
+Pod 1 is seven letters, with some repeating. Pod 2 is seven letters, non-repeating. So you always have two seven-letter words.
+BOSSILY, CATTILY, SEEDILY, TEARILY (or IRATELY) and TERSELY for Pod 1.
+ANGRILY, NASTILY, SHADILY, SNIDELY, STARKLY for Pod 2.
 Pod 3 is eight letters, repeating. Pod 4 is eight letters, non-repeating. So you always have two eight-letter words.
-Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve.
+Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve. Those are shown above.
+
 The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
-The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need thme.
+The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need them.
 ?Where do I go?
 You only need to go one of north or south from the Disowned Downside. The Loop Pool is a bit easier. But going both ways gets you all the points.
 >>SHINER SHRINE
 ?The sly imp simply blocks me!
 LY-words again.
-With LEGENDARY patience, BUTLERY and RANGILY.
+With LEGENDARY patience, BUTLERY and MOTLEYER.
 You only need two. Make it lose its cool.
-ANGRILY.
+ENRAGEDLY.
 BRUTELY. And, for the curious...
-...ENRAGEDLY.
+REMOTELY.
 ?What is the coma camo for? And the message?
 The message is what this room--or the cathedral--was called in previous releases.
 The camo just stops you from going west or east.
@@ -1667,7 +1687,7 @@ Look at it--it wants you to attack it.
 Odd things happen. You say odd things.
 Burr, Bah, etc.
 RHUBARB.
-?What's the RESERVED sign for?
+?What's the RESERVED for DR. SEVERE sign for?
 It can be REVERSED for a fruit.
 A guava, again, something hard to anagram.
 >>CLANGIER CLEARING
