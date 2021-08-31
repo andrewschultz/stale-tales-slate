@@ -63,9 +63,11 @@ def check_anagram_tables(my_proj, col_num):
                         print("    " + line.strip())
                     else:
                         word_dict_got[base_word] = line_count
+    count = 0
     for x in word_dict_need:
         if not word_dict_got[x]:
-            print(x.upper(), "needed but not in {} invisiclues, original line {}.".format(my_proj, word_dict_need[x]))
+            count += 1
+            print(count, x.upper(), "needed but not in {} invisiclues, original line {}.".format(my_proj, word_dict_need[x]))
 
 with open("invv.txt") as file:
     for (line_count, line) in enumerate (file, 1):
