@@ -4,6 +4,8 @@ import i7
 from collections import defaultdict
 import mytools as mt
 
+max_hits = 50
+
 do_shuf = False
 do_roil = True
 
@@ -74,10 +76,12 @@ def check_anagram_tables(my_proj, col_num):
     for x in word_dict_need:
         if not word_dict_got[x]:
             count += 1
+            if count > 50:
+                continue
             print(count, table_of[x], x.upper(), "needed but not in {} invisiclues, original line {}.".format(my_proj, word_dict_need[x]))
-            if count == 50:
-                print("Maximum hit. Returning.")
-                return
+    if count > 50:
+        print("Maximum differences hit. I showed {}, but there were {}.".format(max_hits, count))
+        return
 
 with open("invv.txt") as file:
     for (line_count, line) in enumerate (file, 1):

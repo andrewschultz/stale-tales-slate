@@ -1,4 +1,4 @@
-# pos.py: possibility checker from command line or file
+# pos.py: possibility/position checker from command line or file
 #
 
 from collections import defaultdict
@@ -81,7 +81,7 @@ def valid_red(word_to_redcheck, my_answer):
     return True
 
 def find_poss(word_array, bail=False):
-    hints = word_array[1]
+    hints = word_array[1].lower()
     original = word_array[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
@@ -124,7 +124,7 @@ def find_poss(word_array, bail=False):
         if len(answers) == 1:
             print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
         else:
-            print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from", word_array)
+            print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
@@ -140,6 +140,56 @@ def find_poss(word_array, bail=False):
         print("Uh oh, ",word_array, "doesn't work.")
     if bail: sys.exit()
 
+def cheat_reading(words_array, go_lower = True):
+    my_string = ''
+    words_array = [x.lower() for x in words_array]
+    rights = [0] * len(words_array[0])
+    wrongs = [0] * len(words_array[0])
+    for y in range(0, len(words_array[0])):
+        for x in range(1, len(words_array)):
+            if words_array[x][y] == words_array[0][y]:
+                rights[y] += 1
+            else:
+                wrongs[y] += 1
+        if rights[y] and wrongs[y]:
+            my_string += '?'
+        elif words_array[0][y] == 'y':
+            my_string += 'B' if rights[y] else 'O'
+        elif words_array[0][y] in 'aeiou':
+            my_string += 'G' if rights[y] else 'Y'
+        else:
+            my_string += 'P' if rights[y] else 'R'
+    if go_lower:
+        return my_string.lower()
+    return my_string
+        
+def process_reds():
+    with open("c:/writing/dict/reds.txt") as file:
+        for (line_count, line) in enumerate(file, 1):
+            if '?' not in line: continue
+            if line.startswith("#"): continue
+            do_search = False
+            if len(found_searched):
+                for x in found_searched:
+                    if x in line.lower():
+                        do_search = True
+                        found_searched[x] = True
+            if not (show_all_grids or do_search): continue
+            ary = re.split("[=,]", line.strip().lower())
+            find_poss(ary)
+            got_one_reading = True
+
+    y = [x for x in found_searched if found_searched[x]]
+    z = [x for x in found_searched if not found_searched[x]]
+
+    if not len(y):
+        print("I didn't find a reading for {}. Look in reds.txt to verify this.".format(', '.join(z)))
+    elif not len(z):
+        print("Request{} found. Yay.".format('' if len(found_searched) == 1 else 's all'))
+    else:
+        print("FOUND:", ', ',join(y))
+        print("NOT FOUND:", ', ',join(z))
+
 #test usage examples (main new ones)
 #find_poss(['nearest', '???RG??', 'earnest', 'eastern', 'neaters'], bail=True)
 #find_poss(['reversed', '??RG?RG?', 'reserved', 'deserver', 'edreeves'], bail=True)
@@ -148,6 +198,7 @@ def find_poss(word_array, bail=False):
 #find_poss(['inside', '?RRYRY', 'idiein', 'needsi'])
 
 count = 1
+file_search = False
 
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
@@ -157,37 +208,25 @@ while count < len(sys.argv):
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
     elif arg == 'ns' or arg == 'sn': show_all_grids = False
-    else:
+    elif '=' not in arg:
+        file_search = True
         if ',' in arg:
             a = arg.split(',')
             red_anagrams[a[0]] = a[1:]
             found_searched[a[0]] = False
         else:
             found_searched[arg] = False
+    else:
+        arg = arg.replace('=', '')
+        ary = arg.split(',')
+        red_anagrams[ary[0]] = [ x.replace('!', '') for x in ary[1:] if '!' in x ]
+        main_clue_array = [ x for x in ary[1:] if '!' not in x ]
+        main_clue_array.insert(0, ary[0])
+        main_clue_array.insert(1, cheat_reading(main_clue_array))
+        find_poss(main_clue_array)
     count += 1
 
-with open("c:/writing/dict/reds.txt") as file:
-    for (line_count, line) in enumerate(file, 1):
-        if '?' not in line: continue
-        if line.startswith("#"): continue
-        do_search = False
-        if len(found_searched):
-            for x in found_searched:
-                if x in line.lower():
-                    do_search = True
-                    found_searched[x] = True
-        if not (show_all_grids or do_search): continue
-        ary = re.split("[=,]", line.strip().lower())
-        find_poss(ary)
-        got_one_reading = True
+if file_search:
+    process_reds()
+    sys.exit()
 
-y = [x for x in found_searched if found_searched[x]]
-z = [x for x in found_searched if not found_searched[x]]
-
-if not len(y):
-    print("I didn't find a reading for {}. Look in reds.txt to verify this.".format(', '.join(z)))
-elif not len(z):
-    print("Request{} found. Yay.".format('' if len(found_searched) == 1 else 's all'))
-else:
-    print("FOUND:", ', ',join(y))
-    print("NOT FOUND:", ', ',join(z))

@@ -733,8 +733,8 @@ Get rid of Rodney and his followers.
 They're not really dedicated to him. Get rid of three--any three--and he's more malleable.
 You can get a clue what sort of word to use if you listen to his babble about people that didn't make the cut.
 He describes them with anagramming adjectives.
-Once they're gone, you can send him YONDER.
-Or you can make him DRONEY and his followers will get bored.
+Once they're gone, you can send him <b>YONDER</b>.
+Or you can make him <b>DRONEY</b> and his followers will get bored.
 >>>RODNEY'S GOONS
 ?How do I get rid of the goons? And why are so many listed? I only see six, plus Rodney.
 One henchman is chosen from each group. Five groups have four, and one group has five. They are weighted by length.
@@ -784,43 +784,43 @@ Full of boundless youth.
 Until he is <b>OLDEN</b>.
 ?Ernest
 Very relaxed.
-Make him TENSER.
+Make him <b>TENSER</b>.
 ?Geno
 Just sort of there. What if her were not?
-GONE
+<b>GONE</b>.
 ?Goldy
 Not very holy.
-GODLY.
+<b>GODLY</b>.
 ?Leander
 Seems kind of dumb. Give him book-smarts.
-LEARNED.
+<b>LEARNED</b>.
 ?Marcel
 Very animated.
-CALMER.
+<b>CALMER</b>.
 ?Marlon
 Thinks he's a cut above?
-NORMAL
+<b>NORMAL</b>.
 ?Preston
 The best placed for defense?
-Not when PRONEST.
+Not when <b>PRONEST</b>.
 ?Reggie
 Smells and looks spotless.
-Make him EGGIER so he must go freshen up.
+Make him <b>EGGIER</b> so he must go freshen up.
 ?Royce
 Not shy.
-Unless COYER.
+Unless <b>COYER</b>.
 ?Shane
 A ruddy complexion.
-Til he is ASHEN.
+Til he is <b>ASHEN</b>.
 ?Terrance
 He is not shirking.
-RECREANT.
+<b>RECREANT</b>.
 ?Tyson
 Many emotions...
-...unless he's STONY.
+...unless he's <b>STONY</b>.
 ?Wade
 Confident and poised, but sensible enough to know if he might be overmatched.
-Til he's AWED.
+Til he's <b>AWED</b>.
 >>TOPSIDE DEPOSIT
 ?What can I do with the top opt pot?
 Nothing, until near the end.
@@ -837,7 +837,7 @@ No. They are all the same.
 There are five pastries total.
 ?What are the dreads adders for? How can I get by?
 They inspire dread, but maybe you can make them into a less draining emotion. Or an emotion that drains them.
-Make them SADDER.
+Make them <b>SADDER</b>.
 Comparative adjectives help a lot, so it's worth looking for those suffixes as a shortcut.
 >>GUARDIANS, GUARDIANS
 ?How many do I need to clear?
@@ -866,76 +866,76 @@ The agnostic and Dr. Yow also give one clue.
 ?Alarming Grailman
 You can't be a grailman unless you are a cut above.
 He can't imagine being worse than average.
-MARGINAL.
+<b>MARGINAL</b>.
 ?Asset-Hit Atheists
 They're patient and willing to explain their views.
 Could you make them hurry up so they give up?
-Yes, make them HASTIEST.
+Yes, make them <b>HASTIEST</b>.
 ?Bluster Butlers
 Making them more circumspect could help them move up in the world, and away from here.
-They can become SUBTLER.
+They can become <b>SUBTLER</b>.
 ?(Deal Seer) Lars Eede/Elsa Erde
 The deal seer hits the Reed's Ale quite hard!
 They feel trapped in their life and can't stop drinking.
-You can help them get RELEASED.
+You can help them get <b>RELEASED</b>.
 The Reed's ale can also become RESEALED.
 ?The fluster-self rut
 It is agitated, and it agitates you.
 How can you calm things down?
-Make everything more RESTFUL.
+Make everything more <b>RESTFUL</b>.
 ?Hostile-is-He Lot/Lois the Hostile
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
-Make them the HOLIEST.
+Make them the <b>HOLIEST</b>.
 ?Realist tailers
 They're not nasty enough to reject outright.
 Maybe you can feel better ditching them, or maybe they will fight each other, if they become ...
-... SALTIER.
+... <b>SALTIER</b>.
 ?Denier nereid
 They're too far from shore. They need to be pulled back in.
-Make them REINED.
+Make them <b>REINED</b>.
 ?Promise Imposer
 He's good at what he does.
 So smooth. Doesn't do things by half-measures.
-SEMIPRO.
+<b>SEMIPRO</b>.
 ?Snider diners
 They have dry wit.
-Until they're RINSED.
+Until they're <b>RINSED</b>.
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
-Make him WEARIEST.
+Make him <b>WEARIEST</b>.
 ?Traipse Pirates
 They have impressive tans they're proud of.
 How to make the pirates lose them?
-Make them PASTIER.
+Make them <b>PASTIER</b>.
 ?Hey! What's this yacker keycar doing?
 It appears the first time you clear an area of all the guardians.
 It's pretty easy to dispose of as an LLP.
 It's active and has no mechanical damage...
-...until you make it CREAKY.
+...until you make it <b>CREAKY</b>.
 >>ANEMIC CINEMA
 ?Do I need to deal with the mardier admirer?
 (S)he'd find you less a part of his/her life...
-...if (s)he were MARRIED.
+...if (s)he were <b>MARRIED</b>.
 ?Do I need to deal with the angriest ingrates?
 Only if you want a perfect score.
 If the madness became whining...
-...they could be ANGSTIER.
+...they could be <b>ANGSTIER</b>.
 >>DANGER GARDEN
 ?Do I need to get rid of the bonker?
 Yes, it guards something important.
 It works perfectly.
-Til it's BROKEN.
+Til it's <b>BROKEN</b>.
 Oh, look, something else! They must be guarding something REALLY important.
 ?Hey, something replaced the bonker!
 It sure is vigilant.
 How to lower its energy?
-Make it RESTING.
+Make it <b>RESTING</b>.
 ?Do I need to get rid of the natives' site van?
 Only for maximum points.
 These guys could be one thing, or the other.
-If you want to sucker them with pride, VAINEST.
-If you want to sucker them with stupidity, NAIVEST.
+If you want to sucker them with pride, <b>VAINEST</b>.
+If you want to sucker them with stupidity, <b>NAIVEST</b>.
 Neither is better or worse than the other.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
@@ -951,17 +951,17 @@ It shows you where you need to go.
 It also creates a map in the upper window that lasts until you cross the lake.
 ?What are the try-us yurts doing? How can I get rid of them?
 They're quite eco-friendly, or seem to be. They seem well built enough.
-Unless, or until, they're RUSTY.
+Unless, or until, they're <b>RUSTY</b>.
 >>BALDEST BLASTED SALTBED
 ?What's the docile old ice for?
 An LLP.
 You can change it to something more interesting.
-Make it COILED.
+Make it <b>COILED</b>.
 >>LEVERAGED EVERGLADE
 ?What are the organised ego drains doing?
 You can't actually dispel them so you can get past them, but you can still hit them up for a Last Lousy Point.
 They make you feel like you can't do anything, and they're very reasonable and not overdone.
-You can laugh at them if they become GRANDIOSE.
+You can laugh at them if they become <b>GRANDIOSE</b>.
 >>OUTER ROUTE
 ?What's the campiest campsite for?
 To hold the rapier repair.
@@ -976,17 +976,17 @@ They are scenery to "help" you "decide" to go back east.
 >>TREADING GRADIENT
 ?Do I need to get rid of the weeds?
 No, but you can (and need to) make them immobile.
-Make them SEWED.
+Make them <b>SEWED</b>.
 ?What's a raves saver?
 A tape recorder.
 Note it can RETAPE or REPEAT.
 You'll need to use both to get through.
 If you notice its brand name, you can get an LLP.
 It's a replay player.
-So it can be PEARLY, too.
+So it can be <b>PEARLY</b>, too.
 ?What's the denim for?
 You can't cut at it with anything normal.
-It can, however, be MINED.
+It can, however, be <b>MINED</b>.
 ?What's the ragged dagger for?
 It needs to be toned up.
 You'll find something for that in the Campiest Campsite.
@@ -1003,13 +1003,13 @@ The duck might trust that.
 ?What can I do about the strudel?
 You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
-It can be RUSTLED.
+It can be <b>RUSTLED</b>.
 >>LOST LOTS
 ?What are the sporties' ripostes for?
 An LLP.
 You can make them less incisive.
 They're almost like poetry.
-So change them to the PROSIEST you've heard.
+So change them to the <b>PROSIEST</b> you've heard.
 ?How do I get past the gasfield?
 Well, you don't need to.
 And you can't.
@@ -1021,15 +1021,15 @@ Dr. Yow won't speak until compelled.
 ?How do I get Dr. Yow to speak?
 Scanning gives a word...
 ...or two.
-ROWDY is one.
-WORDY is the other.
+<b>ROWDY</b> is one.
+<b>WORDY</b> is the other.
 Dr. Yow's voice is useful.
 But the duck probably doesn't need Dr. Yow yelling.
 ?Is a log-gaol important?
 Yes, to make the subsector obscurest.
 It wouldn't be very obscure if it had more than one exit, would it?
 ?Is the fissure important?
-Try making it FUSSIER.
+Try making it <b>FUSSIER</b>.
 Nothing happens--with just you there.
 ?The prison ropins don't have anything I can unlock!
 Right. You'll need help.
@@ -1048,12 +1048,12 @@ Yes. Don't go on til you see someone new on the Coastlines.
 The agnostic is interested in technical stuff.
 Playing the raves saver isn't enough.
 ?How should Dr. Yow lecture the agnostic?
-WORDY has been done. This is an exciting lecture. Or it needs to be. The agnostic still is shaking off the effects of time wasted by the Actionless Coastlines.
-ROWDY.
+<b>WORDY</b> has been done. This is an exciting lecture. Or it needs to be. The agnostic still is shaking off the effects of time wasted by the Actionless Coastlines.
+<b>ROWDY</b>.
 ?The agnostic looks tentative. Can I change that?
 This is an LLP. It was part of the main puzzle before I felt it was a bit arbitrary. The word was too long, and it was too easy in cheat mode.
 TENTATIVE can become...
-...ATTENTIVE.
+...<b>ATTENTIVE</b>.
 >>ACTIONLESS COASTLINES
 ?What are the natatorium and hatchery for?
 They are convenient places for the atheists and hostile person/people to go once you've neutralized them.
@@ -1065,7 +1065,7 @@ You need to get rid of them both. When they do, someone new will appear.
 No. It's something to do, something he/she guesses smart people do.
 Maybe if it were less enthralling to look at.
 _Reading a Dinger_ can become...
-...GRAINED.
+...<b>GRAINED</b>.
 ?What's the agnostic interested in?
 Technical stuff. Like Dr. Yow knows. Dr. Yow's in the subsector.
 ASK AGNOSTIC ABOUT DOCTOR once you rescued the doctor.
@@ -1076,19 +1076,19 @@ GIVE GIZMO TO AGNOSTIC.
 Not even close, to start.
 The turbos and blaster are broken.
 You need to fix one, preferably both.
-The turbos can be more ROBUST.
-The blaster can be STABLER.
+The turbos can be more <b>ROBUST</b>.
+The blaster can be <b>STABLER</b>.
 ?Is the weirder red wire good/bad for anything?
 It's not critical to the game.
 It doesn't replace fixing the turbos or blaster.
 But it is a Last Lousy Point.
 It can be reorganized...
-...or REWIRED.
+...or <b>REWIRED</b>.
 >>RAWEST WATERS
 ?I need help from the Earnest Eastern Neaters!
 If only they were a bit closer...
 What can be done to get closer to them?
-Make them, and you, NEAREST.
+Make them, and you, <b>NEAREST</b>.
 ?Hey! I never saw this location. What gives? Is this a fake clue?
 You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed it, you'd have landed here. The puzzle is about as easy as the other two, and I figured it'd be neat to have two ways through.
 >>LEAK LAKE
@@ -1107,27 +1107,26 @@ Once you've been through once, you can't return.
 ?Am I trapped?
 No. You need an anagram for dourest and detours.
 You need something that will wake you up, get you going.
-ROUSTED.
+<b>ROUSTED</b>.
 ?Can I take care of the seismal semials?
 Yes, but you don't need to.
-They can become AIMLESS.
-ROUSTED.
+They can become <b>AIMLESS</b>.
 >>MISLIT LIMITS
 ?What can I do about the pester'n serpent?
 You don't need to get rid of it, strictly. Unless you want maximum points.
 Can't make it so it REPENTS. That's a verb.
 You can't make it go away.
 But you can neutralize it.
-It'll be calmer if it's just PRESENT.
+It'll be calmer if it's just <b>PRESENT</b>.
 ?What's with the unripe ur-pine?
 It's not critical to solving this area, but it'll help with Renato's quest.
 It's too big, and it's covering something up.
 Maybe if it were smaller...
-...or PUNIER.
+...or <b>PUNIER</b>.
 ?And with what's behind it?
 The Nastier Stainer Retinas may be a bit too nasty for their own security.
 Because Nastier has the last three letters in common with ...
-... ANTSIER.
+... <b>ANTSIER</b>.
 Oh, look! A succor crocus.
 ?There aren't many hints here for the curst palace!
 If you opened the premise(s), you can return, talk to the person inside once you gained their trust, and come back. There'll be new clues.
@@ -1137,14 +1136,14 @@ It is a big castle. And it's a final puzzle.
 St. Teri seems to indicate it inspires generic superlatives.
 Like fantastic, incredible...
 ...remember, it was great once...
-...SPECTACULAR.
+...<b>SPECTACULAR</b>.
 >>MESPRISE PREMISES
 ?Do I actually need to be here?
 Only if you want full points.
 ?The Tetris Sitter seems happy as-is!
 Not really. Just wasting time, guessing she is happy.
 Maybe you could get her back to real emotions ...
-... by making her TRISTE.
+... by making her <b>TRISTE</b>.
 ?How do I get any useful concrete information from the (ex-)Tetris Sitter?
 Give him a gift.
 If you found the crocus behind the unripe ur-pine, you can do so.
@@ -1153,57 +1152,57 @@ If you found the crocus behind the unripe ur-pine, you can do so.
 ?Why do the pills have a warning?
 They're dangerous.
 Dangerously addictive, because they allow a free pass through some puzzles here.
-If you SPILL PILLS, in various places, they do different things. But you only get one use.
+If you <b>SPILL</b> the PILLS, in various places, they do different things. But you only get one use.
 Okay, more, if you save before using. Or you have a debug version of the binary I used to test the feature. Which was fun.
 ?What do I need to do to get by the LOLstr trolls?
 Well, you need to be all cool.
-STROLL.
+<b>STROLL</b>.
 But you need to do a few things to be a more undesirable patron.
 ?What's the gins sign for?
 It should suggest a standard Inform verb when you examine it--or by its letters.
-SING.
+<b>SING</b>.
 ?What's the perma-amper for?
 You can fiddle with it if you know the technical terms.
-REMAP it. This means you can't deal with the tunes for a point.
+<b>REMAP</b> it. This means you can't deal with the tunes for a point.
 ?Can I get rid of the tunes?
 Sure.
-Just UNSET them. This means you can't deal with the amper for a point.
+Just <b>UNSET</b> them. This means you can't deal with the amper for a point.
 ?What are the tips pits for?
 Well, you can put something else in there.
 Do something even ruder than not tipping.
-SPIT.
+<b>SPIT</b>.
 ?Can/should I bug Casper?
 He has good general information.
 But you can also do something to irritate him.
 Casper Spacer, Capers Recaps...
-SCRAPE.
+<b>SCRAPE</b>.
 ?What do I do with the stein?
 Well, there are tines.
 You can't quite INSERT...
-...but you can INSET.
+...but you can <b>INSET</b>.
 ?Why can't I do more than three annoying things here?
 The trolls would get too upset and would have an excuse to give you the business.
 >>OLDE LODE
 ?What's the clam doing?
 It's agitated.
-Perhaps you can CALM it.
+Perhaps you can <b>CALM</b> it.
 ?What's this urn? Why can't I walk away?
 Taking it kills you.
 You need to do something faster than walk.
-You need to RUN.
+You need to <b>RUN</b>.
 >>DISEASE SEASIDE
 ?What're the boats for?
 You can make some noise to get their attention.
 If you SOB AT them, they're not interested.
-You need to BOAST.
+You need to <b>BOAST</b>.
 That gets you to the Fighter Frigate.
-?Can I cross on the raft?
+?Can I cross on the frat raft?
 Yes, and you get an extra point for doing so.
 The oars on the raft are odd.
-Get on the raft first. What can you do there?
-FART.
+Get on the raft first. What can you do there? Something stereotypically frat-ty?
+<b>FART</b>.
 The oars are fuller now. You can't cross the river at ground level...
-SOAR.
+<b>SOAR</b>.
 ?Is the canoe useful?
 Well, to see ALL the game, yes.
 You can turn it into an ocean...
@@ -1213,33 +1212,34 @@ It's just a dumb joke/Monty Python reference. You can undo the silly death.
 ?How do I get out of here?
 Once you're on the fighter frigate, your next action should be pretty clear.
 The scary crays aren't going to help, but the pale plea might.
-You need to LEAP.
+You need to <b>LEAP</b>.
 ?I didn't get here. How do you?
 BOAST instead of using the raft at Disease Seaside.
 >>ANGER RANGE
 ?How to stop the bullies?
 Hmm. Carps and Pikes.
-You can SCRAP...
-...or you can SPIKE.
+You can <b>SCRAP</b> with the carps...
+...or you can <b>SPIKE</b> the pikes.
+Either way, you take care of them all.
 ?How do I release the haunter?
 Etahn Ru is its name. Lots of red letters!
-You need to UNEARTH it.
+You need to <b>UNEARTH</b> it.
 But you also need to help it recover its ruby.
 Don't go on 'til you've found a jewel.
 There's one inside the Paw-R-Wrap.
 He will take revenge on whoever stole it.
 What can you do with a ruby?
-BURY it.
+<b>BURY</b> it.
 You'll need the right tool.
 And the right place.
-?Why's anger range so angry?
+?Why's Anger Range so angry?
 The haunter lies beneath.
 You must release him to make him less angry.
-You need to UNEARTH him once you have a shovel. Or, well, something like it.
+You need to <b>UNEARTH</b> him once you have a shovel. Or, well, something like it.
 Say, a rigged digger.
 ?How do I calm the ghost down once he's here?
-He is a SAUSAGE.
-ASSUAGE him.
+The haunter is a Use-Saga Sausage.
+<b>ASSUAGE</b> him.
 ?Why did Anger Range change names?
 Well, nobody's angry any more. So there's no point.
 Also, Hero's Shore is the old name of the Disease Seaside.
@@ -1253,27 +1253,27 @@ Easier, since it's a verb you probably already used.
 SCAN the cans.
 ?No one's here but I hear something.
 They're EEKS.
-Try to SEEK them.
+Try to <b>SEEK</b> them.
 >>LEAN LANE
 ?What does Aunt Tuna want me to do?
 She informs you her nephew the trout's name is Tortu. He hates bullies.
 He needs to be taught.
-You can TUTOR him.
+You can <b>TUTOR</b> him.
 Then you get what's in the raw red drawer.
 ?What do I do with the tea?
 It's not the sort of tea you can drink, and with five anagram possibilities, you can use process of elimination, here.
-You EAT it.
+You <b>EAT</b> it.
 The paler pearl is useful later.
 ?Are the wipes usable/takeable?
 Yes and yes.
 First, let's figure how to take them.
 We need to take them quickly.
-SWIPE them.
+<b>SWIPE</b> them.
 ?Is the dent in the desk useful?
 No, except for getting one more point.
 It's a rather easy point. Let's just say if you scan it in cheat mode, it falls out.
 ?What do I do with the Paw-R-Wrap?
-You WARP it.
+You <b>WARP</b> it.
 Well, not in front of Aunt Tuna. But someone else will deserve and loathe it more.
 ?What can I ask Aunt Tuna about?
 She will tell you about her friend Valeri who gave her a packet.
@@ -1281,56 +1281,56 @@ Which you can get, or you do have.
 It's what the ghost is after.
 ?Can I fix the dent?
 Yes and no. You can't FIX it. That's only three letters...
-...but you can TEND it.
+...but you can <b>TEND</b> it.
 ?Can I go back to the Hardest Trashed Dearths?
 No, but you don't need to.
 >>LAPSIN' PLAINS
 ?How do I unlock the span pans?
 Three parts to this one, but they're all relatively short.
 The skis and knob are in the way.
-KISS the skis.
+<b>KISS</b> the skis.
 The knob is also stuck.
-BONK the knob.
-Then you should be able to SNAP.
+<b>BONK</b> the knob.
+Then you should be able to <b>SNAP</b> to get rid of the pans.
 But wait! A crate.
 ?How do I avoid being hit by a crate?
 This is another two-parter.
 They're too broken to cater with.
 You need to figure where it's coming from.
-TRACE it.
+<b>TRACE</b> it.
 But that's not enough. You need to avoid it.
-REACT.
+<b>REACT</b>.
 ?Anything else I can do?
 You can talk to nobody in general for a last lousy point.
 What is the location's name?
 PLAINS.
 You can do something with that. It's a bit slangy, but...
-...you can SPLAIN your goals and dreams and wishes.
+...you can <b>SPLAIN</b> your goals and dreams and wishes.
 >>SHUTTLE HUTLETS
 ?What do I do with the tubs?
 Maybe there is something inside.
 You need to break them open.
-Or BUST them.
+Or <b>BUST</b> them.
 ?What the heck can I do with a prod?
 The way to open it is simple yet annoyingly weird.
 DROP the prod.
 ?Does the waste need clearing?
 Not if you don't want ALL the points.
 It's work to clear.
-SWEAT.
+<b>SWEAT</b>.
 ?Can I do anything with the heaps I left?
 Yes, but you don't have to.
 They're lumped inartistically.
 This is a last lousy point.
-SHAPE the heaps.
+<b>SHAPE</b> the heaps.
 ?What do I do with a dirty lance?
 You need the wipes from Lean Lane.
-Then you can CLEAN the lance.
+Then you can <b>CLEAN</b> the lance.
 ?What do I do with the rigged digger?
 Two things. First, it can release the haunter...
-...if you UNEARTH.
+...if you <b>UNEARTH</b>.
 Second, once you have the ruby...
-...you can BURY it.
+...you can <b>BURY</b> it.
 ?How do I bring a plane into the Shadier Airshed?
 Well, you need to manipulate the panel.
 You need to uncover it first.
@@ -1338,7 +1338,7 @@ There was a panel in Shuffling Around.
 How did you get it?
 By folding a paper plane.
 I didn't want to reuse an anagram, so...
-...there is no plane. I just needed an anagram for a believably big area, for the items.
+...there is no plane. I just</b> 
 ?How do I operate the plane?
 You can't operate the buttons, but...
 I bet a nuts bot could.
@@ -1347,14 +1347,15 @@ You could make it respect you if you told it tut, snob...
 >>SCLEROUS CLOSURES
 ?Do the arches hide anything?
 Yes. Examining's not enough.
-You have to SEARCH. But the sardine will block you.
+You have to <b>SEARCH</b>. But the sardine will block you.
 ?How do I get rid of the sandier sardine?
 The sardine hates noises.
 You need something that makes noises.
-Here's where you WARP the bubble wrap.
+Here's where you <b>WARP</b> the bubble wrap.
 Now you can SEARCH.
 ?What's the Handsome Sand Home for? ##regignore
 To add plausibility for the game blocking you from going west or south.
+Also as a memorial for Lean Lane's previous name.
 >>HORNED HEDRON
 ?How do I get rid of the weaselly walleyes?
 They're not scared of much.
@@ -1365,7 +1366,7 @@ Well, first, you need to get rid of the walleyes.
 It would be nice as a portal.
 You must be able to disable it somewhere.
 Look around.
-Better yet, PATROL.
+Better yet, <b>PATROL</b>.
 Of course, you need the walleyes gone.
 >>RASCAL CRAALS
 ?What is a craal?
@@ -1374,7 +1375,7 @@ Not a super fancy one, but it sure sounds exotic!
 ?What can I do here?
 This is a good place to hide stuff.
 Like the ruby.
-BURY the RUBY.
+<b>BURY</b> the RUBY.
 Then dig the haunter up and lead it by.
 ?I can't visit the craals after doing something. Is this okay?
 Yes. The craals served their purpose.
@@ -1385,7 +1386,7 @@ Do you have a pearl yet?
 There's more than one.
 Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
-ENLARGE it.
+<b>ENLARGE</b> it.
 >>PLASM LAMPS
 ?I skipped over this! Is it a fake room or clue?
 No, it's a small side quest.
@@ -1396,36 +1397,36 @@ You will need to figure what to do with the Templar Ramplet. It's part of the pu
 It should be easy. There are only five possibilities.
 You need to attack it a certain way.
 There are only five possibilities for ANT.
-You need to TAN it.
+You need to <b>TAN</b> it.
 Once you do, you go to the den loft.
 ?Okay, was/is there anything else to do? That was a bit anticlimactic.
 Yes. The location itself has a bit of a hint.
 A templar is a religious fighter. Maybe you can do a religious thing?
 This word is better known as a noun, but it can also function as a verb.
-You can PSALM while in Plasm Lamps for a bonus point on top of getting rid of the natant ant.
+You can <b>PSALM</b> while in Plasm Lamps for a bonus point on top of getting rid of the natant ant.
 >>TENFOLD TEFLON'D DEN LOFT
 ?Stupid papery yapper!
 He wants to be bribed, but use a different word, maybe?
 The settler can show you what to do. Though it seems to blink.
 That is because some letters in one word are right, but not the other.
 P or Y is right. E or P is right. Y or R is right. But we know if there's a Y--orange or brown color. And we can tell vowel or consonant.
-PREPAY him.
+<b>PREPAY</b> the yapper.
 ?What do I do with the lever?
 It's an optional point.
 Have fun knowing you found it.
-REVEL.
+<b>REVEL</b>.
 ?What do I do with the dialer?
 There's also a clump of letters that can be relaid.
 DIALER may become something else.
-DERAIL.
+<b>DERAIL</b>.
 ?Oh no! Pins are blocking the dialer!
 Two solutions here.
 They aren't lethal, but they are annoying.
-SPIN or SNIP them.
+<b>SPIN</b> or <b>SNIP</b> them.
 ?What else do I do with the dialer?
 Well, you can DERAIL again...
 ...or you can find another way to call back.
-REDIAL.
+<b>REDIAL</b>.
 >STORE T
 >>MINDED MIDDEN
 ?Help! I lost my powers! What do I do?
@@ -1452,19 +1453,17 @@ But how they talk it isn't failing yet.
 You can only use adverbs to take them down, so look for words with LY.
 There're many possibilities, but you only need three. You don't have to respond right away, either.
 There's also one word that's available no matter how they talk.
-They can talk <b>SPARELY</b>.
-They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long.
-DESPAIRINGLY is always there. Well, it is once they start redisplaying and redisplaying.
-One of <b>DESPERATELY</b>, <b>DRAWLINGLY</b>, <b>EMOTIONALLY</b> or <b>REACTIVELY</b> will always show up.
-One of <b>MARTIALLY</b>, <b>SINCERELY</b>, <b>SOBBINGLY</b>, <b>TEDIOUSLY</b> and <b>WEARINGLY</b> will also always show up.
-So will one of <b>MODESTLY</b>, <b>STEAMILY</b> and <b>STUPIDLY</b>.
-There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from.
-Pod 1 is seven letters, with some repeating. Pod 2 is seven letters, non-repeating. So you always have two seven-letter words.
-<b>BOSSILY</b>, <b>CATTILY</b>, <b>SEEDILY</b>, <b>TEARILY</b> (or <b>IRATELY</b>) and <b>TERSELY</b> for Pod 1.
-<b>ANGRILY</b>, <b>NASTILY</b>, <b>SHADILY</b>, <b>SNIDELY</b>, <b>STARKLY</b> for Pod 2.
-Pod 3 is eight letters, repeating. Pod 4 is eight letters, non-repeating. So you always have two eight-letter words.
-Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve. Those are shown above.
-The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
+They can talk <b>SPARELY</b>. That's always available, until you figure it.
+They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long. There are seven pods of words, and I ch
+There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from. The easy ones come first.
+Pod 1 is seven letters, with some repeating. <b>BOSSILY</b>, <b>CATTILY</b>, <b>SEEDILY</b>, <b>TEARILY</b> (or <b>IRATELY</b>) and <b>TERSELY</b> are in Pod 1.
+Pod 2 is seven letters, non-repeating. So you always have two seven-letter words. <b>ANGRILY</b>, <b>NASTILY</b>, <b>SHADILY</b>, <b>SNIDELY</b> and <b>STARKLY</b> are in Pod 2.
+Pod 3 is eight letters, repeating. <b>BLEARILY</b>, <b>RIBALDLY</b>, <b>FORMALLY</b>, <b>COITALLY</b>, <b>SHABBILY</b>, <b>SHODDILY</b>, <b>SILENTLY</b> and <b>SUDDENLY</b> are in Pod 3.
+Pod 4 is eight letters, non-repeating. So you always have two eight-letter words. <b>MODESTLY</b>, <b>STEAMILY</b> and <b>STUPIDLY</b> are in Pod 4.
+Pod 5 is nine letters. <b>MARTIALLY</b>, <b>SINCERELY</b>, <b>SOBBINGLY</b>, <b>TEDIOUSLY</b> and <b>WEARINGLY</b>are in Pod 5.
+Pod 6 is ten to eleven letters. <b>DESPERATELY</b>, <b>DRAWLINGLY</b>, <b>EMOTIONALLY</b> and <b>REACTIVELY</b> are in Pod 6.
+Pod 7 is twelve letters. <b>DESPAIRINGLY</b> and <b>INDISCREETLY</b> are in Pod 7.
+The pods give you slightly more average letters to deal with than if I just picked seven adverbs from the whole list (thirty-two at last count,) but I felt it might be too confusing to have thirty-two possible adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
 The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need them.
 ?Where do I go?
