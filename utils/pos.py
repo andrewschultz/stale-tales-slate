@@ -6,12 +6,14 @@ import sys
 import re
 from itertools import permutations
 import mytools as mt
+from string import ascii_lowercase
 
 track_letter_type = True
 show_all_grids = False
 search_strings = []
 got_one_reading = False
 details = False
+check_v_c = False
 
 red_anagrams = defaultdict(list)
 found_searched = defaultdict(bool)
@@ -85,9 +87,26 @@ def find_poss(word_array, bail=False):
     original = word_array[2:]
     answer = word_array[0].split("/")[0]
     got_yet = defaultdict(bool)
+    check_overall = False
     for x in original:
         if alfy(x) != alfy(answer):
             print("{} vs {} has different letter lumpings: {} vs {}.".format(answer, x, alfy(answer), alfy(x)))
+            check_overall = True
+    if check_overall:
+        any_delta = False
+        expected_each = len(original) // len(answer)
+        for x in ascii_lowercase:
+            delta = original.count(x) - answer.count(x) * expected_each
+            if delta > 0:
+                print(delta, 'too many of', x, 'in clues.')
+                any_delta = True
+            elif delta < 0:
+                print(delta, 'too few of', abs(x), 'in clues.')
+                any_delta = True
+        if any_delta:
+            print("Imbalance in from/to anagrams.")
+        else:
+            print("Despite different letter lumpings, no anagram imbalances.")
     if "/" in word_array[0]:
         print("More than one accepted answer in", ', '.join(word_array), "which is beyond the scope of this program.")
         return
@@ -104,7 +123,7 @@ def find_poss(word_array, bail=False):
         pj = ''.join(p)
         if not valid_match(p, hints, original): continue
         if not valid_red(p, answer): continue
-        if not valid_v_c(p, answer): continue
+        if check_v_c and not valid_v_c(p, answer): continue
         count += 1
         if pj == answer:
             got_answer = True
@@ -162,7 +181,7 @@ def cheat_reading(words_array, go_lower = True):
     if go_lower:
         return my_string.lower()
     return my_string
-        
+
 def process_reds():
     with open("c:/writing/dict/reds.txt") as file:
         for (line_count, line) in enumerate(file, 1):
@@ -203,11 +222,12 @@ file_search = False
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
     if arg == 'd': details = True
-    elif arg == 'nd' or arg == 'dn': details = False
-    elif arg == 'nt' or arg == 'tn': track_letter_type = False
+    elif arg in ( 'nd', 'dn' ): details = False
+    elif arg in ( 'nt', 'tn' ): track_letter_type = False
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
-    elif arg == 'ns' or arg == 'sn': show_all_grids = False
+    elif arg in ( 'ns', 'sn' ): show_all_grids = False
+    elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
     elif '=' not in arg:
         file_search = True
         if ',' in arg:
