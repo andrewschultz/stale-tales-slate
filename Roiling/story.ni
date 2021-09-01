@@ -15638,7 +15638,7 @@ chapter toasting
 
 xrayvision is a truth state that varies.
 
-check inserting into the rosetta toaster:
+check inserting into the Rosetta toaster:
 	if xrayvision is true, say "You've already got some x-ray vision. So you can just XRAY whatever you want." instead;
 	if noun is not a hintpastry, say "That's not a toaster pastry." instead;
 	if noun is strudel and noun is reflexive:
@@ -17442,11 +17442,11 @@ a-text of nastier stainer retinas is "YRRRYYR". b-text of nastier stainer retina
 this is the bore-retinas rule:
 	if current action is attacking, say "You'd suffer, uh, tearins[']." instead;
 
-chapter pester'n serpent
+chapter repents serpent
 
 understand the command "present" as something new.
 
-A pestern serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "It's coiled and ready to strike anyone who tries to go by it.". printed name is "pester'n serpent". understand "pester" and "pester serpent" as pestern serpent.
+A pestern serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
 
 a-text of pestern serpent is "RRYRYRR". b-text of pestern serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
@@ -17659,7 +17659,7 @@ chapter Anemic Cinema guardians
 
 section resident trendies
 
-some Resident Trendies are plural-named terse red guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
+some Resident Trendies are plural-named terse blue guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
 
 a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
 
@@ -17833,26 +17833,6 @@ a-text of he lot is "RYRYYRR". b-text of he lot is "??RYYR?". parse-text of he l
 other-g of Lois the Hostile is he lot. other-g of he lot is Lois the Hostile.
 
 gualoc of he lot is Artist Traits Strait. guadir of he lot is north. block-text of he lot is "They mention you [one of]should know better than[or]are more persistent than[stopping] that agnostic with [his-her] blasphemous science experiments.[paragraph break]Hostile indeed! Fixing that might help their divinity careers.". clue-text of he lot is "Boy! The Lot sure could use some down-home kindness.". taunt-text of he lot is "The Hostile-is-He Lot sniffs as if to say, they deserved what they got. Then they look at you askance."
-
-chapter guardian org table (deprecated, now has properties thrown in directly)
-
-section Topside Deposit
-
-section Scope Copse 0 0
-
-section Baldest Blasted Saltbed 0 1
-
-section Leveraged Everglade 1 0
-
-section Anemic Cinema 0 2
-
-section Treading Gradient 1 1
-
-section Danger Garden 2 0
-
-section Salted Deltas 1 2
-
-section Artist Traits Strait 2 1
 
 chapter rules for flipping guardians
 
@@ -22681,7 +22661,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the pester'n serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
+		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:

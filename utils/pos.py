@@ -91,17 +91,20 @@ def find_poss(word_array, bail=False):
     for x in original:
         if alfy(x) != alfy(answer):
             print("{} vs {} has different letter lumpings: {} vs {}.".format(answer, x, alfy(answer), alfy(x)))
+            if '.' in x:
+                print("    However, this may just be a general logic-check. You may wish to put (!) before {}.".format(x))
             check_overall = True
+    orig_total = ''.join(original)
     if check_overall:
         any_delta = False
-        expected_each = len(original) // len(answer)
+        expected_each = len(orig_total) // len(answer)
         for x in ascii_lowercase:
-            delta = original.count(x) - answer.count(x) * expected_each
+            delta = orig_total.count(x) - answer.count(x) * expected_each
             if delta > 0:
                 print(delta, 'too many of', x, 'in clues.')
                 any_delta = True
             elif delta < 0:
-                print(delta, 'too few of', abs(x), 'in clues.')
+                print(abs(delta), 'too few of', x, 'in clues.')
                 any_delta = True
         if any_delta:
             print("Imbalance in from/to anagrams.")
