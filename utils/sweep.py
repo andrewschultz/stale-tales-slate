@@ -57,7 +57,7 @@ with open("sweep.txt") as file:
                 region_of[ary[0]] = ary[1]
                 description_of[ary[0]] = ary[2]
             else:
-                print(line_count, "Length of ~ separated arry must be 2 or 3. words:description or words:region:description.")
+                print(line_count, "Length of ~ separated ary must be 2 or 3. words:description or words:region:description.")
                 continue
             stuff_to_flag[ary[0]] = "!"
 

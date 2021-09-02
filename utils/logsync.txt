@@ -190,10 +190,10 @@ a sty tasty say>stay
 diapers>despair
 a spider>despair
 ires pad>despair
+pleaser leapers>relapse
 id cede>decide
 ####boredom bedroom
 large regal lager>glare
-rubbish story~ergal agler>glare
 bortles lobster>bolster
 me arts~me arts mr east stream tamers>master
 lead~lead all a deed>deal
@@ -382,8 +382,7 @@ cinders>discern,rescind
 dreads adders>sadder
 ####scope copse
 bluster butlers>subtler
-muscly luc sym>clumsy
-muscly ms lucy>clumsy
+denier nereid>reined
 snider diners>rinsed
 try us yurts>rusty
 ####fringe finger
@@ -394,7 +393,7 @@ traipse pirates>pastier
 fluster self rut>restful
 docile old ice>coiled
 ####leveraged everglade
-smh life mel fish>himself
+realist tailers>saltier
 organised ego drains>grandiose
 promise imposer>semipro
 ####lost lots
@@ -458,6 +457,7 @@ talc spa cure>spectacular
 tetris sitter>triste
 ####dourest detours
 bogus-rousted~dourest detours>rousted
+seismal samiels>aimless
 ########REGION=otters
 ####bleary barley
 bleary barley>barely

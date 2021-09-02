@@ -30,7 +30,7 @@ def show_settler(ls):
     for x in base:
         if x in ['a', 'e', 'i', 'o', 'u']:
             normal.append('y')
-        elif x is 'y':
+        elif x == 'y':
             normal.append('o')
         else:
             normal.append('r')

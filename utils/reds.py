@@ -31,6 +31,7 @@ def usage(my_cmd = "BASIC USAGE"):
     print("w=search for wild card string in file reds.txt")
     print("anything else 3 letters long or more is used for general color comparisons, e.g. REAL LEAR would fail at slots 2 and 3.")
     print("Or REAL % would give 4 possibilities.")
+    print("For more possible-positional analysis, try pos.py.")
     exit()
 
 
