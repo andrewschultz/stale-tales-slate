@@ -4,10 +4,52 @@ import sys
 import math
 from collections import defaultdict
 from itertools import combinations
+from operator import mul
+from functools import reduce
+from math import gcd
 
 fac = defaultdict(int)
 pos = defaultdict(int)
+cheat_poss = defaultdict(int)
 
+max_worthwhile = 2
+go_with_cheats = False
+
+def factor_with_powers(my_num):
+    if my_num == 0:
+        return "0"
+    my_powers = defaultdict(int)
+    remaining_to_factor = my_num
+    while not remaining_to_factor % 2:
+        my_powers[2] += 1
+        remaining_to_factor >>= 1
+    index = 3
+    while index <= remaining_to_factor:
+        while not remaining_to_factor % index:
+            my_powers[index] += 1
+            remaining_to_factor //= index
+        index += 2
+    if remaining_to_factor > 1:
+        my_powers[remaining_to_factor] += 1
+    factor_list = [ "{}^{}".format(x, my_powers[x]) for x in my_powers ]
+    return(" * ".join(factor_list))
+
+def cheat_dif(a, b):
+    l1 = [cheat_poss[x] for x in a]
+    l2 = [cheat_poss[x] for x in b]
+    num = reduce(mul, l1, 1)
+    den = reduce(mul, l2, 1)
+    if num < den:
+        flipped = True
+        (num, den) = (den, num)
+    else:
+        flipped = False
+    g = gcd(num, den)
+    num //= g
+    den //= g
+    compare_string = factor_with_powers(num) + ' / ' + factor_with_powers(den)
+    return (compare_string, num / den, num > den)
+    
 def prods(a, b):
     x = 1
     for z in a: x *= pos[z]
@@ -104,6 +146,15 @@ target_low = 0
 original_order = []
 min_diffs = 10
 
+cmd_count = 1
+while cmd_count < len(sys.argv):
+    arg = sys.argv[cmd_count].lower()
+    if arg == 'c':
+        go_with_cheats = True
+    else:
+        print("Bad argument", arg)
+    cmd_count += 1
+
 with open("c:/games/inform/roiling.inform/source/towbal.txt") as file:
     for (line_count, line) in enumerate(file, 1):
         if line.startswith('#'): continue
@@ -124,22 +175,46 @@ with open("c:/games/inform/roiling.inform/source/towbal.txt") as file:
                 sys.exit("Bad int for max diffs at line {}. Fix it.".format(line_count))
             continue
         x = line.lower().strip()
-        (fac[x], pos[x]) = word_poss(x)
-        original_order.append(x)
+        ary = x.split(",")
+        if len(ary) != 2 or not ary[1].isdigit():
+            sys.exit("Fix line {} ({}) to have ANAGRAM,VALUE".format(line_count, x))
+        (fac[ary[0]], pos[ary[0]]) = word_poss(ary[0])
+        cheat_poss[ary[0]] = int(ary[1])
+        original_order.append(ary[0])
+
+if go_with_cheats:
+    max_worthwhile = 2000
+    old_low = 200
+    target_low = 0
 
 for y in combinations(pos, 5):
     y0 = set(pos) - set(y)
-    (fd, pd, this_bigger) = facdif(y, y0)
+    if go_with_cheats:
+        (fd, pd, this_bigger) = cheat_dif(y, y0)
+    else:
+        (fd, pd, this_bigger) = facdif(y, y0)
     this_log = abs(math.log(pd))
-    if this_log < math.log(2):
+    if this_log < math.log(max_worthwhile):
+        y = sorted(y, key = lambda x: len(x))
+        y0 = sorted(y0, key = lambda x: len(x))
         if target_low:
             if this_log <= math.log(target_low) + .0005:
                 print(y, y0, fd, "= {:.4f}".format(pd), "Numerator > Denominator?", this_bigger)
                 determine_fit(y, y0)
-            continue
-        if this_log < old_low - .00005:
+            else:
+                continue
+        elif this_log < old_low - .00005:
             print(y, y0, fd, "= {:.4f}".format(pd), "Numerator > Denominator?", this_bigger)
             old_low = this_log
             print("New low", old_low, pd)
+            determine_fit(y, y0)
         elif this_log < old_low + .00005:
+            print(y, y0, fd, "= {:.4f}".format(pd), "Numerator > Denominator?", this_bigger)
             print("Tied low", old_low, pd)
+            determine_fit(y, y0)
+        else:
+            continue
+        if go_with_cheats:
+            print(facdif(y, y0))
+        else:
+            print(cheat_dif(y, y0))
