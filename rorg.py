@@ -12,11 +12,11 @@
 #
 #
 
-import mytools
 import re
 import os
 import i7
 import sys
+import mytools as mt
 
 from shutil import copy
 from filecmp import cmp
@@ -40,7 +40,7 @@ do_tables = False
 bail_force = False
 bail_on_mismatch = False
 
-max_file_difs = 0
+max_file_difs = 20
 file_difs = 0
 
 temp_file = os.path.join(i7.extdir, "temp.i7x")
@@ -153,6 +153,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     if temp in sect_order:
                         print("Duplicate section", temp, "line", line_count)
                         dupes += 1
+                        mt.add_postopen(my_f, line_count)
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
@@ -163,6 +164,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     if temp in sect_order:
                         print("Duplicate section", temp, "line", line_count)
                         dupes += 1
+                        mt.add_postopen(my_f, line_count)
                     sect_order[temp] = line_count
                     cur_rule_or_quote = temp
                     cur_full_quote[cur_rule_or_quote] = ""
@@ -174,6 +176,9 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                     if not line.startswith("\t"): garbage += "\n"
                     garbage += line
             # print(line_count, in_table, write_lines, line[:20].strip())
+    if dupes:
+        print("Bailing to fix duplicates.")
+        mt.postopen()
     bail = False
     if not ever_necc_section:
         print("Never crossed necessary section. Need {:s} somewhere.".format(table_start))
@@ -234,7 +239,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         return
     else:
         print("Mismatches between {:s} and {:s}!".format(tbase, fbase))
-        mytools.cs(my_f, temp_file, False, 20)
+        mt.cs(my_f, temp_file, False, max_file_difs)
     if copy_file:
         print("Copying", tbase, "back to", fbase)
         copy(temp_file, my_f)
@@ -251,7 +256,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
 
 cmd_count = 1
 while cmd_count < len(sys.argv):
-    arg = mytools.nohy(sys.argv[cmd_count])
+    arg = mt.nohy(sys.argv[cmd_count])
     if arg == 'c': copy_file = True
     elif arg == 'nc' or arg == 'cn': copy_file = False
     elif arg == 'v': verbose = True
