@@ -810,7 +810,9 @@ definition: a thing (called th) is mass-hint-appropriate:
 
 chapter defined in core
 
-definition: a thing (called th) is past-flipping-help:
+definition: a thing (called th) is reflexed: no;
+
+definition: a thing (called th) is flip-irrelevant:
 	no;
 
 Shuffling Tests ends here.

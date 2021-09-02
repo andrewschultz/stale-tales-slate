@@ -756,6 +756,10 @@ book auxiliary text and rules
 
 section ordeal loader auxiliary
 
+to say reg-rej: say "You don't want to change a region drastically while you're in it"
+
+section busiest subsite auxiliary
+
 to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
 
 to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
@@ -764,17 +768,21 @@ to say word-games: say "A voice in your head tells you that sort of mental wande
 
 to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it"
 
+section rested desert auxiliary
+
 to say nope-odor: say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
 
 to say com-chor: say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
+section thickest thickets auxiliary
+
 to say darnels-inst: say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
+
+section notices section auxiliary
 
 to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
 to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
-
-to say reg-rej: say "You don't want to change a region drastically while you're in it"
 
 section stores auxiliary
 
@@ -786,9 +794,9 @@ to say lotmaso: say "You need to manipulate each store as a store, not a mall or
 
 to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens."
 
-to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seemed like a bit of a long shot"
-
 to say no-mb of (x - a thing): say "Nothing happens. Maybe if Yorpwald were in even more danger the future, [x] might change. But not this adventure";
+
+to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seemed like a bit of a long shot"
 
 to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
 
@@ -828,24 +836,6 @@ this is the forest-east rule:
 	if location of teas is visited, the rule succeeds;
 	the rule fails;
 
-to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
-
-to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
-
-to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
-
-to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
-
-to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
-
-to say stone-read: say "The notes stone is just for reading"
-
-to say vand-art: say "Don't vandalize the art, man"
-
-to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
-
-to say ice-cit: say "Taking care of the main menace may change the iciest cities"
-
 this is the see-meats rule:
 	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
 	the rule fails;
@@ -861,9 +851,35 @@ to say bothlivers: say "The one liver seems inactive by itself"
 
 to say rivliv: say "It's just a liver. No need to parse the brand name"
 
-to say scof-no: say "You know the scoffer coffers and scoffin['] coffins can't be changed, and the more you tried, the worse the smirking would get"
+section rest of forest auxiliary
 
-to say dimness-unchangeable: say "The dimness is unchangeable from out here. You'll have to find a way in"
+to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
+
+section self id fields auxiliary
+
+to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
+
+to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
+
+section flesh shelf auxiliary
+
+to say ice-cit: say "Taking care of the main menace may change the iciest cities"
+
+section gnarliest triangles auxiliary
+
+to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
+
+to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
+
+to say stone-read: say "The notes stone is just for reading"
+
+to say vand-art: say "Don't vandalize the art, man"
+
+to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
+
+section emptiness sepiments auxiliary
+
+to say scof-no: say "You know the scoffer coffers and scoffin['] coffins can't be changed, and the more you tried, the worse the smirking would get"
 
 this is the spread-drapes rule:
 	if player is in Emptiness Sepiments:
@@ -871,45 +887,25 @@ this is the spread-drapes rule:
 			the rule succeeds;
 	the rule fails;
 
-to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
+to say dimness-unchangeable: say "The dimness is unchangeable from out here. You'll have to find a way in"
+
+section ghouls slough auxiliary
 
 to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is beyond here"
 
 to say coe-no: say "The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead"
 
+section frost forst auxiliary
+
+to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
+
 section sortie auxiliary
-
-this is the cedars-visited rule:
-	if sacred cedars is visited, the rule succeeds;
-	the rule fails;
-
-this is the b4-cent rule:
-	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
-	the rule fails;
-
-to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
-
-this is the nick-visit rule:
-	if nick is visited, the rule succeeds;
-	the rule fails;
-
-this is the af-cent rule:
-	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
-	the rule fails;
 
 this is the kitch-visit rule:
 	if player is in kitchen:
 		the rule fails;
 	if kitchen is visited, the rule succeeds;
 	the rule fails;
-
-to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
-
-to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
-
-to say perf-brand: say "It's the full name brand that really catches your eye"
-
-to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
 
 this is the got-shoes rule:
 	if shoes are moot, the rule succeeds;
@@ -919,25 +915,49 @@ this is the rm-or-moor rule:
 	if player is in room or player is in moor, the rule succeeds;
 	the rule fails;
 
-to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
-
 to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
-
-to say cant-change-lois:
-	if caskfillings is 2:
-		say "Besides, you have gotten all the oils you need";
-	else if caskfillings is 1:
-		say "The gift of oils should be enough";
-	else:
-		say "There is something you can take from Sacred Cedars, though"
-
-to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
-
-to say pat-poe: say "Pat won't react kindly to modifications of his poem"
 
 this is the got-plane rule:
 	if the player has the poem and the poem is folded, the rule succeeds;
 	the rule fails;
+
+this is the cedars-visited rule:
+	if sacred cedars is visited, the rule succeeds;
+	the rule fails;
+
+this is the nick-visit rule:
+	if nick is visited, the rule succeeds;
+	the rule fails;
+
+section trap part auxiliary
+
+this is the b4-cent rule:
+	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
+	the rule fails;
+
+to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
+
+this is the af-cent rule:
+	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
+	the rule fails;
+
+section the nick auxiliary
+
+to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
+
+section kitchen auxiliary
+
+to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
+
+to say perf-brand: say "It's the full name brand that really catches your eye"
+
+section stiller trellis auxiliary
+
+to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
+
+section moor auxiliary
+
+to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
 to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
 
@@ -949,9 +969,31 @@ to say but-but: say "It's the buttons['] purposes that need[if steer button is t
 
 to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
 
+to say pat-poe: say "Pat won't react kindly to modifications of his poem"
+
+to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
+
+section sacred cedars auxiliary
+
 to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
 section metros auxiliary
+
+to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+
+to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
+
+to say mits-are: say "The mittens are as comfortable as they're going to be"
+
+this is the no-beats rule:
+	if player is in Esoteric Coteries or player is in Obtains Boastin Bastion, the rule succeeds;
+	the rule fails;
+
+this is the angst rule:
+	if player has emitter and emitter is angstgnatted, the rule succeeds;
+	the rule fails;
+
+section undesired underside auxiliary
 
 to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder"
 
@@ -966,9 +1008,9 @@ to say no-hot:
 
 to say und-camp: say "You can't do much with or to the camp, here or north"
 
-to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
+section roarings garrison auxiliary
 
-to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
 
 to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
 
@@ -976,27 +1018,31 @@ to say harp-annoy: say "The harps are kind of annoying, but they've got nothing 
 
 to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
 
-to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
-
-to say mits-are: say "The mittens are as comfortable as they're going to be"
+section obtains boastin bastion auxiliary
 
 to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
 
+section the ol hotel auxiliary
+
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
-this is the angst rule:
-	if player has emitter and emitter is angstgnatted, the rule succeeds;
-	the rule fails;
+section bile libe auxiliary
 
 to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
 
+section fo real florae auxiliary
+
 to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
+
+section esoteric coteries auxiliary
 
 to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
 
 to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
 
 to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad"
+
+section elm train terminal auxiliary
 
 to say fix-rail: say "[if controls are in gin nope opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
 
@@ -1006,9 +1052,7 @@ to say faded-ad: say "The ad and the PSA are just silly. What's to the east is q
 
 to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
 
-this is the no-beats rule:
-	if player is in Esoteric Coteries or player is in Obtains Boastin Bastion, the rule succeeds;
-	the rule fails;
+section bassy abyss auxiliary
 
 to say aligns-no: say "No use messing with the aligns signal when you need to focus on the [b-b]"
 
@@ -1020,7 +1064,11 @@ section resort auxiliary
 
 to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
 
+section astral altars auxiliary
+
 to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+
+section leis isle auxiliary
 
 to say no-hotspot:
 	if red bull burdell is moot:
@@ -1028,9 +1076,13 @@ to say no-hotspot:
 	else:
 		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
 
+section rived drive auxiliary
+
 this is the bull-moot rule:
 	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
 	the rule fails;
+
+section potshot hotspot auxiliary
 
 to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
 
@@ -1045,6 +1097,8 @@ this is the riot-gone rule:
 	the rule fails;
 
 to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
+
+section means manse auxiliary
 
 to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
