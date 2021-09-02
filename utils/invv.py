@@ -1,3 +1,9 @@
+#
+# invv.py: validates invisiclues files
+#
+# todo: (re-)track non-bold responses as well
+#
+
 import re
 import sys
 import i7
@@ -6,18 +12,22 @@ import mytools as mt
 
 max_hits = 50
 
+list_possibles = False
 do_shuf = False
 do_roil = True
 
 table_of = defaultdict(str)
 space_convert = defaultdict(str)
 reject = defaultdict(bool)
+allow = defaultdict(bool)
 first_match = defaultdict(str)
 congruences = defaultdict(list)
+got_exact = defaultdict(int)
 
 def check_anagram_tables(my_proj, col_num):
     word_dict_need = defaultdict(int)
     word_dict_got = defaultdict(int)
+    possibles = defaultdict(list)
     in_anagram_table = False
     table_file = i7.hdr(my_proj, 'ta')
     with open(table_file) as file:
@@ -54,7 +64,11 @@ def check_anagram_tables(my_proj, col_num):
                 continue
             if ' </b>' in line:
                 print("Space before bold tag at line", line_count)
-            fa = [x[0].strip() for x in re.findall("<b>([A-Z]([A-Z ]+[A-Z])?)</b>", line)]
+            fa0 = [x[0].strip() for x in re.findall("([A-Z]{2}([A-Z- ]*[A-Z])?)", line)]
+            for x in fa0:
+                if x.lower() not in first_match:
+                    possibles[x.lower()].append(line_count)
+            fa = [x[0].strip() for x in re.findall("<b>([A-Z]{2}([A-Z- ]*[A-Z])?)</b>", line)]
             if not fa:
                 continue
             for x in fa:
@@ -64,15 +78,23 @@ def check_anagram_tables(my_proj, col_num):
                     sys.exit("Found {} on line {}.".format(x, line_count))
                 xl = x.lower()
                 if xl not in first_match:
-                    print("Line", line_count, "has un-anagrammy (apparently) all-caps", x)
+                    if xl not in allow:
+                        print("Line", line_count, "has (apparently) unregistered-in-anagram-tables all-caps/bolded", x)
                 else:
                     base_word = first_match[xl]
                     if word_dict_got[base_word] != 0:
-                        print("Duplicate find for", base_word.upper(), invis_file, line_count, "copies line", word_dict_got[base_word])
-                        print("    " + line.strip())
+                        if got_exact[base_word]:
+                            print("Duplicate find for", base_word.upper(), invis_file, line_count, "copies line", word_dict_got[base_word])
+                            print("    " + line.strip())
+                        else:
+                            print("Likely variable anagram solution {} of {} at line {}: {}".format(base_word, congruences[xl], line_count, line.strip()))
                     else:
                         word_dict_got[base_word] = line_count
+                        got_exact[xl] = line_count
     count = 0
+    if list_possibles:
+        for p in sorted(possibles):
+            print(p, possibles[p])
     for x in word_dict_need:
         if not word_dict_got[x]:
             count += 1
@@ -82,15 +104,21 @@ def check_anagram_tables(my_proj, col_num):
     if count > 50:
         print("Maximum differences hit. I showed {}, but there were {}.".format(max_hits, count))
         return
+    if count == 0:
+        print("Hooray! Everything is implemented. Or seems that way.")
 
 with open("invv.txt") as file:
     for (line_count, line) in enumerate (file, 1):
         if line.startswith("#"):
             continue
         if line.startswith("X:"):
-            ary = line[2:].split(' ')
+            ary = line[2:].strip().split(',')
             for a in ary:
                 reject[a] = True
+        elif line.startswith("OK:"):
+            ary = line[3:].strip().split(',')
+            for a in ary:
+                allow[a] = True
         else:
             print("Space conversion is deprecated. Delete or comment out line {}.".format(line_count))
             #space_convert[line.strip().replace(' ', '')] = line.strip()
@@ -98,8 +126,12 @@ with open("invv.txt") as file:
 cmd_count = 1
 while cmd_count < len(sys.argv):
     arg = mt.nohy(sys.argv[cmd_count])
+    if 'l' in arg: list_possibles = True
     if 'n' in arg: do_shuf = do_roil = False
-    if 's' in arg: do_shuf = True
+    if 's' in arg:
+        do_shuf = True
+        if do_roil:
+            print("To disable ROILING, which is on by default, say NS instead of S.")
     if 'r' in arg: do_roil = True
     cmd_count += 1
 
