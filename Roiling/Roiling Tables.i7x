@@ -311,10 +311,11 @@ callosity	callosity	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners
 tallyhoing	tallyhoing	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
 jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
-Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre blinks and almost looks intelligent! It calls out for someone ... 'George ... or ...'[paragraph break]Mr. Lee claps his hands. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He offers you a walk in his infidel infield. You feel a slight shock halfway through--[if power-back is false]your mordant powers are now merely dormant![else]similar to what the eels gav. You shake exaggeratedly and nod your head in thanks.[end if][paragraph break]'That is all I can give you. I hope it is enough.' You agree. You will help make his seed site the seediest--once you do the whole country-saving thing. It's the least you can do."
+Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre blinks and almost looks intelligent! It calls out for someone ... 'George ... or ...'[paragraph break]Mr. Lee claps his hands. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He offers you a walk in his infidel infield. You feel a slight shock halfway through--[if power-back is false]your mordant powers are now merely dormant![else]similar to what the eels gav. You shake exaggeratedly and nod your head in thanks.[end if][paragraph break]'That is all I can give you. I hope it is enough.' You agree. You will help make his seed site the seediest--once you do the whole country-saving thing. It's the least you can do.[paragraph break][revelv]But they are overtaken ... by a vow here."
 vow here	vow here	false	667670490	--	"however"	"however"	--	--	"You counter the vow here suitably, until ... it is not here any more. Hooray for removing distractions!"
 sea cube	sea cube	false	496604299	--	"because"	"because"	pre-seacube-because rule	post-seacube-because rule	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
-eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if]."
+eels	eels	false	405700023	--	"else"	"else"	pre-eels-else rule	post-eels-else rule	"The eels seem to understand you. They squirm across the pool, and somehow, the wire weir opens. The eels create a path for you to swim to the allot atoll. There, you feel a shock through your body[if power-back is true] much like in Mr. Lee's Bran Barn[else], and your mordant skills are no longer dormant[end if].[paragraph break][revelv]And yet, voices remain, asking, or stating, 'Sullenness? Us?' Or maybe 'Sullenness! Us!'"
+sullenness us	sullenness us	false	548181195	--	"unless"	"unless"	--	--	"You provide a counter-point. The voices need not remain sad, because you have a way to defeat Elvira. You think. You hope. You sense less tension in the air."
 atmo moat	atmo moat	false	243725566	--	"atom"	"atom"	pre-moat-atom rule	--	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.[paragraph break]Whoah! That wasn't the toughest anagram you dealt with, but it made the most drastic physical change. You feel the same drained sensation as when you passed the solid idols--but you quickly regain energy for whatever else you need to change."
 parleys splayer players	parleys splayer players	false	569230746	--	"sparely"	"sparely"	--	post-gretta-help rule	"The [pla-ma]s['] enthusiasm drains a bit. They take breaks while they're speaking. Gretta looks relieved for a moment."
 t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	--	--	"The [pla-ma]s cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin DOWNSIDE 7]
@@ -363,7 +364,7 @@ leopard	leopard	false	445979194	--	"paroled"	"paroled"	--	post-lamer-realm-flip 
 badger	badger	false	287365426	--	"garbed"	"garbed"	--	post-lamer-realm-flip rule	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."
 satyr	satyr	false	409254857	--	"artsy"	"artsy"	--	post-lamer-realm-flip rule	"The satyr shakes a bit as if he has had a vision. He begins drawing figures in the air, standing on his hind legs and conducting an imaginary orchestra. He seems less strictly focused on his own survival now."
 weltish whistle	weltish whistle	false	534280357	--	"deeply"	"deeply"	pre-whistle-deeply rule	--	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."
-medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast."
+medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
 
 book others
 
@@ -1576,11 +1577,10 @@ this is the pre-ogre-ergo rule:
 this is the post-ogre-ergo rule:
 	de-inhib;
 	if eels are reflexed, min-up;
+	move vow here to Bran Barn;
 
 to de-inhib:
 	now power-back is true;
-	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' But they are overtaken ... by a vow here.";
-	move vow here to location of player;
 	if atmo moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
 		if try-fail-animal:
@@ -1598,6 +1598,9 @@ this is the post-seacube-because rule:
 	now eels are in Loop Pool;
 	if ghoul hat is moot, min-up;
 
+to say revelv:
+	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!' "
+
 this is the pre-eels-else rule:
 	abide by the medal check rules for eels;
 	if sea cube is touchable:
@@ -1607,6 +1610,7 @@ this is the pre-eels-else rule:
 this is the post-eels-else rule:
 	de-inhib;
 	if gore ogre is moot, min-up;
+	move sullenness us to Loop Pool;
 
 this is the pre-moat-atom rule: [?? preef beforehand to tidy code?]
 	if players are in Disowned Downside:

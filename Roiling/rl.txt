@@ -757,6 +757,14 @@ S(INT)(ILY)(EI)(LNT)(LT)(LEI)Y if we go strictly by the book.
 But we can guess L is in slot 7, because these are adverbs, and E is thus forced into slot 4.
 A bit of trial and error can help here. S(INT)(ILT)E(LNT)(LT)LY is left. Let's place L in slot 5, giving us SNIELTLY. That doesn't work. What about T? SNIETLLY.
 So N is in slot 5. S(IT)(ILT)EN(LT)LY is left. But T in slot 1 gives STIENLLY, so SI(LT)EN(LT)Y is SILENTLY.
+>>LOOP POOL
+# logic for sullenness us
+?How can I ease "sullenness, us?"
+The YR?YR? reading doesn't give as many clues as you'd hope.
+(EU)(LNS)(LS)(UE)(LNS)(NS). From here you can probably guess N is not in the last slot, or the word would be odd.
+(EU)(LNS)(LS)(UE)(LNS)S it is.
+Trial and error on the fifth slot seems to work well. Only S makes sense.
+(EU)NL(EU)SS gives UNLESS.
 >>LAMER REALM
 # logic for stray satyr
 ?What can the stray satyr become?

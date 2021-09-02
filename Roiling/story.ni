@@ -249,15 +249,17 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 32. min-score of otters is 24.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 33. min-score of otters is 24.
 [LLP list:
 1=25 for RESCIND
 3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
-4=28 HOWEVER after second power-back above
-5=29 for all Lamer Realm animals
-6=30 for all Uprates Pasture animals
-7=31 for ASIDE around Elmer/Merle
-8=32 for HONESTLY after ASIDE
+4=28 HOWEVER post Bran Barn
+5=29 UNLESS post Loop Pool
+6=30 for all Lamer Realm animals
+7=31 for all Uprates Pasture animals
+8=32 for ASIDE around Elmer/Merle
+9=33 for HONESTLY after ASIDE
+NON ANAGRAM: PLAY WHISTLE
 ]
 
 Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is Others-goto rule. max-score of Others is 42. min-score of others is 25.
@@ -2687,9 +2689,10 @@ bonker	"The bonker was created by KB RENO."
 stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
-sample maples	"On one, you read: 'Formerly the maiden median, then the gent-fora/frat-gone frontage.'"
+sample maples	"On one, you read: 'Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage.'"
+sullenness us	"You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN."
 holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order]"
-stray satyr	"You see TSYRA branded under the stray satyr's shoulder."
+stray satyr	"You see TSYRA branded in red under the stray satyr's shoulder."
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
 omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
@@ -3022,6 +3025,7 @@ before quipping when player is in Disowned Downside (this is the Gretta checks r
 				if the player regex-prompt-consents:
 					say "A bit of awkward silence follows, but it's nowhere near as awkward as the [players]['] conversation.[no line break]";
 					now hold-it-up is true;
+					the rule succeeds;
 				say "OK.";
 				continue the action;
 
@@ -3618,7 +3622,6 @@ check entering a portal (this is the first portal entry rule):
 	if noun is never-entered:
 		d "First visit to [grn]. Can't try recovering items yet.";
 		add-errs grn;
-		now noun is ever-entered;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "Forcing Towers REPO!";
 		move player to last-loc of grn, without printing a room description;
@@ -3628,6 +3631,7 @@ check entering a portal (this is the first portal entry rule):
 	else:
 		move player to last-loc of grn;
 	if noun is ever-entered, recover-items;
+	now noun is ever-entered;
 	the rule succeeds;
 
 to add-errs (reg - a region):
@@ -3648,7 +3652,7 @@ to scan-hash-errors (tn - a table name):
 				[d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";]
 
 to recover-items:
-	d "ITEMS: [item-list of mrlp]";
+	d "RECOVERED ITEM LIST (IF ANY): [item-list of mrlp]";
 	repeat with JJJ running through item-list of mrlp:
 		if JJJ is not scenery and JJJ is not a backdrop:
 			now player has JJJ;
@@ -4445,6 +4449,9 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			if sea cube is in Loop Pool:
 				now noun is sea cube;
 				continue the action;
+			if sullenness us is in Loop Pool:
+				now noun is sullenness us;
+				continue the action;
 			if eels are reflexive:
 				now noun is eels;
 				continue the action;
@@ -4454,6 +4461,9 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				continue the action;
 			if gore ogre is in Bran Barn:
 				now noun is gore ogre;
+				continue the action;
+			if vow here is in Bran Barn:
+				now noun is vow here;
 				continue the action;
 		if player is in Disowned Downside and atmo moat is in Disowned Downside and parleys splayer players are not in Disowned Downside:
 			now noun is atmo moat;
@@ -4782,8 +4792,9 @@ t-formally	true	true	false	false	"Two question marks in nine letters--well, seve
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
-medals	true	false	false	false	"[if cheat-on is true]Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
+medals	true	false	false	false	"[if cheat-on is true]The medalls clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
+sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
 whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
@@ -5736,6 +5747,7 @@ after reading a command:
 			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
 			reject the player's command;
 	if mrlp is towers, towers-plurcheck;
+	if mrlp is otters, otters-plurcheck;
 	if the player's command includes "smell" and word number 1 in the player's command is not "smell":
 		say "You can just type SMELL.";
 		reject the player's command;
@@ -5771,6 +5783,14 @@ to towers-plurcheck:
 		if the player's command includes "ingrates":
 			now ingrates are plurtry;
 			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
+
+medals-note is a truth state that varies.
+
+to otters-plurcheck:
+	if medals-note is false and player has medals:
+		if the player's command includes "iq" or the player's command includes "iq" or the player's command includes "medal":
+			ital-say "There are a lot of ways to refer to the medals, but they are identical except for their writing. So IQ, MEDAL and LUCKY are all ways to shorten doing something with the medals in the future.";
+			now medals-note is true;
 
 definition: a guardian (called gu) is plurcheck:
 	if gu is plurtry, no;
@@ -18416,6 +18436,7 @@ carry out discerning:
 		try taking the cinders;
 	if cinders are moot, say "[if rescind-cinders is true]You rescinded the cinders, so you can't DISCERN[else]You already used the cinders to DISCERN[end if]." instead;
 	if cinders are not touchable, say "You need the cinders for that. They are back in [Minded Midden]." instead;
+	if otters-cur-item is player, say "[one of]You can do that with the cinders, but[or]Y[stopping]ou're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet. Or maybe you can do something else with them!" instead;
 	if discern-warn is false:
 		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is touchable]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
@@ -18435,7 +18456,6 @@ carry out discerning:
 				the rule succeeds;
 		say "You discern nothing. The cinders stay where they are. But that's a sort of clue in itself." instead;
 	if player is in Reclusion Inclosure and medals are reflexed and whistle is reflexed, say "Your destiny awaits to the west! You are fully prepared to take on Elvira." instead;
-	if otters-cur-item is player, say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
 	process the otters-hinting rule; [note: this takes care of decrementing the region maximum if we found anything.]
 	now spoilit is false;
@@ -18855,7 +18875,10 @@ to decide which number is optleft of (myp - a person):
 	decide on mytemp;
 
 after quipping when qbc_litany is the table of Gretta comments (this is the process Gretta chat rule):
-	if hold-it-up is true, continue the action;
+	if hold-it-up is true:
+		choose row with response of gre-go-quip in table of Gretta comments;
+		now enabled entry is 1;
+		continue the action;
 	if current quip is gre-players-quip:
 		enact gre-elv-quip;
 		enact gre-what-quip;
@@ -18938,10 +18961,7 @@ carry out smacking:
 
 chapter medals
 
-the medals are a reflexive wearable plural-named thing.
-
-check scaning medals when cheat-on is true:
-	say "The IQ and LUCKY medals clink together. They just don't stay still![line break]";
+the damsel medals are a reflexive wearable plural-named thing.
 
 to decide which number is medals-shiny:
 	decide on boolval of (whether or not adjsolve >= 3) + boolval of (whether or not nounsolve >= 3);
@@ -18950,10 +18970,10 @@ to decide whether medals-worthy:
 	if medals-shiny is 2, yes;
 	no;
 
-understand "iq/lucky medal/medals" and "iq/lucky/medal" as medals.
+understand "iq/lucky medal/medals" and "iq/lucky/medal" as damsel medals.
 
 after printing the name of medals while taking inventory:
-	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if][if medals are not examined]--oh, you should examine them, too[end if])";
+	say " ([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (nounsolve + 1) in medalings][end if][if medals are not examined]--oh, you should examine them, too[end if])";
 
 medalings is a list of text variable. medalings is { "crusted over", "grimy", "dull", "shiny", "gleaming" }
 
@@ -19197,6 +19217,10 @@ every turn when player is in Disowned Downside and parleys splayer players are i
 					say "The [pla-ma]s take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if gretta-score > 0], except for what you managed to alter[end if].[paragraph break]";
 			now current-idea is ment;
 			say "[player-move of current-idea][line break]";
+			if debug-state is true:
+				repeat through table of otters anagrams:
+					if the-from entry is current-idea:
+						say "DEBUG spoiler: say [right-word entry].";
 			continue the action;
 	continue the action;
 
@@ -19310,15 +19334,17 @@ the Gore Ogre is a vanishing person in Bran Barn. description is "Fortunately, t
 
 a-text of Gore Ogre is "YRRY". b-text of Gore Ogre is "YRRY". parse-text of Gore Ogre is "-[sp]x[sp]x[sp]-".
 
-section vow here
+chapter sullenness us
 
-the vow here is vanishing LLPish scenery. "You could probably LISTEN to hear the vow better. It doesn't make you see red if you don't hear the details."
+Sullenness Us is vanishing LLPish scenery. description is "You hear voices call 'Sullenness, us? Sullenness! Us!' as if they don't WANT to be sullen, but they don't want to be called out on it. Or that they wish they could maybe not be quite so sullen, but they don't deserve it. And it's weird ... you think you see red writing you could read, if you stare and listen hard enough."
 
-a-text of vow here is "RYRYRYR". b-text of vow here is "RGPYRYR". parse-text of vow here is "x[sp]O[sp]W[sp]-[sp]x[sp]-[sp]x".
+a-text of Sullenness Us is "YRRYRR". b-text of Sullenness Us is "YR?YR?". parse-text of Sullenness Us is "-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
 chapter Loop Pool
 
-Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-vow].". roomnud of Loop Pool is table of Loop Pool nudges.
+Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-unless].". roomnud of Loop Pool is table of Loop Pool nudges.
+
+to say check-unless: if sullenness us is touchable, say ". The 'Sullenness, Us' still echoes. You've done what you need, but maybe you can fix that, too"
 
 to say check-vow: if vow here is touchable, say ". That vow here still echoes. It's not harming you, but maybe you could get rid of it"
 
@@ -19363,6 +19389,12 @@ The wire weir is bounding boring scenery in Loop Pool. description of wire weir 
 this is the bore-wire-weir rule:
 	if current action is climbing, say "That would be dangerous even without the eels ready to zap intruders[if eels are reflexed]--yes, intruders they already helped[end if]." instead;
 	if current action is touching, say "That might get you zapped a bit." instead;
+
+section vow here
+
+the vow here is vanishing LLPish scenery. "You could probably LISTEN to hear the vow better. It doesn't make you see red if you don't hear the details."
+
+a-text of vow here is "RYRYRYR". b-text of vow here is "RGPYRYR". parse-text of vow here is "x[sp]O[sp]W[sp]-[sp]x[sp]-[sp]x".
 
 chapter otters flipto and min points
 
@@ -22665,7 +22697,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
-		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] DISCERN (hint another item) or even, for a bonus point,[end if] RESCIND the cinders.";
+		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] DISCERN (any item) for a spoiler hint or even, for a bonus point,[end if] RESCIND the cinders.";
 		if loop pool is unvisited:
 			say "[2dmiss of myreg]you could've checked north of the Disowned Downside for the other way to regain your powers.";
 		else if eels are not reflexed:
@@ -22675,17 +22707,19 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		else if gore ogre is not moot:
 			say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if aside-llp is not reflexed:
-			say "[2dmiss of myreg]you could've recognized [e-n-m] as aides ideas and pushed them ASIDE.";
+			say "[2dmiss of myreg]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them ASIDE.";
 		else if holy nest is not reflexed:
 			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:
 			repeat with A running through flippable things in Perverse Preserve:
+				if A is raptor or A is parrot, continue; [ get rid of white noise parrot/raptor suggestion while testing ]
 				let AA be the the-to corresponding to a the-from of A in the table of otters anagrams;
-				say "[2dmiss of myreg]you could've turned the [A] into [if AA is plural-named]some[else]a[end if] [AA].";
+				say "[2dmiss of myreg]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
 		if number of reflexive animals in Lamer Realm > 0:
 			repeat with A running through reflexive things in Lamer Realm:
-				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
-		if vow here is not moot, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in [location of vow here] with HOWEVER after you regained your powers.";
+				say "[2dmiss of myreg]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
+		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with HOWEVER after you got rid of the Gore Ogre.";
+		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying UNLESS.";
 	else if myreg is others:
 		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become limes.";
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
@@ -22746,6 +22780,13 @@ rule for showing what the player missed: [there may be a way to do things withou
 	show-miss otters and true;
 	if number of bypassed regions > 0, say "[2da]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
 	if anything-missed is false, say "[line break]CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
+	if number of test-jumped regions > 0:
+		say "MISSES instead of MISSED shows just the current region.";
+
+definition: a region (called R) is test-jumped:
+	unless R is solved, no;
+	unless cur-score of R is 0, no;
+	yes;
 
 book epilogue transition
 

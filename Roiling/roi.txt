@@ -1560,9 +1560,9 @@ A conjunction.
 ?The eels aren't convinced...
 Tell them 'Or...
 ...<b>ELSE</b>.'
-?Is the vow here important?
+?Is "Sullenness, Us" important?
 It appears when you have your powers back. It's just another bonus point.
-To get rid of it, say <b>HOWEVER</b>.
+To get rid of it, say <b>UNLESS</b>.
 >>BRAN BARN
 ?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
@@ -1722,19 +1722,19 @@ An <b>APRICOT</b>.
 No.
 ?Where is Fidel?
 "I fled." He's not coming back.
+?Pipe Panel lie pen app?
+<b>PINEAPPLE</b>.
+?Pryer Bars?
+<b>RASPBERRY</b>.
 ?The buried raft?
-Philip Larkin would figure this out.
+Philip Larkin would figure this out, whatever it is.
 <b>BREADFRUIT</b>.
 ?The mean trowel?
 <b>WATERMELON</b>.
-?Pipe Panel lie pen app?
-<b>PINEAPPLE</b>.
 ?Barriers West?
 <b>STRAWBERRIES</b>.
 ?Barber Sickle?
 <b>BLACKBERRIES</b>.
-?Pryer Bars?
-<b>RASPBERRY</b>.
 ?The rapt figure?
 White and pink with a weird spoon.
 <b>GRAPEFRUIT</b>.
@@ -1744,16 +1744,16 @@ Got any seedy currency?
 Did you try giving the trader a coin?
 The coins aren't seedy or valuable enough. Give the trader something more valuable.
 Like, after you give Curtis twenty fruits, ...
-...the (a) droll dollar.
+...the (well, a) droll dollar.
 ?Do I need any of the fruits down here?
-No, and in fact, they're meant to be a bit tricky.
+No, and in fact, they're meant to be a bit tricky. To give completionists a real sense of accomplishment.
+?What to do with the/a banna'?
+The message NAA-NA-B gives you the letters you need. The colors may be a giveaway.
+Get a <b>BANANA</b>.
 ?I can't take the orange!
 You're being too direct about it.
 Perhaps if you get close...
 ...or <b>GO NEAR</b>...
-?What to do with the/a banna'?
-The message NAA-NA-B gives you the letters you need. The colors may be a giveaway.
-Get a <b>BANANA</b>.
 ?What about the brr hub?
 Well, it is actually *a* brr hub, for the purposes of the puzzle.
 Attack and poke at it to get seeing-red clues.
@@ -1780,27 +1780,27 @@ Though there are a lot of adjectives.
 A voice says 'go, man.'
 MANGO isn't quite it.
 You need to get <b>AMONG</b>.
-?Lemons?
-<b>SOLEMN</b>.
 ?The melon?
 That's not the only one Len Craig has.
 <b>MO LEN<b> or <b>LEN MO</b> should work.
 ?The peach?
 <b>CHEAP</b>.
-?Nectarine?
-Needs to be older.
-<b>ANCIENTER</b>.
-?The auction caution?
-Says PAY ASAP.
-<b>PAPAYAS</b>.
-?The prices precis?
-An error makes you want to lash out at the prices precis.
-<b>CRIPES</b>!
-The kumquat is just a random fruit that was hard to anagram.
 ?The quince needs something in Italian!
 A price, or a number,
 Uno, duo, tre, quattre, ...
 <b>CINQUE</b>.
+?Lemons?
+<b>SOLEMN</b>.
+?The prices precis?
+An error makes you want to lash out at the prices precis.
+<b>CRIPES</b>!
+The kumquat is just a random fruit that was hard to anagram.
+?The auction caution?
+Says PAY ASAP.
+<b>PAPAYAS</b>.
+?Nectarine?
+Needs to be older.
+<b>ANCIENTER</b>.
 >>GATES STAGE
 ?What's behind the gates?
 The happy ending.
