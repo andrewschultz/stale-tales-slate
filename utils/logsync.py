@@ -515,6 +515,7 @@ def check_scannotes():
     suggestions = []
     nsl = [ table_shorten(x) for x in need_source_logic ]
     last_table_line = 0
+    table_start = 0
     with open(r_src) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
@@ -522,6 +523,8 @@ def check_scannotes():
                 reading_header = False
                 continue
             if line.startswith('table of scannotes'):
+                scannotes_start = "{} line {}+".format(r_src, line_count)
+                table_start = line_count
                 reading_header = True
                 continue
             if not in_table: continue
@@ -545,11 +548,16 @@ def check_scannotes():
             else:
                 if verbose: print("Got", ll[0], "in scannotes.")
     if len(suggestions): print("\n".join(sorted(suggestions, key=lambda x:re.sub(".* ", "", x))))
-    for x in sorted(need_source_logic.keys()):
+    source_logic_approximate_order = list(sorted(need_source_logic.keys(), key=need_source_logic.get))
+    last_scannotes = table_start
+    for my_idx in range(0, len(source_logic_approximate_order)):
+        x = source_logic_approximate_order[my_idx]
         if table_shorten(x) not in in_scannotes.keys():# and x not in abbrevs.keys():
-            print("May need", x, "in scannotes table.")
+            print("May need", x, "in scannotes table {}. Best guess: line {}.".format(scannotes_start, last_scannotes))
+            mt.add_postopen(r_src, last_scannotes + 1)
             mayneedscannote += 1
-            mt.add_postopen(r_src, last_table_line)
+        else:
+            last_scannotes = in_scannotes[table_shorten(x)]
     for x in sorted(okay.keys()):
         if x not in in_scannotes.keys():
             print(x, "marked as okay for table of scannotes but doesn't appear there.")
@@ -584,6 +592,7 @@ def check_logic_file(needs, gots, outs, format_string, file_desc, launch_message
         if data_file not in mt.file_post_list:
             mt.add_open(logic_reds_file, gots[min(extraneous, key=gots.get)])
         print("Extraneous elements found in {:s}:".format(os.path.basename(outs)), ', '.join(["{:s}-{:d}".format(x, gots[x]) for x in extraneous]))
+    return need_in_logic + need_in_source
 
 show_count = False
 show_code = True
@@ -717,14 +726,16 @@ check_scannotes()
 
 #we no longer need to check logic.htm as it is generated from the invisiclues file.
 #check_logic_file(need_logic, got_logic, "logic.htm", "<!-- logic for {:s} -->", "old HTML", launch_message = "lh.bat")
-check_logic_file(need_logic, got_logic_invis, logic_invis_file,
+roiling_errors = check_logic_file(need_logic, got_logic_invis, logic_invis_file,
   "# logic for {:s}", "raw InvisiClues",
   launch_message = "invis.pl rl e")
-check_logic_file(need_logic, got_logic_reds, logic_reds_file,
+roiling_errors += check_logic_file(need_logic, got_logic_reds, logic_reds_file,
   "#qver of {:s}", "reds.txt verification, {:d} question mark{:s} needed".format(qm_needed, i7.plur(qm_needed)),
   launch_message = "reds.txt / reds.pl -e", other_test = (qm_needed >= 0))
 
 aro_settler_check()
+if roiling_errors == 0:
+    print("I found no errors in the hinting source for Roiling! Hooray!")
 sa_r_g_check()
 
 if open_after:
