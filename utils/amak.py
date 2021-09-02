@@ -3,6 +3,8 @@
 #
 # in other words, HEAT and HATE have the first letter identical, but EATH has no letter slots in common with HEAT.
 #
+# the algorithm simply switches the two most popular letters at the time.
+#
 
 from glob import glob
 import os
@@ -135,9 +137,9 @@ def can_take_even(x):
     if x % 2 == 0: return x > 0
     else: return x > 3
 
-# here is the explanation of the algorithm:
+# here is the explanation of the algorithm to produce an anagram without any clashing letters:
 #
-# 1. unless we have exactly 3 letters to place, we look for the 2 most frequent letters that have not been switched yet nd switch the earliest incidences of each
+# 1. unless we have exactly 3 letters to place, we look for the 2 most frequent letters that have not been switched yet and switch the earliest incidences of each
 # 2. if there are 3 unique letters remaining, then we go a->b->c.
 #   2a. Note that we can never have 2-1 left, because the previous would have to have 3-?-?. If we started with, say, 2-2-1, we would have 1-1-1 after. Similarly we can never have x-(summing less to x) unless we start with something unviable, because we'd have to have had x+1 and (something less than x+1) on the previous try. If we had x on the previous try, we would have deducted from it.
 #   note having y>x/2 in x letters means we cannot have a unique anagram. That is because we would have x-y slots to move the y to, but x<2y so that doesn't work.
@@ -251,7 +253,10 @@ my_tests = [ "aabbb",
 
 words_to_shift = []
 
-format_string = "{0} <=> {1}"
+NO_FORMATS = 1
+COMMAND_AND_COMMENT = 2
+FULL_TEST_FILE_NOTES = 3
+format_type = FULL_TEST_FILE_NOTES
 start_word = ""
 end_word = ""
 start_after = False
@@ -263,8 +268,9 @@ if len(sys.argv) > 1:
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'c': format_string = "@sli\n#slider test for {0}\n>{1}"
-        elif q == 'cx': format_string = "@sli\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
+        elif q == 'c': format_string = COMMAND_AND_COMMENT
+        elif q == 'cx': format_string = FULL_TEST_FILE_NOTES
+        elif q == 'nc': format_type = NO_FORMATS
         elif q[:2] == 's=':
             start_word = q[2:]
         elif q[:2] == 'e=':
@@ -298,6 +304,15 @@ if len(sys.argv) > 1:
             else:
                 words_to_shift.append(q.lower())
 
+if format_type == FULL_TEST_FILE_NOTES:
+    format_string = "@sli\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
+elif format_type == COMMAND_AND_COMMENT:
+    format_string = "@sli\n#slider test for {0}\n>{1}"
+elif format_type == NO_FORMATS:
+    format_string = "{0} <=> {1}"
+else:
+    sys.exit("Unknown format string.")
+
 if len(tests_to_search):
     for x in tests_to_search:
         test_search(x)
@@ -313,7 +328,7 @@ found_end_word = True
 found_start_word = True
 if start_word:
     found_start_word = False
-sys.exit(format_string)
+
 for w in words_to_shift:
     if not found_start_word:
         if start_word in w:
