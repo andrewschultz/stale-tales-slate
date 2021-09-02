@@ -117,7 +117,7 @@ while ( $a = <A> ) {
     %notedYet = ();
     print "Resetting the hash\n" if $debug;
   }
-  if ( $a !~ /^[a-z]+/ )    #ignore if there is just one item on a line
+  if ( $a !~ /^[a-z]+/ )    #Regions are in CAPS or === means starting Roiling
   {
     %thisTime = ();
     evaluate();
@@ -130,6 +130,7 @@ while ( $a = <A> ) {
     }
   }
   else {
+	  $a =~ s/ //;
     my @b = split( /[\/,]/, $a );
 
     # print "$a = " . (scalar @b) . " total.\n";
@@ -228,9 +229,9 @@ sub evaluate {
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $h2,
-      torgb( $inHere, 3, 50.01, "total puzzles in region" ),
+      torgb( $inHere, 3, 52.01, "total puzzles in region" ),
       $inHere,
-      torgb( $t1, 18, 339.1, "total letters in puzzles" ),
+      torgb( $t1, 18, 355, "total letters in puzzles" ),
       $t1,
       torgb( $t2, 97, 2715, "puzzle letter square sum" ),
       $t2,
@@ -238,11 +239,11 @@ sub evaluate {
       $t1a,
       torgb( $t2b, 4, 8.14, "root mean square of letters in puzzle" ),
       $t2b,
-      torgb( $thislog, 16.65, 392, "sum of logs of possibilities, no settler" ),
+      torgb( $thislog, 16.65, 408, "sum of logs of possibilities, no settler" ),
       $thislog,
       torgb( $tla, 4, 9.53, "average of logs of possibilities, no settler" ),
       $tla,
-      torgb( $thisset, 8, 225, "sum of logs of possibilities with settlers" ),
+      torgb( $thisset, 8, 230, "sum of logs of possibilities with settlers" ),
       $thisset,
       torgb( $tlb, 2, 5.5, "average of logs of possibilities with settlers" ),
       $tlb

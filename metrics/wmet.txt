@@ -22,7 +22,7 @@ sheath/sword/barcode/controls/velcro/opening
 resin/beast
 Metros (max)
 gardenia/tomato/rentals/keycard
-noisebag/sword/barcode/controls/velcro/darkness/opening
+noise bag/sword/barcode/controls/velcro/darkness/opening
 resin/beast
 Sortie (min)
 sixteen/kitchen/straw/sack
@@ -39,13 +39,13 @@ Resort (min)
 islet
 cork
 slope/ropes/grips
-trio/potters/kilns/tugtoe
+trio/potters/kilns/tug toe
 exist
 Resort (max)
 islet
 lies/cork/wings
 toeholds/slope/ropes/grips
-trio/potters/kilns/china/tugtoe
+trio/potters/kilns/china/tug toe
 exist
 ========
 Ordeal Reload (min)
@@ -72,7 +72,7 @@ deserve/last/resist/recant
 Troves (max)
 hate/care/gape
 stay/observe/spot/believe/reason/recall
-despair/decide
+despair/decide/relapse
 glare/master/bolster/deal
 desire
 aspire/strive/ponder
@@ -83,9 +83,13 @@ Routes (max)
 inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 towards/without
 Presto (min)
-wont/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/tough/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
+wont
+umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/tough/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
 Presto (max)
-blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/goodness/bleep/bingo/prost/there/gosh/what/later/solong/trasch/capslock/mug/leaf/skid/cola/futon/keyboard/screen/romsticks/casserole/reboot/tab/sleep/compile/debug/derive/avider/sub
+mazeltov/
+umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/there/gosh/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
+# LLPs
+blam/goodness/prost/what/trasch/rom sticks/casserole/derive/avider/tab
 Oyster (min)
 #we use the pills at the start
 spill
@@ -109,7 +113,8 @@ trample/psalm/tan/revel/derail/spin/redial
 Towers (min)
 gone/weedy/bleak/yonder
 # North/H guardians
-clumsy/nerdiest/pastier/released/restful
+#reined/semipro/pastier/nerdiest/alarming
+rinsed/saltier/restful/weariest/released
 # guardians you have to get
 punier/subtler/holiest/married/hastiest/broken/resting/sewed
 # other stuff to do (robust < nearest)
@@ -120,13 +125,13 @@ stony/ashen/bored/achier/snared/recreant/yonder
 # guardians you have to get (7)
 sadder/subtler/holiest/married/hastiest/broken/resting
 # North/H guardians (5)
-clumsy/nerdiest/pastier/released/restful
+reined/nerdiest/pastier/released/restful
 # East/I guardians (5 extra)
-rinsed/himself/drained/marginal/weariest
+rinsed/saltier/semipro/marginal/weariest
 # other stuff to do (robust < nearest)
 talcier/sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
-rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted
+rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted/aimless/dandier
 # more LLPs
 punier/antsier/present/triste
 #############################################lumping otters min together
@@ -141,7 +146,7 @@ parrot/snail/snipe/racoon
 raptor/deep/quick
 Otters (min)
 barely/reedily
-seedily/steamily/tediously
+seedily/sparely/steamily
 because/else/atom
 brutely/remotely
 slow/coolest/artsy/garbed
@@ -171,9 +176,9 @@ honestly/aside/raptor/deeply/quickly
 Others (min)
 limes/grapes/pears/plums/compass
 #4 easiest from wells/space/field open up clearing
-apples/apricot/banana/gonear
+apples/apricot/banana/go near
 #now the rest
-among/cheap/cripes/molen
+among/cheap/cripes/mo len
 cinque/solemn/papayas/rhubarb
 #small detail here: raspberry/pineapple have more letters but fewer possibilities than tamarind
 reversed/tamarind
@@ -184,8 +189,8 @@ limes/grapes/pears/plums/compass
 blueberries/maraschino/tamarind/pomegranate/persimmon/cantaloupe
 tangerines/mulberries/apples/apricot/gooseberry/coconuts
 blackberries/cranberries/strawberries/breadfruit/watermelon/pineapple/raspberry/grapefruit
-among/papayas/solemn/molen/ancienter/cheap/cripes/cinque
-rhubarb/reversed/banana/gonear
+among/papayas/solemn/mo len/ancienter/cheap/cripes/cinque
+rhubarb/reversed/banana/go near
 sonic/icons/research/review
 ;
 ######For reference, all the Store T stuff
