@@ -190,9 +190,10 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 11/39=TBA key
 12/40=ROM stick
 13/41=escaroles
+NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 43. min-score of oyster is 28.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -209,7 +210,7 @@ There are actually 31 points overall if you don't use the pills. You can "lose" 
 Special spill rules:
 you get -3 if you use the pills right away in the shop.
 you get -1 if you use the pills on Tortu before EAT.
-You get a non-anagram point for framing the bad guys so the use-saga sausage chases them.
+NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
 Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 55. min-score of towers is 25.
@@ -1193,7 +1194,7 @@ to say full-monty of (myobj - a thing):
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
-		if extra-taxer-warn is false, say "[paragraph break]. You can also disable clues for ambiguous/question mark settler-cheat readings with TAXER or TAX ER. You can recover them with EXTRA";
+		if extra-taxer-warn is false, say ".[paragraph break]You can also disable clues for ambiguous/question mark settler-cheat readings with TAXER or TAX ER. You can recover them with EXTRA";
 	now settler-space-warned is sw;
 	now questions-not-flagged is qnf;
 
@@ -4758,6 +4759,7 @@ traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, an
 fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
 angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
 mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
+realist tailers	true	true	false	false	"The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools."
 resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
 sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
@@ -15708,7 +15710,7 @@ understand "xray" as xraying.
 
 definition: a thing (called th) is ambient-flip:
 	if th is not touchable, no;
-	if th is bogus-rousted or th is bogus-detours, yes;
+	if th is bogus-rousted or th is bogus-dandier, yes;
 	no;
 
 rule for supplying a missing noun when xraying or xring:
@@ -17466,7 +17468,7 @@ chapter repents serpent
 
 understand the command "present" as something new.
 
-A pestern serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
+A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
 
 a-text of pestern serpent is "RRYRYRR". b-text of pestern serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
@@ -17647,13 +17649,30 @@ gualoc of snider diners is Scope Copse. guadir of snider diners is east. block-t
 
 chapter Baldest Blasted Saltbed guardians
 
+section promise imposer
+
+The promise imposer is a blue neuter guardian. "A promise imposer stands [psgdir of promise imposer], not willing to let you by. [imposer-guard][one of]. Promise Imposers are the highest-paid and most esteemed of Elvira's henchmen, assigned to repress potential anti-Elivra types from from doing what they want or need to do[or][stopping].". description of promise imposer is "Looking serious and confident and superior. It's not clear what promises they're impoaing, but the net result is, they just don't want you to get by. But perhaps you could bump its social or job status down a notch."
+
+to say imposer-guard:
+	let rm2 be far-room of promise imposer;
+	if rm2 is visited:
+		say "After all, you've been to [rm2]";
+	else if rm2 is tower-accessible:
+		say "After all, you can to get wherever's behind the imposer, if you think about it";
+	else:
+		say "You don't have full documentation why you NEED to get to the other side"
+
+a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
+
+gualoc of promise imposer is Baldest Blasted Saltbed. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
+
 section fluster self rut
 
 the fluster self rut is a boring red guardian. description is "Just looking at it makes you feel agitated, makes you waste energy worrying how much energy it has wasted and will waste. Maybe there's a way to calm it, and yourself, down. Reading it might reveal a brand name, or it might not.". "A fluster self rut blocks your way [psgdir of fluster self rut].". bore-text of fluster self rut is "You can't do much with the fluster self rut. Well, nothing exciting. But there is a way to deal with it, and it'd be convenient to have out of the way.". printed name is "fluster-self rut".
 
 a-text of fluster self rut is "RYRRRYR". b-text of fluster self rut is "R?RRR?R". parse-text of fluster self rut is "x[sp]-[sp]x[sp]x[sp]x[sp]i[sp]x".
 
-gualoc of fluster self rut is Baldest Blasted Saltbed. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
+gualoc of fluster self rut is Leveraged Everglade. guadir of fluster self rut is east. block-text of fluster self rut is "You try going [psgdir of fluster self rut]. It should be easy, but it's nearly impossible. Maybe you can make the fluster-self rut less active.". clue-text of fluster self rut is "You should be able to make it over the fluster-self rut, but you can't. It's just active enough to brush you back.". taunt-text of fluster self rut is "nonsensical yabbering from the fluster-self rut leaves you wondering if you just got rid of the [if number of touchable guardians > 1]easiest[else]easier[end if] obstacle."
 
 section traipse pirates
 
@@ -17677,14 +17696,6 @@ gualoc of pirates is Baldest Blasted Saltbed. guadir of traipse pirates is north
 
 chapter Anemic Cinema guardians
 
-section resident trendies
-
-some Resident Trendies are plural-named terse blue guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
-
-a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
-
-gualoc of resident trendies is Anemic Cinema. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.". taunt-text of trendies is "The trendies say you did okay but also they are sure they could've done that, too, if they had nothing better to do."
-
 section ingrates
 
 some angriest ingrates are plural-named white guardians. "Angriest ingrates whining about any old thing block the way [psgdir of ingrates]."
@@ -17696,6 +17707,41 @@ description of angriest ingrates is "They're spouting some of the angriest ranti
 a-text of angriest ingrates is "YRRRRYYR". b-text of angriest ingrates is "?PPRRY?R". parse-text of ingrates is "-[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 gualoc of ingrates is Anemic Cinema. guadir of ingrates is west. block-text of ingrates is "They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur.". clue-text of ingrates is "Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.". taunt-text of ingrates is "The ingrates seem almost upset they are not important enough to get rid of."
+
+section reed's ale
+
+the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far.". understand "reed/reeds ale" and "reed/reeds" as Reeds Ale. printed name is "Reed's Ale".
+
+a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text of Reeds Ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+
+to say deal-seer:
+	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
+
+Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
+
+description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
+
+gualoc of Lars Eede is Anemic Cinema. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
+
+Elsa Erde is a red guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
+
+description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
+
+other-g of lars eede is elsa erde. other-g of elsa erde is lars eede.
+
+understand "deal seer" and "deal/seer" as Lars Eede when player is male.
+
+understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
+
+rese is a truth state that varies. [checks if our point scoring command was resealed (true) or released (false)]
+
+to say el-la-full:
+	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
+
+to say el-la-first:
+	say "[if player is female]Elsa[else]Lars[end if]"
+
+gualoc of Elsa Erde is Anemic Cinema. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Elsa Erde is "Elsa Erde reaches for a hidden bottle of Reed's Ale and takes a swig."
 
 section mardier admirer
 
@@ -17720,24 +17766,15 @@ a-text of realist tailers is "RYRRYYR". b-text of realist tailers is "R?RR?YR". 
 
 gualoc of realist tailers is Leveraged Everglade. guadir of realist tailers is north. block-text of realist tailers is "The realist tailers let you by ... at first. But then, from behind, they start pointing out that's not the only way through, and besides, do you really need to go past? Their arguments aren't much, but they bog you down and pull you back.". clue-text of realist tailers is "Perhaps you can subject the realist tailers to too much of their realism, even for them.". taunt-text of realist tailers is "The realist tailers mention that sort of thing happens to people who aren't as living-in-the-real-world as they are."
 
-section promise imposer
-
-The promise imposer is a blue neuter guardian. "A promise imposer stands [psgdir of promise imposer], not willing to let you by. [imposer-guard][one of]. Promise Imposers are the highest-paid and most esteemed of Elvira's henchmen, assigned to repress potential anti-Elivra types from from doing what they want or need to do[or][stopping].". description of promise imposer is "Looking serious and confident and superior. It's not clear what promises they're impoaing, but the net result is, they just don't want you to get by. But perhaps you could bump its social or job status down a notch."
-
-to say imposer-guard:
-	let rm2 be far-room of promise imposer;
-	if rm2 is visited:
-		say "After all, you've been to [rm2]";
-	else if rm2 is tower-accessible:
-		say "After all, you can to get wherever's behind the imposer, if you think about it";
-	else:
-		say "You don't have full documentation why you NEED to get to the other side"
-
-a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
-
-gualoc of promise imposer is Leveraged Everglade. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
-
 chapter Treading Gradient guardians
+
+section resident trendies
+
+some Resident Trendies are plural-named terse blue guardians. "Resident trendies block your way [psgdir of resident trendies].". description is "They seem a bit too cool for you, but then, cool is a state of mind, and maybe you could change that."
+
+a-text of resident trendies is "RYRRYYRR". b-text of resident trendies is "R?RRY?R?". parse-text of trendies is "x[sp]?[sp]x[sp]x[sp]-[sp]?[sp]x[sp]?".
+
+gualoc of resident trendies is Treading Gradient. guadir of resident trendies is east. block-text of resident trendies is "The resident trendies can't imagine why YOU earned the right to just CUT THROUGH them. As if you were cool enough to get close!". clue-text of resident trendies is "Looking back at the resident trendies, they still seem too cool for you. But maybe it is all in your mind.". taunt-text of trendies is "The trendies say you did okay but also they are sure they could've done that, too, if they had nothing better to do."
 
 section sweatier wait-seer
 
@@ -17746,41 +17783,6 @@ The sweatier wait seer is a blue guardian. "A sweatier wait-seer seems in no hur
 a-text of sweatier wait seer is "RYYRYYRR". b-text of sweatier wait seer is "?YYRY?RR". parse-text of sweatier wait seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
 gualoc of wait seer is Treading Gradient. guadir of wait seer is north. block-text of wait seer is "The wait-seer doesn't break a second sweat convincing you you don't need to go past. There are other more scenic ways around, and perhaps you don't need to visit what is behind to fulfill whatever your quest is anyway. The logic leaves your head spinning, but the wait-seer sits as serenely as at the start of the lecture, or whatever mind-fu you got pulled on you.". clue-text of wait seer is "Boy! You'd get tired with the wait-seer's life. Maybe you could make them tired, too.". taunt-text of wait seer is "The sweatier wait-seer nods slowly and mumbles some Hakuna Matata nonsense.".
-
-section reed's ale
-
-the Reeds Ale is a vanishing thing. description of Reeds Ale is "It's open and, from [el-la-full]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-first]. Yet [el-la-first] is attached to it, for some reason. Well, you probably know why by now, if you got this far.". understand "reed/reeds ale" and "reed/reeds" as Reeds Ale. printed name is "Reed's Ale".
-
-a-text of Reeds Ale is "RYRYYRYR". b-text of Reeds Ale is "PGRYYRYR". parse-text of Reeds Ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
-
-to say deal-seer:
-	say "[one of]'[el-la-full], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or][el-la-full], Deal Seer, remains here, with that bottle of Reeds Ale[stopping]"
-
-Lars Eede is a red guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
-
-description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
-
-gualoc of Lars Eede is Treading Gradient. guadir of Lars Eede is east. block-text of Lars Eede is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Lars Eede is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Lars Eede is "Lars Eede reaches for a hidden bottle of Reed's Ale and takes a swig."
-
-Elsa Erde is a red guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
-
-description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
-
-other-g of lars eede is elsa erde. other-g of elsa erde is lars eede.
-
-understand "deal seer" and "deal/seer" as Lars Eede when player is male.
-
-understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
-
-rese is a truth state that varies. [checks if our point scoring command was resealed (true) or released (false)]
-
-to say el-la-full:
-	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
-
-to say el-la-first:
-	say "[if player is female]Elsa[else]Lars[end if]"
-
-gualoc of Elsa Erde is Treading Gradient. guadir of Elsa Erde is east. block-text of Elsa Erde is "'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'". clue-text of Elsa Erde is "Maybe you can free Lars from his capitalist or drinking urges.". taunt-text of Elsa Erde is "Elsa Erde reaches for a hidden bottle of Reed's Ale and takes a swig."
 
 chapter Salted Deltas guardians
 
@@ -22115,7 +22117,6 @@ this is the presto-or-others rule:
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
 		say "[eqls][rg][line break]";
-		if rg is towers and number of not moot guardians > 1, say "[eqls][eqls]starting missed Towers guardians[line break]";
 		now rg is tickedoff;
 
 to say eqls: if screenread is false, say "====";
@@ -22664,6 +22665,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				say "[2dmiss of myreg][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 		let xxx be unripe ur pine;
 		if number of not moot guardians > 0:
+			say "[eqls][eqls]starting missed Towers guardians[line break]";
 			repeat with gua running through not moot guardians:
 				if gua is natives site van:
 					say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
@@ -22675,16 +22677,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
-			if number of not moot guardians > 1, say "(that's all for the central guardians)[line break]";
+			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
 		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
 		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
 		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels AIMLESS.";
-		if ingrates are not moot, say "[2dmiss of myreg]the ingrates in Anemic Cinema could've been turned ANGSTIER.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
-		if natives site van is not moot, say "[2dmiss of myreg]the [site van] in [danger garden] could've been turned NAIVEST or VAINEST.";
 		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
 		if mended mini denim is not moot:
 			say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
@@ -22728,8 +22728,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ruts circuits is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 		else:
-			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
-			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
+			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a TAMARIND.";
+			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become MARASCHINO cherries.";
 			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
 			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
