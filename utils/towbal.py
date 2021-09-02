@@ -49,7 +49,7 @@ def cheat_dif(a, b):
     den //= g
     compare_string = factor_with_powers(num) + ' / ' + factor_with_powers(den)
     return (compare_string, num / den, num > den)
-    
+
 def prods(a, b):
     x = 1
     for z in a: x *= pos[z]

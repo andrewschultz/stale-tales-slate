@@ -74,14 +74,14 @@ Store V:
 --FiefCo Office is renamed Upscale Capsule. It has a new first puzzle and more silly random scenery that is labeled that way.
 --Upscale Capsule now has a different ending puzzle, with Sister Tressi and Blamer Balmer watching you.
 --last lousy point, a restaurant to ignore in Boarded Roadbed
---verb to enter the cellar is moved to Store P as a Last Lousy Point
+--one verb to enter the cellar is moved to Store P as a Last Lousy Point
+--there is a further Last Lousy Point after disposing of the lager
 
 Store W:
 --Old Hat Daltho is now Ornate Atoner Renato. The flowerpot quest has more anagrams in general, and the recipient is differently-named.
 --a few more clues for the Lone Duck.
 --the smart kid is now female if you are. In fact, the smart kid isn't a smart kid any more, but a Coasting Agnostic, who requires slightly different help.
 --Dr. Yow is now female if you are.
---The Muscly Hulk now mirrors your gender and has a name either way.
 --the once-sad deacons have been replaced by gender-specific blockers as well.
 --the jetskis are replaced with a conveyance more appropriate to the game: a boat. What kind of boat? Maybe you can guess.
 --the man in the costume is replaced by a deal seer, male or female, gender specific too.
@@ -92,6 +92,9 @@ Store W:
 --the Obscurest Subsector is now more heavily guarded.
 --Dourest Detours now appear if you visit a far-edge room.
 --the smart kid is now a coasting agnostic, though this doesn't affect puzzles.
+--the Clumsy Hulk became Luc Sym/Ms Lucy and then the denier nereid.
+--SMH Life Mel Fish gets to be himself without your help now. He has been replaced by realist tailers. In the process, I switched two pairs of guardians to keep the puzzles fully balanced.
+--the arid den is now a separate location with the same puzzle.
 
 Store Y:
 --the rude door is replaced with Span Pans.

@@ -291,6 +291,11 @@ So STAY it is.
 You can't, because it's clear. Oh, you mean if you scan it.
 R?RYRR is what you get, so the ? must be a vowel, and since slot 4 cannot be E and most be A, slot 2 is E. So we have -E-A--.
 But now slot 1 cannot be L or C, so it is R. Slot 3 cannot be L, leaving C. But then slots 5 and 6 only have L remaining. RECALL.
+>>DRAIN NADIR
+# logic for pleaser leapers
+?How do I decipher and reject the pleaser leapers?
+First note you can place all the vowels. The question marks in slots 2 and 4 must be vowels. The only ones that fit are E and A, respectively.
+With -E-A--E, there are eight possibilities left. Working on the 3rd slot, which can be any of the four consonants, should help you cut down the possibilities pretty quickly.
 >>BOREDOM BEDROOM
 # logic for me arts mr east stream tamers
 ?How do I decipher the ME ARTS?
@@ -385,12 +390,10 @@ The snider diners are the next to pop up questions, though you may not need to u
 There are question marks at locations 2, 3 and 5. What does this mean? It means 2 and 3 are I or N. 5 must be E or R. Since 2-3 are I-N, that means R??R?R needs a vowel, which must be E, because I-N must be in 2 and 3.
 You can switch to non-cheat mode to discover if it is I-N or N-I, or you can keep plugging away elsewhere. For instance, slot 1 can't be S or D--or N. So it is R. R(IN)(IN)(SD)E(SD).
 Slot 6 can't be R or S, so it has to be D, leaving S in slot 4. R(in)(in)SED, and RNISED is out, so, RINSED.
-# logic for Muscly Luc Sym
-?How do Muscly Luc Sym's question marks shake out?
-Muscly Luc Sym only appears if you are male, but his question mark should be pretty clear. There is no O or B, so therefore, the Y must be at the end. --U--Y, then, since there is only one vowel.
-The remaining reds strike out possibilities pretty easily. (CS)(CLMS)U(LM)(CMS)Y.
-But let's look for nonsense words. S in the first slot gives SMULCY/SLUMCY, so it's C. C(LMS)U(LM)(MS)Y.
-If we work on slot 2, CMULSY and CSULMY aren't words, so it's CLUMSY.
+# logic for denier nereid
+?How do the denier nereid's question marks shake out?
+The RGYR?? fixes a lot: RE-N-D. That's because slot 1 must be R, but slot 6 is R or D, making it D. Slot 4 is the other consonant, N. Slot 2 is known.
+So that leaves REENID and REINED, so, REINED.
 # logic for Try Us Yurts
 ?How do I decipher the Try-Us Yurts?
 This is one I actually made tougher than in a previous release, where it was a bit too easy in cheat mode. It's still not too bad.
@@ -421,6 +424,13 @@ That's part of why they are an LLP. They have the most possibilities, according 
 R?YRR?YRY has 2 as a forced consonant, R or G, and 6 is a forced vowel, A or I. That's not a lot of clues.
 So there's not much you can do except examine them for red text. NO EGAD SIR and so forth work, but they take a while.
 They eventually become GRANDIOSE.
+>>LEVERAGED EVERGLADE
+# logic for realist tailers
+?The realist tailers give an ambiguous clue! Can I logic-bomb them?
+This requires some trial and error. R?RR?YR leaves two vowels ambiguous, and you don't really get much help from the consonants. Even slot 6 with a vowel reveals no clues.
+You can try to talk to them for clues. But if you want to do things manually, you can also guess the suffix.
+Or you can eliminate L in slot 7, or work on slot 3. The vowels are a bit trickier.
+SALTIER.
 >>ANEMIC CINEMA
 # logic for angriest ingrates
 ?How do I resolve the question marks for the angriest ingrates?
@@ -545,6 +555,13 @@ There are three possibilities left, but RERIWED and WERIRED aren't words. REWIRE
 The dourest detours need to be more exciting. They are, at first, R??RRYR.
 Each question mark must be a vowel, since we already have four consonant slots known. That makes slot 3 U.
 So (RST)(OE)U(DST)(DRST)(OE)(DR) is left. Listening helps here to get a lot of red. Or you could guess the first letter right.
+# logic for seismal samiels
+?Can/should I get rid of the seismal samiels?
+You might be surprised. The three question marks go a long way. Note slot 2 must be I, so slot 3, which is I or M, is I.
+The only other possible vowel slot is the ambiguous slot 5, so it is E.
+Slot 4 cannot be S, so it is L.
+That means slot 6 and 7 must be the remaining S's. The question marks help you get everything right, here!
+The answer is AIMLESS, which is kind of amusing since the cluing was so directly, well, aimed at the answer.
 >>RAWEST WATERS
 # logic for earnest eastern neaters
 ?How can I call for the Earnest Eastern Neaters?

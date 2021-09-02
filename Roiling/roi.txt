@@ -22,6 +22,11 @@ There may be an embarrassing bug where a female NPC is referred to as male, but 
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
 ?Hey! Why do location names change? Does this mean anything?
 There's no deeper meaning, though it means you're probably mostly done with the area.
+Also, I had some really cool anagrams I wanted to share and bring to the front, and when they fit, I added them. I hope you enjoy the changes of scenery.
+?Why can't I play with a lot of the scenery? How can I tell if it's useful?
+One, you can try scanning stuff.
+Two, if something is described as blocking most ways out, it is probably just there for ambience.
+You can also try a cheap anagram of one of the words.
 >ORDEAL RELOAD
 >>DUSTY STUDY
 ?What do I do here?
@@ -184,6 +189,13 @@ Also, orange = red + yellow.
 What letter may be a consonant or a vowel?
 The letter Y.
 So orange/brown is a bit of a gimme. Though it is rare.
+?What are the question marks/ambiguous readings in cheat mode? Isn't cheat mode supposed to give MORE hints?
+They actually can reaally help. What this means is that if something is made up of two words that anagram, at least one pre-anagram word's letter slot is right, and at least  one is wrong.
+Let's take the LLP of Leis Isle from Shuffling Around as an example. It shouldn't be too much of a spoiler.
+The Leis Isle would giuve ?YR?. That doesn't look very promising, but the vowel in slot 2 can't be an E, and the vowel in slot 3 can't be I.
+Now slot 1 must be I or L, and slot 4 must be E or S.
+But we've already used both I or E, so that leaves L in slot 1 and S in slot 4. LIES.
+The ambiguous readings can thus be particularly nice for longer words, because there are only two possibilities. And if there is only one question mark, you know whether that letter is a vowel or a consonant, since the final word has the same number of consonants as either original.
 ?What's the slider for?
 If you switch it, you'll see red when you totally guess wrong.
 You only get a limited number here, but not seeing red is a sort of clue, too.
@@ -283,6 +295,12 @@ You're grunting wrong.
 ?Do I have to tackle that maze to the north?
 You don't even have to set foot in it, if you figure the right word. It's a tricky one, but there are a lot of clues. You may even wish to eat the crust once you've cleared everything else.
 See the Volt Maze section below.
+?The plebe won't let me by!
+Just saying a word isn't enough, but it gets you started.
+It's a generic word.
+<b>BLEEP</b>.
+You don't have the authority.
+Once you get the star from Char Arch, you will.
 ?The maze is gone now. Why can't I go north?
 The ether hides enemies. If only you could point them out...
 ...saying <b>THERE</b>.
@@ -345,6 +363,9 @@ Say <b>WHASSUP</b> to get in their good graces.
 ?Are they going to follow me everywhere?
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
+?Can I do anything with the Sods-Gone Odes Song?
+It's not critical, but a light interjection will help you deal.
+Say <b>GOODNESS</b>.
 >>NOWT TOWN (VOLT MAZE)
 ?Why can't I enter the maze yet?
 You need to get a few points and figure out what's going on.
@@ -531,7 +552,10 @@ Now you need to avoid the WOE BOW BELL.
 You need to go <b>BELOW</b>.
 Next, Gast pulls out a copy of Rude 'N Nuder.
 You need to hide <b>UNDER</b>, and Gast will give up and leave it behind.
-?I helped Brother Horbert and came back, but what's that MORF-FORM doing?
+?I helped Brother Horbert and came back, but what is A Bev O' Be Ova'?
+You need to look elsewhere than down.
+Look <b>ABOVE</b>.
+Okay, what's that MORF-FORM doing?
 Changing all the time, threatening to arrive.
 Get rid of the threat arriving.
 Make it <b>FROM</b>, and it will come crashing down.
@@ -566,16 +590,18 @@ Position yourself <b>OPPOSITE</b>, and you can take it behind your back without 
 ?What do I do with the sheol-holes?
 Not fall into them.
 Directions don't help, so you need to be more circumspect.
-?Help! It's almost too dark to see!
-This is a three-part puzzle.
+?Help! The NULL-IT UNIT is making it dark!
 You have no light, and your lamp was broken a long time ago.
+The unit is keeping things dark, as they were.
 You can say it was dark and <i>unlit</i>, before...
 ...I mean, <b>UNTIL</b>.
-?Where do I go? How do I find a trail?
+?Where do I go? How do I find a trail with the odd run-on aura?
+Chop it up until you see the six lettes: ADNORU.
+So you need to look <b>AROUND</b>, and you'll find an un-road.
+?The All-Noon Gag still darkens things!
 Remember, you were told you need to NAG OL' NO-LAG LOGAN. There's an UN-ROAD you need to use to get there.
-So, first, you need to look <b>AROUND</b>.
 You're on your way to finding him, now.
-Then, you need to go <b>ALONG</b>.
+Just go <b>ALONG</b>.
 >>RIPE PIER
 ?What's with the mist?
 Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
@@ -597,7 +623,7 @@ Then the hurt hog.
 You can leave it now.
 Go <b>THROUGH</b>.
 ?Should I enter the yob den?
-No. It's a final last distraction.
+No. It's a final last distraction. However, you can sort of do something with it. You need to, to win this scenario.
 You want to go <b>BEYOND</b>.
 ?Are the raptest patters important?
 If you want a full score, yes.
@@ -606,7 +632,7 @@ Or done <b>WITHOUT</b>.
 >STORE V
 >>LOATHER RATHOLE
 ?What do I do here, in general?
-The self-help book tells you IT IS A WAY TO THINK.
+Peg A. Page's self-help book tells you IT IS A WAY TO THINK.
 Standard actions don't work.
 You need to think straight.
 Spoiloplis is about passive verbs.
@@ -626,22 +652,27 @@ Okay, I think I beat this into the ground.
 >>BUSTLE SUBLET
 ?What's the stop post for?
 It can't turn into POTS or TOPS. Or expand your OPTS.
-It will help you SPOT. But you need to get rid of the sob ever verbose.
+It will help you <b>SPOT</b>. But you need to get rid of the sob ever verbose.
 ?What do I do to ignore/dispel the sob ever verbose?
 You can listen to it for clues. Lots of reds.
 <b>OBSERVE</b>.
 >>BOARDED ROADBED
+?A Sty, Tasty, Say. Is it worthwhile?
+To get full points, yes. But it's optional.
+Three y's in twelve letters. Arithmetic says you need a passive verb with four letters.
+<b>STAY</b>.
 ?This stupid evil bee is so near!
 There are two ways to look at it: as so near, or an evil bee. Let's go with the bee itself.
 It's an evil bee. It feeds on your doubt.
 <b>BELIEVE</b>.
-?Should I do anything with the vile bee?
+?Should I do anything with the SNORE-SO ARENA?
 You don't have to. But you'll get an extra point.
 It is still SO NEAR. It is a senora. It has no ears.
 <b>REASON</b> that it cannot possibly exist.
-?Oh no! Can I do anything with the cellar caller?
-It's broken, but maybe it will help you remember.
-No, that's not quite it...
+?Why does the bee turn from evil to vile to live?
+Silly anagrams. Plus, you can see how much it resists you.
+?Oh no! Can I do anything to find L'Clear Cellar?
+You can't quite remember, but fortunately...
 With some thinking, you can <b>RECALL</b>.
 >>DRAIN NADIR
 ?A spider, Ires Pad, diapers...
@@ -674,15 +705,16 @@ You aren't on top of things yet. The stream should refocus you...
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
 You need to learn to <b>DEAL</b>.
-Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have the guts or endurance.
+Though, first, if you haven't dealt with the lobster or ME ARTS, you won't have the guts or endurance. Taking care of both only gets you closer to maximum points.
 >>BROWSE BOWERS
 ?What does Si Reed have to offer?
 The See Dir has a list of places to reside.
 It should make you want to reside.
 Want can become <b>DESIRE</b>.
-?Are the shmoe homes and rotunda important?
-They are just scenery, to give the Browse Bowers a feeling of isolation.
+?Is the rotunda important?
+It is just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
+The Miser Emirs' Mires are the new scenery to stay.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
 The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS back in Boredom Bedroom.
@@ -719,7 +751,7 @@ It focuses you on grueling work that drains your soul.
 Unless you <b>RAMBLE</b>.
 ?Are the Sister Tressi Siters relevant?
 Yes.
-She looks down at you as if you say you're a failure.
+She looks down at you as if you think you're a failure. Or if you think you aren't, because you're lying to yourself.
 You can <b>RESIST</b>.
 ?DIVORCES magazine. Is it useful?
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
@@ -730,20 +762,21 @@ You need to realize something...
 >>LOFTIER TREFOIL
 ?How do I get out?
 Get rid of Rodney and his followers.
-They're not really dedicated to him. Get rid of three--any three--and he's more malleable.
-You can get a clue what sort of word to use if you listen to his babble about people that didn't make the cut.
+They're not really dedicated to him. Get rid of three--any three--of the six, and he can't resist. You can get rid of all six for maximum points.
+You can get a clue what sort of word to use if you listen to Rodney's babble about people that didn't make the cut.
 He describes them with anagramming adjectives.
 Once they're gone, you can send him <b>YONDER</b>.
 Or you can make him <b>DRONEY</b> and his followers will get bored.
 >>>RODNEY'S GOONS
 ?How do I get rid of the goons? And why are so many listed? I only see six, plus Rodney.
-One henchman is chosen from each group. Five groups have four, and one group has five. They are weighted by length.
-Geno, Shane, Tyson, Wade.
-Edwin, Eldon, Floyd, Royce.
-Blake, Bredo, Daryl, Dewey.
-Ernest, Marcel, Marlon, Reggie.
-Andres, Andrew, Archie, Barney.
+One henchman is chosen from each pod below. Five groups have four, and the final, largest group has five. They are weighted by length and number of unique permutations.
+Geno, Royce, Tyson, Wade.
+Daryl, Dewey, Goldy, Shane.
+Blake, Bredo, Edwin, Eldon.
+Archie, Barney, Ernest, Reggie.
+Andres, Andrew, Marcel, Marlon.
 Cedrick, Demitri, Leander, Preston, Terrance.
+Incidentally, there are more y's than on average in the game. That's good news if you're using your settler. The probability of getting a Y is 1-(3/4*1/2*1/4)=55/64~90.6%. The expected number of Y's is 1.5.
 Andrew has a particularly silly description.
 ?Andres
 Roaming freely in his territory...
@@ -821,43 +854,58 @@ Many emotions...
 ?Wade
 Confident and poised, but sensible enough to know if he might be overmatched.
 Til he's <b>AWED</b>.
+?Can I deal with the recital article?
+It is sturdy, but you can make it less so.
+Make it <b>TALCIER</b>.
 >>TOPSIDE DEPOSIT
 ?What can I do with the top opt pot?
 Nothing, until near the end.
-?What can I do with the tarts?
+?What can I do with the start tarts?
 You can put them in the toaster, and it will give you the ability to XRAY something for a hint.
 ?What's the toaster for?
-It's a rosetta toaster.
+It's a Rosetta toaster.
 Put bready snacky products, like the tarts, in the toaster, and you can see through stuff to what it should be.
-There are five, total: behind the yurts in the copse and in the Fringe Finger (west edge) and Lost Lots (south edge). ?? two appear in Fringe Finger
-Including the final puzzle.
+There are five, total.
+The start tarts are right there in Topside Deposit.
+The brownies are in the yurts in Scope Copse.
+The loaves are from the agnostic after you help them stop reading their book.
+The strudel is in Fringe Finger.
+The eclairs are in Treading Gradient, beneath the denim.
 Budget as you need to.
 ?Is there any functional difference between the pastries I find? And how many are there?
 No. They are all the same.
-There are five pastries total.
 ?What are the dreads adders for? How can I get by?
+They are just blocking you from the rest of the Wildest Wilteds.
 They inspire dread, but maybe you can make them into a less draining emotion. Or an emotion that drains them.
 Make them <b>SADDER</b>.
-Comparative adjectives help a lot, so it's worth looking for those suffixes as a shortcut.
+A general hint for the area follows.
+Comparative adjectives help a lot, so it's worth looking for those suffixes to try for a quick solution. -ER is not the only one.
+-EST is also worth a look. So is -ING.
+But -ER is most likely to occur, since there are only two letters you need for it.
 >>GUARDIANS, GUARDIANS
-?How many do I need to clear?
-Eleven, minimum, including the serpent.
-There are eighteen total including the serpent.
-You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastlines so the Coasting Agnostic comes out and has a bit of peace by the seashore.
+?How many are there? How many do I need to clear?
+Well, eighteen or twenty. Two pairs are swappable--there are a male and female deal seer, and you only see one. Likewise with Lois the Hostile and the Hostile-is-He Lot.
+You must clear twelve, though clearing more gives access to hinting items and also makes walking around easier.
+Twelve are in the main area. You must clear six of them to gain access to the three other corners of the map (northwest, southeast, northeast.) Then you must clear the other guardians in the Actionless Coastlines. That's seven more, for eight total.
+You must also clear the way to the Obscurest Subsector. A sequence of two guardians blocks you there.
+You must get past the mardier admirer to reach the Shaven Havens.
+You must also get past the bluster butlers to reach the Outer Route.
+The angriest ingrates and natives' site van guard areas you don't need to visit.
 ?What's the quickest way?
-To get to the Coastlines and clear it, you must zap at least seven guardians. You can actually avoid visiting (Saltbed and Strait) or (Everglade and Deltas).
-The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
+You must zap at least seven guardians connecting the center area. You can actually avoid visiting (Saltbed and Strait) or (Everglade and Deltas).
+The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. This is a bit obscure, but it clues that H or I shaped paths can be cleared to get there.
+The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
 This isn't the only way to do things, but it's the most intuitive, because it isn't that crooked, and the HI seems easiest. It took me a while to see the other shortest way through.
 You must clear the two guardians from the Coastlines, so we'll always assume they are gone. This makes the calculations easier.
 You need to clear (1) either Muscly or the diners in Scope Copse, to start. Also, you need to clear (2) a guardian to get to the Cinema, another (3) to get to the Gradient, another (4) to get to the Garden, and a final one (5) to get to either the Strait or the Deltas. Give yourself one point for each task you haven't got, and that's how many guardians, minimum, you need to dispel.
 The proof this is necessary and sufficient is not too bad, I think. First, if you just got a Copse guardian, then you can make the I or H for 4 left. You will get to 2, 3 or 4 next. Whichever you get to, it is a step away from 5, which is a step away from the other 2 of 2, 3 and 4. So each time you reach a new category/room, your point total goes down by 1. If you reach 5, then the remaining of 2, 3 and 4 are all 1 away. If you reach other than 5, then 5 is still 1 away, after which the remaining of 2, 3  and 4 will be one away. Discussion of guardian balance follows.
 The game is balanced so that both the h-shaped path and the i-shaped path through the main square in Towers are approximately equal. Or the words to anagram have roughly the same total complexity or number of possibilities.
-To be precise, there are 3/4 as many cheat-based possibilities in the I as the H, but there are 3/2 as many non-cheat-based possibilities. Given that we're working with numbers in the thousands, that's pretty close. Oh, and the total number of letters is equal whichever way you go, too.
-Yeah, I was bored and wrote a PERL program to figure it out. It was actually pretty fun. I did this before I realized there were alternate routes through. There are 5 not counting symmetry/rotation.
+The teach-mode possibilities are roughly balanced, at a ratio of 135/128 for the produces of the "H" and "I" guardians. Why, yes, I wrote a program to balance them. It's not too bad.
+I did this before I realized there were alternate routes through. There are 5 not counting symmetry/rotation.
 NEESNNWW, NENWEESS, NNEESWES (this has 5 rotations/reflections. The others have 1.), NNSEES (the H/I), EEWNENWW.
 ?Can I walk around guardians I can't solve?
-Any one guardian? Probably, except the ones who guard dead-end rooms and the coastlines.
-You must defeat the atheists, the hostile, the bonker/stinger and the admirer. Oh, and the Dreads Adders to start.
+Any one guardian? Probably, except the ones who guard dead-end rooms.
+You must defeat the atheists, the Lois or the Hostile-is-He Lot, the bonker and stinger, and the admirer. Oh, and the Dreads Adders to start.
 ?How can I figure guardians a bit more easily?
 Trying to walk past, attack or talk to them may give clues.
 Of course, you can x-ray them.
@@ -871,14 +919,14 @@ He can't imagine being worse than average.
 They're patient and willing to explain their views.
 Could you make them hurry up so they give up?
 Yes, make them <b>HASTIEST</b>.
-?Bluster Butlers
-Making them more circumspect could help them move up in the world, and away from here.
-They can become <b>SUBTLER</b>.
 ?(Deal Seer) Lars Eede/Elsa Erde
 The deal seer hits the Reed's Ale quite hard!
 They feel trapped in their life and can't stop drinking.
 You can help them get <b>RELEASED</b>.
 The Reed's ale can also become RESEALED.
+?Denier Nereid
+They're too far from shore. They need to be pulled back in.
+Make them <b>REINED</b>.
 ?The fluster-self rut
 It is agitated, and it agitates you.
 How can you calm things down?
@@ -887,17 +935,17 @@ Make everything more <b>RESTFUL</b>.
 They're very hostile. The opposite of what you'd expect. They're planning a hostile ol' heist.
 Make them feel differently.
 Make them the <b>HOLIEST</b>.
-?Realist tailers
-They're not nasty enough to reject outright.
-Maybe you can feel better ditching them, or maybe they will fight each other, if they become ...
-... <b>SALTIER</b>.
-?Denier nereid
-They're too far from shore. They need to be pulled back in.
-Make them <b>REINED</b>.
 ?Promise Imposer
 He's good at what he does.
 So smooth. Doesn't do things by half-measures.
 <b>SEMIPRO</b>.
+?Realist tailers
+They're not nasty enough to reject outright.
+Maybe you can feel better ditching them, or maybe they will fight each other, if they become ...
+... <b>SALTIER</b>.
+?Resident Trendies
+Make them far less cool.
+They could become <b>NERDIEST</b>.
 ?Snider diners
 They have dry wit.
 Until they're <b>RINSED</b>.
@@ -913,6 +961,16 @@ It appears the first time you clear an area of all the guardians.
 It's pretty easy to dispose of as an LLP.
 It's active and has no mechanical damage...
 ...until you make it <b>CREAKY</b>.
+>>SCOPE COPSE
+?What's the scope for?
+It shows you where you need to go.
+It also creates a map in the upper window that lasts until you cross the lake.
+?What are the try-us yurts doing? How can I get rid of them?
+They're quite eco-friendly, or seem to be. They seem well built enough.
+Unless, or until, they're <b>RUSTY</b>.
+?How do I get rid of the Bluster Butlers?
+Making them more circumspect could help them move up in the world and away from this not-so-posh place.
+They can become <b>SUBTLER</b>.
 >>ANEMIC CINEMA
 ?Do I need to deal with the mardier admirer?
 (S)he'd find you less a part of his/her life...
@@ -925,10 +983,10 @@ If the madness became whining...
 ?Do I need to get rid of the bonker?
 Yes, it guards something important.
 It works perfectly.
-Til it's <b>BROKEN</b>.
+Well, until it's <b>BROKEN</b>.
 Oh, look, something else! They must be guarding something REALLY important.
 ?Hey, something replaced the bonker!
-It sure is vigilant.
+The stinger sure is vigilant.
 How to lower its energy?
 Make it <b>RESTING</b>.
 ?Do I need to get rid of the natives' site van?
@@ -938,20 +996,12 @@ If you want to sucker them with pride, <b>VAINEST</b>.
 If you want to sucker them with stupidity, <b>NAIVEST</b>.
 Neither is better or worse than the other.
 >>LOCATIONS THAT DON'T 100% MATTER
-?Which ones have nothing besides guardians??
+?Which ones have nothing besides guardians?
 While you have to go through the Scope Copse, and you have to pick off the guardians there, there's nothing critical. Though having the map is helpful.
-Artist Traits Strait and Salted Deltas have nothing else, though you'll probably wind up going through both of them.
-Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
-Baldest Blasted Saltbed and Leveraged Everglade have scenery that gives LLPs.
+Artist Traits Strait and Salted Deltas have nothing else, though you'll probably wind up going through both of them. Strictly speaking, you don't have to visit one of them, but it'd be inconvenient to avoid them deliberately.
+Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing else there you need to deal with.
+Baldest Blasted Saltbed and Leveraged Everglade have scenery that gives LLPs. Strictly speaking, you don't have to visit both of them, but you have to visit one to get to the edges.
 Fringe Finger and Lost Lots have pastries and an LLP each, but nothing critical.
-Of course, you must pass through one of the Strait/Deltas and Saltbed/Everglade. But you don't have to visit both to solve the Towers area or even get maximum points. Though they make getting around a bit quicker.
->>SCOPE COPSE
-?What's the scope for?
-It shows you where you need to go.
-It also creates a map in the upper window that lasts until you cross the lake.
-?What are the try-us yurts doing? How can I get rid of them?
-They're quite eco-friendly, or seem to be. They seem well built enough.
-Unless, or until, they're <b>RUSTY</b>.
 >>BALDEST BLASTED SALTBED
 ?What's the docile old ice for?
 An LLP.
@@ -968,7 +1018,8 @@ To hold the rapier repair.
 Campiest campsite was the name of a room, but it was a bit too obvious. Or implement a full campsite. But I didn't want to remove it completely.
 ?What's the rapier repair for?
 Fixing worn down swordy things.
-You may've found one behind the weeds in the Treading Gradient.
+You may've dug one up elsewhere.
+It's behind the weeds in the Treading Gradient.
 The ragged dagger.
 PUT DAGGER IN REPAIR.
 ?What are the sway-ways for?
@@ -992,6 +1043,11 @@ It needs to be toned up.
 You'll find something for that in the Campiest Campsite.
 PUT DAGGER IN REPAIR.
 The gizmo is handy later.
+>>DIRE AND ARID DEN
+?Help! How did I get down here?
+You looked around after poking at everything in Treading Gradient.
+You are feeling drained, but you'll need a pick-me-up.
+Get <b>DANDIER</b>.
 >>SHAVEN HAVENS
 ?What can I do with the duck?
 It has a nametag.
@@ -1014,10 +1070,9 @@ So change them to the <b>PROSIEST</b> you've heard.
 Well, you don't need to.
 And you can't.
 >>OBSCUREST SUBSECTOR
-?Who's the person in prison?
-Read the prison ropins.
-Dr. Yow.
-Dr. Yow won't speak until compelled.
+?How do I undo the prison ropins?
+Read them for a clue.
+If only they could be <b>UNLOCKED</b>. But you can't just say so.
 ?How do I get Dr. Yow to speak?
 Scanning gives a word...
 ...or two.
@@ -1041,8 +1096,6 @@ The raves saver can record it.
 PUSH RETAPE after getting Dr. Yow to speak.
 PUSH REPEAT in the Shaven Havens.
 Return.
-The lone duck can't be unlocked, but it seems to know to go to the fissure.
-Alternatively, making the fissure FUSSIER causes the duck to go over.
 ?Is Dr. Yow good for anything else?
 Yes. Don't go on til you see someone new on the Coastlines.
 The agnostic is interested in technical stuff.
@@ -1102,7 +1155,7 @@ Oh, and before a location people might think was a joke, too. Minor spoiler!
 >>DOUREST DETOURS
 ?Is this location a joke?
 Well, not a total joke. It's there, but it's a bit floating.
-You can enter it from Outer Route,
+You can enter it from some of the dead-end palces. Outer Route, Lost Lots or Shaven Havens. Fringe Finger has a cliff below, Obscurest Subsector is a prison, and Topside Deposit would be too confusing to start.
 Once you've been through once, you can't return.
 ?Am I trapped?
 No. You need an anagram for dourest and detours.
@@ -1112,11 +1165,10 @@ You need something that will wake you up, get you going.
 Yes, but you don't need to.
 They can become <b>AIMLESS</b>.
 >>MISLIT LIMITS
-?What can I do about the pester'n serpent?
-You don't need to get rid of it, strictly. Unless you want maximum points.
-Can't make it so it REPENTS. That's a verb.
+?What can I do about the Repents Serpent serpent?
+You don't need to get rid of it, strictly. Unless you want to complete the top opt pot side quest for maximum points.
 You can't make it go away.
-But you can neutralize it.
+But you can neutralize it so it gets bored and goes off on its own.
 It'll be calmer if it's just <b>PRESENT</b>.
 ?What's with the unripe ur-pine?
 It's not critical to solving this area, but it'll help with Renato's quest.
@@ -1157,7 +1209,7 @@ Okay, more, if you save before using. Or you have a debug version of the binary 
 ?What do I need to do to get by the LOLstr trolls?
 Well, you need to be all cool.
 <b>STROLL</b>.
-But you need to do a few things to be a more undesirable patron.
+That won't work right away, though. You need to do a few things to be a more undesirable patron.
 ?What's the gins sign for?
 It should suggest a standard Inform verb when you examine it--or by its letters.
 <b>SING</b>.
@@ -1199,7 +1251,7 @@ That gets you to the Fighter Frigate.
 ?Can I cross on the frat raft?
 Yes, and you get an extra point for doing so.
 The oars on the raft are odd.
-Get on the raft first. What can you do there? Something stereotypically frat-ty?
+Get on the raft first. What can you do there? Something stereotypically frat-ish?
 <b>FART</b>.
 The oars are fuller now. You can't cross the river at ground level...
 <b>SOAR</b>.
@@ -1250,7 +1302,7 @@ I did a lot of this, even after the first release. Most of the time, I wonder wh
 You don't have to do anything.
 This is maybe the second-easiest LLP in the game to Peg A. Page's revolting book.
 Easier, since it's a verb you probably already used.
-SCAN the cans.
+<b>SCAN</b> the cans.
 ?No one's here but I hear something.
 They're EEKS.
 Try to <b>SEEK</b> them.
@@ -1313,7 +1365,7 @@ You need to break them open.
 Or <b>BUST</b> them.
 ?What the heck can I do with a prod?
 The way to open it is simple yet annoyingly weird.
-DROP the prod.
+<b>DROP</b> the prod.
 ?Does the waste need clearing?
 Not if you don't want ALL the points.
 It's work to clear.
@@ -1338,7 +1390,7 @@ There was a panel in Shuffling Around.
 How did you get it?
 By folding a paper plane.
 I didn't want to reuse an anagram, so...
-...there is no plane. I just</b> 
+...there is no plane. I just</b>
 ?How do I operate the plane?
 You can't operate the buttons, but...
 I bet a nuts bot could.
@@ -1353,7 +1405,7 @@ The sardine hates noises.
 You need something that makes noises.
 Here's where you <b>WARP</b> the bubble wrap.
 Now you can SEARCH.
-?What's the Handsome Sand Home for? ##regignore
+?What's the Handsome Sand Home for?
 To add plausibility for the game blocking you from going west or south.
 Also as a memorial for Lean Lane's previous name.
 >>HORNED HEDRON
@@ -1378,17 +1430,16 @@ Like the ruby.
 <b>BURY</b> the RUBY.
 Then dig the haunter up and lead it by.
 ?I can't visit the craals after doing something. Is this okay?
-Yes. The craals served their purpose.
+Yes. The craals served their purpose. And besides, the residents might recognize you.
 >>END DEN
 ?Is this where I want to be?
-No. You need an item to scry, and you'll go somewhere else, instead.
-Do you have a pearl yet?
-There's more than one.
+No. You got here because you don't have a map to the Horned Hedron, yet.
+Did you find a pearl yet?
 Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
 <b>ENLARGE</b> it.
 >>PLASM LAMPS
-?I skipped over this! Is it a fake room or clue?
+?I didn't see this! Is it a fake room or clue?
 No, it's a small side quest.
 You need something from the Shuttle Hutlets.
 The lance. If you have it, and you've done what you need with it, something will pop up in the Den Loft.
@@ -1406,15 +1457,19 @@ This word is better known as a noun, but it can also function as a verb.
 You can <b>PSALM</b> while in Plasm Lamps for a bonus point on top of getting rid of the natant ant.
 >>TENFOLD TEFLON'D DEN LOFT
 ?Stupid papery yapper!
-He wants to be bribed, but use a different word, maybe?
-The settler can show you what to do. Though it seems to blink.
-That is because some letters in one word are right, but not the other.
-P or Y is right. E or P is right. Y or R is right. But we know if there's a Y--orange or brown color. And we can tell vowel or consonant.
+The papery yapper wants to be bribed, but use a different word, maybe?
+A synonym for quid pro quo?
 <b>PREPAY</b> the yapper.
+You lose the general gleaner, but you know the way by now, anywayy.
 ?What do I do with the lever?
 It's an optional point.
 Have fun knowing you found it.
 <b>REVEL</b>.
+?Can I walk down the Templar Ramplet?
+Well, not quite walk.
+Also, you need the lance from the Shuttle Hutlets.
+Once you do, you can walk in quite aggressively. It leads to a new location.
+<b>TRAMPLE</b>.
 ?What do I do with the dialer?
 There's also a clump of letters that can be relaid.
 DIALER may become something else.
@@ -1422,7 +1477,8 @@ DIALER may become something else.
 ?Oh no! Pins are blocking the dialer!
 Two solutions here.
 They aren't lethal, but they are annoying.
-<b>SPIN</b> or <b>SNIP</b> them.
+You may notice SNIPping them doesn't work, but that's very close.
+<b>SPIN</b> them.
 ?What else do I do with the dialer?
 Well, you can DERAIL again...
 ...or you can find another way to call back.
@@ -1446,12 +1502,13 @@ Showing you don't need them gets another point.
 You can also <b>RESCIND</b> them.
 >>DISOWNED DOWNSIDE
 ?Why can't I go west?
-You need to help Gretta Garett-Tatger, whom Elmo told you about.
+First, you need to help Gretta Garett-Tatger, whom Elmo told you about.
+Then, you need your powers back to dispose of the moat.
 ?How do I disperse the parleys splayer players?
 They're talking total rubbish.
-But how they talk it isn't failing yet.
-You can only use adverbs to take them down, so look for words with LY.
-There're many possibilities, but you only need three. You don't have to respond right away, either.
+But they have enough style points, they can't be caalled on it yet.
+You can only use adverbs to take them down, so look for words with L and Y in them.
+There're many possibilities, but you only need three before they lose their mojo. You don't have to respond right away to how they talk, either.
 There's also one word that's available no matter how they talk.
 They can talk <b>SPARELY</b>. That's always available, until you figure it.
 They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long. There are seven pods of words, and I ch
@@ -1465,36 +1522,47 @@ Pod 6 is ten to eleven letters. <b>DESPERATELY</b>, <b>DRAWLINGLY</b>, <b>EMOTIO
 Pod 7 is twelve letters. <b>DESPAIRINGLY</b> and <b>INDISCREETLY</b> are in Pod 7.
 The pods give you slightly more average letters to deal with than if I just picked seven adverbs from the whole list (thirty-two at last count,) but I felt it might be too confusing to have thirty-two possible adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
-The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need them.
-?Where do I go?
+Not very good, right now. They're tarnished. You need to fix that.
+Since they say IQ and LUCKY, you may be able to guess what they become. But if you figure them now, you haven't done enough good, yet.
+Incidentally, they're roughly inspired by the medals worn by the protagonist of Saki's <i>The Storyteller</i>.
+?How do I dispose of the moat?
+You have to get your powers back.
+Then, you can make it something much smaller.
+An <b>ATOM</b>.
+?Where do I go first, north or south?
 You only need to go one of north or south from the Disowned Downside. The Loop Pool is a bit easier. But going both ways gets you all the points.
 >>SHINER SHRINE
 ?The sly imp simply blocks me!
-LY-words again.
+LY-words again can get around it. Make it less sly.
 With LEGENDARY patience, BUTLERY and MOTLEYER.
-You only need two. Make it lose its cool.
-<b>ENRAGEDLY</b>.
-<b>BRUTELY</b>. And, for the curious...
-<b>REMOTELY</b>.
+You only need two of three. Make it lose its cool.
+<b>BRUTELY</b> is the shortest.
+<b>REMOTELY</b> is next-shortest.
+<b>ENRAGEDLY</b> is the longest.
 ?What is the coma camo for? And the message?
 The message is what this room--or the cathedral--was called in previous releases.
 The camo just stops you from going west or east.
 >>CLARTHEAD CATHEDRAL
 ?The shrewin' whiners block me noisily!
-Their tallyhoing, callosity and jollity get in the way.
+Their TALLYHOING, CALLOSITY and JOLLITY get in the way.
 Tune their volume down. Disrupt them. Make them take a break.
-You need two of three. <b>JOLTILY</b> and <b>STOICALLY</b> cost the fewest keystrokes.
-<b>LOATHINGLY</b> is the other solution.
+You need two of three.
+<b>JOLTILY</b> costs the fewest keystrokes.
+<b>STOICALLY</b> is next.
+<b>LOATHINGLY</b> is the longest solution.
 >>LOOP POOL
 ?The sea cube...
 You can't waste words.
-But you can't use adverbs.
+But no adverbs seem to work.
 What word is meaningless by itself?
 A conjunction.
 <b>BECAUSE</b>.
 ?The eels aren't convinced...
 Tell them 'Or...
 ...<b>ELSE</b>.'
+?Is the vow here important?
+It appears when you have your powers back. It's just another bonus point.
+To get rid of it, say <b>HOWEVER</b>.
 >>BRAN BARN
 ?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
@@ -1504,20 +1572,24 @@ A conjunction.
 ?The gore ogre is now in the way!
 You can outfox it with a clever conjunction.
 <b>ERGO</b>.
+?Is the vow here important?
+It appears when you have your powers back. It's just another bonus point.
+To get rid of it, say <b>HOWEVER</b>.
 >>LAMER REALM
 ?Owls attack me!
-You need your powers back.
-They are too quick for you.
+You need your powers back. If you don't have them, come back again.
+They kill you if you stay for one move. They're quick!
 Unless they are <b>SLOW</b>.
 ?Why can't I dispel the owls?
 You need your powers back first.
 Visit the Disowned Downside, if you haven't.
 Then clear an area to the north or south.
 ?What of the other animals?
-The leopard can be <b>PAROLED</b>.
-The ocelots can be <b>COOLEST</b>.
-The badger can be <b>GARBED</b>.
+In order of possible combinations...
 The satyr can be <b>ARTSY</b>.
+The badger can be <b>GARBED</b>.
+The ocelots can be <b>COOLEST</b>.
+The leopard can be <b>PAROLED</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>PERVERSE PRESERVE
@@ -1531,14 +1603,14 @@ Then clear an area to the north or south.
 ?Nails?
 Nothing's slain.
 Just an ex-<b>SNAIL</b>.
-?Thrones?
-Buzzing noises? Sting if you sit on it?
-<b>HORNETS</b>.
 ?Pines aren't an animal!
 They have no spine...
 They're not a <b>SNIPE</b>.
 ?The corona is spooky!
 It can be a <b>RACOON</b>.
+?Thrones?
+Buzzing noises? Sting if you sit on it?
+<b>HORNETS</b>.
 ?Help! Why did the room name change?
 Because you did enough to make it a nice place.
 >>RECLUSION INCLOSURE
@@ -1546,6 +1618,9 @@ Because you did enough to make it a nice place.
 You can get the truth out of them.
 It's a last lousy point but not a trivial one. Plus they have silly things to say if you trigger it.
 You can make them talk <b>HONESTLY</b>.
+?Is it significant that Elmer and Merle are ideas aides?
+For full points, yes.
+You can momentarily push them <b>ASIDE</b> to let them know who they're dealing with. Er, with whom they're dealing.
 ?How do I go west?
 You need something that can beat a hydra. Seen an animal?
 The raptor.
@@ -1587,13 +1662,13 @@ ROVE OVER.
 ?What do I need to do for Curtis?
 For starters, get 4 fruits. A few are easy.
 The Spear will be <b>PEARS</b>.
+Examine the ruts circuits. Then the slime can be <b>LIMES</b>.
 The Lumps can be <b>PLUMS</b>.
 The Pagers can be <b>GRAPES</b>.
-Examine the ruts circuits, then the slime can be <b>LIMES</b>.
 There are more potential fruits, which you may be able to guess, but you only need four to start, and I wanted to make them easy.
 ?What's the augural arugula for?
 Well, it's a cheat item. You can EAT it, then GURU something, and if it can become a fruit, there you go.
-But you lose a last lousy point at the end if you GURU something. So it's double-edged.
+But you lose a last lousy point at the end if you GURU something. So it's double-edged, for all you perfectionists out there.
 ?What's this stupid moss cap for?
 The moss cap is supposed to help you with directions.
 It doesn't work so well in its present state.
@@ -1603,45 +1678,45 @@ Now you can go north!
 Curtis gives you something new every four fruits. That's a running total, not four fruits since your last transaction.
 So it's possible to bring back a bunch of fruits and get all the stuff below.
 After the moss cap for the first four, there is
-A tekno-token (4),
-A coin (8),
-Another coin (12),
-And a droll dollar (16).
-Beyond that, he just takes stuff. But you don't need it.
+A tekno-token (9 points, 4 more fruits),
+A coin (13 points, 8 more fruits),
+Another coin (17 points, 12 more fruits),
+And a droll dollar (21 points, 16 more fruits).
+Beyond that, he just takes stuff. But you don't need any one specific fruit for any quest.
 ?Mad Train?
 <b>TAMARIND</b>.
-?Eerie Blurbs?
-Painted blue-purple.
-<b>BLUEBERRIES</b>.
 ?Peanut Cola?
 Some clues on the can.
 <b>CANTALOUPE</b>.
-?Mopeage rant and other writings?
-They're real pips.
-<b>POMEGRANATE</b>.
 ?What's the omen prism for?
 All in red. Clues for a fruit.
 You can READ the omen prism to find various red text.
 For instance, "Nope, Mr. Sim" sounds almost like...
 <b>PERSIMMON</b>.
-?Barren cries?
-<b>CRANBERRIES</b>.
 ?Harmonicas?
 <b>MARASCHINO</b> (cherry).
+?Eerie Blurbs?
+Painted blue-purple.
+<b>BLUEBERRIES</b>.
+?Barren cries?
+<b>CRANBERRIES</b>.
+?Mopeage rant and other writings?
+They're real pips.
+<b>POMEGRANATE</b>.
 >>SWELL WELLS
-?ScoutCon on Stucco?
-<b>COCONUTS</b>.
 ?'Elp PSA?
 Six letter fruit.
 <b>APPLES</b>.
 ?What about the riot cap?
 An <b>APRICOT</b>.
+?ScoutCon on Stucco?
+<b>COCONUTS</b>.
 ?And the sorer bogey?
 <b>GOOSEBERRY</b>.
-?And the miser ruble?
-<b>MULBERRIES</b>.
 ?And the green stain?
 <b>TANGERINES</b>.
+?And the miser ruble?
+<b>MULBERRIES</b>.
 >>FILED FIELD
 ?Anything besides fruit here?
 No.
