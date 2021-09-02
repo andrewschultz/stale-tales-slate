@@ -394,11 +394,8 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 #nudge for pipesoot
 >pipesoto
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-#nudge for mushroom
->murshmoo
-Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
-#nudge for mushrooms
->murshmoos
+#nudge for stupor
+>suptro
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 
 >out
@@ -531,14 +528,17 @@ You have Pat's attention, already, and you don't really need it now that you got
 #done rejects for seed pit
 >despiet
 That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+>despite
+That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
 #mistake retest for apt
 >apt
 Actually, Pat's advice may not be apt.
 !Look to the seed pit.
 
->despite
-!Your score has just gone up by one point
-That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+@mis
+#mistake test for proust
+>proust
+Alas, the stupor sprout has nothing in common with madeleine.
 
 @nud
 #renudge for carvings
@@ -551,11 +551,8 @@ It's not the carvings that need changing.
 You got the mushrooms from the seed pit, and that's what's important
 
 @nud
-#renudge for mushroom
->umshroom
-Brother Horbert will work his magic with that.
-#renudge for mushrooms
->umshrooms
+#renudge for stupor
+>surpot
 Brother Horbert will work his magic with that.
 #nudge for reagents
 >reagenst
@@ -643,6 +640,13 @@ This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, w
 >opposiet
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
+
+@nud
+#readables for ashtray
+>read ashtray
+/On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
+>read ashtray
+/On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side again if you want\.
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
@@ -1150,7 +1154,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
-@nud
 #pre-unlit-until rule
 >until
 }}SCORE++
@@ -1303,7 +1306,7 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
 #scannotes for thickness sketchins
 >scan thickness sketchins
-Those three sentences are certainly tangled, but ... well, you can imagine the drill by now. Perhaps the question marks are not tough to decipher at all.
+Those three sentences are certainly tangled, but ... well, they are a lot of data. Perhaps the question marks are not tough to decipher at all.
 
 @sli
 #slider test for athwart

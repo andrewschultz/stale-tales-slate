@@ -16,8 +16,8 @@ files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.tx
 ~	hints,hin,spoi	t5
 #~	pad	t5
 
-}}MAX=25
-}}CURMAX=25
+}}MAX=26
+}}CURMAX=26
 }}SCORE=0
 }}CURMIN=17
 
@@ -179,7 +179,7 @@ You already got hot. Now you need to summon a different emotion.
 Don't need to overheat, or overhate.
 #spechelp for race acre
 >caer
-For a second, things almost seem to matter. Then, a relapse. You must have been on to something, though.
+For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
 #scannotes for race acre
 >scan race acre
@@ -574,6 +574,26 @@ DEBUG INFO: I'd Cede hinting.
 >score
 {$SCOS}
 
+@sli
+#slider test for pleaser leapers
+>erepsal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@mis
+#mistake test for repeal/repeals
+>repeal
+That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+>repeals
+That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+
+@!mina,minb
+>relapse
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
 @nud
 #mistake test for snog
 >snog
@@ -675,11 +695,6 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-@sli
-#slider test for pleaser leapers
->erepsal
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 @nud
 #mistake retest for aled
 >aled
@@ -759,6 +774,7 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 @!mina,minb
+}}CURMIN++
 }}CURMIN++
 
 >score
@@ -1298,8 +1314,6 @@ by one point
 >score
 @mina,minb
 {$SCOS}
-# this is fixed because it was tricky enough to figure that a few bugs popped up. GAPE/DISCOVER/(other starer) can still be done in the final room. So instead of the minimum of 17, we have 20.
-Maximum score available is 20.
 @!
 {$SCOMAX}
 
@@ -1328,6 +1342,8 @@ you could've tried to BELIEVE to neutralize the evil bee, too.
 !--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
 
 @mina,minb
+Drain Nadir====
+--you could've tried to RELAPSE around the pleaser leapers.
 Boredom Bedroom====
 --you could've tried to GLARE at the Lager.
 

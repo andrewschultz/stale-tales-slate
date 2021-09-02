@@ -15,8 +15,8 @@ files=reg-roi2-towers-max.txt,reg-roi2-towers-min-h.txt,reg-roi2-towers-min-i.tx
 ~	sli	t4
 ~	hints,hin,spoi	t5
 
-}}MAX=54
-}}CURMAX=54
+}}MAX=55
+}}CURMAX=55
 }}SCORE=0
 }}CURMIN=25
 
@@ -882,16 +882,9 @@ The snider diners sniff at the beeping from the settler. They notice you look co
 #scannotes for try us yurts
 >scan try us yurts
 Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
-#scannotes for muscly luc sym
->scan muscly luc sym
-You've been around thee block enough to know what the variable color must be.
-#mistake test for scumly
->scumly
-Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.
->gs
->scumly
-Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.
->gs
+#scannotes for denier nereid
+>scan denier nereid
+You can amlmost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
 #mistake test for ursty/ur sty
 >ursty
 You're trying to destroy the yurts, not build them up.
@@ -1020,7 +1013,7 @@ Your score has just gone up by one point
 >n
 \\
 Baldest Blasted Saltbed
->restful
+>semipro
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1058,7 +1051,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 #notmax
->released
+>nerdiest
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1103,13 +1096,13 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >e
->semipro
+>restful
 Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
 #notmax
->himself
+>saltier
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1138,7 +1131,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 #notmax
->nerdiest
+>released
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1173,16 +1166,10 @@ Danger Garden
 >dinesr
 The diners glare at you, then look up at the sky, slightly worried.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the snider diners. That's a decent omen.
-#spechelp for muscly luc sym
->clumys
-Luc Sym stumbles for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Muscly Luc Sym. That's a decent omen.
->gs
-#spechelp for muscly ms lucy
->clumys
-Ms. Lucy stumbles for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Muscly Ms. Lucy. That's a decent omen.
->gs
+#spechelp for denier nereid
+>dieren
+The denier nereid seems to be pulled away towards Leak Lake for a moment.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the denier nereid. That's a decent omen.
 
 @!minh,mini
 >reined
@@ -1236,16 +1223,6 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-@nud
->e
-#mistake test for file
->file
-You wish you could file Mel Fish away and put him in the past.
-#mistake test for hms
->hms
-No ship comes to take Mel away. It's pretty landlocked here.
->w
-
 @!minh,mini
 >n
 
@@ -1265,8 +1242,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for pastier
 >aptseri
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for restful
->ertsulf
+#slider test for semipro
+>esimrop
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -1343,7 +1320,7 @@ DEBUG: guardian hint choice is sweatier wait-seer from sweatier wait-seer.
 >undo
 
 @!minh,mini
->restful
+>semipro
 Your score has just gone up by one point
 }}SCORE++
 >score
@@ -1385,8 +1362,8 @@ DEBUG INFO: Resident Trendies hinting.
 >undo
 
 @spoi
->xr trendies #02e
-Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
+>xr lars eede #11e
+Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 >xr admirer #02n
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
 >xr ingrates #02w
@@ -1401,9 +1378,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for married
 >rrmaedi
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for nerdiest
->eneidrts
-Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for released
+>ereledas
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: released.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
 #mistake test for tasering
@@ -1474,20 +1452,23 @@ They're already stonewalling you from going west. Whether or not you need to go 
 They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
 
 @max
->gonear leveraged everglade
->e
->naivest
-by one point
+#nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
+>gonear lost lots
 >s
 Dourest Detours
->rousted
-by one point
-Lost Lots
 >undo
 >undo
+>gonear outer route
+>w
+Dourest Detours
 >undo
 >undo
+>gonear shaven havens
+>w
+Dourest Detours
 >undo
+>undo
+
 
 @!minh,mini
 >angstier
@@ -1498,39 +1479,6 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 >w
-\\
-Dourest Detours
-
-@spoi
-#this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
->xr
-!You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
-After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
-
-@sli
-#slider test for rousted
->orsuedt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#scannotes for bogus-rousted
->scan
-You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
-#nudge for detour
->detoru
-This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
-#spechelp for bogus-rousted
->roustde
-You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
-DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
-
-@!minh,mini
-}}CURMIN++
->score
-{$SCOS}
->rousted
-Your score has just gone up by one point
-}}SCORE++
 \\
 Fringe Finger
 \\
@@ -1599,9 +1547,72 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+>w
+Dourest Detours
+\\
+@spoi
+#this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
+>xr
+!You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
+\\
+
+@sli
+#slider test for rousted
+>orsuedt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+@sli
+>smiesal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for seismal samiels
+>scan
+WRONG
+#nudge for samiel
+>samile
+There is more than one samiel to deal with, here.
+#spechelp for seismal samiels
+>samiesl
+The seismal samiels change intensity for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
+#scannotes for bogus-rousted
+>scan
+You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
+#nudge for detour
+>detoru
+This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
+#spechelp for bogus-rousted
+>roustde
+You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+
+@!minh,mini
+>rousted
+>score
+}}SCORE++
+}}CURMIN++
+}}CURMAX--
+{$SCOS}
+>undo
+}}CURMAX++
+>aimless
+Your score has just gone up by one point
+# don't need curmin--we already got it above with the UNDO!
+>score
+{$SCOS}
+>rousted
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+\\
+
+@!minh,mini
 >e
 {--mis}\\#mistake test for inserted\\>inserted\\You see red realizing the resident trendies already inserted themselves here.\\
->nerdiest
+>released
 Your score has just gone up by one point
 }}SCORE++
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
@@ -1795,40 +1806,22 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 No, Elsa's full name. Elsa Erde. With Reed's Ale.
 >gs
 \\
-#spechelp for mel fish
->mel fihs
-Mel Fish mutters, "No, that's not how to be me. Gotta be something simple and plain."
-DEBUG ONLY: You feel a slight psychic push-pull coming from "SMH, Life" Mel Fish. That's a decent omen.
-#nudge for smh
->shm
-No, you need to deal with all of Mel Fish.
-#mistakes for leif/lief
->leif
-Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
->lief
-Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
-#nudge for life
->ilfe
-No, you need to deal with all of Mel Fish.
-#nudge for mel
->mle
-No, you need to deal with all of Mel Fish.
-#nudge for fshi
->fsih
-No, you need to deal with all of Mel Fish.
+#spechelp for realist tailers
+>stailer
+The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
 
 @sli
-#slider test for released
->ereledas
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: released.
-!Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for nerdiest
+>eneidrts
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @hin
 DEBUG INFO: weeds hinting.
 
 @spoi
->xr lars eede #11e
-Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
+>xr trendies #02e
+Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
 @!minh,mini
 >resealed
@@ -1837,7 +1830,7 @@ Your score has just gone up by one point
 --you could've also RELEASED Lars Eede to give him a new outlook on life.
 >undo
 >undo
->released
+>nerdiest
 Your score has just gone up by one point
 }}CURMIN++
 }}SCORE++
@@ -1845,8 +1838,8 @@ Your score has just gone up by one point
 {$SCOS}
 
 @sli
-#slider test for himself
->ihsmlfe
+#slider test for saltier
+>astleri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
@@ -1872,19 +1865,12 @@ out of the way.
 >undo
 >undo
 
-@mis
-#mistake test for lief/leif
->lief
-Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
->leif
-Mel's probably had it with Old English. You're pretty sure he had a phase where he over-used it. Focus on his whole name.
-
 @spoi
 >xr mel fish
 Hmm. You bet you could get past if "SMH, Life" Mel Fish were HIMSELF.
 
 @!minh,mini
->himself
+>saltier
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -2110,8 +2096,8 @@ DEBUG INFO: REB-NOK bonker hinting.
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 
 @sli
-#slider test for semipro
->esimrop
+#slider test for restful
+>ertsulf
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
@@ -2120,7 +2106,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The promise imposer seems a little less intimidating."
 
 @!minh,mini
->semipro
+>restful
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -2225,6 +2211,12 @@ After a thoughtful gaze, you reckon the organised ego drains could be GRANDIOSE.
 #mistake test for organdies
 >organdies
 The ego-drains remain made of sturdy material.
+@mis
+#mistake test for retail/retails
+>retail
+The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
+>retails
+The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
 
 @!minh,mini
 >grandiose
@@ -3152,9 +3144,6 @@ Changing the clays would cause the curst palace to come tumbling down, since it'
 #nudge for caly
 >cayl
 Changing the clays would cause the curst palace to come tumbling down, since it's built on them. Change the palace instead.
-#nudge for pester
->pestre
-The serpent doesn't just pester, it's pester'n.
 #nudge for enip
 >enpi
 It's officially an ur-pine, not a pine.
@@ -3184,13 +3173,13 @@ You're not sure if the serpent's ever been spent, so you can't quite make it re-
 >urpien
 The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. That's a decent omen.
-#spechelp for pestern serpent
+#spechelp for repents serpent
 >presetn
 The serpent calms down for a split-second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pester'n serpent. That's a decent omen.
 >presetn
 The serpent calms down for a split-second, again.
-#scannotes for pestern serpent
+#scannotes for repents serpent
 >scan pester'n serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
 #renudge for lake
@@ -3284,9 +3273,9 @@ You need to make something occur.
 #nudge for occurs
 >occusr
 Changing the blub bulb to a succor crocus was good enough. Why risk more?
-#nudge for present
->presetn
-The serpent is taken care of.
+#nudge for repent
+>repten
+You're probably better of dispelling all the things to repent about at once, not just one.
 
 @!minh,mini
 >in

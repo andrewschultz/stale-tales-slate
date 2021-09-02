@@ -77,6 +77,9 @@ Rustic Citrus doesn't make for great living quarters.
 #mistake test for broader
 >broader
 Rustic Citrus is secluded enough.
+#mistake test for cruits
+>cruits
+Alas, no recruits named Ric or Stu arrive for you to delegate anything to.
 #mistake test for gapers
 >gapers
 Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
@@ -116,14 +119,9 @@ You don't want miles and miles of slime.
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
 \\
-#nudge for arbored
->aborder
-You're not the tree-mangling type. Perhaps if you had a sense of direction, you could figure how to leave.
-\\
-#nudge for border
->bordre
-You're not the tree-mangling type. Perhaps if you had a sense of direction, you could figure how to leave.
-\\
+#nudge for greenish
+>sheerign
+The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway.
 #nudge for storeh
 >streho
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.

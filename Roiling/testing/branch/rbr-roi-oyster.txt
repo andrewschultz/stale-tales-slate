@@ -1153,6 +1153,9 @@ Cute bunnies can make any game better, but having to deal with French as well wo
 #mistake test for naps
 >naps
 You need action, here! Maybe nothing too exhausting, but some action nonetheless.
+#mistake test for nepo
+>nepo
+No world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
 #mistake test for palins
 >palins
 Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.

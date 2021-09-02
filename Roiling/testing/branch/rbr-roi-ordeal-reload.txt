@@ -124,19 +124,17 @@ You can just change the tables by saying STABLE.
 You can just change the tables by saying STABLE.
 >zozimus stable
 You can just change the tables by saying STABLE.
-#renudge for rove
->roev
-That's not a way to sneak around and avoid any future knock at the door.
-#spechelp for palm
->lapm
-You think you feel the palm shake a bit, but nothing terribly magical happens.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 #mistake retest for odor
 >odor
 No, you need a light source, not a way out.
 #mistake retest for rood
 >rood
 You need a light source.
+#mistake test for laredo
+>laredo
+If you want a Western game situated on the US/Mexico border, this isn't for you.
+
+@nud
 #nudge for dark
 >dakr
 You punch your fist as you realize DARK has no anagrams...right into the palm.
@@ -145,6 +143,13 @@ Oh no, not again. Concentrate on the palm.
 #nudge for darkness
 >darkness
 Oh no, not again. Concentrate on the palm.
+#renudge for rove
+>roev
+That's not a way to sneak around and avoid any future knock at the door.
+#spechelp for palm
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 
 >lamp
 Your score has just gone up by one point.
@@ -1050,13 +1055,13 @@ by one point
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
 >yes
 "I respect your choice."
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 
 ###################don't scan at all
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 ####################only c-scan the specter
 >scan specter
@@ -1064,7 +1069,7 @@ Your settler registers ?R?????
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 The Respect Specter coughs.
@@ -1092,7 +1097,7 @@ by one point
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1103,7 +1108,7 @@ by one point
 "You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1115,7 +1120,7 @@ by one point
 "You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1127,7 +1132,7 @@ by one point
 "In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1139,7 +1144,7 @@ by one point
 "I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific."
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1151,7 +1156,7 @@ by one point
 "This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities."
 >in
 "I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
@@ -1163,7 +1168,7 @@ by one point
 "That's all. Thanks for listening. I can repeat things one step at a time if you need a recap."
 >in
 "I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Some people don't want or need it. But if you do, here it is."
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 >scepter
 !The Respect Specter coughs.
