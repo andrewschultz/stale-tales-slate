@@ -26,6 +26,8 @@ cfg_file = "c:/writing/scripts/rorg.txt"
 ignore_full = defaultdict(bool)
 ignore_start = defaultdict(bool)
 
+prefix = defaultdict(str)
+
 nudge_exp_cols = i7.cols_of(i7.hdr('sts', 'co'), "table of no nudges", 5, warn_if_different = True)
 
 verbose = False
@@ -36,6 +38,8 @@ copy_file = False
 game_ary = [ "sa", "roi" ]
 do_nudges = True
 do_tables = False
+
+hunt_table_print_inconsistencies = False
 
 bail_force = False
 bail_on_mismatch = False
@@ -88,6 +92,7 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
     fbase = os.path.basename(my_f)
     dupes = 0
     garbage = ""
+    general_table_next = False
     with open(my_f) as file:
         for (line_count, line) in enumerate(file, 1):
             if not write_lines and sort_end in line:
@@ -96,6 +101,8 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
             if near_end:
                 ending_bit += line
                 continue
+            if line.startswith("chapter "):
+                general_table_next = True
             if table_start in line:
                 in_necc_section = True
                 ever_necc_section = True
@@ -114,6 +121,11 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
                 my_table = re.sub(" *\[.*", "", my_table)
                 my_table = re.sub(" *(nudges|anagrams)", "", my_table)
                 table_starts[my_table] = line_count
+                if general_table_next:
+                    prefix[my_table] = 'chapter'
+                    general_table_next = False
+                else:
+                    prefix[my_table] = 'section'
                 continue
             if line.startswith(table_col_0):
                 in_table = True
@@ -197,6 +209,8 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         for cmd in sorted(x, key=lambda x:sect_order[x]):
             count += 1
             print("{:2d} Line {:5d} has print command {:s}.".format(count, sect_order[cmd], cmd))
+            if hunt_table_print_inconsistencies:
+                mt.add_postopen(my_f, sect_order[cmd], priority = 9)
     y = list(set(table_order) - set(sect_order) - set(ignore_full))
     if len(y):
         print("Table commands not in print:")
@@ -204,8 +218,15 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         for cmd in sorted(y, key=lambda x:table_order[x]):
             count += 1
             print("{:2d} Line {:5d} has print command {:s}.".format(count, table_order[cmd][0], cmd))
-    if not len(x) and not len(y): print("Table and print commands all match up! Yay!")
-    elif bail_on_mismatch: sys.exit("Bailing on mismatches.")
+            if hunt_table_print_inconsistencies:
+                mt.add_postopen(my_f, table_order[cmd][0], priority = 9)
+    if not len(x) and not len(y):
+        print("Table and print commands all match up! Yay!")
+    elif bail_on_mismatch:
+        sys.exit("Bailing on mismatches.")
+    elif len(x) or len(y):
+        mt.postopen()
+        print("-h to hunt and edit these inconsistencies.")
     ts = sorted(table_starts, key=table_starts.get)
     table_got = dict(sect_order)
     for q in sorted(table_order, key=table_order.get):
@@ -218,13 +239,13 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
             #if not pop_yet: temp_out.write("\n")
-            temp_out.write("section {:s} auxiliary\n\n".format(ts[0]))
+            temp_out.write("{} {:s} auxiliary\n\n".format(prefix[ts[0]], ts[0]))
             ts.pop(0)
             #if not pop_yet: temp_out.write("\n")
         temp_out.write(cur_full_quote[q] + "\n")
     if len(table_got):
         print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end:", '/'.join(table_got))
-        temp_out.write("\nbook leftovers\n\n")
+        temp_out.write("book third party stuff\n\n")
         for q in table_got: temp_out.write("{:s}\n".format(cur_full_quote[q]))
     else: print("Nothing left over. Hooray.")
     if garbage:
@@ -269,6 +290,8 @@ while cmd_count < len(sys.argv):
         do_nudges = False
         do_tables = True
     elif arg == 'b' or arg == 'bf' or arg == 'fb': bail_force = True
+    elif arg == 'h':
+        hunt_table_print_inconsistencies = True
     elif arg == 'bm' or arg == 'mb': bail_on_mismatch = True
     elif arg[:2] == 'md' and arg[2:].isdigit():
         max_file_difs = int(arg[2:])

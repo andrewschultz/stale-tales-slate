@@ -41,6 +41,8 @@ sync_detail = defaultdict(str)
 
 rbr_warn = defaultdict(int)
 
+slider_tracking = defaultdict(lambda: defaultdict(str))
+
 region_wildcard = ""
 
 show_wrongs = False
@@ -49,6 +51,16 @@ wrong_count = 0
 out_to_file = False
 launch_outfile = False
 houtfile = "hch_out.txt"
+
+with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
+    for (line_count, line) in enumerate (file, 1):
+        if line.startswith('#'): continue
+        if line.startswith(';'): break
+        (prefix, data) = mt.cfg_data_split(line)
+        if prefix == 'slider':
+            ary = data.split(',')
+            for x in ary[1:]:
+                slider_tracking[ary[0]][x] = False
 
 def standard_usage():
     print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
@@ -79,7 +91,7 @@ def match_slider_tests():
     fi = i7.hdr('roi', 'ta')
     fi2 = i7.hdr('roi', 'nu')
     regions = [ 'ordeal reload' ]
-    slider_tracking = defaultdict(lambda: defaultdict(str))
+
     in_header = False
     in_table = False
     need_cmd = False
@@ -106,7 +118,7 @@ def match_slider_tests():
     with open(fi2) as file:
         for (line_count, line) in enumerate(file, 1):
             ll = line.lower().strip()
-            if (ll.startswith("section") and "auxiliary" in ll) or (ll.startswith("chapter") and "nudges" in ll):
+            if ll.startswith("chapter") and ("auxiliary" in ll or "nudges" in ll):
                 ary = ll.split(' ')
                 aux_sect = ary[1]
             if '[slider test ' in ll:
@@ -240,8 +252,7 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
                 continue
             if mt.last_mod(rox) > mt.last_mod(x):
                 if rox not in rbr_warn:
-                    print("WARNING", rox, "modified after", x)
-                    print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(rox))), "vs", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(x))))
+                    print("WARNING", rox, "modified after", x, time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(rox))), "vs", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(mt.last_mod(x))))
                 rbr_warn[rox] += 1
         with open(x) as file:
             if not quiet: print("Checking", x)
