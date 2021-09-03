@@ -238,10 +238,18 @@ def alf_stuff(my_f, table_start, table_end, sort_start, sort_end, table_col_0, e
             print("Something weird happened. Tried to pop", q, "from the table_order dictionary but couldn't.")
         # print(q, table_order[q], ts, ts[0], table_starts[ts[0]])
         if len(ts) and table_order[q][0] > table_starts[ts[0]]:
-            #if not pop_yet: temp_out.write("\n")
-            temp_out.write("{} {:s} auxiliary\n\n".format(prefix[ts[0]], ts[0]))
-            ts.pop(0)
-            #if not pop_yet: temp_out.write("\n")
+            temp_ary = []
+            while len(ts) and table_order[q][0] > table_starts[ts[0]]:
+                temp = ts.pop(0)
+                temp_ary.append(temp)
+                print("Popping", temp, "from", q, table_order[q][0], table_starts[temp])
+                #if not pop_yet: temp_out.write("\n")
+            if len(temp_ary) > 1:
+                for x in temp_ary[:-1]:
+                    if prefix[x] == 'chapter':
+                        temp_out.write("{} {:s} auxiliary\n\n".format(prefix[x], x))
+            temp_out.write("{} {:s} auxiliary\n\n".format(prefix[temp], temp))
+                #if not pop_yet: temp_out.write("\n")
         temp_out.write(cur_full_quote[q] + "\n")
     if len(table_got):
         print(len(table_got), "unique left over,", dupes, "total duplicates. Dumping unsorted stuff at the end:", '/'.join(table_got))
