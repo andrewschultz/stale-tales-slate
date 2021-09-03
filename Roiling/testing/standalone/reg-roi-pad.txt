@@ -1,0 +1,356 @@
+## reg-roi-others.txt
+## testing all possible passages through others, e.g. how much you can give Curtis, when
+##
+## also tests nudges
+##
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* everything
+
+>au 1
+
+>pad
+Currently you can consult your pad about these general topics:
+--verbs, options, access, free turns.
+--go to, Old Warpy, methods, red.
+--Shuffling Around, tagged gadget, retry, warp.
+--directions/dirs.
+
+>think
+
+>stable
+>pad
+flips
+>undo
+>undo
+
+>open door
+>1
+>5
+
+>lamp
+
+>pad
+Elvira
+
+>basement
+
+>pad
+opt in/no tip
+
+>poss
+>pad
+poss,
+
+>satchel
+>x settler
+[You record the information about the settler in your notepad.]
+
+>pad
+the settler
+
+>d
+>in
+
+>flier
+>3
+"Oh, you should know--Gretta Garett-Tatger, the journalist, has become a target--sorry about that--for looking into Elvira's operations. Gretta may've left a hint in the Strip of Profits, and she may have something for you, if you find her. So, um, yeah, good idea, write that down."
+
+>pad
+rove over
+--Gretta, Old Warpy, SHATTER-THREATS, the settler.
+
+>staple
+>stapler
+>staple wall
+>in
+
+################################trips strip
+
+
+>pad
+retry
+warp
+
+>hint equals
+>hint equals
+>hint equals
+sy/sn
+
+>shake settler
+in the future, you can shorten this with SS
+
+>pad
+/\bss\b
+
+>sl
+>pad
+/\bsl\b
+>undo
+>undo
+
+>switch slider
+[NOTE: You can type SL to toggle the slider in the future.]
+You switch the slider on.
+
+>pad
+/\bsl\b
+
+>w x y z a
+[You record the information about long commands in your notepad.]
+>pad
+long commands
+
+>undo
+>undo
+
+>scan store f with settler
+[NOTE: you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.]
+
+>w x y z a
+[You record the information about long commands in your notepad.]
+
+>pad
+long commands
+
+##########################routesy
+
+>routes
+>in
+
+>scan signboard
+[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
+
+>pad
+/\bla\b
+/\bspaces\b
+
+>say yoho
+!You add the information
+
+>pad
+/\bsaying\b
+
+>against
+[You add the information to your pedanto-notepad under FLIPS.]
+
+>pad
+flips
+
+>sleep
+
+>pad
+/\bsleep\b
+
+>past
+>despite
+>out
+>across
+>opposite
+>out
+>inside
+
+>x toils
+record the information
+>pad
+reagents
+random dialogue
+
+>out
+>against
+>astride
+>below
+>under
+>inside
+No-Gal Logan
+
+>out
+>from
+>beneath
+
+>until
+>around
+>along
+
+>amidst
+
+>pad
+hit win
+
+>retry
+>pad
+!reagents
+
+########################troves specific
+
+>retry
+>troves
+>enter troves
+>z
+>z
+>z
+>z
+>z
+>pad
+random dialogue
+
+#######################presto specific
+
+>retry
+
+>presto
+>enter spot
+
+>umph
+>pooh
+>e
+>s
+>drat
+>rats
+>s
+>ole
+>darn
+>whassup
+
+>n
+>n
+>bleep
+>e
+>bingo
+>put dart in gun
+>w
+>mazeltov
+>there
+>n
+
+>syke
+>later
+>tough
+>pad
+Leo and Rand
+
+>n
+
+>x catechism
+>pad hacking
+A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
+
+>retry
+
+########################oyster specific
+
+>ts
+>oyster
+>enter oyster
+>ask casper about norman bleistift
+[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
+
+>pad
+the haunter
+DIE THOU
+
+>undo
+>undo
+
+>ask casper about xxx
+[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
+>pad
+the haunter
+DIE THOU
+>undo
+>undo
+
+>scrape
+>spit
+>sing
+>stroll
+>calm
+>run
+
+>boast
+>leap
+
+>scrap
+>e
+>seek
+>ask tuna about xxx
+the haunter/DIE THOU
+>pad
+the haunter
+DIE THOU
+>undo
+>undo
+
+>ask tuna about casper
+the haunter/DIE THOU
+>pad
+the haunter
+DIE THOU
+>undo
+>undo
+
+>retry
+
+>pad
+!You can also consult your pad about topics specific to this region:
+
+##################################towers specific
+
+>seed 1
+>towers
+>enter towers
+
+>gone
+>bleak
+>wined
+>yonder
+the Bland Sad Badlands are a cruel, difficult place
+about badlands in
+>pad
+You can also consult your pad about topics specific to this region:
+badlands
+curst palace
+
+>scan palace
+You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
+
+Your settler registers RRYR*******.
+
+>get tarts
+>put tarts in toaster
+
+>pad xray
+
+>gonear mislit
+>present
+>dingy
+>w
+>greyed
+>give flowerpot to ed
+>ask ed about palace
+>e
+
+>pad
+scenery
+
+>retry
+
+#############################otters
+
+>a5
+
+>x otters
+>x field of barley
+
+>barely
+>pf
+You can make the barley be BARELY there once you get past the otters.
+
+>in
+Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.
+
+>pad
+asking
+

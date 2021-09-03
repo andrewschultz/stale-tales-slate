@@ -31,6 +31,10 @@ Peek Keep
 >demo dome mode
 Peek Keep
 
+#mistake test for singed
+>singed
+You already saw one when you helped Curtis. Plus, arson is bad.
+
 #nudge for peek
 >pkee
 You don't need to flip anything here, really. Certainly not a room.

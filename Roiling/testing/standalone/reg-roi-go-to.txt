@@ -1,0 +1,575 @@
+###############################
+#
+#reg-roi-go-to.txt
+#
+#regression test for trying ways through demo dome including nudges
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* manor-go-to
+
+>go to me
+>go to study
+>go to gunter
+Who?
+
+>go to rodney
+You haven't made it to that region, yet.
+
+>go to xxx
+That's not a room or thing I recognize.
+
+>go to elmo
+
+>think
+>x shelf
+>open door
+>1
+>gt study
+>5
+>lamp
+>basement
+>d
+>gt study
+Dusty Study
+
+>chimney
+>u
+>gt study
+Dusty Study
+
+>stable
+>in
+A Blest Stable
+
+>gt basement
+Basement
+
+>satchel
+>x settler
+>gt cavern
+You've never been there yet, so you can't go back.
+
+>in
+>flier
+>gt study
+No need to poke around when you have someone willing to help you--especially since it means less time for him to escape afterwards.
+
+You can RECAP to see your options.
+
+>3
+Carven Cavern
+
+>gt study
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt basement
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt highest
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt stable
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+
+>staple
+>stapler
+>put staple in stapler
+>staple
+>in
+
+* stores-go-to
+
+>ts
+
+>gt study
+You already solved Roman Manor.
+
+>tokers
+>nestor
+
+>enter cloud
+>gt profits
+The command you may be looking for is RETRY.
+
+>in
+>outside
+
+>gt lectures
+You already took care of things there.
+
+* routes-go-to
+
+>ts
+
+>routes
+>gt store u
+
+>enter routes
+Same Mesa
+
+>gt trips strip
+The command you may be looking for is RETRY. Do that now instead?
+>undo
+
+>inside
+>x toils
+>outside
+>gt cleric
+Cleric Circle
+
+>gt mesa
+Same Mesa
+
+>against
+>gt Circle
+You can't run from the giant!
+
+>astride
+>below
+>under
+
+>past
+Idle Deli
+
+>despite
+
+>out
+
+>across
+Adobe Abode
+
+>opposite
+
+>gt horbert
+>out
+
+>gt horbert
+That person has served the necessary purpose.
+
+>from
+
+>gt horbert
+That person has served the necessary purpose.
+
+>gt runed book
+That has served the necessary purpose.
+
+>beneath
+
+>gt mesa
+The crowd would be sad to see you return, unsuccessful.
+
+>until
+>around
+>along
+
+>gt underpass
+>gt mesa
+The crowd would be sad to see you return, unsuccessful.
+
+>amidst
+
+>gt pier
+You have no idea how to turn the cripple clipper around, and you don't want to.
+
+>gt mesa
+Not from the boat, you aren't. You're much closer to your goal right now.
+
+>behind
+>between
+Strip of Profits
+
+* troves-go-to
+
+>ts
+>troves
+>in
+
+>hate
+>care
+
+Bustle Sublet
+>gt rathole
+Going back would be a dereliction of your destiny.
+
+>observe
+>spot
+
+Boarded Roadbed
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+
+>believe
+>recall
+
+Drain Nadir
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+>gt roadbed
+Going back would be a dereliction of your destiny.
+
+>gt capsule
+You must work to make your dreams of going there become reality.
+
+>despair
+
+>decide
+
+Boredom Bedroom
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+>gt roadbed
+Going back would be a dereliction of your destiny.
+>gt nadir
+Going back would be a dereliction of your destiny.
+
+>master
+>deal
+
+Browse Bowers
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+>gt roadbed
+Going back would be a dereliction of your destiny.
+>gt nadir
+Going back would be a dereliction of your destiny.
+>gt boredom
+Going back would be a dereliction of your destiny.
+
+>desire
+
+Econ-Cone
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+>gt roadbed
+Going back would be a dereliction of your destiny.
+>gt nadir
+Going back would be a dereliction of your destiny.
+>gt boredom
+Going back would be a dereliction of your destiny.
+>gt bowers
+Going back would be a dereliction of your destiny.
+
+>aspire
+>ponder
+
+Upscale Capsule
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt sublet
+Going back would be a dereliction of your destiny.
+>gt roadbed
+Going back would be a dereliction of your destiny.
+>gt nadir
+Going back would be a dereliction of your destiny.
+>gt boredom
+Going back would be a dereliction of your destiny.
+>gt bowers
+Going back would be a dereliction of your destiny.
+>gt cone
+Going back would be a dereliction of your destiny.
+>gt fiefco
+You're already here.
+
+>deserve
+Your score has just gone up by one point
+>last
+Your score has just gone up by one point
+>ramble
+Your score has just gone up by one point
+>recant
+Your score has just gone up by one point
+
+Strip of Profits
+
+* presto-go-to
+
+>ts
+
+>enter spot
+>presto
+>in
+
+>umph
+>pooh
+>e
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>n
+
+>gt lev matzo
+You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
+
+>s
+>rats
+>drat
+>s
+>ole
+>darn
+>whassup
+>n
+>n
+>bleep
+>e
+>get gun
+>bingo
+>put dart in gun
+>w
+
+>gt lev matzo
+You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
+
+>mazeltov
+>gt lev matzo
+You don't want to go back to or through the volt maze you solved.
+
+>there
+>n
+>syke
+>n
+>tough
+>so long
+
+>gt dirge ridge
+"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
+>gt leo
+"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
+
+>n
+>screen
+>put screen on slab
+>casserole
+>leaf
+>skid
+>gt disk
+You can flip back to the disk.
+>push skid s
+>g
+>g
+>put leaf on skid
+>s
+Hacks' Shack
+>gt phat path
+Phat Path
+>n
+>keyboard
+>gt Phat Path
+You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
+>put keyboard on slab
+>put screen on slab
+>disk
+>gt skid
+You can flip back to the skid.
+
+* oyster-go-to
+
+>ts
+>oyster
+>in
+
+>spit
+>sing
+>inset
+>stroll
+
+>gt shop
+The trolls would not welcome you back.
+
+>calm
+>run
+Shore
+
+>gt lode
+You don't want to go back near that urn.
+
+>gt shop
+The trolls would not welcome you back, and it'd take too long to get there.
+
+>boast
+>gt shore
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt lode
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt shop
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+
+>leap
+>gt freight
+You don't really want to revisit the crays.
+>gt shore
+No sense crossing back. There's more on this side of the shore.
+>gt lode
+You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+>gt shop
+The trolls would not welcome you back, and it'd take too long to get there.
+
+>spike
+>e
+>scan
+>gt anger range
+You've lost the way back, but the eeks are calling you on.
+
+>seek
+
+>gt dearths
+Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to.
+
+>purloin gleaner
+>enlarge gleaner
+>x gleaner
+>abstract ruby to ll
+>abstract walleyes to ll
+>gonear hedron
+>patrol
+>purloin lance
+>purloin wipes
+>clean lance
+>in
+
+>gt anger range
+Aw, c'mon, the ant should be no problem.
+>tan ant
+Tenfold
+>gt plasm lamps
+You got rid of the ant. Nothing more to do there.
+
+* towers-go-to
+
+>seed 1
+>ts
+>towers
+>in
+
+>gone
+>wined
+>bleak
+>yonder
+Topside Deposit
+
+>gt trefoil
+You had your fun in there.
+>gonear waters
+>gt trefoil
+Progress isn't easy when you're flailing in water.
+>gt deposit
+Progress isn't easy when you're flailing in water.
+
+>nearest
+>gt waters
+No, it wasn't fun the first time.
+>gt deposit
+You don't want to cross Leak Lake again.
+>gt trefoil
+That's way in the past.
+
+* otters-go-to
+
+>seed 1
+>a5
+>in
+>barely
+>reedily
+>w
+>nastily
+>blearily
+>bossily
+>1
+>gt barley
+Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options.
+>3
+>n
+>because
+>else
+>s
+>e
+>n
+>angrily
+>brutely
+>n
+>slow
+>coolest
+>garbed
+>artsy
+>s
+>s
+>s
+>loathingly
+>stoically
+>s
+>parrot
+>snail
+>snipe
+>hornets
+>n
+>n
+>w
+>atom
+>w
+>raptor
+>deeply
+>quickly
+>w
+>gt barley
+"Good fail of dialog!" Elvira can negotiate awkward silence better than you can.
+
+>7
+>gt barley
+You leave her sin shrine with extra quickness before getting a shiner.
+
+Bleary Barley
+
+* others-go-to
+
+>ts
+>gonear rustic
+>pears
+>plums
+>grapes
+>tamarind
+
+>compass
+by one point
+
+>n
+>w
+>e
+>e
+>w
+>n
+>s
+>d
+>gt rustic
+Rustic Citrus
+>gt swell
+Swell Wells
+>gt filed
+Filed Field
+>gt len
+Clangier Clearing
+>gt gates
+Gates Stage
+
