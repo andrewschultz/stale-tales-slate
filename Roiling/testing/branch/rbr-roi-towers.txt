@@ -953,6 +953,9 @@ You don't have x-ray vision right now.
 >purloin brownies
 >put brownies in toaster
 The x-ray vision comes back. Once again, you can XRAY what you want to.
+>xray nereid
+Hmm. You bet you could get past if the denier nereid were REINED.
+!DEBUG INFO: Taking away a max point.
 >xray diners
 Hmm. You bet you could get past if the snider diners were RINSED.
 !DEBUG INFO: Taking away a max point.
@@ -1874,6 +1877,8 @@ Hmm. You bet you could get past if the realist tailers were SALTIER.
 #scannotes for realist tailers
 >scan realist tailers
 The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools.
+#nudge for tailer
+No, you need to deal with all the tailers.
 
 @!minh,mini
 >saltier
@@ -3274,6 +3279,9 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
+#nudge for present
+>pretnes
+The serpent is taken care of.
 #mistake test for occurs
 >occurs
 You need to make something occur.

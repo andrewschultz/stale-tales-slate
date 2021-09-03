@@ -121,7 +121,7 @@ The arugula is just for eating, so you can change something else that's been stu
 \\
 #nudge for greenish
 >sheerign
-The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway.
+The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. Perhaps if you had a sense of direction, you could figure how to leave.
 #nudge for storeh
 >streho
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -270,9 +270,9 @@ You can EXAMINE the ruts circuits to discover more things to change to fruits.
 #done rejects for compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
-#renudge for arbored
->aborder
-You're not the tree-mangling type. So you can only exit to the north.
+#renudge for sheering
+>sheering
+The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. So you can only exit to the north.
 #nudge for needle
 >needel
 The needle is working fine. No need to meddle.
@@ -695,9 +695,6 @@ The singed design on the coin should make you not just want to deign but DO.
 #nudge for singed
 >deigsn
 The design is sort of glommed onto the coin. So you should figure what to do, there.
-#renudge for arbored
->aborder
-You're not the tree-mangling type. So you can only exit to the north.
 #spechelp for coin
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.

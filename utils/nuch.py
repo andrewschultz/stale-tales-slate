@@ -40,6 +40,7 @@ open_after_write = False
 flag_double_comments = False
 open_post = False
 clear_files = False
+quiet = False
 
 TEXT_COLUMN = 4
 
@@ -87,8 +88,9 @@ def pre_process(sts):
                 chapter_name = re.sub("^chapter ", "", line.strip().lower())
                 chapter_name = re.sub(" nudges.*", "", chapter_name.strip().lower())
                 current_chapter = sts + '-' + chapter_name
-                print("Current chapter now", current_chapter)
-                continue
+                if not quiet:
+                    print("Current chapter now", current_chapter)
+                    continue
             if re.search("\"\t[0-9]", line) and not line.startswith('['):
                 line = re.sub(" *\[[^\]]+\]$", "", line.strip())
                 tlist = line.split('\t')
@@ -320,6 +322,8 @@ while count < len(sys.argv):
         open_post = True
     elif arg == 'no' or arg == 'on':
         open_post = False
+    elif arg == 'q':
+        quiet = True
     else:
         print("Unrecognized command", arg)
         usage()

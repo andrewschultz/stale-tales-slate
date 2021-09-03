@@ -66,6 +66,8 @@ around,YRY?RR=oddrun=onaura
 along,??Y??=allno=ongag
 along,nogal,logan
 #ripe pier
+#qver of data dim mists
+amidst,Y??RRR=datadi=mmists
 #qver of admits mist ad
 amidst,?RYRRR=admits=mistad
 amidst,tdasim,sadtim,msdita,itsmad
@@ -87,7 +89,7 @@ spot,pops,tots
 stay,yays,tats
 #qver of sob ever verbose
 observe,YRR?RR?=sobever=verbose
-observe,evesbro,boevers
+observe,evesbro,boevers,beevors,ervbeso
 #qver of a sty tasty say
 stay,RR??=asty=tast=ysay
 stay,yays,tats
@@ -98,6 +100,9 @@ derive,idveer,viered,everid
 reason,noears,sorena,anorse,oasner,asnero
 #drain nadir
 decide,iceded,cdedei,ecedid
+#qver of pleaser leapers
+relapse,R?R?RRY=pleaser=leapers
+relapse,sapleer
 #boredom bedroom
 #qver of large regal lager
 glare,RRYR?=large=regal=lager
@@ -272,8 +277,8 @@ subtler,R?RRR??=bluster=butlers
 #qver of snider diners
 rinsed,R??R?R=snider=diners
 rinsed,isdern,drenis,nerdis
-#qver of muscly luc sym
-clumsy,RRYRR?=muscly=lucsym
+#qver of denier nereid
+reined,RGYR??=denier=nereid
 #(random anywhere)
 creaky,kcayer,rayeck,keycar,yacker
 weariest,treesawi,treesiaw,sitweare,ewitears
@@ -311,7 +316,9 @@ broken,rebonk
 angstier,?PPRRY?R=angriest=ingrates
 angstier,rangiest,geraints,natesrig,tangiers,stingera,streagin,strigena,nitergas,nitregas,sanergit,iregnats
 #leveraged everglades
-himself,melfish,shelfim,smhlife,ehfilms,flemish
+#qver of realist tailers
+saltier,R?RR?YR=realist=tailers
+saltier,itsreal,literas,tiresal
 grandiose,nosiregad,noegadsir,siregadno,sadregion,digreason,eardosing,doersgain
 #qver of traipse pirates
 pastier,?YRRY?R=traipse=pirates
@@ -377,6 +384,8 @@ nerdiest,R?RRY?R?=resident=trendies
 #qver of dourest detours
 rousted,R??RRYR=dourest=detours
 rousted,ourdest,setdour,trodsue
+#qver of seismal samiels
+aimless,YY?R?R?=seismal=samiels
 #qver of nastier stainer retinas
 antsier,YR?R???=nastier=stainer=retinas
 ################otters
@@ -408,6 +417,8 @@ atom,??YR=atmo=moat
 #qver of iqluckyluckyiq
 quickly,R?YRRR?=iqlucky=luckyiq
 #loop pool
+#qver of sullenness us
+unless,YR?YR?=sullen=nessus
 #bran barn
 although,ghoulhat,holathug,ughohalt
 ergo,gore,ogre
