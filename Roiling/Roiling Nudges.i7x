@@ -422,6 +422,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "magazine"	465726572	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "wagon"	285982378	wonga wagon	--	"You really don't need to rearrange the wonga wagon."
 "cark"	159450384	cark rack	--	"The cark rack is built to be sturdy. No need to change it."
+"vote"	412433524	--	--	"[stove-symbolic]."
+"vetos"	508707490	--	--	"[stove-symbolic]."
 "phasor"	376886422	pharos phasor	--	"[pha-light]."
 "pharo"	280612456	pharos phasor	--	"[pha-light]."
 "shaker"	401807173	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
@@ -1814,6 +1816,8 @@ to say scrapery: say "The godlings['] lodgings are a testament to the immovable 
 to say full-pod: say "You must deal with the full END PRONER POD"
 
 section upscale capsule auxiliary
+
+to say stove-symbolic: say "The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote"
 
 to say pha-light: say "You need all that light for late-night work sessions"
 

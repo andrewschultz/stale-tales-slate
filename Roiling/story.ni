@@ -12089,7 +12089,7 @@ section pharos phasor
 
 the pharos phasor is boring amusing scenery. description of pharos phasor is "It gives enough light to keep you awake and nervous and needing to do more.". bore-text is "The pharos phasor would be expensive and toxic to futz with."
 
-chapter desk sked, wonga wagon, cark rack
+chapter desk sked, wonga wagon, cark rack, votes vetos stove
 
 the cark rack is boring scenery. description of cark rack is "Made of nice to notice eco-tin, this--well, it's a desk, really, but one you can complain about hard work over--is more popular and efficient than the [randbla], an inferior product for promoting productivity.". bore-text is "No, the desk is good as it is.". understand "dsk" as cark rack.
 
@@ -12113,6 +12113,8 @@ this is the bore-wagon rule:
 			say "Your settler picks up a signal when it moves to the trance nectar.";
 			try scaning trance nectar instead;
 		say "But you weren't able to find any. That's a bug, but still, there must be something to do!" instead;
+
+the votes vetos stove is boring amusing scenery. description of votes vetos stove is "It's not the real thing, of course. If there were a real thing. But it's symbolic. It shows you know people. It's a reminder some people don't deserve to vote, but you guess you have to let them, but you don't have to make it easy. Oh, and that you deserve access to the vote-counters. It's also Just a Joke, because of course it is."
 
 chapter red vees
 
