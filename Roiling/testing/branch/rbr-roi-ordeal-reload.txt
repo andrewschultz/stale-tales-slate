@@ -660,13 +660,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for event map
 >venemtpa
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for brasscrag
+#slider test for brass crag
 >sarbcgars
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for farmplot
+#slider test for farm plot
 >afmrlpto
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for steelpad
+#slider test for steel pad
 >eestplda
 Your settler begins to make noises: a low hum, but nothing really piercing.
 ###################here we test a special case: if you use the slider on part of the diorama, then you figure what it's for, and the game doesn't let you do it again.

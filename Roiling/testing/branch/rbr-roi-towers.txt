@@ -1549,7 +1549,7 @@ Your score has just gone up by one point
 {$SCOS}
 >w
 Dourest Detours
-\\
+
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
 >xr
@@ -1561,7 +1561,7 @@ After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 #slider test for rousted
 >orsuedt
 Your settler begins to make noises: a low hum, but nothing really piercing.
-@sli
+#slider test for aimless
 >smiesal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -1589,6 +1589,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 
 @!minh,mini
 >rousted
+by one point
 >score
 }}SCORE++
 }}CURMIN++
@@ -1866,8 +1867,13 @@ out of the way.
 >undo
 
 @spoi
->xr mel fish
-Hmm. You bet you could get past if "SMH, Life" Mel Fish were HIMSELF.
+>xr realist tailers
+Hmm. You bet you could get past if the realist tailers were SALTIER.
+
+@nud
+#scannotes for realist tailers
+>scan realist tailers
+The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools.
 
 @!minh,mini
 >saltier
@@ -2211,7 +2217,6 @@ After a thoughtful gaze, you reckon the organised ego drains could be GRANDIOSE.
 #mistake test for organdies
 >organdies
 The ego-drains remain made of sturdy material.
-@mis
 #mistake test for retail/retails
 >retail
 The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
@@ -2307,6 +2312,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >bonkre
 "TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the REB-NOK bonker. That's a decent omen.
+#readables for bonker
+>read bonker
+The bonker was created by KB RENO.
 
 @nud
 #scannotes for reb nok bonker
@@ -2450,9 +2458,8 @@ You fiddle with the prison ropins but probably need someone or something to MAKE
 The luck node needs to be unlocked, with something else you need to figure out.
 
 @sli
-#this is faked a bit. Rowdy/Wordy are not flippable things.
+#this is faked a bit in the code and verification script. Rowdy/Wordy are not flippable things.
 #slider test for wordy
-# (?? not possible? Or map to the nudges?)
 >owdyr
 The slider makes some funny up-and-down noises which suggests it doesn't know what to gauge. Thankfully, Dr. Yow doesn't have a long name.
 #slider test for rowdy
@@ -3176,11 +3183,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the unripe ur-pine. 
 #spechelp for repents serpent
 >presetn
 The serpent calms down for a split-second.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the pester'n serpent. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repents serpent. That's a decent omen.
 >presetn
 The serpent calms down for a split-second, again.
 #scannotes for repents serpent
->scan pester'n serpent
+>scan repents serpent
 That is a lot of blinks, but those blinks have to be almost as good as a purple or green.
 #renudge for lake
 >laek
@@ -3255,7 +3262,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >xr serpent #end bonus
 You blink
 >y
-After a thoughtful gaze, you reckon the pester'n serpent could be PRESENT.
+After a thoughtful gaze, you reckon the repents serpent could be PRESENT.
 
 @!minh,mini
 >present

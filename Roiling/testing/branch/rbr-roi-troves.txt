@@ -555,6 +555,9 @@ It's an ires PAD.
 #nudge for pad
 >pda
 It's an IRES pad.
+#scannotes for pleaser leapers
+>scan pleaser leapers
+You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 
 @sli
 #slider test for despair
@@ -575,7 +578,7 @@ DEBUG INFO: I'd Cede hinting.
 {$SCOS}
 
 @sli
-#slider test for pleaser leapers
+#slider test for relapse
 >erepsal
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
@@ -585,6 +588,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
 >repeals
 That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+
+@nud
+#readables for pleaser leapers
+>read leapers
+SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
 
 @!mina,minb
 >relapse

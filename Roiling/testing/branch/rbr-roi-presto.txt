@@ -1737,10 +1737,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for casserole
 >aceesolrs
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for romstick
+#slider test for rom stick
 >orsmitkc
 Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for romsticks
+#slider test for rom sticks
 >smorsckit
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for avider

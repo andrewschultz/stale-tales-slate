@@ -525,7 +525,7 @@ The spoon points you out of the Idle Deli.
 #mistake retest for tap pat/tap
 >tap
 You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
-#done rejects for seed pit
+#done rejects for stupor sprout
 >despiet
 That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
 >despite
@@ -642,7 +642,7 @@ The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 
 @nud
-#readables for ashtray
+#readables for trashy ashtray
 >read ashtray
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
 >read ashtray
@@ -1255,6 +1255,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the admits mist ad. 
 #scannotes for admits mist ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
+#scannotes for data dim mists
+>scan data dim mists
+Well! The data isn't dim from the settler. There's a lot to work with, here.
 
 @sli
 #slider test for amidst

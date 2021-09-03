@@ -1097,6 +1097,14 @@ min-up
 >undo
 >undo
 
+@nud
+#scannotes for sullenness us
+>scan sullenness us
+The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
+#readables for sullenness us
+>read sullenness us
+You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
+
 @max
 >unless
 by one point
