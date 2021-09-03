@@ -2,8 +2,6 @@
 #--this should be done for all RBR files and not just troves
 #--rbr.py v to verify nothing slipped
 
-# this is a special case--usually MIN comes first, but because of alternate paths through Troves, I have to push it second.
-
 # note to self: MBB 1 = Balmer, MBB 2 = Mr Beal
 
 files=reg-roi2-troves-max.txt,reg-roi2-troves-min-1.txt,reg-roi2-troves-min-2.txt,reg-roi2-troves-nudmis.txt,reg-roi2-troves-slider.txt,reg-roi2-troves-hints.txt
@@ -578,27 +576,12 @@ DEBUG INFO: I'd Cede hinting.
 {$SCOS}
 
 @sli
-#slider test for relapse
->erepsal
+#slider test for glare
+>lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@mis
-#mistake test for repeal/repeals
->repeal
-That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
->repeals
-That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
-
-@nud
-#nudge for leaper
->leapre
-You'll probably want to deal with all the pleaser leapers at once.
-#readables for pleaser leapers
->read leapers
-SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
-
 @!mina,minb
->relapse
+>glare
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
@@ -685,9 +668,6 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 Your eyes gloss over all but the red ERGAL AGLER.
 
 @sli
-#slider test for glare
->lgrea
-Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for master
 >amtsre
 Your settler begins to make noises: a low hum, but nothing really piercing.
@@ -697,14 +677,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for deal
 >edla
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!mina,minb
->glare
-Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
 
 @nud
 #mistake retest for aled
@@ -732,6 +704,34 @@ by one point
 The ME ARTS nourished you spiritually. Time to move on, though you could poke at the lobster.
 >undo
 >undo
+
+@mis
+#mistake test for repeal/repeals
+>repeal
+That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+>repeals
+That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.
+
+@nud
+#nudge for leaper
+>leapre
+You'll probably want to deal with all the pleaser leapers at once.
+#readables for pleaser leapers
+>read leapers
+SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
+
+@sli
+#slider test for relapse
+>erepsal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!mina,minb
+>relapse
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @max
 #pre-deal rule

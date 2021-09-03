@@ -318,23 +318,23 @@ understand "senor" as a mistake ("The bee's gender [snore-was-is] only relevant 
 
 chapter Drain Nadir
 
+understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when lager is touchable.
+
 understand "aspired" as a mistake ("Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!") when player is in Drain Nadir.
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
-
-understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
 
 understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when Id Cede is touchable.
 
 chapter Boredom Bedroom
 
-understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Boredom Bedroom]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when player is in Boredom Bedroom
-
-understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when player is in Boredom Bedroom and lager is in Boredom Bedroom
+understand "aled" as a mistake ("Getting drunk will not solve your problems. Besides, you missed your 'chance' with the lager in Drain Nadir. You see red at yourself for such thoughts.") when player is in Boredom Bedroom.
 
 understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Boredom Bedroom.
 
 understand "maters" and "tamers" as a mistake ("Perhaps they know their trade, well, but you need to, too.") when ME ARTS is in location of player.
+
+understand "repeal" and "repeals" as a mistake ("That's the right sort of emotion, but REPEALS is a noun, and REPEAL is only six letters. Plus the pleaser leapers wouldn't find it emotional or artistic enough to be disappointed.") when pleaser leapers are touchable.
 
 chapter Browse Bowers
 

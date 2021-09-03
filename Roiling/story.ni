@@ -11827,7 +11827,19 @@ a spider is scenery in Drain Nadir. "You're don't know whether to crush it or ev
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
-section I'd Cede
+chapter lager
+
+The can of Large Regal Lager is a vanishing LLPish thing in Drain Nadir. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can notes drinking too many of these is as bad for the economy not drinking enough if you have nothing better to do, and you probably don't. You can read red writing to see how it was allegedly brewed.". "A can of Large Regal Lager sits here. Perhaps you can do something more moral than drinking it."
+
+check opening Large Regal Lager: try drinking Large Regal Lager instead;
+
+a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
+
+check eating lager: say "It drinks like a meal, you're sure, but you need more nourishment than that." instead;
+
+check taking lager: say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it." instead;
+
+chapter I'd Cede
 
 Id Cede is reflexive boring scenery. description of Id Cede is "The song warbles on.". bore-text is "You can't do much with I'd Cede but listen to it.". bore-check is bore-id-cede rule. Id Cede is parse-spoilable. printed name of Id Cede is "I'd Cede".
 
@@ -11880,21 +11892,9 @@ does the player mean doing something with LEAD when the player is in Boredom Bed
 
 check taking LEAD: say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence." instead;
 
-chapter lager
-
-The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. You can read red writing to see how it was allegedly brewed.". "A can of Large Regal Lager sits here. Perhaps you can do something more moral than drinking it."
-
-check opening Large Regal Lager: try drinking Large Regal Lager instead;
-
-a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of Large Regal Lager is "x[sp]x[sp]-[sp]x[sp]-".
-
-check eating lager: say "It drinks like a meal, you're sure, but you need more nourishment than that." instead;
-
-check taking lager: say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it." instead;
-
 chapter pleaser leapers
 
-the pleaser leapers are a plural-named vanishing LLPish thing in Drain Nadir. "Pleaser Leapers[one of], a weird automated toy that give something like cheer if you don't think too hard, frolic around here. You suddenly have a memory of needing them emotionally, even though they gave nothing[or] continue to frolic[stopping]. Perhaps the right sort of action will help make you ditch them for good and your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
+the pleaser leapers are a plural-named vanishing LLPish thing in Boredom Bedroom. "Pleaser Leapers[one of], a weird automated toy that give something like cheer if you don't think too hard, frolic around here. You suddenly have a memory of needing them emotionally, even though they gave nothing[or] continue to frolic[stopping]. Perhaps the right sort of action will help make you ditch them for good and your story more gripping. Or you could just move on.". description is "They all look very cheery. They jump and hop and skip and almost make you feel as if you aren't wasting your life. Red writing on them gives the name of the company that produced them."
 
 a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". parse-text of pleaser leapers is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]".
 

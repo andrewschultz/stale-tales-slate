@@ -679,15 +679,6 @@ With some thinking, you can <b>RECALL</b>.
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 <b>DESPAIR</b>.
-?What are the pleaser leapers for?
-They're an optional puzzle.
-You must do something close to despair. It's something that can follow despair or cause it.
-<b>RELAPSE</b>.
-?What is this song trying to say to me?
-You need to move on from your despair.
-Eddie C, CDEDE ... I
-<b>DECIDE</b>.
->>BOREDOM BEDROOM
 ?I may or may not want to drink the lager!
 Turns out you don't.
 It is upsetting to find it there. Such productivity lost!
@@ -695,6 +686,11 @@ This is a last lousy point.
 The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
 Or you can <b>GLARE</b> at it right away.
+?What is this song trying to say to me?
+You need to move on from your despair.
+Eddie C, CDEDE ... I
+<b>DECIDE</b>.
+>>BOREDOM BEDROOM
 ?Why can't I eat the Bortles Lobster yet?
 You need to feel you can, you deserve it.
 The settler in cheat mode throws a bunch of questions, but actually, that means a lot of things you can clean up.
@@ -702,6 +698,10 @@ The settler in cheat mode throws a bunch of questions, but actually, that means 
 ?Why don't I understand the motivational picture of the stream?
 You aren't on top of things yet. The stream should refocus you...
 ...if you <b>MASTER</b> things.
+?What are the pleaser leapers for?
+They're an optional puzzle.
+You must do something close to despair. It's something that can follow despair or cause it.
+<b>RELAPSE</b>.
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
 You need to learn to <b>DEAL</b>.

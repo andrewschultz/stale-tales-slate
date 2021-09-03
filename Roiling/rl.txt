@@ -229,6 +229,14 @@ That leaves possibilities of (AO)(LN)(AO)(AN)(OG).
 But only 1 and 3 can be A and O, so that makes 4 and 5 N and G, respectively.
 Then 2 must be L. ONALG or ALONG are the only two left. ALONG is the only word of these two.
 >>RIPE PIER
+# logic for data dim mists
+? Can I deal with the data-dim mists?
+Yes, this is an odd one, without much fixed, but few possibilities.
+Only slot 5 can hold S. 4 and 6 give red clues, 2 is I or T, 1 is a vowel, and 3 is I or T.
+(AI)(AM)(IT)(DMT)S(DMT) is left.
+I in slot 1 gives IAT(DM)S(DM, which doesn't work.
+AM(IT)(DT)S(DT) puts I in slot 2.
+AMITSD doesn't work, but AMIDST does.
 # logic for admits mist ad
 ?How do I get around the admits mist ad?
 While the red text clinches it, you can also make hay with the settler readings.
@@ -292,10 +300,12 @@ You can't, because it's clear. Oh, you mean if you scan it.
 R?RYRR is what you get, so the ? must be a vowel, and since slot 4 cannot be E and most be A, slot 2 is E. So we have -E-A--.
 But now slot 1 cannot be L or C, so it is R. Slot 3 cannot be L, leaving C. But then slots 5 and 6 only have L remaining. RECALL.
 >>DRAIN NADIR
-# logic for pleaser leapers
-?How do I decipher and reject the pleaser leapers?
-First note you can place all the vowels. The question marks in slots 2 and 4 must be vowels. The only ones that fit are E and A, respectively.
-With -E-A--E, there are eight possibilities left. Working on the 3rd slot, which can be any of the four consonants, should help you cut down the possibilities pretty quickly.
+# logic for large regal lager
+?How do I deal with the Large Regal Lager?
+Pour it out on the curb in memory of your departed homies. Oh, wait, you want to get the last lousy point.
+The question mark at the end means ELR, but it must be a vowel, so, E.
+The rest is standard logic: the first consonant can't be L or R, so it is G. The remaining vowel in slot 3 must be E.
+That leaves GRALE or GLARE, and while Nigel Molesworth might spell "grail" GRALE, Store V features passive verbs and this is a noun. Also, GLARE works great.
 >>BOREDOM BEDROOM
 # logic for me arts mr east stream tamers
 ?How do I decipher the ME ARTS?
@@ -312,12 +322,10 @@ In fact, each slot is one of two consonants.
 (BL)O(LST)(TS)(LT)E(RS).
 B must be in slot 1, R in slot 7. That leaves three possibilities based on what slot 3 is.
 BOLSTER turns out to be the right one.
-# logic for large regal lager
-?How do I deal with the Large Regal Lager?
-Pour it out on the curb in memory of your departed homies. Oh, wait, you want to get the last lousy point.
-The question mark at the end means ELR, but it must be a vowel, so, E.
-The rest is standard logic: the first consonant can't be L or R, so it is G. The remaining vowel in slot 3 must be E.
-That leaves GRALE or GLARE, and while Nigel Molesworth might spell "grail" GRALE, Store V features passive verbs and this is a noun. Also, GLARE works great.
+# logic for pleaser leapers
+?How do I decipher and reject the pleaser leapers?
+First note you can place all the vowels. The question marks in slots 2 and 4 must be vowels. The only ones that fit are E and A, respectively.
+With -E-A--E, there are eight possibilities left. Working on the 3rd slot, which can be any of the four consonants, should help you cut down the possibilities pretty quickly.
 # logic for lead all a deed
 ?What do I do with _Lead_?
 For <b>LEAD</b>, by the two authors, ???R looks painful indeed. But the red means a consonant which can't be D. So it's L. Fortunately, there are just three choices.

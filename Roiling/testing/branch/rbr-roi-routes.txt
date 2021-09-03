@@ -1242,7 +1242,16 @@ Ripe Pier
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #nudge for mist
 >mits
-Nothing happens. It's a MIST AD, after all.
+You'll have to deal with the whole data-dim mists.
+#nudge for mists
+>mitss
+You'll have to deal with the whole data-dim mists.
+#nudge for data
+>atad
+You'll have to deal with the whole data-dim mists.
+#nudge for dim
+>mid
+You'll have to deal with the whole data-dim mists.
 #readables for admits mist ad
 >read mist ad
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
@@ -1258,6 +1267,13 @@ Like most ads, it doesn't pose any great logical problems.
 #scannotes for data dim mists
 >scan data dim mists
 Well! The data isn't dim from the settler. There's a lot to work with, here.
+
+@mis
+#mistake test for ta da/tada
+>ta da
+This is the wrong region for that sort of flash of insight.
+>tada
+This is the wrong region for that sort of flash of insight.
 
 @sli
 #slider test for amidst
