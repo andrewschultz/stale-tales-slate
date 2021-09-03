@@ -4693,6 +4693,7 @@ MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gi
 null it unit	true	true	false	false	"The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?"
 noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
 odd run on aura	true	true	false	false	"With only one ambiguous setting, the light should soon go on for you to figure where and how to go."
+data dim mists	true	true	false	false	"Well! The data isn't dim from the settler. There's a lot to work with, here."
 admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
 thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all."
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
@@ -11476,7 +11477,7 @@ a-text of un road is "YRYYRR". b-text of un road is "YRYYRP". parse-text of un r
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "You're at a shore. An admits mist ad seems to do the opposite of, well, admitting you behind. You just can't see, anyway. It looks dangerous to enter without a plan. But something must be behind. Perhaps No-Lag Logan's boat! ". roomnud of ripe pier is table of ripe pier nudges.
+Ripe Pier is a room in Routes. "You're at a shore. An admits-mist ad advertises what are, apparently, data-dim mists behind. You just can't see, anyway. It looks dangerous to enter without a plan. But something must be behind. Perhaps No-Lag Logan's boat!". roomnud of ripe pier is table of ripe pier nudges.
 
 after looking in Ripe Pier:
 	set the pronoun it to admits mist ad;
@@ -11484,15 +11485,23 @@ after looking in Ripe Pier:
 
 chapter two ways out
 
-section admits mist ad
+section data dim mists
 
-the admits mist ad is vanishing boring scenery in Ripe Pier. description of admits mist ad is "You can't really see behind it. There must be some nonlinear way to navigate things, though. You might be able to READ parts of it in red for clues, though.". bore-check of admits mist ad is bore-mist rule.
+the data dim mists are boring scenery in Ripe Pier. "There's not much to see in the data-dim mists, though you can probably munge the letters you need to get through them, so they're only dim, not totally dark.". printed name of data dim mists is "data-dim mists".
 
-a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". parse-text of admits mist ad is "a[sp]-[sp]i[sp]-[sp]-[sp]-". admits mist ad is parse-spoilable.
+bore-check of data dim mists is bore-mists rule.
 
-this is the bore-mist rule:
+this is the bore-mists rule:
 	if current action is taking, say "Mist-ake. Ha ha ha." instead;
 	if current action is entering, say "Part of you admits it will be tricky to figure out. Maybe if you entered the mist behind the ad the right way, with a good plan... or even a bad one... it would work out." instead;
+
+a-text of data dim mists is "YRYRRR". b-text of data dim mists is "Y??RRR". parse-text of data dim mists is "-[sp]?[sp]i[sp]x[sp]x[sp]x". data dim mists is parse-spoilable.
+
+section admits mist ad
+
+the admits mist ad is auxiliary boring scenery in Ripe Pier. description of admits mist ad is "Apparently, behind it are DATA-DIM MISTS. There must be some nonlinear way to navigate things, though. You might be able to READ parts of it in red for clues, though.".
+
+a-text of admits mist ad is "YRYRRR". b-text of admits mist ad is "?RYRRR". parse-text of admits mist ad is "a[sp]-[sp]i[sp]-[sp]-[sp]-". admits mist ad is parse-spoilable.
 
 book Cripple Clipper
 

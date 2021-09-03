@@ -296,7 +296,10 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of ripe pier nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pier"	339588717	--	--	"[locname]."
-"mist"	308451983	--	--	"Nothing happens. It's a MIST AD, after all."
+"mist"	308451983	--	--	"[all-dim]."
+"dim"	130097088	--	--	"[all-dim]."
+"data"	128514743	--	--	"[all-dim]."
+"mists"	404725949	--	--	"[all-dim]."
 
 table of cripple clipper nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1746,6 +1749,9 @@ to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as i
 section ripe pier auxiliary
 
 to say spume-no: say "The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them"
+
+to say all-dim:
+	say "You'll have to deal with the whole data-dim mists"
 
 section cripple clipper auxiliary
 

@@ -277,9 +277,11 @@ understand "helos" as a mistake ("Helicopters can't make it underground.") when 
 
 chapter Ripe Pier
 
-understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.") when player is in Cripple Clipper.
+understand "ta da" and "tada" as a mistake ("This is the wrong region for that sort of flash of insight.") when player is in Ripe Pier.
 
 chapter Cripple Clipper
+
+understand "abroad" and "aboard" as a mistake ("Now you have the bad oar and you're aboard, you know you need to go abroad, but--you need to find a new way to navigate.") when player is in Cripple Clipper.
 
 understand "feer" as a mistake ("Fearing or pretending fake fear won't help, here.") when player is in Cripple Clipper.
 
