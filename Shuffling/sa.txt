@@ -31,12 +31,12 @@ Make it a DOOR.
 ?Can I do anything with the bolt?
 Yes, again, switching two letters.
 It can become a BLOT, unlocking the door.
-You can enter the door after this, though you won't get maximum points.
+If you do so right away without attending to the bugle, you won't get maximum points, but it won't affect any endings.
 ?Can I do anything with the bulge?
 Yes, again, switching two letters.
 It can become a BUGLE.
-You can PLAY the BUGLE to unlock the door.
-You can enter the door after this, though you won't get maximum points.
+You can just PLAY the bugle to unlock the door.
+If you do so right away without attending to the blot, you won't get maximum points, but it won't affect any endings.
 >>THICKEST THICKETS
 ?What's the toga doing here?
 Nothing. It is your first "real" test.
@@ -48,9 +48,8 @@ That is because it should be a GOAT.
 Once you've made the goat, just go IN.
 ?Is there anything else to do here?
 Well, nothing game-critical.
-The darnels are snarled, and they make you want to lash out verbally.
+The darnels are snarled, and they make you want to lash out verbally. You can see what to do in the bonus points section. You have no hinting device yet, and even if it would, it would clash where snarled matches the solution and darnels does not.
 This is a seven-letter puzzle and, thus, maybe a bit tough for early on. And you have no cluing device.
-You can SLANDER the snarled darnels for an extra point.
 >>NOTICES SECTION
 ?Do I need to do anything with the getaway gateway?
 No. You need someone to operate it.
@@ -85,7 +84,7 @@ You should use the gadget in both orientations.
 It gives you another example puzzle.
 AT---S are what you change the static to.
 There are actually only four possibilities left. You can brute force this.
-You can flip the ATTICS back, too, to get comfortable with the gadget.
+You can flip the ATTICS back to STATIC, too, to get comfortable with the gadget.
 >STORES
 >>TRIPS STRIP
 ?Oh no! I broke my leg and now it's in a cast! Plus I'm lonely.
@@ -171,10 +170,12 @@ Because it can be MAPS.
 Look at them. They may clue a word.
 They become a CHISEL.
 Now you can go back to the Storing Area and chisel the livers.
-?What do I do with the drapes?
+?What do I do with the spread?
 None will be spared.
-SPREAD.
-CUT SPREAD (with sliver)
+Make them something easier to cut.
+DRAPES.
+?Oh no! I summoned a red asp! What can I do with it?
+You can still transform it as you did the spread.
 ?That banshee is annoying! Can I get rid of it?
 It's a last lousy point, but yes.
 I'll put in a buffer here before spoiling it.
@@ -223,9 +224,16 @@ PARMESAN.
 ?What's the skate for?
 Meaty.
 STEAK.
+?What about the cult tee?
+LETTUCE.
 ?What's the tall trio for?
 Doughy...
 TORTILLA.
+?What does the CATHOUSE perfume become?
+HOT SAUCE.
+?Okay, what do I do with this taco?
+Make something that will keep you warm without eating it.
+The COAT will help you not freeze elsewhere.
 >>>In the fridge
 ?What's the cakepan?
 An optional point, and an easy one, I hope.
@@ -471,7 +479,7 @@ WINGS.
 ?The poles are too steep!
 Yes, they're vertical.
 What can be at an angle?
-A SLOPE.
+Change them to a SLOPE.
 But now you still need help to climb it.
 ?What do I need to change, here?
 The poles...
@@ -547,6 +555,10 @@ It can become ATTICS.
 You need something that you can pour onto it.
 This is a name brand that's become a common accepted word, much like the clover.
 BACTINE.
+?Can we do anything with any other store?
+Yes. Store B.
+You can get a snack.
+SORBET.
 ?Where are the LLPs in the forest?
 Well, there's only one.
 In the Emptiness Sepiments, you can deal with the banshee.
