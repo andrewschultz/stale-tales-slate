@@ -4738,7 +4738,7 @@ perma amper	true	true	false	false	"It's a perma-amper, so that might account for
 Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
 LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
 frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-sabot boats	true	true	false	false	"It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
+sabot boats	true	true	false	false	"It can't be too hard to get the boats['] attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
 Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
 HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
 use saga sausage	true	true	false	false	"The [sausage]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
@@ -4785,7 +4785,7 @@ seismal samiels	true	true	false	false	"You're almost worried it will be too easy
 weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
 curst palace	false	false	false	false	"[scannotes-curst]."
-pestern serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
+repents serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
@@ -22127,7 +22127,7 @@ this is the presto-or-others rule:
 
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
-		say "[eqls][rg][line break]";
+		say "[eqls][b][rg][r][line break]";
 		now rg is tickedoff;
 
 to say eqls: if screenread is false, say "====";
@@ -22723,8 +22723,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:
 			repeat with A running through flippable things in Perverse Preserve:
-				if A is raptor or A is parrot, continue; [ get rid of white noise parrot/raptor suggestion while testing ]
-				let AA be the the-to corresponding to a the-from of A in the table of otters anagrams;
+				if A is raptor or A is parrot, next; [ get rid of white noise parrot/raptor suggestion while testing ]
+				let AA be the the-to corresponding to the-from of A in the table of otters anagrams;
 				say "[2dmiss of myreg]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
 		if number of reflexive animals in Lamer Realm > 0:
 			repeat with A running through reflexive things in Lamer Realm:
@@ -22732,10 +22732,10 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with HOWEVER after you got rid of the Gore Ogre.";
 		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying UNLESS.";
 	else if myreg is others:
-		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become limes.";
-		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become pears.";
-		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become plums.";
-		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become grapes.";
+		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
+		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become PEARS.";
+		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become PLUMS.";
+		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become GRAPES.";
 		if ruts circuits is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 		else:
