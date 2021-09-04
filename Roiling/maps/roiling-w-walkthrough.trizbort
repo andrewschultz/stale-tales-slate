@@ -38,7 +38,7 @@
 			<dock index="0" id="2" port="sse" />
 			<dock index="1" id="12" port="nnw" />
 		</line>
-		<room id="14" name="Record Dr. Yow" subtitle="" x="-32" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="14" name="Record Dr. Yow both ways" subtitle="" x="-32" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="16" name="" description="" flow="oneWay">
 			<dock index="0" id="10" port="e" />
 			<dock index="1" id="14" port="w" />
@@ -101,7 +101,7 @@
 			<dock index="1" id="37" port="e" />
 		</line>
 		<room id="41" name="Last chance for LLPs" subtitle="" x="128" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="e" custom="yes" customRight="0" customDown="-40">Yurts/denim|Old ice/sporties' ripostes|replay player|remaining guardians (5+2)|ego drains/strudel|dourest detours</objects>
+			<objects at="e" custom="yes" customRight="0" customDown="-56">Yurts/denim|Old ice/sporties' ripostes|replay player|remaining guardians (5+2)|ego drains/strudel|dourest detours|seismal semails|Dire and Arid Den</objects>
 		</room>
 		<line id="42" name="" description="" style="dashed">
 			<dock index="0" id="27" port="n" />
@@ -112,8 +112,8 @@
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<room id="45" name="(4) Present / Triste /Unripe" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects custom="yes" customRight="-60" customDown="0">Give the succor crocus /|           top opt pot|   (non-anagram point)</objects>
+		<room id="45" name="Present / Antsier / Triste/ Unripe" subtitle="" x="288" y="224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+			<objects custom="yes" customRight="-64" customDown="0">   Give the succor crocus /|             top opt pot|(non-anagram point, 5 total)</objects>
 		</room>
 		<line id="46" name="" description="" style="dashed">
 			<dock index="0" id="34" port="s" />

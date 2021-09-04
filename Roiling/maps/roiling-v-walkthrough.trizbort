@@ -19,39 +19,34 @@
 			<dock index="1" id="4" port="s" />
 		</line>
 		<room id="6" name="Boredom Bedroom (LEAD)" subtitle="" x="-128" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
-		<room id="8" name="get rid of lager" subtitle="" x="-128" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
-		<line id="9" name="" description="" style="dashed" midText="only in bedroom">
-			<dock index="0" id="6" port="s" />
-			<dock index="1" id="8" port="n" />
-		</line>
-		<room id="10" name="Browse Bowers (Sir Dee)" subtitle="" x="32" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="8" name="get rid of lager" subtitle="" x="32" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="10" name="Browse Bowers (Sir Dee)" subtitle="" x="32" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="11" name="" description="" flow="oneWay">
-			<dock index="0" id="6" port="e" />
-			<dock index="1" id="10" port="w" />
+			<dock index="0" id="6" port="se" />
+			<dock index="1" id="10" port="nw" />
 		</line>
 		<room id="12" name="Statue or Spirea, exit Econ Cone" subtitle="" x="192" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="13" name="" description="" flow="oneWay">
-			<dock index="0" id="10" port="e" />
-			<dock index="1" id="12" port="w" />
+			<dock index="0" id="10" port="ne" />
+			<dock index="1" id="12" port="sw" />
 		</line>
 		<room id="14" name="Statue *and* Spirea" subtitle="" x="192" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="15" name="" description="" style="dashed" midText="only in Econ-Cone">
 			<dock index="0" id="12" port="s" />
 			<dock index="1" id="14" port="n" />
 		</line>
-		<room id="16" name="Reject Trance Nectar" subtitle="" x="192" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<room id="18" name="Pa Egg Pea" subtitle="" x="-288" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-56" customDown="0">any time before victory</objects>
 		</room>
-		<room id="20" name="both of Lobster/ Stream" subtitle="" x="32" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+		<room id="20" name="both of Lobster/ Stream" subtitle="" x="32" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects at="n" custom="yes" customRight="-56" customDown="0" />
 		</room>
-		<room id="22" name="DIVORCES" subtitle="" x="192" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
+		<room id="22" name="DIVORCES" subtitle="" x="192" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
 			<objects custom="yes" customRight="-56" customDown="0"> any time before victory</objects>
 		</room>
 		<line id="23" name="" description="" style="dashed">
-			<dock index="0" id="21" port="e" />
-			<dock index="1" id="22" port="w" />
+			<dock index="0" id="21" port="n" />
+			<dock index="1" id="22" port="s" />
 		</line>
 		<line id="19" name="" description="" style="dashed">
 			<dock index="0" id="1" port="s" />
@@ -66,28 +61,33 @@
 			<dock index="0" id="24" port="s" />
 			<dock index="1" id="6" port="n" />
 		</line>
-		<line id="7" name="" description="" style="dashed">
-			<dock index="0" id="6" port="se" />
-			<dock index="1" id="20" port="nw" />
-		</line>
-		<room id="21" name="Upscale Capsule (deserve)" subtitle="" x="32" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="21" name="Upscale Capsule (deserve)" subtitle="" x="192" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="27" name="" description="" flow="oneWay">
-			<dock index="0" id="12" port="nw" />
-			<dock index="1" id="21" port="se" />
+			<dock index="0" id="12" port="n" />
+			<dock index="1" id="21" port="s" />
 		</line>
 		<room id="28" name="Both Sister Tressi/Blamer Balmer" subtitle="" x="32" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="29" name="" description="" style="dashed">
-			<dock index="0" id="21" port="n" />
-			<dock index="1" id="28" port="s" />
-		</line>
-		<line id="17" name="" description="" flow="oneWay">
-			<dock index="0" id="21" port="ne" />
-			<dock index="1" id="16" port="sw" />
+			<dock index="0" id="21" port="nw" />
+			<dock index="1" id="28" port="se" />
 		</line>
 		<room id="30" name="A Sty, Tasty, Say" subtitle="" x="-128" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="31" name="" description="" style="dashed">
 			<dock index="0" id="2" port="ne" />
 			<dock index="1" id="30" port="sw" />
+		</line>
+		<line id="7" name="" description="" style="dashed">
+			<dock index="0" id="6" port="e" />
+			<dock index="1" id="20" port="w" />
+		</line>
+		<room id="9" name="Pleaser Leapers" subtitle="" x="-128" y="160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<line id="16" name="" description="" style="dashed">
+			<dock index="0" id="6" port="s" />
+			<dock index="1" id="9" port="n" />
+		</line>
+		<line id="17" name="" description="" style="dashed">
+			<dock index="0" id="24" port="e" />
+			<dock index="1" id="8" port="w" />
 		</line>
 	</map>
 	<settings>

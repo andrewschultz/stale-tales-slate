@@ -161,7 +161,7 @@ version 3 March 2015</history>
 			<objects custom="yes" customRight="-22" customDown="0">Dr. Yow</objects>
 		</room>
 		<room id="60" name="Baldest Blasted Saltbed" subtitle="" x="96" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Docile Old Ice (LLP)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects>Muscly Lucy/Sym</objects>
+			<objects>Denier Nereid</objects>
 		</room>
 		<room id="61" name="Artist Traits Strait" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<room id="62" name="Actionless Coastlines" subtitle="" x="352" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Scot Agin/Staci Ong&#xD;&#xA;(solve a loaves)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
@@ -315,11 +315,11 @@ version 3 March 2015</history>
 			<dock index="0" id="55" port="w" />
 			<dock index="1" id="52" port="e" />
 		</line>
-		<line id="112" name="" description="" color="#000000" style="dashed" midText="grailman">
+		<line id="112" name="" description="" color="#000000" style="dashed" midText="Alarming Grailman">
 			<dock index="0" id="61" port="s" />
 			<dock index="1" id="55" port="n" />
 		</line>
-		<line id="113" name="" description="" color="#000000" style="dashed" midText="Mel Fish">
+		<line id="113" name="" description="" color="#000000" style="dashed" midText="Realist Tailers">
 			<dock index="0" id="54" port="s" />
 			<dock index="1" id="52" port="n" />
 		</line>
