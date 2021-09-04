@@ -1,0 +1,61 @@
+
+## reg-roi-stores-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+>ts
+>t
+
+>sorbet
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 4.
+
+>nestor
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
+
+>tokers
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
+
+>enter steaming
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
+
+Cruelest Lectures
+
+#pre-babbler-outside rule
+>outside
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+#this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>towers
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+
+>oyster
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+
+>others
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+
+>presto
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+
+>otters
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath
+

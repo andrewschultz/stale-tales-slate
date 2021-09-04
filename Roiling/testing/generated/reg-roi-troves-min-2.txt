@@ -1,0 +1,185 @@
+#~	pad	t5
+
+## reg-roi-troves-min-2.txt
+
+## minimum walkthrough with second alternate
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* trove-thru
+
+>posf
+
+#Marble Blamer Balmer is the default to test with. It shouldn't matter. But we will test both, anyway.
+>mbb 1
+
+>ts
+>t
+>troves
+
+>enter tastee
+
+>l
+Loather Rathole
+
+>score
+Score in a scenario: 0 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+
+#not a mistake
+>hate
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 1 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+
+#not a mistake
+>care
+Your score has just gone up by one point
+
+Bustle Sublet
+
+>score
+Score in a scenario: 2 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+
+>observe
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 3 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+
+>spot
+Your score has just gone up by one point
+
+#lose a point for not ignoring A Tasty Sty, Say
+
+Boarded Roadbed
+
+>score
+Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+
+>reason
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+
+>recall
+by one point
+
+Drain Nadir
+
+#lose max point for only one of believe/reason
+
+>score
+Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+
+>despair
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 7 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+
+>decide
+Your score has just gone up by one point
+
+Boredom Bedroom
+
+>score
+Score in a scenario: 8 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+
+>master
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 9 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+
+>deal
+Your score has just gone up by one point
+
+Browse Bowers
+
+#lose a point for not dealing with lager
+#lose a point for only one of BOLSTER/MASTER
+
+>score
+Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
+
+>desire
+Your score has just gone up by one point
+
+#Econ Cone
+
+Econ-Cone
+
+>score
+Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
+
+>strive
+Your score has just gone up by one point
+
+>ponder
+Your score has just gone up by one point
+
+Upscale Capsule
+
+#lose a maximum point for only one of aspire/strive
+
+>score
+Score in a scenario: 13 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
+>deserve
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
+>last
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
+>resist
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
+>score
+Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
+>misses
+Troves
+--you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.
+--you could've tried to STAY around A Sty: Tasty, Say.
+Boarded Roadbed====
+
+you could've tried to BELIEVE to neutralize the evil bee, too.
+!--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
+
+Drain Nadir====
+--you could've tried to RELAPSE around the pleaser leapers.
+Boredom Bedroom====
+--you could've tried to GLARE at the Lager.
+
+!--you could've tried to MASTER the ME ARTS.
+--you could've tried to BOLSTER yourself to deserve lobster.
+
+Econ-Cone====
+
+!--you could've tried to STRIVE by the statue of Trevis Vister.
+--you could've tried to ASPIRE, from the praise in the Econ-Cone.
+
+Upscale Capsule====
+--you could've tried to DISCOVER something about DIVORCES magazine.
+
+!--you could've tried to RESIST Sister Tressi.
+--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+
+>recant
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+, Troves (17/26)

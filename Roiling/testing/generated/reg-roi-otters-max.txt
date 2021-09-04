@@ -1,0 +1,509 @@
+
+## reg-roi-otters-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>seed 1
+>ts
+>a5
+>t
+>otters
+
+>opt in
+>enter solid idols
+
+#forceignore
+>barely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+
+>l
+Burnt Brunt
+
+>rescind
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>reedily
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>w
+Disowned Downside
+
+#pre-moat-atom rule
+>atom
+Your powers aren't back yet, but if they were, that'd definitely tip the players off to who you were. They'd let Elvira know quickly.
+!by one point
+#pre-ghoul-hat-although rule
+>s
+>although
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+!by one point
+#preefcheck ghoul hat
+>pf
+You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
+>ergo
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+!by one point
+>n
+>n
+#pre-seacube-because rule
+>because
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+!by one point
+#preefcheck sea cube
+>pf
+You can tell the eels in the sea cube BECAUSE you have material evidence you're trustworthy.
+#pre-eels-else rule
+>because
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+!by one point
+>s
+
+>allrand
+#this makes sure we can score all points for all macks.
+>blearily
+by one point
+>undo
+>bossily
+by one point
+>undo
+>cattily
+by one point
+>undo
+>coitally
+by one point
+>undo
+>despairingly
+by one point
+>undo
+>drawlingly
+by one point
+>undo
+>emotionally
+by one point
+>undo
+>formally
+by one point
+>undo
+>irately
+by one point
+>undo
+>martially
+by one point
+>undo
+>modestly
+by one point
+>undo
+>nastily
+by one point
+>undo
+>ribaldly
+by one point
+>undo
+>seedily
+by one point
+>undo
+>shabbily
+by one point
+>undo
+>shadily
+by one point
+>undo
+>shoddily
+by one point
+>undo
+>silently
+by one point
+>undo
+>sincerely
+by one point
+>undo
+>snidely
+by one point
+>undo
+>sobbingly
+by one point
+>undo
+>starkly
+by one point
+>undo
+>steamily
+by one point
+>undo
+>stupidly
+by one point
+>undo
+>suddenly
+by one point
+>undo
+>tearily
+by one point
+>undo
+>tediously
+by one point
+>undo
+>wearingly
+by one point
+>undo
+>undo
+
+#balance undos
+>n
+>because
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+[You add the information to your pedanto-notepad under FLIPS.]
+>pf
+You can tell the eels in the sea cube BECAUSE once you're able to show evidence you're trustworthy.
+>undo
+>undo
+>undo
+>s
+>although
+You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+[You add the information to your pedanto-notepad under FLIPS.]
+>pf
+You can say ALTHOUGH to Mr. Lee and his ghoul hat once you're able to show evidence you're trustworthy.
+>undo
+>undo
+>undo
+
+>bossily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>angrily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>blearily
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+>au -1
+
+>1
+
+>3
+
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+#again pre-moat-atom rule
+>atom
+That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
+!by one point
+#preefcheck atmo moat
+>pf
+You can collapse the atmo moat to an ATOM once you have the power.
+
+#pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
+#preefcheck medals
+>pf
+The medals can help you go QUICKLY, though they may not be fully magical, yet.
+
+>n
+Loop Pool
+
+>else
+You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
+!by one point
+#preefcheck eels
+>pf
+You can tell the eels ELSE once you have a token of your goodness.
+
+>because
+by one point
+
+>score
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>else
+by one point
+
+>score
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>unless
+by one point
+>score
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
+
+>s
+
+>s
+
+Bran Barn
+
+#pre-ogre-ergo rule
+>ergo
+Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
+!by one point
+#preefcheck gore ogre
+>pf
+You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
+
+>although
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
+
+>ergo
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>however
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+>n
+
+>atom
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>e
+
+>n
+Shiner Shrine
+
+>enragedly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>remotely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>n
+Lamer Realm
+
+>slow
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>coolest
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>paroled
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>artsy
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+#retry pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
+
+>l
+Blest Belts
+
+>garbed
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>s
+>s
+>s
+
+Clarthead Cathedral
+
+>loathingly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>joltily
+Your score has just gone up by one point
+They find another place where rioters roister.
+
+>score
+Score in a scenario: 22 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>snail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 24 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>hornets
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>racoon
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>l
+Uprates Pasture
+
+>snipe
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 27 out of 33 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 33.
+
+>n
+>n
+>w
+
+#pre-parrot-raptor rule
+>raptor
+!by one point
+"Awk! I'd just kill you in that form. Try that around some bad guys."
+#preefcheck parrot
+>pf
+The parrot can be changed back to a RAPTOR.
+#pre-whistle-deeply rule
+>deeply
+!by one point
+#preefcheck whistle
+>pf
+Once the parrot has surrendered the whistle, you can play it DEEPLY.
+#pre-whistle-deeply rule retry
+>deeply
+The parrot still has the whistle. You can't play the whistle until it's yours.
+#preefcheck whistle
+>pf
+Once the parrot has surrendered the whistle, you can play it DEEPLY.
+
+>w
+Reclusion Inclosure
+
+>eelmr
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+>honestly
+!by one point
+
+>aside
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 28 out of 33 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 33.
+
+>honestly
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 29 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+#more pre-medals-quickly rule
+>quickly
+/(Elmer and Merle|Merle and Elmer)'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
+
+>raptor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 30 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+#test the death where we forget to QUICKLY
+>w
+>undo
+#more pre-medals-quickly rule
+>e
+>quickly
+There's nothing you really need to attack or avoid quickly here or nearby.
+>w
+
+>quickly
+The medals clink together. You feel infused with speed. Even your fats feel fast.
+by one point
+
+#this is just to get rid of Elvira
+>w
+Rancho Archon Anchor
+WTF FTW
+>7
+>e
+
+>w
+#pre-whistle-deeply rule retry
+>deeply
+Elvira summons her monsters to attack as you learn to play the whistle. "Sorriest resistor! Apt end, pedant." is the last you hear. Maybe you should've practiced somewhere else.
+!by one point
+>undo
+>undo
+
+>deeply
+Your score has just gone up by one point
+
+>w
+
+>score
+Score in a scenario: 32 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>misses
+!otters
+
+>au 1
+>play whistle
+#notana
+by one point
+DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
+Elmo and Gretta are waiting for you back at the Means Manse
+
+>y
+
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>score
+You need to figure how to change and get through store H.

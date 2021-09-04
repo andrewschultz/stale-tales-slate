@@ -1,0 +1,277 @@
+
+## reg-roi-others-min.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* others-thru
+
+>posf
+>rove over
+
+>others
+
+>in
+Rustic Citrus
+
+>t
+>z
+>z
+
+>limes
+Your score has just gone up by one point.
+
+>score
+You have 1 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pears
+Your score has just gone up by one point.
+
+>score
+You have 2 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>grapes
+Your score has just gone up by one point.
+
+>score
+You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>plums
+Your score has just gone up by one point.
+
+>score
+You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>compass
+Your score has just gone up by one point.
+
+# we can go north, but let's look for a few more points first.
+
+>x ruts circuits
+
+>score
+You have 5 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#only three points here to test the reject case of going east to the clearing without a token
+
+>tamarind
+Your score has just gone up by one point.
+
+>score
+You have 6 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blueberries
+Your score has just gone up by one point.
+
+>score
+You have 7 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>cantaloupe
+Your score has just gone up by one point.
+
+>score
+You have 8 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+# here we want to make a detour to check rejecting going east in Swell Wells. There are two cases based on whether or not you are carrying enough fruits.
+>n
+>e
+The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you will get some from Curtis, if you do enough.
+>apricot
+by one point
+>e
+The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you can go see Curtis for remuneration. You've done a good bit.
+>undo
+>undo
+>undo
+>undo
+
+>persimmon
+Take on a token
+Your score has just gone up by one point.
+
+>score
+You have 9 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>maraschino
+Your score has just gone up by one point.
+
+>score
+You have 10 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pomegranate
+Your score has just gone up by one point.
+
+>score
+You have 11 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+Swell Wells
+
+>apricot
+Your score has just gone up by one point.
+
+>score
+You have 12 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>apples
+Your score has just gone up by one point.
+
+>score
+You have 13 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>mulberries
+Your score has just gone up by one point.
+
+>score
+You have 14 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>gooseberry
+Your score has just gone up by one point.
+
+>score
+You have 15 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+#only really need to test this nag once.
+You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
+
+>s
+Curtis hands you a coin
+scru-it
+
+>n
+
+>icon
+Your score has just gone up by one point.
+>score
+You have 16 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>coconuts
+Your score has just gone up by one point.
+
+>score
+You have 17 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>tangerines
+Your score has just gone up by one point.
+
+>score
+You have 18 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>s
+You fiddle with the coin you got
+
+>n
+
+>w
+Filed Field
+
+>cranberries
+Your score has just gone up by one point.
+
+>score
+You have 19 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blackberries
+Your score has just gone up by one point.
+
+>score
+You have 20 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>watermelon
+Your score has just gone up by one point.
+
+>score
+You have 21 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pineapple
+Your score has just gone up by one point.
+!min-up
+
+>score
+You have 22 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>e
+>s
+Nice going.
+
+#not a mistake
+>sonic
+by one point
+Blam!
+
+>score
+You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+
+>d
+Scape Space
+
+>give dollar
+!Your score has just gone up by one point.
+Dr. Severe
+
+>put icons in slot
+As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
+!Your score has just gone up by one point.
+
+# here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
+>eat arugula
+Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
+>guru orange
+You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
+>undo
+>guru dr severe
+You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
+>undo
+>guru brr hub
+You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
+>score
+You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+You can't get the maximum score, since you used the arugula
+
+>u
+>n
+Gates Stage
+
+>n
+PERP
+
+>prep
+by one point
+>research
+by one point
+#pre-gates-stage-flip rule
+>review
+No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to REVIEW the viewer.
+>undo
+>undo
+>undo
+>review
+by one point
+#pre-gates-stage-flip rule retry
+>research
+No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to RESEARCH the searcher.
+>undo
+>undo
+>undo
+>undo
+
+>research
+by one point
+>score
+
+You have 24 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>review
+by one point
+>score
+
+# let's check "here/valence enclave" conditional text in the score
+You have 25 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+>s
+>score
+You have 25 of 42 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
+>n
+
+#pre-gates-stage-flip rule retry
+>prep
+!No need to over-study or over-think. Through the gates!
+>thisalt
+--you only needed two ways to work the passport. The other was to PREP after you are called a perp.
+
+>n
+#notana
+
+You Did Great
+

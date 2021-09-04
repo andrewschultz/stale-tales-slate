@@ -1,0 +1,274 @@
+
+## reg-roi-ordeal-reload-hints.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* ordeal-reload-thru
+
+>poss
+
+>monty hints
+
+>think
+>x chair
+>x shelf
+
+>open door
+
+>1
+>5
+
+>lamp
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+
+>hint lamp
+The lamp will last as long as you need it to.
+
+>satchel
+Your score has just gone up by one point.
+>t
+
+>basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+>score
+Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+
+>d
+>stair
+by one point
+>undo
+>undo
+
+>stable
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+
+>score
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
+
+>chimney
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+
+>score
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
+
+>painting
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+
+>score
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
+
+>in
+
+>stair
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
+
+>score
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
+
+>out
+>u
+Highest Heights
+
+>ramp
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
+
+>score
+Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
+
+>d
+Largely All-Grey Gallery
+
+>snib
+in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
+
+>hint bins
+You figured how to secure the ISBN bins. Nothing more to do.
+
+!Nothing left to do here in your manse. You should be able to go IN to start your adventures.
+>x settler
+Nothing left to do here in your manse. You should be able to go IN to start your adventures.
+
+>score
+Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+>in
+
+>flier
+by one point
+
+>score
+Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+
+>1
+>1
+
+[1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
+[2] Finish Fishin'.
+
+# note option 2 just hooks around meaningless babble here
+>2
+
+Carven Cavern
+
+>staple
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+>stapler
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+>put staple in stapler
+
+>staple curtain
+
+>score
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scan specter
+Your settler registers ?R?????
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+The Respect Specter coughs.
+>y
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. While you didn't get the definitive hints from non-cheat scanning, I can suspect you see how it could work, combining both ways to scan."
+by one point
+>undo
+>undo
+>t
+>scan specter
+"With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+>undo
+>scepter
+The Respect Specter coughs.
+>y
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. You kind of avoided the cheat-scanning I came here for, but I respect your intrepid stance against cheating, even if it really isn't cheating."
+by one point
+>undo
+>t
+>scan specter
+"Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+by one point
+>undo
+>scan specter
+"You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+>scan specter
+"You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+>scan specter
+"In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+>scan specter
+"I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific."
+>in
+"I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
+by one point
+>undo
+>scan specter
+"This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities."
+>in
+"I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+by one point
+>undo
+>scan specter
+"That's all. Thanks for listening. I can repeat things one step at a time if you need a recap."
+>in
+"I offer you much luck and respect in your journey. Thanks for listening. I am impressed your ethical standards were too high to take a bonus point," the Respect Specter calls, with a hint of sadness.
+"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+>undo
+>scepter
+!The Respect Specter coughs.
+"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
+by one point
+>undo
+
+>scepter
+The Respect Specter coughs.
+>y
+by one point
+>score
+Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+
+>in
+Strip of Profits

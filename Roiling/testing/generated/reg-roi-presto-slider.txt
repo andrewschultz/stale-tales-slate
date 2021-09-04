@@ -1,0 +1,470 @@
+
+## reg-roi-presto-slider.txt
+
+## walkthrough with slider readings
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* presto_walkthrough
+
+>ts
+>t
+>posf
+>presto
+>enter tornado
+Grey Gyre
+
+>slon
+#slider test for blam
+>lbma
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mazeltov
+>ameztlvo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for umph
+>muhp
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for bleep
+>eebpl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>score
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+
+#slider test for phooey
+>oophye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pooh
+>opho
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>phooey
+Your score has just gone up by two points
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+
+>s
+Char Arch
+
+#slider test for rats
+>arst
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for drat
+>rdta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake
+>rats
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>drat
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>n
+
+#not a mistake
+>bleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+Marines Seminar Remains
+
+#slider test for bingo
+>ibgon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for prost
+>rpsto
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>get popgun
+
+>prost
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+
+>w
+
+#slider test for wont
+>owtn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#pre-solve-maze rule retry
+>mazeltov
+Your score has just gone up by three points
+>score
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+>blam
+Your score has just gone up by one point
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>s
+
+>s
+Dirge Ridge
+
+#slider test for ole
+>leo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>ole
+by one point
+
+>score
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+#slider test for darn
+>adnr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for goodness
+>osgndsoe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>goodness
+by one point
+>score
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>darn
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+#slider test for whassup
+>sahwups
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake
+>whassup
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+>n
+
+>bingo
+#pre-boing-bingo rule retry
+!(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>load gun with dart
+
+#slider test for there
+>eethr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>there
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+Saps' Pass
+
+##bingo *2 = no line break ??
+#different message for making it to the phat path 1st time? ??
+
+#slider test for gosh
+>oghs
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for syke
+>ysek
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>syke
+Your score has just gone up by one point
+
+Phat Path
+
+#slider test for what
+>hwta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for solong
+>osolgn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for later
+>alert
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tough
+>otghu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>what
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>later
+Your score has just gone up by one point
+But we ain't bored yet, boss!
+>score
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>score
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+#slider test for trasch
+>rtsahc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>trasch
+by one point
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>n
+Hacks' Shack
+
+>screen
+by one point
+
+>score
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+#slider test for screen
+>ercsne
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#slider test for skid
+>ksdi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cola
+>ocal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mug
+>ugm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for leaf
+>elfa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for futon
+>ufont
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for casserole
+>aceesolrs
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rom stick
+>orsmitkc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rom sticks
+>smorsckit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for avider
+>vadire
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for derive
+>edevir
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for capslock
+>acclskpo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>skid
+Your score has just gone up by one point
+>score
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>leaf
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+#note the regular code path is usurped to remind the player of what they already know
+#slider test for disk
+>ikds
+No, skid <=> disk is about it. There's no tricky third way.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>cola
+Your score has just gone up by one point
+>score
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
+>score
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>futon
+Your score has just gone up by one point
+>score
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>casserole
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+#notmax
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#slider test for keyboard
+>ekbyaodr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>keyboard
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#slider test for tab
+>abt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>put keyboard on slab
+Only one more piece of hardware is needed, and the computer will work.
+
+>put screen on slab
+You can now do computery things unimpeded! Hooray!
+
+>put lock on keyboard
+fits in perfectly
+
+>disk
+
+>put disk in drive a
+
+#slider test for reboot
+>obreto
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>reboot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#slider test for sleep
+>eespl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>sleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#slider test for compile
+>ocpmlei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>compile
+by one point
+
+>score
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>avider
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+
+>derive
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+>rom sticks
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>undo
+>undo
+>romsticks
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>tab
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+#slider test for debug
+>edugb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>pour cola in mug
+You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
+
+>debug
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>misses
+!presto
+
+#slider test for sub
+>usb
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sub.
+
+>sub
+Your score has just gone up by one point
+Diver time
+
+Strip of Profits
+
+>score
+
+Presto (41/41)

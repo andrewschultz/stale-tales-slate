@@ -1,0 +1,558 @@
+
+## reg-roi-otters-slider.txt
+
+## walkthrough with slider readings
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>seed 1
+>ts
+>a5
+>t
+>otters
+
+>opt in
+>enter solid idols
+
+>slon
+#slider test for barely
+>aberyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#forceignore
+>barely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+
+>l
+Burnt Brunt
+
+#slider test for rescind
+>csrendi
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: rescind.
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#slider test for reedily
+>erdelyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>rescind
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>reedily
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>w
+Disowned Downside
+
+>allrand
+#slider test for sparely
+>psralye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for angrily
+>narglyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for bossily
+>ssbolyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for seedily
+>esdelyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for tersely
+>etelrys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for shadily
+>hsdalyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for nastily
+>antslyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for snidely
+>nsdilye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for starkly
+>tsralyk
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for cattily
+>ttcalyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for irately
+#note that tearily is not covered here. This is just an arbitrary choice I made in the table to make IRATELY the #1 choice.
+#elsewhere I defined t-tearily-irately as multiple-solutions.
+>ritalye
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: irately.
+>undo
+#slider test for blearily
+>lblrayei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for ribaldly
+>lbilryad
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for formally
+>lroamfyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for coitally
+>lioatcyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for modestly
+>omedtsyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for shabbily
+>bahsibyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for shoddily
+>dohsidyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for silently
+>llsneyit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for steamily
+>tsaeimyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for suddenly
+>ddsuneyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for stupidly
+>tspudiyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for martially
+>altrlmayi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for sincerely
+>enieslcyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for sobbingly
+>bbsonilyg
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for tediously
+>etiduolys
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for wearingly
+>ewranilyg
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for drawlingly
+>larldniywg
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for emotionally
+>melontiloya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for desperately
+>edeesarlpyt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for reactively
+>eretcviayl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for despairingly
+>iseapdirgnyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#slider test for indiscreetly
+>eisndrciteyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+>undo
+
+>bossily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>angrily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>blearily
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+>au -1
+
+>1
+
+>3
+
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+#pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
+#preefcheck medals
+>pf
+The medals can help you go QUICKLY, though they may not be fully magical, yet.
+
+>s
+#slider test for although
+>htlahguo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>although
+#slider test for ergo
+>reog
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+>undo
+>undo
+>undo
+
+>n
+Loop Pool
+
+#slider test for because
+>ebeusac
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for else
+>seel
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>because
+by one point
+
+>score
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>else
+by one point
+
+>score
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+#slider test for unless
+>slnsue
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>s
+
+>s
+
+Bran Barn
+
+>although
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
+
+>ergo
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
+
+#slider test for however
+>ewohrve
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>however
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+>n
+
+#slider test for atom
+>tamo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>atom
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>e
+
+>n
+Shiner Shrine
+
+#slider test for brutely
+>rbtulye
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for remotely
+>erometyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for enragedly
+>neegarlyd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>enragedly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>remotely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>n
+Lamer Realm
+
+#slider test for slow
+>lswo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>slow
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+#slider test for paroled
+>aporedl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for artsy
+>rasyt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for coolest
+>ocloste
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for garbed
+>agbrde
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>coolest
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>paroled
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>artsy
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>l
+Blest Belts
+
+>garbed
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>s
+>s
+>s
+
+Clarthead Cathedral
+
+#slider test for loathingly
+>ollhtniyag
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stoically
+>lotcilsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for joltily
+>lljotyi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>loathingly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>joltily
+Your score has just gone up by one point
+They find another place where rioters roister.
+
+>score
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 22 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+#slider test for parrot
+>rrpato
+# this is a special case, similar to disk <=> skid, since the game wants to make it clear about parrot <=> raptor
+!Your settler begins to make noises: a low hum, but nothing really piercing.
+The parrot can be changed back into a raptor, but not into anything new.
+
+#slider test for raptor
+>arrotp
+#here we're not telling the player anything shocking or new, so we might as well clue them we should reverse things.
+The parrot can be changed back into a raptor, but not into anything new.
+!Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for snail
+>nsila
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for snipe
+>nspei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for racoon
+>ocarno
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for raccoon
+>aroocnc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for hornets
+>ohnrtse
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>snail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>hornets
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 24 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>racoon
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>l
+Uprates Pasture
+
+>snipe
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>n
+>n
+>w
+
+>w
+Reclusion Inclosure
+
+>eelmr
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+#slider test for aside
+>sadei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>aside
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 27 out of 33 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 33.
+
+#slider test for honestly
+>ohentsyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>honestly
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 28 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>raptor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 29 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+#slider test for quickly
+>uqcilyk
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>quickly
+The medals clink together. You feel infused with speed. Even your fats feel fast.
+by one point
+
+#this is just to get rid of Elvira
+>w
+Rancho Archon Anchor
+WTF FTW
+>7
+>e
+
+#slider test for deeply
+>edpeyl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>deeply
+Your score has just gone up by one point
+
+>w
+
+>score
+Score in a scenario: 31 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>misses
+!otters
+
+>au 1
+>play whistle
+#notana
+by one point
+DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
+Elmo and Gretta are waiting for you back at the Means Manse
+
+>y
+
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>score
+You need to figure how to change and get through store H.

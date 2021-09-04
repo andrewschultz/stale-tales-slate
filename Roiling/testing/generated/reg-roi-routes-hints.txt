@@ -1,0 +1,204 @@
+
+## reg-roi-routes-hints.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>scam
+
+>monty hints
+You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
+
+DEBUG INFO: scripture picturers hinting.
+
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>inside
+Your score has just gone up by one point
+
+Cleric Circle
+
+The spoon reflects to the list-o-toils.
+
+>score
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>x list o toils
+
+The spoon reflects back outside.
+
+#x list o toils
+>x toils
+Precise recipes
+
+>out
+
+You angle your spoon a bit, and you realize you, or something, should be PAST.
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+You angle your spoon a bit, and you realize you, or something, should be DESPITE.
+
+>despite
+Your score has just gone up by one point
+
+The spoon points you out of the Idle Deli.
+
+>out
+
+You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+
+>across
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be OPPOSITE.
+
+Adobe Abode
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+The spoon points you out of Oscar's.
+
+>out
+
+You angle your spoon a bit, and you realize you, or something, should be AGAINST.
+
+>against
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
+
+>score
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>against
+!Your score has just gone up by one point
+
+>astride
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be BELOW.
+
+#not a mistake (mistake code is for general preposition reject)
+>below
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be UNDER.
+
+#not a mistake (mistake code is for general preposition reject once you are under)
+>under
+Your score has just gone up by one point
+
+The spoon points to the Cleric Circle now you have all the items.
+
+##No-Lag needs a line break ??
+
+#I want this here since we want to reject TOWARDS with Gast around
+>towards
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for worst ad.
+
+>in
+
+The spoon points back outside.
+
+>out
+
+You angle your spoon a bit, and you realize you, or something, should be ABOVE.
+
+>above
+Your score has just gone up by one point.
+
+You angle your spoon a bit, and you realize you, or something, should be FROM.
+
+>score
+Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+>from
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be BENEATH.
+
+#not a mistake (mistake code is for general preposition reject)
+>beneath
+Your score has just gone up by one point
+
+Harms Marsh
+
+You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+
+>score
+Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#pre-unlit-until rule
+>until
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+
+>around
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be ALONG.
+
+>along
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be AMIDST.
+
+Ripe Pier
+
+>amidst
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be ATHWART.
+
+Cripple Clipper
+
+>athwart
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be BETWEEN.
+
+Sonancy Canyons
+
+>between
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be THROUGH.
+
+>through
+Your score has just gone up by one point
+
+You angle your spoon a bit, and you realize you, or something, should be BEYOND.
+
+>without
+Your score has just gone up by one point
+
+>score
+
+Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+
+>beyond
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes (22/22)
+

@@ -1,30 +1,7 @@
-#--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
-#--rbr.py v to verify nothing slipped
 
-files=reg-roi-routes-max.txt,reg-roi-routes-min.txt,reg-roi-routes-nudmis.txt,reg-roi-routes-slider.txt,reg-roi-routes-hints.txt
+## reg-roi-routes-nudmis.txt
 
-~	min	t1
-~	max	t0
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin,spoi	t4
-
-}}MAX=22
-}}CURMAX=22
-}}SCORE=0
-}}CURMIN=20
-
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes.
-
-ALSO-IGNORE:t
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
-
+## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -35,37 +12,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >routes
 >enter routes
 >score
-{$SCOS}
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-@spoi
->scam
-
-@hin
->monty hints
-You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
-
-@sli
->slon
-#slider test for towards
->otawdsr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for inside
->niised
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for past
->tpas
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for across
->srcsao
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for against
->gaiastn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for astride
->sartdei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 >t
 #mistake test for follow [text]
 >follow zozimus
@@ -117,18 +65,17 @@ Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys fro
 #mistake test for seam
 >seam
 You can't find any crack in the Same Mesa that you could follow.
-\\
+
 #mistake test for aint
 >aint
 You don't need to make the anti-sag sit-a-nag any sturdier. And calling it ain't-sag would be false advertising.
-\\
+
 #mistake test for aint gas/gas
 >aint gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 >gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 
-@nud
 #nudge for poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
@@ -209,7 +156,6 @@ OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading
 >scan adsorbing signboard
 While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
 
-@nud
 #spechelp for worst ad
 >towarsd
 The ad seems slightly nearer, for a moment.
@@ -221,14 +167,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
-@hin
-DEBUG INFO: scripture picturers hinting.
-
-@!min
 >score
-{$SCOS}
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-@nud
 #nudge for towards
 >towarsd
 You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
@@ -243,7 +184,6 @@ You don't need to worry about art, here.
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 
-@nud
 #mistake test for ides/rat/tar
 >ides
 It's the whole side art you need to deal with.
@@ -252,7 +192,6 @@ It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
 
-@nud
 #pre-side-art-astride rule
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
@@ -269,28 +208,16 @@ You add the information to your pedanto-notepad under FLIPS.
 >pf
 Find a way to be fearless so you can lean AGAINST the anti-sag sit-a-nag.
 
-@max
->in
-Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time
-
 >inside
 Your score has just gone up by one point
-}}SCORE++
 
 Cleric Circle
 
-@spoi
-The spoon reflects to the list-o-toils.
-
 >score
-{$SCOS}
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
 >x list o toils
 
-@spoi
-The spoon reflects back outside.
-
-@nud
 #mistake test for noops
 >noops
 The snoop spoon isn't as complicated as assembly language.
@@ -381,7 +308,6 @@ You can't change stuff like that by brute force. But you don't need to.
 >x toils
 Precise recipes
 
-@nud
 #mistake test for opposite
 >opposite
 Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.
@@ -400,10 +326,6 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 
 >out
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be PAST.
-
-@nud
 #renudge for die
 >edi
 The words themselves do nothing. You found the way in.
@@ -420,7 +342,6 @@ Perhaps it's better and simpler to focus on the proper names instead.
 >resot
 Perhaps it's better and simpler to focus on the proper names instead.
 
-@nud
 #spechelp for adsorbing signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
@@ -428,14 +349,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signbo
 
 >past
 Your score has just gone up by one point
-}}SCORE++
 
 Idle Deli
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be DESPITE.
-
-@nud
 #mistake retest for psat
 >psat
 You have enough word juggling now. You don't need a standardized test, too.
@@ -500,7 +416,6 @@ Pat doesn't need consolation for his lost business.
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 
-@nud
 #spechelp for seed pit
 >despiet
 The seed pit seems to bubble slightly.
@@ -509,19 +424,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 
-@sli
-#slider test for despite
->edeitps
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >despite
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-The spoon points you out of the Idle Deli.
-
-@nud
 #mistake retest for tap pat/tap
 >tap
 You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
@@ -535,12 +440,10 @@ That'd be a double negative, to re-enter. Your argument would be so won, it's lo
 Actually, Pat's advice may not be apt.
 !Look to the seed pit.
 
-@mis
 #mistake test for proust
 >proust
 Alas, the stupor sprout has nothing in common with madeleine.
 
-@nud
 #renudge for carvings
 >cravinsg
 It's not the carvings that need changing.
@@ -550,7 +453,6 @@ You got the mushrooms from the seed pit, and that's what's important
 It's not the carvings that need changing.
 You got the mushrooms from the seed pit, and that's what's important
 
-@nud
 #renudge for stupor
 >surpot
 Brother Horbert will work his magic with that.
@@ -566,10 +468,6 @@ You don't need to do anything with Pat, especially now you got the mushrooms.
 
 >out
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be ACROSS.
-
-@nud
 #renudge for resto
 >resot
 You did well enough to focus on the proper names instead.
@@ -596,15 +494,10 @@ You don't get points just for asking them.
 But the whales would be beached. Inside or outside of Oscar's.
 
 >across
-}}SCORE++
 Your score has just gone up by one point
-
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be OPPOSITE.
 
 Adobe Abode
 
-@nud
 #mistake retest for orcas
 >orcas
 But the whales would be beached. Besides, it's the pipe soot you want
@@ -627,12 +520,6 @@ Brother Horbert will work his magic with that.
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
-@sli
-#slider test for opposite
->poopiset
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, well, dingy enough.
@@ -641,7 +528,6 @@ This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, w
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 
-@nud
 #readables for trashy ashtray
 >read ashtray
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
@@ -650,13 +536,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That'
 
 #not a mistake ("opposite" by List o Toils is)
 >opposite
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-The spoon points you out of Oscar's.
-
-@nud
 #mistake retest for orcas
 >orcas
 Besides, you got the pipe soot
@@ -667,10 +548,6 @@ Brother Horbert will work his magic with that.
 
 >out
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be AGAINST.
-
-@nud
 #mistake retest for poopiest
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And the pipe soot is icky enough as-is.
@@ -693,7 +570,6 @@ No, you don't see any other way around the signboard to enter. You don't need on
 >inseid
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
 
-@nud
 #renudge for orcas
 >ocras
 No, you found the way in, with the extra s.
@@ -704,87 +580,26 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 >enchb
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
-@nud
 #respechelp for sit a nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
 
-@sli
-#slider retest for against
->gaiastn
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-
-@nud
 #nudge for anti
 >anit
 The whole anti-sag sit-a-nag.
-\\
+
 #nudge for sag
 >sga
 The whole anti-sag sit-a-nag.
 
-@max
-# here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
-##balance undos
->past
-by one point
->out
->across
-by one point
->out
 >against
-by one point
->past
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing adsorbing signboard to pad because it was already reflexed.
->undo
->across
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing lairage regalia to pad because it was already reflexed.
->undo
->inside
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing scripture picturers to pad because it was already reflexed.
->undo
->undo
->undo
->undo
->undo
->undo
-
->against
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
-
 >score
-{$SCOS}
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-@max
-#pre-mesa-dir-flip rule
->past
-!by one point
-!Idle Deli
-#pre-mesa-dir-flip rule retry
->across
-!by one point
-!Adobe Abode
-#pre-mesa-dir-flip rule retry
->towards
-!by one point
->pf
-#preefcheck worst ad
-You can go TOWARDS the worst ad once things are a bit more settled.
-#preefcheck lairage regalia
-You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
-#preefcheck adsorbing signboard
-You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
-
-@mis
 #mistake test for gats/tags
 >gats
 This game is not violent enough for tags with gats.
@@ -794,7 +609,6 @@ This game is not violent enough for tags with gats.
 >stag
 Ian Gast already came alone and does not deserve to be changed into an animal.
 
-@nud
 #nudge for gast
 >gsta
 You can't change Ian Gast permanently. You just have to work around him.
@@ -814,7 +628,6 @@ It's the whole side art you need to deal with.
 >against
 !Your score has just gone up by one point
 
-@nud
 #mistake retest for under
 >under
 You can't hide from Ian Gast like that, right now.
@@ -822,19 +635,12 @@ You can't hide from Ian Gast like that, right now.
 >tiraed
 There's more than one tirade
 
-@sli
-#slider retest for astride
->sartdei
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-
-@nud
 #respechelp for side art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the side art. That's a decent omen. ??
 
-@nud
 #nudges for ides
 >ides
 It's the whole side art you need to deal with.
@@ -847,13 +653,8 @@ It's the whole side art you need to deal with.
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit.
 
 >astride
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be BELOW.
-
-@mis
 #mistake retest for ides/rat/tar
 >ides
 It's the whole side art you needed to deal with.
@@ -861,7 +662,6 @@ It's the whole side art you needed to deal with.
 >staider
 You already did your best with the tirades and side art.
 
-@nud
 #done rejects for side art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
@@ -869,39 +669,31 @@ You got on the anti-sag sit-a-nag right. Time to start ducking.
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
-@nud
 #renudge for tirade
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
-@nud
 #redone rejects for sit a nag
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
-@sli
-#slider test for below
->ebowl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for woe bow bell
 >belwo
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
-\\
+
 #nudge for woe
 >weo
 It seems best to deal with the whole WOE BOW BELL.
-\\
+
 #nudge for bow
 >bwo
 It seems best to deal with the whole WOE BOW BELL.
-\\
+
 #nudge for bell
 >bell
 It seems best to deal with the whole WOE BOW BELL.
-\\
+
 #mistake test for bowel/elbow/bowels/elbows
 >bowel
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
@@ -914,13 +706,8 @@ The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find 
 
 #not a mistake (mistake code is for general preposition reject)
 >below
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be UNDER.
-
-@nud
 #mistake retest for below
 >below
 You already tried this preposition. There must be others.
@@ -928,7 +715,6 @@ You already tried this preposition. There must be others.
 >belwo
 You don't want the WOE BOW BELL to come back.
 
-@nud
 #nudge for giatn
 >igtan
 Ian Gast is too old and set in his ways. You may just need to listen to him from one more angle.
@@ -937,12 +723,6 @@ Ian Gast is too old and set in his ways. You may just need to listen to him from
 Nia Gast is too old and set in her ways. You may just need to listen to her from one more angle.
 >gs
 
-@sli
-#slider test for under
->nuerd
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for rude n nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
@@ -956,13 +736,8 @@ That's not quite the book's whole title.
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-The spoon points to the Cleric Circle now you have all the items.
-
-@nud
 #respechelp for sit a nag
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
@@ -984,28 +759,17 @@ Brother Horbert will work his magic with that.
 >pipesoto
 Brother Horbert will work his magic with that.
 
-
 ##No-Lag needs a line break ??
 
-@!min
 #I want this here since we want to reject TOWARDS with Gast around
 >towards
-}}SCORE++
-}}CURMIN++
 Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 
 >in
 
-@spoi
-The spoon points back outside.
-
 >out
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be ABOVE.
-
-@nud
 #mistake test for along
 >along
 You aren't far enough along to, err, look along
@@ -1025,22 +789,12 @@ The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at
 >alogn
 You suspect you have a little way to go before finding clues of No-Lag Logan.
 
-@sli
-#slider test for above
->baveo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >above
-}}SCORE++
 Your score has just gone up by one point.
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be FROM.
-
 >score
-{$SCOS}
+Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
-@nud
 #scannotes for morf form
 >scan morf form
 Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
@@ -1049,24 +803,9 @@ Well, you shouldn't be surprised the settler gives weird readings for something 
 The MORF-FORM rocks in the air, as if it's about to fall.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That's a decent omen.
 
-@sli
-#slider test for from
->rfmo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >from
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be BENEATH.
-
-@sli
-#slider test for beneath
->ebentha
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for under-generic
 >under
 You already went UNDER. You need something new. Something slightly different.
@@ -1088,19 +827,10 @@ joke death
 
 #not a mistake (mistake code is for general preposition reject)
 >beneath
-}}SCORE++
 Your score has just gone up by one point
-
-@min
-}}CURMAX--
-DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
 Harms Marsh
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
-
-@nud
 #nudge for null
 >null
 The whole NULL IT unit.
@@ -1133,9 +863,8 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
 >score
-{$SCOS}
+Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
-@nud
 #scannotes for null it unit
 >scan null it unit
 The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
@@ -1144,25 +873,14 @@ The NULL IT unit seems to leave things double-unlit. But with one ambiguous read
 You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL IT unit. That's a decent omen.
 
-@sli
-#slider test for until
->nuilt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for around
 >around
 You can't see an un-road yet, or anything that might lead to it.
 
 #pre-unlit-until rule
 >until
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
-
-@nud
 #done rejects for un road
 >urdano
 You thought you saw an un-road for a second, but ... not quite.
@@ -1183,7 +901,6 @@ The whole odd run on aura.
 >untli
 The underground is already lit. Un-unlit.
 
-@nud
 #nudge for pyrites
 >pyrites
 not something you
@@ -1192,19 +909,9 @@ not something you
 You thought you saw an un-road for a second, but ... not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
 
-@sli
-#slider test for around
->rauodn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >around
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be ALONG.
-
-@nud
 #renudge for pyrites
 >pyrites
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
@@ -1212,7 +919,6 @@ The pyrites seem to glow, momentarily forming an arrow as if to say, get on with
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 
-@nud
 #spechelp for noon gag
 #remember "all" bugs the Inform compiler
 >alogn
@@ -1222,21 +928,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. Th
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
 
-@sli
-#slider test for along
->lango
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >along
-}}SCORE++
 Your score has just gone up by one point
-
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be AMIDST.
 
 Ripe Pier
 
-@nud
 #nudge for pier
 >pire
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1256,7 +952,6 @@ You'll have to deal with the whole data-dim mists.
 >read mist ad
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
-@nud
 #spechelp for admits mist ad
 >amidts
 Hmm, you almost see a way past the admits mist ad.
@@ -1268,28 +963,17 @@ Like most ads, it doesn't pose any great logical problems.
 >scan data dim mists
 Well! The data isn't dim from the settler. There's a lot to work with, here.
 
-@mis
 #mistake test for ta da/tada
 >ta da
 This is the wrong region for that sort of flash of insight.
 >tada
 This is the wrong region for that sort of flash of insight.
 
-@sli
-#slider test for amidst
->madits
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >amidst
-}}SCORE++
 Your score has just gone up by one point
-
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be ATHWART.
 
 Cripple Clipper
 
-@nud
 #nudge for mess
 >mess
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
@@ -1327,32 +1011,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketch
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, they are a lot of data. Perhaps the question marks are not tough to decipher at all.
 
-@sli
-#slider test for athwart
->tawrtha
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >athwart
-}}SCORE++
 Your score has just gone up by one point
-
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be BETWEEN.
 
 Sonancy Canyons
 
-@sli
-#slider test for through
->hthugor
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for hurt hog
 >throuhg
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
 
-@nud
 #pre-hurt-hog-through rule
 >through
 That could work later, but the hog and ewe don't trust you to go by yet.
@@ -1361,7 +1029,6 @@ That could work later, but the hog and ewe don't trust you to go by yet.
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.
 
-@nud
 #mistake test for thru
 >thru
 Well, sort of, but not so colloquial.
@@ -1397,77 +1064,28 @@ The ciphers cannot be dispelled.
 >ciphre
 The ciphers cannot be dispelled.
 
-@sli
-#slider test for without
->ttwouhi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for between
->ebentwe
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider retest for through
->hthugor
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-
 >between
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be THROUGH.
-
-@nud
 #done rejects for bent ewe
 >betwene
 The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay.
 
 >through
-}}SCORE++
 Your score has just gone up by one point
 
-@spoi
-You angle your spoon a bit, and you realize you, or something, should be BEYOND.
-
-@min
->score
-{$SCOS}
->beyond
-by one point
->undo
-
-@nud
 #spechelp for raptest patters
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
 
-@!min
 >without
-}}SCORE++
-}}CURMIN++
 Your score has just gone up by one point
 
 >score
 
-@min
-{$SCOS}
+Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
 
-@!min
-{$SCOMAX}
-
-@min
->without
-###skip test checking
->score
-you missed some extra stuff you can't go back for
->undo
->undo
-
-@sli
-#slider test for beyond
->eboydn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake retest for tapster
 >tapster
 !No alcohol appears, and worse, Spinal Tap's 'Back from the Dead' doesn't start playing, either.
@@ -1479,18 +1097,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Some different noises from the yob den.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.
 
-@min
->misses
-Routes
---you could've tried to go TOWARDS the worst ad in the Same Mesa.
---you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.
-
 >beyond
-}}SCORE++
 Your score has just gone up by one point
 
 Strip of Profits
 
 >score
-Routes ({SCORE}/{MAX})
+Routes (22/22)
 

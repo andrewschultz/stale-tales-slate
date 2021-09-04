@@ -1,0 +1,249 @@
+
+## reg-roi-otters-min.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>seed 1
+>ts
+>a5
+>t
+>otters
+
+>opt in
+>enter solid idols
+
+#forceignore
+>barely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+
+>l
+Burnt Brunt
+
+>discern ed riley
+DEBUG INFO: Taking away a max point.
+#we need the "wait" in here to hook around the undo blocker
+>z
+>undo
+>undo
+>discern
+REEDILY
+
+>reedily
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>w
+Disowned Downside
+
+>bossily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>angrily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>blearily
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+>au -1
+
+>1
+
+>3
+
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+#pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
+#preefcheck medals
+>pf
+The medals can help you go QUICKLY, though they may not be fully magical, yet.
+
+>n
+Loop Pool
+
+>because
+by one point
+
+>score
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>else
+by one point
+
+>score
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>s
+
+>atom
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>e
+
+>n
+Shiner Shrine
+
+>enragedly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>remotely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>n
+Lamer Realm
+
+>slow
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>coolest
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>paroled
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>artsy
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>l
+Blest Belts
+
+>s
+>s
+>s
+
+Clarthead Cathedral
+
+>loathingly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>joltily
+Your score has just gone up by one point
+They find another place where rioters roister.
+
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>snail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>hornets
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>racoon
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
+
+>l
+Uprates Pasture
+
+>n
+>n
+>w
+
+>w
+Reclusion Inclosure
+
+>eelmr
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+>raptor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+
+>quickly
+The medals clink together. You feel infused with speed. Even your fats feel fast.
+by one point
+
+#this is just to get rid of Elvira
+>w
+Rancho Archon Anchor
+WTF FTW
+>7
+>e
+
+>deeply
+Your score has just gone up by one point
+
+>w
+
+>score
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 30.
+
+>misses
+!otters
+
+>au 1
+>play whistle
+#notana
+by one point
+DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
+Elmo and Gretta are waiting for you back at the Means Manse
+
+>y
+
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>score
+You need to figure how to change and get through store H.

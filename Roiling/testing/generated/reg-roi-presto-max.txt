@@ -1,0 +1,590 @@
+
+## reg-roi-presto-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* presto_walkthrough
+
+>ts
+>t
+>posf
+>presto
+>enter tornado
+Grey Gyre
+
+#pre-plebe-bleep rule
+>bleep
+!by one point
+You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
+#preefcheck plebe
+>pf
+You can shout BLEEP at the plebe once you look more authoritative.
+
+#pre-solve-maze rule
+>mazeltov
+You're not messing around! You see the best way to destroy the maze, and you're going for it.
+>undo
+>undo
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>score
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+
+>phooey
+Your score has just gone up by two points
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+
+>s
+Char Arch
+
+#pre-yak-keyboard rule
+>keyboard
+The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
+Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
+#preefcheck bored yak
+>pf
+You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak.
+
+#not a mistake
+>rats
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>drat
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>n
+
+#not a mistake
+>bleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+Marines Seminar Remains
+
+>bingo
+#pre-boing-bingo rule
+(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+>undo
+
+>get popgun
+
+>prost
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+
+>w
+
+>mazeltov
+!You're not messing around! You see the best way to destroy the maze, and you're going for it.
+No point actually going through the maze when you can destroy it.
+by three points
+>undo
+
+#pre-solve-maze rule retry
+>n
+>mazeltov
+You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
+by three points
+>undo
+>undo
+
+#pre-solve-maze rule retry
+>mazeltov
+Your score has just gone up by three points
+>score
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+>blam
+Your score has just gone up by one point
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+#pre-ether-there rule
+>there
+You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
+#preefcheck ether
+>pf
+You haven't yet found the right moment to shout THERE into the ether.
+
+>s
+
+>s
+Dirge Ridge
+
+>ole
+by one point
+
+>score
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
+>score
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>darn
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+#not a mistake
+>whassup
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+>n
+
+#continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
+#test cases: no gun, no loaded gun, first time, subsequent times
+>there
+/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need to load that popgun.
+>undo
+>abstract popgun to seminar
+>there
+!by one point
+/(Leo and Rand|Rand and Leo) charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
+/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
+>there
+!by one point
+#don't let your pals get beaten up twice.
+THERE, you think, realizing you're not armed yet.
+#detour to test "efffectively" armed
+>banish dart
+>there
+THERE, you think, realizing you're not armed yet.
+>undo
+>undo
+#end detour
+>purloin popgun
+>there
+!by one point
+THERE, you think, realizing you're not effectively armed yet.
+You need to fix the popgun.
+
+>bingo
+#pre-boing-bingo rule retry
+!(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>there
+!by one point
+THERE, you think, realizing you're not effectively armed yet.
+!You need to fix the popgun.
+
+>load gun with dart
+
+>there
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+Saps' Pass
+
+##bingo *2 = no line break ??
+#different message for making it to the phat path 1st time? ??
+
+>gosh
+Your score has just gone up by one point
+Phat Path
+>score
+Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+#pre-hogs-not-keys rule
+>pf
+SYKE was another way around the hogs to get the keys.
+>undo
+>undo
+>undo
+
+>syke
+Your score has just gone up by one point
+
+Phat Path
+
+>what
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+# all 6 combos to get through
+>tough
+by one point
+>so long
+by one point
+!Hut! Go!
+Dat was a good dust-up
+#pre-harpings-flip rule
+>later
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>later
+by one point
+!Hut! Go!
+Dat was a good dust-up
+#pre-harpings-flip rule retry
+>so long
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>undo
+>so long
+by one point
+>later
+by one point
+!Hut! Go!
+Dat was a good dust-up
+>tough
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>tough
+by one point
+Hut! Go!
+Dat was a good dust-up
+>later
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>undo
+>tough
+by one point
+>later
+by one point
+!Hut! Go!
+Dat was a good dust-up
+>so long
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>so long
+by one point
+!Hut! Go!
+Dat was a good dust-up
+>later
+/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
+>undo
+>undo
+>undo
+
+>later
+Your score has just gone up by one point
+But we ain't bored yet, boss!
+>score
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>score
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>trasch
+by one point
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>n
+Hacks' Shack
+
+>screen
+by one point
+
+>score
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>au 2
+>get polemic
+You take it. You don't need to, but it'd be nice to have handy.
+!Taken.
+>s
+#pre-polemic-compile rule
+>compile
+!by one point
+There is no computer around. You probably want to go back to the Hacks' Shack for this.
+>undo
+>n
+>compile
+!by one point
+Good idea, but tough to program without something to type on.
+>purloin keyboard
+>compile
+!by one point
+Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+#preefcheck im le cop polemic
+>pf
+You weren't ready to COMPILE yet.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>skid
+Your score has just gone up by one point
+>score
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>leaf
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+>score
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
+>score
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+#pre-peels-speel-sleep rule
+>sleep
+You haven't yet made anywhere comfortable to sleep.
+#preefcheck peels speel
+>pf
+You tried to SLEEP, but the time wasn't right.
+#pre-reboot rule
+You have nothing to type with, so it doesn't do much good.
+#preefcheck be troo e robot
+>pf
+You weren't ready for the Be-Troo E-Robot to REBOOT yet.
+
+>futon
+Your score has just gone up by one point
+>score
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+#pre-peels-speel-sleep rule retry
+>sleep
+Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.
+
+>casserole
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>give book to yak
+#notmax
+by one point
+>undo
+
+>disk
+That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on the skid wouldn't appreciate it. Best to return to the Hacks' Shack and try again.
+
+>push skid n
+>push skid n
+>push skid n
+#notmax
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>keyboard
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+!by one point
+Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+!Done. You can try to COMPILE again, now.
+Ok, but by "may want" I meant "really probably need to."
+>undo
+
+>put keyboard on slab
+Only one more piece of hardware is needed, and the computer will work.
+
+>compile
+Good idea, but first, you may want to put the screen on the slab. Do so now?
+!Done. You can try to COMPILE again, now.
+Ok, but by "may want" I meant "really probably need to."
+
+>put screen on slab
+You can now do computery things unimpeded! Hooray!
+
+>compile
+!by one point
+You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+>compile
+!by one point
+You need to get rid of that uppercase to successfully compile your code.
+
+>put lock on keyboard
+fits in perfectly
+
+>compile
+!by one point
+A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
+
+>disk
+
+>compile
+!by one point
+A DISK, I'D ASK pops up. You realize that the disk would fit fine.
+
+>put disk in drive a
+
+>compile
+!by one point
+You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
+
+>reboot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+!by one point
+You get a NEED IF-DEFINE error
+>compile
+!by one point
+That stupid NEED IF-DEFINE and that peels speel, still.
+
+>sleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+by one point
+
+>abstract cola to phat path
+>purloin coal
+>abstract mug to phat path
+#pre-bub-dude-egg rule
+>debug
+The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
+!by one point
+#preefcheck bub dude egg
+>pf
+You weren't ready to DEBUG yet.
+>undo
+>undo
+>undo
+>undo
+
+>score
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>avider
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+
+>derive
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+>rom sticks
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>undo
+>undo
+>romsticks
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>tab
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>pour cola in mug
+You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
+
+>debug
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>misses
+!presto
+
+>bus
+Your score has just gone up by one point
+Drive time
+Strip of Profits
+>missalt
+You could also have made the USB into a sub.
+>undo
+>undo
+
+>sub
+Your score has just gone up by one point
+Diver time
+
+Strip of Profits
+
+>missalt
+You could also have made the USB into a bus.
+>undo
+
+>score
+
+Presto (41/41)

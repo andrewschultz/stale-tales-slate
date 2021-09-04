@@ -1,0 +1,449 @@
+
+## reg-roi-others-slider.txt
+
+## walkthrough with slider readings
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* others-thru
+
+>posf
+>rove over
+
+>others
+
+>in
+Rustic Citrus
+
+>t
+>z
+>z
+
+>slon
+#slider test for grapes
+>rgpase
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for limes
+>ilesm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pears
+>eprsa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for plums
+>lpmsu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>limes
+Your score has just gone up by one point.
+
+>score
+You have 1 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pears
+Your score has just gone up by one point.
+
+>score
+You have 2 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>grapes
+Your score has just gone up by one point.
+
+>score
+You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>plums
+Your score has just gone up by one point.
+
+>score
+You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#slider test for compass
+>smoascp
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>compass
+Your score has just gone up by one point.
+
+# we can go north, but let's look for a few more points first.
+
+>x ruts circuits
+
+#slider test for tamarind
+>atamirdn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for maraschino
+>amarcsihon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>score
+You have 5 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#slider test for blueberries
+>ebeblreisur
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cantaloupe
+>acalntuoep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for persimmon
+>mreisponm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pomegranate
+>opeargetnam
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#only three points here to test the reject case of going east to the clearing without a token
+
+>tamarind
+Your score has just gone up by one point.
+
+>score
+You have 6 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blueberries
+Your score has just gone up by one point.
+
+>score
+You have 7 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>cantaloupe
+Your score has just gone up by one point.
+
+>score
+You have 8 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>persimmon
+Take on a token
+Your score has just gone up by one point.
+
+>score
+You have 9 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>maraschino
+Your score has just gone up by one point.
+
+>score
+You have 10 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pomegranate
+Your score has just gone up by one point.
+
+>score
+You have 11 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+Swell Wells
+
+#slider test for apricot
+>pairotc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for apples
+>palpse
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for coconuts
+>ococunst
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for gooseberry
+>resooebgyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mulberries
+>umblreesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tangerines
+>atennesgri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>apricot
+Your score has just gone up by one point.
+
+>score
+You have 12 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>apples
+Your score has just gone up by one point.
+
+>score
+You have 13 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>mulberries
+Your score has just gone up by one point.
+
+>score
+You have 14 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>gooseberry
+Your score has just gone up by one point.
+
+>score
+You have 15 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+#only really need to test this nag once.
+You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
+
+>s
+Curtis hands you a coin
+scru-it
+
+#balance undos
+#detour for slider testing misses for "icon" and "icons"
+#slider test for icon
+>cino
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for sonic icons
+>purloin coins
+>ocsin
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic.
+>undo
+>undo
+#slider test for icons
+>purloin icons
+>cisno
+Your settler begins to make noises: a low hum, but nothing really piercing.
+>undo
+#note if we switch to "cinso" above we don't undo PURLOINing the icons. I'm not sure what's going on here. Check this once test runs are more stable. ??
+
+>n
+
+>icon
+Your score has just gone up by one point.
+>score
+You have 16 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>coconuts
+Your score has just gone up by one point.
+
+>score
+You have 17 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>tangerines
+Your score has just gone up by one point.
+
+>score
+You have 18 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>s
+You fiddle with the coin you got
+
+>n
+
+>w
+Filed Field
+
+#slider test for blackberries
+>ealkcrbbesri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for breadfruit
+>rbrdauefti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cranberries
+>rerbnrcasie
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for grapefruit
+>rgrepuafti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for pineapple
+>eppplinea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for raspberry
+>arrreyspb
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for strawberries
+>rssrbwreaeit
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for watermelon
+>etawelrmno
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>cranberries
+Your score has just gone up by one point.
+
+>score
+You have 19 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blackberries
+Your score has just gone up by one point.
+
+>score
+You have 20 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>watermelon
+Your score has just gone up by one point.
+
+>score
+You have 21 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pineapple
+Your score has just gone up by one point.
+!min-up
+
+>score
+You have 22 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>e
+>s
+Nice going.
+
+#there are more possible tests here but let's worry about this...
+#slider test for sonic
+>osicn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake
+>sonic
+by one point
+Blam!
+
+>score
+You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+
+>w
+>strawberries
+Your score has just gone up by one point.
+>score
+You have 24 of 42 total points for the post-Elvira Others region, though you only need 26 to win.
+#strawberries = last with minimum at base
+>grapefruit
+Your score has just gone up by one point.
+>score
+You have 25 of 42 total points for the post-Elvira Others region, though you only need 27 to win.
+>raspberry
+Your score has just gone up by one point.
+>score
+You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
+>breadfruit
+Your score has just gone up by one point.
+>score
+You have 27 of 42 total points for the post-Elvira Others region, though you only need 29 to win.
+>e
+>e
+Clangier Clearing
+
+#slider test for among
+>magon
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for ancienter
+>neicnarte
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cheap
+>hcape
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cinque
+>icqneu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for cripes
+>rcpise
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for mo len
+>onelm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for papayas
+>apapsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for solemn
+>oselnm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>cinque
+Your score has just gone up by one point.
+>score
+You have 28 of 42 total points for the post-Elvira Others region, though you only need 30 to win.
+>cheap
+Your score has just gone up by one point.
+>score
+You have 29 of 42 total points for the post-Elvira Others region, though you only need 31 to win.
+>papayas
+Your score has just gone up by one point.
+>score
+You have 30 of 42 total points for the post-Elvira Others region, though you only need 32 to win.
+
+#not a mistake
+>among
+Your score has just gone up by one point.
+
+>score
+You have 31 of 42 total points for the post-Elvira Others region, though you only need 33 to win.
+>ancienter
+Your score has just gone up by one point.
+>score
+You have 32 of 42 total points for the post-Elvira Others region, though you only need 34 to win.
+>solemn
+Your score has just gone up by one point.
+>score
+You have 33 of 42 total points for the post-Elvira Others region, though you only need 35 to win.
+>len mo
+Your score has just gone up by one point.
+>score
+You have 34 of 42 total points for the post-Elvira Others region, though you only need 36 to win.
+>cripes
+Your score has just gone up by one point.
+>score
+You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
+
+>w
+
+>d
+Scape Space
+
+>give dollar
+!Your score has just gone up by one point.
+Dr. Severe
+
+>put icons in slot
+As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
+!Your score has just gone up by one point.
+
+#slider test for banana
+>anaban
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for go near
+>ogenra
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for rhubarb
+>brbruha
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for reversed
+>ereredvs
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>banana
+Your score has just gone up by one point.
+>score
+You have 36 of 42 total points for the post-Elvira Others region, though you only need 38 to win.
+>go near
+Your score has just gone up by one point.
+>score
+You have 37 of 42 total points for the post-Elvira Others region, though you only need 39 to win.
+>rhubarb
+Your score has just gone up by one point.
+>score
+You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
+>reversed
+Your score has just gone up by one point.
+You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
+>score
+You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+
+>u
+>n
+Gates Stage
+
+>n
+PERP
+
+#slider test for research
+>erarsehc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for review
+>erewvi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for prep
+>rppe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>research
+by one point
+>score
+
+You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+
+>review
+by one point
+>score
+
+You have 41 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
+!You can't expect anything more from Curtis.
+
+>n
+#notana
+by one point
+#bonus point for not usuing arugula
+
+You Did Great
+

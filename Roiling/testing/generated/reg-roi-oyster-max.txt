@@ -1,0 +1,705 @@
+
+## reg-roi-oyster-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* oyster-thru
+
+>ts
+>oyster
+>enter barnacle balancer
+Posh Hops Shop
+>posf
+
+>spit tips
+by one point
+>undo
+>inset tines
+by one point
+>undo
+>inset stein
+by one point
+>undo
+>scrape casper
+by one point
+>undo
+>scrape capers
+by one point
+>undo
+>remap amper
+by one point
+>undo
+>unset tunes
+by one point
+>undo
+
+>score
+Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
+
+#pre-trolls-stroll rule
+>stroll
+The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
+!by one point
+#preefcheck lolstr trolls
+>pf
+You can't quite STROLL past the LOLstr trolls, yet.
+>sing
+by one point
+>stroll
+The LOLstr trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now. They act sore to scare, sure you stole a coaster. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
+!by one point
+>spit
+"Job perks: bop jerks," say the trolls. The pesty types have formed a half-circle around you now.
+by one point
+>stroll
+The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
+Maybe one more disruption, and you won't be worth bothering with.
+!by one point
+>remap
+The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
+by one point
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>remap
+#notana 'nudge for remap'
+Your score has just gone up by one point
+#not a mistake
+>unset
+!Your score has just gone up by one point
+>undo
+>undo
+#not a mistake
+>unset
+Your score has just gone up by one point
+>remap
+!Your score has just gone up by one point
+>score
+Score in a scenario: 1 out of 42 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
+>sing
+by one point
+>score
+Score in a scenario: 2 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+>scrape
+by one point
+>score
+Score in a scenario: 3 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>inset
+Perhaps you should've played it cool and fled, instead.
+>undo
+>spit
+Perhaps you should've played it cool and fled, instead.
+>undo
+
+>stroll
+by one point
+
+Olde Lode
+
+>thisalt
+--You could have also REMAPped the perma-amper to break the jukebox.
+SPIT
+INSET
+
+>score
+Score in a scenario: 4 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>calm clam
+by one point
+>undo
+
+>calm
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>run
+Your score has just gone up by one point
+
+Disease Seaside
+
+>score
+Score in a scenario: 6 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#pre-oars-soar rule
+>soar
+!by one point
+The oars have no gas, or whatever they might run on
+
+#pre-raft-fart rule
+>fart
+Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
+#preefcheck frat raft
+>pf
+You can get on the frat raft and FART.
+>enter raft
+You get onto the frat raft.
+#not a mistake
+>fart
+by one point
+#pre-boats-boast rule
+>boast
+You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
+!by one point
+>pf
+!FART
+>undo
+>undo
+>undo
+
+#not a mistake
+>boast
+Your score has just gone up by one point
+
+Fighter Freight
+
+>score
+Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>leap
+Your score has just gone up by one point
+
+Anger Range
+
+>score
+Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#pre-tutor-trout rule
+>tutor
+You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
+!by one point
+#preefcheck trout
+>pf
+You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
+#pre-unearth-haunter rule
+>unearth
+!by one point
+You need to worry about the carps and pikes, first.
+#preefcheck hunter hunt area
+>pf
+You can UNEARTH the HUNTER HUNT AREA with the right equipment.
+
+>scrap carps
+by one point
+>undo
+>spike pikes
+by one point
+>undo
+>spike
+Your score has just gone up by one point
+>thisalt
+--you could've tried to SCRAP with the carps to rescue Tortu.
+!--you could've tried to SPIKE the pikes to rescue Tortu.
+>undo
+>undo
+>scrap
+Your score has just gone up by one
+>thisalt
+!--you could've tried to SCRAP with the carps to rescue Tortu.
+--you could've tried to SPIKE the pikes to rescue Tortu.
+
+>unearth
+!by one point
+Nothing to unearth the haunter with.
+
+>e
+Hardest Trashed Dearths
+
+>score
+Score in a scenario: 9 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>scan cans
+by one point
+>undo
+
+>scan
+#notana 'nudge for cans'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 10 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+>seek eeks
+by one point
+>undo
+
+>seek
+Your score has just gone up by one point
+
+Lean Lane
+
+>score
+Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+>eat tea
+by one point
+>undo
+
+>eat
+#notana 'nudge for eat'
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+>tend dent
+by one point
+>undo
+
+>tend
+#notana 'nudge for dent'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 13 out of 42 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
+
+>tutor trout
+by one point
+>undo
+
+>tutor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 42 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 42.
+
+#pre-warp-wrap rule
+>warp
+"Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
+Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
+!by one point
+
+>swipe wipes
+by one point
+>undo
+
+>swipe
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 42 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 42.
+
+>w
+>n
+Lapsin' Plains
+
+>warp
+That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
+
+>splain
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+#pre-crate-react rule
+>react
+That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
+#preefcheck crate
+>pf
+You can REACT to the crate better when you have more data.
+#pre-kiss-skis rule
+>kiss
+That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
+#preefcheck skis
+>pf
+You can KISS the skis once you are less distracted.
+#pre-snap-span-pans rule
+>snap
+You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
+#preefcheck span pans
+>pf
+You can SNAP to clear the span pans when everything else is out of the way.
+
+>trace crate
+by one point
+>undo
+
+>trace
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+#pre-kiss-skis rule retry
+>kiss
+You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
+#pre-bonk-knob rule
+>bonk
+You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
+
+>react
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>kiss skis
+by one point
+>undo
+
+>kiss
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>bonk knob
+by one point
+>undo
+
+>bonk
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 20 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>snap
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 21 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>in
+
+Shuttle Hutlets
+
+>bust tubs
+by one point
+>undo
+
+>bust
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 22 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>drop prod
+Your score has just gone up by one point
+>undo
+
+>drop
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 23 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>sweat
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 24 out of 42 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 42.
+
+>shape heaps
+by one point
+>undo
+
+>shape
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 25 out of 42 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 42.
+
+>clean lance
+by one point
+>undo
+
+>clean
+#notana 'nudge for lance'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 26 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>out
+
+>s
+
+>banish ruby
+>unearth
+!by one point
+Ravage a grave!
+!Nothing to unearth the haunter with.
+You scry a cry as scary... "My...jewel...off...east...I...feel...don't...disturb...unless..."
+You haven't found or discovered a jewel, yet.
+>purloin ruby
+>unearth
+!by one point
+Ravage a grave!
+As you begin to dig, you hear "My...jewel...close...thieves...pay."
+It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.
+!Nothing to unearth the haunter with.
+
+>w
+Sclerous Closures
+
+#pre-search-arches rule
+>search
+A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
+#preefcheck achers chaser arches
+>pf
+SEARCH the arches.
+
+>warp wrap
+by one point
+>undo
+
+>warp
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 27 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>search arches
+by one point
+>undo
+
+>search
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 28 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>x gleaner
+!You see a map of all the paths in the Horned Hedron.
+You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of here, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
+>e
+>x gleaner
+You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of Sclerous Closures, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
+>w
+
+>enlarge gleaner
+by one point
+>undo
+
+>enlarge
+Your score has just gone up by one point
+
+You may wish to re-examine the gleaner now it's changed.
+
+>score
+Score in a scenario: 29 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>n
+Horned Hedron
+
+#pre-patrol-ol-trap rule
+>patrol
+Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
+#detour to test burying ruby without digger
+#preefcheck ol trap
+>pf
+You can PATROL the ol' trap once the weaselly walleyes are gone.
+>w
+>banish digger
+#pre-bury-ruby rule
+>bury
+Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
+#preefcheck ruby
+>pf
+You need to figure how and where to BURY the ruby.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>w
+Rascal Craals
+
+>bury ruby
+Your score has just gone up by one
+>undo
+
+>bury
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 30 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>e
+>s
+>e
+
+##>unearth haunter
+
+>unearth haunter
+by one point
+>undo
+
+>unearth
+by one point
+
+>score
+Score in a scenario: 31 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>assuage sausage
+by one point
+>undo
+
+>assuage
+by one point
+
+>score
+Score in a scenario: 32 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>ask haunter about ruby
+#notana
+by one point
+
+>score
+Score in a scenario: 33 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>w
+
+>n
+
+>w
+
+>e
+
+>patrol ol trap
+by one point
+>undo
+
+>patrol
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>x gleaner
+You see a map of all the paths in the Horned Hedron.
+
+>in
+
+Tenfold Teflon'd Den Loft
+
+#pre-dialer-derail rule
+>derail
+The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
+!by one point
+#preefcheck dialer
+>pf
+With the yapper gone, you should be able to DERAIL.
+#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
+>revel
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
+!by one point
+
+>prepay yapper
+Your score has just gone up by one
+>undo
+
+>prepay
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 35 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>banish lance
+#pre-trample-ramplet rule
+>trample
+You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
+#preefcheck templar ramplet
+>pf
+Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet.
+>undo
+>undo
+>undo
+
+>trample ramplet
+by one point
+>undo
+
+>trample
+
+Plasm Lamps
+
+>score
+Score in a scenario: 36 out of 42 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 42.
+
+#let's test the special case where we TAN without PSALMing.
+>tan
+>score
+Score in a scenario: 37 out of 42 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
+>undo
+>undo
+
+>psalm
+by one point
+
+>score
+Score in a scenario: 37 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
+
+>tan ant
+by one point
+>undo
+
+>tan
+#notana 'nudge for ant'
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 38 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 39 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+>derail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 40 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+#pre-dialer-redial rule
+>redial
+Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
+!by one point
+#preefcheck bogus-redial
+>pf
+You should be able to REDIAL the dialer with the proper preparation.
+
+>spin pins
+Your score has just gone up by one
+>undo
+
+>spin
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 41 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+>redial dialer
+by one point
+>undo
+
+#not a mistake
+>redial
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Oyster (42/42)
+

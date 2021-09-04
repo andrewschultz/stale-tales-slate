@@ -1,0 +1,302 @@
+
+## reg-roi-others-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* others-thru
+
+>posf
+>rove over
+
+>score
+You need to figure how to change and get through store H.
+
+>others
+
+>score
+Enter the Throes Hoster for the final region
+
+>in
+Rustic Citrus
+
+>t
+>z
+>z
+
+>limes
+Your score has just gone up by one point.
+
+>score
+You have 1 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pears
+Your score has just gone up by one point.
+
+>score
+You have 2 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>grapes
+Your score has just gone up by one point.
+
+>score
+You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>plums
+Your score has just gone up by one point.
+
+>score
+You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>compass
+Your score has just gone up by one point.
+
+# we can go north, but let's look for a few more points first.
+
+>x ruts circuits
+
+>score
+You have 5 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+#only three points here to test the reject case of going east to the clearing without a token
+
+>tamarind
+Your score has just gone up by one point.
+
+>score
+You have 6 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blueberries
+Your score has just gone up by one point.
+
+>score
+You have 7 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>cantaloupe
+Your score has just gone up by one point.
+
+>score
+You have 8 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>persimmon
+Take on a token
+Your score has just gone up by one point.
+
+>score
+You have 9 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>maraschino
+Your score has just gone up by one point.
+
+>score
+You have 10 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pomegranate
+Your score has just gone up by one point.
+
+>score
+You have 11 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+Swell Wells
+
+>apricot
+Your score has just gone up by one point.
+
+>score
+You have 12 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>apples
+Your score has just gone up by one point.
+
+>score
+You have 13 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>mulberries
+Your score has just gone up by one point.
+
+>score
+You have 14 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>gooseberry
+Your score has just gone up by one point.
+
+>score
+You have 15 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+#only really need to test this nag once.
+You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
+
+>s
+Curtis hands you a coin
+scru-it
+
+>n
+
+>icon
+Your score has just gone up by one point.
+>score
+You have 16 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>coconuts
+Your score has just gone up by one point.
+
+>score
+You have 17 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>tangerines
+Your score has just gone up by one point.
+
+>score
+You have 18 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>s
+You fiddle with the coin you got
+
+>n
+
+>w
+Filed Field
+
+>cranberries
+Your score has just gone up by one point.
+
+>score
+You have 19 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>blackberries
+Your score has just gone up by one point.
+
+>score
+You have 20 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>watermelon
+Your score has just gone up by one point.
+
+>score
+You have 21 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>pineapple
+Your score has just gone up by one point.
+!min-up
+
+>score
+You have 22 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+>e
+>s
+Nice going.
+
+#not a mistake
+>sonic
+by one point
+Blam!
+
+>score
+You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
+>n
+
+>w
+>strawberries
+Your score has just gone up by one point.
+>score
+You have 24 of 42 total points for the post-Elvira Others region, though you only need 26 to win.
+#strawberries = last with minimum at base
+>grapefruit
+Your score has just gone up by one point.
+>score
+You have 25 of 42 total points for the post-Elvira Others region, though you only need 27 to win.
+>raspberry
+Your score has just gone up by one point.
+>score
+You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
+>breadfruit
+Your score has just gone up by one point.
+>score
+You have 27 of 42 total points for the post-Elvira Others region, though you only need 29 to win.
+>e
+>e
+Clangier Clearing
+
+>cinque
+Your score has just gone up by one point.
+>score
+You have 28 of 42 total points for the post-Elvira Others region, though you only need 30 to win.
+>cheap
+Your score has just gone up by one point.
+>score
+You have 29 of 42 total points for the post-Elvira Others region, though you only need 31 to win.
+>papayas
+Your score has just gone up by one point.
+>score
+You have 30 of 42 total points for the post-Elvira Others region, though you only need 32 to win.
+
+#not a mistake
+>among
+Your score has just gone up by one point.
+
+>score
+You have 31 of 42 total points for the post-Elvira Others region, though you only need 33 to win.
+>ancienter
+Your score has just gone up by one point.
+>score
+You have 32 of 42 total points for the post-Elvira Others region, though you only need 34 to win.
+>solemn
+Your score has just gone up by one point.
+>score
+You have 33 of 42 total points for the post-Elvira Others region, though you only need 35 to win.
+>len mo
+Your score has just gone up by one point.
+>score
+You have 34 of 42 total points for the post-Elvira Others region, though you only need 36 to win.
+>cripes
+Your score has just gone up by one point.
+>score
+You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
+
+>w
+
+>d
+Scape Space
+
+>give dollar
+!Your score has just gone up by one point.
+Dr. Severe
+
+>put icons in slot
+As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
+!Your score has just gone up by one point.
+
+>banana
+Your score has just gone up by one point.
+>score
+You have 36 of 42 total points for the post-Elvira Others region, though you only need 38 to win.
+>go near
+Your score has just gone up by one point.
+>score
+You have 37 of 42 total points for the post-Elvira Others region, though you only need 39 to win.
+>rhubarb
+Your score has just gone up by one point.
+>score
+You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
+>reversed
+Your score has just gone up by one point.
+You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
+>score
+You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+
+>u
+>n
+Gates Stage
+
+>n
+PERP
+
+>research
+by one point
+>score
+
+You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+
+>review
+by one point
+>score
+
+You have 41 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
+!You can't expect anything more from Curtis.
+
+>n
+#notana
+by one point
+#bonus point for not usuing arugula
+
+You Did Great
+

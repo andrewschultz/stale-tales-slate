@@ -1,0 +1,242 @@
+
+## reg-roi-routes-slider.txt
+
+## walkthrough with slider readings
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>slon
+#slider test for towards
+>otawdsr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for inside
+>niised
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for past
+>tpas
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for across
+>srcsao
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for against
+>gaiastn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for astride
+>sartdei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>inside
+Your score has just gone up by one point
+
+Cleric Circle
+
+>score
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>x list o toils
+
+#x list o toils
+>x toils
+Precise recipes
+
+>out
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+#slider test for despite
+>edeitps
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>despite
+Your score has just gone up by one point
+
+>out
+
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#slider test for opposite
+>poopiset
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+>out
+
+#slider retest for against
+>gaiastn
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+
+>against
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>against
+!Your score has just gone up by one point
+
+#slider retest for astride
+>sartdei
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+
+>astride
+Your score has just gone up by one point
+
+#slider test for below
+>ebowl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake (mistake code is for general preposition reject)
+>below
+Your score has just gone up by one point
+
+#slider test for under
+>nuerd
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake (mistake code is for general preposition reject once you are under)
+>under
+Your score has just gone up by one point
+
+##No-Lag needs a line break ??
+
+#I want this here since we want to reject TOWARDS with Gast around
+>towards
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for worst ad.
+
+>in
+
+>out
+
+#slider test for above
+>baveo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>above
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#slider test for from
+>rfmo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>from
+Your score has just gone up by one point
+
+#slider test for beneath
+>ebentha
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake (mistake code is for general preposition reject)
+>beneath
+Your score has just gone up by one point
+
+Harms Marsh
+
+>score
+Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#slider test for until
+>nuilt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#pre-unlit-until rule
+>until
+Your score has just gone up by one point
+
+#slider test for around
+>rauodn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>around
+Your score has just gone up by one point
+
+#slider test for along
+>lango
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+#slider test for amidst
+>madits
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+#slider test for athwart
+>tawrtha
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>athwart
+Your score has just gone up by one point
+
+Sonancy Canyons
+
+#slider test for through
+>hthugor
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#slider test for without
+>ttwouhi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for between
+>ebentwe
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider retest for through
+>hthugor
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+
+>between
+Your score has just gone up by one point
+
+>through
+Your score has just gone up by one point
+
+>without
+Your score has just gone up by one point
+
+>score
+
+Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+
+#slider test for beyond
+>eboydn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>beyond
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes (22/22)
+

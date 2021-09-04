@@ -1,28 +1,7 @@
-# run this file with rbr.py
-#
-files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,reg-roi-otters-altpath.txt,reg-roi-otters-slider.txt,reg-roi-otters-hints.txt
 
-~	max	t0
-~	min	t1
-~	nudmis,nudges,nud,nu,mis	t2
-~	alt	t3
-~	sli	t4
-~	hints,hin,spoi	t5
+## reg-roi-otters-nudmis.txt
 
-}}MAX=33
-}}CURMAX=33
-}}SCORE=0
-}}CURMIN=24
-
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
-
-ALSO-IGNORE:t
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## alternate path	## walkthrough with slider readings
-
+## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -30,28 +9,15 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 >posf
 
-@hin
->monty hints
-
 >seed 1
 >ts
 >a5
 >t
 >otters
 
-@hin
->scam
-
 >opt in
 >enter solid idols
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
-
-@hin
-DEBUG INFO: bleary barley hinting.
-
-@nud
 #this is a general test of a regex with a bad bug--I forgot to test for word boundaries
 >stuffly
 You think you're on to something, but no--you can't find anything to focus on, thinking that.
@@ -94,35 +60,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. T
 >scan bleary barley
 That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess.
 
-@sli
->slon
-#slider test for barely
->aberyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 #forceignore
 >barely
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
-
-@hin
-DEBUG INFO: Ed Riley hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
 
 >l
 Burnt Brunt
 
-@mis
 #mistake test for deltaic
 >deltaic
 Reorganizing the geography around the Edictal Citadel won't help.
 
-@nud
 #nudge for citadel
 >citadle
 The whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
@@ -141,13 +92,6 @@ You've dealt with the barley. You can move around a lot more, now.
 >yl
 Yup, that's the idea here in Otters.
 
-@sli
-#slider test for rescind
->csrendi
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: rescind.
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for increds
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
@@ -180,7 +124,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's 
 >scan cinders
 Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
 
-@nud
 #nudge for steward
 >stewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
@@ -197,7 +140,6 @@ The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-@nud
 #spechelp for ed riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
@@ -215,38 +157,15 @@ Yup! It's Ed's!
 >idle
 Ed Riley looks pleased he's pressured you into laziness.
 
-@sli
-#slider test for reedily
->erdelyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@min
->discern ed riley
-DEBUG INFO: Taking away a max point.
-#we need the "wait" in here to hook around the undo blocker
->z
->undo
->undo
->discern
-REEDILY
-}}CURMAX--
-@!
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
 >reedily
 Your score has just gone up by one point
-}}SCORE++
 
-@hin,spoi
-You made a way west. You're done here.
-
-@nud
 #nudge for cinders
 >cindesr
 The cinders are gone for good.
@@ -264,29 +183,19 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 >undo
 
 >score
-{$SCOS}
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
 >w
 Disowned Downside
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling the parleys splayer players can talk SPARELY.
-
-@hin
-DEBUG INFO: macks hinting.
-
-@nud
 #nudge for parley
 >arpley
 You need to deal with all the players to knock them back a peg.
 
-@mis
 #mistake test for parsley
 >parsley
 Despite your best efforts, they remain meatheads.
 
-@mis
-##balance undos
 >allrand
 #mistake test for indiscretely
 >indiscretely
@@ -294,8 +203,6 @@ Yes, yes, I am being pedantic here. But discreet and discrete are different enou
 >undo
 >undo
 
-@nud
-##balance undos
 >allrand
 #nudge for angry
 >angyr
@@ -471,38 +378,6 @@ No, you need a couple more letters... even with your powers back, you still need
 >undo
 >undo
 
-@max
-#pre-moat-atom rule
->atom
-Your powers aren't back yet, but if they were, that'd definitely tip the players off to who you were. They'd let Elvira know quickly.
-!by one point
-#pre-ghoul-hat-although rule
->s
->although
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
-!by one point
-#preefcheck ghoul hat
->pf
-You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
->ergo
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
-!by one point
->n
->n
-#pre-seacube-because rule
->because
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
-!by one point
-#preefcheck sea cube
->pf
-You can tell the eels in the sea cube BECAUSE you have material evidence you're trustworthy.
-#pre-eels-else rule
->because
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
-!by one point
->s
-
-@nud
 #mistake test for slap em
 >slap em
 Violence is not the answer! Be clever, here.
@@ -524,7 +399,6 @@ On one, you read: "Formerly the maiden median, then the gent-fora/frat-gone fron
 #nudge for gretta
 >gretat
 Enough people are trying to manipulate Gretta. Deal with them directly.
-###############generic rejects. Most mack ideas should give this.
 >bossiyl
 You feel you're on the right track to expose the players. But that's not quite it.
 >angriyl
@@ -532,150 +406,7 @@ You feel you're on the right track to expose the players. But that's not quite i
 >bleariyl
 You feel you're on the right track to expose the players. But that's not quite it.
 
-@sli
-################################this tests all the possible macks' poses. We simply dump all the "items" in the downside, then test and undo them one by one.
-##balance undos
->allrand
-#slider test for sparely
->psralye
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-############now on to all the adverbs
-#slider test for angrily
->narglyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for bossily
->ssbolyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for seedily
->esdelyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for tersely
->etelrys
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for shadily
->hsdalyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for nastily
->antslyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for snidely
->nsdilye
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for starkly
->tsralyk
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for cattily
->ttcalyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for irately
-#note that tearily is not covered here. This is just an arbitrary choice I made in the table to make IRATELY the #1 choice.
-#elsewhere I defined t-tearily-irately as multiple-solutions.
->ritalye
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: irately.
->undo
-#slider test for blearily
->lblrayei
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for ribaldly
->lbilryad
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for formally
->lroamfyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for coitally
->lioatcyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for modestly
->omedtsyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for shabbily
->bahsibyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for shoddily
->dohsidyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for silently
->llsneyit
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for steamily
->tsaeimyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for suddenly
->ddsuneyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for stupidly
->tspudiyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for martially
->altrlmayi
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for sincerely
->enieslcyr
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for sobbingly
->bbsonilyg
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for tediously
->etiduolys
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for wearingly
->ewranilyg
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for drawlingly
->larldniywg
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for emotionally
->melontiloya
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for desperately
->edeesarlpyt
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for reactively
->eretcviayl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for despairingly
->iseapdirgnyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#slider test for indiscreetly
->eisndrciteyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
->undo
-
-@nud
 #here is where we test all the possible mack ideas with ambiguous cheat-scans
-##balance undos
 >allrand
 #scannotes for t-tearily-irately
 >scan ttearily
@@ -695,107 +426,10 @@ Well, you have a feeling you know what that question mark should be.
 >undo
 >undo
 
-@max
-##balance undos
->allrand
-#this makes sure we can score all points for all macks.
->blearily
-by one point
->undo
->bossily
-by one point
->undo
->cattily
-by one point
->undo
->coitally
-by one point
->undo
->despairingly
-by one point
->undo
->drawlingly
-by one point
->undo
->emotionally
-by one point
->undo
->formally
-by one point
->undo
->irately
-by one point
->undo
->martially
-by one point
->undo
->modestly
-by one point
->undo
->nastily
-by one point
->undo
->ribaldly
-by one point
->undo
->seedily
-by one point
->undo
->shabbily
-by one point
->undo
->shadily
-by one point
->undo
->shoddily
-by one point
->undo
->silently
-by one point
->undo
->sincerely
-by one point
->undo
->snidely
-by one point
->undo
->sobbingly
-by one point
->undo
->starkly
-by one point
->undo
->steamily
-by one point
->undo
->stupidly
-by one point
->undo
->suddenly
-by one point
->undo
->tearily
-by one point
->undo
->tediously
-by one point
->undo
->wearingly
-by one point
->undo
->undo
-
-@hin
-!DEBUG INFO: Gretta
-DEBUG INFO: macks hinting.
-
-@nud
 #scannotes for parleys splayer players
 >scan parleys splayer players
 The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
 
-@nud
-##balance undos
 >sparely
 by one point
 #done rejects for parleys splayer players
@@ -814,57 +448,23 @@ You needed to deal with all the players to knock them back a peg.
 >undo
 >undo
 
-@max
-#balance undos
->n
->because
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
-#brackets ok
-[You add the information to your pedanto-notepad under FLIPS.]
->pf
-You can tell the eels in the sea cube BECAUSE once you're able to show evidence you're trustworthy.
->undo
->undo
->undo
->s
->although
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
-#brackets ok
-[You add the information to your pedanto-notepad under FLIPS.]
->pf
-You can say ALTHOUGH to Mr. Lee and his ghoul hat once you're able to show evidence you're trustworthy.
->undo
->undo
->undo
-
 >bossily
 Your score has just gone up by one point.
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
 >angrily
 Your score has just gone up by one point.
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
 >blearily
 Your score has just gone up by one point.
-}}SCORE++
-
-@spoi
-That can wait until you've finished talking.
-
-@hin
-DEBUG INFO: Gretta Garett-Tatger hinting.
-Gretta has an important item for you once you finish chatting.
 
 >score
-{$SCOS}
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 >au -1
 
-@nud
 #renudge for gretta
 >gretat
 Enough people are trying to manipulate Gretta. Listen to what she has to say, instead.
@@ -872,34 +472,14 @@ Enough people are trying to manipulate Gretta. Listen to what she has to say, in
 
 >1
 
-@hin
-DEBUG INFO: Gretta Garett-Tatger hinting.
-
 >3
 
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
-@spoi
-#We don't want to hint the moat right now. That would be a waste of cinders.
-You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
-
-@hin
-Gretta's gone. The first thing to do is to go north or south to regain your powers.
-
-@nud
 #mistake retest for slap em
 >slap em
 The maples are harmless.
-
-@max
-#again pre-moat-atom rule
->atom
-That seems like it should work, but you just can't summon the power. Someone around here should be able to help you, you hope.
-!by one point
-#preefcheck atmo moat
->pf
-You can collapse the atmo moat to an ATOM once you have the power.
 
 #pre-medals-quickly rule
 >quickly
@@ -908,90 +488,9 @@ You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a wa
 >pf
 The medals can help you go QUICKLY, though they may not be fully magical, yet.
 
-@alt
-##balance undos
-# here we look at going to/solving Bran Barn but not Loop Pool
->s
->although
-###skip test checking
->ergo
-###skip test checking
->misses
-!--you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
---you could've dispelled the "vow here" that reappeared in Bran Barn with HOWEVER after you regained your powers.
->undo
->n
->n
->misses
---you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
->undo
->undo
->undo
->however
-by one point
->misses
-!--you could've said HOWEVER
->undo
->undo
->undo
->undo
->undo
-
-@sli
->s
-#slider test for although
->htlahguo
-Your settler begins to make noises: a low hum, but nothing really piercing.
->although
-###skip test checking
-#slider test for ergo
->reog
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
->undo
->undo
->undo
-
-@spoi
-##balance undos
->s
-As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
->although
-As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
->ergo
-by one point
->misses
---you could've checked north of the Disowned Downside for the other way to regain your powers.
->n
->n
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
-You also feel there's something more to do here, if you want, but isn't critical.
->because
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
-You also feel there's something more to do here, if you want, but isn't critical.
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
 >n
 Loop Pool
 
-@spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
-
-@sli
-#slider test for because
->ebeusac
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for else
->seel
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for slee
 >slee
 The eels aren't what needs to be reduced to rubble, here.
@@ -1028,42 +527,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's
 The eels swim a bit faster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
 
-@max
->else
-You consider the end to an argument, but you don't have a start. The eels rattle against the sea cube, just waiting for the right first word.
-!by one point
-#preefcheck eels
->pf
-You can tell the eels ELSE once you have a token of your goodness.
-
-@hin
-DEBUG INFO: sea cube hinting.
-!The Loop Pool isn't critical since you've solved the Bran Barn, but the puzzle may still interest you.
-
 >because
 by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
-
-@hin
-DEBUG INFO: eels hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
 >else
 by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: medals hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
-@nud
 #done rejects for eels
 >eesl
 The eels have done enough.
@@ -1071,33 +546,6 @@ The eels have done enough.
 >allto
 You already made it there, and you don't need to go back.
 
-@sli
-#slider test for unless
->slnsue
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@alt
->misses
-!--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
---you could've checked south of the Disowned Downside for the other way to regain your powers.
---you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
-#balance undos
->unless
-min-up
->misses
-!UNLESS
->undo
->undo
->s
->s
->misses
---you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
-!--you could've checked south of the Disowned Downside for the other way to regain your powers.
->undo
->undo
->undo
-
-@nud
 #scannotes for sullenness us
 >scan sullenness us
 The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
@@ -1105,28 +553,12 @@ The voices seem bummed at your settler's ambiguous readings, unaware (as you are
 >read sullenness us
 You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
 
-@max
->unless
-by one point
-}}CURMIN++
-}}SCORE++
->score
-{$SCOS}
-
 >s
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
-
-@hin
-DEBUG INFO: atmo-moat hinting.
-
-@nud
 #renudge for ly
 >yl
 Yup, that's the idea here in Otters, even with your powers back.
 
-@nud
 #nudge for iq
 >qi
 No, it's a combination of what's on both medals.
@@ -1140,16 +572,10 @@ It's what the medals say that makes them special.
 >medasl
 It's what the medals say that makes them special.
 
-@!min
 >s
-\\
+
 Bran Barn
 
-@spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
-You also feel there's something more to do here, if you want, but isn't critical.
-
-@nud
 #nudge for barn
 >banr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1165,56 +591,28 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That'
 >infidle
 The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
 
-@max
-#pre-ogre-ergo rule
->ergo
-Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
-!by one point
-#preefcheck gore ogre
->pf
-You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
-
-@hin
-DEBUG INFO: ghoul hat hinting.
-The Bran Barn isn't critical since you've solved the Loop Pool, but the puzzle may still interest you.
-
-@!min
 >although
 by one point
-}}SCORE++
-}}CURMIN++
 DEBUG INFO: min-up codepath
-{--hin}DEBUG INFO: Gore Ogre hinting.
 >score
-{$SCOS}
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
 
-@!min
 >ergo
 by one point
-}}SCORE++
-}}CURMIN++
 DEBUG INFO: min-up codepath
-\\
->score
-{$SCOS}
 
-@nudmis
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
+
 #listening for vow here
 >listen
 /You see red as you hear some nonsense repeated: "Eeh, row V!"
 
-@nud
 #spechelp for vow here
 >howevre
 The vow here quiets down for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
 
-@sli
-#slider test for however
->ewohrve
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for vow
 >vwo
 The whole vow here.
@@ -1225,18 +623,14 @@ The whole vow here.
 >whoever
 You wonder whoever could be saying the vow here. You suspect you are very close and very far at once.
 
-@!min
 >however
 by one point
-}}CURMIN++
-}}SCORE++
 DEBUG INFO: min-up codepath
-\\
+
 >score
-{$SCOS}
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 >n
 
-@nud
 #spechelp for atmo moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
@@ -1245,57 +639,17 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That'
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
 
-@sli
-#slider test for atom
->tamo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@hin
-DEBUG INFO: atmo-moat hinting.
-
 >atom
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-Gretta's gone. Go back east for help.
 
 >score
-{$SCOS}
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
 >e
 
 >n
 Shiner Shrine
 
-@spoi
-##balance undos
-/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
->enragedly
-/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
->undo
->remotely
-/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY)\.
->undo
->brutely
-/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|REMOTELY)\.
->undo
-
-@hin
-DEBUG INFO: simply sly imp hinting.
-
-@sli
-#slider test for brutely
->rbtulye
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for remotely
->erometyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for enragedly
->neegarlyd
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@mis
 #mistake test for implys
 >implys
 You will have to be subtle here, but you'll want to work on actions, instead.
@@ -1306,119 +660,84 @@ You don't need a river or two impeding your progress.
 >green lady
 You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
 
-@nud
 #renudge for remote
 >remoet
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #nudge for shiner
 >shinre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-\\
+
 #nudge for simply
 >simpyl
 It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving.
-\\
+
 #nudge for sly
 >syl
 The imp's too sly to get tricked by a word THAT short.
-\\
+
 #nudge for imp
 >ipm
 The imp's too sly to get tricked by a word THAT short.
-\\
+
 #nudge for averts
 >averst
 You need to focus on HOW the imp averts, vaster.
-\\
+
 #nudge for avert
 >avetr
 You need to focus on HOW the imp averts, vaster.
-\\
+
 #nudge for coma
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
-\\
+
 #nudge for brute
 >bruet
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #nudge for enraged
 >enragde
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #spechelp for legendary
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
-\\
+
 #spechelp for motleyer
 >remoteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
-\\
+
 #spechelp for butlery
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
-\\
+
 #scannotes for sly imp
 >scan sly imp
 The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down.
 
-@alt
-##balance undos
->brutely
-by one point
->remotely
-by one point
->thisalt
---you could've made the imp act ENRAGEDLY, and the whiners could've spoken
->undo
->undo
->enragedly
-###skip test checking
->thisalt
---you could've made the imp act REMOTELY, and the whiners could've spoken
->undo
->undo
->undo
-
-@nud
 #readables for coma camo
 >read coma camo
 You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger Pit/Inert Gap."
 
 >enragedly
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: simply sly imp hinting.
-You may need yet another adverb. (+)
 
 >score
-{$SCOS}
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
 >remotely
 Your score has just gone up by one point
-}}SCORE++
-
-@hin,spoi
-!DEBUG INFO: medals hinting.
-The path north is cleared, and you still have work there.
 
 >score
-{$SCOS}
-
-@alt
->thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
 >n
 Lamer Realm
 
-@nud
 #nudge for low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
@@ -1430,43 +749,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a d
 >lows
 Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
 
-@sli
-#slider test for slow
->lswo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
-
 >slow
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
-
-@hin
-/DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
-
-@sli
-#slider test for paroled
->aporedl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for artsy
->rasyt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for coolest
->ocloste
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for garbed
->agbrde
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for lamer
 >lamre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1489,22 +777,22 @@ The ocelots would still be awkward even if they lost the clip-ons.
 >ocelost
 The ocelots squint at you through their clip-ons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
-\\
+
 #spechelp for leopard
 >leopadr
 The leopard almost seems to un-cuff its hands.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
-\\
+
 #spechelp for badger
 >badgre
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
-\\
+
 #spechelp for satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
-\\
+
 #mistake test for ratsy
 >ratsy
 You don't want a rat on your side. Or someone who says rats too much.
@@ -1524,75 +812,18 @@ The leopard is plenty powerful as-is, but you need to get it on your side.
 >pre load
 The leopard is plenty powerful as-is, but you need to get it on your side.
 
-@alt
-##balance undos
->garbed
-by one point
->artsy
-by one point
->paroled
-by one point
->coolest
-DEBUG INFO: min-up codepath
->undo
->misses
-COOLEST
->undo
->undo
->undo
->paroled
-by one point
->coolest
-by one point
->artsy
-DEBUG INFO: min-up codepath
->undo
->misses
-ARTSY
->undo
->undo
->undo
->coolest
-by one point
->artsy
-by one point
->paroled
-DEBUG INFO: min-up codepath
->undo
->misses
-PAROLED
->undo
->undo
->undo
->undo
-
 >coolest
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED|leopard PAROLED)\.
-
-@hin
-/DEBUG INFO: (leopard|stray satyr|badger) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
 >paroled
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED)\.
-
-@hin
-/DEBUG INFO: (stray satyr|badger) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
-@nud
 #scannotes for stray satyr
 >scan stray satyr
 The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
@@ -1602,19 +833,10 @@ You see TSYRA branded under the stray satyr's shoulder.
 
 >artsy
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
-You also feel there's something more to do here, if you want, but isn't critical.
-
-@hin
-DEBUG INFO: medals hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
-@nud
 #mistake retest for preload/pre-load/pre load
 >preload
 The leopard is plenty powerful as-is, and it's already on your side.
@@ -1634,15 +856,9 @@ You already changed the leopard.
 >apelord
 You already changed the leopard.
 
-@max
-#retry pre-medals-quickly rule
->quickly
-You feel a surge, but not enough. One of the medals seems tarnished. Maybe there's a way to clean it up and restore its full power.
-
 >l
 Blest Belts
 
-@nud
 #renudge for shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
@@ -1661,17 +877,12 @@ The badger already feels second-rate, so you need another way to help it.
 >bgrade
 The badger already feels second-rate, so you need another way to help it.
 
-@!min
 >garbed
 Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
 DEBUG INFO: min-up codepath
-{--spoi}As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.\n!You also feel there's something more to do here, if you want, but isn't critical.
 >score
-{$SCOS}
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
-@nud
 #mistake retest for b grade/bgrade
 >b grade
 The badger no longer feels second-rate, so it needs no more help.
@@ -1684,168 +895,96 @@ The badger no longer feels second-rate, so it needs no more help.
 
 Clarthead Cathedral
 
-@spoi
-/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|.
->loathingly
-by one point
-You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
->undo
-
-@hin
-DEBUG INFO: shrewin' whiners hinting.
-The whiners have a lot of energy and exercise it many different ways. (+)
-
-@mis
 #mistake test for sherwin
 >sherwin
 No cryptozookeeper appears.
 
-@sli
-#slider test for loathingly
->ollhtniyag
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stoically
->lotcilsya
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for joltily
->lljotyi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #renudge for jolti
 >ojlti
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #nudge for jolty
 >ojlty
 Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
-\\
+
 #nudge for whiner
 >whinre
 You can't change who whiners are, but maybe you can make them whine less...effectively.
-\\
+
 #nudge for whiners
 >whinesr
 You can't change who whiners are, but maybe you can make them whine less...effectively.
-\\
+
 #nudge for cathedral
 >cathedrla
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-\\
+
 #nudge for loathing
 >loathign
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #nudge for stoic
 >stoci
 Usually, you'd need to add two letters, but here you'd need to add four.
-\\
+
 #nudge for stoical
 >stoicla
 No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
-\\
+
 #renudge for coma
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
-\\
+
 #spechelp for tallyhoing
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
-\\
+
 #spechelp for callosity
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
-\\
+
 #spechelp for jollity
 >joltiyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
-\\
+
 #scannotes for whiners
 >scan whiners
 The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account.
 
-@alt
-##balance undos
->stoically
-###skip test checking
->joltily
-They find another place where rioters roister.
->thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
->undo
->undo
->loathingly
-They find another place where rioters roister.
->thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken TERSELY.
->undo
->undo
->undo
-
-@nud
 #rereadables for coma camo
 >read coma camo
 You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom."
 
 >loathingly
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: shrewin' whiners hinting.
-You can soften them up a bit more. (+)
 
 >score
-{$SCOS}
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
-}}SCORE++
-
-@hin
-!DEBUG INFO: medals hinting.
-The path south is cleared, and you still have work there.
 
 >score
-{$SCOS}
-
-@alt
->thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken STOICALLY.
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
 >s
 Perverse Preserve
 
-@nud
 #spechelp for raptor
 >raptro
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
-
-@hin
-DEBUG INFO: raptor hinting.
-
 >parrot
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
-
-@hin
-/DEBUG INFO: (snipe|thrones|corona|nails) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 22 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
-@nud
 #mistake test for penis
 >penis
 Huh huh huh, Beavis. That was cool.
@@ -1859,14 +998,6 @@ You don't need to grow a spine. You've gotten this far.
 >shorten
 Well--not shorten, but break it down...you see red from the effort.
 
-@sli
-#slider test for parrot
->rrpato
-# this is a special case, similar to disk <=> skid, since the game wants to make it clear about parrot <=> raptor
-!Your settler begins to make noises: a low hum, but nothing really piercing.
-The parrot can be changed back into a raptor, but not into anything new.
-
-@nud
 #readables for whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
@@ -1902,19 +1033,19 @@ There's more than one throne, but it doesn't matter, really, for what you need t
 >thronse
 The thrones seem to buzz a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
-\\
+
 #spechelp for nails
 >naisl
 One of the nails seems to bend a bit.
 >naisl
 Another one of the nails seems to bend a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a decent omen.
-\\
+
 #spechelp for pines
 >pinse
 The pines rustle as if an animal climbed through them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
-\\
+
 #spechelp for corona
 >coroan
 The corona scurries about for a bit before settling down again.
@@ -1923,130 +1054,24 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a
 >slain
 The nails are already dead as a doornail.
 
-@sli
-#slider test for raptor
->arrotp
-#here we're not telling the player anything shocking or new, so we might as well clue them we should reverse things.
-The parrot can be changed back into a raptor, but not into anything new.
-!Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snail
->nsila
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snipe
->nspei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for racoon
->ocarno
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for raccoon
->aroocnc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for hornets
->ohnrtse
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@alt
-##balance undos
->snipe
-!min-up
->racoon
-!min-up
->hornets
-!min-up
->snail
-min-up
->undo
->misses
-!the thrones
---you could've turned the nails into a snail.
-!hornets
-!racoon
-!snipe
->undo
->undo
->snail
-!min-up
->hornets
-min-up
->undo
->misses
---you could've turned the thrones into some hornets.
-!racoon
-!snail
-!snipe
->undo
->undo
->undo
->hornets
-!min-up
->snail
-!min-up
->racoon
-min-up
->undo
->misses
---you could've turned the corona into a racoon.
-!hornets
-!snail
-!snipe
->undo
->undo
->undo
->undo
-
 >snail
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|HORNETS)\.
-
-@hin
-/DEBUG INFO: (snipe|thrones|corona) hinting\.
 
 >score
-{$SCOS}
-
-@alt
->hornet
-by one point
->undo
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
 >hornets
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a RACOON|a SNIPE)\.
-
-@hin
-/DEBUG INFO: (thrones|corona) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 24 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
 >racoon
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
-You also feel there's something more to do here, if you want, but isn't critical.
-
-@hin
-DEBUG INFO: medals hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 25 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
-@alt
->misses
---you could've turned the pines into a snipe.
-!hornets
-!snail
-!racoon
-
-@nud
 #mistake retest for slain/as nil
 >as nil
 You're trying to SAVE the animals, actually.
@@ -2060,21 +1085,12 @@ No need to tweak the rac(c)oon again. It's fine as is.
 >l
 Uprates Pasture
 
-@!min
 >snipe
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-{--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\n!You also feel there's something more to do here, if you want, but isn't critical.
 >score
-{$SCOS}
+Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
-!You also feel there's something more to do here, if you want, but isn't critical.
-
-@nud
 #nudge for uprate
 >upraet
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -2092,40 +1108,9 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 >n
 >w
 
-@hin
-Gretta's gone. Fulfill your destiny to the west.
-
-@max
-#pre-parrot-raptor rule
->raptor
-!by one point
-"Awk! I'd just kill you in that form. Try that around some bad guys."
-#preefcheck parrot
->pf
-The parrot can be changed back to a RAPTOR.
-#pre-whistle-deeply rule
->deeply
-!by one point
-#preefcheck whistle
->pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
-#pre-whistle-deeply rule retry
->deeply
-The parrot still has the whistle. You can't play the whistle until it's yours.
-#preefcheck whistle
->pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
-
 >w
 Reclusion Inclosure
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
-
-@hin
-DEBUG INFO: parrot hinting.
-
-@nud
 #nudge for inclosure
 >inclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -2151,15 +1136,12 @@ You don't know if someone named Cornelius would help or hurt you.
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 
-@mis
 #mistake test for edisa/sadie
 >edisa
 On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
 >sadie
 On the one hand, hooray for trying to fix a gender imbalance. On the other hand, do you really want THREE ideas aides annoying and blocking you?
 
-@nud
-##balance undos
 >aside
 by one point
 >eelmr
@@ -2173,12 +1155,6 @@ by one point
 >undo
 >undo
 
-@sli
-#slider test for aside
->sadei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for monstery
 >monsteyr
 You can't change the inclosure. It's what's to the west that needs changing.
@@ -2238,7 +1214,6 @@ Some art is just out there to troll people. The forces fresco is such. Even if y
 >idae
 You might be able to disrupt both of them, not just one.
 
-@nud
 #scannotes for aside-llp
 >scan elmer
 Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides.
@@ -2249,25 +1224,12 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
 
-@max
->honestly
-!by one point
-
-@!min
 >aside
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 27 out of 33 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 33.
 
-@sli
-#slider test for honestly
->ohentsyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #readables for holy nest
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
@@ -2302,16 +1264,12 @@ holy nest
 >scan merle
 holy nest
 
-@!min
 >honestly
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOMAX}
+Score in a scenario: 28 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
 
-@nud
 #renudge for ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
@@ -2321,7 +1279,6 @@ DEBUG INFO: min-up codepath
 >scan merle
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 
-@nud
 #renudge for idea
 >idae
 You already pushed them aside.
@@ -2332,55 +1289,20 @@ The parrot can be changed back into a raptor, but not into anything new.
 >aseid
 /(Merle and Elmer|Elmer and Merle) aren't the type to get fooled that way again. You got them twice, and that's enough.
 
-@max
-#more pre-medals-quickly rule
->quickly
-/(Elmer and Merle|Merle and Elmer)'s stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts.
-
 >raptor
 Your score has just gone up by one point
-}}SCORE++
 
-@nud
 #nudge for hidings
 >hidinsg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
-\\
+
 #nudge for hiding
 >hidign
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
-
-@hin
-DEBUG INFO: weltish whistle hinting.
-
-@min
-}}CURMAX-=2
-
 >score
-@min
-{$SCOS}
-@!
-{$SCOMAX}
+Score in a scenario: 29 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
 
-@max
-#test the death where we forget to QUICKLY
->w
->undo
-#more pre-medals-quickly rule
->e
->quickly
-There's nothing you really need to attack or avoid quickly here or nearby.
->w
-
-@sli
-#slider test for quickly
->uqcilyk
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
@@ -2389,19 +1311,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the medals. That's a
 >scan medals
 Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
 >x medals
-###skip test checking
 >scan medals
 Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
-
-@spoi
->deeply
-As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY.
->undo
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
-}}SCORE++
 
 #this is just to get rid of Elvira
 >w
@@ -2410,7 +1325,6 @@ WTF FTW
 >7
 >e
 
-@nud
 #mistake retest for coins lure
 >coins lure
 You're not after loot right now.
@@ -2427,16 +1341,6 @@ That's what you're trying to stop, here.
 >hydar
 The hydra's toast. Elvira is not. Deal with her.
 
-@max
->w
-#pre-whistle-deeply rule retry
->deeply
-Elvira summons her monsters to attack as you learn to play the whistle. "Sorriest resistor! Apt end, pedant." is the last you hear. Maybe you should've practiced somewhere else.
-!by one point
->undo
->undo
-
-@nud
 #renudge for weltish
 >whistel
 You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
@@ -2447,12 +1351,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle.
 >read whistle
 Ed Plye, apparently, made the whistle.
 
-@sli
-#slider test for deeply
->edpeyl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for aliver
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
@@ -2462,18 +1360,9 @@ You already got a boost from the medals.
 
 >deeply
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-Your destiny awaits to the west! You are fully prepared to take on Elvira.
-
-@hin
-DEBUG INFO: Elvira hinting.
-Just PLAY THE WHISTLE to defeat her.
 
 >w
 
-@nud
 #renudge for weltish
 >iswelth
 You already figured how to play the whistle.
@@ -2554,10 +1443,7 @@ You have enough to think about without one more of Elvira's machines.
 You have enough to think about without one more of Elvira's machines.
 
 >score
-@min
-{$SCOS}
-@!
-{$SCOMAX}
+Score in a scenario: 31 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
 
 >misses
 !otters
@@ -2566,7 +1452,6 @@ You have enough to think about without one more of Elvira's machines.
 >play whistle
 #notana
 by one point
-}}SCORE++
 DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
 Elmo and Gretta are waiting for you back at the Means Manse
 

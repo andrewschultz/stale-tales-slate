@@ -1,0 +1,418 @@
+
+## reg-roi-presto-hints.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* presto_walkthrough
+
+>ts
+>t
+>posf
+>presto
+>enter tornado
+Grey Gyre
+
+>monty hints
+You haven't gotten any points yet, so you probably want to find what sort of word is used here.
+
+>scam
+You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: Ye Hoop hinting.
+
+>score
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+
+>phooey
+Your score has just gone up by two points
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+Before taking a bite, you wonder if you've visited everywhere you can yet.
+
+>z
+You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
+
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+
+The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.
+
+DEBUG INFO: plebe hinting.
+
+>s
+Char Arch
+
+You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: tsar star hinting.
+
+#not a mistake
+>rats
+Your score has just gone up by one point
+
+You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: dart hinting.
+
+>score
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>drat
+Your score has just gone up by one point
+
+Before taking a bite, you wonder if you've visited everywhere you can yet.
+
+You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
+
+>score
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>n
+
+You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+#not a mistake
+>bleep
+Your score has just gone up by one point
+
+You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+>n
+You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+>undo
+
+DEBUG INFO: volt maze hinting.
+
+>score
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+Marines Seminar Remains
+
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: boing-go bin hinting.
+
+>get popgun
+
+You can just put the dart in the popgun.
+>put dart in popgun
+You wince and prepare to take a bite...
+Ugh. The crust feels like army rations. Not now.
+>undo
+
+>prost
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+
+>w
+
+#pre-solve-maze rule retry
+>mazeltov
+Your score has just gone up by three points
+>score
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+>blam
+Your score has just gone up by one point
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+
+>s
+
+You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
+
+>s
+Dirge Ridge
+
+You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: Leo hinting.
+
+>ole
+by one point
+
+You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+>score
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
+>score
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>darn
+Your score has just gone up by one point
+
+You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+/DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
+
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+#not a mistake
+>whassup
+Your score has just gone up by one point
+
+You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
+
+/You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
+
+>score
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+>n
+
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+>bingo
+#pre-boing-bingo rule retry
+!(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+
+DEBUG INFO: PG-on-up popgun hinting.
+
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>load gun with dart
+
+DEBUG INFO: ether hinting.
+
+>there
+Your score has just gone up by one point
+
+You will want to see what's north.
+>n
+>s
+You will want to get by the lawl wall.
+
+>score
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+Saps' Pass
+
+/You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+##bingo *2 = no line break ??
+#different message for making it to the phat path 1st time? ??
+
+DEBUG INFO: lawl wall hinting.
+
+>syke
+Your score has just gone up by one point
+
+Phat Path
+
+/You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+DEBUG INFO: harpings phrasing hinting.
+
+>what
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>later
+Your score has just gone up by one point
+But we ain't bored yet, boss!
+>score
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+(Favorite bad word,) you think, I'd rather see what's to the north.
+
+You're all done here in the Phat Path. Go north to the shack.
+
+>score
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>trasch
+by one point
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>n
+Hacks' Shack
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
+
+>screen
+by one point
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
+
+>score
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>skid
+Your score has just gone up by one point
+>score
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
+
+>leaf
+Your score has just gone up by one point
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
+
+>score
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
+
+>score
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+>score
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
+>score
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>futon
+Your score has just gone up by one point
+>score
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>casserole
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+#notmax
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>keyboard
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>put keyboard on slab
+Only one more piece of hardware is needed, and the computer will work.
+
+>put screen on slab
+You can now do computery things unimpeded! Hooray!
+
+>put lock on keyboard
+fits in perfectly
+
+>disk
+
+>put disk in drive a
+
+>reboot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>sleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+by one point
+
+>score
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>avider
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+
+>derive
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+>rom sticks
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>undo
+>undo
+>romsticks
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>tab
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>pour cola in mug
+You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
+
+>debug
+Your score has just gone up by one point
+
+DEBUG INFO: USB hinting.
+
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>misses
+!presto
+
+>sub
+Your score has just gone up by one point
+Diver time
+
+Strip of Profits
+
+>score
+
+Presto (41/41)

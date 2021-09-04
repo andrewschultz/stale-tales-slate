@@ -1,0 +1,33 @@
+
+## reg-roi-stores-min.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+>ts
+>t
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>abstract patcher to strip
+>zap store w
+DEBUG INFO: Taking away a max point. Max-score now 10.
+
+>zap store y
+DEBUG INFO: Taking away a max point. Max-score now 9.
+
+>abstract patcher to strip of profits
+>patch store p
+DEBUG INFO: Taking away a max point. Max-score now 8.
+
+>otters
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath
+

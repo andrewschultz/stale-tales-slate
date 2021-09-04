@@ -1,30 +1,7 @@
-#--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
-#--rbr.py v to verify nothing slipped
 
-files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt
+## reg-roi-presto-nudmis.txt
 
-~	min	t1
-~	max	t0
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin,spoi	t4
-
-}}MAX=41
-}}CURMAX=41
-}}SCORE=0
-}}CURMIN=28
-
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto.
-
-ALSO-IGNORE:t
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
-
+## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -37,42 +14,6 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >enter tornado
 Grey Gyre
 
-@hin
->monty hints
-You haven't gotten any points yet, so you probably want to find what sort of word is used here.
-
-@max
-#pre-plebe-bleep rule
->bleep
-!by one point
-You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
-#preefcheck plebe
->pf
-You can shout BLEEP at the plebe once you look more authoritative.
-
-@max
-#pre-solve-maze rule
->mazeltov
-You're not messing around! You see the best way to destroy the maze, and you're going for it.
->undo
->undo
-
-@sli
->slon
-#slider test for blam
->lbma
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mazeltov
->ameztlvo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for umph
->muhp
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bleep
->eebpl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for maze walls
 >veltamoz
 The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
@@ -121,7 +62,6 @@ It's the maze you need to change, not the zany meter.
 >metre
 It's the maze you need to change, not the zany meter.
 
-@nud
 #spechelp for hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
@@ -132,25 +72,13 @@ You don't need to levitate the hump. You need a way to jump over it.
 >up hm
 You don't need to levitate the hump. You need a way to jump over it.
 
-@spoi
->scam
-You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
 >umph
-}}SCORE++
 Your score has just gone up by one point
 Austerer Treasure
 
-@spoi
-You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: Ye Hoop hinting.
-
 >score
-{$SCOS}
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
-@nud
 #mistake test for ooph/phoo
 >ooph
 That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
@@ -171,15 +99,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a de
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
 
-@sli
-#slider test for phooey
->oophye
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pooh
->opho
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for bleep
 >bleep
 I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.
@@ -190,43 +109,22 @@ Boy! It'd be neat to have something that made you more authoritative.
 >whassup
 You probably want to TALK to people instead. Well, most of the time.
 
-@min
->pooh
-#notmax
-Your score has just gone up by one point
-Taking away a max point.
-DEBUG INFO: Taking away a max point.
-}}CURMAX--
-}}SCORE++
-@!
 >phooey
 Your score has just gone up by two points
-}}SCORE+=2
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-@spoi
-Before taking a bite, you wonder if you've visited everywhere you can yet.
-
-@nud
 #nudge for earring
 >earrign
 The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
-@hin
->z
-You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
-
 >score
-{$SCOS}
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-@nud
 #nudges for earring
 >rreagin
 The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
-@mis
 #mistake test for rangier/rearing
 >rangier
 The earring shakes a bit more than usual, but maybe you're not in an area where it can be itself, or what it needs to be, yet.
@@ -235,13 +133,6 @@ The earring shakes a bit more than usual, but maybe you're not in an area where 
 
 >e
 
-@spoi
-The plebe grimaces as you try to eat the crust. Perhaps there's preparation you need to do before bossing the plebe around.
-
-@hin
-DEBUG INFO: plebe hinting.
-
-@nud
 #nudge for hump
 >umhp
 You search for the hump you overcame. You can't find it now. But it's not relevant.
@@ -249,13 +140,6 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 >s
 Char Arch
 
-@spoi
-You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: tsar star hinting.
-
-@nud
 #mistake test for tars
 >tars
 !But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
@@ -330,7 +214,6 @@ You try, but fail, to make something out of nothing.
 >x cistern
 You take a peek in--to see a dart in there.
 
-@nud
 #spechelp for dart
 >drta
 The dart seems a bit closer, but...dang! Not quite.
@@ -339,24 +222,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a d
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
-@sli
-#slider test for rats
->arst
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for drat
->rdta
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
-#pre-yak-keyboard rule
->keyboard
-The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
-Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
-#preefcheck bored yak
->pf
-You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak.
-
-@nud
 #spechelp for tsar star
 >rast
 The tsar star seems to wiggle a bit, but not enough to pull it out.
@@ -380,36 +245,20 @@ You are just trolling now. No further clues for you.
 #not a mistake
 >rats
 Your score has just gone up by one point
-}}SCORE++
 
-@spoi
-You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: dart hinting.
-
-@nud
 #mistake retest for tars
 >tars
 But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 
 >score
-{$SCOS}
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >drat
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-Before taking a bite, you wonder if you've visited everywhere you can yet.
-
-@hin
-You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
 
 >score
-{$SCOS}
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-@nud
 >x cistern
 !You take a peek in--to see a dart in there.
 #renudge for cistern
@@ -424,10 +273,6 @@ The dart's just fine as-is.
 
 >n
 
-@spoi
-You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@nud
 #spechelp for plebe
 >blepe
 The plebe looks confused, as if you garbled what you said.
@@ -443,22 +288,10 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 #not a mistake
 >bleep
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
->n
-You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
->undo
-
-@hin
-DEBUG INFO: volt maze hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-@nud
-##balance undos
 >n
 >w
 #respechelp for maze walls
@@ -475,13 +308,6 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 >e
 Marines Seminar Remains
 
-@spoi
-You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: boing-go bin hinting.
-
-@nud
 #mistake test for oppugn [text]/oppugn
 >oppugn zozimus
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
@@ -520,7 +346,6 @@ The number's got more numerals than letters.
 >numbre
 The number's got more numerals than letters.
 
-@nud
 #spechelp for boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
@@ -532,31 +357,8 @@ Well! No matches, but the name is short enough, you might be able to eliminate t
 >scan sport ports
 Maybe you can find where the vowel is. That could help.
 
-@sli
-#slider test for bingo
->ibgon
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for prost
->rpsto
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->bingo
-#pre-boing-bingo rule
-(taking the popgun first while you mess with the boing-go bin)
-Your score has just gone up by one point
->undo
-
 >get popgun
 
-@spoi
-You can just put the dart in the popgun.
->put dart in popgun
-You wince and prepare to take a bite...
-Ugh. The crust feels like army rations. Not now.
->undo
-
-@nud
 #spechelp for sport ports
 >prots
 The sport ports seem even shinier for a second.
@@ -568,17 +370,13 @@ TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 >potr
 But there is more than one port.
 
-@!min
 >prost
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 
 >score
-{$SCOS}
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
 
-@nud
 #renudge for port
 >potr
 You already observed all the ports. No need to try to single one out.
@@ -588,48 +386,22 @@ You don't need to praise military activity and sacrifice too much. Countries whe
 
 >w
 
-@max
->mazeltov
-!You're not messing around! You see the best way to destroy the maze, and you're going for it.
-No point actually going through the maze when you can destroy it.
-by three points
->undo
-
-@min
->wont
-Your score has just gone up by one point
-#times two
-DEBUG INFO: Taking away a max point.
-}}CURMAX-=2
-}}SCORE++
->score
-{$SCOS}
-
-@nud
 >gonear runway
 >n
 >gonear runway
 >scan zo
-###skip test checking
 >mazeltov
 #notmax
 Your score has just gone up by two points
-}}CURMIN++
-}}CURMAX--
-}}SCORE+=2
 >score
-{$SCOS}
+Score in a scenario: 9 out of 41 total points in the current region, Presto. Lowest score to solve is 31. Maximum score available is 40.
 >undo
 >undo
 >undo
 >undo
 >undo
 >undo
-}}CURMIN--
-}}CURMAX++
-}}SCORE-=2
 
-@nud
 >n
 Nowt Town
 #spechelp for n-t-air
@@ -637,12 +409,6 @@ Nowt Town
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 
-@sli
-#slider test for wont
->owtn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #scannotes for maze walls
 >scan maze walls
 Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe.
@@ -672,7 +438,7 @@ You think about doing something to the floor. But making it disappear would prob
 You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
 >lawl
 You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
-\\
+
 #mistake test for bing
 >bing
 You come to four-fifths of a revelation, but it's not about this maze, sadly.
@@ -730,7 +496,6 @@ You won't be able to do anything to the dreidl to see it, but it'll be so horrif
 >undo
 >undo
 
-@nud
 #separate semi-forcing stuff
 >abstract tom avlez to runway
 #nudge for avlez
@@ -759,59 +524,24 @@ No, his full name is the clue, here.
 >undo
 >undo
 
-@max
-#pre-solve-maze rule retry
->n
->mazeltov
-You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.
-by three points
->undo
->undo
-
-@!min
 #pre-solve-maze rule retry
 >mazeltov
 Your score has just gone up by three points
-}}SCORE+=3
-}}CURMIN+=2
 >score
-{$SCOS}
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
 >blam
 Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-@spoi
-The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
-
-@max
-#pre-ether-there rule
->there
-You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
-#preefcheck ether
->pf
-You haven't yet found the right moment to shout THERE into the ether.
-
-@nud
 >blma
 That's not something
 
 >s
 
-@spoi
-You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
-
 >s
 Dirge Ridge
 
-@sli
-#slider test for ole
->leo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for evil
 >evil
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you, or that guy chasing you. That'd be mean.
@@ -837,23 +567,12 @@ No chance.
 >whupass
 No chance.
 
-@spoi
-You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: Leo hinting.
-
 >ole
-}}SCORE++
 by one point
 
-@spoi
-You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
 >score
-{$SCOS}
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
-@nud
 #done rejects for leo
 >loe
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
@@ -887,36 +606,17 @@ No, you're trying to get RID of the evil, here. Plus, you don't need to encourag
 >rondale
 /Strength and NFL level speed is pretty awesome, but it'd revoke (Rand and Leo|Leo and Rand)'s individuality.
 
-@sli
-#slider test for darn
->adnr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for goodness
->osgndsoe
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!min
 >goodness
 by one point
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >darn
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-/DEBUG INFO: between (Leo and Rand|Rand and Leo) hinting\.
 
 >score
-{$SCOS}
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
-@nud
 #mistake retest for evil
 >evil
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
@@ -927,7 +627,6 @@ Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've fo
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
-@nud
 #nudge for whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
@@ -950,26 +649,13 @@ It's time for something more cordial than whupass. Besides, you have no can to p
 >leonard
 You need to find a way to cheer them up.
 
-@sli
-#slider test for whassup
->sahwups
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 #not a mistake
 >whassup
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
-
-@hin
-/You're done here in Dirge Ridge. Maybe (Leo and Rand|Rand and Leo)'s combined muscle could help you somewhere\.
 
 >score
-{$SCOS}
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
-@nud
 #mistake retest for leonard/renaldo/leandro/rolande
 >leonard
 You wouldn't want that, now they're your friends.
@@ -986,50 +672,14 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 >n
 
-@spoi
-You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@max
-#continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
-#test cases: no gun, no loaded gun, first time, subsequent times
->there
-/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need to load that popgun.
->undo
->abstract popgun to seminar
->there
-!by one point
-/(Leo and Rand|Rand and Leo) charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. "Ha, bums! Ambush!" you hear, before taking a thumping.
-/You all walk back, slightly beaten up, muttering "Ah, ow, whoa." (Rand and Leo|Leo and Rand) shake off their bruises. Perhaps if you were a more effective fighter, you could help them win. You're not going to get buffer, so you probably need a weapon.
->there
-!by one point
-#don't let your pals get beaten up twice.
-THERE, you think, realizing you're not armed yet.
-#detour to test "efffectively" armed
->banish dart
->there
-THERE, you think, realizing you're not armed yet.
->undo
->undo
-#end detour
->purloin popgun
->there
-!by one point
-THERE, you think, realizing you're not effectively armed yet.
-You need to fix the popgun.
-
 >bingo
 #pre-boing-bingo rule retry
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: PG-on-up popgun hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
-@nud
 #mistake retest for nobig/no big
 >no big
 Hey, now, that's just humblebragging.
@@ -1057,42 +707,19 @@ You got the boing-go bin working.
 >numbre
 You got the boing-go bin working.
 
-@max
->there
-!by one point
-THERE, you think, realizing you're not effectively armed yet.
-!You need to fix the popgun.
-
 >load gun with dart
 
-@hin
-DEBUG INFO: ether hinting.
-
-@nud
 #spechelp for ether
 >theer
 The ether pulsates, but you still can't see through it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a decent omen.
 
-@sli
-#slider test for there
->eethr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >there
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-You will want to see what's north.
->n
->s
-You will want to get by the lawl wall.
 
 >score
-{$SCOS}
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
-@nud
 #nudge for mazeltov
 >mazeltvo
 The volt maze is gone. Re-forming it would not be fun.
@@ -1103,13 +730,9 @@ The ether is gone. You can just go north.
 >n
 Saps' Pass
 
-@spoi
-/You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
 ##bingo *2 = no line break ??
 #different message for making it to the phat path 1st time? ??
 
-@mis
 #mistake test for delis
 >delis
 You don't need food. And the food would probably be pretty evil, anyway.
@@ -1135,22 +758,12 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 >spas
 Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallets instead of to their doom. But not until you've gotten rid of Elvira.
 
-@nud
 >s
 #renudge for ether
 >ethre
 The ether is gone. You can just go back north.
 >n
 
-@sli
-#slider test for gosh
->oghs
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for syke
->ysek
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for lawl
 >lalw
 The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on.
@@ -1172,7 +785,7 @@ The three hogs are pretty indistinguishable, but they're still, well, more than 
 #nudge for key
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
-\\
+
 #spechelp for hogs
 >gohs
 The hogs snicker a bit, but they seem a little nervous, too.
@@ -1182,22 +795,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a d
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
 
-@max
->gosh
-Your score has just gone up by one point
-Phat Path
-}}SCORE++
->score
-{$SCOS}
-}}SCORE--
-#pre-hogs-not-keys rule
->pf
-SYKE was another way around the hogs to get the keys.
->undo
->undo
->undo
-
-@nud
 #mistake retest for rats
 >rats
 Boy! You miss that tsar star.
@@ -1211,22 +808,11 @@ Despite being dangerous to walk into, Deil's Slide serves an important ecologica
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
-@hin
-DEBUG INFO: lawl wall hinting.
-
 >syke
-}}SCORE++
 Your score has just gone up by one point
 
 Phat Path
 
-@spoi
-/You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
-@hin
-DEBUG INFO: harpings phrasing hinting.
-
-@nud
 #mistake test for ptah
 >ptah
 No Egyptian deity comes to your rescue. Or needs to.
@@ -1237,7 +823,6 @@ You don't need to riff on any location names to win the game, unless there's not
 >clupm
 No, it's not just any clump, but hawt thaw.
 
-@nud
 #mistake test for alter
 >alter
 Vandalism! For shame!
@@ -1252,31 +837,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt th
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
 
-@sli
-#slider test for what
->hwta
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for solong
->osolgn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for later
->alert
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tough
->otghu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!min
 >what
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 
 >score
-{$SCOS}
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-@nud
 #renudge for leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
@@ -1309,9 +876,7 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 >artel
 /You, (Rand and Leo|Leo and Rand) have already engaged in a collective effort.
 
-@nud
 #first, test each done-reject individually
-##balance undos
 >later
 by one point
 #done rejects for alert
@@ -1334,111 +899,23 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >undo
 >undo
 
-@max
-# all 6 combos to get through
-##balance undos
-#######T S L below
->tough
-by one point
->so long
-by one point
-!Hut! Go!
-Dat was a good dust-up
-#pre-harpings-flip rule
->later
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
-#######T L S below
->later
-by one point
-!Hut! Go!
-Dat was a good dust-up
-#pre-harpings-flip rule retry
->so long
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
->undo
-#######S L T below
->so long
-by one point
->later
-by one point
-!Hut! Go!
-Dat was a good dust-up
->tough
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
-#######S T L below
->tough
-by one point
-Hut! Go!
-Dat was a good dust-up
->later
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
->undo
-#######T L S below
->tough
-by one point
->later
-by one point
-!Hut! Go!
-Dat was a good dust-up
->so long
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
-#######T S L below
->undo
->undo
->so long
-by one point
-!Hut! Go!
-Dat was a good dust-up
->later
-/You mumble other words to shoo (Rand and Leo|Leo and Rand), but you sort of miss them. It was more fun than you realized at the time. Maybe you can get them to provide some muscle.
->undo
->undo
->undo
-
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 >tough
 Your score has just gone up by one point
 Hut! Go!
 Dat was a good dust-up
-}}SCORE++
-
-@spoi
-(Favorite bad word,) you think, I'd rather see what's to the north.
-
-@min
-#GOODNESS is no longer available
-}}CURMAX--
-
-@hin
-You're all done here in the Phat Path. Go north to the shack.
 
 >score
-{$SCOS}
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
-@nud
 #renudge for yrnet
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
-@sli
-#slider test for trasch
->rtsahc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for starch charts
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
@@ -1453,21 +930,14 @@ The mutism summit is meant to be stable. You'll need to go north to do what you 
 >chatr
 But there is more than one chart to twiddle.
 
-@!min
 >trasch
 by one point
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
 Hacks' Shack
 
-@spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
-
-@nud
 #scannotes for n e recs censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
@@ -1484,21 +954,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer.
 
 >screen
 by one point
-}}SCORE++
-
-@spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
 
 >score
-{$SCOS}
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-@sli
-#slider test for screen
->ercsne
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-##balance undos
 >rom sticks
 by one point
 #done rejects for rom sticks
@@ -1522,46 +981,12 @@ You'll know what to do with the sticks when you're ready to program
 >undo
 >undo
 
-@nud
 >s
 #renudge for yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
 
-@max
-##balance undos
->au 2
->get polemic
-You take it. You don't need to, but it'd be nice to have handy.
-!Taken.
->s
-#pre-polemic-compile rule
->compile
-!by one point
-There is no computer around. You probably want to go back to the Hacks' Shack for this.
->undo
->n
->compile
-!by one point
-Good idea, but tough to program without something to type on.
->purloin keyboard
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
-#preefcheck im le cop polemic
->pf
-You weren't ready to COMPILE yet.
->undo
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
-@nud
 #mistake test for rived
 >rived
 You don't need to do that sort of hacking.
@@ -1718,78 +1143,23 @@ You'll need to figure stuff out with the disk, but right now, yeah, you're all "
 Kids don't need to listen to the words you've used so far! They wouldn't help with programming, anyway.
 However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus.
 
-@sli
-#slider test for skid
->ksdi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cola
->ocal
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mug
->ugm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for leaf
->elfa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for futon
->ufont
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for casserole
->aceesolrs
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom stick
->orsmitkc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rom sticks
->smorsckit
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for avider
->vadire
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for derive
->edevir
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for capslock
->acclskpo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >skid
 Your score has just gone up by one point
-}}SCORE++
 >score
-{$SCOS}
-
-@spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >leaf
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
 
 >score
-{$SCOS}
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
-}}SCORE++
-
-@spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
 
 >score
-{$SCOS}
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-@sli
-#note the regular code path is usurped to remind the player of what they already know
-#slider test for disk
->ikds
-No, skid <=> disk is about it. There's no tricky third way.
-!Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake retest for kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with pushing the skid, anyway.
@@ -1805,11 +1175,9 @@ YOU HAVE WHAT YOU NEED.
 No, skid <=> disk is about it. There's no tricky third way.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the skid. That's a decent omen.
 >disk
-###skip test checking
 >skdi
 No, skid <=> disk is about it. There's no tricky third way.
 >skid
-###skip test checking
 #nudge for caps
 >casp
 It'd sort of stink if a caps lock button broke in real life, so, no.
@@ -1843,46 +1211,23 @@ What you want needs to help programming more than water or French champagne or d
 
 >cola
 Your score has just gone up by one point
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >mug
 Your score has just gone up by one point
-}}SCORE++
 >score
-{$SCOS}
-
-@max
-#pre-peels-speel-sleep rule
->sleep
-You haven't yet made anywhere comfortable to sleep.
-#preefcheck peels speel
->pf
-You tried to SLEEP, but the time wasn't right.
-#pre-reboot rule
-You have nothing to type with, so it doesn't do much good.
-#preefcheck be troo e robot
->pf
-You weren't ready for the Be-Troo E-Robot to REBOOT yet.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >futon
 Your score has just gone up by one point
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-@max
-#pre-peels-speel-sleep rule retry
->sleep
-Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.
-
-@mis
 #mistake retest for loca
 >loca
 What you have helps programming more than water or French champagne or dancing in the rain.
 
-@nud
 #done rejects for alocalco cola
 >aloc
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
@@ -1921,16 +1266,12 @@ The screen is less ancient than the censer, but you can't do any better. It work
 The escaroles seem slightly meatier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That's a decent omen.
 
-@!min
 >casserole
 by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@nud
 #done rejects for casserole
 >casseroel
 The casserole is mixed up enough.
@@ -1942,7 +1283,6 @@ The casserole is mixed up enough.
 
 >put leaf on skid
 
-@nud
 #nudge for yak
 >yka
 The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
@@ -1959,65 +1299,32 @@ You may wish to decipher the scratchings, instead.
 >scratchign
 You may wish to decipher the scratchings, instead.
 
-@max
->give book to yak
-#notmax
-by one point
->undo
-
-@nud
 >push skid s
 #notana
 Your score has just gone up by one point
 Hacks' Shack
 >undo
 
-@max
->disk
-That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on the skid wouldn't appreciate it. Best to return to the Hacks' Shack and try again.
-
 >push skid n
 >push skid n
 >push skid n
 #notmax
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@nud
 #spechelp for drab yoke
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That's a decent omen.
 
-@sli
-#slider test for keyboard
->ekbyaodr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >keyboard
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@sli
-#slider test for tab
->abt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->compile
-!by one point
-Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
->undo
-
-@nud
 #mistake test for bat
 >bat
 You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
@@ -2034,67 +1341,29 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 >put keyboard on slab
 Only one more piece of hardware is needed, and the computer will work.
 
-@max
->compile
-Good idea, but first, you may want to put the screen on the slab. Do so now?
-!Done. You can try to COMPILE again, now.
-Ok, but by "may want" I meant "really probably need to."
-
 >put screen on slab
 You can now do computery things unimpeded! Hooray!
 
-@nud
 #renudge for computer
 >compuert
 You need to fix the program in the computer.
 
-@max
->compile
-!by one point
-You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
->compile
-!by one point
-You need to get rid of that uppercase to successfully compile your code.
-
 >put lock on keyboard
 fits in perfectly
 
-@nud
 #spechelp for be troo e robot
 >reboto
 The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
 
-@mis
 #mistake test for to be or
 >to be or
 The Be-Troo E-Robot isn't interested in monologues.
 
-@max
->compile
-!by one point
-A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
-
 >disk
-
-@max
->compile
-!by one point
-A DISK, I'D ASK pops up. You realize that the disk would fit fine.
 
 >put disk in drive a
 
-@max
->compile
-!by one point
-You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
-
-@sli
-#slider test for reboot
->obreto
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #readables for be troo e robot
 >read robot
 OBERTO, in red. That's its name.
@@ -2104,20 +1373,10 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 
 >reboot
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@max
->compile
-!by one point
-You get a NEED IF-DEFINE error
->compile
-!by one point
-That stupid NEED IF-DEFINE and that peels speel, still.
-
-@nud
 #done rejects for be troo e robot
 >toober
 No need to reboot twice.
@@ -2132,19 +1391,12 @@ Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
 
-@sli
-#slider test for sleep
->eespl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >sleep
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@nud
 #done rejects for peels speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
@@ -2153,38 +1405,12 @@ You've had enough comforts from cots to do the programming you need. You might r
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
 
-@sli
-#slider test for compile
->ocpmlei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >compile
 by one point
-}}SCORE++
-
-@max
->abstract cola to phat path
->purloin coal
->abstract mug to phat path
-#pre-bub-dude-egg rule
->debug
-The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
-!by one point
-#preefcheck bub dude egg
->pf
-You weren't ready to DEBUG yet.
->undo
->undo
->undo
->undo
-
-@min
-}}CURMAX-=5
 
 >score
-{$SCOS}
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
-@nud
 #done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
@@ -2205,7 +1431,6 @@ It's alternately referred to as Drive E and E Drive. I'D VEER, someone has writt
 The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
 
-@nud
 #spechelp for drive a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
@@ -2218,50 +1443,38 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a de
 >redive
 But you've figured nothing about Drive E yet. Not that you strictly need to.
 
-@!min
 >avider
 by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
 
-@nud
 #renudge for drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
 
-@!min
 >derive
 by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 >rom sticks
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 >undo
 >undo
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 >score
-{$SCOS}
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 >tab
 by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOMAX}
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-@nud
 #renudge for drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
@@ -2281,18 +1494,11 @@ You already did enough with the TAB key.
 >bta
 No, the TAB key is what it should be.
 
-@nud
 #spechelp for bub dude egg
 >debgu
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
 
-@sli
-#slider test for debug
->edugb
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #scannotes for bub dude egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
@@ -2320,7 +1526,6 @@ The cola has already been reprocessed enough. You'll drink it when the time come
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
-@nud
 #redone rejects for mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
@@ -2330,18 +1535,10 @@ The mug is already somehow generating infinite cola. Don't want to mess with tha
 
 >debug
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: USB hinting.
 
 >score
-@min
-{$SCOS}
-@!
-{$SCOMAX}
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
-@nud
 #done rejects for bub dude egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
@@ -2350,66 +1547,23 @@ You had to consider all sorts of combinations while debugging, but things will b
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
 
 >misses
-@min
-Grey Gyre====
---you could've shouted BLAM at the lamb.
---you could've said MAZEL TOV to get past the maze.
-Dirge Ridge====
---you could've said GOODNESS to the Odes Song.
-Austerer Treasure====
---you could've gotten a style point for saying PHOOEY instead of POOH.
-Marines Seminar Remains====
---you could've said PROST (a German word to toast someone) to the Sport Ports.
-Phat Path====
---you could've said WHAT to the Hawt Thaw.
---you could've made the starch charts TRASCH.
-Hacks' Shack====
---the trim socks could've become ROM STICKS.
---you could've made the TBA key a TAB key.
---you could've made the escaroles a CASSEROLE.
---you could've made Drive A AVIDER.
---you could've taken time to DERIVE how to improve Drive E.
-@!
 !presto
 
-@nud
 #scannotes for usb
 >scan usb
 Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good.
-\\
+
 #spechelp for usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.
 
-@max
->bus
-Your score has just gone up by one point
-Drive time
-Strip of Profits
->missalt
-You could also have made the USB into a sub.
->undo
->undo
-
-@sli
-#slider test for sub
->usb
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sub.
-
 >sub
 Your score has just gone up by one point
-}}SCORE++
 Diver time
 
 Strip of Profits
 
-@max
->missalt
-You could also have made the USB into a bus.
->undo
-
 >score
 
-@!min
-Presto ({MAX}/{MAX})
+Presto (41/41)

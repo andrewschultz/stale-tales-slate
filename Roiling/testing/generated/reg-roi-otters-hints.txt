@@ -1,0 +1,474 @@
+
+## reg-roi-otters-hints.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>monty hints
+
+>seed 1
+>ts
+>a5
+>t
+>otters
+
+>scam
+
+>opt in
+>enter solid idols
+
+As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
+
+DEBUG INFO: bleary barley hinting.
+
+#forceignore
+>barely
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
+
+DEBUG INFO: Ed Riley hinting.
+
+>score
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+
+>l
+Burnt Brunt
+
+>rescind
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>reedily
+Your score has just gone up by one point
+
+You made a way west. You're done here.
+
+>score
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>w
+Disowned Downside
+
+As you gaze into the cinders, they blow away, leaving you feeling the parleys splayer players can talk SPARELY.
+
+DEBUG INFO: macks hinting.
+
+!DEBUG INFO: Gretta
+DEBUG INFO: macks hinting.
+
+>bossily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>angrily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>blearily
+Your score has just gone up by one point.
+
+That can wait until you've finished talking.
+
+DEBUG INFO: Gretta Garett-Tatger hinting.
+Gretta has an important item for you once you finish chatting.
+
+>score
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+>au -1
+
+>1
+
+DEBUG INFO: Gretta Garett-Tatger hinting.
+
+>3
+
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+#We don't want to hint the moat right now. That would be a waste of cinders.
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+
+Gretta's gone. The first thing to do is to go north or south to regain your powers.
+
+#pre-medals-quickly rule
+>quickly
+You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
+#preefcheck medals
+>pf
+The medals can help you go QUICKLY, though they may not be fully magical, yet.
+
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+>although
+As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
+>ergo
+by one point
+>misses
+--you could've checked north of the Disowned Downside for the other way to regain your powers.
+>n
+>n
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+>because
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>n
+Loop Pool
+
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+
+DEBUG INFO: sea cube hinting.
+!The Loop Pool isn't critical since you've solved the Bran Barn, but the puzzle may still interest you.
+
+>because
+by one point
+
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+
+DEBUG INFO: eels hinting.
+
+>score
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>else
+by one point
+
+DEBUG INFO: medals hinting.
+
+>score
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>s
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
+
+DEBUG INFO: atmo-moat hinting.
+
+>s
+
+Bran Barn
+
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+
+DEBUG INFO: ghoul hat hinting.
+The Bran Barn isn't critical since you've solved the Loop Pool, but the puzzle may still interest you.
+
+>although
+by one point
+DEBUG INFO: min-up codepath
+DEBUG INFO: Gore Ogre hinting.
+>score
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
+
+>ergo
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
+
+>however
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+>n
+
+DEBUG INFO: atmo-moat hinting.
+
+>atom
+Your score has just gone up by one point
+
+Gretta's gone. Go back east for help.
+
+>score
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>e
+
+>n
+Shiner Shrine
+
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
+>enragedly
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
+>undo
+>remotely
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY)\.
+>undo
+>brutely
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|REMOTELY)\.
+>undo
+
+DEBUG INFO: simply sly imp hinting.
+
+>enragedly
+Your score has just gone up by one point
+
+DEBUG INFO: simply sly imp hinting.
+You may need yet another adverb. (+)
+
+>score
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>remotely
+Your score has just gone up by one point
+
+!DEBUG INFO: medals hinting.
+The path north is cleared, and you still have work there.
+
+>score
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>n
+Lamer Realm
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
+
+>slow
+Your score has just gone up by one point
+
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
+
+/DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
+
+>score
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>coolest
+Your score has just gone up by one point
+
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED|leopard PAROLED)\.
+
+/DEBUG INFO: (leopard|stray satyr|badger) hinting\.
+
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>paroled
+Your score has just gone up by one point
+
+/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED)\.
+
+/DEBUG INFO: (stray satyr|badger) hinting\.
+
+>score
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>artsy
+Your score has just gone up by one point
+
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
+You also feel there's something more to do here, if you want, but isn't critical.
+
+DEBUG INFO: medals hinting.
+
+>score
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>l
+Blest Belts
+
+>garbed
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.\n!You also feel there's something more to do here, if you want, but isn't critical.
+>score
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>s
+>s
+>s
+
+Clarthead Cathedral
+
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|.
+>loathingly
+by one point
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+>undo
+
+DEBUG INFO: shrewin' whiners hinting.
+The whiners have a lot of energy and exercise it many different ways. (+)
+
+>loathingly
+Your score has just gone up by one point
+
+DEBUG INFO: shrewin' whiners hinting.
+You can soften them up a bit more. (+)
+
+>score
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>joltily
+Your score has just gone up by one point
+They find another place where rioters roister.
+
+!DEBUG INFO: medals hinting.
+The path south is cleared, and you still have work there.
+
+>score
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>s
+Perverse Preserve
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
+
+DEBUG INFO: raptor hinting.
+
+>parrot
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
+
+/DEBUG INFO: (snipe|thrones|corona|nails) hinting\.
+
+>score
+Score in a scenario: 22 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>snail
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|HORNETS)\.
+
+/DEBUG INFO: (snipe|thrones|corona) hinting\.
+
+>score
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>hornets
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make (a RACOON|a SNIPE)\.
+
+/DEBUG INFO: (thrones|corona) hinting\.
+
+>score
+Score in a scenario: 24 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>racoon
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
+You also feel there's something more to do here, if you want, but isn't critical.
+
+DEBUG INFO: medals hinting.
+
+>score
+Score in a scenario: 25 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>l
+Uprates Pasture
+
+>snipe
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\n!You also feel there's something more to do here, if you want, but isn't critical.
+>score
+Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
+!You also feel there's something more to do here, if you want, but isn't critical.
+
+>n
+>n
+>w
+
+Gretta's gone. Fulfill your destiny to the west.
+
+>w
+Reclusion Inclosure
+
+As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
+
+DEBUG INFO: parrot hinting.
+
+>eelmr
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+>aside
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 27 out of 33 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 33.
+
+>honestly
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 28 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>raptor
+Your score has just gone up by one point
+
+As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
+
+DEBUG INFO: weltish whistle hinting.
+
+>score
+Score in a scenario: 29 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>deeply
+As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY.
+>undo
+
+>quickly
+The medals clink together. You feel infused with speed. Even your fats feel fast.
+by one point
+
+#this is just to get rid of Elvira
+>w
+Rancho Archon Anchor
+WTF FTW
+>7
+>e
+
+>deeply
+Your score has just gone up by one point
+
+Your destiny awaits to the west! You are fully prepared to take on Elvira.
+
+DEBUG INFO: Elvira hinting.
+Just PLAY THE WHISTLE to defeat her.
+
+>w
+
+>score
+Score in a scenario: 31 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>misses
+!otters
+
+>au 1
+>play whistle
+#notana
+by one point
+DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
+Elmo and Gretta are waiting for you back at the Means Manse
+
+>y
+
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>score
+You need to figure how to change and get through store H.

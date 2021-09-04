@@ -1,33 +1,7 @@
-# rbr-roi-others.txt
-#
-# this covers maximum points, minimum points and nudges.
-#
-# this does not cover the special cases of all the ways you can return stuff to Curtis.
-#
-files=reg-roi-others-max.txt,reg-roi-others-min.txt,reg-roi-others-nudmis.txt,reg-roi-others-slider.txt,reg-roi-others-hints.txt,reg-roi-others-spoiler.txt
 
-~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin	t4
-~	spoi,spo	t5
+## reg-roi-others-nudmis.txt
 
-ALSO-IGNORE:t
-
-}}MAX=42
-}}CURMAX=42
-}}SCORE=0
-}}CURMIN=25
-
-}$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, though you only need {CURMIN} to win.
-}$SCONOFIND=You have {SCORE} of {MAX} total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
-}$SCOVERYLAST=You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
-
+## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -36,18 +10,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >posf
 >rove over
 
-@hin
->monty hints
-
-@max
->score
-You need to figure how to change and get through store H.
-
 >others
-
-@max
->score
-Enter the Throes Hoster for the final region
 
 >in
 Rustic Citrus
@@ -56,21 +19,6 @@ Rustic Citrus
 >z
 >z
 
-@spoi
->gx me
-You don't want to change. Well, not in that way.
->gx curtis
-A person shouldn't and can't be changed into a fruit.
->gx pagers
-You focus and squint, and letters appears in your sight: GRAPES. The aftertaste of arugula finally dissipates.
->gx slime
-You focus and squint, and letters appears in your sight: LIMES. The aftertaste of arugula finally dissipates.
->gx spear
-You focus and squint, and letters appears in your sight: PEARS. The aftertaste of arugula finally dissipates.
->gx lumps
-You focus and squint, and letters appears in your sight: PLUMS. The aftertaste of arugula finally dissipates.
-
-@nud
 #mistake test for boarder
 >boarder
 Rustic Citrus doesn't make for great living quarters.
@@ -114,18 +62,18 @@ You smile at the slime. It can't be that hard to figure what to do.
 #mistake test for miles
 >miles
 You don't want miles and miles of slime.
-\\
+
 #nudge for arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
-\\
+
 #nudge for greenish
 >sheerign
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. Perhaps if you had a sense of direction, you could figure how to leave.
 #nudge for storeh
 >streho
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
-\\
+
 #nudge for other
 >oreth
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -177,71 +125,31 @@ The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
 #readables for mad train
 
-@mis
 #mistake test for parse
 >parse
 You've parsed the spelling of quite a few words so far. Just a bit more, now.
 
-@sli
->slon
-#slider test for grapes
->rgpase
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for limes
->ilesm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pears
->eprsa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for plums
->lpmsu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@hin
-/DEBUG INFO: (lumps|spear|pagers|slime) hinting\.
-
 >limes
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (spear|pagers|lumps) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 1 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >pears
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (pagers|lumps) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 2 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >grapes
 Your score has just gone up by one point.
 
-@hin
-DEBUG INFO: lumps hinting.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >plums
 Your score has just gone up by one point.
 
-@hin
-DEBUG INFO: moss cap hinting.
-
-@spoi
->gx moss cap
-moss cap: You focus and squint, and letters appears in your sight: COMPASS. The aftertaste of arugula finally dissipates.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
-@nud
 #nudge for moss
 >msso
 Nothing happens. Perhaps it's the whole item that's important.
@@ -249,24 +157,14 @@ Nothing happens. Perhaps it's the whole item that's important.
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
-@nud
 #spechelp for moss cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
 
-@sli
-#slider test for compass
->smoascp
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >compass
 Your score has just gone up by one point.
 
-@hin
-You can EXAMINE the ruts circuits to discover more things to change to fruits.
-
-@nud
 #done rejects for compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
@@ -281,41 +179,6 @@ The needle is working fine. No need to meddle.
 
 >x ruts circuits
 
-@hin
-/DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
-
-@spoi
->gx eerie blurbs
-You focus and squint, and letters appears in your sight: BLUEBERRIES. The aftertaste of arugula finally dissipates.
->gx peanut cola
-You focus and squint, and letters appears in your sight: CANTALOUPE. The aftertaste of arugula finally dissipates.
->gx harmonicas
-You focus and squint, and letters appears in your sight: MARASCHINO. The aftertaste of arugula finally dissipates.
->gx omen prism
-You focus and squint, and letters appears in your sight: PERSIMMON. The aftertaste of arugula finally dissipates.
->gx magenta rope
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
->gx megaton pear
-You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
->gx rampage note
-You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
->gx mopeage rant
-You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
->gx mad train
-You focus and squint, and letters appear in your vision: TAMARIND. The aftertaste of arugula finally dissipates.
-
-@sli
-#slider test for tamarind
->atamirdn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for maraschino
->amarcsihon
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 >read mad train
 DR. NIMATA.
 #spechelp for mad train
@@ -323,7 +186,6 @@ DR. NIMATA.
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mad train. That's a decent omen.
 
-@nud
 #renudge for ruts
 >rust
 You found enough in the ruts circuits. No need to bring them back.
@@ -331,12 +193,11 @@ You found enough in the ruts circuits. No need to bring them back.
 >maraschion
 The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
-\\
+
 #nudge for harmonica
 >harmonica
 The harmonicas seem stuck together, so you probably have to deal with both of them.
 
-@nud
 #nudge for megaton
 >megaton
 No, the whole thing. You see several...similar...items here right now.
@@ -379,7 +240,7 @@ Nothing happens. Perhaps it's the whole item that's important.
 #nudge for eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
-\\
+
 #readables for eerie blurbs
 >read eerie blurbs
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
@@ -409,104 +270,48 @@ Not just omen, or prism. It's an omen prism.
 >prims
 Not just omen, or prism. It's an omen prism.
 
-@nud
 #readables for omen prism
 >read omen prism
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
-@hin
-/DEBUG INFO: (eerie blurbs|harmonicas|mad train|magenta rope|omen prism|peanut cola) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
-
-@sli
-#slider test for blueberries
->ebeblreisur
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cantaloupe
->acalntuoep
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for persimmon
->mreisponm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pomegranate
->opeargetnam
-Your settler begins to make noises: a low hum, but nothing really piercing.
+You have 5 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
 #only three points here to test the reject case of going east to the clearing without a token
 
 >tamarind
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (eerie blurbs|harmonicas|magenta rope|omen prism|peanut cola) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 6 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >blueberries
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (harmonicas|magenta rope|omen prism|peanut cola) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 7 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >cantaloupe
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (harmonicas|magenta rope|omen prism) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
-
-@min
-##balance undos
-# here we want to make a detour to check rejecting going east in Swell Wells. There are two cases based on whether or not you are carrying enough fruits.
->n
->e
-The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you will get some from Curtis, if you do enough.
->apricot
-by one point
->e
-The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you can go see Curtis for remuneration. You've done a good bit.
->undo
->undo
->undo
->undo
+You have 8 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >persimmon
 Take on a token
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (harmonicas|magenta rope) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 9 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >maraschino
 Your score has just gone up by one point.
 
-@hin
-DEBUG INFO: magenta rope hinting.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 10 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >pomegranate
 Your score has just gone up by one point.
 
 >score
-}}SCORE++
-{$SCOS}
+You have 11 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
-@nud
 #nudge for tekno
 >tenok
 There's enough credit on the token. Don't get greedy.
@@ -514,46 +319,6 @@ There's enough credit on the token. Don't get greedy.
 >n
 Swell Wells
 
-@hin
-/DEBUG INFO: (green stain|miser ruble|PSA 'Elp|riot cap|sorer bogey|stucco) hinting\.
-
-@spoi
->gx silly shirt
-You focus and squint, and letters appears in your sight: APPLES. The aftertaste of arugula finally dissipates.
->gx riot cap
-You focus and squint, and letters appears in your sight: APRICOT. The aftertaste of arugula finally dissipates.
->gx stucco
-You focus and squint, and letters appears in your sight: COCONUTS. The aftertaste of arugula finally dissipates.
->gx sorer bogey
-You focus and squint, and letters appears in your sight: GOOSEBERRY. The aftertaste of arugula finally dissipates.
->gx miser ruble
-You focus and squint, and letters appears in your sight: MULBERRIES. The aftertaste of arugula finally dissipates.
->gx green stain
-You focus and squint, and letters appears in your sight: TANGERINES. The aftertaste of arugula finally dissipates.
->gx mound
-Nothing happens. Try something else.
-
-@sli
-#slider test for apricot
->pairotc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for apples
->palpse
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for coconuts
->ococunst
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for gooseberry
->resooebgyr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mulberries
->umblreesri
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tangerines
->atennesgri
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -630,41 +395,23 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. Tha
 >apricot
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (green stain|miser ruble|PSA 'Elp|sorer bogey|stucco) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 12 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >apples
 Your score has just gone up by one point.
 
-@hin
-You can go back to Curtis for a reward.
-Falling through to check the fruit we would've hinted for test scripts...
-/DEBUG INFO: (green stain|miser ruble|sorer bogey|stucco) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 13 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >mulberries
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (green stain|sorer bogey|stucco) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 14 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >gooseberry
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (green stain|stucco) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 15 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -672,26 +419,12 @@ You may want to go see Curtis for a new reward. Or you can keep getting new frui
 Curtis hands you a coin
 scru-it
 
-@spoi
-##balance undos
->gx coin
-You focus and squint, and letters appears in your sight: ICON. The aftertaste of arugula finally dissipates.
->icon
-by one point
->gx icon
-Nothing happens. Try something else.
->undo
->undo
->undo
-
-@mis
 #mistake test for deign/deigns
 >deign
 The singed design on the coin should make you not just want to deign but DO.
 >deigns
 The singed design on the coin should make you not just want to deign but DO.
 
-@nud
 #nudge for singed
 >deigsn
 The design is sort of glommed onto the coin. So you should figure what to do, there.
@@ -700,34 +433,12 @@ The design is sort of glommed onto the coin. So you should figure what to do, th
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
 
-@mis
 #mistake test for sonic
 >sonic
 Maybe if you had more than one coin.
 
-@sli
-#balance undos
-#detour for slider testing misses for "icon" and "icons"
-#slider test for icon
->cino
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for sonic icons
->purloin coins
->ocsin
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic.
->undo
->undo
-#slider test for icons
->purloin icons
->cisno
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
-#note if we switch to "cinso" above we don't undo PURLOINing the icons. I'm not sure what's going on here. Check this once test runs are more stable. ??
-
 >n
 
-@nud
-##balance undo
 #this is to check on the COINS path
 >coconuts
 by one point
@@ -788,22 +499,15 @@ by one point
 
 >icon
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (stucco|green stain) hinting\.
 >score
-}}SCORE++
-{$SCOS}
+You have 16 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >coconuts
 Your score has just gone up by one point.
 
-@hin
-DEBUG INFO: green stain hinting.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 17 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
-@nud
 #done rejects for icon
 >inco
 The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
@@ -814,47 +518,14 @@ Maybe if you had more than one icon.
 >tangerines
 Your score has just gone up by one point.
 
-@hin
-You can go back to Curtis for another reward.
-Falling through to check the fruit we would've hinted for test scripts...
-Nothing specific to do here, but there are other places where you can make fruits to give to Curtis.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 18 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
 >s
 You fiddle with the coin you got
 
-@spoi
-##balance undos
->gx coins
-You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
->icons
-by one point
->gx icons
-You focus and squint, and letters appears in your sight: SONIC. The aftertaste of arugula finally dissipates.
->undo
->undo
->sonic
-by one point
->gx sonic coins
-You focus and squint, and letters appears in your sight: ICONS. The aftertaste of arugula finally dissipates.
->undo
->undo
->undo
-
-
-@hin
-DEBUG INFO: icons hinting.
->sonic
-}}SCORE++
->score
-{$SCOS}
-
 >n
 
-@nud
 #rereadables for singed design
 >read singed design
 The singed design on the icons reads, when you look close, property of NISCO.
@@ -862,56 +533,6 @@ The singed design on the icons reads, when you look close, property of NISCO.
 >w
 Filed Field
 
-@spoi
->gx barber sickle
-You focus and squint, and letters appears in your sight: BLACKBERRIES. The aftertaste of arugula finally dissipates.
->gx buried raft
-You focus and squint, and letters appears in your sight: BREADFRUIT. The aftertaste of arugula finally dissipates.
->gx briar screen
-You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
->gx barren cries
-You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
->gx rapt figure
-You focus and squint, and letters appears in your sight: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
->gx pipe panel fence
-You focus and squint, and letters appears in your sight: PINEAPPLE. The aftertaste of arugula finally dissipates.
->gx pryer bars
-You focus and squint, and letters appears in your sight: RASPBERRY. The aftertaste of arugula finally dissipates.
->gx barriers west
-You focus and squint, and letters appears in your sight: STRAWBERRIES. The aftertaste of arugula finally dissipates.
->gx mean trowel
-You focus and squint, and letters appears in your sight: WATERMELON. The aftertaste of arugula finally dissipates.
-
-@hin
-/DEBUG INFO: (barber sickle|barren cries|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
-
-@sli
-#slider test for blackberries
->ealkcrbbesri
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for breadfruit
->rbrdauefti
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cranberries
->rerbnrcasie
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for grapefruit
->rgrepuafti
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pineapple
->eppplinea
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for raspberry
->arrreyspb
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for strawberries
->rssrbwreaeit
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for watermelon
->etawelrmno
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for fidel
 >fidel
 A thin voice howls "I fled!"
@@ -1011,7 +632,7 @@ Alas, the foliage also blocks your magical powers and not just your explorations
 #readables for mean trowel
 >read mean trowel
 It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
-\\
+
 #spechelp for barren cries
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
@@ -1054,58 +675,37 @@ There's no red text, but there is a mention of how people finally tweaked it to 
 >cranberries
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (barber sickle|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 19 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >blackberries
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 20 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >watermelon
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (barriers west|buried raft|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 21 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >pineapple
 Your score has just gone up by one point.
 !min-up
 
-@hin
-/DEBUG INFO: (barriers west|buried raft|pryer bars|rapt figure) hinting\.
-
 >score
-}}SCORE++
-{$SCOS}
+You have 22 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 >e
 >s
 Nice going.
 
-@nud
 #nudge for bluer
 >ubler
 That doesn't really describe the Tekno-Token
 
-@nud
 #mistake test for scion
 >scion
 Money, or something like it, should not be the guide of you.
 
-@nud
-###skip test checking
 >icons
-###skip test checking
 #spechelp for icons
 >icosn
 The icons rattle promisingly.
@@ -1117,94 +717,46 @@ Money, or something like it, should not be the guide of you.
 >undo
 >undo
 
-@sli
-#there are more possible tests here but let's worry about this...
-#slider test for sonic
->osicn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!hin
 #not a mistake
 >sonic
 by one point
 Blam!
-\\
->score
-}}SCORE++
-{$SCOS}
 
-@nud
+>score
+You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
+
 #mistake retest for scion
 >scion
 Money, or something like it, should not be the guide of you.
-\\
+
 #done rejects for s-i
 >icons
 The sonic icons seem right. No use meddling.
 
 >n
 
-@!min
 >w
 >strawberries
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (buried raft|pryer bars|rapt figure) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 24 of 42 total points for the post-Elvira Others region, though you only need 26 to win.
 #strawberries = last with minimum at base
 >grapefruit
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (buried raft|pryer bars) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 25 of 42 total points for the post-Elvira Others region, though you only need 27 to win.
 >raspberry
 Your score has just gone up by one point.
-{--hin}DEBUG INFO: buried raft hinting.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
 >breadfruit
 Your score has just gone up by one point.
-{--hin}You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 27 of 42 total points for the post-Elvira Others region, though you only need 29 to win.
 >e
 >e
 Clangier Clearing
 
-@hin
-/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis|quince) hinting\.
-
-@spoi
->gx len craig
-Nothing, despite all Len Craig has to sell.
->gx ammo gang
-You focus and squint, and letters appears in your sight: AMONG. The aftertaste of arugula finally dissipates.
->gx nectarine
-You focus and squint, and letters appears in your sight: ANCIENTER. The aftertaste of arugula finally dissipates.
->gx nectarine
-You've already changed the nectarine.
->gx peach
-You focus and squint, and letters appears in your sight: CHEAP. The aftertaste of arugula finally dissipates.
->gx quince
-You focus and squint, and letters appears in your sight: CINQUE. The aftertaste of arugula finally dissipates.
->gx prices precis
-You focus and squint, and letters appears in your sight: CRIPES. The aftertaste of arugula finally dissipates.
->gx melon
-You focus and squint, and letters appears in your sight: MO LEN. The aftertaste of arugula finally dissipates.
->gx auction caution
-You focus and squint, and letters appears in your sight: PAPAYAS. The aftertaste of arugula finally dissipates.
->gx lemons
-You focus and squint, and letters appears in your sight: SOLEMN. The aftertaste of arugula finally dissipates.
-
-@nud
 #mistake test for sell/sell [text]
 >sell
 You are paving the way for commerce, not interacting.
@@ -1220,34 +772,6 @@ You don't need to summon someone who deals in spices, or (dated political joke) 
 >cigar
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
 
-@sli
-#slider test for among
->magon
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for ancienter
->neicnarte
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cheap
->hcape
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cinque
->icqneu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for cripes
->rcpise
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for mo len
->onelm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for papayas
->apapsya
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for solemn
->oselnm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-###########below is melon/lemon nudge trickiness
 >abstract melon to ll
 #nudge for lemon
 >elmon
@@ -1257,7 +781,6 @@ You can't focus on just one of the lemons, but you don't need to.
 >elmon
 Hm, there must be a better melon than that, but how to ask Len, now.
 >abstract lemons to clearing
-###########above is melon/lemon nudge trickiness
 #nudge for price
 >priec
 Hm, no, the pattern of prices
@@ -1297,7 +820,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution.
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
 >x auction caution
-###skip test checking
 >scan auction caution
 Hm, that certainly cuts things down a ton. Just one possibility.
 >t
@@ -1309,30 +831,19 @@ Hm, that certainly cuts things down a ton. Just three possibilities.
 The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
 
-@!min
 >cinque
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|overpriced peach|prices precis) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 28 of 42 total points for the post-Elvira Others region, though you only need 30 to win.
 >cheap
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (No Ammo Gang|auction caution|lemons|melon|nectarine|prices precis) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 29 of 42 total points for the post-Elvira Others region, though you only need 31 to win.
 >papayas
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (No Ammo Gang|lemons|melon|nectarine|prices precis) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 30 of 42 total points for the post-Elvira Others region, though you only need 32 to win.
 
-@nud
 #mistake test for mango
 >mango
 That's the fruit you need to find. You see red wondering where or how.
@@ -1353,15 +864,10 @@ The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues pr
 You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
 
-@!min
 #not a mistake
 >among
 Your score has just gone up by one point.
 
-@hin
-/DEBUG INFO: (lemons|melon|nectarine|prices precis) hinting\.
-
-@nud
 #spechelp for lemons
 >lemosn
 Len frowns at the lemons.
@@ -1385,41 +891,25 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. T
 >scan prices precis
 Whoah, only reds and greens. Interesting.
 
-@!min
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 31 of 42 total points for the post-Elvira Others region, though you only need 33 to win.
 >ancienter
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (lemons|melon|prices precis) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 32 of 42 total points for the post-Elvira Others region, though you only need 34 to win.
 >solemn
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (melon|prices precis) hinting\.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 33 of 42 total points for the post-Elvira Others region, though you only need 35 to win.
 >len mo
 Your score has just gone up by one point.
-{--hin}DEBUG INFO: prices precis hinting.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 34 of 42 total points for the post-Elvira Others region, though you only need 36 to win.
 >cripes
 Your score has just gone up by one point.
-{--hin}You look around and don't see any way to bargain for more fruits here. In fact, you are pretty sure you've found all the fruits.
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
 
-@nud
 #renudge for price
 >priec
 No, you already helped correct the prices precis.
@@ -1445,10 +935,8 @@ Snag mo' mangos? No mas, G.
 >cripse
 You corrected the prices precis enough.
 
-@!min
 >w
 
-@nud
 #doing this in front of the prices precis gives a differrent result.
 #redone rejects for prices precis
 >cripse
@@ -1467,26 +955,6 @@ The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lo
 >d
 Scape Space
 
-@hin
-DEBUG INFO: So-Great Storage hinting.
-You can trade the dollar for the So-Great Storage.
-
-@hin
->give dollar
-You probably want to put the sonic icons in the slot.
-Dr. Severe
-
-@spoi
->gx a banna'
-You focus and squint, and letters appears in your sight: BANANA. The aftertaste of arugula finally dissipates.
->gx orange
-You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
->gx a brr hub
-You focus and squint, and letters appears in your sight: RHUBARB. The aftertaste of arugula finally dissipates.
->gx dr severe
-You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
-
-@nud
 #nudge for storage
 >strogea
 You might break what is in the storage.
@@ -1494,13 +962,6 @@ You might break what is in the storage.
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
-@hin
-You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
->banish passport
->z
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
-
-@mis
 #mistake test for gorean
 >gorean
 This game isn't about that sort of stuff. Not that there's anything wrong with that.
@@ -1511,7 +972,6 @@ Art Erd has nowhere to run, and you don't know if you want him taking that So-Gr
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
 
-@nud
 #nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1534,8 +994,6 @@ The design doesn't need changing. It's what the design's on.
 >read orange
 It's stamped with the word ENGARO in red.
 
-@nud
-#####let's test nudges/mistakes for the two traders.
 #nudge for red
 >red
 first-name basis
@@ -1568,17 +1026,14 @@ Dr. Tera is tarred real good. That's the point of tarring. But she might trade t
 >gs
 male
 
-@nud
 #nudge for lots
 >ltso
 Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear.
 
-@!hin
 >give dollar
 !Your score has just gone up by one point.
 Dr. Severe
 
-@mis
 #mistake test for lots
 >lots
 You only need the one slot.
@@ -1586,7 +1041,6 @@ You only need the one slot.
 >reeves
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
-@nud
 #renudge for lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
@@ -1595,7 +1049,6 @@ After all that work getting it to appear, you don't want to make the lost slot v
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
 
-@nud
 #nudge for banna
 >naban
 It's a banna'. The puzzle here is criminally corny, but it's not criminal like Red Rat Art Erd.
@@ -1633,7 +1086,6 @@ Whatever Dr. Severe rattles on about seems less important than how many letters 
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
 
-@nud
 #nudge for pace
 >paec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1641,80 +1093,28 @@ You don't need to riff on any location names to win the game, unless there's not
 >seveer
 You need to change Dr. Severe, title and all.
 
-@sli
-#slider test for banana
->anaban
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for go near
->ogenra
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for rhubarb
->brbruha
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for reversed
->ereredvs
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@hin
->z
-You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
-
-
-@!min
 >banana
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 36 of 42 total points for the post-Elvira Others region, though you only need 38 to win.
 >go near
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 37 of 42 total points for the post-Elvira Others region, though you only need 39 to win.
 >rhubarb
 Your score has just gone up by one point.
-{--hin}DEBUG INFO: Reversed Deserver Dr. Severe
 >score
-}}SCORE++
-}}CURMIN++
-{$SCOS}
+You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed
 Your score has just gone up by one point.
-{--hin}
 You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
 >score
-}}SCORE++
-}}CURMIN++
-}}CURMIN++
-{$SCONOFIND}
+You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
 
-@min
-# here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
->eat arugula
-Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
->guru orange
-You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
->undo
->guru dr severe
-You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
->undo
->guru brr hub
-You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
->score
-{$SCOS}
-}}CURMAX--
-You can't get the maximum score, since you used the arugula
-
-@nud
 #nudge for guava
 >guaav
 Just return the fruit to Curtis. No need for another change.
 
-@nud
 #nudge for popstar
 >popstra
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
@@ -1722,7 +1122,6 @@ You don't know whose passport it was, but it's yours now, and you need to study 
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
-@nud
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 >researhc
@@ -1732,10 +1131,6 @@ That's not the way to learn from the searcher--it's probably not that complicate
 >n
 Gates Stage
 
-@hin
-/DEBUG INFO: (searcher|viewer) hinting\.
-
-@nud
 #mistake test for saget
 >saget
 You don't need to be part of Yorpwald's Funniest* Home Videos right now.
@@ -1770,15 +1165,6 @@ The Valence Enclave doesn't need modifications. Especially with people potential
 >n
 PERP
 
-@spoi
->gx viewer
-No. You don't want to use the arugula on the viewer. It's got to be pretty simple.
->gx searcher
-No. You don't want to use the arugula on the searcher. It's got to be pretty simple.
->gx fleeing feeling
-No. You don't want to use the arugula on the fleeing feeling. It's got to be pretty simple.
-
-@nud
 #nudge for feeling
 >feelign
 You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP.
@@ -1786,18 +1172,17 @@ You can't shake the fleeing feeling, and it's not just a general one. It says to
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
-\\
+
 #spechelp for searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
-\\
+
 #spechelp for fleeing feeling
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
 
-@nud
 >prep
 by one point
 #done rejects for fleeing feeling
@@ -1806,43 +1191,6 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 >undo
 >undo
 
-@sli
-#slider test for research
->erarsehc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for review
->erewvi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for prep
->rppe
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@min
->prep
-by one point
->research
-by one point
-#pre-gates-stage-flip rule
->review
-No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to REVIEW the viewer.
->undo
->undo
->undo
->review
-by one point
-#pre-gates-stage-flip rule retry
->research
-No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to RESEARCH the searcher.
->undo
->undo
->undo
->undo
-
-@nud
 >review
 by one point
 #done rejects for viewer
@@ -1853,45 +1201,22 @@ You've done enough reviewing, and now you need to try something else.
 
 >research
 by one point
-{--hin}DEBUG INFO: viewer hinting.
-}}SCORE++
 >score
 
-@min
-{$SCOS}
-@!
-{$SCONOFIND}
+You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
 
-@nud
 #done rejects for searcher
 >reserach
 You've done enough researching, and now you need to try something else.
 
 >review
 by one point
-}}SCORE++
 >score
 
-@min
-# let's check "here/valence enclave" conditional text in the score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
->s
->score
-You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win. You can't get the maximum score, since you used the arugula.
->n
-@!
-{$SCOVERYLAST}
+You have 41 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
 !You can't expect anything more from Curtis.
 
-@min
-#pre-gates-stage-flip rule retry
->prep
-!No need to over-study or over-think. Through the gates!
->thisalt
---you only needed two ways to work the passport. The other was to PREP after you are called a perp.
-
-@nud
 #redone rejects for searcher
 >searchre
 You've done enough researching, and now you can just go north.
@@ -1904,7 +1229,6 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 
 >n
 #notana
-@!min
 by one point
 #bonus point for not usuing arugula
 

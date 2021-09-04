@@ -1,41 +1,14 @@
-#--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just means manse
 
-files=reg-roi-ordeal-reload-max.txt,reg-roi-ordeal-reload-min.txt,reg-roi-ordeal-reload-nudmis.txt,reg-roi-ordeal-reload-slider.txt,reg-roi-ordeal-reload-hints.txt
-~	max	t0
-~	min	t1
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin	t4
+## reg-roi-ordeal-reload-nudmis.txt
 
-ALSO-IGNORE:c,t
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges ## slider testing
-
+## walkthrough with all nudges ## slider testing
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * ordeal-reload-thru
 
-}}MAX=15
-}}CURMAX=15
-}}SCORE=0
-}}CURMIN=8
-
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {CURMIN}.
-}$SCOMISS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {CURMIN} points--you missed some extra stuff you can't go back for.
-
-
 >poss
 
-@hin
->monty hints
-
-@nud
 #nudge for ordeal
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -106,7 +79,6 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 >x chair
 >x shelf
 
-@nud
 #nudge for rove
 >roev
 That's not a way to sneak around and avoid the knock at the door.
@@ -116,7 +88,6 @@ That's not a way to sneak around and avoid the knock at the door.
 >1
 >5
 
-@nud
 #mistake retest for [text] stable [text]/stable [text]/[text] stable
 >zozimus stable zozimus
 You can just change the tables by saying STABLE.
@@ -134,7 +105,6 @@ You need a light source.
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
-@nud
 #nudge for dark
 >dakr
 You punch your fist as you realize DARK has no anagrams...right into the palm.
@@ -153,16 +123,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a d
 
 >lamp
 Your score has just gone up by one point.
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
-@hin
->hint lamp
-The lamp will last as long as you need it to.
-
-@nud
 #spechelp for latches
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
@@ -176,14 +140,8 @@ Not one latch. All of them.
 
 >satchel
 Your score has just gone up by one point.
-}}SCORE++
 >t
 
-@sli
->slon
-#note that satchel and lamp can't have slider tests.
-
-@nud
 #nudge for notice
 >notiec
 You can flip everything on the diorama except the notice.
@@ -222,22 +180,6 @@ You try and twist Elvira's words or poke holes where they're wrong...and you can
 >opde
 You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald.
 
-@sli
-#note no slider test needed for satchel since it is settler's precursor
-#slider test for painting
->apnignit
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for basement
->esabemtn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for chimney
->hcmieyn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stable
->tsbael
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #scannotes for tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
@@ -268,7 +210,6 @@ Yep. It's probably part of Elvira's reject-and-retreat, insinuating something wi
 >pedo
 Don't dwell on it. It's lies.
 
-@nud
 #spechelp for meet bans
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
@@ -313,11 +254,9 @@ You change neither the number nor the makeup of the ten beams.
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
-}}SCORE+=2
 >score
-{$SCOS}
+Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
-@nud
 #mistake retest for basement [text]/[text] basement [text]/[text] basement
 >basement zozimus
 You can just go DOWN to enter the basement.
@@ -332,14 +271,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a 
 >undo
 >undo
 
-@!min,nud
->d
->stair
-by one point
->undo
->undo
-
-@nud
 #spechelp for tables
 >stabel
 The tables seem to shift a bit.
@@ -351,20 +282,16 @@ A bleat: "tableS!"
 >subpoean
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
-@!min
 >stable
-}}CURMIN++
-}}SCORE++
-{$MINUP}
-\\
->score
-{$SCOS}
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
-@nud
+>score
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
+
 #nudge for stable
 >stabel
 You probably just want to go IN to the stable.
-\\
+
 #spechelp for niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
@@ -373,30 +300,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a d
 >ceilign
 You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
 
-@sli
->in
-#slider test for stair
->tsira
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
->undo
->gonear gallery
-#slider retest for stair
->tsira
-Your settler begins to make noises: a low hum, but nothing really piercing.
->undo
->undo
-
-@!min
 >chimney
-}}CURMIN++
-}}SCORE++
-{$MINUP}
-\\
->score
-{$SCOS}
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
-@nud
+>score
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
+
 #renudge for ceiling
 >ceilign
 You already built the chimney. If the ceiling caved, you'd be buried.
@@ -404,7 +313,6 @@ You already built the chimney. If the ceiling caved, you'd be buried.
 >chimnye
 You probably just want to go UP the chimney.
 
-@nud
 #nudge for isolani
 >isolain
 You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
@@ -440,17 +348,12 @@ The books could use some changing. But you're better off making Yorpwald itself 
 >shefl
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
-@!min
 >painting
-}}CURMIN++
-}}SCORE++
-{$MINUP}
-\\
-\\
->score
-{$SCOS}
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
-@nud
+>score
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
+
 #nudge for abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
@@ -462,7 +365,6 @@ The painting really goes better with the study than the giant pin.
 You don't need a safe home, right now. You need adventure.
 !Oh, and you don't have to switch that many letters, either.
 
-@nud
 #mistake retest for chalets
 >chalets
 You don't need a safe home, right now. You need adventure.
@@ -497,10 +399,8 @@ You can just go IN to the stable.
 >trestle
 The settler is pretty powerful, but it can't build bridges.
 
-@!min
 >in
 
-@nud
 #spechelp for sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
@@ -518,16 +418,12 @@ You don't need to riff on any location names to win the game, unless there's not
 >ridgign
 If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
 
-@!min
 >stair
-}}CURMIN++
-}}SCORE++
-{$MINUP}
-\\
->score
-{$SCOS}
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
 
-@nud
+>score
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
+
 #mistake retest for astir
 >astir
 You don't need a moving stair.
@@ -535,12 +431,10 @@ You don't need a moving stair.
 >stari
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
-@!min
 >out
 >u
 Highest Heights
 
-@nud
 #nudge for highest
 >highets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -554,12 +448,6 @@ The closets are there to warp space a bit. You don't need to mess with them.
 >closte
 The closets are there to warp space a bit. You don't need to mess with them.
 
-@sli
-#slider test for ramp
->arpm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #scannotes for pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
@@ -568,21 +456,16 @@ You fiddle with the cheat button and note that nothing happens to the reds and y
 The pram creaks back and forth slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a decent omen.
 
-@!min
 >ramp
-}}CURMIN++
-}}SCORE++
-{$MINUP}
-\\
->score
-{$SCOS}
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
 
-@nud
+>score
+Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
+
 #done rejects for ramp
 >rapm
 The ramp is useful now. Best keep it.
 
-@nud
 >gt study
 Dusty Study
 #spechelp for pavement
@@ -608,13 +491,11 @@ The pedestal becomes a steel pad.
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crabgrass. That's a decent omen.
 >x diorama
-###skip test checking
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can reexamine the diorama.
 >brass crag
 The crabgrass dries out and becomes a brass crag.
 
-@nud
 #spechelp for event map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
@@ -644,43 +525,6 @@ The steel pad intertwines into a marginally artistic pedestal.
 >d
 Largely All-Grey Gallery
 
-@sli
-#slider test for pavement
->venemtpa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for platform
->afmrlpto
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for pedestal
->eestplda
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for crabgrass
->sarbcgars
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for event map
->venemtpa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for brass crag
->sarbcgars
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for farm plot
->afmrlpto
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for steel pad
->eestplda
-Your settler begins to make noises: a low hum, but nothing really piercing.
-###################here we test a special case: if you use the slider on part of the diorama, then you figure what it's for, and the game doesn't let you do it again.
->slaeepdt
-Your settler throws out a bunch of beeps:  HIGH LOW LOW HIGH LOW HIGH LOW LOW.
-Ugh. Those high notes gave you a migraine mini-rage. You switch off the slider.
-You figure you can take that noise nine more times.
-Since the diorama has instructions on what changes to what, and it is only a teaching instrument, you probably don't want to use up any more slider charges on any part of it.
->slon
->slaeepdt
-You already got some data from the slider on the diorama. You may want to save it for other things down the road.
-!Your settler throws out a bunch of beeps
-
-@nud
 #nudge for gallery
 >galleyr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -709,36 +553,12 @@ Now, now! This game is strictly about logic! Nothing frivolous, if you please! R
 >bs in
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Right now, you're just dancing around a way to fix the ISBN bins.
 
-@sli
-#slider test for snib
->nsbi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!min
 >snib
-}}CURMIN++
-}}SCORE++
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
-@hin
->hint bins
-You figured how to secure the ISBN bins. Nothing more to do.
-
-@max
->in
-You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas.
-!Hands up
-
-@hin
-!Nothing left to do here in your manse. You should be able to go IN to start your adventures.
->x settler
-Nothing left to do here in your manse. You should be able to go IN to start your adventures.
-
-@!min
 >score
-{$SCOS}
+Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-@nud
 #renudge for bni
 >bin
 You already fixed the bins.
@@ -751,18 +571,10 @@ Now, now! This game is strictly about logic! Nothing frivolous, if you please! O
 >bs in
 Now, now! This game is strictly about logic! Nothing frivolous, if you please! Okay, you can take a small break for fixing the bins.
 
-@!hin
 >x settler
-###skip test checking
 
 >in
 
-@sli
-#slider test for flier
->lferi
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
@@ -780,7 +592,6 @@ You start to educate Elmo about the penalties for murder, but he gestures at you
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 >x elmo
-###skip test checking
 >Z
 >z
 >z
@@ -813,11 +624,9 @@ It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 >flier
 by one point
 
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-@nud
 #renudge for elmo
 >elom
 Changing Elmo won't work. It's his rifle that needed changing.
@@ -852,53 +661,16 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 >1
 >1
 
-@nud
 >1
 
-#brackets ok
 [1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
-#brackets ok
 [2] Finish Fishin'.
 
 # note option 2 just hooks around meaningless babble here
 >2
 
-@min
-}}CURMAX-=6
-
 Carven Cavern
 
-@max
-#pre-specter-scepter rule
->scepter
-The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->yes
-by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOMAX}
-#preefcheck respect specter
->pf
-You can get a SCEPTER from the respect specter at any time.
->undo
->undo
->undo
-}}SCORE--
-}}CURMIN--
-
-@sli
-#slider test for staple
->tspael
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stapler
->tspaerl
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scepter
->eestrcp
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for cavern
 >cavenr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
@@ -944,12 +716,9 @@ You're on your own. Perhaps you'd be better off twiddling the plates to get on w
 >staple
 Your score has just gone up by one point
 
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-
-@nud
 #renudge for terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and staple probably hold the key to leaving.
@@ -957,7 +726,6 @@ Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter a
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
-@nud
 #spechelp for plaster
 >staplre
 The plaster crackles and shines slightly.
@@ -966,11 +734,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter.
 >stapler
 Your score has just gone up by one point
 
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-@nud
 #renudge for terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The stapler and staple probably hold the key to leaving.
@@ -993,24 +759,10 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >put staple in stapler
 
 >staple curtain
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
-@max
->scepter
-"You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->no
-"Thank you for respecting my presence and purpose here."
-!by one point
->scepter
-!You may wish
-by one point
->undo
->undo
-
-@nud
 #scannotes for respect specter
 >t
 >scan respect specter
@@ -1023,7 +775,6 @@ by one point
 >undo
 >undo
 
-@mis
 #mistake test for spectre
 >spectre
 "Spelling matters, here. If I were a spectre, I'd give a different cheat reading. Slots six and seven would turn yellow and red, respectfully. Err, respectively," says the Respect Specter.
@@ -1033,37 +784,10 @@ You're not sure how it was able to detect your mental spelling, but you're a bit
 "Spelling matters, here. If it were a spectre, I'd give a different cheat reading. Slots six and seven would turn red and yellow, respectfully. Err, respectively," says the Respect Specter.
 You're not sure how it was able to detect your mental spelling, but you're a bit impressed and worried at the same time.
 
-@max
-** game: /home/andrew/prt/debug-roiling.ulx
-** interpreter: /home/andrew/prt/glulxe -q
-
-@max
-# basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
-##balance undos
->scepter
-The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->no
-"Thank you for respecting my presence and purpose here."
-!by one point
->scepter
-!You may wish
-"Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way."
-by one point
->undo
->undo
->scepter
-The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->yes
-"I respect your choice."
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
->undo
-
-###################don't scan at all
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
-####################only c-scan the specter
 >scan specter
 Your settler registers ?R?????
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
@@ -1078,7 +802,6 @@ The Respect Specter coughs.
 by one point
 >undo
 >undo
-####################only nc-scan the specter
 >t
 >scan specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
@@ -1091,7 +814,6 @@ The Respect Specter coughs.
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. You kind of avoided the cheat-scanning I came here for, but I respect your intrepid stance against cheating, even if it really isn't cheating."
 by one point
 >undo
-####################c-scan and nc-scan the specter
 >t
 >scan specter
 "Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints."
@@ -1103,7 +825,6 @@ by one point
 !The Respect Specter coughs.
 by one point
 >undo
-######################c-scan twice
 >scan specter
 "You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R."
 >in
@@ -1115,7 +836,6 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
 by one point
 >undo
-######################c-scan three times
 >scan specter
 "You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities."
 >in
@@ -1127,7 +847,6 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
 by one point
 >undo
-######################c-scan four times
 >scan specter
 "In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6."
 >in
@@ -1139,7 +858,6 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
 by one point
 >undo
-######################c-scan five times
 >scan specter
 "I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific."
 >in
@@ -1151,7 +869,6 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I hope scanning me both ways revealed that cheat mode has some limitations, and non-cheat may reveal ambiguous readings from cheat mode."
 by one point
 >undo
-######################c-scan six times
 >scan specter
 "This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities."
 >in
@@ -1163,7 +880,6 @@ by one point
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. Thank you for being respectful and listening to my whole pitch. Remember, often in your adventures, two words may seem to clash, but that can actually result in fewer remaining possibilities to sift through."
 by one point
 >undo
-######################c-scan six times
 >scan specter
 "That's all. Thanks for listening. I can repeat things one step at a time if you need a recap."
 >in
@@ -1176,35 +892,12 @@ by one point
 by one point
 >undo
 
-@max
->x spectre
-The Respect Specter winces slightly and opens its mouth as if to say "Er..."
->scepter
-by one point
-
-@!min,max
 >scepter
 The Respect Specter coughs.
 >y
 by one point
-}}SCORE++
-}}CURMIN++
 >score
-Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
-
-@max
->x 1
-The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
->x 2
-Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
->x 3
-There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
->x 4
-A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
->x 5
-The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
->x 6
-Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
+Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
 Strip of Profits

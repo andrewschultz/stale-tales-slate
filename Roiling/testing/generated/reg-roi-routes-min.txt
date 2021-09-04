@@ -1,0 +1,156 @@
+
+## reg-roi-routes-min.txt
+
+## minimum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>inside
+Your score has just gone up by one point
+
+Cleric Circle
+
+>score
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>x list o toils
+
+#x list o toils
+>x toils
+Precise recipes
+
+>out
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>out
+
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+>out
+
+>against
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>against
+!Your score has just gone up by one point
+
+>astride
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject)
+>below
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject once you are under)
+>under
+Your score has just gone up by one point
+
+##No-Lag needs a line break ??
+
+>in
+
+>out
+
+>above
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 10 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>from
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject)
+>beneath
+Your score has just gone up by one point
+
+DEBUG INFO: Taking away a max point. Max-score now 21.
+
+Harms Marsh
+
+>score
+Score in a scenario: 12 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+
+#pre-unlit-until rule
+>until
+Your score has just gone up by one point
+
+>around
+Your score has just gone up by one point
+
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>athwart
+Your score has just gone up by one point
+
+Sonancy Canyons
+
+>between
+Your score has just gone up by one point
+
+>through
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+>beyond
+by one point
+>undo
+
+>score
+
+Score in a scenario: 19 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+
+>without
+>score
+you missed some extra stuff you can't go back for
+>undo
+>undo
+
+>misses
+Routes
+--you could've tried to go TOWARDS the worst ad in the Same Mesa.
+--you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.
+
+>beyond
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes (20/22)
+

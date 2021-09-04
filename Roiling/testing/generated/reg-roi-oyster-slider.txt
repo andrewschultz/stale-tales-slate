@@ -1,0 +1,538 @@
+
+## reg-roi-oyster-slider.txt
+
+## walkthrough with slider readings
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* oyster-thru
+
+>ts
+>oyster
+>enter barnacle balancer
+Posh Hops Shop
+>posf
+
+>score
+Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
+
+>slon
+#slider test for sing
+>isgn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spit
+>psti
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scrape
+>csarep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for spill
+>lilsp
+You seem to be fumbling what to do with the pills.
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for inset
+>niets
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for remap
+>erapm
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for unset
+>nuets
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stroll
+>lrtlso
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>remap
+#notana 'nudge for remap'
+Your score has just gone up by one point
+#not a mistake
+>unset
+!Your score has just gone up by one point
+>undo
+>undo
+#not a mistake
+>unset
+Your score has just gone up by one point
+>remap
+!Your score has just gone up by one point
+>score
+Score in a scenario: 1 out of 42 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
+>sing
+by one point
+>score
+Score in a scenario: 2 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+>scrape
+by one point
+>score
+Score in a scenario: 3 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>inset
+Perhaps you should've played it cool and fled, instead.
+>undo
+>spit
+Perhaps you should've played it cool and fled, instead.
+>undo
+
+>stroll
+by one point
+
+Olde Lode
+
+>thisalt
+--You could have also REMAPped the perma-amper to break the jukebox.
+SPIT
+INSET
+
+>score
+Score in a scenario: 4 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#slider test for calm
+>acml
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>calm
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#slider test for run
+>nru
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>run
+Your score has just gone up by one point
+
+Disease Seaside
+
+>score
+Score in a scenario: 6 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#slider test for fart
+>aftr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for soar
+>osra
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for boast
+>obsta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake
+>boast
+Your score has just gone up by one point
+
+Fighter Freight
+
+>score
+Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#slider test for leap
+>elpa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>leap
+Your score has just gone up by one point
+
+Anger Range
+
+>score
+Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+#slider test for spike
+>pskei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scrap
+>csapr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>scrap
+Your score has just gone up by one
+
+>e
+Hardest Trashed Dearths
+
+#slider test for seek
+>eske
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for scan
+>csna
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>score
+Score in a scenario: 9 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>scan
+#notana 'nudge for cans'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 10 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+>seek
+Your score has just gone up by one point
+
+Lean Lane
+
+>score
+Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+#slider test for tend
+>etdn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for eat
+>tea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>eat
+#notana 'nudge for eat'
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
+
+>tend
+#notana 'nudge for dent'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 13 out of 42 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
+
+#slider test for tutor
+>utort
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for swipe
+>wspei
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>tutor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 42 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 42.
+
+>swipe
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 42 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 42.
+
+>w
+>n
+Lapsin' Plains
+
+#slider test for splain
+>psalni
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for trace
+>rtcea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for kiss
+>sski
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for bonk
+>obkn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for snap
+>nspa
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>splain
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>trace
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+#slider test for react
+>ercta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>react
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>kiss
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>bonk
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 20 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>snap
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 21 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+>in
+
+Shuttle Hutlets
+
+#slider test for bust
+>ubts
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>bust
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 22 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+#slider test for drop
+>rdpo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>drop
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 23 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
+#slider test for sweat
+>wsate
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>sweat
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 24 out of 42 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 42.
+
+#slider test for shape
+>hspea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>shape
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 25 out of 42 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 42.
+
+#slider test for clean
+>lcane
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>clean
+#notana 'nudge for lance'
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 26 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>out
+
+>s
+
+>w
+Sclerous Closures
+
+#slider test for warp
+>awpr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for search
+>esrahc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>warp
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 27 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>search
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 28 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+#slider test for enlarge
+>neergal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>enlarge
+Your score has just gone up by one point
+
+!You may wish to re-examine the gleaner now it's changed.
+
+>score
+Score in a scenario: 29 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>n
+Horned Hedron
+
+>w
+Rascal Craals
+
+#slider test for bury
+>ubyr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>bury
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 30 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>e
+>s
+>e
+
+#slider test for unearth
+>nuaethr
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+##>unearth haunter
+
+>unearth
+by one point
+
+>score
+Score in a scenario: 31 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+#slider test for assuage
+>saagseu
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>assuage
+by one point
+
+>score
+Score in a scenario: 32 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>ask haunter about ruby
+#notana
+by one point
+
+>score
+Score in a scenario: 33 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>w
+
+>n
+
+>w
+
+>e
+
+#slider test for patrol
+>aprtlo
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>patrol
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+>x gleaner
+You see a map of all the paths in the Horned Hedron.
+
+>in
+
+Tenfold Teflon'd Den Loft
+
+#slider test for prepay
+>rppeya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>prepay
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 35 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
+#slider test for trample
+>rtmalep
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>trample
+
+Plasm Lamps
+
+>score
+Score in a scenario: 36 out of 42 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 42.
+
+#slider test for psalm
+>splma
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for tan
+>nta
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>psalm
+by one point
+
+>score
+Score in a scenario: 37 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
+
+>tan
+#notana 'nudge for ant'
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 38 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
+
+#slider test for revel
+>erlve
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>revel
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 39 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+#slider test for derail
+>edarli
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>derail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 40 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+#slider test for spin
+>psni
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>spin
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 41 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
+#slider test for redial
+>eridla
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+#not a mistake
+>redial
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Oyster (42/42)
+

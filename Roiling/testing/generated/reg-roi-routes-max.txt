@@ -1,0 +1,197 @@
+
+## reg-roi-routes-max.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>in
+Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time
+
+>inside
+Your score has just gone up by one point
+
+Cleric Circle
+
+>score
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>x list o toils
+
+#x list o toils
+>x toils
+Precise recipes
+
+>out
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>out
+
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+>out
+
+# here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
+>past
+by one point
+>out
+>across
+by one point
+>out
+>against
+by one point
+>past
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing adsorbing signboard to pad because it was already reflexed.
+>undo
+>across
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing lairage regalia to pad because it was already reflexed.
+>undo
+>inside
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing scripture picturers to pad because it was already reflexed.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>against
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+#pre-mesa-dir-flip rule
+>past
+!by one point
+!Idle Deli
+#pre-mesa-dir-flip rule retry
+>across
+!by one point
+!Adobe Abode
+#pre-mesa-dir-flip rule retry
+>towards
+!by one point
+>pf
+#preefcheck worst ad
+You can go TOWARDS the worst ad once things are a bit more settled.
+#preefcheck lairage regalia
+You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
+#preefcheck adsorbing signboard
+You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
+
+>against
+!Your score has just gone up by one point
+
+>astride
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject)
+>below
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject once you are under)
+>under
+Your score has just gone up by one point
+
+##No-Lag needs a line break ??
+
+#I want this here since we want to reject TOWARDS with Gast around
+>towards
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for worst ad.
+
+>in
+
+>out
+
+>above
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+>from
+Your score has just gone up by one point
+
+#not a mistake (mistake code is for general preposition reject)
+>beneath
+Your score has just gone up by one point
+
+Harms Marsh
+
+>score
+Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#pre-unlit-until rule
+>until
+Your score has just gone up by one point
+
+>around
+Your score has just gone up by one point
+
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>athwart
+Your score has just gone up by one point
+
+Sonancy Canyons
+
+>between
+Your score has just gone up by one point
+
+>through
+Your score has just gone up by one point
+
+>without
+Your score has just gone up by one point
+
+>score
+
+Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+
+>beyond
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes (22/22)
+

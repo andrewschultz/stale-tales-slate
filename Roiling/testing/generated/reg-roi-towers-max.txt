@@ -1,0 +1,589 @@
+
+## reg-roi-towers-max.txt
+## GENERATOR FILE: rbr-roi-towers.txt
+
+## maximum walkthrough
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* towers-thru
+
+>ts
+>posf
+>towers
+
+>seed 1
+>enter turrets
+>z
+
+#pre-rodney rule
+>yonder
+Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
+!by one point
+#preefcheck rodney
+>pf
+Rodney can be sent YONDER.
+>droney
+Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
+!by one point
+#preefcheck rodney retry
+>pf
+Rodney can be sent YONDER or made DRONEY.
+
+>allrand
+>gone
+Your score has just gone up by one point
+>undo
+>wined
+Your score has just gone up by one point
+>undo
+>bleak
+Your score has just gone up by one point
+>undo
+>tenser
+Your score has just gone up by one point
+>undo
+>snared
+Your score has just gone up by one point
+>undo
+>cricked
+Your score has just gone up by one point
+>undo
+>ashen
+Your score has just gone up by one point
+>undo
+>olden
+Your score has just gone up by one point
+>undo
+>bored
+Your score has just gone up by one point
+>undo
+>calmer
+Your score has just gone up by one point
+>undo
+>warned
+Your score has just gone up by one point
+>undo
+>timider
+Your score has just gone up by one point
+>undo
+>stony
+Your score has just gone up by one point
+>undo
+>godly
+Your score has just gone up by one point
+>undo
+>lardy
+Your score has just gone up by one point
+>undo
+>normal
+Your score has just gone up by one point
+>undo
+>achier
+Your score has just gone up by one point
+>undo
+>learned
+Your score has just gone up by one point
+>undo
+>awed
+Your score has just gone up by one point
+>undo
+>coyer
+Your score has just gone up by one point
+>undo
+>weedy
+Your score has just gone up by one point
+>undo
+>eggier
+Your score has just gone up by one point
+>undo
+>nearby
+Your score has just gone up by one point
+>undo
+>recreant
+Your score has just gone up by one point
+>undo
+>undo
+
+>gone
+>score
+Score in a scenario: 1 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+>lardy
+>score
+Score in a scenario: 2 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+>bleak
+>score
+Score in a scenario: 3 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+
+>achier
+Your score has just gone up by one point
+>score
+Score in a scenario: 4 out of 55 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 55.
+>snared
+Your score has just gone up by one point
+>score
+Score in a scenario: 5 out of 55 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 55.
+>cricked
+Your score has just gone up by one point
+>score
+Score in a scenario: 6 out of 55 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 55.
+
+>droney
+Your score has just gone up by one point
+>undo
+
+>talcier
+by one point
+
+>yonder
+Your score has just gone up by one point
+
+Topside Deposit
+
+>score
+Score in a scenario: 8 out of 55 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 55.
+
+#pre-curst-palace-spectacular rule
+>spectacular
+Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
+!by one point
+#preefcheck curst palace
+>pf
+You can't make the Curst Palace SPECTACULAR until you're near it.
+
+>sadder
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 9 out of 55 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 55.
+
+>get all
+
+>n
+Scope Copse
+
+>rusty
+Your score has just gone up by one point
+>score
+Score in a scenario: 10 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+
+>subtler
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 11 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+
+>reined
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 12 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+
+>rinsed
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 55 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 55.
+
+#readables for keycar
+>read keycar
+/(KC AYER|RAY ECK)
+has more information,
+>read keycar
+/(KC AYER|RAY ECK)
+has a refresher,
+
+>creaky
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 55 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 55.
+
+>n
+
+>coiled
+Your score has just gone up by one point
+>score
+Score in a scenario: 15 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+
+>semipro
+Your score has just gone up by one point
+>score
+Score in a scenario: 16 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+
+>pastier
+Your score has just gone up by one point
+>score
+Score in a scenario: 17 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+
+>n
+
+Anemic Cinema
+
+#nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
+>gonear lost lots
+>s
+Dourest Detours
+>undo
+>undo
+>gonear outer route
+>w
+Dourest Detours
+>undo
+>undo
+>gonear shaven havens
+>w
+Dourest Detours
+>undo
+>undo
+
+>angstier
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 55 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 55.
+>w
+
+Fringe Finger
+
+>score
+Score in a scenario: 18 out of 55 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 55.
+
+>take strudel
+#pre-strudel-rustled rule
+>rustled
+(Yeah, okay. You were supposed to pick the strudel up this way in the first place. But hey, have a point anyway.)
+by one point
+>undo
+>undo
+
+>rustled
+Your score has just gone up by one point
+>score
+Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
+>w
+Dourest Detours
+
+>rousted
+by one point
+>score
+Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 54.
+>undo
+>aimless
+Your score has just gone up by one point
+# don't need curmin--we already got it above with the UNDO!
+>score
+Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 55.
+>rousted
+Your score has just gone up by one point
+>score
+Score in a scenario: 21 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+
+>e
+>released
+Your score has just gone up by one point
+#while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
+>score
+Score in a scenario: 22 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+
+>married
+Your score has just gone up by one point
+>score
+Score in a scenario: 23 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+>n
+
+Shaven Havens
+
+>s
+>e
+
+Salted Deltas
+
+>hastiest
+Your score has just gone up by one point
+>score
+Score in a scenario: 24 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+>weariest
+Your score has just gone up by one point
+>score
+Score in a scenario: 25 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
+>s
+
+>resealed
+Your score has just gone up by one point
+>thisalt
+--you could've also RELEASED Lars Eede to give him a new outlook on life.
+>undo
+>undo
+>nerdiest
+Your score has just gone up by one point
+>score
+Score in a scenario: 26 out of 55 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 55.
+
+>saltier
+Your score has just gone up by one point
+>score
+Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+
+>sewed
+Your score has just gone up by one point
+>score
+Score in a scenario: 28 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+
+>mined
+>score
+Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 55.
+
+>d
+Dire and Arid Den
+>score
+Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+>dandier
+Treading Gradient
+
+>score
+Score in a scenario: 30 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+>e
+
+>marginal
+#notmax
+Your score has just gone up by one point
+>score
+Score in a scenario: 31 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+>holiest
+#notmax
+Your score has just gone up by one point
+>score
+Score in a scenario: 32 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+>n
+>s
+>s
+
+>restful
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 33 out of 55 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 55.
+
+>vainest
+Your score has just gone up by one point
+>thisalt
+--you could've also made the natives' site van NAIVEST to uproot them.
+>undo
+>undo
+>naivest
+Your score has just gone up by one point
+>thisalt
+--you could've also made the natives' site van VAINEST to uproot them.
+>score
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+>w
+
+>grandiose
+Your score has just gone up by one point
+>score
+Score in a scenario: 35 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
+>e
+>s
+Lost Lots
+
+>prosiest
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 36 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>n
+
+>broken
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 37 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>resting
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 38 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>e
+
+Obscurest Subsector
+
+#pre-fussier rule
+>fussier
+The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
+!by one point
+#preefcheck fries us fissure
+>pf
+The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at.
+#pre-unlocked rule
+>unlocked
+You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
+!by one point
+#preefcheck luck node
+>pf
+The luck node needs to be unlocked, with something else you need to figure out.
+
+>wordy
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 39 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>push retape
+
+>gt duck
+>push repeat
+>gt subsector
+
+>fussier
+by one point
+>undo
+
+#not a mistake
+>unlocked
+by one point
+
+>score
+Score in a scenario: 40 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>gt copse
+>w
+
+Outer Route
+
+>put dagger in repair
+#notana
+by one point
+
+>score
+Score in a scenario: 41 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>gt coastlines
+
+>grained
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 42 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+
+>ask agnostic about doctor yow
+#notana
+!Your score has just gone up by one point
+
+>pearly
+Your score has just gone up by one point
+>score
+Score in a scenario: 43 out of 55 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 55.
+>attentive
+Your score has just gone up by one point
+>score
+Score in a scenario: 44 out of 55 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 55.
+
+>rowdy
+#notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 45 out of 55 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 55.
+
+>gt coastlines
+>give gizmo to agnostic
+
+>robust
+by one point
+>enter boat
+Rawest Waters
+>nearest
+Your score has just gone up by one point
+#altpath
+Mislit Limits
+>thisalt
+--you'd have passed Rawest Waters if you'd have made the blaster STABLER.
+>undo
+>undo
+>undo
+>undo
+>stabler
+Your score has just gone up by one point
+>enter boat
+Rawest Waters
+>nearest
+#notmax
+Your score has just gone up by one point
+Mislit Limits
+>thisalt
+--you'd have passed Rawest Waters if you'd have made the turbos ROBUST.
+>undo
+>undo
+>undo
+>robust
+Your score has just gone up by one point
+
+>rewired
+Your score has just gone up by one point
+>score
+Score in a scenario: 48 out of 55 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 55.
+
+>enter boat
+You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
+
+Mislit Limits
+
+>score
+Score in a scenario: 48 out of 55 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 55.
+
+>thisalt
+--If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
+>punier
+Your score has just gone up by one point
+# add minimum point here
+>score
+Score in a scenario: 49 out of 55 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 55.
+
+>antsier
+by one point
+>score
+Score in a scenario: 50 out of 55 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 55.
+
+>present
+Your score has just gone up by one point
+# add minimum point here
+>score
+Score in a scenario: 51 out of 55 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 55.
+
+>in
+
+#pre-curst-palace-spectacular rule retry
+>spectacular
+Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
+!by one point
+
+>triste
+Your score has just gone up by one point
+>score
+Score in a scenario: 52 out of 55 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 55.
+
+>give pot to sitter
+#notana
+Your score has just gone up by one point
+>score
+Score in a scenario: 53 out of 55 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 55.
+
+>out
+
+>misses
+
+>spectacular
+
+Your score has just gone up by one point
+
+NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision anywhere!
+
+Strip of Profits
+
+>score
+, Towers (55/55)
+

@@ -1,28 +1,7 @@
-# run this file with rbr.py
-#
-files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,reg-roi-oyster-slider.txt,reg-roi-oyster-hints.txt
 
-~	max	t0
-~	min	t1
-~	nudmis,nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin	t4
+## reg-roi-oyster-nudmis.txt
 
-}}MAX=42
-}}CURMAX=42
-}}SCORE=0
-}}CURMIN=28
-
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster.
-
-ALSO-IGNORE:t
-
-## *FILE
-
-TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges	## walkthrough with slider readings
-
+## walkthrough with all nudges
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
@@ -34,67 +13,9 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 Posh Hops Shop
 >posf
 
-@hin
->monty hints
-
-@max
-##balance undos
->spit tips
-by one point
->undo
->inset tines
-by one point
->undo
->inset stein
-by one point
->undo
->scrape casper
-by one point
->undo
->scrape capers
-by one point
->undo
->remap amper
-by one point
->undo
->unset tunes
-by one point
->undo
-
-
 >score
-{$SCOS}
+Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
 
-@sli
->slon
-#slider test for sing
->isgn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spit
->psti
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrape
->csarep
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for spill
->lilsp
-You seem to be fumbling what to do with the pills.
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for inset
->niets
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for remap
->erapm
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for unset
->nuets
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for stroll
->lrtlso
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-##balance undos
 >remap
 by one point
 #nudge for remap
@@ -107,39 +28,6 @@ You already got a temporary escape from the bad music. You can't really do any m
 >undo
 >undo
 
-@max
-##balance undos
-#pre-trolls-stroll rule
->stroll
-The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
-!by one point
-#preefcheck lolstr trolls
->pf
-You can't quite STROLL past the LOLstr trolls, yet.
->sing
-by one point
->stroll
-The LOLstr trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now. They act sore to scare, sure you stole a coaster. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
-!by one point
->spit
-"Job perks: bop jerks," say the trolls. The pesty types have formed a half-circle around you now.
-by one point
->stroll
-The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
-Maybe one more disruption, and you won't be worth bothering with.
-!by one point
->remap
-The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
-by one point
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
-@nud
 >t
 >insert settler
 Almost, but with the stein, there.
@@ -216,7 +104,6 @@ There's no other way to disobey the sign.
 >undo
 >undo
 
-@nud
 #readables for stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
@@ -234,32 +121,32 @@ IT'S P is written in red on the bottom.
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
-\\
+
 #spechelp for gins sign
 >igns
 Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
-\\
+
 #spechelp for tips pits
 >spti
 The tips pits rattle a bit as you try to do ... something ... to them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
-\\
+
 #spechelp for tines
 >inste
 Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
-\\
+
 #spechelp for tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
-\\
+
 #spechelp for trolls
 >strlol
 The trolls laugh at you a bit, but nervously.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
-\\
+
 #scannotes for gins sign
 >scan gins sign
 Hmm. Whatever the variable colors are, you think you can do something with the fixed ones.
@@ -281,7 +168,6 @@ The pills can't be that fidgety. The particular brand must be a clue, too.
 >scan lolstr trolls
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
 
-@nud
 #nudge for storey
 >storye
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
@@ -317,7 +203,6 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. Tha
 >unste
 The tunes grow slightly less annoying, for a moment.
 #not a mistake (just testing all the possible nudges, since we can only get 3 of 5 points at one time)
-###balance undos
 >unset
 by one point
 >unset
@@ -338,17 +223,6 @@ The jukebox is already temporarily out of commission.
 >undo
 >undo
 
-@min
->get pills
-Taken.
->spill pills
-You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?
-Okay.
-The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
-by one point
-}}SCORE++
-}}CURMAX-=3
-==!
 >remap
 #notana 'nudge for remap'
 Your score has just gone up by one point
@@ -360,58 +234,39 @@ Your score has just gone up by one point
 #not a mistake
 >unset
 Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
 >remap
 !Your score has just gone up by one point
 >score
-{$SCOS}
+Score in a scenario: 1 out of 42 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 42.
 >sing
 by one point
-}}SCORE++
-}}CURMIN++
 >score
-{$SCOS}
+Score in a scenario: 2 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 >scrape
 by one point
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 3 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@!min
 >inset
 Perhaps you should've played it cool and fled, instead.
 >undo
 >spit
 Perhaps you should've played it cool and fled, instead.
 >undo
-\\
+
 >stroll
 by one point
-}}SCORE++
 
 Olde Lode
 
-@hin
-DEBUG INFO: clam hinting.
-
 >thisalt
-@min
-are the other actions that would've annoyed Posh Hops Shop pesty types instead of SPILLing the pills.
-SING
-INSET
-SPIT
-SCRAPE
-UNSET/REMAP
-@!
 --You could have also REMAPped the perma-amper to break the jukebox.
 SPIT
 INSET
 
 >score
-{$SCOS}
+Score in a scenario: 4 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@nud
 #mistake test for stroll [text]/stroll
 >stroll zozimus
 No, you can't just stroll back into the Posh Hops Shop, and you can just plain walk anywhere else.
@@ -454,27 +309,12 @@ The baser braes can't be changed. There is enough to do in the Olde Lode.
 The clam still seems enraged.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a decent omen.
 
-@sli
-#slider test for calm
->acml
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->calm clam
-by one point
->undo
-
 >calm
 Your score has just gone up by one point
 
-@hin
-DEBUG INFO: urn hinting.
-
 >score
-}}SCORE++
-{$SCOS}
+Score in a scenario: 5 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@nud
 #nudge for calm
 >clma
 Odd! Now, you feel a need to panic and flee after calming the clam.
@@ -483,42 +323,14 @@ Odd! Now, you feel a need to panic and flee after calming the clam.
 The urn sits there, daring you to walk away.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a decent omen.
 
-@sli
-#slider test for run
->nru
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >run
 Your score has just gone up by one point
 
 Disease Seaside
 
-@hin
-DEBUG INFO: boats hinting.
->enter raft
-DEBUG INFO: frat raft hinting.
-#not a mistake
->fart
-DEBUG INFO: interlocking oars hinting.
->undo
->undo
-
 >score
-}}SCORE++
-{$SCOS}
+Score in a scenario: 6 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@sli
-#slider test for fart
->aftr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for soar
->osra
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for boast
->obsta
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for rosa
 >rosa
 Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.
@@ -529,17 +341,17 @@ Easier said than done. Perhaps a river craft could help you across. Like the raf
 >ratf
 The frat raft rocks slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
-\\
+
 #spechelp for oars
 >oasr
 The oars splash around in the water, briefly rising out, as if they don't belong there.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
-\\
+
 #spechelp for sabot boats
 >bosat
 Perhaps if you were louder and more confident, the boats would hear you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boats. That's a decent omen.
-\\
+
 #nudge for seaside
 >seasied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -608,26 +420,17 @@ Whoah, they're just oars. Think simpler. Much simpler.
 >scan frat raft
 You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
 
-@max
-#pre-oars-soar rule
->soar
-!by one point
-The oars have no gas, or whatever they might run on
-
-@nud
 #scannotes for sabot boats
 >scan sabot boats
 It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
 
-@nud
 >enter raft
 You get onto the frat raft.
 #not a mistake
 >fart
 Your score has just gone up by one point
-}}SCORE++
 >score
-{$SCOS}
+Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 #altpath
 #done rejects for frat raft
 >ratf
@@ -636,8 +439,7 @@ The frat raft has fuel. It needs to use that fuel, now, with the oars.
 Your score has just gone up by one point
 Anger Range
 >score
-}}SCORE++
-{$SCOS}
+Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 #altpath
 >thisalt
 --you could've tried to BOAST to get the boats' attention, then LEAP.
@@ -648,49 +450,16 @@ Anger Range
 >undo
 >undo
 >undo
-}}SCORE-=2
-
-@max
-#pre-raft-fart rule
->fart
-Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
-#preefcheck frat raft
->pf
-You can get on the frat raft and FART.
->enter raft
-You get onto the frat raft.
-#not a mistake
->fart
-by one point
-#pre-boats-boast rule
->boast
-You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
-!by one point
->pf
-!FART
->undo
->undo
->undo
 
 #not a mistake
 >boast
 Your score has just gone up by one point
-}}SCORE++
 
 Fighter Freight
 
-@hin
-DEBUG INFO: pale plea hinting.
-
 >score
-{$SCOS}
+Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@sli
-#slider test for leap
->elpa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #nudge for freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -722,51 +491,20 @@ The pale plea already sort of is. You need a stronger action than that.
 
 >leap
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-/DEBUG INFO: (pikes|carps) hinting.
 
 Anger Range
 
 >score
-{$SCOS}
+Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@mis
 #mistake test for boast
 >boast
 Batso.
 
-@max
-#pre-tutor-trout rule
->tutor
-You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
-!by one point
-#preefcheck trout
->pf
-You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
-#pre-unearth-haunter rule
->unearth
-!by one point
-You need to worry about the carps and pikes, first.
-#preefcheck hunter hunt area
->pf
-You can UNEARTH the HUNTER HUNT AREA with the right equipment.
-
-@nud
 #mistake test for fart
 >fart
 Gag! Ass-gas.
 
-@sli
-#slider test for spike
->pskei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scrap
->csapr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #mistake test for craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
@@ -783,12 +521,12 @@ You need to deal with all the bullies at once, somehow, not just one at a time.
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
-\\
+
 #spechelp for pikes
 >pikse
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
-\\
+
 #spechelp for trout
 >trotu
 The best way to help the trout at the moment is to deal with the carps and pikes.
@@ -806,46 +544,18 @@ Silly internet slang isn't active enough, here.
 >renga
 Now is not the time for poetry.
 
-@max
->scrap carps
-by one point
->undo
->spike pikes
-by one point
->undo
->spike
-Your score has just gone up by one point
->thisalt
---you could've tried to SCRAP with the carps to rescue Tortu.
-!--you could've tried to SPIKE the pikes to rescue Tortu.
->undo
->undo
->scrap
-Your score has just gone up by one
->thisalt
-!--you could've tried to SCRAP with the carps to rescue Tortu.
---you could've tried to SPIKE the pikes to rescue Tortu.
-@!
 >scrap
 Your score has just gone up by one
 
-}}SCORE++
-
-@hin
-DEBUG INFO: HUNTER HUNT AREA hinting.
-
-@nud
 #spechelp for HUNTER HUNT AREA
 >unearht
 You need an organized way to reveal what's under the ground, and you don't have a digging instrument, either.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 
-@nud
 #scannotes for HUNTER HUNT AREA
 >scan hunter hunt area
 You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
 
-@nud
 #readables for HUNTER HUNT AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
@@ -853,26 +563,9 @@ Etahn Ru. Near-Hut Haunter.
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
 
-@max
->unearth
-!by one point
-Nothing to unearth the haunter with.
-
 >e
 Hardest Trashed Dearths
 
-@hin
-DEBUG INFO: eeks hinting.
-
-@sli
-#slider test for seek
->eske
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for scan
->csna
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!
@@ -900,9 +593,8 @@ You wonder if there is some odd-yet-familiar way to clean the cans up. That's no
 You try to eke out an eek, but you only have one data point, and that's not enough.
 
 >score
-{$SCOS}
+Score in a scenario: 9 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-@nud
 #spechelp for cans
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
@@ -918,44 +610,22 @@ There are no clothing stores around, nor is there anything physical to lead you 
 >threads
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
-@max
->scan cans
-by one point
->undo
-
-@!min
 >scan
 #notana 'nudge for cans'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@max
->seek eeks
-by one point
->undo
+>score
+Score in a scenario: 10 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >seek
 Your score has just gone up by one point
-}}SCORE++
-
-@min
-#we skipped SCAN and there is no way back.
-}}CURMAX--
 
 Lean Lane
 
-@hin
-DEBUG INFO: tea tray hinting.
-
 >score
-{$SCOS}
+Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
-@nud
 #mistake test for a nut
 >a nut
 That's not nice. You are a guest.
@@ -992,90 +662,35 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a d
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
 
-@nud
 #nudge for tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
 
-@sli
-#slider test for tend
->etdn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for eat
->tea
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->eat tea
-by one point
->undo
-
 >eat
 #notana 'nudge for eat'
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: trout hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 12 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
-@max
->tend dent
-by one point
->undo
-
-@!min
 >tend
 #notana 'nudge for dent'
 Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
 DEBUG INFO: min-up codepath
 
 >score
-{$SCOS}
+Score in a scenario: 13 out of 42 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
-@nud
 #nudge for dent
 >detn
 You already fixed the dent. It's gone.
 
-@sli
-#slider test for tutor
->utort
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for swipe
->wspei
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->tutor trout
-by one point
->undo
-
 >tutor
 Your score has just gone up by one point
-}}SCORE++
-
-@!min
-}}CURMIN++
-
-@hin
-You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points, but a generic HINT will not reveal them.
 
 >score
-{$SCOS}
+Score in a scenario: 14 out of 42 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 42.
 
-@max
-#pre-warp-wrap rule
->warp
-"Goodness me!" cries Aunt Tuna. "I do not approve of such hooliganism! Paw R Wrap has less devious uses! I am almost sorry I gave it to you! You ought to be sent from THIS nest for that noise!"
-Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
-!by one point
-
-@nud
 #mistake test for wrap [text]
 >wrap zozimus
 The bubble wrap is already covering something.
@@ -1096,7 +711,6 @@ It's just wrap, really.
 >bubblewrpa
 It's just wrap, really.
 
-@nud
 #nudge for wipe
 >wiep
 It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
@@ -1108,21 +722,12 @@ The pearl is too jagged to change easily, but it seems like it was roughly cut i
 You try to take the wipes, but you worry you're not fast enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
 
-@max
->swipe wipes
-by one point
->undo
-
-@!min
 >swipe
 Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 15 out of 42 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 42.
+
 #renudge for wipe
 >wiep
 You will need to use them all at once, and on something else
@@ -1131,15 +736,6 @@ You will need to use them all at once, and on something else
 >n
 Lapsin' Plains
 
-@hin
-DEBUG INFO: wherever the crate is coming from hinting.
-DEBUG INFO: crate hinting.
-
-@max
->warp
-That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
-
-@mis
 #mistake test for tush
 >tush
 Oh, behave.
@@ -1187,7 +783,6 @@ No vilence, err, violence, please.
 >nkob
 The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 
-@nud
 #done rejects for wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
@@ -1227,45 +822,45 @@ There are two pans.
 #nudge for isk
 >iks
 But you need to remove both skis.
-\\
+
 #nudge for open
 >opne
 The words on the pans don't change. They are just a generic taunt.
-\\
+
 #nudge for doorknob
 >doorknbo
 It's just a knob. Which thankfully cuts down the possibilities.
-\\
+
 #spechelp for bogus-trace
 >traec
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
-\\
+
 #spechelp for crate
 >reatc
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
-\\
+
 #spechelp for knob
 >knbo
 The knob rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
-\\
+
 #spechelp for skis
 >sksi
 The skis momentarily seem more polished.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
-\\
+
 #spechelp for span pans
 >pasn
 The pans wobble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
-\\
+
 #spechelp for bogus-plains
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
-\\
+
 #scannotes for bogus-plains
 >scan
 !Your settler appears to register this all across the plains.
@@ -1273,34 +868,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 >scan plains
 Your settler appears to register this all across the plains.
 
-@sli
-#slider test for splain
->psalni
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for trace
->rtcea
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for kiss
->sski
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for bonk
->obkn
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for snap
->nspa
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!min
 >splain
 by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
+
 #done rejects for bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think "I...plans." Time to move on.
@@ -1308,28 +882,6 @@ You start up a grand lecture again, but you feel something spinal and think "I..
 >plani
 You had your say.
 
-
-@max
-#pre-crate-react rule
->react
-That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
-#preefcheck crate
->pf
-You can REACT to the crate better when you have more data.
-#pre-kiss-skis rule
->kiss
-That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
-#preefcheck skis
->pf
-You can KISS the skis once you are less distracted.
-#pre-snap-span-pans rule
->snap
-You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
-#preefcheck span pans
->pf
-You can SNAP to clear the span pans when everything else is out of the way.
-
-@nud
 #mistake retest for thus
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
@@ -1337,36 +889,12 @@ Your inactive word does nothing to the huts. Perhaps you can do something to the
 >actres
 Hmm, no, it's only one crate at a time.
 
-@max
->trace crate
-by one point
->undo
-
 >trace
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-!DEBUG INFO: wherever the crate is coming from hinting.
-DEBUG INFO: crate hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 17 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@max
-#pre-kiss-skis rule retry
->kiss
-You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
-#pre-bonk-knob rule
->bonk
-You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate, but there's one more...
-
-@sli
-#slider test for react
->ercta
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #renudge for acters
 >actres
 Hmm, no, it's only one crate at a time.
@@ -1377,15 +905,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a 
 
 >react
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: skis hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 18 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@nud
 #renudge for acters
 >actres
 Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
@@ -1402,44 +925,26 @@ Not worth messing with the fragments any more.
 >fragmetn
 Not worth messing with the fragments any more.
 
-@max
->kiss skis
-by one point
->undo
-
 >kiss
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: knob hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 19 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@nud
 #readables for span pans
 >read span pans
 Red writing indicates the pans were made by Nan's Apps.
 
-@max
->bonk knob
-by one point
->undo
-
 >bonk
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 20 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@mis
 #mistake retest for nkob
 >nkob
 You already did what you needed with the knob, Step by Step.
 
-@nud
 #note the pans must be taken care of last
 #scannotes for span pans
 >scan span pans
@@ -1447,12 +952,10 @@ There are two entries that are ambiguous, but--maybe knowing they're span pans m
 
 >snap
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 21 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@nud
 #mistake retest for thus
 >thus
 Your inactive word does nothing to the huts. But you don't need to do any more, since you can walk in.
@@ -1464,10 +967,6 @@ The message was corny, but the door was a piece of cake since you figured what t
 
 Shuttle Hutlets
 
-@hin
-DEBUG INFO: tubs hinting.
-
-@nud
 #mistake test for auth
 >auth
 Sorry! I'm too busy to cameo in my own game at the moment.
@@ -1493,60 +992,32 @@ The Shadier Airshed is immovable and unchangeable.
 >utb
 Clear ALL the tubs!
 
-@nud
 #spechelp for tubs
 >tusb
 Hm. The tubs shake slightly. Maybe if you were more forceful.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a decent omen.
 
-@sli
-#slider test for bust
->ubts
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->bust tubs
-by one point
->undo
-
 >bust
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: prod hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 22 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@sli
-#slider test for drop
->rdpo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for prod
 >prdo
 You juggle the prod a bit, but it doesn't change into anything new.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
 
-@max
->drop prod
-Your score has just gone up by one point
->undo
-
 >drop
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 23 out of 42 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 42.
 
-@nud
 #nudge for digger
 >diggre
 It's what it needs to be, you imagine.
-\\
+
 #mistake test for bury [text]
 >bury zozimus
 Nothing worth burying.
@@ -1560,18 +1031,11 @@ You need to dig to some purpose, though maybe somewhere else--and not just dig.
 >drpo
 You managed to get a digger from a prod, and that's good enough.
 
-@sli
-#slider test for sweat
->wsate
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for waste
 >waset
 You make an effort to clean the waste but feel you could do better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
 
-@mis
 #mistake test for sweat [text]
 >sweat zozimus
 Don't sweat the extra words. Just sweat.
@@ -1579,17 +1043,13 @@ Don't sweat the extra words. Just sweat.
 >tawse
 You don't need that sort of weapon.
 
-@!min
 >sweat
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 24 out of 42 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 42.
+
 #spechelp for lance
 >lanec
 The lance glimmers slightly. It has potential to be shiny.
@@ -1605,38 +1065,17 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a 
 >hepa
 Change ALL the heaps!
 
-@sli
-#slider test for shape
->hspea
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->shape heaps
-by one point
->undo
-
-@!min
 >shape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 25 out of 42 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 42.
+
 #renudge for heap
 >hepa
 You don't need or want to futz with one heap to make things super-extra-perfect.
 
-@sli
-#slider test for clean
->lcane
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-##balance undos
 #respechelp for lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
@@ -1661,23 +1100,14 @@ Good idea, but you have nothing that could clean the lance effectively.
 >undo
 >undo
 
-@max
->clean lance
-by one point
->undo
-
-@!min
 >clean
 #notana 'nudge for lance'
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 26 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
+
 #done rejects for heaps
 >heasp
 You figure the heaps are at a point where you can't change them for the better.
@@ -1687,30 +1117,12 @@ It's clean enough. You can't, like, make it sharper or anything.
 
 >out
 
-@nud
 #renudge for shut
 >shtu
 You found the hut you needed to.
 
 >s
 
-@max
->banish ruby
->unearth
-!by one point
-Ravage a grave!
-!Nothing to unearth the haunter with.
-You scry a cry as scary... "My...jewel...off...east...I...feel...don't...disturb...unless..."
-You haven't found or discovered a jewel, yet.
->purloin ruby
->unearth
-!by one point
-Ravage a grave!
-As you begin to dig, you hear "My...jewel...close...thieves...pay."
-It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or some people-forms. People-forms who deserve SOMETHING pinned on them.
-!Nothing to unearth the haunter with.
-
-@nud
 >dig
 You need to dig to some purpose, like uncovering the haunter--and not just dig. Dig?
 >unearht
@@ -1719,15 +1131,10 @@ You need an organized way to reveal what's under the ground with your rigged dig
 >w
 Sclerous Closures
 
-@hin
-DEBUG INFO: bubble wrap hinting.
-
-@mis
 #mistake test for rasche
 >rasche
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
 
-@nud
 #scannotes for paw r wrap
 >scan paw r wrap
 Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard.
@@ -1757,62 +1164,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser A
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
 
-@sli
-#slider test for warp
->awpr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for search
->esrahc
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
-#pre-search-arches rule
->search
-A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
-#preefcheck achers chaser arches
->pf
-SEARCH the arches.
-
-@max
->warp wrap
-by one point
->undo
-
 >warp
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: Achers' Chaser Arches hinting.
 
 >score
-{$SCOS}
-
-@max
->search arches
-by one point
->undo
+Score in a scenario: 27 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
 >search
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: general gleaner hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 28 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@max
->x gleaner
-!You see a map of all the paths in the Horned Hedron.
-You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of here, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
->e
->x gleaner
-You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is a structure, possibly the Horned Hedron north of Sclerous Closures, and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too.
->w
-
-@nud
 #renudge for arch
 >arhc
 You already dealt with both arches--no need to deal with one.
@@ -1836,29 +1199,14 @@ You step back, mentally. Having a big-picture view may mean the ambiguous readin
 >reangle
 You tilt the gleaner around to try to see it from a different point of view. If there are any differences, they're too small for you to see.
 
-@sli
-#slider test for enlarge
->neergal
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->enlarge gleaner
-by one point
->undo
-
 >enlarge
 Your score has just gone up by one point
-}}SCORE++
 
-@max
-You may wish to re-examine the gleaner now it's changed.
-@!
 !You may wish to re-examine the gleaner now it's changed.
 
 >score
-{$SCOS}
+Score in a scenario: 29 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@nud
 #mistake retest for reangle
 >reangle
 You tilt the gleaner around to try to see it from a different point of view. You see nothing new--enlarging it seemed to do enough.
@@ -1869,34 +1217,6 @@ It's already been made bigger. Not much more you can do with it except examine i
 >n
 Horned Hedron
 
-@hin
-DEBUG INFO: weaselly walleyes hinting.
-
-@max
-##balance undos
-#pre-patrol-ol-trap rule
->patrol
-Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
-#detour to test burying ruby without digger
-#preefcheck ol trap
->pf
-You can PATROL the ol' trap once the weaselly walleyes are gone.
->w
->banish digger
-#pre-bury-ruby rule
->bury
-Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
-#preefcheck ruby
->pf
-You need to figure how and where to BURY the ruby.
->undo
->undo
->undo
->undo
->undo
->undo
-
-@nud
 #mistake test for part trap/part
 >part trap
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
@@ -1927,10 +1247,6 @@ The walleyes are a bad crowd, past redemption.
 >w
 Rascal Craals
 
-@hin
-DEBUG INFO: ruby hinting.
-
-@nud
 #nudge for craals
 >craasl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1942,24 +1258,12 @@ You don't need to riff on any location names to win the game, unless there's not
 No, that's not quite it. The ruby dulls as if covered by dirt.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a decent omen.
 
-@sli
-#slider test for bury
->ubyr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
->bury ruby
-Your score has just gone up by one
->undo
-
 >bury
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 30 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@nud
 #nudge for hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
@@ -1971,39 +1275,18 @@ It was enough to bury the ruby.
 >s
 >e
 
-@sli
-#slider test for unearth
->nuaethr
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #respechelp test for HUNTER HUNT AREA
 >hauntre
 You need an organized way to reveal what's under the ground with your rigged digger.
 
 ##>unearth haunter
 
-@max
->unearth haunter
-by one point
->undo
-
 >unearth
 by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: haunter hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 31 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@sli
-#slider test for assuage
->saagseu
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for use saga sausage
 >assuaeg
 You're a bit tongue-tied, but that seems close.
@@ -2015,19 +1298,12 @@ Anything can howl, but this is a haunter--and, in fact, it's not just a haunter 
 >scan use saga sausage
 The use-saga sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
 
-@max
->assuage sausage
-by one point
->undo
-
 >assuage
 by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 32 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@nud
 #done rejects for use saga sausage
 >hauntre
 Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
@@ -2035,34 +1311,18 @@ Don't oversell it! Just take the haunter to where it was probably (heh) the wall
 >ask haunter about ruby
 #notana
 by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: ol' trap hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 33 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
 >w
 
-@hin
-DEBUG INFO: ol' trap hinting.
-
 >n
-
-@hin
-DEBUG INFO: ol' trap hinting.
 
 >w
 
 >e
 
-@sli
-#slider test for patrol
->aprtlo
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 >gonear anger range
 #mistake test for horse
 >horse
@@ -2090,19 +1350,12 @@ You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have wo
 >undo
 >undo
 
-@max
->patrol ol trap
-by one point
->undo
-
 >patrol
 Your score has just gone up by one point
-}}SCORE++
 
 >score
-{$SCOS}
+Score in a scenario: 34 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@nud
 #done rejects for pol art portal
 >patrlo
 You discovered the portal. No need to look further.
@@ -2123,19 +1376,14 @@ Den Loft
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
 
-@nud
 #redone rejects for gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it.
 
 >in
 
-@hin
-DEBUG INFO: papery yapper hinting.
-
 Tenfold Teflon'd Den Loft
 
-@nud
 #nudge for tenfold
 >tenfodl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -2166,7 +1414,7 @@ Changing the intercom to a ton-crime intercom would be the opposite of what you 
 #nudge for crime
 >criem
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
-\\
+
 #spechelp for papery yapper
 >yappre
 "Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
@@ -2180,45 +1428,16 @@ Oh no! Where is the orange/y? It'd be easier if that was one of the stable color
 >redial
 You can't even dial with the yapper around.
 
-@sli
-#slider test for prepay
->rppeya
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
-#pre-dialer-derail rule
->derail
-The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
-!by one point
-#preefcheck dialer
->pf
-With the yapper gone, you should be able to DERAIL.
-#negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
->revel
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
-!by one point
-
-@max
->prepay yapper
-Your score has just gone up by one
->undo
-
 >prepay
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: dialer hinting.
 
 >score
-{$SCOS}
+Score in a scenario: 35 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-@mis
 #mistake retest for redial
 >redial
 You need use the dialer meaningfully first.
 
-@nud
 #renudge for jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
@@ -2234,52 +1453,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet.
 >scan templar ramplet
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
 
-@sli
-#slider test for trample
->rtmalep
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@max
-##balance undos
->banish lance
-#pre-trample-ramplet rule
 >trample
-You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
-#preefcheck templar ramplet
->pf
-Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet.
->undo
->undo
->undo
 
-@max
->trample ramplet
-by one point
->undo
-
-@!min
->trample
-}}SCORE++
-}}CURMIN+=2
-\\
 Plasm Lamps
 
-@hin
-DEBUG INFO: natant ant hinting.
-
-@!min
 >score
-{$SCOS}
+Score in a scenario: 36 out of 42 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 42.
 
-@sli
-#slider test for psalm
->splma
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for tan
->nta
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@mis
 #mistake test for nat
 >nat
 You don't need to name the ant. It's not a pet.
@@ -2287,7 +1467,6 @@ You don't need to name the ant. It's not a pet.
 >splam
 There's a simpler way to attack the ant.
 
-@nud
 #scannotes for bogus-psalm
 >scan
 Perhaps finding where the vowel is would be a good start.
@@ -2309,72 +1488,35 @@ You've already got the ant's attention. You'll need to take care of it, now.
 >plma
 Maybe riff on ALL the lamps. But only for fun.
 
-@max
-#let's test the special case where we TAN without PSALMing.
->tan
-}}SCORE++
-}}CURMAX--
->score
-{$SCOS}
->undo
->undo
-}}SCORE--
-}}CURMAX++
-
-@!min
 >psalm
 by one point
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOS}
 
-@nud
+>score
+Score in a scenario: 37 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
+
 #renudge for plam
 >plma
 You did enough.
 
-@max
->tan ant
-by one point
->undo
-
-@!min
 >tan
 #notana 'nudge for ant'
 Your score has just gone up by one point
-}}SCORE++
 
-@hin
-DEBUG INFO: dialer hinting.
-
-@!min
 >score
-{$SCOS}
+Score in a scenario: 38 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
 
-@sli
-#slider test for revel
->erlve
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for lever
 >levre
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
 
-@!min
 >revel
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
-}}SCORE++
-}}CURMIN++
-\\
->score
-{$SCOMAX}
 
-@nud
+>score
+Score in a scenario: 39 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
+
 #done rejects for lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
@@ -2386,45 +1528,17 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
-@sli
-#slider test for derail
->edarli
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
 >derail
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: pins hinting.
 
 >score
-@min
-{$SCOS}
-@!
-{$SCOMAX}
+Score in a scenario: 40 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
 
-@max
-#pre-dialer-redial rule
->redial
-Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
-!by one point
-#preefcheck bogus-redial
->pf
-You should be able to REDIAL the dialer with the proper preparation.
-
-@sli
-#slider test for spin
->psni
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
 
-@nud
 #mistake test for nips
 >nips
 You see red at the thought of voluntarily pricking yourself with pins.
@@ -2438,52 +1552,27 @@ You don't have anything with a small enough blade to cut the pins. And even then
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 >undo
 
-@max
->spin pins
-Your score has just gone up by one
->undo
-
 >spin
 Your score has just gone up by one point
-}}SCORE++
-
-@hin
-DEBUG INFO: dialer hinting.
 
 >score
-@min
-{$SCOS}
-@!
-{$SCOMAX}
+Score in a scenario: 41 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.
 
-@sli
-#slider test for redial
->eridla
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
 #spechelp for bogus-redial
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer (DEBUG: part 2). That's a decent omen.
 
-@max
->redial dialer
-by one point
->undo
-
 #not a mistake
 >redial
 Your score has just gone up by one point
-}}SCORE++
 
 Strip of Profits
 
-@nud
 #mistake retest for fart
 >fart
 You feel slightly dafter, having farted to no good purpose
 
 >score
-Oyster ({SCORE}/{MAX})
+Oyster (42/42)
 
