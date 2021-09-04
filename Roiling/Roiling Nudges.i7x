@@ -1564,7 +1564,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 book auxiliary text and rules
 
-section ordeal reload auxiliary
+chapter ordeal reload auxiliary
 
 to say not-the-reg:	say "Trying to change the current region you're in all at once would be risky, or useless, or maybe both"
 
@@ -1634,7 +1634,7 @@ section carven cavern auxiliary
 
 to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
-section stores auxiliary
+chapter stores auxiliary
 
 to say no-cand: say "Nothing happens. You'd think that store would be a good candidate to change, but it isn't"
 
@@ -1670,7 +1670,7 @@ to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perha
 
 to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious"
 
-section routes auxiliary
+chapter routes auxiliary
 
 this is the has-reag rule:
 	if list o toils is examined:
@@ -1761,7 +1761,7 @@ section sonancy canyons auxiliary
 
 to say no-spoil: say "[if cur-score of troves is 0]You've got the right idea...sort of...but you're not worthy of big thoughts, yet[else]You can change Spoiloplis by thinking, but not like that. One idea at a time[end if]"
 
-section troves auxiliary
+chapter troves auxiliary
 
 to say ei2pg: say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
@@ -1790,7 +1790,7 @@ to say id-cede-full: say "It's the full song name--[Id Cede]"
 section drain nadir auxiliary
 
 this is the glaring-futile rule:
-	if player is in Boredom Bedroom and lager is moot, the rule succeeds;
+	if player is in Drain Nadir and lager is moot, the rule succeeds;
 	the rule fails;
 
 section boredom bedroom auxiliary
@@ -1849,7 +1849,7 @@ this is the divorces-gone rule:
 	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
 	the rule fails;
 
-section presto auxiliary
+chapter presto auxiliary
 
 this is the maze-gone rule:
 	if player is in Grey Gyre and maze is moot, the rule succeeds;
@@ -1982,7 +1982,7 @@ to say kboard-det:
 		else:
 			say "You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.[no line break]";
 
-section oyster auxiliary
+chapter oyster auxiliary
 
 to say slider-activate:
 	if slider is switched on:
@@ -2079,7 +2079,7 @@ this is the got-pot rule:
 	if top opt pot is not off-stage, the rule succeeds;
 	the rule fails;
 
-section towers auxiliary
+chapter towers auxiliary
 
 this is the pas-vis rule:
 	if number of touchable hintpastries > 0, the rule succeeds;
@@ -2255,7 +2255,7 @@ this is the cinders-gone rule:
 	if cinders are moot, the rule succeeds;
 	the rule fails.
 
-section otters auxiliary
+chapter otters auxiliary
 
 to say both-medals: say "No, it's a combination of what's on both medals"
 
@@ -2366,7 +2366,7 @@ to say elv-mach: say "You have enough to think about without one more of Elvira'
 
 to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 
-section others auxiliary
+chapter others auxiliary
 
 to say coin-icon:
 	if player has coin:
@@ -2436,7 +2436,7 @@ to say no-gate: say "The gate needs to be unlocked some other way"
 
 to say val-chg: say "The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too"
 
-section demo dome auxiliary
+chapter demo dome auxiliary
 
 to say dome-rm: say "You don't need to flip anything here, really. Certainly not a room"
 
@@ -2474,7 +2474,7 @@ section sparse spares auxiliary
 
 to say red-wri: say "Red writing is a just clue of what to change. It can't be changed, itself";
 
-section general auxiliary
+chapter general auxiliary
 
 this is the in-innie rule:
 	if location of player is innie, the rule succeeds;
@@ -2514,13 +2514,11 @@ to say dir-cut: say "section has no easter eggs[if mrlp is demo dome], though yo
 
 to say meta-rej: say "Meta-commands don't have any easter eggs, sadly"
 
-book third party stuff
-
-to say adv-help: say "[if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
-
-book support rules
+book support rules and quotes
 
 [These are used elsewhere throughout the nudges file, but they are not main rules listed in a table.]
+
+to say adv-help: say "[if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
 
 slab-pts is a number that varies.
 

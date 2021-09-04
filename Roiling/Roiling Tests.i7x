@@ -126,7 +126,7 @@ chapter troves
 
 [* this includes tests for troves, troves with mistakes, troves min-points and troves max-points as well as alt ways through]
 
-test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/relapse/decide/glare/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
+test troves with "troves/enter troves/x egg/z/gape/hate/care/l/observe/spot/stay/reason/believe/recall/despair/glare/decide/relapse/master/bolster/x lead/deal/z/x reside/desire/aspire/strive/ponder/deserve/last/x desk/x divorces/discover/resist/ramble/recant/coff"
 
 test troves-err with "troves/enter troves/pega/gape/peag/haet/hate/caer/care/obserev/observe/spto/spot/reasno/reason/belieev/believe/reclal/recall/glaer/glare/despari/despair/dela/deal/desier/desire/aspier/aspire/striev/strive/pondre/ponder/ignoer/deserve/lats/last/mastre/master/bolstre/bolster/discovre/discover/lats/last/resing/resign/coff"
 
@@ -1270,7 +1270,7 @@ to say miss-types:
 	say "MISSES = this region's misses (may provide nonsense/spoilers).";
 	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
 	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
-	say "[paragraph break]========================Real stuff below";
+	say "[paragraph break]========================Real stuff below[paragraph break]";
 
 chapter thisalting
 
@@ -1654,6 +1654,66 @@ carry out palcluing:
 		now NC is in Mislit Limits;
 	the rule succeeds.
 
+chapter ptsing
+
+ptsing is an action out of world.
+
+understand the command "pts" as something new.
+
+understand "pts" as ptsing.
+
+carry out ptsing:
+	if cur-score of mrlp is 0, say "You've done nothing yet." instead;
+	let any-yet be false;
+	repeat through regana of mrlp:
+		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
+		if there is a the-to entry and the-to entry is moot, next;
+		if the-from entry is flip-irrelevant, next;
+		if location of the-from entry is shunned:
+			now any-yet is true;
+			say "(too late): [right-word entry].";
+	now any-yet is false;
+	say "[if any-yet is true]===========================================[line break]";
+	repeat through regana of mrlp:
+		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
+		if there is a the-to entry and the-to entry is moot, next;
+		if the-from entry is flip-irrelevant, next;
+		if the-from entry is llpish and location of the-from entry is shunned, next; [ this accounts for B which doesn't come on-stage until A does ]
+		now any-yet is true;
+		say "(LLP): [right-word entry].";
+	say "[if any-yet is true]===========================================[line break]";
+	now any-yet is false;
+	repeat through regana of mrlp:
+		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
+		if there is a the-to entry and the-to entry is moot, next;
+		if the-from entry is flip-irrelevant, next;
+		if location of the-from entry is shunned or the-from entry is llpish, next;
+		if any-yet is false:
+			now any-yet is true;
+			say "LIKELY FIRST NECESSARY: [right-word entry].";
+		else:
+			say "UNDONE: [right-word entry].";
+	the rule succeeds;
+
+definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for regular LLPs but rather for optional stuff like the 3-of-6 at the start of Oyster]
+	if th is in posh hops shop and posh hops shop is shunned, yes;
+	if mrlp is presto:
+		if lawl wall is moot:
+			if th is keys or th is hogs, yes;
+		if Leo is dismissed:
+			if th is log ons letters or th is alert letters or th is ought letters, yes;
+	if mrlp is oyster:
+		if th is carps or th is pikes:
+			if pikes are moot, yes;
+	if mrlp is towers:
+		if rawest waters is visited or mislit limits is visited:
+			if th is turbos or th is blaster or th is earnest eastern neaters, yes;
+	if mrlp is others:
+		if gate-level is 2:
+			if th is viewer or th is searcher or th is fleeing feeling, yes;
+	if th is not-mbb, yes;
+	no;
+
 chapter twiding
 
 [* this lets the user twiddle a table early on to see how it roughly looks. It does not place it in context. ]
@@ -1702,30 +1762,6 @@ to say list-of-randos:
 			now comma-yet is true;
 
 volume for the core
-
-definition: a room (called r) is in-the-past:
-	if r is not visited, no;
-	if location of player is r, no;
-	yes;
-
-definition: a thing (called th) is flip-irrelevant: [NOTE: this is not used for regular LLPs but rather for optional stuff like the 3-of-6 at the start of Oyster]
-	if th is in posh hops shop and posh hops shop is shunned, yes;
-	if mrlp is presto:
-		if lawl wall is moot:
-			if th is keys or th is hogs, yes;
-		if Leo is dismissed:
-			if th is log ons letters or th is alert letters or th is ought letters, yes;
-	if mrlp is oyster:
-		if th is carps or th is pikes:
-			if pikes are moot, yes;
-	if mrlp is towers:
-		if rawest waters is visited or mislit limits is visited:
-			if th is turbos or th is blaster or th is earnest eastern neaters, yes;
-	if mrlp is others:
-		if gate-level is 2:
-			if th is viewer or th is searcher or th is fleeing feeling, yes;
-	if th is not-mbb, yes;
-	no;
 
 Roiling Tests ends here.
 

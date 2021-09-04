@@ -535,46 +535,6 @@ this is the check nudge tables rule:
 			next;
 		say "Define table of nudges for [X].";
 
-chapter ptsing
-
-ptsing is an action out of world.
-
-understand the command "pts" as something new.
-
-understand "pts" as ptsing.
-
-carry out ptsing:
-	if cur-score of mrlp is 0, say "You've done nothing yet." instead;
-	let any-yet be false;
-	repeat through regana of mrlp:
-		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
-		if there is a the-to entry and the-to entry is moot, next;
-		if the-from entry is flip-irrelevant, next;
-		if location of the-from entry is shunned:
-			now any-yet is true;
-			say "(too late): [right-word entry].";
-	now any-yet is false;
-	say "[if any-yet is true]===========================================[line break]";
-	repeat through regana of mrlp:
-		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
-		if there is a the-to entry and the-to entry is moot, next;
-		if the-from entry is flip-irrelevant, next;
-		if the-from entry is llpish and location of the-from entry is shunned, next; [ this accounts for B which doesn't come on-stage until A does ]
-		now any-yet is true;
-		say "(LLP): [right-word entry].";
-	say "[if any-yet is true]===========================================[line break]";
-	now any-yet is false;
-	repeat through regana of mrlp:
-		if the-from entry is moot or the-from entry is reflexed or the-from entry is flip-irrelevant, next;
-		if there is a the-to entry and the-to entry is moot, next;
-		if the-from entry is flip-irrelevant, next;
-		if location of the-from entry is shunned or the-from entry is llpish, next;
-		if any-yet is false:
-			now any-yet is true;
-			say "LIKELY FIRST NECESSARY: [right-word entry].";
-		else:
-			say "UNDONE: [right-word entry].";
-	the rule succeeds;
 
 chapter haling
 

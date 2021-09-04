@@ -100,11 +100,11 @@ evil bee	evil bee	false	607808737	--	"believe"	"believe"	--	bee-less-active rule
 L Clear Cellar	L Clear Cellar	false	341950993	Drain Nadir	"recall"	"recall"	pre-cellar-recall rule	post-cellar-recall rule	"You take some time, and not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's L'Clear Cellar? You keep trying to recall--and you try so hard you forget to feel sorry for yourself. You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
 diapers	diapers	false	459079590	--	"despair"	"despair"	--	post-diapers-despair rule	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find yourself listening over and over again to that song. By Eddie C. Why, it's blasting right now!"
-pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"You lose yourself in the pleaser leapers for a while before snapping out of it. You wonder what you ever saw in them, though of course, you sort of know. 'Danseur dauners, ASUNDER!' you cry, melodramatically, as you realize what a hollow pleasure they are. And yet, at the same time, it was a worthwhile part of your emotional journey. You can't just pitch them out a window, though. They go in the trash, buried deep. Physically and metaphorically. You will look for the approval of real people in the future. Nothing could go wrong that way.[paragraph break]Still, all the same, you feel obliged to respect the initiative of SAP-LEER for profiting so handsomely off them."
+large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 Id Cede	Id Cede	false	361668827	Boredom Bedroom	"decide"	"decide"	--	post-decide rule	"Yes. It is time. You concoct a melodramatic mental defense against melodrama, and you move on, and up in the world, to where you are no longer despondent but just bored with an average life."
 ME ARTS	ME ARTS	false	478776867	--	"master"	"master"	--	post-master-or-bolster rule	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [further-bedroom]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP.[paragraph break]Once you've fully gotten value from it, you plan to sell it at a profit to someone who can similarly use it--if they are focused and with it and such. Good art only appreciates with age!"
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	--	post-master-or-bolster rule	"You bolster your will [further-bedroom]to believe you deserve great food like lobster, not just today, but any day. One day, you will not worry about the price of lobster, and your next Bortles Lobster will be a smaller percent of YOUR income than your underlings['] food is of theirs!"
-large regal lager	large regal lager	false	301731271	--	"glare"	"glare"	--	post-lager-glare rule	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
+pleaser leapers	pleaser leapers	false	574677603	--	"relapse"	"relapse"	--	--	"You lose yourself in the pleaser leapers for a while before snapping out of it. You wonder what you ever saw in them, though of course, you sort of know. 'Danseur dauners, ASUNDER!' you cry, melodramatically, as you realize what a hollow pleasure they are. And yet, at the same time, it was a worthwhile part of your emotional journey. You can't just pitch them out a window, though. They go in the trash, buried deep. Physically and metaphorically. You will look for the approval of real people in the future. Nothing could go wrong that way.[paragraph break]Still, all the same, you feel obliged to respect the initiative of SAP-LEER for profiting so handsomely off them."
 LEAD	LEAD	false	204836855	Browse Bowers	"deal"	"deal"	pre-deal rule	post-deal rule	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 Si Reed	Si Reed	false	503231922	Econ Cone	"desire"	"desire"	--	--	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 praise spirea	praise spirea	false	438050501	--	"aspire"	"aspire"	--	post-strive-or-aspire rule	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for many, many different reasons![else].[end if]"
@@ -692,7 +692,7 @@ this is the post-diapers-despair rule:
 	move Id Cede to Drain Nadir;
 
 this is the post-decide rule:
-	if pleaser leapers are not moot, poss-d;
+	if large regal lager is not moot, poss-d;
 	now Drain Nadir is shunned;
 
 this is the post-master-or-bolster rule:
@@ -712,7 +712,7 @@ this is the pre-deal rule:
 		the rule succeeds;
 
 this is the post-deal rule:
-	if lager is in Boredom Bedroom, poss-d;
+	if pleaser leapers are not moot, poss-d;
 	if lobster is in Boredom Bedroom or ME ARTS is in Boredom Bedroom, poss-d;
 	set the pronoun them to Browse Bowers;
 	now Boredom Bedroom is shunned;
@@ -2210,7 +2210,7 @@ prod	"You juggle the prod a bit, but it doesn't change into anything new."
 lance	"The lance glimmers slightly. It has potential to be shiny."
 Achers Chaser Arches	"Hm, you almost thought you found something. Well, not QUITE like that."
 ruby	"No, that's not quite it. The ruby dulls as if covered by dirt."
-sausage	"You're a bit tongue-tied, but that seems close."
+use saga sausage	"You're a bit tongue-tied, but that seems close."
 ol trap	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
 gleaner	"The gleaner remains too small to read."
 papery yapper	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
@@ -2287,7 +2287,7 @@ turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 earnest eastern neaters	"You feel less split from everyone else for a second."
-pestern serpent	"The serpent calms down for a split-second[ser-try]."
+repents serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
@@ -2528,7 +2528,7 @@ rigged digger	"You managed to get a digger from a prod, and that's good enough."
 heaps	"You figure the heaps are at a point where you can't change them for the better."
 Achers Chaser Arches	"Further searching proves fruitless."
 pol art portal	"You discovered the portal. No need to look further."
-sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
+use saga sausage	"Don't oversell it! Just take [the sausage] to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"It was enough to bury the ruby."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
