@@ -79,7 +79,7 @@ THE BEAN	THE BEAN	false	485518766	Harms Marsh	"beneath"	"beneath"	--	post-the-be
 NULL IT unit	odd run on aura	false	375930018	--	"until"	"until"	pre-unlit-until rule	--	"The one preposition gives you confidence you will find No-Lag Logan, and because you're below ground, you fear no sunlit insult. The NULL IT unit fizzles a bit and pops, and light returns to Harms Marsh ... in the form of an odd run on aura![paragraph break]So while the marsh isn't exactly glowing now, you can definitely notice things better. The sheol holes in particular, though some will still ambush you. But which way to go? Compass directions are still out."
 odd run on aura	un road	false	356906602	--	"around"	"around"	--	post-around-unroad rule	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise. They're almost too bright. You find an all noon gag that helps deflect the shiniest bits, but perhaps it can help you even more."
 noon gag	noon gag	false	231861444	Ripe Pier	"along"	"along"	--	--	"You go along the path you found. You're a bit worried you might be ambushed by an ol['] loan gang, but soon enough, you find yourself at a pier by ... well, you're pretty sure there's some sort of body of water behind the admits mist ad over there."
-admits mist ad	admits mist ad	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
+data dim mists	data dim mists	false	331668890	Cripple Clipper	"amidst"	"amidst"	--	--	"It's tricky. You don't want to just get through the mist, but you mean to explore everything. And you turn up a bad oar! Then, when you find a ship, it's--well, the bad oar is accepted. 'You found it! You must be the one! I can go now!' It is No-Lag Logan. You protest. You need someone to show you the way! 'You will learn from my impetuousness,' says No-Lag Logan. I needed some weird unusual direction, but I just went ahead and tried any old thing ... and now I have just this Cripple Clipper. It will not work for me, but if you got here, it will work for you."
 thickness sketchins	thickness sketchins	false	441136547	Sonancy Canyons	"athwart"	"athwart"	--	post-athwart rule	"Not just any direction will do. You need something nautical. And there it is. Athwart--helps you navigate around tough bits. 'Ahoy, eh? Oh yeah!' you yell, identifying the mast and stuff. You suddenly feel enveloped with all manner of navigational knowledge, and the mess-up spumes popping up everywhere? Well, they are no problem. And though you're in an underground cavern, there are--well, not quite stars, but markers that can help guide you to the free reef, if you need the extra direction.[paragraph break]Harbor! Rah, bro! The bad oar helps you on your way but snaps as you land. You think to yourself, scan yon... so canny... and you wind up somewhere different."
 bent ewe	bent ewe	false	681789531	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
@@ -665,7 +665,6 @@ this is the pre-spot-stop-post rule:
 this is the post-spot-stop-post rule:
 	now purse-stolen is false;
 	now stop post is realized;
-	if tasty sty is reflexive, poss-d;
 	now bustle sublet is shunned;
 
 this is the bee-less-active rule:
@@ -684,6 +683,7 @@ this is the pre-cellar-recall rule:
 
 this is the post-cellar-recall rule:
 	if bee-score < 2, poss-d;
+	if tasty sty is reflexive, poss-d;
 	now boarded roadbed is shunned;
 
 this is the post-diapers-despair rule:
@@ -2101,7 +2101,7 @@ Rude N Nuder	"The pages of [Nuder] flutter a bit."
 odd run on aura	"You thought you saw an un-road for a second, but ... not quite."
 NULL IT unit	"You feel it's ALMOST the right time for the NULL IT unit to shut down, for the darkness to lift."
 noon gag	"You think of how to find a way to No-Lag Logan's boat."
-admits mist ad	"Hmm, you almost see a way past the admits mist ad."
+data dim mists	"Hmm, you almost see a way past the [mists]."
 thickness sketchins	"Your craft rocks and makes negligible forward progress. Still, it's a start."
 hurt hog	"The hog grunts."
 bent ewe	"The bent ewe stretches a bit."

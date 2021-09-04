@@ -37,6 +37,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
+>astride
+!by one point
+#slider retest for astride
+>sartdei
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
+
+>against
+!by one point
+#slider retest for against
+>gaiastn
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
+
 >inside
 Your score has just gone up by one point
 
@@ -82,22 +98,11 @@ Your score has just gone up by one point
 
 >out
 
-#slider retest for against
->gaiastn
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-
 >against
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
-
->against
-!Your score has just gone up by one point
-
-#slider retest for astride
->sartdei
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
 >astride
 Your score has just gone up by one point
@@ -212,8 +217,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider retest for through
+>through
+!by one point
 >hthugor
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
 
 >between
 Your score has just gone up by one point

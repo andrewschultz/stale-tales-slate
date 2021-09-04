@@ -222,6 +222,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
 @hin
+>z
 DEBUG INFO: scripture picturers hinting.
 
 @!min
@@ -229,9 +230,6 @@ DEBUG INFO: scripture picturers hinting.
 {$SCOS}
 
 @nud
-#nudge for towards
->towarsd
-You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 #spechelp for scripture picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
@@ -259,7 +257,7 @@ You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobo
 !by one point
 #preefcheck side art
 >pf
-Find a reason to sit ASTRIDE the anti-sag sit-a-nag.
+You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 #pre-sitanag-against rule
 >against
 !by one point
@@ -267,11 +265,29 @@ You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant w
 You add the information to your pedanto-notepad under FLIPS.
 #preefcheck sit a nag
 >pf
-Find a way to be fearless so you can lean AGAINST the anti-sag sit-a-nag.
+You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
+
+@sli
+>astride
+!by one point
+#slider retest for astride
+>sartdei
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
 
 @max
 >in
 Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time
+
+@sli
+>against
+!by one point
+#slider retest for against
+>gaiastn
+Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
 
 >inside
 Your score has just gone up by one point
@@ -400,6 +416,34 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 
 >out
 
+@max
+##balance undos
+>against
+by one point
+#pre-mesa-dir-flip rule
+>past
+!by one point
+!Idle Deli
+#pre-mesa-dir-flip rule retry
+>across
+!by one point
+!Adobe Abode
+#pre-mesa-dir-flip rule retry
+>towards
+!by one point
+>pf
+#preefcheck worst ad
+You can go TOWARDS the worst ad once things are a bit more settled.
+#preefcheck lairage regalia
+You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
+#preefcheck adsorbing signboard
+You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
+>undo
+>undo
+>undo
+>undo
+>undo
+
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be PAST.
 
@@ -425,6 +469,51 @@ Perhaps it's better and simpler to focus on the proper names instead.
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
+
+@max
+# here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
+# we assume that we have NOT already gone past and across.
+##balance undos
+>past
+by one point
+>out
+>across
+by one point
+>out
+>against
+by one point
+>past
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing adsorbing signboard to pad because it was already reflexed.
+>undo
+>across
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing lairage regalia to pad because it was already reflexed.
+>undo
+>inside
+Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
+DEBUG: not writing scripture picturers to pad because it was already reflexed.
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+@max
+# here we test that directions are sent to the pad
+## balance undos
+>against
+by one point
+>past
+You add the information to your pedanto-notepad under FLIPS.
+!by one point
+>across
+You add the information to your pedanto-notepad under FLIPS.
+!by one point
+>undo
+>undo
+>undo
 
 >past
 Your score has just gone up by one point
@@ -524,12 +613,12 @@ The spoon points you out of the Idle Deli.
 @nud
 #mistake retest for tap pat/tap
 >tap
-You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
+You have Pat's attention, already, and you don't really need it now that you got the stupor sprout.
 #done rejects for stupor sprout
 >despiet
-That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 >despite
-That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 #mistake retest for apt
 >apt
 Actually, Pat's advice may not be apt.
@@ -543,12 +632,10 @@ Alas, the stupor sprout has nothing in common with madeleine.
 @nud
 #renudge for carvings
 >cravinsg
-It's not the carvings that need changing.
-You got the mushrooms from the seed pit, and that's what's important
+It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 #renudge for carving
 >cravign
-It's not the carvings that need changing.
-You got the mushrooms from the seed pit, and that's what's important
+It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 
 @nud
 #renudge for stupor
@@ -562,7 +649,7 @@ Brother Horbert will do his magic on the reagents at the right time.
 Brother Horbert will do his magic on the reagents at the right time.
 #renudge for pta
 >tpa
-You don't need to do anything with Pat, especially now you got the mushrooms.
+You don't need to do anything with Pat, especially now you got the stupor sprout.
 
 >out
 
@@ -711,11 +798,6 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
 #the sit a nag. That's a decent omen. ??
 
-@sli
-#slider retest for against
->gaiastn
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
-
 @nud
 #nudge for anti
 >anit
@@ -724,35 +806,6 @@ The whole anti-sag sit-a-nag.
 #nudge for sag
 >sga
 The whole anti-sag sit-a-nag.
-
-@max
-# here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
-##balance undos
->past
-by one point
->out
->across
-by one point
->out
->against
-by one point
->past
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing adsorbing signboard to pad because it was already reflexed.
->undo
->across
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing lairage regalia to pad because it was already reflexed.
->undo
->inside
-Walking away would upset Ian Gast. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help.
-DEBUG: not writing scripture picturers to pad because it was already reflexed.
->undo
->undo
->undo
->undo
->undo
->undo
 
 >against
 }}SCORE++
@@ -763,26 +816,6 @@ You angle your spoon a bit, and you realize you, or something, should be ASTRIDE
 
 >score
 {$SCOS}
-
-@max
-#pre-mesa-dir-flip rule
->past
-!by one point
-!Idle Deli
-#pre-mesa-dir-flip rule retry
->across
-!by one point
-!Adobe Abode
-#pre-mesa-dir-flip rule retry
->towards
-!by one point
->pf
-#preefcheck worst ad
-You can go TOWARDS the worst ad once things are a bit more settled.
-#preefcheck lairage regalia
-You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
-#preefcheck adsorbing signboard
-You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
 
 @mis
 #mistake test for gats/tags
@@ -811,9 +844,6 @@ It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
 
->against
-!Your score has just gone up by one point
-
 @nud
 #mistake retest for under
 >under
@@ -821,11 +851,6 @@ You can't hide from Ian Gast like that, right now.
 #nudge for tirade
 >tiraed
 There's more than one tirade
-
-@sli
-#slider retest for astride
->sartdei
-Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
 
 @nud
 #respechelp for side art
@@ -995,6 +1020,11 @@ Brother Horbert will work his magic with that.
 Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 
+@nud
+#nudge for towards
+>towarsd
+You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
+
 >in
 
 @spoi
@@ -1160,7 +1190,7 @@ You can't see an un-road yet, or anything that might lead to it.
 Your score has just gone up by one point
 
 @spoi
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+You angle your spoon a bit, and you realize you, or something, should be AROUND.
 
 @nud
 #done rejects for un road
@@ -1257,10 +1287,10 @@ You'll have to deal with the whole data-dim mists.
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
 @nud
-#spechelp for admits mist ad
+#spechelp for data dim mists
 >amidts
-Hmm, you almost see a way past the admits mist ad.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the admits mist ad. That's a decent omen.
+Hmm, you almost see a way past the data-dim mists.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
 #scannotes for admits mist ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
@@ -1325,7 +1355,7 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
 #scannotes for thickness sketchins
 >scan thickness sketchins
-Those three sentences are certainly tangled, but ... well, they are a lot of data. Perhaps the question marks are not tough to decipher at all.
+Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
 
 @sli
 #slider test for athwart
@@ -1405,8 +1435,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ebentwe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider retest for through
+>through
+!by one point
 >hthugor
 Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.
+>undo
+>undo
 
 >between
 }}SCORE++

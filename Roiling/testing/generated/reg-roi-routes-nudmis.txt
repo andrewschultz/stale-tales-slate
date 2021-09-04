@@ -170,9 +170,6 @@ Hm! The worst ad seems like it should be simple, but maybe you need to READ the 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
-#nudge for towards
->towarsd
-You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 #spechelp for scripture picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
@@ -198,7 +195,7 @@ You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobo
 !by one point
 #preefcheck side art
 >pf
-Find a reason to sit ASTRIDE the anti-sag sit-a-nag.
+You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 #pre-sitanag-against rule
 >against
 !by one point
@@ -206,7 +203,7 @@ You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant w
 You add the information to your pedanto-notepad under FLIPS.
 #preefcheck sit a nag
 >pf
-Find a way to be fearless so you can lean AGAINST the anti-sag sit-a-nag.
+You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
 
 >inside
 Your score has just gone up by one point
@@ -429,12 +426,12 @@ Your score has just gone up by one point
 
 #mistake retest for tap pat/tap
 >tap
-You have Pat's attention, already, and you don't really need it now that you got the mushrooms.
+You have Pat's attention, already, and you don't really need it now that you got the stupor sprout.
 #done rejects for stupor sprout
 >despiet
-That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 >despite
-That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 #mistake retest for apt
 >apt
 Actually, Pat's advice may not be apt.
@@ -446,12 +443,10 @@ Alas, the stupor sprout has nothing in common with madeleine.
 
 #renudge for carvings
 >cravinsg
-It's not the carvings that need changing.
-You got the mushrooms from the seed pit, and that's what's important
+It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 #renudge for carving
 >cravign
-It's not the carvings that need changing.
-You got the mushrooms from the seed pit, and that's what's important
+It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 
 #renudge for stupor
 >surpot
@@ -464,7 +459,7 @@ Brother Horbert will do his magic on the reagents at the right time.
 Brother Horbert will do his magic on the reagents at the right time.
 #renudge for pta
 >tpa
-You don't need to do anything with Pat, especially now you got the mushrooms.
+You don't need to do anything with Pat, especially now you got the stupor sprout.
 
 >out
 
@@ -625,9 +620,6 @@ It's the whole side art you need to deal with.
 >tar
 It's the whole side art you need to deal with.
 
->against
-!Your score has just gone up by one point
-
 #mistake retest for under
 >under
 You can't hide from Ian Gast like that, right now.
@@ -765,6 +757,10 @@ Brother Horbert will work his magic with that.
 >towards
 Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
+
+#nudge for towards
+>towarsd
+You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 
 >in
 
@@ -952,10 +948,10 @@ You'll have to deal with the whole data-dim mists.
 >read mist ad
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 
-#spechelp for admits mist ad
+#spechelp for data dim mists
 >amidts
-Hmm, you almost see a way past the admits mist ad.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the admits mist ad. That's a decent omen.
+Hmm, you almost see a way past the data-dim mists.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
 #scannotes for admits mist ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
@@ -1009,7 +1005,7 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
 #scannotes for thickness sketchins
 >scan thickness sketchins
-Those three sentences are certainly tangled, but ... well, they are a lot of data. Perhaps the question marks are not tough to decipher at all.
+Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
 
 >athwart
 Your score has just gone up by one point

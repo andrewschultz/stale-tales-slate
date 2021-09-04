@@ -36,28 +36,34 @@ Precise recipes
 
 >out
 
+>against
+by one point
+#pre-mesa-dir-flip rule
 >past
-Your score has just gone up by one point
-
-Idle Deli
-
->despite
-Your score has just gone up by one point
-
->out
-
+!by one point
+!Idle Deli
+#pre-mesa-dir-flip rule retry
 >across
-Your score has just gone up by one point
-
-Adobe Abode
-
-#not a mistake ("opposite" by List o Toils is)
->opposite
-Your score has just gone up by one point
-
->out
+!by one point
+!Adobe Abode
+#pre-mesa-dir-flip rule retry
+>towards
+!by one point
+>pf
+#preefcheck worst ad
+You can go TOWARDS the worst ad once things are a bit more settled.
+#preefcheck lairage regalia
+You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
+#preefcheck adsorbing signboard
+You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
+>undo
+>undo
+>undo
+>undo
+>undo
 
 # here we test the case of making sure we DON'T try to write directions to the pad if they've already been done.
+# we assume that we have NOT already gone past and across.
 >past
 by one point
 >out
@@ -84,33 +90,46 @@ DEBUG: not writing scripture picturers to pad because it was already reflexed.
 >undo
 >undo
 
+# here we test that directions are sent to the pad
+## balance undos
+>against
+by one point
+>past
+You add the information to your pedanto-notepad under FLIPS.
+!by one point
+>across
+You add the information to your pedanto-notepad under FLIPS.
+!by one point
+>undo
+>undo
+>undo
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>out
+
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+>out
+
 >against
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
-
-#pre-mesa-dir-flip rule
->past
-!by one point
-!Idle Deli
-#pre-mesa-dir-flip rule retry
->across
-!by one point
-!Adobe Abode
-#pre-mesa-dir-flip rule retry
->towards
-!by one point
->pf
-#preefcheck worst ad
-You can go TOWARDS the worst ad once things are a bit more settled.
-#preefcheck lairage regalia
-You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
-#preefcheck adsorbing signboard
-You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
-
->against
-!Your score has just gone up by one point
 
 >astride
 Your score has just gone up by one point

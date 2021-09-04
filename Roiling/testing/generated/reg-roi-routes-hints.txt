@@ -18,6 +18,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >monty hints
 You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
 
+>z
 DEBUG INFO: scripture picturers hinting.
 
 >score
@@ -86,9 +87,6 @@ You angle your spoon a bit, and you realize you, or something, should be ASTRIDE
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
->against
-!Your score has just gone up by one point
-
 >astride
 Your score has just gone up by one point
 
@@ -149,7 +147,7 @@ Score in a scenario: 13 out of 22 total points in the current region, Routes. Lo
 >until
 Your score has just gone up by one point
 
-You angle your spoon a bit, and you realize you, or something, should be UNTIL.
+You angle your spoon a bit, and you realize you, or something, should be AROUND.
 
 >around
 Your score has just gone up by one point

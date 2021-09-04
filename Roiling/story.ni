@@ -3804,11 +3804,11 @@ to say reject:
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
 		if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
-			if the-from entry is reflexed and the-from entry is touchable and the-from entry is final-flipped:
-				say "[good-enuf of the-from entry][line break]";
-				continue the action;
 			if the-to entry is not the-from entry and the-to entry is touchable and the-to entry is final-flipped:
 				say "[good-enuf of the-to entry][line break]";
+				continue the action;
+			if the-from entry is reflexed and the-from entry is touchable and the-from entry is final-flipped:
+				say "[good-enuf of the-from entry][line break]";
 				continue the action;
 			if the-from entry is fungible:
 				if Report Porter Perrot is off-stage and player is in Dusty Study and stuff-found is 3:
@@ -5214,7 +5214,7 @@ the hintstub rules are an object-based rulebook.
 a hintstub rule for a thing (called th) (this is the point-to-mesa rule):
 	if th is in Same Mesa:
 		if player is in Same Mesa, try objhinting th instead;
-		all-say "[if spoilit is true]The spoon points[else]You should go[end if] back outside.";
+		all-say "[if spoilit is true]The spoon reflects[else]You should go[end if] back outside.";
 		now spoilit is false instead;
 
 this is the routes-hinting rule:
@@ -11486,7 +11486,7 @@ chapter two ways out
 
 section data dim mists
 
-the data dim mists are boring scenery in Ripe Pier. "There's not much to see in the data-dim mists, though you can probably munge the letters you need to get through them, so they're only dim, not totally dark.". printed name of data dim mists is "data-dim mists".
+the data dim mists are boring vanishing scenery in Ripe Pier. "There's not much to see in the data-dim mists, though you can probably munge the letters you need to get through them, so they're only dim, not totally dark.". printed name of data dim mists is "data-dim mists".
 
 bore-check of data dim mists is bore-mists rule.
 

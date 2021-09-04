@@ -57,9 +57,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
->against
-!Your score has just gone up by one point
-
 >astride
 Your score has just gone up by one point
 

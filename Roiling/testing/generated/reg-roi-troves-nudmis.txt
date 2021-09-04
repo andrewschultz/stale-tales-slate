@@ -498,7 +498,7 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
 #renudge for amrest
 >amrest
@@ -524,7 +524,7 @@ Your score has just gone up by one point
 Browse Bowers
 
 >score
-Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
 #mistake test for bowser
 >bowser
@@ -573,7 +573,7 @@ Your score has just gone up by one point
 Econ-Cone
 
 >score
-Score in a scenario: 17 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 17 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
 #mistake test for once
 >once
@@ -616,6 +616,8 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 
 >aspire
 Your score has just gone up by one point
+>score
+Score in a scenario: 18 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
 #mistake test for penrod
 >penrod
@@ -644,6 +646,8 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 
 >strive
 Your score has just gone up by one point
+>score
+Score in a scenario: 19 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #mistake retest for once
 >once
@@ -691,7 +695,7 @@ Your score has just gone up by one point
 Upscale Capsule
 
 >score
-Score in a scenario: 20 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
+Score in a scenario: 20 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #mistake test for fren
 >fren
@@ -715,7 +719,7 @@ Etched into the vees are the names of this motivational device's inventors. One 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
+Score in a scenario: 21 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #mistake test for lsat
 >lsat
@@ -777,7 +781,7 @@ Hmm. Well, four letters can't be bad. The vowel must be in one of those two plac
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
+Score in a scenario: 22 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #nudge for salt
 >lats
@@ -839,12 +843,13 @@ All the siters.
 
 >ramble
 Your score has just gone up by one point
+>score
+Score in a scenario: 23 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 >resist
 Your score has just gone up by one point
-
 >score
-Score in a scenario: 24 out of 26 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 26.
+Score in a scenario: 24 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 #nudge for marble
 >marbel

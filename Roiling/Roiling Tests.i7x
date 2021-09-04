@@ -774,7 +774,7 @@ chapter scaming
 
 [* SCAM enables scams for areas with hints that should only work once. Spoon Crust Pills Cinders (?) Xray (?) ]
 
-scaming is an action applying to nothing.
+scaming is an action out of world.
 
 understand the command "scam" as something new.
 understand the command "scams" as something new.

@@ -196,6 +196,9 @@ DEBUG INFO: sob ever verbose hinting.
 
 Bustle Sublet
 
+@spoi
+In particular, you feel the need to OBSERVE right now.
+
 >score
 {$SCOS}
 
@@ -274,15 +277,12 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.
 #preefcheck stop post
 >pf
-You can't focus enough to SPOT, yet.
+You should SPOT once you're able to focus better.
 
 @sli
 #slider test for observe
 >esbover
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@spoi
-In particular, you feel the need to OBSERVE right now.
 
 >observe
 Your score has just gone up by one point
@@ -318,10 +318,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >spot
 Your score has just gone up by one point
 }}SCORE++
-
-@mina,minb
-#lose a point for not ignoring A Tasty Sty, Say
-}}CURMAX--
 
 @spoi
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
@@ -513,6 +509,10 @@ by one point
 @hin
 DEBUG INFO: box of diapers hinting.
 
+@mina,minb
+#lose a point for not ignoring A Tasty Sty, Say
+}}CURMAX--
+
 Drain Nadir
 
 @spoi
@@ -620,6 +620,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >decide
 Your score has just gone up by one point
+
+@mina,minb
+}}CURMAX--
 
 @hin
 /DEBUG INFO: (BORTLES Lobster|ME ARTS) hinting.
@@ -740,7 +743,7 @@ That seems right! But you don't have the courage yet! Perhaps you need to start 
 !by one point
 #preefcheck LEAD
 >pf
-You aren't quite able to DEAL, yet.
+You can DEAL once you've gotten an emotional boost.
 
 @spoi
 >bolster
@@ -785,7 +788,6 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 @!mina,minb
-}}CURMIN++
 }}CURMIN++
 
 >score
@@ -947,6 +949,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >aspire
 Your score has just gone up by one point
 }}SCORE++
+>score
+{$SCOS}
 
 @nud
 #mistake test for penrod
@@ -974,16 +978,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
 
+@!mina,minb
+}}CURMIN++
+
 @!mina
 >strive
 Your score has just gone up by one point
 }}SCORE++
+>score
+{$SCOS}
 
 @spoi
 In particular, you feel the need to PONDER right now.
-
-@!mina,minb
-}}CURMIN++
 
 @hin
 DEBUG INFO: END PRONER POD hinting.
@@ -1250,7 +1256,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With
 #preefcheck trance nectar
 >pf
-You weren't able to RECANT with both the Sister Tressi Siters and Marble Blamer Balmer watching you.
+You can RECANT once you feel less watched.
 #here we test RAMBLE on the alternate blamer
 >misses
 --you could've tried to RAMBLE to ignore Marble Blamer Balmer.
@@ -1280,20 +1286,21 @@ In particular, you feel the need to RECANT right now.
 >ramble
 Your score has just gone up by one point
 }}SCORE++
+>score
+{$SCOS}
+
+@!mina,minb
+}}CURMIN++
 
 @!mina
 >resist
 Your score has just gone up by one point
 }}SCORE++
-
-@!mina,minb
-}}CURMIN++
+>score
+{$SCOS}
 
 @hin
 DEBUG INFO: Trance Nectar hinting.
-
->score
-{$SCOS}
 
 @nud
 #nudge for marble
