@@ -2,4 +2,6 @@
 **/*.txt.bak
 **/*.bak
 # I don't want to save generated test files, because they can be....re-generated.
-**/reg-*-generated-*.txt
+**/*generated*.txt
+# temporary: don't update PDF
+**/*.pdf
