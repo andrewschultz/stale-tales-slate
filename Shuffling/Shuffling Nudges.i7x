@@ -754,7 +754,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 book auxiliary text and rules
 
-section ordeal loader auxiliary
+chapter ordeal loader auxiliary
 
 to say reg-rej: say "You don't want to change a region drastically while you're in it"
 
@@ -784,7 +784,7 @@ to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 
 to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
 
-section stores auxiliary
+chapter stores auxiliary
 
 to say tid: say "The depiction is there as a hint, not as a puzzle";
 
@@ -804,7 +804,7 @@ to say no-store-m: say "No, it's a map of something behind Store M, it looks lik
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
-section forest auxiliary
+chapter forest auxiliary
 
 this is the first-two-forest rule:
 	if player is in sf or player is in rf, the rule succeeds;
@@ -851,11 +851,9 @@ to say bothlivers: say "The one liver seems inactive by itself"
 
 to say rivliv: say "It's just a liver. No need to parse the brand name"
 
-section rest of forest auxiliary
+section self id fields auxiliary
 
 to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
-
-section self id fields auxiliary
 
 to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
 
@@ -899,7 +897,7 @@ section frost forst auxiliary
 
 to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
 
-section sortie auxiliary
+chapter sortie auxiliary
 
 this is the kitch-visit rule:
 	if player is in kitchen:
@@ -941,11 +939,9 @@ this is the af-cent rule:
 	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
 	the rule fails;
 
-section the nick auxiliary
+section kitchen auxiliary
 
 to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
-
-section kitchen auxiliary
 
 to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
@@ -977,7 +973,7 @@ section sacred cedars auxiliary
 
 to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
-section metros auxiliary
+chapter metros auxiliary
 
 to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
 
@@ -1026,15 +1022,13 @@ section the ol hotel auxiliary
 
 to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
 
-section bile libe auxiliary
+section fo real florae auxiliary
 
 to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
 
-section fo real florae auxiliary
+section esoteric coteries auxiliary
 
 to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
-
-section esoteric coteries auxiliary
 
 to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
 
@@ -1060,15 +1054,17 @@ this is the resin-lala rule:
 	if resin is moot, the rule succeeds;
 	the rule fails.
 
-section resort auxiliary
-
-to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
+chapter resort auxiliary
 
 section astral altars auxiliary
 
-to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
 
 section leis isle auxiliary
+
+to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+
+section potshot hotspot auxiliary
 
 to say no-hotspot:
 	if red bull burdell is moot:
@@ -1076,13 +1072,9 @@ to say no-hotspot:
 	else:
 		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
 
-section rived drive auxiliary
-
 this is the bull-moot rule:
 	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
 	the rule fails;
-
-section potshot hotspot auxiliary
 
 to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
 
@@ -1102,7 +1094,7 @@ section means manse auxiliary
 
 to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
-section general auxiliary
+chapter general auxiliary
 
 to say no-2: say "You can't really second-guess the help on the prep paper";
 
