@@ -1,0 +1,544 @@
+
+## reg-sa-sortie-detail.txt
+## GENERATOR FILE: rbr-sa-sortie.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* sortie-thru
+
+>opt in
+>ts
+>xc
+
+>sortie
+by one point
+
+>poss
+
+>in
+
+Trap Part
+
+#gadget test: exitsne to sixteen
+>rc dial
+You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, green flashing between 5 and 7, red flashing between 1 and 6. Hm, exits plus two letters. What number could that be, or become.
+You scan the dial, then the exits. They're swirling around too fast, but they are at right angles to each other. The gadget is throwing out seven lights, all red except for the middle that flashes green. Hm, exits plus two letters. What number could that be, or become.
+
+>sixteen
+#notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
+by one point
+
+>score
+You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>n
+The Nick
+
+#gadget test: thenick to kitchen
+>rc the nick
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRRRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: K-----N.
+DEBUG INFO: CERT-TEXT: -------.
+
+>kitchen
+by one point
+
+Kitchen
+
+#gadget test: warts to straw
+>rc warts
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
+The gadget beeps once. A series of lights comes across: RRGRR.
+DEBUG INFO: RECT-TEXT: S---W.
+DEBUG INFO: CERT-TEXT: --R--.
+
+>open fridge
+You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+>open fridge
+You reopen and peer on. You see a grist and a cake pan inside.
+
+>xx
+Nothing really sticks out. You may have to XX something specific.
+>xx grist
+Your vision blurs a bit, and instead you see grits.
+>xx cake pan
+Your vision blurs a bit, and instead you see a pancake.
+>xx cathouse
+Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
+>xx tall trio
+Your vision blurs a bit, and instead you see a tortilla.
+>xx cult tee
+Your vision blurs a bit, and instead you see a head of lettuce.
+>xx skate
+Your vision blurs a bit, and instead you see cut-up steak.
+>xx spearman
+Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
+
+#gadget test: tall trio to tortilla
+>rc tall trio
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB.
+The gadget beeps once. A series of lights comes across: GRRRRRRR.
+DEBUG INFO: RECT-TEXT: T------A.
+DEBUG INFO: CERT-TEXT: T-------.
+
+#gadget test: cult tee to lettuce
+>rc cult tee
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBRB.
+The gadget beeps once. A series of lights comes across: RRRGRRG.
+DEBUG INFO: RECT-TEXT: L-----E.
+DEBUG INFO: CERT-TEXT: ---T--E.
+
+#gadget test: skate to steak
+>rc skate
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
+The gadget beeps once. A series of lights comes across: GRRRR.
+DEBUG INFO: RECT-TEXT: S---K.
+DEBUG INFO: CERT-TEXT: S----.
+
+#gadget test: cathouse to hotsauce
+>rc cathouse
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR.
+The gadget beeps once. A series of lights comes across: RRGRRGRG.
+DEBUG INFO: RECT-TEXT: H------E.
+DEBUG INFO: CERT-TEXT: --T--U-E.
+
+#gadget test: spearman to parmesan
+>rc spearman
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR.
+The gadget beeps once. A series of lights comes across: RRRRRRGG.
+DEBUG INFO: RECT-TEXT: P------N.
+DEBUG INFO: CERT-TEXT: ------AN.
+
+#gadget test: cakepan to pancake
+>rc cakepan
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB.
+The gadget beeps once. A series of lights comes across: RGRRRRR.
+DEBUG INFO: RECT-TEXT: P-----E.
+DEBUG INFO: CERT-TEXT: -A-----.
+
+#gadget test: grist to grits
+>rc grist
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
+The gadget beeps once. A series of lights comes across: GGGRR.
+DEBUG INFO: RECT-TEXT: G---S.
+DEBUG INFO: CERT-TEXT: GRI--.
+
+>score
+You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>x fridge
+While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see grist and cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
+
+>grits
+Your score has just gone up by one point.
+>score
+You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
+
+>pancake
+Your score has just gone up by one point.
+>score
+You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>tortilla
+Your score has just gone up by one point.
+
+>score
+You currently have 5 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>hotsauce
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>parmesan
+Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>steak
+Your score has just gone up by one point.
+
+>score
+You currently have 8 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>lettuce
+Your score has just gone up by one point.
+
+>score
+You currently have 9 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put lettuce on tortilla
+>put steak on tortilla
+>put parmesan on tortilla
+>put hot sauce on tortilla
+>undo
+
+>put hotsauce on tortilla
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: taco to coat
+>rc taco
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: C--T.
+DEBUG INFO: CERT-TEXT: ----.
+
+>coat
+Your score has just gone up by one point.
+
+>score
+You currently have 11 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+
+>s
+Room
+
+#gadget test: cask to sack
+>rc cask
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: S--K.
+DEBUG INFO: CERT-TEXT: -A-K.
+
+>sack
+Your score has just gone up by one point.
+
+#gadget test: sack to cask
+>rc sack
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: C--K.
+DEBUG INFO: CERT-TEXT: -A-K.
+
+>score
+You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>straw
+Your score has just gone up by one point.
+
+>score
+You currently have 13 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put straw in sack
+
+#gadget test: hoses to shoes
+>rc hoses
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
+The gadget beeps once. A series of lights comes across: RRRGG.
+DEBUG INFO: RECT-TEXT: S---S.
+DEBUG INFO: CERT-TEXT: ---ES.
+
+>shoes
+Your score has just gone up by one point.
+
+>score
+You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: room to moor
+>rc
+Your gadget's not near anything, but it's registering RGGR.
+Your gadget's not near anything, but it's registering RBBG.
+
+>moor
+Your score has just gone up by one point.
+
+#gadget test: anapest to peasant
+>rc anapest
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
+The gadget beeps once. A series of lights comes across: RRGRRRG.
+DEBUG INFO: RECT-TEXT: P-----T.
+DEBUG INFO: CERT-TEXT: --A---T.
+
+>score
+You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>mroo
+The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
+
+>ask woeful pat about beat
+He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem. Or maybe its meter.
+
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this. Here you go, just to make sure."
+
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this."
+
+>ask woeful pat about peasant
+"There is one who tries his best. But he is too...obvious."
+
+>ask woeful pat about anapest
+"I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>peasant
+Your score has just gone up by one point.
+
+#gadget test: moor to room
+>rc
+Your gadget's not near anything, but it's registering RGGR.
+Your gadget's not near anything, but it's registering RBBG.
+
+>ask peasant about mean old
+"Used to be much nicer, I'd say!"
+
+>ask peasant about poem
+"I try my best at it."
+
+>ask peasant about peasant
+"I don't know much about that, that's sure. But I know from hay, being an abler baler."
+
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
+>ask peasant about hay
+"Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand..."
+
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
+>ask peasant about Woeful Pat
+"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
+
+>score
+You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>give straw to peasant
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 17 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>room
+"The room's smoother," you muse...
+
+>n
+Stiller Trellis
+
+>w
+
+>e
+
+>put hay in wall
+#notana
+Your score has just gone up by one point.
+
+#gadget test: haywall to hallway
+>rc haywall
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB.
+The gadget beeps once. A series of lights comes across: GGRRRRR.
+DEBUG INFO: RECT-TEXT: H-----Y.
+DEBUG INFO: CERT-TEXT: HA-----.
+
+>score
+You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>hallway
+Your score has just gone up by one point.
+
+>score
+You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+Sacred Cedars
+
+>cask
+The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
+
+>pour oils
+Gainly laying the cask under the spout, you pour in some oils.
+!A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
+
+>w
+
+>s
+
+>moor
+
+#gadget test: smilies to missile
+>rc smilies
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB.
+The gadget beeps once. A series of lights comes across: RRRRGRR.
+DEBUG INFO: RECT-TEXT: M-----E.
+DEBUG INFO: CERT-TEXT: ----I--.
+
+>missile
+Your score has just gone up by one point.
+
+>score
+You currently have 20 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>fold paper
+(the poem)
+You fold the paper, and it looks sort of like a paper plane.
+
+#gadget test: plane to panel
+>rc plane
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
+The gadget beeps once. A series of lights comes across: GRRRR.
+DEBUG INFO: RECT-TEXT: P---L.
+DEBUG INFO: CERT-TEXT: P----.
+
+>panel
+Your score has just gone up by one point.
+
+>score
+You currently have 21 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: oils to soil
+>rc oils
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: S--L.
+DEBUG INFO: CERT-TEXT: ----.
+
+>soil
+Your score has just gone up by one point.
+
+>score
+You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: roadblock to blackdoor
+>rc roadblock
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB.
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR.
+DEBUG INFO: RECT-TEXT: B-------R.
+DEBUG INFO: CERT-TEXT: --A---O--.
+
+>black door
+Your score has just gone up by one point.
+
+>score
+You currently have 23 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>room
+
+>n
+>e
+
+>pour oils
+Gainly laying the cask under the spout, you pour in some oils.
+A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
+
+>w
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+
+Crashing Archings
+
+>s
+
+>moor
+
+#gadget test: oils to silo
+>rc oils
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
+The gadget beeps once. A series of lights comes across: RGGR.
+DEBUG INFO: RECT-TEXT: S--O.
+DEBUG INFO: CERT-TEXT: -IL-.
+
+>silo
+Your score has just gone up by one point.
+
+>score
+You currently have 24 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put panel in silo
+The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.
+
+>put door in silo
+The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
+
+>put missile in silo
+You schlep the missile through the door. You hear some mechanics and whizzing. A luster-result rustle, if you will. Then "SMILIES MISSILE DEALING-ALIGNED!"
+
+#gadget test: trees to steer
+>rc trees
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
+The gadget beeps once. A series of lights comes across: RRGGR.
+DEBUG INFO: RECT-TEXT: S---R.
+DEBUG INFO: CERT-TEXT: --EE-.
+
+>steer
+Your score has just gone up by one point.
+
+>score
+You currently have 25 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: hoots to shoot
+>rc hoots
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
+The gadget beeps once. A series of lights comes across: RRGRR.
+DEBUG INFO: RECT-TEXT: S---T.
+DEBUG INFO: CERT-TEXT: --O--.
+
+>shoot
+Your score has just gone up by one point.
+
+>score
+You currently have 26 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>purloin missile
+>push steer
+!AMUSING
+>undo
+>undo
+
+>push steer
+"AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
+
+>push shoot
+#notana
+Your score has just gone up by one point.
+
+>score

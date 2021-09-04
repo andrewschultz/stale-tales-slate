@@ -17,7 +17,7 @@
 #spechelp for store r
 >resotr
 Store R remains impassive. "Or rest?" you muse. You're sort of ready for vacation, and sort of not.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Store R. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store R. Keep at it.
 
 >resort
 #notmax
@@ -59,7 +59,7 @@ The feral flare crackles menacingly. You doubt you can change it for the better.
 #spechelp for tiles
 >islte
 The tiles rattle as if to shift but settle down.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tiles. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
 #readables for tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
@@ -101,7 +101,7 @@ The sand and sands and sands are just--well, sand. They won't help you get off t
 #spechelp for l2
 >lesi
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the leis. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
 
 #nudge for lie
 >eil
@@ -126,7 +126,7 @@ You notice writing on the rock and swing similar to what you just said. Or tried
 #spechelp for rock
 >crko
 Hmm, a rock, but only so much you can do with it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the rock. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
 
 >lies
 by one point
@@ -164,7 +164,7 @@ You have a way off this island to the east, though you can make the other for fu
 #spechelp for swing
 >winsg
 The swing goes slightly airborne.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the swing. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
 
 >wings
 Your score has just gone up by one point.
@@ -241,7 +241,7 @@ Only changing one pole would still leave a vertical barrier.
 #spechelp for poles
 >polse
 The poles start to bend at an angle--or maybe that's the light.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the poles. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
 
 #mistake test for prose
 >prose
@@ -272,7 +272,7 @@ You wonder if YOU are the poser, for not being able to figure what to do.
 #spechelp for tool shed
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
 #readables for u lock
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
@@ -290,7 +290,7 @@ The toeholds could be handy for getting up and out of here.
 #spechelp for spore
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the spore. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
 
 >ropes
 Your score has just gone up by one point.
@@ -321,7 +321,7 @@ Those are already useful.
 #spechelp for sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the sprig. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
 
 #mistake test for prigs
 >prigs
@@ -379,7 +379,7 @@ No, the clay is a clue to what the protest really wants to do.
 #spechelp for riot
 >troi
 The riot's still a crowd. A BIG crowd.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the riot. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
 
 #mistake test for i rot
 >i rot
@@ -405,11 +405,11 @@ They're just a simple protest.
 
 #mistake test for ether
 >ether
-They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
+They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
 >kilns
 by one point
 >ether
-They're not bad people. But even bad people don't deserve to vanish like that! Give them something constructive to do.
+They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose or become able to use those kilns.
 >undo
 >undo
 
@@ -419,7 +419,7 @@ The trio remains unmoved. Perhaps you can give the protest more constructive aim
 #spechelp for protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the trio. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
 
 #mistake test for roister
 >roister
@@ -443,7 +443,7 @@ You currently have 11 out of 15 total points for the Resort region. Your minimum
 >pottre
 Picking one person out of a crowd never works.
 
-#spechelp for potters
+#done rejects for potters
 >pottesr
 You've changed the potters enough. Now you need to give them something interesting to do besides protest.
 
@@ -458,7 +458,7 @@ You're overthinking it. Or you hope you are. It's both a chain, and links.
 #spechelp for chain links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the chain links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
 
 #mistake test for achin
 >achin
@@ -482,11 +482,11 @@ Too many people are watching for you to slink away.
 #respechelp for chain links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the links. Keep at it.
 #respechelp for chain links
 >kilsn
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, and maybe the links have artsy potential beyond the china you made.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the links. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the links. Keep at it.
 
 >kilns
 Your score has just gone up by one point.

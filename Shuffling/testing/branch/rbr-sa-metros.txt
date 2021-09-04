@@ -229,7 +229,7 @@ DEBUG INFO: CERT-TEXT: --------.
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
 #preefcheck beast
 >pf
-Stuff you figured, but you couldn't use it right away: 
+Stuff you figured, but you couldn't use it right away:
 beats -> beast
 
 >gardenia

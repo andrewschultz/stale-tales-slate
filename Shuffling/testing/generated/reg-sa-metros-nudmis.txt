@@ -15,7 +15,7 @@
 #spechelp for store m
 >metrso
 Store M shudders slightly. You wonder what sort of rapid transit is behind it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Store M. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store M. Keep at it.
 
 >metros
 Your score has just gone up by one point
@@ -118,7 +118,7 @@ You can't change the hotel,
 #spechelp for drainage
 >gardenai
 The drainage bubbles a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the drainage. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
 
 >w
 >e
@@ -175,7 +175,7 @@ Roarings Garrison
 
 #mistake test for isonome
 >isonome
-The noisome moonies pretend to be all about nature, but as for actually understanding science? Pfft.
+The noisome Moonies pretend to be all about nature, but as for actually understanding science? Pfft.
 
 #mistake test for stent
 >stent
@@ -202,7 +202,7 @@ You should probably just go north to look at the condo instead.
 >conod
 You should probably just go north to look at the condo instead.
 
-#mostlyskipping the camp right now to get the tomato from the alley
+#mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
 Bile Libe
@@ -230,7 +230,7 @@ The author twisted words enough. Perhaps you could concentrate on the motto.
 #spechelp for motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the motto. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the motto. Keep at it.
 
 >tomato
 Your score has just gone up by one point.
@@ -379,10 +379,7 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 #spechelp for lost corn
 >controsl
 You thought you heard electronic beeping from the corn.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
-
->controls
-The dead beat deadbeat might not beat you dead
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 
 >n
 Obtains/Boastin' Bastion
@@ -419,7 +416,7 @@ One antler seems to twitch a bit and pull towards you. Curious--it doesn't look 
 #spechelp for antlers
 >rentlas
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
-DEBUG ONLY: You feel a slight psychic push-pull coming from the antlers. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the antlers. Keep at it.
 
 >rentals
 Your score has just gone up by one point.
@@ -493,8 +490,8 @@ You've already changed the lost corn into the controls, and you don't need to do
 
 #spechelp for dry cake
 >keycadr
-You feel like can almost identify what the cake can become.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
+You feel like you can almost identify what the cake can become.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 
 >keycard
 
@@ -516,7 +513,7 @@ The fuzziness seems to be part of the clover. It might be, even if you're able t
 #spechelp for clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
 
 >velcro
 
@@ -608,10 +605,11 @@ The torn cue is just there to direct you to the brocade.
 
 >give gardenia to faeries
 
+#balance undos
 #spechelp for begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the begonias. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the begonias. Keep at it.
 >noise bag
 by one point
 #altpath
@@ -622,8 +620,6 @@ The noise bag rumbles ominously. Best not change it into something worse.
 >undo
 >undo
 
->take begonias
-
 >take heaths
 
 #renudge for heath
@@ -633,7 +629,7 @@ They are multiple heaths--so you should try to change just one.
 #spechelp for heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
-DEBUG ONLY: You feel a slight psychic push-pull coming from the heaths. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
 
 >sheath
 Your score has just gone up by one point.
@@ -642,12 +638,11 @@ Your score has just gone up by one point.
 >sheaht
 The sheath remains still.
 
->sheath
-
 >score
 You currently have 9 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take brocade
+"It is the least we can do for you! Thank you for helping us!"
 
 >w
 
@@ -660,7 +655,7 @@ You'd need to do something to all the words.
 #spechelp for words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the words. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
 
 >sword
 
@@ -676,7 +671,7 @@ Meddling with the sword right now, you're worried it might poke you.
 #spechelp for brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the brocade. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
 
 >barcode
 
@@ -687,17 +682,20 @@ You currently have 11 out of 18 total points for the Metros region. You have fou
 >barcoed
 The barcode does not shift.
 
->put barcode on keycard
-
 #nudge for ganst
 >ganst
 You don't get rid of angst with just a word.
+#nudge for gnat
+>gnat
+There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter.
 
 >s
 
 #nudge for beats
 >ebtas
 The beats shift up for a second.
+
+>put barcode on keycard
 
 >put card on sensor
 What do you know? It works! The door slides open!
@@ -954,7 +952,7 @@ Apparently the neon pig is a creation of one INPENGO.
 #spechelp for neon pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 
 >opening
 
@@ -1043,7 +1041,7 @@ This racket isn't just one beat.
 #spechelp for siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the siren. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
 
 >resin
 
@@ -1064,7 +1062,7 @@ The dust is dust now.
 #spechelp for beats
 >betsa
 The beats shift up for a second.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the beats. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the beats. Keep at it.
 
 >beast
 

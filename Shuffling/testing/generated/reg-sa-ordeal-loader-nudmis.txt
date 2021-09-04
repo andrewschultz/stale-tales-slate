@@ -9,6 +9,7 @@
 * ordeal_thru
 
 >opt in
+>poss
 
 #nudge for ordeal
 >ordela
@@ -129,7 +130,7 @@ You try to think of it that way, but--nope, it's an odor. Not a very complex one
 #spechelp for odor
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the odor. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
 
 #mistake test for or do door
 >rood
@@ -137,6 +138,9 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 
 >door
 by one point
+
+>score
+You currently have 1 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
 
 #mistake retest for or do door
 >rood
@@ -157,7 +161,7 @@ It's a pretty complex chord.
 #spechelp for bulge
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bulge. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
 
 >bugle
 Your score has just gone up by one point.
@@ -172,10 +176,13 @@ No, the bugle is a bugle, not just a horn. It's been changed enough.
 #spechelp for bolt
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bolt. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
 
 >blot
 by one point
+
+>score
+You currently have 3 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 7
 
 >open door
 Thickest Thickets
@@ -204,7 +211,6 @@ There will be better hints than a manners advice column once you move on, though
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
 >slander
-#notana
 by one point
 
 #mistake retest for landers
@@ -229,7 +235,7 @@ The shrub and brush waver, then point towards the toga.
 #spechelp for toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the toga. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
 #readables for toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
@@ -243,6 +249,9 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 
 >goat
 Your score has just gone up by one point.
+
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
 
 #done rejects for goat
 >gota
@@ -284,15 +293,21 @@ You won't need to do anything to the whole room unless you are trapped in a room
 #spechelp for static
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the static. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
+
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
 
 >attics
 Your score has just gone up by one point.
 
+>score
+You currently have 6 out of 7 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
 #spechelp for attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the attics. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
 
 #nudge for doll
 >dlol
@@ -325,7 +340,7 @@ You will have to change the new land one item at a time.
 #spechelp for nametag
 >gatemna
 The nametag peels infinitesimally.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 
 #mistake test for get a man
 >get a man
@@ -333,6 +348,9 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 
 >gateman
 Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
 #mistake retest for get a man
 >get a man
@@ -364,8 +382,14 @@ You feel nothing from either attic. Perhaps you need to consider both the attics
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
->ask gateman about cabinet
 >take gadget
+As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
+
+>ask gateman about cabinet
 
 #mistake test for remove [something] from [something]
 >remove phial from cabinet
@@ -382,7 +406,7 @@ The cabinet deserves a better fate than THAT.
 #spechelp for acne bit cabinet
 >cbitean
 The cabinet wobbles a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
 #readables for acne bit cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:

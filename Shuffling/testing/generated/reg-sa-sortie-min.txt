@@ -10,6 +10,7 @@
 
 >opt in
 >ts
+>xc
 
 >sortie
 by one point
@@ -34,6 +35,23 @@ The Nick
 by one point
 
 Kitchen
+
+>xx
+Nothing really sticks out. You may have to XX something specific.
+>xx grist
+Your vision blurs a bit, and instead you see grits.
+>xx cake pan
+Your vision blurs a bit, and instead you see a pancake.
+>xx cathouse
+Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
+>xx tall trio
+Your vision blurs a bit, and instead you see a tortilla.
+>xx cult tee
+Your vision blurs a bit, and instead you see a head of lettuce.
+>xx skate
+Your vision blurs a bit, and instead you see cut-up steak.
+>xx spearman
+Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
@@ -144,6 +162,12 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >peasant
 Your score has just gone up by one point.
 
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
+>ask peasant about Woeful Pat
+"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
+
 >score
 You currently have 14 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
@@ -231,6 +255,8 @@ Gainly laying the cask under the spout, you pour in some oils.
 A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
 
 >w
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+
 Crashing Archings
 
 >s
@@ -249,6 +275,9 @@ The panel fits into that rectangle handily and even starts to glow. Two buttons 
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
 
+>put missile in silo
+You schlep the missile through the door. You hear some mechanics and whizzing. A luster-result rustle, if you will. Then "SMILIES MISSILE DEALING-ALIGNED!"
+
 >steer
 Your score has just gone up by one point.
 
@@ -261,8 +290,19 @@ Your score has just gone up by one point.
 >score
 You currently have 24 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
+>purloin missile
+>push steer
+!AMUSING
+>undo
+>undo
+
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
+
+>misses
+Missed in Sortie:
+--the cake pan in the fridge could've become a PANCAKE.
+--the grist in the fridge could've become GRITS.
 
 >push shoot
 #notana

@@ -29,7 +29,7 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 Roarings Garrison
 
-#mostlyskipping the camp right now to get the tomato from the alley
+#mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
 Bile Libe
@@ -59,9 +59,6 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 
 >n
 Roarings Garrison
-
->controls
-The dead beat deadbeat might not beat you dead
 
 >n
 Obtains/Boastin' Bastion
@@ -105,19 +102,16 @@ Fo' Real Florae
 
 >give gardenia to faeries
 
->take begonias
-
 >take heaths
 
 >sheath
 Your score has just gone up by one point.
 
->sheath
-
 >score
 You currently have 8 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >take brocade
+"It is the least we can do for you! Thank you for helping us!"
 
 >w
 
@@ -135,9 +129,9 @@ You currently have 9 out of 18 total points for the Metros region. Your final po
 >score
 You currently have 10 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
->put barcode on keycard
-
 >s
+
+>put barcode on keycard
 
 >put card on sensor
 What do you know? It works! The door slides open!
@@ -218,6 +212,13 @@ You currently have 15 out of 18 total points for the Metros region. Your final p
 You currently have 16 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >take sword
+
+>misses
+Missed in Metros:
+--the antlers in the Obtains Boastin Bastion could've become RENTALS.
+Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
+--the begonias could've made a noise bag.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

@@ -10,9 +10,14 @@
 
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
+>opt in
 
 >ts
 Trips Strip
+
+#pre-storer-resort rule
+>resort
+That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
 
 >forest
 by one point
@@ -27,5 +32,9 @@ by one point
 hubs bush
 
 >sorbet
+by one point
+
+#pre-cabinet-bactine rule
+>bactine
 by one point
 

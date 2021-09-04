@@ -10,6 +10,7 @@
 
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
+>opt in
 
 >ts
 Trips Strip

@@ -18,7 +18,7 @@
 #spechelp for store f
 >fretso
 That seemed right but didn't seem quite natural.
-DEBUG ONLY: You feel a slight psychic push-pull coming from Store F. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from Store F. Keep at it.
 
 >forest
 #notmax
@@ -273,6 +273,10 @@ You currently have 1 out of 17 total points for the Forest region. Your minimum 
 by one point
 Self-ID Fields
 
+#mistake test for scores
+>scores
+Yes, there are scores and scores in the line of no life.
+
 >score
 You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
@@ -304,7 +308,7 @@ The selves vessel is much too sturdy to manipulate.
 >inle
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for life
->lief
+>ilef
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
 #nudge for lineof
 >linefo
@@ -459,7 +463,7 @@ No, you can't afford to wait that long.
 #spechelp for ones
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the ones. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
 
 #mistake test for enos
 >enos
@@ -489,12 +493,12 @@ You need something more tangible than that. Something that could make a gunshot,
 #spechelp for noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the noughts. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 
 #spechelp for dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dashes. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dashes. Keep at it.
 
 >shades
 Your score has just gone up by one point.
@@ -611,7 +615,7 @@ You are trying to save a magic world, not start a garage band. Besides, there's 
 #spechelp for spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Spam. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the Spam. Keep at it.
 
 >maps
 Your score has just gone up by one point.
@@ -630,7 +634,7 @@ It's kind of cold a lot of places here. Keep your clothes on.
 #spechelp for bread
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the bread. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bread. Keep at it.
 
 >beard
 Your score has just gone up by one point.
@@ -652,7 +656,7 @@ You've made a full disguise now!
 #spechelp for slit
 >ilst
 The slit waxes and wanes a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the slit. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
 
 >silt
 by one point
@@ -687,17 +691,11 @@ You know the scoffer coffers and scoffin' coffins can't be changed, and the more
 
 #nudge for coffer
 >coffre
-You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 #nudge for coffers
 >coffesr
-You know the scoffer coffers can't be changed, and the more you tried, the worse the smirking would get.
+You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
-#mistake test for lucre
->lucre
-If there were any treasure here, it'd probably do something terrible to you once you took it.
-#mistake test for cluer
->cluer
-This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
 #mistake test for padres
 >padres
 Bringing holy men down here would probably kill them.
@@ -714,20 +712,26 @@ You can just read the spread instead. The messages here aren't cryptic enough to
 #spechelp for banshee
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the banshee. Keep at it.
-
->hasbeen
-Your score has just gone up by one point.
-
->score
-You currently have 10 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
 
 #spechelp for liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the liches. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
+
+#mistake test for cliesh/cleish
+>cliesh
+You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.
+>cleish
+You'd need exact spelling to turn the liches into salamanders. But really, you can make them something more useful, instead.
 
 >chisel
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>hasbeen
 Your score has just gone up by one point.
 
 >score
@@ -737,7 +741,6 @@ You currently have 11 out of 17 total points for the Forest region. You have fou
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
-#xc
 >s
 >w
 >peel river ville
@@ -808,34 +811,31 @@ You've already done enough with the meats.
 >grin
 You smirk at the grinder you trashed.
 
->silver
-The livers are too dull to do anything like that with. Yet.
-
 #spechelp for livers
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the livers. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
 
 >sliver
 Your score has just gone up by one point.
 
 >srelvi
-The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+#mistake check for silver
 >silver
-The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
+The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
 
-#xc
 >e
 >n
 
 #spechelp for spread
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the spread. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
 #nudge for cloth
 >cloht
@@ -854,7 +854,7 @@ That is too passive, to ask to be spared.
 #spechelp for red asp
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the red asp. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the red asp. Keep at it.
 >drapes
 Your score has just gone up by one point.
 
@@ -875,7 +875,7 @@ The drapes are too thick.
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
 
 #nudge for doorway
->doorway
+>doorwya
 The dimness is unchangeable from out here. You'll have to find a way in.
 
 #nudge for mis
@@ -901,12 +901,11 @@ The dimness is unchangeable from out here. You'll have to find a way in.
 >n
 You don't know what's
 
->doorwya
-You can just go through. You don't want it to change any more, really.
 #spechelp for sliver
 >silvre
-The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the sliver. Keep at it.
+The sliver seems to bend, but it snaps back.
+!As if it's impatient
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sliver. Keep at it.
 
 >silver
 Your score has just gone up by one point.
@@ -934,6 +933,13 @@ You need to SHOOT the gun.
 
 >n
 Ghouls' Slough
+
+#mistake test for lucre
+>lucre
+If there were any treasure here, it'd probably do something terrible to you once you took it.
+#mistake test for cluer
+>cluer
+This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
 
 #nudge for slough
 >slouhg
@@ -1015,7 +1021,7 @@ The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 #spechelp for vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the vowels. Keep at it.
+DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the vowels. Keep at it.
 
 >wolves
 Your score has just gone up by one point.
@@ -1043,7 +1049,7 @@ The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
 #done rejects for wolves
 >wolvse
-You don't need magic. You have a weapon.
+You can't change them back. But maybe you can get rid of them. You do have a weapon.
 
 #mistake test for steel
 >steel

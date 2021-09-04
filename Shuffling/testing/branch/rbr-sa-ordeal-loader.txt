@@ -35,6 +35,11 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >opt in
 >poss
 
+@mis
+#mistake test for laredo
+>laredo
+If you want a Western game situated on the US/Mexico border, this isn't for you.
+
 @hints
 >monty hints
 You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.

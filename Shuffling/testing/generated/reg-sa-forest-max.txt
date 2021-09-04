@@ -102,19 +102,18 @@ Emptiness Sepiments
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
->hasbeen
+>chisel
 Your score has just gone up by one point.
 
 >score
-You currently have 10 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
->chisel
+>hasbeen
 Your score has just gone up by one point.
 
 >score
 You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#xc
 >s
 >w
 >peel river ville
@@ -137,16 +136,12 @@ LIVERS.
 >score
 You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
->silver
-The livers are too dull to do anything like that with. Yet.
-
 >sliver
 Your score has just gone up by one point.
 
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#xc
 >e
 >n
 
@@ -158,6 +153,10 @@ You currently have 14 out of 17 total points for the Forest region. You have fou
 
 >n
 The drapes are too thick.
+
+#pre-sliver-silver rule
+>silver
+The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
@@ -184,6 +183,11 @@ Your score has just gone up by one point.
 
 >score
 You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>misses
+!Missed in Forest:
+!--the slit on Corses Crosse could've been turned to SILT.
+!--the banshee could've become a HASBEEN (space or not).
 
 >shoot wolves
 #notana

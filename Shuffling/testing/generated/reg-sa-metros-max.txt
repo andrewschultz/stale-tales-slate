@@ -19,6 +19,10 @@ Your score has just gone up by one point
 
 Undesired Underside
 
+#pre-beats-beast rule
+>beast
+That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
+
 >gardenia
 by one point
 
@@ -29,10 +33,14 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 Roarings Garrison
 
-#mostlyskipping the camp right now to get the tomato from the alley
+#mostly skipping the garrison right now to get the tomato from the bile libe
 
 >w
 Bile Libe
+
+#pre-words-sword rule
+>sword
+The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
 
 >tomato
 Your score has just gone up by one point.
@@ -60,8 +68,10 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >n
 Roarings Garrison
 
+#pre-lostcorn-controls rule
 >controls
-The dead beat deadbeat might not beat you dead
+The dead beat deadbeat might not beat you dead, but you'd get maligned ere legerdemain.
+In other words, you probably need to gain the deadbeat's trust before taking any stuff.
 
 >n
 Obtains/Boastin' Bastion
@@ -70,6 +80,13 @@ Obtains/Boastin' Bastion
 Your score has just gone up by one point.
 >score
 You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#pre-drycake-keycard rule
+>keycard
+The poses posse would have something to talk about at their next get-together. Like the weirdo who did something scary to that cake and got arrested.
+So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til they're gone.
+>keycard
+This would create quite a (negative) scene with people still in the bastion.
 
 >switch emitter
 #notana
@@ -111,21 +128,65 @@ You currently have 8 out of 18 total points for the Metros region. You have foun
 >e
 Fo' Real Florae
 
+#pre-heaths-sheath rule
+>sheath
+The heaths are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
+#pre-begonias-noisebag rule
+>noise bag
+The begonias are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
+
 >give gardenia to faeries
 
+#balance undos
+>noise bag
+by one point
+>w
+>w
+>open noise bag
+You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it.
+>sword
+#pre-words-sword rule retry
+The words become nastier for a second, forming into a sword, which heads for the noise bag. You're worried the sword might tear the noise bag apart, but before that happens, the sword dematerializes back into words.
+It was the wrong shape for the bag, anyway. Maybe the bag could hold the words if you just OPENED it, though, being a noise bag.
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>barcode
+by one point
 >take begonias
+"A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel for a weapon, though."
+
+#pre-heaths-sheath rule retry
+>sheath
+You already got the begonias--don't mess with the merchandise.
+>undo
+
+>undo
+>undo
 
 >take heaths
 
->sheath
-Your score has just gone up by one point.
+#pre-begonias-noisebag rule retry
+>noise bag
+You already got the heaths--don't mess with the merchandise.
 
 >sheath
+Your score has just gone up by one point.
 
 >score
 You currently have 9 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take brocade
+"It is the least we can do for you! Thank you for helping us!"
+
+#this is done/undone so that we can verify the brocade/barcode is hinted later.
+#pre-brocade-barcode rule
+>barcode
+You turn your back and focus so the faeries can't see you mangle their gift. Or so they aren't jealous, or they don't laugh at how dumb your magic is
+>undo
 
 >w
 
@@ -143,9 +204,9 @@ You currently have 10 out of 18 total points for the Metros region. You have fou
 >score
 You currently have 11 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
->put barcode on keycard
-
 >s
+
+>put barcode on keycard
 
 >put card on sensor
 What do you know? It works! The door slides open!
@@ -220,6 +281,10 @@ You currently have 15 out of 18 total points for the Metros region. You have fou
 
 Bassy Abyss
 
+#pre-beats-beast retry
+>beast
+You don't feel prepared to face a beast yet.
+
 >resin
 
 >score
@@ -231,6 +296,13 @@ You currently have 16 out of 18 total points for the Metros region. You have fou
 You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >take sword
+
+>misses
+!Missed in Metros:
+!--the antlers in the Obtains Boastin Bastion could've become RENTALS.
+While the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.
+--the begonias could've made a noise bag.
+--the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
 #notana

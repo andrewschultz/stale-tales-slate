@@ -9,6 +9,7 @@
 
 # this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
 >z
+>opt in
 
 >monty hints
 >ts 1
@@ -33,12 +34,61 @@ You can just enter the ogled lodge.
 >ts
 Trips Strip
 
+>gt subsite
+You already solved that area.
+
+>monty glean
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 DEBUG: Store F being objhinted.
+>xc
+>eat saltine
+>xx cabinet
+Your vision blurs a bit, and instead you see some Bactine.
+>xx store b
+Your vision blurs a bit, and instead you see sorbet.
+>xx store f
+Are you sure
+Your vision blurs a bit, and instead you see a forest.
+>xx store i
+Your vision blurs a bit, and instead you see a sortie.
+>xx store m
+Your vision blurs a bit, and instead you see metros.
+>xx store r
+Your vision blurs a bit, and instead you see a resort.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the acne-bit cabinet (faint), Store R, Store M, Store I, Store F and Store B (faint) for a few seconds.
+
+>metros
+You see yourself exploring the trade tread you created.
+>undo
+>sortie
+You see yourself exploring the posted depots you created.
+>undo
+
+>n
+As you try to flee the Trips Strip, a voice boomes "Run off for fun? Urff, no!"
+Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
+Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip. Guess you'll need to explore the stores.
+>n
+The hubs bush forces you back to the center of the Trips Strip. Guess you'll need to explore the stores.
+>undo
+>undo
 
 >forest
 by one point
 
 You can just enter the scented descent. If you want or need help with a particular store, HINT STORE Q.
+
+You see yourself exploring the scented descent you created.
+
+>n
+As you try to flee the Trips Strip, a voice boomes "Run off for fun? Urff, no!"
+Up pops a bush--a hubs bush! It's too thick to walk through. You move to the side, but the bush expands.
+Defeated, you turn back to the center--and when you look around, you notice the hubs bush encircles the whole Trips Strip. Guess you'll need to explore the stores, or what you made of them.
+>n
+The hubs bush forces you back to the center of the Trips Strip. Guess you'll need to explore the stores, or what you made of them.
 
 >sortie
 by one point

@@ -9,23 +9,45 @@
 
 >opt in
 >ts
+>xc
 
 >monty hints
 
 >sortie
 by one point
 
+>monty glean
+
 >poss
 
 >in
+
+You see yourself flipping the dial back and forth about six or seven times. It all seems to end with some sort of rocket hitting a huge building. But there is no explosion, just rainbows and bubbles. Weird.
 
 DEBUG: dial being objhinted.
 
 Trap Part
 
+>xx dial
+The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.
+
+>gt trap part
+You're already here. Or there. The precise grammar's neither here nor there.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial for a few seconds.
+
+>w
+You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
+Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
+
 >sixteen
 #notana -- technically, it is, but it's handled through the dial code, so it could be a number. This is an odd one, but there you go.
 by one point
+
+Things look hazy. You find yourself in a cell, which is a bit scary, but you can't stay here.
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 
 >score
 You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
@@ -33,7 +55,21 @@ You currently have 1 out of 27 total points for the Sortie region. Your minimum 
 >n
 The Nick
 
+You see yourself patting your stomach.
+
 DEBUG: great grate being objhinted.
+>xx great grate
+You let your eyes wander.
+Your vision swirls, and you see a kitchen.
+
+>e
+You're trapped. If only the nick could be changed to something more to your taste.
+
+>gt trap part
+That's not the magic way out. Sorry!
+
+>angle
+The nick glows all around.
 
 >kitchen
 by one point
@@ -42,13 +78,62 @@ Kitchen
 
 It's a kitchen. You need to make something. But there are no ingredients around--just weird non-food items. Hmm.
 
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman and the bottle of CATHOUSE perfume for a few seconds. Your warts also tingle.
+
+>open fridge
+You see a grist and a cake pan inside. Hm, mostly instant-meal stuff, nothing nourishing enough for an adventurer, but maybe good for practice.
+>open fridge
+You reopen and peer on. You see a grist and a cake pan inside.
+
+>xx
+Nothing really sticks out. You may have to XX something specific.
+>xx grist
+Your vision blurs a bit, and instead you see grits.
+>xx cake pan
+Your vision blurs a bit, and instead you see a pancake.
+>xx cathouse
+Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
+>xx tall trio
+Your vision blurs a bit, and instead you see a tortilla.
+>xx cult tee
+Your vision blurs a bit, and instead you see a head of lettuce.
+>xx skate
+Your vision blurs a bit, and instead you see cut-up steak.
+>xx spearman
+Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
+
+>gt nick
+No, you don't want to go back there.
+
 >score
 You currently have 2 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
+
+>straw
+by one point
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
+>undo
+
+>w
+>w
+Mum, dud mud blocks your way west. You can only go south to the Trap Part or east
+!to the trellis.
+>s
+>w
+Mum, dud mud blocks your way. You can only go north to the kitchen or east.
+>undo
+>undo
 
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. In the fridge, you see grist and cake pan. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 
 /DEBUG: (skate|bottle of CATHOUSE perfume|cheesy spearman|cult tee|tall trio) being objhinted.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
 
 >grits
 Your score has just gone up by one point.
@@ -115,8 +200,20 @@ DEBUG: taco being objhinted.
 >score
 You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>xx taco
+Your vision blurs a bit, and instead you see a coat.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the taco for a few seconds.
+
 >coat
 Your score has just gone up by one point.
+
+>straw
+You see yourself going to the southeast room and disappearing!
+>undo
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do, except for those warts.
 
 >score
 You currently have 11 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -125,14 +222,33 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 DEBUG: warts being objhinted.
 
+>w
+>w
+Mum, dud mud blocks your way west. You can only go south to the Trap Part or east to the trellis.
+>e
+
 >s
 Room
+
+>xx cask
+Your vision blurs a bit, and instead you see a sack.
+
+>angle
+The whole room seems lit up.
 
 >sack
 Your score has just gone up by one point.
 
 >score
 You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>xx sack
+After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
+
+You see your face clear again, pleased you reversed the warts.
+
+>xx warts
+You can't see them, but you remember the palindrome "No, too stupid a fad. I put soot on ..."
 
 >straw
 Your score has just gone up by one point.
@@ -142,20 +258,48 @@ DEBUG: pair of hoses being objhinted.
 >score
 You currently have 13 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>angle
+You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses for a few seconds.
+!There's nothing else, here, than the general glow.
+
 >put straw in sack
+
+You see yourself smiling at your feet with pride!
+
+>xx hoses
+Your vision blurs a bit, and instead you see shoes.
 
 >shoes
 Your score has just gone up by one point.
 
 The room is just a plain room. You feel like you want to get out, though.
 
+You see yourself disappearing!
+>angle
+The whole room seems lit up.
+!You stare into the blue lube for a bit, then look around. The whole room seems lit up. You notice a weird haze around the pair of hoses for a few seconds.
+There's nothing else, here, than the general glow.
+
 >score
 You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>xx
+Your vision swirls, and you see a moor.
 
 >moor
 Your score has just gone up by one point.
 
+You see a rough but friendly fellow scaring Pat away.
+
 DEBUG: anapest being objhinted.
+>xx
+Your vision blurs a bit, and instead you see a peasant.
+
+>angle
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
+
+>s
+The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came.
 
 >score
 You currently have 15 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -187,6 +331,14 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 Your score has just gone up by one point.
 
 DEBUG: peasant being objhinted.
+>xx
+You have a very non-magical vision of the room you were in before you jumped to the moor.
+
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
+>ask peasant about Woeful Pat
+"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
 >score
 You currently have 16 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -194,6 +346,8 @@ You currently have 16 out of 27 total points for the Sortie region. You have fou
 >give straw to peasant
 #notana
 Your score has just gone up by one point.
+
+You see yourself filling up the wall in Stiller Trellis then making it disappear.
 
 >score
 You currently have 17 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -206,6 +360,8 @@ Nothing more to do here, other than pass between the moor and other rooms you ma
 >n
 Stiller Trellis
 
+You see yourself filling up the wall here then making it disappear.
+
 DEBUG: scraped wall being objhinted.
 
 >w
@@ -216,14 +372,27 @@ DEBUG: scraped wall being objhinted.
 #notana
 Your score has just gone up by one point.
 
+You see the haywall vanishing.
+
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
+
+>n
+Mum, dud mud blocks your way. You can only go west or south.
 
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>xx haywall
+You imagine the scraped wall, already being a haywall, becomes a haywall.
+
 >hallway
 Your score has just gone up by one point.
+
+You see yourself building a huge structure in the moor without saying anything.
+
+>n
+Mum, dud mud blocks your way. You can only go west or south or, since you opened the hallway, east.
 
 >score
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -232,6 +401,9 @@ You currently have 19 out of 27 total points for the Sortie region. You have fou
 Sacred Cedars
 
 Once you change the sack to a cask, you can FILL CASK here, to start.
+
+>n
+There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
@@ -248,7 +420,15 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 
 >s
 
+>s
+Dud, mum mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
+
 >moor
+
+>xx oils
+Your vision blurs a bit, and instead you see soil, then a silo.
+>xx smilies
+Your vision blurs a bit, and instead you see a missile.
 
 >missile
 Your score has just gone up by one point.
@@ -259,6 +439,12 @@ You currently have 20 out of 27 total points for the Sortie region. You have fou
 >fold paper
 (the poem)
 You fold the paper, and it looks sort of like a paper plane.
+
+>angle
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the roadblock, the folded paper plane and the oils for a few seconds.
+
+>xx plane
+You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.
 
 >panel
 Your score has just gone up by one point.
@@ -272,11 +458,18 @@ Your score has just gone up by one point.
 >score
 You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>xx roadblock
+Your vision blurs a bit, and instead you see a black door.
+
 >black door
 Your score has just gone up by one point.
 
 >score
 You currently have 23 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>angle
+The whole moor seems lit up.
+There's nothing else, here, than the general glow.
 
 >room
 
@@ -287,15 +480,32 @@ You currently have 23 out of 27 total points for the Sortie region. You have fou
 Gainly laying the cask under the spout, you pour in some oils.
 A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular one in mind. You hope you've gotten what you need.
 
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the oils for a few seconds.
+
+>gt kitchen
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+>undo
+
 >w
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+
 Crashing Archings
+
+>gt cedars
+You can't go back there.
 
 >s
 
 >moor
 
+>xx oils
+Your vision blurs a bit, and instead you see a silo.
+
 >silo
 Your score has just gone up by one point.
+
+You see yourself assembling the silo further.
 
 >score
 You currently have 24 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -303,8 +513,21 @@ You currently have 24 out of 27 total points for the Sortie region. You have fou
 >put panel in silo
 The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.
 
+>angle
+You stare into the blue lube for a bit, then look around. The whole moor seems lit up. You notice weird hazes around the hoots button and the trees button for a few seconds.
+
 >put door in silo
 The door fits the dotted line in the silo perfectly, swinging slightly before sliding in place with a click.
+
+>put missile in silo
+You schlep the missile through the door. You hear some mechanics and whizzing. A luster-result rustle, if you will. Then "SMILIES MISSILE DEALING-ALIGNED!"
+
+You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar.
+
+>xx trees
+Your vision blurs a bit, and instead you see a steer button.
+>xx hoots
+Your vision blurs a bit, and instead you see a shoot button.
 
 >steer
 Your score has just gone up by one point.
@@ -317,6 +540,12 @@ Your score has just gone up by one point.
 
 >score
 You currently have 26 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>purloin missile
+>push steer
+!AMUSING
+>undo
+>undo
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.

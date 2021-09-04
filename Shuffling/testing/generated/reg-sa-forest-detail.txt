@@ -1,0 +1,335 @@
+
+## reg-sa-forest-detail.txt
+## GENERATOR FILE: rbr-sa-forest.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* forest-thru
+
+>ts
+# this is just so we have a turn processed so Inform doesn't balk and say "nothing to undo"
+>z
+>poss
+
+>opt in
+
+>forest
+#notmax
+Your score has just gone up by one point.
+
+# start the default (which I picked at random) way through.
+
+#balance undos
+>sr sw
+>in
+#gadget test: shout to south
+>rc shout
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: GRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: S---H.
+DEBUG INFO: CERT-TEXT: S----.
+>s
+#gadget test: stew to west
+>rc stew
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: W--T.
+DEBUG INFO: CERT-TEXT: ----.
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>sr ne
+
+>in
+
+Softer Forest
+
+#gadget test: thorn to north
+>rc thorn
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: N---H.
+DEBUG INFO: CERT-TEXT: -----.
+
+>n
+by one point
+Rest of Forest
+>score
+You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+#gadget test: teas to east
+>rc teas
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: E--T.
+DEBUG INFO: CERT-TEXT: ----.
+
+>e
+by one point
+Self-ID Fields
+
+#gadget test: slit to silt
+>rc slit
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
+The gadget beeps once. A series of lights comes across: GRRG.
+DEBUG INFO: RECT-TEXT: S--T.
+DEBUG INFO: CERT-TEXT: S--T.
+
+>score
+You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>e
+Gnarliest Triangles
+
+#gadget test: dashes to shades
+>rc dashes
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
+The gadget beeps once. A series of lights comes across: RRRRGG.
+DEBUG INFO: RECT-TEXT: S----S.
+DEBUG INFO: CERT-TEXT: ----ES.
+
+#gadget test: ones to nose
+>rc ones
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGRB.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: N--E.
+DEBUG INFO: CERT-TEXT: ----.
+
+#gadget test: noughts to shotgun
+>rc noughts
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBG.
+The gadget beeps once. A series of lights comes across: RRRRRRR.
+DEBUG INFO: RECT-TEXT: S-----N.
+DEBUG INFO: CERT-TEXT: -------.
+
+>nose
+Your score has just gone up by one point.
+
+>score
+You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>shades
+Your score has just gone up by one point.
+
+>score
+You currently have 4 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>shotgun
+Your score has just gone up by one point.
+
+>score
+You currently have 5 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>w
+>w
+Flesh Shelf
+
+>open sandwich
+bread from the Spam
+
+#gadget test: bread to beard
+>rc bread
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBR.
+The gadget beeps once. A series of lights comes across: GRRRG.
+DEBUG INFO: RECT-TEXT: B---D.
+DEBUG INFO: CERT-TEXT: B---D.
+#gadget test: spam to maps
+>rc spam
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: M--S.
+DEBUG INFO: CERT-TEXT: ----.
+
+>maps
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>beard
+Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+
+>put shades on beard
+
+>put nose on beard
+You've made a full disguise now!
+
+>e
+
+>silt
+by one point
+
+>score
+You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>n
+#notana
+Your score has just gone up by one point.
+
+Emptiness Sepiments
+
+#gadget test: liches to chisel
+>rc liches
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.
+The gadget beeps once. A series of lights comes across: RRRRGR.
+DEBUG INFO: RECT-TEXT: C----L.
+DEBUG INFO: CERT-TEXT: ----E-.
+
+>score
+You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>chisel
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+#gadget test: banshee to hasbeen
+>rc banshee
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBB.
+The gadget beeps once. A series of lights comes across: RGRRRGR.
+DEBUG INFO: RECT-TEXT: H-----N.
+DEBUG INFO: CERT-TEXT: -A---E-.
+
+>hasbeen
+Your score has just gone up by one point.
+
+>score
+You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>s
+>w
+>peel river ville
+Cr-r-r-r-k.
+
+>e
+
+>w
+
+>peel viler liver
+Cr-r-r-r-k.
+
+>put river ville in canister
+
+>put viler liver in canister
+#notana
+Your score has just gone up by one point.
+LIVERS.
+
+#gadget test: livers to sliver
+>rc livers
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG.
+The gadget beeps once. A series of lights comes across: RRRRRR.
+DEBUG INFO: RECT-TEXT: S----R.
+DEBUG INFO: CERT-TEXT: ------.
+
+>score
+You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>sliver
+Your score has just gone up by one point.
+
+#gadget test: sliver to silver
+>rc sliver
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBR.
+The gadget beeps once. A series of lights comes across: GRRGGG.
+DEBUG INFO: RECT-TEXT: S----R.
+DEBUG INFO: CERT-TEXT: S--VER.
+
+>score
+You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+>n
+
+#gadget test: spread to drapes
+>rc spread
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
+The gadget beeps once. A series of lights comes across: RRRRRR.
+DEBUG INFO: RECT-TEXT: D----S.
+DEBUG INFO: CERT-TEXT: ------.
+
+>n
+
+#gadget test: red asp to drapes
+>rc red asp
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBRB.
+The gadget beeps once. A series of lights comes across: RRRRRR.
+DEBUG INFO: RECT-TEXT: D----S.
+DEBUG INFO: CERT-TEXT: ------.
+
+>drapes
+by one point
+
+>score
+You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>n
+The drapes are too thick.
+
+>cut drapes
+The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
+
+>n
+You don't know what's
+
+>silver
+Your score has just gone up by one point.
+
+>score
+You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>put silver in shotgun
+
+>n
+Ghouls' Slough
+
+>x maps
+Frost Forts
+
+#gadget test: vowels to wolves
+>rc vowels
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
+The gadget beeps once. A series of lights comes across: RGRRRG.
+DEBUG INFO: RECT-TEXT: W----S.
+DEBUG INFO: CERT-TEXT: -O---S.
+
+>wolves
+Your score has just gone up by one point.
+
+>score
+You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>shoot wolves
+#notana
+Your score has just gone up by one point.
+
+Trips Strip
+
+>score
+
+You have scored 17 out of 17 total points for the Forest region.

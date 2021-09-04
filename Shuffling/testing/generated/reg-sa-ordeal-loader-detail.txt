@@ -1,0 +1,283 @@
+
+## reg-sa-ordeal-loader-detail.txt
+## GENERATOR FILE: rbr-sa-ordeal-loader.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* ordeal_thru
+
+>opt in
+>poss
+
+>in
+Rested Desert
+
+>gateman
+The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
+[That's worth noting in your notepad for later, so you do, under FLIPS.]
+>pf
+Stuff you figured, but you couldn't use it right away:
+nametag -> gateman
+
+>door
+by one point
+
+>score
+You currently have 1 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
+
+>bugle
+Your score has just gone up by one point.
+
+>blot
+by one point
+
+>score
+You currently have 3 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 7
+
+>open door
+Thickest Thickets
+
+>slander
+by one point
+
+>goat
+Your score has just gone up by one point.
+
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+
+>in
+Notices Section
+
+#gadget test: static to attics
+>rc static
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: A----S.
+DEBUG INFO: CERT-TEXT: -T----.
+>undo
+#this is so we don't have the gadget later when we TAKE GADGET
+
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+
+>attics
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 7 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: attics to static
+>rc attics
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: S----C.
+DEBUG INFO: CERT-TEXT: -T----.
+>undo
+#this is so we don't have the gadget later when we TAKE GADGET
+
+>gateman
+Your score has just gone up by one point.
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+
+>pf
+You have nothing else you figured in advance.
+!Stuff you figured, but you couldn't use it right away:
+!nametag -> gateman
+>bactine
+"Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
+[That's worth noting in your notepad for later, so you do, once again, under FLIPS.]
+>pf
+Stuff you figured, but you couldn't use it right away:
+cabinet -> Bactine
+
+>take gadget
+As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
+
+>get phial
+!Taken
+>ask gateman about blue lube
+"Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
+"If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
+[You record the information about lube/angle/glean in multiple entries in your dope tan notepad.]
+>undo
+>undo
+
+>ask gateman about cabinet
+
+>ask gateman about xyzzy
+"Fool! That magic word has no place alongside your magic abilities."
+
+>ask gateman about next guy
+"Optimistic, aren't we?"
+
+>ask gateman about sane sean
+The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble.
+
+>ask gateman about advice
+"Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you."
+
+>ask gateman about clods
+Like I said, no time for that. Time to fix things!"
+
+>ask gateman about world
+"Well, it wasn't a very SPECIAL world. In fact it was one of those hero mills. I remember more hills than anything else. Figure it had to break down for the next guy to save it."
+
+>ask gateman about yorpwald
+"It's been shuffled, nearly f-flushed! You can rescue it from physical, economic and moral malaise. You will need to travel through Old Warpy to get there. The stuff in the cabinet should help. Ask me about it. I'm a hero emeritus, and stuff."
+
+>ask gateman about old warpy
+"Once you step in, it'll take you somewhere far away. But it's perfectly harmless and not too bumpy. Like beyond that gateway getaway. Terry's in there, too, and he flips the switch so you can RETRY if you get stuck somewhere."
+
+>ask gateman about terry
+"He's reliable."
+
+>ask gateman about lupine lineup
+Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary."
+
+>ask gateman about noble
+"He used to be fair and just. But he saw Red Bull Burdell 'leveling up,' whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol' Ben."
+
+>ask gateman about quest
+"Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol' Ben: gone. Lorn. No longer."
+"And I think I know who's behind it: RED BULL BURDELL!"
+
+>ask gateman about quest
+He mentions "Noise is one, lupine lineup, Noble Ol' Ben gone, lorn, no longer." Then he motions to the gateway. "You'll see when you get there, I think."
+
+>ask gateman about blozhko
+"Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
+
+>ask gateman about blozhko
+Nat Egam pauses. "There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway. Oh, about the gadget: you'll learn by doing."
+
+>ask gateman about redness
+"Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
+He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
+[You record the information about red in your notepad.]
+
+>ask gateman about board
+"Good idea to take notes on it. But I can tell you about other stuff. Like your gadget. Or even how it works."
+
+>ask gateman about doll house
+"You don't need to take it with or anything. Nice job with it, though."
+
+>ask gateman about static
+"Good job getting rid of it."
+
+>ask gateman about attics
+"They're more appropriate to the doll house, definitely."
+
+>ask gateman about blue lube
+"You can just take it. The phial with the lube can grease your way to a solution." He coughs. "Sorry."
+
+>ask gateman about phail phial
+"Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
+
+>ask gateman about prep paper
+"No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start."
+
+>ask gateman about red bull burdell
+"Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+>ask gateman about red bull burdell
+"Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned..." His eyes grow mistened. "Ten dimes say it's end times. We've waited for an upturn to turn up..."
+>ask gateman about red bull burdell
+"The time for talk is over."
+
+>scan me
+too awesome
+
+>ask gateman about tip
+"Well, one of rectify or certify is overall better than the other. Would you like to know which?"
+
+>yes
+"Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
+>ask gateman about tinfoil info-lit
+"Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
+
+>ask gateman about Bud Helm
+"Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
+
+>ask gateman about Raw Rori
+"Pure strength. That won't get the job done here."
+
+>ask gateman about pen
+"How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense."
+
+>ask gateman about dope tan notepad
+"Good choice, taking notes."
+
+>ask gateman about new land
+"I can't tell you everything about it. But you'll see for yourself."
+
+>ask gateman about nametag
+"Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't at all." He rolls his eyes.
+
+>ask gateman about yourself
+"We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!"
+
+>ask gateman about gateman
+"Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
+
+ >ask gateman about arrow
+"That's just to show SECURE/RECUSE is linked to whether you can change between RECTIFY and CERTIFY."
+
+>ask gateman about knot
+"It's good and tight. Case it gets joggled while you adventure. If the gadget isn't tagged, it loses its magic because, well..."
+
+>ask gateman about examples
+"Hm, LEMON and MELON have three letters in common, and they're all green. The two that switch are red. So that's not bad. PASTE and TAPES, on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left."
+
+>ask gateman about disclaimer
+"Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge."
+
+>ask gateman about recent center
+"The Recent Center is a fancy name for a screen. It will light up when you scan something relevant, and that data will stay."
+
+>ask gateman about handle
+You can't imagine anything tricky about the handle, so you decide not to ask.
+
+>ask gateman about goat
+"Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
+
+>ask gateman about toga
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+
+>ask gateman about shrub
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+
+>ask gateman about brush
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.
+
+>ask gateman about thorn
+"Sorry if it scratched you. And by you I mean your nametag. And by your nametag I mean me."
+
+>ask gateman about getaway
+"It's safe. Don't worry! Get going through there!"
+
+>ask gateman about gadget
+"Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red."
+
+>ask gateman about secure button
+"Could make things tougher at first, but then easier for you. Forces you into only CERTIFYing or RECTIFYing if you push it. But you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
+
+>ask gateman about noise bag
+"Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it."
+
+>ask gateman about saltine
+"Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
+
+>ask gateman about cabinet
+"Everything in there's yours."
+
+>in
+Trips Strip

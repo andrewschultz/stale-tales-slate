@@ -1,0 +1,497 @@
+
+## reg-sa-metros-detail.txt
+## GENERATOR FILE: rbr-sa-metros.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* metros-thru
+
+>ts
+>poss
+>opt in
+
+>metros
+Your score has just gone up by one point
+
+>in
+
+Undesired Underside
+
+#gadget test: drainage to gardenia
+>rc drainage
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: G------A.
+DEBUG INFO: CERT-TEXT: --------.
+
+#gadget test: a reading to gardenia
+>purloin reading
+>rc a reading
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
+The gadget beeps once. A series of lights comes across: RRRRRRRR.
+DEBUG INFO: RECT-TEXT: G------A.
+DEBUG INFO: CERT-TEXT: --------.
+>undo
+>undo
+
+>gardenia
+by one point
+
+>score
+You currently have 1 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>n
+
+Roarings Garrison
+
+#mostly skipping the garrison right now to get the tomato from the bile libe
+
+>ask deadbeat about blozhko
+He mumbles something about chillin' with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn, and he also complains about nerds down southish, for some reason.
+
+>ask deadbeat about deadbeat
+He mumbles "Mt. Rose Rots Me Moster" and giggles stupidly. You probably won't learn much from him except about instruments of subversion.
+
+>ask deadbeat about beats
+"They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, you square, yo."
+
+>ask deadbeat about slorntco
+"Organized capital is so repressive, dude."
+
+>ask deadbeat about nerds
+The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots.
+
+>ask deadbeat about faeries
+The deadbeat doesn't believe in magic, now. But he did as a kid.
+
+>ask deadbeat about red bull burdell
+"He is oppressive, man, but he is just a symptom of disparity and malaise."
+
+>ask deadbeat about poses posse
+The deadbeat starts up some nonsense pseudo-sociological mumblings.
+
+>ask deadbeat about lost corn
+"Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?"
+
+>ask deadbeat about termite emitter
+"What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
+
+>w
+Bile Libe
+
+#gadget test: a motto to tomato
+>rc motto
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
+The gadget beeps once. A series of lights comes across: RRRRGG.
+DEBUG INFO: RECT-TEXT: T----O.
+DEBUG INFO: CERT-TEXT: ----TO.
+
+#gadget test: words to sword
+>rc words
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: S---D.
+DEBUG INFO: CERT-TEXT: -----.
+
+>tomato
+Your score has just gone up by one point.
+
+>score
+You currently have 2 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>e
+
+>s
+>w
+The Ol' Hotel
+
+>throw tomato at thing
+#notana
+by one point
+
+>score
+You currently have 3 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
+
+>x mattress
+
+>e
+
+>n
+Roarings Garrison
+
+>n
+Obtains/Boastin' Bastion
+
+>ask poses posse about dry cake
+Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them.
+
+#gadget test: antlers to rentals
+>rc antlers
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBBGR.
+The gadget beeps once. A series of lights comes across: RRRRRRG.
+DEBUG INFO: RECT-TEXT: R-----S.
+DEBUG INFO: CERT-TEXT: ------S.
+
+#gadget test: dry cake to keycard
+>rc dry cake
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBGB.
+The gadget beeps once. A series of lights comes across: RRGGGRR.
+DEBUG INFO: RECT-TEXT: K-----D.
+DEBUG INFO: CERT-TEXT: --YCA--.
+
+>rentals
+Your score has just gone up by one point.
+>score
+You currently have 4 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>switch emitter
+#notana
+Your score has just gone up by one point.
+>score
+You currently have 5 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>get dry cake
+You take care not to let the cake tear as you pick it up.
+
+>s
+
+>ask deadbeat about beats
+"They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
+
+##nudge for lost
+>ltso
+It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
+##nudge for corn
+>conr
+It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
+
+#gadget test: clover to velcro
+>rc clover
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
+The gadget beeps once. A series of lights comes across: RRRRRR.
+DEBUG INFO: RECT-TEXT: V----O.
+DEBUG INFO: CERT-TEXT: ------.
+
+#gadget test: lost corn to controls
+>rc lost corn
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
+The gadget beeps once. A series of lights comes across: RGRGRGRR.
+DEBUG INFO: RECT-TEXT: C------S.
+DEBUG INFO: CERT-TEXT: -O-T-O--.
+
+>controls
+Your score has just gone up by one point.
+
+>score
+You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>keycard
+
+>score
+You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>velcro
+
+>score
+You currently have 8 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+Fo' Real Florae
+
+#gadget test: heaths to sheath
+>rc heaths
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
+The gadget beeps once. A series of lights comes across: RRRRRR.
+DEBUG INFO: RECT-TEXT: S----H.
+DEBUG INFO: CERT-TEXT: ------.
+
+#gadget test: begonias to noisebag
+>rc begonias
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RRRRRRGR.
+DEBUG INFO: RECT-TEXT: N------G.
+DEBUG INFO: CERT-TEXT: ------A-.
+
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
+!getting a sore
+>abstract gardenia to underside
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
+>undo
+>undo
+>ask faeries about gardenia
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+>undo
+>ask faeries about drainage
+"Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
+
+>ask faeries about beats
+"It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
+
+>take brocade
+The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
+The FREE TO FREELOADERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
+>ask faeries about gardenia
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+
+>ask faeries about xyzzy
+"We are grateful! You are an exceptional human! Thank you so much! Do remember to take your reward! Now go and save the city."
+>take heaths
+"A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel for a weapon, though."
+>ask faeries about xyzzy
+"We are grateful! You are an exceptional human! Thank you so much! We are sure you can do something with your reward! Now go and save the city."
+>undo
+>undo
+>undo
+>undo
+
+>give gardenia to faeries
+
+>take heaths
+
+>sheath
+Your score has just gone up by one point.
+
+>ask faeries about begonias
+The faeries have been generous enough.
+
+>ask faeries about sheath
+"It is up to you to use it. We cannot help further."
+
+>score
+You currently have 9 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>take brocade
+"It is the least we can do for you! Thank you for helping us!"
+
+>ask faeries about brocade
+"Do with it what you need."
+>barcode
+by one point
+>ask faeries about brocade
+"You have disposed of it! We hope it was useful."
+>undo
+>undo
+
+>w
+
+>w
+
+>sword
+
+>score
+You currently have 10 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+
+#gadget test: brocade to barcode
+>rc brocade
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBBR.
+The gadget beeps once. A series of lights comes across: GRRGRGG.
+DEBUG INFO: RECT-TEXT: B-----E.
+DEBUG INFO: CERT-TEXT: B--C-DE.
+
+>barcode
+
+>score
+You currently have 11 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>s
+
+>put barcode on keycard
+
+>put card on sensor
+What do you know? It works! The door slides open!
+
+>e
+#notana
+Esoteric Coteries
+
+>ask about xyzzy
+"Hm, should we even talk to an outsider about that?"
+"Well, if they found their way in, they can't be THAT dumb!"
+"Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they're not here."
+"Maybe they're a lateral thinker. Who knows several ways to get through things."
+"GROAN! Nice Ignorance."
+They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip.
+"If they don't know what to ask nerds about, they deserve ED'S SNARK!" Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.
+>ask about xyzzy
+More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.
+>ask about xyzzy
+Laugh-tons onslaught as you haven't figured what to ask nerds.
+>ask about xyzzy
+They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.
+>ask about xyzzy
+A hundred-nerd DUH follow your latest ask-nerds attempt.
+>ask about xyzzy
+"Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!"
+>ask about xyzzy
+An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.
+>ask about xyzzy
+The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.
+>ask about xyzzy
+Apparently you haven't seen the light for what to ask nerds about. "We can wait here a thousand years!" one laughs. They debate on what's worse, dumb people in power or out.
+>ask about xyzzy
+One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.
+>ask about xyzzy
+One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.
+>ask about xyzzy
+A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.
+>ask about xyzzy
+One nerd jokingly refers you to DR. KASSEN.
+>ask about xyzzy
+"'K, Ren's sad," one nerd remarks, red-faced.
+>ask about xyzzy
+One nerd dumps out his shoe. "Erks! Sand!" He looks red-faced at such a public display.
+>ask about xyzzy
+Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.
+>ask nerds about dorks
+They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help.
+>ask nerds about karkdoss
+They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks.
+>ask nerds about beats
+"Anyone can be smart enough to build noise canceling homes to get rid of the beats!"
+>ask nerds about controls
+"Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to ASK NERDS about."
+>ask nerds about deadbeat
+The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
+>ask nerds about faeries
+The nerds assure you science is better than magic.
+>ask nerds about red bull burdell
+"Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!"
+>ask nerds about tracks
+"We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
+
+>score
+You currently have 12 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>w
+
+>put card on sensor
+The door is open. So you just walk east instead.
+
+Esoteric Coteries
+
+>w
+
+>z
+>e
+
+Esoteric Coteries
+
+>w
+>z
+>open metallic door
+
+>e
+Esoteric Coteries
+You can also see a lit-up tulip here.
+The signers' ingress slides shut.
+
+#gadget test: asknerds to darkness
+>rc nerds
+You get to scanning, twiddling from certify to rectify and back.
+#these are different, since ASK NERDS gives clues, and NERDS ASK back.
+As the nerds ask other questions, the gadget lights up, and you notice BBBGRBBB, until the nerds ask no more. Then it goes back to BRBBBBGB as you think how, why and what to ask nerds.
+"Still messing with technology over your head, eh? Like that Skansder you don't know what it is."
+As the nerds ask other questions, the gadget lights up, and you notice RRGRRRGR, until the nerds ask no more. Then it goes back to RRRRRRRG as you think how, why and what to ask nerds.
+DEBUG INFO: RECT-TEXT: D------S.
+DEBUG INFO: CERT-TEXT: -------S.
+
+>ask nerds about darkness
+#notana
+"What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
+
+"Logical call. I go." You sneak out back west.
+
+Undesired Underside
+
+>score
+You currently have 13 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#again, "ask nerds about darkness" is not an anagram of an actual thing, so it is NOTANA
+
+>s
+Elm Train Terminal
+
+#gadget test: neon pig to opening
+#note you have to climb up
+>u
+>rc neon pig
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR.
+The gadget beeps once. A series of lights comes across: RRRGRRG.
+DEBUG INFO: RECT-TEXT: O-----G.
+DEBUG INFO: CERT-TEXT: ---N--G.
+>undo
+>undo
+
+>opening
+
+>score
+You currently have 14 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>u
+The Velcro strip is just the thing to climb the cafe face and reach the small recess.
+
+>put controls in opening
+#notana
+
+>score
+You currently have 15 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>d
+>e
+
+Bassy Abyss
+
+#gadget test: siren to resin
+>rc siren
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
+The gadget beeps once. A series of lights comes across: RRRRG.
+DEBUG INFO: RECT-TEXT: R---N.
+DEBUG INFO: CERT-TEXT: ----N.
+
+#gadget test: beats to beast
+>rc beats
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
+The gadget beeps once. A series of lights comes across: GGGRR.
+DEBUG INFO: RECT-TEXT: B---T.
+DEBUG INFO: CERT-TEXT: BEA--.
+
+>resin
+
+>score
+You currently have 16 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>beast
+
+>score
+You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>take sword
+
+>attack beast
+#notana
+
+Trips Strip
+
+>score
+You have scored 18 out of 18 total points for the Metros region.
+Won now: the Ordeal Loader and Metros regions.
+

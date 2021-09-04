@@ -1262,7 +1262,7 @@ The sliver turns silver for a moment.
 {$SFIXMAX}
 
 @nud
-#mistake check for silver
+#mistake test for silver
 >silver
 The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
 

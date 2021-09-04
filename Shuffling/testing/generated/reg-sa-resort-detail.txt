@@ -1,0 +1,228 @@
+
+## reg-sa-resort-detail.txt
+## GENERATOR FILE: rbr-sa-resort.txt
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* resort_thru
+
+>ts
+>tsf
+
+>opt in
+>poss
+
+>resort
+#notmax
+Your score has just gone up by one point
+
+>enter resort
+Astral Altars
+
+#gadget test: tiles to islet
+>rc tiles
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB (R = red, G = green, B = blue).
+The gadget beeps once. A series of lights comes across: RRGGR (R = red, G = green).
+DEBUG INFO: RECT-TEXT: I---T.
+DEBUG INFO: CERT-TEXT: --LE-.
+
+#gadget test: stile to islet
+>rc stile
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRGBB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: I---T.
+DEBUG INFO: CERT-TEXT: -----.
+
+>islet
+Your score has just gone up by one point.
+
+Leis Isle
+
+>score
+You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
+
+#gadget test: leis to lies
+>rc leis
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBR.
+The gadget beeps once. A series of lights comes across: GRRG.
+DEBUG INFO: RECT-TEXT: L--S.
+DEBUG INFO: CERT-TEXT: L--S.
+
+#gadget test: rock to cork
+>rc rock
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
+The gadget beeps once. A series of lights comes across: RGRG.
+DEBUG INFO: RECT-TEXT: C--K.
+DEBUG INFO: CERT-TEXT: -O-K.
+
+#gadget test: swing to wings
+>rc swing
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: W---S.
+DEBUG INFO: CERT-TEXT: -----.
+
+>lies
+by one point
+>score
+You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
+
+>cork
+Your score has just gone up by one point.
+
+>score
+You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
+
+>wings
+Your score has just gone up by one point.
+>score
+You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+
+>e
+Rived Drive
+
+#gadget test: poles to slope
+>rc poles
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: S---E.
+DEBUG INFO: CERT-TEXT: -----.
+
+#gadget test: toolshed to toeholds
+>rc toolshed
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB.
+The gadget beeps once. A series of lights comes across: GGRRRRRR.
+DEBUG INFO: RECT-TEXT: T------S.
+DEBUG INFO: CERT-TEXT: TO------.
+
+#gadget test: sprig to grips
+>rc sprig
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: G---S.
+DEBUG INFO: CERT-TEXT: -----.
+
+#gadget test: spore to ropes
+>rc spore
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB.
+The gadget beeps once. A series of lights comes across: RRRRR.
+DEBUG INFO: RECT-TEXT: R---S.
+DEBUG INFO: CERT-TEXT: -----.
+
+>slope
+by one point
+
+>score
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+
+>toeholds
+Your score has just gone up by two points.
+
+>score
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+
+>ropes
+Your score has just gone up by one point.
+
+>score
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
+
+>grips
+Your score has just gone up by one point.
+
+>score
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+
+>e
+
+Potshot Hotspot
+
+#gadget test: riot to trio
+>rc riot
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
+The gadget beeps once. A series of lights comes across: RRRR.
+DEBUG INFO: RECT-TEXT: T--O.
+DEBUG INFO: CERT-TEXT: ----.
+
+>trio
+Your score has just gone up by one point.
+
+>score
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+
+>ethre
+The trio remains unmoved. Perhaps you can give the protest more constructive aims?
+
+#gadget test: protest to potters
+>rc protest
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB.
+The gadget beeps once. A series of lights comes across: GRRGGRR.
+DEBUG INFO: RECT-TEXT: P-----S.
+DEBUG INFO: CERT-TEXT: P--TE--.
+
+>kilns
+by one point
+>ask protest about kilns
+"If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
+>undo
+>undo
+
+>potters
+Your score has just gone up by one point.
+
+>score
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+
+>china
+#notana
+Your score has just gone up by one point.
+
+>score
+You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+#gadget test: links to kilns
+>rc links
+You get to scanning, twiddling from certify to rectify and back.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
+The gadget beeps once. A series of lights comes across: RGRRG.
+DEBUG INFO: RECT-TEXT: K---S.
+DEBUG INFO: CERT-TEXT: -I--S.
+
+>kilns
+Your score has just gone up by one point.
+
+>score
+You currently have 13 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>get out
+!Your score has just
+
+>tug toe
+#notana
+by one point
+
+Your score has just gone up by one point.
+
+>score
+You currently have 14 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
+>e
+Means Manse
+
+>exist
+#notana
+by one point
+My Adieu to You: Made It!
+

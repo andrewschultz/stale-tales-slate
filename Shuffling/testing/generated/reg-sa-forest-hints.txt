@@ -13,8 +13,12 @@
 >poss
 
 >monty hints
+>xc
 
 >opt in
+
+>monty glean
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 >forest
 #notmax
@@ -25,8 +29,14 @@ Your score has just gone up by one point.
 >sr sw
 >in
 DEBUG: rambling shout being objhinted.
+>xx shout
+Your vision blurs, and you see a compass rose pointed south.
+>undo
 >s
 DEBUG: whiff of stew being objhinted.
+>xx stew
+Your vision blurs, and you see a compass rose pointed west.
+>undo
 >undo
 >undo
 >undo
@@ -35,9 +45,22 @@ DEBUG: whiff of stew being objhinted.
 
 >in
 
-DEBUG: thorn being objhinted.
-
 Softer Forest
+
+DEBUG: thorn being objhinted.
+>xx thorn
+Your vision blurs, and you see a compass rose pointed north.
+
+You see yourself considering all four compass directions before picking the right one.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn for a few seconds.
+
+>e
+/You go east a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
+>s
+/You go south a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
+>w
+/You go west a bit, but the paths and vegetation multiply\. You detect (a sneak-snake|a fauns snafu|a stag or gators|a stoat making toast of you|percuss-spruces|slickest stickles), which is enough to drive you back to where you were\.
 
 >n
 by one point
@@ -45,11 +68,30 @@ Rest of Forest
 >score
 You currently have 1 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
+>xx teas
+Your vision blurs, and you see a compass rose pointed east.
+
+You see yourself considering all four compass directions before picking the right one.
+
+>gt forest1
+You can't retrace your steps.
+
 >e
 by one point
 Self-ID Fields
 
 Go east and west and look around a bit. There're only three rooms to start, and passing Corses Crosse needs stuff from each side room. While you can still hint an object, HINT will only give you this nag until you visit all three locations.
+
+You see yourself putting something on your face and then walking through Corses Crosse with ease.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the slit (faint) for a few seconds.
+
+>s
+Given that the people leaving the selves vessel look dead, you probably don't want to go in.
+#No going back. North or east or west is okay, though. = default nowhere but no other direction works
+
+>gt forest2
+You can't retrace your steps.
 
 >score
 You currently have 2 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
@@ -68,11 +110,23 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 Gnarliest Triangles
 
 DEBUG: ones being objhinted.
+>xx ones
+Your vision blurs a bit, and instead you see a nose.
+>xx dashes
+Your vision blurs a bit, and instead you see shades.
+>xx noughts
+Your vision blurs a bit, and instead you see a shotgun.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts for a few seconds.
 
 >nose
 Your score has just gone up by one point.
 
 DEBUG: dashes being objhinted.
+
+>e
+You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
 
 >score
 You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
@@ -99,9 +153,19 @@ Flesh Shelf
 
 DEBUG: sandwich being objhinted.
 
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the bread and the Spam for a few seconds.
+
+>w
+It's too steep down every way except back east.
+
 >open sandwich
 bread from the Spam
 
+>xx bread
+Your vision blurs a bit, and instead you see a beard.
+>xx spam
+Your vision blurs a bit, and instead you see maps.
 >beard
 You have everything you need to enter Corses Crosse, now. You can worry about the other stuff in here later. PUT (item) ON (item) twice to create the full disguise.
 !DEBUG: Spam being objhinted.
@@ -128,6 +192,8 @@ You have everything you need to enter Corses Crosse, now. You can worry about th
 >put nose on beard
 You've made a full disguise now!
 
+You see yourself walking through Corses Crosse with ease.
+
 You should be able to walk NORTH from Self-ID Fields now with your disguise.
 
 >e
@@ -138,6 +204,9 @@ by one point
 >score
 You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >n
 #notana
 Your score has just gone up by one point.
@@ -146,14 +215,21 @@ Emptiness Sepiments
 
 DEBUG: liches being objhinted.
 
+You see the liches working their way under the meats, which fall into the grinder.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches for a few seconds.
+
+>e
+The scoffer coffers and scoffin' coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind.
+
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
->hasbeen
-Your score has just gone up by one point.
+>xx banshee
+The banshee seems to howl about becoming a has-been.
 
->score
-You currently have 10 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+>xx liches
+Your vision blurs a bit, and instead you see a chisel.
 
 >chisel
 Your score has just gone up by one point.
@@ -161,15 +237,24 @@ Your score has just gone up by one point.
 DEBUG: chisel being objhinted.
 
 >score
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
+
+>hasbeen
+Your score has just gone up by one point.
+
+>score
 You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#xc
 >s
 >w
 >peel river ville
 Cr-r-r-r-k.
 
 DEBUG: RiverVille Liver being objhinted.
+>xx river ville
+It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains.
+>xx viler
+It seems to come together with a duplicate of itself. You look again, and your x-ray vision remains.
 
 >e
 
@@ -186,29 +271,55 @@ Your score has just gone up by one point.
 LIVERS.
 
 DEBUG: livers being objhinted.
+>xx livers
+Your vision blurs a bit, and instead you see a silver sliver.
+
+You see the livers narrowing to a sharp, semi-metallic point.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the livers for a few seconds.
 
 >score
 You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
->silver
-The livers are too dull to do anything like that with. Yet.
 
 >sliver
 Your score has just gone up by one point.
 
 DEBUG: spread being objhinted.
 
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver for a few seconds.
+
+>xx sliver
+The sliver turns silver for a moment.
+
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#xc
 >e
 >n
+
+You see the spread fluttering as if outside an open window.
+
+>n
+You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
+>undo
+
+>xx spread
+Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+>undo
+>drepsa
+As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+>xx red asp
+Your vision blurs a bit, and instead drapes seem to flutter in front of the red asp.
+>undo
+>undo
 
 >drapes
 by one point
 
 DEBUG: drapes being objhinted.
+>xx drapes
+Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.
 
 >score
 You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -221,11 +332,21 @@ The drapes vanish as they are cut, revealing ... well, something leading somewhe
 
 DEBUG: sliver being objhinted.
 
+>banish shotgun
+>z
+You see yourself reading the Notes Stone poem and carrying something stick-like.
+>undo
+>undo
+
 >n
 You don't know what's
 
+You see yourself molding the sliver into something more compact and glowing and then loading your shotgun.
+
 >silver
 Your score has just gone up by one point.
+
+You see yourself loading your shotgun.
 
 DEBUG: shotgun being objhinted.
 
@@ -233,6 +354,8 @@ DEBUG: shotgun being objhinted.
 You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
 >put silver in shotgun
+
+You see yourself tracing something on the maps and then walking with a purpose.
 
 >banish maps
 >purloin spam
@@ -248,18 +371,52 @@ DEBUG: maps being objhinted.
 >undo
 >undo
 
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >n
 Ghouls' Slough
+
+>gt fields
+You've done all you could in Emptiness Sepiments and before. Onward.
+
+>e
+Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.
 
 DEBUG: maps being objhinted.
 
 >x maps
 Frost Forts
 
+You see the vowels grow slavering teeth.
+
+>xx vowels
+Your vision blurs a bit, and instead you see wolves.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels for a few seconds.
+
+>e
+The gnash hangs would, err, shnag you.
+
+>gt slough
+It's time to deal with things, not run.
+>gt trips strip
+You may mean to RETRY instead. Do so?
+>n
+
 >wolves
 Your score has just gone up by one point.
 
+A loud blast, then gore splatters everywhere.
+
 DEBUG: wolves being objhinted.
+
+>angle
+You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically.
+
+>e
+The werewolves will catch you easily.
 
 >score
 You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

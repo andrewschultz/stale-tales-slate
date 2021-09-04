@@ -8,6 +8,7 @@
 * ordeal_thru
 
 >opt in
+>poss
 
 >monty hints
 You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out. There's only one way to go.
@@ -26,10 +27,24 @@ If you get to the end, you'll notice two rather forced ones. They both anagram o
 A door. (-)
 A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.
 
+>gt subsite
+Goodness, no.
+
+>n
+The size of the desert, um, deters you. You're steer'd back to the odor.
+!The one you can probably go through.
+
 >door
 by one point
 
 /DEBUG: (bolt|bulge) being objhinted\.
+
+>score
+You currently have 1 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 7
+
+>n
+The size of the desert, um, deters you. You're steer'd back to the door.
+!The one you can probably go through.
 
 >bugle
 Your score has just gone up by one point.
@@ -37,41 +52,111 @@ Your score has just gone up by one point.
 >blot
 by one point
 
+>score
+You currently have 3 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 7
+
+>n
+The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
+
 >open door
 Thickest Thickets
 
 DEBUG: toga being objhinted.
 
+>n
+You hit a snag, and the toga nags you. Or seems to.
+You suppress an insult that would maybe only make sense if the darnels were sentient.
+
+>gt subsite
+Goodness, no.
+
+>gt rested desert
+The door from Rested Desert was one-way. You can't even see it now.
+
 >slander
-#notana
 by one point
+
+>n
+!You suppress an insult that would maybe only make sense if the darnels were sentient.
 
 >goat
 Your score has just gone up by one point.
 
 You can just go IN, now.
 
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
+
 >in
 Notices Section
 
 DEBUG: magenta nametag being objhinted.
+>monty glean
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe find someone to ask.
+
+>gt desert
+The door from Rested Desert was one-way.
+
+>gt thickets
+You can't see the passage back to the Thickets.
+
+>gt subsite
+Goodness, no.
+
+>n
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is, though it'd be nice to have some help.
+
+>score
+You currently have 5 out of 7 total points for the Ordeal Loader region. Your minimum possible score on solving is 6, and the maximum is 7
 
 >attics
 Your score has just gone up by one point.
 
+>score
+You currently have 6 out of 7 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+
 >gateman
 Your score has just gone up by one point.
 
+You need to take the phial for that to happen. The cabinet may not want to relinquish it right away. Maybe ask the gateman.
+
 You probably want to TAKE GADGET before entering the gate. Well, maybe even TAKE ALL.
+
+>n
+You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. Through the gateway it is!
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+
 >take gadget
-It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
-You need to ASK GATEMAN ABOUT CABINET.
->undo
+As you pick it up, you see it's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget.
+Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel you'll wear it out. I'm proud of what I can make it do ... and  yet ... I have some ideas for a new version, maybe far in the future, if worse evil comes to Yorpwald. Anyhoo."
+
+>score
+You currently have 7 out of 7 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
 
 >ask gateman about cabinet
->take gadget
+
+(taking the phial first)
+The cabinet's doors seem to waver a bit, but they don't slam on you.
+You stare into the blue lube for a bit. You see a small story unfold.
+You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
+And a few seconds later, he does. Well, the clairvoyance bit seems to work.
+
+>z
+You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...
+And a few seconds later, he does. Again. Hooray for double-checking, I think.
 
 You can just enter the gate now.
+
+>get saltine
+Got it. You'd have liked a beefier freebie, but with calm opining, you see no use complaining.
+!Taken.
+>eat saltine
+coughs
+
+>eat saltine
+You reckon you can wait
 
 >in
 Trips Strip

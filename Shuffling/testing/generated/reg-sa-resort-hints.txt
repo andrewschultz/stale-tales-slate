@@ -11,32 +11,77 @@
 >tsf
 
 >monty hints
+>xc
 
 >opt in
 >poss
+
+>monty glean
+You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around.
 
 >resort
 #notmax
 Your score has just gone up by one point
 
+You see yourself exploring the ogled lodge you created.
+
 >enter resort
 Astral Altars
+
+You watch as the tiles shrink from a large land mass to a smaller one.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles for a few seconds.
+
+>xx stile
+As your vision blurs, the stile seems to stand over a small islet.
+>xx tiles
+As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
 >islet
 Your score has just gone up by one point.
 
 Leis Isle
 
+You see yourself either swimming or flying east, but not without proper gear.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the leis (faint), the swing and the rock for a few seconds.
+>get leis
+DEBUG INFO: Taking away a max point. Max-score now 14.
+The leis wither as you touch them. "I SEE ILLS!" booms an unseen voice. Yes, the leis were...LIES. Your final resort must be further on.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the swing and the rock for a few seconds.
+>undo
+>undo
+
+>gt tiles
+Gotta keep going forward.
+
 >score
 You currently have 1 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
+
+>xx rock
+Your vision blurs a bit, and instead you see cork.
+>xx swing
+Your vision blurs a bit, and instead you see wings.
+>xx leis
+Your vision blurs as you recall people you thought you trusted telling you lies.
+
+>w
+You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 
 >lies
 by one point
 >score
 You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
+>w
+No, you already saw the woodland was faked.
+!but then, the leis were fake, too.
+
 >cork
 Your score has just gone up by one point.
+
+You see yourself either swimming or flying east.
 
 >score
 You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
@@ -46,17 +91,57 @@ Your score has just gone up by one point.
 >score
 You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >e
 Rived Drive
+
+You see the poles to the east bend at an angle.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig for a few seconds.
+
+>n
+You'd probably get lost that way. Besides, the vague commotion to the east, past the rising poles, seems worth seeing.
+
+>gt tiles
+Gotta keep going forward.
+>gt isle
+Gotta keep going forward.
+
+>xx sprig
+Your vision blurs a bit, and instead you see grips.
+>xx poles
+Your vision blurs a bit, and instead you see a slope.
+>xx spore
+Your vision blurs a bit, and instead you see ropes.
+>xx toolshed
+Your vision blurs a bit, and instead you see toeholds.
 
 >slope
 by one point
 
+You see two visions: one, the tool shed being destroyed, and another, you wearing the sprig, modified and the spore, modified. In each, you climb east.
+
 >score
 You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
+>ropes
+by one point
+>grips
+by one point
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tool shed (faint) for a few seconds.
+>undo
+>undo
+>undo
+
 >toeholds
 Your score has just gone up by two points.
+
+You see yourself climbing east without much trouble.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) for a few seconds.
 
 >score
 You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
@@ -73,12 +158,32 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
+>angle
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
+
 >e
 
 Potshot Hotspot
 
+You see the riot, happier now, discussing art and wearing dirty smocks.
+
+>xx riot
+Your vision blurs a bit, and instead you see a trio.
+
+>n
+The only way you'll want to try to go is east.
+>e
+That rabble seems mad at you. You'd better disperse them first.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot for a few seconds.
+
 >trio
 Your score has just gone up by one point.
+
+You see the trio, happier now, discussing art and wearing dirty smocks.
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
 >score
 You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
@@ -86,11 +191,17 @@ You currently have 10 out of 15 total points for the Resort region. Your minimum
 >ethre
 The trio remains unmoved. Perhaps you can give the protest more constructive aims?
 
+>xx protest
+You see the trio stopping their protest to get to work as potters.
+
 >potters
 Your score has just gone up by one point.
 
 >score
 You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+
+>xx chain links
+Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
 
 >china
 #notana
@@ -99,26 +210,72 @@ Your score has just gone up by one point.
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>xx links
+Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
+
 >kilns
 Your score has just gone up by one point.
+
+You see yourself somehow managing to defeat Red Bull Burdell while still on the ground.
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around Red Bull Burdell for a few seconds.
 
 >score
 You currently have 13 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>gt isle
+He's saying GET OUT just to be obnoxious and intimidating.
+>gt drive
+He's saying GET OUT just to be obnoxious and intimidating.
+>gt altars
+He's saying GET OUT just to be obnoxious and intimidating.
+
 >get out
 !Your score has just
+
+>xx toe
+You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells "GET OUT." Maybe you could pull it...no, not pull...well, there are only six possibilities...
 
 >tug toe
 #notana
 by one point
+
+You see yourself walking east.
 
 Your score has just gone up by one point.
 
 >score
 You currently have 14 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
+>gt isle
+But you beat Red Bull Burdell! Just go east!
+
 >e
 Means Manse
+
+>xx exits
+They just seem to EXIST. Maybe you can, too.
+>xx
+Your vision blurs a bit, and you see names and hear AMENs.
+
+>gt isle
+But you want to NOT go anywhere. NOT take any exits.
+
+>angle
+It's glowing all around here. The X ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
+
+>n
+You suddenly have ye taxin' any-exit anxiety. Like you're in the middle of an exitstential crisis.
+>n
+I best sit, be, you think.
+>n
+Sit, ex-adventurer.
+>n
+Where would you go? Texis, perhaps
+>n
+Seeing exits just makes you want to...
+>n
+Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 
 >exist
 #notana
