@@ -283,7 +283,7 @@ test dome-xp with "x it/x it/x it/x it/x it/x it/x it/x it/x it/x it"
 
 test dome-inlet with "in/x calendar/test dome-xp/test dome-xp/x thesis/out"
 
-test dome-show with "n/x tools wall/test dome-xp/test dome-xp/x owl wall/test dome-xp/test dome-xp/s"
+test dome-show with "n/x raised aiders/test dome-xp/test dome-xp/x coder decor/test dome-xp/test dome-xp/s"
 
 test dome-dens with "w/x chronicle/test dome-xp/test dome-xp/e"
 

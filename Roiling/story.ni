@@ -1326,6 +1326,7 @@ chapter going to
 
 check gotoing:
 	d "Trying location [noun].";
+	if noun is location of player, say "You're already here!" instead;
 	if noun is strip and strip is visited:
 		say "The command you may be looking for is RETRY. Do that now instead?";
 		if the player yes-consents, try retrying instead;
@@ -1342,6 +1343,7 @@ check gotoing:
 			say "You haven't made it to that region, yet." instead;
 	if noureg is Meta Team, say "You should've gotten a different reject than this, but somehow you found a way through my code. This is a BUG I'd be interested to hear about, but fortunately, whatever you wanted to visit isn't relevant to solving the game." instead;
 	if noureg is not mrlp, say "You can't jump across game regions." instead;
+	abide by goto-check of mrlp;
 	if progval of noun < progval of location of player:
 		repeat through table of progvals:
 			if there is a rm entry and rm entry is noun, say "[why-not entry][line break]" instead;
@@ -1381,7 +1383,7 @@ this is the oyster-goto rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-	if noun is Rascal Craals, say "The Rascal Craals are inaccessible now that [the sausage]'s torn through them. You don't need or want to hang out there, though." instead;
+	if noun is Rascal Craals and sausage is moot, say "The Rascal Craals are inaccessible now that [the sausage]'s torn through them. You don't need or want to hang out there, though." instead;
 	if noun is End Den and gleaner is reflexed, say "No need to go back there." instead;
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
@@ -1429,7 +1431,7 @@ Cripple Clipper	4	--	"The Sonancy Canyons lead to your destiny."
 Sonancy Canyons	5	--	[routes]
 Posh Hops Shop	1	--	"The LOLstr trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
 Olde Lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
-Disease Seaside	3	--	"No sense crossing back. There's more on this side of the shore."
+Disease Seaside	3	--	"No sense crossing back. There's more on [if progval of location of player is 4]the other[else]this[end if] side of the shore."
 Fighter Freight	4	--	"You don't really want to revisit the crays."
 --	5	oyster	[oyster]
 Loftier Trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
@@ -4278,8 +4280,6 @@ definition: a room (called myrm) is ominous:
 definition: a person (called per) is guardianish:
 	if per is a guardian, yes;
 
-last-wall is a thing that varies. last-wall is usually allow lots tools wall.
-
 pikes-clue is a truth state that varies.
 
 to decide which thing is not-mbb:
@@ -4316,7 +4316,6 @@ when play begins (this is the hint and other randomization rule):
 		increase orwt entry by wt;
 		increment wt;
 	sort the table of xibits in orwt order;
-	if a random chance of 1 in 2 succeeds, now last-wall is owl decal code wall; [demo dome random pokes]
 
 volume yes-no substitutes
 
@@ -5968,7 +5967,7 @@ After printing the name of a hintpastry (called the curfood) while taking invent
 	say " [if curfood is heated](heated)[else](cold)[end if]";
 
 to say set-det:
-	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and t[else]T[end if]he idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
+	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and [end if]the idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
 
 to say slider-detail:
 	if list-headache is false, continue the action;
@@ -6111,7 +6110,7 @@ check going nowhere (this is the main can't go that way rule) :
 table of nowheres [tnw]
 theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
-Farming Framing	"No time for mooching around Ordeal Reload. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
+Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
@@ -6152,7 +6151,7 @@ Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[
 Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
-Dourest Detours	"Oh man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
+Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
@@ -21175,8 +21174,8 @@ check going up in Peek Keep: say "The great grate is there so you can see but no
 
 table of xibits [since ORWT is randomly changed, it's nontrivial to convert this table to number properties for each exhibit.]
 exhib	orwt
-owl decal code wall	10
-allow lots tools wall	10
+coder decor	10
+raised aiders	10
 Chic Loner Chronicle	10
 Calendar	10
 Novella	20
@@ -21330,48 +21329,28 @@ when play begins (this is the seed novella rule) :
 
 book Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south.". roomnud of Hows Show is table of Hows Show nudges.
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder credo and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "the whos-show is already under CREDITS.";
 	continue the action;
 
 to decide whether nuf-hows-examined:
-	if written walls are examined, decide yes;
-	if tools wall is examined and code wall is examined, decide yes;
+	if techs chest is examined, decide yes;
+	if raised aiders are examined and coder decor is examined, decide yes;
 	decide no;
 
-the written walls are plural-named scenery in Hows Show. "There's an owl decal code wall[if any-walls is true and last-wall is owl decal] you've been browsing recently[else if owl decal is examined] full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow lots tools] you've been browsing recently[else if allow lots tools is examined] full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other[end if]."
+the techs chest is scenery in Hows Show. "The techs chest is divided into RAISED AIDERS (stuff I used as utilities) and CODER DECOR (neat Inform stuff I learned along the way.) You can examine each as much as you'd like for details about how the Stale Tales Slate was made."
 
-check examining written walls for the first time: ital-say "if you want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But if not, I hope it is still fun.";
+check examining techs chest for the first time: ital-say "if you really, really, want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But it's hardly critical. I hope it is fun just to see the big idea.";
 
-any-walls is a truth state that varies.
+section coder decor
 
-section inform wall
+the coder decor is an exhibit in Hows Show. description of coder decor is "You read some [one of][or]more [stopping]of the coder decor.". notes-table of coder decor is table of informcode.
 
-the owl decal code wall is a proper-named exhibit in Hows Show. description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.". bore-text of owl decal code wall is "Not much to do with the owl decal code wall except examine it.". notes-table of owl decal code wall is table of informcode.
+section raised aiders
 
-printed name of owl decal code wall is "the owl-decal code wall"
-
-understand "owl-decal wall" and "owl-decal code wall" as owl decal code wall.
-
-after doing something with owl decal code wall:
-	now any-walls is true;
-	now last-wall is owl decal code wall;
-	continue the action;
-
-section allow-lots-tools wall
-
-the allow lots tools wall is a proper-named exhibit in Hows Show. description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.". bore-text of allow lots tools wall is "The tools wall is just there to be read.". notes-table of allow lots tools wall is table of perlcode.
-
-printed name of allow lots tools wall is "the allow-lots-tools wall".
-
-understand "allow-lots-tools wall" as tools wall.
-
-after doing something with allow lots tools wall:
-	now any-walls is true;
-	now last-wall is allow lots tools wall;
-	continue the action;
+the raised aiders are a plural-named exhibit in Hows Show. description of raised aiders is "You read some [one of][or]more [stopping]of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.". notes-table of raised aiders is table of auxiliary tech stuff.
 
 book Intel Inlet
 

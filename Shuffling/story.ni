@@ -4944,8 +4944,6 @@ Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimer
 
 Frost Forts is north of Ghouls Slough. nowhere is south of Frost Forts.
 
-check going nowhere in Frost Forts: say "[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]." instead;
-
 after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
 
@@ -9174,6 +9172,8 @@ check going nowhere (this is the main can't go that way rule) :
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
 	say "You can go [list of viable directions] here." instead;
 
+to say dmb: say "[dmm] blocks your way [noun].  "
+
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
@@ -9184,11 +9184,12 @@ Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
 Ghouls Slough	"Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog[if player has maps]. Hey, those maps might be useful to look at, though[end if]."
-Trap Part	"[dmm]. You can only go north to the kitchen or east[or-room]." [see before going in trap part for the other text]
+Frost Forts	"[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]."
+Trap Part	"[dmb]You can only go north to the kitchen or east[or-room]." [see before going in trap part for the other text]
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
-Kitchen	"[dmm] [noun]. You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
-roomroom	"Dud, mum mud blocks your way [noun]. You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if]."
-Stiller Trellis	"[dmm]. You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
+Kitchen	"[dmb]You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
+roomroom	"[dmb]You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if]."
+Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
 Roarings Garrison	"There's [if Obtains Boastin Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not off-stage], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
@@ -9198,7 +9199,7 @@ The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
 Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
-Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE![or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
+Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE!'[or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
 Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
 Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
 Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."

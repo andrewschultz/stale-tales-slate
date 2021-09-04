@@ -1884,7 +1884,7 @@ thistext
 "There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing."
 
 table of informcode
-thistext [x owl decal code wall] [tdm2]
+thistext [x coder decor] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
 "You stare at the start of the Tables of Nudges. There's, like, 1000+! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages. You even see how they were broken into regions, and a region has a table name called table of routes anagrams/nudges, and so forth."
@@ -1894,8 +1894,8 @@ thistext [x owl decal code wall] [tdm2]
 "You read more various miscellaneous testing commands, like ones that zap all the guardians, see all the fruits or even show what the player would've missed or alternate paths every move."
 "You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
-table of perlcode
-thistext [x allow-lots-tools wall] [tdm3]
+table of auxiliary tech stuff
+thistext [x raised aiders] [tdm3]
 "#things to do before release:[line break]1. alphabetize tables and check for duplicates[line break]2. make sure anagrams are valid, especially books[line break]3. make sure duplicate anagrams are weeded out or checked[line break]4. check punctuation"
 "#generating silly names with honorific titles cheaply[line break]for ($x in %firstNames) { if ($isLastNameAnagram{alf('$x$ext')}) { print '$ext $x $isLastNameAnagram{alf('$x$ext')}'; # print for instance Mean Roy Maroney"
 "$alf = join('', sort(split(//, lc($a)))); if ($ana{$alf}) { print '$a=$ana{$alf}'; } $ana{$alf} .= ' $a'; # anagram find code"
@@ -3143,9 +3143,9 @@ novella	"You can read the novella from pages 1 to 100."
 saying ignsay	"[dome-blab]"
 Spy Dial Display	"[dome-blab]"
 Shall Halls	"[dome-blab]"
-owl decal Code Wall	"[dome-blab]"
-written walls	"[dome-blab]"
-allow lots tools wall	"[dome-blab]"
+coder decor	"[dome-blab]"
+techs chest	"[dome-blab]"
+raised aiders	"[dome-blab]"
 design deigns	"[dome-blab]"
 disport tripods	"[dome-blab]"
 larded ladder	"[dome-blab]"
