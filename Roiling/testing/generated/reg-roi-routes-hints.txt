@@ -117,7 +117,7 @@ DEBUG INFO: General LLPish min-up for worst ad.
 
 >in
 
-The spoon points back outside.
+The spoon reflects back outside.
 
 >out
 

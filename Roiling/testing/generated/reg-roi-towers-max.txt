@@ -22,13 +22,13 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 !by one point
 #preefcheck rodney
 >pf
-Rodney can be sent YONDER.
+Rodney can be sent YONDER once he's lost enough followers.
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 !by one point
 #preefcheck rodney retry
 >pf
-Rodney can be sent YONDER or made DRONEY.
+Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
 >allrand
 >gone
@@ -149,7 +149,7 @@ Your word, stupendous as it is, has no effect. Yet. You are probably not close e
 !by one point
 #preefcheck curst palace
 >pf
-You can't make the Curst Palace SPECTACULAR until you're near it.
+You can make the Curst Palace SPECTACULAR once you're near it.
 
 >sadder
 Your score has just gone up by one point
@@ -263,6 +263,15 @@ Your score has just gone up by one point
 Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 
 >e
+
+#balance undos
+>resealed
+Your score has just gone up by one point
+>thisalt
+--you could've also RELEASED Lars Eede to give him a new outlook on life.
+>undo
+>undo
+
 >released
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
@@ -292,12 +301,6 @@ Your score has just gone up by one point
 Score in a scenario: 23 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 55.
 >s
 
->resealed
-Your score has just gone up by one point
->thisalt
---you could've also RELEASED Lars Eede to give him a new outlook on life.
->undo
->undo
 >nerdiest
 Your score has just gone up by one point
 >score
@@ -378,11 +381,12 @@ by one point
 >score
 Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
 >undo
+>undo
 >aimless
 Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
+# don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 >rousted
 Your score has just gone up by one point
 >score
@@ -418,7 +422,7 @@ The fissure squirms a bit but settles back down. When it was open, maybe somethi
 !by one point
 #preefcheck fries us fissure
 >pf
-The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at.
+The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
 #pre-unlocked rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.

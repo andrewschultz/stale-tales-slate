@@ -296,6 +296,7 @@ Your score has just gone up by one point
 Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 
 >e
+
 >released
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
@@ -336,12 +337,6 @@ Score in a scenario: 23 out of 55 total points in the current region, Towers. Lo
 >eneidrts
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
->resealed
-Your score has just gone up by one point
->thisalt
---you could've also RELEASED Lars Eede to give him a new outlook on life.
->undo
->undo
 >nerdiest
 Your score has just gone up by one point
 >score
@@ -467,11 +462,12 @@ by one point
 >score
 Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
 >undo
+>undo
 >aimless
 Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
+# don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 >rousted
 Your score has just gone up by one point
 >score

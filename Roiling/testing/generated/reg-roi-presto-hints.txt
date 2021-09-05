@@ -34,6 +34,7 @@ Score in a scenario: 1 out of 41 total points in the current region, Presto. Low
 
 >phooey
 Your score has just gone up by two points
+Before taking a bite, you wonder if you've visited everywhere you can yet.
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
@@ -127,16 +128,19 @@ Score in a scenario: 10 out of 41 total points in the current region, Presto. Lo
 >blam
 Your score has just gone up by one point
 
-The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
 Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
+#check here if you have the gun but not allies
+>bingo
+The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+>undo
+
 >s
 
->bingo
 You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
->undo
 
 >s
 Dirge Ridge
@@ -180,36 +184,36 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
+
 >n
 
 #balance undo
 >put dart in popgun
 It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
 >bingo
-You realize you can put the dart
+You realize you can load the dart into the popgun now, so you do.
 You wince and prepare to take a bite...
 >undo
 >undo
 
 >bingo
 #pre-boing-bingo rule retry
-!You realize you can put the dart
+!You realize you can load the dart into the popgun now, so you do.
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
-You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
->put dart in popgun
-
-Ugh. The crust feels like army rations. Not now.
-
-DEBUG INFO: PG-on-up popgun hinting.
+You can just put the dart in the popgun.
 
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
+>e
+Ugh. The crust feels like army rations. Not now.
+>w
+
 >load gun with dart
 
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
 
 >there

@@ -925,9 +925,6 @@ You sour on changing the lemons further.
 #nudge for kumquat
 >kumquta
 The kumquat is in good enough shape. Just return it to Curtis.
-#done rejects for auction caution
->papaysa
-You hear a sap yap about the sign and figure it can't be changed any more.
 #done rejects for mango
 >manog
 Snag mo' mangos? No mas, G.
@@ -940,7 +937,7 @@ You corrected the prices precis enough.
 #doing this in front of the prices precis gives a differrent result.
 #redone rejects for prices precis
 >cripse
-Just return the fruit to Curtis. No need for another change.
+You corrected the prices precis enough.
 #done rejects for papayas
 >papaysa
 You've already established yourself as a prompt payer.

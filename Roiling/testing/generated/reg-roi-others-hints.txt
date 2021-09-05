@@ -54,7 +54,22 @@ You have 4 of 42 total points for the post-Elvira Others region, though you only
 >compass
 Your score has just gone up by one point.
 
+#balance undos
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
+>n
+>d
+/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+>banana
+/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
+>go near
+/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
+>rhubarb
+DEBUG INFO: Reversed Deserver Dr. Severe
+>undo
+>undo
+>undo
+>undo
+>undo
 
 # we can go north, but let's look for a few more points first.
 
@@ -118,14 +133,6 @@ Swell Wells
 /DEBUG INFO: (green stain|miser ruble|PSA 'Elp|riot cap|sorer bogey|stucco) hinting\.
 >n
 Try going down from the Swell Wells.
->undo
->d
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
->u
->n
-You will find ID inside the So-Great Storage in the Scape Space.
->undo
->undo
 >undo
 
 >apricot
@@ -337,17 +344,14 @@ You haven't visited the Gates Stage north of the Swell Wells, yet. That's where 
 
 >banana
 Your score has just gone up by one point.
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
 >score
 You have 36 of 42 total points for the post-Elvira Others region, though you only need 38 to win.
 >go near
 Your score has just gone up by one point.
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
 >score
 You have 37 of 42 total points for the post-Elvira Others region, though you only need 39 to win.
 >rhubarb
 Your score has just gone up by one point.
-DEBUG INFO: Reversed Deserver Dr. Severe
 >score
 You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed

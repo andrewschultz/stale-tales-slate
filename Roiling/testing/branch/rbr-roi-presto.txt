@@ -207,7 +207,7 @@ DEBUG INFO: Taking away a max point.
 Your score has just gone up by two points
 }}SCORE+=2
 }}CURMIN++
-{--max}Before taking a bite, you wonder if you've visited everywhere you can yet.
+{--hin}Before taking a bite, you wonder if you've visited everywhere you can yet.
 >score
 {$SCOS}
 
@@ -356,7 +356,7 @@ The yak emits an air of aggressive apathy. It's like the yak is foiling your att
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
 #preefcheck bored yak
 >pf
-You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak.
+You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
 @nud
 #spechelp for tsar star
@@ -784,7 +784,7 @@ Your score has just gone up by one point
 }}CURMIN++
 
 @spoi
-The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @!min
 >score
@@ -797,18 +797,22 @@ The ether turns your stomach too much to eat the crust. It's dangerous. You need
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 #preefcheck ether
 >pf
-You haven't yet found the right moment to shout THERE into the ether.
+You can shout THERE once you have the force to win the fight in the ether.
 
 @nud
 >blma
 That's not something
 
+@spoi
+#check here if you have the gun but not allies
+>bingo
+The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+>undo
+
 >s
 
 @spoi
->bingo
 You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
->undo
 
 >s
 Dirge Ridge
@@ -991,6 +995,11 @@ They're on your side. They will fight when they need to.
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
 >n
+
+@min
+#GOODNESS is no longer available once you leave Dirge Ridge with Rand and Leo
+}}CURMAX--
+
 >n
 
 @max
@@ -1027,31 +1036,34 @@ You need to fix the popgun.
 >put dart in popgun
 It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
 >bingo
-You realize you can put the dart
+You realize you can load the dart into the popgun now, so you do.
 You wince and prepare to take a bite...
 >undo
 >undo
 
+@max
+>there
+!by one point
+THERE, you think, realizing you're not effectively armed yet.
+!You need to fix the popgun.
+
 >bingo
 #pre-boing-bingo rule retry
-!You realize you can put the dart
+!You realize you can load the dart into the popgun now, so you do.
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 }}SCORE++
 
-@spoi
-You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
->put dart in popgun
-
-@spoi
-Ugh. The crust feels like army rations. Not now.
-
 @hin
-DEBUG INFO: PG-on-up popgun hinting.
+You can just put the dart in the popgun.
 
 >score
 {$SCOS}
+
+@spoi
+>e
+Ugh. The crust feels like army rations. Not now.
+>w
 
 @nud
 #mistake retest for nobig/no big
@@ -1081,15 +1093,10 @@ You got the boing-go bin working.
 >numbre
 You got the boing-go bin working.
 
-@max
->there
-!by one point
-THERE, you think, realizing you're not effectively armed yet.
-!You need to fix the popgun.
-
 >load gun with dart
 
-@hin
+@spoi
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
 
 @nud
@@ -1215,7 +1222,7 @@ Phat Path
 {$SCOS}
 }}SCORE--
 #pre-hogs-not-keys rule
->pf
+>thisalt
 SYKE was another way around the hogs to get the keys.
 >undo
 >undo
@@ -1442,10 +1449,6 @@ Dat was a good dust-up
 @spoi
 (Favorite bad word,) you think, I'd rather see what's to the north.
 
-@min
-#GOODNESS is no longer available
-}}CURMAX--
-
 @hin
 You're all done here in the Phat Path. Go north to the shack.
 
@@ -1575,7 +1578,7 @@ Good idea, but tough to program without something to type on.
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
 #preefcheck im le cop polemic
 >pf
-You weren't ready to COMPILE yet.
+You can COMPILE once you've started coding.
 >undo
 >undo
 >undo
@@ -1884,8 +1887,9 @@ Your score has just gone up by one point
 You haven't yet made anywhere comfortable to sleep.
 #preefcheck peels speel
 >pf
-You tried to SLEEP, but the time wasn't right.
+You can SLEEP once you've gotten a good start on your coding task.
 #pre-reboot rule
+>reboot
 You have nothing to type with, so it doesn't do much good.
 #preefcheck be troo e robot
 >pf
@@ -2204,7 +2208,7 @@ You weren't ready to DEBUG yet.
 >undo
 
 @min
-}}CURMAX-=5
+}}CURMAX-=4
 
 >score
 {$SCOS}
@@ -2387,7 +2391,7 @@ Marines Seminar Remains====
 --you could've said PROST (a German word to toast someone) to the Sport Ports.
 Phat Path====
 --you could've said WHAT to the Hawt Thaw.
---you could've made the starch charts TRASCH.
+--you could've called the starch charts TRASCH.
 Hacks' Shack====
 --the trim socks could've become ROM STICKS.
 --you could've made the TBA key a TAB key.

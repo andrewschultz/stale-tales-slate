@@ -164,7 +164,7 @@ Scope Copse
 
 /DEBUG INFO: (denier nereid|snider diners) hinting\.
 >gf salted deltas
-/DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from (Resident Trendies and sweatier wait-seer|sweatier wait-seer and Resident Trendies)\.
+/DEBUG: guardian hint choice is (sweatier wait-seer|Lars Eede) from (Lars Eede and sweatier wait-seer|sweatier wait-seer and Lars Eede)\.
 >undo
 
 >xr butlers
@@ -231,7 +231,7 @@ Score in a scenario: 14 out of 55 total points in the current region, Towers. Lo
 
 >n
 
-/DEBUG: guardian hint choice is (fluster-self rut|traipse pirates) from (fluster-self rut and traipse pirates|traipse pirates and fluster-self rut).
+/DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
 >xr old ice
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
@@ -241,8 +241,8 @@ After a thoughtful gaze, you reckon the docile old ice could be COILED.
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
->xr fluster
-Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
+>xr imposer
+Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >undo
 
 >coiled
@@ -277,7 +277,7 @@ Anemic Cinema
 
 DEBUG INFO: mardier admirer hinting.
 >married
-DEBUG INFO: Resident Trendies hinting.
+DEBUG INFO: Lars Eede hinting.
 >undo
 
 >xr lars eede
@@ -312,6 +312,7 @@ Your score has just gone up by one point
 Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 
 >e
+
 >released
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
@@ -355,12 +356,6 @@ DEBUG INFO: weeds hinting.
 >xr trendies
 Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
->resealed
-Your score has just gone up by one point
->thisalt
---you could've also RELEASED Lars Eede to give him a new outlook on life.
->undo
->undo
 >nerdiest
 Your score has just gone up by one point
 >score
@@ -439,8 +434,8 @@ Score in a scenario: 30 out of 55 total points in the current region, Towers. Lo
 
 DEBUG INFO: REB-NOK bonker hinting.
 
->xr imposer
-Hmm. You bet you could get past if the promise imposer were SEMIPRO.
+>xr fluster
+Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
 >restful
 Your score has just gone up by one point
@@ -495,11 +490,12 @@ by one point
 >score
 Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
 >undo
+>undo
 >aimless
 Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
+# don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 >rousted
 Your score has just gone up by one point
 >score

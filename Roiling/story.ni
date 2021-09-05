@@ -3727,7 +3727,7 @@ to say good-enuf of (goody - a thing):
 		say "You've already dealt with the [players] that way.[no line break]";
 		continue the action;
 	if goody is a fruit:
-		say "[just-c].[no line break]";
+		say "I should have a less generic message, but you should just return [the goody] to Curtis. No need to try anything further.[no line break]";
 		continue the action;
 	if goody is an animal:
 		if goody is in Perverse Preserve or goody is in Lamer Realm:
@@ -4989,7 +4989,6 @@ this is the others-hinting rule:
 		if levdelt > 1, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 2]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if].";
 		if first-hint-check is false, the rule succeeds;
 		say "Falling through to check the fruit we would've hinted for test scripts...";
-	if player is in Gates Stage and passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
 	if droll dollar is not off-stage and enuf-fruit-poke is false:
 		now enuf-fruit-poke is true;
 		say "You have gotten enough fruits, so from here on out you'll need to hint something specific if you want to change it. You'll want to go [if player is in Gates Stage]north of the gates[else if Gates Stage is visited]back north to the Gates Stage[else]north[end if]." instead;
@@ -5000,7 +4999,10 @@ this is the others-hinting rule:
 		if searcher is not reflexed, try objhinting searcher instead;
 		if viewer is not reflexed, try objhinting viewer instead;
 		try objhinting passport instead;
-	if player is in Gates Stage, all-say "[if Scape Space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
+	if player is in Gates Stage:
+		if Scape Space is unvisited, say "Try going down from the Swell Wells." instead;
+		if passport is off-stage, all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
+		all-say "You will find ID inside the So-Great Storage in the Scape Space." instead;
 	if player is in Scape Space:
 		if droll dollar is off-stage, say "You'll eventually want to get that So-Great Storage down the road.";
 		if So Great Storage is in Scape Space and player has droll dollar, try objhinting So Great Storage instead;
@@ -5245,7 +5247,7 @@ this is the routes-hinting rule:
 			all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
 			now spoilit is false instead;
 		if spoilit is true:
-			all-say "The spoon points back outside.";
+			all-say "The spoon reflects back outside.";
 			now spoilit is false instead;
 		try objhinting list o toils instead;
 	if location of player is Idle Deli:
@@ -6027,7 +6029,7 @@ check taking inventory:
 		now all regspecial things carried by player are marked for listing;
 		say "Here in the [mrlp] region you have found:[line break]";
 		if mrlp is routes and read-list is true:
-			if number of quest-items carried by the player > 1, say "  [list of quest-items carried by the player] (for Brother Horbert)[line break]";
+			if number of quest-items carried by the player > 0, say "  [list of quest-items carried by the player with indefinite articles] (for Brother Horbert)[line break]";
 			now all quest-items carried by the player are unmarked for listing;
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
@@ -6100,6 +6102,7 @@ check going nowhere when mrlp is towers (this is the towers-mis-go rule):
 			say "You get lost in [the random bounding scenery in location of player] a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.";
 			now last-detour is location of player;
 			move player to Dourest Detours;
+			min-up;
 
 definition: a room (called r) is detourable:
 	if r is outer route or r is lost lots or r is shaven havens, yes;
@@ -6968,6 +6971,8 @@ check sleeping:
 	if mrlp is presto:
 		if player is in Hacks Shack:
 			if peels speel is in Hacks Shack, try fliptoing peels speel instead;
+			if peels speel is off-stage:
+				say "You aren't tired enough, yet[if futon is off-stage]. Besides, you have nowhere to sleep[end if]." instead;
 		if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
 	if mrlp is oyster, say "You feel too inclined towards action for that." instead;
 	if peels speel is reflexed, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
@@ -9999,7 +10004,7 @@ plebe	presto	"You can shout BLEEP at the plebe [now-once of whether or not the p
 ether	presto	"You can shout THERE [now-once of whether or not leo is eager and boing go bin is reflexed] you have the force to win the fight in the ether."
 bored yak	presto	"You can change the drab yoke to a KEYBOARD [now-once of whether or not yak is moot] it's free of the bored yak."
 be troo e robot	presto	"You can have [the e robot] REBOOT [now-once of whether or not number of things on labs slab is 4] your computing parts are in place."
-peels speel	presto	"You can SLEEP [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your task."
+peels speel	presto	"You can SLEEP [now-once of whether or not (futon is touchable and cpuready)] you've gotten a good start on your coding task."
 Im Le Cop Polemic	presto	"You can COMPILE [now-once of whether or not compile-yet] you've started coding."
 BUB DUDE EGG	presto	"You weren't ready to DEBUG yet."
 LOLstr trolls	oyster	"You can STROLL past the LOLstr trolls [now-once of whether or not silly-acts is 3] you're not worth stopping." [oyster]
@@ -11421,7 +11426,7 @@ The cravings carvings are plural-named auxiliary scenery in Idle Deli. "All sort
 
 a-text of cravings carvings is "RYRRYRY". b-text of cravings carvings is "RYRRYRY". parse-text of cravings carvings is "x[sp]e[sp]x[sp]x[sp]i[sp]x[sp]e".
 
-the stupor sprout is a boring quest-item. description of stupor sprout is "Just looking at it makes you feel relaxed and happy and dopey. But not too dopey!". bore-text of stupor sprout is "Best not do anything to alter the stupor sprout. [if toils is examined]Brother Horbert will know what to do with it[else]It looks a bit arcane[end if]."
+a stupor sprout is a boring quest-item. description of stupor sprout is "Just looking at it makes you feel relaxed and happy and dopey. But not too dopey!". bore-text of stupor sprout is "Best not do anything to alter the stupor sprout. [if toils is examined]Brother Horbert will know what to do with it[else]It looks a bit arcane[end if]."
 
 the seed pit is reflexive scenery in Idle Deli. "[if stupor sprout is off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[else]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
 
@@ -19967,7 +19972,7 @@ carry out guruing:
 		if noun is the-from entry:
 			if noun is reflexed:
 				say "You've already changed [the noun]. ";
-			else if noun is compass:
+			else if noun is moss cap:
 				say "Whoah! A compass begins spinning. ";
 			else if noun is coins:
 				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
@@ -21691,7 +21696,7 @@ this is the spoil-hints rule:
 			try objhinting parallel-entry entry instead;
 		now spoilit is false;
 		if there is no spoil-entry entry:
-			d "Oops fix [hint-entry entry].[line break]";
+			d "Oops [hint-entry entry] needs a spoil-entry in table of hintobjs.[line break]";
 		if player has curst crust:
 			if there is no spoil-entry entry:
 				say "Before you eat the crust, you mutter a naughty word. You may need to use HINT to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";

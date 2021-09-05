@@ -1032,7 +1032,7 @@ You search around for the worst ad some more, but you can't find it, or anything
 >in
 
 @spoi
-The spoon points back outside.
+The spoon reflects back outside.
 
 >out
 

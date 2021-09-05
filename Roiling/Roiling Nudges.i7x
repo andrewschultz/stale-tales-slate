@@ -2338,8 +2338,6 @@ this is the perp-moot rule:
 
 to say count-enuf: say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
 
-to say just-c: say "Just return the fruit to Curtis. No need for another change"
-
 section rustic citrus auxiliary
 
 to say plur-fruit: say "Well, you don't technically need plurals for this, but you're on the right track"

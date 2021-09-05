@@ -21,7 +21,7 @@ Rustic Citrus
 >gx me
 You don't want to change. Well, not in that way.
 >gx curtis
-A person shouldn't and can't be changed into a fruit.
+If Curtis had any materials, he wouldn't hide them from you.
 >gx pagers
 You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipates.
 >gx slime
@@ -125,7 +125,7 @@ You have 11 of 42 total points for the post-Elvira Others region, though you onl
 >n
 Swell Wells
 
->gx silly shirt
+>gx elp psa
 You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
 >gx riot cap
 You have a vision of a fruit: APRICOT. The aftertaste of arugula finally dissipates.

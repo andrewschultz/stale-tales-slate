@@ -38,7 +38,6 @@ Score in a scenario: 1 out of 41 total points in the current region, Presto. Low
 
 >phooey
 Your score has just gone up by two points
-Before taking a bite, you wonder if you've visited everywhere you can yet.
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
@@ -56,7 +55,7 @@ The yak emits an air of aggressive apathy. It's like the yak is foiling your att
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
 #preefcheck bored yak
 >pf
-You know the drab yoke can be changed to a KEYBOARD if it's free of the bored yak.
+You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
 #not a mistake
 >rats
@@ -130,7 +129,7 @@ Score in a scenario: 11 out of 41 total points in the current region, Presto. Lo
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 #preefcheck ether
 >pf
-You haven't yet found the right moment to shout THERE into the ether.
+You can shout THERE once you have the force to win the fight in the ether.
 
 >s
 
@@ -162,6 +161,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
+
 >n
 
 #balance undo
@@ -192,21 +192,19 @@ THERE, you think, realizing you're not armed yet.
 THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
 
->bingo
-#pre-boing-bingo rule retry
-!You realize you can put the dart
-!(taking the popgun first while you mess with the boing-go bin)
-Your score has just gone up by one point
-
->put dart in popgun
-
->score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
-
 >there
 !by one point
 THERE, you think, realizing you're not effectively armed yet.
 !You need to fix the popgun.
+
+>bingo
+#pre-boing-bingo rule retry
+!You realize you can load the dart into the popgun now, so you do.
+!(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >load gun with dart
 
@@ -228,7 +226,7 @@ Phat Path
 >score
 Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 #pre-hogs-not-keys rule
->pf
+>thisalt
 SYKE was another way around the hogs to get the keys.
 >undo
 >undo
@@ -354,7 +352,7 @@ Good idea, but tough to program without something to type on.
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
 #preefcheck im le cop polemic
 >pf
-You weren't ready to COMPILE yet.
+You can COMPILE once you've started coding.
 >undo
 >undo
 >undo
@@ -397,8 +395,9 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 You haven't yet made anywhere comfortable to sleep.
 #preefcheck peels speel
 >pf
-You tried to SLEEP, but the time wasn't right.
+You can SLEEP once you've gotten a good start on your coding task.
 #pre-reboot rule
+>reboot
 You have nothing to type with, so it doesn't do much good.
 #preefcheck be troo e robot
 >pf

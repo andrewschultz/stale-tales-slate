@@ -60,7 +60,7 @@ Rustic Citrus
 >gx me
 You don't want to change. Well, not in that way.
 >gx curtis
-A person shouldn't and can't be changed into a fruit.
+If Curtis had any materials, he wouldn't hide them from you.
 >gx pagers
 You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipates.
 >gx slime
@@ -264,7 +264,23 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 @hin
+#balance undos
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
+>n
+>d
+/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+>banana
+/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
+>go near
+/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
+>rhubarb
+DEBUG INFO: Reversed Deserver Dr. Severe
+>undo
+>undo
+>undo
+>undo
+>undo
+
 
 @nud
 #done rejects for compass
@@ -519,17 +535,9 @@ Swell Wells
 >n
 Try going down from the Swell Wells.
 >undo
->d
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
->u
->n
-You will find ID inside the So-Great Storage in the Scape Space.
->undo
->undo
->undo
 
 @spoi
->gx silly shirt
+>gx elp psa
 You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
 >gx riot cap
 You have a vision of a fruit: APRICOT. The aftertaste of arugula finally dissipates.
@@ -1446,9 +1454,6 @@ You sour on changing the lemons further.
 #nudge for kumquat
 >kumquta
 The kumquat is in good enough shape. Just return it to Curtis.
-#done rejects for auction caution
->papaysa
-You hear a sap yap about the sign and figure it can't be changed any more.
 #done rejects for mango
 >manog
 Snag mo' mangos? No mas, G.
@@ -1463,7 +1468,7 @@ You corrected the prices precis enough.
 #doing this in front of the prices precis gives a differrent result.
 #redone rejects for prices precis
 >cripse
-Just return the fruit to Curtis. No need for another change.
+You corrected the prices precis enough.
 #done rejects for papayas
 >papaysa
 You've already established yourself as a prompt payer.
@@ -1670,21 +1675,18 @@ You haven't visited the Gates Stage north of the Swell Wells, yet. That's where 
 @!min
 >banana
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
 >score
 }}SCORE++
 }}CURMIN++
 {$SCOS}
 >go near
 Your score has just gone up by one point.
-{--hin}/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
 >score
 }}SCORE++
 }}CURMIN++
 {$SCOS}
 >rhubarb
 Your score has just gone up by one point.
-{--hin}DEBUG INFO: Reversed Deserver Dr. Severe
 >score
 }}SCORE++
 }}CURMIN++

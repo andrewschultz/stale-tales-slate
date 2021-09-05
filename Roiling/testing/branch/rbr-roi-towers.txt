@@ -73,13 +73,13 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 !by one point
 #preefcheck rodney
 >pf
-Rodney can be sent YONDER.
+Rodney can be sent YONDER once he's lost enough followers.
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 !by one point
 #preefcheck rodney retry
 >pf
-Rodney can be sent YONDER or made DRONEY.
+Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
 @nud
 >t
@@ -661,7 +661,7 @@ Your word, stupendous as it is, has no effect. Yet. You are probably not close e
 !by one point
 #preefcheck curst palace
 >pf
-You can't make the Curst Palace SPECTACULAR until you're near it.
+You can make the Curst Palace SPECTACULAR once you're near it.
 
 @mis
 #mistake test for wist led/its lewd
@@ -908,7 +908,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @hin
 /DEBUG INFO: (denier nereid|snider diners) hinting\.
 >gf salted deltas
-/DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from (Resident Trendies and sweatier wait-seer|sweatier wait-seer and Resident Trendies)\.
+/DEBUG: guardian hint choice is (sweatier wait-seer|Lars Eede) from (Lars Eede and sweatier wait-seer|sweatier wait-seer and Lars Eede)\.
 >undo
 
 @spoi
@@ -955,9 +955,6 @@ You don't have x-ray vision right now.
 The x-ray vision comes back. Once again, you can XRAY what you want to.
 >xray nereid
 Hmm. You bet you could get past if the denier nereid were REINED.
-!DEBUG INFO: Taking away a max point.
->xray diners
-Hmm. You bet you could get past if the snider diners were RINSED.
 !DEBUG INFO: Taking away a max point.
 
 @nud
@@ -1230,7 +1227,7 @@ Your score has just gone up by one point
 >n
 
 @hin
-/DEBUG: guardian hint choice is (fluster-self rut|traipse pirates) from (fluster-self rut and traipse pirates|traipse pirates and fluster-self rut).
+/DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
 @spoi
 >xr old ice
@@ -1302,8 +1299,8 @@ Your settler registers RRYR?Y*****.
 >xr pirates #01n
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
->xr fluster #01e
-Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
+>xr imposer #01e
+Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >undo
 
 @!minh,mini
@@ -1321,6 +1318,11 @@ by one point
 DEBUG: guardian hint choice is sweatier wait-seer from sweatier wait-seer.
 >undo
 >undo
+
+@nud
+#spechelp for promise imposer
+>semprio
+The promise imposer seems a little less intimidating.
 
 @!minh,mini
 >semipro
@@ -1361,7 +1363,7 @@ Anemic Cinema
 @hin
 DEBUG INFO: mardier admirer hinting.
 >married
-DEBUG INFO: Resident Trendies hinting.
+DEBUG INFO: Lars Eede hinting.
 >undo
 
 @spoi
@@ -1554,7 +1556,22 @@ Your score has just gone up by one point
 
 @!minh,mini
 >e
-{--mis}\\#mistake test for inserted\\>inserted\\You see red realizing the resident trendies already inserted themselves here.\\
+
+@mis
+#mistake test for inserted
+>inserted
+You see red realizing the resident trendies already inserted themselves here.
+
+@max
+#balance undos
+>resealed
+Your score has just gone up by one point
+>thisalt
+--you could've also RELEASED Lars Eede to give him a new outlook on life.
+>undo
+>undo
+
+@!minh,mini
 >released
 Your score has just gone up by one point
 }}SCORE++
@@ -1767,12 +1784,6 @@ DEBUG INFO: weeds hinting.
 Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
 @!minh,mini
->resealed
-Your score has just gone up by one point
->thisalt
---you could've also RELEASED Lars Eede to give him a new outlook on life.
->undo
->undo
 >nerdiest
 Your score has just gone up by one point
 }}CURMIN++
@@ -2042,18 +2053,13 @@ Your score has just gone up by one point
 DEBUG INFO: REB-NOK bonker hinting.
 
 @spoi
->xr imposer #10e
-Hmm. You bet you could get past if the promise imposer were SEMIPRO.
+>xr fluster #10e
+Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
 @sli
 #slider test for restful
 >ertsulf
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#spechelp for promise imposer
->semprio
-The promise imposer seems a little less intimidating."
 
 @!minh,mini
 >restful
@@ -2181,6 +2187,7 @@ Lost Lots
 @!minh,mini
 >w
 Dourest Detours
+}}CURMIN++
 
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
@@ -2224,20 +2231,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 by one point
 >score
 }}SCORE++
-}}CURMIN++
 }}CURMAX--
 {$SCOS}
 >undo
+>undo
+}}CURMIN++
 }}CURMAX++
 >aimless
 Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
+# don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
 {$SCOS}
 >rousted
 Your score has just gone up by one point
 }}SCORE++
-}}CURMIN++
 >score
 {$SCOS}
 \\
@@ -2456,7 +2463,7 @@ The fissure squirms a bit but settles back down. When it was open, maybe somethi
 !by one point
 #preefcheck fries us fissure
 >pf
-The Fries-Us Fissure can be made FUSSIER to some effect, once there's something it can fuss at.
+The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
 #pre-unlocked rule
 >unlocked
 You fiddle with the prison ropins but probably need someone or something to MAKE them unlocked due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.

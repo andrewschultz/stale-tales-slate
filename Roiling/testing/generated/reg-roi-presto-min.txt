@@ -100,18 +100,19 @@ Your score has just gone up by one point
 Score in a scenario: 9 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
 
 >n
+
+#GOODNESS is no longer available once you leave Dirge Ridge with Rand and Leo
+
 >n
 
 >bingo
 #pre-boing-bingo rule retry
-!You realize you can put the dart
+!You realize you can load the dart into the popgun now, so you do.
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 
->put dart in popgun
-
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >load gun with dart
 
@@ -119,7 +120,7 @@ Score in a scenario: 10 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >n
 Saps' Pass
@@ -133,19 +134,17 @@ Your score has just gone up by one point
 Phat Path
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 >tough
 Your score has just gone up by one point
 Hut! Go!
 Dat was a good dust-up
-
-#GOODNESS is no longer available
 
 >score
 Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
@@ -243,7 +242,7 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 by one point
 
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 32.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
@@ -253,7 +252,7 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 32.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
 >misses
 Grey Gyre====
@@ -267,7 +266,7 @@ Marines Seminar Remains====
 --you could've said PROST (a German word to toast someone) to the Sport Ports.
 Phat Path====
 --you could've said WHAT to the Hawt Thaw.
---you could've made the starch charts TRASCH.
+--you could've called the starch charts TRASCH.
 Hacks' Shack====
 --the trim socks could've become ROM STICKS.
 --you could've made the TBA key a TAB key.

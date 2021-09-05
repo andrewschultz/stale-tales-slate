@@ -624,6 +624,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 15 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
 
+#spechelp for promise imposer
+>semprio
+The promise imposer seems a little less intimidating.
+
 >semipro
 Your score has just gone up by one point
 >score
@@ -936,12 +940,6 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
 
->resealed
-Your score has just gone up by one point
->thisalt
---you could've also RELEASED Lars Eede to give him a new outlook on life.
->undo
->undo
 >nerdiest
 Your score has just gone up by one point
 >score
@@ -1133,10 +1131,6 @@ Score in a scenario: 30 out of 55 total points in the current region, Towers. Lo
 >s
 >s
 
-#spechelp for promise imposer
->semprio
-The promise imposer seems a little less intimidating."
-
 >restful
 Your score has just gone up by one point
 
@@ -1251,11 +1245,12 @@ by one point
 >score
 Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
 >undo
+>undo
 >aimless
 Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
+# don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 >rousted
 Your score has just gone up by one point
 >score

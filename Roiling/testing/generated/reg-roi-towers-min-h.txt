@@ -61,9 +61,6 @@ The x-ray vision comes back. Once again, you can XRAY what you want to.
 >xray nereid
 Hmm. You bet you could get past if the denier nereid were REINED.
 !DEBUG INFO: Taking away a max point.
->xray diners
-Hmm. You bet you could get past if the snider diners were RINSED.
-!DEBUG INFO: Taking away a max point.
 
 >subtler
 Your score has just gone up by one point
