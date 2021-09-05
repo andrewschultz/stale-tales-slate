@@ -924,7 +924,7 @@ You got enough of a discount. Really.
 You sour on changing the lemons further.
 #nudge for kumquat
 >kumquta
-Just return the fruit to Curtis. No need for another change.
+The kumquat is in good enough shape. Just return it to Curtis.
 #done rejects for auction caution
 >papaysa
 You hear a sap yap about the sign and figure it can't be changed any more.
@@ -1107,13 +1107,12 @@ Your score has just gone up by one point.
 You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed
 Your score has just gone up by one point.
-You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
 >score
 You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
 
 #nudge for guava
 >guaav
-Just return the fruit to Curtis. No need for another change.
+The guava doesn't need to be changed. Curtis will be happy with it.
 
 #nudge for popstar
 >popstra
@@ -1211,8 +1210,6 @@ You've done enough researching, and now you need to try something else.
 
 >review
 by one point
-Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
-!You can't expect anything more from Curtis.
 
 >score
 

@@ -62,13 +62,13 @@ You don't want to change. Well, not in that way.
 >gx curtis
 A person shouldn't and can't be changed into a fruit.
 >gx pagers
-You focus and squint, and letters appears in your sight: GRAPES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipates.
 >gx slime
-You focus and squint, and letters appears in your sight: LIMES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
 >gx spear
-You focus and squint, and letters appears in your sight: PEARS. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
 >gx lumps
-You focus and squint, and letters appears in your sight: PLUMS. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for boarder
@@ -235,7 +235,7 @@ DEBUG INFO: moss cap hinting.
 
 @spoi
 >gx moss cap
-moss cap: You focus and squint, and letters appears in your sight: COMPASS. The aftertaste of arugula finally dissipates.
+Whoah! You suddenly see a COMPASS spinning around. The aftertaste of arugula finally dissipates.
 
 >score
 }}SCORE++
@@ -286,26 +286,26 @@ The needle is working fine. No need to meddle.
 
 @spoi
 >gx eerie blurbs
-You focus and squint, and letters appears in your sight: BLUEBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
 >gx peanut cola
-You focus and squint, and letters appears in your sight: CANTALOUPE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: CANTALOUPE. The aftertaste of arugula finally dissipates.
 >gx harmonicas
-You focus and squint, and letters appears in your sight: MARASCHINO. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
 >gx omen prism
-You focus and squint, and letters appears in your sight: PERSIMMON. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
 >gx magenta rope
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 >gx megaton pear
 You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 >gx rampage note
 You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 >gx mopeage rant
 You blink and wind up refocusing on the magenta rope.
-You focus and squint, and letters appears in your sight: POMEGRANATE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 >gx mad train
-You focus and squint, and letters appear in your vision: TAMARIND. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
 @sli
 #slider test for tamarind
@@ -516,20 +516,31 @@ Swell Wells
 
 @hin
 /DEBUG INFO: (green stain|miser ruble|PSA 'Elp|riot cap|sorer bogey|stucco) hinting\.
+>n
+Try going down from the Swell Wells.
+>undo
+>d
+/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+>u
+>n
+You will find ID inside the So-Great Storage in the Scape Space.
+>undo
+>undo
+>undo
 
 @spoi
 >gx silly shirt
-You focus and squint, and letters appears in your sight: APPLES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: APPLES. The aftertaste of arugula finally dissipates.
 >gx riot cap
-You focus and squint, and letters appears in your sight: APRICOT. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: APRICOT. The aftertaste of arugula finally dissipates.
 >gx stucco
-You focus and squint, and letters appears in your sight: COCONUTS. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: COCONUTS. The aftertaste of arugula finally dissipates.
 >gx sorer bogey
-You focus and squint, and letters appears in your sight: GOOSEBERRY. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: GOOSEBERRY. The aftertaste of arugula finally dissipates.
 >gx miser ruble
-You focus and squint, and letters appears in your sight: MULBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: MULBERRIES. The aftertaste of arugula finally dissipates.
 >gx green stain
-You focus and squint, and letters appears in your sight: TANGERINES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: TANGERINES. The aftertaste of arugula finally dissipates.
 >gx mound
 Nothing happens. Try something else.
 
@@ -675,7 +686,7 @@ scru-it
 @spoi
 ##balance undos
 >gx coin
-You focus and squint, and letters appears in your sight: ICON. The aftertaste of arugula finally dissipates.
+You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
 >icon
 by one point
 >gx icon
@@ -714,7 +725,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for sonic icons
 >purloin coins
 >ocsin
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sonic.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
+DOUBLE PROBLEM FOR: sonic.
 >undo
 >undo
 #slider test for icons
@@ -833,17 +845,16 @@ You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The afte
 >icons
 by one point
 >gx icons
-You focus and squint, and letters appears in your sight: SONIC. The aftertaste of arugula finally dissipates.
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >sonic
 by one point
 >gx sonic coins
-You focus and squint, and letters appears in your sight: ICONS. The aftertaste of arugula finally dissipates.
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
 >undo
 >undo
 >undo
-
 
 @hin
 DEBUG INFO: icons hinting.
@@ -864,23 +875,23 @@ Filed Field
 
 @spoi
 >gx barber sickle
-You focus and squint, and letters appears in your sight: BLACKBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: BLACKBERRIES. The aftertaste of arugula finally dissipates.
 >gx buried raft
-You focus and squint, and letters appears in your sight: BREADFRUIT. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: BREADFRUIT. The aftertaste of arugula finally dissipates.
 >gx briar screen
-You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 >gx barren cries
-You focus and squint, and letters appears in your sight: CRANBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 >gx rapt figure
-You focus and squint, and letters appears in your sight: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
 >gx pipe panel fence
-You focus and squint, and letters appears in your sight: PINEAPPLE. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
 >gx pryer bars
-You focus and squint, and letters appears in your sight: RASPBERRY. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: RASPBERRY. The aftertaste of arugula finally dissipates.
 >gx barriers west
-You focus and squint, and letters appears in your sight: STRAWBERRIES. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: STRAWBERRIES. The aftertaste of arugula finally dissipates.
 >gx mean trowel
-You focus and squint, and letters appears in your sight: WATERMELON. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: WATERMELON. The aftertaste of arugula finally dissipates.
 
 @hin
 /DEBUG INFO: (barber sickle|barren cries|barriers west|buried raft|mean trowel|pipe panel lie pen app|pryer bars|rapt figure) hinting\.
@@ -1170,7 +1181,7 @@ Your score has just gone up by one point.
 {$SCOS}
 >breadfruit
 Your score has just gone up by one point.
-{--hin}You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
+{--hin}You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
 >score
 }}SCORE++
 }}CURMIN++
@@ -1186,23 +1197,23 @@ Clangier Clearing
 >gx len craig
 Nothing, despite all Len Craig has to sell.
 >gx ammo gang
-You focus and squint, and letters appears in your sight: AMONG. The aftertaste of arugula finally dissipates.
+You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 >gx nectarine
-You focus and squint, and letters appears in your sight: ANCIENTER. The aftertaste of arugula finally dissipates.
+You feel a need to make the nectarine ANCIENTER. The aftertaste of arugula finally dissipates.
 >gx nectarine
 You've already changed the nectarine.
 >gx peach
-You focus and squint, and letters appears in your sight: CHEAP. The aftertaste of arugula finally dissipates.
+You feel a need to call the peach CHEAP. The aftertaste of arugula finally dissipates.
 >gx quince
-You focus and squint, and letters appears in your sight: CINQUE. The aftertaste of arugula finally dissipates.
+You feel a need to order CINQUE. The aftertaste of arugula finally dissipates.
 >gx prices precis
-You focus and squint, and letters appears in your sight: CRIPES. The aftertaste of arugula finally dissipates.
+You feel a need to lash out and say CRIPES. The aftertaste of arugula finally dissipates.
 >gx melon
-You focus and squint, and letters appears in your sight: MO LEN. The aftertaste of arugula finally dissipates.
+You feel a need to haggle with  MO LEN. The aftertaste of arugula finally dissipates.
 >gx auction caution
-You focus and squint, and letters appears in your sight: PAPAYAS. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 >gx lemons
-You focus and squint, and letters appears in your sight: SOLEMN. The aftertaste of arugula finally dissipates.
+You feel an urge to look SOLEMN. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for sell/sell [text]
@@ -1413,7 +1424,7 @@ Your score has just gone up by one point.
 {$SCOS}
 >cripes
 Your score has just gone up by one point.
-{--hin}You look around and don't see any way to bargain for more fruits here. In fact, you are pretty sure you've found all the fruits.
+{--hin}You look around and don't see any way to bargain for more fruits here. Maybe there's more to do elsewhere.
 >score
 }}SCORE++
 }}CURMIN++
@@ -1434,7 +1445,7 @@ You got enough of a discount. Really.
 You sour on changing the lemons further.
 #nudge for kumquat
 >kumquta
-Just return the fruit to Curtis. No need for another change.
+The kumquat is in good enough shape. Just return it to Curtis.
 #done rejects for auction caution
 >papaysa
 You hear a sap yap about the sign and figure it can't be changed any more.
@@ -1478,13 +1489,13 @@ Dr. Severe
 
 @spoi
 >gx a banna'
-You focus and squint, and letters appears in your sight: BANANA. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: BANANA. The aftertaste of arugula finally dissipates.
 >gx orange
-You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
+You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally dissipates.
 >gx a brr hub
-You focus and squint, and letters appears in your sight: RHUBARB. The aftertaste of arugula finally dissipates.
+You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
 >gx dr severe
-You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
+One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
 
 @nud
 #nudge for storage
@@ -1495,10 +1506,7 @@ You might break what is in the storage.
 You might break what is in the storage. Then it would be neither great nor so great.
 
 @hin
-You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
->banish passport
->z
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+You probably want to put the sonic icons in the slot.
 
 @mis
 #mistake test for gorean
@@ -1659,7 +1667,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >z
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
 
-
 @!min
 >banana
 Your score has just gone up by one point.
@@ -1684,8 +1691,7 @@ Your score has just gone up by one point.
 {$SCOS}
 >reversed
 Your score has just gone up by one point.
-{--hin}
-You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
+{--hin}You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.\nSince you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.\nThere are no more fruits to find for Curtis.
 >score
 }}SCORE++
 }}CURMIN++
@@ -1696,14 +1702,8 @@ You look around and don't see any way to pick off more fruits here. In fact, you
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
 Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
->guru orange
-You focus and squint, and letters appears in your sight: GO NEAR. The aftertaste of arugula finally dissipates.
->undo
 >guru dr severe
-You focus and squint, and letters appears in your sight: REVERSED. The aftertaste of arugula finally dissipates.
->undo
->guru brr hub
-You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
+One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
 >score
 {$SCOS}
 }}CURMAX--
@@ -1712,7 +1712,7 @@ You can't get the maximum score, since you used the arugula
 @nud
 #nudge for guava
 >guaav
-Just return the fruit to Curtis. No need for another change.
+The guava doesn't need to be changed. Curtis will be happy with it.
 
 @nud
 #nudge for popstar
@@ -1871,8 +1871,6 @@ You've done enough researching, and now you need to try something else.
 by one point
 }}SCORE++
 @!min
-Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
-!You can't expect anything more from Curtis.
 
 >score
 

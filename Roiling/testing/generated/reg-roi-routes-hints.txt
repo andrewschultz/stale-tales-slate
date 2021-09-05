@@ -18,8 +18,12 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >monty hints
 You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
 
->z
+>past
+by one point
+>out
 DEBUG INFO: scripture picturers hinting.
+>undo
+>undo
 
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.

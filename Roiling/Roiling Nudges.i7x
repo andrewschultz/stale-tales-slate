@@ -1261,8 +1261,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "drol"	234519308	lord al	--	"[count-enuf]."
 "droll"	288333147	dollar	--	"[count-enuf]."
 "dollar"	290520965	dollar	--	"[count-enuf]."
-"guava"	249245965	guava	--	"[just-c]."
-"kumquat"	516923398	kumquat	--	"[just-c]."
+"guava"	249245965	guava	--	"The guava doesn't need to be changed. Curtis will be happy with it."
+"kumquat"	516923398	kumquat	--	"The kumquat is in good enough shape. Just return it to Curtis."
 "feeling"	482441009	fleeing feeling	--	"You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP."
 
 table of Rustic Citrus nudges

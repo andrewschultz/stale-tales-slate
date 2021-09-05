@@ -44,21 +44,21 @@ The LOLstr trolls seem concerned you haven't had any fun at all. You try to argu
 !by one point
 #preefcheck lolstr trolls
 >pf
-You can't quite STROLL past the LOLstr trolls, yet.
+You can STROLL past the LOLstr trolls once you're not worth stopping.
 >sing
 by one point
 >stroll
 The LOLstr trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now. They act sore to scare, sure you stole a coaster. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
 >spit
-"Job perks: bop jerks," say the trolls. The pesty types have formed a half-circle around you now.
+"Job perks: bop jerks," say the LOLstr trolls. The pesty types have formed a half-circle around you now.
 by one point
 >stroll
 The LOLstr trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 Maybe one more disruption, and you won't be worth bothering with.
 !by one point
 >remap
-The trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
+The LOLstr trolls and pesty types have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out--now's a good time to STROLL.
 by one point
 >undo
 >undo
@@ -180,13 +180,6 @@ You probably can't help the trout until they're off his case, but they wouldn't 
 #preefcheck trout
 >pf
 You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
-#pre-unearth-haunter rule
->unearth
-!by one point
-You need to worry about the carps and pikes, first.
-#preefcheck hunter hunt area
->pf
-You can UNEARTH the HUNTER HUNT AREA with the right equipment.
 
 >scrap carps
 by one point
@@ -207,9 +200,13 @@ Your score has just gone up by one
 !--you could've tried to SCRAP with the carps to rescue Tortu.
 --you could've tried to SPIKE the pikes to rescue Tortu.
 
+#pre-unearth-haunter rule
 >unearth
 !by one point
-Nothing to unearth the haunter with.
+Nothing to unearth a haunter with.
+#preefcheck hunter hunt area
+>pf
+You can UNEARTH the HUNTER HUNT AREA with the right equipment.
 
 >e
 Hardest Trashed Dearths
@@ -309,7 +306,7 @@ Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lo
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
 #preefcheck crate
 >pf
-You can REACT to the crate better when you have more data.
+You can REACT to the crate better once you have more data.
 #pre-kiss-skis rule
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
@@ -321,7 +318,7 @@ You can KISS the skis once you are less distracted.
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 #preefcheck span pans
 >pf
-You can SNAP to clear the span pans when everything else is out of the way.
+You can SNAP to clear the span pans once everything else is out of the way.
 
 >trace crate
 by one point
@@ -504,7 +501,7 @@ Now there's a good plan. But right now, that gang of walleyes might rough you up
 #detour to test burying ruby without digger
 #preefcheck ol trap
 >pf
-You can PATROL the ol' trap once the weaselly walleyes are gone.
+You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 >w
 >banish digger
 #pre-bury-ruby rule
@@ -574,10 +571,6 @@ Score in a scenario: 33 out of 42 total points in the current region, Oyster. Lo
 
 >e
 
->patrol ol trap
-by one point
->undo
-
 >patrol
 Your score has just gone up by one point
 
@@ -597,7 +590,7 @@ The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't to
 !by one point
 #preefcheck dialer
 >pf
-With the yapper gone, you should be able to DERAIL.
+You can use the dialer to DERAIL once the papery yapper is gone.
 #negative test: lever used to be there before you got rid of the yapper. We want to make sure it's not there.
 >revel
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
@@ -613,13 +606,19 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
->banish lance
+# note: the code says "if wipes are not moot" so you might think BANISH LANCE is more sensible, but in this case, I just want to make sure the code paths work.
+>banish wipes
 #pre-trample-ramplet rule
+>trample
+You'd think your lance would make you worthy of climbing the templar ramplet, but not in its current form. It's too dirty.
+>banish lance
 >trample
 You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
 #preefcheck templar ramplet
 >pf
-Once you have a symbol of your worthiness, you can TRAMPLE the templar ramplet.
+You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
+>undo
+>undo
 >undo
 >undo
 >undo
@@ -678,7 +677,7 @@ Maybe in a bit, but the pins are in the way at the moment. They can't be too har
 !by one point
 #preefcheck bogus-redial
 >pf
-You should be able to REDIAL the dialer with the proper preparation.
+You can REDIAL the dialer once the pins are not in your way.
 
 >spin pins
 Your score has just gone up by one

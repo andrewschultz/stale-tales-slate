@@ -261,35 +261,18 @@ by one point
 Your score has just gone up by one point
 >score
 Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
->w
-Dourest Detours
-
->rousted
-by one point
->score
-Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 54.
->undo
->aimless
-Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
->score
-Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 55.
->rousted
-Your score has just gone up by one point
->score
-Score in a scenario: 21 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
 
 >e
 >released
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
 >score
-Score in a scenario: 22 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+Score in a scenario: 21 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 >n
 
 Shaven Havens
@@ -302,11 +285,11 @@ Salted Deltas
 >hastiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 24 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+Score in a scenario: 22 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
+Score in a scenario: 23 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 55.
 >s
 
 >resealed
@@ -318,43 +301,43 @@ Your score has just gone up by one point
 >nerdiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 26 out of 55 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 55.
+Score in a scenario: 24 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
 
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 25 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
 
 >sewed
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 26 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
 
 >mined
 >score
-Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 55.
+Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 55.
 
 >d
 Dire and Arid Den
 >score
-Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >dandier
 Treading Gradient
 
 >score
-Score in a scenario: 30 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+Score in a scenario: 28 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >e
 
 >marginal
 #notmax
 Your score has just gone up by one point
 >score
-Score in a scenario: 31 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >holiest
 #notmax
 Your score has just gone up by one point
 >score
-Score in a scenario: 32 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+Score in a scenario: 30 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >n
 >s
 >s
@@ -363,7 +346,7 @@ Score in a scenario: 32 out of 55 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 33 out of 55 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 55.
+Score in a scenario: 31 out of 55 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 55.
 
 >vainest
 Your score has just gone up by one point
@@ -376,16 +359,34 @@ Your score has just gone up by one point
 >thisalt
 --you could've also made the natives' site van VAINEST to uproot them.
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+Score in a scenario: 32 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
 >w
 
 >grandiose
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
+Score in a scenario: 33 out of 55 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 55.
 >e
 >s
 Lost Lots
+
+>w
+Dourest Detours
+
+>rousted
+by one point
+>score
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
+>undo
+>aimless
+Your score has just gone up by one point
+# don't need curmin--we already got it above with the UNDO!
+>score
+Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 55.
+>rousted
+Your score has just gone up by one point
+>score
+Score in a scenario: 35 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 
 >prosiest
 Your score has just gone up by one point

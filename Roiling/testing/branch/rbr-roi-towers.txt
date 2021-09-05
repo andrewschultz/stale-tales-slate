@@ -906,7 +906,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @hin
-/DEBUG INFO: (Muscly Luc Sym|snider diners) hinting\.
+/DEBUG INFO: (denier nereid|snider diners) hinting\.
 >gf salted deltas
 /DEBUG: guardian hint choice is (sweatier wait-seer|Resident Trendies) from (Resident Trendies and sweatier wait-seer|sweatier wait-seer and Resident Trendies)\.
 >undo
@@ -1383,7 +1383,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for released
 >ereledas
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: released.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
+DOUBLE PROBLEM FOR: released.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @mis
@@ -1550,68 +1551,6 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
->w
-Dourest Detours
-
-@spoi
-#this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
->xr
-!You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
-After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
-\\
-
-@sli
-#slider test for rousted
->orsuedt
-Your settler begins to make noises: a low hum, but nothing really piercing.
-#slider test for aimless
->smiesal
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#scannotes for seismal samiels
->scan
-WRONG
-#nudge for samiel
->samile
-There is more than one samiel to deal with, here.
-#spechelp for seismal samiels
->samiesl
-The seismal samiels change intensity for a bit.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
-#scannotes for bogus-rousted
->scan
-You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
-#nudge for detour
->detoru
-This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
-#spechelp for bogus-rousted
->roustde
-You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
-DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
-
-@!minh,mini
->rousted
-by one point
->score
-}}SCORE++
-}}CURMIN++
-}}CURMAX--
-{$SCOS}
->undo
-}}CURMAX++
->aimless
-Your score has just gone up by one point
-# don't need curmin--we already got it above with the UNDO!
->score
-{$SCOS}
->rousted
-Your score has just gone up by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
-\\
 
 @!minh,mini
 >e
@@ -2238,6 +2177,70 @@ Your score has just gone up by one point
 >e
 >s
 Lost Lots
+
+@!minh,mini
+>w
+Dourest Detours
+
+@spoi
+#this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
+>xr
+!You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
+\\
+
+@sli
+#slider test for rousted
+>orsuedt
+Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for aimless
+>smiesal
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for seismal samiels
+>scan
+WRONG
+#nudge for samiel
+>samile
+There is more than one samiel to deal with, here.
+#spechelp for seismal samiels
+>samiesl
+The seismal samiels change intensity for a bit.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the seismal samiels. That's a decent omen.
+#scannotes for bogus-rousted
+>scan
+You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it.
+#nudge for detour
+>detoru
+This may technically be a detour, but since the area name is "detours," you need some way to negate ALL the detours.
+#spechelp for bogus-rousted
+>roustde
+You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
+DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+
+@!minh,mini
+>rousted
+by one point
+>score
+}}SCORE++
+}}CURMIN++
+}}CURMAX--
+{$SCOS}
+>undo
+}}CURMAX++
+>aimless
+Your score has just gone up by one point
+# don't need curmin--we already got it above with the UNDO!
+>score
+{$SCOS}
+>rousted
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+\\
 
 @sli
 #slider test for prosiest

@@ -36,6 +36,7 @@ Burnt Brunt
 #slider test for rescind
 >csrendi
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
+DOUBLE PROBLEM FOR: rescind.
 
 #slider test for reedily
 >erdelyi
@@ -101,7 +102,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #note that tearily is not covered here. This is just an arbitrary choice I made in the table to make IRATELY the #1 choice.
 #elsewhere I defined t-tearily-irately as multiple-solutions.
 >ritalye
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: irately.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
+DOUBLE PROBLEM FOR: irately.
 >undo
 #slider test for blearily
 >lblrayei

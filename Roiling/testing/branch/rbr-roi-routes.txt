@@ -222,8 +222,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
 @hin
->z
+>past
+by one point
+>out
 DEBUG INFO: scripture picturers hinting.
+>undo
+>undo
 
 @!min
 >score

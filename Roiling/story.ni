@@ -3826,7 +3826,7 @@ to say reject:
 						continue the action;
 					if the-from entry is mult-sol:
 						say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.";
-						if debug-state is true, say "[line break][right-word entry].";
+						if debug-state is true, say "[line break]DOUBLE PROBLEM FOR: [right-word entry].";
 						continue the action;
 					if the-from entry is part of the diorama and slider-diorama is true:
 						say "You already got some data from the slider on the diorama. You may want to save it for other things down the road.";
@@ -6064,7 +6064,10 @@ to decide which number is fruits-got: decide on number of not fruit-to-find frui
 to eval-fruits:
 	say "[line break]DEBUG NOTE: MISSES shows fruits left.";
 	if moss cap is off-stage, continue the action;
-	if droll dollar is not off-stage and fruits-left > 0:
+	if fruits-left is 0:
+		say "There are no more fruits to find for Curtis.";
+		continue the action;
+	if droll dollar is not off-stage:
 		say "You can't expect anything more from Curtis.";
 		continue the action;
 	let next-goal be (curtis-level + 2) * 4;
@@ -10008,11 +10011,11 @@ crate	oyster	"You can REACT to the crate better [now-if-dealt of bogus-trace] yo
 skis	oyster	"You can KISS the skis [now-if-dealt of bogus-trace] you are less distracted."
 span pans	oyster	"You can SNAP to clear the span pans [if knob is moot and skis are moot]now[else]once[end if] everything else is out of the way."
 ruby	oyster	"You need to figure how and where to BURY the ruby."
-ol trap	oyster	"You can PATROL to find the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
+ol trap	oyster	"You can PATROL to disable the ol['] trap [now-if-dealt of weaselly walleyes] the weaselly walleyes are gone."
 dialer	oyster	"You can use the dialer to DERAIL [now-if-dealt of papery yapper] the papery yapper is gone."
 bogus-redial	oyster	"You can REDIAL the dialer [now-if-dealt of pins] the pins are not in your way."
 lance	oyster	"You'll want to CLEAN the lance [now-once of whether or not player has wipes] you have something to wash it with."
-templar ramplet	oyster	"You can TRAMPLE the templar ramplet [now-if-dealt of wipes] you have a shiny worthy weapon."
+templar ramplet	oyster	"You can TRAMPLE the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
 rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if] [now-once of whether or not moot-picaros >= 3] he's lost enough followers." [towers]
 luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be unlocked, with [if duck-preef is true]the lone duck[else]something else you need to figure out[end if]."
 fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect [now-once of whether or not duck is friendly] there's something it can fuss at."
@@ -14583,8 +14586,6 @@ rule for supplying a missing noun when unearthing:
 		say "Nothing worth unearthing here." instead;
 	else if HUNTER HUNT AREA is touchable:
 		now the noun is HUNTER HUNT AREA;
-	else:
-		say "You need to worry about the carps and pikes, first." instead;
 
 The HUNTER HUNT AREA is boring vanishing scenery. "You feel hate pulsing from it, even an odd urge to attack it. You can also READ its details.". bore-text of HUNTER HUNT AREA is "The HUNTER HUNT AREA is hiding something potentially malevolent. But what?". bore-check is bore-hunter-hunt-area rule.
 
@@ -14601,10 +14602,7 @@ does the player mean unearthing the HUNTER HUNT AREA: it is very likely.
 
 carry out unearthing:
 	if mrlp is not oyster, say "[reject]" instead;
-	if player does not have rigged digger:
-		say "You need something to dig here[if Shuttle Hutlets is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
-		preef HUNTER HUNT AREA;
-		do nothing instead;
+	[if player does not have rigged digger:] [now covered in the pre-haunter rule]
 	if noun is sausage, say "It already is." instead;
 	if player is in Rascal Craals:
 		if noun is location, say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
@@ -15099,7 +15097,7 @@ carry out spining:
 
 chapter redialing
 
-the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "dialer, again".
+the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "repaired dialer".
 
 a-text of bogus-redial is "RYRYYR". b-text of bogus-redial is "RYRYYR". parse-text of bogus-redial is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
@@ -19947,6 +19945,13 @@ this is the person-to-fruit rule:
 	if noun is flippable or noun is vanishing, continue the action;
 	if noun is not ammo gang, say "A person shouldn't and can't be changed into a fruit[unless ammo gang is moot or dr severe is moot], though perhaps you could help someone, or trade someone else, for one." instead;
 
+definition: a thing (called th) is to-fruit:
+	if th is a fruit, no;
+	if th is dr severe, no;
+	if th is prices precis, no;
+	if th is moss cap, no;
+	if th is icon or th is coin or th is s-c or th is icons or th is coins, no;
+
 carry out guruing:
 	if can-guru is false:
 		if arugula is moot, say "You lost your guru powers." instead;
@@ -19966,6 +19971,10 @@ carry out guruing:
 				say "Whoah! A compass begins spinning. ";
 			else if noun is coins:
 				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
+			else if noun is s-c or noun is icons:
+				say "You realize you were close to forming SONIC ICONS.";
+			else if noun is coin:
+				say "You see the coin could become an ICON.";
 			else if noun is a fruit or noun is Dr Severe:
 				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. ";
 			else:
@@ -19974,11 +19983,9 @@ carry out guruing:
 			now noun is prefigured;
 			now did-guru is true;
 			say "The aftertaste of arugula finally dissipates.";
-			poss-d;
+			if scams is false, poss-d;
 			the rule succeeds;
-	if noun is iconic:
-		if noun is s-i, say "The icons seem appropriate as-is." instead;
-		say "Hm. That's not fruit and not going to be fruit. You are pretty sure you can decide what to do." instead;
+	if noun is s-i, say "The icons seem appropriate as-is." instead;
 	say "Nothing happens. Maybe something else.";
 	the rule succeeds.
 

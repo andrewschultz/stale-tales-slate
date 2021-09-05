@@ -463,7 +463,8 @@ Score in a scenario: 40 out of 41 total points in the current region, Presto. Th
 
 #slider test for sub
 >usb
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: sub.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
+DOUBLE PROBLEM FOR: sub.
 
 >sub
 Your score has just gone up by one point

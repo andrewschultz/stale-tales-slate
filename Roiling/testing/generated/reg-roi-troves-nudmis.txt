@@ -354,9 +354,6 @@ It's an ires PAD.
 #nudge for pad
 >pda
 It's an IRES pad.
-#scannotes for pleaser leapers
->scan pleaser leapers
-You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 
 >despair
 Your score has just gone up by one point
@@ -380,14 +377,14 @@ The story on the lager is mostly in black, except where it mentions ERGAL AGLER,
 >read lager
 Your eyes gloss over all but the red ERGAL AGLER.
 
-#nudge for glare
->glaer
-You stare into space some more but get distracted.
-
 >glare
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 26.
+
+#nudge for glare
+>glaer
+You stare into space some more but get distracted.
 
 #mistake test for snog
 >snog
@@ -463,6 +460,9 @@ You'll probably want to deal with all the pleaser leapers at once.
 #readables for pleaser leapers
 >read leapers
 SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
+#scannotes for pleaser leapers
+>scan pleaser leapers
+You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 
 >relapse
 Your score has just gone up by one point

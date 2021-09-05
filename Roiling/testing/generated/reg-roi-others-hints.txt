@@ -116,6 +116,17 @@ You have 11 of 42 total points for the post-Elvira Others region, though you onl
 Swell Wells
 
 /DEBUG INFO: (green stain|miser ruble|PSA 'Elp|riot cap|sorer bogey|stucco) hinting\.
+>n
+Try going down from the Swell Wells.
+>undo
+>d
+/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+>u
+>n
+You will find ID inside the So-Great Storage in the Scape Space.
+>undo
+>undo
+>undo
 
 >apricot
 Your score has just gone up by one point.
@@ -249,7 +260,7 @@ DEBUG INFO: buried raft hinting.
 You have 26 of 42 total points for the post-Elvira Others region, though you only need 28 to win.
 >breadfruit
 Your score has just gone up by one point.
-You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
+You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
 >score
 You have 27 of 42 total points for the post-Elvira Others region, though you only need 29 to win.
 >e
@@ -299,7 +310,7 @@ DEBUG INFO: prices precis hinting.
 You have 34 of 42 total points for the post-Elvira Others region, though you only need 36 to win.
 >cripes
 Your score has just gone up by one point.
-You look around and don't see any way to bargain for more fruits here. In fact, you are pretty sure you've found all the fruits.
+You look around and don't see any way to bargain for more fruits here. Maybe there's more to do elsewhere.
 >score
 You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
 
@@ -315,10 +326,7 @@ You can trade the dollar for the So-Great Storage.
 You probably want to put the sonic icons in the slot.
 Dr. Severe
 
-You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
->banish passport
->z
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+You probably want to put the sonic icons in the slot.
 
 >put icons in slot
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
@@ -344,8 +352,7 @@ DEBUG INFO: Reversed Deserver Dr. Severe
 You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed
 Your score has just gone up by one point.
-
-You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
+You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.\nSince you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.\nThere are no more fruits to find for Curtis.
 >score
 You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
 
@@ -367,8 +374,6 @@ You have 40 of 42 total points for the post-Elvira Others region. There are no f
 
 >review
 by one point
-Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
-!You can't expect anything more from Curtis.
 
 >score
 

@@ -134,16 +134,10 @@ Carven Cavern
 #pre-specter-scepter rule
 >scepter
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->yes
-by one point
->score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is 15 points.
+>no
 #preefcheck respect specter
 >pf
 You can get a SCEPTER from the respect specter at any time.
->undo
->undo
->undo
 
 >staple
 Your score has just gone up by one point

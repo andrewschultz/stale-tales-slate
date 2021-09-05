@@ -349,8 +349,8 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oar
 
 #spechelp for sabot boats
 >bosat
-Perhaps if you were louder and more confident, the boats would hear you.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the boats. That's a decent omen.
+Perhaps if you were louder and more confident, the sabot boats would hear you.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
 
 #nudge for seaside
 >seasied
@@ -363,7 +363,7 @@ The streamlets change, and don't change, at the same time. But that's just becau
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
 #mistake test for a cone
 >a cone
-That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or boats are a better bet.
+That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.
 #nudge for canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
@@ -422,7 +422,7 @@ You're pretty sure you can get this one quickly. I mean, you've been given one o
 
 #scannotes for sabot boats
 >scan sabot boats
-It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
+It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!
 
 >enter raft
 You get onto the frat raft.
@@ -442,7 +442,7 @@ Anger Range
 Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 #altpath
 >thisalt
---you could've tried to BOAST to get the boats' attention, then LEAP.
+--you could've tried to BOAST to get the sabot boats' attention, then LEAP.
 >undo
 >undo
 >undo
@@ -549,7 +549,7 @@ Your score has just gone up by one
 
 #spechelp for HUNTER HUNT AREA
 >unearht
-You need an organized way to reveal what's under the ground, and you don't have a digging instrument, either.
+You need a slightly more organized way to reveal what's under the ground, and you don't have a digging instrument, either.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 
 #scannotes for HUNTER HUNT AREA
@@ -1016,7 +1016,7 @@ Score in a scenario: 23 out of 42 total points in the current region, Oyster. Lo
 
 #nudge for digger
 >diggre
-It's what it needs to be, you imagine.
+It's already been, err, rigged, enough.
 
 #mistake test for bury [text]
 >bury zozimus
@@ -1126,7 +1126,7 @@ You found the hut you needed to.
 >dig
 You need to dig to some purpose, like uncovering the haunter--and not just dig. Dig?
 >unearht
-You need an organized way to reveal what's under the ground with your rigged digger.
+You need a slightly more organized way to reveal what's under the ground with your rigged digger.
 
 >w
 Sclerous Closures
@@ -1137,7 +1137,7 @@ Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm do
 
 #scannotes for paw r wrap
 >scan paw r wrap
-Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. But I hope it's not too hard.
+Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay.
 #nudge for closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -1277,7 +1277,7 @@ It was enough to bury the ruby.
 
 #respechelp test for HUNTER HUNT AREA
 >hauntre
-You need an organized way to reveal what's under the ground with your rigged digger.
+You need a slightly more organized way to reveal what's under the ground with your rigged digger.
 
 ##>unearth haunter
 
@@ -1290,13 +1290,13 @@ Score in a scenario: 31 out of 42 total points in the current region, Oyster. Lo
 #spechelp for use saga sausage
 >assuaeg
 You're a bit tongue-tied, but that seems close.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the haunter. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
 #nudge for howler
 >howlre
-Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
+A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
 #scannotes for use saga sausage
 >scan use saga sausage
-The use-saga sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
+The Use-Saga Sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
 
 >assuage
 by one point
@@ -1305,8 +1305,8 @@ by one point
 Score in a scenario: 32 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
 #done rejects for use saga sausage
->hauntre
-Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
+>assuega
+Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh) the walleyes who buried the ruby.
 
 >ask haunter about ruby
 #notana
@@ -1368,7 +1368,7 @@ That was my pen name in Shuffling Around.
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >x gleaner
-Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...
+You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side.
 Den Loft
 >undo
 >out
@@ -1561,7 +1561,7 @@ Score in a scenario: 41 out of 42 total points in the current region, Oyster. Th
 #spechelp for bogus-redial
 >redila
 The dialer must have another setting, but that's not quite it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer (DEBUG: part 2). That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
 
 #not a mistake
 >redial
