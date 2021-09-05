@@ -2,9 +2,9 @@ Hello there! This is my walkthrough for A Roiling Original, a sequel to Shufflin
 
 Whether you just want to make sure you missed a silly gag, or you're stuck on a specific section, welcome I hope this walkthrough helps without spoiling too much! I wanted to try to weave the story in without making it too big, so you didn't feel like you were just typing commands, or maybe you could see one last hint before revealing the answer.
 
-If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will explain the details. This tells you what to do. (TLDR: question marks in cheat mode seem like a nuisance, but they actually help you, if you think about them right!)
+If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will do a better job. (TLDR: question marks usually help you, if you think about them right!)
 
-I've semi-hidden some Last Lousy Points to give you one more chance at getting them on your own and also to focus on the walkthrough. They are at the very end. You can cut and paste text to ROT13.com for those.
+I've semi-hidden some Last Lousy Points to give you one more chance at getting them on your own and also to focus on th walkthrough. They are at the very end. You can cut and paste text to ROT13.com for those.
 
 If you're a bit more worried about spoilers, you may want the HTML version, which has expandable InvisiClues. These should both have similar content, and they should be in the bundle with this file and the game file.
 
@@ -420,7 +420,7 @@ Now the cellar caller the bee was on is broken. It would get help you find the c
 
 So now you're in the Drain Nadir.
 
-You've hit rock bottom, and you need to bring yourself up. If you want, you can take a flap at Sister Tressi, but you don't need to.
+You've hit rock bottom, and you need to bring yourself up. If you want, you can deal with the Large Regal Lager, but you don't have to.
 
 > DESPAIR
 
@@ -428,7 +428,7 @@ You've hit rock bottom. Time to pull yourself up a bit...the tune from Eddie C w
 
 > DECIDE
 
-Boredom Bedroom! You may be able to figure what to do with the lager, which is another Last Lousy Point.
+Boredom Bedroom! The pleaser leapers are another Last Lousy Point.
 
 You need to do one of the two below to have confidence you can move beyond the Boredom Bedroom. There's the BORTLES lobster and the ME ARTS stream.
 
@@ -1281,9 +1281,9 @@ Those bluster butlers are guarding something important, but maybe you can make t
 
 > SUBTLER
 
-The denier nereid is too close to you.
+You won't win a fight with someone muscly.
 
-> REINED
+> CLUMSY
 
 The snider diners are sure you can't get past them. The dry wit!
 
@@ -1291,13 +1291,13 @@ The snider diners are sure you can't get past them. The dry wit!
 
 North or east doesn't really matter, but let's go east first. It's slightly shorter.
 
-By the way, the yacker keycar that appears here? It actually appears in the first non-Coastlines place that is free of guardians. It's possible to clear the area without seeing the keycar, but not very. The keycar is an LLP. To avoid it altogether, you could avoid changing the denier nereid, the wait-seer, the reed's ale deal seer, the trendies, and the drained arid den. This is probably harder to work out than just disposing of a few more guardians, but in case you were wondering, it is possible.
+By the way, the yacker keycar that appears here? It actually appears in the first non-Coastlines place that is free of guardians. It's possible to clear the area without seeing the keycar, but not very. The keycar is an LLP. To avoid it altogether, you could avoid changing Muscly, the wait-seer, the reed's ale deal seer, the trendies, and the drained arid den. This is probably harder to work out than just disposing of a few more guardians, but in case you were wondering, it is possible.
 
 > E
 
-The realist tailers won't leave you alone until they become...
+"SMH, Life" Mel Fish is not Flemish. He just wants to be...
 
-> SALTIER
+> HIMSELF
 
 The dandier arid den won't let you pass without purchasing some of that Nerd-Aid! But you don't have any money.
 
@@ -1962,14 +1962,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 2 TROVES:
  * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs WEST)
- * release 4:
-   ** the verbose babblings became a sob ever verbose, to make it clearer what to do.
-   ** Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Boarded Roadbed and Bustle Sublet forked from the second room that kept changing its name.
-   ** the Boarded Roadbed has a new LLP: A Tasty Sty, Say.
-   ** the Drain Nadir has a new LLP: pleaser leapers.
-   ** The skyscraper in Econ Cone is now the godlings' lodgings. The END PRONER POD replaces the Pernod.
-   ** The Upscale Capsule is rearranged so the red vees are the first puzzle (IGNORE REGION became a general jump command) with Sister Tressi and Blamer Balmer at the end. You need to get rid of one of two.
-   ** The final puzzle, the Trance Nectar, is new, and Eddie C's song is moved to the Drain Nadir.
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added. The Drain Nadir is an offshoot of Boredom Bedroom. The Roadbed and Sublet forked from the second room that kept changing its name. The skyscraper is now the godlings' lodgings. The END PRONER POD replaces the Pernod. The Upscale Capsule is rearranged so the red vees are the first puzzle (IGNORE REGION became a general jump command) with Sister Tressi and Blamer Balmer at the end. The final puzzle, the Trance Nectar, is new, and Eddie C's song is sent to the Drain Nadir.
 3 ROUTES:
   * release 4: optional ways through various areas are now disabled. The end puzzle is now in an area past the Cripple Clipper. The two mutually exclusive former winning words are now both necessary, and there is an additional command, too. ABOARD is no longer a solution. The raptest patters are a new LLP.
 4 PRESTO:
@@ -1985,24 +1978,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where it makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4:
-  ** there is now a recital article that you can destroy in the Loftier Trefoil for an LLP.
-  ** Dreads Adders now block your way at the start.
-  ** the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP.
-  ** The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better.
-  ** The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others, replaced by a deal seer.
-  ** The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of.
-  ** Also, the stinger now defends the subsector after you've disposed of the bonker.
-  ** The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP.
-  ** The neural pulses are also replaced by the sporties' ripostes as an LLP.
-  ** the muscly hulk was renamed during release to Luc Sym and Ms Lucy, then replaced by a denier nereid.
-  ** SMH-Life Mel Fish ("himself") was retired, another relic of the first relief. Realist tailers now discourage you.
-  ** the arid den, formerly a guardian, is moved to a side LLP below Treading Gradient. The den is replaced you a promise imposer.
-  ** the iPrune is renamed and moved to the end, replaced by the Resident Trendies
-  ** Also, everything was shuffled a bit, to balance the puzzles fully as determined by the total anagram possibilities of each guardian. The end ratio was 135/128 for the sets of six--not too bad.
-  ** The (now yacker) keycar is relegated to LLP status. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also three other LLPs to get a proper gift.
-  ** Sporties' ripostes are another LLP in Lost Lots.
-  ** Whew! Oh, wait, added the Dourest Detours with two LLP (one to get out, one optional once you're there.)
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. The kid is also replaced by an Agnostic, whom you need to help to focus on what they always meant to do. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker. The fluster-self rut is a new guardian, replacing the organised ego-drains, which are relegated to an LLP. The neural pulses are also replaced by the sporties' ripostes as an LLP. The keycar is relegated to LLP status, and the iPrune is renamed and moved to the end, replaced by the Resident Trendies. The Tetris Sitter replaces Ed Yerg, giving the puzzle a different flavor, since there are also three other LLPs to get a proper gift. Dreads Adders now block your way at the start. Sporties' ripostes are another LLP. Whew! Oh, added the Dourest Detours with an LLP and another LLP in the Loftier Trefoil.
 7 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering the Reclusion Inclosure.
@@ -2137,8 +2113,6 @@ FGNL around A Sty.
 
 TYNER at the lager (again, interesting ROT13.)
 
-ERYNCFR around the pleaser leapers.
-
 QVFPBIRE something about Divorces magazine. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than Divorces.
 
 Note that troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them, and you may or may not be able to solve both. For instance, Sister Tressi and the Marble Blamer. These are listed in the walkthrough.
@@ -2161,10 +2135,8 @@ The docile old ice can be PBVYRQ.
 In the Leveraged Everglade:
 TENAQVBFR for the organised ego drains.
 
-In either of the Lost Lots, Fringe Finger, Outer Route or Shaven Havens, going in a wrong direction sends you to the Dourest Detours.
+Before visiting either of the Lost Lots or Fringe Finger when both are unvisited, you are sent to the Dourest Detours.
 EBHFGRQ helps you get refocused and returns you where you meant to go.
-
-You can also say NVZYRFF to get rid of the seismal samiels.
 
 In the Lost Lots:
 CEBFVRFG for the sporties' ripostes.

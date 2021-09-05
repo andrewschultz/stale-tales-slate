@@ -144,8 +144,7 @@ Yup, that's the idea here in Otters.
 @sli
 #slider test for rescind
 >csrendi
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible, DEBUG: rescind.
-Your settler begins to make noises: a low hum, but nothing really piercing.
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 
 @nud
 #mistake test for increds
@@ -221,11 +220,11 @@ Ed Riley looks pleased he's pressured you into laziness.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @min
+#NOTE: unbalanced undos are because DISCERN doesn't seem to count as a move
 >discern ed riley
 DEBUG INFO: Taking away a max point.
 #we need the "wait" in here to hook around the undo blocker
 >z
->undo
 >undo
 >discern
 REEDILY
@@ -901,41 +900,13 @@ That seems like it should work, but you just can't summon the power. Someone aro
 >pf
 You can collapse the atmo moat to an ATOM once you have the power.
 
+@max
 #pre-medals-quickly rule
 >quickly
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
 #preefcheck medals
 >pf
-The medals can help you go QUICKLY, though they may not be fully magical, yet.
-
-@alt
-##balance undos
-# here we look at going to/solving Bran Barn but not Loop Pool
->s
->although
-###skip test checking
->ergo
-###skip test checking
->misses
-!--you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
---you could've dispelled the "vow here" that reappeared in Bran Barn with HOWEVER after you regained your powers.
->undo
->n
->n
->misses
---you could've said BECAUSE to dissolve the sea cube, then said ELSE to gain the eels' trust.
->undo
->undo
->undo
->however
-by one point
->misses
-!--you could've said HOWEVER
->undo
->undo
->undo
->undo
->undo
+The medals can help you go QUICKLY once they are restored enough.
 
 @sli
 >s
@@ -952,7 +923,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 >undo
 
-@spoi
+@alt
 ##balance undos
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
@@ -962,6 +933,11 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say ER
 by one point
 >misses
 --you could've checked north of the Disowned Downside for the other way to regain your powers.
+HOWEVER
+>however
+by one point
+>misses
+!HOWEVER
 >n
 >n
 As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
@@ -969,6 +945,8 @@ You also feel there's something more to do here, if you want, but isn't critical
 >because
 As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
+>undo
+>undo
 >undo
 >undo
 >undo
@@ -1077,6 +1055,7 @@ You already made it there, and you don't need to go back.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @alt
+#balance undos
 >misses
 !--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
 --you could've checked south of the Disowned Downside for the other way to regain your powers.
@@ -1105,13 +1084,15 @@ The voices seem bummed at your settler's ambiguous readings, unaware (as you are
 >read sullenness us
 You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
 
-@max
+@!min
 >unless
 by one point
 }}CURMIN++
 }}SCORE++
 >score
 {$SCOS}
+>misses
+!--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
 >s
 
@@ -1170,9 +1151,6 @@ The infidel infield is Mr. Lee's, and it expresses things from his perspective. 
 >ergo
 Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
 !by one point
-#preefcheck gore ogre
->pf
-You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 
 @hin
 DEBUG INFO: ghoul hat hinting.
@@ -1184,6 +1162,7 @@ by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
+{--max}#preefcheck gore ogre\n>pf\nYou can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 {--hin}DEBUG INFO: Gore Ogre hinting.
 >score
 {$SCOS}
@@ -2102,19 +2081,19 @@ Gretta's gone. Fulfill your destiny to the west.
 "Awk! I'd just kill you in that form. Try that around some bad guys."
 #preefcheck parrot
 >pf
-The parrot can be changed back to a RAPTOR.
+You can change the parrot back to a RAPTOR to defeat a formidable foe.
 #pre-whistle-deeply rule
 >deeply
 !by one point
 #preefcheck whistle
 >pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
+You can play the whistle DEEPLY once the parrot has given it to you.
 #pre-whistle-deeply rule retry
 >deeply
 The parrot still has the whistle. You can't play the whistle until it's yours.
 #preefcheck whistle
 >pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
+You can play the whistle DEEPLY once the parrot has given it to you.
 
 >w
 Reclusion Inclosure

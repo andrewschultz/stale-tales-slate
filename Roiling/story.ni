@@ -1283,7 +1283,7 @@ rule for deciding whether to allow undo:
 		append "UNDO: (no hint)[line break]" to the file of gamehints;
 	if undo is prevented and scams is false:
 		if undo-code is -1:
-			say "Don't worry. There's no wrong way through dialogues, nothing disappears, and important stuff is recorded in your pedanto-notepad.";
+			say "This can't be undone, but don't worry. There's no wrong way through dialogues, nothing disappears, and important stuff is recorded in your pedanto-notepad.";
 		else if undo-code is 1:
 			say "[eh-eh]Ucky, yuck, you think at the biology behind the crust coming back up your throat. For your own health, see. That's something not even a tree eater could re-eat.";
 		else if undo-code is 2:
@@ -1307,6 +1307,12 @@ rule for deciding whether to allow undo:
 			now the have-died flag is true;
 		else if undo-code is 10:
 			ital-say "the 'you died' message is random--but there are [number of rows in table of death messages]. So if you're hunting them, it may be more efficient to win to see them all.";
+		else if scams is true:
+			say "Allowing undo because you are in scams mode.";
+		else if undo is prevented:
+			say "Undo is prevented here. But don't worry. You can't be locked out of a win.";
+			deny undo;
+	allow undo;
 
 chapter warp stuff
 
@@ -3819,7 +3825,8 @@ to say reject:
 						say "Wait, wait. You've already figured what to do, but it wasn't the right time. You can PAD FLIPS if you forgot the details. You don't need or want to waste any clues from the slider, here.";
 						continue the action;
 					if the-from entry is mult-sol:
-						say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible[if debug-state is true], DEBUG: [right-word entry][end if].[line break]";
+						say "You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.";
+						if debug-state is true, say "[line break][right-word entry].";
 						continue the action;
 					if the-from entry is part of the diorama and slider-diorama is true:
 						say "You already got some data from the slider on the diorama. You may want to save it for other things down the road.";
@@ -4815,6 +4822,7 @@ Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] ey
 [?? test qmh toggling and scanning stuff]
 
 check scaning a prefigured thing:
+	if noun is specter, continue the action;
 	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
 
 to say scannotes-curst:
@@ -5095,7 +5103,7 @@ this is the presto-hinting rule:
 		try objhinting plebe instead;
 	if player is in austerer:
 		if ye hoop is in austerer, try objhinting ye hoop instead;
-		if spoilit is false, all-say "You are done here in Austerer Treasure." instead;
+		if spoilit is false, all-say "You are done here in Austerer Treasure. The [if screen is off-stage]screen[else]censer, or what it can become,[end if] won't be useful until much later." instead;
 	if tsar star is touchable and tsar star is in Char Arch, try objhinting tsar star instead;
 	if dart is touchable and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -5141,6 +5149,9 @@ this is the presto-hinting rule:
 			now spoilit is false;
 			all-say "Before taking a bite, you wonder if you've visited everywhere you can yet." instead;
 		if ye hoop is in austerer and austerer is visited, all-say "You think to YE HOOP you saw in Austerer Treasure." instead;
+	if Hacks Shack is visited:
+		if hump is not moot, try objhinting hump instead;
+		if censer is not moot, try objhinting censer instead;
 	if disk is touchable and skid is off-stage, try objhinting disk instead;
 	if yak is touchable and spoilit is false, try objhinting yak instead;
 	if flea is touchable, try objhinting flea instead;
@@ -5157,8 +5168,6 @@ this is the presto-hinting rule:
 		try objhinting ALocalCo cola instead;
 	if fount is touchable, try objhinting fount instead;
 	if Hacks Shack is visited:
-		if hump is not moot, try objhinting hump instead;
-		if censer is not moot, try objhinting censer instead;
 		if yak is not moot: [?! rearrange this]
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in[location of yak]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
@@ -5373,8 +5382,8 @@ to decide which thing is oyster-item:
 	if player is in Plasm Lamps, decide on ant;
 	if location of player is Den Loft:
 		if yapper is in Tenfold Teflond Den Loft, decide on yapper;
-		if pins are touchable and pins are reflexive, decide on pins;
-		if pins are reflexed, decide on bogus-redial;
+		if pins are touchable, decide on pins;
+		if pins are moot, decide on bogus-redial;
 		decide on dialer;
 	decide on the player;
 
@@ -15090,7 +15099,7 @@ carry out spining:
 
 chapter redialing
 
-the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "dialer[if debug-state is true] (DEBUG: part 2)[end if]"
+the bogus-redial is privately-named unscannable reflexive scenery. bogus-redial is undesc. printed name of bogus-redial is "dialer, again".
 
 a-text of bogus-redial is "RYRYYR". b-text of bogus-redial is "RYRYYR". parse-text of bogus-redial is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
@@ -17478,7 +17487,7 @@ chapter repents serpent
 
 understand the command "present" as something new.
 
-A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pestern serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pestern serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
+A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of repents serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of repents serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
 
 a-text of pestern serpent is "RRYRYRR". b-text of pestern serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
@@ -21681,14 +21690,14 @@ this is the spoil-hints rule:
 				say "Before you eat the crust, you mutter a naughty word. You may need to use HINT to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
 				ital-say "this is a bug. If you have a transcript/game state, I'd love to know.";
 				do nothing instead;
-			if noun is thruhinted, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
-			if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think of [spoil-entry entry][else]once again thing [spoil-entry entry][end if]." instead;
-			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to [spoil-entry entry]." instead;
+			if noun is thruhinted and scams is false, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
+			if noun is prefigured, say "The crust looks so disgusting, you [if player is in Hacks Shack]instead think [spoil-entry entry][else]once again think [spoil-entry entry][end if]." instead;
+			if player is in Hacks Shack, say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
 			say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!";
 			if scams is false, decrement swears;
 			now undo-code is 1;
 			now noun is cheatitemed;
-			prevent undo;
+			if scams is false, prevent undo;
 			if swears is 0:
 				say "The crust is all gone, now.";
 				moot crust instead;

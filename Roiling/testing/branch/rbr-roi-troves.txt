@@ -155,7 +155,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-In particular, you feel the need to HATE right now.
+In particular, you feel the need to CARE right now.
 
 @hin
 DEBUG INFO: Race Acre hinting.
@@ -580,6 +580,28 @@ DEBUG INFO: I'd Cede hinting.
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@nud
+#spechelp for large regal lager
+>glaer
+No...that is not quite the way to fight the temptation of the wicked brew.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
+#scannotes for large regal lager
+>scan large regal lager
+There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
+#mistake test for alger
+>alger
+What would an Alger hero DO to such foul spirits as the lager, though?
+#readables for large regal lager
+>read lager
+The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it.
+>read lager
+Your eyes gloss over all but the red ERGAL AGLER.
+
+@nud
+#nudge for glare
+>glaer
+You stare into space some more but get distracted.
+
 @!mina,minb
 >glare
 Your score has just gone up by one point
@@ -643,32 +665,15 @@ The people living in them don't want to change. You can't make them. You need to
 #nudge for home
 >hoem
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
-#mistake test for aled
->aled
-Getting drunk will not solve your problems. And that lager would taste awful, anyway. You see red at yourself for such thoughts.
 #nudge for bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 #mistake test for broomed
 >broomed
 You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.
-
-@nud
-#spechelp for large regal lager
->glaer
-No...that is not quite the way to fight the temptation of the wicked brew.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
-#scannotes for large regal lager
->scan large regal lager
-There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
-#mistake test for alger
->alger
-What would an Alger hero DO to such foul spirits as the lager, though?
-#readables for large regal lager
->read lager
-The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it.
->read lager
-Your eyes gloss over all but the red ERGAL AGLER.
+#mistake test for aled
+>aled
+Getting drunk will not solve your problems. Besides, you missed your "chance" with the lager in Drain Nadir. You see red at yourself for such thoughts.
 
 @sli
 #slider test for master
@@ -680,14 +685,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for deal
 >edla
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#mistake retest for aled
->aled
-Getting drunk will not solve your problems. Especially when there's nothing here to get drunk with. You see red at yourself for such thoughts.
-#nudge for glare
->glaer
-You stare into space some more but get distracted.
 
 @nud
 #spechelp for lobster
@@ -827,6 +824,9 @@ DEBUG INFO: Si Reed hinting.
 #lose a point for only one of BOLSTER/MASTER
 }}CURMAX-=2
 
+@spoi
+In particular, you feel the need to DESIRE right now.
+
 >score
 {$SCOS}
 
@@ -875,9 +875,6 @@ Nothing catches your eye except an article on ridees, captioned in red. Whether 
 #slider test for desire
 >ederis
 Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@spoi
-In particular, you feel the need to DESIRE right now.
 
 >desire
 Your score has just gone up by one point
@@ -985,14 +982,16 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 >strive
 Your score has just gone up by one point
 }}SCORE++
->score
-{$SCOS}
 
 @spoi
 In particular, you feel the need to PONDER right now.
 
 @hin
 DEBUG INFO: END PRONER POD hinting.
+
+@!mina
+>score
+{$SCOS}
 
 @nud
 #mistake retest for once
@@ -1296,11 +1295,13 @@ Your score has just gone up by one point
 >resist
 Your score has just gone up by one point
 }}SCORE++
->score
-{$SCOS}
 
 @hin
 DEBUG INFO: Trance Nectar hinting.
+
+@!mina
+>score
+{$SCOS}
 
 @nud
 #nudge for marble

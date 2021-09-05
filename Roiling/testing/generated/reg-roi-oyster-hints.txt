@@ -76,7 +76,7 @@ Your score has just gone up by one point
 
 Disease Seaside
 
-DEBUG INFO: boats hinting.
+DEBUG INFO: sabot boats hinting.
 >enter raft
 DEBUG INFO: frat raft hinting.
 #not a mistake
@@ -135,7 +135,7 @@ Your score has just gone up by one point
 
 Lean Lane
 
-DEBUG INFO: tea tray hinting.
+DEBUG INFO: Tea-at-a-Tee hinting.
 
 >score
 Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
@@ -271,7 +271,7 @@ Score in a scenario: 26 out of 42 total points in the current region, Oyster. Lo
 >w
 Sclerous Closures
 
-DEBUG INFO: bubble wrap hinting.
+DEBUG INFO: Paw-R-Wrap hinting.
 
 >warp
 Your score has just gone up by one point
@@ -322,7 +322,7 @@ Score in a scenario: 30 out of 42 total points in the current region, Oyster. Lo
 >unearth
 by one point
 
-DEBUG INFO: haunter hinting.
+DEBUG INFO: Use-Saga Sausage hinting.
 
 >score
 Score in a scenario: 31 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
@@ -419,7 +419,7 @@ Score in a scenario: 40 out of 42 total points in the current region, Oyster. Th
 >spin
 Your score has just gone up by one point
 
-DEBUG INFO: dialer hinting.
+DEBUG INFO: dialer, again hinting.
 
 >score
 Score in a scenario: 41 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.

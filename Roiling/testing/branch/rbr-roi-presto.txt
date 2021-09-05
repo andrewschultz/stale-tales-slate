@@ -33,6 +33,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >ts
 >t
 >posf
+
+@spoi
+>scam
+
 >presto
 >enter tornado
 Grey Gyre
@@ -133,7 +137,6 @@ You don't need to levitate the hump. You need a way to jump over it.
 You don't need to levitate the hump. You need a way to jump over it.
 
 @spoi
->scam
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >umph
@@ -198,16 +201,15 @@ Taking away a max point.
 DEBUG INFO: Taking away a max point.
 }}CURMAX--
 }}SCORE++
-@!
+
+@!min
 >phooey
 Your score has just gone up by two points
 }}SCORE+=2
 }}CURMIN++
+{--max}Before taking a bite, you wonder if you've visited everywhere you can yet.
 >score
 {$SCOS}
-
-@spoi
-Before taking a bite, you wonder if you've visited everywhere you can yet.
 
 @nud
 #nudge for earring
@@ -216,7 +218,7 @@ The earring pulses a bit more, but you doubt you can do anything with it on your
 
 @hin
 >z
-You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
+You are done here in Austerer Treasure. The censer, or what it can become, won't be useful until much later.
 
 >score
 {$SCOS}
@@ -448,10 +450,13 @@ Your score has just gone up by one point
 @spoi
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
+DEBUG INFO: n-t-air hinting.
+!DEBUG INFO: volt maze.
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
 
 @hin
+>z
 DEBUG INFO: volt maze hinting.
 
 >score
@@ -550,11 +555,8 @@ Your score has just gone up by one point
 >get popgun
 
 @spoi
-You can just put the dart in the popgun.
->put dart in popgun
-You wince and prepare to take a bite...
-Ugh. The crust feels like army rations. Not now.
->undo
+DEBUG INFO: SCAM command says to hint the boing-go bin.
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 @nud
 #spechelp for sport ports
@@ -780,11 +782,14 @@ Your score has just gone up by three points
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
->score
-{$SCOS}
 
 @spoi
 The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+
+@!min
+>score
+{$SCOS}
+
 
 @max
 #pre-ether-there rule
@@ -801,7 +806,9 @@ That's not something
 >s
 
 @spoi
+>bingo
 You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
+>undo
 
 >s
 Dirge Ridge
@@ -986,10 +993,8 @@ You don't need to combine them physically, but their physical strengths combined
 >n
 >n
 
-@spoi
-You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
-
 @max
+#balance undo
 #continuing pre-ether-there rule. It's tricky to test every case in order, so let's use testing commands to skip over parts.
 #test cases: no gun, no loaded gun, first time, subsequent times
 >there
@@ -1017,11 +1022,30 @@ THERE, you think, realizing you're not armed yet.
 THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
 
+@spoi
+#balance undo
+>put dart in popgun
+It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
+>bingo
+You realize you can put the dart
+You wince and prepare to take a bite...
+>undo
+>undo
+
 >bingo
 #pre-boing-bingo rule retry
+!You realize you can put the dart
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
 }}SCORE++
+
+@spoi
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+>put dart in popgun
+
+@spoi
+Ugh. The crust feels like army rations. Not now.
 
 @hin
 DEBUG INFO: PG-on-up popgun hinting.
@@ -1465,7 +1489,7 @@ by one point
 Hacks' Shack
 
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 
 @nud
 #scannotes for n e recs censer
@@ -1482,20 +1506,20 @@ It's the censer that's important, not the brand name.
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
 
+@sli
+#slider test for screen
+>ercsne
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >screen
 by one point
 }}SCORE++
 
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
 >score
 {$SCOS}
-
-@sli
-#slider test for screen
->ercsne
-Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 ##balance undos
@@ -1756,18 +1780,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >skid
 Your score has just gone up by one point
 }}SCORE++
->score
-{$SCOS}
 
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
+
+>score
+{$SCOS}
 
 >leaf
 Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
 {$SCOS}
@@ -1777,7 +1802,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
 >score
 {$SCOS}

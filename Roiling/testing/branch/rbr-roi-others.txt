@@ -1685,7 +1685,7 @@ Your score has just gone up by one point.
 >reversed
 Your score has just gone up by one point.
 {--hin}
-You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
+You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
 >score
 }}SCORE++
 }}CURMIN++
@@ -1870,6 +1870,10 @@ You've done enough researching, and now you need to try something else.
 >review
 by one point
 }}SCORE++
+@!min
+Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
+!You can't expect anything more from Curtis.
+
 >score
 
 @min
@@ -1881,8 +1885,6 @@ You have {SCORE} of {MAX} total points for the post-Elvira Others region, and yo
 >n
 @!
 {$SCOVERYLAST}
-Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
-!You can't expect anything more from Curtis.
 
 @min
 #pre-gates-stage-flip rule retry

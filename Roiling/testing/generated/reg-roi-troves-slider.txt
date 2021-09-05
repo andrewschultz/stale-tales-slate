@@ -216,6 +216,7 @@ Score in a scenario: 18 out of 26 total points in the current region, Troves. Lo
 
 >strive
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 19 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
@@ -268,6 +269,7 @@ Score in a scenario: 23 out of 26 total points in the current region, Troves. Lo
 
 >resist
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 24 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 

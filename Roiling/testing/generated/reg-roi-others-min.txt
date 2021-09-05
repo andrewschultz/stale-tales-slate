@@ -255,6 +255,7 @@ You have 24 of 42 total points for the post-Elvira Others region, though you onl
 
 >review
 by one point
+
 >score
 
 # let's check "here/valence enclave" conditional text in the score

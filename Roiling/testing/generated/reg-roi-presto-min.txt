@@ -10,6 +10,7 @@
 >ts
 >t
 >posf
+
 >presto
 >enter tornado
 Grey Gyre
@@ -103,8 +104,11 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 
 >bingo
 #pre-boing-bingo rule retry
+!You realize you can put the dart
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
+
+>put dart in popgun
 
 >score
 Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
@@ -157,6 +161,7 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 
 >skid
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 

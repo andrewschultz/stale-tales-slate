@@ -10,6 +10,7 @@
 >ts
 >t
 >posf
+
 >presto
 >enter tornado
 Grey Gyre
@@ -531,6 +532,7 @@ Your score has just gone up by three points
 Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
 >blam
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
@@ -674,8 +676,11 @@ You don't need to combine them physically, but their physical strengths combined
 
 >bingo
 #pre-boing-bingo rule retry
+!You realize you can put the dart
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
+
+>put dart in popgun
 
 >score
 Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
@@ -1145,6 +1150,7 @@ However, you do take a second to reflect that nobody told you you're doing this 
 
 >skid
 Your score has just gone up by one point
+
 >score
 Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 

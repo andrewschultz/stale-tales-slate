@@ -28,11 +28,11 @@ Score in a scenario: 1 out of 33 total points in the current region, Otters. Low
 >l
 Burnt Brunt
 
+#NOTE: unbalanced undos are because DISCERN doesn't seem to count as a move
 >discern ed riley
 DEBUG INFO: Taking away a max point.
 #we need the "wait" in here to hook around the undo blocker
 >z
->undo
 >undo
 >discern
 REEDILY
@@ -69,13 +69,6 @@ Score in a scenario: 5 out of 33 total points in the current region, Otters. Low
 
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
-
-#pre-medals-quickly rule
->quickly
-You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
-#preefcheck medals
->pf
-The medals can help you go QUICKLY, though they may not be fully magical, yet.
 
 >n
 Loop Pool

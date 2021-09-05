@@ -218,7 +218,7 @@ You can collapse the atmo moat to an ATOM once you have the power.
 You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a way to clean them up and restore their full power, but that feels right. You note what to do for later.
 #preefcheck medals
 >pf
-The medals can help you go QUICKLY, though they may not be fully magical, yet.
+The medals can help you go QUICKLY once they are restored enough.
 
 >n
 Loop Pool
@@ -246,6 +246,8 @@ Score in a scenario: 8 out of 33 total points in the current region, Otters. Low
 by one point
 >score
 Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
+>misses
+!--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
 >s
 
@@ -257,13 +259,11 @@ Bran Barn
 >ergo
 Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first
 !by one point
-#preefcheck gore ogre
->pf
-You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 
 >although
 by one point
 DEBUG INFO: min-up codepath
+#preefcheck gore ogre\n>pf\nYou can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 >score
 Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
 
@@ -410,19 +410,19 @@ Score in a scenario: 27 out of 33 total points in the current region, Otters. Lo
 "Awk! I'd just kill you in that form. Try that around some bad guys."
 #preefcheck parrot
 >pf
-The parrot can be changed back to a RAPTOR.
+You can change the parrot back to a RAPTOR to defeat a formidable foe.
 #pre-whistle-deeply rule
 >deeply
 !by one point
 #preefcheck whistle
 >pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
+You can play the whistle DEEPLY once the parrot has given it to you.
 #pre-whistle-deeply rule retry
 >deeply
 The parrot still has the whistle. You can't play the whistle until it's yours.
 #preefcheck whistle
 >pf
-Once the parrot has surrendered the whistle, you can play it DEEPLY.
+You can play the whistle DEEPLY once the parrot has given it to you.
 
 >w
 Reclusion Inclosure

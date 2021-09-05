@@ -494,7 +494,7 @@ Your score has just gone up by one point
 Disease Seaside
 
 @hin
-DEBUG INFO: boats hinting.
+DEBUG INFO: sabot boats hinting.
 >enter raft
 DEBUG INFO: frat raft hinting.
 #not a mistake
@@ -950,7 +950,7 @@ Your score has just gone up by one point
 Lean Lane
 
 @hin
-DEBUG INFO: tea tray hinting.
+DEBUG INFO: Tea-at-a-Tee hinting.
 
 >score
 {$SCOS}
@@ -1720,7 +1720,7 @@ You need an organized way to reveal what's under the ground with your rigged dig
 Sclerous Closures
 
 @hin
-DEBUG INFO: bubble wrap hinting.
+DEBUG INFO: Paw-R-Wrap hinting.
 
 @mis
 #mistake test for rasche
@@ -1993,7 +1993,7 @@ by one point
 }}SCORE++
 
 @hin
-DEBUG INFO: haunter hinting.
+DEBUG INFO: Use-Saga Sausage hinting.
 
 >score
 {$SCOS}
@@ -2448,7 +2448,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-DEBUG INFO: dialer hinting.
+DEBUG INFO: dialer, again hinting.
 
 >score
 @min

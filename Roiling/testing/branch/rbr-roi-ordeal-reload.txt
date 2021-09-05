@@ -1058,6 +1058,7 @@ The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode
 "Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
 >undo
 
+@max
 ###################don't scan at all
 >in
 "I offer you much luck and respect in your journey. I am impressed you want to get on with things and not worry about silly trivia and points like, um, me," the Respect Specter calls, with a hint of sadness.

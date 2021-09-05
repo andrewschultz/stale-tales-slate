@@ -1107,7 +1107,7 @@ Your score has just gone up by one point.
 You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed
 Your score has just gone up by one point.
-You look around and don't see any way to pick off more fruits here. Maybe there's more to do elsewhere.
+You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
 >score
 You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
 
@@ -1211,11 +1211,12 @@ You've done enough researching, and now you need to try something else.
 
 >review
 by one point
+Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
+!You can't expect anything more from Curtis.
+
 >score
 
 You have 41 of 42 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
-Since you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.
-!You can't expect anything more from Curtis.
 
 #redone rejects for searcher
 >searchre

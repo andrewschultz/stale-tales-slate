@@ -9,6 +9,9 @@
 >ts
 >t
 >posf
+
+>scam
+
 >presto
 >enter tornado
 Grey Gyre
@@ -16,7 +19,6 @@ Grey Gyre
 >monty hints
 You haven't gotten any points yet, so you probably want to find what sort of word is used here.
 
->scam
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >umph
@@ -35,10 +37,8 @@ Your score has just gone up by two points
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
-Before taking a bite, you wonder if you've visited everywhere you can yet.
-
 >z
-You are done here in Austerer Treasure. You can do something with the censer, but only on the other side of the volt maze.
+You are done here in Austerer Treasure. The censer, or what it can become, won't be useful until much later.
 
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
@@ -87,9 +87,12 @@ Your score has just gone up by one point
 
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
+DEBUG INFO: n-t-air hinting.
+!DEBUG INFO: volt maze.
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
 
+>z
 DEBUG INFO: volt maze hinting.
 
 >score
@@ -104,11 +107,8 @@ DEBUG INFO: boing-go bin hinting.
 
 >get popgun
 
-You can just put the dart in the popgun.
->put dart in popgun
-You wince and prepare to take a bite...
-Ugh. The crust feels like army rations. Not now.
->undo
+DEBUG INFO: SCAM command says to hint the boing-go bin.
+You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >prost
 Your score has just gone up by one point
@@ -126,14 +126,17 @@ Your score has just gone up by three points
 Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
 >blam
 Your score has just gone up by one point
->score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
 
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
 >s
 
+>bingo
 You pause before eating the crust. The yak probably needs to be carried with something you don't have yet.
+>undo
 
 >s
 Dirge Ridge
@@ -179,12 +182,26 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 >n
 >n
 
-You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+#balance undo
+>put dart in popgun
+It seems like it should fit, but it doesn't. You can't quite compress the boing-go bin right, but if you had a moment of insight, you could.
+>bingo
+You realize you can put the dart
+You wince and prepare to take a bite...
+>undo
+>undo
 
 >bingo
 #pre-boing-bingo rule retry
+!You realize you can put the dart
 !(taking the popgun first while you mess with the boing-go bin)
 Your score has just gone up by one point
+
+You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
+
+>put dart in popgun
+
+Ugh. The crust feels like army rations. Not now.
 
 DEBUG INFO: PG-on-up popgun hinting.
 
@@ -257,27 +274,28 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >n
 Hacks' Shack
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 
 >screen
 by one point
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >skid
 Your score has just gone up by one point
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
+
 >score
 Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
 
 >leaf
 Your score has just gone up by one point
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
@@ -285,7 +303,7 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 >capslock
 Your score has just gone up by one point
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
 >score
 Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
