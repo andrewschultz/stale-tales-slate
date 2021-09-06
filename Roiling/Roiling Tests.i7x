@@ -787,6 +787,29 @@ carry out scaming:
 	say "Scams is [on-off of scams].";
 	the rule succeeds;
 
+chapter soning
+
+soning is an action applying to one number.
+
+understand the command "son" as something new.
+
+understand "son [number]" as soning.
+
+coinlist is a list of things variable. coinlist is { coin, icon, coins, icons, s-c, s-i }.
+
+carry out soning:
+	if number understood < 0 or number understood > number of entries in coinlist, say "0-[number of entries in coinlist] please." instead;
+	repeat with ZZ running from 1 to number of entries in coinlist:
+		if ZZ is number understood:
+			now player has entry ZZ in coinlist;
+		else:
+			now entry ZZ in coinlist is off-stage;
+	if number understood is 0:
+		say "All coinish items are out of play.";
+	else:
+		say "Giving you [the entry number understood in coinlist].";
+	the rule succeeds;
+
 chapter mowing
 
 [* MOW allows you to mow through all the options you haven't used yet in a dialogue]
