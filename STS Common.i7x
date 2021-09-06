@@ -546,8 +546,31 @@ to say plus:
 	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
 
 to say minus:
-	now cur-item is thruhinted;
+	if ignore-hint-completion is false, now cur-item is thruhinted;
 	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
+
+ignore-hint-completion is a truth state that varies. [a test variable for ignoring random hints that fall through]
+
+chapter ihcing - not for release
+
+ihcing is an action applying to one number.
+
+understand the command "ihc" as something new.
+
+understand "ihc [number]" as ihcing.
+
+carry out ihcing:
+	let was-already be false;
+	if the number understood is 0:
+		now ignore-hint-completion is whether or not ignore-hint-completion is false;
+	else if the number understood is 1:
+		if ignore-hint-completion is true, now was-already is true;
+		now ignore-hint-completion is true;
+	else if the number understood is -1:
+		if ignore-hint-completion is false, now was-already is true;
+		now ignore-hint-completion is false;
+	say "Ignoring hint completion [if was-already is true]was already[else]is now[end if] [on-off of ignore-hint-completion].";
+	the rule succeeds;
 
 part disambiguation
 
