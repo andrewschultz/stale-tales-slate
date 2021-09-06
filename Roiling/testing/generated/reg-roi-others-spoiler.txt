@@ -57,6 +57,43 @@ Whoah! You suddenly see a COMPASS spinning around. The aftertaste of arugula fin
 >score
 You have 4 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 
+>son 1
+Giving you the coin.
+>gx coin
+You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 2
+Giving you the icon.
+>gx icon
+Nothing happens. Maybe try to see through something else.
+>undo
+>undo
+>son 3
+Giving you the coins.
+>gx coins
+You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 4
+Giving you the icons.
+>gx icons
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 5
+Giving you the sonic coins.
+>gx sonic coins
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 6
+Giving you the sonic icons.
+>gx sonic icons
+The icons seem appropriate as-is.
+>undo
+>undo
+
 >compass
 Your score has just gone up by one point.
 
@@ -201,25 +238,6 @@ You have 18 of 42 total points for the post-Elvira Others region, though you onl
 >s
 You fiddle with the coin you got
 
->purloin coins
->gx coins
-You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
->undo
->undo
-
->icons
-by one point
->gx icons
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
->undo
->undo
->sonic
-by one point
->gx sonic coins
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
->undo
->undo
-
 >n
 
 >w
@@ -307,8 +325,6 @@ Nothing, despite all Len Craig has to sell.
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 >gx nectarine
 You feel a need to make the nectarine ANCIENTER. The aftertaste of arugula finally dissipates.
->gx nectarine
-You've already changed the nectarine.
 >gx peach
 You feel a need to call the peach CHEAP. The aftertaste of arugula finally dissipates.
 >gx quince
@@ -316,7 +332,7 @@ You feel a need to order CINQUE. The aftertaste of arugula finally dissipates.
 >gx prices precis
 You feel a need to lash out and say CRIPES. The aftertaste of arugula finally dissipates.
 >gx melon
-You feel a need to haggle with  MO LEN. The aftertaste of arugula finally dissipates.
+You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipates.
 >gx auction caution
 You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 >gx lemons
@@ -358,6 +374,9 @@ Your score has just gone up by one point.
 >score
 You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
 
+>gx nectarine
+You've already changed the nectarine.
+
 >w
 
 >d
@@ -369,8 +388,6 @@ You have a vision of a fruit: BANANA. The aftertaste of arugula finally dissipat
 You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally dissipates.
 >gx a brr hub
 You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
->gx dr severe
-One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
 
 >give dollar
 !Your score has just gone up by one point.
@@ -379,6 +396,9 @@ Dr. Severe
 >put icons in slot
 As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, dissolving to reveal a popstar's passport.
 !Your score has just gone up by one point.
+
+>gx dr severe
+One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 
 >banana
 Your score has just gone up by one point.
@@ -395,7 +415,8 @@ You have 38 of 42 total points for the post-Elvira Others region, though you onl
 >reversed
 Your score has just gone up by one point.
 >score
-You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 39 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >u
 >n
@@ -415,7 +436,8 @@ No. You don't want to use the arugula on the fleeing feeling. It's got to be pre
 by one point
 >score
 
-You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 40 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >review
 by one point
@@ -426,8 +448,6 @@ You have 41 of 42 total points for the post-Elvira Others region, and you should
 
 >n
 #notana
-by one point
-#bonus point for not usuing arugula
 
 You Did Great
 

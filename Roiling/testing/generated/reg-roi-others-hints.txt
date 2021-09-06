@@ -58,13 +58,14 @@ Your score has just gone up by one point.
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
 >n
 >d
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+/DEBUG INFO: (banna'|brr-hub|ENGARO orange)
 >banana
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
+/DEBUG INFO: (brr-hub|ENGARO orange)
 >go near
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
+/DEBUG INFO: (brr-hub)
 >rhubarb
-DEBUG INFO: Reversed Deserver Dr. Severe
+Falling through to check the fruit we would've hinted for test scripts...
+You'll eventually want to get that So-Great Storage down the road.
 >undo
 >undo
 >undo
@@ -356,9 +357,11 @@ Your score has just gone up by one point.
 You have 38 of 42 total points for the post-Elvira Others region, though you only need 40 to win.
 >reversed
 Your score has just gone up by one point.
-You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.\nSince you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.\nThere are no more fruits to find for Curtis.
+You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.
+Congratulations on finding all the fruits! Since you did so without using the arugula to GURU, you will get the final bonus point.
 >score
-You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 39 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >u
 >n
@@ -374,7 +377,8 @@ by one point
 DEBUG INFO: viewer hinting.
 >score
 
-You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 40 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >review
 by one point

@@ -11,6 +11,8 @@
 >t
 >posf
 
+>au 1
+
 >presto
 >enter tornado
 Grey Gyre
@@ -1159,12 +1161,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->capslock
-Your score has just gone up by one point
-
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 #mistake retest for kids
 >kids
 Kids don't need to listen to the words you've used so far! They wouldn't help with pushing the skid, anyway.
@@ -1217,17 +1213,12 @@ What you want needs to help programming more than water or French champagne or d
 >cola
 Your score has just gone up by one point
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->futon
-Your score has just gone up by one point
->score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 #mistake retest for loca
 >loca
@@ -1275,7 +1266,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That'
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #done rejects for casserole
 >casseroel
@@ -1317,7 +1308,7 @@ Hacks' Shack
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #spechelp for drab yoke
 >keyboadr
@@ -1328,7 +1319,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That'
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #mistake test for bat
 >bat
@@ -1352,9 +1343,6 @@ You can now do computery things unimpeded! Hooray!
 #renudge for computer
 >compuert
 You need to fix the program in the computer.
-
->put lock on keyboard
-fits in perfectly
 
 #spechelp for be troo e robot
 >reboto
@@ -1380,6 +1368,17 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 Your score has just gone up by one point
 
 >score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+>futon
+Your score has just gone up by one point
+>score
 Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #done rejects for be troo e robot
@@ -1395,6 +1394,9 @@ Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 >epsel
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
+
+>put lock on keyboard
+fits in perfectly
 
 >sleep
 Your score has just gone up by one point

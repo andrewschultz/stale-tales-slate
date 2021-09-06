@@ -934,7 +934,7 @@ You corrected the prices precis enough.
 
 >w
 
-#doing this in front of the prices precis gives a differrent result.
+#doing this in front of the prices precis should give the same result.
 #redone rejects for prices precis
 >cripse
 You corrected the prices precis enough.
@@ -1105,7 +1105,8 @@ You have 38 of 42 total points for the post-Elvira Others region, though you onl
 >reversed
 Your score has just gone up by one point.
 >score
-You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 39 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 #nudge for guava
 >guaav
@@ -1199,7 +1200,8 @@ You've done enough reviewing, and now you need to try something else.
 by one point
 >score
 
-You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 40 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 #done rejects for searcher
 >reserach

@@ -85,7 +85,7 @@ Trying to change the current region you're in all at once would be risky, or use
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for bare
 >baer
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 #spechelp for bleary barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
@@ -165,10 +165,10 @@ You'll need to change more than one cinder.
 Ed's full name, please!
 #nudge for reedi
 >reeid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 #nudge for reedy
 >reeyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 #spechelp for cinders
 >cindesr
 The cinders glow and even warm up for a bit.
@@ -243,7 +243,7 @@ DEBUG INFO: min-up codepath
 Your score has just gone up by one point
 }}SCORE++
 
-@hin,spoi
+@hin
 You made a way west. You're done here.
 
 @nud
@@ -253,13 +253,13 @@ The cinders are gone for good.
 >n
 #nudge for remote
 >remoet
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 >s
 #nudge for jolti
 >ojlti
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 
@@ -270,10 +270,7 @@ No, you need a couple more letters... a couple to make a word weak enough to con
 Disowned Downside
 
 @spoi
-As you gaze into the cinders, they blow away, leaving you feeling the parleys splayer players can talk SPARELY.
-
-@hin
-DEBUG INFO: macks hinting.
+As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
 
 @nud
 #nudge for parley
@@ -297,177 +294,177 @@ Yes, yes, I am being pedantic here. But discreet and discrete are different enou
 @nud
 ##balance undos
 >allrand
-#nudge for angry
->angyr
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
->undo
 #nudge for angri
 >angir
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+#nudge for angry
+>angyr
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
-#nudge for bossy
->bosys
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bossi
 >bosis
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+#nudge for bossy
+>bosys
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+>undo
 >undo
 #nudge for nasti
 >nasit
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for nasty
 >nasyt
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for seedi
 >seeid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for seedy
 >seeyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for shadi
 >shaid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shady
 >shayd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for snide
 >snied
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for stark
 >stakr
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for terse
 >teres
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for tacit
 >tacti
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for catty
 >catyt
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for teari
 >teair
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for teary
 >teayr
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
->undo
-#nudge for bleayr
->bleary
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for bleari
 >bleair
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+>undo
+#nudge for bleayr
+>bleary
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for ribald
 >ribadl
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for formal
 >formla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for coital
 >coitla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for modest
 >modets
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shabbi
 >shabib
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shabby
 >shabyb
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for shoddi
 >shodid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shoddy
 >shodyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for silent
 >siletn
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for steami
 >steaim
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for steamy
 >steaym
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for sudden
 >suddne
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for stupdi
 >stupid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for martial
 >martila
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for sincere
 >sinceer
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for sobbing
 >sobbign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for tedious
 >tediosu
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for wearing
 >wearign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for desperate
 >desperaet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for drawling
 >drawlign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for emotional
 >emotionla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for reactive
 >reactiev
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for despairing
 >despairign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for indiscreet
 >indiscrete
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 
@@ -485,7 +482,7 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >ergo
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
 >n
 >n
@@ -495,10 +492,10 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 !by one point
 #preefcheck sea cube
 >pf
-You can tell the eels in the sea cube BECAUSE you have material evidence you're trustworthy.
+You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 #pre-eels-else rule
->because
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+>else
+That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
 >s
 
@@ -520,7 +517,7 @@ No need to change the maples. They are the least dreary part of the Downside.
 No need to change the maples. They are the least dreary part of the Downside.
 #readables for sample maples
 >read sample maples
-On one, you read: "Formerly the maiden median, then the gent-fora/frat-gone frontage."
+On one, you read: "Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage."
 #nudge for gretta
 >gretat
 Enough people are trying to manipulate Gretta. Deal with them directly.
@@ -788,7 +785,7 @@ by one point
 
 @hin
 !DEBUG INFO: Gretta
-DEBUG INFO: macks hinting.
+DEBUG INFO: parleys splayer players hinting.
 
 @nud
 #scannotes for parleys splayer players
@@ -800,6 +797,7 @@ The players certainly do dance around a lot with their talk, so it's no surprise
 >sparely
 by one point
 #done rejects for parleys splayer players
+>sparely
 You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
 #nudge for amcks
 >macsk
@@ -814,6 +812,7 @@ You needed to deal with all the players to knock them back a peg.
 >undo
 >undo
 >undo
+>undo
 
 @max
 #balance undos
@@ -821,9 +820,9 @@ You needed to deal with all the players to knock them back a peg.
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
 #brackets ok
-[You add the information to your pedanto-notepad under FLIPS.]
+![You add the information to your pedanto-notepad under FLIPS.]
 >pf
-You can tell the eels in the sea cube BECAUSE once you're able to show evidence you're trustworthy.
+You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 >undo
 >undo
 >undo
@@ -831,9 +830,9 @@ You can tell the eels in the sea cube BECAUSE once you're able to show evidence 
 >although
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
 #brackets ok
-[You add the information to your pedanto-notepad under FLIPS.]
+![You add the information to your pedanto-notepad under FLIPS.]
 >pf
-You can say ALTHOUGH to Mr. Lee and his ghoul hat once you're able to show evidence you're trustworthy.
+You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >undo
 >undo
 >undo
@@ -910,6 +909,18 @@ You feel a surge, but not enough. Both medals seem tarnished. Maybe there's a wa
 >pf
 The medals can help you go QUICKLY once they are restored enough.
 
+@hin
+##balance undo
+>s
+DEBUG INFO: ghoul hat hinting.
+>although
+DEBUG INFO: Gore Ogre hinting.
+>ergo
+DEBUG INFO: damsel medals hinting.
+>undo
+>undo
+>undo
+
 @sli
 >s
 #slider test for although
@@ -927,6 +938,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @alt
 ##balance undos
+>scam
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
 >although
@@ -936,18 +948,19 @@ by one point
 >misses
 --you could've checked north of the Disowned Downside for the other way to regain your powers.
 HOWEVER
+>undo
 >however
 by one point
 >misses
 !HOWEVER
+>undo
 >n
 >n
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 >because
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
->undo
 >undo
 >undo
 >undo
@@ -961,7 +974,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 Loop Pool
 
 @spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
 
 @sli
 #slider test for because
@@ -1014,7 +1027,7 @@ You consider the end to an argument, but you don't have a start. The eels rattle
 !by one point
 #preefcheck eels
 >pf
-You can tell the eels ELSE once you have a token of your goodness.
+You can tell the eels ELSE once you've made progress with the sea cube.
 
 @hin
 DEBUG INFO: sea cube hinting.
@@ -1025,7 +1038,7 @@ by one point
 }}SCORE++
 
 @spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 @hin
 DEBUG INFO: eels hinting.
@@ -1038,7 +1051,7 @@ by one point
 }}SCORE++
 
 @hin
-DEBUG INFO: medals hinting.
+DEBUG INFO: damsel medals hinting.
 
 >score
 {$SCOS}
@@ -1129,7 +1142,7 @@ It's what the medals say that makes them special.
 Bran Barn
 
 @spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
 @nud
@@ -1155,7 +1168,7 @@ Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is 
 !by one point
 
 @hin
-DEBUG INFO: ghoul hat hinting.
+DEBUG INFO: damsel medals hinting.
 The Bran Barn isn't critical since you've solved the Loop Pool, but the puzzle may still interest you.
 
 @!min
@@ -1164,8 +1177,7 @@ by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
-{--max}#preefcheck gore ogre\n>pf\nYou can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
-{--hin}DEBUG INFO: Gore Ogre hinting.
+{--max}#preefcheck gore ogre\\>pf\\You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 >score
 {$SCOS}
 
@@ -1249,6 +1261,9 @@ Gretta's gone. Go back east for help.
 >n
 Shiner Shrine
 
+@hin
+DEBUG INFO: simply sly imp hinting.
+
 @spoi
 ##balance undos
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
@@ -1261,9 +1276,6 @@ Shiner Shrine
 >brutely
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|REMOTELY)\.
 >undo
-
-@hin
-DEBUG INFO: simply sly imp hinting.
 
 @sli
 #slider test for brutely
@@ -1290,7 +1302,7 @@ You remember reading about the Green Lady in the Silver Chair, where she started
 @nud
 #renudge for remote
 >remoet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #nudge for shiner
 >shinre
@@ -1322,11 +1334,11 @@ The coma camo remains as-is. It's probably made by A-COM, and all their products
 \\
 #nudge for brute
 >bruet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #nudge for enraged
 >enragde
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #spechelp for legendary
 >enragedyl
@@ -1385,16 +1397,16 @@ You may need yet another adverb. (+)
 Your score has just gone up by one point
 }}SCORE++
 
-@hin,spoi
-!DEBUG INFO: medals hinting.
-The path north is cleared, and you still have work there.
+@hin
+!DEBUG INFO: damsel medals hinting.
+The path north is cleared, and you feel ready to challenge yourself there.
 
 >score
 {$SCOS}
 
 @alt
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken
 
 >n
 Lamer Realm
@@ -1424,7 +1436,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 @hin
 /DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
@@ -1552,7 +1564,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED|leopard PAROLED)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 @hin
 /DEBUG INFO: (leopard|stray satyr|badger) hinting\.
@@ -1565,7 +1577,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-/DEBUG INFO As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make the (satyr ARTSY|badger GARBED)\.
 
 @hin
 /DEBUG INFO: (stray satyr|badger) hinting\.
@@ -1579,18 +1591,18 @@ Your score has just gone up by one point
 The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
 #readables for stray satyr
 >read stray satyr
-You see TSYRA branded under the stray satyr's shoulder.
+You see TSYRA branded in red under the stray satyr's shoulder.
 
 >artsy
 Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
 @hin
-DEBUG INFO: medals hinting.
+DEBUG INFO: damsel medals hinting.
 
 >score
 {$SCOS}
@@ -1648,7 +1660,7 @@ Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
 DEBUG INFO: min-up codepath
-{--spoi}As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.\n!You also feel there's something more to do here, if you want, but isn't critical.
+{--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.\\!You also feel there's something more to do here, if you want, but isn't critical.
 >score
 {$SCOS}
 
@@ -1665,16 +1677,16 @@ The badger no longer feels second-rate, so it needs no more help.
 
 Clarthead Cathedral
 
-@spoi
-/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|.
->loathingly
-by one point
-You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
->undo
-
 @hin
 DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
+
+@spoi
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|JOLTILY).
+>loathingly
+by one point
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (STOICALLY|JOLTILY).
+>undo
 
 @mis
 #mistake test for sherwin
@@ -1695,11 +1707,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @nud
 #renudge for jolti
 >ojlti
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #nudge for jolty
 >ojlty
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Even with your powers back, you still need to get the adverb right.
 \\
 #nudge for whiner
 >whinre
@@ -1715,7 +1727,7 @@ You don't need to riff on any location names to win the game, unless there's not
 \\
 #nudge for loathing
 >loathign
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #nudge for stoic
 >stoci
@@ -1723,7 +1735,7 @@ Usually, you'd need to add two letters, but here you'd need to add four.
 \\
 #nudge for stoical
 >stoicla
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 \\
 #renudge for coma
 >coam
@@ -1761,7 +1773,7 @@ They find another place where rioters roister.
 >loathingly
 They find another place where rioters roister.
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken TERSELY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken JOLTILY.
 >undo
 >undo
 >undo
@@ -1788,8 +1800,8 @@ They find another place where rioters roister.
 }}SCORE++
 
 @hin
-!DEBUG INFO: medals hinting.
-The path south is cleared, and you still have work there.
+!DEBUG INFO: damsel medals hinting.
+The path south is cleared, and you feel ready to challenge yourself there.
 
 >score
 {$SCOS}
@@ -1818,10 +1830,10 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
 
 @hin
-/DEBUG INFO: (snipe|thrones|corona|nails) hinting\.
+/DEBUG INFO: (pines|thrones|corona|nails) hinting\.
 
 >score
 {$SCOS}
@@ -1939,7 +1951,7 @@ min-up
 >undo
 >misses
 !the thrones
---you could've turned the nails into a snail.
+--you could've turned the nails in Perverse Preserve into a snail.
 !hornets
 !racoon
 !snipe
@@ -1951,7 +1963,7 @@ min-up
 min-up
 >undo
 >misses
---you could've turned the thrones into some hornets.
+--you could've turned the thrones in Perverse Preserve into some hornets.
 !racoon
 !snail
 !snipe
@@ -1966,7 +1978,7 @@ min-up
 min-up
 >undo
 >misses
---you could've turned the corona into a racoon.
+--you could've turned the corona in Perverse Preserve into a racoon.
 !hornets
 !snail
 !snipe
@@ -1980,10 +1992,10 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|HORNETS)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|HORNETS)\.
 
 @hin
-/DEBUG INFO: (snipe|thrones|corona) hinting\.
+/DEBUG INFO: (pines|thrones|corona) hinting\.
 
 >score
 {$SCOS}
@@ -1998,10 +2010,10 @@ Your score has just gone up by one point
 }}SCORE++
 
 @spoi
-As you gaze into the cinders, they blow away, leaving you feeling you can make (a RACOON|a SNIPE)\.
+/As you gaze into the cinders, they blow away, leaving you feeling you can make (a RACOON|a SNIPE)\.
 
 @hin
-/DEBUG INFO: (thrones|corona) hinting\.
+/DEBUG INFO: (pines|corona) hinting\.
 
 >score
 {$SCOS}
@@ -2015,14 +2027,14 @@ As you gaze into the cinders, they blow away, leaving you feeling the medals can
 You also feel there's something more to do here, if you want, but isn't critical.
 
 @hin
-DEBUG INFO: medals hinting.
+DEBUG INFO: damsel medals hinting.
 
 >score
 {$SCOS}
 
 @alt
 >misses
---you could've turned the pines into a snipe.
+--you could've turned the pines in Perverse Preserve into a snipe.
 !hornets
 !snail
 !racoon
@@ -2047,13 +2059,9 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 }}SCORE++
 }}CURMIN++
-{--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\n!You also feel there's something more to do here, if you want, but isn't critical.
+{--spoi}As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.\\!You also feel there's something more to do here, if you want, but isn't critical.
 >score
 {$SCOS}
-
-@spoi
-As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
-!You also feel there's something more to do here, if you want, but isn't critical.
 
 @nud
 #nudge for uprate
@@ -2365,14 +2373,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #spechelp for medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the medals. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
 #scannotes for medals
 >scan medals
-Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
+The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
 >x medals
 ###skip test checking
 >scan medals
-Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
+The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
 
 @spoi
 >deeply

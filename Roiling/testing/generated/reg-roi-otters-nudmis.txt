@@ -51,7 +51,7 @@ Trying to change the current region you're in all at once would be risky, or use
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 #nudge for bare
 >baer
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 #spechelp for bleary barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
@@ -109,10 +109,10 @@ You'll need to change more than one cinder.
 Ed's full name, please!
 #nudge for reedi
 >reeid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 #nudge for reedy
 >reeyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 #spechelp for cinders
 >cindesr
 The cinders glow and even warm up for a bit.
@@ -172,13 +172,13 @@ The cinders are gone for good.
 >n
 #nudge for remote
 >remoet
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 >s
 #nudge for jolti
 >ojlti
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 
@@ -204,177 +204,177 @@ Yes, yes, I am being pedantic here. But discreet and discrete are different enou
 >undo
 
 >allrand
-#nudge for angry
->angyr
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
->undo
 #nudge for angri
 >angir
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+#nudge for angry
+>angyr
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
-#nudge for bossy
->bosys
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >undo
 #nudge for bossi
 >bosis
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+#nudge for bossy
+>bosys
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
+>undo
 >undo
 #nudge for nasti
 >nasit
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for nasty
 >nasyt
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for seedi
 >seeid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for seedy
 >seeyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for shadi
 >shaid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shady
 >shayd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for snide
 >snied
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for stark
 >stakr
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for terse
 >teres
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for tacit
 >tacti
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for catty
 >catyt
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for teari
 >teair
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for teary
 >teayr
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
->undo
-#nudge for bleayr
->bleary
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for bleari
 >bleair
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
+>undo
+#nudge for bleayr
+>bleary
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for ribald
 >ribadl
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for formal
 >formla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for coital
 >coitla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for modest
 >modets
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shabbi
 >shabib
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shabby
 >shabyb
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for shoddi
 >shodid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for shoddy
 >shodyd
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for silent
 >siletn
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for steami
 >steaim
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for steamy
 >steaym
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 #nudge for sudden
 >suddne
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for stupdi
 >stupid
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for martial
 >martila
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for sincere
 >sinceer
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for sobbing
 >sobbign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for tedious
 >tediosu
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for wearing
 >wearign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for desperate
 >desperaet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for drawling
 >drawlign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for emotional
 >emotionla
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for reactive
 >reactiev
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for despairing
 >despairign
-No, you need a couple more letters... a couple to make a word weak enough to control.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 #nudge for indiscreet
 >indiscrete
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 
@@ -395,7 +395,7 @@ No need to change the maples. They are the least dreary part of the Downside.
 No need to change the maples. They are the least dreary part of the Downside.
 #readables for sample maples
 >read sample maples
-On one, you read: "Formerly the maiden median, then the gent-fora/frat-gone frontage."
+On one, you read: "Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage."
 #nudge for gretta
 >gretat
 Enough people are trying to manipulate Gretta. Deal with them directly.
@@ -433,6 +433,7 @@ The players certainly do dance around a lot with their talk, so it's no surprise
 >sparely
 by one point
 #done rejects for parleys splayer players
+>sparely
 You've already made the macks/players talk a bit slower. Now you need to deal with their arguments.
 #nudge for amcks
 >macsk
@@ -443,6 +444,7 @@ If you messed with one mack, the others would gang up on you. Work on the argume
 #renudge for parley
 >arpley
 You needed to deal with all the players to knock them back a peg.
+>undo
 >undo
 >undo
 >undo
@@ -662,7 +664,7 @@ You remember reading about the Green Lady in the Silver Chair, where she started
 
 #renudge for remote
 >remoet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #nudge for shiner
 >shinre
@@ -694,11 +696,11 @@ The coma camo remains as-is. It's probably made by A-COM, and all their products
 
 #nudge for brute
 >bruet
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #nudge for enraged
 >enragde
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #spechelp for legendary
 >enragedyl
@@ -829,7 +831,7 @@ Score in a scenario: 18 out of 33 total points in the current region, Otters. Lo
 The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
 #readables for stray satyr
 >read stray satyr
-You see TSYRA branded under the stray satyr's shoulder.
+You see TSYRA branded in red under the stray satyr's shoulder.
 
 >artsy
 Your score has just gone up by one point
@@ -901,11 +903,11 @@ No cryptozookeeper appears.
 
 #renudge for jolti
 >ojlti
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #nudge for jolty
 >ojlty
-Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
+No, you need a couple more letters, but not the usual ones. Even with your powers back, you still need to get the adverb right.
 
 #nudge for whiner
 >whinre
@@ -921,7 +923,7 @@ You don't need to riff on any location names to win the game, unless there's not
 
 #nudge for loathing
 >loathign
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #nudge for stoic
 >stoci
@@ -929,7 +931,7 @@ Usually, you'd need to add two letters, but here you'd need to add four.
 
 #nudge for stoical
 >stoicla
-No, you need a couple more letters... even with your powers back, you still need to get the adverb right.
+No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
 #renudge for coma
 >coam
@@ -1306,13 +1308,13 @@ Score in a scenario: 30 out of 33 total points in the current region, Otters. Th
 #spechelp for medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the medals. That's a decent omen.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
 #scannotes for medals
 >scan medals
-Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
+The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
 >x medals
 >scan medals
-Hmm. You're an old hat by now, and the questionable slots seem -- well, not as bad as a final puzzle usually is. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
+The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what's engraved on the medals.
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.

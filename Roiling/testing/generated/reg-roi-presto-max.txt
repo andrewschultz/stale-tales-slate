@@ -11,6 +11,8 @@
 >t
 >posf
 
+>au 1
+
 >presto
 >enter tornado
 Grey Gyre
@@ -369,39 +371,22 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->capslock
-Your score has just gone up by one point
-
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 >cola
 Your score has just gone up by one point
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
-#pre-peels-speel-sleep rule
->sleep
-You haven't yet made anywhere comfortable to sleep.
-#preefcheck peels speel
->pf
-You can SLEEP once you've gotten a good start on your coding task.
 #pre-reboot rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
 #preefcheck be troo e robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
-
->futon
-Your score has just gone up by one point
->score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 #pre-peels-speel-sleep rule retry
 >sleep
@@ -411,7 +396,7 @@ Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous 
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -435,13 +420,13 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >keyboard
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >compile
 !by one point
@@ -463,16 +448,6 @@ You can now do computery things unimpeded! Hooray!
 
 >compile
 !by one point
-You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
->compile
-!by one point
-You need to get rid of that uppercase to successfully compile your code.
-
->put lock on keyboard
-fits in perfectly
-
->compile
-!by one point
 A DISK, I'D ASK pops up. You realize that you can change the skid back, due to the lossless compression algorithm.
 
 >disk
@@ -491,7 +466,30 @@ You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this v
 Your score has just gone up by one point
 
 >score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+#pre-peels-speel-sleep rule
+>sleep
+There's no task ahead you need to sleep for, yet. Besides, you have nowhere to sleep.
+#preefcheck peels speel
+>pf
+You can SLEEP once you've gotten a good start on your coding task.
+
+>futon
+Your score has just gone up by one point
+>score
 Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#pre-peels-speel-sleep rule
+>sleep
+There's no task ahead you need to sleep for, yet.
+!Besides, you have nowhere to sleep.
 
 >compile
 !by one point
@@ -499,6 +497,16 @@ You get a NEED IF-DEFINE error
 >compile
 !by one point
 That stupid NEED IF-DEFINE and that peels speel, still.
+
+>compile
+!by one point
+You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+>compile
+!by one point
+You need to get rid of that uppercase to successfully compile your code.
+
+>put lock on keyboard
+fits in perfectly
 
 >sleep
 Your score has just gone up by one point

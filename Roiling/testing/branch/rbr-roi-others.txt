@@ -21,7 +21,7 @@ ALSO-IGNORE:t
 }}CURMIN=25
 
 }$SCOS=You have {SCORE} of {MAX} total points for the post-Elvira Others region, though you only need {CURMIN} to win.
-}$SCONOFIND=You have {SCORE} of {MAX} total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+}$SCONOFIND=You have {SCORE} of {MAX} total points for the post-Elvira Others region.\nThere are no fruits left to find or give back to Curtis.
 }$SCOVERYLAST=You have {SCORE} of {MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 ## *FILE
@@ -244,6 +244,46 @@ Whoah! You suddenly see a COMPASS spinning around. The aftertaste of arugula fin
 }}SCORE++
 {$SCOS}
 
+@spoi
+##balance undo
+>son 1
+Giving you the coin.
+>gx coin
+You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 2
+Giving you the icon.
+>gx icon
+Nothing happens. Maybe try to see through something else.
+>undo
+>undo
+>son 3
+Giving you the coins.
+>gx coins
+You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 4
+Giving you the icons.
+>gx icons
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 5
+Giving you the sonic coins.
+>gx sonic coins
+You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
+>undo
+>undo
+>son 6
+Giving you the sonic icons.
+>gx sonic icons
+The icons seem appropriate as-is.
+>undo
+>undo
+
+
 @nud
 #nudge for moss
 >msso
@@ -271,13 +311,14 @@ Your score has just gone up by one point.
 You can EXAMINE the ruts circuits to discover more things to change to fruits.
 >n
 >d
-/DEBUG INFO: (banna'|brr-hub|Reversed Deserver Dr Severe|ENGARO orange)
+/DEBUG INFO: (banna'|brr-hub|ENGARO orange)
 >banana
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe|ENGARO orange)
+/DEBUG INFO: (brr-hub|ENGARO orange)
 >go near
-/DEBUG INFO: (brr-hub|Reversed Deserver Dr. Severe)
+/DEBUG INFO: (brr-hub)
 >rhubarb
-DEBUG INFO: Reversed Deserver Dr. Severe
+Falling through to check the fruit we would've hinted for test scripts...
+You'll eventually want to get that So-Great Storage down the road.
 >undo
 >undo
 >undo
@@ -849,29 +890,6 @@ Nothing specific to do here, but there are other places where you can make fruit
 >s
 You fiddle with the coin you got
 
-@spoi
-##balance undos
->purloin coins
->gx coins
-You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
->undo
->undo
-
-@spoi
-##balance undos
->icons
-by one point
->gx icons
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
->undo
->undo
->sonic
-by one point
->gx sonic coins
-You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
->undo
->undo
-
 @hin
 DEBUG INFO: icons hinting.
 >sonic
@@ -1216,8 +1234,6 @@ Nothing, despite all Len Craig has to sell.
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 >gx nectarine
 You feel a need to make the nectarine ANCIENTER. The aftertaste of arugula finally dissipates.
->gx nectarine
-You've already changed the nectarine.
 >gx peach
 You feel a need to call the peach CHEAP. The aftertaste of arugula finally dissipates.
 >gx quince
@@ -1225,7 +1241,7 @@ You feel a need to order CINQUE. The aftertaste of arugula finally dissipates.
 >gx prices precis
 You feel a need to lash out and say CRIPES. The aftertaste of arugula finally dissipates.
 >gx melon
-You feel a need to haggle with  MO LEN. The aftertaste of arugula finally dissipates.
+You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipates.
 >gx auction caution
 You have a vision of a fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 >gx lemons
@@ -1446,6 +1462,10 @@ Your score has just gone up by one point.
 }}CURMIN++
 {$SCOS}
 
+@spoi
+>gx nectarine
+You've already changed the nectarine.
+
 @nud
 #renudge for price
 >priec
@@ -1473,7 +1493,7 @@ You corrected the prices precis enough.
 >w
 
 @nud
-#doing this in front of the prices precis gives a differrent result.
+#doing this in front of the prices precis should give the same result.
 #redone rejects for prices precis
 >cripse
 You corrected the prices precis enough.
@@ -1507,8 +1527,6 @@ You have a vision of a fruit: BANANA. The aftertaste of arugula finally dissipat
 You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally dissipates.
 >gx a brr hub
 You have a vision of a fruit: RHUBARB. The aftertaste of arugula finally dissipates.
->gx dr severe
-One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
 
 @nud
 #nudge for storage
@@ -1676,6 +1694,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >ereredvs
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@spoi
+>gx dr severe
+One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
+
 @hin
 >z
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
@@ -1701,7 +1723,7 @@ Your score has just gone up by one point.
 {$SCOS}
 >reversed
 Your score has just gone up by one point.
-{--hin}You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.\nSince you've changed all the fruits without using the arugula to GURU, I think you deserve to know you that you'll get a bonus point for that once you enter the Valence Enclave north of here.\nThere are no more fruits to find for Curtis.
+{--hin}You look around and don't see any way to pick off more fruits here. In fact, you are pretty sure you've found all the fruits.\\Congratulations on finding all the fruits! Since you did so without using the arugula to GURU, you will get the final bonus point.
 >score
 }}SCORE++
 }}CURMIN++
@@ -1914,7 +1936,7 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 
 >n
 #notana
-@!min
+@!min,spoi
 by one point
 #bonus point for not usuing arugula
 

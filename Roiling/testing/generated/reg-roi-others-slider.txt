@@ -407,7 +407,8 @@ You have 38 of 42 total points for the post-Elvira Others region, though you onl
 >reversed
 Your score has just gone up by one point.
 >score
-You have 39 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 39 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >u
 >n
@@ -430,7 +431,8 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 >score
 
-You have 40 of 42 total points for the post-Elvira Others region. There are no fruits left to find or give back to Curtis.
+You have 40 of 42 total points for the post-Elvira Others region.
+There are no fruits left to find or give back to Curtis.
 
 >review
 by one point

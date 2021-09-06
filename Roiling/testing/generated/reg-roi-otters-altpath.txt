@@ -67,6 +67,7 @@ Score in a scenario: 6 out of 33 total points in the current region, Otters. Low
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
+>scam
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
 >although
@@ -76,18 +77,19 @@ by one point
 >misses
 --you could've checked north of the Disowned Downside for the other way to regain your powers.
 HOWEVER
+>undo
 >however
 by one point
 >misses
 !HOWEVER
+>undo
 >n
 >n
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 >because
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
+As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
->undo
 >undo
 >undo
 >undo
@@ -206,7 +208,7 @@ Your score has just gone up by one point
 Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
 
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken LOATHINGLY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken
 
 >n
 Lamer Realm
@@ -300,7 +302,7 @@ They find another place where rioters roister.
 >loathingly
 They find another place where rioters roister.
 >thisalt
---you could've made the imp act BRUTELY, and the whiners could've spoken TERSELY.
+--you could've made the imp act BRUTELY, and the whiners could've spoken JOLTILY.
 >undo
 >undo
 >undo
@@ -341,7 +343,7 @@ min-up
 >undo
 >misses
 !the thrones
---you could've turned the nails into a snail.
+--you could've turned the nails in Perverse Preserve into a snail.
 !hornets
 !racoon
 !snipe
@@ -353,7 +355,7 @@ min-up
 min-up
 >undo
 >misses
---you could've turned the thrones into some hornets.
+--you could've turned the thrones in Perverse Preserve into some hornets.
 !racoon
 !snail
 !snipe
@@ -368,7 +370,7 @@ min-up
 min-up
 >undo
 >misses
---you could've turned the corona into a racoon.
+--you could've turned the corona in Perverse Preserve into a racoon.
 !hornets
 !snail
 !snipe
@@ -400,7 +402,7 @@ Your score has just gone up by one point
 Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
 
 >misses
---you could've turned the pines into a snipe.
+--you could've turned the pines in Perverse Preserve into a snipe.
 !hornets
 !snail
 !racoon

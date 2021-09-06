@@ -56,7 +56,7 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 >pf
 You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >ergo
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
+That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
 >n
 >n
@@ -66,10 +66,10 @@ You try to argue that you're that person who saved Yorpwald in the first place, 
 !by one point
 #preefcheck sea cube
 >pf
-You can tell the eels in the sea cube BECAUSE you have material evidence you're trustworthy.
+You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 #pre-eels-else rule
->because
-You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
+>else
+That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
 >s
 
@@ -165,18 +165,18 @@ by one point
 >n
 >because
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Le Mer is unmoved.
-[You add the information to your pedanto-notepad under FLIPS.]
+![You add the information to your pedanto-notepad under FLIPS.]
 >pf
-You can tell the eels in the sea cube BECAUSE once you're able to show evidence you're trustworthy.
+You can tell the eels in the sea cube BECAUSE once you have material evidence you're trustworthy.
 >undo
 >undo
 >undo
 >s
 >although
 You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. Mr. Lee is unmoved.
-[You add the information to your pedanto-notepad under FLIPS.]
+![You add the information to your pedanto-notepad under FLIPS.]
 >pf
-You can say ALTHOUGH to Mr. Lee and his ghoul hat once you're able to show evidence you're trustworthy.
+You can say ALTHOUGH to Mr. Lee and his ghoul hat once you have material evidence you're trustworthy.
 >undo
 >undo
 >undo
@@ -228,7 +228,7 @@ You consider the end to an argument, but you don't have a start. The eels rattle
 !by one point
 #preefcheck eels
 >pf
-You can tell the eels ELSE once you have a token of your goodness.
+You can tell the eels ELSE once you've made progress with the sea cube.
 
 >because
 by one point
@@ -263,7 +263,9 @@ Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is 
 >although
 by one point
 DEBUG INFO: min-up codepath
-#preefcheck gore ogre\n>pf\nYou can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
+#preefcheck gore ogre
+>pf
+You can say ERGO to deal with the Gore Ogre now you've helped Mr. Lee deal with the ghoul hat.
 >score
 Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
 

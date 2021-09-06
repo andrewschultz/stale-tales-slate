@@ -11,6 +11,8 @@
 >t
 >posf
 
+>au 1
+
 >presto
 >enter tornado
 Grey Gyre
@@ -170,26 +172,15 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
->capslock
-Your score has just gone up by one point
-
->score
-Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
-
 >cola
 Your score has just gone up by one point
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
-
->futon
-Your score has just gone up by one point
->score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >get book
 >push skid s
@@ -205,22 +196,19 @@ Score in a scenario: 21 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >keyboard
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
 
 >put keyboard on slab
 Only one more piece of hardware is needed, and the computer will work.
 
 >put screen on slab
 You can now do computery things unimpeded! Hooray!
-
->put lock on keyboard
-fits in perfectly
 
 >disk
 
@@ -230,7 +218,21 @@ fits in perfectly
 Your score has just gone up by one point
 
 >score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+
+>capslock
+Your score has just gone up by one point
+
+>futon
+Your score has just gone up by one point
+>score
 Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+
+>put lock on keyboard
+fits in perfectly
 
 >sleep
 Your score has just gone up by one point

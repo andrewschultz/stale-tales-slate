@@ -11,6 +11,8 @@
 >t
 >posf
 
+>au 1
+
 >presto
 >enter tornado
 Grey Gyre
@@ -309,12 +311,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->capslock
-Your score has just gone up by one point
-
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 #note the regular code path is usurped to remind the player of what they already know
 #slider test for disk
 >ikds
@@ -324,23 +320,18 @@ No, skid <=> disk is about it. There's no tricky third way.
 >cola
 Your score has just gone up by one point
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->futon
-Your score has just gone up by one point
->score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -356,7 +347,7 @@ Score in a scenario: 30 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for keyboard
 >ekbyaodr
@@ -366,7 +357,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for tab
 >abt
@@ -377,9 +368,6 @@ Only one more piece of hardware is needed, and the computer will work.
 
 >put screen on slab
 You can now do computery things unimpeded! Hooray!
-
->put lock on keyboard
-fits in perfectly
 
 >disk
 
@@ -393,7 +381,21 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+>futon
+Your score has just gone up by one point
+>score
 Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>put lock on keyboard
+fits in perfectly
 
 #slider test for sleep
 >eespl
