@@ -4801,7 +4801,7 @@ t-formally	true	true	false	false	"Two question marks in nine letters--well, seve
 t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
-medals	true	false	false	false	"[if cheat-on is true]The medalls clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
+medals	true	false	false	false	"[if cheat-on is true]The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
@@ -5105,7 +5105,7 @@ this is the presto-hinting rule:
 		try objhinting plebe instead;
 	if player is in austerer:
 		if ye hoop is in austerer, try objhinting ye hoop instead;
-		if spoilit is false, all-say "You are done here in Austerer Treasure. The [if screen is off-stage]screen[else]censer, or what it can become,[end if] won't be useful until much later." instead;
+		if spoilit is false, all-say "You are done here in Austerer Treasure. The earring [if earring is moot]changed into the censer[else]will change when the time is right[end if]." instead;
 	if tsar star is touchable and tsar star is in Char Arch, try objhinting tsar star instead;
 	if dart is touchable and dart is in cistern, try objhinting dart instead;
 	if location of player is Dirge Ridge:
@@ -5126,7 +5126,6 @@ this is the presto-hinting rule:
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
 	if player is in a mazeroom or player is in Nowt Town or player is in Unwary Runway:
-		if spoilit is false, all-say "[maze-solve]." instead;
 		try objhinting n-t-air instead;
 	if player is in Grey Gyre:
 		if volt maze is in Grey Gyre, try objhinting volt maze instead;
@@ -5157,17 +5156,9 @@ this is the presto-hinting rule:
 	if disk is touchable and skid is off-stage, try objhinting disk instead;
 	if yak is touchable and spoilit is false, try objhinting yak instead;
 	if flea is touchable, try objhinting flea instead;
-	if Clack Ops Locs Pack is touchable, try objhinting Clack Ops Locs Pack instead; [these are not the easiest, but they are listed in order of optimally solving the game.]
 	if drab yoke is touchable:
 		if yak is touchable, say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not touchable]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
-	if coal is touchable, try objhinting coal instead;
-	if gum is touchable, try objhinting gum instead;
-	if ALocalCo cola is touchable:
-		if spoilit is true:
-			all-say "No, you'd rather pour the cola into [if mug is touchable]the mug[else]some simple drinking container[end if]. It's slightly less nasty than the crust.";
-			now spoilit is false instead;
-		try objhinting ALocalCo cola instead;
 	if fount is touchable, try objhinting fount instead;
 	if Hacks Shack is visited:
 		if yak is not moot: [?! rearrange this]
@@ -5185,7 +5176,13 @@ this is the presto-hinting rule:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
 		if Im Le Cop polemic is reflexive, try objhinting Im Le Cop polemic instead;
-		if ALocalCo cola is not moot, try objhinting mug instead;
+		if coal is touchable, try objhinting coal instead;
+		if gum is touchable, try objhinting gum instead;
+		if ALocalCo cola is touchable:
+			if spoilit is true:
+				all-say "No, you'd rather pour the cola into [if mug is touchable]the mug[else]some simple drinking container[end if]. It's slightly less nasty than the crust.";
+				now spoilit is false instead;
+			try objhinting ALocalCo cola instead;
 		if BUB DUDE EGG is reflexive, try objhinting BUB DUDE EGG instead;
 		if usb is touchable, try objhinting usb instead;
 	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
@@ -6064,7 +6061,9 @@ after taking inventory when mrlp is others:
 to decide which number is fruits-got: decide on number of not fruit-to-find fruits;
 
 to eval-fruits:
-	say "[line break]DEBUG NOTE: MISSES shows fruits left.";
+	if debug-state is true:
+		say "[line break]DEBUG NOTE: MISSES shows fruits left. Fruits-left = [fruits-left].";
+		if fruits-left < 10, say "REMAINING: [list of fruit-to-find fruits].";
 	if moss cap is off-stage, continue the action;
 	if fruits-left is 0:
 		say "There are no more fruits to find for Curtis.";
@@ -6972,7 +6971,7 @@ check sleeping:
 		if player is in Hacks Shack:
 			if peels speel is in Hacks Shack, try fliptoing peels speel instead;
 			if peels speel is off-stage:
-				say "You aren't tired enough, yet[if futon is off-stage]. Besides, you have nowhere to sleep[end if]." instead;
+				say "There's no task ahead you need to sleep for, yet[if futon is off-stage]. Besides, you have nowhere to sleep[end if]." instead;
 		if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
 	if mrlp is oyster, say "You feel too inclined towards action for that." instead;
 	if peels speel is reflexed, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
@@ -9941,6 +9940,7 @@ to say what-can-flip:
 
 to say prefigured-things:
 	repeat with pft running through not unfigured things:
+		say "[pft].";
 		let got-it be false;
 		repeat through table of preflip clues:
 			if pft is preflip entry:
@@ -17492,7 +17492,7 @@ understand the command "present" as something new.
 
 A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of repents serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of repents serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as repents serpent.
 
-a-text of repents serpent is "RRYRYRR". b-text of repents serpent is "?RYRG??". parse-text of repents serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+a-text of repents serpent is "RRYRYRR". b-text of repents serpent is "RRYR???". parse-text of repents serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
 rule for supplying a missing second noun when showing:
 	if repents serpent is touchable, now second noun is repents serpent.
@@ -18300,7 +18300,9 @@ to pick-a-picaro:
 
 volume otters
 
-a block-concept is a kind of thing. a block-concept is usually scenery. a block-concept is usually vanishing. a block-concept is usually boring. bore-text of a block-concept is usually "That [if noun is in Shiner Shrine]evaluation[else]activity[end if] is nothing you can observe or manipulate physically, but if you focus on [the noun], you might be able to SCAN it if you need to.". description of a block-concept is usually "Well, [the item described] is there, and it's definitely distracting you from going [past-barley-vert].". a block-concept is usually ssno. bore-check of a block-concept is usually the bore-concept rule.
+a block-concept is a kind of thing. a block-concept is usually scenery. a block-concept is usually vanishing. a block-concept is usually boring. bore-text of a block-concept is usually "That [if noun is in Shiner Shrine]evaluation[else]activity[end if] is nothing you can observe or manipulate physically, but if you focus on [the noun], you might be able to SCAN it if you need to.". description of a block-concept is usually "Well, [the item described] is there, and it's definitely distracting you from going [past-barley-vert].". a block-concept is usually ssno. bore-check of a block-concept is usually the bore-concept rule. a block-concept has text called flip-name.
+
+a block-concept can be forcemooted. a block-concept is usually not forcemooted. a block-concept can be northern or southern.
 
 this is the bore-concept rule:
 	if current action is taking, say "Well, the problem is, you can't take [the noun]. You'd like to get rid of it." instead;
@@ -19449,15 +19451,15 @@ check scaning sly imp: say "The settler then gets garbled a bit. The imp probabl
 
 section imp's block ideas
 
-motleyer is a vanishing block-concept in Shiner Shrine.
+motleyer is a vanishing northern block-concept in Shiner Shrine. flip-name of motleyer is "REMOTELY".
 
 a-text of motleyer is "RYRYRYRO". b-text of motleyer is "RYRYRYRO". parse-text of motleyer is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". motleyer is cheat-spoilable. [remotely]
 
-butlery is a vanishing block-concept in Shiner Shrine.
+butlery is a vanishing northern block-concept in Shiner Shrine. flip-name of butlery is "BRUTELY".
 
 a-text of butlery is "RRYRYRO". b-text of butlery is "PRYRGRB". parse-text of butlery is "b[sp]x[sp]u[sp]x[sp]e[sp]l[sp]y". butlery is cheat-spoilable. [brutely]
 
-legendary is a vanishing block-concept in Shiner Shrine.
+legendary is a vanishing northern block-concept in Shiner Shrine. flip-name of legendary is "ENRAGEDLY".
 
 a-text of legendary is "YRRYRYRRO". b-text of legendary is "YRRYRYRRB". parse-text of legendary is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [enragedly]
 
@@ -19610,15 +19612,15 @@ check scaning sly imp: say "Nothing turns up, but maybe you can focus on how it 
 
 chapter what the whiners do
 
-callosity is a vanishing block-concept in Clarthead Cathedral.
+callosity is a vanishing southern block-concept in Clarthead Cathedral. flip-name of callosity is "STOICALLY".
 
 a-text of callosity is "RRYYRYRRO". b-text of callosity is "RRYYRYRRB". parse-text of callosity is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". [stoically]
 
-tallyhoing is a vanishing block-concept in Clarthead Cathedral.
+tallyhoing is a vanishing southern block-concept in Clarthead Cathedral. flip-name of tallyhoing is "LOATHINGLY".
 
 a-text of tallyhoing is "RYYRRYRRRO". b-text of tallyhoing is "RYYRRYRRRO". parse-text of tallyhoing is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y". [loathingly]
 
-jollity is a vanishing block-concept in Clarthead Cathedral.
+jollity is a vanishing southern block-concept in Clarthead Cathedral. flip-name of jollity is "JOLTILY".
 
 a-text of jollity is "RYRRYRO". b-text of jollity is "PGPRGRB". parse-text of jollity is "j[sp]o[sp]l[sp]l[sp]i[sp]t[sp]y". jollity is cheat-spoilable. [joltily]
 
@@ -19858,7 +19860,7 @@ got-forced-others-min is a truth state that varies.
 
 this is the force-others-final-point rule:
 	if guru-bonus-forced:
-		say "[line break]You've done enough work. You deserve to know, for future reference, your final bonus point on completing this journey will be for not using the arugula.";
+		say "[line break]Congratulations on finding all the fruits! Since you did so without using the arugula to GURU, you will get the final bonus point.";
 		now got-forced-others-min is true;
 		min-up;
 
@@ -19973,7 +19975,7 @@ carry out guruing:
 			if noun is reflexed:
 				say "You've already changed [the noun]. ";
 			else if noun is moss cap:
-				say "Whoah! A compass begins spinning. ";
+				say "Whoah! You suddenly see a COMPASS spinning around. ";
 			else if noun is coins:
 				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
 			else if noun is s-c or noun is icons:
@@ -19986,10 +19988,16 @@ carry out guruing:
 				say "You feel a need to be AMONG. ";
 			else if noun is quince:
 				say "You feel a need to order CINQUE. ";
+			else if noun is nectarine:
+				say "You feel a need to make the nectarine ANCIENTER. ";
+			else if noun is Dr Severe:
+				say "One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. ";
 			else if noun is prices precis:
 				say "You feel a need to lash out and say CRIPES. ";
 			else if noun is melon:
 				say "You feel a need to haggle with MO LEN. ";
+			else if noun is orange:
+				say "You see how to get the orange: first, GO NEAR. ";
 			else if noun is lemons:
 				say "You feel an urge to look SOLEMN. ";
 			else if noun is a fruit or noun is Dr Severe:
@@ -20001,6 +20009,8 @@ carry out guruing:
 			now did-guru is true;
 			say "The aftertaste of arugula finally dissipates.";
 			if scams is false, poss-d;
+			pad-del "guru";
+			pad-rec "flips";
 			the rule succeeds;
 	if noun is s-i, say "The icons seem appropriate as-is." instead;
 	say "Nothing happens. Maybe try to see through something else.";
@@ -20679,7 +20689,7 @@ check going east in swell wells:
 	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
 	if tekno token is moot, say "You bartered for everything you could inthe Clangier Clearing." instead
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
 
 after looking in Clangier Clearing:
 	set the pronoun them to nameless salesmen;
@@ -21742,7 +21752,7 @@ this is the spoil-hints rule:
 			say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
 		if player has cinders:
 			if noun is thruhinted or noun is prefigured, say "[if player is in Shiner Shrine and imp is in Shiner Shrine]Hm, it'd still be fun to see the imp act[else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]It still might peg the whiners back a bit if they talked more[else]You pause, realizing you do not need to discern. Perhaps now is a good time to remember[end if] [spoil-entry entry]." instead;
-			say "As you gaze into the cinders, they [if noun is medals and noun is not cinder-dissolve]glint slightly off the medals[else]blow away[end if], leaving you feeling ";
+			say "As you gaze into the cinders, they blow away, leaving you feeling ";
 			say "[if player is in Shiner Shrine and imp is in Shiner Shrine]the imp could act [else if player is in Clarthead Cathedral and whiners are in Clarthead Cathedral]the whiners could talk [end if][spoil-entry entry].";
 			if conditional-llp-present, say "[line break]You also feel there's something more to do here, if you want, but isn't critical.";
 			if noun is cinder-dissolve:
@@ -21755,9 +21765,7 @@ this is the spoil-hints rule:
 
 carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
-	if scams is true:
-		d "SCAM command says to hint [the noun].";
-	else if spoilit is false:
+	if spoilit is false:
 		d "[noun] hinting.";
 	now ever-obj-hinted is true;
 	if noun is the player, all-say "[if cur-score of Ordeal Reload < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead; [ couldn't put the player in the table of hintobjs]
@@ -22519,7 +22527,7 @@ to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the [pla-ma]s act (you only needed three of seven): [how-players].";
-	say "[2da]you could've made the imp act [list of block-concepts in Shiner Shrine], and the whiners could've spoken [list of block-concepts in Clarthead Cathedral].";
+	say "[2da]you could've made the imp act [b][if number of forcemooted northern block-concepts is 0]<BUG>[else][flip-name of random forcemooted northern block-concept][end if][r], and the whiners could've spoken [b][if number of forcemooted southern block-concepts is 0]<BUG>[else][flip-name of random southern forcemooted block-concept][end if][r].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";
@@ -22774,7 +22782,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [Clangier Clearing]
 		if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
 		if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
-		if mango is not moot, say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
+		if mango is not moot, say "[2drm of Clangier Clearing]you could've gone AMONG the No-Ammo Gang for a mango.";
 		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
 		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices precis.";
 		if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";

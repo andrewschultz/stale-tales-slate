@@ -307,8 +307,8 @@ Ed Riley	Ed Riley	false	583131047	--	"reedily"	"reedily"	--	--	"'WHAT ARE You...
 motleyer	motleyer	false	758646860	--	"remotely"	"remotely"	--	post-imp-flip rule	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so it's not very intimidating. It returns to zigzagging, but it's kind of missing the edges, now."
 butlery	butlery	false	615937733	--	"brutely"	"brutely"	--	post-imp-flip rule	"The imp loses some dexterity and gains some strength. Not enough to beat you up."
 legendary	legendary	false	641833229	--	"enragedly"	"enragedly"	--	post-imp-flip rule	"The imp flares up for a brief moment, explaining how it gets mad having to be patient. It didn't become an imp for this..."
-callosity	callosity	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
-tallyhoing	tallyhoing	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
+tallyhoing	tallyhoing	false	593419698	--	"loathingly"	"loathingly"	--	post-whiners-flip rule	"[shout-check]"
+callosity	callosity	false	569909740	--	"stoically"	"stoically"	--	post-whiners-flip rule	"[shout-check]"
 jollity	jollity	false	501402896	--	"joltily"	"joltily"	--	post-whiners-flip rule	"[shout-check]"
 ghoul hat	ghoul hat	false	445734359	--	"although"	"although"	pre-ghoul-hat-although rule	post-ghoul-hat-although rule	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaporizes. 'But--the ghoul hat--they said it would stop the Gore Ogre.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. The Gore Ogre still seems unwilling to actually attack."
 Gore Ogre	Gore Ogre	false	320082191	--	"ergo"	"ergo"	pre-ogre-ergo rule	post-ogre-ergo rule	"Blam! The gore ogre blinks and almost looks intelligent! It calls out for someone ... 'George ... or ...'[paragraph break]Mr. Lee claps his hands. 'Wow! You're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' You promise to re-bran what is barren. He offers you a walk in his infidel infield. You feel a slight shock halfway through--[if power-back is false]your mordant powers are now merely dormant![else]similar to what the eels gav. You shake exaggeratedly and nod your head in thanks.[end if][paragraph break]'That is all I can give you. I hope it is enough.' You agree. You will help make his seed site the seediest--once you do the whole country-saving thing. It's the least you can do.[paragraph break][revelv]But they are overtaken ... by a vow here."
@@ -995,14 +995,14 @@ this is the pre-polemic-compile rule:
 		else:
 			say "Ok, but by 'may want' I meant 'really probably need to.'";
 		preef Im Le Cop polemic instead;
-	if caps lock is not part of the keyboard:
-		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
-		preef Im Le Cop polemic instead;
 	if disk is not in Drive A:
 		say "A DISK, I'D ASK pops up. You realize that [if disk is moot]you can change the skid back, due to the lossless compression algorithm[else]the disk would fit fine[end if].";
 		preef Im Le Cop polemic instead;
 	if be troo e robot is reflexive:
 		say "You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs['] bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a[if Drive A is examined]nother[end if] look at the drive might help.";
+		preef Im Le Cop polemic instead;
+	if caps lock is not part of the keyboard:
+		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
 		preef Im Le Cop polemic instead;
 	if peels speel is reflexive:
 		say "[one of]You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.[paragraph break]'Up late, a letup,' you think restlessly and dreamily to yourself, 'Then fail the final!'[paragraph break]You're just too exhausted to put up with any more ... probably you just switched something or got something backwards[or]That stupid NEED IF-DEFINE and that peels speel, still[stopping].";
@@ -1542,6 +1542,7 @@ this is the post-imp-flip rule:
 	if imp-score is 2:
 		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
 		moot imp;
+		now all block-concepts in Shiner Shrine are forcemooted;
 		moot motleyer;
 		moot butlery;
 		moot legendary;
@@ -1553,6 +1554,7 @@ this is the post-whiners-flip rule:
 	if whiner-score is 2:
 		say "[line break]As they sulk away from the Clarthead Cathedral, the whiners let loose a final complaint about that bum Ed Riley who got a more exciting post--kissing up to Elvira so weedily[if ed riley is in Minded Midden]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		moot whiners;
+		now all block-concepts in Clarthead Cathedral are forcemooted;
 		moot callosity;
 		moot tallyhoing;
 		moot jollity;
@@ -1801,7 +1803,7 @@ section otters
 
 a medal check rule for a thing (called x):
 	if player does not have medals:
-		if x is Gore Ogre or X is eels:
+		if x is ghoul hat or X is sea cube:
 			say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
 		else:
 			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
@@ -3007,7 +3009,7 @@ Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn'
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
-parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s' parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARSELY"
+parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s['] parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARELY"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed Riley can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"

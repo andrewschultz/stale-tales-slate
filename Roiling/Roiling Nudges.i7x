@@ -2222,9 +2222,9 @@ this is the midden-n-s rule:
 
 section minded midden auxiliary
 
-to say add-ly: say "No, you need a couple more letters... [adv-help]"
+to say add-ly: say "[adv-help-1][adv-help-2]"
 
-to say add-li: say "No, you need a couple more letters, but not the usual ones... [adv-help]"
+to say add-li: say "[adv-help-1], but not the usual ones[adv-help-2]"
 
 to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
 
@@ -2456,7 +2456,9 @@ book support rules and quotes
 
 [These are used elsewhere throughout the nudges file, but they are not main rules listed in a table.]
 
-to say adv-help: say "[if power-back is true]even with your powers back, you still need to get the adverb right[else]a couple to make a word weak enough to control[end if]"
+to say adv-help-1: say "No, you need a couple more letters"
+
+to say adv-help-2: say ". [if power-back is true]Even with your powers back, you still need to get the adverb right[else]Ones that make a word weak enough to control[end if]"
 
 slab-pts is a number that varies.
 
