@@ -937,14 +937,14 @@ this is the pre-reboot rule:
 	if player has keyboard and keyboard is not on slab:
 		say "The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?";
 		preef be troo e robot instead;
+	if keyboard is not touchable:
+		say "You have nothing to type with, so it doesn't do much good.";
+		preef be troo e robot instead;
 	if disk is not in Drive A:
 		say "It's risky to boot without a disk, like that [if disk is in Hacks Shack]disk right there[else]skid used to be[end if], in the disk drive. Much less reboot.";
 		preef be troo e robot instead;
 	if computer screen is not on slab:
 		say "You wouldn't know if anything happened, since there's no screen on the table[if player has computer screen]. The one in your inventory should do[end if].";
-		preef be troo e robot instead;
-	if keyboard is not touchable:
-		say "You have nothing to type with, so it doesn't do much good.";
 		preef be troo e robot instead;
 	set the pronoun it to computer screen;
 

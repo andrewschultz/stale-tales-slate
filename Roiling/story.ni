@@ -1625,7 +1625,7 @@ persuasion rule for asking a nasty person to try doing something:
 
 [towers]
 
-persuasion rule for asking pestern serpent to try doing something:
+persuasion rule for asking repents serpent to try doing something:
 	say "The serpent needs a change of attitude, and speaking won't do it.";
 	persuasion fails;
 
@@ -1936,7 +1936,7 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 agnostic	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 dreads adders	"The adders sit around and look intimidating."
-pestern serpent	"[serp-say]."
+repents serpent	"[serp-say]."
 realist tailers	--
 denier nereid	--
 lois the hostile	--
@@ -2111,7 +2111,7 @@ sweatier wait seer	"'[one of]Sit! We are[or]Trees! Aw, I[or]Trees! I, aw[in rand
 duck	"It quacks."
 Resident Trendies	"They sniff. They're too cool to hang around you, but they're also too cool to consider letting you by."
 ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You're shocked by the [i]angriest[r] interruption imaginable[cycling]."
-pestern serpent	"[serp-say]."
+repents serpent	"[serp-say]."
 alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!' You see red at the name."
 bonker	"You try to chat but feel like a, er, knob."
 stinger	"The grin set in the stinger distracts you from what you meant to say. You feel almost drunk, and hear a weird voice in your head. 'Ginster! Ginster!' You see red."
@@ -17490,12 +17490,12 @@ chapter repents serpent
 
 understand the command "present" as something new.
 
-A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of repents serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of repents serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as pestern serpent.
+A repents serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of repents serpent is "[one of]Oh, no! A[or]The[stopping] repents serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of repents serpent is "Just one look at it and you feel re-spent and re-spent until you're spenter. It's good at mental pester'n, that's for sure.". understand "repent" and "repent serpent" as repents serpent.
 
-a-text of pestern serpent is "RRYRYRR". b-text of pestern serpent is "?RYRG??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
+a-text of repents serpent is "RRYRYRR". b-text of repents serpent is "?RYRG??". parse-text of repents serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
 rule for supplying a missing second noun when showing:
-	if pestern serpent is touchable, now second noun is pestern serpent.
+	if repents serpent is touchable, now second noun is repents serpent.
 
 chapter curst palace
 
@@ -17589,7 +17589,7 @@ check scaning the player when player is in Arid Den:
 
 section nerd aid
 
-the Nerd Aid Diner ad is boring auxiliary scenery. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.".
+the Nerd Aid Diner ad is boring auxiliary scenery in Arid Den. printed name of Nerd Aid diner ad is "Nerd-Aid Diner ad". description of Nerd Aid is "It's an advertisement for a place that might help you out of messes like the one you're in now. Which is a bit confusing, because you'd need to get out of this mess to get there. Maybe it's helpful in its own way, though.". bore-text of nerd aid is "The Nerd-Aid Diner ad is not worth doing anything with.".
 
 a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YYR". parse-text of Nerd Aid is "?[sp]a[sp]?[sp]?[sp]i[sp]e[sp]x".
 
@@ -19977,9 +19977,21 @@ carry out guruing:
 			else if noun is coins:
 				say "You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! ";
 			else if noun is s-c or noun is icons:
-				say "You realize you were close to forming SONIC ICONS.";
+				say "You realize you were close to forming SONIC ICONS. ";
 			else if noun is coin:
-				say "You see the coin could become an ICON.";
+				say "You see the coin could become an ICON. ";
+			else if noun is peach:
+				say "You feel a need to call the peach CHEAP. ";
+			else if noun is ammo gang:
+				say "You feel a need to be AMONG. ";
+			else if noun is quince:
+				say "You feel a need to order CINQUE. ";
+			else if noun is prices precis:
+				say "You feel a need to lash out and say CRIPES. ";
+			else if noun is melon:
+				say "You feel a need to haggle with MO LEN. ";
+			else if noun is lemons:
+				say "You feel an urge to look SOLEMN. ";
 			else if noun is a fruit or noun is Dr Severe:
 				say "You focus and squint, and letters appears in your sight: [right-word entry in upper case]. ";
 			else:
@@ -19991,7 +20003,7 @@ carry out guruing:
 			if scams is false, poss-d;
 			the rule succeeds;
 	if noun is s-i, say "The icons seem appropriate as-is." instead;
-	say "Nothing happens. Maybe something else.";
+	say "Nothing happens. Maybe try to see through something else.";
 	the rule succeeds.
 
 chapter curtis and dealing with him

@@ -9,6 +9,8 @@
 >posf
 >rove over
 
+>scam
+
 >others
 
 >in
@@ -138,7 +140,7 @@ You have a vision of a fruit: MULBERRIES. The aftertaste of arugula finally diss
 >gx green stain
 You have a vision of a fruit: TANGERINES. The aftertaste of arugula finally dissipates.
 >gx mound
-Nothing happens. Try something else.
+Nothing happens. Maybe try to see through something else.
 
 >apricot
 Your score has just gone up by one point.
@@ -172,7 +174,7 @@ You see the coin could become an ICON. The aftertaste of arugula finally dissipa
 >icon
 by one point
 >gx icon
-Nothing happens. Try something else.
+Nothing happens. Maybe try to see through something else.
 >undo
 >undo
 >undo
@@ -199,8 +201,12 @@ You have 18 of 42 total points for the post-Elvira Others region, though you onl
 >s
 You fiddle with the coin you got
 
+>purloin coins
 >gx coins
 You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
+>undo
+>undo
+
 >icons
 by one point
 >gx icons
@@ -211,7 +217,6 @@ You realize you were close to forming SONIC ICONS. The aftertaste of arugula fin
 by one point
 >gx sonic coins
 You realize you were close to forming SONIC ICONS. The aftertaste of arugula finally dissipates.
->undo
 >undo
 >undo
 
@@ -230,7 +235,7 @@ You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dis
 You have a vision of a fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 >gx rapt figure
 You have a vision of a fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
->gx pipe panel fence
+>gx pipe panel lie pen app
 You have a vision of a fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
 >gx pryer bars
 You have a vision of a fruit: RASPBERRY. The aftertaste of arugula finally dissipates.

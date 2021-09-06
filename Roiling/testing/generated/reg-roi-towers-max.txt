@@ -264,7 +264,6 @@ Score in a scenario: 19 out of 55 total points in the current region, Towers. Lo
 
 >e
 
-#balance undos
 >resealed
 Your score has just gone up by one point
 >thisalt

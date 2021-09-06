@@ -192,11 +192,6 @@ THERE, you think, realizing you're not armed yet.
 THERE, you think, realizing you're not effectively armed yet.
 You need to fix the popgun.
 
->there
-!by one point
-THERE, you think, realizing you're not effectively armed yet.
-!You need to fix the popgun.
-
 >bingo
 #pre-boing-bingo rule retry
 !You realize you can load the dart into the popgun now, so you do.
@@ -401,7 +396,7 @@ You can SLEEP once you've gotten a good start on your coding task.
 You have nothing to type with, so it doesn't do much good.
 #preefcheck be troo e robot
 >pf
-You weren't ready for the Be-Troo E-Robot to REBOOT yet.
+You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
 >futon
 Your score has just gone up by one point

@@ -822,7 +822,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "seer"	437209987	wait seer	--	"[wait-see]."
 "rampant"	407258077	mardier admirer	--	"No, just a mardier admirer, really."
 "womantrap"	589545427	--	see-female-admirer rule	"No, just a mardier admirer, really."
-"tailer"	417234433	--	--	"No, you need to deal with all the tailers."
+"tailer"	417234433	realist tailers	--	"No, you need to deal with all the tailers."
 "nerd"	303066509	Nerd Aid	--	"[nerd-a]."
 "aid"	68209753	Nerd Aid	--	"[nerd-a]."
 "bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"

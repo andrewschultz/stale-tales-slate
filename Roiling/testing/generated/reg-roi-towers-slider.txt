@@ -124,7 +124,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 #slider test for yonder
 >oydnre
-You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible,
+You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 >undo
 >undo
 
@@ -647,14 +647,14 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 49 out of 55 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 55.
 
+#slider test for antsier
+>nasteri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >antsier
 by one point
 >score
 Score in a scenario: 50 out of 55 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 55.
-
-#slider test for antsier
->nasteri
-Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >present
 Your score has just gone up by one point

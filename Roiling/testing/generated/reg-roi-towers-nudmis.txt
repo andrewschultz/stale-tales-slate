@@ -278,6 +278,15 @@ Topside Deposit
 >score
 Score in a scenario: 8 out of 55 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 55.
 
+# this is out of order, because the main code path unlocks (ahem) UNLOCKED quite early
+>gonear obscurest subsector
+#spechelp for luck node
+>unleckdo
+You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
+>undo
+>undo
+
 #mistake test for wist led/its lewd
 >wist led
 Editorializing about the Wildest Wilteds won't help.
@@ -594,25 +603,10 @@ Changing just one pirate would not, you sense, do much. It might even ostracize 
 >old iec
 The old ice seems to glimmer a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the docile old ice. That's a decent omen.
-#readables for fluster self rut
->read fluster self rut
-You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
->read fluster self rut
-You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
 
-#spechelp for fluster self rut
->selfrtu
-You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
-#scannotes for fluster self rut
->scan fluster self rut
-You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
 #scannotes for docile old ice
 >scan docile old ice
 Hm, it's certainly docile old ice, so the confusing letter may not be so confusing.
-#mistake test for fluters
->fluters
-This game has no soundtrack, and if I made one, it wouldn't be very good.
 #rescannotes for curst palace
 >scan palace
 #palace 6 lights
@@ -706,13 +700,6 @@ Hmm, there are some matches, and maybe one of the two variable settings will wor
 #scannotes for mardier admirer
 >scan mardier admirer
 Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants.
-#scannotes for resident trendies
->scan resident trendies
-The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
-#spechelp for resident trendies
->nerdiets
-The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
 #mistake test for granites/granite
 >granites
 They're already stonewalling you from going west. Whether or not you need to go west, you can't 'til they're gone.
@@ -769,9 +756,44 @@ Score in a scenario: 19 out of 55 total points in the current region, Towers. Lo
 
 >e
 
-#mistake test for inserted
->inserted
-You see red realizing the resident trendies already inserted themselves here.
+#nudge for reeds
+>reesd
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for reed
+>rede
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for ale
+>ael
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for reedale
+>reedael
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for sere
+>seer
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#nudge for deal
+>dela
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+#spechelp for reeds ale
+>reedsael
+Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
+#nudge for lars
+>lasr
+No, Lars's full name. Lars Eede. With Reed's Ale.
+#nudge for eede
+>eeed
+No, Lars's full name. Lars Eede. With Reed's Ale.
+>gs
+>reedsael
+Elsa Erde listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
+#nudge for elsa
+>elas
+No, Elsa's full name. Elsa Erde. With Reed's Ale.
+#nudge for erde
+>ered
+No, Elsa's full name. Elsa Erde. With Reed's Ale.
+>gs
 
 >released
 Your score has just gone up by one point
@@ -896,49 +918,23 @@ Score in a scenario: 23 out of 55 total points in the current region, Towers. Lo
 !Ooh! Another light, now.
 You don't see any new information about the curst palace this time. In fact, you have less information than when you were closer.
 Your settler registers RRYR?YR****.
-#nudge for reeds
->reesd
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for reed
->rede
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for ale
->ael
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for reedale
->reedael
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for sere
->seer
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#nudge for deal
->dela
-Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
-#spechelp for reeds ale
->reedsael
-Lars Eede listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the Reed's Ale. That's a decent omen.
-#nudge for lars
->lasr
-No, Lars's full name. Lars Eede. With Reed's Ale.
-#nudge for eede
->eeed
-No, Lars's full name. Lars Eede. With Reed's Ale.
->gs
->reedsael
-Elsa Erde listens to what you're saying for a minute, but--no, you didn't quite get it right. She goes back to reciting her tired sales pitch.
-#nudge for elsa
->elas
-No, Elsa's full name. Elsa Erde. With Reed's Ale.
-#nudge for erde
->ered
-No, Elsa's full name. Elsa Erde. With Reed's Ale.
->gs
 
 #spechelp for realist tailers
 >stailer
 The realist tailers moan in exasperation, completely not sure what you're trying to do. But they're sure it's going to fail. They wouldn't have said anything if you were on the wrong track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the realist tailers. That's a decent omen.
+
+#scannotes for resident trendies
+>scan resident trendies
+The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured.
+#spechelp for resident trendies
+>nerdiets
+The resident trendies sniff a bit. No, that's uncool, they say. But they look a little rattled.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Resident Trendies. That's a decent omen.
+
+#mistake test for inserted
+>inserted
+You see red realizing the resident trendies already inserted themselves here.
 
 >nerdiest
 Your score has just gone up by one point
@@ -962,7 +958,13 @@ out of the way.
 >scan realist tailers
 The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools.
 #nudge for tailer
+>talier
 No, you need to deal with all the tailers.
+#mistake test for retail/retails
+>retail
+The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
+>retails
+The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
 
 >saltier
 Your score has just gone up by one point
@@ -1131,6 +1133,22 @@ Score in a scenario: 30 out of 55 total points in the current region, Towers. Lo
 >s
 >s
 
+#readables for fluster self rut
+>read fluster self rut
+You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There might be more if you read again.
+>read fluster self rut
+You focus and see that the brand is TRU-SELF. Which would make you see red on general principles. There are also weird furlets around it.
+#spechelp for fluster self rut
+>selfrtu
+You feel a bit more agitated. Relax. Breathe. Etc. It may not be critical, but you'd like to figure what to do, and you think you will.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fluster-self rut. That's a decent omen.
+#scannotes for fluster self rut
+>scan fluster self rut
+You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings.
+#mistake test for fluters
+>fluters
+This game has no soundtrack, and if I made one, it wouldn't be very good.
+
 >restful
 Your score has just gone up by one point
 
@@ -1202,11 +1220,6 @@ With nine letters, it was never going to be easy. (Fourth wall note: this is the
 #mistake test for organdies
 >organdies
 The ego-drains remain made of sturdy material.
-#mistake test for retail/retails
->retail
-The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
->retails
-The realist tailers have plenty to say about retail shopping, but you don't want to hear it.
 
 >grandiose
 Your score has just gone up by one point
@@ -1220,8 +1233,8 @@ Lost Lots
 Dourest Detours
 
 #scannotes for seismal samiels
->scan
-WRONG
+>scan samiels
+You're almost worried it will be too easy to figure things out, now. Too hard, too easy, too normal ... everything leaves you in the dumps.
 #nudge for samiel
 >samile
 There is more than one samiel to deal with, here.
@@ -1462,15 +1475,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control to counter, but the duck seems to look curiously at it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure. That's a decent omen.
 >undo
-#spechelp for luck node
->unleckdo
-You twiddle the luck node for a bit, and it seems to be working, until you ... hit a bit of bad luck. Maybe you need to make your own luck, or make your own luck better.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That's a decent omen.
 #readables for prison ropins
 >read prison
-/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK). There're three other bits to read\.
+/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
 >read prison
-/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK). There're three other bits to read\.
+/Part of the red writing on the prison says (Made by DunkelCo|Made in LOUDNECK|CONKLUDE there's no way to break in|Designed by EL CUNDOK|Violators have a CLONK DUE). There're four other bits to read\.
 #readables for luck node
 >read luck node
 /One of five names in red on the node by the fissure reads (Doc Lunke|Ned Lucko|Ed Clunko|O'Kendluc|Ockeldun)\.
@@ -1806,6 +1815,7 @@ Too late to be a prayers sprayer.
 You need more than one Neater to help you.
 >undo
 >undo
+>undo
 
 #nudge for bot
 >bto
@@ -1978,6 +1988,9 @@ The retinas are probably full of all kinds of indescribable weird organic compou
 #mistake test for taserin
 >taserin
 The retinas are more likely to zap you.
+#nudge for repent
+>repten
+You're probably better of dispelling all the things to repent about at once, not just one.
 
 >antsier
 by one point
@@ -1999,9 +2012,6 @@ You need to make something occur.
 #nudge for occurs
 >occusr
 Changing the blub bulb to a succor crocus was good enough. Why risk more?
-#nudge for repent
->repten
-You're probably better of dispelling all the things to repent about at once, not just one.
 
 >in
 
