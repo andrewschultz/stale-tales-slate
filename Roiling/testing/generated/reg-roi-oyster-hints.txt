@@ -12,7 +12,10 @@
 Posh Hops Shop
 >posf
 
+>take pills
+Taken.
 >monty hints
+>ptf 2
 
 >score
 Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
@@ -62,6 +65,14 @@ INSET
 
 >score
 Score in a scenario: 4 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
+
+>ptf 0
+>z
+>z
+>z
+>spill pills
+You already got hints of what to do with the clam: CALM. So you decide to save the pills for later.
+>ptf 2
 
 >calm
 Your score has just gone up by one point
@@ -419,7 +430,7 @@ Score in a scenario: 40 out of 42 total points in the current region, Oyster. Th
 >spin
 Your score has just gone up by one point
 
-DEBUG INFO: dialer, again hinting.
+DEBUG INFO: repaired dialer hinting.
 
 >score
 Score in a scenario: 41 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.

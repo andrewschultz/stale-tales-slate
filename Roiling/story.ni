@@ -5159,7 +5159,6 @@ this is the presto-hinting rule:
 	if drab yoke is touchable:
 		if yak is touchable, say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not touchable]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
-	if fount is touchable, try objhinting fount instead;
 	if Hacks Shack is visited:
 		if yak is not moot: [?! rearrange this]
 			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in[location of yak]." instead;
@@ -5172,6 +5171,7 @@ this is the presto-hinting rule:
 		if caps lock is not part of the keyboard:
 			if spoilit is true, all-say "You curse yourself for not putting the caps lock button in the keyboard." instead;
 			try objhinting caps lock instead;
+		if fount is touchable, try objhinting fount instead;
 		if futon is touchable and peels speel is reflexive:
 			if spoilit is true, all-say "Yeech. You're full. You need to SLEEP." instead;
 			try objhinting futon instead;
@@ -12516,7 +12516,8 @@ this is the post-wall-arch rule:
 			now drab yoke is in Hacks Shack;
 			moot casserole;
 			move player to Hacks Shack;
-		say "You'd like to ask for help, but you don't have enough muscle food for [l-n-r] after they pull the skid. Those escaroles simply aren't meaty enough.";
+		else:
+			say "You'd like to ask for help, but you don't have enough muscle food for [l-n-r] after they pull the skid. Those escaroles simply aren't meaty enough.";
 	else:
 		say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
 	the rule fails;
@@ -14116,7 +14117,7 @@ to check-silly-death:
 
 chapter spilling
 
-the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did not solve them yourself. Plus you won't get  bonus point for figuring how best to use them[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'L P's Pills".
+the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did not solve them yourself. Plus you won't get bonus point for figuring how best to use them, and it will not help you with stuff you don't 100% need[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'L P's Pills".
 
 understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
 
@@ -14194,6 +14195,8 @@ check spilling (this is the specific game state spill reject rule):
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of sausage is location of player:
 		if sausage is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around[if player is not in anger range] some more[end if]." instead;
+	if location of sausage was location of player:
+		say "You don't need to leave the sausage a trail of pills." instead; [this is probably only a valid code path during spill-every-turn testing]
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if HUNTER HUNT AREA is in Anger Range:
@@ -14812,9 +14815,13 @@ after examining gleaner when gleaner is not realized and gleaner is reflexed:
 	if player is in end den and gleaner is reflexed:
 		say "Oh! So that's how the map looks! And that's where you are now! You trace around a bit. Yes. Going like so will get you to the center...";
 		move player to Tenfold Teflond Den Loft;
-		now gleaner is realized;
 	else if end den is visited and Tenfold Teflond Den Loft is not visited:
-		now gleaner is realized;
+		say "You see where you made the wrong turn to the End Den before. You'll get things right the next time.";
+	now gleaner is realized;
+	continue the action;
+
+after printing the locale description for den loft:
+	now gleaner is realized;
 	continue the action;
 
 after printing the name of the general gleaner while taking inventory:
@@ -14831,7 +14838,6 @@ to say are-were-hedron: say "[if player is in end den]are[else]were[end if]"
 a-text of general gleaner is "YRRYRRY". b-text of general gleaner is "YRR??RY". parse-text of general gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
 
 to say oy-can-win:
-	now gleaner is realized;
 	if aunt-tuna-cross is true and wipes are in lean lane, say ", but it's dimmed, as if the place is off-limits"
 
 chapter enlargeing

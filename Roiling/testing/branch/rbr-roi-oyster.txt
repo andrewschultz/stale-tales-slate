@@ -35,6 +35,8 @@ Posh Hops Shop
 >posf
 
 @hin
+>take pills
+Taken.
 >monty hints
 >ptf 2
 
@@ -2456,7 +2458,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-DEBUG INFO: dialer, again hinting.
+DEBUG INFO: repaired dialer hinting.
 
 >score
 @min
