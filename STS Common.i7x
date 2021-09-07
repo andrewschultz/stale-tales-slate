@@ -546,31 +546,38 @@ to say plus:
 	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
 
 to say minus:
-	if ignore-hint-completion is false, now cur-item is thruhinted;
+	if prevent-thruhint-flag is false, now cur-item is thruhinted;
 	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
 
-ignore-hint-completion is a truth state that varies. [a test variable for ignoring random hints that fall through]
+prevent-thruhint-flag is a truth state that varies. [a test variable for ignoring random hints that fall through]
 
-chapter ihcing - not for release
+chapter ptfing - not for release
 
-ihcing is an action applying to one number.
+ptfing is an action applying to one number.
 
-understand the command "ihc" as something new.
+understand the command "ptf" as something new.
 
-understand "ihc [number]" as ihcing.
+understand "ptf [number]" as ptfing.
 
-carry out ihcing:
-	let was-already be false;
-	if the number understood is 0:
-		now ignore-hint-completion is whether or not ignore-hint-completion is false;
-	else if the number understood is 1:
-		if ignore-hint-completion is true, now was-already is true;
-		now ignore-hint-completion is true;
-	else if the number understood is -1:
-		if ignore-hint-completion is false, now was-already is true;
-		now ignore-hint-completion is false;
-	say "Ignoring hint completion [if was-already is true]was already[else]is now[end if] [on-off of ignore-hint-completion].";
+carry out ptfing:
+	let was-already be prevent-thruhint-flag;
+	if the number understood is 1:
+		now prevent-thruhint-flag is whether or not prevent-thruhint-flag is false;
+	else if the number understood is 2:
+		if prevent-thruhint-flag is true, now was-already is true;
+		now prevent-thruhint-flag is true;
+	else if the number understood is 0:
+		if prevent-thruhint-flag is false, now was-already is true;
+		now prevent-thruhint-flag is false;
+	say "Ignoring hint completion [if was-already is prevent-thruhint-flag]was already[else]is now[end if] [on-off of prevent-thruhint-flag].";
 	the rule succeeds;
+
+ptf1ing is an action out of world.
+
+understand "ptf" as ptf1ing.
+
+carry out ptf1ing:
+	try ptfing 1;
 
 part disambiguation
 
