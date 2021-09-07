@@ -130,6 +130,30 @@ Bustle Sublet
 >score
 Score in a scenario: 3 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
 
+#scannotes for a sty tasty say
+>scan sty
+Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+>scan sty
+!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+#spechelp for a sty tasty say
+>tsya
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+#readables for a sty tasty say
+>read sty
+YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+
+>stay
+by one point
+>score
+Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
+
+#done rejects for a sty tasty say
+>stya
+You can't over-stay your staying power, or something.
+
 #mistake test for pots
 >pots
 You can't see what you would do with a bunch of pots.
@@ -198,7 +222,7 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
+Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
 #spechelp for stop post
 >stpo
@@ -218,7 +242,7 @@ Your score has just gone up by one point
 Boarded Roadbed
 
 >score
-Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
+Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
 #mistake test for norse
 >norse
@@ -229,30 +253,6 @@ A small orange blob with big eyes, short legs, and no arms falls off to the side
 #mistake test for senor
 >senor
 The bee's gender is only relevant to the point of knowing it's a senora.
-
-#scannotes for a sty tasty say
->scan sty
-Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
->scan sty
-!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
-#spechelp for a sty tasty say
->tsya
-No. You pause. That can't be it. You need to do something, or nothing, differently.
-DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
-#readables for a sty tasty say
->read sty
-YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
-
->stay
-by one point
->score
-Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
-
-#done rejects for a sty tasty say
->stya
-You can't over-stay your staying power, or something.
 
 #nudge for stop
 >stpo

@@ -212,6 +212,40 @@ In particular, you feel the need to OBSERVE right now.
 >score
 {$SCOS}
 
+@sli
+#slider test for stay
+>tsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for a sty tasty say
+>scan sty
+Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+>scan sty
+!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+#spechelp for a sty tasty say
+>tsya
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+#readables for a sty tasty say
+>read sty
+YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+
+@!mina,minb
+>stay
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@nud
+#done rejects for a sty tasty say
+>stya
+You can't over-stay your staying power, or something.
+
 @mis
 #mistake test for pots
 >pots
@@ -329,6 +363,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 }}SCORE++
 
+@mina,minb
+#lose a point for not ignoring A Tasty Sty, Say
+}}CURMAX--
+
 @spoi
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
 
@@ -350,40 +388,6 @@ A small orange blob with big eyes, short legs, and no arms falls off to the side
 #mistake test for senor
 >senor
 The bee's gender is only relevant to the point of knowing it's a senora.
-
-@sli
-#slider test for stay
->tsya
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#scannotes for a sty tasty say
->scan sty
-Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
->scan sty
-!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
-#spechelp for a sty tasty say
->tsya
-No. You pause. That can't be it. You need to do something, or nothing, differently.
-DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
-#readables for a sty tasty say
->read sty
-YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
-
-@!mina,minb
->stay
-by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
-
-@nud
-#done rejects for a sty tasty say
->stya
-You can't over-stay your staying power, or something.
 
 @sli
 #slider test for reason
@@ -518,10 +522,6 @@ by one point
 
 @hin
 DEBUG INFO: box of diapers hinting.
-
-@mina,minb
-#lose a point for not ignoring A Tasty Sty, Say
-}}CURMAX--
 
 Drain Nadir
 
@@ -897,7 +897,7 @@ Econ-Cone
 /In particular, you feel the need to (STRIVE|ASPIRE) right now\.
 
 @hin
-/DEBUG INFO: (Trevis Vister|praise spirea) hinting.
+/DEBUG INFO: (rivets|praise spirea) hinting.
 
 }}SCORE++
 >score

@@ -47,6 +47,11 @@ Bustle Sublet
 >score
 Score in a scenario: 3 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
 
+>stay
+by one point
+>score
+Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
+
 #pre-spot-stop-post rule
 >spot
 !by one point
@@ -59,18 +64,13 @@ You should SPOT once you're able to focus better.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
+Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
 >spot
 Your score has just gone up by one point
 
 Boarded Roadbed
 
->score
-Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
-
->stay
-by one point
 >score
 Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 

@@ -23,10 +23,19 @@
 Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
 
 >monty hints
+>ptf 2
 DEBUG INFO: Eh, At Heat hinting.
 
 >l
 Loather Rathole
+
+>ptf 0
+>z
+>z
+>z
+You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to HATE.
+!Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
+>ptf 2
 
 >score
 Score in a scenario: 0 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
@@ -61,6 +70,11 @@ In particular, you feel the need to OBSERVE right now.
 >score
 Score in a scenario: 3 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
 
+>stay
+by one point
+>score
+Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
+
 >observe
 Your score has just gone up by one point
 
@@ -69,7 +83,7 @@ In particular, you feel the need to SPOT right now.
 DEBUG INFO: stop post hinting.
 
 >score
-Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
+Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
 >spot
 Your score has just gone up by one point
@@ -80,11 +94,6 @@ Your score has just gone up by one point
 
 Boarded Roadbed
 
->score
-Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 26.
-
->stay
-by one point
 >score
 Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
@@ -193,7 +202,7 @@ Econ-Cone
 
 /In particular, you feel the need to (STRIVE|ASPIRE) right now\.
 
-/DEBUG INFO: (Trevis Vister|praise spirea) hinting.
+/DEBUG INFO: (rivets|praise spirea) hinting.
 
 >score
 Score in a scenario: 17 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.

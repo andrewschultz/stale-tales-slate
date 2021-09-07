@@ -11738,6 +11738,12 @@ check scaning stop post:
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
+chapter A Sty, Tasty, Say
+
+A Sty Tasty Say is a proper-named LLPish reflexive scenery in Bustle Sublet. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
+
+a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
+
 book Boarded Roadbed
 
 Boarded Roadbed is a room in Troves. "It's odd...bare... except for one business, [tasty say], which [if tasty say is reflexed]you've neutralized in your mind[else]can't be where you need to be. It's up to you how directly you wish to ignore it[end if].[paragraph break]But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help.". roomnud of Boarded Roadbed is table of Boarded Roadbed nudges.
@@ -11746,12 +11752,6 @@ every turn when player is in Boarded Roadbed:
 	if bee-score > 0:
 		if current action is not listening:
 			say "How to discover L'Clear Cellar? Distractions have gone, and you're focused there, now[if bee-score is 1]... though you may also have fun smacking the bee down a bit more[end if].[paragraph break]";
-
-chapter A Sty, Tasty, Say
-
-A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
-
-a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
 chapter THE BEE and 2 solutions
 
@@ -22665,7 +22665,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
-		if a sty tasty say is reflexive, say "[2dmiss of myreg]you could've tried to STAY around A Sty: Tasty, Say.";
+		if a sty tasty say is reflexive, say "[2drm of Bustle Sublet]you could've tried to STAY around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
 		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO ARENA, too.";
 		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to RELAPSE around the pleaser leapers.";
