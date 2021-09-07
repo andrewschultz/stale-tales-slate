@@ -873,7 +873,7 @@ Gretta has an important item for you once you finish chatting.
 
 >score
 {$SCOS}
->au -1
+>au 0
 
 @nud
 #renudge for gretta
@@ -2562,7 +2562,7 @@ You have enough to think about without one more of Elvira's machines.
 >misses
 !otters
 
->au 1
+>au 2
 >play whistle
 #notana
 by one point

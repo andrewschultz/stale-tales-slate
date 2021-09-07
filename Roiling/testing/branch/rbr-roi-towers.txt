@@ -821,7 +821,7 @@ Hmm. You bet you could get past if the dreads adders were SADDER.
 >z
 >z
 >xr adders
-You remember, from somewhere behind a fourth wall, figuring you could just say SADDER.
+You already remember the word SADDER--which seems right, just a matter of getting other things right first. Maybe they already are.
 >ptf 2
 
 >sadder
@@ -1961,8 +1961,8 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 Dire and Arid Den
 {--nud}#scannotes for bogus-dandier\\>scan\\You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.\\#scannotes for drained dreadin\\>scan drained dreadin\\Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.\\#scannotes for nerd aid diner ad\\>scan nerd aid diner ad\\The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.\\#spechelp for bogus-dandier\\>adderin\\You feel slightly less depressed you tried something. You can't be too far off.
 {--sli}#slider test for dandier\\>addneri\\Your settler begins to make noises: a low hum, but nothing really piercing.
-{--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 {--hin}>t\\>scan\\Your settler registers ?YR?Y?R--hmm.\\>scan dreadin\\Your settler registers PYRRY?R.\\>dridane\\You feel slightly less depressed you tried something. You can't be too far off.\\DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
+{--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 }}CURMIN++
 >score
 {$SCOS}
@@ -2220,8 +2220,10 @@ Dourest Detours
 @spoi
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
 >xr
+Your x-ray vision seems to enlighten ... well, all around you.
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
+>undo
 \\
 
 @sli
@@ -2253,6 +2255,12 @@ This may technically be a detour, but since the area name is "detours," you need
 >roustde
 You feel slightly more awake, but not quite enough. Yet. The detours do seem a little less dour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
+
+@spoi
+>xr samiels
+Do so anyway?
+>y
+After a thoughtful gaze, you reckon the seismal samiels could be AIMLESS.
 
 @!minh,mini
 >rousted

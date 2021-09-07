@@ -868,16 +868,6 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 
 Carven Cavern
 
-@max
-#pre-specter-scepter rule
->scepter
-The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->no
-###skip test checking (this avoids getting a point ... for now)
-#preefcheck respect specter
->pf
-You can get a SCEPTER from the respect specter at any time.
-
 @sli
 #slider test for staple
 >tspael
@@ -989,18 +979,6 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >score
 {$SCOS}
 
-@max
->scepter
-"You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->no
-"Thank you for respecting my presence and purpose here."
-!by one point
->scepter
-!You may wish
-by one point
->undo
->undo
-
 @nud
 #scannotes for respect specter
 >t
@@ -1029,24 +1007,30 @@ You're not sure how it was able to detect your mental spelling, but you're a bit
 ** interpreter: /home/andrew/prt/glulxe -q
 
 @max
-# basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
+# first basic stuff with the scepter: yes/no as well as flipping twice (no warning second time)
 ##balance undos
+#pre-specter-scepter rule
 >scepter
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
+##nobalance
 >no
+###skip test checking (this avoids getting a point ... for now)
 "Thank you for respecting my presence and purpose here."
 !by one point
+>pf
+You can get a SCEPTER from the respect specter at any time.
 >scepter
 !You may wish
 "Well done." A scepter appears in the Respect Specter's hands before disappearing with a pop. "Oops, forgot to warn you, it wasn't real. But it wouldn't have been useful. Besides, the real treasure is the puzzles you solved along the way. I respect your need to do more and talk less. There are things I would have liked to explain. But maybe you know them well enough, or maybe you can figure them out on your own, and it'll be more rewarding that way."
 by one point
 >undo
 >undo
+>undo
 >scepter
 The Respect Specter coughs. "You may wish to scan me in cheat and non-cheat mode first, if you're not sure about ambiguous settler readings. Would you still like that scepter anyway?"
->yes
-"I respect your choice."
-"Oh. One more thing. Instead of the scepter you could've had, have Inducted Deductin'. It's got examples of how to use the settler. Just in case you need to brush up. It might spoil too much. So you can DROP it. But if you want it, here it is."
+##nobalance
+>y
+by one point
 >undo
 
 @max

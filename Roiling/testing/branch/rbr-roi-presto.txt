@@ -34,7 +34,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >t
 >posf
 
->au 1
+>au 2
 
 @spoi
 >scam
@@ -1559,7 +1559,6 @@ The YrNet entry is secure. You wouldn't know where to start hacking it. Besides,
 
 @max
 ##balance undos
->au 2
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
@@ -1577,10 +1576,11 @@ Good idea, but tough to program without something to type on.
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+##nobalance
+>n
 #preefcheck im le cop polemic
 >pf
 You can COMPILE once you've started coding.
->undo
 >undo
 >undo
 >undo
@@ -1813,9 +1813,6 @@ Kids don't need to listen to the words you've used so far! They wouldn't help wi
 #mistake test for repo
 >repo
 Nobody else seems to own the oper rope or the skid.
-#done rejects for caps lock
->capslokc
-YOU HAVE WHAT YOU NEED.
 #spechelp for skid
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
@@ -1826,12 +1823,6 @@ No, skid <=> disk is about it. There's no tricky third way.
 No, skid <=> disk is about it. There's no tricky third way.
 >skid
 ###skip test checking
-#nudge for caps
->casp
-It'd sort of stink if a caps lock button broke in real life, so, no.
-#nudge for lock
->lokc
-It'd sort of stink if a caps lock button broke in real life, so, no.
 #nudge for rope
 >roep
 You don't need to do anything tricky with the skid's rope.
@@ -1842,10 +1833,6 @@ It's too small to be a fountain--really, just a fount.
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
-#spechelp for fount
->futno
-Hm, might be FUN TO try another guess. Or useful. Or both.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 #spechelp for gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
@@ -1857,18 +1844,6 @@ Alcohol doesn't work as well as caffeine in this situation.
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
->cola
-Your score has just gone up by one point
-}}SCORE++
->score
-{$SCOS}
-
->mug
-Your score has just gone up by one point
-}}SCORE++
->score
-{$SCOS}
-
 @max
 #pre-reboot rule
 >reboot
@@ -1879,42 +1854,15 @@ You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
 @max
 #pre-peels-speel-sleep rule retry
+#futon not made yet
 >sleep
-Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.
-
-@mis
-#mistake retest for loca
->loca
-What you have helps programming more than water or French champagne or dancing in the rain.
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 @nud
-#done rejects for alocalco cola
->aloc
-No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
-#nudge for soda
->soad
-It's cola, not soda or pop. And you can just drink it.
-#nudge for pop
->ppo
-It's cola, not soda or pop. And you can just drink it.
-#mistake retest for alco
->alco
-Alcohol doesn't work as well as caffeine in this situation.
-#mistake test for pop
->pop
-It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
-#mistake test for soda
->soda
-It's cola. It has to be. Soda could make you into a sod, of course.
-#mistake retest for feal
->feal
-Nobody needs allegiance, here.
-#done rejects for futon
+#spechelp for fount
 >futno
-The futon could be a little less lumpy, sure, but that's beyond your magic powers.
-#done rejects for mug
->mgu
-The mug is no longer manipulable.
+Hm, might be FUN TO try another guess. Or useful. Or both.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 #done rejects for leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
@@ -2015,9 +1963,11 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
+#compile, but don't put keyboard on slab (auto-no)
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+>no
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 >undo
@@ -2042,10 +1992,12 @@ Only one more piece of hardware is needed, and the computer will work.
 @max
 >compile
 Good idea, but first, you may want to put the screen on the slab. Do so now?
+>no
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 
 >put screen on slab
+!It already is
 You can now do computery things unimpeded! Hooray!
 
 @nud
@@ -2096,12 +2048,24 @@ OBERTO, in red. That's its name.
 >scan robot
 You wonder if you need a step back to take a new look at the ambiguous clues.
 
+@max
+#balance undo
+#pre-peels-speel-sleep rule
+>sleep
+!Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+>futon
+by one point
+>sleep
+Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
+!You may need sleep later, but not now. Besides, you have nowhere to sleep.
+>undo
+>undo
+>undo
+
 >reboot
 Your score has just gone up by one point
 }}SCORE++
-
->score
-{$SCOS}
 
 @spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
@@ -2113,13 +2077,36 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 Your score has just gone up by one point
 }}SCORE++
 
+@max
+>compile
+!by one point
+You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+>compile
+!by one point
+You need to get rid of that uppercase to successfully compile your code.
+
+>put lock on keyboard
+fits in perfectly
+
 @spoi
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a FUTON.
+
+@nud
+#done rejects for caps lock
+>capslokc
+YOU HAVE WHAT YOU NEED.
+#nudge for caps
+>casp
+It'd sort of stink if a caps lock button broke in real life, so, no.
+#nudge for lock
+>lokc
+It'd sort of stink if a caps lock button broke in real life, so, no.
 
 @max
 #pre-peels-speel-sleep rule
 >sleep
-There's no task ahead you need to sleep for, yet. Besides, you have nowhere to sleep.
+You haven't yet made anywhere comfortable to sleep.
+You add the information to your pedanto-notepad under FLIPS.
 #preefcheck peels speel
 >pf
 You can SLEEP once you've gotten a good start on your coding task.
@@ -2130,21 +2117,10 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
-@max
-#pre-peels-speel-sleep rule
->sleep
-There's no task ahead you need to sleep for, yet.
-!Besides, you have nowhere to sleep.
-
-@max
->compile
-!by one point
-You get a NEED IF-DEFINE error
->compile
-!by one point
-That stupid NEED IF-DEFINE and that peels speel, still.
-
 @nud
+#done rejects for futon
+>futno
+The futon could be a little less lumpy, sure, but that's beyond your magic powers.
 #done rejects for be troo e robot
 >toober
 No need to reboot twice.
@@ -2162,13 +2138,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. Tha
 @max
 >compile
 !by one point
-You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
+You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.
 >compile
 !by one point
-You need to get rid of that uppercase to successfully compile your code.
-
->put lock on keyboard
-fits in perfectly
+That stupid NEED IF-DEFINE and that peels speel, still.
 
 @sli
 #slider test for sleep
@@ -2200,6 +2173,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 }}SCORE++
 
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
+
 @max
 >abstract cola to phat path
 >purloin coal
@@ -2222,7 +2198,52 @@ You weren't ready to DEBUG yet.
 >score
 {$SCOS}
 
+>cola
+Your score has just gone up by one point
+}}SCORE++
+
+@spoi
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a MUG.
+
+>score
+{$SCOS}
+
+@mis
+#mistake retest for loca
+>loca
+What you have helps programming more than water or French champagne or dancing in the rain.
+
 @nud
+#done rejects for alocalco cola
+>aloc
+No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
+#nudge for soda
+>soad
+It's cola, not soda or pop. And you can just drink it.
+#nudge for pop
+>ppo
+It's cola, not soda or pop. And you can just drink it.
+#mistake retest for alco
+>alco
+Alcohol doesn't work as well as caffeine in this situation.
+#mistake test for pop
+>pop
+It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
+#mistake test for soda
+>soda
+It's cola. It has to be. Soda could make you into a sod, of course.
+#mistake retest for feal
+
+>mug
+Your score has just gone up by one point
+}}SCORE++
+>score
+{$SCOS}
+
+@nud
+#done rejects for mug
+>mgu
+The mug is no longer manipulable.
 #done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.

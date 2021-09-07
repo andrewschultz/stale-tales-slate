@@ -981,7 +981,7 @@ this is the pre-polemic-compile rule:
 		preef Im Le Cop polemic instead;
 	if keyboard is not on slab:
 		say "Good idea, but first, you probably want to put the keyboard on the slab. Do so now?";
-		if the player dir-consents:
+		if the player regex-prompt-consents:
 			now keyboard is on slab;
 			say "Done. You can try to COMPILE again, now.";
 		else:
@@ -989,7 +989,7 @@ this is the pre-polemic-compile rule:
 		preef Im Le Cop polemic instead;
 	if computer screen is not on slab:
 		say "Good idea, but first, you may want to put the screen on the slab. Do so now?";
-		if the player dir-consents:
+		if the player regex-prompt-consents:
 			now computer screen is on slab;
 			say "Done. You can try to COMPILE again, now.";
 		else:
@@ -1033,7 +1033,7 @@ this is the pre-peels-speel-sleep rule:
 		preef peels speel;
 		do nothing instead;
 	if not cpuready:
-		say "Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.";
+		say "Sleep on the futon? Wouldn't be fun to. You've got a big coding session ahead, and you haven't fully prepared. yet.";
 		preef peels speel;
 		do nothing instead;
 
@@ -2865,12 +2865,12 @@ aunt tuna	"Aunt Tuna may have some good information[if trout is reflexive]. Howe
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to TEND the dent.[minus][cycling]"	--
 wipes	"[if player has wipes][one of]The wipes, unsurprisingly, help make something less dirty.[plus][or]What is something that is very dirty?[plus][or][name-the-lance].[minus][cycling][else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling][end if]"
 tea at a tee	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT the tea.[minus][cycling]"	--	"[if trout is reflexive]TUTOR Tortu the trout, then [end if]EAT the [tea]"
-trout	"[if trout is in Anger Range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
+trout	"[if trout is in Anger Range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"	--	"TUTOR the trout"
 raw red drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
 ruby	"[one of]The ruby isn't yours. It's been stolen.[plus][or]The ruby belongs to the haunter in [anger range].[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"	--	"BURY the ruby" [NOTE: we say haunter not sausage here because you can't see the sausage until the ruby is buried]
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Sclerous Closures will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"	--	"WARP the Paw-R-Wrap"
-span pans	"[one of]The span pans are a five-part puzzle. You may guess the final step, which consists of dissolving the pans.[plus][or]You need to dispose of the knob.[plus][or]You need to get rid of the skis.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues or, if you need help with the pans, see below.[plus][or]You can SNAP.[minus][cycling]"	--	"SNAP at the Span Pans"
+span pans	"[one of]The span pans are a five-part puzzle. You may guess the final step, which consists of dissolving the pans.[plus][or]You need to dispose of the knob.[plus][or]You need to get rid of the skis.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues or, if you need help with the pans, see below.[plus][or]You can SNAP.[minus][cycling]"	--	"SNAP at the span pans"
 shut huts	--	span pans
 tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, or crush them, ...[plus][or]...or BUST them.[minus][cycling]"	--	"BUST the tubs"
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"	--	"DROP the prod"

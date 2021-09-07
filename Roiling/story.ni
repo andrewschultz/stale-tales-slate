@@ -5161,7 +5161,7 @@ this is the presto-hinting rule:
 		try objhinting drab yoke instead;
 	if Hacks Shack is visited:
 		if yak is not moot: [?! rearrange this]
-			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in[location of yak]." instead;
+			if spoilit is true, all-say "Ugh, the crust looks worse than yak food. You wonder what to do with the yak [if yak is touchable]here[else]back in [location of yak]." instead;
 			all-say "You need to find the bored yak and bring it back to the shack (ack, Mac!) Maybe you can guess what its drab yoke holds." instead;
 	if player is in Hacks Shack:
 		if disk is not in drive a, all-say "You [if spoilit is true]would rather[else]should[end if] [if skid is in Hacks Shack]change the skid back to the disk, then [end if]put the disk in the disk drive." instead;
@@ -6971,7 +6971,7 @@ check sleeping:
 		if player is in Hacks Shack:
 			if peels speel is in Hacks Shack, try fliptoing peels speel instead;
 			if peels speel is off-stage:
-				say "There's no task ahead you need to sleep for, yet[if futon is off-stage]. Besides, you have nowhere to sleep[end if]." instead;
+				say "[if futon is off-stage]You may need sleep later, but not now. Besides, you have nowhere to sleep[else]Sleep on the futon? Wouldn't be fun to. Or necessary. Yet[end if]." instead;
 		if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
 	if mrlp is oyster, say "You feel too inclined towards action for that." instead;
 	if peels speel is reflexed, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
@@ -14194,9 +14194,8 @@ check spilling (this is the specific game state spill reject rule):
 	if player is in Sclerous Closures:
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
 	if location of sausage is location of player:
+		if player is not in Anger Range, say "You don't need to leave the sausage a trail of pills." instead; [this is probably only a valid code path during spill-every-turn testing]
 		if sausage is reflexed, say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]. Perhaps you can get the haunter to follow you just by walking around[if player is not in anger range] some more[end if]." instead;
-	if location of sausage was location of player:
-		say "You don't need to leave the sausage a trail of pills." instead; [this is probably only a valid code path during spill-every-turn testing]
 	if player is in Anger Range and carps are moot:
 		if digger is off-stage, say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if HUNTER HUNT AREA is in Anger Range:
