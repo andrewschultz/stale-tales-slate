@@ -644,7 +644,7 @@ use MAX_SYMBOLS of 150000.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
-use ALLOC_CHUNK_SIZE of 37500.
+use ALLOC_CHUNK_SIZE of 38000.
 
 use MAX_VERBSPACE of 10240.
 
@@ -14116,7 +14116,7 @@ to check-silly-death:
 
 chapter spilling
 
-the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did nopt solve them yourself[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'L P's Pills".
+the Lil Ps Pills is in Posh Hops Shop. it is proper-named. "A jr. jar of Li'L P's Pills lies off to the side here. It's not quite pretzels or peanuts, but it doesn't seem to be anyone's.". description is "Li'l P's Official Yorpwaldian Jumping Pills, a product of CopeLabs Placebos. The obligatory warning message suggests that using the pills may temporarily enhance your life and solve problems, but long-term, you may be slightly bummed you did not solve them yourself. Plus you won't get  bonus point for figuring how best to use them[one of].[paragraph break]It's not very big--just a jr. jar[or][stopping].". printed name of Lil Ps Pills is "Li'L P's Pills".
 
 understand "jar/jr" and "jar of pills" and "pill jar" and "li l p/ps" and "li l" and "lil p" and "lil p pills" as Lil Ps Pills when Lil Ps Pills are touchable.
 
@@ -14182,6 +14182,13 @@ check spilling (this is the general game state spill reject rule):
 		if the player's command does not include "pills":
 			say "You can't spill the jar--just what's in it.";
 
+to say an-sol of (th - a thing):
+	repeat through regana of mrlp:
+		if the-from entry is th:
+			say "[right-word entry in upper case]";
+			continue the action;
+	say "NOTHING (BUG)";
+
 check spilling (this is the specific game state spill reject rule):
 	if player is in Sclerous Closures:
 		if Achers Chaser Arches is prefigured, say "You remember that SEARCHing might've worked better with the sardine gone." instead;
@@ -14200,6 +14207,7 @@ check spilling (this is the specific game state spill reject rule):
 	if player is in End Den, say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
 	let oi be oyster-spill-item;
 	if oi is the player, say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
+	if oi is thruhinted, say "You already got hints of what to do with [the oi]: [an-sol of oi]. So you decide to save the pills for later." instead;
 	if pill-warned is false and scams is false:
 		say "[if Anger Range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
 		now pill-warned is true;
@@ -15797,11 +15805,12 @@ check xraying:
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
 	if noun is prefigured:
 		choose row with the-from of noun in table of towers anagrams;
-		say "You already remember trying [right-word entry in upper case]--which seems right, just a matter of getting other things right first. Maybe they already are." instead;
+		say "You already remember the word [right-word entry in upper case]--which seems right, just a matter of getting other things right first. Maybe they already are." instead;
 	if noun is thruhinted:
 		choose row with the-from of noun in table of towers anagrams;
-		if scams is false, say "You remember, from somewhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
-		say "NOTE: [the noun] was thruhinted, but the 'scam' testing flag is on, so we disabled the fourth-wall nudge to see the hint we would've gotten.";
+		say "You remember, from somewhere behind a fourth wall, figuring you could just say [right-word entry in upper case].";
+		if scams is false, the rule succeeds;
+		say "NOTE: [the noun] [if noun is plural-named]were[else]was[end if] thruhinted, but the 'scam' testing flag is on, so we disabled the fourth-wall nudge to see the hint we would've gotten.";
 	if noun is the player, say "Even if you could, you might expose yourself to harmful rays and stuff." instead;
 	if noun is agnostic:
 		if Dinger is in Actionless Coastlines, try xraying Dinger instead;
@@ -15854,6 +15863,7 @@ check xraying:
 		if used-ray is false, poss-d;
 		now used-ray is true;
 	now noun is rayed;
+	preef noun;
 	if scams is false:
 		now xrayvision is false;
 		now undo-code is 2;
@@ -19926,10 +19936,14 @@ understand the command "gx" as something new.
 
 understand "gx [things]" as gxing when mrlp is others and debug-state is true.
 
+in-gx is a truth state that varies.
+
 carry out gxing:
 	if can-guru is false, now can-guru is true;
 	let prev-max-poss be poss-score of others;
+	now in-gx is true;
 	try guruing the noun;
+	now in-gx is false;
 	if player does not have arugula:
 		say "Taking arugula back. NOTE: this totally trashes your score.";
 		now can-guru is true;
@@ -19969,6 +19983,7 @@ carry out guruing:
 	if noun is briar screen, try guruing barren cries instead;
 	if noun is the player, say "You don't want to change. Well, not in that way." instead;
 	abide by the person-to-fruit rule;
+	if noun is thruhinted, say "No, you already know [an-sol of the noun] changes [the noun]." instead;
 	if noun is viewer or noun is searcher or noun is fleeing feeling, say "No. You don't want to use the arugula on [the noun]. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
@@ -20008,7 +20023,7 @@ carry out guruing:
 			now noun is prefigured;
 			now did-guru is true;
 			say "The aftertaste of arugula finally dissipates.";
-			if scams is false, poss-d;
+			if scams is false and in-gx is false, poss-d;
 			pad-del "guru";
 			pad-rec "flips";
 			the rule succeeds;

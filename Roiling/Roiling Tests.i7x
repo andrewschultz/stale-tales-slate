@@ -774,18 +774,33 @@ chapter scaming
 
 [* SCAM enables scams for areas with hints that should only work once. Spoon Crust Pills Cinders (?) Xray (?) ]
 
-scaming is an action out of world.
+scaming is an action applying to one number.
 
 understand the command "scam" as something new.
 understand the command "scams" as something new.
 
-understand "scam" as scaming.
-understand "scams" as scaming.
+understand "scam [number]" as scaming.
+understand "scams [number]" as scaming.
 
 carry out scaming:
-	now scams is whether or not scams is false;
-	say "Scams is [on-off of scams].";
+	if number understood < 0 or number understood > 2, say "Scam toggling should be 0 (off), 1 (toggle) or 2 (on)." instead;
+	let prev-scam be scams;
+	if number understood is 1:
+		now scams is whether or not scams is false;
+	else if number understood is 2:
+		now scams is true;
+	else if number understood is 0:
+		now scams is false;
+	say "Scams is [if scams is prev-scam]already[else]now[end if] [on-off of scams].";
 	the rule succeeds;
+
+scambasing is an action out of world.
+
+carry out scambasing:
+	try scaming 1;
+
+understand "scam" as scambasing.
+understand "scams" as scambasing.
 
 chapter soning
 

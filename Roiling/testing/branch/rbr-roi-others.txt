@@ -41,6 +41,7 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+>ptf 2
 
 @max
 >score
@@ -70,8 +71,6 @@ You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipat
 You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
 >gx spear
 You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
->gx lumps
-You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 @nud
 #mistake test for boarder
@@ -226,6 +225,16 @@ Your score has just gone up by one point.
 
 @hin
 DEBUG INFO: lumps hinting.
+
+@hin
+>ptf 0
+>z
+>z
+>z
+>gx lumps
+No, you already know PLUMS changes the lumps.
+!You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+>ptf 2
 
 >score
 }}SCORE++
@@ -1461,10 +1470,6 @@ Your score has just gone up by one point.
 }}SCORE++
 }}CURMIN++
 {$SCOS}
-
-@spoi
->gx nectarine
-You've already changed the nectarine.
 
 @nud
 #renudge for price

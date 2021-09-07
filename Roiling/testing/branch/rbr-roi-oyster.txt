@@ -36,6 +36,7 @@ Posh Hops Shop
 
 @hin
 >monty hints
+>ptf 2
 
 @max
 ##balance undos
@@ -458,6 +459,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a d
 #slider test for calm
 >acml
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@hin
+>ptf 0
+>z
+>z
+>z
+>spill pills
+You already got hints of what to do with the clam: CALM. So you decide to save the pills for later.
+>ptf 2
 
 @max
 >calm clam

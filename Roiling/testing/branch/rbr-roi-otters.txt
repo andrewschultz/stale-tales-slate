@@ -32,6 +32,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+# ignore hint completion to start
+>ptf 2
 
 >seed 1
 >ts
@@ -110,6 +112,15 @@ As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can s
 
 @hin
 DEBUG INFO: Ed Riley hinting.
+
+@hin
+#here hint-every-turn is on, but now we don't want to ignore getting the answer. We want to test that the game knows when an answer was revealed, so you don't waste your cinders. We temporarily unset the thruhinting flag to make sure HINT then DISCERN doesn't waste the cinders. Then we reset the prevent-hinting flag.
+>ptf 0
+>z
+>z
+>z
+You pause, realizing you do not need to discern. Perhaps now is a good time to remember Ed Riley can speak REEDILY.
+>ptf 2
 
 >score
 {$SCOS}

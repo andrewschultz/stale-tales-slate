@@ -53,10 +53,20 @@ Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of 
 
 @hin
 >monty hints
+>ptf 2
 DEBUG INFO: Eh, At Heat hinting.
 
 >l
 Loather Rathole
+
+@hints
+>ptf 0
+>z
+>z
+>z
+You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to HATE.
+!Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
+>ptf 2
 
 @sli
 >slon
