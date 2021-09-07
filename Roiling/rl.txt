@@ -578,8 +578,8 @@ But that lets a lot fall out. Since slots 4 and 6 are R or S, slot 3 must be A.
 That makes slot 2 E. Then slot 1 is N. Then slot 7 is T.
 NEA(RS)E(RS)T is NEASERT or NEAREST. NEAREST.
 >>MISLIT LIMITS
-# logic for pestern serpent
-?How do I interpret the pester'n serpent scans?
+# logic for repents serpent
+?How do I interpret the repents serpent's scans?
 The ?RYRG?? leaves a lot of question marks, but since the only vowel is E, you can knock that off quickly. And you also know all the ?'s are consonants.
 So, --E-E-- is a start, even before navigating the question marks.
 Then (PS)(PSTRN)E(RSN)E(RN)(NT) is left. That's really not too bad, despite slot 2 looking like it has a lot of possibilities. If you pick off the other ones, it goes quickly.

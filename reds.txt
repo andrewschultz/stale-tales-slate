@@ -364,8 +364,8 @@ hastiest,setithas,thiseats,tieshats
 nearest,ernesta,strenae,stearne
 nearest,???RG??=earnest=eastern=neaters
 #mislit limits
-#qver of pestern serpent
-present,?RYRG??=pestern=serpent
+#qver of repents serpent
+present,?RYRG??=repents=serpent
 punier,inpure,iprune,inperu,unrIpe,urpIne
 #qver of curst palace
 #qver-ignore
