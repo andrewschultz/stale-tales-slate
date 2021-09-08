@@ -137,7 +137,7 @@ punier/antsier/present/triste
 #############################################lumping otters min together
 Otters adjusted (min)
 bare/reedi
-seedi/steami/tedious
+seedi/steami/spare
 because/else/atom
 brute/remote
 slow/coolest/artsy/garbed
@@ -167,7 +167,7 @@ honest/aside/raptor/deep/quick
 Otters (max)
 barely/rescind/reedily
 sobbingly/emotionally/despairingly
-because/else/atom/although/ergo/however
+because/else/atom/although/ergo/however/unless
 remotely/enragedly
 slow/paroled/coolest/artsy/garbed
 loathingly/stoically
