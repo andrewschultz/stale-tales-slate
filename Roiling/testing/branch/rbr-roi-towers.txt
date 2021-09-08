@@ -1959,10 +1959,49 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 @!minh,mini
 >d
 Dire and Arid Den
-{--nud}#scannotes for bogus-dandier\\>scan\\You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.\\#scannotes for drained dreadin\\>scan drained dreadin\\Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.\\#scannotes for nerd aid diner ad\\>scan nerd aid diner ad\\The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.\\#spechelp for bogus-dandier\\>adderin\\You feel slightly less depressed you tried something. You can't be too far off.
-{--sli}#slider test for dandier\\>addneri\\Your settler begins to make noises: a low hum, but nothing really piercing.
-{--hin}>t\\>scan\\Your settler registers ?YR?Y?R--hmm.\\>scan dreadin\\Your settler registers PYRRY?R.\\>dridane\\You feel slightly less depressed you tried something. You can't be too far off.\\DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
-{--spoi}>xr dreadin\\After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
+
+@nud
+#scannotes for bogus-dandier
+>scan
+You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
+#scannotes for drained dreadin
+>scan drained dreadin
+Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.
+#scannotes for nerd aid diner ad
+>scan nerd aid diner ad
+The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
+#spechelp for bogus-dandier
+>adderin
+You feel slightly less depressed you tried something. You can't be too far off.
+#nudge for nerd
+>nedr
+Concentrate on the Nerd-Aid. In the dandier arid den.
+#nudge for aid
+>adi
+Concentrate on the Nerd-Aid. In the dandier arid den.
+#nudge for bottles
+>bottlse
+They're not just bottles! They're bottles of NERD-AID!
+
+@sli
+#slider test for dandier
+>addneri
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@hin
+>scan
+Your settler registers ?YR?Y?R--hmm.
+>scan dreadin
+Your settler registers PYRRY?R.
+>dridane
+You feel slightly less depressed you tried something. You can't be too far off.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
+
+@spoi
+>xr dreadin
+After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
+
+@!minh,mini
 }}CURMIN++
 >score
 {$SCOS}

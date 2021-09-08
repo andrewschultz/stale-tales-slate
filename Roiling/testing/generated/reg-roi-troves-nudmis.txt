@@ -766,6 +766,12 @@ You need all that light for late-night work sessions.
 #nudge for pharo
 >phaor
 You need all that light for late-night work sessions.
+#nudge for vote
+>ovet
+The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
+#nudge for vetos
+>ovets
+The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
 
 #spechelp for salt
 >lats

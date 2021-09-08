@@ -1046,6 +1046,7 @@ You already tweaked so much here in the Treading Gradient. You don't need to cha
 
 >d
 Dire and Arid Den
+
 #scannotes for bogus-dandier
 >scan
 You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
@@ -1058,6 +1059,16 @@ The ad must be helpful in its own way. But of course it is just aid and not an o
 #spechelp for bogus-dandier
 >adderin
 You feel slightly less depressed you tried something. You can't be too far off.
+#nudge for nerd
+>nedr
+Concentrate on the Nerd-Aid. In the dandier arid den.
+#nudge for aid
+>adi
+Concentrate on the Nerd-Aid. In the dandier arid den.
+#nudge for bottles
+>bottlse
+They're not just bottles! They're bottles of NERD-AID!
+
 >score
 Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >dandier

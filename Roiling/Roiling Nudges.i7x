@@ -823,9 +823,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rampant"	407258077	mardier admirer	--	"No, just a mardier admirer, really."
 "womantrap"	589545427	--	see-female-admirer rule	"No, just a mardier admirer, really."
 "tailer"	417234433	realist tailers	--	"No, you need to deal with all the tailers."
-"nerd"	303066509	Nerd Aid	--	"[nerd-a]."
-"aid"	68209753	Nerd Aid	--	"[nerd-a]."
-"bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "liam"	165069656	grailman	--	"[grail-name]."
 "garn"	189018831	grailman	--	"[grail-name]."
 "lars"	237599426	lars eede	--	"[reed-name]."
@@ -1036,6 +1033,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesprise"	724017911	--	--	"[towersloc]."
 "emprise"	627743945	--	--	"[towersloc]."
 "teri"	361232776	--	teri-reflexed rule	"St. Teri is fine as-is. If she needs more changing, it will come from life experience."
+
+table of Dire And Arid Den nudges
+this-cmd	hashval	this-item	this-rule (rule)	this-clue
+"nerd"	303066509	Nerd Aid	--	"[nerd-a]."
+"aid"	68209753	Nerd Aid	--	"[nerd-a]."
+"bottles"	576885432	Nerd Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 
 table of Dourest Detours nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

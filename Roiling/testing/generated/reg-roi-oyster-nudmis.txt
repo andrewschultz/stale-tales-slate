@@ -1562,6 +1562,9 @@ Score in a scenario: 41 out of 42 total points in the current region, Oyster. Th
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
+#nudge for spin
+>spni
+You don't need to bring the pins back.
 
 #not a mistake
 >redial

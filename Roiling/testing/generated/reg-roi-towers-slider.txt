@@ -373,9 +373,11 @@ Score in a scenario: 27 out of 55 total points in the current region, Towers. Lo
 
 >d
 Dire and Arid Den
+
 #slider test for dandier
 >addneri
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
 >score
 Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
 >dandier

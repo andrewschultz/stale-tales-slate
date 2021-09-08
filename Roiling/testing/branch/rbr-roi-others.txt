@@ -339,7 +339,7 @@ You'll eventually want to get that So-Great Storage down the road.
 #done rejects for compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
-#renudge for sheering
+#renudge for greenish
 >sheering
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. So you can only exit to the north.
 #nudge for needle
