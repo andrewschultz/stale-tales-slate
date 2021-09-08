@@ -1149,18 +1149,25 @@ questions-not-flagged is a truth state that varies.
 
 settler-space-warned is a truth state that varies;
 
+to decide which thing is status-obj of (th - a thing):
+	if th is a block-concept:
+		if th is in clarthead cathedral, decide on shrewin whiners;
+		if th is in shiner shrine, decide on sly imp; [if this falls through, it is solved and OK to spoil]
+	decide on th;
+
 to say full-monty of (myobj - a thing):
 	let A be indexed text;
 	let C be indexed text;
 	let D be 13;
 	let qnf be questions-not-flagged;
 	let sw be settler-space-warned;
+	let shown-obj be status-obj of myobj;
 	if cheat-on is true:
 		let A be "[b-text of myobj]";
 	else:
 		let A be "[a-text of myobj]";
 	if number of characters in A > 15:
-		say "Something went wrong. [myobj] had a [number of characters in A]-letter scan. Let me know what you were doing. [bug-report]";
+		say "Something went wrong. [myobj]/[shown-obj] had a [number of characters in A]-letter scan. Let me know what you were doing. [bug-report]";
 		continue the action;
 	repeat with CC running from 1 to the number of characters in A:
 		let C be character number CC in A;
@@ -1192,7 +1199,7 @@ to say full-monty of (myobj - a thing):
 		draw a rectangle (current foreground-color) in current graphics window at D by 12 with size 12 by 12;
 		increase D by 13;
 	draw a rectangle (R 255 G 255 B 255) in current graphics window at 13 by 30 with size 220 by 20;
-	paint bitmap text (color g-Black) of "[myobj]: cheat [on-off of cheat-on]" in current graphics window at 13 by 30 using Glimmr C&C with size 1;
+	paint bitmap text (color g-Black) of "[shown-obj]: cheat [on-off of cheat-on]" in current graphics window at 13 by 30 using Glimmr C&C with size 1;
 	say "[spacies of A]";
 	if parse-now is true and cheat-on is true:
 		say ". You figure out what you can: [parse-text of myobj]";
@@ -4846,8 +4853,6 @@ medals	true	false	false	false	"[if cheat-on is true]The medals clink back and fo
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down."
-whiners	false	false	false	false	"The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account."
 stray satyr	true	true	false	false	"The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
@@ -18426,7 +18431,15 @@ this is the bore-concept rule:
 
 to say past-barley-vert: say "[if player is in Shiner Shrine]north[else if player is in Clarthead Cathedral]south[else]somewhere you haven't been[end if]"
 
-section turn rules
+after scaning a block-concept:
+	if player is in Clarthead Cathedral:
+		say "The settler then garbles and changes. The whiners have more than one way of staying loud.";
+	else if player is in Shiner Shrine:
+		say "The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down.";
+	else:
+		say "BUG. You shouldn't have been able to scan things this way.";
+
+chapter turn rules
 
 after going (this is the parrot follows you rule):
 	if parrot is in an adjacent room:
@@ -19336,6 +19349,9 @@ check taking imp: say "Simply much too fast." instead;
 to decide which number is imp-score:
 	decide on (boolval of whether or not motleyer is moot) + (boolval of whether or not butlery is moot) + (boolval of whether or not legendary is moot)
 
+check scaning sly imp:
+	try scaning a random touchable block-concept instead;
+
 section motleyer
 
 motleyer is a vanishing northern block-concept in Shiner Shrine. flip-name of motleyer is "REMOTELY".
@@ -19489,6 +19505,9 @@ chapter shrewin whiners
 the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
+
+check scaning whiners:
+	try scaning a random touchable block-concept instead;
 
 section callosity
 
