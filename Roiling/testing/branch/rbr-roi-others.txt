@@ -1740,7 +1740,7 @@ Your score has just gone up by one point.
 >eat arugula
 Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
 >guru dr severe
-One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
+One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score
 {$SCOS}
 }}CURMAX--

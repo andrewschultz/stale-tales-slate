@@ -1368,7 +1368,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a de
 \\
 #scannotes for sly imp
 >scan sly imp
-The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down.
+The settler then gets garbled a bit. The imp has more than one way to be active.
 
 @alt
 ##balance undos
@@ -1769,7 +1769,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners
 \\
 #scannotes for whiners
 >scan whiners
-The settler then garbles and changes. The whiners have more than one way of staying loud, and that will be tricky to take into account.
+The settler then garbles and changes. The whiners have more than one way of staying loud.
 
 @alt
 ##balance undos

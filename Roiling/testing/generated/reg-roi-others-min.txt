@@ -205,7 +205,7 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 >eat arugula
 Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourself. You can now GURU what you are curious about.
 >guru dr severe
-One look at Dr. Severe shows how to change things: REVERSED. The aftertaste of arugula finally dissipates.
+One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score
 You have 23 of 42 total points for the post-Elvira Others region, though you only need 25 to win.
 You can't get the maximum score, since you used the arugula

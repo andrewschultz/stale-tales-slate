@@ -18452,7 +18452,7 @@ after scaning a block-concept:
 	if player is in Clarthead Cathedral:
 		say "The settler then garbles and changes. The whiners have more than one way of staying loud.";
 	else if player is in Shiner Shrine:
-		say "The settler then gets garbled a bit. The imp probably has more than one way to be active, so the settler can't pin it down.";
+		say "The settler then gets garbled a bit. The imp has more than one way to be active.";
 	else:
 		say "BUG. You shouldn't have been able to scan things this way.";
 
