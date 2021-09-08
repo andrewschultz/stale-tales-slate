@@ -1415,8 +1415,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 table of disport tripods nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"tripods"	506548258	--	--	"[its-a-museum]"
-"tripdo"	410274292	--	--	"[its-a-museum]"
+"tripods"	506548258	--	--	"[its-a-museum]."
+"tripdo"	410274292	--	--	"[its-a-museum]."
 
 table of Evoc Cove nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1428,17 +1428,11 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Hows Show nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hows"	315843615	--	--	"[dome-rm]."
-"codewall"	459943629	--	--	"[its-a-museum]."
-"codewalls"	556217595	--	--	"[its-a-museum]."
-"coed"	242193360	--	--	"[its-a-museum]."
-"sllaw"	314024235	--	--	"[its-a-museum]."
-"owl"	236101189	--	--	"[its-a-museum]."
-"decal"	223842440	--	--	"[its-a-museum]."
-"allow"	292102846	--	--	"[its-a-museum]."
-"ltso"	327550400	--	--	"[its-a-museum]."
-"tools"	401902977	--	--	"[its-a-museum]."
-"allowlots"	619653246	--	--	"[its-a-museum]."
-"wall"	217750269	--	--	"[its-a-museum]."
+"chest"	383477977	--	--	"[its-a-museum]."
+"raised"	377613631	--	--	"[its-a-museum]."
+"aider"	281339665	--	--	"[its-a-museum]."
+"coder"	327517163	--	--	"[its-a-museum]."
+"tech"	287204011	--	--	"[its-a-museum]."
 
 table of Ned's Dens nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

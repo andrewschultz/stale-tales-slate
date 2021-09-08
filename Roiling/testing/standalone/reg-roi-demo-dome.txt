@@ -54,7 +54,7 @@ There's no score in the Demo Dome. You just need to look around.
 
 Are you sure you want to leave before looking at everything?
 
->x ad shelf
+>x disport
 
 >blather
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
@@ -157,6 +157,14 @@ This is a museum! Messing with the exhibits would be very bad form.
 >space
 This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for tripods
+>triposd
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for tripdo
+>tripod
+This is a museum! Messing with the exhibits would be very bad form.
+
 >in
 Intel Inlet
 
@@ -193,6 +201,14 @@ These are documents of historical records! Revisionism is so Elvira.
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
 
+#nudge for passe
+>pases
+I have full creative control over the Passe Apses, and I'm not giving it up.
+
+#nudge for apse
+>apes
+I have full creative control over the Passe Apses, and I'm not giving it up.
+
 >out
 
 >n
@@ -202,61 +218,32 @@ Hows Show
 >hosw
 You don't need to flip anything here, really. Certainly not a room.
 
->x wall
-Which do you mean, the owl-decal code wall or the allow-lots-tools wall?
-
 >bluh
 
-#nudge for sllaw
->sllaw
+#nudge for chest
+>chets
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for wall
->wall
+#nudge for raised
+>raisde
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for owl
->owl
+#nudge for aider
+>aidre
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for decal
->decal
+#nudge for coder
+>codre
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for codewall
->codewlal
+#nudge for tech
+>tehc
 This is a museum! Messing with the exhibits would be very bad form.
 
-#nudge for codewalls
->codewlals
-This is a museum! Messing with the exhibits would be very bad form.
-
-#nudge for coed
->cedo
-This is a museum! Messing with the exhibits would be very bad form.
-
-#mistake test for coed
->coed
-Yes, everyone is welcome in the Demo Dome.
-
-#nudge for allow
->allow
-This is a museum! Messing with the exhibits would be very bad form.
-
-#nudge for ltso
->ltso
-This is a museum! Messing with the exhibits would be very bad form.
-
-#nudge for tools
->tools
-This is a museum! Messing with the exhibits would be very bad form.
-
-#nudge for allowlots
->allowlots
-This is a museum! Messing with the exhibits would be very bad form.
-
->x code wall
+>x coder decor
+You read some of the coder decor.
 >g
+You read some more of the coder decor.
 >g
 >g
 >g
@@ -265,8 +252,8 @@ This is a museum! Messing with the exhibits would be very bad form.
 >g
 NOTE: you've read all the way through
 
->x tools wall
-You read some of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+>x raised aiders
+You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
 You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
@@ -536,10 +523,10 @@ You take a break and get back to, well, running Yorpwald. The museum was about t
 >au -1
 >scam
 
->x shelf
+>x disport tripods
 >n
->x owl
->x tools
+>x coder decor
+>x raised aiders
 
 >out
 >in
