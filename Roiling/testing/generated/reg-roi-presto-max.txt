@@ -11,7 +11,7 @@
 >t
 >posf
 
->au 1
+>au 2
 
 >presto
 >enter tornado
@@ -329,7 +329,6 @@ by one point
 >score
 Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->au 2
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
 !Taken.
@@ -347,10 +346,11 @@ Good idea, but tough to program without something to type on.
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+##nobalance
+>n
 #preefcheck im le cop polemic
 >pf
 You can COMPILE once you've started coding.
->undo
 >undo
 >undo
 >undo
@@ -371,16 +371,6 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->cola
-Your score has just gone up by one point
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->mug
-Your score has just gone up by one point
->score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 #pre-reboot rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
@@ -389,14 +379,15 @@ You have nothing to type with, so it doesn't do much good.
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
 #pre-peels-speel-sleep rule retry
+#futon not made yet
 >sleep
-Sleep on the futon? Wouldn't be fun to. You aren't even exhausted from vigorous intellectual exercise! Yet.
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -420,17 +411,19 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >keyboard
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
+#compile, but don't put keyboard on slab (auto-no)
 >compile
 !by one point
 Good idea, but first, you probably want to put the keyboard on the slab. Do so now?
+>no
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 >undo
@@ -440,10 +433,12 @@ Only one more piece of hardware is needed, and the computer will work.
 
 >compile
 Good idea, but first, you may want to put the screen on the slab. Do so now?
+>no
 !Done. You can try to COMPILE again, now.
 Ok, but by "may want" I meant "really probably need to."
 
 >put screen on slab
+!It already is
 You can now do computery things unimpeded! Hooray!
 
 >compile
@@ -462,41 +457,28 @@ A DISK, I'D ASK pops up. You realize that the disk would fit fine.
 !by one point
 You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer
 
+#balance undo
+#pre-peels-speel-sleep rule
+>sleep
+!Sleep on the futon? Wouldn't be fun to. Or necessary. Yet
+You may need sleep later, but not now. Besides, you have nowhere to sleep.
+>futon
+by one point
+>sleep
+Sleep on the futon? Wouldn't be fun to. Or necessary. Yet.
+!You may need sleep later, but not now. Besides, you have nowhere to sleep.
+>undo
+>undo
+>undo
+
 >reboot
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
-
-#pre-peels-speel-sleep rule
->sleep
-There's no task ahead you need to sleep for, yet. Besides, you have nowhere to sleep.
-#preefcheck peels speel
->pf
-You can SLEEP once you've gotten a good start on your coding task.
-
->futon
-Your score has just gone up by one point
->score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
-#pre-peels-speel-sleep rule
->sleep
-There's no task ahead you need to sleep for, yet.
-!Besides, you have nowhere to sleep.
-
->compile
-!by one point
-You get a NEED IF-DEFINE error
->compile
-!by one point
-That stupid NEED IF-DEFINE and that peels speel, still.
 
 >compile
 !by one point
@@ -508,11 +490,31 @@ You need to get rid of that uppercase to successfully compile your code.
 >put lock on keyboard
 fits in perfectly
 
+#pre-peels-speel-sleep rule
+>sleep
+You haven't yet made anywhere comfortable to sleep.
+You add the information to your pedanto-notepad under FLIPS.
+#preefcheck peels speel
+>pf
+You can SLEEP once you've gotten a good start on your coding task.
+
+>futon
+Your score has just gone up by one point
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+!by one point
+You get a NEED IF-DEFINE error the first time you try to compile. That peels speel keeps popping up again.
+>compile
+!by one point
+That stupid NEED IF-DEFINE and that peels speel, still.
+
 >sleep
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >compile
 by one point
@@ -532,6 +534,17 @@ You weren't ready to DEBUG yet.
 >undo
 >undo
 
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 

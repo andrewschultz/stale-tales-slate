@@ -18,6 +18,7 @@ Score in a scenario: 0 out of 22 total points in the current region, Routes. Low
 >monty hints
 You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.
 
+>z
 >past
 by one point
 >out
@@ -65,6 +66,14 @@ The spoon points you out of the Idle Deli.
 >out
 
 You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+
+>ptf 0
+>z
+>z
+>z
+Hmm, wait. Maybe you can just go ACROSS.
+!You angle your spoon a bit, and you realize you, or something, should be ACROSS.
+>ptf 2
 
 >across
 Your score has just gone up by one point

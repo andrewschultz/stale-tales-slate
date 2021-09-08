@@ -10,7 +10,7 @@
 >t
 >posf
 
->au 1
+>au 2
 
 >scam
 
@@ -310,21 +310,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
->cola
-Your score has just gone up by one point
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->mug
-Your score has just gone up by one point
->score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -340,18 +330,19 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >keyboard
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >put keyboard on slab
 Only one more piece of hardware is needed, and the computer will work.
 
 >put screen on slab
+!It already is
 You can now do computery things unimpeded! Hooray!
 
 >disk
@@ -361,36 +352,48 @@ You can now do computery things unimpeded! Hooray!
 >reboot
 Your score has just gone up by one point
 
->score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
+>put lock on keyboard
+fits in perfectly
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a FUTON.
 
 >futon
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->put lock on keyboard
-fits in perfectly
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >sleep
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >compile
 by one point
 
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
+
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a MUG.
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 

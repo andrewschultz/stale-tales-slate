@@ -61,7 +61,7 @@ Your score has just gone up by one point.
 
 >score
 Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
->au -1
+>au 0
 
 >1
 
@@ -227,7 +227,7 @@ Score in a scenario: 23 out of 33 total points in the current region, Otters. Lo
 >misses
 !otters
 
->au 1
+>au 2
 >play whistle
 #notana
 by one point

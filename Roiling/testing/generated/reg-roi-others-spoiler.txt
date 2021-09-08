@@ -30,8 +30,6 @@ You have a vision of a fruit: GRAPES. The aftertaste of arugula finally dissipat
 You have a vision of a fruit: LIMES. The aftertaste of arugula finally dissipates.
 >gx spear
 You have a vision of a fruit: PEARS. The aftertaste of arugula finally dissipates.
->gx lumps
-You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
 >limes
 Your score has just gone up by one point.
@@ -373,9 +371,6 @@ You have 34 of 42 total points for the post-Elvira Others region, though you onl
 Your score has just gone up by one point.
 >score
 You have 35 of 42 total points for the post-Elvira Others region, though you only need 37 to win.
-
->gx nectarine
-You've already changed the nectarine.
 
 >w
 

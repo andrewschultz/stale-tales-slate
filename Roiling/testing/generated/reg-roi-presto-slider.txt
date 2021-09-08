@@ -11,7 +11,7 @@
 >t
 >posf
 
->au 1
+>au 2
 
 >presto
 >enter tornado
@@ -317,21 +317,11 @@ Score in a scenario: 25 out of 41 total points in the current region, Presto. Lo
 No, skid <=> disk is about it. There's no tricky third way.
 !Your settler begins to make noises: a low hum, but nothing really piercing.
 
->cola
-Your score has just gone up by one point
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->mug
-Your score has just gone up by one point
->score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -347,7 +337,7 @@ Score in a scenario: 28 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for keyboard
 >ekbyaodr
@@ -357,7 +347,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for tab
 >abt
@@ -367,6 +357,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Only one more piece of hardware is needed, and the computer will work.
 
 >put screen on slab
+!It already is
 You can now do computery things unimpeded! Hooray!
 
 >disk
@@ -381,21 +372,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
 
+>put lock on keyboard
+fits in perfectly
+
 >futon
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->put lock on keyboard
-fits in perfectly
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for sleep
 >eespl
@@ -405,7 +393,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #slider test for compile
 >ocpmlei
@@ -414,6 +402,17 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >compile
 by one point
 
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 

@@ -9,6 +9,8 @@
 >posf
 
 >monty hints
+# ignore hint completion to start
+>ptf 2
 
 >seed 1
 >ts
@@ -32,6 +34,14 @@ Your score has just gone up by one point
 As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
 DEBUG INFO: Ed Riley hinting.
+
+#here hint-every-turn is on, but now we don't want to ignore getting the answer. We want to test that the game knows when an answer was revealed, so you don't waste your cinders. We temporarily unset the thruhinting flag to make sure HINT then DISCERN doesn't waste the cinders. Then we reset the prevent-hinting flag.
+>ptf 0
+>z
+>z
+>z
+You pause, realizing you do not need to discern. Perhaps now is a good time to remember Ed Riley can speak REEDILY.
+>ptf 2
 
 >score
 Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
@@ -81,7 +91,7 @@ Gretta has an important item for you once you finish chatting.
 
 >score
 Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
->au -1
+>au 0
 
 >1
 
@@ -365,14 +375,6 @@ Score in a scenario: 26 out of 33 total points in the current region, Otters. Lo
 >l
 Uprates Pasture
 
-#here hint-every-turn is on, but now we don't want to ignore getting the answer. We want to test that the game knows when an answer was revealed, so you don't waste your cinders.
->ihc -1
->z
->z
->z
-You pause, realizing you do not need to discern. Perhaps now is a good time to remember you can make a SNIPE.
->ihc 1
-
 >snipe
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -450,7 +452,7 @@ Score in a scenario: 32 out of 33 total points in the current region, Otters. Th
 >misses
 !otters
 
->au 1
+>au 2
 >play whistle
 #notana
 by one point

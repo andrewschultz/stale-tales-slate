@@ -10,6 +10,7 @@
 >rove over
 
 >monty hints
+>ptf 2
 
 >others
 
@@ -40,6 +41,15 @@ You have 2 of 42 total points for the post-Elvira Others region, though you only
 Your score has just gone up by one point.
 
 DEBUG INFO: lumps hinting.
+
+>ptf 0
+>z
+>z
+>z
+>gx lumps
+No, you already know PLUMS changes the lumps.
+!You have a vision of a fruit: PLUMS. The aftertaste of arugula finally dissipates.
+>ptf 2
 
 >score
 You have 3 of 42 total points for the post-Elvira Others region, though you only need 25 to win.

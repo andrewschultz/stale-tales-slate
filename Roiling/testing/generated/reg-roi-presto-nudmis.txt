@@ -11,7 +11,7 @@
 >t
 >posf
 
->au 1
+>au 2
 
 >presto
 >enter tornado
@@ -1168,9 +1168,6 @@ Kids don't need to listen to the words you've used so far! They wouldn't help wi
 #mistake test for repo
 >repo
 Nobody else seems to own the oper rope or the skid.
-#done rejects for caps lock
->capslokc
-YOU HAVE WHAT YOU NEED.
 #spechelp for skid
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
@@ -1179,12 +1176,6 @@ No, skid <=> disk is about it. There's no tricky third way.
 >skdi
 No, skid <=> disk is about it. There's no tricky third way.
 >skid
-#nudge for caps
->casp
-It'd sort of stink if a caps lock button broke in real life, so, no.
-#nudge for lock
->lokc
-It'd sort of stink if a caps lock button broke in real life, so, no.
 #nudge for rope
 >roep
 You don't need to do anything tricky with the skid's rope.
@@ -1195,10 +1186,6 @@ It's too small to be a fountain--really, just a fount.
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
-#spechelp for fount
->futno
-Hm, might be FUN TO try another guess. Or useful. Or both.
-DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 #spechelp for gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways it COULD be stretched.
@@ -1210,47 +1197,10 @@ Alcohol doesn't work as well as caffeine in this situation.
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
->cola
-Your score has just gone up by one point
->score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
->mug
-Your score has just gone up by one point
->score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
-
-#mistake retest for loca
->loca
-What you have helps programming more than water or French champagne or dancing in the rain.
-
-#done rejects for alocalco cola
->aloc
-No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
-#nudge for soda
->soad
-It's cola, not soda or pop. And you can just drink it.
-#nudge for pop
->ppo
-It's cola, not soda or pop. And you can just drink it.
-#mistake retest for alco
->alco
-Alcohol doesn't work as well as caffeine in this situation.
-#mistake test for pop
->pop
-It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
-#mistake test for soda
->soda
-It's cola. It has to be. Soda could make you into a sod, of course.
-#mistake retest for feal
->feal
-Nobody needs allegiance, here.
-#done rejects for futon
+#spechelp for fount
 >futno
-The futon could be a little less lumpy, sure, but that's beyond your magic powers.
-#done rejects for mug
->mgu
-The mug is no longer manipulable.
+Hm, might be FUN TO try another guess. Or useful. Or both.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 #done rejects for leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
@@ -1266,7 +1216,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That'
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #done rejects for casserole
 >casseroel
@@ -1308,7 +1258,7 @@ Hacks' Shack
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #spechelp for drab yoke
 >keyboadr
@@ -1319,7 +1269,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That'
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #mistake test for bat
 >bat
@@ -1338,6 +1288,7 @@ Nothing happens. It's probably just the TBA you need to work with, which certain
 Only one more piece of hardware is needed, and the computer will work.
 
 >put screen on slab
+!It already is
 You can now do computery things unimpeded! Hooray!
 
 #renudge for computer
@@ -1368,19 +1319,32 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
-
->score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
 
+>put lock on keyboard
+fits in perfectly
+
+#done rejects for caps lock
+>capslokc
+YOU HAVE WHAT YOU NEED.
+#nudge for caps
+>casp
+It'd sort of stink if a caps lock button broke in real life, so, no.
+#nudge for lock
+>lokc
+It'd sort of stink if a caps lock button broke in real life, so, no.
+
 >futon
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
+#done rejects for futon
+>futno
+The futon could be a little less lumpy, sure, but that's beyond your magic powers.
 #done rejects for be troo e robot
 >toober
 No need to reboot twice.
@@ -1395,14 +1359,11 @@ Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
 
->put lock on keyboard
-fits in perfectly
-
 >sleep
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 #done rejects for peels speel
 >epsle
@@ -1416,8 +1377,46 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polem
 by one point
 
 >score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+#mistake retest for loca
+>loca
+What you have helps programming more than water or French champagne or dancing in the rain.
+
+#done rejects for alocalco cola
+>aloc
+No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
+#nudge for soda
+>soad
+It's cola, not soda or pop. And you can just drink it.
+#nudge for pop
+>ppo
+It's cola, not soda or pop. And you can just drink it.
+#mistake retest for alco
+>alco
+Alcohol doesn't work as well as caffeine in this situation.
+#mistake test for pop
+>pop
+It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.
+#mistake test for soda
+>soda
+It's cola. It has to be. Soda could make you into a sod, of course.
+#mistake retest for feal
+
+>mug
+Your score has just gone up by one point
+>score
 Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
+#done rejects for mug
+>mgu
+The mug is no longer manipulable.
 #done rejects for im le cop polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.

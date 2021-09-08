@@ -1,0 +1,220 @@
+## reg-roi-oyster-hints.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* oyster-thru
+
+>ts
+>oyster
+>in
+
+>take pills
+Taken.
+
+>scam
+>l
+DEBUG INFO: Spilling LOLstr trolls.
+Olde Lode
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to STROLL past the trolls.
+HOW PILLS WERE USED: STROLL past the trolls.
+
+>z
+DEBUG INFO: Spilling clam.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to CALM the clam.
+HOW PILLS WERE USED: CALM the clam.
+
+>z
+DEBUG INFO: Spilling urn.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to RUN from the urn.
+HOW PILLS WERE USED: RUN from the urn.
+
+>scam
+>get on raft
+>fart
+>scam
+>z
+DEBUG INFO: Spilling interlocking oars.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SOAR by the oars.
+HOW PILLS WERE USED: SOAR by the oars.
+>undo
+>undo
+>undo
+>undo
+>undo
+
+>z
+DEBUG INFO: Spilling sabot boats.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BOAST at the sabot boats.
+HOW PILLS WERE USED: BOAST at the sabot boats.
+
+>z
+DEBUG INFO: Spilling pale plea.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to LEAP by the plea.
+HOW PILLS WERE USED: LEAP by the plea.
+
+>z
+/DEBUG INFO: Spilling (pikes|carps).
+/DEBUG: MISSES will show Instead of spilling the pills, you could've tried to (SPIKE the pikes|SCRAP \(with\) the carps).
+/HOW PILLS WERE USED: (SPIKE the pikes|SCRAP \(with\) the carps).
+
+>z
+DEBUG INFO: Current oyster hint/spill item = HUNTER HUNT AREA/HUNTER HUNT AREA.
+
+A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument.
+
+>e
+DEBUG INFO: Spilling eeks.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEEK the eeks.
+
+Lean Lane
+
+>z
+DEBUG INFO: Spilling Tea-at-a-Tee.
+MISSES will show Instead of spilling the pills, you could've tried to TUTOR Tortu the trout, then EAT the Tea-at-a-Tee.
+Anger Range
+
+>undo
+>scam 0
+>eat
+by one point
+>scam 2
+DEBUG INFO: Spilling trout.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TUTOR the trout.
+HOW PILLS WERE USED: TUTOR the trout.
+
+>w
+
+>n
+Lapsin' Plains
+DEBUG INFO: Spilling wherever the crate is coming from.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to TRACE the crate.
+
+>z
+DEBUG INFO: Spilling crate.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to REACT to the crate.
+HOW PILLS WERE USED: REACT to the crate.
+
+>z
+DEBUG INFO: Spilling skis.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to KISS the skis.
+HOW PILLS WERE USED: KISS the skis.
+
+>z
+DEBUG INFO: Spilling knob.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BONK the knob.
+HOW PILLS WERE USED: BONK the knob.
+
+>z
+DEBUG INFO: Spilling span pans.
+
+DEBUG INFO: Trying to flip span pans.
+
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SNAP at the span pans.
+
+HOW PILLS WERE USED: SNAP at the span pans.
+
+>z
+You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
+
+>in
+Shuttle Hutlets
+DEBUG INFO: Spilling tubs.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BUST the tubs.
+HOW PILLS WERE USED: BUST the tubs.
+
+>z
+DEBUG INFO: Spilling prod.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to DROP the prod.
+HOW PILLS WERE USED: DROP the prod.
+
+>z
+You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
+
+>out
+>s
+>w
+Sclerous Closures
+DEBUG INFO: Spilling Paw-R-Wrap.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to WARP the Paw-R-Wrap.
+HOW PILLS WERE USED: WARP the Paw-R-Wrap.
+
+>z
+DEBUG INFO: Spilling Achers' Chaser Arches.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SEARCH the arches.
+HOW PILLS WERE USED: SEARCH the arches.
+
+>z
+DEBUG INFO: Spilling general gleaner.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to ENLARGE the gleaner.
+HOW PILLS WERE USED: ENLARGE the gleaner.
+
+>z
+You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long.
+
+>n
+You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes.
+
+>w
+DEBUG INFO: Spilling ruby.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to BURY the ruby.
+HOW PILLS WERE USED: BURY the ruby.
+
+>e
+>s
+>e
+DEBUG INFO: Spilling HUNTER HUNT AREA.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to UNEARTH the haunter from the HUNTER HUNT AREA.
+HOW PILLS WERE USED: UNEARTH the haunter from the HUNTER HUNT AREA.
+
+>z
+DEBUG INFO: Spilling Use-Saga Sausage.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to ASSUAGE the Use-Saga Sausage.
+HOW PILLS WERE USED: ASSUAGE the Use-Saga Sausage.
+
+>z
+The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it. Perhaps you can get the haunter to follow you just by walking around.
+
+>w
+>n
+>w
+
+>z
+DEBUG INFO: Spilling ol' trap.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to PATROL the ol' trap.
+HOW PILLS WERE USED: PATROL the ol' trap.
+
+>in
+End Den
+You look around, but this probably isn't where you're supposed to be. You can probably go back out. Or maybe you have something that could get you to the right place.
+
+DEBUG INFO: Current oyster hint/spill item = yourself/yourself.
+
+Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map. One might be in your inventory, and you just need to examine it.
+
+>x gleaner
+DEBUG INFO: Spilling papery yapper.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to PREPAY the papery yapper.
+HOW PILLS WERE USED: PREPAY the papery yapper.
+
+>z
+DEBUG INFO: Spilling dialer.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to DERAIL with the dialer.
+HOW PILLS WERE USED: DERAIL with the dialer.
+
+>z
+DEBUG INFO: Spilling pins.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to SPIN the pins.
+HOW PILLS WERE USED: SPIN the pins.
+
+>gonear plasm lamps
+>z
+DEBUG INFO: Spilling natant ant.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to <BUG, SORRY, FORGOT TO FILL IN A TABLE CELL>.
+HOW PILLS WERE USED: <BUG, SORRY, FORGOT TO FILL IN A TABLE CELL>.
+
+>z
+DEBUG INFO: Spilling repaired dialer.
+DEBUG: MISSES will show Instead of spilling the pills, you could've tried to REDIAL with the dialer.
+HOW PILLS WERE USED: REDIAL with the dialer.
+

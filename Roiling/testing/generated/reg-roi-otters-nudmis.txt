@@ -465,7 +465,7 @@ Your score has just gone up by one point.
 
 >score
 Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
->au -1
+>au 0
 
 #renudge for gretta
 >gretat
@@ -1450,7 +1450,7 @@ Score in a scenario: 32 out of 33 total points in the current region, Otters. Th
 >misses
 !otters
 
->au 1
+>au 2
 >play whistle
 #notana
 by one point
