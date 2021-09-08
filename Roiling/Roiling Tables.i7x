@@ -1825,6 +1825,20 @@ volume demo dome tables
 
 [xxdmt]
 
+table of testing notes
+thistext [x tester street] [tdm0]
+"Early parts relate the brave heroes who slogged through the first version of the game, replete with missing directions to new areas and puzzles that ... well, they technically fit the area. This includes people who tested both Shuffling and Roiling. Their early recommended tweaks helped so much."
+"I remember I wanted the hints to work, so I asked testers to run a tricky command. It seems like awkward coding now--a line that hinted what to do next got written to a file every move so nothing was spoiled--but it helped."
+"Some testers stepped in post-Spring Thing 2013 to help me with changes I thought seemed basically necessary."
+"I remember feeling guilty about asking someone to run through the three areas in different orders to test the SECURE/RECUSE option in Shuffling. It seemed even more tangled in Roiling."
+"Knowing how hard it was to ask people to test cases where you do a, b, c in all six possible orders, I tried to make Inform 'test x with y' commands."
+"Some people who wrote reviews were kind enough to isolate bugs I couldn't otherwise catch. Their observations also made it in and gave me 'why don't I...' moments. I also was able to trade testing with a few people, which was very helpful. I recommend it. Working on their games sometimes reminded me I should try to add feature X for my own games. Or, sometimes, I borrowed their idea with a twist to make mine easier."
+"It gets harder to ask for help the longer a game goes on from its original release. However, stuff like randomizing completion order made it into my more automated files."
+"Testers for other games often gave me ideas of how to streamline part of the Stale Tales Slate. Sometimes a detail that bothered me here would have a similar one pop up elsewhere. I thought, why not fix it?"
+"Eventually, migration to GitHub, where I could write out issues and commit code, and Zarf's regtest scripts allowed me to run tests it was exhausting for human testers to run. I ran them repeatedly. I hunted down annoying bugs I wouldn't otherwise have the time to. Most testing became automated."
+"Sometimes I needed full computer processing power on my virtual Linux box, so that forced me not to browse on the internet. Or I ran a test when I went out to do chores or whatever. It felt neat, doing two things at once, or getting something done while I slept. It was good to save time when Roiling took a minute to build, and I just wanted to nail that one last elusive bug."
+"Many of the original testers of Shuffling have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better."
+
 table of calparts
 thistext [x calendar] [tdm1]
 "Part one: Protean[paragraph break]There's no compelling personal story here. I just had fun trying to make the sort of game I'd have liked when I was younger, the sort Infocom might've done better if the Apple didn't have its limitations.[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, the best I found for Andrew Schultz was CRAWLS, ZEN, THUD, until Hanon Ondricek pointed out (in 2014) Dawn Churlzest worked, too."
@@ -1883,6 +1897,9 @@ thistext
 "(W/H) Nameless salesmen are sent to the post-script episode. They were formerly dandier, replaced by the arid den to be drained, then by the promise imposer, with the arid den moved to a separate room."
 "(W) Other former guardians are a nebula (unable,) deacons (who become Lois the Hostile and the Hostile-is-He Lot,) an orc replaced with a proper alarming grailman, a grandiose swarm (moved to ego-drains.)"
 "(W) The smart kid is replaced by a Coasting Agnostic, who doesn't FIDGET (gifted) any more but is absorbed in Reading: a Dinger."
+"(W) Near the end of release 4, I finally disposed of Muscly Luc Sym and Ms. Lucy. They were a bit awkward, and I liked the denier nereid better. But they were great stopgaps for short words while I looked for something better."
+"(W) SMH-Life Mel Fish, who was originally the man covert in inapt paint, also was retired. I forget when I realized 'himself' wasn't really an adjective, but once I came to grips, he had to go. Realist tailers replaced him, and they're kind of more menacing, anyway."
+"Finally, here in the Demo Dome, the owl decal code wall became something the Coder Decor, and the allow-lots-tools wall became raised aiders."
 "There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing."
 
 table of informcode

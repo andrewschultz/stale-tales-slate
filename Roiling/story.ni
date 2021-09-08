@@ -21237,6 +21237,7 @@ check going up in Peek Keep: say "The great grate is there so you can see but no
 
 table of xibits [since ORWT is randomly changed, it's nontrivial to convert this table to number properties for each exhibit.]
 exhib	orwt
+tester street	10
 coder decor	10
 raised aiders	10
 Chic Loner Chronicle	10
@@ -21392,7 +21393,7 @@ when play begins (this is the seed novella rule) :
 
 book Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder credo and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can go back south.". roomnud of Hows Show is table of Hows Show nudges.
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder credo and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "the whos-show is already under CREDITS.";
@@ -21403,7 +21404,13 @@ to decide whether nuf-hows-examined:
 	if raised aiders are examined and coder decor is examined, decide yes;
 	decide no;
 
-the techs chest is scenery in Hows Show. "The techs chest is divided into RAISED AIDERS (stuff I used as utilities) and CODER DECOR (neat Inform stuff I learned along the way.) You can examine each as much as you'd like for details about how the Stale Tales Slate was made."
+section tester street
+
+Tester Street is an exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
+
+section techs chest
+
+the techs chest is boring scenery in Hows Show. "The techs chest is divided into RAISED AIDERS (stuff I used as utilities) and CODER DECOR (neat Inform stuff I learned along the way.) You can examine each as much as you'd like for details about how the Stale Tales Slate was made."
 
 check examining techs chest for the first time: ital-say "if you really, really, want to understand everything, it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for. But it's hardly critical. I hope it is fun just to see the big idea.";
 
