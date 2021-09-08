@@ -654,7 +654,7 @@ use MAX_VERBS of 830.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_PROP_TABLE_SIZE of 640000.
+use MAX_PROP_TABLE_SIZE of 650000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
@@ -674,9 +674,9 @@ use MAX_VERBS of 850. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
 
-use MAX_OBJECTS of 970. [delta=10]
+use MAX_OBJECTS of 990. [delta=10]
 
-use MAX_PROP_TABLE_SIZE of 650000. [delta=10000]
+use MAX_PROP_TABLE_SIZE of 660000. [delta=10000]
 
 use MAX_STATIC_DATA of 760000.
 
@@ -18420,7 +18420,24 @@ to decide whether try-fail-animal:
 	if try-fail-cathedral-south is true, decide yes;
 	decide no;
 
-section block-concepts for N/S of Midden
+chapter block-concepts and concept-rooms
+
+section concept-rooms
+
+a concept-room is a kind of room.
+
+a concept-room has a list of things called concept-list.
+
+a concept-room has a number called concept-index.
+
+when play begins:
+	repeat with X running through concept-rooms:
+		now concept-index of X is 0;
+		repeat with Y running through block-concepts in X:
+			add Y to concept-list of X;
+		sort concept-list of X in random order;
+
+section block-concepts
 
 a block-concept is a kind of thing. a block-concept is usually scenery. a block-concept is usually vanishing. a block-concept is usually boring. bore-text of a block-concept is usually "That [if noun is in Shiner Shrine]evaluation[else]activity[end if] is nothing you can observe or manipulate physically, but if you focus on [the noun], you might be able to SCAN it if you need to.". description of a block-concept is usually "Well, [the item described] is there, and it's definitely distracting you from going [past-barley-vert].". a block-concept is usually ssno. bore-check of a block-concept is usually the bore-concept rule. a block-concept has text called flip-name.
 
@@ -18439,6 +18456,20 @@ after scaning a block-concept:
 	else:
 		say "BUG. You shouldn't have been able to scan things this way.";
 
+section two-of-threers
+
+a two-of-threer is a kind of person.
+
+check scaning a two-of-threer:
+	let old-concept-index be concept-index of location of player;
+	increment concept-index of location of player;
+	while concept-index of location of player is not old-concept-index:
+		if concept-index of location of player > number of entries in concept-list of location of player, now concept-index of location of player is 1;
+		let scan-candidate be entry (concept-index of location of player) of concept-list of location of player;
+		if scan-candidate is not moot, try scaning scan-candidate instead;
+		increment concept-index of location of player;
+	say "Oh no! I found no concept to scan for [the noun]. This is a BUG." instead;
+
 chapter turn rules
 
 after going (this is the parrot follows you rule):
@@ -18450,7 +18481,7 @@ after going (this is the parrot follows you rule):
 			say "'Awk! Not sure you need to mess around there now.' The parrot does not follow you.";
 	continue the action;
 
-section region specific type definitions
+chapter puzzle animals in the north and south
 
 a puzanimal is a kind of animal. a puzanimal is usually neuter. a puzanimal can be northy or southy. a puzanimal has text called locale-text.
 
@@ -19330,11 +19361,11 @@ this is the bore-wire-weir rule:
 
 book Shiner Shrine
 
-Shiner Shrine is an innie room in Otters. Shiner Shrine is north of Minded Midden. "This north-south passage is [if sly imp is touchable]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west.". roomnud of Shiner Shrine is table of Shiner Shrine nudges.
+Shiner Shrine is an innie concept-room in Otters. Shiner Shrine is north of Minded Midden. "This north-south passage is [if sly imp is touchable]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]. You recognize coma camo to the east and west.". roomnud of Shiner Shrine is table of Shiner Shrine nudges.
 
 chapter imp
 
-The simply sly imp is a flippable neuter person in Shiner Shrine. "A simply sly imp zooms about [list of touchable block-concepts], causing vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
+The simply sly imp is a flippable neuter two-of-threer in Shiner Shrine. "A simply sly imp zooms about [list of touchable block-concepts], causing vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
 after looking in Shiner Shrine:
 	if sly imp is in Shiner Shrine, it-him-her sly imp;
@@ -19348,9 +19379,6 @@ check taking imp: say "Simply much too fast." instead;
 
 to decide which number is imp-score:
 	decide on (boolval of whether or not motleyer is moot) + (boolval of whether or not butlery is moot) + (boolval of whether or not legendary is moot)
-
-check scaning sly imp:
-	try scaning a random touchable block-concept instead;
 
 section motleyer
 
@@ -19489,7 +19517,7 @@ every turn (this is the raptor kills you rule):
 
 book Clarthead Cathedral
 
-Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is a room in Otters. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise in this north-south passage just unbearable[else]With the [whiners] gone, this is a relatively plain north-south passage[end if]. You recognize coma camo to the east and west.". roomnud of Clarthead Cathedral is table of Clarthead Cathedral nudges.
+Clarthead Cathedral is a concept-room in Otters. Clarthead Cathedral is south of Minded Midden. Clarthead Cathedral is innie. "[if whiners are in Clarthead Cathedral]The noise in this north-south passage just unbearable[else]With the [whiners] gone, this is a relatively plain north-south passage[end if]. You recognize coma camo to the east and west.". roomnud of Clarthead Cathedral is table of Clarthead Cathedral nudges.
 
 check going south in Clarthead Cathedral:
 	if whiners are touchable, say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
@@ -19502,12 +19530,9 @@ to decide which number is whiner-score:
 
 chapter shrewin whiners
 
-the shrewin whiners are plural-named flippable people in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
+the shrewin whiners are plural-named flippable two-of-threers in Clarthead Cathedral. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin or Whisner, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners here block the way south, displaying [list of touchable block-concepts] [if one-whine-down]almost [end if]without stopping. The chatter is all over the place, yet controlled enough to distract you[if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if].". printed name of shrewin whiners is "shrewin['] whiners".
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text of whiners is "BUG".
-
-check scaning whiners:
-	try scaning a random touchable block-concept instead;
 
 section callosity
 
