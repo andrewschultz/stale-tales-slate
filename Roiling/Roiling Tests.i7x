@@ -299,6 +299,91 @@ definition: a thing (called th) is mass-hint-appropriate: [this is a definition 
 	unless th is touchable, no;
 	yes;
 
+volume talk-tests
+
+chapter talky tests - not for release
+
+section grill
+
+grilling is an action applying to one thing.
+
+understand the command "grill" as something new.
+
+understand "grill [thing]" as grilling.
+
+does the player mean grilling the player: it is very unlikely.
+
+carry out grilling:
+	if noun is not a person, say "Try grilling a person, instead." instead;
+	repeat through table of subject-blather:
+		if him-who entry is noun, say "[him-who entry] / [person-subj entry] = [him-say entry][line break]";
+	repeat through table of general-blather:
+		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
+	repeat through table of default-sub-blather:
+		if him-who entry is noun, say "[him-who entry] / = [him-say entry][line break]";
+	repeat through table of default-gen-blather:
+		if default-talker entry is noun, say "[default-talker entry] / = [gen-blah entry][line break]";
+	repeat through table of reflexive-blather:
+		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
+
+section spam
+
+spaming is an action applying to one topic.
+
+understand the command "spam" as something new.
+
+understand "spam [text]" as spaming.
+
+carry out spaming:
+	let foundyet be false;
+	say "You are asking about a topic.";
+	repeat with PEO running through people:
+		now foundyet is false;
+		repeat through table of general-blather:
+			if PEO is him-who entry and topic understood matches topic entry:
+				say "[PEO] x this subject: [him-say entry][line break]";
+				now foundyet is true;
+			if foundyet is false:
+				repeat through table of default-gen-blather:
+					if default-talker entry is PEO:
+						say "[PEO] x this subject: [gen-blah entry][line break]";
+						now foundyet is true;
+	the rule succeeds;
+
+section thingy/spamobj-ing
+
+spamobjing is an action applying to one visible thing.
+
+understand the command "thingy" as something new.
+
+understand "thingy [any thing]" as spamobjing.
+
+carry out spamobjing:
+	let foundyet be false;
+	say "You are asking about a thing.";
+	repeat with PEO running through people:
+		say "[PEO] is a person.";
+	the rule succeeds;
+	repeat with PEO running through people:
+		say "Asking [PEO].";
+		now foundyet is false;
+		repeat through table of subject-blather:
+			if him-who entry is PEO and person-subj entry is noun:
+				say "[PEO]-[noun]: [him-say entry][line break]";
+				now foundyet is true;
+			if foundyet is false and noun is PEO:
+				repeat through table of reflexive-blather:
+					if him-asked entry is noun:
+						say "[PEO]-itself: [him-told entry][line break]";
+						now foundyet is true;
+			if foundyet is false:
+				repeat through table of default-sub-blather:
+					if him-who entry is PEO:
+						say "[PEO]-[noun]: [him-say entry][line break]";
+						now foundyet is true;
+		try asking PEO about the topic understood;
+	the rule succeeds;
+
 volume verbs
 
 chapter coffing
@@ -1798,8 +1883,6 @@ to say list-of-randos:
 		if go-ahead entry is bzzt rule and reps entry > 1:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
-
-volume for the core
 
 Roiling Tests ends here.
 

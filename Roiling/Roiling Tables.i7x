@@ -1801,6 +1801,8 @@ check preferring sometimes abbreviated room descriptions (this is the override b
 
 section otters
 
+the medal check rules are an object-based rulebook.
+
 a medal check rule for a thing (called x):
 	if player does not have medals:
 		if x is ghoul hat or X is sea cube:
@@ -3171,6 +3173,7 @@ larded ladder	"[dome-blab]"
 talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
+tester street	"[dome-blab]"
 
 to say e-m-bonus:
 	if holy nest is off-stage:

@@ -474,6 +474,8 @@ understand "brig" as a mistake ("There, there. This maze is much less hard to ge
 
 chapter Saps' Pass
 
+[a reminder here that we rename Saps' Pass to Phat Path once the hogs are gone]
+
 understand "asp" and "asps" as a mistake ("[Saps Pass] [if lawl wall is moot]was[else]is[end if] dangerous enough.") when player is in Saps Pass.
 
 understand "delis" as a mistake ("You don't need food. And the food would probably be pretty evil, anyway.") when player is in Saps Pass.

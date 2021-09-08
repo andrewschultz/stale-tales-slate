@@ -6,3 +6,4 @@
 # temporary: don't update PDF/PNG
 **/*.pdf
 **/*.png
+appsettings.json

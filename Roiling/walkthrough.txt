@@ -1306,9 +1306,9 @@ The Realist Tailers might argue among themselves if they became ...
 
 > SALTIER
 
-The Promise Imposer is less professional when ...
+The fluster-self rut leaves you agitated.
 
-> SEMIPRO
+> RESTFUL
 
 > N
 
@@ -1318,19 +1318,17 @@ The weeds are free to move until they're...
 
 You can do something with the denim, too. Another Last Lousy Point. They're all over the Towers. Then there's one Last Lousy Point in the area under there.
 
-The fluster-self rut leaves you agitated.
-
-> RESTFUL
-
 The sweatier wait-seer blocks you with patience.
 
 > WEARIEST
 
-The Reed's Ale vendor (differs if you're male or female) can't decide if he should stay or go. To break Lars/Else free from obligations,
+The Promise Imposer is less professional when ...
 
-> RELEASED
+> SEMIPRO
 
-(ALT) > RESEALED (to get Lars's/Elsa's costume to fit)
+The Resident Trendies are too cool to let you past.
+
+> NERDIEST
 
 > E
 
@@ -1380,9 +1378,11 @@ We can help the Coasting Agnostic a bit. They'll help us later. But first, make 
 
 > W
 
-The Resident Trendies are too cool to let you past.
+The Reed's Ale vendor (differs if you're male or female) can't decide if he should stay or go. To break Lars/Else free from obligations,
 
-> NERDIEST
+> RELEASED
+
+(ALT) > RESEALED (to get Lars's/Elsa's costume to fit)
 
 > W
 
@@ -1390,11 +1390,11 @@ Now there are three guardians. We only need to clear one. The mardier admirer.
 
 > MARRIED
 
-Let's clear the traipse pirates so we aren't blocked. They are ruddier than you. Maybe you need to make it so they need a tan.
+Let's clear the traipse pirates so we can walk around totally unimpeded. They are ruddier than you. Maybe you need to make it so they need a tan.
 
 > PASTIER
 
-Now you can detour for an LLP. There are two ways to take the Strudel in Lost Lots.
+Now you can detour for an LLP. There are two ways to take the Strudel in Fringe Finger. One gets a point. One doesn't.
 
 > N
 
