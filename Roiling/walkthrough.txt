@@ -93,6 +93,8 @@ And there's something in the latches! The teariest treatise from Gateman Nat Ega
 
 The giant pin is a last lousy point. It is probably harder than the three ways out, which it clues. I'll save it and other LLPs for the end.
 
+The diorama is just for practice with the settler. You'll learn about how some flips, but not many, have a space in their solutions. Here are the pairings. You can flip them at will, though you don't need to. EVENT MAP/PAVEMENT, BRASS CRAG/CRABGRASS, FARM PLOT/PLATFORM, STEEL PAD/PEDESTAL.
+
 Now to get out of your study. There are three ways. First, the tables.
 
 > STABLE
@@ -679,7 +681,7 @@ That will do it! Since you've solved two store regions, you can now zap stores w
 
 STORE Y seems to be something underwater-ish. There are more points to gain than in STORE P, but guessing the right words seem easier. I find it ironic that the "guess the verb" area seemed to have caused testers the least frustration. Perhaps having to ask "what do I do next" automatically makes people think of verbs, too. I don't know.
 
-In a case where a verb can take an object, you should get a point for either command, e.g. PASTE TAPES or PASTE should both work. I won't label all the cases here.
+In a case where a verb can take an object, you should get a point for either command, e.g. PASTE TAPES or PASTE (spoiler: not a point-gaining action) should both work. I won't label when a subject is valid and when it isn't, and I'll generally stick with one-word commands, while noting what needs to be acted on in the text above.
 
 > OYSTER
 > ENTER BALANCER BARNACLE
@@ -689,6 +691,8 @@ Okay, you're in an action-packed bar. It's totally action-filled, and you need t
 You can do something with the sign, which hints what sort of words can be used here. It's a last lousy point. The pills can also help you skip a puzzle if you SPILL them.
 
 Still, it looks like you need to get rid of the trolls to start. They're there to keep people in, suggesting they do belong there, or haven't done enough. You need to perform three of six actions to annoy people at the Posh Hops Shop.
+
+The gins sign, tips pits and tines stein make for the least typing. So let's tackle them.
 
 > SING
 > SPIT
@@ -747,7 +751,7 @@ You can get the wipes if you want. They lead to a side quest I will detail at th
 
 But you want to be a good guest. The tea-at-a-tee should be pretty straightforward.
 
-> EAT TEA
+> EAT
 
 You will not be surprised to learn that you will find the other half of the paler pearl later. In fact, you could do so in short order now. But it's slightly quicker to go somewhere else first.
 
@@ -762,10 +766,13 @@ Your first order of business is to stop getting hit by a crate.
 > TRACE
 > REACT
 
-Ah, that'll do it.
+Ah, that'll do it. Now the skis.
 
-> KISS SKIS
-> BONK KNOB
+> KISS
+
+Now the knob.
+
+> BONK
 
 Okay, now to deal with the span pans.
 
@@ -781,7 +788,7 @@ The prod needs something simple to jar and open it. It's a command that's genera
 
 > DROP
 
-There's something under the waste and another LLP once you deal with the waste. But this walkthrough is about getting through the game. So let's go west of the plains.
+There's something under the waste and another LLP once you deal with the waste. But this part of the walkthrough is about getting through the game. So let's go west of the plains.
 
 > OUT
 
@@ -797,7 +804,7 @@ Did you examine the arches?
 
 How about examining more thoroughly? Some games force you to do this instead of EXAMINE to find everything, which is a nuisance. But I hope it "works" here.
 
-> SEARCH ARCHES
+> SEARCH
 
 The two paler pearls fit to become a general gleaner...which is too small to read. Fortunately, that's only temporary!
 
@@ -870,7 +877,7 @@ Oh dear! You need to do something with the dialer.
 
 That's a warning from Elvira! You could call back, but the pins are in the way at the moment.
 
-> SPIN PINS
+> SPIN
 
 Note: you can't SNIP them. You don't have anything surgical enough. Now to bug Elvira again.
 
@@ -1265,7 +1272,7 @@ Also, if you want, you can
 
 The toaster allows you to eat stuff which can XRAY stuff you need to look at. Though with this walkthrough, you won't need it.
 
-The next part doesn't need to be ALL done. You can deep-six all but, uh, five of the guardians. (Leave an H shape. Or an I--H rotated by 90 degrees. And you need to clear both guardians in the Actionless Coastline.)
+The next part doesn't need to be ALL done. You can deep-six all but, uh, five of the guardians. (Leave an H shape. Or an I, which is H rotated by 90 degrees. And you need to clear both guardians in the Actionless Coastline.)
 
 > N
 
@@ -1281,9 +1288,9 @@ Those bluster butlers are guarding something important, but maybe you can make t
 
 > SUBTLER
 
-You won't win a fight with someone muscly.
+The denier nereid sure gets in your personal space.
 
-> CLUMSY
+> REINED
 
 The snider diners are sure you can't get past them. The dry wit!
 
@@ -1295,13 +1302,13 @@ By the way, the yacker keycar that appears here? It actually appears in the firs
 
 > E
 
-"SMH, Life" Mel Fish is not Flemish. He just wants to be...
+The Realist Tailers might argue among themselves if they became ...
 
-> HIMSELF
+> SALTIER
 
-The dandier arid den won't let you pass without purchasing some of that Nerd-Aid! But you don't have any money.
+The Promise Imposer is less professional when ...
 
-> DRAINED
+> SEMIPRO
 
 > N
 
@@ -1309,7 +1316,7 @@ The weeds are free to move until they're...
 
 > SEWED
 
-You can do something with the denim, too. Another Last Lousy Point. They're all over the Towers.
+You can do something with the denim, too. Another Last Lousy Point. They're all over the Towers. Then there's one Last Lousy Point in the area under there.
 
 The fluster-self rut leaves you agitated.
 
@@ -1564,15 +1571,19 @@ The cinders are a bonus point. DISCERN will help you get a free pass anywhere, o
 
 How to help Gretta ward off the parleys splayer players? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs, 11-word adverbs, and a 12-word adverb. Since these are random for each playthrough, randomly picking one word in each pod won't work. The adverbs also appear randomly, and you can't guess a pickup line before it's said. So just wait (Z), then go for the seven- or eight-letter words.
 
-You only need three of the seven words.
+You only need three of the seven words. Well, actually two, if you note the players can be calmed down with ...
 
-This twelve-letter adverb always works:
+> SPARELY
+
+One of these twelve-letter adverbs always works:
 > DESPAIRINGLY
+> INDISCREETLY
 
 One of these two ten/eleven-letter adverbs will work:
 > DESPERATELY
-> EMOTIONALLY
 > DRAWLINGLY
+> EMOTIONALLY
+> REACTIVELY
 
 Here are the nine-word adverbs:
 > MARTIALLY
@@ -1598,16 +1609,18 @@ Here are the duplicate-letter eight-word adverbs:
 > SUDDENLY
 
 Here are the unique-letter seven-word adverbs:
-> SAINTLY
+> ANGRILY
+> NASTILY
 > SHADILY
 > SNIDELY
 > STARKLY
 
 Here are the duplicate-letter seven-word adverbs:
 > BOSSILY
+> CATTILY
 > SEEDILY
-> TACITLY
-> TEARILY/IRATELY (you can use either one--note no letters are duplicated, but there are two solutions, so it got bumped to the "easy" pool)
+> TEARILY / IRATELY (you can use either one--note no letters are duplicated, but there are two solutions, so it got bumped to the "easy" pool)
+> TERSELY
 
 Now we're going to skip the conversation, here, but you may wish to work through it. Gretta describes what sort of allies work best against Elvira and why.
 
@@ -1843,6 +1856,8 @@ Yay, a tekno-token for money.
 
 And now a coin! It can be changed now or later.
 
+(ALT) > ICON
+
 > N
 
 > E
@@ -1899,7 +1914,7 @@ Woohoo! A popstar's passport! Maybe it can get you through the gate!
 (You can also note you get called a perp if you go north. That gives a third verb you should have no problem guessing. But you only need two, and, in fact, that's what the game will let you have. Note none of these are meant to be too hard, since you're really just putting ER at the end to RE at the start.)
 
 (ALT) > N
-(ALT) > PERP
+(ALT) > PREP
 
 > N
 
@@ -1974,7 +1989,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 1 (deprecated) : you DESTROY Oyster D at the end and can pull the lever if you want. No yapper.
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game just gives warnings now.
   * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
-  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them. The rude door was replaced by span-pans, which you need to SNAP at to get past. The side quest also has a tricky LLP. Many locations are renamed. Also, the haunter is now a use-saga sausage.
+  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN them. The rude door was replaced by span-pans, which you need to SNAP at to get past. The side quest also has a tricky LLP. Many locations are renamed. Also, the haunter is now a use-saga sausage.
 6 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where it makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
@@ -2067,9 +2082,13 @@ LAST LOUSY POINTS
 
 Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave three of the seven picaros in the Trefoil alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, don't progress the story, but I hope they provide interesting detail. Often they will seem superfluous or even slightly hidden, or the word to solve them may be obscure. (That's why they're not in the main walkthrough.)
 
-Hints are in ROT13. If you aren't sure what ROT13 is, it means moving a letter 13 forward or back in the alphabet. If you don't want to do the translation in your head, and I don't blame you, it can be translated at ROT13.com. I take no responsibility for your being able to figure ROT13 and thus have answers spoiled if you get too good at reading ROT13 clues. If that happens, take time to feel smart. You deserve to.
+Hints are in ROT13. If you aren't sure what ROT13 is, it means moving a letter 13 forward or back in the alphabet. If you don't want to do the translation in your head, and I don't blame you, it can be translated at ROT13.com. I take no responsibility for your being able to figure ROT13 innately and thus have answers spoiled if you get too good at reading ROT13 clues. If that happens, take time to feel smart. You deserve to.
 
 ORDEAL RELOAD:
+
+You can get maximum points if you clear all three ways through to the Largely All-Grey Gallery.
+
+The giant pin can become a CNVAGVAT.
 
 FAVO for the ISBN bins.
 
@@ -2109,15 +2128,17 @@ TROVES:
 
 TNCR at Simple Impels by Peg A. Page.
 
-FGNL around A Sty.
+FGNL around A Sty in Bustle Sublet.
 
 TYNER at the lager (again, interesting ROT13.)
 
+ERYNCFR by the Pleaser Leapers.
+
 QVFPBIRE something about Divorces magazine. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than Divorces.
 
-Note that troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them, and you may or may not be able to solve both. For instance, Sister Tressi and the Marble Blamer. These are listed in the walkthrough.
+Note that troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them. There's no penalty for solving oone and no special reward for solving both. For instance, you only need to deal with one of Sister Tressi and the Marble Blamer to solve the final puzzle. All these pairs are listed in the walkthrough.
 
-Which are they? The live bee/senora, lobster/stream, blamer/sister, and praise spirea/rivets.
+Which are they? The evil bee/SNORE SO ARENA, lobster/stream, blamer/sister, and praise spirea/rivets.
 
 TOWERS:
 
@@ -2127,7 +2148,7 @@ In the Loftier Trefoil:
 The recital article can become GNYPVRE.
 
 In the Scope Copse:
-The Try Us Yurts can be LHEGF.
+The Try Us Yurts can be EHFGL.
 
 In the Baldest Blasted Saltbed:
 The docile old ice can be PBVYRQ.
@@ -2135,18 +2156,27 @@ The docile old ice can be PBVYRQ.
 In the Leveraged Everglade:
 TENAQVBFR for the organised ego drains.
 
-Before visiting either of the Lost Lots or Fringe Finger when both are unvisited, you are sent to the Dourest Detours.
+In Anemic Cinema:
+The angriest ingrates guarding the way west can be NATFGVRE.
+
+In Danger Garden:
+The natives' site van guarding the way south can be INVARFG or ANVIRFG.
+
+Some of the dead-end rooms hint that there is further adventure if you explore the bounding scenery. Outer Route, Shaven Havens and Lost Lots all allow you to a semi-secret room below. That is Dourest Detours.
 EBHFGRQ helps you get refocused and returns you where you meant to go.
+You can also, before you leave, make the seismal samiels NVZYRFF.
 
 In the Lost Lots:
 CEBFVRFG for the sporties' ripostes.
 
 In the Fringe Finger:
-The strudel can be EHFGYRQ for an extra point, though you can just take it.
+The strudel can be EHFGYRQ for an extra point, before or after you take it.
 
 In the Treading Gradient:
 The mended mini denim can be ZVARQ for a new pastry.
 The replay player can become CRNEYL.
+
+Below the Treading Gradient, you also have the Dire and Arid Den. There, you need to feel QNAQVRE.
 
 Once you've cleared everything in one of the main square, a keycar appears. It can become PERNXL.
 
@@ -2154,7 +2184,7 @@ The Coasting Agnostic can also be made NGGRAGVIR in the Subsector.
 
 You can even fix the boat a bit more in Actionless Coastlines. The weirder red wire can be ERJVERQ.
 
-Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer etinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR. Give the top opt pot for a non-anagram point.
+Across Leak Lake, there is the quest for the top opt pot. The pester'n serpent can become CERFRAG, the unripe ur-pine can become CHAVRE, the Nastier Stainer Retinas can become NAGFVRE, and the Tetris Sitter can become GEVFGR. Give the top opt pot for a non-anagram point.
 
 You also get a final last lousy point for ABG HFVAT K-ENL IVFVBA. VS LBH NGR N CNFGEL LBH PNA FGVYY TRG GUVF CBVAG.
 
@@ -2182,6 +2212,9 @@ OTTERS:
 As in Troves and Towers, multiple passages through mean that solving one way makes other puzzles LLPs. There are two ways to get your powers back, which get two points, and you have an extra animal in Lamer Realm and Perverse Preserve. That makes four of the seven LLPs.
 
 You can ERFPVAQ the cinders instead of using them for a clue with DISCERN.
+
+If you cleared the Bran Barn, you can say UBJRIRE to the vow here.
+If you cleared the Loop Pool, you can say HAYRFF to "Sullenness, Us."
 
 There are also two ways to annoy Elmer and Merle.
 Elmer and Merle are also ideas aides and can thus be (temporarily) NFVQR. This gives another LLP.
