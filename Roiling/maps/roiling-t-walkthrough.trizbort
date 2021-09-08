@@ -115,13 +115,13 @@
 			<dock index="0" id="43" port="n" />
 			<dock index="1" id="28" port="s" />
 		</line>
-		<room id="34" name="Vow Here" subtitle="" x="-384" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="34" name="Vow Here" subtitle="" x="-224" y="-352" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="46" name="" description="" style="dashed">
-			<dock index="0" id="12" port="w" />
-			<dock index="1" id="34" port="e" />
+			<dock index="0" id="12" port="n" />
+			<dock index="1" id="34" port="s" />
 		</line>
 		<room id="15" name="gain eels' trust" subtitle="" x="-64" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
-		<line id="16" name="" description="">
+		<line id="16" name="" description="" flow="oneWay">
 			<dock index="0" id="8" port="ne" />
 			<dock index="1" id="15" port="sw" />
 		</line>

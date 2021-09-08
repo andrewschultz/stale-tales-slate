@@ -133,7 +133,7 @@
 			<dock index="0" id="10" port="ne" />
 			<dock index="1" id="25" port="sw" />
 		</line>
-		<room id="50" name="Keycar" subtitle="Clear 1 area" x="-352" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
+		<room id="50" name="Keycar" subtitle="Clear 1 room" x="-352" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<line id="51" name="" description="" style="dashed">
 			<dock index="0" id="2" port="n" />
 			<dock index="1" id="50" port="s" />

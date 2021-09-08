@@ -25,7 +25,7 @@
 		<room id="23" name="win fight in Ether" subtitle="" x="-32" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<room id="26" name="get KEYS from HOGS" subtitle="" x="-32" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<room id="28" name="LLP: Lamb" subtitle="" x="-512" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-24" customDown="0">before making|computer</objects>
+			<objects at="n" custom="yes" customRight="-36" customDown="0">before making|    computer</objects>
 		</room>
 		<room id="30" name="Dismiss Leo/Rand" subtitle="" x="128" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
 		<room id="32" name="Flea/Disk" subtitle="" x="288" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0" />
@@ -87,7 +87,7 @@
 		</line>
 		<line id="9" name="" description="" flow="oneWay">
 			<dock index="0" id="1" port="sw" />
-			<dock index="1" id="6" port="nw" />
+			<dock index="1" id="6" port="ne" />
 		</line>
 		<line id="10" name="" description="" flow="oneWay">
 			<dock index="0" id="6" port="se" />
@@ -131,10 +131,10 @@
 		</line>
 		<line id="33" name="" description="" flow="oneWay">
 			<dock index="0" id="32" port="n" />
-			<dock index="1" id="38" port="ssw" />
+			<dock index="1" id="38" port="s" />
 		</line>
 		<room id="35" name="LLP: Odes Song" subtitle="" x="-512" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSubtitleColor="" roomSmallText="" ZOrder="0">
-			<objects at="n" custom="yes" customRight="-50" customDown="0">before|reaching path</objects>
+			<objects at="n" custom="yes" customRight="-28" customDown="0">  before|Rand/Leo|   follow</objects>
 		</room>
 		<line id="36" name="" description="" style="dashed">
 			<dock index="0" id="1" port="w" />
