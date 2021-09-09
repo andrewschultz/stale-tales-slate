@@ -220,7 +220,7 @@ The size of the desert, um, deters you. You're steer'd back to the odor.
 by one point
 }}SCORE++
 
-@hin,hints
+@hin
 /DEBUG: (bolt|bulge) being objhinted\.
 
 >score

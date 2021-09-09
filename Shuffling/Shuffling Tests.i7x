@@ -110,6 +110,8 @@ chapter ending-testing
 
 [ * simple very-ending test ]
 
+test lbrk with "gonear hotspot/trio/kilns"
+
 test end-test with "gonear manse/exist"
 
 chapter for-testers
