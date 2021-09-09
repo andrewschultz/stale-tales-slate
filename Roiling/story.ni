@@ -3417,7 +3417,7 @@ check taking scenery:
 	if location of player is Cleric Circle, say "That'd be kind of sinful and disruptive." instead;
 	if location of player is Idle Deli, say "The [noun] is part of the ambiance, for better or worse." instead;
 	if location of player is Drain Nadir, say "Nothing here is valuable enough. You need to leave it all behind!" instead;
-	if location of player is Econ Cone, say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
+	if location of player is Econ Cone, say "Oh, you'll TAKE Spoiloplis, all of it. But you can't lug THAT around." instead;
 	if location of player is Upscale Capsule, say "You don't need to take that. Just take inspiration from it." instead;
 	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
 
@@ -3596,7 +3596,7 @@ carry out zaping:
 	if noun is Store U, now oyster is bypassed;
 	if noun is Store P, now presto is bypassed;
 	moot noun;
-	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Hopefully, you somehow made eveything okay behind [the noun] once you're finished here, or maybe it can be saved until after you defeat Elvira.[end if]";
+	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Hopefully, you somehow made everything okay behind [the noun] once you're finished here, or maybe it can be saved until after you defeat Elvira.[end if]";
 	if number of patchable things is 0:
 		say "[line break]With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.";
 		moot chapter patcher;
@@ -4808,7 +4808,7 @@ Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title
 dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
-denier nereid	true	true	false	false	"You can amlmost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
+denier nereid	true	true	false	false	"You can almost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
 try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
 traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
 fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
@@ -4853,7 +4853,7 @@ medals	true	false	false	false	"[if cheat-on is true]The medals clink back and fo
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-stray satyr	true	true	false	false	"The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters." [end otters]
+stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
 s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
 pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
@@ -6228,7 +6228,7 @@ Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimi
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
 Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage, the only way to say I fled is to go back east[end if]."
-Scape Space	"One look at the warding drawing disabues you of any notion of going anywhere except back up."
+Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
@@ -6967,7 +6967,7 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Dusty Study and Report Porter Perrot is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead; [stores]
-	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verrbally, even though that will do no good." instead;
+	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good." instead;
 	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
 	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
@@ -9718,7 +9718,7 @@ check going inside in Carven Cavern:
 
 chapter Respect Specter
 
-the Respect Specter is a vanishing LLPish terse person in Carven Cavern. "[one of]You hear a rustly, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
+the Respect Specter is a vanishing LLPish terse person in Carven Cavern. "[one of]You hear a rustle, then you see an apparition. 'Hi! I'm the Respect Specter. I appreciate what you did to defeat Red Bull Burdell, and I, um, was sent here to help you figure what to do with ambiguous settler readings. It might be pretty clear what to change me to, but what's really important is dealing with ambiguous readings. So you can SCAN me if you want. I'll sit in the corner and wait.'[or]The Respect Specter sits innocuously and respectfully in the corner, and you can SCAN it if you want, or figure what it can become or give you.[stopping]". description is "It's just hanging around, nondescript, not much to say except to help you."
 
 a-text of respect specter is "RRYRRYR". b-text of respect specter is "?R?????". parse-text of respect specter is "x[sp]x[sp]-[sp]?[sp]x[sp]?[sp]?".
 
@@ -10725,7 +10725,7 @@ this is the enter-oyster rule:
 		else:
 			say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is touchable]store W[else if towers is not unsolved]the towers were[else]the truster turrets[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
 			unless the player yes-consents, say "You decide to look around a bit more." instead;
-	say "[one of]You'r a bit worried the balancer barnacle will gobble you up, but Old Warpy puts the jinx on that. You're sucked well away to a bar--so busy and loud people don't notice you fell in. They don't even notice that, unlike them, you are not a seafood person. Err, sea person. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
+	say "[one of]You're a bit worried the balancer barnacle will gobble you up, but Old Warpy puts the jinx on that. You're sucked well away to a bar--so busy and loud people don't notice you fell in. They don't even notice that, unlike them, you are not a seafood person. Err, sea person. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 
 chapter store z
 
@@ -11082,7 +11082,7 @@ the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian l
 to say ast: say "[if screenread is true] ** [end if]"
 
 check scaning Uhh Tut Hut:
-	say "The uhh tut hut gives nothing, but te lairage regalia above it gives a reading.";
+	say "The uhh tut hut gives nothing, but the lairage regalia above it gives a reading.";
 	try scaning lairage regalia instead;
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYR?". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]x".
@@ -12241,7 +12241,7 @@ the votes vetos stove is boring amusing scenery. description of votes vetos stov
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla][paragraph break]Perhaps there is something deeper to DIVORCES and its advocacy of enhanced lifestyles than youi might suspect. It might not be critical, but it could be there.". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
+DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla][paragraph break]Perhaps there is something deeper to DIVORCES and its advocacy of enhanced lifestyles than you might suspect. It might not be critical, but it could be there.". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
@@ -13142,7 +13142,7 @@ this is the shack-south rule:
 	if keyboard is not off-stage and screen is not off-stage:
 		say "You should have what you need. It might be distracting to go back out with all this computer work.";
 		if hawt thaw is moot and starch charts are moot and lamb is moot and sport ports are reflexed:
-			say "You've done everything else you could've, including some weird small detaila. You probably want to focus on things here.";
+			say "You've done everything else you could've, including some weird small details. You probably want to focus on things here.";
 			the rule fails;
 	else if screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
@@ -13458,7 +13458,7 @@ understand "book" and "bad book" as a badbook.
 
 does the player mean doing something with a touchable badbook: it is very likely.
 
-Bakery Do is a badbook. author of Bakery Do is "DeRoy Bak". theme of Bakery Do is "overoptimistic views on enterpeneurism".
+Bakery Do is a badbook. author of Bakery Do is "DeRoy Bak". theme of Bakery Do is "overoptimistic views on entrepeneurism".
 
 a-text of Bakery Do is "RYORYYRR". b-text of Bakery Do is "RYORYYRR". parse-text of bakery do is "x[sp]-[sp]y[sp]x[sp]-[sp]-[sp]x[sp]x".
 
@@ -14914,7 +14914,7 @@ some Paw R Wrap is a singular-named flippable thing. indefinite article of Paw R
 
 a-text of Paw R Wrap is "RYRR". b-text of Paw R Wrap is "??R?". parse-text of Paw R Wrap is "w[sp]a[sp]r[sp]p". Paw R Wrap is parse-spoilable.
 
-description of Paw R Wrap is "Paw-R-Wrap has been a great commercial succeess in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.". printed name of Paw R Wrap is "Paw-R-Wrap".
+description of Paw R Wrap is "Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two demographics with its alternate interpretations: 'Power' wrap, for the practical, and 'Paw [']er,' for those who just love the noise it makes.[paragraph break]As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.". printed name of Paw R Wrap is "Paw-R-Wrap".
 
 chapter warping
 
@@ -16544,7 +16544,7 @@ Rule for printing room description details of the Rosetta Toaster: do nothing in
 
 the Rosetta Toaster has a number called charges. the charges of the Rosetta Toaster is usually 0.
 
-the description of the Rosetta Toaster is "[one of]You begin to stare.[paragraph break][or][stopping]This nutriments instrument, according the writing beneath 'O Treats,' automatically applies a much more appropriate description to the target of your choice than the most obvious one. Which makes up for it not having a dial for how dark you toast your preferred flat bread product. It's not available at-store and known to cause conflicts with namer ramen[one of].[paragraph break]it'as also known as a toast-o-stat[or][stopping]."
+the description of the Rosetta Toaster is "[one of]You begin to stare.[paragraph break][or][stopping]This nutriments instrument, according the writing beneath 'O Treats,' automatically applies a much more appropriate description to the target of your choice than the most obvious one. Which makes up for it not having a dial for how dark you toast your preferred flat bread product. It's not available at-store and known to cause conflicts with namer ramen[one of].[paragraph break]It's also known as a toast-o-stat[or][stopping]."
 
 understand "toast-o-stat" and "stat" as toaster.
 
@@ -17024,7 +17024,7 @@ the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
 book Obscurest Subsector
 
-Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]you so neatly diapatched with the duck's help[else]are holding someone in captivity, with the help of a most devious luck node[end if]. A log-gaol blocking every way but west keeps the subsector obscurest[if dr yow is moot], and with Dr. Yow gone, you don't need to do anything else here[end if].". roomnud of Obscurest Subsector is table of Obscurest Subsector nudges.
+Obscurest Subsector is east of Danger Garden. Obscurest Subsector is in Towers. "A place this obscure is perfect for prison ropins, which [if duck is returned]you so neatly dispatched with the duck's help[else]are holding someone in captivity, with the help of a most devious luck node[end if]. A log-gaol blocking every way but west keeps the subsector obscurest[if dr yow is moot], and with Dr. Yow gone, you don't need to do anything else here[end if].". roomnud of Obscurest Subsector is table of Obscurest Subsector nudges.
 
 chapter scenery
 
@@ -17606,7 +17606,7 @@ check giving to Tetris Sitter:
 	if crocus is off-stage, say "You consider giving the top opt pot to St. Teri, but that blub bulb won't make anyone happy. Maybe you can do a few last-minute things to make a plant bloom." instead;
 	say "St. Teri smiles at the top opt pot and looks less tense. She realizes whom the gift must be from. She sighs, nods, hangs her new flower out back where it can get better, then returns, thanking you.";
 	min-and;
-	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaning optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
+	if cur-score of towers is max-score of towers - 2 and min-score of towers is max-score of towers - 2, say "[line break]NOTE: you probably deserve to know the remaining optional point is for not using any hintpastries. So if you fix the Curst Palace, you'll hit the maximum. Good work! Towers is a long area.";
 	moot top opt pot instead;
 
 check going outside in Mesprise Premises: try going east instead;
@@ -17967,7 +17967,7 @@ description of denier nereid is "Alluring and all that, but very languid. She's 
 
 a-text of denier nereid is "RYYRYR". b-text of denier nereid is "RGYR??". parse-text of denier nereid is "r[sp]e[sp]?[sp]x[sp]?[sp]x". denier nereid is cheat-spoilable.
 
-gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly greatful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
+gualoc of denier nereid is Scope Copse. guadir of denier nereid is north. block-text of denier nereid is "She languidly expresses how you don't really need to go [psgdir of denier nereid], and anyway, if you do save somebody or something, they won't be properly grateful, so why bother. She sees you getting tired and says 'END IRE!' This causes you to see red.". clue-text of denier nereid is "Looking again at the denier nereid, she is rather far away from her native water. Perhaps she should be pulled back.". taunt-text of denier nereid is "The denier nereid gives a 'why bother' gesture."
 
 section snider diners
 
@@ -17983,7 +17983,7 @@ chapter Baldest Blasted Saltbed guardians
 
 section promise imposer
 
-The promise imposer is a blue neuter guardian. "A promise imposer stands [psgdir of promise imposer], not willing to let you by. [imposer-guard][one of]. Promise Imposers are the highest-paid and most esteemed of Elvira's henchmen, assigned to repress potential anti-Elivra types from from doing what they want or need to do[or][stopping].". description of promise imposer is "Looking serious and confident and superior. It's not clear what promises they're impoaing, but the net result is, they just don't want you to get by. But perhaps you could bump its social or job status down a notch."
+The promise imposer is a blue neuter guardian. "A promise imposer stands [psgdir of promise imposer], not willing to let you by. [imposer-guard][one of]. Promise Imposers are the highest-paid and most esteemed of Elvira's henchmen, assigned to repress potential anti-Elivra types from from doing what they want or need to do[or][stopping].". description of promise imposer is "Looking serious and confident and superior. It's not clear what promises they're imposing, but the net result is, they just don't want you to get by. But perhaps you could bump its social or job status down a notch."
 
 to say imposer-guard:
 	let rm2 be far-room of promise imposer;
@@ -20434,7 +20434,7 @@ chapter cantaloupe
 
 the cantaloupe is a fruit.
 
-the can of peanut cola is a boring thing. "A can of peanut cola turned up from the ruts circuits. Surely it can become something a bit tastier.". description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like thia before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
+the can of peanut cola is a boring thing. "A can of peanut cola turned up from the ruts circuits. Surely it can become something a bit tastier.". description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan. You've seen bottles like this before, with an actual peon or neat cupola on the label, but all this has is red writing with the brand name.". bore-text is "The peanut cola isn't good for much. It can become something more palatable, but what?". bore-check of peanut cola is the bore-peanut-cola rule.
 
 a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY". parse-text of peanut cola is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]-".
 
@@ -20472,7 +20472,7 @@ a-text of megaton pear is "RYRYRRYRYRY". b-text of megaton pear is "RYRYRRYRYRY"
 
 section rampage note
 
-the rampage note is auxiliary boring scenery. description of rampage note is "[pre-pom-blah].". bore-text of rampage note is "The rampage note is useless as-is. Change it, maytbe?"
+the rampage note is auxiliary boring scenery. description of rampage note is "[pre-pom-blah].". bore-text of rampage note is "The rampage note is useless as-is. Change it, maybe?"
 
 a-text of rampage note is "RYRYRRYRYRY". b-text of rampage note is "RYPYRRYPYPG". parse-text of rampage note is "x[sp]-[sp]m[sp]-[sp]x[sp]x[sp]-[sp]n[sp]-[sp]t[sp]e".
 
@@ -20502,7 +20502,7 @@ to decide what number is mound-writing:
 
 to say what-on-mound:
 	if mound-writing is 0:
-		say ". Many weird and uninterersting things are written on the mound. None are helpful any more. You got enough from it";
+		say ". Many weird and uninteresting things are written on the mound. None are helpful any more. You got enough from it";
 		continue the action;
 		say ". [if mound-writing > 1]Things are[else]Something is[end if] writen in red on the un-mod mound";
 	if stucco is in swell wells, say ".[paragraph break]There's an advertisement in red for [stucco-ad].";
@@ -20853,7 +20853,7 @@ book Clangier Clearing
 
 check going east in swell wells:
 	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
-	if tekno token is moot, say "You bartered for everything you could inthe Clangier Clearing." instead
+	if tekno token is moot, say "You bartered for everything you could in the Clangier Clearing." instead
 
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
 
@@ -22642,7 +22642,7 @@ this is the presto-alt rule:
 	else:
 		say "[2da]You have two ways to remove the hoop ahead.";
 	if maze-points > 0:
-		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT was how to cop out of Nowt Town, but for only one poine instead of [maze-points in words][end if].";
+		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT was how to cop out of Nowt Town, but for only one point instead of [maze-points in words][end if].";
 	else:
 		say "[2da]There are three ways to get by the maze ahead, each giving a different number of points.";
 	if hogs are moot:
@@ -22905,7 +22905,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
 		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complate Ornate Atoner Renato's quest[end if].";
+		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
@@ -23182,7 +23182,7 @@ understand "allrand" as allranding.
 carry out allranding:
 	say "ALLRAND dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
 	if parleys splayer players are moot:
-		say "WARNING you cleared the players/macks, so moving all pickup lines to [downside] may be useless or woese.";
+		say "WARNING you cleared the players/macks, so moving all pickup lines to [downside] may be useless or worse.";
 	else:
 		say "Moved all players/macks['] pickup lines to Disowned Downside.";
 	now all pickup-lines are in Disowned Downside;

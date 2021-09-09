@@ -1653,7 +1653,7 @@ to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of
 
 section cruelest lectures auxiliary
 
-to say blab-un: say "The blabber babbler is unchangeable, but perhaps indiectly moving [him-her] will work"
+to say blab-un: say "The blabber babbler is unchangeable, but perhaps indirectly moving [him-her] will work"
 
 to say ian-un: say "Ian is unchangeable, but maybe he is movable"
 
@@ -2325,7 +2325,7 @@ to say coin-icon:
 	else if player has s-c or player has coins:
 		say "coins";
 	else:
-		say "BUG. The singed design ahould be a part of something you're holding but isn't"
+		say "BUG. The singed design should be a part of something you're holding but isn't"
 
 to say slot-no: say "[if lost slot is off-stage]Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear[else]After all that work getting it to appear, you don't want to make the lost slot vanish[end if]"
 

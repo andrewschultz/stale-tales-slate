@@ -599,7 +599,7 @@ understand "renga" as a mistake ("Now is not the time for poetry.") when player 
 
 understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in Anger Range and carps are in Anger Range.
 
-understand "unheart" as a mistake ("Silly internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of sausage.
+understand "unheart" as a mistake ("Silly Internet slang isn't active enough, here.") when player is in Anger Range or location of player is location of sausage.
 
 chapter Hardest Trashed Dearths
 
