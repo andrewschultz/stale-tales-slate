@@ -699,7 +699,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "knot"	299303281	gadget	--	"[titenot]."
 "salient"	497092104	salient saltine	--	"The saltine's there to help you. Changing it might work against you."
 "point"	372828908	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
-"parse"	393057655	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
+"parse"	393057655	--	can-i-parse rule	"There's no in-between for the PARSE and SPARE commands for the gadget."
 "angle"	285314976	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
 "yorpwald"	548467110	--	past-loader rule	"[if player is in Notices Section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
 "retry"	523922985	--	know-retry-yet rule	"[if player is in trips strip or trips strip is unvisited]You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no[else]Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire[end if]."

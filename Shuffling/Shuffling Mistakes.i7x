@@ -430,7 +430,7 @@ understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not litera
 
 understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Elm Train Terminal.
 
-understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it sbove the cafe face with the velcro[end if].") when cafe face is touchable.
+understand "tar" as a mistake ("[if cafe-climbed is false]That'd be neat, make the wall sticky so you could climb and deal with that [pig-or-opening]...but you might get stuck to it, too. Need something clingy but less gooey[else]No need. You made it above the cafe face with the velcro[end if].") when cafe face is touchable.
 
 chapter Esoteric Coteries
 

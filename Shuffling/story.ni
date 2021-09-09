@@ -2252,7 +2252,7 @@ preflip	pretodo
 gateman	"nametag -> gateman" [Ordeal Loader]
 tenibac	"cabinet -> Bactine" [stores]
 ogled lodge	"Store R -> Resort"
-silver	"[if livers are not moot]livers[else]sliver[end if] -> SLIVER" [forest]
+silver	"[if livers are not moot]livers[else]sliver[end if] -> SILVER" [forest]
 drapes	"spread -> [if red asp is in Emptiness Sepiments]RED ASP -> [end if]drapes"
 r2	"room -> moor" [sortie]
 hallway	"[if hay is part of scraped wall]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
