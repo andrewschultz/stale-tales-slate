@@ -365,7 +365,7 @@ You see yourself exploring the posted depots you created.
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
 #preefcheck ogled lodge
 >pf
-Store R -> resort
+Store R -> Resort
 
 @gn
 >n
@@ -534,7 +534,7 @@ Store P -> PRESTO in A Roiling Original
 Hm, that seems right, but it doesn't work this game!
 #preefcheck of store u
 >pf
-Store R -> ROUTES in A Roiling Original
+Store U -> ROUTES in A Roiling Original
 #mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.

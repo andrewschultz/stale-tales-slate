@@ -913,6 +913,7 @@ They see your gardenia and snatch it away before you can offer properly. "Yes! Y
 >undo
 >undo
 >undo
+>undo
 
 @mis
 #mistake test for loafer
@@ -1021,16 +1022,14 @@ It was the wrong shape for the bag, anyway. Maybe the bag could hold the words i
 >undo
 >undo
 
-@gle,hin,max
+@hin,max
 >barcode
 by one point
 >take begonias
 "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel for a weapon, though."
 
-@gle
-You are holding a bag with one hand and plugging an ear with another.
-
 @hin
+You are holding a bag with one hand and plugging an ear with another.
 DEBUG: begonias being objhinted.
 
 @max
@@ -1039,23 +1038,21 @@ DEBUG: begonias being objhinted.
 You already got the begonias--don't mess with the merchandise.
 >undo
 
-@gle,hin,max
+@hin,max
 >undo
 >undo
 
 >take heaths
 
-@gle,hin
+@hin
 >barcode
 by one point
 
-@gle
-You see a weapon at your side, as if tied to a belt.
-
 @hin
+You see a weapon at your side, as if tied to a belt.
 DEBUG: heaths being objhinted.
 
-@gle,hin
+@hin
 >undo
 
 @nud
@@ -1657,7 +1654,7 @@ No matter how hard you try to convince yourself they are lovely, you're not smit
 \\
 #mistake retest for tar
 >tar
-No need. You made it sbove the cafe face with the velcro.
+No need. You made it above the cafe face with the velcro.
 
 >put controls in opening
 #notana

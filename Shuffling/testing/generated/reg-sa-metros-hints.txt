@@ -182,7 +182,6 @@ by one point
 "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel for a weapon, though."
 
 You are holding a bag with one hand and plugging an ear with another.
-
 DEBUG: begonias being objhinted.
 
 >undo
@@ -194,7 +193,6 @@ DEBUG: begonias being objhinted.
 by one point
 
 You see a weapon at your side, as if tied to a belt.
-
 DEBUG: heaths being objhinted.
 
 >undo

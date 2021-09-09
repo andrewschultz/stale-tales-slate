@@ -15,6 +15,9 @@
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 [That's worth noting in your notepad for later, so you do, under FLIPS.]
+#preefcheck gateman
+>pf
+nametag -> gateman
 
 >in
 Rested Desert

@@ -1227,6 +1227,11 @@ You smirk at the grinder you trashed.
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
 
+@nud
+#mistake test for silver
+>silver
+The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
+
 >sliver
 Your score has just gone up by one point.
 }}SCORE++
@@ -1260,11 +1265,6 @@ The sliver turns silver for a moment.
 {$SCOS}
 @!
 {$SFIXMAX}
-
-@nud
-#mistake test for silver
->silver
-The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
 
 >e
 >n
@@ -1370,7 +1370,7 @@ The drapes are too thick.
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 #preefcheck silver
 >pf
-sliver->silver
+sliver -> SILVER
 
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.

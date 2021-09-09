@@ -157,6 +157,9 @@ The drapes are too thick.
 #pre-sliver-silver rule
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
+#preefcheck silver
+>pf
+sliver -> SILVER
 
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.

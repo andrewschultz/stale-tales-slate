@@ -123,7 +123,7 @@ Mum, dud mud blocks your way west. You can only go south to the Trap Part or eas
 !to the trellis.
 >s
 >w
-Mum, dud mud blocks your way. You can only go north to the kitchen or east.
+Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 >undo
 >undo
 
@@ -378,7 +378,7 @@ DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
 
 >n
-Mum, dud mud blocks your way. You can only go west or south.
+Mum, dud mud blocks your way north. You can only go west or south.
 
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
@@ -392,7 +392,7 @@ Your score has just gone up by one point.
 You see yourself building a huge structure in the moor without saying anything.
 
 >n
-Mum, dud mud blocks your way. You can only go west or south or, since you opened the hallway, east.
+Mum, dud mud blocks your way north. You can only go west or south or, since you opened the hallway, east.
 
 >score
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.

@@ -306,6 +306,10 @@ You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
+#preefcheck drapes
+>pf
+spread -> drapes
+>undo
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.

@@ -816,6 +816,10 @@ You smirk at the grinder you trashed.
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
 
+#mistake test for silver
+>silver
+The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
+
 >sliver
 Your score has just gone up by one point.
 
@@ -824,10 +828,6 @@ The sliver seems to bend, but it snaps back. As if it's impatient to do or be mo
 
 >score
 You currently have 13 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-
-#mistake check for silver
->silver
-The livers pulse for a moment, but ... nothing happens. Perhaps they have another use, first.
 
 >e
 >n

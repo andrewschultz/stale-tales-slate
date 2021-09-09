@@ -339,33 +339,49 @@ The trade tread isn't for commenting on, it's for passage to the metros.
 #mistake test for lost
 >lost
 No, you need to find your way through individual stores.
-#mistake test for oyster
->oyster
-Nice try, but that's next game!
 #mistake test for presto
 >presto
 Your magic is not advanced enough to change store p! Well, not this game!
-#mistake test for routes
->routes
-Hm, that seems right, but it doesn't work this game!
 #mistake test for strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
 #mistake test for tories
 >tories
 I don't think they would help Yorpwald. Maybe it would help our world fractionally if they left, but I don't want to get too far into politics, here.
-#mistake test for towers
->towers
-That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
-#mistake test for troves
->troves
-Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 #mistake test for destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
 #mistake test for doters
 >doters
 You don't need people oohing and ahing at your skill.
+
+#preefcheck of store p
+>pf
+Store P -> PRESTO in A Roiling Original
+#mistake test for routes
+>routes
+Hm, that seems right, but it doesn't work this game!
+#preefcheck of store u
+>pf
+Store U -> ROUTES in A Roiling Original
+#mistake test for troves
+>troves
+Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
+#preefcheck of store v
+>pf
+Store V -> TROVES in A Roiling Original
+#mistake test for towers
+>towers
+That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
+#preefcheck of store w
+>pf
+Store W -> TOWERS in A Roiling Original
+#mistake test for oyster
+>oyster
+Nice try, but that's next game!
+#preefcheck of store y
+>pf
+Store Y -> OYSTER in A Roiling Original
 
 >n
 hubs bush
