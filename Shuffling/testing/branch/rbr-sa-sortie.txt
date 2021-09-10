@@ -239,7 +239,7 @@ It's a kitchen. You need to make something. But there are no ingredients around-
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman and the bottle of CATHOUSE perfume for a few seconds. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate and the cheesy spearman for a few seconds. Your warts also tingle.
 
 @scan
 #gadget test: warts to straw
@@ -339,7 +339,7 @@ DEBUG INFO: CERT-TEXT: GRI--.
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate, the cheesy spearman, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
 
 @gle
 >straw
@@ -442,7 +442,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 
 @gle
 >angle
-You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the bottle of CATHOUSE perfume, the cult tee, the skate, the cheesy spearman, the grist (faint) and the cake pan (faint) for a few seconds. Your warts also tingle.
 
 @!min
 >grits
@@ -1576,7 +1576,7 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 
 @gn
 >s
-Dud, mum mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
+Mum, dud mud blocks your way south. You can only go west back to the Trap Part or north to the trellis.
 
 @mis
 #mistake retest for pray

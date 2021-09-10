@@ -492,10 +492,7 @@ hub-region is Stores.
 glean-rule of ordeal loader is ordeal-glean rule.
 glean-rule of stores is stores-glean rule.
 
-reg-sto of forest is Store F. reg-ent of forest is scented descent. glean-rule of forest is forest-glean rule.
-reg-sto of sortie is Store I. reg-ent of sortie is posted depots. glean-rule of sortie is sortie-glean rule.
-reg-sto of metros is Store M. reg-ent of metros is trade tread. glean-rule of metros is metros-glean rule.
-reg-sto of resort is Store R. reg-ent of resort is ogled lodge. glean-rule of resort is resort-glean rule.
+[reg-stos are defined after stores are defined]
 
 to solve-region (sre - a region):
 	process the notify score changes rule;
@@ -5024,6 +5021,13 @@ understand "resort" as ogled lodge when player is in Trips Strip and ogled lodge
 
 this is the resort-entry rule:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the ogled lodge thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise. You wind up somewhere ethereal. Have you been made a deity? A high priest? Even without defeating Red Bull Burdell?";
+
+book store properties (at the end so item namespaces aren't overwritten)
+
+reg-sto of forest is Store F. reg-ent of forest is the scented descent. glean-rule of forest is forest-glean rule.
+reg-sto of sortie is Store I. reg-ent of sortie is the posted depots. glean-rule of sortie is sortie-glean rule.
+reg-sto of metros is Store M. reg-ent of metros is the trade tread. glean-rule of metros is metros-glean rule.
+reg-sto of resort is Store R. reg-ent of resort is the ogled lodge. glean-rule of resort is resort-glean rule.
 
 volume Forest
 
@@ -10087,7 +10091,7 @@ check going nowhere (this is the main can't go that way rule) :
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
 	say "You can go [list of viable directions] here." instead;
 
-to say dmb: say "[dmm] blocks your way [noun].  "
+to say dmb: say "[dmm] blocks your way [noun]. "
 
 table of nowheres [tnw]
 theloc	thereject
