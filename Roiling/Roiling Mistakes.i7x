@@ -1078,7 +1078,7 @@ understand "darter" as a mistake ("Art Erd has nowhere to run[if So Great Storag
 
 understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is touchable.
 
-understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera Darter.
+understand "red rat" as a mistake ("Red? Dr. Tera Darter is nowhere NEAR that left-wing. Rat? Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in Scape Space and greedy-person is Dr Tera Darter.
 
 understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in Scape Space.
 
@@ -1098,11 +1098,11 @@ understand "send" as a mistake ("Maybe in another game, you could do that, if yo
 
 chapter Peek Keep
 
-understand "dali" as a mistake ("Not surreal enough for you?") when player is in Peek Keep.
+understand "dali" as a mistake ("Not surreal enough for you?") when spy dial display is touchable.
 
-understand "laid" as a mistake ("The spy dial is already laid out.") when player is in Peek Keep.
+understand "laid" as a mistake ("The spy dial is already laid out.") when spy dial display is touchable.
 
-understand "singed" as a mistake ("You already saw one when you helped Curtis. Plus, arson is bad.") when Design Deigns is touchable.
+understand "singed" as a mistake ("You already saw a singed design when you helped Curtis. Plus, arson is bad.") when Design Deigns is touchable.
 
 chapter Sparse Spares
 

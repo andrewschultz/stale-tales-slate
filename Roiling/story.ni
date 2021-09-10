@@ -4292,7 +4292,7 @@ when play begins (this is the basic initialization rule):
 	now Nowt Town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
-	if map region of myrm is in Otters, no;
+	unless map region of myrm is Otters, no;
 	if myrm is Minded Midden and bleary barley is touchable, no;
 	if myrm is Shiner Shrine or myrm is Clarthead Cathedral, decide no;
 	if myrm is Lamer Realm or myrm is Perverse Preserve, no;
@@ -13628,7 +13628,7 @@ carry out showing it to:
 
 chapter Compile
 
-the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder credo seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
+the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder decor seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
 
 report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy." instead;
 
@@ -21326,14 +21326,23 @@ to left-to-see:
 				say "You could still examine [the QQ] [if player is in Sparse Spares]here[else]in Sparse Spares[end if].";
 				continue the action;
 	repeat through table of xibits:
+		if exhib entry is unnoted and exhib entry is touchable:
+			if exhib entry is unexamined:
+				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine [if exhib entry is plural-named]them[else]it[end if].";
+				continue the action;
+			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined but not read)[end if] to look through.";
+			continue the action;
+	repeat through table of xibits:
 		if exhib entry is unnoted:
 			if location of exhib entry is unvisited:
 				say "You still haven't gone [cueloc of exhib entry] from Peek Keep.";
 				continue the action;
+	repeat through table of xibits:
+		if exhib entry is unnoted:
 			if exhib entry is unexamined:
 				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine [if exhib entry is plural-named]them[else]it[end if].";
 				continue the action;
-			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined by not read)[end if] to look through.";
+			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined but not read)[end if] to look through.";
 			continue the action;
 	if Sparse Spares is unvisited:
 		say "There's some random junk below the entry to Peek Keep.";
@@ -21355,6 +21364,7 @@ xabing is an action applying to one thing.
 carry out xabing:
 	if noun is not an exhibit, say "XAB only works for an exhibit." instead;
 	let max-row be number of rows in notes-table of noun;
+	if noun is Novella, say "The novella is an exhibit, but it works differently from others. You'll want to read its 100 pages by number." instead;
 	if notes-row of noun is max-row - 1:
 		say "You're already next to the end for [noun]." instead;
 	while notes-row of noun < max-row - 1:
@@ -21416,7 +21426,7 @@ check going south in Peek Keep:
 	if debug-state is true:
 		try xtraking;
 	if number of not exhausted exhibits is 0:
-		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
+		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers['] money.";
 		end the story;
 	else:
 		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
@@ -21525,6 +21535,7 @@ carry out tenpgreading:
 	while novella is not exhausted and count < 10:
 		increment count;
 		read-lowest-page;
+	now turbo-novella is false;
 	if novella is exhausted:
 		say "Well, that's all. Hooray for speed-reading.";
 
@@ -21532,14 +21543,19 @@ to read-lowest-page:
 	let xyz be 1;
 	let nonsense be false;
 	repeat through table of pagelist:
-		if page-read-yet entry is true or comprehensible entry is false:
+		if comprehensible entry is false:
+			[if debug-state is true, say "DEBUG: nonsense page [xyz].";]
 			now nonsense is true;
+		else if page-read-yet entry is true:
+			now nonsense is false;
+		if page-read-yet entry is true or comprehensible entry is false:
+			[if debug-state is true, say "DEBUG: skipping page [xyz].";]
 			increment xyz;
 		else:
 			if turbo-novella is false:
 				say "[if nonsense is true]You have to skip a bit to get to a sensible page ([xyz])[else]The next page ([xyz]) makes enough sense, you guess[end if].";
 			else:
-				say "[b]PAGE [xyz]: [r]";
+				say "[if nonsense is true](skipping some totally nonsensical stuff) [end if][b]PAGE [xyz]: [r]";
 			try numreading xyz;
 			the rule succeeds;
 	say "You've read through everything that makes sense, so you may want to look at a specific page.";
@@ -21591,7 +21607,7 @@ when play begins (this is the seed novella rule) :
 
 book Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder credo and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "A techs chest sits here, full of weird information and tips. It's divided into coder decor and raised aiders. They may be too technical, but maybe you can get a general feel for the silly tricks that went into Shuffling Around and A Roiling Original. You can also look at Tester Street outside, or you exit go back south.". roomnud of Hows Show is table of Hows Show nudges.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "the whos-show is already under CREDITS.";
@@ -21604,7 +21620,7 @@ to decide whether nuf-hows-examined:
 
 section tester street
 
-Tester Street is an exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
+Tester Street is a proper-named exhibit in Hows Show. description of Tester Street is "[one of]Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The 'couldn't have done it without them' cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.[or]More on testing.[stopping]". notes-table of Tester Street is table of testing notes.
 
 section techs chest
 
