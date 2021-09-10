@@ -33,7 +33,8 @@ Peek Keep
 
 #mistake test for singed
 >singed
-You already saw one when you helped Curtis. Plus, arson is bad.
+There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
+!You already saw a singed design when you helped Curtis. Plus, arson is bad.
 
 #nudge for peek
 >pkee
@@ -42,17 +43,11 @@ You don't need to flip anything here, really. Certainly not a room.
 >x me
 You look just fine.
 
-#don't let the player go outside
->au -1
-
-#let's turn on auto scoring every move
->scam
-There's no score in the Demo Dome. You just need to look around.
-
 >s
 !There's no score in the Demo Dome. You just need to look around.
 
 Are you sure you want to leave before looking at everything?
+>n
 
 >x disport
 
@@ -63,8 +58,15 @@ There's nothing too tricky to do in the Demo Dome. You can THINK or request the 
 >gerta
 It was tested to make sure even you couldn't magic it open.
 
+>x ignsay
+UNFOLD OLD FUN, MEMOIR: I'M MORE.
+
 #nudge for sgni
 >igns
+No need to mess with the helpful sign.
+
+#nudge for saying
+>siyang
 No need to mess with the helpful sign.
 
 #nudge for unfold
@@ -75,31 +77,32 @@ No need to mess with the helpful sign.
 >memoir
 No need to mess with the helpful sign.
 
->x entry
-UNFOLD OLD FUN, MEMOIR: I'M MORE.
-
-#nudge for ertyn
->etrny
-No need to mess with the helpful sign.
-
+# this is a test to make sure stuff doesn't show up before X GRATE
 #nudge for display
 >dipslay
 !You won't figure the code
 
+##############################################nudges before and after are different
+
 >x grate
+
+#mistake retest for singed
+>singed
+!There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
+You already saw a singed design when you helped Curtis. Plus, arson is bad.
 
 #nudge for shall
 >shlal
 You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
 
 >turn dial
-The dial is out of reach.
+The Spy Dial Display is currently off and out of reach.
 
 >turn dial on
-The dial is out of reach.
+The Spy Dial Display is currently off and out of reach.
 
 >turn dial off
-The dial is out of reach.
+The Spy Dial Display is currently off and out of reach.
 
 #nudge for demo
 >edom
@@ -124,14 +127,6 @@ Not surreal enough for you?
 #mistake test for laid
 >laid
 The spy dial is already laid out.
-
-#nudge for shefl
->flesh
-This is a museum! Messing with the exhibits would be very bad form.
-
-#nudge for flashed
->flashed
-This is a museum! Messing with the exhibits would be very bad form.
 
 #nudge for design
 >edgins
@@ -167,6 +162,11 @@ This is a museum! Messing with the exhibits would be very bad form.
 
 >in
 Intel Inlet
+
+>x apses
+The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a page of former content:
+
+(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload.
 
 >x thesis
 
@@ -256,13 +256,13 @@ NOTE: you've read all the way through
 You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
 >g
@@ -288,10 +288,9 @@ Ned's Dens
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
 
-
 ##nudge for neds
 >sedn
-Maybe in another game, you could do that, if you walked around right. But not this one.
+You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one! There are so many awesome ones!
 
 >read chronicle
 >g
@@ -308,7 +307,8 @@ Maybe in another game, you could do that, if you walked around right. But not th
 >g
 >g
 >g
-Another thought reads: Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate.
+Another thought reads:
+Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate.
 
 That's the end of the Chronicle. You can read it again, if you want.
 
@@ -477,10 +477,10 @@ Bulk-Klub's credibility took a hit once Elvira got on their board of directors, 
 >score
 /You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
 
->au 1
 >u
 /You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
 >s
+>y
 You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
 
 >undo
@@ -501,11 +501,11 @@ You take a break, ignoring the final eight things in Sparse Spares, and get back
 >x bolt case
 You could still examine the parcels clasper here.
 
->au 1
 >u
 You could still examine the parcels clasper in Sparse Spares.
 
 >s
+>y
 You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
 
 >undo
@@ -517,42 +517,134 @@ You take a break, ignoring the parcels clasper in Sparse Spares, and get back to
 You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
 !ignoring
 
-* demo-saw-some
+* demo-track-progress
 
 >demo dome
->au -1
->scam
 
->x disport tripods
+>score
+There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin" Diviner or Sharper Phraser. Or have them all. You've earned it!
+You saw the disport tripods here in Peek Keep, but you didn't examine them.
+!You can toggle
+
+>score
+!There's no score
+You saw the disport tripods here in Peek Keep, but you didn't examine them.
+
+##############################peek keep and disport tripods
+
+>s
+Are you sure you want to leave before looking at everything? You can type SCORE or THINK to see what you still haven't done.
 >n
+Okay, why not look around a bit more.
+
+>xtrak
+
+UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: nothing.
+
+>xab tripods
+The disport tripods advertise another way to enjoyably pass time after you are done.
+
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: disport tripods (Peek Keep).
+EXHAUSTED exhibits: nothing.
+
+>score
+You still haven't gone north from Peek Keep.
+
+>x tripods
+NOTE: you've read all the way through.
+
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep).
+
+>n
+Hows Show
+
+##############################hows show: tester street
+
+>x tester street
+Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
+>g
+More on testing.
+
+>xab tester street
+More on testing.
+
+>score
+You saw the coder decor here in Hows Show, but you didn't examine it.
+
+UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: Tester Street (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep).
+
+>x tester street
+More on testing.
+NOTE: you've read all the way through.
+
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
+
+#################################hows show: coder decor
+
 >x coder decor
+You read some of the coder decor.
+!You read some more of the coder decor.
+
+>xab coder decor
+!You read some of the coder decor.
+You read some more of the coder decor.
+
+UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: coder decor (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
+
+>x coder decor
+NOTE: you've read all the way through.
+
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
+
+#################################hows show: raised aiders
+
 >x raised aiders
+You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+!You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
->out
->in
->x calendar
->x thesis
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: raised aiders (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
 
->out
+>xab raised aiders
+You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+!You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+
+>x raised aiders
+NOTE: you've read all the way through.
+
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERSUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
+
+>score
+You still haven't gone west from Peek Keep.
+
+#################################Ned's Dens: Chic Loner Chronicle
+
+>s
 >w
->x chronicle
->e
->e
->x novella
->read novella
->w
->s
-Are you sure you want to leave before exhaustively looking at everything? You can type SCORE to see what you still haven't done.
->au 1
->s
-It's--yes, you've sort of lived it, already. You're just too busy for frivolity. You've had a look at everything, just not in total detail.
-Epilogue's Up! Lie, Ego
+Ned's Dens
 
->undo
+>score
+You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
 
->d
->x clasper
->u
->s
-busy for frivolity.
-!not in total detail
