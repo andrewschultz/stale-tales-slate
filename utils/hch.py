@@ -126,7 +126,7 @@ def match_slider_tests():
                 string_to_slide = re.sub("\]", "", string_to_slide)
                 slider_tracking[aux_sect][string_to_slide] = False
     for x in slider_tracking:
-        file_name = "reg-roi2-{}-slider.txt".format(x.replace(' ', '-'))
+        file_name = "reg-roi-{}-slider.txt".format(x.replace(' ', '-'))
         with open(file_name) as file:
             for (line_count, line) in enumerate(file, 1):
                 ll = line.lower().strip()

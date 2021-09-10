@@ -356,6 +356,7 @@ to decide whether the action is procedural: [aip]
 	if attacking, yes;
 	if smelling, yes;
 	if listening, yes;
+	if xabing, yes;
 	if qbc_litany is table of no conversation: [we can goto something boring with no problen]
 		if gotoing, yes;
 		if gotothinging, yes;
@@ -4070,7 +4071,7 @@ carry out requesting the score:
 	if mrlp is nothing, say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
 		if dome-score-not is false:
-			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites['] Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!";
+			say "There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites['] Listee, Greaten-Grantee, Derivin['] Diviner or Sharper Phraser. Or have them all. You've earned it!";
 			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true and player is in Strip of Profits, say "[if store h is in Strip of Profits]You need to figure how to change and get through store H[else]Enter the Throes Hoster for the final region[end if]." instead;
@@ -21330,7 +21331,7 @@ to left-to-see:
 				say "You still haven't gone [cueloc of exhib entry] from Peek Keep.";
 				continue the action;
 			if exhib entry is unexamined:
-				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine it.";
+				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine [if exhib entry is plural-named]them[else]it[end if].";
 				continue the action;
 			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined by not read)[end if] to look through.";
 			continue the action;
@@ -21346,6 +21347,33 @@ to left-to-see:
 to decide which direction is cueloc of (xx - an exhibit):
 	let myway be the best route from Peek Keep to the location of xx;
 	decide on myway.
+
+chapter xabing
+
+xabing is an action applying to one thing.
+
+carry out xabing:
+	if noun is not an exhibit, say "XAB only works for an exhibit." instead;
+	let max-row be number of rows in notes-table of noun;
+	if notes-row of noun is max-row - 1:
+		say "You're already next to the end for [noun]." instead;
+	while notes-row of noun < max-row - 1:
+		try examining the noun;
+	the rule succeeds;
+
+chapter xtraking
+
+[must be here since we try xtraking when we leave Demo Dome. The actual syntax is defined in a test file.]
+
+xtraking is an action out of world.
+
+after printing the name of an exhibit (called myx) when xtraking: say " ([location of myx])";
+
+carry out xtraking:
+	say "UNNOTED exhibits: [list of unnoted exhibits].";
+	say "PERUSED exhibits: [list of perused exhibits].";
+	say "EXHAUSTED exhibits: [list of exhausted exhibits].";
+	the rule succeeds;
 
 chapter the basics
 
@@ -21386,7 +21414,7 @@ to say esi-pro: set the pronoun it to saying ignsay;
 
 check going south in Peek Keep:
 	if debug-state is true:
-		say "DEBUG: [list of unnoted exhibits] unnoted, [list of perused exhibits] perused, [list of exhausted exhibits] exhausted.";
+		try xtraking;
 	if number of not exhausted exhibits is 0:
 		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
@@ -21419,7 +21447,7 @@ Passe Apses	10
 
 section Great Grate
 
-The Great Grate is boring scenery in Peek Keep. description of Great Grate is "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. There's also a talks stalk, spy dial display, design-deigns and a spec space.". bore-text is "The great grate was put there just to let you know there will be new stuff from the author--and has been, since the Demo Dome was conceived. Of course, any new stuff you could see would be too raw to be any good. I make bad mistakes in my first drafts.". bore-check is the bore-great-grate rule.
+The Great Grate is boring scenery in Peek Keep. description of Great Grate is "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. There's also a talks stalk, spy dial display, design-deigns and a spec space. Nothing is as critical as the other exhibits, but the grate symbolizes how I want to try both new stuff I have and haven't thought of yet.". bore-text is "The great grate was put there just to let you know there will be new stuff from the author--and has been, since the Demo Dome was conceived. Of course, any new stuff you could see would be too raw to be any good. I make bad mistakes in my first drafts.". bore-check is the bore-great-grate rule.
 
 this is the bore-great-grate rule:
 	if current action is opening, say "The great grate is too great for that.";
@@ -21434,7 +21462,7 @@ after examining great grate (this is the keep scenery spill rule)	:
 
 section Spy Dial Display
 
-The Spy Dial Display is boring scenery. description of Spy Dial Display is "The Spy Dial Display is behind the Great Grate. It may be for calibrating future games, or other stuff.". bore-text is "The display is currently off and out of reach."
+The Spy Dial Display is boring scenery. description of Spy Dial Display is "The Spy Dial Display is behind the Great Grate. It may be for calibrating future games, or other stuff.". bore-text is "The [spy dial] is currently off and out of reach."
 
 to say dial-out: say "The dial is out of reach. It's sort of for me. Well, for you, if you are kind enough to help me test a future game. Or even suggest tweaks to make Roiling or Shuffling better"
 

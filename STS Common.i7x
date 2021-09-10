@@ -467,7 +467,7 @@ instead of doing something with a boring thing: [no-irp]
 		now boring-exception is false;
 		continue the action;
 	abide by the bore-exam rule;
-	say "[bore-text of noun]" instead;
+	say "[bore-text of noun][line break]" instead;
 
 this is the bore-pass rule: do nothing; [probably not necessary, but just in case...]
 

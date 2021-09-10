@@ -1884,6 +1884,22 @@ to say list-of-randos:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
 
+chapter xabing
+
+[x all but last row of an exhibit]
+
+understand the command "xab" as something new.
+
+understand "xab [something]" as xabing.
+
+chapter xtraking
+
+[ tracks exhibits. Main code is in story.ni because we have an if-debug statement when we leave Demo Dome. ]
+
+understand the command "xtrak" as something new.
+
+understand "xtrak" as xtraking.
+
 Roiling Tests ends here.
 
 ---- DOCUMENTATION ----

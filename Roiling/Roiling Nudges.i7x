@@ -1398,28 +1398,23 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 table of Peek Keep nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "peek"	390011355	--	--	"[dome-rm]."
-"flashed"	364908016	--	--	"[its-a-museum]."
-"shefl"	341691109	--	--	"[its-a-museum]."
-"design"	391609220	--	--	"[its-a-museum]."
-"deign"	295335254	--	--	"[its-a-museum]."
+"design"	391609220	Design Deigns	--	"[its-a-museum]."
+"deign"	295335254	Design Deigns	--	"[its-a-museum]."
 "sgni"	242774022	--	--	"[no-mess]."
-"ertyn"	507506690	--	--	"[no-mess]."
 "unfold"	349723716	--	--	"[no-mess]."
 "memoir"	460625641	--	--	"[no-mess]."
-"shall"	243371761	--	--	"You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will."
-"greta"	351027450	--	--	"It was tested to make sure even you couldn't magic it open."
-"talks"	308318819	--	--	"[its-a-museum]."
-"talk"	212044853	--	--	"[its-a-museum]."
-"spce"	324551619	--	--	"[its-a-museum]."
-"speca"	326739437	--	--	"[its-a-museum]."
+"saying"	367321092	--	--	"[no-mess]."
+"shall"	243371761	Shall Halls	--	"You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will."
+"greta"	351027450	Great Grate	--	"It was tested to make sure even you couldn't magic it open."
+"talks"	308318819	Talks Stalk	--	"[its-a-museum]."
+"talk"	212044853	Talks Stalk	--	"[its-a-museum]."
+"spce"	324551619	Spec Space	--	"[its-a-museum]."
+"speca"	326739437	Spec Space	--	"[its-a-museum]."
 "display"	422122769	spy dial display	--	"[no-fig-code]."
 "spy"	300099177	spy dial display	--	"[no-fig-code]."
 "dial"	122023592	spy dial display	--	"[no-fig-code]."
-
-table of disport tripods nudges
-this-cmd	hashval	this-item	this-rule (rule)	this-clue
-"tripods"	506548258	--	--	"[its-a-museum]."
-"tripdo"	410274292	--	--	"[its-a-museum]."
+"tripods"	506548258	disport tripods	--	"[its-a-museum]."
+"tripdo"	410274292	disport tripods	--	"[its-a-museum]."
 
 table of Evoc Cove nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
