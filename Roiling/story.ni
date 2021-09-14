@@ -213,21 +213,22 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 55. min-score of towers is 25.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 56. min-score of towers is 26.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
 7=12 for the minimum number of other guardians you need to dispel to get through the map
-1=13 for subtler (see rapier repair)
+1=13 for subtler (see diverse deviser)
 1=14 for mardier admirer (see the duck)
 2=16 for bonker & stinger (get to Obscurest Subsector)
 1=17 for weeds
 2=19 for Dr Yow's two voices
 1=20 for lone duck
 1=21 for READING A DINGER/grained
-1=22 for using the ragged dagger on the rapier repair NON-ANAGRAM
-2=24 for a bot boat
-1=25 for the palace]
+1=22 for diverse deviser
+1=23 for using the ragged dagger on the diverse deviser NON-ANAGRAM
+2=25 for a bot boat
+1=26 for the palace]
 [LLP list:
 3=3 for the extra picaros
 1=4 for the recital article
@@ -2700,6 +2701,7 @@ gleaner	"The gleaner was made by Al Green, written in red."
 Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
 dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
 recital article	"This version was written by some lovely chap named ALTERIC."	[towers]
+diverse deviser	"I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue."
 strudel	"DR. ELTUS recommends this strudel!"
 keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
 fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
@@ -4809,8 +4811,9 @@ Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title
 dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
-denier nereid	true	true	false	false	"You can almost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
+denier nereid	true	true	false	false	"You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
 try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
+diverse deviser	true	true	false	false	"You can almost hear a voice from the Campiest Campsite say 'Buck up, sport! I believe in you! Gosh, those ambiguous clues might be MORE interesting and useful than the usual!'"
 traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
 fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
 angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
@@ -5504,8 +5507,8 @@ this is the towers-hinting rule:
 	if duck is not returned, all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And the name on its nametag, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if Actionless Coastlines is unvisited, all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is moot and atheists are moot]You've already cleared who you need to[else]You've got at least another guardian to get rid of in the Actionless Coastlines before an ally will appear[end if].[cycling]" instead;
 	if player is in Outer Route:
-		if weeds are in Treading Gradient, all-say "The item that fits in the rapier repair is behind the weeds in the Treading Gradient." instead;
-		if gizmo is off-stage, try objhinting rapier repair instead;
+		if weeds are in Treading Gradient, all-say "The item that fits in [the deviser] is behind the weeds in the Treading Gradient." instead;
+		if gizmo is off-stage, try objhinting diverse deviser instead;
 	if agnostic is lonely, all-say "[one of]Hm, the agnostic [if player is not in Actionless Coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK AGNOSTIC ABOUT DOCTOR.[cycling]" instead;
 	if agnostic is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector, all-say "The agnostic will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy, all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the agnostic.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
@@ -6352,7 +6355,7 @@ ant	"You poke at the ant, which keeps it at bay. You need something more simple,
 dialer	"That would only sabotage communications here. You need to sabotage the supplier."
 yurts	"Don't get [']urty! (Sorry not sorry.)" [START towers]
 campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
-rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
+diverse deviser	"[if gizmo is not off-stage]You already broke [the deviser][else]No, it must be useful for something[end if]!"
 mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
 sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 bluster butlers	"They're probably trained to hand out ur-belts."
@@ -6917,7 +6920,7 @@ check listening:
 			if Dr Yow has been rowdy or Dr Yow has been wordy, say "Dr. Yow is silent once again." instead;
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
 	if noun is angriest ingrates, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
-	if player is in Outer Route, say "The rapier repair machine [if dagger is moot]chugs[else]fizzles[end if] along." instead;
+	if player is in Outer Route, say "The [deviser] machine [if dagger is moot]chugs[else]fizzles[end if] along." instead;
 	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
 	if noun is wait seer, say "The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip." instead;
@@ -8394,7 +8397,7 @@ to say dear-reader:
 	if treatise is examined and satchel is touchable:
 		say "(Stuff about getting the satchel that you don't need to reread.)";
 		continue the action;
-	say "Dear, er, Reader: Apologies for any sucky yucks. I couldn't have sent tens of snug gnus, sought toughs, or any gubbins subbing for you. These latches, shut thus, contain a recoded decoder, a revised deviser. Help make your tour a rout. Not that it emits smite. Have a peek, then keep, to help lift the doom mood in Yorpwald. But you'll need to be refined, definer. Just changing things to other things, relived, won't deliver. It's powerful, too. My magician-lawyer Rawley Lawrey warned me creating it would drain my life force. But I feel great![paragraph break]  --Gateman Nat Egam[line break]";
+	say "Dear, er, Reader: Apologies for any sucky yucks. I couldn't have sent tens of snug gnus, sought toughs, or any gubbins subbing for you. These latches, shut thus, contain a recoded decoder. Help make your tour a rout. Not that it emits smite. Have a peek, then keep, to help lift the doom mood in Yorpwald. But you'll need to be refined, definer. Just changing things to other things, relived, won't deliver. It's powerful, too. My magician-lawyer Rawley Lawrey warned me creating it would drain my life force. But I feel great![paragraph break]  --Gateman Nat Egam[line break]";
 
 the teariest treatise is a thing. description is "[dear-reader][line break]Even without cheat mode, it's pretty handy, because it shows the letters [i]should[r] be either...[one of][paragraph break]The treatise iterates some sort of pattern but ends abruptly. You stare. Tears. Eyes watery yet raw. Arg. Life. Fragile.[or][paragraph break](Yes, the old timer is a time lord now.)[stopping]"
 
@@ -8774,7 +8777,7 @@ check objhinting super purse when super purse is moot: say "Do not worry about w
 
 chapter letters settler
 
-The Letters Settler is a warpable thing. understand "recoded decoder" and "recoded/decoder" and "revised/deviser" and "revised deviser" as letters settler. understand "device" as letters settler.
+The Letters Settler is a warpable thing. understand "recoded decoder" and "recoded/decoder" as letters settler. understand "device" as letters settler.
 
 check giving settler to agnostic: try objasking agnostic about settler instead;
 
@@ -12800,6 +12803,14 @@ this is the bore-hoop rule:
 
 a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
 
+[this is cheaty text for logsync.py. So don't delete it!
+
+a-text of hoop1 is "RYYR". b-text of hoop1 is "RGGR". parse-text of hoop1 is "POOH".
+
+a-text of hoop2 is "RRYYYO". b-text of hoop2 is "RRYGYO". parse-text of hoop2 is "x[sp]x[sp]-[sp]o[sp]-[sp]y".
+
+]
+
 ye-scan is a truth state that varies.
 no-ye-scan is a truth state that varies.
 ever-hoop-both is a truth state that varies.
@@ -13628,7 +13639,7 @@ carry out showing it to:
 
 chapter Compile
 
-the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. The no-decor coder decor seems right, but he's probably leaving some obvious computer action out, and you would hate to have to meet him[or]The polemic doesn't make any more sense the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
+the Im Le Cop polemic is a reflexive thing in Hacks Shack. description of Im Le Cop polemic is "[one of]It's a [i]polemic[r] about programming languages, processors, and user-friendliness in general. E-trash haters too. Whoever wrote it relies on pedants['] pentads, the sort that , but he's still probably leaving some obvious computer action out,[or]The polemic doesn't shed any light on main problems the second time through[stopping]. You see a messy signature at the bottom.". printed name of polemic is "I'm Le Cop Polemic".
 
 report taking polemic: say "You take it. You don't need to, but it'd be nice to have handy." instead;
 
@@ -16648,11 +16659,15 @@ book Outer Route
 
 Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. You can only go back east. Sway-ways surround you, which might be too adventurous[note-detour].". roomnud of Outer Route is table of Outer Route nudges.
 
-chapter rapier repair
+chapter diverse deviser
 
-A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is moot]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not moot]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[else]You seem to have broken it creating the gizmo[end if]."
+A diverse deviser is a cheat-spoilable reflexive thing in Outer Route. "A diverse deviser [if deviser is reflexed]labeled RAPIER REPAIR[else]with some red writing on it[end if] [if dagger is held]chugs[else]fizzles[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if deviser is reflexive]It doesn't seem to work as well as it could. [else if dagger is moot]But it's done its job. [end if][if dagger is not moot]You could probably PUT any blade smaller than a rapier in there[else]You seem to have broken it creating the [gizmo][end if]."
 
-check taking rapier repair:	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is moot]Plus you already used it[else]Better to carry something that'd fit into IT[end if]." instead;
+understand "revised" and "revised deviser" as diverse deviser when diverse deviser is reflexed.
+
+a-text of diverse deviser is "RYRYRYR". b-text of diverse deviser is "R?P???R". parse-text of diverse deviser is "x[sp]-[sp]V[sp]-[sp]x[sp]?[sp]x".
+
+check taking diverse deviser: say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if deviser is reflexive]And it's not useful in its current state[else if dagger is moot]Plus you already used it[else]Better to find something that'd fit into IT[end if]." instead;
 
 the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game[or]You find yourself baffled by the [giz-part][stopping]."
 
@@ -16668,17 +16683,18 @@ to say giz-part:
 check opening gizmo:
 	say "It's too complicated to learn about." instead;
 
-check inserting into rapier repair machine:
+check inserting into diverse deviser:
 	ignore the can't insert into what's not a container rule;
-	if noun is gizmo, say "The gizmo is so cool, the machine broke itself producing one. Also, the gizmo needs no repair." instead;
-	if ragged dagger is moot, say "The machine has already given its all to create the gizmo." instead;
+	if diverse deviser is reflexive, say "The [deviser] is not yet the best form it can be. Maybe your magicking can help upgrade it." instead;
+	if noun is gizmo, say "But the [deviser] broke itself producing the gizmo for you." instead;
 	if noun is toaster, say "In a different Wasteland, that would be very practical, indeed. Especially if you know the bit-flip infinite skill trick. But not here." instead;
+	if ragged dagger is moot, say "The diverse deviser machine has already given its all to create the gizmo." instead;
 	if noun is not ragged dagger, say "That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to find something else." instead;
-	say "The dagger is sucked into the machine, which gets raspier as it repairs. A couple minutes of proclaiming itself 'the sharpener that resharpens,' and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG.";
+	say "The ragged dagger is sucked into [the deviser], which gets raspier as it repairs. A couple minutes of proclaiming itself 'the sharpener that resharpens' and an alarming increase in smoke and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG. Which is certainly a diverse tool indeed![paragraph break]The [deviser] still fizzles fruitlessly as a reminder of the work it once did, but the gizmo probably used up all the diversity in the deviser. But hey, if you gotta go, you might as well go right after making your masterpiece.";
 	now player has the I ZOMG Gizmo;
 	moot ragged dagger;
 	set the pronoun it to I ZOMG Gizmo;
-	now rapier repair is realized;
+	now diverse deviser is realized;
 	reg-inc instead;
 
 section repairing (verb)
@@ -16690,9 +16706,8 @@ understand the command "repair" as something new.
 understand "repair [something]" as repairing.
 
 carry out repairing:
-	if repair machine is not touchable, say "You need to be by a repair machine." instead;
-	try inserting noun into repair machine instead;
-	the rule succeeds.
+	if diverse deviser is not touchable, say "You need to be by a machine that could repair other things." instead;
+	try inserting noun into diverse deviser instead;
 
 chapter scenery
 
@@ -16707,7 +16722,7 @@ this is the bore-sway-ways rule:
 
 section Campiest Campsite
 
-the campiest campsite is boring useless scenery in Outer Route. description of campiest campsite is "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it.". bore-text of campiest campsite is "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair.".
+the campiest campsite is boring useless scenery in Outer Route. description of campiest campsite is "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it.". bore-text of campiest campsite is "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe [if diverse deviser is reflexive]figure how to buff up the diverse deviser[else if dagger is not moot]figure what goes in the diverse deviser[else]mourn the diverse deviser's demise[end if].".
 
 understand "camp/site/campsite" and "yon camp" as campsite.
 
@@ -17880,7 +17895,7 @@ the shoals aslosh are a useless boring plural-named backdrop. they are in Salted
 
 book Dire and Arid Den
 
-there is an innie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too."
+there is an innie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too.". roomnud of Arid Den is table of Dire And Arid Den nudges.
 
 chapter bogus-dandier (flippable scenery for room)
 
@@ -22500,7 +22515,7 @@ examp
 "Shoer Osher changes gender too."
 "Attacking the pikes/carps."
 "[bold type](towers)[r] The mardier admirer reacts differently to TALKing/KISSing, etc."
-"The rapier repair reminds you of Boy/Girl Scouts."
+"The diverse deviser reminds you of Boy/Girl Scouts."
 "The ego drains drain you a bit more if you're female."
 "The Coasting Agnostic has a different name, with a (sic) on making the bot-boat."
 "Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."

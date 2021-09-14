@@ -890,7 +890,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "campiest"	538917454	--	--	"[gosh-camp]!"
 "repair"	427100338	--	--	"[rapier-mach]."
 "machine"	364257318	--	--	"[rapier-mach]."
-"shiny"	369815871	--	--	"[rapier-mach]."
 
 table of Baldest Blasted Saltbed nudges [1 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1475,7 +1474,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "settler"	697243862	settler	--	"[no-set]."
 "mark"	204519952	settler	--	"[no-set]."
 "recoded"	476352361	settler	--	"[no-set]."
-"deviser"	610396742	settler	--	"[no-set]."
 "backside"	382647496	settler	--	"[no-set]."
 "decla"	223842440	settler	--	"[no-set]."
 "buntot"	473004833	settler	--	"[no-set]."
@@ -2049,7 +2047,7 @@ this is the see-female-admirer rule:
 	if player is female and mardier admirer is touchable, the rule succeeds;
 	the rule fails;
 
-to say nerd-a: say "Concentrate on the Nerd-Aid. In the dandier arid den"
+to say nerd-a: say "Concentrate on the Nerd-Aid. Here in the Dire and Arid Den"
 
 to say grail-name: say "His full name, Liam Garn"
 
@@ -2099,7 +2097,7 @@ section outer route auxiliary
 
 to say gosh-camp: say "Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything"
 
-to say rapier-mach: say "The machine is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it[end if]"
+to say rapier-mach: say "The [deviser] is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it, and it's too broken to fix[end if]"
 
 section baldest blasted saltbed auxiliary
 

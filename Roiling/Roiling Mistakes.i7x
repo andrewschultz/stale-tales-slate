@@ -757,7 +757,7 @@ understand "worse" as a mistake ("The brownies don't need to taste any worse.") 
 
 chapter Outer Route
 
-understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].") when player is in Outer Route.
+understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the diverse deviser. It's done enough for you[end if].") when player is in Outer Route.
 
 chapter Baldest Blasted Saltbed
 
@@ -1087,10 +1087,6 @@ book demo dome
 chapter Evoc-Cove
 
 understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in Evoc Cove.
-
-chapter Hows Show
-
-understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") when player is in Hows Show.
 
 chapter Ned's Dens
 

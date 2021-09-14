@@ -116,9 +116,9 @@ gone/weedy/bleak/yonder
 #reined/semipro/pastier/nerdiest/alarming
 rinsed/saltier/restful/weariest/released
 # guardians you have to get
-punier/subtler/holiest/married/hastiest/broken/resting/sewed
+punier/subtler/holiest/married/hastiest/broken/resting
 # other stuff to do (robust < nearest)
-wordy/rowdy/fussier/grained/stabler/robust/spectacular
+sewed/revised/wordy/rowdy/fussier/grained/stabler/robust/spectacular
 Towers (max)
 # 7 warriors
 stony/ashen/bored/achier/snared/recreant/yonder
@@ -129,7 +129,7 @@ reined/nerdiest/pastier/released/restful
 # East/I guardians (5 extra)
 rinsed/saltier/semipro/marginal/weariest
 # other stuff to do (robust < nearest)
-talcier/sewed/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
+talcier/sewed/revised/wordy/rowdy/unlocked/grained/stabler/nearest/spectacular
 # LLPs to flip
 rusty/naivest/angstier/mined/creaky/pearly/coiled/rustled/grandiose/prosiest/attentive/rewired/rousted/aimless/dandier
 # more LLPs

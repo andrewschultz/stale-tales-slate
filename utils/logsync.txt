@@ -386,6 +386,8 @@ bluster butlers>subtler
 denier nereid>reined
 snider diners>rinsed
 try us yurts>rusty
+####outer route
+diverse deviser>revised
 ####fringe finger
 strudel>rustled
 sled rut>rustled
@@ -590,8 +592,8 @@ a brr hub>rhubarb
 searcher>research
 viewer>review
 fleeing feeling~perp>prep
-##############logic file checks (eventually delete this all)
-###################stuff that is okay for aftertexts
+###################stuff that is okay to be in scannotes even if the algorithm doesn't pick it up ASAP
+# it may be stuff without any ?s but we need to make a comment to clue the player, etc.
 #means manse
 AFT=pram,tables,niche,beams,meet bans
 #routes
@@ -603,7 +605,7 @@ AFT=maze walls
 #towers
 AFT=dr yow
 #otters
-AFT=sly imp,medals,whiners
+AFT=medals
 #others
 AFT=a brr hub
 AFT=auction caution

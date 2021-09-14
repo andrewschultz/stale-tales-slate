@@ -408,6 +408,13 @@ This is one I actually made tougher than in a previous release, where it was a b
 First things first: the O puts the Y in slot 5. The U must be in slot 2 or 4, but we can't tell which.
 (RS)(RU)(ST)(TU)Y is what we get. But there are only two possibilities to check.
 SRTUY is not a word, so RUSTY it is.
+>>OUTER ROUTE
+# logic for diverse deviser
+?How do I fix the diverse deviser?
+It's a bit out of date. And so many question marks! Even a purple reading, too.
+(RSV)(IE)V(IE)(RS)(SE)(DSV) is how it starts. Note the sixth slot must be a vowel. So it is E. Slot 7 must be D.
+(RS)(IE)V(IE)(RS)ED is left. You can guess from here, but you can read the red writing to get the solution logically.
+The red text "I'd Serve" leaves you with REVISED.
 >>BALDEST BLASTED SALTBED
 # logic for fluster self rut
 ?What do the question marks mean for the fluster self rut?

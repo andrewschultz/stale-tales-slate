@@ -279,6 +279,9 @@ rinsed,R??R?R=snider=diners
 rinsed,isdern,drenis,nerdis
 #qver of denier nereid
 reined,RGYR??=denier=nereid
+#outer route
+#qver of diverse deviser
+revised,R?P???R=diverse=deviser
 #(random anywhere)
 creaky,kcayer,rayeck,keycar,yacker
 weariest,treesawi,treesiaw,sitweare,ewitears
