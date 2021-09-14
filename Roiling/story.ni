@@ -6218,7 +6218,7 @@ Actionless Coastlines	"You can't get across Leak Lake without some sort of craft
 Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
-Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
+Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."
 Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrike!'[paragraph break][or][stopping]Not worth it. Any direction but back south might drive you too far from the palace."
 Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]."
@@ -15917,7 +15917,7 @@ check xraying:
 	else if xrayvision is false and xraytrump is false:
 		say "You don't have x-ray vision now." instead;
 	else if xraytrump is true:
-		d "using x-ray trump.";
+		d "using x-ray trump on [noun].";
 	if mrlp is not towers:
 		if Topside Deposit is unvisited, say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
@@ -15932,7 +15932,7 @@ check xraying:
 	if noun is the player, say "Even if you could, you might expose yourself to harmful rays and stuff." instead;
 	if noun is agnostic:
 		if Dinger is in Actionless Coastlines, try xraying Dinger instead;
-		if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector, say "You realize [agnostic-first] could be a little more ATTENTIVE.";
+		if agnostic is in Obscurest Subsector and atblock is in Obscurest Subsector, try xraying atblock instead;
 	if noun is sled rut:
 		if strudel is touchable, try xraying strudel instead;
 		say "Without the strudel, you can't really see into the sled rut." instead;
@@ -16080,17 +16080,16 @@ to draw-towers-map:
 		now myy is tow-y-start + (tow-delta * my-y entry) - square-from-center;
 		draw a rectangle (current foreground-color) in current graphics window at myx by myy with size sqsz by sqsz;
 	repeat with myg running through guardians:
-		if myg is stinger and bonker is not moot, next; [the stinger is tricky because it's artificially placed a bit]
-		[if debug-state is true, say "Gendermatching [myg].";]
+		if myg is bonker, next;
 		unless myg gendermatches, next;
 		if myg is moot:
 			change current foreground-color to (R 42 G 210 B 42);
 		else:
 			change current foreground-color to (R 210 G 42 B 42);
-		if myg is stinger:
+		if myg is stinger: [ a special case ... this is the bonker's original gualoc/guadir but whether we can go east depends on if the stinger is blocking ]
 			draw-line Obscurest Subsector and west;
-			continue the action;
-		[if debug-state is true, say "[loc entry] [blockdir entry] [current foreground-color].";]
+			next;
+		if debug-state is true, say "[gualoc of myg] [guadir of myg] [current foreground-color].";
 		draw-line (gualoc of myg) and (guadir of myg);
 
 to draw-line (lcc - a room) and (bd - a direction):
@@ -16626,6 +16625,9 @@ check examining Spec O Scope:
 	say "[one of]It seems like an OK tool to look. You notice the word HI carved in big block letters on the Spec-O-Scope--the I being just the H rotated.[paragraph break][or][stopping][i][bracket][one of]Fourth wall time--w[or]W[stopping]ould you prefer a full-text summary of the map in the Spec-O-Scope to a text map?[close bracket][r][line break]";
 	if the player regex-prompt-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
+		now Spec O Scope is examined;
+		carry out the specoscope draw rule;
+		the rule succeeds;
 
 description of Spec O Scope is "You look into the Spec-O-Scope and see:[paragraph break][fixed letter spacing]
 [line break]  !      *
@@ -16787,7 +16789,7 @@ this is the bore-theater rule:
 
 book Treading Gradient
 
-Treading Gradient is north of Leveraged Everglade and east of Baldest Blasted Saltbed. "This place is [grad-by-points]. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths lead in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers. roomnud of Treading Gradient is table of Treading Gradient nudges.
+Treading Gradient is north of Leveraged Everglade and east of Baldest Blasted Saltbed. "[grad-by-points]. You see [if weeds are touchable and mended mini denim is touchable][we-g] along with the mended mini denim patching what's probably a hole[else if weeds are touchable][we-g][else if mended mini denim is touchable]mended mini denim patching a hole[else]nothing else you can shake down for items[end if]. Paths lead in all four directions here[if guar-here is 0], all unobstructed[else if guar-here is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers. roomnud of Treading Gradient is table of Treading Gradient nudges.
 
 to decide which number is grad-points: [?? we could possibly convert this into having a list and having moots of a list being the number of moot items in the list]
 	let temp be 0;
@@ -17514,7 +17516,7 @@ this is the bore-ripostes rule:
 
 book Fringe Finger
 
-Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n.". roomnud of Fringe Finger is table of Fringe Finger nudges.
+Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n.". roomnud of Fringe Finger is table of Fringe Finger nudges. [NOTE: no note-detour here because you would fall and die off the finger/fringe]
 
 understand "loaves" and "loaf" as solve a loaves.
 
@@ -18012,7 +18014,7 @@ to say imposer-guard:
 
 a-text of promise imposer is "RYRYRRY". b-text of promise imposer is "RYRYRRY". parse-text of promise imposer is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
-gualoc of promise imposer is Baldest Blasted Saltbed. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they\re good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, they are the best at what they do.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
+gualoc of promise imposer is Baldest Blasted Saltbed. guadir of promise imposer is east. block-text of promise imposer is "The promise imposer shuffles into position, promising you there's another way around, and perhaps you promised not to move them and forgot about it. Man, they're good at what they do!". clue-text of promise imposer is "Whoever they promised, whatever they promised, or whomever they make promise something, the promise imposer is the best at their job.". taunt-text of promise imposer is "The promise imposer mutters how, now you can get around a little easier, you don't need to remove them NEARLY as much. That's how it works, right?"
 
 section traipse pirates
 
@@ -18138,7 +18140,7 @@ chapter Salted Deltas guardians
 
 section atheists
 
-the asset hit atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
+the asset hit atheists are plural-named purple guardians. "Asset-hit atheists to the [psgdir of atheists] seem quite set in their ways. And their territory. Maybe a closer look will tell more about them.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will. [one of]Their style--you know, if you examine again, you might look closer and get a clue how to get rid of them[or]Their ties, hats... you see red[stopping].". printed name of asset hit atheists is "asset-hit atheists". understand "atheist" as atheists.
 
 a-text of asset hit atheists is "RYRRYYRR". b-text of asset hit atheists is "RY?R?YR?". parse-text of asset hit atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
 
@@ -18210,7 +18212,7 @@ chapter rules for flipping guardians
 
 after fliptoing a guardian (this is the guardian taunt and track progress rule) :
 	if guar-here is 0:
-		if keycar is off-stage and player is not in Topside Deposit and player is not in Actionless Coastlines: [note you can avoid the keycar if you really want, even clearing other rooms of guardians without the keycar appearing, but the NW/SE rooms must eventually cause it to pop up if you try to clear everything.]
+		if keycar is off-stage and player is not in Topside Deposit and player is not in Actionless Coastlines: [note you can avoid the keycar if you really want, even clearing other rooms of guardians without the keycar appearing, but the NW/SE rooms must eventually cause it to pop up if you try to clear everything. You can ignore the nereids and grailman to have maximum mobility, in fact]
 			say "A keycar speeds into view with all the guardians gone! And not just any keycar. An annoying yacker keycar, a novelty toy whose sales helped make Elvira rich, before she sponsored a campaign to fine reckless keycar users--well, okay, there's no PROOF of kickbacks.[paragraph break]The keycar's probably not going to stop you going anywhere, but it'd be nice to get rid of.";
 			move keycar to location of player;
 		continue the action;
@@ -22952,7 +22954,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
 		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
 		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
-		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar could've been made CREAKY[else]you didn't clear enough guardians for the keycar to appear and become CREAKY[end if].";
+		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar [keycar-loc] could've been made CREAKY[else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
 		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
 		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels AIMLESS.";
 		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
@@ -23058,6 +23060,8 @@ definition: a region (called R) is test-jumped:
 	unless R is solved, no;
 	unless cur-score of R is 0, no;
 	yes;
+
+to say keycar-loc: say "in [location of keycar]"
 
 book epilogue transition
 
