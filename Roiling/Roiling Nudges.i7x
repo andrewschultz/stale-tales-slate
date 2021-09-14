@@ -888,7 +888,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "camp"	166734515	--	--	"[gosh-camp]!"
 "site"	372182939	--	--	"[gosh-camp]!"
 "campiest"	538917454	--	--	"[gosh-camp]!"
-"repair"	427100338	--	--	"[rapier-mach]."
+"repair"	427100338	--	deviser-reflexed rule	"[rapier-mach]."
 "machine"	364257318	--	--	"[rapier-mach]."
 
 table of Baldest Blasted Saltbed nudges [1 2]
@@ -2096,6 +2096,10 @@ to say cop-sco: say "The copse and the Spec-O-Scope are both fine as-is[if yurts
 section outer route auxiliary
 
 to say gosh-camp: say "Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything"
+
+this is the deviser-reflexed rule:
+	if diverse deviser is reflexed, the rule succeeds;
+	the rule fails;
 
 to say rapier-mach: say "The [deviser] is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it, and it's too broken to fix[end if]"
 

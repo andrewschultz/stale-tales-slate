@@ -2083,7 +2083,8 @@ Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
 #towers anagrams for lois the hostile
 >xr hostile
-Hmm. You bet you could get past if the Lois the Hostile were HOLIEST.
+Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
+>gs
 
 @nud
 #nudge for scalier
@@ -2802,7 +2803,7 @@ DEBUG INFO: diverse deviser hinting.
 @nud
 #mistake test for pairer
 >pairer
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 #nudge for roeut
 >roetu
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -2820,10 +2821,10 @@ Gosh! The campsite's about as swell as can be, as is. No need to rearrange anyth
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for machine
 >machien
-The revised deviser is complicated enough. You probably just need to figure what to put in it.
+The diverse deviser is complicated enough. You probably just need to figure what to put in it.
 #nudge for repair
 >repari
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 @sli
 #slider test for revised
@@ -2844,9 +2845,7 @@ You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I be
 @spoi
 #towers anagrams for diverse deviser
 >xr deviser
-After a thoughtful gaze, you reckon the revised deviser could be REVISED.
-
->revides
+After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 
 >revised
 }}SCORE++
@@ -2854,7 +2853,7 @@ After a thoughtful gaze, you reckon the revised deviser could be REVISED.
 @nud
 #renudge for repair
 >repari
-The revised deviser is complicated enough. You probably just need to figure what to put in it.
+The diverse deviser is complicated enough. You probably just need to figure what to put in it.
 
 @mis
 #mistake test for pairer
@@ -2883,8 +2882,8 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 >pairer
 The diverse deviser is in no shape to do any more work.
 #renudge for repair
->shiyn
-The revised deviser is complicated enough. You already got something from it, and it's too broken to fix.
+>repira
+The diverse deviser is complicated enough. You already got something from it, and it's too broken to fix.
 
 
 >gt coastlines
@@ -3067,6 +3066,14 @@ The raves saver/replay player can be parleyed into something shinier.
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon Scot Agin could be ATTENTIVE.
+>undo
+# this is kind of silly, but scot/staci are the same object, so I need to UNDO
+>gs
+>xr agnostic
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon Staci Ong could be ATTENTIVE.
+>gs
 
 @!minh,mini
 >pearly

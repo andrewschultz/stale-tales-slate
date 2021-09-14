@@ -480,7 +480,8 @@ Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
 #towers anagrams for lois the hostile
 >xr hostile
-Hmm. You bet you could get past if the Lois the Hostile were HOLIEST.
+Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
+>gs
 
 #towers anagrams for alarming grailman
 >xr grailman
@@ -666,9 +667,7 @@ DEBUG INFO: diverse deviser hinting.
 
 #towers anagrams for diverse deviser
 >xr deviser
-After a thoughtful gaze, you reckon the revised deviser could be REVISED.
-
->revides
+After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 
 >revised
 
@@ -702,6 +701,14 @@ Dr. Yow is versatile. You need him to be exciting around the agnostic.
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon Scot Agin could be ATTENTIVE.
+>undo
+# this is kind of silly, but scot/staci are the same object, so I need to UNDO
+>gs
+>xr agnostic
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon Staci Ong could be ATTENTIVE.
+>gs
 
 >pearly
 Your score has just gone up by one point

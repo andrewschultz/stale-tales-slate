@@ -1410,7 +1410,7 @@ this is the oyster-goto rule:
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 
 this is the towers-goto rule:
-	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough.";
+	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough." instead;
 	if duck is touchable and duck is friendly:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
@@ -1428,9 +1428,11 @@ this is the others-goto rule:
 this is the demo-dome-goto rule:
 	say "You rush, despite having nothing urgent to do.";
 
-carry out gotoing:
+check gotoing:
 	d "From [progval of location of player] to [progval of noun].";
 	if noun is shunned, say "[noun] is off-limits. I should have a better explanation why, so please let me know at [email]." instead;
+
+carry out gotoing:
 	move player to noun;
 
 when play begins (this is the seed room progress for GO TO rule) :
@@ -6811,7 +6813,7 @@ check touching:
 	if noun is lawl wall, say "You're not playing tag, here." instead;
 	if noun is tubs, say "They seem to be made of something fragile, something you could break--porcelain, maybe? You hear something rattling inside." instead; [oyster]
 	if noun is raves saver, say "Odd. It feels ... really papery." instead;
-	if noun is lone duck, say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]." instead; [towers]
+	if noun is lone duck, say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else if duck is aloof]--maybe it needs some way to trust you[end if]." instead; [towers]
 	if noun is pryer bars, say "They feel like spry rebar." instead; [others]
 	say "You don't need to touch anything in A Roiling Original. Okay, you need to touchstuff, but not use the TOUCH verb." instead;
 
@@ -9418,7 +9420,7 @@ lance	oyster	"You'll want to CLEAN the lance [now-once of whether or not player 
 templar ramplet	oyster	"You can TRAMPLE the templar ramplet [now-if-dealt of lance] you have a shiny worthy weapon."
 rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if] [now-once of whether or not moot-picaros >= 3] he's lost enough followers." [towers]
 luck node	towers	"[if node-preef is true]The luck node[else]Something[end if] needs to be unlocked, with [if duck-preef is true]the lone duck[else]something else you need to figure out[end if]."
-fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect [now-once of whether or not duck is friendly] there's something it can fuss at."
+fries us fissure	towers	"The Fries-Us Fissure can be made FUSSIER to some effect [now-once of whether or not duck is midstage] there's something it can fuss at."
 curst palace	towers	"You can make the Curst Palace SPECTACULAR [now-once of whether or not player is in mislit limits] you're near it."
 sea cube	otters	"You can tell the eels in the sea cube BECAUSE [now-once-medals]." [otters]
 ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [now-once-medals]."
@@ -16864,7 +16866,7 @@ does the player mean doing something with repeat button when repeat button is no
 
 this is the saver-check rule:
 	if lone duck is friendly, say "Don't mess with the raves saver while the duck is following you." instead;
-	if lone duck is returned or lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
+	if lone duck is close or lone duck is returned or lone duck is moot, say "[one of]You don't really need to fiddle with the raves saver any more.[or][stopping]"; [?? run paragraph on??]
 	if across-leak-lake, say "The saver got bumped around too much when you crossed Leak Lake. Well, you got good use out of it." instead;
 	if saver is touchable and player does not have saver, try silently taking raves saver;
 
@@ -16909,7 +16911,7 @@ check pushing repeat button:
 	if duck is touchable and saver is goosey, say "The duck cowers in fear, unable to locate the source of the noise[if Dr Yow is touchable], and Dr. Yow seems to glare at you a bit[end if]." instead;
 	if raves saver is yow-yell and duck is touchable, say "The duck seems to walk forward but gets scared by the volume and rapidity of the noise." instead;
 	if raves saver is yow-talk and duck is touchable:
-		if duck is friendly, say "You've already got the duck's attention." instead;
+		if duck is friendly or duck is close, say "You've already got the duck's attention." instead;
 		say "The duck perks up. It recognizes Dr. Yow's voice! It gives a hankering honk and comes closer to you and the sound of Dr. Yow's voice.";
 		now duck is friendly;
 		now raves saver is realized;
@@ -17038,7 +17040,12 @@ description of lone duck is "A pretty normal duck, but it doesn't seem that inte
 
 the ID tag is a boring thing. it is part of the lone duck. description of the ID tag is "' Loud Neck (in red)[paragraph break]Dr. Yow's Duck'". bore-text is "It's just there for identification. [if luck node is moot]Probably not a useful clue now, anyway[else]Maybe it'll provide a clue[end if]."
 
-the lone duck can be aloof, friendly or returned. the lone duck is aloof.
+the lone duck can be aloof, friendly, close or returned. the lone duck is aloof.
+
+definition: the lone duck is midstage:
+	if the lone duck is friendly, yes;
+	if the lone duck is close, yes;
+	no;
 
 book Obscurest Subsector
 
@@ -17056,6 +17063,10 @@ after printing the locale description for Obscurest Subsector when subsector-vis
 	ital-say "in the future, you may wish to GO TO/GT GAOL to get back here with less hassle.";
 	now subsector-visit is true;
 	continue the action;
+
+after printing the locale description for Obscurest Subsector when duck is friendly:
+	say "The duck lies down for a moment. It seems to want to be here.";
+	now duck is close;
 
 after choosing notable locale objects when player is in Obscurest Subsector:
 	set locale priority of prison ropins to 0;

@@ -757,7 +757,7 @@ understand "worse" as a mistake ("The brownies don't need to taste any worse.") 
 
 chapter Outer Route
 
-understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, [the deviser] machine looks complex enough. It will probably reject or accept what it needs to[else]The diverse deviser is in no shape to do any more work[end if].") when player is in Outer Route and diverse deviser is reflexed.
+understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, [the deviser] looks complex enough. It will probably reject or accept what it needs to[else]The diverse deviser is in no shape to do any more work[end if].") when player is in Outer Route and diverse deviser is reflexed.
 
 chapter Baldest Blasted Saltbed
 
@@ -837,7 +837,7 @@ understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposi
 
 understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in Obscurest Subsector.
 
-understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[duck-clue]") when duck is in location of player and prison ropins is not in location of player.
+understand "unlocked" as a mistake ("There's nothing here to unlock. [if prison ropins are moot]You did what you needed[else if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not midstage]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured and prison ropins are not moot]. Still, that's an idea[end if].[duck-clue]") when duck is in location of player and prison ropins is not in location of player.
 
 chapter Salted Deltas
 

@@ -171,8 +171,6 @@ Score in a scenario: 19 out of 56 total points in the current region, Towers. Lo
 
 Outer Route
 
->revides
-
 >revised
 
 >put dagger in deviser
