@@ -5,6 +5,8 @@
 # this looks for a table named, say, XYZ, then looks for #xyz in a glob of test files
 #
 # todo: check for rules as well. They should always go in MAX.
+#
+# todo: table of towers anagrams could maybe have branch name or names. Check the config file for that.
 
 from collections import defaultdict
 import os
@@ -24,6 +26,7 @@ quiet = 0
 
 valids = { 'slider': [ 'slider' ],
   'nudmis': [ 'scannotes', 'spechelp', 'done rejects' ],
+  'hints': [ 'towers anagrams' ],
   '' : []
 }
 
@@ -354,14 +357,14 @@ def sync_check(a, b, region=""):
         print(a, "/", b, "was not found in main source or table header.")
         return 0
     rbr_find = "rbr-*"
-    reg_find = "*-nudmis*"
+    reg_find = "*-{}*".format(valids_reverse[b])
     ret_val = find_in_glob(needs_sync_test, rbr_find, a, b, region, sync_detail, []) # formerly ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [] until I moved that to RBRs. Included this comment for posterity if we need to use this again.
-    if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail)
+    #if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail)
     return ret_val
 
 projs = ['sa', 'roi']
 tabs = { 'sa' : ['spechelp', 'done rejects', 'readables'],
-  'roi': ['scannotes', 'spechelp', 'done rejects', 'readables']
+  'roi': ['scannotes', 'spechelp', 'done rejects', 'readables', 'towers anagrams']
 }
 
 cols = { 'scannotes': 5 }

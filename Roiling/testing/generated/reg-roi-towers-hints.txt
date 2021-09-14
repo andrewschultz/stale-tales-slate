@@ -23,81 +23,107 @@
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl|Geno) hinting\.
 
 >allrand
+#towers anagrams for rodney
 >xr rodney
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
+#towers anagrams for geno
 >xr geno
 Boy! Geno might be less oppressive if he were GONE.
 >undo
+#towers anagrams for shane
 >xr shane
 Boy! Shane might be less oppressive if he were ASHEN.
 >undo
+#towers anagrams for tyson
 >xr tyson
 Boy! Tyson might be less oppressive if he were STONY.
 >undo
+#towers anagrams for wade
 >xr wade
 Boy! Wade might be less oppressive if he were AWED.
 >undo
+#towers anagrams for edwin
 >xr edwin
 Boy! Edwin might be less oppressive if he were WINED.
 >undo
+#towers anagrams for eldon
 >xr eldon
 Boy! Eldon might be less oppressive if he were OLDEN.
 >undo
+#towers anagrams for goldy
 >xr goldy
 Boy! Goldy might be less oppressive if he were GODLY.
 >undo
+#towers anagrams for royce
 >xr royce
 Boy! Royce might be less oppressive if he were COYER.
 >undo
+#towers anagrams for blake
 >xr blake
 Boy! Blake might be less oppressive if he were BLEAK.
 >undo
+#towers anagrams for bredo
 >xr bredo
 Boy! Bredo might be less oppressive if he were BORED.
 >undo
+#towers anagrams for daryl
 >xr daryl
 Boy! Daryl might be less oppressive if he were LARDY.
 >undo
+#towers anagrams for dewey
 >xr dewey
 Boy! Dewey might be less oppressive if he were WEEDY.
 >undo
+#towers anagrams for ernest
 >xr ernest
 Boy! Ernest might be less oppressive if he were TENSER.
 >undo
+#towers anagrams for marcel
 >xr marcel
 Boy! Marcel might be less oppressive if he were CALMER.
 >undo
+#towers anagrams for marlon
 >xr marlon
 Boy! Marlon might be less oppressive if he were NORMAL.
 >undo
+#towers anagrams for reggie
 >xr reggie
 Boy! Reggie might be less oppressive if he were EGGIER.
 >undo
+#towers anagrams for andres
 >xr andres
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
+#towers anagrams for andrew
 >xr andrew
 Boy! Andrew might be less oppressive if he were WARNED.
 >undo
+#towers anagrams for archie
 >xr archie
 Boy! Archie might be less oppressive if he were ACHIER.
 >undo
+#towers anagrams for barney
 >xr barney
 Boy! Barney might be less oppressive if he were NEARBY.
 >undo
+#towers anagrams for cedrick
 >xr cedrick
 Boy! Cedrick might be less oppressive if he were CRICKED.
 >undo
+#towers anagrams for demitri
 >xr demitri
 Boy! Demitri might be less oppressive if he were TIMIDER.
 >undo
+#towers anagrams for leander
 >xr leander
 Boy! Leander might be less oppressive if he were LEARNED.
 >undo
+#towers anagrams for preston
 >xr preston
 Boy! Preston might be less oppressive if he were PRONEST.
 >undo
+#towers anagrams for terrance
 >xr terrance
 Boy! Terrance might be less oppressive if he were RECREANT.
 >undo
@@ -132,6 +158,13 @@ DEBUG INFO: Yo-Rend-Or-Deny Rodney hinting.
 >score
 Score in a scenario: 6 out of 56 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 56.
 
+#towers anagrams for recital article
+>xr article
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+FOR TESTING: WE NEED A Y OR N.
+> y
+After a thoughtful gaze, you reckon the recital article could be TALCIER.
+
 >talcier
 by one point
 
@@ -147,6 +180,7 @@ Score in a scenario: 8 out of 56 total points in the current region, Towers. Low
 
 >xr me
 Even if you could, you might expose yourself to harmful rays and stuff.
+#towers anagrams for dreads adders
 >xr adders
 Hmm. You bet you could get past if the dreads adders were SADDER.
 
@@ -177,14 +211,18 @@ Scope Copse
 /DEBUG: guardian hint choice is (sweatier wait-seer|Lars Eede) from (Lars Eede and sweatier wait-seer|sweatier wait-seer and Lars Eede)\.
 >undo
 
+#towers anagrams for bluster butlers
 >xr butlers
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
+#towers anagrams for try us yurts
 >xr yurts
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
+#towers anagrams for denier nereid
 >xr nereid
 Hmm. You bet you could get past if the denier nereid were REINED.
+#towers anagrams for snider diners
 >xr diners
 Hmm. You bet you could get past if the snider diners were RINSED.
 
@@ -228,6 +266,7 @@ has more information,
 /(KC AYER|RAY ECK)
 has a refresher,
 
+#towers anagrams for keycar
 >xr keycar
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -243,14 +282,17 @@ Score in a scenario: 14 out of 56 total points in the current region, Towers. Lo
 
 /DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
+#towers anagrams for docile old ice
 >xr old ice
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the docile old ice could be COILED.
 
+#towers anagrams for pirates
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
+#towers anagrams for promise imposer
 >xr imposer
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >undo
@@ -290,10 +332,17 @@ DEBUG INFO: mardier admirer hinting.
 DEBUG INFO: Lars Eede hinting.
 >undo
 
+#towers anagrams for reeds ale
 >xr lars eede
 Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
+>gs
+>xr elsa erde
+Hmm. You bet you could get past if Elsa Erde were RELEASED or RESEALED.
+>gs
+#towers anagrams for mardier admirer
 >xr admirer
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
+#towers anagrams for ingrates
 >xr ingrates
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -311,6 +360,7 @@ Fringe Finger
 >score
 Score in a scenario: 18 out of 56 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 56.
 
+#towers anagrams for strudel
 >xr strudel
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -345,8 +395,10 @@ Salted Deltas
 #getting rid of the rut made the gradient available, so we hint the atheists.
 DEBUG: guardian hint choice is asset-hit atheists from asset-hit atheists.
 
+#towers anagrams for asset hit atheists
 >xr atheists
 Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
+#towers anagrams for sweatier wait seer
 >xr sweatier
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 
@@ -363,6 +415,7 @@ Score in a scenario: 23 out of 56 total points in the current region, Towers. Lo
 
 DEBUG INFO: weeds hinting.
 
+#towers anagrams for resident trendies
 >xr trendies
 Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
@@ -371,13 +424,16 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 24 out of 56 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 56.
 
+#towers anagrams for weeds
 >xr weeds
 After a thoughtful gaze, you reckon the weeds could be SEWED.
+#towers anagrams for mended mini denim
 >xr denim
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the mended mini-denim could be MINED.
 
+#towers anagrams for realist tailers
 >xr realist tailers
 Hmm. You bet you could get past if the realist tailers were SALTIER.
 
@@ -392,6 +448,7 @@ You need to work your way to the east corner of the map.
 >score
 Score in a scenario: 26 out of 56 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 56.
 
+#towers anagrams for raves saver
 >xr player
 You blink
 >y
@@ -404,6 +461,7 @@ Score in a scenario: 27 out of 56 total points in the current region, Towers. Lo
 >d
 Dire and Arid Den
 
+#towers anagrams for bogus-dandier
 >xr dreadin
 After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 
@@ -416,9 +474,15 @@ Treading Gradient
 Score in a scenario: 28 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >e
 
+#towers anagrams for the hostile is he lot
 >xr hostile
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
+>gs
+#towers anagrams for lois the hostile
+>xr hostile
+Hmm. You bet you could get past if the Lois the Hostile were HOLIEST.
 
+#towers anagrams for alarming grailman
 >xr grailman
 Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
@@ -438,6 +502,7 @@ Score in a scenario: 30 out of 56 total points in the current region, Towers. Lo
 
 DEBUG INFO: REB-NOK bonker hinting.
 
+#towers anagrams for fluster self rut
 >xr fluster
 Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
@@ -447,6 +512,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 31 out of 56 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 56.
 
+#towers anagrams for natives site van
 >xr natives
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -468,6 +534,7 @@ Score in a scenario: 32 out of 56 total points in the current region, Towers. Lo
 
 You need a way past the bonker
 
+#towers anagrams for organised ego drains
 >xr organised
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -485,12 +552,14 @@ Lost Lots
 Dourest Detours
 
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
+#towers anagrams for bogus-rousted
 >xr
 Your x-ray vision seems to enlighten ... well, all around you.
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 >undo
 
+#towers anagrams for seismal samiels
 >xr samiels
 Do so anyway?
 >y
@@ -512,6 +581,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 56 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 56.
 
+#towers anagrams for sporties ripostes
 >xr sporties
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -525,6 +595,7 @@ Score in a scenario: 36 out of 56 total points in the current region, Towers. Lo
 
 >n
 
+#towers anagrams for bonker
 >xr bonker
 Hmm. You bet you could get past if the REB-NOK bonker were BROKEN.
 
@@ -533,6 +604,7 @@ Your score has just gone up by one point
 
 DEBUG INFO: grin-set stinger hinting.
 
+#towers anagrams for stinger
 >xr stinger
 Hmm. You bet you could get past if the grin-set stinger were RESTING.
 
@@ -590,6 +662,7 @@ Outer Route
 
 DEBUG INFO: rapier repair machine hinting.
 
+#towers anagrams for diverse deviser
 >xr deviser
 After a thoughtful gaze, you reckon the revised deviser could be REVISED.
 
@@ -606,6 +679,7 @@ Score in a scenario: 42 out of 56 total points in the current region, Towers. Lo
 
 >gt coastlines
 
+#towers anagrams for dinger
 >xr dinger
 After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 
@@ -647,9 +721,12 @@ Score in a scenario: 46 out of 56 total points in the current region, Towers. Lo
 >xr weirder
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
+#towers anagrams for weirder red wire
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
+#towers anagrams for turbos
 >xr turbos
 After a thoughtful gaze, you reckon the turbos could be ROBUST.
+#towers anagrams for blaster
 >xr blaster
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
@@ -659,6 +736,7 @@ by one point
 by one point
 
 >gonear waters
+#towers anagrams for earnest eastern neaters
 >xr eastern
 After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
 >undo
@@ -674,12 +752,14 @@ You speed across the deeps of the Rawest Waters as if on nine-seg engines and to
 
 Mislit Limits
 
+#towers anagrams for curst palace
 >xr curst palace
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 >score
 Score in a scenario: 49 out of 56 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 56.
 
+#towers anagrams for ur pine
 >xr unripe
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -693,6 +773,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 50 out of 56 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 56.
 
+#towers anagrams for nastier stainer retinas
 >xr retinas
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -703,6 +784,7 @@ by one point
 >score
 Score in a scenario: 51 out of 56 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 56.
 
+#towers anagrams for repents serpent
 >xr serpent
 You blink
 >y
@@ -716,6 +798,7 @@ Score in a scenario: 52 out of 56 total points in the current region, Towers. Lo
 
 >in
 
+#towers anagrams for tetris sitter
 >xr tetris
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
