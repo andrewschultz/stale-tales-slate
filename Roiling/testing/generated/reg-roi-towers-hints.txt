@@ -625,8 +625,10 @@ Obscurest Subsector
 
 Dr. Yow can be manipulated, even behind the prison ropins.
 
+#towers anagrams for fissure
 >xr fissure
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
+#towers anagrams for luck node
 >xr luck node
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
 
@@ -660,7 +662,7 @@ Score in a scenario: 40 out of 56 total points in the current region, Towers. Lo
 
 Outer Route
 
-DEBUG INFO: rapier repair machine hinting.
+DEBUG INFO: diverse deviser hinting.
 
 #towers anagrams for diverse deviser
 >xr deviser
@@ -670,7 +672,7 @@ After a thoughtful gaze, you reckon the revised deviser could be REVISED.
 
 >revised
 
->put dagger in repair
+>put dagger in deviser
 #notana
 by one point
 
@@ -694,6 +696,12 @@ Score in a scenario: 43 out of 56 total points in the current region, Towers. Lo
 !Your score has just gone up by one point
 
 Dr. Yow is versatile. You need him to be exciting around the agnostic.
+
+#towers anagrams for atblock
+>xr agnostic
+You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
+>y
+After a thoughtful gaze, you reckon Scot Agin could be ATTENTIVE.
 
 >pearly
 Your score has just gone up by one point

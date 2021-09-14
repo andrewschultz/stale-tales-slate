@@ -2797,12 +2797,12 @@ It's not just any duck. But it's served its purpose.
 Outer Route
 
 @hin
-DEBUG INFO: rapier repair machine hinting.
+DEBUG INFO: diverse deviser hinting.
 
 @nud
 #mistake test for pairer
 >pairer
-You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 #nudge for roeut
 >roetu
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -2818,12 +2818,12 @@ Gosh! The campsite's about as swell as can be, as is. No need to rearrange anyth
 #nudge for campiest
 >campiets
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
-#nudge for repair
->repari
-The revised deviser is complicated enough. You probably just need to figure what to put in it.
 #nudge for machine
 >machien
 The revised deviser is complicated enough. You probably just need to figure what to put in it.
+#nudge for repair
+>repari
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 @sli
 #slider test for revised
@@ -2851,7 +2851,17 @@ After a thoughtful gaze, you reckon the revised deviser could be REVISED.
 >revised
 }}SCORE++
 
->put dagger in repair
+@nud
+#renudge for repair
+>repari
+The revised deviser is complicated enough. You probably just need to figure what to put in it.
+
+@mis
+#mistake test for pairer
+>pairer
+You don't need duplicates of anything here. Besides, the diverse deviser looks complex enough. It will probably reject or accept what it needs to.
+
+>put dagger in deviser
 #notana
 by one point
 }}SCORE++
@@ -2871,7 +2881,7 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 #mistake retest for pairer
 >pairer
-You don't need to repurpose the repair machine. It's done enough for you.
+The diverse deviser is in no shape to do any more work.
 #renudge for repair
 >shiyn
 The revised deviser is complicated enough. You already got something from it, and it's too broken to fix.

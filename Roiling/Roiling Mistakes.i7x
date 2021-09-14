@@ -757,7 +757,7 @@ understand "worse" as a mistake ("The brownies don't need to taste any worse.") 
 
 chapter Outer Route
 
-understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the diverse deviser. It's done enough for you[end if].") when player is in Outer Route.
+understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, [the deviser] machine looks complex enough. It will probably reject or accept what it needs to[else]The diverse deviser is in no shape to do any more work[end if].") when player is in Outer Route and diverse deviser is reflexed.
 
 chapter Baldest Blasted Saltbed
 

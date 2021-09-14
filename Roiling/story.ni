@@ -16626,7 +16626,7 @@ check examining Spec O Scope:
 	if the player regex-prompt-consents:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless mardier admirer is moot]un[end if]available, another just west is [unless ingrates are moot]un[end if]available, a particularly important location east of the east shore seems [unless bonker is moot]un[end if]available, and just south of it, an area looks [unless natives site van is moot]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 		now Spec O Scope is examined;
-		carry out the specoscope draw rule;
+		consider the specoscope draw rule;
 		the rule succeeds;
 
 description of Spec O Scope is "You look into the Spec-O-Scope and see:[paragraph break][fixed letter spacing]

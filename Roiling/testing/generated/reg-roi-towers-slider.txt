@@ -557,7 +557,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >revised
 
->put dagger in repair
+>put dagger in deviser
 #notana
 by one point
 
