@@ -219,13 +219,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Terrance. That's a d
 
 >gone
 >score
-Score in a scenario: 1 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+Score in a scenario: 1 out of 56 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 56.
 >lardy
 >score
-Score in a scenario: 2 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+Score in a scenario: 2 out of 56 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 56.
 >bleak
 >score
-Score in a scenario: 3 out of 55 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 55.
+Score in a scenario: 3 out of 56 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 56.
 
 #spechelp for rodney
 >rodnye
@@ -238,15 +238,15 @@ You've already thinned the picaros' ranks a bit--it can't be bad to tackle the o
 >achier
 Your score has just gone up by one point
 >score
-Score in a scenario: 4 out of 55 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 55.
+Score in a scenario: 4 out of 56 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 56.
 >snared
 Your score has just gone up by one point
 >score
-Score in a scenario: 5 out of 55 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 55.
+Score in a scenario: 5 out of 56 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 56.
 >cricked
 Your score has just gone up by one point
 >score
-Score in a scenario: 6 out of 55 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 55.
+Score in a scenario: 6 out of 56 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 56.
 
 #renudge for picaros
 >picarso
@@ -276,7 +276,7 @@ Your score has just gone up by one point
 Topside Deposit
 
 >score
-Score in a scenario: 8 out of 55 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 55.
+Score in a scenario: 8 out of 56 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 56.
 
 # this is out of order, because the main code path unlocks (ahem) UNLOCKED quite early
 >gonear obscurest subsector
@@ -415,7 +415,7 @@ Ooh! A couple more lights, now.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 55 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 55.
+Score in a scenario: 9 out of 56 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 56.
 
 >get all
 
@@ -486,7 +486,7 @@ The snider diners sniff at the beeping from the settler. They notice you look co
 Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
 #scannotes for denier nereid
 >scan denier nereid
-You can amlmost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
+You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
 #mistake test for ursty/ur sty
 >ursty
 You're trying to destroy the yurts, not build them up.
@@ -496,7 +496,7 @@ You're trying to destroy the yurts, not build them up.
 >rusty
 Your score has just gone up by one point
 >score
-Score in a scenario: 10 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+Score in a scenario: 10 out of 56 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 56.
 
 #mistake test for xray/x ray
 >xray
@@ -537,7 +537,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the bluster butlers.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+Score in a scenario: 11 out of 56 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 56.
 
 #spechelp for snider diners
 >dinesr
@@ -552,13 +552,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the denier nereid. T
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 55 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 55.
+Score in a scenario: 12 out of 56 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 56.
 
 >rinsed
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 55 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 55.
+Score in a scenario: 13 out of 56 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 56.
 
 #readables for keycar
 >read keycar
@@ -577,7 +577,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the yacker keycar. T
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 55 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 55.
+Score in a scenario: 14 out of 56 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 56.
 
 >n
 
@@ -616,7 +616,7 @@ Your settler registers RRYR?Y*****.
 >coiled
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+Score in a scenario: 15 out of 56 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 56.
 
 #spechelp for promise imposer
 >semprio
@@ -625,7 +625,7 @@ The promise imposer seems a little less intimidating.
 >semipro
 Your score has just gone up by one point
 >score
-Score in a scenario: 16 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+Score in a scenario: 16 out of 56 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 56.
 
 #done rejects for old ice
 >oldiec
@@ -641,7 +641,7 @@ Boy, these guys are tough! No matches, and ... well, maybe one of the vague read
 >pastier
 Your score has just gone up by one point
 >score
-Score in a scenario: 17 out of 55 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 55.
+Score in a scenario: 17 out of 56 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 56.
 
 >n
 
@@ -710,13 +710,13 @@ They're already stonewalling you from going west. Whether or not you need to go 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 55 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 55.
+Score in a scenario: 18 out of 56 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 56.
 >w
 
 Fringe Finger
 
 >score
-Score in a scenario: 18 out of 55 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 55.
+Score in a scenario: 18 out of 56 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 56.
 
 #mistake test for rustle/rustle strudel
 >rustle
@@ -752,7 +752,7 @@ DR. ELTUS recommends this strudel!
 >rustled
 Your score has just gone up by one point
 >score
-Score in a scenario: 19 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
+Score in a scenario: 19 out of 56 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 56.
 
 >e
 
@@ -799,7 +799,7 @@ No, Elsa's full name. Elsa Erde. With Reed's Ale.
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
 >score
-Score in a scenario: 20 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
+Score in a scenario: 20 out of 56 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 56.
 
 #done rejects for strudel
 >strudle
@@ -819,7 +819,7 @@ You're not sure why the Salted Deltas could be slated, or how. You're not here f
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 21 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
+Score in a scenario: 21 out of 56 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 56.
 >n
 
 Shaven Havens
@@ -905,11 +905,11 @@ Ooh! Another light, now.
 >hastiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 22 out of 55 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 55.
+Score in a scenario: 22 out of 56 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 56.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 55 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 55.
+Score in a scenario: 23 out of 56 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 56.
 >s
 
 #rescannotes for curst palace
@@ -939,7 +939,7 @@ You see red realizing the resident trendies already inserted themselves here.
 >nerdiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 24 out of 55 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 55.
+Score in a scenario: 24 out of 56 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 56.
 
 #mistake test for dang rite
 >dang rite
@@ -969,7 +969,7 @@ The realist tailers have plenty to say about retail shopping, but you don't want
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
+Score in a scenario: 25 out of 56 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 56.
 
 #renudge for gradient
 >gradietn
@@ -989,7 +989,7 @@ That might make the weeds FROM Scandinavia, but it wouldn't SEND them there.
 >sewed
 Your score has just gone up by one point
 >score
-Score in a scenario: 26 out of 55 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 55.
+Score in a scenario: 26 out of 56 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 56.
 
 #nudge for save
 >saev
@@ -1038,7 +1038,7 @@ The gradient itself can't be changed, but you can change the last thing that's h
 
 >mined
 >score
-Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 55.
+Score in a scenario: 27 out of 56 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 56.
 
 #renudge for gradient
 >gradietn
@@ -1049,10 +1049,12 @@ Dire and Arid Den
 
 #scannotes for bogus-dandier
 >scan
+Your settler registers ?YR?Y?R.
 You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
 #scannotes for drained dreadin
 >scan drained dreadin
 Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.
+Your settler registers PYRRY?R.
 #scannotes for nerd aid diner ad
 >scan nerd aid diner ad
 The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
@@ -1061,21 +1063,30 @@ The ad must be helpful in its own way. But of course it is just aid and not an o
 You feel slightly less depressed you tried something. You can't be too far off.
 #nudge for nerd
 >nedr
-Concentrate on the Nerd-Aid. In the dandier arid den.
+Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 #nudge for aid
 >adi
-Concentrate on the Nerd-Aid. In the dandier arid den.
+Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 #nudge for bottles
 >bottlse
 They're not just bottles! They're bottles of NERD-AID!
 
+#rescanning bogus-dandier
+>scan
+Your settler registers ?YR?Y?R.
+# might as well test this appearing only once
+!You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
+>dridane
+You feel slightly less depressed you tried something. You can't be too far off.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
+
 >score
-Score in a scenario: 27 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 27 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >dandier
 Treading Gradient
 
 >score
-Score in a scenario: 28 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 28 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >e
 
 #nudge for scalier
@@ -1134,12 +1145,12 @@ Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a b
 #notmax
 Your score has just gone up by one point
 >score
-Score in a scenario: 29 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 29 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >holiest
 #notmax
 Your score has just gone up by one point
 >score
-Score in a scenario: 30 out of 55 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 55.
+Score in a scenario: 30 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >n
 >s
 >s
@@ -1164,7 +1175,7 @@ This game has no soundtrack, and if I made one, it wouldn't be very good.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 55 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 55.
+Score in a scenario: 31 out of 56 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 56.
 
 #nudge for native
 >natiev
@@ -1189,7 +1200,7 @@ Your score has just gone up by one point
 >thisalt
 --you could've also made the natives' site van VAINEST to uproot them.
 >score
-Score in a scenario: 32 out of 55 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 55.
+Score in a scenario: 32 out of 56 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 56.
 >w
 
 #nudge for leveraged
@@ -1235,7 +1246,7 @@ The ego-drains remain made of sturdy material.
 >grandiose
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 55 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 55.
+Score in a scenario: 33 out of 56 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 56.
 >e
 >s
 Lost Lots
@@ -1267,18 +1278,18 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 >rousted
 by one point
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 54.
+Score in a scenario: 34 out of 56 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
 >undo
 >undo
 >aimless
 Your score has just gone up by one point
 # don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
+Score in a scenario: 34 out of 56 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 56.
 >rousted
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 55 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 55.
+Score in a scenario: 35 out of 56 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 56.
 
 #mistake test for reposit/reposits
 >reposit
@@ -1311,7 +1322,7 @@ You might have to read through a lot of possibilities even if you can quickly fi
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 36 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 #nudge for lost
 >ltso
@@ -1347,7 +1358,7 @@ Seeing ambiguous readings is probably better than seeing stars from actually get
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 37 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 37 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 #spechelp for stinger
 >restign
@@ -1361,7 +1372,7 @@ The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you gue
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 38 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 38 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 #mistake test for ranged
 >ranged
@@ -1458,7 +1469,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 39 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 39 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 >wordy
 You recharge Dr. Yow's wordiness.
@@ -1526,7 +1537,7 @@ The luck node can and should be defeated nonviolently.
 by one point
 
 >score
-Score in a scenario: 40 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 40 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 #mistake retest for delock
 >delock
@@ -1578,21 +1589,35 @@ Gosh! The campsite's about as swell as can be, as is. No need to rearrange anyth
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for repair
 >repari
-The machine is complicated enough. You probably just need to figure what to put in it.
+The revised deviser is complicated enough. You probably just need to figure what to put in it.
 #nudge for machine
 >machien
-The machine is complicated enough. You probably just need to figure what to put in it.
-#nudge for shiny
->shiyn
-The machine is complicated enough. You probably just need to figure what to put in it.
+The revised deviser is complicated enough. You probably just need to figure what to put in it.
+
+#spechelp for diverse deviser
+>revisde
+You thought you heard a brief hum from the diverse deviser for a moment there.
+#readables for diverse deviser
+>read deviser
+I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
+#scannotes for diverse deviser
+>scan deviser
+You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Gosh, those ambiguous clues might be MORE interesting and useful than the usual!"
+
+>revides
+
+>revised
 
 >put dagger in repair
 #notana
 by one point
 
 >score
-Score in a scenario: 41 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 42 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
+#done rejects for diverse deviser
+>revised
+You already repaired the diverse deviser and got what you needed.
 #nudge for gizmo
 >gizom
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
@@ -1602,9 +1627,9 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 #mistake retest for pairer
 >pairer
 You don't need to repurpose the repair machine. It's done enough for you.
-#renudge for shiny
+#renudge for repair
 >shiyn
-The machine is complicated enough. You already got something from it.
+The revised deviser is complicated enough. You already got something from it, and it's too broken to fix.
 
 >gt coastlines
 
@@ -1711,7 +1736,7 @@ Well, this may be more intellectually challenging than the book itself. Lots of 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 42 out of 55 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 55.
+Score in a scenario: 43 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 >ask agnostic about doctor yow
 #notana
@@ -1755,11 +1780,11 @@ The raves saver/replay player can be parleyed into something shinier.
 >pearly
 Your score has just gone up by one point
 >score
-Score in a scenario: 43 out of 55 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 55.
+Score in a scenario: 44 out of 56 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 56.
 >attentive
 Your score has just gone up by one point
 >score
-Score in a scenario: 44 out of 55 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 55.
+Score in a scenario: 45 out of 56 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 56.
 
 #mistake retest for parley
 >parley
@@ -1783,7 +1808,7 @@ Scot is fully attentive. Don't ruin a good thing!
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 45 out of 55 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 55.
+Score in a scenario: 46 out of 56 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 56.
 
 >gt coastlines
 >give gizmo to agnostic
@@ -1916,7 +1941,7 @@ You fixed what you can of the boat.
 >rewired
 Your score has just gone up by one point
 >score
-Score in a scenario: 48 out of 55 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 55.
+Score in a scenario: 49 out of 56 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 56.
 
 >enter boat
 You speed across the deeps of the Rawest Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
@@ -1924,7 +1949,7 @@ You speed across the deeps of the Rawest Waters as if on nine-seg engines and to
 Mislit Limits
 
 >score
-Score in a scenario: 48 out of 55 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 55.
+Score in a scenario: 49 out of 56 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 56.
 
 #nudge for mislit
 >mislti
@@ -1971,7 +1996,7 @@ You're beyond the lake now.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 49 out of 55 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 55.
+Score in a scenario: 50 out of 56 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 56.
 
 #scannotes for nastier stainer retinas
 >scan retinas
@@ -2007,13 +2032,13 @@ You're probably better of dispelling all the things to repent about at once, not
 >antsier
 by one point
 >score
-Score in a scenario: 50 out of 55 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 55.
+Score in a scenario: 51 out of 56 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 56.
 
 >present
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 51 out of 55 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 55.
+Score in a scenario: 52 out of 56 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 56.
 
 #nudge for present
 >pretnes
@@ -2049,7 +2074,7 @@ No physical sciences are necessary here.
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 52 out of 55 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 55.
+Score in a scenario: 53 out of 56 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 56.
 
 #nudge for teri
 >teir
@@ -2062,7 +2087,7 @@ St. Teri's back in the real world, now.
 #notana
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 55 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 55.
+Score in a scenario: 54 out of 56 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 56.
 
 >ask teri about palace
 It can be something super special.
@@ -2150,7 +2175,7 @@ NOTE: You get a bonus point for not using the toaster/pastries' x-ray vision any
 Strip of Profits
 
 >score
-, Towers (55/55)
+, Towers (56/56)
 
 #this can't be easily tested elsewhere without cheating e.g. gonear limits, spectacular
 #mistake retest for tortes

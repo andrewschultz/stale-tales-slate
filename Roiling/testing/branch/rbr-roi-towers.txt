@@ -15,10 +15,10 @@ files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,r
 ~	sli	t4
 ~	hints,hin,spoi	t5
 
-}}MAX=55
-}}CURMAX=55
+}}MAX=56
+}}CURMAX=56
 }}SCORE=0
-}}CURMIN=25
+}}CURMIN=26
 
 }$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 }$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Towers. There are no secrets left to find here, so the score to win is {CURMAX} points.
@@ -905,7 +905,7 @@ The snider diners sniff at the beeping from the settler. They notice you look co
 Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is.
 #scannotes for denier nereid
 >scan denier nereid
-You can amlmost hear the denier nereid telling you you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
+You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings.
 #mistake test for ursty/ur sty
 >ursty
 You're trying to destroy the yurts, not build them up.
@@ -1963,10 +1963,12 @@ Dire and Arid Den
 @nud
 #scannotes for bogus-dandier
 >scan
+Your settler registers ?YR?Y?R.
 You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
 #scannotes for drained dreadin
 >scan drained dreadin
 Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach.
+Your settler registers PYRRY?R.
 #scannotes for nerd aid diner ad
 >scan nerd aid diner ad
 The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here.
@@ -1975,10 +1977,10 @@ The ad must be helpful in its own way. But of course it is just aid and not an o
 You feel slightly less depressed you tried something. You can't be too far off.
 #nudge for nerd
 >nedr
-Concentrate on the Nerd-Aid. In the dandier arid den.
+Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 #nudge for aid
 >adi
-Concentrate on the Nerd-Aid. In the dandier arid den.
+Concentrate on the Nerd-Aid. Here in the Dire and Arid Den.
 #nudge for bottles
 >bottlse
 They're not just bottles! They're bottles of NERD-AID!
@@ -1988,11 +1990,12 @@ They're not just bottles! They're bottles of NERD-AID!
 >addneri
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@hin
+@nud
+#rescanning bogus-dandier
 >scan
-Your settler registers ?YR?Y?R--hmm.
->scan dreadin
-Your settler registers PYRRY?R.
+Your settler registers ?YR?Y?R.
+# might as well test this appearing only once
+!You cringe, waiting for a voice to boom "WHAT? YOU EXPECTED A COMPLETE SOLUTION?" You probably have enough to work with.
 >dridane
 You feel slightly less depressed you tried something. You can't be too far off.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Dire and Arid Den. That's a decent omen.
@@ -2717,6 +2720,9 @@ It's not just any duck. But it's served its purpose.
 
 Outer Route
 
+@hin
+DEBUG INFO: rapier repair machine hinting.
+
 @nud
 #mistake test for pairer
 >pairer
@@ -2738,16 +2744,35 @@ Gosh! The campsite's about as swell as can be, as is. No need to rearrange anyth
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 #nudge for repair
 >repari
-The machine is complicated enough. You probably just need to figure what to put in it.
+The revised deviser is complicated enough. You probably just need to figure what to put in it.
 #nudge for machine
 >machien
-The machine is complicated enough. You probably just need to figure what to put in it.
-#nudge for shiny
->shiyn
-The machine is complicated enough. You probably just need to figure what to put in it.
+The revised deviser is complicated enough. You probably just need to figure what to put in it.
 
-@hin
-DEBUG INFO: rapier repair machine hinting.
+@sli
+#slider test for revised
+>eresdvi
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#spechelp for diverse deviser
+>revisde
+You thought you heard a brief hum from the diverse deviser for a moment there.
+#readables for diverse deviser
+>read deviser
+I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue.
+#scannotes for diverse deviser
+>scan deviser
+You can almost hear a voice from the Campiest Campsite say "Buck up, sport! I believe in you! Gosh, those ambiguous clues might be MORE interesting and useful than the usual!"
+
+@spoi
+>xr deviser
+After a thoughtful gaze, you reckon the revised deviser could be REVISED.
+
+>revides
+
+>revised
+}}SCORE++
 
 >put dagger in repair
 #notana
@@ -2758,6 +2783,9 @@ by one point
 {$SCOS}
 
 @nud
+#done rejects for diverse deviser
+>revised
+You already repaired the diverse deviser and got what you needed.
 #nudge for gizmo
 >gizom
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
@@ -2767,9 +2795,10 @@ It's so technically detailed, you worry you might break it by thinking at it wro
 #mistake retest for pairer
 >pairer
 You don't need to repurpose the repair machine. It's done enough for you.
-#renudge for shiny
+#renudge for repair
 >shiyn
-The machine is complicated enough. You already got something from it.
+The revised deviser is complicated enough. You already got something from it, and it's too broken to fix.
+
 
 >gt coastlines
 
