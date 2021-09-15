@@ -33,6 +33,9 @@ check_v_c = False
 red_anagrams = defaultdict(list)
 found_searched = defaultdict(bool)
 
+examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
+  'sprite,esprit,stripe', 'sprite,esprit,stripe,!priest' ]
+
 def alfy(a):
     return ''.join(sorted(a))
 
@@ -50,6 +53,14 @@ def max_digits(freqs):
             if digits_of(freqs[a][b]) > max_so_far:
                 max_so_far = digits_of(freqs[a][b])
     return max_so_far
+
+def process_from_string(my_string):
+    ary = my_string.split(',')
+    red_anagrams[ary[0]] = [ x.replace('!', '') for x in ary[1:] if '!' in x ]
+    main_clue_array = [ x for x in ary[1:] if '!' not in x ]
+    main_clue_array.insert(0, ary[0])
+    main_clue_array.insert(1, cheat_reading(main_clue_array))
+    find_poss(main_clue_array)
 
 def valid_match(my_answer, my_hints, my_original):
     my_hints = my_hints.lower()
@@ -246,6 +257,11 @@ while count < len(sys.argv):
     elif arg == 's': show_all_grids = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
     elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
+    elif arg[0] == 'x' and arg[1:].isdigit():
+        temp = int(arg[1:])
+        if temp < 1 or temp > len(examples_array):
+            sys.exit("Not a valid example. x requires a digit from 0 to {}.".format(len(examples_array)))
+        process_from_string(examples_array[temp-1])
     elif '=' not in arg:
         file_search = True
         if ',' in arg:
@@ -256,12 +272,7 @@ while count < len(sys.argv):
             found_searched[arg] = False
     else:
         arg = arg.replace('=', '')
-        ary = arg.split(',')
-        red_anagrams[ary[0]] = [ x.replace('!', '') for x in ary[1:] if '!' in x ]
-        main_clue_array = [ x for x in ary[1:] if '!' not in x ]
-        main_clue_array.insert(0, ary[0])
-        main_clue_array.insert(1, cheat_reading(main_clue_array))
-        find_poss(main_clue_array)
+        process_array(arg)
     count += 1
 
 if file_search:
