@@ -30,6 +30,20 @@ You don't want to risk anything that would make Elvira more powerful.
 >alvire
 Changing Elvira is impossible, and you certainly don't want to summon her.
 
+# must be done before using the TS command
+
+#nudge for paces
+>epcas
+Meta-commands don't have any easter eggs, sadly.
+
+#nudge for pedanto
+>pedanto
+You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
+
+#renudge for pedanto
+>pedanto
+!But to do that
+
 ########################
 #above stuff needs to be done before/inside. Below can be done any time, or you need the settler
 ########################
@@ -42,7 +56,7 @@ You can't just unjumble Yorpwald with just one word. You need to deal with indiv
 
 #nudge for settler
 >ettlers
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for which
 >whihc
@@ -54,54 +68,50 @@ You won't gain anything trying to magic the settler, or parts of it, about. All 
 
 #nudge for mark
 >kram
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for recoded
 >recodde
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
-#nudge for deviser
->deviser
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for backside
 >backside
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for decla
 >decal
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for buntot
 >button
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for receptor
 >receptor
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for receptors
 >receptors
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for output
 >outptu
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for displya
 >displya
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for equals
 >quales
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for logo
 >gool
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
+You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
 #nudge for souht
->south
+>suoth
 This game almost never requires you to mess with cardinal directions.
 
 #nudge for ewts
@@ -196,7 +206,15 @@ The purse is just fine as it is.
 >aspec
 You don't want to mess with the space-capes. They work.
 
+>purloin treatise
+
 #nudge for treatise
+>treaties
+The treatise is there as help to discover the satchel. It has only sentimental value, now.
+
+>abstract treatise to ll
+
+#renudge for treatise
 >treaties
 The treatise was there as help to discover the satchel. It has only sentimental value, now.
 
@@ -221,14 +239,6 @@ Red writing is a just clue of what to change.
 >warning
 You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
 
-#nudge for pedanto
->pedanto
-You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
-
-#rernudge for pedanto
->pedanto
-!But to do that
-
 #nudge for curses
 >cusser
 You're not fooling ME. Shame on you!
@@ -241,7 +251,7 @@ You're not fooling ME. Shame on you!
 >astarbd
 You're not fooling ME. Shame on you!
 
->abstract elmo to lalaland
+>abstract elmo to ll
 
 #nudge for parse
 >pesar
@@ -293,7 +303,7 @@ Meta-commands don't have any easter eggs, sadly.
 
 #nudge for spaceson
 >spacenos
-Meta-commands don't have any easter eggs, sadly
+Meta-commands don't have any easter eggs, sadly.
 
 #nudge for spaceon
 >spacoen
@@ -301,10 +311,6 @@ Meta-commands don't have any easter eggs, sadly.
 
 #nudge for spaces
 >spaces
-Meta-commands don't have any easter eggs, sadly.
-
-#nudge for paces
->epcas
 Meta-commands don't have any easter eggs, sadly.
 
 #nudge for son
@@ -333,15 +339,15 @@ Meta-commands don't have any easter eggs, sadly.
 
 #nudge for opts
 >opst
-Meta-commands don't have any easter eggs, sadly
+Meta-commands don't have any easter eggs, sadly.
 
 #nudge for options
 >optiosn
-Meta-commands don't have any easter eggs, sadly
+Meta-commands don't have any easter eggs, sadly.
 
 #nudge for version
 >versino
-Meta-commands don't have any easter eggs, sadly
+Meta-commands don't have any easter eggs, sadly.
 
 #nudge for something
 >semithong

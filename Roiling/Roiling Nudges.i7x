@@ -1490,7 +1490,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "slider"	429239652	settler	--	"You can just switch the slider if you want to manipulate it."
 "purse"	495975644	super purse	--	"The purse is just fine as it is."
 "sacep"	326739437	super purse	--	"You don't want to mess with the space-capes. They work."
-"treatise"	690610687	treatise	--	"The treatise [if settler is off-stage]is[else]was[end if] there as help to discover [if settler is off-stage]what's in the latches[else]the satchel. It has only sentimental value, now[end if]."
+"treatise"	690610687	--	treatise-known rule	"The treatise [if treatise is moot]was[else]is[end if] there as help to discover [if settler is off-stage]what's in the latches[else]the satchel. It has only sentimental value, now[end if]."
 "gird"	183945440	gird grid	--	"The grid already contains pretty much everything Elmo was able to find out."
 "writing"	487861496	red writing	--	"[red-wri]."
 "redwriting"	722020497	red writing	--	"[red-wri]."
@@ -1537,7 +1537,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "credit"	401267450	--	degen-true rule	"The 'credits' [dir-cut]."
 "history"	563694761	--	degen-true rule	"The 'history' [dir-cut]."
 "hush"	275944371	--	degen-true rule	"[meta-rej]."
-"spaceson"	566273488	--	degen-true rule	"[meta-rej]"
+"spaceson"	566273488	--	degen-true rule	"[meta-rej]."
 "spaceon"	469999522	--	degen-true rule	"[meta-rej]."
 "spaces"	423013403	--	degen-true rule	"[meta-rej]."
 "paces"	326739437	--	degen-true rule	"[meta-rej]."
@@ -1547,9 +1547,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "access"	360553029	--	degen-true rule	"[meta-rej]."
 "exit"	388677054	--	degen-true rule	"[meta-rej]."
 "exits"	484951020	--	degen-true rule	"[meta-rej]."
-"opts"	355202520	--	degen-true rule	"[meta-rej]"
-"options"	543455451	--	degen-true rule	"[meta-rej]"
-"version"	604821629	--	degen-true rule	"[meta-rej]"
+"opts"	355202520	--	degen-true rule	"[meta-rej]."
+"options"	543455451	--	degen-true rule	"[meta-rej]."
+"version"	604821629	--	degen-true rule	"[meta-rej]."
 "something"	649400178	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
 
 book auxiliary text and rules
@@ -2047,8 +2047,6 @@ this is the see-female-admirer rule:
 	if player is female and mardier admirer is touchable, the rule succeeds;
 	the rule fails;
 
-to say nerd-a: say "Concentrate on the Nerd-Aid. Here in the Dire and Arid Den"
-
 to say grail-name: say "His full name, Liam Garn"
 
 to say reed-name: say "No, [el-la-first]'s full name. [el-la-full]. With Reed's Ale"
@@ -2196,6 +2194,10 @@ section mesprise premises auxiliary
 this is the teri-reflexed rule:
 	if player is in Mesprise Premises and Tetris Sitter is reflexed, the rule succeeds;
 	the rule fails;
+
+section dire and arid den auxiliary
+
+to say nerd-a: say "Concentrate on the Nerd-Aid. Here in the Dire and Arid Den"
 
 chapter otters auxiliary
 
@@ -2406,6 +2408,10 @@ this is the elvira-here rule:
 
 to say no-set: say "You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place";
 
+this is the treatise-known rule:
+	if treatise is not off-stage, the rule succeeds;
+	the rule fails;
+
 to say red-wri: say "Red writing is a just clue of what to change. It can't be changed, itself";
 
 this is the in-innie rule:
@@ -2434,7 +2440,7 @@ to say major-swear: say "[if mrlp is presto and cur-score of presto > 0]Curiousl
 to say mild-swear: say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
 
 this is the know-point rule:
-	if cur-score of Ordeal Reload > 1, the rule succeeds;
+	if cur-score of Ordeal Reload > 1 or mrlp is not Ordeal Reload, the rule succeeds;
 	the rule fails;
 
 this is the can-i-parse rule:
