@@ -9799,11 +9799,12 @@ table of X4 reasoning
 cheat-clue
 "Example 4 is an ESPRIT STRIPE. The clue is ?R??R?."
 "Believe it or not, nearly everything falls into place quickly here."
-"The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/P/S, and the sixth is E/T."
-"If letter 4 were R, #2 and 3 would both be P. So #4 is I."
-"Also, #5 is T, because if it were R or P, that'd leave only one option for letter 2 or 3. But since #6 must be E or T, it is E."
-"Since #1 is E or S, so it must be S. That leaves SRPITE or SPRITE."
-"At some point, strict logic isn't quite enough, and common sense will eliminate the last few answers. Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE."
+"The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T."
+"Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T)."
+"That makes a total of four, and you can guess if you want from sprite, eprist, erpist, and srpite."
+"But you also may be aided by red writing that indicates all letters are wrong. In this case, PRIEST written on the stripe would help you eliminate three options.
+"Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though."
+"At some point, strict logic isn't quite enough. Common sense may eliminate the last few answers, or for longer words, you may need legitimate guesswork."
 
 chapter plaster psalter
 
@@ -16911,7 +16912,7 @@ check pushing repeat button:
 	if duck is touchable and saver is goosey, say "The duck cowers in fear, unable to locate the source of the noise[if Dr Yow is touchable], and Dr. Yow seems to glare at you a bit[end if]." instead;
 	if raves saver is yow-yell and duck is touchable, say "The duck seems to walk forward but gets scared by the volume and rapidity of the noise." instead;
 	if raves saver is yow-talk and duck is touchable:
-		if duck is friendly or duck is close, say "You've already got the duck's attention." instead;
+		if duck is midstage, say "You've already got the duck's attention." instead;
 		say "The duck perks up. It recognizes Dr. Yow's voice! It gives a hankering honk and comes closer to you and the sound of Dr. Yow's voice.";
 		now duck is friendly;
 		now raves saver is realized;
@@ -23353,8 +23354,8 @@ carry out tsing:
 	if Strip of Profits is visited, say "You should RETRY instead to go back." instead;
 	move player to Strip of Profits;
 	get-cool-stuff;
-	if player has lamp, moot lamp;
-	if player has teariest treatise, moot teariest treatise;
+	moot lamp;
+	moot teariest treatise; [ for testing purposes ]
 	now Ordeal Reload is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;

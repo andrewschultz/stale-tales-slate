@@ -1,5 +1,20 @@
 # pos.py: possibility/position checker from command line or file
 #
+# this processes what question mark clues should appear for an item and the word it needs
+# it also calculates the total possibilities given these clues as well as any unique letters
+#
+# usage: (for inducted deductin')
+#
+# pos.py =peas,apes,apse
+# pos.py =rome,mere,moor
+# pos.py =cadres,sacred,cedars
+# pos.py =sprite,esprit,stripe
+# pos.py =sprite,esprit,stripe,!priest (priest red-letter writing)
+#
+# with and without red writing
+#
+# pos.py revised
+# pos.py revised,idserve
 
 from collections import defaultdict
 import sys
