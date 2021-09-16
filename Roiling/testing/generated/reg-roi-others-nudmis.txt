@@ -928,14 +928,14 @@ The kumquat is in good enough shape. Just return it to Curtis.
 #done rejects for mango
 >manog
 Snag mo' mangos? No mas, G.
-#done rejects for prices precis
+#done rejects for kumquat
 >cripse
 You corrected the prices precis enough.
 
 >w
 
 #doing this in front of the prices precis should give the same result.
-#redone rejects for prices precis
+#redone rejects for kumquat
 >cripse
 You corrected the prices precis enough.
 #done rejects for papayas
@@ -1004,7 +1004,7 @@ It's counterfeit enough as-is. You probably need to just find someone who'd actu
 female
 #mistake test for red rat
 >red rat
-Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
+Red? Dr. Tera Darter is nowhere NEAR that left-wing. Rat? Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
 #mistake test for allo
 >allo
 Lola says nothing back.

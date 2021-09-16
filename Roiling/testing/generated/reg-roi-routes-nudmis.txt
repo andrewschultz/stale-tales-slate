@@ -141,7 +141,7 @@ The church's name is not as important as its mission.
 #scannotes for anti sag sit a nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
-#spechelp for sit a nag
+#spechelp for anti sag sit a nag
 >agastni
 You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
@@ -575,7 +575,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 >enchb
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
-#respechelp for sit a nag
+#respechelp for anti sag sit a nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -610,7 +610,7 @@ You can't change Ian Gast permanently. You just have to work around him.
 #mistake retest for staider
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
-#done rejects for sit a nag
+#done rejects for gast
 >againts
 You already leaned on the anti-sag sit-a-nag right. You look around it and wonder if the side art could stop Ian Gast's tirades.
 #nudge for ides
@@ -657,7 +657,7 @@ You already did your best with the tirades and side art.
 #done rejects for side art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
-#redone rejects for sit a nag
+#redone rejects for gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -665,7 +665,7 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 
-#redone rejects for sit a nag
+#redone rejects for gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -730,11 +730,10 @@ That's not quite the book's whole title.
 >under
 Your score has just gone up by one point
 
-#respechelp for sit a nag
+#done rejects for anti sag sit a nag
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
-!DEBUG ONLY: You feel a slight psychic push-pull coming from
-#the sit a nag. That's a decent omen. ??
+!DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
 #mistake retest for satired
 >satired
 Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.

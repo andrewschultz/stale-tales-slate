@@ -806,7 +806,7 @@ If only it were that easy, to have a basket to harvest fish! But this area is ab
 Don't flee! Help the poor trout.
 #mistake test for unheart
 >unheart
-Silly internet slang isn't active enough, here.
+Silly Internet slang isn't active enough, here.
 #mistake test for renga
 >renga
 Now is not the time for poetry.

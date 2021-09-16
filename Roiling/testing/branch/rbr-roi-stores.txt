@@ -356,7 +356,7 @@ It'd get you in trouble around here.
 @nud
 #nudge for blabber
 >blabbre
-The blabber babbler is unchangeable, but perhaps indiectly moving him will work.
+The blabber babbler is unchangeable, but perhaps indirectly moving him will work.
 \\
 #nudge for rehab
 >rehba
@@ -407,7 +407,7 @@ Before you can do anything with or to the Rehabs Basher, she thrusts pamphlets l
 Before you can do anything with or to the Rehabs Basher, he thrusts pamphlets labeled Help Stamp Hemp SPLAT at you
 #nudge for example
 >exampel
-The blabber babbler is unchangeable, but perhaps indiectly moving him will work.
+The blabber babbler is unchangeable, but perhaps indirectly moving him will work.
 #nudge for ian
 >ina
 Ian is unchangeable, but maybe he is movable.

@@ -1366,7 +1366,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a de
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 \\
-#scannotes for sly imp
+#NOTE: the sly imp is not in the scannotes table because they are rerouted to their properties, but I still want a test.
 >scan sly imp
 The settler then gets garbled a bit. The imp has more than one way to be active.
 
@@ -1599,7 +1599,7 @@ Your score has just gone up by one point
 @nud
 #scannotes for stray satyr
 >scan stray satyr
-The satyr seems phyiscally hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
+The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
 #readables for stray satyr
 >read stray satyr
 You see TSYRA branded in red under the stray satyr's shoulder.
@@ -1767,7 +1767,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 \\
-#scannotes for whiners
+#NOTE: the whiners are not in the scannotes table because they are rerouted to their properties, but I still want a test.
 >scan whiners
 The settler then garbles and changes. The whiners have more than one way of staying loud.
 
