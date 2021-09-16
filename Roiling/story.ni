@@ -6143,17 +6143,7 @@ carry out iving:
 	say "Now I(INVENTORY) [if hows-show-tools is true]show[else]hide[end if]s your general tools.";
 	the rule succeeds;
 
-chapter going
-
-check going nowhere when mrlp is towers (this is the towers-mis-go rule):
-	if noun is inside or noun is outside, say "You can't go in, here." instead;
-	if shoals are touchable, say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
-	if location of player is detourable:
-		if dourest detours are unvisited:
-			say "You get lost in [the random bounding scenery in location of player] a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.";
-			now last-detour is location of player;
-			move player to Dourest Detours;
-			min-up;
+chapter going (nowhere)
 
 definition: a room (called r) is detourable:
 	if r is outer route or r is lost lots or r is shaven havens, yes;
@@ -6168,6 +6158,7 @@ check going nowhere (this is the main can't go that way rule) :
 			now upwarned is true instead;
 	repeat through table of nowheres:
 		if theloc entry is location of player, say "[thereject entry][line break]" instead;
+	if mrlp is troves, say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on."; [this should not be relevant, as all Troves locations should be in the table below, but just in case...]
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
@@ -6177,17 +6168,17 @@ table of nowheres [tnw]
 theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
 Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
-Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
+Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if pram is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
 Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
-Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor.[end if]"
+Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor."
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
-Loather Rathole	"Consciously going into any hurt thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
+Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where L Clear Cellar must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where [cellar] must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
 Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
 Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
 Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
@@ -6198,7 +6189,7 @@ Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens 
 Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar Remains	"While you're impressed with people who can navigate sport ports, you [if sport ports are reflexed]already saluted them. No need to do more[else]couldn't do much more than show respect for them, if you need a distraction from your main quest[end if]."
 Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
-Unwary Runway	"The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?"
+Unwary Runway	"[if number of npcish people > 0 and symp-yet is false][random npcish person] waves frantically at you NOT to touch the east and west walls. They may be extra shocking here[change-symp]![else]The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?[end if]"
 Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
 Posh Hops Shop	"[posh-cant-exit]." [oyster]
 Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
@@ -6206,37 +6197,47 @@ Disease Seaside	"The matterless streamlets, err, don't matter. They might even l
 Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
 Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
 Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south, or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
+Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
 Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
 Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
 Tenfold Teflond Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
-Loftier Trefoil	"[if rodney is touchable]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
+Loftier Trefoil	"[if number of moot picaros < 3]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out[end if]." [towers]
 Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
-Actionless Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]."
+Actionless Coastlines	"[if noun is southwest]You don't need to explore the natatorium or Hatchery[else]You can't get across Leak Lake without some sort of craft[like-boat][end if]."
 Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
 Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
 Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."
 Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrike!'[paragraph break][or][stopping]Not worth it. Any direction but back south might drive you too far from the palace."
 Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
-Mislit Limits	"The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]."
+Mislit Limits	"[if noun is south or noun is southwest]You don't want to go back across Leak Lake[else]The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[mislit-clue][end if]."
 Clarthead Cathedral	"[no-coma]." [otters]
 Shiner Shrine	"[no-coma]."
 Loop Pool	"The pool is wide and long. You can only go back south."
-Bran Barn	"You don't need to go any way but back north."
-Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Blest Belts are private to animals[end if]."
+Bran Barn	"You don't need to explore Mr. Lee's property. Your only way out is back north."
+Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Blest Belts are private to animals and those who helped them[end if]."
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot![paragraph break]Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"[if swell wells are visited]You can only go north back to the Swell Wells and beyond[else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
-Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage, the only way to say I fled is to go back east[end if]."
+Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
+Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
+
+to say change-symp: now symp-yet is true;
+
+to say and-pen: say "[if lie pen app is moot]even without [the lie pen app][else][the lie pen app] too[end if]"
+
+to say mislit-clue: say "[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]"
+
+to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"
+
+to say back-to-wells: say " back to the Swell Wells and beyond"
 
 to say posh-cant-exit:
 	if noun is not outside:
@@ -6269,6 +6270,79 @@ to say unless-max:
 	if bogus-redial is reflexive:
 		decrement my-tot;
 	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
+
+section specific rules
+
+check going nowhere in Dusty Study:
+	if Dusty Study is not lit, say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
+	if Report Porter Perrot is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
+	check going down in Dusty Study:
+		if meet bans are in Dusty Study, say "Ouch! You smack into the MEET-BANS[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
+	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Report Porter Perrot is moot], especially after that chat with [perrot][end if]." instead;
+	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
+
+check going nowhere in Carven Cavern (this is the cavern check rule):
+	if act ruin curtain is not in Carven Cavern, say "You need to make an exit, first." instead;
+	say "The only way to make progress is inward, through that [if act ruin curtain is moot]ex-[end if]curtain.";
+	if act ruin curtain is moot:
+		say "[line break]Go through?";
+		if the player regex-prompt-consents, try going inside instead;
+		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
+	do nothing instead;
+
+check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
+	if Gast is in Same Mesa:
+		if noun is inside, try fliptoing scripture picturers instead;
+		say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
+	if noun is a direction:
+		if noun is inside:
+			if Cleric Circle is unvisited:
+				if adobe is visited or deli is visited:
+					if adobe is visited and deli is visited:
+						if inwarn is false:
+							ital-say "if you want to get back to the adobe or deli, you have to go ACROSS or PAST. Sorry for the ambiguity.";
+							now inwarn is true;
+					else:
+						say "That isn't quite how to enter the church. Do you wish to go back to the [if adobe is visited]adobe[else]deli[end if]?";
+						if the player yes-consents:
+							if adobe is visited, move player to adobe instead;
+							move player to Idle Deli instead;
+				now in-try is true;
+				say "Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time[if Adobe Abode is visited or deli is visited]--you already used [aop] to enter another place differently, so the same probably applies here[end if]." instead;
+			move player to Cleric Circle instead;
+		if noun is down and THE BEAN is touchable, say "Well, not quite DOWN..." instead;
+		if noun is up or noun is down, say "That won't work right now." instead;
+		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
+	else:
+		say "No matter where you try to wander, you wind up back where you are." instead;
+
+check going nowhere in Cleric Circle:
+	if noun is not outside:
+		say "[one of]'Directions are not important here, my son. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to.' So you do.[or]'One day, my son, you will learn to put aside your need for compass directions.'[stopping][line break]You go back outside.";
+	move player to Same Mesa instead;
+
+check going nowhere in Cripple Clipper:
+	if noun is inside or noun is down, say "Locked ol['] deck. No bowel on below." instead;
+
+check going nowhere when location of player is a mazeroom (this is the zaphint rule):
+	if voltzap is false:
+		say "You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT.";
+		now voltzap is true;
+	else:
+		say "You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.";
+	the rule succeeds;
+
+check going nowhere when mrlp is towers (this is the towers-mis-go rule):
+	if noun is inside or noun is outside, say "You can't go in, here." instead;
+	if shoals are touchable:
+		if player is in actionless coastlines, continue the action;
+		unless mislit limits are visited, say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
+	if location of player is detourable:
+		if dourest detours are unvisited:
+			say "You get lost in [the random bounding scenery in location of player] a bit. And it's fun for a while, until you realize you're too lost, and no map of the Wildest Wilteds can help. You'll need to find your way back on your own. It's all too depressing.";
+			now last-detour is location of player;
+			move player to Dourest Detours;
+			min-up;
 
 book regular trivial verb tweaks
 
@@ -8146,13 +8220,6 @@ every turn when Dusty Study was not lit and lamp is off-stage (this is the clue 
 		say "Hm. You didn't need to change that palm to a lamp before, but it might be a good time, now." instead;
 	say "[one of]Usually, in situations like this, you go in for a four-letter word. But an obscene one wouldn't help much here.[or]No use to blub [']til you produce a lit bulb. Or, better, something that contains one.[or]You need to get light. What's a good plam (sic)?[or]You have ampl (sic) power to change the lamp into something else, you know.[or]You remember changing a toga into a goat before you ever entered Yorpwald. Perhaps the same sort of thing would work here.[or]You remember how a school cafeteria cashier named Pam L. used to light up everyone's day. Well, halfway.[or]There are only 20 possibilities for what the lamp can change into, minus the clues I've already given.[or]Getting lampshady about your special power has made me feel shady.[or]Oh, for a Light Activating Movable Paraphernalia![stopping]"
 
-check going nowhere in Dusty Study:
-	if Dusty Study is not lit, say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
-	if Report Porter Perrot is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
-	if noun is down, say "[if Report Porter Perrot is off-stage]Yeah...you do have somewhere to hide., but no full excuse, yet[else]There's a room below. What's it called, again? Boy[end if]." instead;
-	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Report Porter Perrot is moot], especially after that chat with [perrot][end if]." instead;
-	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
-
 Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study, say "[one of]Rats, kid, it's dark[or]Aww, dark. Awkward[in random order]. You probably can't go stumbling around--you'd poke your eye on that palm, or something. Wouldn't be bright." instead;
 
@@ -9637,9 +9704,6 @@ check going outside in Largely All Grey Gallery:
 
 check exiting in Largely All Grey Gallery: try going inside instead;
 
-check going down in Dusty Study:
-	if meet bans are in Dusty Study, say "Ouch! You smack into the MEET-BANS[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
-
 check going in Farming Framing:
 	if noun is inside or noun is outside:
 		if backcheck is false:
@@ -9697,15 +9761,6 @@ check exiting in Carven Cavern:
 		say "Exiting the cavern, entering the passage, the same thing.";
 		try going inside instead;
 	say "It's much safer to go in, not out, here." instead;
-
-check going nowhere in Carven Cavern (this is the cavern check rule):
-	if act ruin curtain is not in Carven Cavern, say "You need to make an exit, first." instead;
-	say "The only way to make progress is inward, through that [if act ruin curtain is moot]ex-[end if]curtain.";
-	if act ruin curtain is moot:
-		say "[line break]Go through?";
-		if the player regex-prompt-consents, try going inside instead;
-		say "That is probably the way out of the Ordeal Reload. But you are free to look around." instead;
-	do nothing instead;
 
 check going inside in Carven Cavern:
 	if plaster is in Carven Cavern, say "There's nowhere to go in, yet." instead;
@@ -9802,7 +9857,7 @@ cheat-clue
 "The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T."
 "Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T)."
 "That makes a total of four, and you can guess if you want from sprite, eprist, erpist, and srpite."
-"But you also may be aided by red writing that indicates all letters are wrong. In this case, PRIEST written on the stripe would help you eliminate three options.
+"But you also may be aided by red writing that indicates all letters are wrong. In this case, PRIEST written on the stripe would help you eliminate three options."
 "Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though."
 "At some point, strict logic isn't quite enough. Common sense may eliminate the last few answers, or for longer words, you may need legitimate guesswork."
 
@@ -10938,32 +10993,6 @@ after looking in Same Mesa:
 		set the pronoun it to sit a nag;
 	continue the action;
 
-check going nowhere in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
-	if Gast is in Same Mesa:
-		if noun is inside, try fliptoing scripture picturers instead;
-		say "Even without [Gast]'s unavoidable tirades, your head is spinning too much for directions." instead;
-	if noun is a direction:
-		if noun is inside:
-			if Cleric Circle is unvisited:
-				if adobe is visited or deli is visited:
-					if adobe is visited and deli is visited:
-						if inwarn is false:
-							ital-say "if you want to get back to the adobe or deli, you have to go ACROSS or PAST. Sorry for the ambiguity.";
-							now inwarn is true;
-					else:
-						say "That isn't quite how to enter the church. Do you wish to go back to the [if adobe is visited]adobe[else]deli[end if]?";
-						if the player yes-consents:
-							if adobe is visited, move player to adobe instead;
-							move player to Idle Deli instead;
-				now in-try is true;
-				say "Something blocks you. Perhaps you were a bit too glib about entering and need to be a bit more formal the first time[if Adobe Abode is visited or deli is visited]--you already used [aop] to enter another place differently, so the same probably applies here[end if]." instead;
-			move player to Cleric Circle instead;
-		if noun is down and THE BEAN is touchable, say "Well, not quite DOWN..." instead;
-		if noun is up or noun is down, say "That won't work right now." instead;
-		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
-	else:
-		say "No matter where you try to wander, you wind up back where you are." instead;
-
 part verbs
 
 chapter make sure they don't clash
@@ -11272,11 +11301,6 @@ check exiting in Cleric Circle (this is the horbert-bye rule):
 	if toils is unexamined or pews are unexamined:
 		say "You look back at the [if toils is examined]pews[else if pews are examined]list-o-toils[else]pews and list-o-toils[end if]. Perhaps closer inspection might give you [if toils is examined]the 'why'[else if pews are examined]the 'what'[else]the 'what' and 'why'[end if] for dealing with the directionless Same Mesa.[paragraph break][randbla]";
 	now player is in Same Mesa instead;
-
-check going nowhere in Cleric Circle:
-	if noun is not outside:
-		say "[one of]'Directions are not important here, my son. They are arbitrary, but eternal truth is eternal. Just EXIT, if you want to.' So you do.[or]'One day, my son, you will learn to put aside your need for compass directions.'[stopping][line break]You go back outside.";
-	move player to Same Mesa instead;
 
 chapter brother horbert
 
@@ -11699,9 +11723,6 @@ after looking in Loather Rathole:
 	continue the action;
 
 check looking in Loather Rathole for the first time: now the player has Pa Egg Pea.
-
-check going nowhere (this is the troves general direction reject rule):
-	if mrlp is troves, say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
 
 after printing the locale description for Loather Rathole when Loather Rathole is unvisited:
 	say "Skid Row, Wordski.";
@@ -13707,14 +13728,6 @@ voltzap is a truth state that varies.
 
 symp-yet is a truth state that varies.
 
-check going nowhere when location of player is a mazeroom or location of player is Unwary Runway (this is the zaphint rule) :
-	now voltzap is true;
-	say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
-	if number of npcish people > 0 and symp-yet is false:
-		say ". [random npcish person] cringes";
-		now symp-yet is true;
-	say "." instead;
-
 the zaphint rule is listed before the main can't go that way rule in the check going rulebook.
 
 before going up when location of player is a mazeroom or location of player is Unwary Runway (this is the photopia reference rule) :
@@ -15384,7 +15397,6 @@ Sclerous Closures is a room in oyster. Sclerous Closures is west of Anger Range.
 check going north in Sclerous Closures: if sardine is in Sclerous Closures, say "'Sop, no snoop,' says the sandier sardine, pulling you back." instead;
 
 check going in Sclerous Closures:
-	if noun is west or noun is south, say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
 	if noun is inside, try going north instead;
 
 chapter scenery
@@ -17532,7 +17544,7 @@ Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe
 
 understand "loaves" and "loaf" as solve a loaves.
 
-check going down in fringe finger: say "There's no way back up, even if you survived the fall." instead;
+check going down in fringe finger: say "The logged dogleg prevents you from jumping to your doom below to the unorg'd ground." instead;
 
 chapter scenery
 
