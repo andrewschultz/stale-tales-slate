@@ -131,9 +131,17 @@ a region can be parsewrned. a region is usually not parsewrned.
 
 a region has a list of things called item-list.
 
+a region has a rule called listen-rule.
+
+a region has a rule called sleep-rule.
+
+a region has a rule called smell-rule.
+
+a region has a rule called swear-rule.
+
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is ordeal-reload-goto rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -148,7 +156,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is stores-goto rule. max-score of stores is 11. min-score of Stores is 3.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -157,7 +165,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is troves-goto rule. max-score of Troves is 26. min-score of Troves is 17.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -170,13 +178,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is routes-goto rule. max-score of Routes is 22. min-score of Routes is 20.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is presto-goto rule. max-score of presto is 41. min-score of presto is 28.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -193,7 +201,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. max-score of oyster is 42. min-score of oyster is 28.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -213,7 +221,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is towers-goto rule. max-score of towers is 56. min-score of towers is 26.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -251,7 +259,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is Otters-goto rule. max-score of otters is 33. min-score of otters is 24.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 33. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
 [LLP list:
 1=25 for RESCIND
 3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
@@ -264,11 +272,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is Others-goto rule. max-score of Others is 42. min-score of others is 25.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule.
 [There are so many possibilities--about 36 choose 20, or 7 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is demo-dome-goto rule.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule.
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -1374,19 +1382,19 @@ check gotoing:
 	if progval of noun > progval of location of player, say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
 	abide by the goto-check of mrlp;
 
-this is the ordeal-reload-goto rule:
+this is the goto-ordeal-reload rule:
 	do nothing;
 
-this is the stores-goto rule:
+this is the goto-stores rule:
 	do nothing;
 
-this is the routes-goto rule:
+this is the goto-routes rule:
 	if Gast is in Same Mesa, say "You can't run from [Gast]!" instead;
 
-this is the troves-goto rule:
+this is the goto-troves rule:
 	say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
 
-this is the presto-goto rule:
+this is the goto-presto rule:
 	if noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
@@ -1400,7 +1408,7 @@ this is the presto-goto rule:
 				move Leo to noun;
 				move Rand to noun;
 
-this is the oyster-goto rule:
+this is the goto-oyster rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
@@ -1409,7 +1417,7 @@ this is the oyster-goto rule:
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 
-this is the towers-goto rule:
+this is the goto-towers rule:
 	if noun is Dourest Detours or noun is Arid Den, say "No thanks. Once was enough." instead;
 	if duck is touchable and duck is friendly:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
@@ -1419,13 +1427,13 @@ this is the towers-goto rule:
 	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
 	if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
 
-this is the otters-goto rule:
+this is the goto-otters rule:
 	if player is in Rancho Archon Anchor, elvira-flee-taunt;
 
-this is the others-goto rule:
+this is the goto-others rule:
 	do nothing;
 
-this is the demo-dome-goto rule:
+this is the goto-demo-dome rule:
 	say "You rush, despite having nothing urgent to do.";
 
 check gotoing:
@@ -3081,6 +3089,12 @@ to decide whether the action is blathery:
 	if objasking about, yes;
 	no.
 
+have-noted-procedurals is a truth state that varies;
+to note-procedurals:
+	if have-noted-procedurals is false:
+		say "NOTE: you can use meta-commands and trivial actions while talking, but they're not useful.[paragraph break]";
+		now have-noted-procedurals is true;
+
 before doing something when Report Porter Perrot is touchable:
 	if current action is examining:
 		if noun is not Report Porter Perrot:
@@ -3088,6 +3102,9 @@ before doing something when Report Porter Perrot is touchable:
 		continue the action;
 	if current action is attacking, say "That'd just give the Penal Panel one more excuse." instead;
 	if action is blathery, say "Report Porter Perrot's kind of leading the conversation, here." instead;
+	if current action is procedural:
+		note-procedurals;
+		continue the action;
 	if current action is not talking to Report Porter Perrot and current action is not QBC responding with:
 		say "[convoforce].";
 		reject the player's command;
@@ -6918,32 +6935,24 @@ rule for supplying a missing noun when listening (this is the directed ambient s
 	now the noun is the location of the player;
 
 check listening:
+	abide by the listen-rule of mrlp;
+	say "The air! Hear it! (Silent.)[paragraph break]" instead; [??]
+
+this is the listen-ordeal-reload rule:
 	if player is in Dusty Study: [Ordeal Reload]
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Report Porter Perrot is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if player is in Farming Framing or player is in Largely All Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if noun is elmo, say "[if rifle is moot]You're in a conversation[else]Awkward silence, what with Elmo holding that rifle[end if]." instead;
+
+this is the listen-stores rule:
 	if noun is odorant tornado, say "A roar of angry undefinable words swirls from the odorant tornado." instead; [stores]
 	if noun is tokers, say "[if nestor is touchable]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if noun is nestor, say "Nestor periodically mumbles about his lost buddies." instead;
 	if player is in Cruelest Lectures, say "You're hearing enough without trying, sadly." instead;
-	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
-	if noun is Gast: [routes]
-		if Rude N Nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
-		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
-		if tirades are touchable, try listening to tirades instead;
-		say "BUG. [Gast] should direct you to the next puzzle." instead;
-	if noun is woe bow bell, say "Through the Woe Bow Bell's resonance, you [one of]think you could hear something if you listen carefully[or]hear OL['] WEB, OL['] WEB. It makes you see red[stopping]." instead;
-	if player is in Same Mesa:
-		if THE BEAN is touchable, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
-		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
-		say "'Mama sees me as...' Irrelevant stuff." instead;
-	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
-	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
-	if noun is raptest patters, try examining raptest patters instead;
-	if noun is hurt hog, say "[if bent ewe is reflexive]Squealing. It could be calmer[else]Less noisy now you've been peacemaking a bit[end if]." instead;
-	if player is in Sonancy Canyons, say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;
+
+this is the listen-troves rule:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
 		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
@@ -6969,8 +6978,30 @@ check listening:
 	if player is in Dirge Ridge:
 		if Rand is washed up, try listening to Rand instead;
 		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
+
+this is the listen-routes rule:
+	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
+	if noun is Gast: [routes]
+		if Rude N Nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
+		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
+		if tirades are touchable, try listening to tirades instead;
+		say "BUG. [Gast] should direct you to the next puzzle." instead;
+	if noun is woe bow bell, say "Through the Woe Bow Bell's resonance, you [one of]think you could hear something if you listen carefully[or]hear OL['] WEB, OL['] WEB. It makes you see red[stopping]." instead;
+	if player is in Same Mesa:
+		if THE BEAN is touchable, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
+		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
+		say "'Mama sees me as...' Irrelevant stuff." instead;
+	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
+	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
+	if noun is raptest patters, try examining raptest patters instead;
+	if noun is hurt hog, say "[if bent ewe is reflexive]Squealing. It could be calmer[else]Less noisy now you've been peacemaking a bit[end if]." instead;
+	if player is in Sonancy Canyons, say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;
+
+this is the listen-presto rule:
 	if player is in Hacks Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
-	if mrlp is presto, say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
+	say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
+
+this is the listen-oyster rule:
 	if noun is tunes, say "The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened." instead; [oyster]
 	if player is in Posh Hops Shop, say "Silence. Awkward silence. An occasional cough." instead;
 	if noun is clam, say "You hear the clam snapping." instead;
@@ -6984,6 +7015,8 @@ check listening:
 	if player is in Sclerous Closures, say "Silence[if sardine is in sclerous closures]--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU[end if]." instead;
 	if noun is papery yapper, say "Mindless materialistic babble." instead;
 	if noun is dialer, say "[if pins are in Tenfold Teflond Den Loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
+
+this is the listen-towers rule:
 	if noun is Rodney, say "Rodney's intimidating enough, he can keep this place quiet." instead; [towers]
 	if player is in Loftier Trefoil, say "Ugh. as Rodney barks out complaints, you think 'dry one' and see red." instead;
 	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
@@ -7012,6 +7045,8 @@ check listening:
 	if noun is natives site van:
 		say "The babble from the natives['] site van doesn't stop.";
 		try objasking natives site van about natives site van instead;
+
+this is the listen-otters rule:
 	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
 	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
@@ -7021,6 +7056,8 @@ check listening:
 	if noun is sly imp, say "The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now." instead;
 	if player is in Perverse Preserve, say "You hear no monotremes you could turn into metronomes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
+
+this is the listen-others rule:
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
 	if player is in Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties." instead;
 	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
@@ -7029,8 +7066,9 @@ check listening:
 	if player is in Clangier Clearing, say "Selly yells. [randbla]" instead;
 	if noun is brr hub, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process." instead;
 	if noun is s-i or noun is s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
+
+this is the listen-demo-dome rule:
 	if mrlp is demo dome, say "It's nice and quiet. It [i]IS[r] a museum." instead; [demo dome]
-	say "The air! Hear it! (Silent.)[paragraph break]" instead; [??]
 
 chapter smelling
 
@@ -7044,26 +7082,40 @@ rule for supplying a missing noun when listening:
 			now the noun is Q;
 			continue the action;
 
-check smelling (this is the you can smell some stuff some places rule): [see about smelling things]
-	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead; [Ordeal Reload]
+check smelling (this is the you can smell some stuff some places rule):
+	abide by the smell-rule of mrlp;
+	say "Aroma-o-rama? Nothing's [i]tons[r] nigh." instead;
+
+this is the smell-ordeal-reload rule:
+	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead;
 	if player is in Dusty Study and Report Porter Perrot is moot, say "Bean soup. Subpoena is near." instead;
 	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
-	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead; [stores]
+
+this is the smell-stores rule:
+	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead;
 	if noun is odorant tornado, say "The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good." instead;
 	if noun is store y or noun is barnacle balancer, say "Seawater scents from [the noun]." instead;
 	if noun is throes hoster, say "A mix of surprisingly nice smells from the Throes Hoster where Store H was." instead;
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
-	if noun is pipe soot, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead; [routes]
-	if noun is seed pit, say "The seed pit smells a bit musty." instead;
-	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
-	if player is in Loather Rathole or player is in Bustle Sublet, say "Eew-gas sewage. Skint-stink." instead; [troves]
+
+this is the smell-troves rule:
+	if player is in Loather Rathole or player is in Bustle Sublet, say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
 	if noun is Large Regal Lager, say "It's not open. You don't want to open it to smell it." instead;
 	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;
+
+this is the smell-routes rule:
+	if noun is pipe soot, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead;
+	if noun is seed pit, say "The seed pit smells a bit musty." instead;
+	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
+
+this is the smell-presto rule:
 	if noun is ether, say "The ether is nontoxic but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
 	if noun is casserole, say "That casserole doesn't smell very good, but it's not toxic." instead;
 	if player is in a mazeroom or player is in Unwary Runway, say "'You smell a gefilte and think 'get a life.'" instead;
-	if mrlp is presto, say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead; [presto]
+	say "[if cur-score of presto is 0]It smells a bit stinky here, but more pressingly, it just FEELS stinky[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
+
+this is the smell-oyster rule:
 	if player is in Posh Hops Shop, say "You catch a whiff of some mokes['] smoke." instead; [oyster]
 	if player is in Disease Seaside, say "Say, spare sea spray." instead;
 	if player is in Fighter Freight, say "You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly." instead;
@@ -7072,43 +7124,37 @@ check smelling (this is the you can smell some stuff some places rule): [see abo
 	if player is in Rascal Craals, say "This situation only stinks in general, not literally." instead;
 	if noun is weaselly walleyes, say "The weaselly walleyes smell of Skum-Musk." instead;
 	if player is in Tenfold Teflond Den Loft, say "Old heat. Loathed hot lead." instead;
-	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead; [towers]
-	if mrlp is towers and leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
+
+this is the smell-towers rule:
+	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if noun is Nerd Aid, say "The Nerd-Aid smells suspiciously like the very red Rind-Ade drink." instead;
-	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead; [otters]
+	if leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
+
+this is the smell-otters rule:
+	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead;
 	if player is in Disowned Downside, say "You can [if parleys splayer players are touchable]still [end if]smell the [players]['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
 	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin['] cyanide, too." instead;
-	if noun is slime, say "The slime actually smells...nice, like dishwashing detergent." instead; [others]
-	if mrlp is others, say "Smells, savory, vary so." instead;
-	say "Aroma-o-rama? Nothing's [i]tons[r] nigh." instead;
+
+this is the smell-others rule:
+	if noun is slime, say "The slime actually smells...nice, like dishwashing detergent." instead;
+	say "Smells, savory, vary so." instead;
+
+this is the smell-demo-dome rule:
+	say "Thankfully, nothing unusual like, say, a Med-O-Dome." instead;
 
 chapter sleeping
 
 check sleeping:
-	if player is in Dusty Study, say "[if Report Porter Perrot is off-stage]But you just woke up![else]Not with that knocking.[end if]" instead;
-	if player is in Cripple Clipper, say "This is no dreamboat." instead;
-	if mrlp is troves:
-		if player is in Boredom Bedroom, say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
-		if player is in Upscale Capsule, say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
-		if player is in Browse Bowers or player is in Econ Cone, say "In a public place? Worse, in an upscale public place? How shocking!" instead;
-		say "Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now." instead;
-	if mrlp is presto:
-		if player is in Hacks Shack:
-			if peels speel is in Hacks Shack, try fliptoing peels speel instead;
-			if peels speel is off-stage:
-				say "[if futon is off-stage]You may need sleep later, but not now. Besides, you have nowhere to sleep[else]Sleep on the futon? Wouldn't be fun to. Or necessary. Yet[end if]." instead;
-		if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
-	if mrlp is oyster, say "You feel too inclined towards action for that." instead;
-	if peels speel is reflexed, say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
+	abide by the sleep-rule of mrlp;
+	if peels speel is reflexed:
+		say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
 	say "[one of][sleep-reject].[or][randbla][stopping]" instead;
 
 to say sleep-reject:
-	if peels speel is reflexed:
-		say "You found the one place in the game where you needed to sleep";
-	else if location is outie:
+	if location of player is outie:
 		say "Sleeping outside is dangerous. You'd need somewhere protected";
 	else if mrlp is Ordeal Reload:
 		say "You won't need to sleep for a long while.";
@@ -7118,6 +7164,41 @@ to say sleep-reject:
 		say "Maybe you'll find somewhere more hospitable later";
 	say ". But otherwise, you'll get a bunch of silly random responses you may or may not find entertaining";
 	pad-rec "sleep";
+
+this is the sleep-ordeal-reload rule:
+	if player is in dusty study and report porter perrot is off-stage, say "But you just woke up!" instead; [could be just the second condition, but some tests jump around]
+	if report-porter-knocks, say "Not with that knocking." instead;
+	if player is in Carven Cavern, say "It's way safer here than in the Means Manse, but it's also way less comfortable." instead;
+	say "You probably can't spend another night in the Means Manse. You need to get going, here!" instead;
+
+this is the sleep-stores rule: do nothing;
+
+this is the sleep-troves rule:
+	if player is in Boredom Bedroom, say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
+	if player is in Upscale Capsule, say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
+	if player is in Browse Bowers or player is in Econ Cone, say "In a public place? Worse, in an upscale public place? How shocking!" instead;
+	say "Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now." instead;
+
+this is the sleep-routes rule:
+	if player is in Cripple Clipper, say "This is no dreamboat." instead;
+
+this is the sleep-presto rule:
+	if player is in Hacks Shack:
+		if peels speel is in Hacks Shack, try fliptoing peels speel instead;
+		if peels speel is off-stage:
+			say "[if futon is off-stage]You may need sleep later, but not now. Besides, you have nowhere to sleep[else]Sleep on the futon? Wouldn't be fun to. Or necessary. Yet[end if]." instead;
+	if Hacks Shack is visited and peels speel is reflexive, say "Only the shack seems to be a safe place to sleep, here." instead;
+
+this is the sleep-oyster rule:
+	say "You feel too inclined towards action for that." instead;
+
+this is the sleep-towers rule: do nothing;
+
+this is the sleep-otters rule: do nothing;
+
+this is the sleep-others rule: do nothing;
+
+this is the sleep-demo-dome rule: do nothing;
 
 chapter taking
 
@@ -7189,7 +7270,18 @@ chapter swearing
 
 check swearing obscenely:
 	unless qbc_litany is table of no conversation, say "You're classier than that." instead;
-	if location of player is Cleric Circle: [ROUTES]
+	abide by the swear-rule of mrlp;
+	say "[randbla][line break]" instead;
+
+this is the swear-ordeal-reload rule: do nothing;
+
+this is the swear-stores rule: do nothing;
+
+this is the swear-troves rule:
+	say "Such words, thought or spoken, may help some get ahead in life. But they are a bit suboptimal for you here." instead;
+
+this is the swear-routes rule:
+	if location of player is Cleric Circle:
 		if curse-warned is false:
 			now curse-warned is true;
 			say "Only, uh, unholy. You can curse anywhere else except here without repercussion." instead;
@@ -7197,24 +7289,35 @@ check swearing obscenely:
 		get-dead;
 		the rule succeeds;
 	if player is in Cripple Clipper, say "Siphon no pish on-ship." instead;
-	if mrlp is presto: [PRESTO]
-		if cur-score of presto is 0, say "That's too strong for here. But you have the right idea." instead;
-		if Hacks Shack is visited, say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
-		if plebe is touchable, say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
-		if hogs are touchable, say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
-		say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
-	if player is in Posh Hops Shop, say "This is the place for it, but you can't bring yourself to be heard." instead; [OYSTER]
+
+this is the swear-presto rule:
+	if cur-score of presto is 0, say "That's too strong for here. But you have the right idea." instead;
+	if Hacks Shack is visited, say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
+	if plebe is touchable, say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
+	if hogs are touchable, say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
+	say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
+
+this is the swear-oyster rule:
+	if player is in Posh Hops Shop, say "This is the place for it, but you can't bring yourself to be heard." instead;
 	if player is in Lean Lane, say "You don't want Aunt Tuna to perform a tsk task." instead;
-	if agnostic is touchable, say "Some example you are." instead; [TOWERS]
+
+this is the swear-towers rule:
+	if agnostic is touchable, say "Some example you are." instead;
 	if player is in Actionless Coastlines or player is in Artist Traits Strait:
 		if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in Rawest Waters:
 		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
-	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead; [OTTERS]
+
+this is the swear-otters rule:
+	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
+	if power-back is false, say "At the moment, even your profanities lack power." instead;
 	if player is in Reclusion Inclosure and elmer is in Reclusion Inclosure, say "[e-n-m] sniff faux-piously." instead;
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
+
+this is the swear-others rule:
 	if player is in Rustic Citrus, say "Instead you mumble ... I, curst." instead;
-	say "[randbla][line break]" instead;
+
+this is the swear-demo-dome rule: do nothing;
 
 to say deth:
 	let temp be a random number from 1 to number of rows in table of death messages;
@@ -8564,7 +8667,11 @@ to decide which number is stuff-found:
 		decide on mytemp;
 	decide on mytemp.
 
-every turn when location of player is Dusty Study and stuff-found >= 3 and Report Porter Perrot is off-stage (this is the Report Porter Perrot Knocks rule):
+to decide whether report-porter-knocks:
+	if location of player is Dusty Study and stuff-found >= 3 and Report Porter Perrot is off-stage, yes;
+	no;
+
+every turn when report-porter-knocks (this is the Report Porter Perrot Knocks rule):
 	increment okay-thats-it;
 	if okay-thats-it is 6:
 		say "You're sick of the knocking, so you just answer the door, already.";
@@ -20235,7 +20342,7 @@ to say curtis-potter:
 	if number of fruit-to-find fruits is 0:
 		say "wondering how best to use all the fruits you got him";
 	else:
-		say "waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits"
+		say "waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits";
 	if cur-score of others > 4, say " and singing and humming the tidiest dietist ditties"
 
 extra-citrus is a number that varies.
