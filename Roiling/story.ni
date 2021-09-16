@@ -6718,7 +6718,9 @@ check singing:
 			now lyre-dest is true;
 			say "Unexpectedly, Ed pulls out a lyre from somewhere and yells 'LYRE! DIE!' like he's in some medieval heavy metal band or something. He's really seeing red as he stomps it to dust." instead;
 		say "You don't want to push your luck. Ed Riley yelling LYRE DIE and seeing red kind of weirded you out." instead;
-	if player is in Peek Keep, say "No, this is a quieter place than the Posh Hops Shop." instead; [demo dome]
+	if player is in Rustic Citrus and moss cap is not off-stage:
+		say "You don't know the words to Curtis's tidiest dietist ditties. You might disrupt his concentration." instead;
+	if player is in Peek Keep, say "No, there's a sign here, but it's a quieter place than the Posh Hops Shop." instead; [demo dome]
 	say "[randbla][line break]" instead;
 
 chapter kissing
@@ -7020,7 +7022,7 @@ check listening:
 	if player is in Perverse Preserve, say "You hear no monotremes you could turn into metronomes." instead;
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
 	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
-	if player is in Rustic Citrus, say "Curtis is mumbling about some perceived slight." instead;
+	if player is in Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties." instead;
 	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
 	if noun is barren cries, say "The barren cries are sour and bitter and tiny." instead;
 	if noun is ammo gang, say "A small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
@@ -8055,7 +8057,7 @@ The look around once light available rule is not listed in the for printing the 
 
 after fliptoing when player is in Rustic Citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
-		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. Curtis seems pretty demanding and probably wants a lot more fruit than you could find or create here.";
+		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Curtis turns away and starts humming and singing tidiest dietist ditties, dreaming up new ways of delegating and new business ideas.[paragraph break]This all makes your head spin a bit, which doesn't help your sense of direction. The moss cap needs changing. Curtis seems pretty demanding and probably wants a lot more fruit than you could find or create here. How to find somewhere new?";
 		mootl list of all carried fruits;
 		now player has moss cap;
 		continue the action;
@@ -20234,6 +20236,7 @@ to say curtis-potter:
 		say "wondering how best to use all the fruits you got him";
 	else:
 		say "waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits"
+	if cur-score of others > 4, say " and singing and humming the tidiest dietist ditties"
 
 extra-citrus is a number that varies.
 

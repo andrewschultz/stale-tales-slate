@@ -1299,6 +1299,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cola"	149359819	peanut cola	--	"[whole-item]."
 "moss"	330975662	moss cap	--	"[whole-item]." [stuff gotten from Curtis]
 "cap"	102659362	moss cap	--	"[whole-item]."
+"ditties"	541314892	--	--	"The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway."
 
 table of Swell Wells nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
