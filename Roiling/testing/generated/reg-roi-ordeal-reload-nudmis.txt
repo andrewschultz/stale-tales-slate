@@ -400,6 +400,7 @@ You can just go IN to the stable.
 The settler is pretty powerful, but it can't build bridges.
 
 >in
+Farming Framing
 
 #spechelp for sitar
 >stari

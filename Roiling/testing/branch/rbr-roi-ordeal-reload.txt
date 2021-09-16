@@ -1,12 +1,13 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just means manse
 
-files=reg-roi-ordeal-reload-max.txt,reg-roi-ordeal-reload-min.txt,reg-roi-ordeal-reload-nudmis.txt,reg-roi-ordeal-reload-slider.txt,reg-roi-ordeal-reload-hints.txt
+files=reg-roi-ordeal-reload-max.txt,reg-roi-ordeal-reload-min.txt,reg-roi-ordeal-reload-nudmis.txt,reg-roi-ordeal-reload-slider.txt,reg-roi-ordeal-reload-hints.txt,reg-roi-ordeal-reload-verbs.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
 ~	hints,hin	t4
+~	verbs	t5
 
 ALSO-IGNORE:c,t
 
@@ -33,6 +34,10 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 
 @hin
 >monty hints
+
+@verbs
+>sleep
+But you just woke up!
 
 @nud
 #nudge for ordeal
@@ -110,10 +115,18 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 >roev
 That's not a way to sneak around and avoid the knock at the door.
 
+@verbs
+>sleep
+Not with that knocking.
+
 >open door
 
 >1
 >5
+
+@verbs
+>sleep
+You probably can't spend another night in the Means Manse. You need to get going, here!
 
 @nud
 #mistake retest for [text] stable [text]/stable [text]/[text] stable
@@ -150,9 +163,17 @@ That's not a way to sneak around and avoid any future knock at the door.
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 
+@verbs
+>smell
+That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
+
 >lamp
 Your score has just gone up by one point.
 }}SCORE++
+
+@verbs
+>smell
+Bean soup. Subpoena is near.
 
 >score
 {$SCOS}
@@ -498,6 +519,11 @@ The settler is pretty powerful, but it can't build bridges.
 
 @!min
 >in
+Farming Framing
+
+@verbs
+>smell
+Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
 
 @nud
 #spechelp for sitar
@@ -866,6 +892,12 @@ You can't change Elmo into an animal. Your powers don't work that way. He alread
 }}CURMAX-=6
 
 Carven Cavern
+
+@verbs
+>gt dusty study
+Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
+>sleep
+It's way safer here than in the Means Manse, but it's also way less comfortable.
 
 @sli
 #slider test for staple
