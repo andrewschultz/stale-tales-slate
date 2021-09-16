@@ -1014,9 +1014,12 @@ They make you feel like you can't do anything, and they're very reasonable and n
 You can laugh at them if they become <b>GRANDIOSE</b>.
 >>OUTER ROUTE
 ?What's the campiest campsite for?
-To hold the rapier repair.
-Campiest campsite was the name of a room, but it was a bit too obvious. Or implement a full campsite. But I didn't want to remove it completely.
-?What's the rapier repair for?
+To hold the diverse deviser.
+Campiest Campsite was once the name of a room, but it was a bit too obvious. Or implement a full campsite. But I didn't want to remove it completely.
+?How do I get the diverse deviser to work?
+It needs an upgrade. Or to be described as upgraded.
+It needs to be REVISED.
+?What's the diverse deviser for?
 Fixing worn down swordy things.
 You may've dug one up elsewhere.
 It's behind the weeds in the Treading Gradient.
