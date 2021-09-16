@@ -1335,23 +1335,23 @@ carry out gzing:
 	if sporties ripostes are reflexed:
 		increment min-score of towers;
 
-chapter diing
+chapter powing
 
-[* DI regains your powers in Otters.]
+powing is an action applying to one number.
 
-diing is an action out of world.
+understand the command "pow" as something new.
 
-understand the command "di" as something new.
+understand "pow [number]" as powing.
 
-understand "di" as diing.
-
-carry out diing:
-	if power-back is true:
-		say "You're now inhibited.";
+carry out powing:
+	let pbprev be power-back;
+	if the number understood is 1:
+		now power-back is whether or not power-back is false;
+	else if the number understood is 0:
 		now power-back is false;
-	else:
-		say "You're now uninhibited.";
+	else if the number understood is 2:
 		now power-back is true;
+	say "You [if pbprev is power-back]already[else]now[end if] [if power-back is false]don't [end if]have your magic powers for Otters.";
 	the rule succeeds
 
 chapter misseding
