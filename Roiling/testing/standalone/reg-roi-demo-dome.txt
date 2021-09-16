@@ -199,11 +199,11 @@ This is a museum! Messing with the exhibits would be very bad form.
 >space
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for tripods
+#nudge for tripods
 >triposd
 This is a museum! Messing with the exhibits would be very bad form.
 
-#renudge for tripdo
+#nudge for tripdo
 >tripod
 This is a museum! Messing with the exhibits would be very bad form.
 
@@ -736,7 +736,7 @@ You glance over page 100. The most interesting bit seems to be Undone herd endur
 >undo
 
 >rr
-PAGE 100: 
+PAGE 100:
 You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
 
 Well, that's all. Hooray for speed-reading.
