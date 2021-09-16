@@ -6637,7 +6637,7 @@ book ROOM / roomroom
 
 roomroom is a privately-named room in Sortie. the printed name of roomroom is "Room". "[if moor is unvisited]This room is a little too undescribed. It's nice to have a break from all this puzzling, but it's almost too easy a break[tagit][else]Zapping yourself to the moor hasn't made this room any more exciting[end if].[paragraph break]A passage leads west back to the Trap Part, and another leads north."
 
-understand "room1" as roomroom when debug-state is true.
+understand "room1" and "roomroom" as roomroom when debug-state is true.
 
 to say tagit:
 	if kitchen is visited:
@@ -8541,6 +8541,8 @@ book Bassy Abyss
 
 Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are touchable]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is touchable]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the Trips Strip, since you won. This is a BUG[end if].". Abyss is in Metros. roomnud of Bassy Abyss is table of Bassy Abyss nudges.
 
+west of Bassy Abyss is nowhere.
+
 after printing the locale description for abyss when abyss is unvisited:
 	set the pronoun it to siren;
 	continue the action;
@@ -8918,18 +8920,11 @@ every turn while player is in Potshot Hotspot:
 to say pottiness:
 	say "--[if kilns are touchable]they're working happily at their kilns[else]they have nothing better to do with their hands right now than wave signs and pump their fists and point at you[end if]"
 
-before going in Potshot Hotspot:
-	if red bull burdell is touchable:
-		if noun is east, say "Not with Red Bull Burdell around, you aren't. That 'get out' is just villain talk." instead;
-		say "I don't think Red Bull Burdell wants you to take him literally. Villains just talk like that, you know?" instead;
-	if red bull burdell is moot:
-		if noun is not east, say "You really can only go east to your Means Manse." instead;
-
 check going west in Potshot Hotspot: say "No going back now." instead;
 
 check going east in Potshot Hotspot:
 	if riot is touchable, say "That rabble seems mad at you. You'd better disperse them first." instead;
-	if red bull burdell is touchable, say "Not with Red Bull Burdell around you aren't." instead;
+	if red bull burdell is touchable, say "Not with Red Bull Burdell around, you aren't. That 'get out' is just standard villainous taunting a clever hero can take advantage of." instead;
 	if protest is touchable, say "They still outnumber you. Though they're only blocking you out of spite. They just--well, they don't have anything to do, and they're sort of expecting you to give them something better to do than, well, [i]protest[r]." instead;
 	if potters are touchable and kilns are not touchable, say "They seem a civil trio, buy as you inch east, they get vitriolic. 'Give us something to do!'" instead;
 
@@ -10097,16 +10092,19 @@ check going nowhere (this is the main can't go that way rule) :
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
-	say "You can go [list of viable directions] here." instead;
+	say "You can't go [noun] here, but you can go [list of viable directions]." instead;
 
 to say dmb: say "[dmm] blocks your way [noun]. "
+
+to say can-go of (d - a direction):
+	let droom be the room d of location of player;
+	say "[d][if droom is visited] to [droom][end if]"
 
 table of nowheres [tnw]
 theloc	thereject
 Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
 Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if][one of]. Plus, if you could go anywhere, you might regret winding up in the Tuffest Tuffets[or][stopping]."
 Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. Through the gateway it is[if gateman is in Notices Section]![else], though it'd be nice to have some help.[end if]"
-Self ID Fields	"No going back. North or east or west is okay, though."
 Flesh Shelf	"It's too steep down every way except back east."
 Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
 Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
@@ -10114,18 +10112,18 @@ Ghouls Slough	"Without any sort of guide to look at you'd be (ugh) SOL--or it'd 
 Frost Forts	"[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]."
 Trap Part	"[dmb]You can only go north to the kitchen or east[or-room]." [see before going in trap part for the other text]
 The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
-Kitchen	"[dmb]You can only go south to the Trap Part or east[if Stiller Trellis is visited] to the trellis[end if]."
-roomroom	"[dmb]You can only go west back to the Trap Part or north[if Stiller Trellis is visited] to the trellis[end if]."
+Kitchen	"[dmb]You can only go [can-go of south] or [can-go of east]."
+roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
 Stiller Trellis	"[dmb]You can only go west or south[if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis] or, since you opened the hallway, east[end if]."
 moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Roarings Garrison	"There's [if Obtains Boastin Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not off-stage], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
+Roarings Garrison	"There's [if Obtains Boastin Bastion is visited]the Obtains Boastin['] Bastion[else]a residence[end if] north[if dry cake is not in Obtains Boastin Bastion], which you were booted out of[end if], a library west, a flower shop east, and a seedier area south. But there are no special exits."
 Bile Libe	"Only way out's back east."
 Fo Real Florae	"The only safe way out is back west."
 The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
 Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
 Elm Train Terminal	"The tracks lead down east, and the city is back north."
-Bassy Abyss	"You try to flee, but you feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
+Bassy Abyss	"You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
 Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'ONE LIKE YOU IS BEYOND THE FERAL FLARE!'[or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
 Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
 Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
@@ -10476,7 +10474,7 @@ check listening:
 	if player is in moor and anapest is in moor, try listening to the anapest instead;
 	if player is in moor and peasant is in moor, say "With less, he whistles, eh?" instead;
 	if player is in Rived Drive, say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
-	if player is in kitchen, say "Dietist ditties pipe through from somewhere unseen. They're kind of catchy but really distracting." instead;
+	if player is in kitchen, say "Dietist ditties pipe through from somewhere unseen. They're the tidiest, but really distracting." instead;
 	if doll house is touchable:
 		if static is touchable, say "You hear static coming from the doll house." instead;
 		say "Each attic is tacit now." instead;
