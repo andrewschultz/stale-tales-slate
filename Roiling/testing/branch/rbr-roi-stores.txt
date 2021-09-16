@@ -1,12 +1,13 @@
 #--hch.py checks for if we have something to scan
 #--this should be done for all RBR files and not just stores
 
-files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,reg-roi-stores-slider.txt,reg-roi-stores-hints.txt
+files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,reg-roi-stores-slider.txt,reg-roi-stores-hints.txt,reg-roi-stores-verbs.txt
 ~	max	t0
 ~	min	t1
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
 ~	hints,hin	t4
+~	verbs	t5
 
 ## *FILE
 
@@ -35,6 +36,10 @@ The resort and Store R led to the Means Manse last game. It won't go anywhere ne
 
 >ts
 >t
+
+@verbs
+>gt study
+You already solved Ordeal Reload.
 
 @hin
 >monty hints
@@ -312,6 +317,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a de
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
 
+@verbs
+>smell steaming
+Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
+
 @nud
 #renudge for toker
 >tokre
@@ -336,6 +345,12 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
 \\
 Cruelest Lectures
+
+@verbs
+>gt trips strip
+You'll need to find your way back. Don't worry. There are clues. And a small reward.
+>listen
+You're hearing enough without trying, sadly.
 
 @mis
 #mistake test for douse it
@@ -441,6 +456,12 @@ The speaker parkees aren't what, or who, you need to change, here. It'll still b
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
+
+@verbs
+>listen tokers
+Conversation from the tokers you don't want to listen TOO closely to.
+>listen nestor
+Nestor periodically mumbles about his lost buddies.
 
 @nud
 #mistake test for tortes
@@ -583,6 +604,12 @@ DEBUG INFO: Taking away a max point. Max-score now 8.
 >presto
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+
+@verbs
+>listen tornado
+A roar of angry undefinable words swirls from the odorant tornado.
+>smell tornado
+The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.
 
 @nud
 #nudge for odorant

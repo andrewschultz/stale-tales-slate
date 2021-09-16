@@ -1,0 +1,81 @@
+
+## reg-roi-stores-verbs.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* stores-thru
+
+>ts
+>t
+
+>gt study
+You already solved Ordeal Reload.
+
+>sorbet
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 4.
+
+>nestor
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
+
+>tokers
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
+
+>smell steaming
+Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
+
+>enter steaming
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
+
+Cruelest Lectures
+
+>gt trips strip
+You'll need to find your way back. Don't worry. There are clues. And a small reward.
+>listen
+You're hearing enough without trying, sadly.
+
+#pre-babbler-outside rule
+>outside
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+#this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
+
+>listen tokers
+Conversation from the tokers you don't want to listen TOO closely to.
+>listen nestor
+Nestor periodically mumbles about his lost buddies.
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>towers
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+
+>oyster
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+
+>others
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+
+>presto
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+
+>listen tornado
+A roar of angry undefinable words swirls from the odorant tornado.
+>smell tornado
+The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.
+
+>otters
+Your score has just gone up by one point
+!DEBUG INFO: min-up codepath
+
