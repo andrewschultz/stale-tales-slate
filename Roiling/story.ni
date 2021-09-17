@@ -1401,15 +1401,18 @@ this is the goto-presto rule:
 	if noun is nowt town or noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
-		if noun is Dirge Ridge:
-			if Leo is dismissed:
-				abide by the post-wall-arch rule;
-		if player is in Hacks Shack, abide by the shack-south rule;
-		if Leo is touchable and Leo is eager:
-			if noun is not a mazeroom:
-				say "([l-n-r] following.)";
-				move Leo to noun;
-				move Rand to noun;
+	if noun is Dirge Ridge:
+		if Leo is dismissed:
+			abide by the post-wall-arch rule;
+		abide by the leo-rand-forward rule;
+	if player is in Hacks Shack, abide by the shack-south rule;
+	if Leo is touchable and Leo is eager:
+		if noun is in-the-maze:
+			say "[l-n-r] don't want to deal with that big confusing maze.";
+		else:
+			say "([l-n-r] following.)";
+			move Leo to noun;
+			move Rand to noun;
 
 this is the goto-oyster rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
@@ -1425,8 +1428,7 @@ this is the goto-towers rule:
 	if duck is touchable and duck is friendly:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
-		if can-see-map, draw-my-loc;
-		choose-new-hint-guardian;
+		continue the action;
 	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
 	if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
 
@@ -5212,7 +5214,7 @@ this is the presto-hinting rule:
 			now spoilit is false;
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the Marines Seminar Remains has to offer." instead;
-	if player is in a mazeroom or player is in Nowt Town or player is in Unwary Runway:
+	if location of player is in-the-maze:
 		try objhinting n-t-air instead;
 	if player is in Grey Gyre:
 		if volt maze is in Grey Gyre, try objhinting volt maze instead;
@@ -6964,9 +6966,11 @@ check listening:
 
 this is the listen-ordeal-reload rule:
 	if player is in Dusty Study: [Ordeal Reload]
+		if report-porter-knocks, say "Nothing, except... (knock, knock, knock.)" instead;
 		if stuff-found < 3, say "Peace and quiet. No adventure. Yet." instead;
 		if Dusty Study is not lit, say "Nobody's going to whisper a hint to you in the dark." instead;
-		say "[if Report Porter Perrot is moot][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
+		if perrot is touchable, say "You're in a conversation. Your turn to speak." instead;
+		say "[randbla]" instead;
 	if player is in Farming Framing or player is in Largely All Grey Gallery, say "Merciful quiet, for the moment." instead;
 	if noun is elmo, say "[if rifle is moot]You're in a conversation[else]Awkward silence, what with Elmo holding that rifle[end if]." instead;
 
@@ -6979,8 +6983,10 @@ this is the listen-stores rule:
 this is the listen-troves rule:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		if noun is boarded roadbed, try listening to snore so arena instead;
 		if snore so arena is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
+		if noun is boarded roadbed and bee-score is 0:
+			say "A bit distracting -- you want to focus on the cellar. But there is ambient noise.[paragraph break]";
+			try listening to snore so arena instead;
 		if noun is snore so arena:
 			if arena is reflexive, say "A snore from the Snore So Arena makes you see red. Everything about the snore and arena, in fact." instead;
 			say "[one of]A snore arises from the arena. You see red.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
@@ -6989,11 +6995,6 @@ this is the listen-troves rule:
 				say "Nothing unusual from the bee. But the arena...";
 				try listening to SNORE SO ARENA instead;
 			say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
-		if noun is boarded roadbed:
-			if bee-score is 0:
-				say "A bit distracting -- you want to focus on the cellar. But there is ambient noise.[paragraph break]";
-				if evil-bee-second is true, try listening to snore so arena instead;
-				try listening to evil bee instead;
 	if can-hear-gritty, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if noun is Id Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
@@ -7098,7 +7099,7 @@ this is the listen-others rule:
 	if noun is s-i or noun is s-c, say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
 
 this is the listen-demo-dome rule:
-	if mrlp is demo dome, say "It's nice and quiet. It [i]IS[r] a museum." instead; [demo dome]
+	say "It's nice and quiet. It [i]IS[r] a museum." instead;
 
 chapter smelling
 
@@ -7106,7 +7107,7 @@ the block smelling rule is not listed in any rulebook.
 
 smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] weaselly walleyes, [towers] angriest ingrates, Nerd Aid, [others] slime }
 
-rule for supplying a missing noun when listening:
+rule for supplying a missing noun when smelling:
 	repeat with Q running through smell-candidates:
 		if Q is touchable:
 			now the noun is Q;
@@ -7131,7 +7132,7 @@ this is the smell-stores rule:
 this is the smell-troves rule:
 	if can-hear-gritty, say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
-	if noun is Large Regal Lager, say "It's not open. You don't want to open it to smell it." instead;
+	if noun is Large Regal Lager, say "A faint rye-be-beery odor." instead;
 	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;
 
 this is the smell-routes rule:
@@ -7141,8 +7142,8 @@ this is the smell-routes rule:
 
 this is the smell-presto rule:
 	if noun is ether, say "The ether is nontoxic but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
-	if noun is casserole, say "That casserole doesn't smell very good, but it's not toxic." instead;
-	if player is in a mazeroom or player is in Unwary Runway, say "'You smell a gefilte and think 'get a life.'" instead;
+	if noun is casserole, say "That casserole smells ... well, sturdy. Not for the sophisticated." instead;
+	if location of player is in-the-maze, say "You smell a gefilte and think 'get a life.'" instead;
 	say "[if cur-score of presto is 0]It smells a bit stinky here, but more pressingly, it just FEELS stinky[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
 
 this is the smell-oyster rule:
@@ -7159,7 +7160,7 @@ this is the smell-towers rule:
 	if noun is ingrates, say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead;
 	if player is in Outer Route, say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]" instead;
 	if noun is Nerd Aid, say "The Nerd-Aid smells suspiciously like the very red Rind-Ade drink." instead;
-	if leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
+	if leak lake is touchable, say "The overwhelming smell of kale is not offensive, but you'd like to get by Leak Lake, all the same." instead;
 
 this is the smell-otters rule:
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead;
@@ -7323,7 +7324,7 @@ this is the swear-routes rule:
 this is the swear-presto rule:
 	if cur-score of presto is 0, say "That's too strong for here. But you have the right idea." instead;
 	if Hacks Shack is visited, say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
-	if plebe is touchable, say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
+	if plebe is touchable, say "The plebe perks [his-her] ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
 	if hogs are touchable, say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
 	say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
 
@@ -7332,11 +7333,8 @@ this is the swear-oyster rule:
 	if player is in Lean Lane, say "You don't want Aunt Tuna to perform a tsk task." instead;
 
 this is the swear-towers rule:
-	if agnostic is touchable, say "Some example you are." instead;
-	if player is in Actionless Coastlines or player is in Artist Traits Strait:
-		if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
-	if player is in Rawest Waters:
-		say "Trying to cross languages and make this Swears-Wasser does no good." instead;
+	if lois is touchable or hostile is he lot is touchable, say "Oh, the self-righteous backlash you'd get from [if lois is touchable][lois the][else][the he lot][end if]!" instead;
+	if player is in Rawest Waters, say "Trying to cross languages and make this Swears-Wasser does no good." instead;
 
 this is the swear-otters rule:
 	if player is in Disowned Downside and parleys splayer players are in Disowned Downside, say "The conversation is horrid enough." instead;
@@ -7345,7 +7343,7 @@ this is the swear-otters rule:
 	if player is in Rancho Archon Anchor, say "Yup. It's gotten REAL. But that won't help." instead;
 
 this is the swear-others rule:
-	if player is in Rustic Citrus, say "Instead you mumble ... I, curst." instead;
+	if player is in Rustic Citrus, say "Instead, you mumble ... 'I, curst!'" instead;
 
 this is the swear-demo-dome rule: do nothing;
 
@@ -7355,12 +7353,17 @@ to say deth:
 
 curse-warned is a truth state that varies.
 
-to say om: say "[if Rand is off-stage and dart is off-stage]one or two mild swears[else]one more mild swear[end if]";
+to decide which number is mild-swear-score:
+	if dart is in char arch, increment temp;
+	if rand is not reflexed, increment temp;
+	decide on temp;
+
+to say om: say "[if mild-swear-score is 0]one or two mild swears[else if mild-swear-score is 1]one more mild swear[end if]";
 
 check swearing mildly:
 	if mrlp is presto:
 		if hogs are touchable, say "The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off." instead;
-		say "[if dart is off-stage or Rand is off-stage]Well, maybe [om] would work here.[else if plebe is touchable]The plebe tries hard not to snicker.[else]You had your chance for a swear. And you took it. Yay, you.[end if]" instead;
+		say "[if mild-swear-score < 2]Well, maybe [om] would work somewhere around here.[else if plebe is touchable]The plebe tries hard not to snicker and succeeds, but just barely.[else]You had your chance for a swear or two. And you took it. Yay, you.[end if]" instead;
 	try swearing obscenely instead;
 
 understand "bastard" as swearing mildly.
@@ -10661,9 +10664,9 @@ to it-him-her (x - a thing):
 
 section throes hoster
 
-the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is touchable. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-others rule. go-region of Throes Hoster is Others.
+the Throes Hoster is a not lumpable not maingame portal. understand "others" as throes hoster when throes hoster is touchable. "That stupid throes hoster sits here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than explore Yorpwald instead of saving it, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. But it also has a sadness about it. As if it knows Elvira's influence [if roved is false]will slowly wane[else]is slowly waning[end if] the longer she is gone, but perhaps some hero (you?) can destroy things quicker.". diffic of hoster is 9. entry-rule of Throes Hoster is enter-hoster rule. go-region of Throes Hoster is Others.
 
-this is the enter-others rule:
+this is the enter-hoster rule:
 	if roved is false, say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
 	say "After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug].";
 	if arugula is not moot, pad-rec "guru";
@@ -10776,9 +10779,9 @@ a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-
 
 section odorant tornado
 
-the odorant tornado is a portal. understand "presto" as odorant tornado when odorant tornado is touchable. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-presto rule.
+the odorant tornado is a portal. understand "presto" as odorant tornado when odorant tornado is touchable. diffic of odorant tornado is 5. the go-region of odorant tornado is Presto. description is "The odorant tornado swirls about. Yuck! You fear what [if Grey Gyre is visited]is[else]might be[end if] behind it. There's a general roar that makes you back up a bit. Still, you suspect you need to [if Grey Gyre is visited]re-[end if]ENTER them.". initial appearance of odorant tornado is "An odorant tornado swirls where Store P used to reside.". entry-rule of odorant tornado is enter-tornado rule.
 
-this is the enter-presto rule:
+this is the enter-tornado rule:
 	say "[one of]Shoof! Foosh! A tentacle of Old Warpy snatches at you as you enter the odorant tornado, and you don't stop spinning for a minute. [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through the odorant tornado and Old Warpy again, managing to land on your feet this time.[stopping]"
 
 chapter store q
@@ -10809,7 +10812,7 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 section solid idols portal
 
-the solid idols are a plural-named not lumpable portal. understand "otters" as solid idols when solid idols are touchable. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-otters rule. go-region of solid idols is Otters.
+the solid idols are a plural-named not lumpable portal. understand "otters" as solid idols when solid idols are touchable. diffic of solid idols is 8. description of solid idols is "Not the sort you would be silly enough to bow down to, bcause otters are cool but not powerful. There's also something below their names, and it reads:". initial appearance is "Solid idols of otters wait here where store T was, facing each other--it's all blurry behind them.". entry-rule of solid idols is enter-idols rule. go-region of solid idols is Otters.
 
 report examining solid idols: try examining engravings;
 
@@ -10822,7 +10825,7 @@ definition: a region (called reg) is otters-blocking:
 	if reg is otters, no;
 	yes;
 
-this is the enter-otters rule:
+this is the enter-idols rule:
 	if number of otters-blocking regions > 0:
 		d "[list of otters-blocking regions].";
 		say "As you step between them, you feel a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in Strip of Profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
@@ -10846,9 +10849,9 @@ a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is
 
 section course source
 
-the course source is a portal. diffic of course source is 3. understand "routes" as course source when source course is touchable. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-routes rule. go-region of course source is Routes.
+the course source is a portal. diffic of course source is 3. understand "routes" as course source when source course is touchable. description of course source is "It appears as though it would branch out in many different directions if you started along it.". initial appearance of course source is "A course source stands near where Store U was. You may wish to [if Same Mesa is visited]re[end if]enter it.". entry-rule of course source is enter-source rule. go-region of course source is Routes.
 
-this is the enter-routes rule:
+this is the enter-source rule:
 	say "[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and each seems to lead through Old Warpy, anyway. But still you keep walking, until you cross a red line and hear a buzz. There is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[else]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 
 chapter store v
@@ -10867,9 +10870,9 @@ a-text of voters is "RRYRYR". b-text of voters is "RRYRYP". parse-text of voters
 
 section Tastee Estate
 
-the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-troves rule.
+the Tastee Estate is a portal. diffic of Tastee Estate is 2. go-region of Tastee Estate is troves. understand "troves" as tastee estate when Tastee Estate is touchable. initial appearance of Tastee Estate is "A Tastee Estate sits where Store V used to be, seeming too good to be true.". description of Tastee Estate is "Shiny. Tempting. If it does not lead to riches, it must lead to a rich experience if you ENTER.". entry-rule of Tastee Estate is enter-estate rule.
 
-this is the enter-troves rule:
+this is the enter-estate rule:
 	say "[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. Into Old Warpy, because of course. You run through the darkness, and you start to feel VERY cold before winding up in a hovel labeled [heat].[paragraph break]But you are soon thrown outside! There are no freeloaders in that most successful of cities: Spoiloplis![wfak][paragraph break]A girdled griddle where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]" [?? need to account for RETRY/TERRY stuff. What if you RETRY with the super purse gone?]
 
 chapter store w
@@ -10882,11 +10885,11 @@ a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of stor
 
 section truster turrets
 
-the truster turrets are a plural-named portal. diffic of truster turrets is 7. understand "towers" as truster turrets when truster turrets are touchable. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-towers rule
+the truster turrets are a plural-named portal. diffic of truster turrets is 7. understand "towers" as truster turrets when truster turrets are touchable. the go-region of truster turrets is Towers. initial appearance of truster turrets is "Two truster turrets stand where Store W used to be.". description of truster turrets is "Ivy or ivory. You can't tell which is tower, er, two. They're probably, hopefully, linked some way so you can ENTER. But their size indicates a hefty quest ahead.". entry-rule of truster turrets is enter-turrets rule.
 
 towers-warn is a truth state that varies.
 
-this is the enter-towers rule:
+this is the enter-turrets rule:
 	if number of kayoed regions < 5 and towers-warn is false:
 		now towers-warn is true;
 		if patcher is touchable:
@@ -10914,11 +10917,11 @@ the shells are a boring thing. they are part of store y. the shells are uncluing
 
 section barnacle balancer
 
-the balancer barnacle is a portal. diffic of balancer barnacle is 6. understand "oyster" as barnacle balancer when barnacle balancer is touchable. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-oyster rule.
+the balancer barnacle is a portal. diffic of balancer barnacle is 6. understand "oyster" as barnacle balancer when barnacle balancer is touchable. the go-region of barnacle balancer is Oyster. "The barnacle balancer that swallowed up the Store Y oyster is open. You could definitely sneak in.". description of barnacle balancer is "It's not particularly tall, but its width suggests there's a lot to do there.". entry-rule of balancer barnacle is enter-barnacle rule.
 
 oyster-warn is a truth state that varies.
 
-this is the enter-oyster rule:
+this is the enter-barnacle rule:
 	if number of solved regions < 2 and oyster-warn is false:
 		now oyster-warn is true;
 		if patcher is touchable:
@@ -12417,6 +12420,12 @@ this is the bore-divorces rule:
 
 volume presto
 
+definition: a room (called r) is in-the-maze:
+	if r is a mazeroom, yes;
+	if r is nowt town, yes;
+	if r is unwary runway, yes;
+	no;
+
 book general stuff and rules
 
 chapter interjections
@@ -12742,8 +12751,11 @@ to yak-and-yoke:
 	moot leaf;
 	moot yak;
 
-check going south in Char Arch:
+this is the leo-rand-forward rule:
 	if Leo is touchable, say "'I don't wanna go back dere, boss. I wants adventureses. Fightses.' says [l-r]." instead;
+
+check going south in Char Arch:
+	abide by the leo-rand-forward rule;
 	if Leo is dismissed, abide by the post-wall-arch rule;
 
 this is the post-wall-arch rule:
@@ -21819,7 +21831,7 @@ the raised aiders are a plural-named exhibit in Hows Show. description of raised
 
 book Intel Inlet
 
-Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there. Passe Apses[one of], of puzzles that made the cut in earlier releases before being weeded out or moved, [or][stopping] also wait here for your perusal.". roomnud of Intel Inlet is table of Intel Inlet nudges.
+Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there. Passe Apses[one of], of puzzles that made the cut in earlier releases before being weeded out or moved,[or][stopping] also wait here for your perusal.". roomnud of Intel Inlet is table of Intel Inlet nudges.
 
 to say the-pro: set the pronoun it to shiest thesis;
 
@@ -22538,18 +22550,6 @@ towers	"REPAIR TOASTER?"
 --	"Saying COINS RULE or RULE, SCION in the Rancho Archon Anchor?"
 others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
---	"[i][bracket]NOTE: [super-rude].[r][close bracket]"	presto-or-others rule
-presto	"TARD while getting the dart in Presto/Char Arch?"
-others	"RETARD at the Tarred Trader, [greedy-person], in Others's Scape Space?"
-
-to say super-rude:
-	say "[if presto is not solved and others is not solved]you didn't get a chance to see two mean anagrams not recommended in real life--one is in PRESTO[else]author does not advocate using the word[pres-s] below in real life[end if]"
-
-to say pres-s: if presto is solved and others is solved, say "s"
-
-this is the presto-or-others rule:
-	if presto is solved or others is solved, the rule succeeds;
-	the rule fails;
 
 to say 2dg of (rg - a region):
 	if rg is not tickedoff:
