@@ -1,12 +1,13 @@
 # run this file with rbr.py
 #
-files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,reg-roi-oyster-slider.txt,reg-roi-oyster-hints.txt
+files=reg-roi-oyster-max.txt,reg-roi-oyster-min.txt,reg-roi-oyster-nudmis.txt,reg-roi-oyster-slider.txt,reg-roi-oyster-hints.txt,reg-roi-oyster-verbs.txt
 
 ~	max	t0
 ~	min	t1
 ~	nudmis,nudges,nud,nu,mis	t2
 ~	sli	t3
 ~	hints,hin	t4
+~	verbs	verbs
 
 }}MAX=42
 }}CURMAX=42
@@ -732,6 +733,10 @@ You worry what will happen to you, or the settler, if you pull it out again. You
 >peal
 The pale plea already sort of is. You need a stronger action than that.
 
+@verbs
+>gt saccade
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+
 >leap
 Your score has just gone up by one point
 }}SCORE++
@@ -943,6 +948,10 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
+@verbs
+>gt anger range
+You've lost the way back, but the eeks are calling you on.
+
 @max
 >seek eeks
 by one point
@@ -963,6 +972,10 @@ DEBUG INFO: Tea-at-a-Tee hinting.
 
 >score
 {$SCOS}
+
+@verbs
+>gt dearths
+Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to.
 
 @nud
 #mistake test for a nut
@@ -1875,6 +1888,10 @@ You tilt the gleaner around to try to see it from a different point of view. You
 >gleanre
 It's already been made bigger. Not much more you can do with it except examine it.
 
+@verbs
+>gt rascal craals
+The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
+
 >n
 Horned Hedron
 
@@ -2106,6 +2123,11 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+@verbs
+# prime GT END DEN for later
+>in
+>out
+
 @nud
 #done rejects for pol art portal
 >patrlo
@@ -2131,6 +2153,10 @@ You see a map of all the paths in the Horned Hedron.
 #redone rejects for gleaner
 >gleanre
 It's already been made bigger. Not much more you can do with it.
+
+@verbs
+>gt end den
+No need to go back there.
 
 >in
 
@@ -2281,6 +2307,10 @@ DEBUG INFO: natant ant hinting.
 >score
 {$SCOS}
 
+@verbs
+>gt hedron
+Aw, c'mon, the ant should be no problem.
+
 @sli
 #slider test for psalm
 >splma
@@ -2362,6 +2392,10 @@ DEBUG INFO: dialer hinting.
 @!min
 >score
 {$SCOS}
+
+@verbs
+>gt plasm lamps
+You got rid of the ant. Nothing more to do there.
 
 @sli
 #slider test for revel
