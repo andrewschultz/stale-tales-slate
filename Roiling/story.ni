@@ -1356,7 +1356,7 @@ chapter going to
 check gotoing:
 	d "Trying location [noun].";
 	if noun is location of player, say "You're already here!" instead;
-	if noun is strip and strip is visited:
+	if noun is strip and strip is visited and player is not in Cruelest Lectures:
 		say "The command you may be looking for is RETRY. Do that now instead?";
 		if the player yes-consents, try retrying instead;
 		say "OK. You will want to use RETRY in the future." instead;
@@ -1386,6 +1386,8 @@ this is the goto-ordeal-reload rule:
 	do nothing;
 
 this is the goto-stores rule:
+	if noun is Cruelest Lectures, say "You kind of destroyed Cruelest Lectures, and you won't get any rewards for going back. It was neat and all but not as fun as watching Reefer Madness." instead;
+	if noun is Strip of Profits, say "You'll need to find your way back. Don't worry. There are clues. And a small reward." instead;
 	do nothing;
 
 this is the goto-routes rule:
@@ -3102,7 +3104,7 @@ before doing something when Report Porter Perrot is touchable:
 		continue the action;
 	if current action is attacking, say "That'd just give the Penal Panel one more excuse." instead;
 	if action is blathery, say "Report Porter Perrot's kind of leading the conversation, here." instead;
-	if current action is procedural:
+	if action is procedural:
 		note-procedurals;
 		continue the action;
 	if current action is not talking to Report Porter Perrot and current action is not QBC responding with:
@@ -3594,35 +3596,51 @@ chapter zaping (with patcher)
 
 zaping is an action applying to one thing.
 
+does the player mean zaping a direction: it is very unlikely.
+
 understand the command "zap [something]" as something new.
 understand the command "patch [something]" as something new.
 
 understand "zap [something]" as zaping.
 understand "patch [something]" as zaping.
 
+to bypass-sto (st - a sto):
+	repeat through table of stores anagrams:
+		if st is the-from entry:
+			now go-region of the-to entry is bypassed;
+			moot the-from entry;
+			moot the-to entry;
+			continue the action;
+	say "Uh-oh. The patcher should've gotten rid of something besides [the noun], but it didn't. This is a BUG";
+	moot st;
+
+to say behind-t:
+	say ". Whoever or whatever is behind [if store t is touchable]Store T[else]the solid idols[end if] must be very powerful indeed."
+
 carry out zaping:
 	if player is not in Strip of Profits, say "[reject]" instead;
+	if player has patcher:
+		say "You shouldn't be carrying the patcher. It has to stay in the Strip of Profits.";
+		move patcher to strip of profits;
+		say "[line break]You can use it [if player is in strip of profits]now[else]once you get back to the Strip of Profits[end if]." instead;
 	if chapter patcher is not in Strip of Profits, say "You don't have anything that can zap anything." instead;
 	if noun is tokers or noun is nestor or noun is mangiest steaming, say "You're a text adventurer, not a drug enforcement agent." instead;
 	if noun is not a sto and noun is not a portal, say "The patcher can only zap stores or portals." instead;
-	if noun is store h:
-		if otters is solved, say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
-		say "Store H isn't critical. Yet. Plus there are too many people around. You should maybe look elsewhere." instead;
+	if noun is store h or noun is store b:
+		say "You try to swivel the chapter patcher to [noun], but it won't go that way. While [noun] seems like it could be changed, hopefully there's nothing critical there." instead;
 	if noun is Store K or noun is Store N, say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it." instead;
-	if noun is Store T, say "The energy you felt from the patcher seems to bounce off Store T and zap you back. You'll have to be a tough customer to enter Store T." instead;
-	if noun is solid idols, say "The energy beam that emits from the patcher fizzles as it hits the otters. Whatever's behind the otters is likely no joke." instead;
+	if noun is Store T or noun is solid idols:
+		say "The energy beam from the patcher bounces off [the noun] and almost zaps you and the patcher back. Whoever or whatever is behind [the noun] must be very powerful indeed." instead;
 	if noun is a portal, now go-region of noun is bypassed;
-	if noun is Store U, now routes is bypassed;
-	if noun is Store V, now troves is bypassed;
-	if noun is Store W, now towers is bypassed;
-	if noun is Store U, now oyster is bypassed;
-	if noun is Store P, now presto is bypassed;
-	moot noun;
-	say "[if noun is a portal]The patcher obliterates [the noun] you created. Wow![else]You point the patcher at [the noun], which disintegrates. Hopefully, you somehow made everything okay behind [the noun] once you're finished here, or maybe it can be saved until after you defeat Elvira.[end if]";
+	if noun is a sto:
+		bypass-sto noun;
+	else:
+		moot noun;
+	say "You point the patcher at [the noun][if noun is a portal] you created[end if]. It disintegrates. Hopefully, you somehow made everything okay behind [the noun] once you're finished here, or maybe it can be saved until after you defeat Elvira.";
 	if number of patchable things is 0:
 		say "[line break]With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.";
 		moot chapter patcher;
-	poss-d;
+	if noun is not a portal, poss-d;
 	the rule succeeds;
 
 the chapter patcher is a warpable thing. description is "[if number of patchable things > 1]I bet if you switched it, something cool might happen[else]It's probably useless to warp past the final area[end if].". "A chapter patcher lies here next to the megaton magneto-montage."
@@ -3636,7 +3654,7 @@ check switching on the chapter patcher:
 	moot patcher;
 	repeat with ZT running through unsolved regions:
 		now ZT is bypassed;
-	say "[if number of patchable things is 1]You point your patcher at [random patchable thing] and it goes poof[else]You point your patcher at, in turn, [list of patchable things][end if]. Well, you should be able to see what's [if Store T is touchable]really behind Store T[else]behind the otters[end if] now.";
+	say "[if number of patchable things is 1]You point your patcher at [random patchable thing] and it goes poof[else]You point your patcher at, in turn, [the list of patchable things][end if]. Well, you should be able to see what's [if Store T is touchable]really behind Store T[else]behind the otters[end if] now.";
 	repeat with ZT running through patchable things:
 		if ZT is a sto and ZT is in Strip of Profits:
 			poss-d;
@@ -4151,7 +4169,7 @@ to show-rank:
 	if mrlp is others or roved is true or otters is solved:
 		say "Procured Producer.";
 		continue the action;
-	let Q be number of rank-increasing regions + number of bypassed regions + 1 + boolval of power-back;
+	let Q be number of rank-increasing regions + 1 + boolval of power-back;
 	if Q > number of rows in table of ranks:
 		d "[Q] rank, but only [number of rows in table of ranks] rows. Find some more.";
 		now Q is number of rows in table of ranks;
@@ -4159,7 +4177,6 @@ to show-rank:
 	say "[rank-name entry].";
 
 definition: a region (called reg) is rank-increasing:
-	if reg is spoiled, no;
 	if reg is bypassed, yes;
 	if reg is solved, yes;
 	no;
