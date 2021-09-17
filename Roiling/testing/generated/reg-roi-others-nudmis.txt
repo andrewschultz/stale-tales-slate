@@ -165,6 +165,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's
 >compass
 Your score has just gone up by one point.
 
+#nudge for ditties
+>dittise
+The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway.
 #done rejects for compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
