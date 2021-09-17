@@ -4,7 +4,7 @@
 
 # note to self: MBB 1 = Balmer, MBB 2 = Mr Beal
 
-files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,reg-roi-troves-nudmis.txt,reg-roi-troves-slider.txt,reg-roi-troves-hints.txt
+files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,reg-roi-troves-nudmis.txt,reg-roi-troves-slider.txt,reg-roi-troves-hints.txt,reg-roi-troves-verbs.txt
 ~	max	t0
 ~	mina	t1
 ~	minb	t2
@@ -12,6 +12,7 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ~	sli	t4
 ~	slider	t4
 ~	hints,hin,spoi	t5
+~	verbs	t6
 #~	pad	t5
 
 }}MAX=26
@@ -56,6 +57,10 @@ Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of 
 >ptf 2
 DEBUG INFO: Eh, At Heat hinting.
 
+@verbs
+>gt upscale
+You must work to make your dreams of going there become reality.
+
 >l
 Loather Rathole
 
@@ -67,6 +72,16 @@ Loather Rathole
 You pause, wondering if there is a way to preserve resources. Maybe now is a good time to try to HATE.
 !Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to HATE right now.
 >ptf 2
+
+@verbs
+>listen
+Actually, you can't help but hear gritty dialogue
+>hush
+Random dialogue off.
+>listen
+You have shut off the random gritty dialogue with HUSH.
+>uhhs
+Random dialogue on again.
 
 @sli
 >slon
@@ -377,6 +392,10 @@ Boarded Roadbed
 
 >score
 {$SCOS}
+
+@verbs
+>gt rathole
+Going back would be a dereliction of your destiny.
 
 @mis
 #mistake test for norse

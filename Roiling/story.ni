@@ -1363,7 +1363,8 @@ check gotoing:
 	if qbc_litany is not table of no conversation, say "End your conversation first." instead;
 	let noureg be map region of location of noun;
 	if noureg is solved and noureg is not stores, say "You already solved [noureg]." instead;
-	if noun is unvisited and mrlp is noureg, say "You've never been there yet, so you can't go back." instead;
+	if noun is unvisited and mrlp is noureg:
+		if mrlp is not troves, say "You've never been there yet, so you can't go back." instead;
 	if last-loc of noureg is unvisited:
 		d "[noureg]: [last-loc of noureg].";
 		if mrlp is noureg:
@@ -6934,6 +6935,10 @@ to say a-r: say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
 to say next-sonancy: say "[if hurt hog is moot]the final step[else if bent ewe is reflexed]the hurt hog[else]the hog and the ewe[end if]"
 
+to decide whether can-hear-gritty:
+	if player is in Loather Rathole or player is in Bustle Sublet, yes;
+	no;
+
 to decide whether can-hear-posh:
 	if player is in Browse Bowers, yes;
 	if player is in Econ Cone and praise spirea is reflexed, yes;
@@ -6974,29 +6979,27 @@ this is the listen-stores rule:
 this is the listen-troves rule:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		if bee-score is 0, say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it. A snore from the bee makes you see red." instead;
-		if snore so arena is reflexive, say "A snore from the Snore So Arena makes you see red." instead;
-		say "The bee is quiet now." instead;
-	if player is in Loather Rathole or player is in Bustle Sublet, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
+		if noun is boarded roadbed, try listening to snore so arena instead;
+		if snore so arena is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
+		if noun is snore so arena:
+			if arena is reflexive, say "A snore from the Snore So Arena makes you see red. Everything about the snore and arena, in fact." instead;
+			say "[one of]A snore arises from the arena. You see red.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
+		if noun is evil bee:
+			if SNORE SO ARENA is reflexive:
+				say "Nothing unusual from the bee. But the arena...";
+				try listening to SNORE SO ARENA instead;
+			say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
+		if noun is boarded roadbed:
+			if bee-score is 0:
+				say "A bit distracting -- you want to focus on the cellar. But there is ambient noise.[paragraph break]";
+				if evil-bee-second is true, try listening to snore so arena instead;
+				try listening to evil bee instead;
+	if can-hear-gritty, say "[if talk-quiet is false]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is false]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
-	if noun is SNORE SO ARENA:
-		if SNORE SO ARENA is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
-		say "[one of]A snore arises from the arena. You see red.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
-	if noun is evil bee:
-		if SNORE SO ARENA is reflexive, try listening to SNORE SO ARENA instead;
-		say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
 	if noun is Id Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
 	if player is in Boredom Bedroom, say "The dead air inspires no rad idea." instead;
 	if noun is praise spirea, try examining praise spirea instead;
 	if player is in Upscale Capsule, say "White noise, it is on. Whee." instead;
-	if noun is odes song, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead; [presto]
-	if noun is Rand or noun is Leo:
-		if Rand is washed up:
-			say "You horn in on [l-n-r]'s small talk, and they open up to you a bit.";
-			try asking a random washed up person about "rannygazoo" instead;
-	if player is in Dirge Ridge:
-		if Rand is washed up, try listening to Rand instead;
-		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
 
 this is the listen-routes rule:
 	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
@@ -7017,6 +7020,14 @@ this is the listen-routes rule:
 	if player is in Sonancy Canyons, say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;
 
 this is the listen-presto rule:
+	if noun is odes song, say "The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain. [one of]It sounds familiar, though. If you listen again, you might hear whom it's by and have a clue how to deal with it[or]It's by DENS SO OG, a dumb name that makes you see red, and you remember they had a dumb follow-up song, too[or]While listening to the odes song, you see red remembering DENS SO OG also wrote the appalling nonsense SEGS DO ON. There was one more even worse[or]DENS SO OG also wrote SEGS DO ON and the unmotivational NEGS? SO? DO[stopping]." instead; [presto]
+	if noun is Rand or noun is Leo:
+		if Rand is washed up:
+			say "You horn in on [l-n-r]'s small talk, and they open up to you a bit.";
+			try asking a random washed up person about "rannygazoo" instead;
+	if player is in Dirge Ridge:
+		if Rand is washed up, try listening to Rand instead;
+		say "The odes song is gone, but you still just feel mad about things[if rand is fightin], and you're not the only one[else], despite having worked things out with [l-n-r][end if]." instead;
 	if player is in Hacks Shack, say "Classic techno music from the Baleets: 'Be Stale.'" instead;
 	say "'This ... this ... this...' you hear, faintly. It feels profane." instead;
 
@@ -7118,7 +7129,7 @@ this is the smell-stores rule:
 	if player is in Cruelest Lectures, say "It smells depressingly antiseptic here." instead;
 
 this is the smell-troves rule:
-	if player is in Loather Rathole or player is in Bustle Sublet, say "Eew-gas sewage. Skint-stink." instead;
+	if can-hear-gritty, say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
 	if noun is Large Regal Lager, say "It's not open. You don't want to open it to smell it." instead;
 	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;

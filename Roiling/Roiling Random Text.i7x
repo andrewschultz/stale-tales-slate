@@ -415,7 +415,7 @@ this is the read-eths rule:
 	the rule fails.
 
 this is the say-gritty rule:
-	if player is in Bustle Sublet or player is in Boarded Roadbed or player is in Loather Rathole, the rule succeeds;
+	if can-hear-gritty, the rule succeeds;
 	the rule fails;
 
 this is the in-lot-or-ruin rule:
@@ -431,7 +431,7 @@ this is the read-see-dir rule:
 	the rule fails;
 
 this is the say-posh rule:
-	if player is in Econ Cone or player is in Browse Bowers, the rule succeeds;
+	if can-hear-posh, the rule succeeds;
 	the rule fails;
 
 this is the read-tec rule:
