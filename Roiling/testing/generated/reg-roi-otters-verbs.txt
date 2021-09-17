@@ -1,0 +1,304 @@
+
+## reg-roi-otters-verbs.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* otters-thru
+
+>posf
+
+>seed 1
+>ts
+>a5
+>t
+>otters
+
+>opt in
+>enter solid idols
+
+#forceignore
+>barely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+
+>l
+Burnt Brunt
+
+>rescind
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>reedily
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 3 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>w
+Disowned Downside
+
+>bossily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 4 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>angrily
+Your score has just gone up by one point.
+>score
+Score in a scenario: 5 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>blearily
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 6 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+>au 0
+
+>1
+
+>3
+
+#I prefer to say "no" here in the test script, so it's not confused with "north."
+>no
+
+>n
+Loop Pool
+
+>because
+by one point
+
+>score
+Score in a scenario: 7 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>else
+by one point
+
+>score
+Score in a scenario: 8 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
+
+>unless
+by one point
+>score
+Score in a scenario: 9 out of 33 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 33.
+>misses
+!--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
+
+>s
+
+>s
+
+Bran Barn
+
+>although
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 10 out of 33 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 33.
+
+>ergo
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
+
+>however
+by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 12 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+>n
+
+>atom
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 13 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>e
+
+>n
+Shiner Shrine
+
+>enragedly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>remotely
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>n
+Lamer Realm
+
+>slow
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>coolest
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>paroled
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 18 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>artsy
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 19 out of 33 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 33.
+
+>l
+Blest Belts
+
+>garbed
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 20 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>s
+>s
+>s
+
+Clarthead Cathedral
+
+>loathingly
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 21 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>joltily
+Your score has just gone up by one point
+They find another place where rioters roister.
+
+>score
+Score in a scenario: 22 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 23 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>snail
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 24 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>hornets
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>racoon
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 26 out of 33 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 33.
+
+>l
+Uprates Pasture
+
+>snipe
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 27 out of 33 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 33.
+
+>n
+>n
+>w
+
+>w
+Reclusion Inclosure
+
+>eelmr
+/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+>aside
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 28 out of 33 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 33.
+
+>honestly
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 29 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>raptor
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 30 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>quickly
+The medals clink together. You feel infused with speed. Even your fats feel fast.
+by one point
+
+#this is just to get rid of Elvira
+>w
+Rancho Archon Anchor
+WTF FTW
+>7
+>e
+
+>gt inclosure
+You leave her sin shrine with extra quickness before getting a shiner.
+Elvira mocks you, but makes no attack:
+>w
+>gt inclosure
+Elvira mocks you again:
+>undo
+>undo
+>undo
+
+>deeply
+Your score has just gone up by one point
+
+>w
+
+>score
+Score in a scenario: 32 out of 33 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 33 points.
+
+>misses
+!otters
+
+>au 2
+>play whistle
+#notana
+by one point
+DEBUG INFO: FINAL REGION ACTION: checking weltish whistle.
+Elmo and Gretta are waiting for you back at the Means Manse
+
+>y
+
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>score
+You need to figure how to change and get through store H.

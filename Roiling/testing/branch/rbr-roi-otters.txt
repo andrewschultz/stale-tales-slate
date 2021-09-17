@@ -1,6 +1,6 @@
 # run this file with rbr.py
 #
-files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,reg-roi-otters-altpath.txt,reg-roi-otters-slider.txt,reg-roi-otters-hints.txt
+files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,reg-roi-otters-altpath.txt,reg-roi-otters-slider.txt,reg-roi-otters-hints.txt,reg-roi-otters-verbs.txt
 
 ~	max	t0
 ~	min	t1
@@ -8,6 +8,7 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	alt	t3
 ~	sli	t4
 ~	hints,hin,spoi	t5
+~	verbs	t6
 
 }}MAX=33
 }}CURMAX=33
@@ -2409,6 +2410,17 @@ Rancho Archon Anchor
 WTF FTW
 >7
 >e
+
+@verbs
+>gt inclosure
+You leave her sin shrine with extra quickness before getting a shiner.
+Elvira mocks you, but makes no attack:
+>w
+>gt inclosure
+Elvira mocks you again:
+>undo
+>undo
+>undo
 
 @nud
 #mistake retest for coins lure
