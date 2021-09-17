@@ -5,15 +5,16 @@
 # this is a special case--usually MIN comes first, but because of alternate routes, I have to push it second.
 
 # spechelp should be right before @!minh,mini
-# what is towers-f for? Can we delete it?
 
-files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,reg-roi-towers-nudmis.txt,reg-roi-towers-slider.txt,reg-roi-towers-hints.txt
-~	max	t0
-~	minh	t1
-~	mini	t2
-~	nudges,nud,nu,mis	t3
-~	sli	t4
-~	hints,hin,spoi	t5
+files=reg-roi-towers-max.txt,reg-roi-towers-min-h.txt,reg-roi-towers-min-i.txt,reg-roi-towers-nudmis.txt,reg-roi-towers-slider.txt,reg-roi-towers-hints.txt,reg-roi-towers-verbs.txt
+
+~	max	max
+~	h,minh	min-h
+~	i,mini	min-i
+~	nudges,nud,nu,mis	nudmis
+~	sli	slider
+~	hints,hin,spoi	hints
+~	verbs	verbs
 
 }}MAX=56
 }}CURMAX=56
@@ -686,6 +687,10 @@ DEBUG INFO: dreads adders hinting.
 }}CURMAX-=4
 
 Topside Deposit
+
+@verbs
+>gt trefoil
+You had your fun in there.
 
 >score
 {$SCOS}
@@ -2860,6 +2865,10 @@ The diverse deviser is complicated enough. You probably just need to figure what
 >pairer
 You don't need duplicates of anything here. Besides, the diverse deviser looks complex enough. It will probably reject or accept what it needs to.
 
+@verbs
+>gt shoals
+Unfortunately, since the shoals aslosh can be seen from or in more than one place, I can't go there.
+
 >put dagger in deviser
 #notana
 by one point
@@ -3280,6 +3289,20 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 >undo
 >undo
 
+@verbs
+>robust
+by one point
+>enter boat
+Rawest Waters
+>nearest
+Your score has just gone up by one point
+>gt leak lake
+Leak Lake wasn't fun the first time.
+>undo
+>undo
+>undo
+>undo
+
 @max
 >robust
 by one point
@@ -3361,6 +3384,12 @@ Mislit Limits
 #towers anagrams for curst palace
 >xr curst palace #final
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
+
+@verbs
+>gt trefoil
+That's way in the past.
+>gt coastlines
+You don't want to cross Leak Lake again.
 
 >score
 {$SCOS}

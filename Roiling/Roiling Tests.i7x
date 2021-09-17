@@ -1009,8 +1009,10 @@ understand "picpic" as picpicing when player is in Loftier Trefoil.
 understand "warwar" as picpicing when player is in Loftier Trefoil.
 
 carry out picpicing:
+	say "Flipping all of [picaros in Loftier Trefoil] and [the recital article], too.";
 	repeat with pic running through not leaderly picaros in Loftier Trefoil:
 		try fliptoing pic;
+	try fliptoing recital article;
 	try fliptoing Rodney;
 	the rule succeeds;
 
