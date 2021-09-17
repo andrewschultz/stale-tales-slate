@@ -2412,6 +2412,7 @@ WTF FTW
 >e
 
 @verbs
+#verbcase goto-otters-if-player-is-in-rancho-archon-anchor
 >gt inclosure
 You leave her sin shrine with extra quickness before getting a shiner.
 Elvira mocks you, but makes no attack:

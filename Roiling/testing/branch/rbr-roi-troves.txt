@@ -58,6 +58,7 @@ Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of 
 DEBUG INFO: Eh, At Heat hinting.
 
 @verbs
+#verbcase goto-troves-default
 >gt upscale
 You must work to make your dreams of going there become reality.
 
@@ -394,6 +395,7 @@ Boarded Roadbed
 {$SCOS}
 
 @verbs
+#reverbcase goto-troves-default
 >gt rathole
 Going back would be a dereliction of your destiny.
 

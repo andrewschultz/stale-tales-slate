@@ -345,6 +345,7 @@ Your score has just gone up by one point
 Conversation from the tokers you don't want to listen TOO closely to.
 >listen nestor
 Nestor periodically mumbles about his lost buddies.
+#verbcase smell-stores-if-noun-is-mangiest-steaming
 >smell steaming
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
 
@@ -376,6 +377,10 @@ Cruelest Lectures
 {$SCOS}
 
 @verbs
+#verbcase smell-stores-if-player-is-in-cruelest-lectures
+>smell
+It smells depressingly antiseptic here.
+#verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
 >listen
@@ -499,6 +504,11 @@ There's no time for food! Especially fatty, non-brain food!
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
+
+@verbs
+#verbcase goto-stores-if-noun-is-cruelest-lectures
+>gt cruelest lectures
+You kind of destroyed Cruelest Lectures, and you won't get any rewards for going back. It was neat and all but not as fun as watching Reefer Madness.
 
 >routes
 }}SCORE++
@@ -625,11 +635,21 @@ You point the patcher at the balancer barnacle you created. It disintegrates. Ho
 }}CURMAX--
 You point the patcher at Store Y. It disintegrates. Hopefully, you somehow made everything okay behind Store Y once you're finished here, or maybe it can be saved until after you defeat Elvira.
 
+@verbs
+#verbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
+>smell store y
+Seawater scents from Store Y.
+
 @!min
 >oyster
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+
+@verbs
+#reverbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
+>smell balancer
+Seawater scents from the balancer barnacle.
 
 >score
 {$SCOS}
@@ -655,6 +675,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#verbcase smell-stores-if-noun-is-throes-hoster
+>smell throes hoster
+A mix of surprisingly nice smells from the Throes Hoster where Store H was.
 
 @nud
 #done rejects for throes hoster
@@ -699,6 +724,7 @@ With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, a
 @verbs
 >listen tornado
 A roar of angry undefinable words swirls from the odorant tornado.
+#verbcase smell-stores-if-noun-is-odorant-tornado
 >smell tornado
 The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.
 

@@ -164,6 +164,7 @@ You think you feel the palm shake a bit, but nothing terribly magical happens.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
 
 @verbs
+#verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
 
@@ -172,6 +173,7 @@ Your score has just gone up by one point.
 }}SCORE++
 
 @verbs
+#verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-moot
 >smell
 Bean soup. Subpoena is near.
 
@@ -523,6 +525,7 @@ The settler is pretty powerful, but it can't build bridges.
 Farming Framing
 
 @verbs
+#verbcase smell-ordeal-reload-if-player-is-in-farming-framing
 >smell
 Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
 

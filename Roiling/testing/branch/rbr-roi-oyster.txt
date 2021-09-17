@@ -734,6 +734,7 @@ You worry what will happen to you, or the settler, if you pull it out again. You
 The pale plea already sort of is. You need a stronger action than that.
 
 @verbs
+#verbcase goto-oyster-if-player-is-in-fighter-freight
 >gt saccade
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
 
@@ -949,6 +950,7 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @verbs
+#verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
 You've lost the way back, but the eeks are calling you on.
 
@@ -974,6 +976,7 @@ DEBUG INFO: Tea-at-a-Tee hinting.
 {$SCOS}
 
 @verbs
+#verbcase goto-oyster-if-noun-is-hardest-trashed-dearths
 >gt dearths
 Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to.
 
@@ -1889,6 +1892,7 @@ You tilt the gleaner around to try to see it from a different point of view. You
 It's already been made bigger. Not much more you can do with it except examine it.
 
 @verbs
+#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
 >gt rascal craals
 The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
 
@@ -2155,6 +2159,7 @@ You see a map of all the paths in the Horned Hedron.
 It's already been made bigger. Not much more you can do with it.
 
 @verbs
+#verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
 >gt end den
 No need to go back there.
 
@@ -2308,6 +2313,7 @@ DEBUG INFO: natant ant hinting.
 {$SCOS}
 
 @verbs
+#verbcase goto-oyster-if-location-of-player-is-plasm-lamps
 >gt hedron
 Aw, c'mon, the ant should be no problem.
 
@@ -2394,6 +2400,7 @@ DEBUG INFO: dialer hinting.
 {$SCOS}
 
 @verbs
+#verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
 
