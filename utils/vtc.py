@@ -1,0 +1,132 @@
+#
+# vtc.py: verbs test case checker
+#
+# makes sure verb test cases are linked up with something in an RBR or REG file
+#
+
+valid_rule_types = [ 'ordeal-reload', 'stores', 'routes', 'troves', 'presto', 'oyster', 'towers', 'otters', 'others', 'demo-dome' ]
+
+import os
+import glob
+import mytools as mt
+import re
+import sys
+from collections import defaultdict
+if_levels = defaultdict(str)
+rules_to_find = defaultdict(bool)
+
+current_rule = ''
+current_testcase = ''
+
+crit_word = 'smell'
+
+try:
+    crit_word = sys.argv[1].lower()
+    print("New critical word:", crit_word)
+except:
+    print("CMD line can take a parameter for critical word to display source. Default is", crit_word)
+
+def is_valid_rule(my_string):
+    for x in valid_rule_types:
+        if x + ' rule' in my_string:
+            return True
+    return False
+
+def if_statement_of(my_line, backup_string):
+    if 'else:' in my_line:
+        return 'not-' + backup_string
+    my_line = my_line.strip()
+    if my_line.startswith('unless') or my_line.startswith('if') or my_line.startswith('elseif'):
+        temp = re.sub("[,:].*", "", my_line.lower())
+        temp = temp.replace(' ', '-')
+        return temp
+    return ''
+
+with open("story.ni") as file:
+    for (line_count, line) in enumerate(file, 1):
+        l = line.rstrip()
+        if l.startswith("this is") and l.endswith(' rule:'):
+            current_rule = re.sub("this is (the )?", "", l.strip())
+            if is_valid_rule(current_rule):
+                current_rule = re.sub(" +rule:", "", current_rule)
+                #print(current_rule, line_count)
+            else:
+                current_rule = ''
+        if not l.strip():
+            current_rule = ''
+            if current_testcase:
+                rules_to_find[current_testcase] = False
+            current_testcase = ''
+            if_levels.clear()
+            continue
+        if current_rule:
+            current_if_level = l.count('\t')
+            lev_to_delete = current_if_level + 1
+            while lev_to_delete in if_levels:
+                if_levels.pop(lev_to_delete)
+                lev_to_delete += 1
+            temp = if_statement_of(line, if_levels[current_if_level] if current_if_level in if_levels else '')
+            if not temp:
+                if "instead;" in line and current_if_level == 1:
+                    rules_to_find[current_rule + "-default"] = False
+                continue
+            if current_testcase:
+                if current_testcase in rules_to_find:
+                    print("Duplicate test case", current_testcase, "line", line_count)
+                rules_to_find[current_testcase] = False
+            current_testcase = current_rule
+            if_levels[current_if_level] = if_statement_of(line, if_levels[current_if_level] if current_if_level in if_levels else '')
+            for x in sorted(if_levels):
+                current_testcase += '-' + if_levels[x]
+
+def comment_to_case(my_line):
+    my_line = my_line.lower().strip()
+    my_line = re.sub("^#(re)?verb(test|case) *", "", line.strip())
+    my_line = re.sub("[0-9]+$", "", my_line)
+    return my_line.strip()
+
+for x in glob.glob("rbr*"):
+    b = os.path.basename(x)
+    with open(x) as file:
+        for (line_count, line) in enumerate (file, 1):
+            if line.startswith("#verbtest") or line.startswith("#verbcase"):
+                this_verb_case = comment_to_case(line)
+                if this_verb_case not in rules_to_find:
+                    print("Warning no verb case for", this_verb_case, b, "line", line_count)
+                    mt.add_postopen(x, line_count)
+                elif rules_to_find[this_verb_case]:
+                    print("Duplicate verbtest for", this_verb_case, b, line_count)
+                    print("Previously seen at", rules_to_find[this_verb_case])
+                    mt.add_postopen(x, line_count)
+                else:
+                    rules_to_find[this_verb_case] = (b, line_count)
+            if line.startswith("#reverbtest") or line.startswith("#reverbcase"):
+                this_verb_case = comment_to_case(line)
+                if this_verb_case not in rules_to_find:
+                    print("Warning no verb case for", this_verb_case, b, "line", line_count)
+                    mt.add_postopen(x, line_count)
+                elif not rules_to_find[this_verb_case]:
+                    print("Reverbtest before verbtest for", this_verb_case, b, line_count)
+                    mt.add_postopen(x, line_count)
+
+count = 0
+got = 0
+
+for x in rules_to_find:
+    if not rules_to_find[x]:
+        if not count:
+            print('====')
+        count += 1
+        if crit_word in x:
+            print("#verbcase", x, count)
+    else:
+        got += 1
+
+if not count:
+    print("All verb test cases tracked!")
+else:
+    print(count, "verb test cases needed.")
+    if got:
+        print(got, "verb test cases tracked!")
+
+mt.postopen()
