@@ -14,6 +14,7 @@ import sys
 from collections import defaultdict
 if_levels = defaultdict(str)
 rules_to_find = defaultdict(bool)
+line_of = defaultdict(int)
 
 current_rule = ''
 current_testcase = ''
@@ -56,6 +57,7 @@ with open("story.ni") as file:
             current_rule = ''
             if current_testcase:
                 rules_to_find[current_testcase] = False
+                line_of[current_testcase] = line_count - 1
             current_testcase = ''
             if_levels.clear()
             continue
@@ -69,11 +71,13 @@ with open("story.ni") as file:
             if not temp:
                 if "instead;" in line and current_if_level == 1:
                     rules_to_find[current_rule + "-default"] = False
+                    line_of[current_rule + "-default"] = line_count
                 continue
             if current_testcase:
                 if current_testcase in rules_to_find:
                     print("Duplicate test case", current_testcase, "line", line_count)
                 rules_to_find[current_testcase] = False
+                line_of[current_testcase] = line_count
             current_testcase = current_rule
             if_levels[current_if_level] = if_statement_of(line, if_levels[current_if_level] if current_if_level in if_levels else '')
             for x in sorted(if_levels):
@@ -82,7 +86,7 @@ with open("story.ni") as file:
 def comment_to_case(my_line):
     my_line = my_line.lower().strip()
     my_line = re.sub("^#(re)?verb(test|case) *", "", line.strip())
-    my_line = re.sub("[0-9]+$", "", my_line)
+    my_line = re.sub(" [0-9 ]+$", "", my_line)
     return my_line.strip()
 
 for x in glob.glob("rbr*"):
@@ -112,15 +116,21 @@ for x in glob.glob("rbr*"):
 count = 0
 got = 0
 
+prefixes = defaultdict(int)
+
 for x in rules_to_find:
     if not rules_to_find[x]:
         if not count:
             print('====')
         count += 1
+        prefixes[re.sub("-.*", "", x)] += 1
         if crit_word in x:
-            print("#verbcase", x, count)
+            print("#verbcase", x, count, line_of[x])
     else:
         got += 1
+
+for q in sorted(prefixes, key=prefixes.get):
+    print(q, prefixes[q])
 
 if not count:
     print("All verb test cases tracked!")
