@@ -345,6 +345,7 @@ You can just go DOWN to enter the basement.
 >basemetn
 You probably just want to go DOWN to the basement.
 >d
+Largely All-Grey Gallery
 #spechelp for stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.

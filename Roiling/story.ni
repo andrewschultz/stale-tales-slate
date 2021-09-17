@@ -6293,8 +6293,9 @@ section specific rules
 check going nowhere in Dusty Study:
 	if Dusty Study is not lit, say "You can't really go much of anywhere. You remember secret passages in this study, but you'd probably stumble into that [i]palm[r] first in the dark." instead;
 	if Report Porter Perrot is off-stage, say "[if stuff-found is 3]You shouldn't just run away when someone is knocking[else]You're just in the mood for quiet time, now, just looking around[end if]." instead;
-	check going down in Dusty Study:
+	if noun is down:
 		if meet bans are in Dusty Study, say "Ouch! You smack into the MEET-BANS[if Dusty Study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
+		continue the action;
 	if noun is outside, say "You don't want to go outside, and you don't want to walk around where you might be seen[if Report Porter Perrot is moot], especially after that chat with [perrot][end if]." instead;
 	say "You always lose all sense of direction in your study. You generally just think of it as a place you can go into or out of. There [if meet bans are touchable]may be[else]is[end if] a passage down, too. Hard to forget how down works[if niche is touchable]. Maybe there's something above, too[else]. You can also shimmy [b]UP[r][end if]." instead;
 
@@ -6930,10 +6931,11 @@ rule for supplying a missing noun when listening (this is the directed ambient s
 	repeat with Q running through listen-candidates:
 		if Q is touchable:
 			now the noun is Q;
-			if debug-state is true, say "Chose [Q].";
+			if debug-state is true, say "DEBUG: chose [Q].";
 			continue the action;
 	now the noun is the location of the player;
 
+understand "listen [something]" as listening.
 check listening:
 	abide by the listen-rule of mrlp;
 	say "The air! Hear it! (Silent.)[paragraph break]" instead; [??]
@@ -7089,7 +7091,7 @@ check smelling (this is the you can smell some stuff some places rule):
 this is the smell-ordeal-reload rule:
 	if player is in Dusty Study and study is dark, say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead;
 	if player is in Dusty Study and Report Porter Perrot is moot, say "Bean soup. Subpoena is near." instead;
-	if player is in Farming Framing, say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
+	if player is in Farming Framing, say "Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap." instead;
 
 this is the smell-stores rule:
 	if noun is mangiest steaming, say "Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!" instead;
@@ -7166,8 +7168,8 @@ to say sleep-reject:
 	pad-rec "sleep";
 
 this is the sleep-ordeal-reload rule:
-	if player is in dusty study and report porter perrot is off-stage, say "But you just woke up!" instead; [could be just the second condition, but some tests jump around]
 	if report-porter-knocks, say "Not with that knocking." instead;
+	if player is in dusty study and report porter perrot is off-stage, say "But you just woke up!" instead; [could/should be just the second condition, but some tests jump around]
 	if player is in Carven Cavern, say "It's way safer here than in the Means Manse, but it's also way less comfortable." instead;
 	say "You probably can't spend another night in the Means Manse. You need to get going, here!" instead;
 
@@ -7652,7 +7654,7 @@ ever-hush is a truth state that varies.
 
 carry out hushing:
 	if talk-quiet is true, say "You already can't hear random dialogue." instead;
-	say "HUSH on.[paragraph break]";
+	say "Random dialogue off.[paragraph break]";
 	if ever-hush is false:
 		ital-say "you will still hear the first random dialogue in an area, but it will be noted as such.";
 		now ever-hush is true;
