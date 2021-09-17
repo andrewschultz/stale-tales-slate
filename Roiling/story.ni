@@ -1457,9 +1457,9 @@ table of progvals [this determines which rooms are definitively ahead of others,
 rm	rmprog	regs	why-not
 --	1	Ordeal Reload	"Your Means Manse was surrounded, and you escaped. Bad idea to turn back."
 Carven Cavern	2	--	[Ordeal Reload]
---	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
-Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get past the admits mist ad[else]And onto the boat, which must go somewhere[end if]!"
-Ripe Pier	3	--	"[if progval of location of player is 3]You have no idea how to turn the Cripple Clipper around, and you don't want to[else]You've come too far. You can't go back. Physically, you can't[end if]."
+--	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
+Harms Marsh	2	--	"You already muddled your way out of Harms Marsh. You may be lost now, but [if player is in Ripe Pier]walking[else]sailing[end if] back would be worse."
+Ripe Pier	3	--	"[if progval of location of player is 4]You have no idea how to turn the Cripple Clipper around, and you don't want to[else]You've come too far. You can't go back. Physically, you can't[end if]."
 Cripple Clipper	4	--	"The Sonancy Canyons lead to your destiny."
 Sonancy Canyons	5	--	[routes]
 Posh Hops Shop	1	--	"The LOLstr trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
@@ -7001,17 +7001,17 @@ this is the listen-troves rule:
 this is the listen-routes rule:
 	if noun is tirades, say "Those [i]tirades[r] from [Gast]. [one of]Though [he-she] gets staider--while still turning red a bit.[or]'Dear, it's...' [he-she] trails off.[or]'Sit. Dare!' [he-she] commands. 'Rad site! Rest aid!'[or]'I stared...'[or][he-she-c] gestures to the [sit a nag], turning red. 'I'd rest a...'[or]'Die, rats! Rats, die!' [he-she] moans, to nobody in particular.[or]'A direst, aridest stare! I'd...'[or]'I stared! I'd stare!'[or]'It's a red...' [he-she] says, actually going red.[or]'Drat, [']e is!' cries [Gast], turning red.[or][he-she-c] explains what left Ed astir, turning red.[in random order]" instead;
 	if noun is Gast: [routes]
-		if Rude N Nuder is touchable, say "[gast] is banging on about Rude [']N Nuder, now." instead;
+		if Rude N Nuder is touchable, say "[gast] is banging on about [nuder], now." instead;
 		if woe bow bell is touchable, say "You can't hear [gast] over the WOE BOW BELL." instead;
 		if tirades are touchable, try listening to tirades instead;
 		say "BUG. [Gast] should direct you to the next puzzle." instead;
 	if noun is woe bow bell, say "Through the Woe Bow Bell's resonance, you [one of]think you could hear something if you listen carefully[or]hear OL['] WEB, OL['] WEB. It makes you see red[stopping]." instead;
 	if player is in Same Mesa:
-		if THE BEAN is touchable, say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
+		if THE BEAN is touchable, say "[one of]You hear people far away crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead; [routes]
 		if Gast is moot, say "Nice to have silence with [Gast] gone." instead;
 		say "'Mama sees me as...' Irrelevant stuff." instead;
 	if player is in Cleric Circle, say "Ol['] Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There." instead;
-	if player is in Ripe Pier, say "Someone calling out they need help to go ABROAD." instead;
+	if player is in Ripe Pier, say "Someone calling out '[']Tis mad!' You see red." instead;
 	if noun is raptest patters, try examining raptest patters instead;
 	if noun is hurt hog, say "[if bent ewe is reflexive]Squealing. It could be calmer[else]Less noisy now you've been peacemaking a bit[end if]." instead;
 	if player is in Sonancy Canyons, say "The raptest patters are gone, and you can fully focus on [next-sonancy]." instead;

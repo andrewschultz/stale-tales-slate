@@ -1,0 +1,193 @@
+
+## reg-roi-routes-verbs.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-thru
+
+>posf
+>ts
+>routes
+>enter routes
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>score
+Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>inside
+Your score has just gone up by one point
+
+Cleric Circle
+
+>score
+Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>bother
+Only, uh, unholy. You can curse anywhere else except here without repercussion.
+>bother
+A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!
+UNDO
+>undo
+>listen
+Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
+
+>x list o toils
+
+#x list o toils
+>x toils
+Precise recipes
+
+>out
+
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>out
+
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+#not a mistake ("opposite" by List o Toils is)
+>opposite
+Your score has just gone up by one point
+
+>out
+
+>against
+Your score has just gone up by one point
+
+>gt adobe
+You can't run from Ian Gast!
+>listen
+Those tirades from Ian Gast.
+
+>score
+Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+
+>astride
+Your score has just gone up by one point
+
+>listen gast
+You can't hear Ian Gast over the WOE BOW BELL.
+
+#not a mistake (mistake code is for general preposition reject)
+>below
+Your score has just gone up by one point
+
+>listen gast
+Ian Gast is banging on about Rude 'N Nuder, now.
+
+#not a mistake (mistake code is for general preposition reject once you are under)
+>under
+Your score has just gone up by one point
+
+##No-Lag needs a line break ??
+
+#I want this here since we want to reject TOWARDS with Gast around
+>towards
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for worst ad.
+
+>in
+
+>out
+
+>above
+Your score has just gone up by one point.
+
+>score
+Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+>listen
+Nice to have silence with Ian Gast gone.
+
+>from
+Your score has just gone up by one point
+
+>listen
+You hear people far away crying "The Bean has landed!"
+
+#not a mistake (mistake code is for general preposition reject)
+>beneath
+Your score has just gone up by one point
+
+Harms Marsh
+
+>score
+Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+
+#pre-unlit-until rule
+>until
+Your score has just gone up by one point
+
+>around
+Your score has just gone up by one point
+
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>listen
+Someone calling out "'Tis mad!" You see red.
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>sleep
+This is no dreamboat!
+>bother
+Siphon no pish on-ship.
+
+>athwart
+Your score has just gone up by one point
+
+Sonancy Canyons
+
+>listen
+An over-cheery voice: "Thou wit!"
+>listen
+The raptest patters are gone, and you can fully focus on the hog and the ewe.
+>listen hog
+Squealing. It could be calmer
+
+>between
+Your score has just gone up by one point
+
+>listen hog
+Less noisy now you've been peacemaking a bit.
+>listen
+The raptest patters are gone, and you can fully focus on the hurt hog.
+
+>through
+Your score has just gone up by one point
+
+>listen
+The raptest patters are gone, and you can fully focus on the final step.
+
+>without
+Your score has just gone up by one point
+
+>score
+
+Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+
+>beyond
+Your score has just gone up by one point
+
+Strip of Profits
+
+>score
+Routes (22/22)
+

@@ -2,13 +2,14 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi-routes-max.txt,reg-roi-routes-min.txt,reg-roi-routes-nudmis.txt,reg-roi-routes-slider.txt,reg-roi-routes-hints.txt
+files=reg-roi-routes-max.txt,reg-roi-routes-min.txt,reg-roi-routes-nudmis.txt,reg-roi-routes-slider.txt,reg-roi-routes-hints.txt,reg-roi-routes-verbs.txt
 
 ~	min	t1
 ~	max	t0
 ~	nudges,nud,nu,mis	t2
 ~	sli	t3
 ~	hints,hin,spoi	t4
+~	verbs	t5
 
 }}MAX=22
 }}CURMAX=22
@@ -305,6 +306,16 @@ The spoon reflects to the list-o-toils.
 
 >score
 {$SCOS}
+
+@verbs
+>bother
+Only, uh, unholy. You can curse anywhere else except here without repercussion.
+>bother
+A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!
+UNDO
+>undo
+>listen
+Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
 
 >x list o toils
 
@@ -828,6 +839,12 @@ Your score has just gone up by one point
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be ASTRIDE.
 
+@verbs
+>gt adobe
+You can't run from Ian Gast!
+>listen
+Those tirades from Ian Gast.
+
 >score
 {$SCOS}
 
@@ -951,6 +968,10 @@ The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find 
 >elbows
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
 
+@verbs
+>listen gast
+You can't hear Ian Gast over the WOE BOW BELL.
+
 #not a mistake (mistake code is for general preposition reject)
 >below
 }}SCORE++
@@ -958,6 +979,10 @@ Your score has just gone up by one point
 
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be UNDER.
+
+@verbs
+>listen gast
+Ian Gast is banging on about Rude 'N Nuder, now.
 
 @nud
 #mistake retest for below
@@ -1097,12 +1122,20 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That'
 >rfmo
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+>listen
+Nice to have silence with Ian Gast gone.
+
 >from
 }}SCORE++
 Your score has just gone up by one point
 
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be BENEATH.
+
+@verbs
+>listen
+You hear people far away crying "The Bean has landed!"
 
 @sli
 #slider test for beneath
@@ -1279,6 +1312,10 @@ You angle your spoon a bit, and you realize you, or something, should be AMIDST.
 
 Ripe Pier
 
+@verbs
+>listen
+Someone calling out "'Tis mad!" You see red.
+
 @nud
 #nudge for pier
 >pire
@@ -1332,6 +1369,12 @@ You angle your spoon a bit, and you realize you, or something, should be ATHWART
 
 Cripple Clipper
 
+@verbs
+>sleep
+This is no dreamboat!
+>bother
+Siphon no pish on-ship.
+
 @nud
 #nudge for mess
 >mess
@@ -1383,6 +1426,14 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be BETWEEN.
 
 Sonancy Canyons
+
+@verbs
+>listen
+An over-cheery voice: "Thou wit!"
+>listen
+The raptest patters are gone, and you can fully focus on the hog and the ewe.
+>listen hog
+Squealing. It could be calmer
 
 @sli
 #slider test for through
@@ -1462,6 +1513,12 @@ Your score has just gone up by one point
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be THROUGH.
 
+@verbs
+>listen hog
+Less noisy now you've been peacemaking a bit.
+>listen
+The raptest patters are gone, and you can fully focus on the hurt hog.
+
 @nud
 #done rejects for bent ewe
 >betwene
@@ -1473,6 +1530,10 @@ Your score has just gone up by one point
 
 @spoi
 You angle your spoon a bit, and you realize you, or something, should be BEYOND.
+
+@verbs
+>listen
+The raptest patters are gone, and you can fully focus on the final step.
 
 @min
 >score
