@@ -1972,15 +1972,7 @@ carry out untieing:
 
 chapter swearing
 
-check swearing obscenely:
-	if player is in Sacred Cedars, say "Such language is not worthy of this place." instead;
-	if player is in Astral Altars, say "That'd be one way to leave such a holy place, but I don't think you'd like where you'd end up." instead;
-	if player is in Potshot Hotspot:
-		if Red Bull Burdell is touchable, say "[burdell] could easily best you in THAT sort of wordsmithing contest, but there's another." instead;
-		if Red Bull Burdell is not moot, say "Swearing isn't a good method of crowd control." instead;
-	if mrlp is Forest and Self ID Fields is visited, say "Keep using language like that, you might wind up STAYING here." instead;
-	if mrlp is metros, say "Properly gritty for an urban adventure but still not as grating as the beats." instead;
-	say "[one of]No [']scusing on cussing[or]Swearing? [']s wearing[cycling][plus-check]." instead;
+check swearing obscenely: say "[one of]No [']scusing on cussing[or]Swearing? [']s wearing[cycling][plus-check]." instead;
 
 to say plus-check: if Notices Section is visited, say "[one of]. Plus, I checked. Or had someone more vulgar than me check. Nothing[or][stopping]";
 
