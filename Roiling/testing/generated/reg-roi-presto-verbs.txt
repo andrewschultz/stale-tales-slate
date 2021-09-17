@@ -1,0 +1,349 @@
+
+## reg-roi-presto-verbs.txt
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* presto_walkthrough
+
+>ts
+>t
+>posf
+
+>au 2
+
+>presto
+>enter tornado
+Grey Gyre
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>score
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+
+>phooey
+Your score has just gone up by two points
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+
+>s
+Char Arch
+
+#not a mistake
+>rats
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>drat
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>n
+
+#not a mistake
+>bleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+
+>e
+Marines Seminar Remains
+
+>get popgun
+
+>prost
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+
+>w
+
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>n
+
+#pre-solve-maze rule retry
+>mazeltov
+Your score has just gone up by three points
+>score
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+>blam
+Your score has just gone up by one point
+
+>gt runway
+You don't want to, and can't, go back to or through the volt maze you solved.
+>gt nowt town
+You don't want to, and can't, go back to or through the volt maze you solved.
+
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>s
+
+>s
+Dirge Ridge
+
+>ole
+by one point
+
+>score
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+
+>goodness
+by one point
+>score
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>darn
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+#not a mistake
+>whassup
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+
+>n
+
+>bingo
+#pre-boing-bingo rule retry
+!You realize you can load the dart into the popgun now, so you do.
+!(taking the popgun first while you mess with the boing-go bin)
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>load gun with dart
+
+>there
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+
+>n
+Saps' Pass
+
+##bingo *2 = no line break ??
+#different message for making it to the phat path 1st time? ??
+
+>syke
+Your score has just gone up by one point
+
+Phat Path
+
+>gt dirge ridge
+"Nyurgh! Hungry!"
+Maybe if
+
+>what
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>later
+Your score has just gone up by one point
+But we ain't bored yet, boss!
+>score
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>score
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+
+>trasch
+by one point
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>n
+Hacks' Shack
+
+>screen
+by one point
+
+>score
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>skid
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>leaf
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+
+>casserole
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+#notmax
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>keyboard
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>put keyboard on slab
+Only one more piece of hardware is needed, and the computer will work.
+
+>put screen on slab
+!It already is
+You can now do computery things unimpeded! Hooray!
+
+>disk
+
+>put disk in drive a
+
+>reboot
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>capslock
+Your score has just gone up by one point
+
+>put lock on keyboard
+fits in perfectly
+
+>futon
+Your score has just gone up by one point
+>score
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>sleep
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>compile
+by one point
+
+>score
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>cola
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>mug
+Your score has just gone up by one point
+>score
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+
+>avider
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+
+>derive
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+>rom sticks
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>undo
+>undo
+>romsticks
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+>tab
+by one point
+DEBUG INFO: min-up codepath
+>score
+Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>pour cola in mug
+You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
+The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
+
+>gt phat path
+You can't budge until you fix this program, here.
+
+>debug
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+
+>misses
+!presto
+
+>gt phat path
+Just do something simple with that USB
+
+>sub
+Your score has just gone up by one point
+Diver time
+
+Strip of Profits
+
+>score
+
+Presto (41/41)

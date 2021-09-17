@@ -2,13 +2,14 @@
 #--this should be done for all RBR files and not just routes
 #--rbr.py v to verify nothing slipped
 
-files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt
+files=reg-roi-presto-max.txt,reg-roi-presto-min.txt,reg-roi-presto-nudmis.txt,reg-roi-presto-slider.txt,reg-roi-presto-hints.txt,reg-roi-presto-verbs.txt
 
-~	min	t1
-~	max	t0
-~	nudges,nud,nu,mis	t2
-~	sli	t3
-~	hints,hin,spoi	t4
+~	min	min
+~	max	max
+~	nudges,nud,nu,mis	nudmis
+~	sli	slider
+~	hints,hin,spoi	hints
+~	verbs	verbs
 
 }}MAX=41
 }}CURMAX=41
@@ -772,6 +773,20 @@ by three points
 >undo
 >undo
 
+@verbs
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>n
+
 @!min
 #pre-solve-maze rule retry
 >mazeltov
@@ -784,6 +799,12 @@ Your score has just gone up by three points
 Your score has just gone up by one point
 }}SCORE++
 }}CURMIN++
+
+@verbs
+>gt runway
+You don't want to, and can't, go back to or through the volt maze you solved.
+>gt nowt town
+You don't want to, and can't, go back to or through the volt maze you solved.
 
 @spoi
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
@@ -1297,6 +1318,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for tough
 >otghu
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@verbs
+>gt dirge ridge
+"Nyurgh! Hungry!"
+Maybe if
 
 @!min
 >what
@@ -2387,6 +2413,10 @@ You'd get cola all over you if you tried anything with the mug.
 >lcoa
 The mug is already somehow generating infinite cola. Don't want to mess with that.
 
+@verbs
+>gt phat path
+You can't budge until you fix this program, here.
+
 >debug
 Your score has just gone up by one point
 }}SCORE++
@@ -2456,6 +2486,10 @@ You could also have made the USB into a sub.
 >usb
 You hear weird static from the settler. Perhaps there is more than one solution, and the settler is unable to determine which is more sensible.
 DOUBLE PROBLEM FOR: sub.
+
+@verbs
+>gt phat path
+Just do something simple with that USB
 
 >sub
 Your score has just gone up by one point

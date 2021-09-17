@@ -1398,7 +1398,7 @@ this is the goto-troves rule:
 	say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
 
 this is the goto-presto rule:
-	if noun is a mazeroom or noun is Unwary Runway:
+	if noun is nowt town or noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 		if noun is Dirge Ridge:
@@ -1415,8 +1415,8 @@ this is the goto-oyster rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
 	if location of player is Hardest Trashed Dearths, say "You've lost the way back, but the eeks are calling you on." instead;
 	if noun is Hardest Trashed Dearths, say "Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to." instead;
-	if noun is Rascal Craals and sausage is moot, say "The Rascal Craals are inaccessible now that [the sausage]'s torn through them. You don't need or want to hang out there, though." instead;
-	if noun is End Den and gleaner is reflexed, say "No need to go back there." instead;
+	if noun is Rascal Craals and sausage is moot, say "The Rascal Craals are inaccessible now that [the sausage] has torn through them. You don't need or want to hang out there, though." instead;
+	if noun is End Den and gleaner is realized, say "No need to go back there." instead;
 	if noun is Plasm Lamps, say "You got rid of the ant. Nothing more to do there." instead;
 	if player is in Fighter Freight, say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 
@@ -12764,7 +12764,7 @@ this is the post-wall-arch rule:
 		else:
 			say "You'd like to ask for help, but you don't have enough muscle food for [l-n-r] after they pull the skid. Those escaroles simply aren't meaty enough.";
 	else:
-		say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
+		say "'Nyurgh! Hungry!' you recall [l-n-r] saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so once[end if] you have some manual labor they'd be better suited for, you can visit them.";
 	the rule fails;
 
 chapter keyboard
@@ -13312,7 +13312,7 @@ check going in Hacks Shack (this is the maybe lock player in rule):
 
 this is the shack-south rule:
 	if Im Le Cop polemic is reflexed:
-		say "You're so close. You must be. You can't [i]budge[r] until you...";
+		say "You're so close. You must be. [if dude bub egg is reflexed]Just do something simple with that USB[else]You can't [i]budge[r] until you fix this program, here[end if].";
 		the rule fails;
 	if keyboard is not off-stage and screen is not off-stage:
 		say "You should have what you need. It might be distracting to go back out with all this computer work.";
