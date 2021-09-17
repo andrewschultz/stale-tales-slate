@@ -7,27 +7,82 @@
 
 * stores-thru
 
+>poss
+
 >ts
 >t
 
 >routes
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+
 >troves
 Your score has just gone up by one point
 
->abstract patcher to strip
->zap store w
-DEBUG INFO: Taking away a max point. Max-score now 10.
-
->zap store y
-DEBUG INFO: Taking away a max point. Max-score now 9.
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
 
 >abstract patcher to strip of profits
+
+>switch patcher
+The patcher shatters in a shower of fourth-wall quantum physics as you switch it.
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 8.
+>undo
+>undo
+
+>zap store b
+You try to swivel the chapter patcher to Store B, but it won't go that way. While Store B seems like it could be changed, hopefully there's nothing critical there.
+>zap store h
+You try to swivel the chapter patcher to Store H, but it won't go that way. While Store H seems like it could be changed, hopefully there's nothing critical there.
+>zap store w
+You point the patcher at Store W. It disintegrates. Hopefully, you somehow made everything okay behind Store W once you're finished here, or maybe it can be saved until after you defeat Elvira.
+
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 10.
+
+>oyster
+>zap balancer barnacle
+You point the patcher at the balancer barnacle you created. It disintegrates. Hopefully, you somehow made everything okay behind the balancer barnacle once you're finished here, or maybe it can be saved until after you defeat Elvira.
+>score
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 10.
+>undo
+>undo
+>undo
+>zap store y
+You point the patcher at Store Y. It disintegrates. Hopefully, you somehow made everything okay behind Store Y once you're finished here, or maybe it can be saved until after you defeat Elvira.
+
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
+
+>patch course source
+You point the patcher at the course source you created. It disintegrates. Hopefully, you somehow made everything okay behind the course source once you're finished here, or maybe it can be saved until after you defeat Elvira.
+# check synonyms
+>patch troves
+You point the patcher at the Tastee Estate you created. It disintegrates. Hopefully, you somehow made everything okay behind the Tastee Estate once you're finished here, or maybe it can be saved until after you defeat Elvira.
+# make sure you lose no points/maximum points for blasting a portal
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
 >patch store p
-DEBUG INFO: Taking away a max point. Max-score now 8.
+You point the patcher at Store P. It disintegrates. Hopefully, you somehow made everything okay behind Store P once you're finished here, or maybe it can be saved until after you defeat Elvira.
+With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 8.
+>undo
+>undo
+
+>zap store t
+The energy beam from the patcher bounces off Store T and almost zaps you and the patcher back. Whoever or whatever is behind Store T must be very powerful indeed.
 
 >otters
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
+
+>zap solid idols
+The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.
 

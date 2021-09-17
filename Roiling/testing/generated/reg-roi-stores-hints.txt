@@ -6,6 +6,8 @@
 
 * stores-thru
 
+>poss
+
 >ts
 >t
 
@@ -13,50 +15,72 @@
 
 >sorbet
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 4.
+>score
+Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 
 >nestor
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
+>score
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 5. Maximum score available is 11.
 
 >tokers
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
+>score
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
 >enter steaming
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
-
 Cruelest Lectures
+
+>score
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
-!DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+!DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
+>score
+Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 >routes
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 5 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+
 >troves
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+
+>abstract patcher to strip of profits
+
 >towers
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+
+>score
+Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
 
 >oyster
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+
+>score
+Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
 
 >others
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+>score
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
 >presto
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+>score
+Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 11 points.
 
 >otters
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
+
+>score
+Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
 

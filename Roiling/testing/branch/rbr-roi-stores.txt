@@ -9,6 +9,18 @@ files=reg-roi-stores-max.txt,reg-roi-stores-min.txt,reg-roi-stores-nudmis.txt,re
 ~	hints,hin	t4
 ~	verbs	t5
 
+}}MAX=11
+}}CURMAX=11
+}}SCORE=0
+}}CURMIN=3
+
+}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
+}$SCODONE=Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
+
+
+}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {CURMIN}.
+
 ## *FILE
 
 ALSO-IGNORE:t
@@ -19,6 +31,8 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * stores-thru
+
+>poss
 
 @nud
 #mistake test for throes
@@ -260,7 +274,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store B. That's a de
 @!min
 >sorbet
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 4.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #done rejects for store b
@@ -296,7 +313,10 @@ They are who they are. You should maybe try to get their friend back.
 @!min
 >nestor
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 5.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #mistake retest for stoner
@@ -315,9 +335,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a de
 @!min
 >tokers
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 6.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @verbs
+>listen tokers
+Conversation from the tokers you don't want to listen TOO closely to.
+>listen nestor
+Nestor periodically mumbles about his lost buddies.
 >smell steaming
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
 
@@ -342,9 +369,11 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 
 @!min
 >enter steaming
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 7.
-\\
 Cruelest Lectures
+\\
+}}CURMIN++
+>score
+{$SCOS}
 
 @verbs
 >gt trips strip
@@ -454,14 +483,11 @@ The speaker parkees aren't what, or who, you need to change, here. It'll still b
 #pre-babbler-outside rule
 >outside
 Your score has just gone up by one point
-!DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+}}SCORE++
+!DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
-
-@verbs
->listen tokers
-Conversation from the tokers you don't want to listen TOO closely to.
->listen nestor
-Nestor periodically mumbles about his lost buddies.
+>score
+{$SCOS}
 
 @nud
 #mistake test for tortes
@@ -475,7 +501,11 @@ Store U seems to light up with lines and curves for a second, but no, that's not
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a decent omen.
 
 >routes
+}}SCORE++
 Your score has just gone up by one point
+
+>score
+{$SCOS}
 
 @nud
 #done rejects for course source
@@ -499,6 +529,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a de
 
 >troves
 Your score has just gone up by one point
+}}SCORE++
+
+>score
+{$SCOS}
+
+>abstract patcher to strip of profits
+
+@min
+>switch patcher
+The patcher shatters in a shower of fourth-wall quantum physics as you switch it.
+}}CURMAX-=3
+>score
+{$SCOS}
+}}CURMAX+=3
+>undo
+>undo
 
 @nud
 #done rejects for tastee estate
@@ -523,14 +569,22 @@ WESTOR is the name of the company that built this. There's more, about what meth
 WESTOR is the name of the company that built this. They used the SET-ROW method.
 
 @min
->abstract patcher to strip
+>zap store b
+You try to swivel the chapter patcher to Store B, but it won't go that way. While Store B seems like it could be changed, hopefully there's nothing critical there.
+>zap store h
+You try to swivel the chapter patcher to Store H, but it won't go that way. While Store H seems like it could be changed, hopefully there's nothing critical there.
 >zap store w
-DEBUG INFO: Taking away a max point. Max-score now 10.
+You point the patcher at Store W. It disintegrates. Hopefully, you somehow made everything okay behind Store W once you're finished here, or maybe it can be saved until after you defeat Elvira.
+}}CURMAX--
 
 @!min
 >towers
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 8.
+}}SCORE++
+}}CURMIN++
+
+>score
+{$SCOS}
 
 @nud
 #done rejects for truster turrets
@@ -554,13 +608,31 @@ You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a decent omen.
 
 @min
+>oyster
+}}SCORE++
+}}CURMIN++
+###skip test checking
+>zap balancer barnacle
+You point the patcher at the balancer barnacle you created. It disintegrates. Hopefully, you somehow made everything okay behind the balancer barnacle once you're finished here, or maybe it can be saved until after you defeat Elvira.
+>score
+{$SCOS}
+>undo
+>undo
+>undo
 >zap store y
-DEBUG INFO: Taking away a max point. Max-score now 9.
+}}SCORE--
+}}CURMIN--
+}}CURMAX--
+You point the patcher at Store Y. It disintegrates. Hopefully, you somehow made everything okay behind Store Y once you're finished here, or maybe it can be saved until after you defeat Elvira.
 
 @!min
 >oyster
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+}}SCORE++
+}}CURMIN++
+
+>score
+{$SCOS}
 
 @nud
 #done rejects for balancer barnacle
@@ -579,7 +651,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store H. That's a de
 @!min
 >others
 Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #done rejects for throes hoster
@@ -596,14 +671,30 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store P. That's a de
 I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters.
 
 @min
->abstract patcher to strip of profits
+>patch course source
+You point the patcher at the course source you created. It disintegrates. Hopefully, you somehow made everything okay behind the course source once you're finished here, or maybe it can be saved until after you defeat Elvira.
+# check synonyms
+>patch troves
+You point the patcher at the Tastee Estate you created. It disintegrates. Hopefully, you somehow made everything okay behind the Tastee Estate once you're finished here, or maybe it can be saved until after you defeat Elvira.
+# make sure you lose no points/maximum points for blasting a portal
+>score
+{$SCOS}
 >patch store p
-DEBUG INFO: Taking away a max point. Max-score now 8.
+You point the patcher at Store P. It disintegrates. Hopefully, you somehow made everything okay behind Store P once you're finished here, or maybe it can be saved until after you defeat Elvira.
+With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.
+}}CURMAX--
+>score
+{$SCOS}
+>undo
+>undo
+}}CURMAX++
 
 @!min
 >presto
-Your score has just gone up by one point
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOMAX}
 
 @verbs
 >listen tornado
@@ -625,9 +716,24 @@ You should just enter the odorant tornado. No need or way to seal it back up.
 You hear various unrecognizable animal noises.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Store T. That's a decent omen.
 
+@min
+>zap store t
+The energy beam from the patcher bounces off Store T and almost zaps you and the patcher back. Whoever or whatever is behind Store T must be very powerful indeed.
+
 >otters
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
+}}SCORE++
+
+>score
+@min
+{$SCOS}
+==!
+{$SCODONE}
+
+@min
+>zap solid idols
+The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.
 
 @nud
 #done rejects for solid idols
