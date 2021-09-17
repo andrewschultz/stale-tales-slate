@@ -341,8 +341,10 @@ Your score has just gone up by one point
 {$SCOS}
 
 @verbs
+#verbcase listen-stores-if-noun-is-tokers
 >listen tokers
 Conversation from the tokers you don't want to listen TOO closely to.
+#verbcase listen-stores-if-noun-is-nestor
 >listen nestor
 Nestor periodically mumbles about his lost buddies.
 #verbcase smell-stores-if-noun-is-mangiest-steaming
@@ -383,6 +385,7 @@ It smells depressingly antiseptic here.
 #verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
+#verbcase listen-stores-if-player-is-in-cruelest-lectures
 >listen
 You're hearing enough without trying, sadly.
 
@@ -722,6 +725,7 @@ With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, a
 {$SCOMAX}
 
 @verbs
+#verbcase listen-stores-if-noun-is-odorant-tornado
 >listen tornado
 A roar of angry undefinable words swirls from the odorant tornado.
 #verbcase smell-stores-if-noun-is-odorant-tornado

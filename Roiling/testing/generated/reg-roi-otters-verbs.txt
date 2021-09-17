@@ -17,9 +17,17 @@
 >opt in
 >enter solid idols
 
+#verbcase swear-otters-if-power-back-is-false
+>bother
+At the moment, even your profanities lack power.
+
 #forceignore
 >barely
 Your score has just gone up by one point
+
+#verbcase listen-otters-if-noun-is-ed-riley
+>listen
+Ed Riley doesn't seem to make any noise. He just blocks you west.
 
 >score
 Score in a scenario: 1 out of 33 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
@@ -33,6 +41,10 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 2 out of 33 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 33.
 
+#verbcase smell-otters-if-the-deli-rye-is-touchable-or-noun-is-deli-rye
+>smell
+The deli rye smells good, but Ed won't share.
+
 >reedily
 Your score has just gone up by one point
 
@@ -41,6 +53,16 @@ Score in a scenario: 3 out of 33 total points in the current region, Otters. Low
 
 >w
 Disowned Downside
+
+#verbcase swear-otters-if-player-is-in-disowned-downside-and-parleys-splayer-players-are-in-disowned-downside
+>bother
+The conversation is horrid enough.
+#verbcase smell-otters-if-player-is-in-disowned-downside
+>smell
+You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+#verbcase listen-otters-if-noun-is-parleys-splayer-players
+>listen
+Ick, man. Mackin'. You really don't want to pay attention to the details, but you get the general impression.
 
 >bossily
 Your score has just gone up by one point.
@@ -66,8 +88,16 @@ Score in a scenario: 6 out of 33 total points in the current region, Otters. Low
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
+#reverbcase smell-otters-if-player-is-in-disowned-downside
+>smell
+You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+
 >n
 Loop Pool
+
+#verbcase smell-otters-if-player-is-in-loop-pool
+>smell
+Salt Water. Wet, astral.
 
 >because
 by one point
@@ -107,6 +137,13 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
+#verbcase listen-otters-if-player-is-in-bran-barn
+>listen
+You hear morose mooers you can't see.
+#verbcase listen-otters-if-vow-here-is-touchable
+>listen
+You see red as you hear some nonsense repeated: "Eeh, row V!"
+
 >however
 by one point
 DEBUG INFO: min-up codepath
@@ -125,6 +162,10 @@ Score in a scenario: 13 out of 33 total points in the current region, Otters. Lo
 
 >n
 Shiner Shrine
+
+#verbcase listen-otters-if-noun-is-sly-imp
+>listen
+The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now.
 
 >enragedly
 Your score has just gone up by one point
@@ -180,6 +221,10 @@ Score in a scenario: 20 out of 33 total points in the current region, Otters. Lo
 
 Clarthead Cathedral
 
+#verbcase listen-otters-if-noun-is-whiners
+>listen
+It's hard not to hear what the shrewin' whiners have to say, actually
+
 >loathingly
 Your score has just gone up by one point
 
@@ -195,6 +240,10 @@ Score in a scenario: 22 out of 33 total points in the current region, Otters. Lo
 
 >s
 Perverse Preserve
+
+#verbcase listen-otters-if-player-is-in-perverse-preserve
+>listen
+You hear no metronomes you could turn into monotremes.
 
 >parrot
 Your score has just gone up by one point
@@ -236,8 +285,12 @@ Score in a scenario: 27 out of 33 total points in the current region, Otters. Lo
 >w
 Reclusion Inclosure
 
->eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+#verbcase swear-otters-if-player-is-in-reclusion-inclosure-and-elmer-is-in-reclusion-inclosure
+>bother
+sniff faux-piously.
+#verbcase smell-otters-if-player-is-in-reclusion-inclosure
+>smell
+A clove, likely from one alcove.
 
 >aside
 Your score has just gone up by one point
@@ -268,6 +321,16 @@ WTF FTW
 >7
 >e
 
+#verbcase listen-otters-if-player-is-in-rancho-archon-anchor
+>listen
+Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE.
+#verbcase smell-otters-if-player-is-in-rancho-archon-anchor
+>smell
+Vast vats' sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin' cyanide, too.
+#verbcase swear-otters-if-player-is-in-rancho-archon-anchor
+>bother
+Yup. It's gotten REAL. But that won't help.
+#verbcase goto-otters-if-player-is-in-rancho-archon-anchor
 >gt inclosure
 You leave her sin shrine with extra quickness before getting a shiner.
 Elvira mocks you, but makes no attack:

@@ -121,6 +121,10 @@ Score in a scenario: 17 out of 56 total points in the current region, Towers. Lo
 
 Anemic Cinema
 
+#verbcase smell-towers-if-noun-is-ingrates
+>smell ingrates
+Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way.
+
 >angstier
 Your score has just gone up by one point
 
@@ -188,8 +192,16 @@ Score in a scenario: 26 out of 56 total points in the current region, Towers. Lo
 >score
 Score in a scenario: 27 out of 56 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 56.
 
+#verbcase listen-towers-if-player-is-in-treading-gradient
+>listen
+You'd expect a great din, but you don't hear one, thankfully.
+
 >d
 Dire and Arid Den
+
+#verbcase smell-towers-if-noun-is-nerd-aid
+>smell nerd aid
+The Nerd-Aid smells suspiciously like the very red Rind-Ade drink.
 
 >score
 Score in a scenario: 27 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
@@ -199,6 +211,14 @@ Treading Gradient
 >score
 Score in a scenario: 28 out of 56 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 56.
 >e
+
+#verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
+>bother
+Oh, the self-righteous backlash you'd get from the Hostile-is-He Lot!
+>gs
+>bother
+Oh, the self-righteous backlash you'd get from the Lois the Hostile!
+>gs
 
 >marginal
 #notmax
@@ -219,6 +239,10 @@ Your score has just gone up by one point
 
 >score
 Score in a scenario: 31 out of 56 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 56.
+
+#verbcase listen-towers-if-noun-is-natives-site-van
+>listen site van
+The babble from the natives' site van doesn't stop.
 
 >vainest
 Your score has just gone up by one point
@@ -245,6 +269,10 @@ Lost Lots
 >w
 Dourest Detours
 
+#verbcase listen-towers-if-player-is-in-dourest-detours
+>listen
+You hear something that makes you see red.
+
 >rousted
 by one point
 >score
@@ -261,6 +289,10 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 35 out of 56 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 56.
 
+#verbcase listen-towers-if-noun-is-sporties-ripostes
+>listen ripostes
+The sporties' ripostes
+
 >prosiest
 Your score has just gone up by one point
 
@@ -269,14 +301,26 @@ Score in a scenario: 36 out of 56 total points in the current region, Towers. Lo
 
 >n
 
+#verbcase listen-towers-if-noun-is-bonker
+>listen bonker
+A menacing silence spews from the bonker. Or maybe it's just your imagination.
+
 >broken
 Your score has just gone up by one point
 
 >score
 Score in a scenario: 37 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
+#verbcase listen-towers-if-noun-is-stinger
+>listen stinger
+A twanging e-string emits from the stinger. Surprisingly, you don't see red at it.
+
 >resting
 Your score has just gone up by one point
+
+#verbcase listen-towers-if-noun-is-geese
+>listen geese
+Honk, honk.
 
 >score
 Score in a scenario: 38 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
@@ -297,6 +341,9 @@ Score in a scenario: 39 out of 56 total points in the current region, Towers. Lo
 >push repeat
 >gt subsector
 
+#verbcase goto-towers-if-duck-is-touchable-and-duck-is-friendly
+(The duck follows, with quick-nag quacking, though you're walking pretty fast.)
+
 #not a mistake
 >unlocked
 by one point
@@ -308,6 +355,10 @@ Score in a scenario: 40 out of 56 total points in the current region, Towers. Lo
 >w
 
 Outer Route
+
+#verbcase smell-towers-if-player-is-in-outer-route
+>smell
+You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.
 
 >revised
 
@@ -322,6 +373,10 @@ by one point
 Score in a scenario: 42 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 >gt coastlines
+
+#verbcase smell-towers-if-leak-lake-is-touchable
+>smell
+The overwhelming smell of kale is not offensive, but you'd like to get by Leak Lake, all the same.
 
 >grained
 Your score has just gone up by one point
@@ -352,6 +407,12 @@ Score in a scenario: 46 out of 56 total points in the current region, Towers. Lo
 >gt coastlines
 >give gizmo to agnostic
 
+#verbcase goto-towers-if-noun-is-dourest-detours-or-noun-is-arid-den
+>gt detours
+No thanks. Once was enough.
+>gt arid den
+No thanks. Once was enough.
+
 >robust
 by one point
 >stabler
@@ -361,10 +422,23 @@ by one point
 by one point
 >enter boat
 Rawest Waters
+#verbcase listen-towers-if-player-is-in-rawest-waters
+>listen
+A scrawny swan cry. But not the Sawn Swan. You hope.
+#verbcase swear-towers-if-player-is-in-rawest-waters
+>bother
+Trying to cross languages and make this Swears-Wasser does no good.
+#verbcase goto-towers-if-location-of-player-is-rawest-waters
+>gt coastlines
+Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
+#verbcase goto-towers-if-noun-is-rawest-waters
 >gt leak lake
 Leak Lake wasn't fun the first time.
+>undo
+>undo
+>undo
 >undo
 >undo
 >undo

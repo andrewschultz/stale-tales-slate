@@ -36,8 +36,12 @@ TSV:## maximum walkthrough	## minimum walkthrough	## walkthrough with all nudges
 >monty hints
 
 @verbs
+#verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep
 But you just woke up!
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-stuff-found-<-3
+>listen
+Peace and quiet. No adventure. Yet.
 
 @nud
 #nudge for ordeal
@@ -116,16 +120,28 @@ You can just change the tables by saying STABLE--well, once you've had an introd
 That's not a way to sneak around and avoid the knock at the door.
 
 @verbs
+#verbcase sleep-ordeal-reload-if-report-porter-knocks
 >sleep
 Not with that knocking.
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-report-porter-knocks
+>listen
+Nothing, except... (knock, knock, knock.)
 
 >open door
 
 >1
+
+@verbs
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-perrot-is-touchable
+>listen
+You're in a conversation. Your turn to speak.
+
 >5
 
 @verbs
+
 >sleep
+#verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
 @nud
@@ -167,6 +183,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a d
 #verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-dusty-study-is-not-lit
+>listen
+Nobody's going to whisper a hint to you in the dark.
 
 >lamp
 Your score has just gone up by one point.
@@ -332,6 +351,11 @@ Not even one of the beams rattles. You count them up again--there are ten.
 >tne
 You change neither the number nor the makeup of the ten beams.
 
+@verbs
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study
+>listen
+WRONG
+
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
@@ -354,6 +378,11 @@ Largely All-Grey Gallery
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a decent omen.
 >undo
 >undo
+
+@verbs
+#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
+>listen
+Merciful quiet, for the moment.
 
 @!min,nud
 >d
@@ -839,6 +868,11 @@ It's not a gun but a rifle.
 >gnu
 It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 
+@verbs
+#verbcase listen-ordeal-reload-if-noun-is-elmo
+>listen elmo
+Awkward silence, what with Elmo holding that rifle.
+
 >flier
 by one point
 
@@ -901,6 +935,7 @@ Carven Cavern
 >gt dusty study
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >sleep
+#verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 
 @sli

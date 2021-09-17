@@ -160,6 +160,10 @@ Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lo
 >w
 Sclerous Closures
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 >warp
 Your score has just gone up by one point
 

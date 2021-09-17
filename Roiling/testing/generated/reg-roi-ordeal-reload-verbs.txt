@@ -8,30 +8,49 @@
 
 >poss
 
+#verbcase sleep-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-off-stage
 >sleep
 But you just woke up!
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-stuff-found-<-3
+>listen
+Peace and quiet. No adventure. Yet.
 
 >think
 >x chair
 >x shelf
 
+#verbcase sleep-ordeal-reload-if-report-porter-knocks
 >sleep
 Not with that knocking.
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-report-porter-knocks
+>listen
+Nothing, except... (knock, knock, knock.)
 
 >open door
 
 >1
+
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-perrot-is-touchable
+>listen
+You're in a conversation. Your turn to speak.
+
 >5
 
 >sleep
+#verbcase sleep-ordeal-reload-default
 You probably can't spend another night in the Means Manse. You need to get going, here!
 
+#verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-study-is-dark
 >smell
 That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting.
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study-if-dusty-study-is-not-lit
+>listen
+Nobody's going to whisper a hint to you in the dark.
 
 >lamp
 Your score has just gone up by one point.
 
+#verbcase smell-ordeal-reload-if-player-is-in-dusty-study-and-report-porter-perrot-is-moot
 >smell
 Bean soup. Subpoena is near.
 
@@ -42,11 +61,19 @@ Score in a scenario: 1 out of 15 total points in the current region, Ordeal Relo
 Your score has just gone up by one point.
 >t
 
+#verbcase listen-ordeal-reload-if-player-is-in-dusty-study
+>listen
+WRONG
+
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+
+#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
+>listen
+Merciful quiet, for the moment.
 
 >d
 >stair
@@ -75,6 +102,7 @@ Score in a scenario: 7 out of 15 total points in the current region, Ordeal Relo
 >in
 Farming Framing
 
+#verbcase smell-ordeal-reload-if-player-is-in-farming-framing
 >smell
 Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
 
@@ -106,6 +134,10 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 >x settler
 
 >in
+
+#verbcase listen-ordeal-reload-if-noun-is-elmo
+>listen elmo
+Awkward silence, what with Elmo holding that rifle.
 
 >flier
 by one point
@@ -148,6 +180,7 @@ Carven Cavern
 >gt dusty study
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >sleep
+#verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 
 >staple

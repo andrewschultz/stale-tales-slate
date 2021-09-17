@@ -284,6 +284,10 @@ Sclerous Closures
 
 DEBUG INFO: Paw-R-Wrap hinting.
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 >warp
 Your score has just gone up by one point
 

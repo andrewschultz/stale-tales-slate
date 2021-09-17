@@ -445,6 +445,10 @@ It wouldn't do to be caught (ruby-)red-handed. Maybe you can frame someone or so
 >w
 Sclerous Closures
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 #pre-search-arches rule
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.

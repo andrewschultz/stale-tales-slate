@@ -13,6 +13,10 @@
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
+#verbcase listen-routes-if-player-is-in-same-mesa
+>listen
+"Mama sees me as..." Irrelevant stuff.
+
 >score
 Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
@@ -24,12 +28,15 @@ Cleric Circle
 >score
 Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
 
+#verbcase swear-routes-if-location-of-player-is-cleric-circle
 >bother
 Only, uh, unholy. You can curse anywhere else except here without repercussion.
+#verbcase swear-routes-if-location-of-player-is-cleric-circle-if-curse-warned-is-false
 >bother
 A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!
 UNDO
 >undo
+#verbcase listen-routes-if-player-is-in-cleric-circle
 >listen
 Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
 
@@ -60,13 +67,25 @@ Adobe Abode
 >opposite
 Your score has just gone up by one point
 
+#verbcase smell-routes-if-noun-is-pipe-soot 128
+>smell pipe soot
+The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong, so the pipe soot probably won't burn your hands if you can take it.
+#verbcase smell-routes-if-noun-is-seed-pit 129
+>smell seed pit
+The seed pit smells a bit musty.
+#verbcase smell-routes-if-player-is-in-ripe-pier 130
+
 >out
 
 >against
 Your score has just gone up by one point
 
+#verbcase goto-routes-if-gast-is-in-same-mesa 3
 >gt adobe
 You can't run from Ian Gast!
+#verbcase listen-routes-if-noun-is-gast
+#verbcase listen-routes-if-noun-is-tirades
+#verbcase listen-routes-if-noun-is-gast-if-tirades-are-touchable
 >listen
 Those tirades from Ian Gast.
 
@@ -76,8 +95,12 @@ Score in a scenario: 6 out of 22 total points in the current region, Routes. Low
 >astride
 Your score has just gone up by one point
 
+#verbcase listen-routes-if-noun-is-gast-if-woe-bow-bell-is-touchable
 >listen gast
 You can't hear Ian Gast over the WOE BOW BELL.
+#verbcase listen-routes-if-noun-is-woe-bow-bell
+>listen bell
+Through the Woe Bow Bell's resonance, you think you could hear something if you listen carefully.
 
 #not a mistake (mistake code is for general preposition reject)
 >below
@@ -85,6 +108,10 @@ Your score has just gone up by one point
 
 >listen gast
 Ian Gast is banging on about Rude 'N Nuder, now.
+
+#verbcase listen-routes-if-noun-is-gast-if-rude-n-nuder-is-touchable
+>listen
+Ian Gast is banging on about Rude 'n Nuder, now.
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
@@ -107,12 +134,14 @@ Your score has just gone up by one point.
 >score
 Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
+#verbcase listen-routes-if-player-is-in-same-mesa-if-gast-is-moot
 >listen
 Nice to have silence with Ian Gast gone.
 
 >from
 Your score has just gone up by one point
 
+#verbcase listen-routes-if-player-is-in-same-mesa-if-the-bean-is-touchable
 >listen
 You hear people far away crying "The Bean has landed!"
 
@@ -137,6 +166,7 @@ Your score has just gone up by one point
 
 Ripe Pier
 
+#verbcase listen-routes-if-player-is-in-ripe-pier
 >listen
 Someone calling out "'Tis mad!" You see red.
 
@@ -145,8 +175,10 @@ Your score has just gone up by one point
 
 Cripple Clipper
 
+#verbcase sleep-routes-if-player-is-in-cripple-clipper
 >sleep
 This is no dreamboat!
+#verbcase swear-routes-if-player-is-in-cripple-clipper
 >bother
 Siphon no pish on-ship.
 
@@ -155,10 +187,13 @@ Your score has just gone up by one point
 
 Sonancy Canyons
 
+#verbcase listen-routes-if-noun-is-raptest-patters
 >listen
 An over-cheery voice: "Thou wit!"
+#verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hog and the ewe.
+#verbcase listen-routes-if-noun-is-hurt-hog
 >listen hog
 Squealing. It could be calmer
 
@@ -167,6 +202,7 @@ Your score has just gone up by one point
 
 >listen hog
 Less noisy now you've been peacemaking a bit.
+#reverbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hurt hog.
 

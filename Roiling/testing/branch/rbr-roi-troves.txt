@@ -58,9 +58,15 @@ Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of 
 DEBUG INFO: Eh, At Heat hinting.
 
 @verbs
+#verbcase sleep-troves-default
+>sleep
+Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now.
 #verbcase goto-troves-default
 >gt upscale
 You must work to make your dreams of going there become reality.
+#verbcase swear-troves-default
+>bother
+Such words, thought or spoken, may help some get ahead in life. But they are a bit suboptimal for you here.
 
 >l
 Loather Rathole
@@ -75,6 +81,7 @@ You pause, wondering if there is a way to preserve resources. Maybe now is a goo
 >ptf 2
 
 @verbs
+#verbcase listen-troves-if-can-hear-gritty
 >listen
 Actually, you can't help but hear gritty dialogue
 >hush
@@ -83,6 +90,9 @@ Random dialogue off.
 You have shut off the random gritty dialogue with HUSH.
 >uhhs
 Random dialogue on again.
+#verbcase smell-troves-if-can-hear-gritty
+>smell
+Eew-gas sewage. Skint-stink.
 
 @sli
 >slon
@@ -343,6 +353,12 @@ You should SPOT once you're able to focus better.
 #slider test for observe
 >esbover
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@verbs
+#verbcase listen-troves-if-noun-is-sob-ever-verbose
+>listen verbose
+The sob ever verbose just rattles on and on. A sad, stupid, winding story about
+, which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red.
 
 >observe
 Your score has just gone up by one point
@@ -608,6 +624,10 @@ DEBUG INFO: I'd Cede hinting.
 >lgrea
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+#verbcase smell-troves-if-noun-is-large-regal-lager
+>smell lager
+A faint rye-be-beery odor.
+
 @nud
 #spechelp for large regal lager
 >glaer
@@ -632,6 +652,11 @@ Your score has just gone up by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#verbcase smell-troves-if-player-is-in-drain-nadir
+>smell
+Ew--mild mildew. A mustier semi-rut.
 
 @nud
 #nudge for glare
@@ -668,6 +693,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a d
 >ediced
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#verbcase listen-troves-if-noun-is-id-cede
+>listen
+Eddie C.'s song
+
 >decide
 Your score has just gone up by one point
 
@@ -685,6 +715,14 @@ Boredom Bedroom
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#verbcase listen-troves-if-player-is-in-boredom-bedroom
+>listen
+The dead air inspires no rad idea.
+#verbcase sleep-troves-if-player-is-in-boredom-bedroom
+>sleep
+You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker.
 
 @nud
 #nudge for shmoe
@@ -858,6 +896,14 @@ DEBUG INFO: Si Reed hinting.
 @spoi
 In particular, you feel the need to DESIRE right now.
 
+@verbs
+#verbcase smell-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone-or-player-is-in-upscale-capsule
+>smell
+Perfumed. Dump-free.
+#verbcase sleep-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone
+>sleep
+In a public place? Worse, in an upscale public place? How shocking!
+
 >score
 {$SCOS}
 
@@ -924,6 +970,11 @@ Econ-Cone
 >score
 {$SCOS}
 
+@verbs
+#verbcase listen-troves-if-noun-is-praise-spirea
+>listen praise spirea
+You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+
 @nud
 #mistake test for once
 >once
@@ -979,6 +1030,12 @@ Your score has just gone up by one point
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#verbcase listen-troves-if-can-hear-posh
+>listen
+Actually, you can't help but hear posh dialogue.
+Anyway, no more badgering beggar din.
 
 @nud
 #mistake test for penrod
@@ -1091,6 +1148,14 @@ In particular, you feel the need to DESERVE right now.
 }}SCORE++
 >score
 {$SCOS}
+
+@verbs
+#verbcase sleep-troves-if-player-is-in-upscale-capsule
+>sleep
+You got here by doing nothing while conscious, not doing nothing while unconscious.
+#verbcase listen-troves-if-player-is-in-upscale-capsule
+>listen
+White noise, it is on. Whee.
 
 @nud
 #mistake test for fren

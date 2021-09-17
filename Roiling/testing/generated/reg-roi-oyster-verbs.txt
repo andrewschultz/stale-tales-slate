@@ -12,6 +12,16 @@
 Posh Hops Shop
 >posf
 
+#verbcase swear-oyster-if-player-is-in-posh-hops-shop
+>bother
+This is the place for it, but you can't bring yourself to be heard.
+#verbcase smell-oyster-if-player-is-in-posh-hops-shop
+>smell
+You catch a whiff of some mokes' smoke.
+#verbcase sleep-oyster-default
+>sleep
+You feel too inclined towards action for that.
+
 >score
 Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
 
@@ -70,6 +80,10 @@ Your score has just gone up by one point
 
 Disease Seaside
 
+#verbcase smell-oyster-if-player-is-in-disease-seaside
+>smell
+Say, spare sea spray.
+
 >score
 Score in a scenario: 6 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
@@ -82,8 +96,12 @@ Fighter Freight
 >score
 Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
->gt saccade
+#verbcase goto-oyster-if-player-is-in-fighter-freight
+>gt disease seaside
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
+#verbcase smell-oyster-if-player-is-in-fighter-freight
+>smell
+You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
 
 >leap
 Your score has just gone up by one point
@@ -110,6 +128,7 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 10 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
+#verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
 You've lost the way back, but the eeks are calling you on.
 
@@ -118,9 +137,17 @@ Your score has just gone up by one point
 
 Lean Lane
 
+#verbcase swear-oyster-if-player-is-in-lean-lane
+>bother
+You don't want Aunt Tuna to perform a tsk task.
+#verbcase smell-oyster-if-player-is-in-lean-lane
+>smell
+Antiseptic spice taint.
+
 >score
 Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
+#verbcase goto-oyster-if-noun-is-hardest-trashed-dearths
 >gt dearths
 Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed Dearths more than you need to.
 
@@ -237,6 +264,10 @@ Score in a scenario: 26 out of 42 total points in the current region, Oyster. Lo
 >w
 Sclerous Closures
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 >warp
 Your score has just gone up by one point
 
@@ -257,14 +288,23 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 29 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
+#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
 >gt rascal craals
 The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
 
 >n
 Horned Hedron
 
+#verbcase smell-oyster-if-noun-is-weaselly-walleyes
+>smell
+The weaselly walleyes smell of Skum-Musk.
+
 >w
 Rascal Craals
+
+#verbcase smell-oyster-if-player-is-in-rascal-craals
+>smell
+This situation only stinks in general, not literally.
 
 >bury
 Your score has just gone up by one point
@@ -318,6 +358,7 @@ Score in a scenario: 34 out of 42 total points in the current region, Oyster. Lo
 >x gleaner
 You see a map of all the paths in the Horned Hedron.
 
+#verbcase goto-oyster-if-noun-is-end-den-and-gleaner-is-realized
 >gt end den
 No need to go back there.
 
@@ -338,6 +379,7 @@ Plasm Lamps
 >score
 Score in a scenario: 36 out of 42 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 42.
 
+#verbcase goto-oyster-if-location-of-player-is-plasm-lamps
 >gt hedron
 Aw, c'mon, the ant should be no problem.
 
@@ -354,8 +396,12 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 38 out of 42 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 42.
 
+#verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
+#verbcase smell-oyster-if-player-is-in-tenfold-teflond-den-loft
+>smell
+Old heat. Loathed hot lead.
 
 >revel
 Your score has just gone up by one point

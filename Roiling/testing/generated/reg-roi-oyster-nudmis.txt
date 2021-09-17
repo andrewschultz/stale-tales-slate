@@ -1131,6 +1131,10 @@ You need a slightly more organized way to reveal what's under the ground with yo
 >w
 Sclerous Closures
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 #mistake test for rasche
 >rasche
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.

@@ -66,6 +66,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sartdei
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#verbcase listen-routes-if-player-is-in-same-mesa
+>listen
+"Mama sees me as..." Irrelevant stuff.
+
 @nud
 >t
 #mistake test for follow [text]
@@ -308,12 +313,15 @@ The spoon reflects to the list-o-toils.
 {$SCOS}
 
 @verbs
+#verbcase swear-routes-if-location-of-player-is-cleric-circle
 >bother
 Only, uh, unholy. You can curse anywhere else except here without repercussion.
+#verbcase swear-routes-if-location-of-player-is-cleric-circle-if-curse-warned-is-false
 >bother
 A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!
 UNDO
 >undo
+#verbcase listen-routes-if-player-is-in-cleric-circle
 >listen
 Ol' Peg's Gospel is singing Our Spire Superior. Or Uh, Peter, Here Put the Pure Up There.
 
@@ -852,6 +860,9 @@ You angle your spoon a bit, and you realize you, or something, should be ASTRIDE
 #verbcase goto-routes-if-gast-is-in-same-mesa 3
 >gt adobe
 You can't run from Ian Gast!
+#verbcase listen-routes-if-noun-is-gast
+#verbcase listen-routes-if-noun-is-tirades
+#verbcase listen-routes-if-noun-is-gast-if-tirades-are-touchable
 >listen
 Those tirades from Ian Gast.
 
@@ -979,8 +990,12 @@ The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find 
 The WOE BOW BELL sounds disembodied, but you don't want to give it a body. Find a direction to duck.
 
 @verbs
+#verbcase listen-routes-if-noun-is-gast-if-woe-bow-bell-is-touchable
 >listen gast
 You can't hear Ian Gast over the WOE BOW BELL.
+#verbcase listen-routes-if-noun-is-woe-bow-bell
+>listen bell
+Through the Woe Bow Bell's resonance, you think you could hear something if you listen carefully.
 
 #not a mistake (mistake code is for general preposition reject)
 >below
@@ -1027,6 +1042,11 @@ Only one inconclusive clue, and you have some direct hits. This shouldn't be too
 #nudge for rude
 >urde
 That's not quite the book's whole title.
+
+@verbs
+#verbcase listen-routes-if-noun-is-gast-if-rude-n-nuder-is-touchable
+>listen
+Ian Gast is banging on about Rude 'n Nuder, now.
 
 #not a mistake (mistake code is for general preposition reject once you are under)
 >under
@@ -1133,6 +1153,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That'
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @verbs
+#verbcase listen-routes-if-player-is-in-same-mesa-if-gast-is-moot
 >listen
 Nice to have silence with Ian Gast gone.
 
@@ -1144,6 +1165,7 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be BENEATH.
 
 @verbs
+#verbcase listen-routes-if-player-is-in-same-mesa-if-the-bean-is-touchable
 >listen
 You hear people far away crying "The Bean has landed!"
 
@@ -1323,6 +1345,7 @@ You angle your spoon a bit, and you realize you, or something, should be AMIDST.
 Ripe Pier
 
 @verbs
+#verbcase listen-routes-if-player-is-in-ripe-pier
 >listen
 Someone calling out "'Tis mad!" You see red.
 
@@ -1380,8 +1403,10 @@ You angle your spoon a bit, and you realize you, or something, should be ATHWART
 Cripple Clipper
 
 @verbs
+#verbcase sleep-routes-if-player-is-in-cripple-clipper
 >sleep
 This is no dreamboat!
+#verbcase swear-routes-if-player-is-in-cripple-clipper
 >bother
 Siphon no pish on-ship.
 
@@ -1438,10 +1463,13 @@ You angle your spoon a bit, and you realize you, or something, should be BETWEEN
 Sonancy Canyons
 
 @verbs
+#verbcase listen-routes-if-noun-is-raptest-patters
 >listen
 An over-cheery voice: "Thou wit!"
+#verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hog and the ewe.
+#verbcase listen-routes-if-noun-is-hurt-hog
 >listen hog
 Squealing. It could be calmer
 
@@ -1526,6 +1554,7 @@ You angle your spoon a bit, and you realize you, or something, should be THROUGH
 @verbs
 >listen hog
 Less noisy now you've been peacemaking a bit.
+#reverbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hurt hog.
 

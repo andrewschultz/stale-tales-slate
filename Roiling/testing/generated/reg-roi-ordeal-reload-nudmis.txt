@@ -86,7 +86,12 @@ That's not a way to sneak around and avoid the knock at the door.
 >open door
 
 >1
+
 >5
+
+>sleep
+#verbcase sleep-ordeal-reload-default
+You probably can't spend another night in the Means Manse. You need to get going, here!
 
 #mistake retest for [text] stable [text]/stable [text]/[text] stable
 >zozimus stable zozimus

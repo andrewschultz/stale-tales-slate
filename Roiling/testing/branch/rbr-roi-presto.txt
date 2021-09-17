@@ -48,6 +48,16 @@ Grey Gyre
 >monty hints
 You haven't gotten any points yet, so you probably want to find what sort of word is used here.
 
+@verbs
+#verbcase swear-presto-if-cur-score-of-presto-is-0
+>damn
+That's too strong for here. But you have the right idea.
+>bother
+Well, maybe one or two mild swears would work somewhere around here.
+#verbcase smell-presto-default
+>smell
+It smells a bit stinky here, but more pressingly, it just FEELS stinky
+
 @max
 #pre-plebe-bleep rule
 >bleep
@@ -153,6 +163,14 @@ You gulp the crust and can't help thinking POOH. But you are too polite and/or r
 @hin
 DEBUG INFO: Ye Hoop hinting.
 
+@verbs
+#reverbcase smell-presto-default
+>smell
+You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing
+#verbcase listen-presto-default
+>listen
+"This ... this ... this..." you hear, faintly. It feels profane.
+
 >score
 {$SCOS}
 
@@ -214,6 +232,11 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
+@verbs
+#verbcase swear-presto-default
+>bother
+No, that's too strong for here. You've been doing quite well with the tame stuff.
+
 @nud
 #nudge for earring
 >earrign
@@ -245,6 +268,11 @@ The plebe grimaces as you try to eat the crust. Perhaps there's preparation you 
 
 @hin
 DEBUG INFO: plebe hinting.
+
+@verbs
+#verbcase smell-presto-if-noun-is-ether
+>smell ether
+The ether is nontoxic but still potentially dangerous, if someone's hiding there.
 
 @nud
 #nudge for hump
@@ -412,6 +440,10 @@ But you already took the tsar star FROM the tars. Plus, you'd get all sticky.
 Your score has just gone up by one point
 }}SCORE++
 
+@verbs
+>bother
+Well, maybe one more mild swear would work somewhere around here.
+
 @spoi
 Before taking a bite, you wonder if you've visited everywhere you can yet.
 
@@ -451,6 +483,13 @@ The writing says EZ-Ol'-Av' (TM) Volt Maze.
 Olav Metz and Zemo Valt were the main architects.
 >read volt maze
 It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
+
+@verbs
+#verbcase swear-presto-if-plebe-is-touchable
+>bleep
+The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
+>bother
+The plebe tries hard not to snicker and succeeds, but just barely.
 
 #not a mistake
 >bleep
@@ -784,6 +823,9 @@ by three points
 >n
 >w
 >w
+#verbcase smell-presto-if-location-of-player-is-in-the-maze
+>smell
+You smell a gefilte and think "get a life."
 >n
 >n
 >e
@@ -947,6 +989,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >osgndsoe
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#verbcase listen-presto-if-noun-is-odes-song
+>listen odes song
+The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain.
+
 @!min
 >goodness
 by one point
@@ -954,6 +1001,11 @@ by one point
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#verbcase listen-presto-if-player-is-in-dirge-ridge
+>listen
+The odes song is gone, but you still just feel mad about things
 
 >darn
 Your score has just gone up by one point
@@ -967,6 +1019,10 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 
 >score
 {$SCOS}
+
+@verbs
+>bother
+You had your chance for a swear or two. And you took it. Yay, you.
 
 @nud
 #mistake retest for evil
@@ -1006,6 +1062,13 @@ You need to find a way to cheer them up.
 #slider test for whassup
 >sahwups
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@verbs
+#verbcase listen-presto-if-noun-is-rand-or-noun-is-leo
+#verbcase listen-presto-if-noun-is-rand-or-noun-is-leo-if-rand-is-washed-up
+#verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
+>listen
+small talk, and they open up to you a bit.
 
 #not a mistake
 >whassup
@@ -1259,6 +1322,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a d
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
+
+@verbs
+#verbcase swear-presto-if-hogs-are-touchable
+>damn
+The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears.
+>bother
+The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
 
 @max
 >gosh
@@ -1546,6 +1616,14 @@ Hacks' Shack
 
 @spoi
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
+
+@verbs
+#verbcase swear-presto-if-hacks-shack-is-visited
+>bother
+While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
+#verbcase listen-presto-if-player-is-in-hacks-shack
+>listen
+Classic techno music from the Baleets: "Be Stale."
 
 @nud
 #scannotes for n e recs censer
@@ -1940,6 +2018,16 @@ DEBUG INFO: min-up codepath
 >casseroel
 The casserole is mixed up enough.
 
+@verbs
+#verbcase smell-presto-if-noun-is-casserole
+>smell casserole
+That casserole smells ... well, sturdy. Not for the sophisticated.
+>s
+#verbcase sleep-presto-if-hacks-shack-is-visited-and-peels-speel-is-reflexive
+>sleep
+Only the shack seems to be a safe place to sleep, here.
+>n
+
 >get book
 >push skid s
 >push skid s
@@ -2100,7 +2188,10 @@ OBERTO, in red. That's its name.
 >scan robot
 You wonder if you need a step back to take a new look at the ambiguous clues.
 
-@max
+@verbs
+#verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-off-stage
+
+@max,verbs
 #balance undo
 #pre-peels-speel-sleep rule
 >sleep
@@ -2199,6 +2290,10 @@ That stupid NEED IF-DEFINE and that peels speel, still.
 #slider test for sleep
 >eespl
 Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@verbs
+#verbcase sleep-presto-if-player-is-in-hacks-shack
+#verbcase sleep-presto-if-player-is-in-hacks-shack-if-peels-speel-is-in-hacks-shack
 
 >sleep
 Your score has just gone up by one point

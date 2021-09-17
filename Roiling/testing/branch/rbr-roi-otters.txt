@@ -103,6 +103,11 @@ That is a lot of matching for six letters. And you haven't seen anything like th
 >aberyl
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#verbcase swear-otters-if-power-back-is-false
+>bother
+At the moment, even your profanities lack power.
+
 #forceignore
 >barely
 Your score has just gone up by one point
@@ -122,6 +127,11 @@ DEBUG INFO: Ed Riley hinting.
 >z
 You pause, realizing you do not need to discern. Perhaps now is a good time to remember Ed Riley can speak REEDILY.
 >ptf 2
+
+@verbs
+#verbcase listen-otters-if-noun-is-ed-riley
+>listen
+Ed Riley doesn't seem to make any noise. He just blocks you west.
 
 >score
 {$SCOS}
@@ -250,6 +260,11 @@ DEBUG INFO: min-up codepath
 }}CURMIN++
 >score
 {$SCOS}
+
+@verbs
+#verbcase smell-otters-if-the-deli-rye-is-touchable-or-noun-is-deli-rye
+>smell
+The deli rye smells good, but Ed won't share.
 
 >reedily
 Your score has just gone up by one point
@@ -510,6 +525,17 @@ You can tell the eels in the sea cube BECAUSE once you have material evidence yo
 That feels right, but it also feels like you're getting way ahead of yourself, there.
 !by one point
 >s
+
+@verbs
+#verbcase swear-otters-if-player-is-in-disowned-downside-and-parleys-splayer-players-are-in-disowned-downside
+>bother
+The conversation is horrid enough.
+#verbcase smell-otters-if-player-is-in-disowned-downside
+>smell
+You can smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+#verbcase listen-otters-if-noun-is-parleys-splayer-players
+>listen
+Ick, man. Mackin'. You really don't want to pay attention to the details, but you get the general impression.
 
 @nud
 #mistake test for slap em
@@ -899,6 +925,11 @@ You're not able to discern anything right here and now. Maybe move somewhere wit
 @hin
 Gretta's gone. The first thing to do is to go north or south to regain your powers.
 
+@verbs
+#reverbcase smell-otters-if-player-is-in-disowned-downside
+>smell
+You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy-hued bottle.
+
 @nud
 #mistake retest for slap em
 >slap em
@@ -987,6 +1018,11 @@ Loop Pool
 
 @spoi
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
+
+@verbs
+#verbcase smell-otters-if-player-is-in-loop-pool
+>smell
+Salt Water. Wet, astral.
 
 @sli
 #slider test for because
@@ -1203,10 +1239,13 @@ DEBUG INFO: min-up codepath
 >score
 {$SCOS}
 
-@nudmis
-#listening for vow here
+@verbs
+#verbcase listen-otters-if-player-is-in-bran-barn
 >listen
-/You see red as you hear some nonsense repeated: "Eeh, row V!"
+You hear morose mooers you can't see.
+#verbcase listen-otters-if-vow-here-is-touchable
+>listen
+You see red as you hear some nonsense repeated: "Eeh, row V!"
 
 @nud
 #spechelp for vow here
@@ -1288,6 +1327,11 @@ DEBUG INFO: simply sly imp hinting.
 >brutely
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|REMOTELY)\.
 >undo
+
+@verbs
+#verbcase listen-otters-if-noun-is-sly-imp
+>listen
+The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now.
 
 @sli
 #slider test for brutely
@@ -1700,6 +1744,11 @@ by one point
 /As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (STOICALLY|JOLTILY).
 >undo
 
+@verbs
+#verbcase listen-otters-if-noun-is-whiners
+>listen
+It's hard not to hear what the shrewin' whiners have to say, actually
+
 @mis
 #mistake test for sherwin
 >sherwin
@@ -1824,6 +1873,11 @@ The path south is cleared, and you feel ready to challenge yourself there.
 
 >s
 Perverse Preserve
+
+@verbs
+#verbcase listen-otters-if-player-is-in-perverse-preserve
+>listen
+You hear no metronomes you could turn into monotremes.
 
 @nud
 #spechelp for raptor
@@ -2148,9 +2202,16 @@ You don't know if someone named Cornelius would help or hurt you.
 #mistake test for rule scion
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
-
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
+
+@verbs
+#verbcase swear-otters-if-player-is-in-reclusion-inclosure-and-elmer-is-in-reclusion-inclosure
+>bother
+sniff faux-piously.
+#verbcase smell-otters-if-player-is-in-reclusion-inclosure
+>smell
+A clove, likely from one alcove.
 
 @mis
 #mistake test for edisa/sadie
@@ -2412,6 +2473,15 @@ WTF FTW
 >e
 
 @verbs
+#verbcase listen-otters-if-player-is-in-rancho-archon-anchor
+>listen
+Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE.
+#verbcase smell-otters-if-player-is-in-rancho-archon-anchor
+>smell
+Vast vats' sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin' cyanide, too.
+#verbcase swear-otters-if-player-is-in-rancho-archon-anchor
+>bother
+Yup. It's gotten REAL. But that won't help.
 #verbcase goto-otters-if-player-is-in-rancho-archon-anchor
 >gt inclosure
 You leave her sin shrine with extra quickness before getting a shiner.

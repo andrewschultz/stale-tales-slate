@@ -606,10 +606,6 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
-#listening for vow here
->listen
-/You see red as you hear some nonsense repeated: "Eeh, row V!"
-
 #spechelp for vow here
 >howevre
 The vow here quiets down for a moment.
@@ -1134,7 +1130,6 @@ You don't know if someone named Cornelius would help or hurt you.
 #mistake test for rule scion
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
-
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
 

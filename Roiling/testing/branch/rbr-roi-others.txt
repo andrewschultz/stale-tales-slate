@@ -58,10 +58,18 @@ Enter the Throes Hoster for the final region
 Rustic Citrus
 
 @verbs
+#verbcase swear-others-if-player-is-in-rustic-citrus
+>bother
+Instead, you mumble ... 'I, curst!'
+#verbcase listen-others-if-noun-is-pagers
 >listen pagers
 Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though.
+#verbcase listen-others-if-player-is-in-rustic-citrus
 >listen
 Curtis mumbles various business ideas to himself.
+#verbcase smell-others-if-noun-is-slime
+>smell slime
+The slime actually smells...nice, like dishwashing detergent.
 
 >t
 >z
@@ -319,10 +327,16 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's
 >smoascp
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@verbs
+#verbcase smell-others-default
+>smell
+Smells, savory, vary so.
+
 >compass
 Your score has just gone up by one point.
 
 @verbs
+#reverbcase listen-others-if-player-is-in-rustic-citrus
 >listen
 Curtis continues to sing and hum the tidiest dietist ditties.
 
@@ -598,8 +612,10 @@ There's enough credit on the token. Don't get greedy.
 Swell Wells
 
 @verbs
+#verbcase listen-others-if-noun-is-sorer-bogey
 >listen sorer bogey
 /"I am the sorer bogey!" you hear\. "(Be sorry, ego|Oy! Erg! Sober|Ye sorer gob)!" it cries, as you see your skin redden.
+#verbcase listen-others-if-noun-is-barren-cries
 >listen barren cries
 The barren cries are sour and bitter and tiny.
 
@@ -927,6 +943,7 @@ DEBUG INFO: icons hinting.
 {$SCOS}
 
 @verbs
+#verbcase listen-others-if-noun-is-s-i-or-noun-is-s-c
 >listen sonic icons
 A low buzzing from your sonic icons--odd. What could they do, or buy?
 
@@ -1386,8 +1403,10 @@ The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
 
 @verbs
+#verbcase listen-others-if-player-is-in-clangier-clearing
 >listen
 Selly yells.
+#verbcase listen-others-if-noun-is-ammo-gang
 >listen ammo gang
 A small voice is saying, "Go, man!" You see red as it begins to nag mo'. Where? How?
 
@@ -1738,6 +1757,7 @@ One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aft
 You haven't visited the Gates Stage north of the Swell Wells, yet. That's where you can use the passport.
 
 @verbs
+#verbcase listen-others-if-noun-is-brr-hub
 >listen brr hub
 if noun is brr hub, say "A brr-hub is making an aggressive bb-arr-uh noise and seems to turn red in the process.
 

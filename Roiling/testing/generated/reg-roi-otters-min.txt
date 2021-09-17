@@ -196,9 +196,6 @@ Uprates Pasture
 >w
 Reclusion Inclosure
 
->eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
-
 >raptor
 Your score has just gone up by one point
 

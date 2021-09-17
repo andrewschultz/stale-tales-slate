@@ -65,6 +65,16 @@ by one point
 by one point
 >undo
 
+@verbs
+#verbcase swear-oyster-if-player-is-in-posh-hops-shop
+>bother
+This is the place for it, but you can't bring yourself to be heard.
+#verbcase smell-oyster-if-player-is-in-posh-hops-shop
+>smell
+You catch a whiff of some mokes' smoke.
+#verbcase sleep-oyster-default
+>sleep
+You feel too inclined towards action for that.
 
 >score
 {$SCOS}
@@ -516,6 +526,11 @@ DEBUG INFO: interlocking oars hinting.
 >undo
 >undo
 
+@verbs
+#verbcase smell-oyster-if-player-is-in-disease-seaside
+>smell
+Say, spare sea spray.
+
 >score
 }}SCORE++
 {$SCOS}
@@ -735,8 +750,11 @@ The pale plea already sort of is. You need a stronger action than that.
 
 @verbs
 #verbcase goto-oyster-if-player-is-in-fighter-freight
->gt saccade
+>gt disease seaside
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
+#verbcase smell-oyster-if-player-is-in-fighter-freight
+>smell
+You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
 
 >leap
 Your score has just gone up by one point
@@ -971,6 +989,14 @@ Lean Lane
 
 @hin
 DEBUG INFO: Tea-at-a-Tee hinting.
+
+@verbs
+#verbcase swear-oyster-if-player-is-in-lean-lane
+>bother
+You don't want Aunt Tuna to perform a tsk task.
+#verbcase smell-oyster-if-player-is-in-lean-lane
+>smell
+Antiseptic spice taint.
 
 >score
 {$SCOS}
@@ -1747,6 +1773,10 @@ Sclerous Closures
 @hin
 DEBUG INFO: Paw-R-Wrap hinting.
 
+#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
+>smell
+Sea rind.
+
 @mis
 #mistake test for rasche
 >rasche
@@ -1902,6 +1932,11 @@ Horned Hedron
 @hin
 DEBUG INFO: weaselly walleyes hinting.
 
+@verbs
+#verbcase smell-oyster-if-noun-is-weaselly-walleyes
+>smell
+The weaselly walleyes smell of Skum-Musk.
+
 @max
 ##balance undos
 #pre-patrol-ol-trap rule
@@ -1959,6 +1994,11 @@ Rascal Craals
 
 @hin
 DEBUG INFO: ruby hinting.
+
+@verbs
+#verbcase smell-oyster-if-player-is-in-rascal-craals
+>smell
+This situation only stinks in general, not literally.
 
 @nud
 #nudge for craals
@@ -2403,6 +2443,9 @@ DEBUG INFO: dialer hinting.
 #verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
 You got rid of the ant. Nothing more to do there.
+#verbcase smell-oyster-if-player-is-in-tenfold-teflond-den-loft
+>smell
+Old heat. Loathed hot lead.
 
 @sli
 #slider test for revel

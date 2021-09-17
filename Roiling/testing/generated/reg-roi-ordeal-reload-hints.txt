@@ -17,7 +17,12 @@
 >open door
 
 >1
+
 >5
+
+>sleep
+#verbcase sleep-ordeal-reload-default
+You probably can't spend another night in the Means Manse. You need to get going, here!
 
 >lamp
 Your score has just gone up by one point.

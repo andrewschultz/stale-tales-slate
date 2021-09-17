@@ -429,9 +429,6 @@ You can play the whistle DEEPLY once the parrot has given it to you.
 >w
 Reclusion Inclosure
 
->eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
-
 >honestly
 !by one point
 

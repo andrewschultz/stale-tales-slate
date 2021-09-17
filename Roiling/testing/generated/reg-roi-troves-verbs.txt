@@ -18,12 +18,20 @@
 
 >enter tastee
 
+#verbcase sleep-troves-default
+>sleep
+Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now.
+#verbcase goto-troves-default
 >gt upscale
 You must work to make your dreams of going there become reality.
+#verbcase swear-troves-default
+>bother
+Such words, thought or spoken, may help some get ahead in life. But they are a bit suboptimal for you here.
 
 >l
 Loather Rathole
 
+#verbcase listen-troves-if-can-hear-gritty
 >listen
 Actually, you can't help but hear gritty dialogue
 >hush
@@ -32,6 +40,9 @@ Random dialogue off.
 You have shut off the random gritty dialogue with HUSH.
 >uhhs
 Random dialogue on again.
+#verbcase smell-troves-if-can-hear-gritty
+>smell
+Eew-gas sewage. Skint-stink.
 
 >score
 Score in a scenario: 0 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
@@ -63,6 +74,11 @@ by one point
 >score
 Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
+#verbcase listen-troves-if-noun-is-sob-ever-verbose
+>listen verbose
+The sob ever verbose just rattles on and on. A sad, stupid, winding story about
+, which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red.
+
 >observe
 Your score has just gone up by one point
 
@@ -77,6 +93,7 @@ Boarded Roadbed
 >score
 Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 26.
 
+#reverbcase goto-troves-default
 >gt rathole
 Going back would be a dereliction of your destiny.
 
@@ -103,10 +120,22 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 26.
 
+#verbcase smell-troves-if-noun-is-large-regal-lager
+>smell lager
+A faint rye-be-beery odor.
+
 >glare
 Your score has just gone up by one point
 >score
 Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 26.
+
+#verbcase smell-troves-if-player-is-in-drain-nadir
+>smell
+Ew--mild mildew. A mustier semi-rut.
+
+#verbcase listen-troves-if-noun-is-id-cede
+>listen
+Eddie C.'s song
 
 >decide
 Your score has just gone up by one point
@@ -115,6 +144,13 @@ Boredom Bedroom
 
 >score
 Score in a scenario: 12 out of 26 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 26.
+
+#verbcase listen-troves-if-player-is-in-boredom-bedroom
+>listen
+The dead air inspires no rad idea.
+#verbcase sleep-troves-if-player-is-in-boredom-bedroom
+>sleep
+You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker.
 
 >relapse
 Your score has just gone up by one point
@@ -138,6 +174,13 @@ Your score has just gone up by one point
 
 Browse Bowers
 
+#verbcase smell-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone-or-player-is-in-upscale-capsule
+>smell
+Perfumed. Dump-free.
+#verbcase sleep-troves-if-player-is-in-browse-bowers-or-player-is-in-econ-cone
+>sleep
+In a public place? Worse, in an upscale public place? How shocking!
+
 >score
 Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
@@ -151,10 +194,19 @@ Econ-Cone
 >score
 Score in a scenario: 17 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
+#verbcase listen-troves-if-noun-is-praise-spirea
+>listen praise spirea
+You hear something from the praise spirea. It might help you, but then again, it might make what you want/need to do too obvious.
+
 >aspire
 Your score has just gone up by one point
 >score
 Score in a scenario: 18 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
+
+#verbcase listen-troves-if-can-hear-posh
+>listen
+Actually, you can't help but hear posh dialogue.
+Anyway, no more badgering beggar din.
 
 >strive
 Your score has just gone up by one point
@@ -169,6 +221,13 @@ Upscale Capsule
 
 >score
 Score in a scenario: 20 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+
+#verbcase sleep-troves-if-player-is-in-upscale-capsule
+>sleep
+You got here by doing nothing while conscious, not doing nothing while unconscious.
+#verbcase listen-troves-if-player-is-in-upscale-capsule
+>listen
+White noise, it is on. Whee.
 
 >deserve
 Your score has just gone up by one point

@@ -423,9 +423,6 @@ Score in a scenario: 27 out of 33 total points in the current region, Otters. Lo
 >w
 Reclusion Inclosure
 
->eelmr
-/You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Maybe you could find a way to get rid of them.
-
 >aside
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath

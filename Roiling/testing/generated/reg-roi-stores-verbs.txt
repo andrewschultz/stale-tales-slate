@@ -29,10 +29,13 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
+#verbcase listen-stores-if-noun-is-tokers
 >listen tokers
 Conversation from the tokers you don't want to listen TOO closely to.
+#verbcase listen-stores-if-noun-is-nestor
 >listen nestor
 Nestor periodically mumbles about his lost buddies.
+#verbcase smell-stores-if-noun-is-mangiest-steaming
 >smell steaming
 Err. I can't tell you exactly how the mangiest steaming smells. I wouldn't know. I don't need that stuff to come up with my ideas. I'm that brilliant!
 
@@ -42,8 +45,13 @@ Cruelest Lectures
 >score
 Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
+#verbcase smell-stores-if-player-is-in-cruelest-lectures
+>smell
+It smells depressingly antiseptic here.
+#verbcase goto-stores-if-noun-is-strip-of-profits
 >gt trips strip
 You'll need to find your way back. Don't worry. There are clues. And a small reward.
+#verbcase listen-stores-if-player-is-in-cruelest-lectures
 >listen
 You're hearing enough without trying, sadly.
 
@@ -54,6 +62,10 @@ Your score has just gone up by one point
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 >score
 Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+
+#verbcase goto-stores-if-noun-is-cruelest-lectures
+>gt cruelest lectures
+You kind of destroyed Cruelest Lectures, and you won't get any rewards for going back. It was neat and all but not as fun as watching Reefer Madness.
 
 >routes
 Your score has just gone up by one point
@@ -75,8 +87,16 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
 
+#verbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
+>smell store y
+Seawater scents from Store Y.
+
 >oyster
 Your score has just gone up by one point
+
+#reverbcase smell-stores-if-noun-is-store-y-or-noun-is-barnacle-balancer
+>smell balancer
+Seawater scents from the balancer barnacle.
 
 >score
 Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
@@ -86,12 +106,18 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
+#verbcase smell-stores-if-noun-is-throes-hoster
+>smell throes hoster
+A mix of surprisingly nice smells from the Throes Hoster where Store H was.
+
 >presto
 >score
 Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 11 points.
 
+#verbcase listen-stores-if-noun-is-odorant-tornado
 >listen tornado
 A roar of angry undefinable words swirls from the odorant tornado.
+#verbcase smell-stores-if-noun-is-odorant-tornado
 >smell tornado
 The smell from the odorant tornado makes you almost want to lash out verbally, even though that will do no good.
 
