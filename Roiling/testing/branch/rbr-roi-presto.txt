@@ -232,11 +232,6 @@ Your score has just gone up by two points
 >score
 {$SCOS}
 
-@verbs
-#verbcase swear-presto-default
->bother
-No, that's too strong for here. You've been doing quite well with the tame stuff.
-
 @nud
 #nudge for earring
 >earrign
@@ -269,11 +264,6 @@ The plebe grimaces as you try to eat the crust. Perhaps there's preparation you 
 @hin
 DEBUG INFO: plebe hinting.
 
-@verbs
-#verbcase smell-presto-if-noun-is-ether
->smell ether
-The ether is nontoxic but still potentially dangerous, if someone's hiding there.
-
 @nud
 #nudge for hump
 >umhp
@@ -284,7 +274,10 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 >s
 >gt nowt town
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-You'll have to walk through Nowt Town and the Volt Maze, from L to V. Or, well, just solve it.
+I'm going to make you use directions to Nowt Town and the Volt Maze. Or, well, just solve it.
+>gt unwary runway
+#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
+I'm going to make you use directions to Nowt Town and the Volt Maze, from L to V. Or, well, just solve it.
 
 >s
 Char Arch
@@ -835,6 +828,10 @@ You smell a gefilte and think "get a life."
 >w
 >n
 >n
+Unwary Runway
+>bother
+Unnecessary mazes do have that effect on people.
+#verbcase swear-presto-if-location-of-player-is-in-the-maze
 >n
 >gt nowt town
 #verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager-if-noun-is-in-the-maze
@@ -854,6 +851,9 @@ Your score has just gone up by one point
 }}CURMIN++
 
 @verbs
+#verbcase smell-presto-if-noun-is-ether
+>smell ether
+The ether is nontoxic but still potentially dangerous, if someone's hiding there.
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway-if-volt-maze-is-moot
 >gt runway
 You don't want to, and can't, go back to or through the volt maze you solved.
@@ -993,6 +993,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #verbcase listen-presto-if-noun-is-odes-song
 >listen odes song
 The sods-gone odes song makes Dirge Ridge unwelcoming but not totally inhospitable. The musical interludes at least make it more tolerable than listening to someone complain.
+#verbcase swear-presto-default
+>damn
+No, that's too strong for here. You've been doing quite well with the tame stuff.
 
 @!min
 >goodness

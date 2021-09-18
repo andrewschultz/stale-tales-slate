@@ -54,6 +54,11 @@ TSV:## maximum walkthrough	## minimum walkthrough h	## minimum walkthrough i	## 
 @hin
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl|Geno) hinting\.
 
+@verbs
+#verbcase listen-towers-if-noun-is-rodney
+>listen
+Rodney's intimidating enough, he can keep this place quiet. Well, everyone else in this place. He's a dry one, you think, as you see red.
+
 @nud
 #nudge for deny
 >deyn
@@ -691,6 +696,9 @@ Topside Deposit
 @verbs
 >gt trefoil
 You had your fun in there.
+#verbcase listen-towers-if-player-is-in-topside-deposit
+>listen
+An unconvincing voice from where you came moans 'Stop! Die!' You must ignore it and go forward.
 
 >score
 {$SCOS}
@@ -889,6 +897,14 @@ You sense that the dreads adders were one of the easier things to deal with, her
 
 >n
 Scope Copse
+
+@verbs
+#verbcase listen-towers-if-noun-is-diners
+>listen diners
+An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
+#verbcase listen-towers-if-noun-is-butlers
+>listen butlers
+The butlers loudly banter 'Let's rub (you) the wrong way!' You see red.
 
 @nud
 #rescannotes for curst palace
@@ -1421,6 +1437,17 @@ DEBUG INFO: mardier admirer hinting.
 DEBUG INFO: Lars Eede hinting.
 >undo
 
+@verbs
+#verbcase listen-towers-if-noun-is-angriest-ingrates
+>listen ingrates
+The ingrates go red from
+#verbcase listen-towers-if-noun-is-mardier-admirer
+>listen admirer
+The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy.
+#verbcase listen-towers-if-noun-is-lars-eede-or-noun-is-elsa-erde
+>listen lars
+Lars Eede mutters and moans how
+
 @spoi
 #towers anagrams for reeds ale
 >xr lars eede #11e
@@ -1700,6 +1727,11 @@ Your score has just gone up by one point
 \\
 Shaven Havens
 
+@verbs
+#verbcase listen-towers-if-player-is-in-shaven-havens
+>listen
+You think you hear NEVAHs, but that's got to be just internal melodrama.
+
 @nud
 #mistake test for unlocked
 >unlocked
@@ -1734,6 +1766,14 @@ The ravages are chaotic enough. Changing them is a fight you'd lose.
 >e
 \\
 Salted Deltas
+
+@verbs
+#verbcase listen-towers-if-noun-is-wait-seer
+>listen sweatier
+The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip.
+#verbcase listen-towers-if-noun-is-asset-hit-atheists
+>listen atheists
+The atheists are really spelling out their logical arguments against any sort of God. In light of this, the wait-seer doesn't seem to be the least tired. Maybe you could learn more details talking to the atheists.
 
 @hin
 #getting rid of the rut made the gradient available, so we hint the atheists.
@@ -2729,12 +2769,23 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 >undo
 >undo
 
+@verbs
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins
+>listen yow
+Dr. Yow moans he could hack less shackles.
+
 >wordy
 Your score has just gone up by one point
 }}SCORE++
 
 @hin
 That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it home?
+
+@verbs
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-wordy
+>listen yow
+Dr. Yow is talking slowly and soothingly.
 
 >score
 {$SCOS}
@@ -2760,6 +2811,14 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Fries-Us Fissure
 
 @hin
 The duck won't follow you. It doesn't trust your voice.
+
+@verbs
+>z
+>z
+>z
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
+>listen
+Dr. Yow is silent once again.
 
 >gt duck
 >push repeat
@@ -2913,6 +2972,8 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
 You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.
+#verbcase listen-towers-if-player-is-in-outer-route
+The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
 
 >revised
 }}SCORE++
@@ -3193,6 +3254,11 @@ DEBUG INFO: I ZOMG Gizmo hinting.
 
 @mini,minh
 }}CURMAX--
+
+@verbs
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-rowdy
+>listen yow
+Dr. Yow is yacking away noisily and enthusiastically.
 
 >score
 {$SCOS}

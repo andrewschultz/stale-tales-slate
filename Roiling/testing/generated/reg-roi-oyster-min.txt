@@ -24,6 +24,10 @@ Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 
+#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
+>listen
+Silence. Awkward silence. An occasional cough.
+
 Olde Lode
 
 >thisalt
@@ -159,10 +163,6 @@ Score in a scenario: 16 out of 42 total points in the current region, Oyster. Lo
 
 >w
 Sclerous Closures
-
-#verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
->smell
-Sea rind.
 
 >warp
 Your score has just gone up by one point

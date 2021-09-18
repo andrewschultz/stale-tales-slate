@@ -75,6 +75,13 @@ You catch a whiff of some mokes' smoke.
 #verbcase sleep-oyster-default
 >sleep
 You feel too inclined towards action for that.
+#verbcase listen-oyster-if-noun-is-tunes
+>listen tunes
+The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
+#verbcase listen-oyster-if-player-is-in-posh-hops-shop
+>listen
+!Silence. Awkward silence. An occasional cough.
+The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
 
 >score
 {$SCOS}
@@ -392,6 +399,11 @@ by one point
 >score
 {$SCOS}
 
+#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
+>listen
+Silence. Awkward silence. An occasional cough.
+
+
 @!min
 >inset
 Perhaps you should've played it cool and fled, instead.
@@ -482,6 +494,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You already got hints of what to do with the clam: CALM. So you decide to save the pills for later.
 >ptf 2
 
+@verbs
+#verbcase listen-oyster-if-noun-is-clam
+>listen
+You hear the clam snapping.
+
 @max
 >calm clam
 by one point
@@ -530,6 +547,9 @@ DEBUG INFO: interlocking oars hinting.
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
 Say, spare sea spray.
+#verbcase listen-oyster-if-player-is-in-disease-seaside
+>listen
+You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
 
 >score
 }}SCORE++
@@ -755,6 +775,9 @@ If only it was that easy. Well, I hope it's not too hard to figure the right act
 #verbcase smell-oyster-if-player-is-in-fighter-freight
 >smell
 You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
+#verbcase listen-oyster-if-noun-is-pale-plea
+>listen
+/("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
 
 >leap
 Your score has just gone up by one point
@@ -764,6 +787,14 @@ Your score has just gone up by one point
 /DEBUG INFO: (pikes|carps) hinting.
 
 Anger Range
+
+@verbs
+#verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
+>listen
+You can't help but listen to the carps' and pikes' immature, nasty jibes.
+#verbcase listen-oyster-if-noun-is-trout
+>listen trout
+Whimpering slightly.
 
 >score
 {$SCOS}
@@ -859,6 +890,11 @@ Your score has just gone up by one
 Your score has just gone up by one
 
 }}SCORE++
+
+@verbs
+#verbcase listen-oyster-if-player-is-in-anger-range-and-carps-are-moot-and-sausage-is-off-stage
+>listen
+A cry. "Eh ... a runt..." you turn red on hearing it.
 
 @hin
 DEBUG INFO: HUNTER HUNT AREA hinting.
@@ -971,6 +1007,9 @@ DEBUG INFO: min-up codepath
 #verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
 You've lost the way back, but the eeks are calling you on.
+#verbcase listen-oyster-if-noun-is-eeks
+>listen
+You hear eeks. Arcing caring. Weeps sweep. "Eek! Eek! Eek!" You must find where the eeks are coming from.
 
 @max
 >seek eeks
@@ -997,6 +1036,9 @@ You don't want Aunt Tuna to perform a tsk task.
 #verbcase smell-oyster-if-player-is-in-lean-lane
 >smell
 Antiseptic spice taint.
+#verbcase listen-oyster-if-noun-is-aunt-tuna
+>listen tuna
+Aunt Tuna is humming something tuneless as she goes about her business.
 
 >score
 {$SCOS}
@@ -1773,9 +1815,13 @@ Sclerous Closures
 @hin
 DEBUG INFO: Paw-R-Wrap hinting.
 
+@verbs
 #verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
 >smell
 Sea rind.
+#verbcase listen-oyster-if-player-is-in-sclerous-closures
+>listen
+Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
 
 @mis
 #mistake test for rasche
@@ -1839,6 +1885,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: Achers' Chaser Arches hinting.
+
+@verbs
+#reverbcase listen-oyster-if-player-is-in-sclerous-closures
+>listen
+Silence.
 
 >score
 {$SCOS}
@@ -1921,11 +1972,6 @@ You tilt the gleaner around to try to see it from a different point of view. You
 >gleanre
 It's already been made bigger. Not much more you can do with it except examine it.
 
-@verbs
-#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
->gt rascal craals
-The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
-
 >n
 Horned Hedron
 
@@ -1934,7 +1980,7 @@ DEBUG INFO: weaselly walleyes hinting.
 
 @verbs
 #verbcase smell-oyster-if-noun-is-weaselly-walleyes
->smell
+>smell walleyes
 The weaselly walleyes smell of Skum-Musk.
 
 @max
@@ -2160,6 +2206,11 @@ You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have wo
 >undo
 >undo
 
+@verbs
+#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
+>gt rascal craals
+The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
+
 >patrol
 Your score has just gone up by one point
 }}SCORE++
@@ -2272,6 +2323,14 @@ You can use the dialer to DERAIL once the papery yapper is gone.
 >revel
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 !by one point
+
+@verbs
+#verbcase listen-oyster-if-noun-is-papery-yapper
+>listen yapper
+Mindless babble about mutually favorable transactions. Perhaps you can find one here and now.
+#verbcase listen-oyster-if-noun-is-dialer
+>listen dialer
+You hear a hum from the dialer.
 
 @max
 >prepay yapper
@@ -2491,6 +2550,11 @@ Your score has just gone up by one point
 
 @hin
 DEBUG INFO: pins hinting.
+
+@verbs
+#reverbcase listen-oyster-if-noun-is-dialer
+>listen dialer
+The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
 @min

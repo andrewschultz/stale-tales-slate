@@ -63,17 +63,13 @@ Your score has just gone up by one point.
 
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study
 >listen
-WRONG
+Shouty youths.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
 >score
 Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
-
-#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
->listen
-Merciful quiet, for the moment.
 
 >d
 >stair
@@ -124,6 +120,10 @@ Score in a scenario: 9 out of 15 total points in the current region, Ordeal Relo
 
 >d
 Largely All-Grey Gallery
+
+#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
+>listen
+Merciful quiet, for the moment.
 
 >snib
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.

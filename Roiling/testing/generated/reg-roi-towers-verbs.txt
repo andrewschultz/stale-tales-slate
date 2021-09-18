@@ -15,6 +15,10 @@
 >enter turrets
 >z
 
+#verbcase listen-towers-if-noun-is-rodney
+>listen
+Rodney's intimidating enough, he can keep this place quiet. Well, everyone else in this place. He's a dry one, you think, as you see red.
+
 >gone
 >score
 Score in a scenario: 1 out of 56 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 56.
@@ -48,6 +52,9 @@ Topside Deposit
 
 >gt trefoil
 You had your fun in there.
+#verbcase listen-towers-if-player-is-in-topside-deposit
+>listen
+An unconvincing voice from where you came moans 'Stop! Die!' You must ignore it and go forward.
 
 >score
 Score in a scenario: 8 out of 56 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 56.
@@ -62,6 +69,13 @@ Score in a scenario: 9 out of 56 total points in the current region, Towers. Low
 
 >n
 Scope Copse
+
+#verbcase listen-towers-if-noun-is-diners
+>listen diners
+An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
+#verbcase listen-towers-if-noun-is-butlers
+>listen butlers
+The butlers loudly banter 'Let's rub (you) the wrong way!' You see red.
 
 >rusty
 Your score has just gone up by one point
@@ -121,6 +135,16 @@ Score in a scenario: 17 out of 56 total points in the current region, Towers. Lo
 
 Anemic Cinema
 
+#verbcase listen-towers-if-noun-is-angriest-ingrates
+>listen ingrates
+The ingrates go red from
+#verbcase listen-towers-if-noun-is-mardier-admirer
+>listen admirer
+The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy.
+#verbcase listen-towers-if-noun-is-lars-eede-or-noun-is-elsa-erde
+>listen lars
+Lars Eede mutters and moans how
+
 #verbcase smell-towers-if-noun-is-ingrates
 >smell ingrates
 Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way.
@@ -158,10 +182,21 @@ Score in a scenario: 21 out of 56 total points in the current region, Towers. Lo
 
 Shaven Havens
 
+#verbcase listen-towers-if-player-is-in-shaven-havens
+>listen
+You think you hear NEVAHs, but that's got to be just internal melodrama.
+
 >s
 >e
 
 Salted Deltas
+
+#verbcase listen-towers-if-noun-is-wait-seer
+>listen sweatier
+The wait-seer is so serene, you almost can't waste ire on being blocked. Almost. Maybe even saying random stuff might help a hint slip.
+#verbcase listen-towers-if-noun-is-asset-hit-atheists
+>listen atheists
+The atheists are really spelling out their logical arguments against any sort of God. In light of this, the wait-seer doesn't seem to be the least tired. Maybe you could learn more details talking to the atheists.
 
 >hastiest
 Your score has just gone up by one point
@@ -329,13 +364,29 @@ Score in a scenario: 38 out of 56 total points in the current region, Towers. Lo
 
 Obscurest Subsector
 
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins
+>listen yow
+Dr. Yow moans he could hack less shackles.
+
 >wordy
 Your score has just gone up by one point
+
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-wordy
+>listen yow
+Dr. Yow is talking slowly and soothingly.
 
 >score
 Score in a scenario: 39 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
 >push retape
+
+>z
+>z
+>z
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
+>listen
+Dr. Yow is silent once again.
 
 >gt duck
 >push repeat
@@ -359,6 +410,8 @@ Outer Route
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
 You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.
+#verbcase listen-towers-if-player-is-in-outer-route
+The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
 
 >revised
 
@@ -400,6 +453,10 @@ Score in a scenario: 45 out of 56 total points in the current region, Towers. Lo
 >rowdy
 #notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
+
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-rowdy
+>listen yow
+Dr. Yow is yacking away noisily and enthusiastically.
 
 >score
 Score in a scenario: 46 out of 56 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 56.

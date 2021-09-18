@@ -21,6 +21,13 @@ You catch a whiff of some mokes' smoke.
 #verbcase sleep-oyster-default
 >sleep
 You feel too inclined towards action for that.
+#verbcase listen-oyster-if-noun-is-tunes
+>listen tunes
+The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
+#verbcase listen-oyster-if-player-is-in-posh-hops-shop
+>listen
+!Silence. Awkward silence. An occasional cough.
+The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
 
 >score
 Score in a scenario: 0 out of 42 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 42.
@@ -49,6 +56,10 @@ by one point
 >score
 Score in a scenario: 3 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
+#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
+>listen
+Silence. Awkward silence. An occasional cough.
+
 >inset
 Perhaps you should've played it cool and fled, instead.
 >undo
@@ -69,6 +80,10 @@ INSET
 >score
 Score in a scenario: 4 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
+#verbcase listen-oyster-if-noun-is-clam
+>listen
+You hear the clam snapping.
+
 >calm
 Your score has just gone up by one point
 
@@ -83,6 +98,9 @@ Disease Seaside
 #verbcase smell-oyster-if-player-is-in-disease-seaside
 >smell
 Say, spare sea spray.
+#verbcase listen-oyster-if-player-is-in-disease-seaside
+>listen
+You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
 
 >score
 Score in a scenario: 6 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
@@ -102,17 +120,31 @@ If only it was that easy. Well, I hope it's not too hard to figure the right act
 #verbcase smell-oyster-if-player-is-in-fighter-freight
 >smell
 You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
+#verbcase listen-oyster-if-noun-is-pale-plea
+>listen
+/("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
 
 >leap
 Your score has just gone up by one point
 
 Anger Range
 
+#verbcase listen-oyster-if-noun-is-carps-or-noun-is-pikes
+>listen
+You can't help but listen to the carps' and pikes' immature, nasty jibes.
+#verbcase listen-oyster-if-noun-is-trout
+>listen trout
+Whimpering slightly.
+
 >score
 Score in a scenario: 8 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
 >scrap
 Your score has just gone up by one
+
+#verbcase listen-oyster-if-player-is-in-anger-range-and-carps-are-moot-and-sausage-is-off-stage
+>listen
+A cry. "Eh ... a runt..." you turn red on hearing it.
 
 >e
 Hardest Trashed Dearths
@@ -131,6 +163,9 @@ Score in a scenario: 10 out of 42 total points in the current region, Oyster. Lo
 #verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
 You've lost the way back, but the eeks are calling you on.
+#verbcase listen-oyster-if-noun-is-eeks
+>listen
+You hear eeks. Arcing caring. Weeps sweep. "Eek! Eek! Eek!" You must find where the eeks are coming from.
 
 >seek
 Your score has just gone up by one point
@@ -143,6 +178,9 @@ You don't want Aunt Tuna to perform a tsk task.
 #verbcase smell-oyster-if-player-is-in-lean-lane
 >smell
 Antiseptic spice taint.
+#verbcase listen-oyster-if-noun-is-aunt-tuna
+>listen tuna
+Aunt Tuna is humming something tuneless as she goes about her business.
 
 >score
 Score in a scenario: 11 out of 42 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
@@ -267,9 +305,16 @@ Sclerous Closures
 #verbcase smell-oyster-if-player-is-in-sclerous-closures-and-sardine-is-in-sclerous-closures
 >smell
 Sea rind.
+#verbcase listen-oyster-if-player-is-in-sclerous-closures
+>listen
+Silence--you wouldn't dare sin to upset the sardine with ear dins. OR WOULD YOU.
 
 >warp
 Your score has just gone up by one point
+
+#reverbcase listen-oyster-if-player-is-in-sclerous-closures
+>listen
+Silence.
 
 >score
 Score in a scenario: 27 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
@@ -288,15 +333,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 29 out of 42 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 42.
 
-#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
->gt rascal craals
-The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
-
 >n
 Horned Hedron
 
 #verbcase smell-oyster-if-noun-is-weaselly-walleyes
->smell
+>smell walleyes
 The weaselly walleyes smell of Skum-Musk.
 
 >w
@@ -345,6 +386,10 @@ Score in a scenario: 33 out of 42 total points in the current region, Oyster. Lo
 
 >e
 
+#verbcase goto-oyster-if-noun-is-rascal-craals-and-sausage-is-moot 11
+>gt rascal craals
+The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn through them. You don't need or want to hang out there, though.
+
 >patrol
 Your score has just gone up by one point
 
@@ -365,6 +410,13 @@ No need to go back there.
 >in
 
 Tenfold Teflon'd Den Loft
+
+#verbcase listen-oyster-if-noun-is-papery-yapper
+>listen yapper
+Mindless babble about mutually favorable transactions. Perhaps you can find one here and now.
+#verbcase listen-oyster-if-noun-is-dialer
+>listen dialer
+You hear a hum from the dialer.
 
 >prepay
 Your score has just gone up by one point
@@ -412,6 +464,10 @@ Score in a scenario: 39 out of 42 total points in the current region, Oyster. Th
 
 >derail
 Your score has just gone up by one point
+
+#reverbcase listen-oyster-if-noun-is-dialer
+>listen dialer
+The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
 Score in a scenario: 40 out of 42 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 42 points.

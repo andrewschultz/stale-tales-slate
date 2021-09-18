@@ -354,7 +354,7 @@ You change neither the number nor the makeup of the ten beams.
 @verbs
 #verbcase listen-ordeal-reload-if-player-is-in-dusty-study
 >listen
-WRONG
+Shouty youths.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -378,11 +378,6 @@ Largely All-Grey Gallery
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a decent omen.
 >undo
 >undo
-
-@verbs
-#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
->listen
-Merciful quiet, for the moment.
 
 @!min,nud
 >d
@@ -701,6 +696,11 @@ The steel pad intertwines into a marginally artistic pedestal.
 
 >d
 Largely All-Grey Gallery
+
+@verbs
+#verbcase listen-ordeal-reload-if-player-is-in-farming-framing-or-player-is-in-largely-all-grey-gallery
+>listen
+Merciful quiet, for the moment.
 
 @sli
 #slider test for pavement
