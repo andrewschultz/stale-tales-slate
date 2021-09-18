@@ -1193,6 +1193,11 @@ Bran Barn
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
+@verbs
+#verbcase listen-otters-if-player-is-in-bran-barn
+>listen
+You hear morose mooers you can't see.
+
 @nud
 #nudge for barn
 >banr
@@ -1240,9 +1245,6 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @verbs
-#verbcase listen-otters-if-player-is-in-bran-barn
->listen
-You hear morose mooers you can't see.
 #verbcase listen-otters-if-vow-here-is-touchable
 >listen
 You see red as you hear some nonsense repeated: "Eeh, row V!"
@@ -2470,7 +2472,6 @@ by one point
 Rancho Archon Anchor
 WTF FTW
 >7
->e
 
 @verbs
 #verbcase listen-otters-if-player-is-in-rancho-archon-anchor
@@ -2492,6 +2493,8 @@ Elvira mocks you again:
 >undo
 >undo
 >undo
+
+>e
 
 @nud
 #mistake retest for coins lure

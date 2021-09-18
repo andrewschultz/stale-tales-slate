@@ -124,6 +124,10 @@ Score in a scenario: 9 out of 33 total points in the current region, Otters. Low
 
 Bran Barn
 
+#verbcase listen-otters-if-player-is-in-bran-barn
+>listen
+You hear morose mooers you can't see.
+
 >although
 by one point
 DEBUG INFO: min-up codepath
@@ -137,9 +141,6 @@ DEBUG INFO: min-up codepath
 >score
 Score in a scenario: 11 out of 33 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 33.
 
-#verbcase listen-otters-if-player-is-in-bran-barn
->listen
-You hear morose mooers you can't see.
 #verbcase listen-otters-if-vow-here-is-touchable
 >listen
 You see red as you hear some nonsense repeated: "Eeh, row V!"
@@ -319,7 +320,6 @@ by one point
 Rancho Archon Anchor
 WTF FTW
 >7
->e
 
 #verbcase listen-otters-if-player-is-in-rancho-archon-anchor
 >listen
@@ -340,6 +340,8 @@ Elvira mocks you again:
 >undo
 >undo
 >undo
+
+>e
 
 >deeply
 Your score has just gone up by one point

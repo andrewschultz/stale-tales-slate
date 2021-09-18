@@ -7127,8 +7127,8 @@ this is the smell-stores rule:
 
 this is the smell-troves rule:
 	if can-hear-gritty, say "Eew-gas sewage. Skint-stink." instead;
-	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
 	if noun is Large Regal Lager, say "A faint rye-be-beery odor." instead;
+	if player is in Drain Nadir, say "Ew--mild mildew. A mustier semi-rut." instead;
 	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule, say "Perfumed. Dump-free." instead;
 
 this is the smell-routes rule:
@@ -7160,7 +7160,7 @@ this is the smell-towers rule:
 
 this is the smell-otters rule:
 	if the deli rye is touchable or noun is deli rye, say "The deli rye smells good, but Ed won't share." instead;
-	if player is in Disowned Downside, say "You can [if parleys splayer players are touchable]still [end if]smell the [players]['] Cool-Gen Cologne, from that coy-hued bottle." instead;
+	if player is in Disowned Downside, say "You can [if parleys splayer players are moot]still [end if]smell the [players]['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in Reclusion Inclosure, say "A clove, likely from one alcove." instead;
 	if player is in Loop Pool, say "Salt Water. Wet, astral." instead;
 	if player is in Rancho Archon Anchor, say "Vast vats['] sulfinyl reek sinfully, clearly eliminates all hope of silly fun. Oh: decayin['] cyanide, too." instead;
