@@ -10682,37 +10682,37 @@ to show-miss (curr - a region) and (ts - a truth state):
 		unless curr is metros or curr is resort, continue the action;
 	now sect-missed is false;
 	if curr is Ordeal Loader:
-		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a BLOT.";
-		if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge into a BUGLE.";
-		if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to SLANDER the darnels.";
-		if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to ATTICS.";
+		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a [b]BLOT[r].";
+		if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge into a [b]BUGLE[r].";
+		if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to [b]SLANDER[r] the darnels.";
+		if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to [b]ATTICS[r].";
 	if curr is stores:
-		if store b is in Trips Strip, say "[2da of stores]store B had some food for you. SORBET.";
+		if store b is in Trips Strip, say "[2da of stores]store B had some food for you. [b]SORBET[r].";
 		if store f is in Trips Strip, say "[2da of stores]store F in the Trips Strip led to a forest.";
 		if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
 		if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
-		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with BACTINE.";
+		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
 	if curr is forest:
-		if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to SILT.";
-		if banshee is not moot, say "[2da of forest]the banshee could've become a HASBEEN (space or not).";
+		if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to [b]SILT[r].";
+		if banshee is not moot, say "[2da of forest]the banshee could've become a [b]HASBEEN[r] (space or not).";
 	if curr is sortie:
-		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a PANCAKE.";
-		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become GRITS.";
+		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a [b]PANCAKE[r].";
+		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become [b]GRITS[r].";
 	if curr is metros:
-		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become RENTALS.";
+		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become [b]RENTALS[r].";
 		say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 	if curr is resort:
-		if found-lies is false, say "[2da of resort]you could've said LIES [if l2 are in Leis Isle]to expose the Leis Isle as an illusion[else]instead of taking the leis[end if].";
-		if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to CORK.";
-		if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
-		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
-		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
-		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS for 2 points.";
+		if found-lies is false, say "[2da of resort]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the Leis Isle as an illusion[else]instead of taking the leis[end if].";
+		if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to [b]CORK[r].";
+		if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to [b]WINGS[r].";
+		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to [b]ROPES[r][toolwood].";
+		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to [b]GRIPS[r][toolwood].";
+		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to [b]TOEHOLDS[r] for 2 points.";
 		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
 		if curr is solved: [so there are no testing artifacts with MISSES before]
-			say "[line break]There were three final commands to win the game. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them, unless you want to type UNDO to guess[or]you could also have tried [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
+			say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."
 
 rule for showing what the player missed:
 	now sect-missed is false;
@@ -10739,9 +10739,9 @@ to say alt-sols:
 
 table of tulip-acq
 sol	chosen
-"ASK NERDS ABOUT DARKNESS"	false
-"OPEN NOISE BAG in the Esoteric Coteries after getting the begonias"	false
-"SHOW EMITTER TO DEADBEAT after using it the Bastion, then using it again in the Esoteric Coteries"	false
+"[b]ASK NERDS ABOUT DARKNESS[r]"	false
+"[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"	false
+"[b]SHOW EMITTER TO DEADBEAT[r] after using it the Bastion, then using it again in the Esoteric Coteries"	false
 
 book amusing
 
@@ -10749,13 +10749,13 @@ to say nfi: say "[one of]? [or]? (region suggestions are not fully inclusive--se
 
 table of big yucks
 reg	yux
---	"XYZZY several times?"
---	"In the Ordeal Loader, trying SANDLER or LANDERS around the snarled darnels, or changing the toga to a gato[nfi]"
+--	"[b]XYZZY[r] several times?"
+--	"In the Ordeal Loader, trying [b]SANDLER[r] or [b]LANDERS[r] around the snarled darnels, or changing the toga to a gato[nfi]"
 --	"Reading the name list until the editorializing doesn't change?"
 --	"Examining store c? Several times?"
---	"STROBE in the Trips Strip?"
-forest	"The following anagrams in the forest where appropriate: Nile, File, DESTRO, amps, steam, padres, rasped, spader[nfi]"
-forest	"Saying GOD or GOB in the ghouls['] slough?"
+--	"[b]STROBE[r] in the Trips Strip?"
+forest	"The following anagrams in the forest where appropriate: Nile, File, [b]DESTRO[r], amps, steam, padres, rasped, spader[nfi]"
+forest	"Saying [b]GOD[r] or [b]GOB[r] in the ghouls['] slough?"
 sortie	"Eating the hot sauce or the taco?"
 sortie	"Examining the parmesan cheese?"
 sortie	"Praying in Sacred Cedars?"
@@ -10792,7 +10792,7 @@ listlasting is an activity.
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"see a L/LIST (1-[number of rows in table of megachatter]) of random [one of](now quasi-alphabetized) [or][stopping]NPC text, or LN for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
+"see a L/[b]LIST[r] (1-[number of rows in table of megachatter]) of random [one of](now quasi-alphabetized) [or][stopping]NPC text, or LN for the next one"	true	"l/list [number]" or "[number]"	--	listshowing
 --	true	"l/list"	--	listlisting
 --	true	"ln"	--	listlasting
 

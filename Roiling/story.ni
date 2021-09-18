@@ -1361,9 +1361,9 @@ check gotoing:
 	d "Goto progvals: from [location of player] [progval of location of player] to [noun] [progval of noun].";
 	if noun is location of player, say "You're already here!" instead;
 	if noun is strip and strip is visited and player is not in Cruelest Lectures:
-		say "The command you may be looking for is RETRY. Do that now instead?";
+		say "The command you may be looking for is [b]RETRY[r]. Do that now instead?";
 		if the player yes-consents, try retrying instead;
-		say "OK. You will want to use RETRY in the future." instead;
+		say "OK. You will want to use [b]RETRY[r] in the future." instead;
 	if qbc_litany is not table of no conversation, say "End your conversation first." instead;
 	let noureg be map region of location of noun;
 	if noureg is solved and noureg is not stores, say "You already solved [noureg]." instead;
@@ -1405,7 +1405,7 @@ this is the goto-troves rule:
 this is the goto-presto rule:
 	if noun is nowt town or noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
-		say "GO TO is disabled for Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Perhaps there's another way to solve it than by walking through[if leo is eager]. Anyway, it'd make poor [l-n-r]'s heads spin[end if]." instead;
+		say "[b]GO TO[r] is disabled for Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Perhaps there's another way to solve it than by walking through[if leo is eager]. Anyway, it'd make poor [l-n-r]'s heads spin[end if]." instead;
 	if noun is Dirge Ridge:
 		if Leo is dismissed:
 			abide by the post-wall-arch rule;
@@ -1504,7 +1504,7 @@ persuasion rule for asking a person to try doing something (this is the default 
 [general]
 
 persuasion rule for asking pedanto notepad to try doing something:
-	say "CONSULT it instead.";
+	say "[b]CONSULT[r] the notepad instead.";
 	persuasion fails;
 
 persuasion rule for asking the parrot to try giving:
@@ -1932,7 +1932,7 @@ table of reflexive-blather	[ask x about x] [tor] [trb] [xxtalk1]
 him-asked	him-told
 Report Porter Perrot	"Perrot's views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
-Respect Specter	"'I'll give you help if you SCAN me. But as an undead, I can't talk much beyond what's allowed.'"
+Respect Specter	"'I'll give you help if you [b]SCAN[r] me. But as an undead, I can't talk much beyond what's allowed.'"
 nestor	"[if store k is touchable]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is touchable]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 blabber babbler	--
@@ -3396,7 +3396,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 after quipping (this is the usually don't undo convos rule):
 	now current quip is mowered;
 	if current quip is showset-quip:
-		ital-say "if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.";
+		ital-say "if you didn't mean to do this, you can [b]UNDO[r] to get a bit more help from Elmo.";
 	else:
 		if debug-state is false:
 			prevent undo;
@@ -18743,7 +18743,7 @@ to get-dead:
 	else if location of player is Reclusion Inclosure:
 		do nothing;
 	else if joke-death is true:
-		ital-say "this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.";
+		ital-say "this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than [b]UNDO[r] and retry them.";
 	d "Getting dead: [undo-code].[line break]";
 	end the story saying "[deth]";
 
@@ -19564,7 +19564,7 @@ a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]
 
 chapter vow here
 
-the vow here is vanishing LLPish scenery. "You could probably LISTEN to hear the vow better. It doesn't make you see red if you don't hear the details."
+the vow here is vanishing LLPish scenery. "You could probably [b]LISTEN[r] to hear the vow better. It doesn't make you see red if you don't hear the details."
 
 a-text of vow here is "RYRYRYR". b-text of vow here is "RGPYRYR". parse-text of vow here is "x[sp]O[sp]W[sp]-[sp]x[sp]-[sp]x".
 
@@ -19708,7 +19708,7 @@ chapter satyr
 
 the stray satyr is a reflexive male northy puzanimal. description is "He looks [if satyr is reflexed]like he's dreaming of a poem or something. You've made him happier[else]He looks preoccupied and mistrustful[might-read-satyr][end if].". "A stray satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if].". locale-text is "a stray satyr [if satyr is reflexed]dreaming of a better Yorpwald[else]resistant to all but practicality and survival[end if]".
 
-to say might-read-satyr: say "[if satyr is read-yet]. You might be able to READ him--his name seems branded on"
+to say might-read-satyr: say "[if satyr is read-yet]. You might be able to [b]READ[r] him--his name seems branded on"
 
 understand "tsyra" as stray satyr when satyr is read-yet.
 
@@ -19728,7 +19728,7 @@ every turn (this is the owls kill you rule):
 	if owls were touchable and owls are touchable:
 		unless the action is procedural:
 			if debug-state is true, say "[the current action].";
-			say "You were not fast enough to dispel the owls. They peck you to a death so horrible even an unemotional computer type is willing to give you a chance to change it with UNDO.";
+			say "You were not fast enough to dispel the owls. They peck you to a death so horrible even an unemotional computer type is willing to give you a chance to change it with [b]UNDO[r].";
 			get-dead;
 		else:
 			ital-say "You'll get a mulligan for instantaneous actions like examining, but you may want to deal with those owls, or flee.";
@@ -19736,7 +19736,7 @@ every turn (this is the owls kill you rule):
 every turn (this is the raptor kills you rule):
 	if raptor was touchable and raptor is touchable:
 		unless the action is procedural:
-			say "You were not fast enough to dispel the raptor. It gobbles you so quickly and gruesomely that even an unemotional computer type is willing to give you a chance to change it with UNDO.";
+			say "You were not fast enough to dispel the raptor. It gobbles you so quickly and gruesomely that even an unemotional computer type is willing to give you a chance to change it with [b]UNDO[r].";
 			get-dead;
 		else:
 			ital-say "You'll get a mulligan for instantaneous actions like examining, but you may want to deal with that raptor, or flee.";
@@ -20074,7 +20074,7 @@ carry out playing:
 			force-status;
 			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him later. Or, if you're interested right now, would you like to go back to the Strip of Profits?";
 			unless the player regex-prompt-consents:
-				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
+				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just [b]UNDO[r] at the next command.[paragraph break]For now, you'll be a ... REPOSED DEPOSER.";
 				note-denial;
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
@@ -22253,7 +22253,7 @@ this is the spoil-hints rule:
 			d "Oops [hint-entry entry] needs a spoil-entry in table of hintobjs.[line break]";
 		if player has curst crust:
 			if there is no spoil-entry entry:
-				say "Before you eat the crust, you mutter a naughty word. You may need to use HINT to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
+				say "Before you eat the crust, you mutter a naughty word. You may need to use [b]HINT[r] to deal with [the hint-entry entry], which may be more distasteful than the crust itself.";
 				ital-say "this is a bug. If you have a transcript/game state, I'd love to know.";
 				do nothing instead;
 			if noun is thruhinted and scams is false, say "Looking for any excuse not to eat the crust, you suddenly think [if player is in Hacks Shack]of [end if][spoil-entry entry]." instead;
@@ -22291,7 +22291,7 @@ this is the spoil-hints rule:
 				if scams is false:
 					cinders-bye;
 				else:
-					say "You activated SCAMS, so I won't block undo.";
+					say "You activated [b]SCAMS[r], so I won't block undo.";
 			now noun is cheatitemed;
 			the rule succeeds;
 
@@ -22387,7 +22387,7 @@ to say give-croc:
 		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the premises to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
 
 to say casp-cap:
-	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or]SCRAPE the blackboard.[minus][cycling]"
+	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or][b]SCRAPE[r] the blackboard.[minus][cycling]"
 
 to decide whether one-imp-down:
 	if imp-score >= 1, yes;
@@ -22522,22 +22522,22 @@ book amusing
 
 table of big yucks
 reg-needed	yux
---	"KNOCK when Report Porter Perrot knocks?"
---	"KISSing Elvira or making her ALIVER?"
---	"TICKLE ELMO?"
+--	"[b]KNOCK[r] when Report Porter Perrot knocks?"
+--	"[b]KISSing Elvira or making her [b]ALIVER[r]?"
+--	"[b]TICKLE ELMO[r]?"
 --	"WAITing (Z) or not typing anything in a command a few times?"
 --	"READing all of the Dope Op-Ed? (It has far fewer entries than the random text)"
---	"BURNING various things?"
+--	"[b]BURNING[r] various things?"
 --	"SMELLing in various places?"
 --	"LISTENing in various places?"
 --	"ATTACKing yourself, or various NPCs or things, including Brother Horbert, the Tetris Sitter, the yurts and the campiest campsite?"
---	"Asking for a HINT in the Rancho Archon Anchor?"
+--	"Asking for a [b]HINT[r] in the Rancho Archon Anchor?"
 --	"reading Roiling Mistakes.i7x for other 'clever' 'jokes?'"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
 routes	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
-routes	"Feeling BANE around the bean?"
-troves	"Anagramming the astute STATUE?"
-presto	"Calling the cola POP or SODA?"
+routes	"Feeling [b]BANE[r] around the bean?"
+troves	"Anagramming the astute [b]STATUE[r]?"
+presto	"Calling the cola [b]POP[r] or [b]SODA[r]?"
 presto	"Cursing, or anagramming cursing, anywhere in Presto?"
 others	"Trying to get a mango twice in the Clearing?"
 others	"Giving Curtis four or more fruits?"
@@ -22653,7 +22653,7 @@ This is the print the modified final question rule:
 						say "[2da][final question wording entry][line break]";
 					else:
 						increment pure-metas;
-	say "You [if the story has ended finally]can also[else]probably want to UNDO, but your full list of choices is to[end if] ";
+	say "You [if the story has ended finally]can also[else]probably want to [b]UNDO[r], but your full list of choices is to[end if] ";
 	repeat through the Table of Final Question Options:
 		if the only if victorious entry is false or the story has ended finally:
 			if there is a final response rule entry
@@ -22668,16 +22668,16 @@ part real options
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic		final response rule		final response activity
-"see ALTERNATE/ALT paths for mutually exclusive solutions"	true	"alt/alternate"	--	showing alternate routes
-"check what you may've MISSED (minor spoilers) point-wise"	true	"missed"	--	showing what the player missed
+"see [b]ALTERNATE[r]/[b]ALT[r] paths for mutually exclusive solutions"	true	"alt/alternate"	--	showing alternate routes
+"check what you may've [b]MISSED[r] (minor spoilers) point-wise"	true	"missed"	--	showing what the player missed
 --	false	"l/list"	--	potzing about
 --	false	"n/ln/nl"	--	putzing about
 --	false	"p/pl"	--	putzing around
 --	false	"la/lh/lm/lp/ls/lt/lu/lv/lw/ly"	--	reging about
 --	false	"nr/lr"	--	nrling about
-"[one of]FORM (OF MR)[or](M OR F) FORM[in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
-"L(IST) to see random dialogues, etc., L(IST) (NUMBER) for a particular one, LN/NL for the next or L(store name) for one region (LA for general or, say, LU for Routes), or LR for the region's next list"	false	"l/list [number]"	--	potzing around
-"DEMO DOME MODE (director's cut, can't undo)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
+"[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
+"L([b]IST[r]) to see random dialogues, etc., L(IST) ([b]NUMBER[r]) for a particular one, LN/NL for the next or L(store name) for one region (LA for general or, say, LU for Routes), or LR for the region's next list"	false	"l/list [number]"	--	potzing around
+"[b]DEMO DOME MODE[r] (director's cut, can't undo)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
 
 sexsorting is an activity.
 
@@ -22705,8 +22705,8 @@ examp
 "[bold type](routes)[r] Cursing in Cleric Circle."
 "Going a direction in Same Mesa."
 "[bold type](troves)[r] catching the thief."
-"Saying ACRE."
-"Reading DEAL."
+"Saying [b]ACRE[r]."
+"Reading [b]DEAL[r]."
 "When entering the Upscale Capsule."
 "[bold type](presto)[r] The plebe stops you or lets you by with different text."
 "[bold type](oyster)[r] The win-text for the OYSTER region."
@@ -22878,7 +22878,7 @@ rule for showing a list:
 
 showing alternate routes is an activity.
 
-to say remap-unset: say "[if remapped is true]UNSET the tunes[else]REMAP the perma-amper[end if]";
+to say remap-unset: say "[if remapped is true][b]UNSET[r] the tunes[else][b]REMAP[r] the perma-amper[end if]";
 
 a region has a rule called altroutes.
 
@@ -22896,15 +22896,15 @@ this is the troves-alt rule:
 this is the presto-alt rule:
 	say "[eqls]PRESTO[line break]";
 	if hoop is moot:
-		say "[2da]you could've said [if phooeyed is true]POOH instead of PHOOEY[else]PHOOEY instead of POOH[end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
+		say "[2da]you could've said [if phooeyed is true][b]POOH[r] instead of [b]PHOOEY[r][else][b]PHOOEY[r] instead of [b]POOH[r][end if], which would've meant one [if phooeyed is true]less[else]more[end if] point.";
 	else:
 		say "[2da]You have two ways to remove the hoop ahead.";
 	if maze-points > 0:
-		say "[2da][if maze-points is 1]MAZEL TOV would've given more points in the Volt Maze[else]WONT was how to cop out of Nowt Town, but for only one point instead of [maze-points in words][end if].";
+		say "[2da][if maze-points is 1][b]MAZEL TOV[r] would've given more points in the Volt Maze[else][b]WONT[r] was how to cop out of Nowt Town, but for only one point instead of [maze-points in words][end if].";
 	else:
 		say "[2da]There are three ways to get by the maze ahead, each giving a different number of points.";
 	if hogs are moot:
-		say "[2da][if hogs-not-keys is true]SYKE[else]GOSH[end if] was another way around the hogs to get the keys.";
+		say "[2da][if hogs-not-keys is true][b]SYKE[r][else][b]GOSH[r][end if] was another way around the hogs to get the keys.";
 	else:
 		say "[2da]You'll have two ways to get by Saps['] Pass.";
 	say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
@@ -22913,9 +22913,9 @@ this is the presto-alt rule:
 	else:
 		say "[eqls]you have three ways ahead to get the drab yoke.";
 	if USB is reflexive:
-		say "[eqls]You'll have two ways to deal with a USB.";
+		say "[eqls]You'll have two ways to deal with a [b]USB[r].";
 	else:
-		say "[eqls]You could also have made the USB into a [if issub is true]bus[else]sub[end if]."
+		say "[eqls]You could also have made the [b]USB[r] into a [if issub is true]bus[else]sub[end if]."
 
 unset-not-remap is a truth state that varies.
 
