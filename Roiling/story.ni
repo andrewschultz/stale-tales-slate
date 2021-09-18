@@ -14217,7 +14217,7 @@ check asking casper spacer about:
 	if casper-talk is false, casper-chat instead;
 
 to casper-chat:
-	say "'Before you can pull a bar seat abreast... 'Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad.' He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says 'Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back.'[add-hangout]"
+	say "Before you can pull a bar seat abreast... 'Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad.' He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says 'Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back.'[add-hangout]"
 
 understand "author" as Casper Spacer.
 
@@ -22676,7 +22676,7 @@ final question wording	only if victorious	topic		final response rule		final resp
 --	false	"la/lh/lm/lp/ls/lt/lu/lv/lw/ly"	--	reging about
 --	false	"nr/lr"	--	nrling about
 "[one of][b]FORM[r] ([b]OF MR[r])[or]([b]M OR F[r]) [b]FORM[r][in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
-"L([b]IST[r]) to see random dialogues, etc., L(IST) ([b]NUMBER[r]) for a particular one, LN/NL for the next or L(store name) for one region (LA for general or, say, LU for Routes), or LR for the region's next list"	false	"l/list [number]"	--	potzing around
+"L([b]IST[r]) to see random dialogues, etc., L(IST) (NUMBER) for a particular one, LN/NL for the next or L(store name) for one region (LA for general or, say, LU for Routes), or LR for the region's next list"	false	"l/list [number]"	--	potzing around
 "[b]DEMO DOME MODE[r] (director's cut, can't undo)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
 
 sexsorting is an activity.
@@ -22915,7 +22915,7 @@ this is the presto-alt rule:
 	if USB is reflexive:
 		say "[eqls]You'll have two ways to deal with a [b]USB[r].";
 	else:
-		say "[eqls]You could also have made the [b]USB[r] into a [if issub is true]bus[else]sub[end if]."
+		say "[eqls]You could also have made the [b]USB[r] into a [if issub is true][b]BUS[r][else][b]SUB[r][end if]."
 
 unset-not-remap is a truth state that varies.
 
@@ -22926,18 +22926,18 @@ this is the oyster-alt rule:
 	if pill-warned is false, say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
 	if Olde Lode is visited:
 		say "[2da][remaining-actions of 0] are the other actions that would've annoyed Posh Hops Shop pesty types[if spill-target is trolls] instead of SPILLing the pills[else], as you only needed three of the five possible[end if].";
-		if tunes are moot, say "[2da]You could have also [if remapped is true]UNSET the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
+		if tunes are moot, say "[2da]You could have also [if remapped is true][b]UNSET[r] the tunes[else]REMAPped the perma-amper[end if] to break the jukebox.";
 	else:
 		say "[2da]You won't be able to use all actions to leave the shop.";
 	if Anger Range is unvisited:
 		say "[2da]There is some branching between Disease Seaside and Anger Range.";
 	else:
 		if sabot boats are in Disease Seaside:
-			say "[2da]you could've tried to BOAST to get the sabot boats['] attention, then LEAP.";
+			say "[2da]you could've tried to [b]BOAST[r] to get the sabot boats['] attention, then [b]LEAP[r].";
 		else:
-			say "[2da]you could've tried to [if frat raft is reflexive]FART on the frat raft, then [end if]SOAR to use the oars.";
+			say "[2da]you could've tried to [if frat raft is reflexive][b]FART[r] on the frat raft, then [end if][b]SOAR[r] to use the oars.";
 	if pikes are moot:
-		say "[2da]you could've tried to [if spikes is true]SCRAP with the carps[else]SPIKE the pikes[end if] to rescue Tortu.";
+		say "[2da]you could've tried to [if spikes is true][b]SCRAP[r] with the carps[else][b]SPIKE[r] the pikes[end if] to rescue Tortu.";
 	else:
 		say "[2da]you can defeat the carps and pikes two different ways ahead.";
 	if end den is unvisited, say "[2da][if Tenfold Teflond Den Loft is visited]you actually missed a room: the End Den in the Horned Hedron, because you examined the gleaner before entering the portal. Don't worry about going back. There was nothing there[else]You have a chance to jump past the End Den[end if].";
@@ -22949,24 +22949,24 @@ naiv-nat is a truth state that varies.
 this is the towers-alt rule:
 	say "[eqls]TOWERS[line break]";
 	if bredo is moot:
-		say "[2da]Bredo could've also become [if bredo-bored is true]ROBED[else]BORED[instead].";
+		say "[2da]Bredo could've also become [if bredo-bored is true][b]ROBED[r][else][b]BORED[r][instead].";
 	else if towers is not solved and Bredo is in Loftier Trefoil:
 		say "[2da]Bredo has two solutions.";
 	if towers is not solved and Reeds Ale is not moot, say "[2da]Two solutions for the Reed's Ale salesman.";
-	if Reeds Ale is moot, say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-full] to give [him-her] a new outlook on life.";
+	if Reeds Ale is moot, say "[2da]you could've also [if rese is true][b]RELEASED[r][else][b]RESEALED[r][end if] [el-la-full] to give [him-her] a new outlook on life.";
 	if towers is not solved and natives site van is not moot, say "[2da]Two solutions for the natives['] site van.";
-	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
-	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+	if natives site van is moot, say "[2da]you could've also made the natives['] site van [if naiv-nat is true][b]VAINEST[r][else][b]NAIVEST[r][end if] to uproot them.";
+	if Mislit Limits are visited, say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waters, where you'd have needed to bring the [neaters] [b]NEAREST[r][else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster [b]STABLER[r][else]you'd have passed Rawest Waters if you'd have made the turbos [b]ROBUST[r][end if].";
 	if towers is not solved and otters is not solved and Mislit Limits are not visited, say "[2da]Branch upcoming before crossing Leak Lake.";
 	if towers is not solved and lone duck is not moot, say "[2da]You have two solutions ahead for the lone duck/fissure.";
 	if lone duck is moot, say "[2da]Instead of [ff of true], you could've [ff of false].";
 
-to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure] FUSSIER[else]using the lone duck to make the prison ropins UNLOCKED[end if]"
+to say ff of (j - a truth state): say "[if j is fissure-flip]making the [fissure] [b]FUSSIER[r][else]using the lone duck to make the prison ropins [b]UNLOCKED[r][end if]"
 
 this is the otters-alt rule:
 	say "[eqls]OTTERS[line break]";
 	say "[2da]there were several other ways you could've made the [pla-ma]s act (you only needed three of seven): [how-players].";
-	say "[2da]you could've made the imp act [b][if number of forcemooted northern block-concepts is 0]<BUG>[else][flip-name of random forcemooted northern block-concept][end if][r], and the whiners could've spoken [b][if number of forcemooted southern block-concepts is 0]<BUG>[else][flip-name of random southern forcemooted block-concept][end if][r].";
+	say "[2da]you could've made the imp act [b][if number of forcemooted northern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random forcemooted northern block-concept][end if][r], and the whiners could've spoken [b][if number of forcemooted southern block-concepts is 0]<[b]BUG[r]>[else][flip-name of random southern forcemooted block-concept][end if][r].";
 
 this is the others-alt rule:
 	say "[eqls]OTHERS[line break]";
@@ -22984,7 +22984,7 @@ altroutes of otters is the otters-alt rule.
 altroutes of others is the others-alt rule.
 
 rule for showing alternate routes:
-	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. Ordeal Reload and Routes have no mutually exclusive solutions. This list overlaps very little with the MISSED list which shows actual points missed.";
+	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. Ordeal Reload and Routes have no mutually exclusive solutions. This list overlaps very little with the [b]MISSED[r] list which shows actual points missed.";
 	d "[list of solved regions].";
 	repeat with myr running through regions-in-order:
 		if myr is solved, process the altroutes of myr;
@@ -23000,26 +23000,26 @@ to say how-players:
 		say "[unless got-yet is true] or [end if]";
 		now got-yet is true;
 		if QQ is t-tearily-irately:
-			say "IRATELY/TEARILY";
+			say "[b]IRATELY[r]/[b]TEARILY[r]";
 		else:
 			choose row with the-from of QQ in table of otters anagrams;
 			say "[right-word entry]";
-	if t-tearily-irately is moot and t-tearily-irately is not passed-on, say "[if irately is true]TEARILY instead of IRATELY[else]IRATELY instead of TEARILY[end if]";
+	if t-tearily-irately is moot and t-tearily-irately is not passed-on, say "[if irately is true][b]TEARILY[r] instead of [b]IRATELY[r][else][b]IRATELY[r] instead of [b]TEARILY[r][end if]";
 
 showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
-	if tips pits are not reflexed, add "SPIT" to poshact;
-	if tines are not reflexed, add "INSET" to poshact;
-	if capers is not reflexed, add "SCRAPE" to poshact;
-	if gins sign is not reflexed, add "SING" to poshact;
-	if tunes are not moot, add "UNSET/REMAP" to poshact;
+	if tips pits are not reflexed, add "[b]SPIT[r]" to poshact;
+	if tines are not reflexed, add "[b]INSET[r]" to poshact;
+	if capers is not reflexed, add "[b]SCRAPE[r]" to poshact;
+	if gins sign is not reflexed, add "[b]SING[r]" to poshact;
+	if tunes are not moot, add "[b]UNSET[r]/[b]REMAP[r]" to poshact;
 	if tunes are reflexed:
 		if remapped is true:
-			add "UNSET (instead of REMAP to break the jukebox)" to poshact;
+			add "[b]UNSET[r] (instead of [b]REMAP[r] to break the jukebox)" to poshact;
 		else:
-			add "REMAP (instead of UNSET to break the jukebox)" to poshact;
+			add "[b]REMAP[r] (instead of [b]UNSET[r] to break the jukebox)" to poshact;
 	sort poshact in random order;
 	if fd > 0:
 		while number of entries in poshact > fd:
@@ -23034,7 +23034,7 @@ doublecheat is a truth state that varies.
 
 to say d-then:
 	if doublecheat is true:
-		say "DERAIL then ";
+		say "[b]DERAIL[r] then ";
 
 to say how-pills-used:
 	repeat through table of hintobjs:
@@ -23063,73 +23063,73 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	now miss-room is Meatier Emerita Emirate;
 	if needsolve is true and myreg is not solved, continue the action;
 	if myreg is Ordeal Reload:
-		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a PAINTING.";
-		if meet bans are in Dusty Study, say "[2dmiss of myreg]you could've made the MEET-BANS into a BASEMENT.";
-		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
-		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a STAIR.";
-		if niche is in Dusty Study, say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
-		if pram is in Highest Heights, say "[2dmiss of myreg]you could've changed the pram into a RAMP[if Highest Heights is unvisited], if you'd gone up from the study[end if].";
-		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a SNIB on the ISBN bins.";
+		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a [b]PAINTING[r].";
+		if meet bans are in Dusty Study, say "[2dmiss of myreg]you could've made the MEET-BANS into a [b]BASEMENT[r].";
+		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
+		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a [b]STAIR[r].";
+		if niche is in Dusty Study, say "[2dmiss of myreg]you could've changed 'my niche' into a [b]CHIMNEY[r].";
+		if pram is in Highest Heights, say "[2dmiss of myreg]you could've changed the pram into a [b]RAMP[r][if Highest Heights is unvisited], if you'd gone up from the study[end if].";
+		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a [b]SNIB[r] on the [b]ISBN[r] bins.";
 	else if myreg is stores:
-		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some SORBET.";
-		if store K is in stores, say "[2dmiss of myreg]Store K could've made some TOKERS.";
-		if store N is in stores, say "[2dmiss of myreg]NESTOR was hiding in Store K.";
-		if store U is in stores, say "[2dmiss of myreg]ROUTES were in Store U.";
-		if store V is in stores, say "[2dmiss of myreg]TROVES were in Store V.";
-		if store P is in stores, say "[2dmiss of myreg]PRESTO would've opened Store P.";
-		if store Y is in stores, say "[2dmiss of myreg]The OYSTER was in Store Y.";
-		if store W is in stores, say "[2dmiss of myreg]TOWERS were in Store W.";
+		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some [b]SORBET[r].";
+		if store K is in stores, say "[2dmiss of myreg]Store K could've made some [b]TOKERS[r].";
+		if store N is in stores, say "[2dmiss of myreg][b]NESTOR[r] was hiding in Store K.";
+		if store U is in stores, say "[2dmiss of myreg][b]ROUTES[r] were in Store U.";
+		if store V is in stores, say "[2dmiss of myreg][b]TROVES[r] were in Store V.";
+		if store P is in stores, say "[2dmiss of myreg][b]PRESTO[r] would've opened Store P.";
+		if store Y is in stores, say "[2dmiss of myreg]The [b]OYSTER[r] was in Store Y.";
+		if store W is in stores, say "[2dmiss of myreg][b]TOWERS[r] were in Store W.";
 	else if myreg is routes:
-		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
-		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done WITHOUT the content of the raptest patters in Sonancy Canyons.";
+		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go [b]TOWARDS[r] the worst ad in the Same Mesa.";
+		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done [b]WITHOUT[r] the content of the raptest patters in Sonancy Canyons.";
 	else if myreg is troves:
-		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
-		if a sty tasty say is reflexive, say "[2drm of Bustle Sublet]you could've tried to STAY around A Sty: Tasty, Say.";
-		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to BELIEVE to neutralize the evil bee, too."; [1 of 2]
-		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to REASON to neutralize the SNORE SO ARENA, too.";
-		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to RELAPSE around the pleaser leapers.";
-		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to GLARE at the Lager.";
-		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to MASTER the ME ARTS."; [1 of 2]
-		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to BOLSTER yourself to deserve lobster.";
-		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to STRIVE by the statue of Trevis Vister."; [1 of 2]
-		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to ASPIRE, from the praise in the Econ-Cone.";
-		if DIVORCES is not moot, say "[2drm of Upscale Capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
-		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to RESIST Sister Tressi.";
-		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to RAMBLE to ignore [mbb]."; [1 of 2]
+		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page.";
+		if a sty tasty say is reflexive, say "[2drm of Bustle Sublet]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
+		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
+		if [b]SNORE SO ARENA[r] is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
+		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
+		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]GLARE[r] at the Lager.";
+		if [b]ME ARTS[r] is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
+		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
+		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
+		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
+		if [b]DIVORCES[r] is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
+		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
+		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
 	else if myreg is presto:
-		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
-		if maze-points < 2, say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
+		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted [b]BLAM[r] at the lamb.";
+		if maze-points < 2, say "[2drm of Grey Gyre]you could've said [b]MAZEL TOV[r] to get past the maze.";
 		if maze-points is 2, say "[2drm of Grey Gyre]Because you scanned someone in the Unwary Runway, you only got two out of three points for the Volt Maze."; [mazeguide-scanned]
-		if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said GOODNESS to the Odes Song.";
-		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
-		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said PROST (a German word to toast someone) to the Sport Ports.";
-		if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said WHAT to the Hawt Thaw.";
-		if starch charts are not moot, say "[2drm of Saps Pass]you could've called the starch charts TRASCH.";
-		if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become ROM STICKS.";
-		if TBA key is reflexive, say "[2drm of Hacks Shack]you could've made the TBA key a TAB key.";
-		if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a CASSEROLE.";
-		if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A AVIDER.";
-		if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to DERIVE how to improve Drive E.";
+		if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said [b]GOODNESS[r] to the Odes Song.";
+		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying [b]PHOOEY[r] instead of [b]POOH[r].";
+		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said [b]PROST[r] (a German word to toast someone) to the Sport Ports.";
+		if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said [b]WHAT[r] to the Hawt Thaw.";
+		if starch charts are not moot, say "[2drm of Saps Pass]you could've called the starch charts [b]TRASCH[r].";
+		if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become [b]ROM STICKS[r].";
+		if [b]TBA[r] key is reflexive, say "[2drm of Hacks Shack]you could've made the [b]TBA[r] key a [b]TAB[r] key.";
+		if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a [b]CASSEROLE[r].";
+		if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A [b]AVIDER[r].";
+		if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to [b]DERIVE[r] how to improve Drive E.";
 	else if myreg is oyster:
 		if spill-target is not nothing, say "[2dmiss of myreg][endgame-spill-instead].";
 		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
-		if cans are not moot, say "[2dmiss of myreg]you could've tried to SCAN the cans.";
-		if dent is not moot, say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
-		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
+		if cans are not moot, say "[2dmiss of myreg]you could've tried to [b]SCAN[r] the cans.";
+		if dent is not moot, say "[2dmiss of myreg]you could've stopped to [b]TEND[r] the dent in Aunt Tuna's raw red drawer.";
+		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to [b]SHAPE[r] the heaps to beautify the hut.";
 		if wipes are on raw red drawer:
-			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
+			say "[2dmiss of myreg]you could've tried to [b]SWIPE[r] the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not moot:
-			say "[2dmiss of myreg]you could've tried to SWEAT to remove the waste.";
+			say "[2dmiss of myreg]you could've tried to [b]SWEAT[r] to remove the waste.";
 		else if lance is reflexive:
-			say "[2dmiss of myreg]you could've tried to CLEAN the lance.";
+			say "[2dmiss of myreg]you could've tried to [b]CLEAN[r] the lance.";
 		else if templar ramplet is not moot:
-			say "[2dmiss of myreg]you could've tried to TRAMPLE the Templar Ramplet.";
+			say "[2dmiss of myreg]you could've tried to [b]TRAMPLE[r] the Templar Ramplet.";
 		else if Plasm Lamps is visited and bogus-psalm are not reflexed:
-			say "[2dmiss of myreg]you could've tried to PSALM in Plasm Lamps.";
-		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
-		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
+			say "[2dmiss of myreg]you could've tried to [b]PSALM[r] in Plasm Lamps.";
+		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to [b]SPLAIN[r] in the plains, at any time during the door-open puzzle.";
+		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
 	else if myreg is Towers:
-		if recital article is not moot, say "[2dmiss of myreg]you could've made the recital article TALCIER.";
+		if recital article is not moot, say "[2dmiss of myreg]you could've made the recital article [b]TALCIER[r].";
 		if number of pinko picaros > 0:
 			repeat with pk running through pinko picaros:
 				say "[2dmiss of myreg][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
@@ -23138,7 +23138,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[eqls][eqls]starting missed Towers guardians[line break]";
 			repeat with gua running through not moot guardians:
 				if gua is natives site van:
-					say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned VAINEST or NAIVEST.";
+					say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned [b]VAINEST[r] or [b]NAIVEST[r].";
 					next;
 				if bad-gender-match of gua, next;
 				now xxx is gua;
@@ -23146,40 +23146,40 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				choose row with the-from of xxx in table of towers anagrams;
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
-				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
+				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else][right-word entry in upper case][end if].";
 			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
-		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become RUSTY.";
-		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become COILED.";
-		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become GRANDIOSE.";
-		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar [keycar-loc] could've been made CREAKY[else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
-		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of](MISSED again for puzzle spoiler) found a puzzle[or]made yourself ROUSTED after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
-		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels AIMLESS.";
-		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become RUSTLED.";
-		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become PROSIEST.";
+		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become [b]RUSTY[r].";
+		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become [b]COILED[r].";
+		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become [b]GRANDIOSE[r].";
+		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r][else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
+		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of]([b]MISSED[r] again for puzzle spoiler) found a puzzle[or]made yourself [b]ROUSTED[r] after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
+		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels [b]AIMLESS[r].";
+		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become [b]RUSTLED[r].";
+		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become [b]PROSIEST[r].";
 		if mended mini denim is not moot:
-			say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been MINED.";
-			if arid den is unvisited, say "[2dmiss of myreg]there was a Dire and Arid Den below the denim. [one of]Type MISSES again to see how to escape[or]You would've gotten out by feeling DANDIER[stopping].";
-		if raves saver is reflexive, say "[2dmiss of myreg]the REPLAY PLAYER letters on the raves saver could've become PEARLY.";
-		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
-		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire REWIRED.";
-		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine PUNIER to uncover something beyond.";
-		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent PRESENT to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter TRISTE[else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
+			say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been [b]MINED[r].";
+			if arid den is unvisited, say "[2dmiss of myreg]there was a Dire and Arid Den below the denim. [one of]Type [b]MISSES[r] again to see how to escape[or]You would've gotten out by feeling [b]DANDIER[r][stopping].";
+		if raves saver is reflexive, say "[2dmiss of myreg]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
+		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
+		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire [b]REWIRED[r].";
+		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine [b]PUNIER[r] to uncover something beyond.";
+		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter [b]TRISTE[r][else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
 		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
 		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 	else if myreg is otters:
-		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] DISCERN (any item) for a spoiler hint or even, for a bonus point,[end if] RESCIND the cinders.";
+		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
 		if loop pool is unvisited:
 			say "[2dmiss of myreg]you could've checked north of the Disowned Downside for the other way to regain your powers.";
 		else if eels are not reflexed:
-			say "[2dmiss of myreg]you could've [if sea cube is not moot]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
+			say "[2dmiss of myreg]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
 		if bran barn is not visited:
 			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
 		else if gore ogre is not moot:
-			say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said ALTHOUGH to dissolve the ghoul hat, then [end if]said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.";
+			say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said [b]ALTHOUGH[r] to dissolve the ghoul hat, then [end if]said [b]ERGO[r] to get rid of the Gore Ogre and gain Mr. Lee's trust.";
 		if aside-llp is not reflexed:
-			say "[2dmiss of myreg]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them ASIDE.";
+			say "[2dmiss of myreg]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r].";
 		else if holy nest is not reflexed:
-			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at the holy nest.";
+			say "[2dmiss of myreg]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
 		if number of flippable things in Perverse Preserve > 0:
 			repeat with A running through flippable things in Perverse Preserve:
 				if A is raptor or A is parrot, next; [ get rid of white noise parrot/raptor suggestion while testing ]
@@ -23188,48 +23188,48 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if number of reflexive animals in Lamer Realm > 0:
 			repeat with A running through reflexive things in Lamer Realm:
 				say "[2dmiss of myreg]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
-		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with HOWEVER after you got rid of the Gore Ogre.";
-		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying UNLESS.";
+		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
+		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
 	else if myreg is others:
-		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become LIMES.";
-		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become PEARS.";
-		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become PLUMS.";
-		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become GRAPES.";
+		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";
+		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become [b]PEARS[r].";
+		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become [b]PLUMS[r].";
+		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become [b]GRAPES[r].";
 		if ruts circuits is unexamined:
 			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
 		else:
-			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a TAMARIND.";
-			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become MARASCHINO cherries.";
-			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
-			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
-			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
-			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a PERSIMMON.";
-		if apples are not dislodged, say "[2drm of Swell Wells]the PSA [']Elp could've become APPLES."; [Swell Wells]
-		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
-		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
-		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
-		if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
-		if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
-		if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT."; [Filed Field]
-		if pipe panel lie pen app is not moot, say "[2drm of Filed Field]the pipe panel lie pen app could've become a PINEAPPLE.";
-		if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
-		if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
-		if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
-		if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
-		if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
-		if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
-		if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons."; [Clangier Clearing]
-		if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
-		if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
-		if mango is not moot, say "[2drm of Clangier Clearing]you could've gone AMONG the No-Ammo Gang for a mango.";
-		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
-		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said CRIPES at the prices precis.";
-		if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
-		if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
-		if orange is not dislodged, say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange."; [Scape Space]
-		if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a BANANA.";
-		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub RHUBARB.";
-		if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments REVERSED.";
+			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
+			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
+			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
+			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a [b]CANTALOUPE[r].";
+			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a [b]POMEGRANATE[r].";
+			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a [b]PERSIMMON[r].";
+		if apples are not dislodged, say "[2drm of Swell Wells]the PSA [']Elp could've become [b]APPLES[r]."; [Swell Wells]
+		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain [b]TANGERINES[r].";
+		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become [b]MULBERRIES[r].";
+		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an [b]APRICOT[r].";
+		if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a [b]GOOSEBERRY[r].";
+		if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become [b]COCONUTS[r].";
+		if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a [b]GRAPEFRUIT[r]."; [Filed Field]
+		if pipe panel lie pen app is not moot, say "[2drm of Filed Field]the pipe panel lie pen app could've become a [b]PINEAPPLE[r].";
+		if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become [b]STRAWBERRIES[r].";
+		if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become [b]CRANBERRIES[r].";
+		if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become [b]BREADFRUIT[r].";
+		if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a [b]RASPBERRY[r].";
+		if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become [b]BLACKBERRIES[r].";
+		if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a [b]WATERMELON[r].";
+		if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked [b]SOLEMN[r] to get lemons."; [Clangier Clearing]
+		if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said [b]MO LEN[r] or [b]LEN MO[r] to get a melon.";
+		if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten [b]PAPAYAS[r] from the 'Pay [b]ASAP[r]' Auction Caution.";
+		if mango is not moot, say "[2drm of Clangier Clearing]you could've gone [b]AMONG[r] the No-Ammo Gang for a mango.";
+		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach [b]CHEAP[r].";
+		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said [b]CRIPES[r] at the prices precis.";
+		if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs [b]CINQUE[r].";
+		if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine [b]ANCIENTER[r].";
+		if orange is not dislodged, say "[2drm of Scape Space]you could've tried to [b]GO NEAR[r] to get the orange."; [Scape Space]
+		if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a [b]BANANA[r].";
+		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub [b]RHUBARB[r].";
+		if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments [b]REVERSED[r].";
 		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:
 		say "No points in the Demo Dome, so nothing to find.";
@@ -23251,7 +23251,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if number of bypassed regions > 0, say "[2da]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
 	if anything-missed is false, say "[line break]CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
 	if number of test-jumped regions > 0:
-		say "MISSES instead of MISSED shows just the current region.";
+		say "[b]MISSES[r] instead of [b]MISSED[r] shows just the current region.";
 
 definition: a region (called R) is test-jumped:
 	unless R is solved, no;
@@ -23290,7 +23290,7 @@ To fully resume the story:
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"ROVE OVER to see what's behind STORE H"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
+"[b]ROVE OVER[r] to see what's behind STORE H"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
 
 This is the epilogue rule:
 	fully resume the story;
@@ -23440,7 +23440,7 @@ understand the command "allrand" as something new.
 understand "allrand" as allranding.
 
 carry out allranding:
-	say "ALLRAND dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
+	say "ALLRAND[r] dumps all of randomly picked obstacles into their respective rooms. If you wish to twiddle the marble blamer, use MBB 1/2.";
 	if parleys splayer players are moot:
 		say "WARNING you cleared the players/macks, so moving all pickup lines to [downside] may be useless or worse.";
 	else:
@@ -23536,7 +23536,7 @@ understand "ts" as tsing.
 
 carry out tsing:
 	if player is in Strip of Profits, say "You already are here!" instead;
-	if Strip of Profits is visited, say "You should RETRY instead to go back." instead;
+	if Strip of Profits is visited, say "You should [b]RETRY[r] instead to go back." instead;
 	move player to Strip of Profits;
 	get-cool-stuff;
 	moot lamp;
@@ -23615,7 +23615,7 @@ carry out a5ing:
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to OTTERS. I also gave you the settler and purse and notepad, in case.";
 	process the notify score changes rule;
-	ital-say "you may wish to SEED 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation."
+	ital-say "you may wish to [b]SEED[r] 1 so you can make the [pla-ma]s talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
 chapter endgameing
 
