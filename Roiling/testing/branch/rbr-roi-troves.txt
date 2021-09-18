@@ -415,14 +415,14 @@ Boarded Roadbed
 >gt rathole
 Going back would be a dereliction of your destiny.
 #verbcase listen-troves-if-player-is-in-boarded-roadbed
-#verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-boarded-roadbed-and-bee-score-is-0
->listen
-A bit distracting -- you want to focus on the cellar. But there is ambient noise.
-A snore from the Snore So Arena makes you see red. Everything about the snore and arena, in fact.
+>listen pa egg pea
+Nothing from Pa, Egg, Pea, but the SNORE SO ARENA is making noise.
+!A snore arises
 #verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-evil-bee-if-snore-so-arena-is-reflexive
 >listen bee
 Nothing unusual from the bee. But the arena...
-#verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-snore-so-arena
+A snore arises from the arena. You see red. There's more, if you can deal with it.
+#verbcase listen-troves-if-player-is-in-boarded-roadbed-else-if-noun-is-snore-so-arena
 >listen arena
 "NO EARS! NO EARS!" you hear, seeing red, because that's obviously wrong.
 
@@ -498,14 +498,6 @@ In particular, you feel the need to RECALL right now.
 In particular, you feel the need to RECALL right now.
 >undo
 
-@verbs
-#verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-evil-bee
->listen bee
-The live bee is silent. So is the SNORE SO ARENA beneath it.
-#verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-snore-so-arena-if-snore-so-arena-is-reflexed
->listen arena
-Nothing now that you reasoned your way around the arena's distractions.
-
 @max
 #pre-cellar-recall rule
 >recall
@@ -543,6 +535,17 @@ Your score has just gone up by one point
 
 @!mina,minb
 }}CURMIN++
+
+@verbs
+#reverbcase listen-troves-if-player-is-in-boarded-roadbed
+>listen pa egg pea
+Nothing from Pa, Egg, Pea. Relative quiet now you dealt with the SNORE SO ARENA.
+#verbcase listen-troves-if-player-is-in-boarded-roadbed-if-noun-is-evil-bee
+>listen bee
+The live bee is silent. So is the SNORE SO ARENA beneath it.
+#verbcase listen-troves-if-player-is-in-boarded-roadbed-else-if-noun-is-snore-so-arena-if-snore-so-arena-is-reflexed
+>listen arena
+Nothing now that you reasoned your way around the arena's distractions.
 
 >score
 {$SCOS}

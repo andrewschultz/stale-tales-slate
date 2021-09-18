@@ -1350,6 +1350,9 @@ Ripe Pier
 #verbcase listen-routes-if-player-is-in-ripe-pier
 >listen
 Someone calling out "'Tis mad!" You see red.
+#verbcase smell-routes-if-noun-is-data-dim-mists
+>smell
+Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here.
 
 @nud
 #nudge for pier
@@ -1546,7 +1549,7 @@ Wait, wait. You've already figured what to do, but it wasn't the right time. You
 @verbs
 >without
 It's always tough to figure how to ignore stuff.
-#reverbcase listen-routes-if-player-is-in-sonancy-canyons
+#verbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hog and the ewe.
 >undo
@@ -1564,7 +1567,7 @@ You angle your spoon a bit, and you realize you, or something, should be THROUGH
 Less noisy now you've been peacemaking a bit.
 >without
 It's always tough to figure how to ignore stuff.
-#verbcase listen-routes-if-player-is-in-sonancy-canyons
+#reverbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the hurt hog.
 >undo
@@ -1602,6 +1605,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters.
 Your score has just gone up by one point
 
 @verbs
+#reverbcase listen-routes-if-player-is-in-sonancy-canyons
 >listen
 The raptest patters are gone, and you can fully focus on the final step.
 

@@ -39,6 +39,9 @@ You don't smell anything that'd make you say what you've needed to say in this a
 >score
 Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
+>bother
+Well, maybe one or two mild swears would work somewhere around here.
+
 >phooey
 Your score has just gone up by two points
 >score
@@ -50,13 +53,30 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 >e
 
 >n
->s
+>w
+>w
+#verbcase smell-presto-if-location-of-player-is-in-the-maze
+>smell
+You smell a gefilte and think "get a life."
+>n
+#verbcase swear-presto-if-location-of-player-is-in-the-maze
+>damn
+Unnecessary mazes do have that effect on people.
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+Unwary Runway
+>n
 >gt nowt town
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-I'm going to make you use directions to Nowt Town and the Volt Maze. Or, well, just solve it.
+GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
 >gt unwary runway
 #reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-I'm going to make you use directions to Nowt Town and the Volt Maze, from L to V. Or, well, just solve it.
+GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
 
 >s
 Char Arch
@@ -80,10 +100,8 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 >n
 
 #verbcase swear-presto-if-plebe-is-touchable
->bleep
+>damn
 The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
->bother
-The plebe tries hard not to snicker and succeeds, but just barely.
 
 #not a mistake
 >bleep
@@ -106,29 +124,25 @@ Score in a scenario: 7 out of 41 total points in the current region, Presto. Low
 
 >w
 
->n
->w
->w
-#verbcase smell-presto-if-location-of-player-is-in-the-maze
->smell
-You smell a gefilte and think "get a life."
->n
->n
->e
->e
->e
->n
->w
->n
->n
-Unwary Runway
->bother
-Unnecessary mazes do have that effect on people.
-#verbcase swear-presto-if-location-of-player-is-in-the-maze
->n
+#balance undo
+>s
+>s
+>ole
+>darn
+>whassup
 >gt nowt town
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager-if-noun-is-in-the-maze
-don't want to deal with that big confusing maze.
+#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
+Anyway, it'd make poor
+>gt grey gyre
+#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
+following.)
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 #pre-solve-maze rule retry
 >mazeltov
@@ -149,12 +163,6 @@ You don't want to, and can't, go back to or through the volt maze you solved.
 
 >score
 Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
-
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager-not-if-noun-is-in-the-maze
->gt marines seminar
-following)
->undo
 
 >s
 
@@ -190,7 +198,7 @@ Your score has just gone up by one point
 Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >bother
-You had your chance for a swear or two. And you took it. Yay, you.
+You had your chance for a minor swear or two. And you took it. Yay, you.
 
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo
 #verbcase listen-presto-if-noun-is-rand-or-noun-is-leo-if-rand-is-washed-up
@@ -226,6 +234,12 @@ Score in a scenario: 16 out of 41 total points in the current region, Presto. Lo
 
 >load gun with dart
 
+>abstract plebe to grey gyre
+>bother
+The plebe actually looks frightened, because they've had mild swears soften them up for worse.
+>undo
+>undo
+
 >there
 Your score has just gone up by one point
 
@@ -249,11 +263,6 @@ Your score has just gone up by one point
 
 Phat Path
 
-#verbcase goto-presto-if-noun-is-dirge-ridge-if-leo-is-dismissed
->gt dirge ridge
-"Nyurgh! Hungry!"
-Maybe if
-
 >what
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
@@ -274,6 +283,11 @@ Dat was a good dust-up
 >score
 Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
+#verbcase goto-presto-if-noun-is-dirge-ridge-if-leo-is-dismissed
+>gt dirge ridge
+"Nyurgh! Hungry!"
+Maybe if
+
 >trasch
 by one point
 >score
@@ -283,7 +297,7 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 Hacks' Shack
 
 #verbcase swear-presto-if-hacks-shack-is-visited
->bother
+>damn
 While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
 #verbcase listen-presto-if-player-is-in-hacks-shack
 >listen

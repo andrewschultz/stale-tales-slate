@@ -54,7 +54,7 @@ Topside Deposit
 You had your fun in there.
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
-An unconvincing voice from where you came moans 'Stop! Die!' You must ignore it and go forward.
+An unconvincing voice from where you came moans "Stop! Die!" You must ignore it and go forward.
 
 >score
 Score in a scenario: 8 out of 56 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 56.
@@ -75,7 +75,7 @@ Scope Copse
 An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
 #verbcase listen-towers-if-noun-is-butlers
 >listen butlers
-The butlers loudly banter 'Let's rub (you) the wrong way!' You see red.
+The butlers loudly banter "Let's rub (you) the wrong way!" You see red.
 
 >rusty
 Your score has just gone up by one point
@@ -249,10 +249,10 @@ Score in a scenario: 28 out of 56 total points in the current region, Towers. Lo
 
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
-Oh, the self-righteous backlash you'd get from the Hostile-is-He Lot!
+Oh, the self-righteous backlash you'd get from the Hostile-Is-He Lot!
 >gs
 >bother
-Oh, the self-righteous backlash you'd get from the Lois the Hostile!
+Oh, the self-righteous backlash you'd get from Lois the Hostile!
 >gs
 
 >marginal
@@ -348,7 +348,7 @@ Score in a scenario: 37 out of 56 total points in the current region, Towers. Lo
 
 #verbcase listen-towers-if-noun-is-stinger
 >listen stinger
-A twanging e-string emits from the stinger. Surprisingly, you don't see red at it.
+A twanging e-string emits from the stinger. You can't even see red at it.
 
 >resting
 Your score has just gone up by one point
@@ -364,15 +364,15 @@ Score in a scenario: 38 out of 56 total points in the current region, Towers. Lo
 
 Obscurest Subsector
 
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-in-ropins
 >listen yow
 Dr. Yow moans he could hack less shackles.
 
 >wordy
 Your score has just gone up by one point
 
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-wordy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-wordy
 >listen yow
 Dr. Yow is talking slowly and soothingly.
 
@@ -384,7 +384,7 @@ Score in a scenario: 39 out of 56 total points in the current region, Towers. Lo
 >z
 >z
 >z
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
 >listen
 Dr. Yow is silent once again.
 
@@ -399,6 +399,13 @@ Dr. Yow is silent once again.
 >unlocked
 by one point
 
+>rowdy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-rowdy
+>listen yow
+Dr. Yow is yacking away noisily and enthusiastically.
+>undo
+>undo
+
 >score
 Score in a scenario: 40 out of 56 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 56.
 
@@ -409,7 +416,8 @@ Outer Route
 
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
-You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.
+You smell something generically nice from the campsite nearby and say "Ahhhh! Nature!" a bit too loud. Ugg. You won't do that again.
+>listen
 #verbcase listen-towers-if-player-is-in-outer-route
 The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
 
@@ -454,10 +462,6 @@ Score in a scenario: 45 out of 56 total points in the current region, Towers. Lo
 #notana -- well, technically it is, but the spechelp has already been tracked, so I need this to jibe with bop.py
 Your score has just gone up by one point
 
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-rowdy
->listen yow
-Dr. Yow is yacking away noisily and enthusiastically.
-
 >score
 Score in a scenario: 46 out of 56 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 56.
 
@@ -469,11 +473,6 @@ Score in a scenario: 46 out of 56 total points in the current region, Towers. Lo
 No thanks. Once was enough.
 >gt arid den
 No thanks. Once was enough.
-
->robust
-by one point
->stabler
-by one point
 
 >robust
 by one point
@@ -491,8 +490,8 @@ Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
 #verbcase goto-towers-if-noun-is-rawest-waters
->gt leak lake
-Leak Lake wasn't fun the first time.
+>gt rawest waters
+Rawest Waters would probably be even less fun the second time around.
 >undo
 >undo
 >undo
@@ -500,6 +499,11 @@ Leak Lake wasn't fun the first time.
 >undo
 >undo
 >undo
+
+>robust
+by one point
+>stabler
+by one point
 
 >rewired
 Your score has just gone up by one point

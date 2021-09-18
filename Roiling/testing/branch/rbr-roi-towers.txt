@@ -698,7 +698,7 @@ Topside Deposit
 You had your fun in there.
 #verbcase listen-towers-if-player-is-in-topside-deposit
 >listen
-An unconvincing voice from where you came moans 'Stop! Die!' You must ignore it and go forward.
+An unconvincing voice from where you came moans "Stop! Die!" You must ignore it and go forward.
 
 >score
 {$SCOS}
@@ -904,7 +904,7 @@ Scope Copse
 An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red.
 #verbcase listen-towers-if-noun-is-butlers
 >listen butlers
-The butlers loudly banter 'Let's rub (you) the wrong way!' You see red.
+The butlers loudly banter "Let's rub (you) the wrong way!" You see red.
 
 @nud
 #rescannotes for curst palace
@@ -2219,10 +2219,10 @@ Whoah, this game's pretty retro, but nothing that ancient. Besides, you want a b
 @verbs
 #verbcase swear-towers-if-lois-is-touchable-or-hostile-is-he-lot-is-touchable
 >bother
-Oh, the self-righteous backlash you'd get from the Hostile-is-He Lot!
+Oh, the self-righteous backlash you'd get from the Hostile-Is-He Lot!
 >gs
 >bother
-Oh, the self-righteous backlash you'd get from the Lois the Hostile!
+Oh, the self-righteous backlash you'd get from Lois the Hostile!
 >gs
 
 @!minh,mini
@@ -2612,7 +2612,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 @verbs
 #verbcase listen-towers-if-noun-is-stinger
 >listen stinger
-A twanging e-string emits from the stinger. Surprisingly, you don't see red at it.
+A twanging e-string emits from the stinger. You can't even see red at it.
 
 >resting
 Your score has just gone up by one point
@@ -2770,7 +2770,7 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 >undo
 
 @verbs
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-in-ropins
 >listen yow
 Dr. Yow moans he could hack less shackles.
 
@@ -2782,8 +2782,8 @@ Your score has just gone up by one point
 That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it home?
 
 @verbs
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-wordy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-wordy
 >listen yow
 Dr. Yow is talking slowly and soothingly.
 
@@ -2816,7 +2816,7 @@ The duck won't follow you. It doesn't trust your voice.
 >z
 >z
 >z
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-in-ropins-if-dr-yow-has-been-rowdy-or-dr-yow-has-been-wordy
 >listen
 Dr. Yow is silent once again.
 
@@ -2882,6 +2882,15 @@ by one point
 
 @hin
 Hm, the agnostic at the coastlines seems technically inclined but restless.
+
+@verbs
+>rowdy
+#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-touchable-if-dr-yow-is-rowdy
+###skip test checking
+>listen yow
+Dr. Yow is yacking away noisily and enthusiastically.
+>undo
+>undo
 
 >score
 {$SCOS}
@@ -2971,7 +2980,8 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 @verbs
 #verbcase smell-towers-if-player-is-in-outer-route
 >smell
-You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.
+You smell something generically nice from the campsite nearby and say "Ahhhh! Nature!" a bit too loud. Ugg. You won't do that again.
+>listen
 #verbcase listen-towers-if-player-is-in-outer-route
 The diverse deviser machine fizzles along. The chirping of birds from the campiest campsite seems a little TOO cheery.
 
@@ -3255,11 +3265,6 @@ DEBUG INFO: I ZOMG Gizmo hinting.
 @mini,minh
 }}CURMAX--
 
-@verbs
-#verbcase listen-towers-if-player-is-in-obscurest-subsector-and-dr-yow-is-in-obscurest-subsector-if-dr-yow-is-rowdy
->listen yow
-Dr. Yow is yacking away noisily and enthusiastically.
-
 >score
 {$SCOS}
 
@@ -3414,20 +3419,6 @@ No thanks. Once was enough.
 >gt arid den
 No thanks. Once was enough.
 
-@!max
->robust
-by one point
->stabler
-by one point
-
-@spoi
->gonear waters
-#towers anagrams for earnest eastern neaters
->xr eastern #2-of-3 over lake
-After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
->undo
->undo
-
 @verbs
 ##balance undos
 >robust
@@ -3446,13 +3437,27 @@ Progress isn't easy when you're flailing in water.
 >nearest
 Your score has just gone up by one point
 #verbcase goto-towers-if-noun-is-rawest-waters
->gt leak lake
-Leak Lake wasn't fun the first time.
+>gt rawest waters
+Rawest Waters would probably be even less fun the second time around.
 >undo
 >undo
 >undo
 >undo
 >undo
+>undo
+>undo
+
+@!max
+>robust
+by one point
+>stabler
+by one point
+
+@spoi
+>gonear waters
+#towers anagrams for earnest eastern neaters
+>xr eastern #2-of-3 over lake
+After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
 >undo
 >undo
 

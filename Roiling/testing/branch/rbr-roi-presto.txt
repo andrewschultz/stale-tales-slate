@@ -214,6 +214,10 @@ Boy! It'd be neat to have something that made you more authoritative.
 >whassup
 You probably want to TALK to people instead. Well, most of the time.
 
+@verbs
+>bother
+Well, maybe one or two mild swears would work somewhere around here.
+
 @min
 >pooh
 #notmax
@@ -271,13 +275,30 @@ You search for the hump you overcame. You can't find it now. But it's not releva
 
 @verbs
 >n
->s
+>w
+>w
+#verbcase smell-presto-if-location-of-player-is-in-the-maze
+>smell
+You smell a gefilte and think "get a life."
+>n
+#verbcase swear-presto-if-location-of-player-is-in-the-maze
+>damn
+Unnecessary mazes do have that effect on people.
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+Unwary Runway
+>n
 >gt nowt town
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-I'm going to make you use directions to Nowt Town and the Volt Maze. Or, well, just solve it.
+GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
 >gt unwary runway
 #reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
-I'm going to make you use directions to Nowt Town and the Volt Maze, from L to V. Or, well, just solve it.
+GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's another way to solve it than by walking through.
 
 >s
 Char Arch
@@ -479,10 +500,8 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 
 @verbs
 #verbcase swear-presto-if-plebe-is-touchable
->bleep
+>damn
 The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting.
->bother
-The plebe tries hard not to snicker and succeeds, but just barely.
 
 #not a mistake
 >bleep
@@ -813,29 +832,28 @@ by three points
 >undo
 
 @verbs
->n
->w
->w
-#verbcase smell-presto-if-location-of-player-is-in-the-maze
->smell
-You smell a gefilte and think "get a life."
->n
->n
->e
->e
->e
->n
->w
->n
->n
-Unwary Runway
->bother
-Unnecessary mazes do have that effect on people.
-#verbcase swear-presto-if-location-of-player-is-in-the-maze
->n
+#balance undo
+>s
+>s
+>ole
+###skip test checking
+>darn
+###skip test checking
+>whassup
+###skip test checking
 >gt nowt town
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager-if-noun-is-in-the-maze
-don't want to deal with that big confusing maze.
+#reverbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
+Anyway, it'd make poor
+>gt grey gyre
+#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
+following.)
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
 
 @!min
 #pre-solve-maze rule retry
@@ -866,13 +884,6 @@ You gulp the crust and can't help thinking BINGO. But you are too polite and/or 
 @!min
 >score
 {$SCOS}
-
-@verbs
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager
-#verbcase goto-presto-if-leo-is-touchable-and-leo-is-eager-not-if-noun-is-in-the-maze
->gt marines seminar
-following)
->undo
 
 @max
 #pre-ether-there rule
@@ -1025,7 +1036,7 @@ You gulp the crust and can't help thinking WHASSUP. But you are too polite and/o
 
 @verbs
 >bother
-You had your chance for a swear or two. And you took it. Yay, you.
+You had your chance for a minor swear or two. And you took it. Yay, you.
 
 @nud
 #mistake retest for evil
@@ -1223,6 +1234,13 @@ You pause before eating the crust. The yak probably needs to be carried with som
 >n
 Grey Gyre
 
+@verbs
+>abstract plebe to grey gyre
+>bother
+The plebe actually looks frightened, because they've had mild swears soften them up for worse.
+>undo
+>undo
+
 >there
 Your score has just gone up by one point
 }}SCORE++
@@ -1417,12 +1435,6 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >otghu
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
-@verbs
-#verbcase goto-presto-if-noun-is-dirge-ridge-if-leo-is-dismissed
->gt dirge ridge
-"Nyurgh! Hungry!"
-Maybe if
-
 @!min
 >what
 Your score has just gone up by one point
@@ -1581,6 +1593,12 @@ You're all done here in the Phat Path. Go north to the shack.
 >score
 {$SCOS}
 
+@verbs
+#verbcase goto-presto-if-noun-is-dirge-ridge-if-leo-is-dismissed
+>gt dirge ridge
+"Nyurgh! Hungry!"
+Maybe if
+
 @nud
 #renudge for yrnet
 >yrnte
@@ -1622,7 +1640,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 
 @verbs
 #verbcase swear-presto-if-hacks-shack-is-visited
->bother
+>damn
 While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is mostly over.
 #verbcase listen-presto-if-player-is-in-hacks-shack
 >listen

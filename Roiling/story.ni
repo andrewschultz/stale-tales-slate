@@ -1405,19 +1405,16 @@ this is the goto-troves rule:
 this is the goto-presto rule:
 	if noun is nowt town or noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is moot, say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
-		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
+		say "GO TO is disabled for Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Perhaps there's another way to solve it than by walking through[if leo is eager]. Anyway, it'd make poor [l-n-r]'s heads spin[end if]." instead;
 	if noun is Dirge Ridge:
 		if Leo is dismissed:
 			abide by the post-wall-arch rule;
 		abide by the leo-rand-forward rule;
 	if player is in Hacks Shack, abide by the shack-south rule;
 	if Leo is touchable and Leo is eager:
-		if noun is in-the-maze:
-			say "[l-n-r] don't want to deal with that big confusing maze.";
-		else:
-			say "([l-n-r] following.)";
-			move Leo to noun;
-			move Rand to noun;
+		say "([l-n-r] following.)";
+		move Leo to noun;
+		move Rand to noun;
 
 this is the goto-oyster rule:
 	if location of player is Plasm Lamps, say "Aw, c'mon, the ant should be no problem." instead;
@@ -1435,7 +1432,7 @@ this is the goto-towers rule:
 		move duck to noun;
 		continue the action;
 	if location of player is Rawest Waters, say "Progress isn't easy when you're flailing in water." instead;
-	if noun is Rawest Waters, say "No, it wasn't fun the first time." instead;
+	if noun is Rawest Waters, say "Rawest Waters would probably be even less fun the second time around." instead;
 
 this is the goto-otters rule:
 	if player is in Rancho Archon Anchor, elvira-flee-taunt;
@@ -4050,7 +4047,7 @@ presto	1	"It feels cathartic, using a sub-profanity to get going."
 presto	2	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
 oyster	1	"You've started to get some action in."
 oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
-towers	1	"Well! You kind of cost him a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
+towers	1	"Well! You kind of cost [noun] a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
 towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice."
 otters	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
 otters	2	"Barley, [if player is in Minded Midden]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
@@ -7002,17 +6999,15 @@ this is the listen-stores rule:
 this is the listen-troves rule:
 	if noun is sob ever verbose, try examining sob ever verbose instead; [troves]
 	if player is in Boarded Roadbed:
-		if noun is boarded roadbed and bee-score is 0:
-			say "A bit distracting -- you want to focus on the cellar. But there is ambient noise.[paragraph break]";
-			try listening to snore so arena instead;
-		if noun is snore so arena:
-			if snore so arena is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
-			say "[one of]A snore arises from the arena. You see red. There's more, if you can deal with it.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
 		if noun is evil bee:
 			if SNORE SO ARENA is reflexive:
 				say "Nothing unusual from the bee. But the arena...";
 				try listening to SNORE SO ARENA instead;
 			say "The [evil bee] is silent. So is the SNORE SO ARENA beneath it." instead;
+		else if noun is snore so arena:
+			if snore so arena is reflexed, say "Nothing now that you reasoned your way around the arena's distractions." instead;
+			say "[one of]A snore arises from the arena. You see red. There's more, if you can deal with it.[or]'NO EARS! NO EARS!' you hear, seeing red, because that's obviously wrong.[or]'SENORA! SENORA!' You see red, unsure who or what the arena is calling out to.[or]There's an advertisement for a play, or a movie, or something, with O. ASNER AS NERO. So weird. You see red.[cycling]" instead;
+		say "Nothing from [the noun][if snore so arena is reflexive], but the [snore so] is making noise[else]. Relative quiet now you dealt with the [snore so][end if]." instead;
 	if can-hear-gritty, say "[if talk-quiet is true]You have shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if can-hear-posh, say "[if talk-quiet is true]You have shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if noun is Id Cede, say "Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes. You listen closely to 'I'd Cede.' [one of]Oh man, that one part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy. You hope for just a bit more[or]There is no more. It is the end. But you see red at the memory of Eddie C.[']s followup, a vapid rehash, [i]I Ceded[r][cycling]." instead;
@@ -7072,14 +7067,14 @@ this is the listen-towers rule:
 	if noun is diners, say "An argument over whether Derin's is a good place to eat. Pro and con both leave you seeing red." instead;
 	if noun is butlers, say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in Shaven Havens, say "You think you hear NEVAHs, but that's got to be just internal melodrama." instead;
-	if player is in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
+	if player is in Obscurest Subsector and Dr Yow is touchable:
 		if Dr Yow is rowdy, say "Dr. Yow is yacking away noisily and enthusiastically." instead;
 		if Dr Yow is wordy, say "Dr. Yow is talking slowly and soothingly." instead;
 		if Dr Yow is in ropins:
 			if Dr Yow has been rowdy or Dr Yow has been wordy, say "Dr. Yow is silent once again." instead;
 			say "Dr. Yow moans [he-she] could hack less shackles." instead;
 	if noun is angriest ingrates, say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]describing how tacky [i]Tena's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[or]a complaint that sounds like tin gears[in random order]." instead;
-	if player is in Outer Route, say "The [deviser] machine [if dagger is moot or deviser is reflexive]chugs[else]fizzles[end if] along. The chirping of birds from the campiest campsite seems a little TOO cheery." instead;
+	if player is in Outer Route, say "The [deviser] machine [if dagger is moot or deviser is reflexive]fizzles[else]chugs[end if] along. The chirping of birds from the campiest campsite seems a little TOO cheery." instead;
 	if noun is mardier admirer, say "The mardier admirer's babbling is more than a bit embarrassing. It loops effortlessly between effusive praise, backhanded compliments, and insinuations you've got lazy." instead;
 	if noun is lars eede or noun is elsa erde, say "[el-la-full] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if noun is asset hit atheists, say "The atheists are really spelling out their logical arguments against any sort of God[if wait seer is touchable]. In light of this, the wait-seer doesn't seem to be the least tired[end if]. Maybe you could learn more details talking to the atheists." instead;
@@ -7172,7 +7167,7 @@ this is the smell-troves rule:
 this is the smell-routes rule:
 	if noun is pipe soot, say "The lingering pipe smoke that made the soot is actually agreeable. The ashtray itself doesn't smell especially strong[if pipe soot is in Adobe Abode], so the pipe soot probably won't burn your hands if you can take it[end if]." instead;
 	if noun is seed pit, say "The seed pit smells a bit musty." instead;
-	if player is in Ripe Pier, say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
+	if noun is data dim mists, say "Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here." instead;
 
 this is the smell-presto rule:
 	if noun is ether, say "The ether is nontoxic but still potentially dangerous, [if ether-try is true]since[else]if[end if] someone's hiding there." instead;
@@ -7390,8 +7385,8 @@ curse-warned is a truth state that varies.
 
 to decide which number is mild-swear-score:
 	let temp be 0;
-	if dart is in cistern, increment temp;
-	if rand is not reflexed, increment temp;
+	if dart is not in cistern, increment temp;
+	if rand is reflexed, increment temp;
 	decide on temp;
 
 to say om: say "[if mild-swear-score is 0]one or two mild swears[else if mild-swear-score is 1]one more mild swear[end if]";
@@ -7399,7 +7394,7 @@ to say om: say "[if mild-swear-score is 0]one or two mild swears[else if mild-sw
 check swearing mildly:
 	if mrlp is presto:
 		if hogs are touchable, say "The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off." instead;
-		say "[if mild-swear-score < 2]Well, maybe [om] would work somewhere around here.[else if plebe is touchable]The plebe tries hard not to snicker and succeeds, but just barely.[else]You had your chance for a swear or two. And you took it. Yay, you.[end if]" instead;
+		say "[if mild-swear-score < 2]Well, maybe [om] would work somewhere around here.[else if plebe is touchable]The plebe actually looks frightened, because they've had mild swears soften them up for worse.[else]You had your chance for a minor swear or two. And you took it. Yay, you.[end if]" instead;
 	try swearing obscenely instead;
 
 understand "bastard" as swearing mildly.
@@ -13146,6 +13141,8 @@ a-text of sport ports is "RRYRR". b-text of sport ports is "?R?R?". parse-text o
 book Saps' Pass / Phat Path
 
 Saps Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [wall-sentence][if hawt thaw is in Saps Pass]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course.. You can retreat south, too, of course.". roomnud of Saps Pass is table of Saps' Pass nudges. printed name is "[if lawl wall is moot]Phat Path[else]Saps['] Pass[end if]".
+
+understand "phat/path" and "phat path" as Saps Pass when hogs are moot.
 
 check scaning in Saps Pass when Leo is in Saps Pass: say "[l-n-r] ooh and aah at how you're using a thing to find out about things.";
 
