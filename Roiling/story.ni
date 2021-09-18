@@ -131,6 +131,10 @@ a region can be parsewrned. a region is usually not parsewrned.
 
 a region has a list of things called item-list.
 
+a region has a list of things called listen-list.
+
+a region has a list of things called smell-list.
+
 a region has a rule called listen-rule.
 
 a region has a rule called sleep-rule.
@@ -6943,13 +6947,31 @@ to decide whether can-hear-posh:
 	if player is in Econ Cone and praise spirea is reflexed, yes;
 	no;
 
-listen-candidates is a list of things variable. listen-candidates is { [ordeal reload] elmo, [stores] odorant tornado, tokers, nestor, [routes] woe bow bell, gast, raptest patters, [troves] sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea, [presto] odes song, [oyster] tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer, [towers] rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese, ed riley, parleys splayer players, vow here, [otters] whiners, imp, [others] pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }
+listen-list of ordeal reload is { elmo }.
+
+listen-list of stores is { tokers, nestor, odorant tornado }.
+
+listen-list of routes is { woe bow bell, gast, raptest patters }.
+
+listen-list of troves is { sob ever verbose, SNORE SO ARENA, Id Cede, praise spirea }.
+
+listen-list of presto is { odes song }.
+
+listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks, papery yapper, dialer }.
+
+listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese }.
+
+listen-list of otters is { ed riley, parleys splayer players, vow here, whiners, sly imp }.
+
+listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }.
+
+listen-list of demo dome is { }.
 
 the ambient sound rule is not listed in any rulebook.
 
 rule for supplying a missing noun when listening (this is the directed ambient sound rule) :
 	if debug-state is true, say "DEBUG: Going through listen-candidates."; [??]
-	repeat with Q running through listen-candidates:
+	repeat with Q running through listen-list of mrlp:
 		if Q is touchable:
 			now the noun is Q;
 			if debug-state is true, say "DEBUG: chose [Q].";
@@ -7101,10 +7123,26 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
-smell-candidates is a list of things variable. smell-candidates is { [stores] mangiest steaming, odorant tornado, store y, barnacle balancer, hoster, [routes] pipe soot, seed pit, [troves] [presto] ether, casserole, [oyster] weaselly walleyes, [towers] angriest ingrates, Nerd Aid, [others] slime }
+smell-list of ordeal reload is { }.
+
+smell-list of stores is { mangiest steaming, odorant tornado, store y, barnacle balancer, hoster }.
+
+smell-list of routes is { pipe soot, seed pit, data dim mists }.
+
+smell-list of troves is { }.
+
+smell-list of presto is { ether, casserole }.
+
+smell-list of oyster is { weaselly walleyes }.
+
+smell-list of towers is { angriest ingrates, Nerd Aid }.
+
+smell-list of others is { slime }.
+
+smell-list of demo dome is { }.
 
 rule for supplying a missing noun when smelling:
-	repeat with Q running through smell-candidates:
+	repeat with Q running through smell-list of mrlp:
 		if Q is touchable:
 			now the noun is Q;
 			continue the action;
