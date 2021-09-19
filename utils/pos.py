@@ -272,7 +272,7 @@ while count < len(sys.argv):
             found_searched[arg] = False
     else:
         arg = arg.replace('=', '')
-        process_array(arg)
+        process_from_string(arg)
     count += 1
 
 if file_search:
