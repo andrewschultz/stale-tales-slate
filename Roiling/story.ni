@@ -6971,11 +6971,14 @@ rule for supplying a missing noun when listening (this is the directed ambient s
 	repeat with Q running through listen-list of mrlp:
 		if Q is touchable:
 			now the noun is Q;
-			if debug-state is true, say "DEBUG: chose [Q].";
+			if debug-state is true, say "DEBUG note: [Q] found as listen candidate.";
+			now the noun is Q;
 			continue the action;
+	if debug-state is true, say "DEBUG note: nothing found as listen candidate.";
 	now the noun is the location of the player;
 
 understand "listen [something]" as listening.
+
 check listening:
 	abide by the listen-rule of mrlp;
 	say "The air! Hear it! (Silent.)[paragraph break]" instead; [??]
@@ -7118,6 +7121,8 @@ chapter smelling
 
 the block smelling rule is not listed in any rulebook.
 
+the ambient odour rule is not listed in any rulebook.
+
 smell-list of ordeal reload is { }.
 
 smell-list of stores is { mangiest steaming, odorant tornado, store y, barnacle balancer, hoster }.
@@ -7136,11 +7141,14 @@ smell-list of others is { slime }.
 
 smell-list of demo dome is { }.
 
-rule for supplying a missing noun when smelling:
+rule for supplying a missing noun when smelling (this is the directed ambient odor rule):
+	if debug-state is true, say "DEBUG: finding missing (smell) noun.";
 	repeat with Q running through smell-list of mrlp:
 		if Q is touchable:
+			if debug-state is true, say "DEBUG note: [Q] found as smell candidate.";
 			now the noun is Q;
 			continue the action;
+	if debug-state is true, say "DEBUG note: nothing found as smell candidate.";
 
 check smelling (this is the you can smell some stuff some places rule):
 	abide by the smell-rule of mrlp;
