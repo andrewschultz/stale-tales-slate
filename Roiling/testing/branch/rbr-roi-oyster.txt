@@ -399,6 +399,7 @@ by one point
 >score
 {$SCOS}
 
+@verbs
 #reverbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
 Silence. Awkward silence. An occasional cough.

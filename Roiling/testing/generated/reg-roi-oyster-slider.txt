@@ -67,10 +67,6 @@ by one point
 >score
 Score in a scenario: 3 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
-#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
->listen
-Silence. Awkward silence. An occasional cough.
-
 >inset
 Perhaps you should've played it cool and fled, instead.
 >undo

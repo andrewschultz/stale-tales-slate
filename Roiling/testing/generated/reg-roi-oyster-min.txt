@@ -24,10 +24,6 @@ Okay.
 The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
 by one point
 
-#reverbcase listen-oyster-if-player-is-in-posh-hops-shop
->listen
-Silence. Awkward silence. An occasional cough.
-
 Olde Lode
 
 >thisalt
