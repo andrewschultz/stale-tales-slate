@@ -91,10 +91,38 @@ You saw the disport tripods here in Peek Keep, but you didn't examine them.
 
 @max
 >s
-Are you sure you want to leave before looking at everything?
+Are you sure you want to leave before looking at everything? You can type SCORE or THINK to see what you still haven't done.
+>y
+It's--yes, you've sort of lived it, already. You're just too busy for frivolity.
+>undo
+>s
 >n
+Okay, why not look around a bit more.
 \\
->x disport
+>xtrak
+\\
+UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: nothing.
+\\
+>xab tripods
+The disport tripods advertise another way to enjoyably pass time after you are done.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: disport tripods (Peek Keep).
+EXHAUSTED exhibits: nothing.
+\\
+>score
+/You still haven't gone (north|east|west|inside) from Peek Keep.
+\\
+>x tripods
+NOTE: you've read all the way through.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep).
 \\
 >x ignsay
 UNFOLD OLD FUN, MEMOIR: I'M MORE.
@@ -257,6 +285,75 @@ Intel Inlet
 @max
 >n
 You can only go outside here.
+\\
+#######################################Intel Inlet: Passe Apses
+\\
+>e
+>inside
+Intel Inlet
+\\
+>score
+/You saw (the shiest thesis|the Passe Apses|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
+\\
+>x apses
+The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a page of former content:
+(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload.
+!You observe another page of former content:
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
+PERUSED exhibits: Passe Apses (Intel Inlet).
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
+\\
+>xab apses
+!You observe a page of former content:
+You observe another page of former content:
+\\
+>x apses
+There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing.
+[NOTE: you've read all the way through.]
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+\\
+>score
+/You saw (the shiest thesis|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
+You still haven't gone east from Peek Keep.
+
+@max
+#######################################Intel Inlet: CareLand Calendar
+\\
+>x calendar
+The CareLand Calendar is divided into several parts based on what is there. You read through one.
+Part one: Protean
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove) and shiest thesis (Intel Inlet).
+PERUSED exhibits: CareLand Calendar (Intel Inlet).
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+\\
+>xab calendar
+The CareLand Calendar is divided into several parts based on what is there. You read through one.
+\\
+>x calendar
+The CareLand Calendar is divided into several parts based on what is there. You read through one.
+[NOTE: you've read all the way through.]
+\\
+>score
+You saw the shiest thesis here in Intel Inlet, but you didn't examine it.
+
+@max
+#######################################Intel Inlet: Shiest Thesis
+\\
+>x shiest thesis
+It's a list
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 
 @nud
 #nudge for intel
@@ -283,6 +380,88 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 
 >n
 Hows Show
+
+@max
+##############################hows show: tester street
+\\
+>x tester street
+Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
+>g
+More on testing.
+\\
+>xab tester street
+More on testing.
+\\
+>score
+/You saw (the coder decor|the raised aiders) here in Hows Show, but you didn't examine (it|them).
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: Tester Street (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep).
+\\
+>x tester street
+More on testing.
+NOTE: you've read all the way through.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
+
+@max
+#################################hows show: coder decor
+\\
+>x coder decor
+You read some of the coder decor.
+!You read some more of the coder decor.
+\\
+>xab coder decor
+!You read some of the coder decor.
+You read some more of the coder decor.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: coder decor (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
+\\
+>x coder decor
+NOTE: you've read all the way through.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
+\\
+>score
+You saw the raised aiders here in Hows Show, but you didn't examine them.
+
+@max
+#################################hows show: raised aiders
+\\
+>x raised aiders
+You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+!You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: raised aiders (Hows Show).
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
+\\
+>xab raised aiders
+You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+!You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+\\
+>x raised aiders
+NOTE: you've read all the way through.
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
+\\
+>score
+/You still haven't gone (east|west|inside) from Peek Keep.
 
 @nud
 #nudge for hows
@@ -318,6 +497,36 @@ You can only go south here.
 >w
 Ned's Dens
 
+@max
+#################################Ned's Dens: Chic Loner Chronicle
+\\
+>score
+You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
+\\
+>x chronicle
+The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
+!Another thought reads:
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
+PERUSED exhibits: Chic Loner Chronicle (Ned's Dens).
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
+\\
+>xab chronicle
+!The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
+Another thought reads:
+\\
+>x chronicle
+[NOTE: you've read all the way through.]
+\\
+>xtrak
+UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
+\\
+>score
+/You still haven't gone (east|inside) from Peek Keep.
+
 @nud
 #mistake test for send
 >send
@@ -349,6 +558,127 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
+@max
+#######################################Evoc-Cove
+\\
+>out
+>e
+Evoc-Cove
+\\
+>score
+You saw the novella here in Evoc-Cove, but you didn't examine it.
+\\
+>w
+Peek Keep
+>score
+You saw the novella in Evoc-Cove, but you didn't examine it.
+\\
+>e
+>x novella
+It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)--the lowest page you haven't read that looks comprehensible is 1. You can also speed-read with RR.
+\\
+>w
+Peek Keep
+>score
+\\
+You still have more of the novella (examined but not read) to look through.
+\\
+>e
+>read
+The next page (1) makes enough sense, you guess.
+\\
+You glance over page 1. The most interesting bit seems to be Page One: Openage. Peonage.
+\\
+>w
+>s
+Are you sure you want to leave before exhaustively
+>n
+Okay, why not look around a bit more.
+>undo
+\\
+>e
+\\
+>rr
+PAGE 2:
+PAGE 11:
+\\
+# test the page skipping feature
+>read
+You have to skip a bit to get to a sensible page (13).
+\\
+You glance over page 13. The most interesting bit seems to be Tether in thin tree, then tire.
+\\
+>rr
+PAGE 14:
+(skipping some totally nonsensical stuff) PAGE 23:
+PAGE 24:
+\\
+>rr
+PAGE 25:
+PAGE 34:
+\\
+>rr
+PAGE 35:
+(skipping some totally nonsensical stuff) PAGE 43:
+PAGE 45:
+\\
+>rr
+PAGE 46:
+(skipping some totally nonsensical stuff) PAGE 56:
+\\
+>rr
+PAGE 57:
+(skipping some totally nonsensical stuff) PAGE 67:
+\\
+>rr
+PAGE 68:
+PAGE 77:
+\\
+>rr
+PAGE 78:
+(skipping some totally nonsensical stuff) PAGE 87:
+PAGE 88:
+\\
+>rr
+PAGE 89:
+(skipping some totally nonsensical stuff) PAGE 91:
+PAGE 99:
+\\
+>read
+The next page (100) makes enough sense, you guess.
+You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
+\\
+>undo
+\\
+>rr
+PAGE 100:
+You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
+\\
+Well, that's all. Hooray for speed-reading.
+\\
+>r
+(the novella)
+DEBUG note: reading the novella with novella is under scrutiny, with bore-novella rule.
+\\
+You've read through everything that makes sense, so you may want to look at a specific page.
+\\
+>rr
+You already read through. You could read individual pages again, I guess.
+\\
+>xtrak
+UNNOTED exhibits: nothing.
+PERUSED exhibits: nothing.
+EXHAUSTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
+\\
+>score
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
+\\
+>w
+>s
+You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+\\
+>undo
+
 @nud
 #nudge for novella
 >novelal
@@ -376,6 +706,48 @@ You don't need to flip anything here, really. Certainly not a room.
 
 >d
 Sparse Spares
+
+>score
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
+\\
+>x trifle
+>score
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
+>x placer
+>score
+/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
+>x duster
+>score
+/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
+>x dustpan
+>score
+/You could still examine the (parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
+>x ladder
+>score
+/You could still examine the (parcels clasper|bolt case|plastic scalp-it) here.
+>x plastic
+>score
+/You could still examine the (parcels clasper|bolt case) here.
+>x bolt case
+>score
+You could still examine the parcels clasper here.
+\\
+>u
+\\
+>score
+You could still examine the parcels clasper in Sparse Spares.
+\\
+>s
+You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+\\
+>undo
+>d
+>x clasper
+\\
+>u
+>s
+You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
+!ignoring
 
 @nud
 #mistake test for spears
@@ -451,389 +823,4 @@ You don't need to flip anything here, really. Certainly not a room.
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 
 * demo-track-progress
-
-##############################peek keep and disport tripods
-
->s
-Are you sure you want to leave before looking at everything? You can type SCORE or THINK to see what you still haven't done.
->y
-It's--yes, you've sort of lived it, already. You're just too busy for frivolity.
->undo
->s
->n
-Okay, why not look around a bit more.
-
->xtrak
-
-UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: nothing.
-
->xab tripods
-The disport tripods advertise another way to enjoyably pass time after you are done.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: disport tripods (Peek Keep).
-EXHAUSTED exhibits: nothing.
-
->score
-/You still haven't gone (north|east|west|inside) from Peek Keep.
-
->x tripods
-NOTE: you've read all the way through.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep).
-
->n
-Hows Show
-
-##############################hows show: tester street
-
->x tester street
-Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
->g
-More on testing.
-
->xab tester street
-More on testing.
-
->score
-/You saw (Tester Street|the coder decor|the raised aiders) here in Hows Show, but you didn't examine (it|them).
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: Tester Street (Hows Show).
-EXHAUSTED exhibits: disport tripods (Peek Keep).
-
->x tester street
-More on testing.
-NOTE: you've read all the way through.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
-
-#################################hows show: coder decor
-
->x coder decor
-You read some of the coder decor.
-!You read some more of the coder decor.
-
->xab coder decor
-!You read some of the coder decor.
-You read some more of the coder decor.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: coder decor (Hows Show).
-EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
-
->x coder decor
-NOTE: you've read all the way through.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
-
->score
-You saw the raised aiders here in Hows Show, but you didn't examine them.
-
-#################################hows show: raised aiders
-
->x raised aiders
-You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-!You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: raised aiders (Hows Show).
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
-
->xab raised aiders
-You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-!You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-
->x raised aiders
-NOTE: you've read all the way through.
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
-
->score
-/You still haven't gone (east|west|inside) from Peek Keep.
-
-#################################Ned's Dens: Chic Loner Chronicle
-
->s
->w
-Ned's Dens
-
->score
-You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
-
->x chronicle
-The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
-!Another thought reads:
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
-PERUSED exhibits: Chic Loner Chronicle (Ned's Dens).
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
-
->xab chronicle
-!The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
-Another thought reads:
-
->x chronicle
-[NOTE: you've read all the way through.]
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
-
->score
-/You still haven't gone (east|inside) from Peek Keep.
-
-#######################################Intel Inlet: Passe Apses
-
->e
->inside
-Intel Inlet
-
->score
-/You saw (the shiest thesis|the Passe Apses|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
-
->x apses
-The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a page of former content:
-(ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload.
-!You observe another page of former content:
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
-PERUSED exhibits: Passe Apses (Intel Inlet).
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
-
->xab apses
-!You observe a page of former content:
-You observe another page of former content:
-
->x apses
-There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing.
-[NOTE: you've read all the way through.]
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-
->score
-/You saw (the shiest thesis|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
-
-#######################################Intel Inlet: CareLand Calendar
-
->x calendar
-The CareLand Calendar is divided into several parts based on what is there. You read through one.
-Part one: Protean
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove) and shiest thesis (Intel Inlet).
-PERUSED exhibits: CareLand Calendar (Intel Inlet).
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-
->xab calendar
-The CareLand Calendar is divided into several parts based on what is there. You read through one.
-
->x calendar
-The CareLand Calendar is divided into several parts based on what is there. You read through one.
-[NOTE: you've read all the way through.]
-
->score
-You saw the shiest thesis here in Intel Inlet, but you didn't examine it.
-
-#######################################Intel Inlet: CareLand Calendar
-
->x shiest thesis
-It's a list
-
->xtrak
-UNNOTED exhibits: novella (Evoc-Cove).
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-
->score
-
-You still haven't gone east from Peek Keep.
-
-#######################################Evoc-Cove
-
->out
->e
-Evoc-Cove
-
->score
-You saw the novella here in Evoc-Cove, but you didn't examine it.
-
->w
-Peek Keep
->score
-You saw the novella in Evoc-Cove, but you didn't examine it.
-
->e
->x novella
-It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)--the lowest page you haven't read that looks comprehensible is 1. You can also speed-read with RR.
-
->w
-Peek Keep
->score
-
-You still have more of the novella (examined but not read) to look through.
-
->e
->read
-The next page (1) makes enough sense, you guess.
-
-You glance over page 1. The most interesting bit seems to be Page One: Openage. Peonage.
-
->w
->s
-Are you sure you want to leave before exhaustively
->n
-Okay, why not look around a bit more.
->undo
-
->e
-
->rr
-PAGE 2:
-PAGE 11:
-
-# test the page skipping feature
->read
-You have to skip a bit to get to a sensible page (13).
-
-You glance over page 13. The most interesting bit seems to be Tether in thin tree, then tire.
-
->rr
-PAGE 14:
-(skipping some totally nonsensical stuff) PAGE 23:
-PAGE 24:
-
->rr
-PAGE 25:
-PAGE 34:
-
->rr
-PAGE 35:
-(skipping some totally nonsensical stuff) PAGE 43:
-PAGE 45:
-
->rr
-PAGE 46:
-(skipping some totally nonsensical stuff) PAGE 56:
-
->rr
-PAGE 57:
-(skipping some totally nonsensical stuff) PAGE 67:
-
->rr
-PAGE 68:
-PAGE 77:
-
->rr
-PAGE 78:
-(skipping some totally nonsensical stuff) PAGE 87:
-PAGE 88:
-
->rr
-PAGE 89:
-(skipping some totally nonsensical stuff) PAGE 91:
-PAGE 99:
-
->read
-The next page (100) makes enough sense, you guess.
-You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
-
->undo
-
->rr
-PAGE 100:
-You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
-
-Well, that's all. Hooray for speed-reading.
-
->r
-(the novella)
-DEBUG note: reading the novella with novella is under scrutiny, with bore-novella rule.
-
-You've read through everything that makes sense, so you may want to look at a specific page.
-
->rr
-You already read through. You could read individual pages again, I guess.
-
->xtrak
-UNNOTED exhibits: nothing.
-PERUSED exhibits: nothing.
-EXHAUSTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-
->score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
-
->w
->s
-You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-
->undo
-
->d
->score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
-
->x trifle
->score
-/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
->x placer
->score
-/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
->x duster
->score
-/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
->x dustpan
->score
-/You could still examine the (parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
->x ladder
->score
-/You could still examine the (parcels clasper|bolt case|plastic scalp-it) here.
->x plastic
->score
-/You could still examine the (parcels clasper|bolt case) here.
->x bolt case
->score
-You could still examine the parcels clasper here.
-
->u
-
->score
-You could still examine the parcels clasper in Sparse Spares.
-
->s
-You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-
->undo
->d
->x clasper
-
->u
->s
-You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-!ignoring
-
 
