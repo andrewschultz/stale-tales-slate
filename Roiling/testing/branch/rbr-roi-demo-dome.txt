@@ -1,3 +1,15 @@
+#--hch.py checks for if we have something to scan
+#--this should be done for all RBR files and not just routes
+#--rbr.py v to verify nothing slipped
+
+# test cases are a bit squashed: MAX tries all the odd verbs, but NUD tried the nudges
+
+files=reg-roi-demo-dome-max.txt,reg-roi-demo-dome-nudges.txt,reg-roi-demo-dome-hints.txt
+
+~	max	max
+~	nudges,nud,nu,mis	nudmis
+~	hints,hin,spoi	hints
+
 ###############################
 #
 #reg-roi-demo-dome.txt
@@ -8,23 +20,33 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _demo-nudges
+* main
+
+@max
+>z
+>gonear strip
+>demo dome mode
+For reasons of continuity
+>undo
+>undo
 
 >demo dome
 Peek Keep
 
+@max
 >undo
 >demo mode
 Peek Keep
-
+\\
 >undo
 >dome mode
 Peek Keep
-
+\\
 >undo
 >demo dome mode
 Peek Keep
 
+@max
 #verbcase smell-demo-dome-default
 >smell
 Thankfully, nothing unusual like, say, a Med-O-Dome.
@@ -32,210 +54,227 @@ Thankfully, nothing unusual like, say, a Med-O-Dome.
 >listen
 It's nice and quiet. It IS a museum.
 
+@nud
 #mistake test for singed
 >singed
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You already saw a singed design when you helped Curtis. Plus, arson is bad.
-
+\\
 #mistake test for dali
 >dali
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !Not surreal enough for you?
-
+\\
 #mistake test for laid
 >laid
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !The spy dial is already laid out.
-
+\\
 #nudge for peek
 >pkee
 You don't need to flip anything here, really. Certainly not a room.
 
+@max
 >x me
 You look just fine.
 
->s
-!There's no score in the Demo Dome. You just need to look around.
+@max
+>score
+There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
+You saw the disport tripods here in Peek Keep, but you didn't examine them.
+You can toggle
+\\
+>score
+!There's no score
+You saw the disport tripods here in Peek Keep, but you didn't examine them.
+!You can toggle
 
+@max
+>s
 Are you sure you want to leave before looking at everything?
 >n
-
+\\
 >x disport
-
->blather
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-
-#nudge for greta
->gerta
-It was tested to make sure even you couldn't magic it open.
-
+\\
 >x ignsay
 UNFOLD OLD FUN, MEMOIR: I'M MORE.
 
+@nud
+>blather
+There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
+\\
+#nudge for greta
+>gerta
+It was tested to make sure even you couldn't magic it open.
+\\
 #nudge for sgni
 >igns
 No need to mess with the helpful sign.
-
+\\
 #nudge for saying
 >siyang
 No need to mess with the helpful sign.
-
+\\
 #nudge for unfold
 >unfold
 No need to mess with the helpful sign.
-
+\\
 #nudge for memoir
 >memoir
 No need to mess with the helpful sign.
-
+\\
 ##############################################these nudges should fail before X GRATE
-
+\\
 #nudge for display
 >dipslay
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
-
+\\
 #nudge for spy
 >spy
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
-
+\\
 #nudge for dial
 >dial
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
-
+\\
 #nudge for design
 >edgins
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for deign
 >edgin
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for talks
 >talsk
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for talk
 >takl
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for spce
 >spec
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for speca
 >spaec
 # note this is defined in the general table, so we get the non-default response.
 Meta-commands don't have any easter eggs, sadly.
 !This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 ##############################################nudges before and after are different
 
 >x grate
 
+@nud
 #mistake retest for singed
 >singed
 !There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 You already saw a singed design when you helped Curtis. Plus, arson is bad.
-
+\\
 #mistake retest for dali
 >dali
 Not surreal enough for you?
-
+\\
 #mistake retest for laid
 >laid
 The spy dial is already laid out.
-
+\\
 #nudge for shall
 >shlal
 You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
-
->turn dial
-The Spy Dial Display is currently off and out of reach.
-
->turn dial on
-The Spy Dial Display is currently off and out of reach.
-
->turn dial off
-The Spy Dial Display is currently off and out of reach.
-
+\\
 #nudge for demo
 >edom
 Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
-
+\\
 #renudge for display
 >dipslay
 You won't figure the code. There isn't one. Muahaha.
-
+\\
 #renudge for spy
 >spy
 You won't figure the code. There isn't one. Muahaha.
-
+\\
 #renudge for dial
 >dial
 You won't figure the code. There isn't one. Muahaha.
-
+\\
 #renudge for design
 >edgins
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #renudge for deign
 >edgin
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #renudge for talks
 >talsk
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #renudge for talk
 >takl
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #renudge for spce
 >spec
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #renudge for speca
 >space
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for tripods
 >triposd
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for tripdo
 >tripod
 This is a museum! Messing with the exhibits would be very bad form.
+\\
+@max
+>turn dial
+The Spy Dial Display is currently off and out of reach.
+\\
+>turn dial on
+The Spy Dial Display is currently off and out of reach.
+\\
+>turn dial off
+The Spy Dial Display is currently off and out of reach.
 
 >in
 Intel Inlet
 
+@max
 >n
 You can only go outside here.
 
+@nud
 #nudge for intel
 >eltin
 You don't need to flip anything here, really. Certainly not a room.
-
+\\
 #nudge for calendar
 >careladn
 These are documents of historical records! Revisionism is so Elvira.
-
+\\
 #nudge for thesis
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
-
+\\
 #nudge for passe
 >pases
 I have full creative control over the Passe Apses, and I'm not giving it up.
-
+\\
 #nudge for apse
 >apes
 I have full creative control over the Passe Apses, and I'm not giving it up.
@@ -245,32 +284,32 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 >n
 Hows Show
 
+@nud
 #nudge for hows
 >hosw
 You don't need to flip anything here, really. Certainly not a room.
-
->bluh
-
+\\
 #nudge for chest
 >chets
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for raised
 >raisde
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for aider
 >aidre
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for coder
 >codre
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for tech
 >tehc
 This is a museum! Messing with the exhibits would be very bad form.
 
+@max
 >w
 You can only go south here.
 
@@ -279,26 +318,27 @@ You can only go south here.
 >w
 Ned's Dens
 
+@nud
 #mistake test for send
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
-
+\\
 ##nudge for neds
 >sedn
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one! There are so many awesome ones!
-
+\\
 #nudge for icch
 >icch
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
-
+\\
 #nudge for ernol
 >ernol
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
-
+\\
 #nudge for chicloner
 >chronicle
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
-
+\\
 #nudge for neds
 >edns
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
@@ -309,126 +349,108 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
+@nud
 #nudge for novella
 >novelal
 You can't change the book's writing. Well, you could, I guess. But this is a museum
-
+\\
 #mistake test for neva/lol
 >neva
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 >lol
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
-
+\\
 #nudge for neva
 >neav
 You can't change the book's writing. Well, you could, I guess. But this is a museum
-
+\\
 #nudge for lol
 >llo
 You can't change the book's writing. Well, you could, I guess. But this is a museum
-
+\\
 #nudge for evoc
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 
 >w
+
 >d
 Sparse Spares
 
->gonear sparse spares
-
+@nud
 #mistake test for spears
 >spears
 There's nothing you need a weapon to fight against.
-
+\\
 #nudge for trifle
 >tifler
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for placer
 >palcer
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for scalper
 >palcers
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for rudest
 >rudest
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for dustpan
 >dupstan
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for ladder
 >lardde
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for scalpit
 >sclipat
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for btol
 >blto
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for case
 >scea
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for boltcase
 >boltcaes
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for best
 >bets
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for calo
 >calo
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 #nudge for sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 #nudge for spare
-
+\\
 #mistake test for clasp
 >clasp
 If there were a puzzle for stealing stuff, that'd work. But there isn't.
-
+\\
 #nudge for clasp
 >alcsp
 This is a museum! Messing with the exhibits would be very bad form.
-
+\\
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
-
+\\
 #nudge for bulk
 >ublk
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 
 * demo-track-progress
-
->z
->gonear strip
->demo dome mode
-For reasons of continuity
->undo
->undo
-
->demo dome
-
->score
-There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
-You saw the disport tripods here in Peek Keep, but you didn't examine them.
-You can toggle
-
->score
-!There's no score
-You saw the disport tripods here in Peek Keep, but you didn't examine them.
-!You can toggle
 
 ##############################peek keep and disport tripods
 
