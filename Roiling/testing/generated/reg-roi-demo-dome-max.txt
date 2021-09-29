@@ -1,15 +1,4 @@
-#--hch.py checks for if we have something to scan
-#--this should be done for all RBR files and not just routes
-#--rbr.py v to verify nothing slipped
 
-# test cases are a bit squashed: MAX tries all the odd verbs, but NUD tried the nudges
-
-files=reg-roi-demo-dome-max.txt,reg-roi-demo-dome-nudmis.txt
-
-~	max	max
-~	nudges,nud,nu,mis	nudmis
-
-###############################
 #
 #reg-roi-demo-dome.txt
 #
@@ -21,7 +10,6 @@ files=reg-roi-demo-dome-max.txt,reg-roi-demo-dome-nudmis.txt
 
 * main
 
-@max
 >z
 >gonear strip
 >demo dome mode
@@ -32,20 +20,18 @@ For reasons of continuity
 >demo dome
 Peek Keep
 
-@max
 >undo
 >demo mode
 Peek Keep
-\\
+
 >undo
 >dome mode
 Peek Keep
-\\
+
 >undo
 >demo dome mode
 Peek Keep
 
-@max
 #verbcase smell-demo-dome-default
 >smell
 Thankfully, nothing unusual like, say, a Med-O-Dome.
@@ -53,42 +39,19 @@ Thankfully, nothing unusual like, say, a Med-O-Dome.
 >listen
 It's nice and quiet. It IS a museum.
 
-@nud
-#mistake test for singed
->singed
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!You already saw a singed design when you helped Curtis. Plus, arson is bad.
-\\
-#mistake test for dali
->dali
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!Not surreal enough for you?
-\\
-#mistake test for laid
->laid
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!The spy dial is already laid out.
-\\
-#nudge for peek
->pkee
-You don't need to flip anything here, really. Certainly not a room.
-
-@max
 >x me
 You look just fine.
 
-@max
 >score
 There's no score in the Demo Dome. You just need to look around. Well, if you'd like a rank ... eh, you've done so much, I'll let you choose between Elites' Listee, Greaten-Grantee, Derivin' Diviner or Sharper Phraser. Or have them all. You've earned it!
 You saw the disport tripods here in Peek Keep, but you didn't examine them.
 You can toggle
-\\
+
 >score
 !There's no score
 You saw the disport tripods here in Peek Keep, but you didn't examine them.
 !You can toggle
 
-@max
 >s
 Are you sure you want to leave before looking at everything? You can type SCORE or THINK to see what you still haven't done.
 >y
@@ -97,299 +60,122 @@ It's--yes, you've sort of lived it, already. You're just too busy for frivolity.
 >s
 >n
 Okay, why not look around a bit more.
-\\
+
 >xtrak
-\\
+
 UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: nothing.
-\\
+
 >xab tripods
 The disport tripods advertise another way to enjoyably pass time after you are done.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: disport tripods (Peek Keep).
 EXHAUSTED exhibits: nothing.
-\\
+
 >score
 /You still haven't gone (north|east|west|inside) from Peek Keep.
-\\
+
 >x tripods
 NOTE: you've read all the way through.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep).
-\\
+
 >x ignsay
 UNFOLD OLD FUN, MEMOIR: I'M MORE.
 
-@nud
->blather
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-\\
-#nudge for greta
->gerta
-It was tested to make sure even you couldn't magic it open.
-\\
-#nudge for sgni
->igns
-No need to mess with the helpful sign.
-\\
-#nudge for saying
->siyang
-No need to mess with the helpful sign.
-\\
-#nudge for unfold
->unfold
-No need to mess with the helpful sign.
-\\
-#nudge for memoir
->memoir
-No need to mess with the helpful sign.
-\\
-##############################################these nudges should fail before X GRATE
-\\
-#nudge for display
->dipslay
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!You won't figure the code. There isn't one. Muahaha.
-\\
-#nudge for spy
->spy
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!You won't figure the code. There isn't one. Muahaha.
-\\
-#nudge for dial
->dial
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!You won't figure the code. There isn't one. Muahaha.
-\\
-#nudge for design
->edgins
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for deign
->edgin
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for talks
->talsk
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for talk
->takl
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for spce
->spec
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for speca
->spaec
-# note this is defined in the general table, so we get the non-default response.
-Meta-commands don't have any easter eggs, sadly.
-!This is a museum! Messing with the exhibits would be very bad form.
-\\
-##############################################nudges before and after are different
-
 >x grate
 
-@nud
-#mistake retest for singed
->singed
-!There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
-You already saw a singed design when you helped Curtis. Plus, arson is bad.
-\\
-#mistake retest for dali
->dali
-Not surreal enough for you?
-\\
-#mistake retest for laid
->laid
-The spy dial is already laid out.
-\\
-#nudge for shall
->shlal
-You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
-\\
-#nudge for demo
->edom
-Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
-\\
-#renudge for display
->dipslay
-You won't figure the code. There isn't one. Muahaha.
-\\
-#renudge for spy
->spy
-You won't figure the code. There isn't one. Muahaha.
-\\
-#renudge for dial
->dial
-You won't figure the code. There isn't one. Muahaha.
-\\
-#renudge for design
->edgins
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#renudge for deign
->edgin
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#renudge for talks
->talsk
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#renudge for talk
->takl
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#renudge for spce
->spec
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#renudge for speca
->space
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for tripods
->triposd
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for tripdo
->tripod
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-
-@max
 >turn dial
 The Spy Dial Display is currently off and out of reach.
-\\
+
 >turn dial on
 The Spy Dial Display is currently off and out of reach.
-\\
+
 >turn dial off
 The Spy Dial Display is currently off and out of reach.
 
 >n
 Hows Show
 
-@max
-##############################hows show: tester street
-\\
 >x tester street
 Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
 >g
 More on testing.
-\\
+
 >xab tester street
 More on testing.
-\\
+
 >score
 /You saw (the coder decor|the raised aiders) here in Hows Show, but you didn't examine (it|them).
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: Tester Street (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep).
-\\
+
 >x tester street
 More on testing.
 NOTE: you've read all the way through.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
 
-@max
-#################################hows show: coder decor
-\\
 >x coder decor
 You read some of the coder decor.
 !You read some more of the coder decor.
-\\
+
 >xab coder decor
 !You read some of the coder decor.
 You read some more of the coder decor.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: coder decor (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
-\\
+
 >x coder decor
 NOTE: you've read all the way through.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
-\\
+
 >score
 You saw the raised aiders here in Hows Show, but you didn't examine them.
 
-@max
-#################################hows show: raised aiders
-\\
 >x raised aiders
 You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 !You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: raised aiders (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
-\\
+
 >xab raised aiders
 You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 !You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
-\\
+
 >x raised aiders
 NOTE: you've read all the way through.
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
-\\
+
 >score
 /You still haven't gone (east|west|inside) from Peek Keep.
 
-@nud
-#nudge for hows
->hosw
-You don't need to flip anything here, really. Certainly not a room.
-\\
-#nudge for chest
->chets
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for raised
->raisde
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for aider
->aidre
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for coder
->codre
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for tech
->tehc
-This is a museum! Messing with the exhibits would be very bad form.
-
-@max
 >w
 You can only go south here.
 
@@ -397,154 +183,96 @@ You can only go south here.
 >w
 Ned's Dens
 
-@max
-#################################Ned's Dens: Chic Loner Chronicle
-\\
 >score
 You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
-\\
+
 >x chronicle
 The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 !Another thought reads:
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
 PERUSED exhibits: Chic Loner Chronicle (Ned's Dens).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
-\\
+
 >xab chronicle
 !The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 Another thought reads:
-\\
+
 >x chronicle
 [NOTE: you've read all the way through.]
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
-\\
+
 >score
 /You still haven't gone (east|inside) from Peek Keep.
-
-@nud
-#mistake test for send
->send
-Maybe in another game, you could do that, if you walked around right. But not this one.
-\\
-##nudge for neds
->sedn
-You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one! There are so many awesome ones!
-\\
-#nudge for icch
->icch
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
-\\
-#nudge for ernol
->ernol
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
-\\
-#nudge for chicloner
->chronicle
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
-\\
-#nudge for neds
->edns
-You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
 
 >e
 >in
 Intel Inlet
 
-@max
 >n
 You can only go outside here.
-\\
-#######################################Intel Inlet: Passe Apses
-\\
+
 >score
 /You saw (the shiest thesis|the Passe Apses|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
-\\
+
 >x apses
 The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a page of former content:
 (ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload.
 !You observe another page of former content:
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
 PERUSED exhibits: Passe Apses (Intel Inlet).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
-\\
+
 >xab apses
 !You observe a page of former content:
 You observe another page of former content:
-\\
+
 >x apses
 There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing.
 [NOTE: you've read all the way through.]
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand Calendar (Intel Inlet).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-\\
+
 >score
 /You saw (the shiest thesis|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
 !You still haven't gone east from Peek Keep.
 
-@max
-#######################################Intel Inlet: CareLand Calendar
-\\
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 Part one: Protean
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove) and shiest thesis (Intel Inlet).
 PERUSED exhibits: CareLand Calendar (Intel Inlet).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-\\
+
 >xab calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
-\\
+
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 [NOTE: you've read all the way through.]
-\\
+
 >score
 You saw the shiest thesis here in Intel Inlet, but you didn't examine it.
 
-@max
-#######################################Intel Inlet: Shiest Thesis
-\\
 >x shiest thesis
 It's a list
-\\
+
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove).
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-
-@nud
-#nudge for intel
->eltin
-You don't need to flip anything here, really. Certainly not a room.
-\\
-#nudge for calendar
->careladn
-These are documents of historical records! Revisionism is so Elvira.
-\\
-#nudge for thesis
->thessi
-These are documents of historical records! Revisionism is so Elvira.
-\\
-#nudge for passe
->pases
-I have full creative control over the Passe Apses, and I'm not giving it up.
-\\
-#nudge for apse
->apes
-I have full creative control over the Passe Apses, and I'm not giving it up.
 
 >out
 
@@ -553,275 +281,166 @@ I have full creative control over the Passe Apses, and I'm not giving it up.
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
-@max
-#######################################Evoc-Cove
-\\
 >out
 >e
 Evoc-Cove
-\\
+
 >score
 You saw the novella here in Evoc-Cove, but you didn't examine it.
-\\
+
 >w
 Peek Keep
 >score
 You saw the novella in Evoc-Cove, but you didn't examine it.
-\\
+
 >e
 >x novella
 It's called Venal Ol' Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)--the lowest page you haven't read that looks comprehensible is 1. You can also speed-read with RR.
-\\
+
 >w
 Peek Keep
 >score
-\\
+
 You still have more of the novella (examined but not read) to look through.
-\\
+
 >e
 >read
 The next page (1) makes enough sense, you guess.
-\\
+
 You glance over page 1. The most interesting bit seems to be Page One: Openage. Peonage.
-\\
+
 >w
 >s
 Are you sure you want to leave before exhaustively
 >n
 Okay, why not look around a bit more.
 >undo
-\\
+
 >e
-\\
+
 >rr
 PAGE 2:
 PAGE 11:
-\\
+
 # test the page skipping feature
 >read
 You have to skip a bit to get to a sensible page (13).
-\\
+
 You glance over page 13. The most interesting bit seems to be Tether in thin tree, then tire.
-\\
+
 >rr
 PAGE 14:
 (skipping some totally nonsensical stuff) PAGE 23:
 PAGE 24:
-\\
+
 >rr
 PAGE 25:
 PAGE 34:
-\\
+
 >rr
 PAGE 35:
 (skipping some totally nonsensical stuff) PAGE 43:
 PAGE 45:
-\\
+
 >rr
 PAGE 46:
 (skipping some totally nonsensical stuff) PAGE 56:
-\\
+
 >rr
 PAGE 57:
 (skipping some totally nonsensical stuff) PAGE 67:
-\\
+
 >rr
 PAGE 68:
 PAGE 77:
-\\
+
 >rr
 PAGE 78:
 (skipping some totally nonsensical stuff) PAGE 87:
 PAGE 88:
-\\
+
 >rr
 PAGE 89:
 (skipping some totally nonsensical stuff) PAGE 91:
 PAGE 99:
-\\
+
 >read
 The next page (100) makes enough sense, you guess.
 You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
-\\
+
 >undo
-\\
+
 >rr
 PAGE 100:
 You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
-\\
+
 Well, that's all. Hooray for speed-reading.
-\\
+
 >r
 (the novella)
 DEBUG note: reading the novella with novella is under scrutiny, with bore-novella rule.
-\\
+
 You've read through everything that makes sense, so you may want to look at a specific page.
-\\
+
 >rr
 You already read through. You could read individual pages again, I guess.
-\\
+
 >xtrak
 UNNOTED exhibits: nothing.
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
-\\
+
 >score
 /You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
-\\
+
 >w
 >s
 You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-\\
->undo
 
-@nud
-#nudge for novella
->novelal
-You can't change the book's writing. Well, you could, I guess. But this is a museum
-\\
-#mistake test for neva/lol
->neva
-Yeah, the novel is pretty unbelievable, but it's not there to be profound.
->lol
-Yeah, the novel is pretty unbelievable, but it's not there to be profound.
-\\
-#nudge for neva
->neav
-You can't change the book's writing. Well, you could, I guess. But this is a museum
-\\
-#nudge for lol
->llo
-You can't change the book's writing. Well, you could, I guess. But this is a museum
-\\
-#nudge for evoc
->evco
-You don't need to flip anything here, really. Certainly not a room.
-\\
->w
+>undo
 
 >d
 Sparse Spares
 
-@max
 >score
 /You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
-\\
+
 >x trifle
-###skip test checking
 >score
 /You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x placer
-###skip test checking
 >score
 /You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x duster
-###skip test checking
 >score
 /You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
 >x dustpan
-###skip test checking
 >score
 /You could still examine the (parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
 >x ladder
-###skip test checking
 >score
 /You could still examine the (parcels clasper|bolt case|plastic scalp-it) here.
 >x plastic
-###skip test checking
 >score
 /You could still examine the (parcels clasper|bolt case) here.
 >x bolt case
-###skip test checking
 >score
 You could still examine the parcels clasper here.
-\\
+
 >u
-\\
+
 >score
 You could still examine the parcels clasper in Sparse Spares.
-\\
+
 >s
 You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
-\\
+
 >undo
 >d
 >x clasper
-\\
+
 >u
 >s
 You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not so big it wasted taxpayers' money.
 !ignoring
-
-@nud
-#mistake test for spears
->spears
-There's nothing you need a weapon to fight against.
-\\
-#nudge for trifle
->tifler
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for placer
->palcer
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for scalper
->palcers
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for rudest
->rudest
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for dustpan
->dupstan
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for ladder
->lardde
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for scalpit
->sclipat
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for btol
->blto
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for case
->scea
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for boltcase
->boltcaes
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for best
->bets
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for calo
->calo
-This is a museum! Messing with the exhibits would be very bad form.
-\\
-#nudge for sparse
->spresa
-You don't need to flip anything here, really. Certainly not a room.
-#nudge for spare
-\\
-#mistake test for clasp
->clasp
-If there were a puzzle for stealing stuff, that'd work. But there isn't.
-\\
-#nudge for clasp
->alcsp
-This is a museum! Messing with the exhibits would be very bad form.
-\\
->spresa
-You don't need to flip anything here, really. Certainly not a room.
-\\
-#nudge for bulk
->ublk
-Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 
