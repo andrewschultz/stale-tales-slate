@@ -25,6 +25,13 @@ Peek Keep
 >demo dome mode
 Peek Keep
 
+#verbcase smell-demo-dome-default
+>smell
+Thankfully, nothing unusual like, say, a Med-O-Dome.
+#verbcase listen-demo-dome-default
+>listen
+It's nice and quiet. It IS a museum.
+
 #mistake test for singed
 >singed
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
