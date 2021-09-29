@@ -6967,7 +6967,6 @@ listen-list of demo dome is { }.
 the ambient sound rule is not listed in any rulebook.
 
 rule for supplying a missing noun when listening (this is the directed ambient sound rule) :
-	if debug-state is true, say "DEBUG: Going through listen-candidates."; [??]
 	repeat with Q running through listen-list of mrlp:
 		if Q is touchable:
 			now the noun is Q;
@@ -7142,13 +7141,13 @@ smell-list of others is { slime }.
 smell-list of demo dome is { }.
 
 rule for supplying a missing noun when smelling (this is the directed ambient odor rule):
-	if debug-state is true, say "DEBUG: finding missing (smell) noun.";
 	repeat with Q running through smell-list of mrlp:
 		if Q is touchable:
 			if debug-state is true, say "DEBUG note: [Q] found as smell candidate.";
 			now the noun is Q;
 			continue the action;
 	if debug-state is true, say "DEBUG note: nothing found as smell candidate.";
+	now noun is location of player;
 
 check smelling (this is the you can smell some stuff some places rule):
 	abide by the smell-rule of mrlp;
@@ -19644,7 +19643,7 @@ the coma camo is a boring bounding backdrop. It is in Shiner Shrine and Clarthea
 
 book Lamer Realm
 
-Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here, hardly the coxiest[if adjsolve is 4]. There're so many you think Gee, Fur Refuge[end if][atleast-evenbetter]. You can go back south--saturnic curtains guard all other ways out.". roomnud of Lamer Realm is table of Lamer Realm nudges.
+Lamer Realm is north of Shiner Shrine. Lamer Realm is a room in Otters. "[if adjsolve >= 3]Since it's been redone, there're no deer--or need! It's so much nicer here than the lamer realm it was, or unblest sunbelt it could be. [end if]Exotics coexist here, hardly the coxiest[if adjsolve is 4]. There're so many you think Gee, Fur Refuge[end if][atleast-evenbetter]. You can go back south--saturnic curtains guard all other ways out. They might even prevent loosing olingos, if any olingos were about.". roomnud of Lamer Realm is table of Lamer Realm nudges.
 
 to say atleast-evenbetter: say ". [if enough-animals-solved-here]Even better,[else]At least[end if] it's secluded enough you can't see the Edictal Citadel from here"
 

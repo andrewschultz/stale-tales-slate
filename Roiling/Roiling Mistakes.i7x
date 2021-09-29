@@ -585,6 +585,8 @@ chapter Fighter Freight
 
 understand "peal" as a mistake ("The pale plea already sort of is. You need a stronger action than that.") when player is in Fighter Freight.
 
+understand "refight" as a mistake ("That's not very good English, and you haven't gotten in a fight yet. Soon, though.") when player is in Fighter Freight.
+
 chapter Anger Range / Hero's Shore
 
 understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in Anger Range and carps are in Anger Range.
