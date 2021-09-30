@@ -10,8 +10,8 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	hints,hin,spoi	t5
 ~	verbs	t6
 
-}}MAX=34
-}}CURMAX=34
+}}MAX=35
+}}CURMAX=35
 }}SCORE=0
 }}CURMIN=24
 
@@ -936,7 +936,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
 #spechelp for cut ya all cult laya
 >actualyl
-The jabber from the Cut-Ya-All Cult Laya' becomes slightly less inane for a moment.
+The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
 #scannotes for cut ya all cult laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
@@ -2171,6 +2171,43 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 
 >n
 >n
+
+@sli
+#slider test for basically
+>alislbayc
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#spechelp for asyllabic lilac bays
+>basicalyl
+You almost hear music as the lilac bays rustle.
+
+@verbs
+#verbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
+>listen
+!You can't hear anything from the bays now
+/(Silly Cab A|Clay Blais)
+
+@!min
+>basically
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@nud
+#done rejects for asyllabic lilac bays
+>basicalyl
+The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
+
+@verbs
+#reverbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
+>listen
+You can't hear anything from the bays now
+!/(Silly Cab A|Clay Blais)
+!An odd voice.
+
 >w
 
 @hin

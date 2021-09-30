@@ -65,7 +65,7 @@ That is a lot of matching for six letters. And you haven't seen anything like th
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
+Score in a scenario: 1 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 35.
 
 >l
 Burnt Brunt
@@ -161,7 +161,7 @@ Ed Riley looks pleased he's pressured you into laziness.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 2 out of 34 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 34.
+Score in a scenario: 2 out of 35 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 
 >reedily
 Your score has just gone up by one point
@@ -183,7 +183,7 @@ No, you need a couple more letters. Ones that make a word weak enough to control
 >undo
 
 >score
-Score in a scenario: 3 out of 34 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 34.
+Score in a scenario: 3 out of 35 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 
 >w
 Disowned Downside
@@ -453,18 +453,18 @@ You needed to deal with all the players to knock them back a peg.
 >bossily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 34 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 34.
+Score in a scenario: 4 out of 35 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 5 out of 34 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 34.
+Score in a scenario: 5 out of 35 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 6 out of 34 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 34.
+Score in a scenario: 6 out of 35 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 35.
 >au 0
 
 #renudge for gretta
@@ -484,7 +484,7 @@ Enough people are trying to manipulate Gretta. Listen to what she has to say, in
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
 #spechelp for cut ya all cult laya
 >actualyl
-The jabber from the Cut-Ya-All Cult Laya' becomes slightly less inane for a moment.
+The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
 #scannotes for cut ya all cult laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
@@ -492,7 +492,7 @@ The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no ful
 >actually
 by one point
 >score
-Score in a scenario: 7 out of 34 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 34.
+Score in a scenario: 7 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
 
 #mistake retest for slap em
 >slap em
@@ -541,13 +541,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a d
 by one point
 
 >score
-Score in a scenario: 8 out of 34 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 34.
+Score in a scenario: 8 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
 
 >else
 by one point
 
 >score
-Score in a scenario: 9 out of 34 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 34.
+Score in a scenario: 9 out of 35 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 35.
 
 #done rejects for eels
 >eesl
@@ -566,7 +566,7 @@ You focus on the voices swirling around, and a despairing bit of poetry appears 
 >unless
 by one point
 >score
-Score in a scenario: 10 out of 34 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 34.
+Score in a scenario: 10 out of 35 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 35.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
@@ -612,14 +612,14 @@ The infidel infield is Mr. Lee's, and it expresses things from his perspective. 
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 11 out of 34 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 34.
+Score in a scenario: 11 out of 35 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 35.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 12 out of 34 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 34.
+Score in a scenario: 12 out of 35 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 35.
 
 #spechelp for vow here
 >howevre
@@ -641,7 +641,7 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 13 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 13 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 >n
 
 #spechelp for atmo moat
@@ -656,7 +656,7 @@ You feel sheepish having used the settler, but it's been a long journey.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 14 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 >e
 
@@ -740,13 +740,13 @@ You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger P
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 15 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 16 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 >n
 Lamer Realm
@@ -766,7 +766,7 @@ Actually, you'd like the owls NOT to reach lows like you are. Or not to get ther
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 17 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 #nudge for lamer
 >lamre
@@ -829,13 +829,13 @@ The leopard is plenty powerful as-is, but you need to get it on your side.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 18 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 19 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 #scannotes for stray satyr
 >scan stray satyr
@@ -848,7 +848,7 @@ You see TSYRA branded in red under the stray satyr's shoulder.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 34 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 34.
+Score in a scenario: 20 out of 35 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 35.
 
 #mistake retest for preload/pre-load/pre load
 >preload
@@ -894,7 +894,7 @@ The badger already feels second-rate, so you need another way to help it.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 21 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 21 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 #mistake retest for b grade/bgrade
 >b grade
@@ -975,14 +975,14 @@ You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 22 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: 23 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 23 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 >s
 Perverse Preserve
@@ -996,7 +996,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 24 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 #mistake test for penis
 >penis
@@ -1071,19 +1071,19 @@ The nails are already dead as a doornail.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 25 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 >hornets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 26 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 34 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 34.
+Score in a scenario: 27 out of 35 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 35.
 
 #mistake retest for slain/as nil
 >as nil
@@ -1102,7 +1102,7 @@ Uprates Pasture
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 34 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 34.
+Score in a scenario: 28 out of 35 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 35.
 
 #nudge for uprate
 >upraet
@@ -1119,6 +1119,20 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 
 >n
 >n
+
+#spechelp for asyllabic lilac bays
+>basicalyl
+You almost hear music as the lilac bays rustle.
+
+>basically
+by one point
+>score
+Score in a scenario: 29 out of 35 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 35.
+
+#done rejects for asyllabic lilac bays
+>basicalyl
+The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
+
 >w
 
 >w
@@ -1240,7 +1254,7 @@ Hmm. The two yellows can't mean something like LREME. So it must be they are ide
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 29 out of 34 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 34.
+Score in a scenario: 30 out of 35 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 35.
 
 #readables for holy nest
 >read holy nest
@@ -1280,7 +1294,7 @@ holy nest
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 30 out of 34 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 34 points.
+Score in a scenario: 31 out of 35 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 #renudge for ideas
 >edsia
@@ -1313,7 +1327,7 @@ You don't need to riff on any location names to win the game, unless there's not
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >score
-Score in a scenario: 31 out of 34 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 34 points.
+Score in a scenario: 32 out of 35 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 #spechelp for medals
 >quickyl
@@ -1456,7 +1470,7 @@ You have enough to think about without one more of Elvira's machines.
 You have enough to think about without one more of Elvira's machines.
 
 >score
-Score in a scenario: 33 out of 34 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 34 points.
+Score in a scenario: 34 out of 35 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 >misses
 !otters

@@ -23,7 +23,7 @@
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
+Score in a scenario: 1 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 35.
 
 >l
 Burnt Brunt
@@ -41,7 +41,7 @@ REEDILY
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 2 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 2 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >w
 Disowned Downside
@@ -49,18 +49,18 @@ Disowned Downside
 >bossily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 3 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 3 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 4 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 5 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 5 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 >au 0
 
 >1
@@ -77,13 +77,13 @@ Loop Pool
 by one point
 
 >score
-Score in a scenario: 6 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 6 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >else
 by one point
 
 >score
-Score in a scenario: 7 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 7 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >s
 
@@ -91,7 +91,7 @@ Score in a scenario: 7 out of 34 total points in the current region, Otters. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 8 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >e
 
@@ -102,13 +102,13 @@ Shiner Shrine
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 9 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 10 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 10 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >n
 Lamer Realm
@@ -117,25 +117,25 @@ Lamer Realm
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 11 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >coolest
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 12 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 13 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >artsy
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 14 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >l
 Blest Belts
@@ -150,14 +150,14 @@ Clarthead Cathedral
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 15 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: 16 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 16 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >s
 Perverse Preserve
@@ -166,31 +166,32 @@ Perverse Preserve
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 17 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >snail
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 18 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >hornets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 19 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 33.
+Score in a scenario: 20 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 34.
 
 >l
 Uprates Pasture
 
 >n
 >n
+
 >w
 
 >w
@@ -200,7 +201,7 @@ Reclusion Inclosure
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 31.
+Score in a scenario: 21 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
@@ -220,7 +221,7 @@ Your score has just gone up by one point
 >w
 
 >score
-Score in a scenario: 23 out of 34 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 31.
+Score in a scenario: 23 out of 35 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 32.
 
 >misses
 !otters
