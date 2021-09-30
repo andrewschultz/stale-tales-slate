@@ -204,7 +204,7 @@ def verify_one_array(my_array):
     return ret_val
 
 def verify_one_line(my_line):
-    return verify_one_array(my_line.split(","))
+    return verify_one_array(my_line.replace(' ', '').split(','))
 
 def test_for_code_change():
     print("Should be ok:")

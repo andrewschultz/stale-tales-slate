@@ -29,6 +29,7 @@ search_strings = []
 got_one_reading = False
 details = False
 check_v_c = False
+show_red_text = False
 
 red_anagrams = defaultdict(list)
 found_searched = defaultdict(bool)
@@ -43,6 +44,17 @@ def usage():
     print("Use =(wanted word,clue word 1,etc.) to give a new set of possible positions.")
     print("revised,idserve tacks on more red writing to a solution already in reds.txt.")
     sys.exit()
+
+def red_text(a):
+    temp = ''
+    for q in a.lower():
+        if q == 'y':
+            temp += 'O'
+        elif q in 'aeiou':
+            temp += 'Y'
+        else:
+            temp += 'R'
+    return temp
 
 def alfy(a):
     return ''.join(sorted(a))
@@ -183,6 +195,8 @@ def find_poss(word_array, bail=False):
             print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
         else:
             print(len(answers), poss_string, "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
+        if show_red_text:
+            print("    RED TEXT:", red_text(answer))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
@@ -278,6 +292,7 @@ while count < len(sys.argv):
         sys.exit()
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
+    elif arg == 'r': show_red_text = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
     elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
     elif arg[0] == 'x' and arg[1:].isdigit():
