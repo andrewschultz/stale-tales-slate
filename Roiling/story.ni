@@ -263,21 +263,22 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 33. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 34. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
 [LLP list:
 1=25 for RESCIND
-3=27 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
-4=28 HOWEVER post Bran Barn
-5=29 UNLESS post Loop Pool
-6=30 for all Lamer Realm animals
-7=31 for all Uprates Pasture animals
-8=32 for ASIDE around Elmer/Merle
-9=33 for HONESTLY after ASIDE
+2=26 for ACTUALLY
+4=28 (+2) for both of BECAUSE/ELSE or ALTHOUGH/ERGO (second power-back)
+5=29 HOWEVER post Bran Barn
+6=30 UNLESS post Loop Pool
+7=31 for all Lamer Realm animals
+8=32 for all Uprates Pasture animals
+9=33 for ASIDE around Elmer/Merle
+10=34 for HONESTLY after ASIDE
 NON ANAGRAM: PLAY WHISTLE
 ]
 
 Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule.
-[There are so many possibilities--about 36 choose 20, or 7 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
+[There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule.
@@ -2728,6 +2729,7 @@ stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power
 cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
 coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
 sample maples	"On one, you read: 'Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage.'"
+cut ya all cult laya	"One of the two designers['] names is [one of]Clay Laut[or]Lucy Lata[in random order]."
 sullenness us	"You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN."
 holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order]"
 stray satyr	"You see TSYRA branded in red under the stray satyr's shoulder."
@@ -4891,6 +4893,7 @@ t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks an
 t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
 medals	true	false	false	false	"[if cheat-on is true]The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
+cut ya all cult laya	true	false	false	false	"The words of the [laya] certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading."
 atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
 aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
@@ -18956,7 +18959,7 @@ check going west in Minded Midden: if Ed Riley is touchable, say "'Re-yield, yie
 
 book Disowned Downside
 
-Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the [players][end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here.". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
+Disowned Downside is west of Minded Midden. It is a room in Otters. "This crossroad is [if Gretta is touchable]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]unobstructed now you dispersed the [players][end if]. A [if merle is moot]wide (thanks to the parrot/raptor)[else]narrow[end if] entry to Elvira's Edictal Citadel is to the west[if Reclusion Inclosure is unvisited]--you'll want to brave it some time[end if][if atmo moat is in Disowned Downside]. A moat blocks entry right now, though[end if]. You can also go back east or [if Loop Pool is visited or Bran Barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]. Sample maples make it a bit less dreary here[if laya is touchable].[paragraph break]The [laya] still chirps away here, praising Elvira. Putting it out of commission might be a nice distraction[end if].". roomnud of Disowned Downside is table of Disowned Downside nudges. [ic]
 
 after looking in Disowned Downside:
 	if parleys splayer players are in Disowned Downside:
@@ -19062,7 +19065,7 @@ gre-north-quip	"'Maybe you will figure how to help the eels to the north and the
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
 gre-east-quip	"'There are animal pens back east.' [if Clarthead Cathedral is visited and Shiner Shrine is visited]You nod your head[else if Clarthead Cathedral is unvisited and Shiner Shrine is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
-gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them. They probably aren't any old medals--they deserve a closer look.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
+gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel. They are worn out, but good deeds can restore them.'[paragraph break]They look very tarnished, but a gift is a gift. You take them. They probably aren't any old medals--they deserve a closer look.[paragraph break]'[gre-other].' She nods and walks off[check-started-yet].[end if][paragraph break]As she does, you hear a small mechanical voice. It is coming from a [laya], one of Elvira's favorite propaganda weapons!" [end GRETTA text]
 
 to decide which number is optleft of (myp - a person):
 	let mytemp be 0;
@@ -19093,6 +19096,7 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 	else if current quip is gre-go-quip:
 		terminate the conversation;
 		now the player wears medals;
+		move laya to disowned downside;
 		moot Gretta;
 		if do-i-chat is true:
 			moot hydra;
@@ -19102,6 +19106,12 @@ after quipping when qbc_litany is the table of Gretta comments (this is the proc
 		do nothing;
 	else:
 		debug-fallthrough;
+
+chapter cut ya all cult laya
+
+the Cut Ya All Cult Laya is LLPish vanishing scenery. printed name of laya is "Cut-Ya-All Cult Laya[']". description is "The [laya] keeps chirping away with inane ramblings of how great Elvira is, only it's all buried under ten levels of irony, so it can't be cultish. You can LISTEN for a clue, if you really want to. The designers['] names are also written in red on here."
+
+a-text of Cut Ya All Cult Laya is "YRRYYRRO". b-text of Cut Ya All Cult Laya is "YR?Y?R?O". parse-text of Cut Ya All Cult Laya is "-[sp]x[sp]x[sp]-[sp]a[sp]l[sp]y".
 
 chapter boring scenery
 

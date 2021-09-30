@@ -351,6 +351,7 @@ t-desperately	t-desperately	false	948982071	--	"desperately"	"desperately"	--	--
 t-reactively	t-reactively	false	793570199	--	"reactively"	"reactively"	--	--	"Gretta catches the [pla-ma]s looking around a little too often to see if their words have effect. It ruins the spell.[paragraph break]For your part, you feel you haven't been VERY creative. Cater and Trace and React back in the [plains] has been done, and now, you didn't have to switch too many letters. But then you realize that just underscores how flimsy the [pla-ma]s['] 'creativity' really was."
 t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	--	--	"The [pla-ma]s become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the [pla-ma]s." [begin DOWNSIDE 12]
 t-indiscreetly	t-indiscreetly	false	915420970	--	"indiscreetly"	"indiscreetly"	--	--	"The [pla-ma]s let their wild clothes get the best of them, asking a bit too closely for Gretta's approval. She rejects them out of hand."
+Cut Ya All Cult Laya	Cut Ya All Cult Laya	false	461583976	--	"actually"	"actually"	--	--	"Surprisingly, arguing with the [laya] seems to work! You've been actually'ed yourself, first, but now that you handled the [players], it's cathartic, for a bit, to explore the ways the [laya] is full of rubbish.[paragraph break]The [laya] seems to warp and slow down as you articulate its thoughts. It fizzles and explodes impressively, leaving no trace. I suppose that's what effective gaslighting machines do--erase all trace they were there, success or failure.[paragraph break]You reflect that it's also a move you couldn't have pulled with the [players] around, because they'd just outnumber you and badger you into agreement, no matter how much logic was on your side."
 holy nest	holy nest	false	683905568	--	"honestly"	"honestly"	--	post-holy-nest-honestly rule	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 aside-llp	aside-llp	false	292289828	--	"aside"	"aside"	--	post-ideas-aides-aside rule	"You wave the ideas aides aside. You won't listen to their intimidation. They're visibly impressed ... until you go a bit farther west and hear the roar of a hardy hydra. You step back, and when [e-n-m] laugh at you, you mention THEY could never be that intimidating. That shuts them up.[paragraph break][e-n-m] shifted around a bit. And you notice something that was behind them--a small holy nest. Perhaps it can show up something else about them."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	--	post-raptor-parrot rule	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
@@ -2316,6 +2317,7 @@ ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
+cut ya all cult laya	"The jabber from [the laya] turns slightly less inane for a moment."
 motleyer	"[imp-nag]."
 butlery	"[imp-nag]."
 legendary	"[imp-nag]."
@@ -2458,7 +2460,8 @@ to say spec-help of (itm - a thing):
 		d "You may want to put in special text here in the table of spechelp, tsh, for ([the itm]). Or not.";
 	say "[pull-from of itm].";
 	if xtra-trax-warn is false:
-		say "[line break]You can use the command XTRA TRAX to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
+		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
+		if debug-state is true, say "DEBUG: note this option is turned on by default while testing."
 		now xtra-trax-warn is true;
 
 to decide whether can-prog-hint:

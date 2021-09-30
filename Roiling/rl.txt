@@ -772,6 +772,15 @@ S(INT)(ILY)(EI)(LNT)(LT)(LEI)Y if we go strictly by the book.
 But we can guess L is in slot 7, because these are adverbs, and E is thus forced into slot 4.
 A bit of trial and error can help here. S(INT)(ILT)E(LNT)(LT)LY is left. Let's place L in slot 5, giving us SNIELTLY. That doesn't work. What about T? SNIETLLY.
 So N is in slot 5. S(IT)(ILT)EN(LT)LY is left. But T in slot 1 gives STIENLLY, so SI(LT)EN(LT)Y is SILENTLY.
+# logic for cut ya all cult laya
+?How do I deal with the Cut Ya All Cult Laya'?
+You don't have to, but it is not too bad.
+The names in red aren't much help.
+Logically, though, you get a Y in slot 8 and LY in slot 7. This tells you something you already knew, but it's a start.
+Slot 5 must be a vowel, so between A and L, it is A.
+Other letters fill the possibilities as follows: (AU)(CLT)(LT)(AU)A(CLT)LY. Note the duplicate letters mean you can't eliminate an A or L.
+You may guess that U--AA--- is very odd indeed, too odd to be a word, and you'd be right. So that fixes the vowels. A(CLT)(LT)UA(CLT)LY.
+ACLUATLY, ACTUALLY, ALTUACY, ATLUACY are the remaining choices. ACTUALLY it is.
 >>LOOP POOL
 # logic for sullenness us
 ?How can I ease "sullenness, us?"

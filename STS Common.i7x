@@ -376,7 +376,7 @@ carry out possing:
 	now possibles is whether or not possibles is false;
 	say "Switching [on-off of possibles] minimum/maximum available point notification in the status line. ";
 	if min-alert is false:
-		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
+		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop means your most recent move precluded getting an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
 		say "[line break]";
 	now min-alert is true;
