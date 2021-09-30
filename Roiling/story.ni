@@ -263,7 +263,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 34. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -272,8 +272,9 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 6=30 UNLESS post Loop Pool
 7=31 for all Lamer Realm animals
 8=32 for all Uprates Pasture animals
-9=33 for ASIDE around Elmer/Merle
-10=34 for HONESTLY after ASIDE
+9=33 for BASICALLY back at Brunt, post-animal help
+10=34 for ASIDE around Elmer/Merle
+11=35 for HONESTLY after ASIDE
 NON ANAGRAM: PLAY WHISTLE
 ]
 
@@ -6961,7 +6962,7 @@ listen-list of oyster is { tunes, clam, pale plea, carps, aunt tuna, trout, eeks
 
 listen-list of towers is { rodney, diners, butlers, lars eede, elsa erde, ingrates, admirer, atheists, wait seer, ripostes, natives site van, bonker, stinger, geese }.
 
-listen-list of otters is { ed riley, parleys splayer players, vow here, whiners, sly imp }.
+listen-list of otters is { ed riley, parleys splayer players, vow here, whiners, sly imp, asyllabic lilac bays }.
 
 listen-list of others is { pagers, sorer bogey, barren cries, ammo gang, brr hub, s-i, s-c }.
 
@@ -7096,7 +7097,8 @@ this is the listen-towers rule:
 		try objasking natives site van about natives site van instead;
 
 this is the listen-otters rule:
-	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead; [otters]
+	if noun is Ed Riley, say "Ed Riley doesn't seem to make any noise. He just blocks you west." instead;
+	if noun is asyllabic lilac bays, say "[if lilac bays are reflexed]You can't hear anything from the bays now[else]An odd voice. [one of]'Silly Cab A ... Silly Cab A ...' You see red at such nonsense, but you didn't expect anything rigorously profound from flowers[or]'Clay Blais ... Clay Blais ...' oh, right! The exotic flower expert! You see red at his treatment under the new regime[in random order][one of]. The voice seems to change. Maybe there's something else[or][stopping][end if].";
 	if noun is parleys splayer players, say "Ick, man. Mackin[']. You really don't want to pay attention to the details, but you get the general impression." instead;
 	if vow here is touchable, say "You see red as you hear some nonsense repeated: '[one of]Eeh, row V!'[or]Veer? How?'[or]Rev. Howe?!'[stopping]" instead;
 	if player is in Bran Barn, say "You hear morose mooers you can't see." instead;
@@ -7107,7 +7109,7 @@ this is the listen-otters rule:
 	if player is in Rancho Archon Anchor, say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
 
 this is the listen-others rule:
-	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead; [others]
+	if noun is pagers, say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
 	if noun is Rustic Citrus, say "Curtis [if cur-score of others < 4]mumbles various business ideas to himself[else]continues to sing and hum the tidiest dietist ditties[end if]." instead;
 	if noun is sorer bogey, say "'I am the sorer bogey!' you hear. '[one of]Be sorry, ego[or]Oy! Erg! Sober[or]Ye sorer gob[in random order]!' it cries, as you see your skin redden." instead;
 	if noun is barren cries, say "The barren cries are sour and bitter and tiny." instead;
@@ -18901,7 +18903,13 @@ book Minded Midden
 
 to say if-ed: say "[if ed riley is in Minded Midden]Ed Riley is still blocking the way west[else]You can go west past where Ed Riley was[end if]"
 
-Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+Minded Midden is a room in Otters. last-loc of otters is Minded Midden. "[if bleary barley is touchable]You sense someone is watching you here. Also, bleary barley blocks you completely, stretching out seamlessly, endlessly. Who planned to watch you? Men did. Probably[else][if-ed], and though a nude dune blocks your way east, you cleared paths north and south through the barley[end if][if lilac bays are in minded midden][lilac-bay-desc][end if].".  roomnud of Minded Midden is table of Minded Midden nudges.
+
+to say lilac-bay-desc:
+	if lilac bays are reflexed:
+		say ". The asyllabic lilac bays you spruced up help this place not look too bereft";
+	else:
+		say ". [one of]Some asyllabic lilac bays have bloomed since last you passed through. They're still a bit sickly, but if you want to take a break from your quest to prettify things, maybe the right word can spring them up. Maybe it's a useless word that doesn't really nourish the human mind. After all, plants like plant food, which, ick[or]The asyllabic lilac bays wait here, in decent enough health, but maybe you can take a break from your quest to perk them up a bit more[stopping]"
 
 printed name of Minded Midden is "[if nude dune is in Minded Midden]Burnt Brunt[else]Minded Midden[end if]"
 
@@ -18932,6 +18940,10 @@ the nude dune is boring bounding scenery. description of nude dune is "It is imp
 this is the bore-dune rule:
 	if current action is entering, say "That would END U. See what I did there?" instead;
 	if current action is climbing, say "There's nothing on the other side. You would probably just slide back down if you tried to climb it, too." instead;
+
+chapter asyllabic lilac bays
+
+the asyllabic lilac bays are reflexive LLPish scenery. "They [if lilac bays are reflexed]look nice now you fixed them[else]look like they need something. You're not sure what. You've heard plants like classical music, but they're unusual plants, so they just might need the right word. It's weird, but if you listen closely, the wind through the lilacs seems to say something[end if]."
 
 chapter Ed Riley
 
@@ -19553,7 +19565,7 @@ to say check-unless: if sullenness us is touchable, say ". The 'Sullenness, Us' 
 to say check-vow: if vow here is touchable, say ". That vow here still echoes. It's not harming you, but maybe you could get rid of it"
 
 after looking in Loop Pool for the first time:
-	say "You hear whispering ... 'Le Mer guards the allot atoll from the not worth yet.' Well, it's good to know what to call the center of the Loop Pool.";
+	say "You hear whispering ... 'Le Mer guards the allot atoll from the not yet worthy.' Well, it's good to know what to call the center of the Loop Pool.";
 	continue the action;
 
 chapter le mer
@@ -23207,6 +23219,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				say "[2dmiss of myreg]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
 		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
 		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
+		if asyllabic lilac bays are in Minded Midden, say "[2dmiss of myreg]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
+		if cult laya is in Disowned Downside, say "[2dmiss of myreg]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
 	else if myreg is others:
 		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";
 		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become [b]PEARS[r].";

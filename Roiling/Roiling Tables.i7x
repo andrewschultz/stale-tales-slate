@@ -365,6 +365,7 @@ ocelots	ocelots	false	548714671	--	"coolest"	"coolest"	--	post-ocelots-coolest r
 leopard	leopard	false	445979194	--	"paroled"	"paroled"	--	post-lamer-realm-flip rule	"The leopard perks up as its handcuffs are dissolved."
 badger	badger	false	287365426	--	"garbed"	"garbed"	--	post-lamer-realm-flip rule	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."
 satyr	satyr	false	409254857	--	"artsy"	"artsy"	--	post-lamer-realm-flip rule	"The satyr shakes a bit as if he has had a vision. He begins drawing figures in the air, standing on his hind legs and conducting an imaginary orchestra. He seems less strictly focused on his own survival now."
+lilac bays	lilac bays	false	413053868	--	"basically"	"basically"	--	--	"Nothing happens, until the asyllabic lilac bays bloom unexpectedly! Weird that such a flabby word would provide them with nourishment, but hey, plants already like plant food, which is weird enough. Well, you've prettified things."
 weltish whistle	weltish whistle	false	534280357	--	"deeply"	"deeply"	pre-whistle-deeply rule	--	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."
 medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
 
@@ -1519,6 +1520,7 @@ this is the post-lamer-realm-flip rule:
 	else if temp is 3:
 		say "The [list of touchable reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of touchable reflexive animals] and shrug a bit, as if it can come along if it wants to. Your LUCKY medal looks very shiny now.";
 		now random touchable reflexive animal is llpish;
+	move-basically;
 
 this is the post-perverse-preserve-flip rule:
 	increment nounsolve;
@@ -1528,6 +1530,10 @@ this is the post-perverse-preserve-flip rule:
 	else if temp is 3:
 		say "[line break]The [list of touchable southy puzanimals] swarm around you and dance in a circle a few times before going back to rest. You seem to have gained their full trust, whether or not you can do anything with the [random pre-animal in Perverse Preserve]. Your IQ medal looks very shiny now.";
 		now random not touchable southy puzanimal is llpish;
+	move-basically;
+
+to move-basically:
+	move asyllabic lilac bays to minded midden;
 
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
@@ -2317,6 +2323,7 @@ ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
+asyllabic lilac bays	"You almost hear music as the lilac bays rustle."
 cut ya all cult laya	"The jabber from [the laya] turns slightly less inane for a moment."
 motleyer	"[imp-nag]."
 butlery	"[imp-nag]."
@@ -2461,7 +2468,7 @@ to say spec-help of (itm - a thing):
 	say "[pull-from of itm].";
 	if xtra-trax-warn is false:
 		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
-		if debug-state is true, say "DEBUG: note this option is turned on by default while testing."
+		if debug-state is true, say "DEBUG: note this option is turned on by default while testing.";
 		now xtra-trax-warn is true;
 
 to decide whether can-prog-hint:
@@ -2567,6 +2574,7 @@ turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
 nude dune	"You've dealt with the barley. You can move around a lot more, now." [START otters]
+asyllabic lilac bays	"The [lilac bays] are quite nice as-is after your brilliant plant-whispering."
 parleys splayer players	"You've already made the macks/players talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
