@@ -68,6 +68,7 @@ along,nogal,logan
 #ripe pier
 #qver of data dim mists
 amidst,Y??RRR=datadi=mmists
+amidst,staimd
 #qver of admits mist ad
 amidst,?RYRRR=admits=mistad
 amidst,tdasim,sadtim,msdita,itsmad
@@ -368,7 +369,7 @@ nearest,ernesta,strenae,stearne
 nearest,???RG??=earnest=eastern=neaters
 #mislit limits
 #qver of repents serpent
-present,?RYRG??=repents=serpent
+present,RRYR???=repents=serpent
 punier,inpure,iprune,inperu,unrIpe,urpIne
 #qver of curst palace
 #qver-ignore
@@ -415,6 +416,8 @@ wearingly,lawyering
 modestly,ed my lost,styledom,yet old ms,ty sod mel
 #qver of silently
 silently,P??YRR?O=stylenet=sillynet=snityell
+#qver of cut ya all cult laya
+actually,YR?Y?R?O=cut ya all=cult laya
 #qver of atmo moat
 atom,??YR=atmo=moat
 #qver of iqluckyluckyiq

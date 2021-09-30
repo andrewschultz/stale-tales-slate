@@ -10,8 +10,8 @@ files=reg-roi-otters-max.txt,reg-roi-otters-min.txt,reg-roi-otters-nudmis.txt,re
 ~	hints,hin,spoi	t5
 ~	verbs	t6
 
-}}MAX=33
-}}CURMAX=33
+}}MAX=34
+}}CURMAX=34
 }}SCORE=0
 }}CURMIN=24
 
@@ -924,6 +924,30 @@ You're not able to discern anything right here and now. Maybe move somewhere wit
 
 @hin
 Gretta's gone. The first thing to do is to go north or south to regain your powers.
+
+@sli
+#slider test for actually
+>lautcayl
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#readables for cut ya all cult laya
+>read laya
+/One of the two designers' names is (Clay Laut|Lucy Lata)\.
+#spechelp for cut ya all cult laya
+>actualyl
+The jabber from the Cut-Ya-All Cult Laya' becomes slightly less inane for a moment.
+#scannotes for cut ya all cult laya
+>scan laya
+The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
+
+@!min
+>actually
+by one point
+}}CURMIN++
+}}SCORE++
+>score
+{$SCOS}
 
 @verbs
 #reverbcase smell-otters-if-player-is-in-disowned-downside
