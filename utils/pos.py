@@ -36,6 +36,14 @@ found_searched = defaultdict(bool)
 examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
   'sprite,esprit,stripe', 'sprite,esprit,stripe,!priest' ]
 
+def usage():
+    print("==================================USAGE")
+    print("? shows everything, because it matches data lines, and this program detects ?'s.")
+    print("You can use a word from the reds.text file or from the examples array. Type e to see them.")
+    print("Use =(wanted word,clue word 1,etc.) to give a new set of possible positions.")
+    print("revised,idserve tacks on more red writing to a solution already in reds.txt.")
+    sys.exit()
+
 def alfy(a):
     return ''.join(sorted(a))
 
@@ -231,7 +239,7 @@ def process_reds():
     z = [x for x in found_searched if not found_searched[x]]
 
     if not len(y):
-        print("I didn't find a reading for {}. Look in reds.txt to verify this.".format(', '.join(z)))
+        print("I didn't find a reading for {}. Look in reds.txt to verify this or preface the string with =.".format(', '.join(z)))
     elif not len(z):
         print("Request{} found. Yay.".format('' if len(found_searched) == 1 else 's all'))
     else:
@@ -247,12 +255,25 @@ def process_reds():
 
 count = 1
 file_search = False
+warn_about_usage = False
+
+if len(sys.argv) == 1:
+    usage()
+
+examples_flat = ','.join(examples_array).split(',')
 
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
+    if arg == '?': # no ELIF since we want to pop this warning after seeing all anagrams
+        warn_about_usage = True
     if arg == 'd': details = True
     elif arg in ( 'nd', 'dn' ): details = False
     elif arg in ( 'nt', 'tn' ): track_letter_type = False
+    elif arg == 'e':
+        print("Pull any word from these examples to see calculations:")
+        for e in examples_array:
+            print("    ----", e)
+        sys.exit()
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
@@ -270,6 +291,11 @@ while count < len(sys.argv):
             found_searched[a[0]] = False
         else:
             found_searched[arg] = False
+    elif arg in examples_flat:
+        for u in examples_array:
+            if arg in u:
+                print("Processing example", arg)
+                process_from_string(arg)
     else:
         arg = arg.replace('=', '')
         process_from_string(arg)
@@ -277,5 +303,7 @@ while count < len(sys.argv):
 
 if file_search:
     process_reds()
-    sys.exit()
+
+if warn_about_usage:
+    print("You used ? as a parameter. If you want usage, run pos.py without arguments.")
 
