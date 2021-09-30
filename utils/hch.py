@@ -24,21 +24,8 @@ super_quiet = False
 err_max = 0
 quiet = 0
 
-valids = { 'slider': [ 'slider' ],
-  'nudmis': [ 'scannotes', 'spechelp', 'done rejects' ],
-  'hints': [ 'towers anagrams' ],
-  '' : []
-}
-
+valids = defaultdict(list)
 valids_reverse = defaultdict(str)
-
-for x in valids:
-    for y in valids[x]:
-        if y:
-            valids_reverse[y] = x
-            valids_reverse["re" + y] = x
-valids_reverse['nudge'] = 'nudmis'
-valids_reverse['mistake'] = 'nudmis'
 
 sync_detail = defaultdict(str)
 
@@ -64,6 +51,17 @@ with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
             ary = data.split(',')
             for x in ary[1:]:
                 slider_tracking[ary[0]][x] = False
+        elif prefix == 'regfile':
+            ary1 = data.split('=')
+            try:
+                for comment in ary1[1].split(','):
+                    valids[ary1[0]] = comment
+                    valids_reverse[comment] = ary1[0]
+                    valids_reverse['re' + comment] = ary1[0]
+            except:
+                sys.exit("Need = after REGTEST line {} in hch.txt.".format(line_count))
+        else:
+            print("WARNING bad prefix {} at line {}.".format(prefix, line_count))
 
 def standard_usage():
     print("[asdi]* = aftertexts, spechelp, done rejects / i = ignore 'nudmis' files, only look at RBR generators.")
@@ -233,7 +231,6 @@ def catch_bad_reg(p):
                 if ll.startswith("#"): ll = ll[1:]
                 for y in valids_reverse:
                     if ll.startswith(y) and valids_reverse[y] not in x:
-                        if valids_reverse[y] == 'nudmis' and x == 'reg-roi-demo-dome.txt': continue
                         print(y, valids_reverse[y], x)
                         print("Misplaced test case", x, line_count, line.lower().strip())
                 if 'hints' not in x and ll.startswith("DEBUG INFO") and "objhinting" in ll:
@@ -247,6 +244,8 @@ def find_in_glob(sync_stuff, pattern, loc_proj, b, region, details, extras = [])
     last_line = 0
     wrong_count = 0
     for x in glob.glob(pattern) + extras:
+        if not os.path.exists(x):
+            print("WARNING skipping {} which doesn't seem to exist.".format(x))
         if x.startswith("reg-"):
             rox = rbr_of(loc_proj, x)
             if not os.path.exists(rox):
@@ -357,8 +356,12 @@ def sync_check(a, b, region=""):
         print(a, "/", b, "was not found in main source or table header.")
         return 0
     rbr_find = "rbr-*"
-    reg_find = "*-{}*".format(valids_reverse[b])
     ret_val = find_in_glob(needs_sync_test, rbr_find, a, b, region, sync_detail, []) # formerly ["reg-roi-seed.txt"] if os.path.exists("reg-roi-seed.txt") else [] until I moved that to RBRs. Included this comment for posterity if we need to use this again.
+    if b not in valids_reverse:
+        print("WARNING {} not in valids_reverse in hch.txt.")
+        return ret_val
+    reg_find = "*-{}*".format(valids_reverse[b])
+    ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail, [])
     #if not ignore_nudmis: ret_val += find_in_glob(needs_sync_test, reg_find, a, b, region, sync_detail)
     return ret_val
 
@@ -419,7 +422,7 @@ for p in projs:
 if verify_roi or verify_sa:
     if verify_roi: verify_reg_files('roi')
     if verify_sa: verify_reg_files('sa')
-    exit()
+    sys.exit()
 
 if out_to_file: hout = open(houtfile, "w")
 
