@@ -175,12 +175,14 @@ def find_poss(word_array, bail=False):
             for x in range(0, len(fixed_answer)):
                 if fixed_answer[x] != pj[x]:
                     fixed_answer[x] = '-'
+    full_poss = [ ''.join(sorted(freqs[q])).upper() for q in freqs ]
+    poss_string = ''.join(["({})".format(x) if len(x) > 1 else x for x in full_poss])
     if got_answer:
         answers.insert(0, answer.upper())
         if len(answers) == 1:
             print("UNIQUE SOLUTION for {} given reading of {}, clues of {}/{} and answer of {}.".format(answer, hints, red_anagrams[answer] if answer in red_anagrams else '(no red writing)', original, answer))
         else:
-            print(len(answers), "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
+            print(len(answers), poss_string, "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
