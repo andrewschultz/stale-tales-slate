@@ -2079,6 +2079,110 @@ thistext	page-read-yet	comprehensible
 "Ninny Nite."
 "Undone herd endured, hon. Oh! Run Ended!"
 
+volume attack tables
+
+table of ordeal reload attacks
+target	nohit
+plaster	"There's too much of it, and it's too hardened."
+act ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
+Elmo	"[if see-rifle]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
+
+table of stores attacks
+target	nohit
+chapter patcher	"If you don't want to use it, just ignore it."
+megaton magneto montage	"Pointless expressions of rage? You're ... not game."
+
+table of routes attacks
+target	nohit
+Brother Horbert	"Yorpwald's already got a St. Lip-Split."
+scripture picturers	"A shameful attempt at vandalism."
+THE BEAN	"It's like a dense metal or something. It's more likely it would make something else crack."
+Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in your super purse. Anyway, [he-she]'s not evil, just whiny."
+
+table of troves attacks
+target	nohit
+Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering."
+
+table of presto attacks
+target	nohit
+Leo	"[dont-hit of Leo]"
+Rand	"[dont-hit of Rand]"
+lamb	"Meanie. There's a better way to help it flee home."
+walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
+hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
+
+table of oyster attacks
+target	nohit
+LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down."
+urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
+sabot boats	"O, bats!"
+frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
+HUNTER HUNT AREA	"As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing."
+carps	"That sounds so--brutal. And nonspecific."
+pikes	"That sounds so--brutal. And nonspecific."
+trout	"This game's kind of topsy turvy, but not like THAT."
+paw r wrap	"Alas, the Paw-R-Wrap is nor Wap-R-Wrap."
+knob	"Yes, but how?"
+skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
+span pans	"Well, you need to do something to the pans."
+yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
+ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
+dialer	"That would only sabotage communications here. You need to sabotage the supplier."
+
+table of towers attacks
+target	nohit
+yurts	"Don't get [']urty! (Sorry not sorry.)"
+campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
+diverse deviser	"[if gizmo is not off-stage]You already broke [the deviser][else]No, it must be useful for something[end if]!"
+mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
+sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
+bluster butlers	"They're probably trained to hand out ur-belts."
+promise imposer	"That might be RIP-some."
+bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
+prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
+log gaol	"[which-sharp]----but there is probably nothing beyond in the Wildest Wilteds anyway."
+Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
+lone duck	"The poor thing at least doesn't have a clonk due. You can see red at this, if you want."
+serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
+Tetris Sitter	"Rest it! (Feel free to see red at this.)"
+
+table of otters attacks
+target	nohit
+ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red."
+players	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
+Mr Lee	"Be nice. He's on your side."
+eels	"Be nice. They're on your side."
+hornets	"[nice-to-animals]."
+snipe	"[nice-to-animals]."
+snail	"[nice-to-animals]."
+racoon	"[nice-to-animals]."
+parrot	"No. He's here to help."
+imp	"It jumps out of reach, streakily, satyrlike."
+whiners	"That idea is banefully unflyable."
+leopard	"Even if he weren't a hardened criminal, you'd lose. I mean, a leopard."
+ocelots	"They're bigger than average. And the leopard would back them up."
+satyr	"He's bigger than average. And the leopard would back him up."
+badger	"It's bigger than average. And the leopard would back it up."
+raptor	"Not even."
+sea cube	"Bounce no cube."
+Elmer	"[att-elm]"
+Merle	"[att-elm]"
+
+table of others attacks
+target	nohit
+Curtis	"Aw, c'mon. Curtis is sort of bossy, but he's not that bad."
+Len Craig	"Len Craig is pretty fair and balanced."
+Red Rat Art Erd	"[not-even-trader]."
+Dr Tera Darter	"[not-even-trader]."
+
+to say not-even-trader: say "If anyone deserves it, [he-she] does. But [he-she] still doesn't. [he-she-c]'s already had enough physical abuse."
+
+to say nice-to-animals: say "You didn't rescue them to kill them like this";
+
+to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'"
+
+to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
+
 volume scannotes tables
 
 [these table gives clues after you scan, although usually it may be approrpriate to give hints only in cheat mode.]

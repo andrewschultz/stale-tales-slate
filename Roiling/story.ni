@@ -130,6 +130,8 @@ a region can be parsewrned. a region is usually not parsewrned.
 
 a region has a table name called scannotes.
 
+a region has a table name called attack-table.
+
 a region has a list of things called item-list.
 
 a region has a list of things called listen-list.
@@ -146,7 +148,7 @@ a region has a rule called swear-rule.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -161,7 +163,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -170,7 +172,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -183,13 +185,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -206,7 +208,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -226,7 +228,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -264,7 +266,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -279,11 +281,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.]
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks]
 [some are commented out above in the rare case we might ever need them]
 
 
@@ -4281,7 +4283,7 @@ understand the command "exits" as something new.
 understand "exits" as exitsing.
 
 carry out exitsing:
-	if player is in Strip of Profits, say "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go IN to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [start stores]
+	if player is in Strip of Profits, say "There are no directional exits here, but you [if number of touchable portals is 0]may want to try opening up a store[else if number of touchable portals is 1]can go IN to the store-portal you made[else]have multiple ex-stores you can enter[end if]." instead; [exits stores]
 	if mrlp is routes:
 		if player is in Same Mesa:
 			if Gast is in Same Mesa, say "You probably aren't going anywhere with [Gast] around." instead;
@@ -4290,10 +4292,10 @@ carry out exitsing:
 		if player is in Idle Deli or player is in adobe or player is in Cleric Circle, say "You can go back out." instead;
 		say "Looks like you will need to figure a way to go onward without directions. You've been doing well so far." instead;
 	if mrlp is troves, say "No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world." instead;
-	if player is in Tenfold Teflond Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [start oyster]
+	if player is in Tenfold Teflond Den Loft, say "You can go back outside, though you can also finish the job back here." instead; [exits oyster]
 	if player is in end den, say "You can go back outside to the Horned Hedron." instead;
-	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [start towers]
-	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [start otters]
+	if player is in Loftier Trefoil, say "You probably aren't going anywhere until Rodney does, first." instead; [exits towers]
+	if player is in Minded Midden and bleary barley is in Minded Midden, say "Maybe you'll see some exits if you get rid of the barley." instead; [exits otters]
 	if player is in rustic and Swell Wells is unvisited, say "You've lost your bearings a bit, but maybe [if player has compass]the compass could help[else]if you got enough fruits, Curtis would help you[end if]." instead;
 	if number of viable directions is 0, say "There are no directional exits here, but that doesn't mean you're stuck. Maybe you can figure a way to create one[if number of touchable enterable things > 0], and it looks like there's something to ENTER[end if]." instead;
 	if number of viable directions is 1, say "The only way you seem to be able to go is [list of viable directions].";
@@ -6233,6 +6235,8 @@ understand "kick [something]" as attacking.
 
 check attacking: [this takes responses for general types. The table below it is for specific NPCs/objects]
 	if noun is a store, say "Sore at a store?" instead; [general stuff here that can't fit into a table]
+	if noun is a store, say "Just ENTER [the noun] to, um, attack its challenges." instead; [general stuff here that can't fit into a table]
+	if noun is yourself, say "Surly foe: yourself? Lose fury!" instead;
 	if noun is Elvira:
 		say "'Hater-heart.' She pouts. She summons a proto-troop that easily defeats you. '[one of]Pretty try, pet[or]Gritty try, git[in random order]!' she laughs. 'A feted defeat!' Perhaps you need backup.";
 		get-dead;
@@ -6243,95 +6247,15 @@ check attacking: [this takes responses for general types. The table below it is 
 		get-dead;
 		follow the shutdown rules;
 		the rule succeeds;
-	if noun is a target listed in the table of attack-specific:
-		choose row with target of noun in table of attack-specific;
-		say "[nohit entry][line break]" instead;
+	repeat through attack-table of mrlp:
+		if noun is target entry, say "[nohit entry][line break]" instead;
 	if player has lance, say "[if noun is not ant]Wrong enemy for the lance[else]You need something more succinct[end if]." instead;
-	if player has paw r wrap, say "Alas, the Paw-R-Wrap is nor Wap-R-Wrap." instead;
 	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
-	if noun is imposer, say "That might be RIP-some." instead;
 	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
 
-sign-other is a truth state that varies.
-
 to say dont-hit of (fi - a person):
 	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [r-l of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
-
-table of attack-specific
-target	nohit
-yourself	"Surly foe: yourself? Lose fury!"
-plaster	"There's too much of it, and it's too hardened." [start Ordeal Reload]
-act ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
-Elmo	"[if see-rifle]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
-Brother Horbert	"Yorpwald's already got a St. Lip-Split." [START routes]
-scripture picturers	"A shameful attempt at vandalism."
-THE BEAN	"It's like a dense metal or something. It's more likely it would make something else crack."
-Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in your super purse. Anyway, [he-she]'s not evil, just whiny."
-Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering." [START troves]
-Leo	"[dont-hit of Leo]" [START Presto]
-Rand	"[dont-hit of Rand]"
-lamb	"Meanie. There's a better way to help it flee home."
-walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
-hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
-LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
-urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
-sabot boats	"O, bats!"
-frat raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
-HUNTER HUNT AREA	"As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing."
-carps	"That sounds so--brutal. And nonspecific."
-pikes	"That sounds so--brutal. And nonspecific."
-trout	"This game's kind of topsy turvy, but not like THAT."
-knob	"Yes, but how?"
-skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
-span pans	"Well, you need to do something to the pans."
-yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. The yapper could take out a rock-man or two, you bet."
-ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
-dialer	"That would only sabotage communications here. You need to sabotage the supplier."
-yurts	"Don't get [']urty! (Sorry not sorry.)" [START towers]
-campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
-diverse deviser	"[if gizmo is not off-stage]You already broke [the deviser][else]No, it must be useful for something[end if]!"
-mended mini denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's been mended nicely, for sure."
-sweatier wait seer	"You find it tough to get close to the sweatiness. 'Ew...I...tears,' you say, your eyes going red."
-bluster butlers	"They're probably trained to hand out ur-belts."
-bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
-prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
-log gaol	"[which-sharp]----but there is probably nothing beyond in the Wildest Wilteds anyway."
-Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imagine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
-lone duck	"The poor thing at least doesn't have a clonk due. You can see red at this, if you want."
-serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
-Tetris Sitter	"Rest it! (Feel free to see red at this.)"
-ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]
-players	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
-Mr Lee	"Be nice. He's on your side."
-eels	"Be nice. They're on your side."
-hornets	"[nice-to-animals]."
-snipe	"[nice-to-animals]."
-snail	"[nice-to-animals]."
-racoon	"[nice-to-animals]."
-parrot	"No. He's here to help."
-imp	"It jumps out of reach, streakily, satyrlike."
-whiners	"That idea is banefully unflyable."
-leopard	"Even if he weren't a hardened criminal, you'd lose. I mean, a leopard."
-ocelots	"They're bigger than average. And the leopard would back them up."
-satyr	"He's bigger than average. And the leopard would back him up."
-badger	"It's bigger than average. And the leopard would back it up."
-raptor	"Not even."
-cube	"Bounce no cube."
-Elmer	"[att-elm]"
-Merle	"[att-elm]"
-Curtis	"Aw, c'mon. Curtis is sort of bossy, but he's not that bad." [start OTHERS]
-Len Craig	"Len Craig is pretty fair and balanced."
-Red Rat Art Erd	"[not-even-trader]."
-Dr Tera Darter	"[not-even-trader]."
-
-to say not-even-trader: say "If anyone deserves it, he does. But he still doesn't. [he-she-c]'s already had enough physical abuse."
-
-to say nice-to-animals: say "You didn't rescue them to kill them like this";
-
-to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'"
-
-to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
 
 chapter cutting
 
@@ -6598,19 +6522,19 @@ Understand "kiss [thing]" as kissing. [needed to kiss skis]
 check kissing:
 	if player carries the noun, say "Moisten no items." instead; [general]
 	if noun is the player, say "You feel as good-looking as ever after kissing yourself." instead;
-	if noun is skis, try fliptoing skis instead; [start OYSTER]
-	if noun is sausage, say "The [sausage] can't respond to affection." instead;
-	If noun is aunt tuna, say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
-	if noun is LOLstr trolls, say "There's loving your enemy, then..." instead;
+	if noun is LOLstr trolls, say "There's loving your enemy, then..." instead; [kiss OYSTER]
+	if noun is skis, try fliptoing skis instead;
 	if noun is clam, say "It could use a bit of friendship, but not like that." instead;
-	if noun is mardier admirer, say "You are not a lousy enough kisser to discourage [him-her]. Perhaps there's another way to sour [if player is male]her[else]him[end if] on you." instead; [start TOWERS]
+	If noun is aunt tuna, say "That would be cruel to poor Tortu. She would blackmail him into kissing her long after you left." instead;
+	if noun is sausage, say "The [sausage] can't respond to affection." instead;
+	if noun is mardier admirer, say "You are not a lousy enough kisser to discourage [him-her]. Perhaps there's another way to sour [if player is male]her[else]him[end if] on you." instead; [kiss TOWERS]
 	if noun is bonker, say "Not even with a good dental plan." instead;
 	if noun is duck, say "It's cute and all, but it also doesn't trust you." instead;
 	if noun is Dr Yow, say "[he-she-c] is not the touchy feely kind." instead;
 	if noun is agnostic, say "Okay, we're close to creepy territory here.";
 	if noun is not a person, say "That can't really respond to your affection." instead;
 	if noun is guardian, say "Creeping out whatever's blocking your way won't work." instead;
-	if noun is parleys splayer players, say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead; [start OTTERS]
+	if noun is parleys splayer players, say "[if player is male]That'd be subtle trolling, but you might not stay conscious long enough to enjoy it[else]You don't want to get their attention that way[end if]." instead; [kiss OTTERS]
 	if noun is Gretta, say "You imagine her all 'Tricky try. Ick.'" instead;
 	if noun is an animal, say "Yay you for loving animals. Or claiming to." instead;
 	if noun is Elvira:
@@ -23149,18 +23073,18 @@ This is the epilogue rule:
 
 volume mapping
 
-[start regular]
+[map tweaks for ordeal reload]
 
 index map with Highest Heights mapped east of Dusty Study.
 index map with Farming Framing mapped west of Dusty Study.
 index map with gallery mapped north of Dusty Study.
 index map with Carven Cavern mapped north of gallery.
 
-[start stores]
+[map tweaks for stores]
 
 index map with Cruelest Lectures mapped north of Strip of Profits.
 
-[start routes]
+[map tweaks for routes]
 
 index map with Same Mesa mapped west of Strip of Profits.
 index map with Idle Deli mapped north of Same Mesa.
@@ -23170,7 +23094,7 @@ index map with Harms Marsh mapped south of Adobe Abode.
 index map with Ripe Pier mapped east of Harms Marsh.
 index map with clipper cripple mapped east of Ripe Pier.
 
-[start troves]
+[map tweaks for troves]
 
 index map with Upscale Capsule mapped north of Cruelest Lectures.
 index map with Loather Rathole mapped west of Upscale Capsule.
@@ -23181,7 +23105,7 @@ index map with Boredom Bedroom mapped east of Drain Nadir.
 index map with Econ Cone mapped south of Boredom Bedroom.
 index map with Browse Bowers mapped east of Boredom Bedroom.
 
-[start towers]
+[map tweaks for towers]
 
 index map with Topside Deposit mapped east of Highest Heights.
 
@@ -23189,13 +23113,13 @@ index map with Topside Deposit mapped west of Loftier Trefoil.
 index map with Rawest Waters mapped east of Actionless Coastlines.
 index map with Mislit Limits mapped north of Rawest Waters.
 
-[start others]
+[map tweaks for others]
 
 index map with Filed Field mapped south of Cripple Clipper.
 index map with Scape Space mapped north of Clangier Clearing.
 [index map with stadium mapped north of Scape Space.]
 
-[start oyster]
+[map tweaks for oyster]
 
 index map with Posh Hops Shop mapped east of Cruelest Lectures.
 index map with Olde Lode mapped east of Posh Hops Shop.
@@ -23209,21 +23133,21 @@ index map with Plasm Lamps mapped east of tenfold.
 index map with end den mapped east of Plasm Lamps.
 index map with Shuttle Hutlets mapped east of end den.
 
-[start otters]
+[map tweaks for otters]
 
 index map with Rancho Archon Anchor mapped east of Anger Range.
 
-[start towers]
+[map tweaks for towers]
 
 index map with Shaven Havens mapped south of Neds Dens.
 
-[start presto]
+[map tweaks for presto]
 
 index map with Hacks Shack mapped south of Harms Marsh.
 index map with Austerer Treasure mapped south of Saps Pass.
 index map with r44 mapped west of Hacks Shack.
 
-[start demo dome]
+[map tweaks for demo dome]
 
 index map with Neds Dens mapped east of Scape Space.
 index map with Intel Inlet mapped north of Evoc Cove.
