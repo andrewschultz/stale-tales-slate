@@ -3165,17 +3165,14 @@ to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
 to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
-volume table of hintobjs
+volume tables of hintobjs
 
-table of hintobjs [toh]
+[parts of the settler first]
+table of general hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
+pedanto notepad	"You can CONSULT the notepad about things. It contains no game-critical hints, but it can help you remember a lot of shortcuts and such, so you can think sharper."	a thing	text
 red writing	"The red writing provides a clue of what the letters can't be."
-pedanto notepad	"You can CONSULT the notepad about things. It contains no game-critical hints, but it can help you remember a lot of shortcuts and such, so you can think sharper."
-a rich chair	"[if player does not have notepad]You can take the pedanto-notepad from the rich chair, for starters[else if latches are not off-stage]The/a rich chair hid the latches. You have them now[else]You can SEARCH a rich chair to find something, though it will turn up in the course of play anyway[end if]."
-Report Porter Perrot	"You can pump [perrot] for information if you want."
-isolani liaison	"The isolani liaison is just a door. It isn't there for any puzzles but just to communicate with the outside world[if Report Porter Perrot is not off-stage]. But after taking to Report Porter Perrot, it's not useful[end if]."
-notice	"For reading."
-beams	"[one of]It's important there are TEN BEAMS.[plus][or]The ten beams lead somewhere below.[plus][or]What is a place that's below in a house?[plus][or]Open the BASEMENT.[minus][cycling]"
+yourself	"[one of]You have the same power you had in Shuffling Around.[plus][or][if Report Porter Perrot is off-stage]Try opening the door and having a chat. You'll see some, err, patterns.[else]Report Porter Perrot's chat contained a good many things.[end if][plus][or]You had the ability to flip objects into anagrams of each other. This game shows a different side to that power.[minus][cycling]"
 question mark	"[if player has inducted deductin][deductin] has more detailed information on how to read a question mark.[line break][else if inducted deductin is off-stage]There'll be a hint item later that explains how to sort out ambiguous readings from the settler in cheat mode.[line break][else][end if][one of]A question mark in cheat mode for the settler is not as hopeless as you'd think. In fact, it may cut down the possibilities. It may occur when there are two possible solutions or, more likely, when something to change has a double-anagram, e.g. TAPES SPATE, a matching anagram, or MERE MOOR, which is (EMOR) times two.[plus][or]So if you have an eight-letter word, an ambiguous reading may leave two possibilities, but a vowel or consonant may turn up four. Thus, an ambiguous reading works out better.[plus][or]You can also switch to non-cheat mode to clear up ambiguities, but often, you don't need to. I'll use the TAPES SPATE sample below.[plus][or]If TAPES SPATE gives R?R??, we have a good bit to work with. The first letter must be P, since it is a consonant.[plus][or]The second letter must be A. This is the sort of jump that makes cheat mode with ambiguity powerful. Slot 3 must be a consonant, and slots 4 or 5 can be E or a consonant. That leaves A for slot 2.[plus][or]However, for the end bit, there is ambiguity. E can go in slot 4 or 5.[plus][or]You thus have PATES or PASTE, so TAPES SPATE is potentially ambiguous. No critical puzzles will be in A Roiling Original. But you can also see how ambiguous readings can drastically cut down possibilities.[minus][cycling]"
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
 whichs shwich	"[one of]The whichs shwich button toggles whether or not you know characters are in the right position. Details on what the colors mean will follow if you HINT again.[plus][or]More specifically, red/yellow=wrong, purple/green=right.[minus][cycling]"
@@ -3185,6 +3182,25 @@ slider	"The slider will allow you more detailed hints about how close a guess is
 receptors	"Electricity is beyond me. But the rest of the settler could help you."
 a tech etcha	"[one of]The/a tech etcha['] can be switched to vary the level of hinting. Cheat/teach on potentially gives more. Some NPCs may [if strip of profits is visited]have helped[else]help[end if] you with it, but if you want the quick spoilers, HINT again.[plus][or]A tech etcha['] shows different readings for certain letters. In some cases, the readings are ambiguous, but usually, they aren't.[plus][or]A tech etcha['] may cause some entries to be purple or green instead of red or yellow.[plus][or]The tech etcha['] adds blue in some cases.[plus][or]If a letter is in the right spot, the/a tech etcha['] adds blue. Red + blue = purple for consonants. Yellow + blue = green for vowels.[plus][or]Undefined settings indicate one or more, but not all, letters in a compound anagram are right, but not both.[plus][or]A simple example would be EAST SEAT going to TEAS. Letters 2 and 3 would give question marks. For a full explanation of how this could help you, HINT QUESTION MARK.[minus][cycling]"
 output	"This is the display that analyzes the last thing you meaningfully scanned."
+pen	"Not much you can do with a pen other than write."
+latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Largely All Grey Gallery is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
+letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
+equals sign	"[one of]The equals sign is useful if you don't want things to be too easy.[plus][or]The equals sign will give squealings if you scan something and the information might make the puzzle trivial.[plus][or]You can override the equals sign with SY (scan with correct letters) or SN.[line break][sy-sn][minus][cycling]"
+super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
+Gird Grid	"The Gird Grid has information on the various stores to explore."
+Inducted Deductin	"[in-ded-hint]."
+X1	"[in-ded-hint]."
+X2	"[in-ded-hint]."
+X3	"[in-ded-hint]."
+X4	"[in-ded-hint]."
+
+table of ordeal reload hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+a rich chair	"[if player does not have notepad]You can take the pedanto-notepad from the rich chair, for starters[else if latches are not off-stage]The/a rich chair hid the latches. You have them now[else]You can SEARCH a rich chair to find something, though it will turn up in the course of play anyway[end if]."
+Report Porter Perrot	"You can pump [perrot] for information if you want."
+isolani liaison	"The isolani liaison is just a door. It isn't there for any puzzles but just to communicate with the outside world[if Report Porter Perrot is not off-stage]. But after taking to Report Porter Perrot, it's not useful[end if]."
+notice	"For reading."
+beams	"[one of]It's important there are TEN BEAMS.[plus][or]The ten beams lead somewhere below.[plus][or]What is a place that's below in a house?[plus][or]Open the BASEMENT.[minus][cycling]"
 platform	"[dio-part]."
 pavement	"[dio-part]."
 pedestal	"[dio-part]."
@@ -3199,10 +3215,8 @@ closest closets	"The closets [if closets are touchable]are[else]were[end if] jus
 vertical stripe	--	act ruin curtain
 horizontal stripes	--	act ruin curtain
 small holes	--	act ruin curtain
-pen	"Not much you can do with a pen other than write."
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[plus][or]One four-letter shuffling of PALM is indicated. Hopefully.[plus][or]You can change the palm to a LAMP by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
-yourself	"[one of]You have the same power you had in Shuffling Around.[plus][or][if Report Porter Perrot is off-stage]Try opening the door and having a chat. You'll see some, err, patterns.[else]Report Porter Perrot's chat contained a good many things.[end if][plus][or]You had the ability to flip objects into anagrams of each other. This game shows a different side to that power.[minus][cycling]"
 meet bans	"[one of]The ten beams guard something downstairs. What?[plus][or]The number of beams is important.[plus][or]What's a common downstairs place in any house?[plus][or]The beams guard a BASEMENT.[minus][cycling]"
 tables	"[one of]The tables seem out of place in such a posh mansion.[plus][or]What's more posh than tables?[plus][or]The tables can be a STABLE.[minus][cycling]"
 chimney	"You can CLIMB the chimney or go up it."
@@ -3212,32 +3226,24 @@ sitar	"[one of]You need a way down, but the sitar doesn't allow that.[plus][or]R
 stria	"[one of]Embedded in the ceiling, the stria split it a bit. Maybe they offer a way up?[plus][or]The stria can become a STAIR.[minus][cycling]"
 pram	"[one of]The pram gives you a sinking feeling to look at it.[plus][or]You need a way down and out of reach. Something you could even crawl down.[plus][or]The pram can become a ramp.[minus][cycling]"
 ramp	"Just go down or in to walk down the ramp."
-latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Largely All Grey Gallery is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
 satchel	"The satchel might be useful for carrying things, but your super purse is better. So don't worry about it."
-letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
-equals sign	"[one of]The equals sign is useful if you don't want things to be too easy.[plus][or]The equals sign will give squealings if you scan something and the information might make the puzzle trivial.[plus][or]You can override the equals sign with SY (scan with correct letters) or SN.[line break][sy-sn][minus][cycling]"
 ISBN Bins	"[if isbn bins are reflexed]You figured how to secure the ISBN bins. Nothing more to do.[else][one of]The ISBN Bins are pretty hefty, but they're easy to enter.[plus][or]Maybe you could add a bit of security before leaving. Not that you need to. But if you want all the points...[plus][or]It's an unusual word, but then, there are only twenty-four of them.[plus][or]You can make a SNIB.[minus][cycling][end if]"
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
-super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
 evac cave	"The evac-cave is your way out[if Elmo is touchable] once you get rid of Elmo[end if]."
 rifle	"[one of]The rifle's more powerful than words. OR IS IT.[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless FLIER.[minus][cycling]"
-Gird Grid	"The Gird Grid has information on the various stores to explore."
 Respect Specter	"[one of]The Respect Specter isn't necesary to solve the game, but it can help you with puzzles if you use cheat mode.[plus][or]First, the actual thing to change to is easy.[plus][or]Make, or ask for, a SCEPTER. Spelling is important. But you can do more.[plus][or]The specter may give more information about ambiguous readings if you scan it different ways.[minus][cycling]"
 plaster psalter	"[one of]Plaster generally covers up holes. You need to bust through that plaster.[plus][or]If you used the settler, you might notice it, uh, settles a lot about the plaster.[plus][or]The plaster becomes a STAPLER.[minus][cycling]"
 palest pastel plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a STAPLE.[minus][cycling]"
 staple	"[one of]What does a staple go in?[plus][or][if plaster is touchable]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 stapler	"[one of]What goes in a stapler?[plus][or][if plates is touchable]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 act ruin curtain	"[one of]What does the act-ruin curtain--with its design--remind you of?[plus][or]The act-ruin curtain is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is touchable or plates are touchable]You've got some work to do before you can do any stapling[else]You've got what you need to staple the curtain and peel it back[end if].[plus][or]STAPLE CURTAIN[if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
-Inducted Deductin	"[in-ded-hint]."
-X1	"[in-ded-hint]."
-X2	"[in-ded-hint]."
-X3	"[in-ded-hint]."
-X4	"[in-ded-hint]."
-Curtis	"[if moss cap is off-stage][one of]Curtis will help you if you get him enough fruits. Actually, just four.[plus][or]Look around a bit and look at the scenery. A few things have just a few letters. The rest are an exercise.[plus][or]He is good at delegating but not conversation.[minus][cycling][else if player has moss cap]You won't get more than the moss cap from him. Now, what to do with it?[else]Curtis [up-to-l3].[end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."
-high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end ORDEAL RELOAD hints]
+high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
+
+table of stores hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
 Store B	"[one of]Store B contains some sort of mystery food, but people seem too lazy to figure it out.[plus][or]The two names provide red-clues, but you can also tell from the smells from Store B.[plus][or]SORBET.[minus][cycling]"
 Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to [b]ROVE OVER[r] when you are in the Means Manse.[minus][cycling]"
 Store K	"[one of]Store K is not critical, because it's a bit of American slang.[plus][or]What is the suspicious smelling smoke?[plus][or]The smoke is marijuana, but STONER doesn't quite work on Store N.[plus][or]The residents of Store K want to REST, OK? That hint knocks out the vowels with the settler.[plus][or]Also, they yell don't have a STROKE![plus][or]You can also assume they are plural, so S is last.[plus][or]They are TOKERS.[minus][cycling]"
@@ -3268,9 +3274,12 @@ mangiest steaming	"[if blabber babbler is reflexive]You can enter the steaming f
 passage	"If you go there, you'll get a big hint."
 pamphlets	"They are completely useless for actual life lessons, but the settler on 'cheat' mode will knock a vowel out from I USED TO."
 Rehabs Basher	"[one of]You need to get the Rehabs Basher and the blabber babbler out of the way. Nouns won't work here.[plus][or]The Rehabs Basher's pamphlet is a hint.[plus][or]TEDIOUS + I USED TO should give you a clue what to anagram. Studio E may clinch it.[plus][or]You need to throw the bums OUTSIDE.[minus][cycling]"
-blabber babbler	--	Rehabs Basher	[end stores hinting]
+blabber babbler	--	Rehabs Basher
+
+table of routes hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
-sit a nag	"[one of]It's just a bench, but the name brand indicates an anagram.[plus][or]Touching the [sit a nag] does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
+sit a nag	"[one of]It's just a bench, but the name brand indicates an anagram.[plus][or]Touching the [sit a nag] does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"
 scripture picturers	"[if cleric circle is visited]You've gotten inside. The chantries and picturers are no longer useful clues.[else][one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling][end if]"	--	"INSIDE"
 snatchier chantries	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
@@ -3305,14 +3314,17 @@ odd run on aura	"[one of]The odd run on aura gives directions of a sort. It will
 un road	"You need to follow the un-road, but the all noon gag has better clues for that."
 noon gag	"[one of]The all noon gag provides a new quasi-direction you need to go in, to see No-Lag Logan.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]Go ALONG.[minus][cycling]"	--	"ALONG"
 Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but it is a slightly odd preposition.[plus][or]You just need to go around. All over the place.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
-	thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
+thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
 bad oar	"The thickness sketchins will tell you how to use the bad oar."
 raptest patters	"[one of]'Thou wit!' You don't really need the flattery, but it won't really derail you.[plus][or]It might be better to ignore them.[plus][or]Or not put up with them.[plus][or]Or do WITHOUT.[minus][cycling]"	--	"WITHOUT"
 bent ewe	"[if bent ewe is reflexed]Deal with the hurt hog now.[else][one of]The bent ewe feels threatened by the hurt hog. Maybe you can defuse things.[plus][or]Get in the way.[plus][or]Sonancy Canyons is another country. They do things differently there.[plus][or]BETWEEN.[minus][cycling][end if]"	--	"BETWEEN"
 hurt hog	"[one of]The hurt hog won't let you by. You [if bent ewe is reflexed]dealt[else]need to deal[end if] with the bent ewe.[plus][or]With the newt bee sated, everyone will be happy, and you can go...[plus][or]THROUGH.[minus][cycling]"	--	"THROUGH"
-yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"	[end ROUTES hinting]
+yob den	"[one of]It's not really important. They're just a symptom of what's gone wrong.[plus][or]So how to ignore the yob den and move away from it?[plus][or]Go BEYOND.[minus][cycling]"	--	"BEYOND"
+
+table of troves hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
-Eh At Heat	"[one of]Man! You're just upset about what happened to you. Maybe there's a way your emotions could make you warmer.[plus][or]There's an emotion you can physically boil over with that anagrams with [heat].[plus][or]You can HATE for a quick surge.[minus][cycling]"	--	"HATE"	[start TROVES hinting]
+Eh At Heat	"[one of]Man! You're just upset about what happened to you. Maybe there's a way your emotions could make you warmer.[plus][or]There's an emotion you can physically boil over with that anagrams with [heat].[plus][or]You can HATE for a quick surge.[minus][cycling]"	--	"HATE"
 Race Acre	"[one of]You can't be bothered with the Race Acre since you're drained from that hate. You need a new approach to get going again.[plus][or]You need to CARE.[minus][cycling]."	--	"CARE"
 fretful truffle	"The fretful truffle, if you eat it, will tell you what to [if cur-score of troves is 0]type[else]think[end if] next."
 verbose	"[one of]Even when someone or something is terse with you, their terseness can give you something to focus on and manipulate.[plus][or]OBSERVE other people or things.[minus][cycling]."	--	"OBSERVE"
@@ -3346,8 +3358,11 @@ salt	"[one of]Anyone can make it to the top, but only those worth their salt wil
 Sister Tressi Siters	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
 blamer mr beal	"[one of]Mr. Beal helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
-trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT" [end TROVES hinting]
-curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
+trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT"
+
+table of presto hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
 zany meter	--	volt maze
 n-t-air	"[one of]Nowt Town may make you feel lethargic. You can find a quick word that substitutes as an interjection but isn't really one.[plus][or]You won't get full points for the (non-profane) four-letter word.[plus][or]say WONT to dispel the maze.[minus][cycling]"	--	"WONT"
@@ -3418,8 +3433,11 @@ Drive A	"[h-d][line break]"
 Drive E	"[one of]You need to figure what's wrong with Drive E.[plus][or]Deduce, if you will. Well, not quite deduce.[plus][or]DERIVE.[minus][cycling]"
 mutism summit	"[if player is in Hacks Shack]You need to build a computer here[else]The mutism summit is just scenery when you're in the Phat Path. But you can enter by going north[if-rand-gone][end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
-computer screen	"[if Hacks Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
-trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying the pesty types.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	--	"STROLL past the trolls"	[start OYSTER hinting]
+computer screen	"[if Hacks Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]"
+
+table of oyster hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying the pesty types.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	--	"STROLL past the trolls"
 tips pits	"[one of]The tips pits are for putting something in them.[plus][or]What could go in? A noun or a verb.[plus][or]SPIT into the tips pits.[minus][cycling]"
 song buttons	--	tunes
 jukebox	--	tunes
@@ -3489,7 +3507,10 @@ jumble	"The jumble reorganizes when you set the dialer."
 pins	"[one of]You need to futz with the pins to get them out of the way.[plus][or]The pins are tangled together, and they are too small to SNIP.[plus][or]SPIN the pins.[minus][cycling]"	--	"SPIN the pins"
 lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
 bogus-redial	--	dialer	"REDIAL with the dialer"
-dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can DERAIL, but what else can you have it do?[plus][or]The dialer can REDIAL after you DERAIL, though there is an in-between action, too.[minus][cycling]"	--	"DERAIL with the dialer" [end OYSTER hinting]
+dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible. You need it to do two things.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can DERAIL, but what else can you have it do?[plus][or]The dialer can REDIAL after you DERAIL, though there is an in-between action, too.[minus][cycling]"	--	"DERAIL with the dialer"
+
+table of towers hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
 top opt pot	"[if succor crocus is off-stage]The blub bulb can't really be changed until the very end[else]Now that the pot has a succor crocus in it, the person you want to give the pot to is inside[end if]."
 blub bulb	--	top opt pot
@@ -3598,8 +3619,11 @@ accu plaster	"[fin-pal-clue]."
 capsule cart	"[fin-pal-clue]."
 talc spa cure	"[fin-pal-clue]."
 Last Acre Cup	"[fin-pal-clue]."
-Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
-bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
+Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]"
+
+table of otters hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
 parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s['] parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARELY"
@@ -3649,7 +3673,11 @@ Look Kool	"You can't do much but admire them."
 Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Rancho Archon Anchor is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY the whistle by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped.[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"
-Elvira	"[if current quip is final-quip]Just [play-whistle] to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just [play-whistle]"
+Elvira	"[if current quip is final-quip]Just [play-whistle] to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]"	--	"you can just [play-whistle]"
+
+table of others hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+Curtis	"[if moss cap is off-stage][one of]Curtis will help you if you get him enough fruits. Actually, just four.[plus][or]Look around a bit and look at the scenery. A few things have just a few letters. The rest are an exercise.[plus][or]He is good at delegating but not conversation.[minus][cycling][else if player has moss cap]You won't get more than the moss cap from him. Now, what to do with it?[else]Curtis [up-to-l3].[end if]"
 greenish sheering	"It's not passable [if player has moss cap]until you change the moss cap[else if player has compass]except to the north[else]without an item Curtis gives you once you have four fruits[end if]."
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[plus][or]What's a fruit that has pits and a stem?[plus][or]A cherry, but this is a much brighter red than usual.[plus][or]MARASCHINO.[minus][cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[plus][or]What can green dishwashing detergent smell like?[plus][or]LIMES.[minus][cycling]"
@@ -3720,9 +3748,12 @@ halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if 
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Valence Enclave safely. The viewer and searcher can help, as can the message if you go north and fail."
 Valence Enclave	"You can't change the Valence Enclave, but you can enter it via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
-searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
+searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 fleeing feeling	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]"
-Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
+
+table of demo dome hintobjs
+hint-entry	advice-entry	parallel-entry	spoil-entry
+Great Grate	"The Great Grate is immovable."
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"
 calendar	"[dome-blab]"

@@ -523,10 +523,10 @@ understand "he" as heing.
 carry out heing:
 	let ZXQ be false;
 	repeat with QXZ running through visible things:
-		if there is a hint-entry of QXZ in the table of hintobjs or QXZ is useless or QXZ is cluey:
+		if there is a hint-entry of QXZ in hintobjstable of mrlp or QXZ is useless or QXZ is cluey:
 			do nothing;
 		else:
-			all-say "BUG: [QXZ] needs to be a hint-entry in the table of hintobjs. Or deemed useless, cluey or amusing.";
+			all-say "BUG: [QXZ] needs to be a hint-entry in [hintobjstable of mrlp]. Or deemed useless, cluey or amusing.";
 			now ZXQ is true;
 	if ZXQ is false:
 		all-say "This room is all clear!";
@@ -571,7 +571,7 @@ carry out whiing:
 	repeat with ZQ running through things:
 		if map region of location of ZQ is mrlp:
 			if ZQ is not useless:
-				unless there is a hint-entry of ZQ in table of hintobjs:
+				unless there is a hint-entry of ZQ in hintobjstable of mrlp:
 					d "You need to look at [ZQ].[line break]";
 	the rule succeeds;
 
