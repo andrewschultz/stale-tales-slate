@@ -2183,6 +2183,73 @@ to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look
 
 to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
 
+volume donehinting tables
+
+[ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"]
+
+table of troves donehinting
+hint-entry	advice-entry
+Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point."
+stop post	"Now you've spotted the post, it is only good for another clue if you examine it."
+evil bee	"You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]."
+SNORE SO ARENA	"[by-bee]."
+diapers	"You figured what to do with the diapers."
+praise	"[by-rivets]."
+rivets	"[by-rivets]."
+ME ARTS	"The ME ARTS inspired you enough, [if lobster is moot]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]."
+
+table of routes donehinting
+hint-entry	advice-entry
+scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe."
+sit a nag	"You got [Gast] to the [sit a nag]. Now you need to deal with [Gast]."
+side art	"You positioned yourself well to put up with [Gast]'s tirades. Time to try a new direction."
+seed pit	"You got what you needed from the seed pit."
+hurt hog	"[fill-in-here]"
+
+table of presto donehinting
+hint-entry	advice-entry
+dart	"[if dart is in popgun]You're done with the dart, except for firing it at the right time[else if Marines Seminar Remains is unvisited]It'd be nice to find a weapon for the dart[else]Maybe the dart can fit in the popgun[end if]."
+tsar star	"[if Marines Seminar Remains is visited]The tsar star has done its duty[else]Wearing the tsar star may help you get the authority to get by someone else who knows about decorations[end if]."
+boing go bin	"The boing-go bin works fine now."
+maze walls	"The walls hold no great secrets beyond a clue to volt maze's essence itself."
+log ons letters	"[other-let]."
+alert letters	"[other-let]."
+ought letters	"[other-let]."
+Im Le Cop polemic	"You got things compiling. No more worries there."
+TBA key	"[if TBA key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
+
+table of oyster donehinting
+hint-entry	advice-entry
+frat raft	"Now you're on the frat raft, you need to find a way to use the oars."
+knob	"The knob's been dealt with."
+heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
+lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
+gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if Plasm Lamps is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
+lever	"The lever was designed not to give extra points for pulling it too much."
+
+table of towers donehinting
+hint-entry	advice-entry
+turbos	"You fixed the turbos. [if blaster is reflexed]The blaster, too. You can just ENTER BOAT[else]Now maybe try the blaster[end if]."
+blaster	"You fixed the blaster. [if blaster is reflexed]The turbos, too. You can just ENTER BOAT[else]Now maybe try the turbos[end if]."
+Tetris Sitter	"Now St. Teri's sick of Tetris, [if top opt pot is moot]and you gave her a gift, she can help. ASK her about the palace, and when you get outside, there'll be a new clue item[else]maybe you can give her a priceless gift of sorts instead[end if]."
+
+table of otters donehinting
+hint-entry	advice-entry
+bleary barley	"You've cut it down enough. Who needs that much barley anyway?"
+medals	"The medals are in good enough shape. They will help you speed up when you need to."
+Elmer	"You can't take on [e-n-m] by yourself--you need some allies."
+Merle	"You can't take on [e-n-m] by yourself--you need some allies."
+
+to say other-let: say "Try either of the other letters. With variety, [l-n-r] will take the hint"
+
+to say this-animal: say "You've got a useful ally. They'll be ready just as they are when the time comes"
+
+to say by-rivets: say "You've been inspired enough by the statue[if praise spirea is reflexed and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
+
+to say by-bee: say "You can get past the bee now[if bee-score is 1], though you can deal with it one more way[else], having dealt with it both ways[end if]"
+
+to say op-ed-silly: say "The op-ed, with all of its parts, is just there to build up Elvira's ludicrous 'case' against you";
+
 volume scannotes tables
 
 [these table gives clues after you scan, although usually it may be approrpriate to give hints only in cheat mode.]
@@ -2205,7 +2272,7 @@ to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb
 
 table of ordeal reload scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
-pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
+pram	false	false	false	true	"[cheatfid]."
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
 beams	false	false	false	true	"[cheatfid]."
@@ -2215,7 +2282,7 @@ Respect Specter	false	false	false	false	"'[respect-help].'"
 
 table of stores scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
-tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
+tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters."
 
 table of routes scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -2277,7 +2344,7 @@ peels speel	true	true	false	false	"Oh man. Even small puzzles are getting to you
 table of oyster scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
-capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
+capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
 perma amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
 Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
