@@ -132,13 +132,15 @@ a region has a table name called scannotes.
 
 a region has a table name called attack-table.
 
-a region has a table name called donehint table.
+a region has a table name called hint-done-note table.
 
 a region has a list of things called item-list.
 
 a region has a list of things called listen-list.
 
 a region has a list of things called smell-list.
+
+a region has a table name called nowhere-table.
 
 a region has a rule called loc-scan-rule.
 
@@ -154,7 +156,7 @@ chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] donehint table of ordeal reload is table of ordeal reload donehinting.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -169,7 +171,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] donehint table of stores is table of stores donehinting.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -178,7 +180,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. donehint table of troves is table of troves donehinting.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -191,13 +193,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. donehint table of routes is table of routes donehinting.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. donehint table of presto is table of presto donehinting.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -214,7 +216,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. donehint table of oyster is table of oyster donehinting.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -234,7 +236,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] donehint table of towers is table of towers donehinting.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -272,7 +274,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. donehint table of otters is table of otters donehinting.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -287,13 +289,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. donehint table of others is table of others donehinting.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [donehint table of demo dome is table of demo dome donehinting.]
-[some are commented out above in the rare case we might ever need them]
-
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [ owhere-table of demo dome is table of demo dome nowheres.]
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -6036,120 +6036,13 @@ check going nowhere (this is the main can't go that way rule) :
 		if noun is up or noun is down:
 			say "You can't go [noun] here[if mrlp is demo dome and player is not in Sparse Spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
 			now upwarned is true instead;
-	repeat through table of nowheres:
+	repeat through nowhere-table of mrlp:
 		if theloc entry is location of player, say "[thereject entry][line break]" instead;
 	if mrlp is troves, say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on."; [this should not be relevant, as all Troves locations should be in the table below, but just in case...]
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
 	say "You can go [list of viable directions] here." instead;
-
-table of nowheres [tnw]
-theloc	thereject
-Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond." [Ordeal Reload]
-Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
-Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if pram is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!" [stores]
-Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms." [routes]
-Adobe Abode	"This do be a one-room place. You can really only go outside."
-Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat."
-Harms Marsh	"Far into a rift? No. You can't [if darkness is touchable]see far enough to [end if]rely on directions, here[if darkness is touchable]. You'd likely wind up in Smasher Marshes or Shamers['] Marshes, far from No-Lag Logan[end if]."
-Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drowning ails or roils a sailor."
-Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
-Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]" [troves]
-Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where [cellar] must be. [if bee-score is 0]Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think[else]There's a chance you might wind up in ruts: Rustin['] Ruin St.![paragraph break]Nevertheless, on your brief walk, [one of]you saw a red Ell Car (Yorpwald public transport) rattle by[or]you ran into construction by LC Lear--the name written in red[or]you ran into construction by Larlec, written in red[cycling][end if]."
-Drain Nadir	"No. You're so low, you [if diapers are in Drain Nadir]might just walk off to SAD PIER and end it all, even without seeing red or after eating a few rad pies[else]can picture yourself slipping on a rind or dinar. 'I... darn.' You need to build yourself up here, somehow[end if]."
-Boredom Bedroom	"Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better."
-Browse Bowers	"You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more."
-Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
-Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
-Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
-Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
-Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
-Marines Seminar Remains	"While you're impressed with people who can navigate sport ports, you [if sport ports are reflexed]already saluted them. No need to do more[else]couldn't do much more than show respect for them, if you need a distraction from your main quest[end if]."
-Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
-Unwary Runway	"[if number of npcish people > 0 and symp-yet is false][random npcish person] waves frantically at you NOT to touch the east and west walls. They may be extra shocking here[change-symp]![else]The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?[end if]"
-Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
-Posh Hops Shop	"[posh-cant-exit]." [oyster]
-Olde Lode	"Something seems to tell you 'Lo! Lo! Deed!' It can't be too hard. The [if clam is in Olde Lode]clam[else]urn[end if] isn't that complex."
-Disease Seaside	"The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront. Going back to the Olde Lode or Posh Hops Shop seems pointless, too.[paragraph break]You need to cross to the north for more action."
-Fighter Freight	"Directions aren't what matters here. You just need some sort of action to get off the boat."
-Hardest Trashed Dearths	"Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow." [oyster]
-Lean Lane	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin Plains	"With the sloppy polyps on most all sides, you can only go back south or[if span pans are in Lapsin Plains], once the span pans are neutralized,[end if] inside."
-Sclerous Closures	"You can only go north to the Horned Hedron[if sardine is in Sclerous Closures], once the sardine is gone,[end if] or east back to Anger Range. The Handsome Sand Home blocks you west and south."
-Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if pol art portal is touchable]portal[else]ol['] trap once you disarm it[end if][if walleyes are touchable], though you probably don't need the walleyes watching you try[end if]."
-Rascal Craals	"The round bay boundary blocks you from going any way but back east."
-End Den	"You're disoriented here, but you can go back OUT to get to the Horned Hedron."
-Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
-Tenfold Teflond Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
-Loftier Trefoil	"[if number of moot picaros < 3]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out[end if]." [towers]
-Topside Deposit	"The Wildest Wilteds are too dangerous any way but[if Scope Copse is visited] back[end if] north[if dreads adders are touchable], and the dreads adders are in the way right now[end if]."
-Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
-Actionless Coastlines	"[if noun is southwest]You don't need to explore the natatorium or Hatchery[else]You can't get across Leak Lake without some sort of craft[like-boat][end if]."
-Dourest Detours	"Oh, man! You're so negative and un-energetic. Too tired and upset to try a wrong way, much less a right one. You need a way to change that."
-Fringe Finger	"[if noun is down]The logged dogleg prevents you from jumping to your doom[else if noun is cardinal]You try the logged dogleg's [noun] entry, get twisted around, and come out the [dogleg-other of noun] entry[else if noun is planar]The logged dogleg has no diagonal entries[else]You can't sneeak around the dogleg that way. You can only go back east[end if]."
-Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
-Obscurest Subsector	"A log-gaol blocks any way other than back west. If it didn't, the subsector wouldn't truly be obscurest, now."
-Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrike!'[paragraph break][or][stopping]Not worth it. Any direction but back south might drive you too far from the palace."
-Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
-Mislit Limits	"[if noun is south or noun is southwest]You don't want to go back across Leak Lake[else]The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[mislit-clue][end if]."
-Clarthead Cathedral	"[no-coma]." [otters]
-Shiner Shrine	"[no-coma]."
-Loop Pool	"The pool is wide and long. You can only go back south."
-Bran Barn	"You don't need to explore Mr. Lee's property. Your only way out is back north."
-Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Blest Belts are private to animals and those who helped them[end if]."
-Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot![paragraph break]Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
-Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
-Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]." [others]
-Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
-Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
-Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
-Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
-
-to say change-symp: now symp-yet is true;
-
-to say and-pen: say "[if lie pen app is moot]even without [the lie pen app][else][the lie pen app] too[end if]"
-
-to say mislit-clue: say "[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]"
-
-to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"
-
-to say back-to-wells: say " back to the Swell Wells and beyond"
-
-to say posh-cant-exit:
-	if noun is not outside:
-		say "You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them";
-		continue the action;
-	say "'This ain't the E-Z Beer Breeze-Beezer, here,' one of the LOLstr trolls says. You haven't paid, and you have no money, but you need to leave somehow. And straight-up exiting doesn't seem to be the way.[paragraph break][trolls-mood]";
-
-to say trolls-mood:
-	if silly-acts is 3:
-		say "You get the feeling the LOLstr trolls wouldn't mind seeing you go since you might be bad for business";
-	else if silly-acts is 2:
-		say "Yet, the LOLstr trolls aren't that enthusiastic. They remember that disruption you caused and, in some weird way, respect your own trolling";
-	else if silly-acts is 1:
-		say "The LOLstr trolls hesitate a bit, though. Your behavior wasn't perfect. Maybe if you did more, they'd be glad to see the back of you";
-	else if silly-acts is 0:
-		say "So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image";
-	else:
-		say "BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this"
-
-to say curtis-next: say "[if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]"
-
-to say no-coma: say "The coma camo may be detectable, but you can't change it"
-
-to say unless-max:
-	let my-tot be poss-score of oyster - cur-score of oyster;
-	if lever is reflexive:
-		decrement my-tot;
-	if dialer is reflexive:
-		decrement my-tot;
-	if bogus-redial is reflexive:
-		decrement my-tot;
-	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
 
 section specific rules
 
@@ -22099,7 +21992,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	abide by the spoil-hints rule;
 	if there is hint-entry of noun in the table of hintobjs:
 		if noun is reflexed: [first check if it's solved already]
-			repeat through table of dont-need-hints:
+			repeat through hint-done-note table of mrlp:
 				if hint-entry entry is noun, all-say "[advice-entry entry]" instead;
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry:
