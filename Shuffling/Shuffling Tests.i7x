@@ -632,7 +632,7 @@ carry out privsing:
 			if the-from entry is spayshul:
 				do nothing;
 			else:
-				say "[the-from entry] should have an entry in the table of spechelp for changing to [the-to entry].";
+				say "[the-from entry] should have an entry in [spechelp of mrlp] for changing to [the-to entry].";
 				increment privent;
 	say "[privent] new entries needed.";
 	the rule succeeds;

@@ -2081,7 +2081,7 @@ thistext	page-read-yet	comprehensible
 
 volume specific help for things you need to flip
 
-table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
+table of ordeal reload spechelp
 xtrhelp	helptxt
 meet bans	"The ten beams creak slightly. Maybe not all of them. But a few."
 palm	"You think you feel the palm shake a bit, but nothing terribly magical happens."
@@ -2104,7 +2104,10 @@ plates	"The plates shine slightly and rattle."
 plaster	"The plaster crackles and shines slightly."
 pram	"The pram creaks back and forth slightly."
 rifle	"Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you."
-Store B	"The smell from Store B becomes fruitier and more delicious." [START stores]
+
+table of stores spechelp
+xtrhelp	helptxt
+Store B	"The smell from Store B becomes fruitier and more delicious."
 Store H	"Store H looks totally different for a second."
 Store K	"An odd sweet smell from Store K, for a second."
 Store N	"'Dude, you like must be close!' you hear from Store N."
@@ -2115,7 +2118,10 @@ Store V	"A single paper currency flutters off from Store V, lost forever."
 Store W	"Store W seems to push up from the ground and go narrower for a second."
 Store Y	"You hear grinding, then a slimy gulp, from store Y. But nothing definitive."
 blabber babbler	"The blabber babbler coughs and shakes [his-her] head, looking for someone who almost disrupted [his-her] speech. [he-she-c] doesn't close to finger you."
-THE BEAN	"THE BEAN rolls back and forth a bit." [START routes]
+
+table of routes spechelp
+xtrhelp	helptxt
+THE BEAN	"THE BEAN rolls back and forth a bit."
 worst ad	"The ad seems slightly nearer, for a moment."
 scripture picturers	"You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that."
 lairage regalia	"You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close."
@@ -2136,7 +2142,10 @@ hurt hog	"The hog grunts."
 bent ewe	"The bent ewe stretches a bit."
 raptest patters	"The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to."
 yob den	"Some different noises from the yob den."
-Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
+
+table of troves spechelp
+xtrhelp	helptxt
+Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right."
 Eh At Heat	"You feel slightly less cold but mad at yourself for not doing better."
 Race Acre	"For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though."
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
@@ -2162,7 +2171,10 @@ Sister Tressi Siters	"Sister Tressi seems a bit more upset than usual."
 marble blamer balmer	"[mbb] seems slightly taken aback."
 marble blamer mr beal	"[mbb] seems slightly taken aback."
 trance nectar	"Your willpower is not quite strong enough to give it all up yet. But you must be on the right track."
-lamb	"The lamb looks confused. Maybe you could be more forceful. Verbally, not physically." [START presto]
+
+table of presto spechelp
+xtrhelp	helptxt
+lamb	"The lamb looks confused. Maybe you could be more forceful. Verbally, not physically."
 hump	"The hump suddenly looks a bit smaller. But not enough."
 n-t-air	"You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet."
 dart	"The dart seems a bit closer, but...dang! Not quite."
@@ -2203,7 +2215,10 @@ skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Ye
 BUB DUDE EGG	"Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here, why BUB DUDE EGG is showing."
 drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
 drive e	"Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it."
-Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
+
+table of oyster spechelp
+xtrhelp	helptxt
+Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe."
 gins sign	"Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT."
 tips pits	"The tips pits rattle a bit as you try to do ... something ... to them."
 tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
@@ -2250,7 +2265,10 @@ bogus-redial	"[di-cli]."
 templar ramplet	"There MUST be a way to storm down the templar ramplet. But not that."
 bogus-psalm	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
-Andres	"Andres looks a bit more tied up at the moment." [START towers]
+
+table of towers spechelp
+xtrhelp	helptxt
+Andres	"Andres looks a bit more tied up at the moment."
 Andrew	"Andrew suddenly looks as if he's been told he did something wrong."
 Archie	"Archie looks a bit pained."
 Barney	"Barney looks around a bit."
@@ -2321,7 +2339,10 @@ repents serpent	"The serpent calms down for a split-second[ser-try]."
 Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
-bleary barley	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
+
+table of otters spechelp
+xtrhelp	helptxt
+bleary barley	"The barley rustles in an imaginary wind--but hardly at all."
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
 asyllabic lilac bays	"You almost hear music as the lilac bays rustle."
 cut ya all cult laya	"The jabber from [the laya] turns slightly less inane for a moment."
@@ -2352,7 +2373,10 @@ badger	"The badger flexes imaginary suit lapels, then quickly goes back to brood
 satyr	"The satyr puts a hand on its chin as if pondering deeper things."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
-moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
+
+table of others spechelp
+xtrhelp	helptxt
+moss cap	"The cap itches for a bit, then seems to try to spin you around."
 coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close."
 coins	"The coins jingle promisingly."
 icons	"The icons rattle promisingly."
@@ -2446,7 +2470,7 @@ to say spec-help of (itm - a thing):
 		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
 		continue the action;
 	if xtra-trax is true:
-		repeat through table of spechelp:
+		repeat through spechelp of mrlp:
 			if itm is xtrhelp entry:
 				if there is a helptxt entry:
 					say "[helptxt entry][line break]";
@@ -2464,7 +2488,7 @@ to say spec-help of (itm - a thing):
 					continue the action;
 				else:
 					break;
-		d "You may want to put in special text here in the table of spechelp, tsh, for ([the itm]). Or not.";
+		d "You may want to put in special text here in [spechelp of mrlp] for ([the itm]). Or not.";
 	say "[pull-from of itm].";
 	if xtra-trax-warn is false:
 		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";

@@ -32,7 +32,7 @@ definition: a thing (called th) is dislodged: [useful for fruits checking especi
 	no;
 
 definition: a thing (called ht) is spayshul:
-	if ht is an xtrhelp listed in the table of spechelp, decide yes;
+	if ht is an xtrhelp listed in spechelp of mrlp, decide yes;
 	decide no.
 
 the file of debuggery is called "debug". [deprecated slightly but still useful for manual runthroughs]
@@ -112,6 +112,8 @@ a region has a number called poss-score. the poss-score of a region is usually z
 a region has a number called cur-score. the cur-score of a region is usually zero.
 
 a region has a table name called regnud. a region has a table name called regana.
+
+a region has a table name called spechelp.
 
 a region has a room called last-loc.
 

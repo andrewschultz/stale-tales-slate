@@ -1661,8 +1661,8 @@ carry out rejching:
 to rej-analyze (x - a thing):
 	choose row with the-from of x in regana of temp-reg;
 	let y be the-to entry;
-	unless x is an xtrhelp listed in table of spechelp:
-		say "Whoops, [x] could also be in table of spechelp, to [y].";
+	unless x is an xtrhelp listed in spechelp of mrlp:
+		say "Whoops, [x] could also be in [spechelp of mrlp], to [y].";
 	unless x is a specdone listed in table of done rejects:
 		if x is reflexive:
 			say "Strong possibility: [x] could also be in table of done rejects, to [y].";

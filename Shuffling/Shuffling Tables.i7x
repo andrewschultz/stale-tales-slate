@@ -532,7 +532,7 @@ volume specific help for things you need to flip
 
 [We need a non-backdrop first here, or the compiler complains.]
 
-table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
+table of ordeal loader spechelp
 xtrhelp	helptxt
 odor	"The odor doesn't seem too complex. You pause. You can figure what it should be."
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
@@ -541,13 +541,19 @@ toga	"The toga blows in an unseen breeze, exposing what's written on it a bit mo
 nametag	"The nametag peels infinitesimally."
 static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
 attics	"Hm, you can't think of anything to do with the attics but change them back."
+
+table of store spechelp
+xtrhelp	helptxt
 Store B	"You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet."
 Store F	"That seemed right but didn't seem quite natural."
 Store I	"Store I shakes a bit. 'RISE TO...' you think, as you see red. Rise to what?"
 Store M	"Store M shudders slightly. You wonder what sort of rapid transit is behind it."
 Store R	"Store R remains impassive. 'Or rest?' you muse. You're sort of ready for vacation, and sort of not."
 acne bit cabinet	"The cabinet wobbles a bit."
-slit	"The slit waxes and wanes a bit." [forest]
+
+table of forest spechelp
+xtrhelp	helptxt
+slit	"The slit waxes and wanes a bit."
 ones	"The ones rattle a bit. Maybe you can sense out what they should be."
 dashes	"The dashes seemed to rattle a bit, but you feel slightly uncool."
 noughts	"Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you."
@@ -560,6 +566,9 @@ spread	"As you ponder the spread, it turns bright red and burst into something e
 red asp	"The red asp strikes at something you can't see, unaware it's you that's trying to change it."
 Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for a moment."
 vowels	"The vowels continue to howl in defiance. OU...AIE...like a wild animal."
+
+table of sortie spechelp
+xtrhelp	helptxt
 hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 cask	"[if sack is moot]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
 sack	"You doubt the sack/cask has a triple purpose."
@@ -583,7 +592,10 @@ smilies	"The smilies momentarily grow eyebrows that point aggressively, then van
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
 oils	"[if player is not in moor]The oils need a purpose--to build something great. You don't want to waste them[else if soil is touchable]No, that wouldn't need the soil as a foundation[else]The oils could change the moor into something more fertile, but not that[end if]."
-drainage	"The drainage bubbles a bit." [metros start]
+
+table of metros spechelp
+xtrhelp	helptxt
+drainage	"The drainage bubbles a bit."
 motto	"Hm, you maybe could bend the/a motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
 lost corn	"You thought you heard electronic beeping from the corn."
@@ -596,7 +608,10 @@ words	"The words [if words are in noise bag]slash at the bag a bit[else]seem to 
 beats	"The beats shift up for a second."
 siren	"The siren continues to blind you--like it's throwing dust in your eyes."
 neon pig	"The neon pig blinks as if in last-ditch defiance."
-tiles	"The tiles rattle as if to shift but settle down." [resort start]
+
+table of resort spechelp
+xtrhelp	helptxt
+tiles	"The tiles rattle as if to shift but settle down."
 swing	"The swing goes slightly airborne."
 l2	"You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief."
 tool shed	"You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here."
@@ -638,7 +653,7 @@ to say spec-help of (itm - a thing):
 		say "[if player is in Sacred Cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
 		continue the action;
 	let got-spec be false;
-	repeat through table of spechelp:
+	repeat through spechelp of mrlp:
 		if itm is xtrhelp entry:
 			now got-spec is true;
 			if point is true:
@@ -648,7 +663,7 @@ to say spec-help of (itm - a thing):
 			d "There is a spechelp entry for this.";
 			break;
 	if got-spec is false: [this should not happen, but it was useful weeding out clues.]
-		d "Add something to the table of spechelp for [the itm], maybe? Search for to[r]sh.";
+		d "Add something to the [spechelp of mrlp] for [the itm], maybe? Search for to[r]sh.";
 		say "You feel a slight psychic push-pull coming from [where-pull of itm]. Keep at it.";
 		say "[line break](NOTE: I forgot to provide a specific clue, here. Can you let me know about [the itm] at [email]?)";
 	if pointcue is false:
