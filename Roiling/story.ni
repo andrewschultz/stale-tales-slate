@@ -153,11 +153,14 @@ a region has a rule called smell-rule.
 
 a region has a rule called swear-rule.
 
+a region has a rule called randomization rule.
+
 chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.]
+
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -172,7 +175,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.]
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -181,7 +184,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -194,13 +197,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.]
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -217,7 +220,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -237,7 +240,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -275,7 +278,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -290,11 +293,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.]
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule.
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -4372,29 +4375,45 @@ to decide which thing is not-mbb:
 	decide on Mr Beal;
 
 when play begins (this is the hint and other randomization rule):
-	if a random chance of 1 in 2 succeeds, now evil-bee-second is true; [troves random clues]
+	repeat with myreg running through regions:
+		process the randomize-rule of myreg;
+
+this is the randomize-troves rule:
+	if a random chance of 1 in 2 succeeds, now evil-bee-second is true;
 	if a random chance of 1 in 2 succeeds, now rivets-first is true;
 	if a random chance of 1 in 2 succeeds, now lobster-first is true;
 	if a random chance of 1 in 2 succeeds, now sister-first is true;
 	if a random chance of 1 in 2 succeeds, now mbb is Mr Beal;
-	if a random chance of 1 in 2 succeeds, now goshy is true; [presto random clues]
+
+this is the randomize-presto rule:
+	if a random chance of 1 in 2 succeeds, now goshy is true;
 	if a random chance of 1 in 2 succeeds, now pikes-clue is true;
 	sort byebyes in random order; [Phat Path ways to say goodbye]
 	now a random badbook is in Hacks Shack;
-	sort shop-hint-items in random order; [Posh Hops Shop items] [oyster random clues]
+
+this is the randomize-oyster rule:
+	sort shop-hint-items in random order; [Posh Hops Shop items]
 	if a random chance of 1 in 2 succeeds, now carps-pref is true;
+
+this is the randomize-towers rule:
 	now t-or-b is turbos;
-	if a random chance of 1 in 2 succeeds, now t-or-b is blaster; [towers random clues]
-	sort table of animal randomness in random order; [otters hinting]
+	if a random chance of 1 in 2 succeeds, now t-or-b is blaster;
+	sort nextclue in random order;
+
+this is the randomize-otters rule:
+	sort table of animal randomness in random order;
 	sort shrine-imp-items in random order;
 	sort cathedral-items in random order;
-	if a random chance of 1 in 2 succeeds, now viewer-first is true; [others random clues]
+
+this is the randomize-others rule:
+	if a random chance of 1 in 2 succeeds, now viewer-first is true;
 	sort rustic-easy-items in random order;
 	sort wells-hintables in random order;
 	sort field-hintables in random order;
 	sort clearing-hintables in random order;
 	sort scapespace-hintables in random order;
-	sort nextclue in random order; [Mislit Limits items]
+
+this is the randomize-demo-dome rule:
 	sort the table of xibits in random order; [demo dome exhibit stuff]
 	let wt be 0;
 	repeat through table of xibits:
@@ -6227,23 +6246,23 @@ The block climbing rule is not listed in the check climbing rulebook.
 check climbing (this is the climb to enter rule) :
 	if noun is frat raft or noun is cistern or noun is chimney or noun is sit a nag or noun is stair, try entering noun instead;
 
-check climbing (this is the generic silly climbing reject rule):
-	if noun is ramp, try going down instead; [start Ordeal Reload]
+check climbing (this is the generic silly climbing reject rule): [note the SPECIFIC TO in brackets. This is so lkst.py (look for start/end regions) doesn't flag this as code to use a region property on. There's not enough.]
+	if noun is ramp, try going down instead; [specific to Ordeal Reload]
 	if noun is stair:
 		if player is in Farming Framing, move player to Largely All Grey Gallery instead;
 		move player to study instead;
-	if noun is THE BEAN, say "THE BEAN is too slippery and round." instead; [strt routes]
-	if noun is godlings lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [start troves]
-	if noun is mount um not, say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead; [start presto]
-	if noun is Deils Slide, say "Oh dear. It's more like you'd fall down Deil's Slide instead. Semantics aside, it's a bad idea." instead; [end PRESTO]
-	if noun is crate, say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead; [start OYSTER]
-	if noun is huts, say "They're too tall. No good handholds. The span pans guide the only way in." instead; [end OYSTER]
-	if noun is gaol, say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead; [start towers]
-	if noun is prison, say "It's actually a decent jungle gym, but you're not here to putz around." instead; [end TOWERS]
-	if noun is Edictal Citadel, say "Elvira is in the Edictal Citadel, not on top of it." instead; [start otters]
-	if noun is wire weir, say "It's a long way down, and it'd take you away from your quest." instead; [end OTTERS]
-	if noun is un mod mound, try going down instead; [start others]
-	if noun is gropin roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead; [end OTHERS]
+	if noun is THE BEAN, say "THE BEAN is too slippery and round." instead; [specific to routes]
+	if noun is godlings lodgings, say "Your thought and efforts are what may lead you to the top, not a physical feat." instead; [specific to troves]
+	if noun is mount um not, say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead; [specific to presto]
+	if noun is Deils Slide, say "Oh dear. It's more like you'd fall down Deil's Slide instead. Semantics aside, it's a bad idea." instead;
+	if noun is crate, say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shuttle Hutlets is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead; [specific to OYSTER]
+	if noun is huts, say "They're too tall. No good handholds. The span pans guide the only way in." instead;
+	if noun is gaol, say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead; [specific to towers]
+	if noun is prison, say "It's actually a decent jungle gym, but you're not here to putz around." instead;
+	if noun is Edictal Citadel, say "Elvira is in the Edictal Citadel, not on top of it." instead; [specific to otters]
+	if noun is wire weir, say "It's a long way down, and it'd take you away from your quest." instead;
+	if noun is un mod mound, try going down instead; [specific to others]
+	if noun is gropin roping, say "It's a long way down, and you probably want to get north somehow, anyway." instead;
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
 chapter dropping
@@ -8921,13 +8940,13 @@ definition: a thing (called candi) is bluable:
 	if candi is clue-used, no;
 	if player is in Econ Cone:
 		if rivets are reflexive and candi is praise, no; [?? this looks very wrong. We need to look for blues in Econ Cone.]
-	if candi is tunes, no; [oyster specific]
+	if candi is tunes, no; [specific to oyster]
 	if player is in Plasm Lamps and candi is ant, yes;
 	if candi is sausage and player is in Anger Range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in Lapsin Plains:
 		if bogus-trace is in Lapsin Plains, yes;
-	if candi is elmer, no; [otters specific]
-	if player is in Gates Stage and gate-level is 2: [others specific]
+	if candi is elmer, no; [specific to oyster]
+	if player is in Gates Stage and gate-level is 2: [specific to others]
 		if candi is fleeing feeling or candi is searcher or candi is viewer, no;
 	if player is in Filed Field and candi is barren cries, no;
 	if candi is touchable, yes;
