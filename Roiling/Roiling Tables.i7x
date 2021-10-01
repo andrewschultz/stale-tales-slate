@@ -3018,9 +3018,9 @@ doublewarn is a truth state that varies.
 
 volume done rejects
 
-table of done rejects [TDR - while I think I've covered the entries in here, there will always be a chance I missed some.]
+table of ordeal reload done rejects
 specdone	spectalk
-lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either." [START manse]
+lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
 painting	"The painting really goes better with the study than the giant pin."
 chimney	"You probably just want to go UP the chimney."
 stair	"The stair helps you get around more easily, so it doesn't need to be changed back."
@@ -3029,7 +3029,10 @@ satchel	"You don't need to do anything more to the satchel--and if it became lat
 ISBN bins	"The ISBN bins are secure. Best not tinker."
 staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
-store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"	[START stores]
+
+table of stores done rejects
+specdone	spectalk
+store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"
 solid idols	"[got-e of solid idols]."
 course source	"[got-e of source course]."
 Tastee Estate	"[got-e of tastee estate]."
@@ -3039,7 +3042,10 @@ balancer barnacle	"[got-e of balancer barnacle]."
 Throes Hoster	"[got-e of throes hoster]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
-scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[START routes]
+
+table of routes done rejects
+specdone	spectalk
+scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 gast	"[if Gast is moot][giant-over][else if side art is not reflexed]You already leaned on the [sit a nag] right. You look around it and wonder if the side art could stop [gast]'s tirades[else]The [sit a nag] itself isn't as important as what's happening around it[end if]."
@@ -3053,14 +3059,20 @@ THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
 un road	"You know where the un-road is, but how to navigate it?"
 odd run on aura	"The underground is already lit. Un-unlit."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
-Pa Egg Pea	"You probably did what you could. Or not-did." [START troves]
+
+table of troves done rejects
+specdone	spectalk
+Pa Egg Pea	"You probably did what you could. Or not-did."
 heat	"Don't need to overheat, or overhate."
 a sty tasty say	"You can't over-stay your staying power, or something."
 SNORE SO ARENA	"Drowning something without reason further in reason is unreasonable."
 evil bee	"The bee's already taken enough of your in-my-heartitude."
 praise spirea	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
-tsar star	"No need for additional arts."	[START presto]
+
+table of presto done rejects
+specdone	spectalk
+tsar star	"No need for additional arts."
 dart	"The dart's just fine as-is."
 boing go bin	"You can't force another revelation, but you don't need to."
 sport ports	"You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism."
@@ -3084,7 +3096,10 @@ TBA key	"No, the TAB key is what it should be."
 Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 peels speel	"You've had enough comforts from cots to do the programming you need. You might re-wake weaker."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
-tips pits	"You can't and don't want to do anything else to the tips pits." [START oyster]
+
+table of oyster done rejects
+specdone	spectalk
+tips pits	"You can't and don't want to do anything else to the tips pits."
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
 gins sign	"There's no other way to disobey the sign."
 tines	"You destroyed the stein, and that's enough."
@@ -3102,6 +3117,9 @@ use saga sausage	"Don't oversell it! Just take [the sausage] to where it was pro
 thin hint	"It was enough to bury the ruby."
 gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
+
+table of towers done rejects
+specdone	spectalk
 diverse deviser	"You already repaired [the deviser][if dagger is moot] and got what you needed[end if]."
 old ice	"Twist the ice too much, it might not look right."
 raves saver	"The raves saver is as glitzed-up as it'll get."
@@ -3109,14 +3127,20 @@ strudel	"You'd have to drop the strudel on the ground and get it germy to try th
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 Tetris Sitter	"[The tetris sitter]'s back in the real world, now."
-nude dune	"You've dealt with the barley. You can move around a lot more, now." [START otters]
+
+table of otters done rejects
+specdone	spectalk
+nude dune	"You've dealt with the barley. You can move around a lot more, now."
 asyllabic lilac bays	"The [lilac bays] are quite nice as-is after your brilliant plant-whispering."
 parleys splayer players	"You've already made the macks/players talk a bit slower. Now you need to deal with their arguments."
 eels	"The eels have done enough."
 parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from the medals."
-compass	"The compass is accurate enough. Changing it might ruin things." [START others]
+
+table of others done rejects
+specdone	spectalk
+compass	"The compass is accurate enough. Changing it might ruin things."
 icon	"The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more."
 s-i	"The sonic icons seem right. No use meddling."
 kumquat	"You corrected the prices precis enough."

@@ -1663,11 +1663,11 @@ to rej-analyze (x - a thing):
 	let y be the-to entry;
 	unless x is an xtrhelp listed in spechelp of mrlp:
 		say "Whoops, [x] could also be in [spechelp of mrlp], to [y].";
-	unless x is a specdone listed in table of done rejects:
+	unless x is a specdone listed in done reject table of mrlp:
 		if x is reflexive:
-			say "Strong possibility: [x] could also be in table of done rejects, to [y].";
+			say "Strong possibility: [x] could also be in [done reject table of mrlp], to [y].";
 		else if x is not vanishing:
-			say "Weak possibility: [x] could also be in table of done rejects, to [y].";
+			say "Weak possibility: [x] could also be in [done reject table of mrlp], to [y].";
 
 chapter deprefing
 
