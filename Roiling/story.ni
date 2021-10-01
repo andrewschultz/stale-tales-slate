@@ -27,7 +27,6 @@ TOSB = subj-blather, about a specific subject
 TNW  = messages for "you can't go that way"
 TRE  = table of readables
 TSX  = differences between sexes
-TSH  = table of spechelp, so you can see the specialized help for an item
 TDR  = table of done rejects, which gives specialized responses for if you try to flip something that doesn't need it any more
 TQT  = table of quip texts for GRetta, elMO, ELvira, PErrot. Separated with hyphen
 TCO  = table of conversations for GRetta, elMO, ELvira, PErrot. Separated with hyphen
@@ -129,6 +128,8 @@ a region can be unspoiled or spoiled. a region is usually unspoiled.
 
 a region can be parsewrned. a region is usually not parsewrned.
 
+a region has a table name called scannotes.
+
 a region has a list of things called item-list.
 
 a region has a list of things called listen-list.
@@ -145,7 +146,7 @@ a region has a rule called swear-rule.
 
 chapter region definition
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -160,7 +161,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -169,7 +170,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -182,13 +183,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -205,7 +206,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -225,7 +226,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -263,7 +264,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -278,11 +279,13 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.]
+[some are commented out above in the rare case we might ever need them]
+
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -475,6 +478,16 @@ to any-guardian-hint: [note: we are assured there is > 1 guardian. This is a gen
 				continue the action;
 
 chapter rules on stub
+
+table of region-spoilers
+hint-reg	spoil-expl
+otters	"adverbs[if power-back is false](weakest, due to lost powers)[else](but powers back now)[end if]"
+presto	"interjections"
+routes	"prepositions"
+troves	"passive verbs"
+towers	"adjectives"
+oyster	"active verbs"
+others	"not nouns any more--a different part of speech in each location"
 
 every turn when Strip of Profits is visited (this is the region-hint on no score rule):
 	if mrlp is Ordeal Reload and Report Porter Perrot is moot:
@@ -4629,13 +4642,13 @@ carry out scaning: [note: "the rule fails" is needed here because of the scan-bo
 	say "[sb-choose][full-monty of noun].";
 	let modnoun be scannote-idx of noun;
 	if taxer-not-extra is true, the rule succeeds;
-	repeat through table of scannotes:
-[	if noun is an thing-to-note in table of scannotes: ?! doesn't work]
+	repeat through scannotes of mrlp:
+[	if noun is an thing-to-note in scannotes of mrlp: ?! doesn't work]
 		if modnoun is thing-to-note entry:
 			if there is no postscanclue entry:
 				if cheat-on is true and give-generic-question-hint is true, ital-say "PAD QUESTION MARK should give generic question-mark hints, as a reminder. Toggle this nag with QMH.";
 				the rule succeeds;
-			choose row with a thing-to-note of modnoun in table of scannotes;
+			choose row with a thing-to-note of modnoun in scannotes of mrlp;
 			if bothscan entry is true:
 				now modnoun is ncscanned;
 				now modnoun is cscanned;
@@ -4739,200 +4752,6 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Swell Wells:
 		if sorer bogey is touchable, try scaning sorer bogey instead;
 	say "You can't find anything specific to scan, and nothing shows up on your settler." instead;
-
-chapter scannotes
-
-table of region-spoilers
-hint-reg	spoil-expl
-otters	"adverbs[if power-back is false](weakest, due to lost powers)[else](but powers back now)[end if]"
-presto	"interjections"
-routes	"prepositions"
-troves	"passive verbs"
-towers	"adjectives"
-oyster	"active verbs"
-others	"not nouns any more--a different part of speech in each location"
-
-[this table gives clues after you scan, although sometimes it may be approrpriate to give hints only in cheat mode.]
-
-to say cheatfid:
-	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
-
-to say respect-help:
-	if cheat-on is false:
-		say "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode";
-	else:
-		say "[one of]Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
-
-to say g-thru-resp: now got-thru-respect is true;
-
-to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
-
-[??pad question mark / scan elmer / scan merle]
-[note we start with the pram which is not in the first room so we can define thing-to-note as not-scenery. Don't change this.]
-
-table of scannotes [tsn]
-thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
-pram	false	false	false	true	"[cheatfid]." [START Ordeal Reload]
-tables	false	false	false	true	"[cheatfid]."
-niche	false	false	false	true	"[cheatfid]."
-beams	false	false	false	true	"[cheatfid]."
-meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth entry turns purple with cheats on, red with them off."
-palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end Ordeal Reload]
-Respect Specter	false	false	false	false	"'[respect-help].'"
-tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters." [START stores]
-worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from." [START routes]
-lairage regalia	true	false	false	false	"OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic."
-adsorbing signboard	true	false	false	false	"While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk."
-anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
-Rude N Nuder	true	true	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
-a bev o be ova	true	true	false	false	"That's a lot of questions for such a small bottle, but it can't be too hard."
-MORF FORM	true	true	false	false	"Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?"
-null it unit	true	true	false	false	"The NULL IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?"
-noon gag	true	true	false	false	"Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out."
-odd run on aura	true	true	false	false	"With only one ambiguous setting, the light should soon go on for you to figure where and how to go."
-data dim mists	true	true	false	false	"Well! The data isn't dim from the settler. There's a lot to work with, here."
-admits mist ad	true	true	false	false	"Like most ads, it doesn't pose any great logical problems."
-thickness sketchins	true	false	false	false	"Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all."
-Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out." [START troves]
-eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
-race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
-sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
-stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
-l clear cellar	true	false	false	false	"That question mark is perhaps, um, clear if you think about it."
-a sty tasty say	true	false	false	false	"Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't."
-pleaser leapers	true	false	false	false	"You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves."
-large regal lager	true	true	false	false	"There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break."
-bortles lobster	true	true	false	false	"Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters."
-me arts	true	true	false	false	"Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle."
-LEAD	true	true	false	false	"Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!"
-praise spirea	true	false	false	false	"Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever."
-rivets	false	true	false	false	"Hmm, along with the information for scanning Trevis, you might really have something here." [??what if already STRIVEd]
-marble blamer mr beal	true	true	false	false	"[beal-or-balmer]."
-marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
-salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
-Sister Tressi Siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
-trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
-maze walls	false	false	false	false	"Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe." [START presto]
-n e recs censer	true	true	false	false	"This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings."
-boing go bin	true	true	false	false	"Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!"
-sods gone odes song	true	true	false	false	"My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants."
-sport ports	true	true	false	false	"Maybe you can find where the vowel is. That could help."
-hawt thaw	true	false	false	false	"Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint."
-alert	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them."
-starch charts	true	true	false	false	"Starch is calorically and consonantally (if that's a word) heavy. This must help."
-Clack Ops Locs Pack	true	true	false	false	"Ugh, no matches for so many letters. Yet the definitive colors may have clues."
-be troo e robot	true	true	false	false	"You wonder if you need a step back to take a new look at the ambiguous clues."
-Im Le Cop polemic	true	true	false	false	"Well! You can probably figurer what the undefined color is, and maybe reading the polemic will provide more clues."
-bub dude egg	true	true	false	false	"Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here."
-USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
-Drive E	true	false	false	false	"Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it."
-Drive A	true	false	false	false	"It's DRIVE A, A DRIVE and [if drive a is not examined]something else you can READ, if you want[else]VARIED[end if], which may be what's causing the whole jumble."
-peels speel	true	true	false	false	"Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue..."
-gins sign	true	true	false	false	"Hmm. Whatever the variable colors are, you think you can do something with the fixed ones."
-capers recaps	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both." [START oyster]
-casper spacer	true	true	false	false	"Casper and Recaps may be linked. You could probably bulldoze through with the information from scanning both."
-perma amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
-Lil Ps Pills	true	true	false	false	"The pills can't be that fidgety. The particular brand must be a clue, too."
-LOLstr Trolls	true	true	false	false	"Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past."
-frat raft	true	true	false	false	"You're pretty sure you can get this one quickly. I mean, you've been given one of the letters."
-sabot boats	true	true	false	false	"It can't be too hard to get the boats['] attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!"
-Achers Chaser Arches	true	true	false	false	"You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler."
-HUNTER HUNT AREA	true	true	false	false	"You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying 'You know, sometimes, that's more helpful than straight-up clues.'"
-use saga sausage	true	true	false	false	"The [sausage]'s moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it."
-Paw R Wrap	true	true	false	false	"Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay."
-general gleaner	true	false	false	false	"You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad."
-bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
-span pans	true	true	false	false	"There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here."
-papery yapper	true	true	false	false	"Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully."
-templar ramplet	true	true	false	false	"With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not."
-natant ant	true	true	false	false	"You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic."
-bogus-psalm	true	true	false	false	"Perhaps finding where the vowel is would be a good start."
-Yo Rend or Deny Rodney	true	true	false	false	"Perhaps Rodney's over-florid title will wind up being a weakness."
-dreads adders	true	true	false	false	"Well, that's a bit ambiguous to start. Still, if you got by the prosaic picaros who had only one name, the dreads adders give a double clue." [START towers]
-bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
-snider diners	true	false	false	false	"The snider diners sniff at the beeping from the settler. They notice you look confused at the question marks--well, momentarily. 'What's this? Such distracting noise!' They go on to mention, drily, that a sophisticated palette will serve you better than knowing how gadgets work."
-denier nereid	true	true	false	false	"You can almost hear the denier nereid kibitzing that you didn't need to use the settler. There can't be many possibilities, with the two ambiguous readings."
-try us yurts	true	true	false	false	"Well, the orange kind of gives things away. And even with brute force, you can probably guess where the vowel is."
-diverse deviser	true	true	false	false	"You can almost hear a voice from the Campiest Campsite say 'Buck up, sport! I believe in you! Gosh, those ambiguous clues might be MORE interesting and useful than the usual!'"
-traipse pirates	true	true	false	false	"Boy, these guys are tough! No matches, and ... well, maybe one of the vague readings can be worked out. You may want to try to talk with them or run past, though."
-fluster self rut	true	true	false	false	"You stare at the fluster self rut a bit, confident you won't let it make you upset over the inconclusive letter readings."
-angriest ingrates	true	true	false	false	"Hmm, there are some matches, and maybe one of the two variable settings will work itself out."
-mardier admirer	true	true	false	false	"Ugh! Maybe the four inconclusive readings are interrelated somehow. Perhaps certain combinations can't both be consonants."
-realist tailers	true	true	false	false	"The realist tailers take time to sniff at that ... whatever it is. You shouldn't need hand-holding for whatever you're doing. Even if some of the entries don't give any concrete information, so they can't possibly be useful. The tailers, of course, deserve access to state-of-the-art tools."
-resident trendies	true	true	false	false	"The trendies point and laugh at your settler and how it has apparently malfunctioned. Perhaps if they had more technical knowledge, they wouldn't be so self-assured."
-raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. Maybe it's the brand you can/should worry about."
-sporties ripostes	true	true	false	false	"You might have to read through a lot of possibilities even if you can quickly figure what the third letter is."
-mended mini denim	true	true	false	false	"Hmph. Perhaps it would be an easier clue if it were just denim. But three names could give a lot of clues."
-bogus-dandier	true	true	false	false	"You cringe, waiting for a voice to boom 'WHAT? YOU EXPECTED A COMPLETE SOLUTION?' You probably have enough to work with."
-drained dreadin	true	true	false	false	"Oh goodness. More ambiguous readings. But even after you figure things out, there's still a hole above that's too high to reach."
-nerd aid diner ad	true	true	false	false	"The ad must be helpful in its own way. But of course it is just aid and not an outright spoiler, so you have a bit of mental work to do, here."
-sweatier wait seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
-organised ego drains	true	true	false	false	"With nine letters, it was never going to be easy. (Fourth wall note: this is the hardest ambiguous reading in the game. That's why it's optional.) Perhaps you can try talking or running by the drains for clues. Lateral thinking, yay!"
-alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
-asset hit atheists	true	true	false	false	"Those question marks could be annoying, but with two t's and two s's, that restricts the number of guesses a lot."
-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
-lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
-reb nok bonker	true	true	false	false	"Seeing ambiguous readings is probably better than seeing stars from actually getting hit, you muse."
-reading a dinger	true	true	false	false	"Well, this may be more intellectually challenging than the book itself. Lots of reds."
-docile old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
-fries us fissure	true	true	false	false	"The fissure's jabbering may provide an alternate way to free Dr. Yow from operating the luck node. It's up to you which you feel will be easier."
-Dr Yow	false	false	false	false	"[if Dr Yow has been rowdy and Dr Yow has been wordy]Dr. Yow has already been wordy and rowdy. You suspect these readings just say you can make Dr. Yow wordy or rowdy again[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]The settler flashed RYRRO on and off. That doesn't usually happen. Perhaps it represents a range of Dr. Yow's emotions[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her][else]BUG--but Dr. Yow has two states[end if]."
-natives site van	true	true	false	false	"You get the feeling the natives can be swayed more than one way, here."
-bogus-rousted	true	true	false	false	"You're momentarily bummed you have two letters to decipher, but it's a small pick-me-up that figuring them out will be worth it."
-seismal samiels	true	true	false	false	"You're almost worried it will be too easy to figure things out, now. Too hard, too easy, too normal ... everything leaves you in the dumps."
-weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
-earnest eastern neaters	true	true	false	false	"That's some ambiguous readings, but I guess before you get help, you'll need to help yourself. Good thing the settler's even working despite the potential for water damage!"
-curst palace	false	false	false	false	"[scannotes-curst]."
-repents serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
-tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
-bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess." [START otters]
-cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely."
-parleys splayer players	true	true	false	false	"The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data."
-t-formally	true	true	false	false	"Two question marks in nine letters--well, seven--might be a little sticky. The [players] said two things."
-t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
-t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
-t-silently	true	true	false	false	"Wow! Three things to consider here. This might be tricky."
-medals	true	false	false	false	"[if cheat-on is true]The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. [end if]The seven slots suggest it's not the medals that need attention but what[if medals are examined]'s[else] might be[end if] engraved on the medals."
-cut ya all cult laya	true	false	false	false	"The words of the [laya] certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading."
-atmo moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
-sullenness us	true	false	false	false	"The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier."
-aside-llp	true	true	false	false	"Hmm. The two yellows can't mean something like LREME. So it must be they are ideas aides."
-stray satyr	true	true	false	false	"The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters." [end otters]
-coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [START others]
-s-c	true	true	false	false	"You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be..."
-pipe panel lie pen app	true	true	false	false	"Hmm. There are a lot of P's. Maybe that helps."
-auction caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or it should, once you read that sign--caution has four vowels, but the settler indicates three[else if cheat-on is true]. Just one possibility[else]. Just three possibilities[end if]."
-prices precis	true	true	false	false	"Whoah, only reds and greens. Interesting."
-melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
-ammo gang	true	true	false	false	"The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly."
-a banna	false	false	false	false	"It must be the/a banna['] AND the message on it." [scape space]
-a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
-Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
-
-[?? test qmh toggling and scanning stuff]
-
-check scaning a prefigured thing:
-	if noun is specter, continue the action;
-	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
-
-to say scannotes-curst:
-	if palace-let < 6:
-		say "Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace[if palace-let >= 5 and cheat-on is true]. [sadly-curst]";
-		continue the action;
-	else if palace-let is 11 and cheat-on is true:
-		say "The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process";
-	else if cheat-on is true:
-		say "[sadly-curst]";
-	else:
-		say "Even if the reds and yellows were all in place, there'd still be a lot of possibilities[if max-pal-seen < 8][one of]. But it should still help to get closer ro the Curst Palace[or][stopping]";
-		repeat through table of scannotes:
-			if thing-to-note entry is curst palace:
-				now b-only entry is true;
-				 continue the action;
-
-to say sadly-curst:
-	say "Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler";
 
 chapter qmhing
 
