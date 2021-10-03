@@ -135,6 +135,8 @@ a region has a table name called attack-table.
 
 a region has a table name called hint-done-note table.
 
+a region has a table name called subject blather table.
+
 a region has a list of things called item-list.
 
 a region has a list of things called listen-list.
@@ -161,7 +163,7 @@ chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. subject blather table of ordeal reload is table of ordeal reload subject blather.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -176,7 +178,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. subject blather table of stores is table of stores subject blather.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -185,7 +187,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -198,13 +200,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. subject blather table of presto is table of presto subject blather.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -221,7 +223,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -241,7 +243,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -279,7 +281,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -294,11 +296,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs.
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.]
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -1782,7 +1784,7 @@ persuasion rule for asking Len Craig to try doing something:
 
 the persuasion disclaimer rule is listed first in the persuasion rulebook.
 
-book telling and asking about
+volume dialogues, telling and asking about, etc
 
 section generically asking
 
@@ -1885,13 +1887,13 @@ check objasking it about (This is the check for object information rule):
 	if the noun is the second noun:
 		repeat through table of reflexive-blather:
 			if noun is him-asked entry and there is a him-told entry, say "[him-told entry][line break]" instead;
-	repeat through table of subject-blather:
+	repeat through subject blather table of mrlp:
 		if second noun is the person-subj entry:
 			if noun is the him-who entry, say "[him-say entry][line break]" instead;
 	if second noun is the player:
 		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
 	if the chum of the noun is not yourself:
-		repeat through table of subject-blather:
+		repeat through subject blather table of mrlp:
 			if second noun is the person-subj entry:
 				if the chum of the noun is the him-who entry, say "[him-say entry][line break]" instead;
 	if the noun is not to-gen-blather:
@@ -2271,251 +2273,6 @@ to say ohai-casper:
 	else:
 		now casper-mumble is true;
 
-table of subject-blather	[ask x about thing they know about] [tosb] [xxtalk4]
-him-who	person-subj	him-say
-Elmo	settler	"This shouldn't be available." [start INTRO]
-Rehabs Basher	blabber babbler	"'Ayup. Listen up.'" [start STORES]
-Rehabs Basher	Elvira	"'She didn't get to her position of power by using DRUGS.'"
-Rehabs Basher	Rehabs Basher	"The pamphlets the Rehabs Basher gave you will say enough."
-nestor	Elvira	"'So bogusly repressive!'"
-nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
-nestor	tokers	"[if tokers are touchable]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
-tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
-tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is all the drug you need!'"
-tokers	nestor	"[if nestor is touchable]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
-tokers	mangiest steaming	"[if Cruelest Lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
-blabber babbler	Elvira	"You probably missed the pro-Elvira introduction, which is all for the better."
-blabber babbler	blabber babbler	"You probably don't have to ask to hear the blabber babbler's personal anecdotes."
-Brother Horbert	spoon	"'[if spoon is moot]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
-Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
-Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the list yourself?[else if stupor sprout is off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
-Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
-Brother Horbert	Pat	"[lost-faith]"
-Brother Horbert	Oscar	"[lost-faith]"
-Brother Horbert	Gast	"'Well-meaning, but [his-her] wrath is misplaced. I can hear [him-her] from here. You [if Gast is moot]did well to listen to [him-her][else]may profit from listening to [him-her], but there is really nothing to fear[end if].'"
-Brother Horbert	Elvira	"'Perhaps she was good once. But her influence on religion is...disturbing.'"
-Gast	sit a nag	"There's not much dispute over the ownership. And [Gast] isn't trying to shoo you away. Maybe you should listen to [him-her] in general."
-Gast	Elvira	"[Gast] becomes momentarily more vocal and upset."
-oscar	ashtray	"[if player has pipe soot]Best not to call attention to your thievery.[else]'It's not pretty, but it's mine.'[end if]"
-oscar	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
-oscar	pat	"'I went there once. That SEED PIT...ugh.'"
-oscar	Gast	"'Keeps my home less quiet, I'm sure!'"
-oscar	Brother Horbert	"'[bh-mw].'"
-oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
-oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
-pat	pat	"'Still holding on to the Idle Deli here.'"
-pat	seed pit	"'[if stupor sprout is off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
-pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
-pat	Gast	"'Probably not good for business.'"
-pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
-pat	Elvira	"'Business is bad enough. I don't need trouble with her.'" [end routes]
-Si Reed	Elvira	"Si Reed nods pointedly." [begin troves] [end troves]
-plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]." [start PRESTO]
-plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
-plebe	Rand	"You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force."
-Rand	yak	"[pal-yak]" [chum=Leo]
-Rand	plebe	"[no-plebe]"
-Leo	hogs	"[if Saps Pass is unvisited]You haven't seen any hogs yet.[else if lawl wall is moot]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
-Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Rand is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
-Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
-Leo	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
-Rand	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
-Lev Tzoma	Elvira	"'I'm safe from her in this maze. I think?'"
-Zo Mavelt	Elvira	"'I'm safe from her in this maze. I think?'"
-Tom Avlez	Elvira	"'I'm safe from her in this maze. I think?'"
-Lev Tzoma	volt maze	"[maze-end-clue].'"
-Zo Mavelt	volt maze	"[maze-end-clue].'"
-Tom Avlez	volt maze	"[maze-end-clue].'"
-Zo Mavelt	Lev Tzoma	"[maze-later]."
-Zo Mavelt	Tom Avlez	"[maze-later]."
-Lev Tzoma	Zo Mavelt	"[maze-before]."
-Lev Tzoma	Tom Avlez	"[maze-later]."
-Tom Avlez	Lev Tzoma	"[maze-before]."
-Tom Avlez	Zo Mavelt	"[maze-before]."
-hogs	popgun	"They snicker at the memory."
-hogs	Rand	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
-hogs	Leo	"They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect."
-hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
-hogs	Elvira	"They snicker and nod."
-hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
-LOLstr trolls	Horned Hedron	"'Even more fun than here. So we hear.'"
-LOLstr trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [start oyster]
-LOLstr trolls	Elvira	"'An inspiration and an example to keep our job fun!'"
-LOLstr trolls	capers	"[if stein is moot][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
-LOLstr trolls	stein	"[if stein is moot][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
-LOLstr trolls	tunes	"[if tunes are moot][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
-LOLstr trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lotsa people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
-LOLstr trolls	tips pits	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
-LOLstr trolls	HUNTER HUNT AREA	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
-pesty types	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot.'"
-pesty types	LOLstr trolls	"'They rather keep us in and make us spend more than kick us out.'"
-pesty types	Elvira	"You endure annoying pro- and anti-Elvira half-drunken banter for a bit."
-Casper	HUNTER HUNT AREA	"'I heard it's buried on the other side of the shore. Need to bring it something lost.'"
-Casper	LOLstr trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
-Casper	capers recaps	"Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers."
-Casper	Elvira	"'She certainly knows how to seek out power. She showed that anagram chump what's what. [if player is female]She's no woman[else]He's no man[end if] of action.'"
-carps	trout	"[mean-fish]!" [chum=pikes]
-carps	Aunt Tuna	"[mean-fish]!"
-carps	Casper	"They probably like books more violent than Casper Spacer's. If they read at all."
-carps	Elvira	"'All the cool kids look up to her.'"
-carps	HUNTER HUNT AREA	"They are probably too coo-ool for ghost stories."
-carps	pikes	"You could maybe set them against each other, but really, you're the strongest...life form here."
-pikes	carps	"You could maybe set them against each other, but really, you're the strongest...life form here."
-pikes	Elvira	"'All the cool kids look up to her.'"
-trout	carps	"[if player is in Anger Range]You can ask about them later. They're pretty clearly picking on him here[else if trout is reflexive]He gives a blank look of fear[else]He feels like he can handle them and their taunts now[end if]."
-trout	Elvira	"'I heard those carps and pikes liked her.'"
-trout	HUNTER HUNT AREA	"'S-s-s-scary[if trout is reflexed], even after you helped me[end if]!'"
-trout	pikes	"[if player is in Anger Range]You can ask about them later. They're pretty clearly picking on him here[else if trout is reflexive]He gives a blank look of fear[else]He feels like he can handle them and their taunts now[end if]."
-trout	aunt tuna	"[if carps are touchable]The carps are already asking mean questions.[else]'She sure is grateful you rescued me.'[end if]"
-trout	Casper	"'I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway.'"
-aunt tuna	casper	"'Those books of his! I cannot approve.'"
-aunt tuna	tea	"'[if tea is moot]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
-aunt tuna	pikes	"[bbbullies]."
-aunt tuna	carps	"[bbbullies]."
-aunt tuna	HUNTER HUNT AREA	"'It is searching for a stolen treasure. They say it will wreak terrible havoc on the possessor.'"
-aunt tuna	walleyes	"[fish-these-days]."
-aunt tuna	sardine	"[fish-these-days]."
-aunt tuna	yapper	"[fish-these-days]."
-aunt tuna	Horned Hedron	"'It is a terrible place full of horrible people! But we cannot organize to drive them out.'"
-aunt tuna	Elvira	"'A horrible person! No, I have never met her. But Yorpwald is the worse for her arrival.'"
-aunt tuna	trout	"'He is a good boy despite no fine uncle influence, [if trout is reflexed]and you have helped him to ward off those weirdos so wired in the future[else]but those weirdos so wired may still pick on him[end if].' Tortu blushes at being treated like he might be eavesdropping."
-aunt tuna	ruby	"Aunt Tuna wouldn't believe you knew anything about the jewel[if player has ruby], and seeing it might cause her heart failure[end if]."
-aunt tuna	Casper Spacer	"'A vile man, I'm sure! And those BOOKS of his! Or so I've heard!'"
-sardine	sausage	"'I'd be scared of it, if it existed. And if I was the one stole its jewel. We all would. Well, weak-os are, anyway.'"
-sardine	Elvira	"'I wouldn't have this job if it weren't for her.'"
-sardine	Horned Hedron	"'I work here. Well, I guard the outside.'"
-sausage	ruby	"It acts all ghostly and asks you to take it where the ruby might be."
-sausage	Elvira	"'Horrible! Broil her!'"
-walleyes	HUNTER HUNT AREA	"'Anything to keep the sheeple scared.'"
-walleyes	ruby	"'Bet we could sell it to raise funds for the Base! But we'd keep a nice cut.'"
-walleyes	sardine	"'We'll have fun narcing him out for letting you in. What? He's already gone? Eh.'"
-walleyes	Casper	"'Nice books, love the violence, but too many big words.'"
-walleyes	Horned Hedron	"'Nice place, eh? Especially for not being very nice at all!'"
-walleyes	Elvira	"'Helps fund our little social club here.'"
-yapper	dialer	"'Very complex machinery! Shouldn't be used without proper certification.'"
-yapper	gleaner	"'Very pretty! I--well, I know a friend who could be bribed by it.' The yapper winks."
-yapper	Casper	"'That one book. About how beating people up was more fun than riches? Rubbish.'"
-yapper	ruby	"'The ruby would've been a good gift, but it's gone, now.'"
-yapper	sausage	"'I'm sure I'm safe from it here. Unless--that pearl's not its jewel? No? Good.'"
-yapper	sardine	"'Pft, foot soldiers, working for mere salary.'"
-yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
-yapper	Casper	"'Too much violence in his books, not enough money making.'"
-yapper	Elvira	"'She's called on the dialer a few times.'"
-yapper	Horned Hedron	"'That's where we are.'"
-butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'" [start TOWERS]
-diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
-denier nereid	Elvira	"The denier nereid mentions Elvira is one person not worth denying."
-pirates	Elvira	"The pirates explain colorfully how Elvira's rule has been good for piracy. Not the software or music sort that deserves jail time, but the stuff that takes real guts."
-sweatier	Elvira	"The wait-seer frowns and shrugs and seems to sit extra hard, as if waiting for her reign to end."
-sweatier	curst palace	"The wait-seer points to the palace and shrugs, as if to say, why?"
-ingrates	Elvira	"'She's been terrible for Yorpwald! But anyone else would be even worse. That's life!'"
-mardier admirer	Elvira	"'You both have your faults and your good sides. You might have more faults than her.'"
-mardier admirer	curst palace	"'Well I bet you could make it there, you're clever enough, but what would you do once you got there?'"
-grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
-grailman	curst palace	"'You can get there without getting by me, I bet!'"
-realist tailers	Elvira	"'Elvira certainly has shaken things up around here! We keep away from politics, but she does tweak the sort of people we hate!'"
-Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
-Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
-atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
-lois the hostile	Elvira	"'I could do even better than her...Yorpwald is missing out...'"
-hostile is he lot	Elvira	"'Any one of us could do even better than her...Yorpwald is missing out...'"
-organised	Elvira	"Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before."
-natives site van	Elvira	"The natives mention she says everyone deserves their own place, unless they don't, because they're lame."
-natives site van	curst palace	"'Why go there when you could live in the Wildest Wilteds?'"
-fluster self rut	Elvira	"You hear nothing and imagine Elvira laughing at you."
-bonker	Elvira	"'She has increased bonker production by 1000%!'"
-bonker	curst palace	"'It must be guarded by a thousand like me!'"
-agnostic	Dr Yow	"[if agnostic is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if agnostic is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [ag-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if agnostic is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
-agnostic	Elvira	"'I don't get why other people say she's so cool. They say I'm too lazy to.'"
-agnostic	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
-agnostic	keycar	"'Those things are annoying! But it'd be neat to know how they worked.'"
-agnostic	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
-agnostic	atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
-agnostic	hostile is he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
-agnostic	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
-agnostic	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is touchable]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
-agnostic	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the agnostic, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The agnostic'll use it better anyway."
-agnostic	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
-agnostic	toaster	"[if toaster is in Actionless Coastlines]'Gee, thanks for that! I'll do something cool to, I mean with, it!'[else if toaster is in Topside Deposit]You think back to the toaster [hereish of Topside Deposit]. It might be worth giving to [agnostic], as a nice gift, if you ever leave.[else]You show the toaster to [agnostic], who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
-Dr Yow	duck	"[if Shaven Havens is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
-Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
-Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
-Dr Yow	lake	"[doc-on-lake]"
-Dr Yow	agnostic	"[if agnostic is in Actionless Coastlines]'It would be fun to tutor someone!'[else if agnostic is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
-Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
-Tetris Sitter	Elvira	"'[if Tetris Sitter is reflexive]She drags us all down[else]I feel like she doesn't have to drag us down any longer. I will do what I can to help you with the curst palace, if you need[end if]!'"
-Tetris Sitter	curst palace	"'It can be something super special. [3-random]? If only...' You got no concrete clues, but St. Teri's observations were a help[new-mislit-clue]. Maybe you can come back for another, later, if you still have no luck outside."
-Tetris Sitter	crocus	"[if Tetris Sitter is reflexive]'Flowers? Oh, I don't know. They're nice, but ... they don't help ENOUGH.'[else if crocus is moot]Don't push-poll her about your generosity.[else if crocus is in top opt pot]Just give her the crocus.[else]'I haven't enjoyed flowers for a long time.'[end if]"
-Tetris Sitter	top opt pot	"[if Tetris Sitter is reflexive]'Worthless, with or without a flower in it.'[else]'From Renato, eh? Very nice.'[end if]"
-Tetris Sitter	Ornate Atoner Renato	"[if Tetris Sitter is reflexive]'There's a name. I sort of miss him.'[else if crocus is moot]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
-Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
-players	Elvira	"'She is too good even for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
-eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
-Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
-Mr Lee	Elvira	"'She must be defeated[if gore ogre is moot]. You must be the one to lead us[else if ghoul hat is moot]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
-Gore Ogre	Elvira	"The Gore Ogre EORG's a bit louder."
-ocelots	Elvira	"They shudder[at-elvira]."
-satyr	Elvira	"He shudders[at-elvira]."
-leopard	Elvira	"It shudders[at-elvira]."
-badger	Elvira	"It shudders[at-elvira]."
-snail	Elvira	"It shudders."
-snipe	Elvira	"It shudders."
-racoon	Elvira	"It shudders."
-hornets	Elvira	"The buzzing seems almost angry."
-Elmer	Merle	"'Almost as interesting as me.'"
-Merle	Elmer	"'Almost as interesting as me.'"
-Merle	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
-Elmer	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
-Elvira	Gretta	"'Not as unselfish as she thought she was.'"
-Elvira	Mr Lee	"'Hopeless. Paranoid.'"
-Elvira	eels	"'Their electric shocks would be useful--but they didn't let me harness them.'"
-Elvira	Le Mer	"'Not dangerous.'"
-Elvira	Merle	"'He will get his reward. Even if he hadn't let you by.'"
-Elvira	Elmer	"'He will get his reward. Even if he hadn't let you by.'"
-Elvira	Ed Riley	"'I didn't expect much from him.'"
-Elvira	whiners	"[if whiners are in Clarthead Cathedral]She's not going to HELP you with them[else]You explain you got past them, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
-Elvira	sly imp	"[if imp is in Shiner Shrine]She's not going to HELP you with the imp[else]You explain you got past it, and she shrugs[end if]. Henchmen these days. That's why they're henchmen and not leaders."
-sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here.'"
-whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
-Elmer	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'"
-Gretta	Elvira	"[if players are touchable]Gretta cringes even more at hearing Elvira's name, but she can't do much with those [pla-ma]s around, and neither can you[else]You are already talking about Elvira[end if]." [end OTTERS]
-curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'" [start OTHERS]
-curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
-curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
-curtis	Len Craig	"'A bit of a salesman, but he has some goods. Just--we're not on great terms, so maybe you can...'"
-curtis	Elvira	"'She was terrible for business and innovation. Things are picking up again now, though.'"
-Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
-Art Erd	So Great Storage	"'[if So Great Storage is in Scape Space]It's...umm...worth something.[else]You bought it[end if].'"
-Art Erd	len craig	"[icy-len]"
-Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
-Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
-len craig	curtis	"[one of]'Nice fella, interesting ideas about agriculture, but kinda bossy. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
-len craig	tekno token	"[one of]Len inspects the token and assures you it's valid[or]If you ask again, Len might question its validity[stopping]."
-len craig	elvira	"'Less said, the better.'"
-len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
-Ammo Gang	mango	"Yes, we sell them. Come join our conversation the right way. You turn red, briefly, thinking it can't be too hard to figure how to get a mango." [end OTHERS]
-
-to say bh-mw:
-	say "Brother Horbert means well, but he's too unfocused to DO anything by himself"
-
-to say at-elvira:
-	say " at the name. You quickly give assurance where you stand"
-
-to say icy-len:
-	say "'Nicely? Len? Icy!' [he-she] mutters. 'Cut Len's cluster...'"
-
-check objasking about Dr Tera when player is female:
-	try objasking noun about Art Erd instead;
-
-check objasking Elvira about an animal:
-	if second noun is in Lamer Realm or second noun is in Perverse Preserve, say "'Elvira scrunches her face up. 'Oh! I love animals! They help me in many...WAYS. Even if they're just...wimpy.'" instead;
-
-to say mean-fish:
-	say "They'd have nothing nice to say, and you don't need to encourage them. Take action instead";
-
-to say fish-these-days:
-	say "Aunt Tuna probably has a lecture prepared about fish these days. One that won't help you go hunt a hangout";
-
 ag-cheat is a truth state that varies. ag-cheat is false.
 ag-guar is a person that varies. [ag-guar is usually nothing.]
 
@@ -2571,20 +2328,6 @@ check objasking len craig about a fruit:
 	else:
 		say "'A fine fruit, but I don't deal in that. Maybe someone else does.'";
 	the rule succeeds;
-
-to say no-plebe: say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
-
-to say bbbullies: say "She seems more worked up about them than Tortu was[if trout is reflexed], even after your lesson[end if]. But she means well"
-
-to say yeah-cute: say "[if silly-acts is 1]The LOLstr trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The LOLstr trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The LOLstr trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
-
-to say lost-faith: say "'One of many of my flock who have lost faith they can help.'[no line break]";
-
-to say maze-end-clue: say "'I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through";
-
-to say maze-before: say "'Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have.'"
-
-to say maze-later: say "'Oh! He'll drop by later. I hope you don't need his help too much.'"
 
 check objasking a picaro about a picaro:
 	if noun is rodney:
@@ -2647,7 +2390,7 @@ to say ag-fol:
 	move agnostic to Obscurest Subsector;
 	move player to Obscurest Subsector;
 
-book reading (vs just examining)
+volume reading (vs just examining)
 
 The reading action translates into I6 as "Read".
 
@@ -2790,7 +2533,7 @@ this is the bore-red-writing rule:
 	if current action is objhinting, continue the action;
 	if number of readable things is 0, say "There's no red writing here to do anything with." instead;
 
-book quips
+volume quips
 
 [added this to check if a quip is gone-through. Artistic is not used, but yeah...]
 
@@ -2808,17 +2551,6 @@ to lawnmower (mytab - a table-name) :
 			say "DEBUG: Did not touch [response entry]: [prompt entry][line break]";
 			now mower is false;
 	if mower is true, say "DEBUG: Lawnmowering worked.";
-
-chapter quip-variable-text
-
-to say satchel-extra:
-	if satchel is bscanned, continue the action;
-	if satchel is not in Largely All Grey Gallery, say "quickly go back to the study for the satchel, ";
-	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
-
-to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, you've got a whole body of data, now[stopping]";
-
-last-yays is a number that varies.
 
 section settler color deduction text
 
@@ -4317,6 +4049,12 @@ chapter game-start
 
 goshy is a truth state that varies.
 
+definition: a person (called myp) is nonspecific:
+	repeat with myrg running through regions:
+		if myp is a him-who listed in subject blather table of myrg, no;
+	if litany of myp is Table of No Conversation and myp is not terse, no;
+	yes;
+
 when play begins (this is the basic initialization rule):
 	let temp be 0;
 	now the have-died flag is false;
@@ -4334,7 +4072,7 @@ when play begins (this is the basic initialization rule):
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
-		repeat through table of subject-blather:
+		repeat through subject blather table of mrlp:
 			if there is no him-say entry:
 				say "[him-who entry] / [person-subj entry] needs entry.";
 				now him-say entry is "[bug-report]";
@@ -4347,9 +4085,7 @@ when play begins (this is the basic initialization rule):
 				if 1 > 2:
 					say "[PE] might want default-sub-blather.";
 			if PE is not terse and PE is not a guardian:
-				if PE is not a him-who listed in the table of subject-blather:
-					if litany of PE is Table of No Conversation and PE is not terse:
-						say "[PE] has nothing special or specific to say.";
+				if PE is nonspecific, say "[PE] has nothing special or specific to say.";
 				if PE is not a him-asked listed in the table of reflexive-blather:
 					if litany of PE is Table of No Conversation:
 						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive-Blather.";
@@ -9982,11 +9718,22 @@ orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the e
 orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
 bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break][gridchek]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN in a font that feels rantier. Behind is a Carven Cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
 
+section extra quip checks
+
 to say gridchek:
 	say "[if player does not have gird grid]Elmo hands you an additional note--a Gird Grid--to help you on your way. [end if]";
 	now player has gird grid;
 
-section Gird Grid
+to say satchel-extra:
+	if satchel is bscanned, continue the action;
+	if satchel is not in Largely All Grey Gallery, say "quickly go back to the study for the satchel, ";
+	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
+
+to say mo-data:	say "[one of]More data[or]Even more data[or]Ok, you've got a whole body of data, now[stopping]";
+
+last-yays is a number that varies.
+
+chapter Gird Grid
 
 the Gird Grid is a warpable thing. description is "[bug-report]"
 

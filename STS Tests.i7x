@@ -292,20 +292,28 @@ to say hint-type of (th - a thing): say "[if th is universal]universal[else if t
 
 after printing the name of a thing (called th) while hintalling: say " ([hint-type of th][if th is privately-named]--privately named[end if])";
 
+stuff-to-duplicate is a list of things variable.
+stuff-to-delete is a list of things variable.
+stuff-to-find is a list of things variable.
+
 carry out hintalling:
 	let my-count be 0;
 	let times-found be 0;
 	let this-row be 0;
 	let last-row be 0;
-	let stuff-to-find be a list of things;
-	let stuff-to-delete be a list of things;
+	now stuff-to-find is {};
+	now stuff-to-delete is {};
+	now stuff-to-duplicate is {};
 	let should-find be true;
+	let duplicate-this be false;
 	say "Running HINTALL to find which items need hinting. This may take a [if is-roiling is true]long [end if]while.";
 	say "You may wish to define something as AMUSING, USELESS or BOUNDING if it pops up here and doesn't need a hint.[paragraph break]";
+	now hintobjstable of meta team is table of general hintobjs;
 	repeat with VTH running through all things:
 		now should-find is true;
 		now times-found is 0;
 		now last-row is 0;
+		now duplicate-this is false;
 		follow the skip hinting rules for VTH;
 		if the rule succeeded:
 			[say "skip rules succeeded for [vth].";]
@@ -317,27 +325,34 @@ carry out hintalling:
 			[say "skip rules no action for [vth].";]
 			do nothing;
 		now this-row is 0;
-		repeat through table of hintobjs:
-			increment this-row;
-			if hint-entry entry is not VTH, next;
-			increment times-found;
-			if should-find is true and times-found > 1:
-				say "Row [this-row]: duplicate [VTH] in table of hintobjs from row [last-row].";
-				increment my-count;
-			if should-find is false:
-				say "Row [this-row]: [VTH] shouldn't be in the table of hintobjs at all.";
-				increment my-count;
-			now last-row is this-row;
+		repeat with MYR running through regions:
+			repeat through hintobjstable of MYR:
+				increment this-row;
+				if hint-entry entry is not VTH, next;
+				say "[VTH] found in [hintobjstable of MYR].";
+				increment times-found;
+				if should-find is true and times-found > 1:
+					say "Row [this-row]: duplicate [VTH] in table of hintobjs from row [last-row].";
+					now duplicate-this is true;
+					increment my-count;
+				if should-find is false:
+					say "Row [this-row]: [VTH] shouldn't be in the table of hintobjs at all.";
+					increment my-count;
+				now last-row is this-row;
 		if should-find is true and times-found is 0:
 			add VTH to stuff-to-find;
 			increment my-count;
 		else if should-find is false and times-found > 0:
 			add VTH to stuff-to-delete;
 			increment my-count;
+		else if duplicate-this is true:
+			add VTH to stuff-to-duplicate;
+			increment my-count;
 	if my-count is 0, say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!" instead;
 	say "[my-count] total things to fix.";
-	say "[if number of entries in stuff-to-find > 0]Stuff to put in table of hintobjects ([number of entries in stuff-to-find]): [stuff-to-find][else]Table of Hintobjects needs no entries[end if].";
-	say "[if number of entries in stuff-to-delete > 0]Stuff to remove from table of hintobjects ([number of entries in stuff-to-delete]): [stuff-to-delete][else]Table of Hintobjects has no excess entries[end if].";
+	say "[if number of entries in stuff-to-find > 0]Stuff to put in tables of hintobjs ([number of entries in stuff-to-find]): [stuff-to-find][else]The hintobject tables need no entries[end if].";
+	say "[if number of entries in stuff-to-delete > 0]Stuff to remove from tables of hintobjs ([number of entries in stuff-to-delete]): [stuff-to-delete][else]The hintobject tables had no excess entries[end if].";
+	say "[if number of entries in stuff-to-duplicate > 0]Stuff to unduplicate in tables of hintobjs ([number of entries in stuff-to-delete]): [stuff-to-delete][else]The hintobject tables had no duplicate entries[end if].";
 	the rule succeeds;
 
 section so hintall works ok

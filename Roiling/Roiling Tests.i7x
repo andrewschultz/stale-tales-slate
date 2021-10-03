@@ -315,7 +315,7 @@ does the player mean grilling the player: it is very unlikely.
 
 carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
-	repeat through table of subject-blather:
+	repeat through subject blather table of mrlp:
 		if him-who entry is noun, say "[him-who entry] / [person-subj entry] = [him-say entry][line break]";
 	repeat through table of general-blather:
 		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
@@ -367,7 +367,7 @@ carry out spamobjing:
 	repeat with PEO running through people:
 		say "Asking [PEO].";
 		now foundyet is false;
-		repeat through table of subject-blather:
+		repeat through subject blather table of mrlp:
 			if him-who entry is PEO and person-subj entry is noun:
 				say "[PEO]-[noun]: [him-say entry][line break]";
 				now foundyet is true;
@@ -1426,7 +1426,7 @@ a person can be blah, elvonly, unelvy or elvy. a person is usually blah.
 
 carry out elving:
 	let elvies be true;
-	repeat through table of subject-blather:
+	repeat through subject blather table of mrlp:
 		if person-subj entry is Elvira:
 			if him-who entry is unelvy:
 				now him-who entry is elvy;
