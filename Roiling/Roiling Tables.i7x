@@ -2183,6 +2183,107 @@ to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look
 
 to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
 
+volume readables
+
+table of ordeal reload readables
+to-read	what-read	alt-read
+giant pin	"GNAT. I NIP is nonsensically written in red on the giant pin."	a thing
+sitar	"Oh, right. You bought it from Trisa Israt."
+rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
+pastel plates	"EPSTAL is written as an author's signature."
+
+table of stores readables
+to-read	what-read	alt-read
+Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'"
+Store W	"WESTOR is the name of the company that built this. [one of]There's more, about what method they used[or]They used the SET-ROW method[stopping]."
+
+table of routes readables
+to-read	what-read	alt-read
+worst ad	"'WARTS DO SOW, DRAT' is written below RADWOST but not in red. Hmm."
+cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is written in red."
+trashy ashtray	"On this side is [one of]PEST OP, OI[or]PO['] SPITE, O[cycling]. You can read the other side [one of][or]again [stopping]if you want."
+A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
+Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
+
+table of troves readables
+to-read	what-read	alt-read
+stop post	"POP'S TOTS is written in red on the stop post."
+a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
+LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
+large regal lager	"[one of]The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
+pleaser leapers	"SAP-LEER is the 'ironic' name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't."
+See Dir	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
+rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
+red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
+Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
+Blamer Mr Beal	"The likeness was drawn up by E. R. Lamb, whose signature is in red."
+DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
+END PRONER POD	"It is, apparently, produced by N-E-PROD corporation."
+r cad card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
+
+table of presto readables
+to-read	what-read	alt-read
+volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
+sport ports	"TOP'RS is the name of the firm who built the Sport Ports, carved in red."
+drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
+Clack Ops Locs Pack	"The [locs pack] mentions, in red, [one of]PC Cloaks are also a super cool productivity booster.[or]Polacck's products are shoddy imitations of, well, this. Don't be fooled![in random order]"
+Be Troo E Robot	"OBERTO, in red. That's its name."
+drive a	"It says DRIVE A/A DRIVE: [if drive a is reflexed]AVIDER[else]VARIED[end if]."
+drive e	"It's alternately referred to as Drive E and E Drive. [one of]But wait! There's some kibitzing in red, which you can see if you READ again[or]I'D VEER, someone has written in red[stopping]."
+peels speel	"Through the jargon, you read [']E Elps! [']E Elps! a lot. It's emphasized in red."
+
+table of oyster readables
+to-read	what-read	alt-read
+stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [oyster]
+jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
+tips pits	"IT'S P is written in red on the bottom."
+HUNTER HUNT AREA	"Etahn Ru. Near-Hut Haunter."
+span pans	"Red writing indicates the pans were made by Nan's Apps."
+gleaner	"The gleaner was made by Al Green, written in red."
+Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
+dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
+
+table of towers readables
+to-read	what-read	alt-read
+recital article	"This version was written by some lovely chap named ALTERIC."	[towers]
+diverse deviser	"I'D SERVE is written in an overly-flowery font. A bit silly, but hey, a clue's a clue."
+strudel	"DR. ELTUS recommends this strudel!"
+keycar	"When the car slows a bit, you read [one of]product of KC AYER[or]property of RAY ECK[in random order], in a slightly different shade of red. Maybe the other side has [one of]more information[or]a refresher[stopping], if you read again."
+fluster self rut	"You focus and see that the brand is TRU-SELF. Which would make you see red on general principles[one of]. There might be more if you read again[or]. There are also weird furlets around it[stopping]."
+Thearchy Hatchery	"THE LOIS SIT HOLE is written on the Thearchy Hatchery in red[if the-hostile is moot]. Nice, but you don't need clues any more[end if]."
+Dinger	"You notice it was co-authored. Di Regan and Ned Riga. The names elevated, embossed, in red."
+prison ropins	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[or]Designed by EL CUNDOK[or]Violators have a CLONK DUE[cycling]. There're four other bits to read."
+luck node	"One of five names in red on the node by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]."
+blaster	"ALBERT'S."
+bonker	"The bonker was created by KB RENO."
+stinger	"The stinger's brand is TRI-NEGS, for triple the demoralizing grin power, you guess."
+
+table of otters readables
+to-read	what-read	alt-read
+cinders	"[one of]You see red realizing you aren't as crafty as Sr. Indec reading the cinders[or]You recall somehow that NRD ICES work[or]You see red having no access to IC Nerds who'd know what's what[in random order]."	[otters]
+coma camo	"You concentrate and see: 'Formerly the [if player is in Clarthead Cathedral]Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom[else]Less Nice Silences, then Tapering Anger Pit/Inert Gap[end if].'"
+sample maples	"On one, you read: 'Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage.'"
+cut ya all cult laya	"One of the two designers['] names is [one of]Clay Laut[or]Lucy Lata[in random order]."
+sullenness us	"You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN."
+holy nest	"Scrawled in red on the holy nest is [one of]ETHYLS? NO![or]EH, SLY? NOT![or]SLOTH YEN.[or]THY LENS, O![or]YE SOL, NTH.[or]ELTYN? SHO![in random order]"
+stray satyr	"You see TSYRA branded in red under the stray satyr's shoulder."
+whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
+
+table of others readables
+to-read	what-read	alt-read
+eerie blurbs	"One reads [one of][']ERE IS RUBBLE[or]REEL? RISE, BUB[or]RUBBER I ELSE[or]RUBLE BEE, SIR[or]REEL RUSE BIB[in random order], and it makes you see red." [others]
+omen prism	"Looking into the omen prism, you see text form in red: [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
+peanut cola	"The brand name is A PLACE UNTO. It feels forced enough to make you see red."
+riot cap	"It's red and [one of]made of I-TARP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
+mad train	"DR. NIMATA."
+mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
+pipe panel lie pen app	"There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea."
+orange	"It's stamped with the word ENGARO in red."
+singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
+
+to say ad-auth:
+	say "An author's signature: [one of]T. D. ASIM[or]MS. DITA[or]SAD TIM[in random order]"
+
 volume specific subject dialogue tables
 
 table of ordeal reload subject blather	[ask x about thing they know about]
