@@ -98,7 +98,8 @@ for x in glob.glob("rbr*"):
             if line.startswith("#verbtest") or line.startswith("#verbcase"):
                 this_verb_case = comment_to_case(line)
                 if " for " not in line:
-                    print("WARNING line {} should add < for > after #verbtest/case.".format(line_count))
+                    pass
+                    #print("WARNING line {} {} should add < for > after #verbtest/case.".format(line_count, b))
                 if this_verb_case not in rules_to_find:
                     print("WARNING {} line {} extraneous verbtest for {}".format(b, line_count, this_verb_case))
                     mt.add_postopen(x, line_count)
