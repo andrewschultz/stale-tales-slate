@@ -196,7 +196,19 @@ def find_poss(word_array, bail=False):
         else:
             print(len(answers), poss_string, "<nothing fixed>" if fixed_answer == ['-'] * len(answer) else "(fixed {})".format(''.join(fixed_answer).upper()), ', '.join(sorted(answers)), "from {}{}".format(word_array, '' if not red_anagrams[answer] else ' red: {}'.format(', '.join(red_anagrams[answer]))))
         if show_red_text:
-            print("    RED TEXT:", red_text(answer))
+            my_red = red_text(answer)
+            print("    RED TEXT:", my_red)
+            poss_array = []
+            for p in full_poss:
+                if len(p) == 1:
+                    poss_array.append(p)
+                elif re.search("^[aeiou]+$", p.lower()):
+                    poss_array.append('-')
+                elif re.search("^[^aeiouy]+$", p.lower()):
+                    poss_array.append('x')
+                else:
+                    poss_array.append('?')
+            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(answer, my_red, answer, hints, answer, '[sp]'.join(poss_array)))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
@@ -209,7 +221,7 @@ def find_poss(word_array, bail=False):
                         temp_ary.append(max_x)
                 print("|".join(temp_ary))
     else:
-        print("Uh oh, ",word_array, "doesn't work.")
+        print("Uh oh, ",word_array, "has no good answers.")
     if bail: sys.exit()
 
 def cheat_reading(words_array, go_lower = True):
