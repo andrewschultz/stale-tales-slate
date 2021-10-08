@@ -713,6 +713,8 @@ understand "cleats" as a mistake ("The castle is run-down and unromantic enough.
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
+understand "wist led" and "its lewd" as a mistake ("Editorializing about the Wildest Wilteds won't help.") when mrlp is towers and player is not in Loftier Trefoil.
+
 chapter Loftier Trefoil
 
 understand "clear it" as a mistake ("The recital article stays in place. You see red, upset the brute-force magic didn't work.") when recital article is touchable.
@@ -743,7 +745,7 @@ understand "posited" as a mistake ("You formulate a proof that the place you are
 
 understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is touchable.
 
-understand "wist led" and "its lewd" as a mistake ("Editorializing about the Wildest Wilteds won't help.") when mrlp is towers and player is not in Loftier Trefoil.
+understand "stop die" as a mistake ("The voice you heard no longer echoes. [if dreads adders are moot]You've found[else]You'll find[end if] a way north to the Wildest Wilteds.") when player is in Topside Deposit.
 
 chapter Scope Copse
 
