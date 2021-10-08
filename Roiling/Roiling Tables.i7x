@@ -2313,7 +2313,7 @@ evil bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
 Si Reed	"Si Reed points to his head, then to yours, then smiles knowingly. Or you assume it's knowingly. 'Be an ID SEER like me!' You see red at this stupid exhortation."
 
-table of troves general blather
+table of presto general blather
 default-talker	gen-blah
 lamb	"It's a baaaaad conversationalist."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe yelling the right way would make the plebe move."
@@ -4324,7 +4324,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
-recital article	"[one of]The recital article is sturdy, but you can make it crumble.[plus][or]Because the towers area focuses on adjectives, comparative adjectives play a big part, including ones ending in -ier.[plus][or]Make the recital article TALCIER.[minus][cycling]
+recital article	"[one of]The recital article is sturdy, but you can make it crumble.[plus][or]Because the towers area focuses on adjectives, comparative adjectives play a big part, including ones ending in -ier.[plus][or]Make the recital article TALCIER.[minus][cycling]"
 unripe ur pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 nastier stainer retinas	"[one of]The nastier stainer retinas seem very focused on their job.[plus][or]If you could make the retinas jumpier, they might leave. No, not quite jumpier.[plus][or]Make the retinas ANTSIER.[minus][cycling]"
 succor crocus	--	top opt pot

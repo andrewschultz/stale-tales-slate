@@ -317,14 +317,14 @@ carry out grilling:
 	if noun is not a person, say "Try grilling a person, instead." instead;
 	repeat through subject blather table of mrlp:
 		if him-who entry is noun, say "[him-who entry] / [person-subj entry] = [him-say entry][line break]";
+	repeat through general blather table of mrlp:
+		if default-talker entry is noun, say "[default-talker entry] / = [gen-blah entry][line break]";
+	repeat through reflexive blather table of mrlp:
+		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
+	repeat through table of default-sub-blather: [ these 2 are very rare and come last ]
+		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
 	repeat through table of general-blather:
 		if him-who entry is noun, say "[him-who entry] -> [him-say entry][line break]";
-	repeat through table of default-sub-blather:
-		if him-who entry is noun, say "[him-who entry] / = [him-say entry][line break]";
-	repeat through table of default-gen-blather:
-		if default-talker entry is noun, say "[default-talker entry] / = [gen-blah entry][line break]";
-	repeat through table of reflexive-blather:
-		if him-asked entry is noun, say "[him-asked entry] / = [him-told entry][line break]";
 
 section spam
 
@@ -344,7 +344,7 @@ carry out spaming:
 				say "[PEO] x this subject: [him-say entry][line break]";
 				now foundyet is true;
 			if foundyet is false:
-				repeat through table of default-gen-blather:
+				repeat through table of general-blather:
 					if default-talker entry is PEO:
 						say "[PEO] x this subject: [gen-blah entry][line break]";
 						now foundyet is true;
@@ -372,7 +372,7 @@ carry out spamobjing:
 				say "[PEO]-[noun]: [him-say entry][line break]";
 				now foundyet is true;
 			if foundyet is false and noun is PEO:
-				repeat through table of reflexive-blather:
+				repeat through reflexive blather table of mrlp:
 					if him-asked entry is noun:
 						say "[PEO]-itself: [him-told entry][line break]";
 						now foundyet is true;

@@ -118,6 +118,10 @@ a region has a table name called hint-done-note table.
 
 a region has a table name called subject blather table.
 
+a region has a table name called general blather table.
+
+a region has a table name called reflexive blather table.
+
 a region has a table name called readable table.
 
 a region has a list of things called item-list.
@@ -146,7 +150,7 @@ chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. subject blather table of ordeal reload is table of ordeal reload subject blather. readable table of ordeal reload is table of ordeal reload readables.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. subject blather table of ordeal reload is table of ordeal reload subject blather. readable table of ordeal reload is table of ordeal reload readables. general blather table of ordeal reload is table of ordeal reload general blather. reflexive blather table of ordeal reload is table of ordeal reload reflexive blather.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -161,7 +165,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. subject blather table of stores is table of stores subject blather. readable table of stores is table of stores readables.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. subject blather table of stores is table of stores subject blather. readable table of stores is table of stores readables. general blather table of stores is table of stores general blather. reflexive blather table of stores is table of stores reflexive blather.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -170,7 +174,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
 [LLP list:
 1/18=Pa Egg Pea
 2?19=A Sty: Tasty, Say
@@ -183,13 +187,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. subject blather table of presto is table of presto subject blather. readable table of presto is table of presto readables.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. subject blather table of presto is table of presto subject blather. readable table of presto is table of presto readables. general blather table of presto is table of presto general blather. reflexive blather table of presto is table of presto reflexive blather.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -206,7 +210,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables. general blather table of oyster is table of oyster general blather. reflexive blather table of oyster is table of oyster reflexive blather.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -226,7 +230,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables. general blather table of towers is table of towers general blather. reflexive blather table of towers is table of towers reflexive blather.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -264,7 +268,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables. general blather table of otters is table of otters general blather. reflexive blather table of otters is table of otters reflexive blather.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -279,11 +283,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.]
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.]
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -1782,7 +1786,7 @@ Understand "tell about [any thing]" or "ask about [any thing]" or "talk about [a
 check objasking generically (This is the check for only one sensible object converser rule):
 	if the number of persons enclosed by the location is one:
 		repeat with X running through touchable scenery: [talk to non-talkable scenery]
-			repeat through table of default-gen-blather:
+			repeat through general blather table of mrlp:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
@@ -1812,7 +1816,7 @@ understand "tell [thing] about [text]" as asking it about.
 Check asking generically (This is the check for only one sensible converser rule):
 	if the number of persons enclosed by the location is one:
 		repeat with X running through touchable scenery:
-			repeat through table of default-gen-blather:
+			repeat through general blather table of mrlp:
 				if X is the default-talker entry, say "[gen-blah entry][line break]" instead;
 		say "You inquire into your own thoughts. You gain no illumination." instead;
 	if the number of persons enclosed by the location is two:
@@ -1868,7 +1872,7 @@ check objasking it about (This is the check for object information rule):
 				say "'ME RAND!' Rand points at you. 'AM NERD!' Er, [d-word]." instead;
 			say "He's in a fighting mood, not a talking mood, right now." instead;
 	if the noun is the second noun:
-		repeat through table of reflexive-blather:
+		repeat through reflexive blather table of mrlp:
 			if noun is him-asked entry and there is a him-told entry, say "[him-told entry][line break]" instead;
 	repeat through subject blather table of mrlp:
 		if second noun is the person-subj entry:
@@ -1886,7 +1890,7 @@ check objasking it about (This is the check for object information rule):
 			if noun is not serpent, say "[him-say entry][line break]" instead;
 		repeat through table of default-sub-blather:
 			if noun is him-who entry, say "[him-say entry][line break]" instead;
-	repeat through table of default-gen-blather:
+	repeat through general blather table of mrlp:
 		if noun is default-talker entry:
 			say "[gen-blah entry][line break]";
 			if noun is terse and noun is not terse-warned:
@@ -1922,7 +1926,7 @@ check asking about (This is the check for specific topics rule):
 		if there is a right-region entry:
 			if right-region entry is not mrlp, say "This is the wrong region to ask about that." instead;
 		say "[him-say entry][line break]" instead;
-	repeat through table of default-gen-blather:
+	repeat through general blather table of mrlp:
 		if the noun is default-talker entry:
 			say "[gen-blah entry][line break]";
 			if noun is terse and noun is not terse-warned:
@@ -3176,7 +3180,7 @@ to say good-enuf of (goody - a thing):
 		if dio-other of goody is not off-stage:
 			say "You know what to change [the goody] back to: [the dio-other of the goody]. There's no third option.[no line break]";
 			continue the action;
-	d "The table of done rejects could still use a lot more entries, like here for the [goody]. Search for TDR in the source.";
+	d "[done reject table of mrlp] may be missing an entry for the [goody].";
 	say "You've already changed [them-that of goody] enough.[no line break]";
 
 to decide what thing is dio-other of (di - a thing):
@@ -3695,21 +3699,10 @@ when play begins (this is the basic initialization rule):
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
-		repeat through subject blather table of mrlp:
-			if there is no him-say entry:
-				say "[him-who entry] / [person-subj entry] needs entry.";
-				now him-say entry is "[bug-report]";
-				now convo-holes is true;
 		repeat with PE running through people:
-			if PE is not a default-talker listed in the table of default-gen-blather:
-				say "[PE] needs default-gen-blather.";
-				now convo-holes is true;
-			else if PE is not a him-who listed in the table of default-sub-blather and PE is not terse:
-				if 1 > 2:
-					say "[PE] might want default-sub-blather.";
 			if PE is not terse and PE is not a guardian:
-				if PE is nonspecific, say "[PE] has nothing special or specific to say.";
-				if PE is not a him-asked listed in the table of reflexive-blather:
+				if PE is nonspecific, say "[PE] has nothing special or specific to say and is not defined as terse.";
+				if PE is not a him-asked listed in reflexive blather table of mrlp:
 					if litany of PE is Table of No Conversation:
 						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive-Blather.";
 		if convo-holes is false, say "No conversational holes.";
@@ -9239,7 +9232,7 @@ check talking to a person:
 
 check talking to:
 	if noun is not terse:
-		repeat through table of default-gen-blather:
+		repeat through general blather table of mrlp:
 			if noun is default-talker entry and there is a gen-blah entry, say "[gen-blah entry][line break]" instead;
 	if noun is yourself, say "You give an elfish 'Hi, self.' You discuss how maybe the game needs better developed NPCs, or maybe they just need to give more hints." instead;
 	if noun is not brr hub, say "You can only talk to animate objects. This isn't one, or the game (mistakenly or otherwise) doesn't think it's one." instead;
@@ -22521,7 +22514,7 @@ carry out blaaing:
 	say "=================default general blather[line break]";
 	repeat with pe running through people:
 		now this-guy is false;
-		repeat through table of default-gen-blather:
+		repeat through general blather table of mrlp:
 			if pe is default-talker entry:
 				say "[pe]: [gen-blah entry][line break]";
 				now this-guy is true;
