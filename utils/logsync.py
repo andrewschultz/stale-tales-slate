@@ -516,13 +516,14 @@ def check_scannotes():
     nsl = [ table_shorten(x) for x in need_source_logic ]
     last_table_line = 0
     table_start = 0
-    with open(r_src) as file:
+    scannotes_start = -1
+    with open(i7.hdr('roi', 'ta')) as file:
         for (line_count, line) in enumerate(file, 1):
             if reading_header:
                 in_table = True
                 reading_header = False
                 continue
-            if line.startswith('table of scannotes'):
+            if line.startswith('table of') and 'scannotes' in line:
                 scannotes_start = "{} line {}+".format(r_src, line_count)
                 table_start = line_count
                 reading_header = True
@@ -530,7 +531,8 @@ def check_scannotes():
             if not in_table: continue
             if not line.strip():
                 last_table_line = line_count
-                break
+                in_table = False
+                continue
             line = re.sub("[ \t]*\[[^\[]*\]$", "", line.strip())
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
@@ -547,6 +549,8 @@ def check_scannotes():
                 #print(ll[5])
             else:
                 if verbose: print("Got", ll[0], "in scannotes.")
+    if not scannotes_start:
+        print("UH OH, NO SCANNOTES TABLES FOUND")
     if len(suggestions): print("\n".join(sorted(suggestions, key=lambda x:re.sub(".* ", "", x))))
     source_logic_approximate_order = list(sorted(need_source_logic.keys(), key=need_source_logic.get))
     last_scannotes = table_start
