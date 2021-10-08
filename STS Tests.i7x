@@ -329,7 +329,6 @@ carry out hintalling:
 			repeat through hintobjstable of MYR:
 				increment this-row;
 				if hint-entry entry is not VTH, next;
-				say "[VTH] found in [hintobjstable of MYR].";
 				increment times-found;
 				if should-find is true and times-found > 1:
 					say "Row [this-row]: duplicate [VTH] in table of hintobjs from row [last-row].";

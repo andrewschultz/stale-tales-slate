@@ -542,7 +542,7 @@ nametag	"The nametag peels infinitesimally."
 static	"You [if attics are moot]don't think you can change it to anything but the attics[else]think a bit, and the static seems like a bad extension to the doll house[end if]."
 attics	"Hm, you can't think of anything to do with the attics but change them back."
 
-table of store spechelp
+table of stores spechelp
 xtrhelp	helptxt
 Store B	"You smell a variety of fruits and feel a cold blast, but nothing definitive happens--yet."
 Store F	"That seemed right but didn't seem quite natural."
@@ -673,17 +673,23 @@ to say spec-help of (itm - a thing):
 
 volume done rejects
 
-table of done rejects [tdr]
+table of ordeal loader done rejects
 donething	donemsg
-OR DO door	"The door is probably the way out. Best not change it into something else." [start Ordeal Loader]
+OR DO door	"The door is probably the way out. Best not change it into something else."
 bugle	"The bugle emits a sad 'don't change me back' noise."
 goat	"The goat is happy as-is. No need to go tag a ..."
 gateman	"Don't scramble the gateman. He's here to help."
-scented descent	"The scented descent to the forest doesn't need to be changed. What's behind it, does." [start stores]
+
+table of stores done rejects
+donething	donemsg
+scented descent	"The scented descent to the forest doesn't need to be changed. What's behind it, does."
 posted depots	"The posted depots doen't need to be changed. What's behind them, does."
 trade tread	"The trade tread doesn't need to be changed. What's behind it, does."
 ogled lodge	"You already made passage to the ogled lodge. It's good enough. Why change it?"
-nose	"Don't get that nose bent out of shape." [start forest]
+
+table of forest done rejects
+donething	donemsg
+nose	"Don't get that nose bent out of shape."
 shades	"Anything you do to bend the shades might break them."
 shotgun	"Anything you do might violate firearm safety rules, or something."
 beard	"For a beard, it's actually pretty cool."
@@ -692,7 +698,10 @@ chisel	"It's a perfectly good tool. Trying to refine it might break it."
 drapes	"They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically."
 silver	"Hard to beat silver. It's what it should be."
 wolves	"You can't change them back. But maybe you can get rid of them. You do have a weapon."
-HOTSAUCE	"[keep-food-simple]." [start sortie]
+
+table of sortie done rejects
+donething	donemsg
+HOTSAUCE	"[keep-food-simple]."
 parmesan	"[keep-food-simple]."
 steak	"[keep-food-simple]."
 lettuce	"[keep-food-simple]."
@@ -710,7 +719,10 @@ silo	"That silo was pretty big. You probably have little more to do with the oil
 soil	"The soil is right as-is, but maybe something can go on it."
 steer button	"No, the steer button HAS to be right."
 shoot button	"No, the shoot button HAS to be right."
-gardenia	"The flowers are fine as-is." [start metros]
+
+table of metros done rejects
+donething	donemsg
+gardenia	"The flowers are fine as-is."
 tomato	"It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out."
 Velcro	"The Velcro remains tangled."
 controls	"The controls stay as they are."
@@ -722,7 +734,10 @@ noise bag	"The noise bag rumbles ominously. Best not change it into something wo
 sword	"Meddling with the sword right now, you're worried it might poke you."
 resin	"You could use the resin's stickiness right now."
 beast	"You've changed the beats to something tangible, physically beatable."
-cork	"Your head swims then sinks as you realize the cork can't become much else." [start resort]
+
+table of resort done rejects
+donething	donemsg
+cork	"Your head swims then sinks as you realize the cork can't become much else."
 wings	"The wings should be able to propel you enough."
 toeholds	"The toeholds could be handy for getting up and out of here."
 slope	"You wouldn't want to make the slope crumble away."
@@ -735,13 +750,16 @@ to say keep-food-simple: say "Best not to get too crazy with food preparation"
 
 volume table of hints
 
-table of hintobjs [toh]
+table of general hintobjs
 hint-entry	advice-entry	parallel-entry
 yourself	"[if cur-score of Ordeal Loader is 0]Try hinting objects around you instead[else]You have the ability to anagram things[end if]."
 redness	"Redness means all the letters in a word are wrong, compared to what something should become. E.g. GNAT <-> TANG."
 dope tan notepad	"You will write procedural things in your notepad as you get them."
 acne bit cabinet	"[if gateman is off-stage]You need someone who will let the cabinet trust you. Maybe your nametag can help.[else if Trips Strip is unvisited]You can take what you want from the cabinet with no penalty.[else][one of]The cabinet seems wounded. Maybe you can help it not be acne-bit.[plus][or]The acne-bit cabinet is a LLP and maybe a slightly tricky one, because it refers to a brand name that has become a word.[plus][or]A healing solution that has no letter slots in common with if you READ the cabinet will work. You could also scan the cabinet for clues, of course.[plus][or]BACTINE.[minus][cycling]"
 cratered bits	"The cratered bits make the cabinet acne-bit and clue what it can become[if Trips Strip is unvisited] once you start your main quest[end if], since they are red, and red means no letters are right."
+
+table of ordeal loader hintobjs
+hint-entry	advice-entry	parallel-entry
 name list	"The list hints what Shuffling Around is all about."
 vacate caveat	"The vacate caveat has advice. Not very good advice, but it gives you an idea of where to go. It is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
@@ -782,7 +800,10 @@ prep paper	"The prep paper gives hints you'll cross off as you finger things."
 broad board	"The broad board's advice is very useful[if gateman is off-stage], especially to summon help[else], even now that you've summoned help[end if]."
 mega ant	"The mega ant is blocking the gateway, but it's an odd shade of red. That's a hint, from the broad board, of what you need to do, or summon."
 saltine	"Eating the saltine will give you one hint."
-tepid icon depiction	"The tepid icon depiction will give you some hints what to do in the remaining area(s)." [start STORES]
+
+table of stores hintobjs
+hint-entry	advice-entry	parallel-entry
+tepid icon depiction	"The tepid icon depiction will give you some hints what to do in the remaining area(s)."
 begad badge	"Just a semantic note to try STOREA and not SHOPA."
 go rest flier	"Just general encouragement. Store G isn't relevant to the game."
 storeall	"Try hinting a single store instead."
@@ -820,6 +841,9 @@ store w	"[nxt-g]."
 store x	"[no-sto]."
 store y	"[nxt-g]."
 store z	"[no-sto]."
+
+table of forest hintobjs
+hint-entry	advice-entry	parallel-entry
 whiff of stew	"[one of]The stew is a clue which way to go.[plus][or]You should go WEST.[minus][cycling]" [START FOREST]
 thorn	"[one of]The thorn is a clue which way to go.[plus][or]You should go NORTH.[minus][cycling]"
 rambling shout	"[one of]The shout is a clue which way to go.[plus][or]You should go SOUTH.[minus][cycling]"
@@ -866,7 +890,10 @@ maps	"[if player is in Ghouls Slough]You need to READ the MAPS[else]The maps wil
 vowels	"[one of]The vowels seem to be hiding a great evil, a Halloweeny menace. They seem to be saying 'We're Vowels.'[plus][or]Two solutions: WEREWOLVES or WOLVES.[minus][cycling]"
 wolves	"They're due for a violent end."
 bumps	"The bumps clue what the vowels can become."
-dial	"[if centrifuge-stopped is true]You've dealt with the dial.[else][one of]You'll get hints for turning the dial wrong, but the EXITS at right angles are a clue.[plus][or]You need to figure what the right directions are.[plus][or]If you've tried going diagonally, that doesn't work, leaving four possibilities.[plus][or]You can also just think of a number with X in it, with seven letters.[plus][or]Binary search works, too, but the next clue shows how you can get things in one move.[plus][or]The right number is SIXTEEN.[minus][cycling][end if]"	[START SORTIE]
+
+table of sortie hintobjs
+hint-entry	advice-entry	parallel-entry
+dial	"[if centrifuge-stopped is true]You've dealt with the dial.[else][one of]You'll get hints for turning the dial wrong, but the EXITS at right angles are a clue.[plus][or]You need to figure what the right directions are.[plus][or]If you've tried going diagonally, that doesn't work, leaving four possibilities.[plus][or]You can also just think of a number with X in it, with seven letters.[plus][or]Binary search works, too, but the next clue shows how you can get things in one move.[plus][or]The right number is SIXTEEN.[minus][cycling][end if]"
 trap exits	--	dial
 Mean Old Mondale Doleman	"You don't need to do anything directly to Mondale Doleman to get through the sortie."
 lid	"The (a) lid is just there to keep the dial from turning."
@@ -928,38 +955,44 @@ creases	"The creases indicate the paper has been folded before."
 smilies	"[one of]The smilies seem like they don't belong on the page.[plus][or]What'd you hear about weapons that weren't harmful? Killing with love?[plus][or]They can become a MISSILE.[minus][cycling]"
 panel	"[if panel is not part of silo]How to get the silo working? PUT PANEL ON SILO.[else]The panel is in place.[end if]"
 wires	"The wires aren't important. The panel is."
-drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if].[plus][or]Anything would be more beautiful than drainage, especially a flower.[plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA.[minus][cycling]" [START METROS]
+
+table of metros hintobjs
+hint-entry	advice-entry	parallel-entry
+drainage	"[one of]The drainage [if flowers is visited]changes into something the faeries want[else]can be cleaned up[end if].[plus][or]Anything would be more beautiful than drainage, especially a flower.[plus][or]You could [if flowers is visited]give the faeries[else]make[end if] a GARDENIA.[minus][cycling]"
 a reading	"A reading anagrams the drainage, so it gives you a few more clues where letters should be."
+gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 signers ingress	"[if nerds-unwelcome is true]You got through the [ingress], but you're not welcome back. Still, you got something useful[else if Esoteric Coteries is visited]You can go in and out as you please[else]You'll need the right sort of technology ID[end if]."
+tilting titling	"The tilting titling is just there for ambience."
+building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
+friend finder	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
+optical beam	--	friend finder
 night thing	"You can't kill the night thing on your own. Maybe something equally awful would take care of it?"
 smartest mattress	"[if night thing is in The Ol Hotel]You need to get rid of the night thing[else if emitter is off-stage]EXAMINE the mattress[else]Nothing left in the mattress[end if]."
 cruel ulcer	"That cruel ulcer looks like a weak link. If you could throw something in there..."
 ketchup bottle	"The ketchup bottle clues what the night thing likes."
-tomato	"The tomato is rotten enough that throwing it at something may send them off-stage."
 bump	"SEARCH the mattress to find what's in the bump."
 clover	"[one of]The clover seems a bit sticky.[plus][or]Maybe you could change it into something even stickier, like...[plus][or]VELCRO.[minus][cycling]"
 leaves	"The leaves['] clinginess clues what the clover should become."
 Velcro	"The Velcro, with its hooks, is useful for sticking to something."
 string	"The string is probably what the clover's stem was. It keeps the Velcro mittens hooked together."
 hooks	--	Velcro
-lease easel	"The lease easel just [if motto is in Bile Libe]held[else]holds[end if] the (a) motto."
-motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you.[plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[plus][or]Potato, ...[plus][or]TOMATO.[minus][cycling]"
-neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons.[plus][or]You can scan it, and that gives you some information.[plus][or]You'd rather have nothing there than the pig, too.[plus][or]It can become an OPENING.[minus][cycling]"
-cafe face	"You can climb up the cafe face with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
-gardenia	"[if player is in Fo Real Florae]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
-tilting titling	"The tilting titling is just there for ambience."
-building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
-friend finder	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the friend finder and the signers['] ingress[end if]."
 lost corn	"[one of]You haven't done anything with the lost corn yet.[plus][or]The kernels look like buttons.[plus][or]The 'lost' adjective is important.[plus][or]The lost corn can become CONTROLS.[minus][cycling]"
 discolored buttons	--	kernels
 yellow kernels	"The different colored kernels may clue what the lost corn should be."
-dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be.[plus][or]The cake becomes a KEYCARD.[minus][cycling]"
-optical beam	--	friend finder
-antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to.[plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that.[plus][or]Make the antlers RENTALS.[minus][cycling]"
 cordoned red condo	"The cordoned red condo is an area [if cake is not in Obtains Boastin Bastion]where you're not welcome[else]with an item you need[end if]."
 library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the Bile Libe[else]You've done all you need to in the Bile Libe[end if]."
 deadbeat	"[if dry cake is in Obtains Boastin Bastion]The deadbeat would like you to take a stand against the Bastion to the north before you earn anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refill.[else]The deadbeat is useless to you now."
+controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
+emitter	"[if poses posse is in Obtains Boastin Bastion][one of]The emitter is useful to disperse a group of people.[plus][or]Some people are guarding something you want.[plus][or]SWITCH EMITTER in [here-there of Bastion], and you can take the dry cake.[minus][cycling][else if player has tulip]The emitter could have been used to get the tulip, as well.[else if emitter is not angstgnatted]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[else]The angst gnats in the emitter can clear out another area for an alternate solution.[end if]"
+dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something that will be.[plus][or]The cake becomes a KEYCARD.[minus][cycling]"
+antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to.[plus][or]The antlers seem like a centerpiece to the Bastion. Maybe you could fix that.[plus][or]Make the antlers RENTALS.[minus][cycling]"
 keycard	"[if brocade is in Fo Real Florae]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up.[plus][or]What's white with lots of black lines and a few numbers below?[plus][or]That'd be a BARCODE.[plus][or]You'll need to PUT BARCODE ON KEYCARD.[minus][cycling][end if]"
+poses posse	"[one of]The poses posse guards the dry cake. Until the posse is gone, you can't take it.[plus][or][if player has emitter]SWITCH EMITTER to disperse the poses posse[else]You don't have what you need to get rid of the poses posse, yet. Check The Ol['] Hotel[end if].[minus][cycling]"
+lease easel	"The lease easel just [if motto is in Bile Libe]held[else]holds[end if] the (a) motto."
+motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you.[plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[plus][or]Potato, ...[plus][or]TOMATO.[minus][cycling]"
+tomato	"The tomato is rotten enough that throwing it at something may send them off-stage."
+words	"[if player is in Bassy Abyss]This is the place to change the words[else if begonias are in Fo Real Florae and heaths are in Fo Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
+sword	"[if beast is touchable and siren is not touchable]Attack the beast[else if beast is touchable]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 brocade	"[one of]The brocade isn't really magic, but it can become technological magic.[plus][or]What else is white and black?[plus][or]You can make a BAR CODE, no space necessary.[minus][cycling]"
 adhesive backing	"Useful once you find something to attach the barcode to."
 barcode	"[if barcode is part of the keycard]The barcode is now fully scannable[else if player does not have keycard]You need to find something that will hold the barcode[else]PUT BARCODE ON KEYCARD[end if]."
@@ -968,29 +1001,30 @@ heaths	"[one of]You can change the heaths into something that can hold something
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something.[plus][or]Also, one word is related to sound.[plus][or]Create a NOISE BAG.[minus][cycling]"
 noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in Bassy Abyss and beast is in Bassy Abyss]You can OPEN the noise bag to defeat the beast.[else if player is in Bassy Abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
-words	"[if player is in Bassy Abyss]This is the place to change the words[else if begonias are in Fo Real Florae and heaths are in Fo Real Florae]What you do with the words depends on what reward you get from the fairies[else if heaths are in Fo Real Florae]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
-sword	"[if beast is touchable and siren is not touchable]Attack the beast[else if beast is touchable]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
 torn cue	"It indicates the brocade [if brocade is in Fo Real Florae]is[else]was[end if] free."
 sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath?[plus][or]Make a SWORD.[minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in Bassy Abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
-controls	"The controls need to fit into a recess[if neon pig is moot], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
-instructions	"Just a little something to make it plausible to muddle with the controls."
-nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question.[plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing.[plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is...[plus][or]DARKNESS.[plus][or] ASK NERDS ABOUT DARKNESS.[minus][cycling]"
 Memo Tote Tome	"Examining, if not reading, the Memo Tote Tome gives clues what to ask the nerds about."
-tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
 lit up tulip	"The lit-up tulip [if player is in Bassy Abyss]is providing light[else]can provide light[end if]."
+nerds	"[one of]There are alternate ways through, but the most straightforward is to ASK NERDS the right question.[plus][or]The nerds won't let you have the lit-up tulip, until you prove you're smart enough to ask about the right thing.[plus][or]The lit-up tulip gives light, and east of Elm Train Terminal is...[plus][or]DARKNESS.[plus][or] ASK NERDS ABOUT DARKNESS.[minus][cycling]"
+neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons.[plus][or]You can scan it, and that gives you some information.[plus][or]You'd rather have nothing there than the pig, too.[plus][or]It can become an OPENING.[minus][cycling]"
+cafe face	"You can climb up the cafe face with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
+instructions	"Just a little something to make it plausible to muddle with the controls."
+tracks	"[if power-shut is true]You can go east on the tracks now[else]You'll need to find how to make the tracks stop fizzing[end if]."
 gin nope opening	"[if controls are part of gin nope opening]You've fixed the power.[else][one of]The opening at the top of the cafe face is interesting.[plus][or]It appears to have a bunch of circuit-ends, etc.[plus][or]The controls can override the power surge to the east.[plus][or]PUT CONTROLS IN OPENING.[minus][cycling][end if]"
 siren	"[one of]The siren is irritating.[plus][or]You can disable it and make something you need.[plus][or]It becomes RESIN.[minus][cycling]"
 resin	"With the resin on your hands, you can get a better grip on things. You don't need to do anything."
 hilt	"[if siren is in Bassy Abyss]The hilt is too slippery to grab[else]Now that you got the resin, you can grab the hilt--and the sword[end if]."
 beats	"[if player is not in Bassy Abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
-poses posse	"[one of]The poses posse guards the dry cake. Until the posse is gone, you can't take it.[plus][or][if player has emitter]SWITCH EMITTER to disperse the poses posse[else]You don't have what you need to get rid of the poses posse, yet. Check The Ol['] Hotel[end if].[minus][cycling]"
-emitter	"[if poses posse is in Obtains Boastin Bastion][one of]The emitter is useful to disperse a group of people.[plus][or]Some people are guarding something you want.[plus][or]SWITCH EMITTER in [here-there of Bastion], and you can take the dry cake.[minus][cycling][else if player has tulip]The emitter could have been used to get the tulip, as well.[else if emitter is not angstgnatted]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[else]The angst gnats in the emitter can clear out another area for an alternate solution.[end if]"
-tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest.[plus][or]The TILES become an ISLET.[minus][cycling]" [START RESORT]
+
+table of resort hintobjs
+hint-entry	advice-entry	parallel-entry
+tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest.[plus][or]The TILES become an ISLET.[minus][cycling]"
 stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET.[minus][cycling]"
 l2	"They're not ultimately what you want to be after. You may or may not notice an anagram here for a bonus point, though."
 lies	"The lies are the result of exposing the Leis Isle. You can't do anything with them."
+odd low woodland	"Just there as a hat tip to what Rived Drive was."
 swing	"[one of]The swing can get you up in the air, but maybe you can go even higher.[plus][or]The swing can become WINGS, too.[minus][cycling]"
 wings	"The wings will let you go up or east over the water."
 cork	"The cork will let you go east over the water."
@@ -1005,16 +1039,14 @@ tool shed	"[one of]You need a way up the slope. It's too smooth and steep.[plus]
 toeholds	"With the toeholds around, you only need to [if poles are touchable]do something with the poles[else]go up the slope, though [toho][end if]."
 outcroppings	"These clue what the toolshed can become."
 u lock	"Just there to keep you out of the toolshed. Which you can change."
-odd low woodland	"Just there as a hat tip to what Rived Drive was."
 protest	"[one of]Three people are still a protest. How can you cut them down?[plus][or]They have REAL jobs. They make something, they say![plus][or]Apparently they use clay and say 'It's kiln me!'[plus][or]The people in the PROTEST are really POTTERS.[minus][cycling]"
 riot	"[one of]It's a riot! Way more than three people![plus][or]How would you cut it down to three?[plus][or]Make them a TRIO.[minus][cycling]"
 links	"[one of]The potters need something to do with their hands.[plus][or]The chain links have been dropped. Perhaps you could use them for less violent purposes.[plus][or]They can become something fragile, for a bonus point you can guess..[plus][or]They can become KILNS.[minus][cycling]"
-X ITES exits	"[one of]The exits remind you of something to do. Or not do. You don't have to. There is more than one solution to win.[plus][or]You want to do something that completely ignores the EXITS.[plus][or]You need to do something that doesn't match X ITES anywhere.[plus][or]Your work's done. Time to EXIST.[minus][cycling]"
 potters	"[if kilns are off-stage]The potters need something to work with--those chain links aren't doing much right now[else]The potters are happy with their kilns[end if]."
 kilns	"[if potters are off-stage]They need people to operate them--perhaps the ones around you can be changed[else]Just fine as they are now[end if]."
-Burdell	"[one of]Red Bull Burdell does like yelling GET OUT.[plus][or]And changing stuff won't help you here.[plus][or]So maybe you need to change what he says?[plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds.[plus][or]He has but one weakness, blah blah blah...[plus][or]TUG TOE.[minus][cycling]"
+Red Bull Burdell	"[one of]Red Bull Burdell does like yelling GET OUT.[plus][or]And changing stuff won't help you here.[plus][or]So maybe you need to change what he says?[plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds.[plus][or]He has but one weakness, blah blah blah...[plus][or]TUG TOE.[minus][cycling]"
 toe	--	Red Bull Burdell
-[toh end]
+X ITES exits	"[one of]The exits remind you of something to do. Or not do. You don't have to. There is more than one solution to win.[plus][or]You want to do something that completely ignores the EXITS.[plus][or]You need to do something that doesn't match X ITES anywhere.[plus][or]Your work's done. Time to EXIST.[minus][cycling]"
 
 to say no-sto: say "Nothing is hidden in that store".
 
