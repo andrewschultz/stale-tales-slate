@@ -3959,6 +3959,7 @@ sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find th
 
 table of stores hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
+megaton magneto montage	"The [montage] gives clues about the sort of words each area needs. The text highlighting changes with each area you solve."
 Store B	"[one of]Store B contains some sort of mystery food, but people seem too lazy to figure it out.[plus][or]The two names provide red-clues, but you can also tell from the smells from Store B.[plus][or]SORBET.[minus][cycling]"
 Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to [b]ROVE OVER[r] when you are in the Means Manse.[minus][cycling]"
 Store K	"[one of]Store K is not critical, because it's a bit of American slang.[plus][or]What is the suspicious smelling smoke?[plus][or]The smoke is marijuana, but STONER doesn't quite work on Store N.[plus][or]The residents of Store K want to REST, OK? That hint knocks out the vowels with the settler.[plus][or]Also, they yell don't have a STROKE![plus][or]You can also assume they are plural, so S is last.[plus][or]They are TOKERS.[minus][cycling]"
@@ -4028,6 +4029,7 @@ darkness	--	NULL IT unit
 odd run on aura	"[one of]The odd run on aura gives directions of a sort. It will help you look. Where? How?[plus][or]Use the odd run on aura to look AROUND.[minus][cycling]"	--	"AROUND"
 un road	"You need to follow the un-road, but the all noon gag has better clues for that."
 noon gag	"[one of]The all noon gag provides a new quasi-direction you need to go in, to see No-Lag Logan.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]Go ALONG.[minus][cycling]"	--	"ALONG"
+data dim mists	"[one of]The mists and ad provide a clue how to move next.[plus][or]The ad has aligned anagrams (six unique letters, then six more) and red writing, too, so it may give more clues.[plus][or]Go AMIDST.[minus][cycling]"	--	"AMIDST"
 Admits Mist Ad	"[one of]There's a lot of red writing that should be a clue, but it is a slightly odd preposition.[plus][or]You just need to go around. All over the place.[plus][or]AMIDST will help you search everywhere.[minus][cycling]" 	--	"AMIDST"
 thickness sketchins	"[one of]The poem seems to have AAHRTTW as the letters. It's tough to navigate, but you seem to need to go this way and that way.[plus][or]This word is a bit archaic, so you may want to use the spoon.[plus][or]ATHWART.[minus][cycling]"	--	"ATHWART"
 bad oar	"The thickness sketchins will tell you how to use the bad oar."
@@ -4053,6 +4055,7 @@ ires pad	"[one of]Each picture/author name in the Ires Pad has a red-letter clue
 diapers	"[one of]The diapers symbolize ... wait, no, they just mesh with the other items to present a seven-word anagram.[plus][or]Nevertheless, diapers are pretty depressing, too.[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair.[minus][cycling]"	--	"DESPAIR"
 lager	"[one of]The Large Regal Lager [if player is in Boredom Bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
 Id Cede	"[one of]Eddie C, [Id Cede]. Listening once helps you see red.[plus][or]Another time listening gives you notes, lyrics and more red.[plus][or]A third should clinch it. You want to do more. Or less.[plus][or]DECIDE.[minus][cycling]"	--	"DECIDE"
+pleaser leapers	"[one of]The pleaser leapers are meant to give shallow happiness, but you may want to go for the opposite.[plus][or]You're on your way to healing, but the path is not smooth.[plus][or]RELAPSE.[minus][cycling]"
 lobster	"[one of]That lobster looks delicious, but you can't bring yourself to eat it. You don't have the confidence[if ME ARTS is in Boredom Bedroom]. NB: finding what to do with the ME ARTS also works[end if].[plus][or]You need to boost yourself![plus][or]Or, rather, BOLSTER![minus][cycling]"	--	"BOLSTER"
 ME ARTS	"[one of]The ME ARTS should relax you to feel on top of things[if lobster is in Boredom Bedroom]. NB: finding what to do with the lobster also works[end if].[plus][or]You need to be able to control, to understand...[plus][or]...or to MASTER.[minus][cycling]"	--	"MASTER"
 LEAD	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair.[plus][or]If you can't DEAL, you'll never make it.[minus][cycling]"	--	"DEAL"
@@ -4321,6 +4324,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
+recital article	"[one of]The recital article is sturdy, but you can make it crumble.[plus][or]Because the towers area focuses on adjectives, comparative adjectives play a big part, including ones ending in -ier.[plus][or]Make the recital article TALCIER.[minus][cycling]
 unripe ur pine	"[one of]The unripe ur-pine is too big for you.[plus][or]Any way to make it smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 nastier stainer retinas	"[one of]The nastier stainer retinas seem very focused on their job.[plus][or]If you could make the retinas jumpier, they might leave. No, not quite jumpier.[plus][or]Make the retinas ANTSIER.[minus][cycling]"
 succor crocus	--	top opt pot
@@ -4340,10 +4344,12 @@ table of otters hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
 bleary barley	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
-Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
-parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s['] parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARELY"
+asyllabic lilac bays	"[one of]The lilac bays need a word that will nurture them. It's useless in regular conversation, but for whatever reason, the lilac bays like it.[plus][or]BASICALLY.[minus][cycling]"
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed Riley can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
+Gretta	"Gretta has an important item for you once you [if parleys splayer players are not moot]dispose of the [pla-ma]s[else]finish chatting[end if]."
+parleys splayer players	"[if players are reflexed]You need to find ways to deal with the [pla-ma]s['] arguments, since you made them argue more SPARELY[else][one of]The [pla-ma]s['] parleys are all over the place. Perhaps you can make them less ubiquitous.[plus][or]They cound argue less frequently, or less rapidly, or more...[plus][or]...SPARELY.[minus][cycling]"	--	"the [pla-ma]s can talk SPARELY"
+Cut Ya All Cult Laya	"[one of]A meaningless word will cut the [laya] down. It's one people use to win an argument.[plus][or]ACTUALLY.[minus][cycling]"
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 Mr Lee	"[if ghoul hat is not moot]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if gore ogre is in Bran Barn]Try to get rid of the Gore Ogre.[else]You've helped Mr. Lee all you can."
@@ -4355,6 +4361,7 @@ le mer	--	sea cube
 sea cube	"[one of]The sea cube in the Loop Pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
 allot atoll	"The allot atoll [if eels are reflexed]was just there to get you your reward[else]in is not helpful on its own, but you'll get there if you help the eels[end if]. You don't need to do anything to it."
+Sullenness Us	"[one of]The sullenness needs something to call exception to its gloom.[plus][or]Everything is futile. There's no way out except...[plus][or]UNLESS.[minus][cycling]"
 motleyer	"[one of]The [imp]'s motleyness gets in your face, sort of.[plus][or]If you could push the motleyness back, that would work.[plus][or]The [imp] can be made to move REMOTELY.[minus][cycling]"
 butlery	"[one of]The [imp]'s butlery air is unflappable in its present form.[plus][or]You could make the imp a bit more direct.[plus][or]The [imp] can be made to act BRUTELY.[minus][cycling]"
 legendary	"[one of]The [imp] seems too legendary. It's good at what it does, unflappable.[plus][or]Perhaps you could make the imp upset with its work.[plus][or]The [imp] can be made to behave ENRAGEDLY.[minus][cycling]"
@@ -4494,6 +4501,7 @@ talks stalk	"[dome-blab]"
 spec space	"[dome-blab]"
 parcels clasper	"[dome-blab]"
 tester street	"[dome-blab]"
+passe apses	"[dome-blab]"
 
 to say ag-if-seen: say "[if agnostic is off-stage]someone somewhere[else]the agnostic[end if]"
 
