@@ -4146,6 +4146,12 @@ mutism summit	"[if player is in Hacks Shack]You need to build a computer here[el
 golden dongle	"The golden dongle is just there to make it plausible to hook Drive A to other hardware."
 computer screen	"[if Hacks Shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]"
 
+to say maze-solve:
+	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
+
+to say wash-up:
+	say "[one of][l-n-r] are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
+
 to say sl-t-l:
 	repeat with AA running through byebyes:
 		if AA is reflexive:
@@ -4153,20 +4159,17 @@ to say sl-t-l:
 			continue the action;
 	say "BUG--sign should've said something";
 
-to say yak-worry:
-	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
-
-to say maze-solve:
-	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
-
-to say wash-up:
-	say "[one of][l-n-r] are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
-
 to say mug-detail:
 	say "[one of]Like the never-ending gum it came from, the mug regenerates what's in there.[plus][or]What goes in a mug? Liquid, generally.[plus][or][if coal is not moot]You can probably figure what to do with the coal to make a liquid.[end if]The cola is a liquid.[plus][or]POUR COLA IN MUG.[minus][cycling]"
 
-to say if-rand-gone:
-	say "[if rand is in Dirge Ridge]now[else]once[end if] [l-n-r] are gone"
+to say leaf-or-flea: say "[if leaf is off-stage]You need to change the flea in the shack.[else]The leaf in the shack will work.[end if]"
+
+to say once-now-shack: say "[if keyboard is on slab and disk is in Drive]now[else]once[end if]"
+
+to say kboard-blah: say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
+
+to say yak-worry:
+	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
 
 to say h-d: [??]
 	if disk is in drive:
@@ -4177,11 +4180,8 @@ to say h-d: [??]
 		continue the action;
 	say "[one of]You can put the disk in the drive, when you're done. You can also attach things to the drive or put things on the slab. Computery things.[plus][or][if yak is not moot]You need to get something to operate the computer with first, though.[else if keyboard is touchable and keyboard is not on slab]You can put the keyboard on the labs slab.[else if computer screen is touchable and computer screen is not on slab]You can put the computer screen on the labs slab.[else]You need to put find and put components on the labs slab to get the disk working.[end if][plus][or]You can push a button once you're done.[minus][cycling]"
 
-to say leaf-or-flea: say "[if leaf is off-stage]You need to change the flea in the shack.[else]The leaf in the shack will work.[end if]"
-
-to say kboard-blah: say "[if keyboard is off-stage]You need to find a keyboard. An animal and its item may provide a clue[else]The keyboard you got from the yak's drab yoke will work[end if]"
-
-to say once-now-shack: say "[if keyboard is on slab and disk is in Drive]now[else]once[end if]"
+to say if-rand-gone:
+	say "[if rand is in Dirge Ridge]now[else]once[end if] [l-n-r] are gone"
 
 table of oyster hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -4262,17 +4262,14 @@ to say dh-true: now trolls-hinted is true;
 to say casp-cap:
 	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or][b]SCRAPE[r] the blackboard.[minus][cycling]"
 
-to say a-t-check:
-	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
-
-to say name-the-lance:
-	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shuttle Hutlets[end if]"
-
 to say lance-hints:
 	if player does not have lance:
 		say "[one of]The lance is part of an optional quest. It isn't clean enough to take.[plus][or]You need an item to make the lance less dirty.[plus][or]The wipes in Lean Lane can do that.[plus][or][if player has wipes]Now you need to apply the wipes the right way[else]You should be able to get the wipes unless you used the pills on Aunt Tuna. You need to take them quickly. HINT them if you need more clues[end if].[plus][or]CLEAN the lance once you have the wipes.[minus][cycling]";
 	else:
 		say "[one of]The detour past the Horned Hedron entry opens up if you have the lance.[plus][or]Once you get there, you have an animal to defeat, which should not be hard.[minus][cycling]"
+
+to say name-the-lance:
+	say "[if lance is off-stage]You haven't found it yet, but you probably will when you see it[else]The lance in the Shuttle Hutlets[end if]"
 
 to say once-now-digger: say "[if player has rigged digger]now you've got the rigged digger[else]once you have the right equipment[end if]"
 
@@ -4281,6 +4278,9 @@ to say where-is-digger:
 		say "What you want is inside the shut huts of Lapsin['] Plains to the north";
 	else:
 		say "Your digger should do the job[if ruby is moot], but it has another use elsewhere, first[end if]"
+
+to say a-t-check:
+	say "[if Lean Lane is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
 
 book towers
 
@@ -4397,21 +4397,21 @@ talc spa cure	"[fin-pal-clue]."
 Last Acre Cup	"[fin-pal-clue]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]"
 
-to say ag-yow-lect:
-	say "[if yow is moot]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
-
-to say ag-if-seen: say "[if agnostic is off-stage]someone somewhere[else]the agnostic[end if]"
-
-to say dagger-details: say "[if player has ragged dagger]That ragged dagger you got from [gradient][else]Something is still hidden in [gradient][end if]"
-
 to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
 
 to say lois-or-lot-hint: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 
-to say fin-pal-clue: say "You may get a hint what the Curst Palace can become from [the noun]."
+to say ag-yow-lect:
+	say "[if yow is moot]You already helped [him-her] appreciate Dr. Yow's lecture[else][he-she-c] may need a lecture first[end if]"
 
 to say n-o:
 	say "[if atblock is reflexed]now[else]once[end if]";
+
+to say dagger-details: say "[if player has ragged dagger]That ragged dagger you got from [gradient][else]Something is still hidden in [gradient][end if]"
+
+to say ag-if-seen: say "[if agnostic is off-stage]someone somewhere[else]the agnostic[end if]"
+
+to say fin-pal-clue: say "You may get a hint what the Curst Palace can become from [the noun]."
 
 to say sitter-ok: say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
 
@@ -4472,6 +4472,24 @@ weltish whistle	"[if whistle is reflexed]PLAY the whistle by Elvira to win.[else
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the Reclusion Inclosure.[minus][cycling][end if]"
 Elvira	"[if current quip is final-quip]Just [play-whistle] to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if medals-shiny < 2]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]"	--	"you can just [play-whistle]"
 
+to say rand-otters-east-ly:
+	let mysc be entry 1 of shrine-imp-items;
+	if player is in Clarthead Cathedral:
+		now mysc is entry 1 of cathedral-items;
+	repeat through table of otters anagrams:
+		if mysc is the-from entry:
+			say "[right-word entry in upper case]";
+			continue the action;
+	say "BUG--[if player is in Clarthead Cathedral]loathingly or tersely[else]angrily or brutely[end if]";
+
+to say e-m-bonus:
+	if holy nest is off-stage:
+		say "but you can get a couple bonus points for bugging them";
+	else if holy nest is moot:
+		say "and you got the bonus points for annoying them";
+	else:
+		say "though you can get another bonus point for tweaking them"
+
 to say medal-help:
 	say "The medals look less than perfect. ";
 	if nounsolve is 0 and adjsolve is 0:
@@ -4484,14 +4502,6 @@ to say medal-help:
 		say "You've done something in the [if nounsolve is 0]Lamer Realm[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of Burnt Brunt, too";
 	else:
 		say "You've done work in the Lamer Realm and preserve, but not enough"
-
-to say e-m-bonus:
-	if holy nest is off-stage:
-		say "but you can get a couple bonus points for bugging them";
-	else if holy nest is moot:
-		say "and you got the bonus points for annoying them";
-	else:
-		say "though you can get another bonus point for tweaking them"
 
 to say medals-do:
 	say "[if Reclusion Inclosure is unvisited]The medals are only fully useful west of the Disowned Downside[else if merle is not moot]You can't really use the medals until [e-n-m] are gone[else]The medals let you go QUICKLY before going west of the Reclusion Inclosure, which will help you deal with Elvira's initial attack[end if]"
@@ -4512,16 +4522,6 @@ to say need-refurb:
 to say but-in-inclosure:
 	if player is not in Reclusion Inclosure:
 		say ", but maybe not here";
-
-to say rand-otters-east-ly:
-	let mysc be entry 1 of shrine-imp-items;
-	if player is in Clarthead Cathedral:
-		now mysc is entry 1 of cathedral-items;
-	repeat through table of otters anagrams:
-		if mysc is the-from entry:
-			say "[right-word entry in upper case]";
-			continue the action;
-	say "BUG--[if player is in Clarthead Cathedral]loathingly or tersely[else]angrily or brutely[end if]";
 
 to say play-whistle: say "PLAY THE WHISTLE[if qbc_litany is table of elvira comments] after chatting (pick any options)[end if]"
 
