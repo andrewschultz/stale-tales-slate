@@ -2994,7 +2994,7 @@ The diverse deviser machine fizzles along. The chirping of birds from the campie
 The diverse deviser is complicated enough. You probably just need to figure what to put in it.
 
 @mis
-#mistake test for pairer
+#mistake retest for pairer
 >pairer
 You don't need duplicates of anything here. Besides, the diverse deviser looks complex enough. It will probably reject or accept what it needs to.
 

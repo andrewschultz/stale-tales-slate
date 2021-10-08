@@ -18,9 +18,9 @@
 
 >stable
 >in
->sitar
+>stair
 >d
-Basement
+Largely All-Grey Gallery
 
 >basement
 Well, if you want points for that, you'll need to go back to the study.
@@ -36,6 +36,4 @@ Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat 
 Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
 >teach off
 Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
-
->stair
 
