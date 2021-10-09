@@ -1200,7 +1200,7 @@ Shane	Shane	false	332457700	--	"ashen"	"ashen"	--	--	"Suddenly, the color rushes
 Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	--	--	"Terrance suddenly realizes that unconditional acceptance of pointless duty is lazy in its own way and decides to wander off. [if here-picaros is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	--	--	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	--	--	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
-Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Wildest Wilteds are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato advises you that Pass-Rite Raspiest Pastries may be scattered in the Wildest Wilteds: not the most delicious snack, but they give your brain a boost to help you with obstacles in your way. While Elvira's made it a regular diet for certain henchmen, there is no moral punishment for using them.[paragraph break]Then he hands you a flowerpot. But not any old flowerpot. A top opt pot! It's for an old friend--one who bought property near Castle Apcur, the Curst Palace, and can't bring herself to move. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told, old hat.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut."
+Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	pre-rodney rule	post-rodney rule	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Ornate Atoner Renato, talking about things he'd been near to, or neat. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Wildest Wilteds are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Renato advises you that Pass-Rite Raspiest Pastries may be scattered in the Wildest Wilteds: not the most delicious snack, but they give your brain a boost to help you with obstacles in your way. While Elvira's made it a regular diet for certain henchmen, there is no moral punishment for using them.[paragraph break]Then he hands you a flowerpot. But not any old flowerpot. A top opt pot! It's for an old friend--one who bought property near Castle Apcur, the Curst Palace, and can't bring herself to move. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told, old hat.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, running the last bit through a Shout-So Hut. As you exit, a voice booms 'STOP! DIE!' So you sort of expect where you end up next..."
 
 this is the post-reeds-ale rule:
 	moot lars eede;
@@ -1435,14 +1435,6 @@ satyr	satyr	false	409254857	--	"artsy"	"artsy"	--	post-lamer-realm-flip rule	"Th
 lilac bays	lilac bays	false	413053868	--	"basically"	"basically"	--	--	"Nothing happens, until the asyllabic lilac bays bloom unexpectedly! Weird that such a flabby word would provide them with nourishment, but hey, plants already like plant food, which is weird enough. Well, you've prettified things."
 weltish whistle	weltish whistle	false	534280357	--	"deeply"	"deeply"	pre-whistle-deeply rule	--	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."
 medals	medals	false	482616124	--	"quickly"	"quickly"	pre-medals-quickly rule	--	"The medals clink together. You feel infused with speed. Even your fats feel fast.[paragraph break]Oh, also, if you were waiting all game, wondering when you'd get to use the 'Q before U' factoid, I guess it just slipped in under the wire!"
-
-to de-inhib:
-	now power-back is true;
-	if atmo moat is prefigured:
-		say "[line break]You feel strong enough to tackle the moat, now";
-		if try-fail-animal:
-			say ", and maybe even the [if try-fail-pit-north is false]loud roar[else if try-fail-cathedral-south is false]owls[else]owls and loud roar[end if] that chased you away back east, too"; [note that try-fail-animal means 1 of pit-north ansd cathedral-south must be true]
-		say ".";
 
 this is the post-barley-barely rule:
 	set the pronoun them to cinders;
@@ -1713,6 +1705,16 @@ section otters auxiliary
 after fliptoing a pickup-line (this is the weaken-players rule):
 	process the post-gretta-help rule;
 	continue the action;
+
+section others auxiliary
+
+to de-inhib:
+	now power-back is true;
+	if atmo moat is prefigured:
+		say "[line break]You feel strong enough to tackle the moat, now";
+		if try-fail-animal:
+			say ", and maybe even the [if try-fail-pit-north is false]loud roar[else if try-fail-cathedral-south is false]owls[else]owls and loud roar[end if] that chased you away back east, too"; [note that try-fail-animal means 1 of pit-north ansd cathedral-south must be true]
+		say ".";
 
 book others
 
@@ -2098,6 +2100,9 @@ lamb	"Meanie. There's a better way to help it flee home."
 walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
 hogs	"If you were as strong as [l-n-r], maybe. But you're not. Maybe you can out-think them."
 
+to say dont-hit of (fi - a person):
+	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [r-l of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
+
 table of oyster attacks
 target	nohit
 LOLstr trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down."
@@ -2133,6 +2138,8 @@ lone duck	"The poor thing at least doesn't have a clonk due. You can see red at 
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 Tetris Sitter	"Rest it! (Feel free to see red at this.)"
 
+to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
+
 table of otters attacks
 target	nohit
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red."
@@ -2155,6 +2162,10 @@ sea cube	"Bounce no cube."
 Elmer	"[att-elm]"
 Merle	"[att-elm]"
 
+to say nice-to-animals: say "You didn't rescue them to kill them like this";
+
+to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'"
+
 table of others attacks
 target	nohit
 Curtis	"Aw, c'mon. Curtis is sort of bossy, but he's not that bad."
@@ -2163,12 +2174,6 @@ Red Rat Art Erd	"[not-even-trader]."
 Dr Tera Darter	"[not-even-trader]."
 
 to say not-even-trader: say "If anyone deserves it, [he-she] does. But [he-she] still doesn't. [he-she-c]'s already had enough physical abuse."
-
-to say nice-to-animals: say "You didn't rescue them to kill them like this";
-
-to say att-elm: say "'Die, brag brigade!' you think. But they see your sour look and say 'Venomous? Us? Move on.'"
-
-to say which-sharp: say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[else]You have nothing remotely sharp[end if]"
 
 volume readables
 
@@ -2191,6 +2196,9 @@ cravings carvings	"When you squint the right way, 'SPEED IT? SIT. DEEP.' is writ
 trashy ashtray	"On this side is [one of]PEST OP, OI[or]PO['] SPITE, O[cycling]. You can read the other side [one of][or]again [stopping]if you want."
 A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
 Admits Mist Ad	"[one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order], in red."
+
+to say ad-auth:
+	say "An author's signature: [one of]T. D. ASIM[or]MS. DITA[or]SAD TIM[in random order]"
 
 table of troves readables
 to-read	what-read	alt-read
@@ -2267,9 +2275,6 @@ mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help yo
 pipe panel lie pen app	"There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea."
 orange	"It's stamped with the word ENGARO in red."
 singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
-
-to say ad-auth:
-	say "An author's signature: [one of]T. D. ASIM[or]MS. DITA[or]SAD TIM[in random order]"
 
 volume general blather tables
 
@@ -2954,15 +2959,21 @@ to say op-ed-silly: say "The op-ed, with all of its parts, is just there to buil
 
 volume nowhere tables
 
+book ordeal reload
+
 table of ordeal reload nowheres
 theloc	thereject
 Largely All Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
 Farming Framing	"No time for mooching around your means manse. You probably need to take [if sitar is touchable]a[else]that[end if] secret passage in, or down."
 Highest Heights	"You can go back IN to the study, though you don't need to, or you could try [if pram is touchable]to get the pram out of the way[else]going DOWN the ramp[end if]."
 
+book stores
+
 table of stores nowheres
 theloc	thereject
 Cruelest Lectures	"You fear a 'BE RASH? EH, BARS!' from the Rehabs Basher. And anyway, the trumped-up charges and the teleological lectures have conked your sense of compass directions worse than drugs ever could.[paragraph break]But there must be a generic way to leave!"
+
+book routes
 
 table of routes nowheres
 theloc	thereject
@@ -2974,6 +2985,8 @@ Cripple Clipper	"Floats would make you the, uh, last of, unless you are St. Olaf
 Sonancy Canyons	"You might run into the spheric ciphers. You still don't have your sense of direction back."
 Loather Rathole	"Consciously going into any hurt-thru might leave you vulnerable. You need to find [if race acre is touchable]motivation to get through the Race Acre. You need to catch that thief![else]temporary warmth now you were kicked out from [heat].[end if]"
 
+book troves
+
 table of troves nowheres
 theloc	thereject
 Bustle Sublet	"The reastier arteries lead nowhere good. You still have a lot to look for."
@@ -2984,6 +2997,8 @@ Browse Bowers	"You are definitely going places, but you are going even better pl
 Econ Cone	"The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but they still HAVE to save, there. You can do even better!"
 Upscale Capsule	"You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. [if salt is off-stage]And you couldn't just run out before doing ANYTHING[else if salt is touchable]And you'd need to have proved yourself. You haven't, yet[else]I guess you could leave now, if you did the right thing, first[end if]."
 
+book presto
+
 table of presto nowheres
 theloc	thereject
 Char Arch	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead."
@@ -2993,6 +3008,10 @@ Marines Seminar Remains	"While you're impressed with people who can navigate spo
 Nowt Town	"Nowt Town holds no secrets. You can only go west or south."
 Unwary Runway	"[if number of npcish people > 0 and symp-yet is false][random npcish person] waves frantically at you NOT to touch the east and west walls. They may be extra shocking here[change-symp]![else]The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?[end if]"
 Saps Pass	"[if lawl wall is not moot]There's no way around the hogs. You need to get rid of them[else]It's best to stay on the Phat Path[end if]."
+
+to say change-symp: now symp-yet is true;
+
+book oyster
 
 table of oyster nowheres
 theloc	thereject
@@ -3010,6 +3029,38 @@ End Den	"You're disoriented here, but you can go back OUT to get to the Horned H
 Plasm Lamps	"It's you against the ant! There's no running, but it can't be too hard to defeat."
 Tenfold Teflond Den Loft	"While you can go back outside, you can just finish things here[unless-max]."
 
+to say posh-cant-exit:
+	if noun is not outside:
+		say "You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them";
+		continue the action;
+	say "'This ain't the E-Z Beer Breeze-Beezer, here,' one of the LOLstr trolls says. You haven't paid, and you have no money, but you need to leave somehow. And straight-up exiting doesn't seem to be the way.[paragraph break][trolls-mood]";
+
+to say unless-max:
+	let my-tot be poss-score of oyster - cur-score of oyster;
+	if lever is reflexive:
+		decrement my-tot;
+	if dialer is reflexive:
+		decrement my-tot;
+	if bogus-redial is reflexive:
+		decrement my-tot;
+	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
+
+section oyster auxiliary
+
+to say trolls-mood:
+	if silly-acts is 3:
+		say "You get the feeling the LOLstr trolls wouldn't mind seeing you go since you might be bad for business";
+	else if silly-acts is 2:
+		say "Yet, the LOLstr trolls aren't that enthusiastic. They remember that disruption you caused and, in some weird way, respect your own trolling";
+	else if silly-acts is 1:
+		say "The LOLstr trolls hesitate a bit, though. Your behavior wasn't perfect. Maybe if you did more, they'd be glad to see the back of you";
+	else if silly-acts is 0:
+		say "So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image";
+	else:
+		say "BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this"
+
+book towers
+
 table of towers nowheres
 theloc	thereject
 Loftier Trefoil	"[if number of moot picaros < 3]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to deal with Rodney and go out[end if]."
@@ -3024,6 +3075,12 @@ Shaven Havens	"[one of]You wander off, but you hear hikers shreik 'Shrike! Shrik
 Rawest Waters	"Spirited riptides! [if noun is east]You'll never reach the [neaters] with physical exertion. A bit of magic[else]That'd only make the [neaters] further away[end if]."
 Mislit Limits	"[if noun is south or noun is southwest]You don't want to go back across Leak Lake[else]The scaly clays are too treacherous. You need to find the word to restore the curst palace to its former glory[mislit-clue][end if]."
 
+to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"
+
+to say mislit-clue: say "[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]"
+
+book otters
+
 table of otters nowheres
 theloc	thereject
 Clarthead Cathedral	"[no-coma]."
@@ -3034,76 +3091,33 @@ Lamer Realm	"You can only go back south. [if adjsolve < 3]Yup, lame[else]The Ble
 Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot![paragraph break]Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"The coevals['] alcoves north and south may seem less intimidating, but you really should be focused on what's to the west."
 Rancho Archon Anchor	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]."
+
+to say no-coma: say "The coma camo may be detectable, but you can't change it"
+
+book others
 
 table of others nowheres
 theloc	thereject
+Rustic Citrus	"[if swell wells are visited]You can only go north[back-to-wells][else]With greenish sheering all around, one direction seems as good as any other. Maybe you need to [curtis-next][end if]."
 Filed Field	"[if barriers west are touchable and noun is west]The barriers west block you. Maybe they don't lead anywhere, but they might become something more useful[else]With all the foilage foliage and [and-pen], the only way to say I fled is to go back east[end if]."
 Scape Space	"One look at the warding drawing disabuses you of any notion of going anywhere except back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
-to say change-symp: now symp-yet is true;
-
-to say and-pen: say "[if lie pen app is moot]even without [the lie pen app][else][the lie pen app] too[end if]"
-
-to say mislit-clue: say "[if mesprise premises is unvisited]. Maybe there is a clue to the west[end if]"
-
-to say like-boat: say "[if bot boat is touchable], like the boat, which [agnostic-first] will let you enter[end if]"
-
 to say back-to-wells: say " back to the Swell Wells and beyond"
-
-to say posh-cant-exit:
-	if noun is not outside:
-		say "You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them";
-		continue the action;
-	say "'This ain't the E-Z Beer Breeze-Beezer, here,' one of the LOLstr trolls says. You haven't paid, and you have no money, but you need to leave somehow. And straight-up exiting doesn't seem to be the way.[paragraph break][trolls-mood]";
-
-to say trolls-mood:
-	if silly-acts is 3:
-		say "You get the feeling the LOLstr trolls wouldn't mind seeing you go since you might be bad for business";
-	else if silly-acts is 2:
-		say "Yet, the LOLstr trolls aren't that enthusiastic. They remember that disruption you caused and, in some weird way, respect your own trolling";
-	else if silly-acts is 1:
-		say "The LOLstr trolls hesitate a bit, though. Your behavior wasn't perfect. Maybe if you did more, they'd be glad to see the back of you";
-	else if silly-acts is 0:
-		say "So, the LOLstr trolls are convinced you're the sort of square who can be pushed into doing what you're told. Maybe you can shake that image";
-	else:
-		say "BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this"
 
 to say curtis-next: say "[if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]"
 
-to say no-coma: say "The coma camo may be detectable, but you can't change it"
-
-to say unless-max:
-	let my-tot be poss-score of oyster - cur-score of oyster;
-	if lever is reflexive:
-		decrement my-tot;
-	if dialer is reflexive:
-		decrement my-tot;
-	if bogus-redial is reflexive:
-		decrement my-tot;
-	say "[if my-tot is 0], and you've done everything else[else], or maybe you can look around to get more points[end if]";
+to say and-pen: say "[if lie pen app is moot]even without [the lie pen app][else][the lie pen app] too[end if]"
 
 volume scannotes tables
 
 [these table gives clues after you scan, although usually it may be approrpriate to give hints only in cheat mode.]
 
-to say cheatfid:
-	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
-
-to say respect-help:
-	if cheat-on is false:
-		say "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode";
-	else:
-		say "[one of]Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
-
-to say g-thru-resp: now got-thru-respect is true;
-
-to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
-
 [??pad question mark / scan elmer / scan merle]
 [note we start with the pram which is not in the first room so we can define thing-to-note as not-scenery. Don't change this.]
+
+book ordeal reload
 
 table of ordeal reload scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -3115,9 +3129,26 @@ meet bans	false	false	false	true	"You fiddle with the cheat button. The eighth e
 palest pastel plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is."
 Respect Specter	false	false	false	false	"'[respect-help].'"
 
+to say cheatfid:
+	say "You fiddle with the cheat button and note that nothing happens to the reds and yellows"
+
+to say respect-help:
+	if cheat-on is false:
+		say "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode";
+	else:
+		say "[one of]Six ambiguous readings may seem like a lot, but you can maybe stop to think if any HAVE to be vowels or consonants. You can SCAN again if you want more hints[or]You may notice slots 1 and 7 both have to be consonants. Number one can only be R or S, number 4 is P or C, and number 7 can only be T or R[or]You may notice that slots 3, 5 and 6 can't be defined. That's tricky! But a bit of deeper logic can cut down the possibilities[or]In this case, the two vowels must be in slots 3, 5 and 6, so you can just try putting the only possible consonant in 3, then in 5, then in 6[or]I can't tell you the full solution, but you may also note that slot 1 and 7 both possibly being R can cut down the possibilities, too. You may need guesswork at the end if you can't see the word, but there are less possibilities than you think. In this case, you may stumble across the answer, so I can't say anything specific[or]This example was sort of formulated. It may be easy to guess. You may also be able to assume you can't have three or four consonants in a row, which can help. But I'm here just to show all the future possibilities[g-thru-resp][or]That's all. Thanks for listening. I can repeat things one step at a time if you need a recap[cycling]"
+
+section ordeal reload auxiliary
+
+to say g-thru-resp: now got-thru-respect is true;
+
+book stores
+
 table of stores scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 tropes poster	true	true	false	false	"I guess it's a trope that something with a trope might help you with the general principles of when the settler is vague. Perhaps you can knock out one of the first two letters."
+
+book routes
 
 table of routes scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -3156,6 +3187,8 @@ marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 Sister Tressi Siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
+
+to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
 table of presto scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
@@ -3240,6 +3273,26 @@ repents serpent	true	true	false	false	"That is a lot of blinks, but those blinks
 nastier stainer retinas	true	false	false	false	"Boy! Over half the readings are ambiguous! Nastier than usual, indeed. Though actually, if they were only 'stainer retinas,' you'd have one-half the possibilities. Sometimes evil is like that. The more evil it is, the more intimidating it seems, but the more it can leave itself vulnerable to good guys just plodding away."
 tetris sitter	true	true	false	false	"With only two vowels, this word may be a bit irregular. But having the two t's in sitter is nice."
 
+to say scannotes-curst:
+	if palace-let < 6:
+		say "Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace[if palace-let >= 5 and cheat-on is true]. [sadly-curst]";
+		continue the action;
+	else if palace-let is 11 and cheat-on is true:
+		say "The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process";
+	else if cheat-on is true:
+		say "[sadly-curst]";
+	else:
+		say "Even if the reds and yellows were all in place, there'd still be a lot of possibilities[if max-pal-seen < 8][one of]. But it should still help to get closer ro the Curst Palace[or][stopping]";
+		repeat through scannotes of mrlp:
+			if thing-to-note entry is curst palace:
+				now b-only entry is true;
+				 continue the action;
+
+section towers auxiliary
+
+to say sadly-curst:
+	say "Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler";
+
 table of otters scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 bleary barley	true	true	false	false	"That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess."
@@ -3269,30 +3322,6 @@ a banna	false	false	false	false	"It must be the/a banna['] AND the message on it
 a brr hub	false	false	false	false	"Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so."
 Reserved Deserver Dr Severe	true	true	false	false	"Dr. Severe rolls [his-her] eyes. 'My arguments certainly merit analysis, but there is no quick way to grokking them.'[paragraph break]Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities."
 
-[?? test qmh toggling and scanning stuff]
-
-check scaning a prefigured thing:
-	if noun is specter, continue the action;
-	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
-
-to say scannotes-curst:
-	if palace-let < 6:
-		say "Wow, lots of blank data. You may want to get closer to get fuller clues about how to restore the palace[if palace-let >= 5 and cheat-on is true]. [sadly-curst]";
-		continue the action;
-	else if palace-let is 11 and cheat-on is true:
-		say "The final entry blinks alternately with the fifth--neither is purple at the same time. The settler usually isn't this slow, but maybe you can take advantage of it having so much data to process";
-	else if cheat-on is true:
-		say "[sadly-curst]";
-	else:
-		say "Even if the reds and yellows were all in place, there'd still be a lot of possibilities[if max-pal-seen < 8][one of]. But it should still help to get closer ro the Curst Palace[or][stopping]";
-		repeat through scannotes of mrlp:
-			if thing-to-note entry is curst palace:
-				now b-only entry is true;
-				 continue the action;
-
-to say sadly-curst:
-	say "Sadly, the ambiguous fifth entry doesn't seem like you could figure it easily, even if you had a full report from the settler";
-
 volume specific help for things you need to flip
 
 table of ordeal reload spechelp
@@ -3318,6 +3347,8 @@ plates	"The plates shine slightly and rattle."
 plaster	"The plaster crackles and shines slightly."
 pram	"The pram creaks back and forth slightly."
 rifle	"Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you."
+
+to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can [if diorama is examined]re[end if]examine the diorama"
 
 table of stores spechelp
 xtrhelp	helptxt
@@ -3430,6 +3461,10 @@ BUB DUDE EGG	"Hmm. Fixing code you've compiled is tricky. Once it's fixed, if yo
 drive a	"Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently."
 drive e	"Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it."
 
+to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
+
+to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
+
 table of oyster spechelp
 xtrhelp	helptxt
 Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe."
@@ -3479,6 +3514,9 @@ bogus-redial	"[di-cli]."
 templar ramplet	"There MUST be a way to storm down the templar ramplet. But not that."
 bogus-psalm	"The plasm lamps flicker slightly."
 natant ant	"There must be a simple way to take down the ant. You haven't quite got it right yet, though."
+
+to say di-cli:
+	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
 
 table of towers spechelp
 xtrhelp	helptxt
@@ -3549,10 +3587,14 @@ turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 weirder red wire	"You think you see how to untangle some of the mess inside the/a bot-boat, but you don't want or need to do anything unless it's all just right."
 earnest eastern neaters	"You feel less split from everyone else for a second."
-repents serpent	"The serpent calms down for a split-second[ser-try]."
+repents serpent	"The serpent calms down for a split-second[serp-try]."
 Tetris Sitter	"[The tetris sitter] breaks her glassy smile for a moment."
 ur pine	"The ur-pine shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller."
 curst palace	"Hmm...[if player is in Mislit Limits]only faint rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
+
+to say jet-nq: say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
+
+to say serp-try: say "[one of][or], again[stopping]";
 
 table of otters spechelp
 xtrhelp	helptxt
@@ -3587,6 +3629,10 @@ badger	"The badger flexes imaginary suit lapels, then quickly goes back to brood
 satyr	"The satyr puts a hand on its chin as if pondering deeper things."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
+
+to say imp-nag: say "The imp looks slightly annoyed for a second. You may be on the right track";
+
+to say whin-nag: say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
 
 table of others spechelp
 xtrhelp	helptxt
@@ -3635,88 +3681,7 @@ viewer	"That's not the way to learn from the viewer--it's probably not that comp
 searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 fleeing feeling	"It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though."
 
-to say dior-hint: say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can [if diorama is examined]re[end if]examine the diorama"
-
-to say l-r-bye-hint: say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
-
-to say di-cli:
-	say "[if yapper is in tenfold]The yapper might alert its cronies if you try anything. Even something not quite right, like that[else if dialer is reflexive]The dialer seems to click slightly[else]The dialer must have another setting, but that's not quite it[end if]"
-
-to say ser-try: say "[one of][or], again[stopping]";
-
 to say l-frown: say "[if player is in Clangier Clearing]Len frowns[else]you frown[end if] at the ";
-
-to say jet-nq: say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
-
-to say imp-nag: say "The imp looks slightly annoyed for a second. You may be on the right track";
-
-to say whin-nag: say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
-
-ana-repeats is a number that varies.
-
-cur-help-item is a thing that varies. cur-help-item is usually yourself.
-
-definition: a thing (called itm) is all-around:
-	if itm is bogus-rousted, yes;
-	if itm is bogus-plains, yes;
-	if itm is bogus-psalm, yes;
-	if itm is n-t-air, yes;
-	no;
-
-to say where-pull of (itm - a thing):
-	if itm is all-around:
-		say "all around";
-	else if itm is maze walls and player is in Grey Gyre:
-		say "the volt maze";
-	else if itm is a block-concept:
-		say "[if player is in Shiner Shrine]the imp[else]the shrewin['] whiners[end if]";
-	else:
-		say "[the itm]"
-
-to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
-
-to say spec-help of (itm - a thing):
-	if rq is active:
-		say "With that conversation, you can't concentrate on much...";
-		continue the action;
-	now itm is attempted;
-	if itm is a pickup-line:
-		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
-		continue the action;
-	if xtra-trax is true:
-		repeat through spechelp of mrlp:
-			if itm is xtrhelp entry:
-				if there is a helptxt entry:
-					say "[helptxt entry][line break]";
-					if debug-state is true, say "DEBUG ONLY: [pull-from of itm].";
-					if itm is cur-help-item:
-						if can-prog-hint:
-							increment ana-repeats;
-							if ana-repeats is 3:
-								now ana-repeats is 0;
-								say "[line break]This guessing is getting a bit frustrating. You note the idlers['] slider on the settler[one of][or]again[stopping]. Maybe it could help you a bit.";
-								continue the action;
-					else:
-						now ana-repeats is 0;
-					now cur-help-item is itm;
-					continue the action;
-				else:
-					break;
-		d "You may want to put in special text here in [spechelp of mrlp] for ([the itm]). Or not.";
-	say "[pull-from of itm].";
-	if xtra-trax-warn is false:
-		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
-		if debug-state is true, say "DEBUG: note this option is turned on by default while testing.";
-		now xtra-trax-warn is true;
-
-to decide whether can-prog-hint:
-	if mrlp is oyster, decide no;
-	if player does not have settler, decide no;
-	if headaches is 0, decide no;
-	if slider is switched on, decide no;
-	decide yes;
-
-doublewarn is a truth state that varies.
 
 volume done rejects
 
@@ -3745,6 +3710,8 @@ Throes Hoster	"[got-e of throes hoster]."
 tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
 nestor	"You rescued him, and that's enough."
 
+to say got-e of (to-enter - a thing): say "You should just enter [the to-enter]. No need or way to seal [it-them of to-enter] back up"
+
 table of routes done rejects
 specdone	spectalk
 scripture picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."
@@ -3761,6 +3728,8 @@ THE BEAN	"The Morf-Form has, uh, morphed enough. Deal with THE BEAN."
 un road	"You know where the un-road is, but how to navigate it?"
 odd run on aura	"The underground is already lit. Un-unlit."
 bent ewe	"The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay."
+
+to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
 
 table of troves done rejects
 specdone	spectalk
@@ -3798,6 +3767,8 @@ TBA key	"No, the TAB key is what it should be."
 Im Le Cop polemic	"After compiling, you often need to make small tweaks, but not like that."
 peels speel	"You've had enough comforts from cots to do the programming you need. You might re-wake weaker."
 BUB DUDE EGG	"You had to consider all sorts of combinations while debugging, but things will be easier now."
+
+to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
 table of oyster done rejects
 specdone	spectalk
@@ -3855,17 +3826,7 @@ fleeing feeling	"Don't want to over-prep[win-north]."
 searcher	"You've done enough researching[win-north]."
 viewer	"You've done enough reviewing[win-north]."
 
-to say play-food: say "Don't play with your food. [if toaster is touchable]Maybe put it in the toaster instead[else]There must be something that can prepare it[end if]"
-
 to say win-north: say ", and now you [if gate-level is 2]can just go north[else]need to try something else[end if]"
-
-to say got-e of (to-enter - a thing): say "You should just enter [the to-enter]. No need or way to seal [it-them of to-enter] back up"
-
-to say sk2dsk: say "No, skid <=> disk is about it. There's no tricky third way"
-
-to say giant-over: say "The [sit a nag] isn't important with [Gast] gone"
-
-to say no-rehash: say "[if leo is touchable]That'd be an awkward rehash. You need another way to say good-bye[else]With [l-n-r] gone, your fumbling for a third way to say good-bye is only emotionally useful[end if]"
 
 volume tables of hintobjs
 
@@ -3899,6 +3860,8 @@ X4	"[in-ded-hint]."
 to say sy-sn:
 	pad-rec-lump "sy";
 	pad-rec "sn";
+
+to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
 
 table of ordeal reload hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -4397,8 +4360,6 @@ talc spa cure	"[fin-pal-clue]."
 Last Acre Cup	"[fin-pal-clue]."
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]St. Teri might, [sitter-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]"
 
-to say in-ded-hint: say "Inducted Deductin and its sub-pages are just there to examine, to help you understand how to reason when the settler's cheat mode gives ambiguous readings"
-
 to say lois-or-lot-hint: say "[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
 
 to say ag-yow-lect:
@@ -4661,3 +4622,6 @@ a skip hinting rule for a thing (called th):
 Roiling Tables ends here.
 
 ---- DOCUMENTATION ----
+
+
+
