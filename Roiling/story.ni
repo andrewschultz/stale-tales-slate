@@ -518,7 +518,9 @@ the player is terse.
 
 an animal is usually terse.
 
-a hintpastry is a kind of thing. a hintpastry can be heated. a hintpastry is usually not heated. a hintpastry is usually edible.
+chapter hintpastries
+
+a hintpastry is a kind of thing. a hintpastry can be heated. a hintpastry is usually not heated. a hintpastry is usually edible. a hintpastry can be brandnoted. a hintpastry is usually not brandnoted.
 
 a hintpastry has a number called deliciousness.
 
@@ -541,6 +543,22 @@ check objasking about a hintpastry when mrlp is towers:
 		try giving the second noun to the noun instead;
 
 the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
+
+this is the note-pastries rule:
+	if noun is brandnoted, continue the action;
+	now noun is brandnoted;
+	say "[one of]You note [the noun] is produced by [passrite], as Ornate Atoner Renato mentioned.[or]Another of those [passrite].[or]And yet another [passrite]! Even ify you don't need the clues, it's nice to know you won't starve in the wilderness, here.[or]Wow. A smorgabord of [passrite].[stopping]";
+
+the hintpastry babble rule is listed last in the after rules.
+
+this is the hintpastry babble rule:
+	if current action is not objhinting:
+		process  the note-pastries rule;
+	continue the action;
+
+to say passrite: say "Pass-Rite Raspiest Pastries"
+
+chapter fruits
 
 a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it."
 
@@ -5328,11 +5346,16 @@ check taking inventory:
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
+		now rosetta toaster is not marked for listing;
+		now all hintpastries are not marked for listing;
 		say "Here in the [mrlp] region you have found:[line break]";
 		if mrlp is routes and read-list is true:
 			if number of quest-items carried by the player > 0, say "  [list of quest-items carried by the player with indefinite articles] (for Brother Horbert)[line break]";
 			now all quest-items carried by the player are unmarked for listing;
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+		if mrlp is towers and number of hintpastries carried by player > 0:
+			say "You've found some snack foods[if player has rosetta toaster] and a Rosetta Toaster to heat them with:[line break]  ";
+			say "[list of hintpastries carried by the player][line break]";
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
 	if number of warpable things enclosed by player is 0:
@@ -15816,7 +15839,11 @@ Report taking the Rosetta toaster:
 
 chapter start tarts
 
-a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
+a pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though, as long as you warm them up first.". "A pack of start tarts lies here."
+
+after doing something with pack of start tarts:
+	set the pronoun them to start tarts;
+	continue the action;
 
 chapter scenery
 
