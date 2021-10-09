@@ -2051,12 +2051,6 @@ yak	"You yack, it's all C-ya, K? Nevertheless, it seems to have some rudimentary
 
 casper-mumble is a truth state that varies.
 
-to say ohai-casper:
-	if casper-mumble is true:
-		now casper-mumble is false;
-	else:
-		now casper-mumble is true;
-
 ag-cheat is a truth state that varies. ag-cheat is false.
 ag-guar is a person that varies. [ag-guar is usually nothing.]
 
@@ -3717,13 +3711,7 @@ when play begins (this is the basic initialization rule):
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
-		repeat with PE running through people:
-			if PE is not terse and PE is not a guardian:
-				if PE is nonspecific, say "[PE] has nothing special or specific to say and is not defined as terse.";
-				if PE is not a him-asked listed in reflexive blather table of mrlp:
-					if litany of PE is Table of No Conversation:
-						say "[PE] has nothing to say about themselves. Perhaps put a blank entry in Table of Reflexive-Blather.";
-		if convo-holes is false, say "No conversational holes.";
+		say "[b]GRILL[r] tests conversations.";
 	now Lars Eede has the Reeds Ale;
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Cruelest Lectures]
 	now r10 is mapped west of Nowt Town;
@@ -4014,6 +4002,10 @@ first-good-scan is a truth state that varies.
 to oscan (scanee - a thing):
 	now scanee is ncscanned;
 	now scanee is cscanned;
+
+check scaning a prefigured thing:
+	if noun is specter, continue the action;
+	if noun is not dialer, say "Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad." instead;
 
 carry out scaning: [note: "the rule fails" is needed here because of the scan-both rule. I suppose we could have a scan-both flag, but that gets into global variables etc.]
 	if mrlp is demo dome:
@@ -4414,6 +4406,11 @@ to sto-hint (stosto - a sto): say "Sto hint for [stosto].";
 
 book presto-hinting
 
+check objhinting drive:
+	if disk is in Drive A:
+		if be troo e robot is reflexed, all-say "You have the disk drive working." instead;
+		try objhinting be troo e robot instead;
+
 to say maze-or-pass:
 	say "[if ether is moot][Saps Pass][else]the volt maze[end if]"
 
@@ -4516,12 +4513,6 @@ to decide whether can-put-on-slab:
 
 to say k-and-c:
 	say "[if player has keyboard and player has computer screen]keyboard and screen[else if player has keyboard]keyboard[else]screen[end if]";
-
-to say maze-solve:
-	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
-
-to say wash-up:
-	say "[one of][l-n-r] are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
 
 to say hereish of (rm - a room):
 	say "[if player is in rm]here[else]in [rm][end if]"
@@ -5275,6 +5266,74 @@ Rule for printing a parser error when the latest parser error is the I beg your 
 	now pardons is false;
 	follow the alert you don't have to gawk rule;
 
+chapter mapping errors to help
+
+ana-repeats is a number that varies.
+
+cur-help-item is a thing that varies. cur-help-item is usually yourself.
+
+definition: a thing (called itm) is all-around:
+	if itm is bogus-rousted, yes;
+	if itm is bogus-plains, yes;
+	if itm is bogus-psalm, yes;
+	if itm is n-t-air, yes;
+	no;
+
+to say where-pull of (itm - a thing):
+	if itm is all-around:
+		say "all around";
+	else if itm is maze walls and player is in Grey Gyre:
+		say "the volt maze";
+	else if itm is a block-concept:
+		say "[if player is in Shiner Shrine]the imp[else]the shrewin['] whiners[end if]";
+	else:
+		say "[the itm]"
+
+to say pull-from of (itm - a thing): say "You feel a slight psychic push-pull coming from [where-pull of itm]. That's a decent omen"
+
+to say spec-help of (itm - a thing):
+	if rq is active:
+		say "With that conversation, you can't concentrate on much...";
+		continue the action;
+	now itm is attempted;
+	if itm is a pickup-line:
+		say "You feel you're on the right track to expose the [pla-ma]s. But that's not quite it.";
+		continue the action;
+	if xtra-trax is true:
+		repeat through spechelp of mrlp:
+			if itm is xtrhelp entry:
+				if there is a helptxt entry:
+					say "[helptxt entry][line break]";
+					if debug-state is true, say "DEBUG ONLY: [pull-from of itm].";
+					if itm is cur-help-item:
+						if can-prog-hint:
+							increment ana-repeats;
+							if ana-repeats is 3:
+								now ana-repeats is 0;
+								say "[line break]This guessing is getting a bit frustrating. You note the idlers['] slider on the settler[one of][or]again[stopping]. Maybe it could help you a bit.";
+								continue the action;
+					else:
+						now ana-repeats is 0;
+					now cur-help-item is itm;
+					continue the action;
+				else:
+					break;
+		d "You may want to put in special text here in [spechelp of mrlp] for ([the itm]). Or not.";
+	say "[pull-from of itm].";
+	if xtra-trax-warn is false:
+		say "[line break]You can use the command [b]XTRA TRAX[r] to track the right combination of letters less generically. However, some hints might be a bit too pointed.";
+		if debug-state is true, say "DEBUG: note this option is turned on by default while testing.";
+		now xtra-trax-warn is true;
+
+doublewarn is a truth state that varies.
+
+to decide whether can-prog-hint:
+	if mrlp is oyster, decide no;
+	if player does not have settler, decide no;
+	if headaches is 0, decide no;
+	if slider is switched on, decide no;
+	decide yes;
+
 book reading a command
 
 volume regular verb tweaks and irregular verbs
@@ -5562,9 +5621,6 @@ check attacking: [this takes responses for general types. The table below it is 
 	if noun is a picaro, say "Even Rodney alone could dispatch you. After, of course, a quick battle cry of 'Y'r DONE!'" instead;
 	if noun is a guardian, say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder. Nobody in the Wildest Wilteds is evil, just a nuisance[end if]." instead;
 	say "[randbla][line break]" instead;
-
-to say dont-hit of (fi - a person):
-	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [r-l of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
 
 chapter cutting
 
@@ -12314,13 +12370,6 @@ check scaning harpings phrasing: say "It's all over the place. Maybe you should 
 
 byebyes is a list of things variable. byebyes is { log ons letters, alert letters, ought letters}.
 
-to say sl-t-l:
-	repeat with AA running through byebyes:
-		if AA is reflexive:
-			say "[if AA is log ons]SO LONG[else if AA is alert]LATER[else]TOUGH[end if]";
-			continue the action;
-	say "BUG--sign should've said something";
-
 bye-disambig is a truth state that varies.
 
 does the player mean doing something with entry 1 of byebyes:
@@ -13286,6 +13335,8 @@ chapter Casper Spacer
 
 Casper Spacer is a person in Posh Hops Shop. description is "He hides the writing in his Capers Recaps from your prying eyes.". "Casper Spacer, the famous fish author, is here, working on his latest book, Capers Recaps[one of]. He seems to want to be bothered and not want to be at the same time. Writers have a way of massaging life's contradictions[or][stopping]."
 
+casper-talk is a truth state that varies.
+
 check objasking casper spacer about:
 	if casper-talk is false, casper-chat instead;
 
@@ -13294,6 +13345,11 @@ check asking casper spacer about:
 
 to casper-chat:
 	say "Before you can pull a bar seat abreast... 'Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad.' He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says 'Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back.'[add-hangout]"
+
+to say add-hangout:
+	now casper-talk is true;
+	pad-rec-lump "the haunter";
+	pad-rec "DIE THOU";
 
 understand "author" as Casper Spacer.
 
@@ -15815,7 +15871,7 @@ to say sade-sard:
 
 a-text of dreads adders is "RYRRYR". b-text of dreads adders is "RY?RYR". parse-text of dreads adders is "x[sp]-[sp]?[sp]x[sp]-[sp]x".
 
-gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think.".
+gualoc of Dreads Adders is Topside Deposit. guadir of Dreads Adders is north. block-text of Dreads Adders is "The dreads adders may or may not be lethal. In fact, they may be perfectly harmless. But one look at them makes you worry, what if you were the first slob to be killed by them as you tried to pass? Especially since, as you calculate things, there can't be many possibilities.[paragraph break]You don't see red until you turn away and get lost in your own dreads.". clue-text of Dreads Adders is "From what you know about dreads adders, they shouldn't be harmful, and they rely more on intimidation than subterfuge. Maybe you could change how THEY think, even though they outnumber you!".
 
 chapter toaster
 
@@ -16961,8 +17017,6 @@ this is the bore-crocus rule:
 
 description of crocus is "It looks much better than the blub bulb it was."
 
-to say new-mislit-clue: now flip-final-clue is true;
-
 flip-final-clue is a truth state that varies.
 
 section planting
@@ -17136,10 +17190,6 @@ check taking scenery in Mislit Limits:
 	if noun is clear catsup, say "Picking up litter is admirable, but it's small thinking with your powers." instead;
 	if noun is accurst leap, say "Take a leap of logic instead." instead;
 	say "You can't and don't need to take it, but maybe you can take a clue from it." instead;
-
-to say 3-random:
-	sort table of magnifs in random order;
-	say "[blurb in row 1 of table of magnifs]! [blurb in row 2 of table of magnifs]! [blurb in row 3 of table of magnifs]! He-he. Eh";
 
 table of magnifs
 blurb
@@ -17899,16 +17949,6 @@ understand "discern [something]" as discerning.
 
 does the player mean discerning the cinders: it is very likely.
 does the player mean discerning the player: it is likely.
-
-to say rand-to-go:
-	let mysc be entry 1 of shrine-imp-items;
-	if player is in Clarthead Cathedral:
-		now mysc is entry 1 of cathedral-items;
-	repeat through table of otters anagrams:
-		if mysc is the-from entry:
-			say "[right-word entry in upper case]";
-			continue the action;
-	say "BUG--[if player is in Clarthead Cathedral]loathingly or tersely[else]angrily or brutely[end if]";
 
 rescind-cinders is a truth state that varies.
 
@@ -19655,8 +19695,6 @@ to say do-coin: say "Doing anything with or too such a horrid counterfeit coin w
 
 to say coin-per-d: say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
 
-to say ollard-hint: say "[he-she-c] is worse than useless to society but only useless to you. Yay?"
-
 after doing something with coin-person:
 	if coin-person is Lord Al:
 		set the pronoun him to Lord Al;
@@ -20487,8 +20525,6 @@ to say greedy-sez: say "[greedy-s] shrugs, then does the 'let's swap' hand gestu
 
 to say greedy-s: say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
 
-to say trader-clue: say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of moot fruits < 12]Curtis's third gift, after [12 - number of moot fruits in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
-
 to say gree-app:
 	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if Clangier Clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping]--[he-she]'s sort of hold onto a box labeled So-Great Storage"
 
@@ -21307,7 +21343,7 @@ this is the hint certain object groups rule:
 	if location of noun is nothing and noun is not a backdrop, all-say "[noun]: you probably shouldn't know about that [if noun is a person]person[else]object[end if], yet. This error should never appear, but if it does, try HINTing objects you can see." instead;
 	if noun is bounding, say "[if noun is plural-named]Those are[else]That's[end if] there just to provide barriers in various directions, and for local flavor. Screeny scenery, if you will. Or even if you won't." instead;
 	if noun is a room, say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
-	if noun is realized, all-say "Nothing more for you to do with [if noun is plural-named]those[else]that[end if]." instead;
+	if noun is realized, all-say "Nothing more for you to do with [the noun]." instead;
 	if noun is amusing, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
 	if noun is useless, all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
 	if noun is shunloc, all-say "You don't need to go back where that is." instead;
@@ -21320,6 +21356,9 @@ this is the hint certain object groups rule:
 		if hint-prog of noun is 3, now hint-prog of noun is 1;
 		say "[if hint-prog of noun is 1]You may be able to disrupt how the [pla-ma]s [pickup-description of noun].[plus][else]You can make the [pla-ma] talk more [pickup-spoil of noun].[minus][end if]";
 		the rule succeeds;
+
+to say frootz:
+	say "[if dollar is not off-stage]You've gotten all you need, but you can still return this fruit to Curtis[else]Curtis will mostly be collecting fruits, so you can return this to him[end if].[line break]"
 
 to say pickup-spoil of (pl - a pickup-line):
 	repeat through table of otters anagrams:
@@ -21392,6 +21431,9 @@ this is the spoil-hints rule:
 			now noun is cheatitemed;
 			the rule succeeds;
 
+check fliptoing a reflexed animal when mrlp is otters:
+	say "You helped [the noun] enough. They will help you back when the time comes." instead;
+
 carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if spoilit is false:
@@ -21445,13 +21487,6 @@ section hint table for objects
 
 [check objhinting when you are in Clangier Clearing or Scape Space -- check for if you did something already, or first hints. Include booleans etc. breakthru-field, breakthru-clearing, breakthru-ice]
 
-to say dh-true: now trolls-hinted is true;
-
-to say dio-part: say "Not a puzzle per se but helps you understand what to do with [if settler is off-stage]an analytical object you may uncover[else]the settler[end if]"
-
-to say yak-worry:
-	say "You don't need to worry about the yak for a long time[if Leo is not touchable]. You may want to go to Dirge Ridge, south of the Char Arch, for companions[else if Saps Pass is not visited]. You need to go north of the gyre and the maze, first[end if]"
-
 check objhinting Gast:
 	if sit a nag is reflexive, try objhinting sit a nag instead;
 	if side art is reflexive, try objhinting side art instead;
@@ -21462,31 +21497,13 @@ check objhinting Gast:
 to say in-hovels:
 	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shuttle Hutlets and lance is off-stage] that might be buried under here[else if player is in Shuttle Hutlets] like that lance, with the right verb[else] in a dingier area than this[end if]";
 
-to say up-to-l3:
-	if fruits-left is 0:
-		say "has gotten all the fruits you could find";
-	else if droll dollar is not off-stage:
-		say "can only take everything you find, now";
-	else if curtis-level is not curtis-award-level:
-		say "has payment for you";
-	else:
-		say "needs more fruit before your next reward";
-
-to say n-o:
-	say "[if atblock is reflexed]now[else]once[end if]";
-
 check objhinting a quest-item when mrlp is routes (this is the redirect hints in routes rule) :
 	if Cleric Circle is unvisited, say "You shouldn't know about [the noun] yet." instead;
 	if list o toils is unexamined, say "[if noun is pipe soot]The pipe soot from the ashtray[else]That[end if] is one of the items on the list you haven't examined yet. In the Cleric Circle." instead;
 	if noun is held, say "[The noun] [if list o toils is examined]is part of the spiers['] potion that will help let people see directions again[else]has a use, as a reagent of some sort, but maybe you haven't examined anything you need[end if]. Since you found it, you don't need to do anything else with it." instead;
 
-to say sitter-ok: say "[if Tetris sitter is reflexed]though her advice seems cryptic[else]but you'd have to get through to her first[end if]"
-
 to say give-croc:
 		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if Mesprise Premises is unvisited]You can, but you don't have to, visit the premises to the west[else if Tetris sitter is reflexive]You need to make the Tetris Sitter care about something other than her game, first[else]You need to give St. Teri the crocus[end if]"
-
-to say casp-cap:
-	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something. [plus][or][b]SCRAPE[r] the blackboard.[minus][cycling]"
 
 to decide whether one-imp-down:
 	if imp-score >= 1, yes;
@@ -21495,19 +21512,6 @@ to decide whether one-imp-down:
 to decide whether one-whine-down:
 	if whiner-score >= 1, yes;
 	no;
-
-to say medal-help:
-	say "The medals look less than perfect. ";
-	if nounsolve is 0 and adjsolve is 0:
-		say "Maybe you can find someone, or something, to help. You should [if player is in Lamer Realm or player is in Perverse Preserve]see what you can do here[else if player is in Shiner Shrine or player is in Clarthead Cathedral]go north or south[else]explore north or south of Burnt Brunt[end if]";
-	else if nounsolve >= 3:
-		say "You've done good work in the preserve[if nounsolve is 3](helping the [random flippable animal in Lamer Realm] is optional now,)[else],[end if] but maybe you can go [if Lamer Realm is unvisited]north[else]to the Lamer Realm[end if] to do more";
-	else if adjsolve >= 3:
-		say "You've done good work in the Lamer Realm, but maybe you can go [if Lamer Realm is unvisited]north[else]to the preserve[end if] to do more";
-	else if nounsolve is 0 or adjsolve is 0:
-		say "You've done something in the [if nounsolve is 0]Lamer Realm[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of Burnt Brunt, too";
-	else:
-		say "You've done work in the Lamer Realm and preserve, but not enough"
 
 volume end of story
 
