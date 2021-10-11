@@ -722,14 +722,15 @@ Your word, stupendous as it is, has no effect. Yet. You are probably not close e
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
 
-@mis
+@nud
 #mistake test for wist led/its lewd
 >wist led
 Editorializing about the Wildest Wilteds won't help.
 >its lewd
 Editorializing about the Wildest Wilteds won't help.
-
-@nud
+#mistake test for stop die
+>stop die
+The voice you heard no longer echoes. You'll find a way north to the Wildest Wilteds.
 #mistake test for posited
 >posited
 You formulate a proof that the place you are in does actually exist.

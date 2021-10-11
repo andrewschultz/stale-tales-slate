@@ -292,7 +292,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the luck node. That'
 Editorializing about the Wildest Wilteds won't help.
 >its lewd
 Editorializing about the Wildest Wilteds won't help.
-
+#mistake test for stop die
+>stop die
+The voice you heard no longer echoes. You'll find a way north to the Wildest Wilteds.
 #mistake test for posited
 >posited
 You formulate a proof that the place you are in does actually exist.

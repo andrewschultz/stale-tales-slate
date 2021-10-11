@@ -460,6 +460,9 @@ Fighter Freight
 >score
 Score in a scenario: 7 out of 42 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
+#mistake test for refight
+>refight
+That's not very good English, and you haven't gotten in a fight yet. Soon, though.
 #nudge for freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.

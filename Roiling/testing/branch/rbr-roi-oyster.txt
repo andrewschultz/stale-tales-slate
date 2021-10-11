@@ -740,6 +740,9 @@ DEBUG INFO: pale plea hinting.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#mistake test for refight
+>refight
+That's not very good English, and you haven't gotten in a fight yet. Soon, though.
 #nudge for freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
