@@ -1,8 +1,8 @@
 Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
-volume nudges
+volume nudge tables
 
-[rorg.py sorts the "to say" and rules in the order they appear in the table]
+[ott.py sorts the "to say" and rules in the order they appear in the table]
 [nuch.py makes sure that all the nudges have a test case assigned]
 [stsv.py verifies the hash values with the strings]
 [all this should be in the post-commit hooks]
@@ -18,13 +18,15 @@ section parser administrivia
 
 understand the command "cross" as something new. [this was mapped to ENTER, but with Corses Crosse, it gets confusing.]
 
-book nudge tables
-
-chapter ordeal loader
+book ordeal loader
 
 table of Ordeal Loader nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "ordeal"	364513235	--	degen-true rule	"[reg-rej]."
+
+to say reg-rej: say "You don't want to change a region drastically while you're in it"
+
+chapter busiest subsite
 
 table of Busiest Subsite nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -42,6 +44,16 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "noentry"	650766775	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."
 "caveat"	361462168	--	--	"Vandalizing the vacate caveat is probably more trouble than it's worth."
 
+to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
+
+to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
+
+to say word-games: say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
+
+to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it"
+
+chapter Rested Desert
+
 table of Rested Desert nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "rested"	561349094	--	--	"[loc-rej]."
@@ -51,6 +63,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "chord"	236993353	OR DO Door	--	"[com-chor]."
 "horn"	265866187	bugle	--	"No, the bugle is a bugle, not just a horn. It's been changed enough."
 
+to say nope-odor: say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
+
+to say com-chor: say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
+
+chapter Thickest Thickets
+
 table of Thickest Thickets nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "thickets"	584514019	--	--	"[loc-rej]."
@@ -58,6 +76,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "darnel"	359068166	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
 "shrub"	342404780	--	--	"The [if goat is touchable]remains of the [end if]shrub and brush waver, then point towards the [if toga is touchable]toga[else]opening in the thickets[end if]."
 "darnels"	455342132	darnels	--	"[darnels-inst]."
+
+to say darnels-inst: say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
+
+chapter Notices Section
 
 table of Notices Section nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -76,7 +98,11 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "dollhouse"	643830102	doll house	--	"Thinking that doesn't do much, but the [if static is touchable]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
 
-chapter stores
+to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
+
+to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
+
+book stores
 
 table of Stores nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -177,7 +203,25 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "hubs"	257080977	hubs bush	--	"[hub-stur]."
 "buh"	160807011	hubs bush	--	"[hub-stur]."
 
-chapter forest
+to say tid: say "The depiction is there as a hint, not as a puzzle";
+
+to say say-which: say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"
+
+to say lotmaso: say "You need to manipulate each store as a store, not a mall or a lot"
+
+to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens."
+
+to say no-mb of (x - a thing): say "Nothing happens. Maybe if Yorpwald were in even more danger the future, [x] might change. But not this adventure";
+
+to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seemed like a bit of a long shot"
+
+to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
+
+to say no-store-m: say "No, it's a map of something behind Store M, it looks like."
+
+to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
+
+book forest
 
 table of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -202,9 +246,58 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cylinder"	543238031	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
 "forest"	513381369	--	degen-true rule	"[if Self ID Fields is visited][reg-rej][else][loc-rej][end if]."
 
+this is the first-two-forest rule:
+	if player is in sf or player is in rf, the rule succeeds;
+	the rule fails
+
+to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
+
+to say guider-content of (th - a thing): say "No, that's not the [i]essence[r] of [the th]"
+
+this is the forest-south rule:
+	if self id fields is visited, the rule fails;
+	if location of shout is visited, the rule succeeds;
+	the rule fails;
+
+to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is in sf]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
+
+this is the forest-north rule:
+	if self id fields is visited, the rule fails;
+	if location of thorn is visited, the rule succeeds;
+	the rule fails;
+
+this is the forest-west rule:
+	if self id fields is visited, the rule fails;
+	if location of stew is visited, the rule succeeds;
+	the rule fails;
+
+this is the forest-east rule:
+	if self id fields is visited, the rule fails;
+	if location of teas is visited, the rule succeeds;
+	the rule fails;
+
+this is the see-meats rule:
+	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
+	the rule fails;
+
+to say spec-meat: say "You'll need to be more specific about the meat to poke at"
+
+this is the liv-vis rule:
+	if number of carried glopmeats > 0, the rule succeeds;
+	if player is in Flesh Shelf and number of glopmeats in Flesh Shelf > 1, the rule succeeds;
+	the rule fails;
+
+to say bothlivers: say "The one liver seems inactive by itself"
+
+to say rivliv: say "It's just a liver. No need to parse the brand name"
+
+chapter rest of forest
+
 table of Rest of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "rest"	412513896	--	--	"[loc-rej]."
+
+chapter self id fields
 
 table of Self ID Fields nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -222,6 +315,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "undead"	346065420	--	--	"[no-un]."
 "undeads"	442339386	--	--	"[no-un]."
 
+to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
+
+to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
+
+to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
+
+chapter Flesh Shelf
+
 table of Flesh Shelf nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "shelf"	341691109	--	--	"The shelf is frozen that way. Ba dum bum."
@@ -234,6 +335,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "grin"	231823859	grinder	--	"The ring does not bend."
 "hams"	199819236	canister	--	"You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if]."
 "bleads"	319529726	--	--	"The blades, buried in the grinder, remain lifeless."
+
+to say ice-cit: say "Taking care of the main menace may change the iciest cities"
+
+chapter Gnarliest Triangles
 
 table of Gnarliest Triangles nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -257,6 +362,18 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "naughts"	445467118	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	noughts	--	"There's more than one nought."
 
+to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
+
+to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
+
+to say stone-read: say "The notes stone is just for reading"
+
+to say vand-art: say "Don't vandalize the art, man"
+
+to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
+
+chapter Emptiness Sepiments
+
 table of Emptiness Sepiments nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "emptiness"	810711634	--	--	"[loc-rej]."
@@ -273,6 +390,18 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "send"	314016672	dimness	--	"[dimness-unchangeable]."
 "nde"	217742706	dimness	--	"[dimness-unchangeable]."
 
+to say scof-no: say "You know the scoffer coffers and scoffin['] coffins can't be changed, and the more you tried, the worse the smirking would get"
+
+this is the spread-drapes rule:
+	if player is in Emptiness Sepiments:
+		if drapes are in Emptiness Sepiments or spread is in Emptiness Sepiments:
+			the rule succeeds;
+	the rule fails;
+
+to say dimness-unchangeable: say "The dimness is unchangeable from out here. You'll have to find a way in"
+
+chapter Ghouls Slough
+
 table of Ghouls Slough nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "slough"	399428190	--	--	"[loc-rej]."
@@ -283,7 +412,13 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "ones"	367340160	--	--	"[coe-no]."
 "enclosure"	758395303	--	--	"[coe-no]."
 
-table of Frost Forst nudges
+to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is beyond here"
+
+to say coe-no: say "The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead"
+
+chapter Frost Forts
+
+table of Frost Forts nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "frost"	385575260	--	--	"[loc-rej]."
 "snow"	347468824	--	--	"[froz-ha-ha]."
@@ -298,7 +433,9 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "werewolves"	1016216878	wolves	--	"They won't be changed with magic. Thankfully, you've got something more direct."
 "lupine"	482092068	wolves	--	"They are the lupine lineup from your notes, but for your purpose, they're wolves."
 
-chapter sortie
+to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
+
+book sortie
 
 table of Sortie nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -325,7 +462,35 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "sixteen"	681664637	--	nick-visit rule	"You don't need to re-stop the centrifuge."
 "hay"	161829369	hay	--	"Hay is not terribly magical. It's more for trading or building."
 
-[check these as some may be useless now]
+this is the kitch-visit rule:
+	if player is in kitchen:
+		the rule fails;
+	if kitchen is visited, the rule succeeds;
+	the rule fails;
+
+this is the got-shoes rule:
+	if shoes are moot, the rule succeeds;
+	the rule fails;
+
+this is the rm-or-moor rule:
+	if player is in room or player is in moor, the rule succeeds;
+	the rule fails;
+
+to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
+
+this is the got-plane rule:
+	if the player has the poem and the poem is folded, the rule succeeds;
+	the rule fails;
+
+this is the cedars-visited rule:
+	if sacred cedars is visited, the rule succeeds;
+	the rule fails;
+
+this is the nick-visit rule:
+	if nick is visited, the rule succeeds;
+	the rule fails;
+
+chapter trap part
 
 table of trap part nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -341,11 +506,25 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "exits"	484951020	--	b4-cent rule	"You can't do much to the exits when you don't even know which way they are."
 "aroundden"	574649308	--	af-cent rule	"[loc-rej]."
 
+this is the b4-cent rule:
+	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
+	the rule fails;
+
+to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
+
+this is the af-cent rule:
+	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
+	the rule fails;
+
+chapter the nick
+
 table of the nick nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "graffiti"	366236825	--	--	"The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it."
 "greta"	351027450	--	--	"The grate remains impassive."
 "nick"	185839117	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
+
+chapter kitchen
 
 table of kitchen nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -370,6 +549,12 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cutupsteak"	796104265	steak	--	"The steak's just right as is."
 "lamina"	236164982	manila animal	--	"It actually looks pretty nice on the fridge."
 
+to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
+
+to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
+
+to say perf-brand: say "It's the full name brand that really catches your eye"
+
 table of Stiller Trellis nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "trellis"	565134420	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]"
@@ -378,6 +563,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "wall"	217750269	scraped wall	--	"[hway-hint]."
 "scraped"	433092329	scraped wall	--	"[hway-hint]."
 "rubble"	408887368	crashing archings	--	"The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need."
+
+to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
 
 table of moor nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -409,6 +596,22 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "poetyr"	594417718	poem	--	"[peas-poe]."
 "warhead"	383751709	missile	--	"You don't want to change the missile's message, which seems rather nice."
 
+to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
+
+to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
+
+this is the panel-in-silo rule:
+	if player is in moor and panel is part of the silo, the rule succeeds;
+	the rule fails;
+
+to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
+
+to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
+
+to say pat-poe: say "Pat won't react kindly to modifications of his poem"
+
+to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
+
 table of Sacred Cedars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "cedars"	351626370	--	--	"[loc-rej]."
@@ -424,6 +627,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "lance"	271720859	--	--	"[best-not-defile]."
 "idols"	290462317	--	--	"[best-not-defile]."
 "cliche"	301906263	--	--	"[best-not-defile]."
+
+to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
 
 chapter metros
 
@@ -455,6 +660,20 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "ganst"	303079012	--	angst rule	"You don't get rid of angst with just a word."
 "gnat"	206805046	--	angst rule	"There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter."
 
+to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+
+to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
+
+to say mits-are: say "The mittens are as comfortable as they're going to be"
+
+this is the no-beats rule:
+	if player is in Esoteric Coteries or player is in Obtains Boastin Bastion, the rule succeeds;
+	the rule fails;
+
+this is the angst rule:
+	if player has emitter and emitter is angstgnatted, the rule succeeds;
+	the rule fails;
+
 table of Undesired Underside nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "undesired"	698274326	--	--	"[loc-rej]."
@@ -475,6 +694,19 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cramped"	400893516	--	--	"[und-camp]."
 "camp"	166734515	--	--	"[und-camp]."
 
+to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder"
+
+to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]"
+
+to say no-hot:
+	say "You can't change the hotel, ";
+	if night thing is not in The Ol Hotel:
+		say "and you got rid of the night thing, anyway";
+	else:
+		say "but you could have a[if The Ol Hotel is visited]nother[end if] look around";
+
+to say und-camp: say "You can't do much with or to the camp, here or north"
+
 table of Roarings Garrison nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "roarings"	489962023	--	--	"[loc-rej]."
@@ -493,6 +725,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "reeding"	508465166	deadbeat	--	"[beat-man]."
 "library"	412420266	--	--	"The library could use renovation, but that's out of the scope of your quest, now."
 
+to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
+
+to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
+
+to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
+
+to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
+
 table of Obtains Boastin Bastion nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "boastin"	408243638	--	--	"[loc-rej]."
@@ -506,6 +746,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "dry"	228712144	dry cake	--	"It isn't just any cake. It's dry cake."
 "rental"	441149095	--	--	"[if antlers are in Obtains Boastin Bastion]One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers[else]No point bringing those tacky antlers back, or thinking about them any more[end if]."
 
+to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
+
+chapter the ol hotel
+
 table of the ol hotel nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "thelo"	396364842	--	--	"[loc-rej]."
@@ -518,6 +762,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "lucre"	391055143	ulcer	--	"You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway."
 "emitter"	656224056	emitter	--	"Whatever icky stuff is/was in there might come out. Eww."
 "bump"	269065824	bump	--	"Just search the bump instead."
+
+to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
+
+chapter bile libe
 
 table of Bile Libe nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -543,6 +791,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "stems"	487539212	heaths	--	"Deal with the whole flower, not just the stems."
 "begonia"	369265465	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
 
+to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
+
 table of Esoteric Coteries nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "anticool"	440722768	--	--	"[loc-rej]."
@@ -559,6 +809,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "memo"	330308992	--	--	"[memo-tote-no]."
 "tote"	408378722	--	--	"[memo-tote-no]."
 "tome"	369343857	--	--	"[memo-tote-no]."
+
+to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
+
+to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
+
+to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
+
+to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad"
 
 table of Elm Train Terminal nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -581,6 +839,14 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "gin"	146500056	gin nope opening	--	"[nope-gin]."
 "recess"	552489538	gin nope opening	--	"You've already made nothing out of something, and instead of reversing that, [if controls are in gin nope opening]you did what you needed[else]you may need to put something in the opening[end if]."
 
+to say fix-rail: say "[if controls are in gin nope opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
+
+to say psa-vand: say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
+
+to say faded-ad: say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
+
+to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
+
 table of Bassy Abyss nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "bassy"	335513907	--	--	"[loc-rej]."
@@ -588,11 +854,19 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "align"	202501713	--	--	"[aligns-no]."
 "resin"	423304232	--	resin-lala rule	"The dust is dust now."
 
-chapter resort
+to say aligns-no: say "No use messing with the aligns signal when you need to focus on the [b-b]"
+
+this is the resin-lala rule:
+	if resin is moot, the rule succeeds;
+	the rule fails.
+
+book resort
 
 table of Resort nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "resort"	572190276	--	degen-true rule	"[reg-rej]."
+
+chapter Astral Altars
 
 table of Astral Altars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -600,6 +874,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "altar"	246623296	--	--	"[astral-nudge]."
 "flare"	295646465	feral flare	--	"The feral flare crackles menacingly. You doubt you can change it for the better."
 "tile"	329722812	--	--	"You need to deal with all the tiles."
+
+to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
+
+chapter Leis Isle
 
 table of Leis Isle nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -612,6 +890,10 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "islet"	425996778	--	--	"That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave."
 "eter"	444046039	--	--	"The tree sits there[if swing is touchable], but the swing rocks a bit[end if]."
 "oflat"	259979148	--	--	"[if cork is touchable and wings are touchable]You can just use either the cork or the wings to leave to the east[else if cork is touchable or wings are touchable]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
+
+to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
+
+chapter Rived Drive
 
 table of Rived Drive nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -627,6 +909,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "lock"	200105179	tool shed	--	"Nope. That lock's secure."
 "rope"	368948448	ropes	--	"Those are already useful."
 "grip"	244382310	grips	--	"Those are already useful."
+
+chapter Potshot Hotspot
 
 table of Potshot Hotspot nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -659,7 +943,31 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "tshirt"	470092950	red bull burdell	--	"[tshirt-no]."
 "shirt"	366982932	red bull burdell	--	"[tshirt-no]."
 
-table of Means Manse nudges
+to say no-hotspot:
+	if red bull burdell is moot:
+		say "You don't want to make this place a hotspot again";
+	else:
+		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
+
+this is the bull-moot rule:
+	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
+	the rule fails;
+
+to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
+
+this is the hotspot-no-kilns rule:
+	if player is in Potshot Hotspot:
+		if kilns are not in Potshot Hotspot:
+			if protest is in Potshot Hotspot or riot is in Potshot Hotspot, the rule succeeds;
+	the rule fails;
+
+this is the riot-gone rule:
+	if player is in Potshot Hotspot and riot is moot, the rule succeeds;
+	the rule fails;
+
+to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
+
+chapter Means Manse
 this-cmd	hashval	this-item	this-rule	this-clue
 "manse"	359250554	--	--	"You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
 "extis"	484951020	--	--	"That's not quite the right sort of nothing."
@@ -667,7 +975,9 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "spire"	435862683	--	--	"[ennui]."
 "toaster"	592164309	--	--	"[ennui]."
 
-chapter general
+to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
+
+book general
 
 table of general nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -751,350 +1061,6 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "options"	543455451	--	degen-true rule	"[meta-rej]"
 "version"	604821629	--	degen-true rule	"[meta-rej]"
 "something"	649400178	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
-
-book auxiliary text and rules
-
-chapter ordeal loader auxiliary
-
-to say reg-rej: say "You don't want to change a region drastically while you're in it"
-
-section busiest subsite auxiliary
-
-to say loc-rej: say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start constantly giving readings then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is in acne bit cabinet and acne bit cabinet is unexamined]. You'll find a hint device for that soon enough[end if]"
-
-to say name-list: say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
-
-to say word-games: say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
-
-to say sofa-there: say "The Oafs['] Sofa is there, and there's nothing you can do about it"
-
-section rested desert auxiliary
-
-to say nope-odor: say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
-
-to say com-chor: say "It's a pretty complex chord[if cur-score of ordeal loader is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
-
-section thickest thickets auxiliary
-
-to say darnels-inst: say "You [if darn-slan is true]already messed with the darnels[else]might be able to clear the darnels a bit, but they're not as thick as, well, the thicket[end if]"
-
-section notices section auxiliary
-
-to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
-
-to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
-
-chapter stores auxiliary
-
-to say tid: say "The depiction is there as a hint, not as a puzzle";
-
-to say say-which: say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"
-
-to say lotmaso: say "You need to manipulate each store as a store, not a mall or a lot"
-
-to say no-cand of (x - a thing): say "[x] seems like a good candidate to change and reveal something, but nothing happens."
-
-to say no-mb of (x - a thing): say "Nothing happens. Maybe if Yorpwald were in even more danger the future, [x] might change. But not this adventure";
-
-to say no-way of (x - a thing): say "[x] remains impassive and dark, but it seemed like a bit of a long shot"
-
-to say road-sign: say "Hmm...you get the feeling the store itself holds more adventure"
-
-to say no-store-m: say "No, it's a map of something behind Store M, it looks like."
-
-to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
-
-chapter forest auxiliary
-
-this is the first-two-forest rule:
-	if player is in sf or player is in rf, the rule succeeds;
-	the rule fails
-
-to say no-con: say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
-
-to say guider-content of (th - a thing): say "No, that's not the [i]essence[r] of [the th]"
-
-this is the forest-south rule:
-	if self id fields is visited, the rule fails;
-	if location of shout is visited, the rule succeeds;
-	the rule fails;
-
-to say forest-no of (x - a thing): say "Your internal compass feels extra jumbled[if x is touchable]. [badana of x][else if x is in sf]. You remember [the x], but there's probably a different challenge here[else]. You must have the right general idea[end if]"
-
-this is the forest-north rule:
-	if self id fields is visited, the rule fails;
-	if location of thorn is visited, the rule succeeds;
-	the rule fails;
-
-this is the forest-west rule:
-	if self id fields is visited, the rule fails;
-	if location of stew is visited, the rule succeeds;
-	the rule fails;
-
-this is the forest-east rule:
-	if self id fields is visited, the rule fails;
-	if location of teas is visited, the rule succeeds;
-	the rule fails;
-
-this is the see-meats rule:
-	if River Ville is touchable or Spam is touchable or viler liver is touchable or player is in Flesh Shelf, the rule succeeds;
-	the rule fails;
-
-to say spec-meat: say "You'll need to be more specific about the meat to poke at"
-
-this is the liv-vis rule:
-	if number of carried glopmeats > 0, the rule succeeds;
-	if player is in Flesh Shelf and number of glopmeats in Flesh Shelf > 1, the rule succeeds;
-	the rule fails;
-
-to say bothlivers: say "The one liver seems inactive by itself"
-
-to say rivliv: say "It's just a liver. No need to parse the brand name"
-
-section self id fields auxiliary
-
-to say crosse-to-you: say "Whatever you could do to Corses Crosse, it might do worse to you"
-
-to say line-is-dead: say "They're dead and not interfering with you. Greater powers than you will determine their final fate"
-
-to say no-un: say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
-
-section flesh shelf auxiliary
-
-to say ice-cit: say "Taking care of the main menace may change the iciest cities"
-
-section gnarliest triangles auxiliary
-
-to say in-sort of (q - a thing): say "[if q is moot]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
-
-to say tack-heap: say "No need to try to turn the stack into a heap. Ho ho ho"
-
-to say stone-read: say "The notes stone is just for reading"
-
-to say vand-art: say "Don't vandalize the art, man"
-
-to say nau-zer-enuf: say "The naughts, err, noughts seem zero-y enough to contain an o";
-
-section emptiness sepiments auxiliary
-
-to say scof-no: say "You know the scoffer coffers and scoffin['] coffins can't be changed, and the more you tried, the worse the smirking would get"
-
-this is the spread-drapes rule:
-	if player is in Emptiness Sepiments:
-		if drapes are in Emptiness Sepiments or spread is in Emptiness Sepiments:
-			the rule succeeds;
-	the rule fails;
-
-to say dimness-unchangeable: say "The dimness is unchangeable from out here. You'll have to find a way in"
-
-section ghouls slough auxiliary
-
-to say marsh-lake: say "The marsh and lake are symptoms of--whatever evil is beyond here"
-
-to say coe-no: say "The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead"
-
-section frost forst auxiliary
-
-to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
-
-chapter sortie auxiliary
-
-this is the kitch-visit rule:
-	if player is in kitchen:
-		the rule fails;
-	if kitchen is visited, the rule succeeds;
-	the rule fails;
-
-this is the got-shoes rule:
-	if shoes are moot, the rule succeeds;
-	the rule fails;
-
-this is the rm-or-moor rule:
-	if player is in room or player is in moor, the rule succeeds;
-	the rule fails;
-
-to say expo-or-anapest: say "Thinking of the flier leads you back to the anapest";
-
-this is the got-plane rule:
-	if the player has the poem and the poem is folded, the rule succeeds;
-	the rule fails;
-
-this is the cedars-visited rule:
-	if sacred cedars is visited, the rule succeeds;
-	the rule fails;
-
-this is the nick-visit rule:
-	if nick is visited, the rule succeeds;
-	the rule fails;
-
-section trap part auxiliary
-
-this is the b4-cent rule:
-	if player is in Trap Part and centrifuge-stopped is false, the rule succeeds;
-	the rule fails;
-
-to say cent-diz: say "You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it."
-
-this is the af-cent rule:
-	if player is in Trap Part and centrifuge-stopped is true, the rule succeeds;
-	the rule fails;
-
-section kitchen auxiliary
-
-to say fridge-abuse: say "The fridge has taken enough abuse and can't be changed for the better[if fridge-score is 1], but maybe you can fix something else inside it[else if fridge-score is 0], but maybe you can fix something inside it[end if]"
-
-to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
-
-to say perf-brand: say "It's the full name brand that really catches your eye"
-
-section stiller trellis auxiliary
-
-to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
-
-section moor auxiliary
-
-to say woe-all: say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
-
-to say no-wire: say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
-
-this is the panel-in-silo rule:
-	if player is in moor and panel is part of the silo, the rule succeeds;
-	the rule fails;
-
-to say but-but: say "It's the buttons['] purposes that need[if steer button is touchable and shoot button is touchable]ed[end if] changing";
-
-to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
-
-to say pat-poe: say "Pat won't react kindly to modifications of his poem"
-
-to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
-
-section sacred cedars auxiliary
-
-to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
-
-chapter metros auxiliary
-
-to say kern-push: say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
-
-to say dead-help: if bastion-evac is true, say ". Perhaps you can ask the deadbeat about the lost corn for more help";
-
-to say mits-are: say "The mittens are as comfortable as they're going to be"
-
-this is the no-beats rule:
-	if player is in Esoteric Coteries or player is in Obtains Boastin Bastion, the rule succeeds;
-	the rule fails;
-
-this is the angst rule:
-	if player has emitter and emitter is angstgnatted, the rule succeeds;
-	the rule fails;
-
-section undesired underside auxiliary
-
-to say finder-cond: say "You don't [if esoteric coteries is visited]need to futz further with[else]have the skill to hack[end if] the friend finder"
-
-to say on-finder: say "[if esoteric coteries is visited]You got to the Esoteric Coteries. You don't need any tricks like that[else]The signers['] ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder[end if]"
-
-to say no-hot:
-	say "You can't change the hotel, ";
-	if night thing is not in The Ol Hotel:
-		say "and you got rid of the night thing, anyway";
-	else:
-		say "but you could have a[if The Ol Hotel is visited]nother[end if] look around";
-
-to say und-camp: say "You can't do much with or to the camp, here or north"
-
-section roarings garrison auxiliary
-
-to say ded-chg: say "The deadbeat may mumble about change, but changing oneself? Not so fast"
-
-to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should probably just go north to look at the [n-of-garrison] instead[else]You've done enough to the condo/bastion. Time to move on[end if]"
-
-to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
-
-to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
-
-section obtains boastin bastion auxiliary
-
-to say no-poses: say "You can't change who they are. They probably can't, either. It's sad"
-
-section the ol hotel auxiliary
-
-to say no-ketch: say "It [if night thing is moot]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
-
-section fo real florae auxiliary
-
-to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
-
-section esoteric coteries auxiliary
-
-to say coterie-no: say "You don't need to explore the coteries[if player has tulip]. The tulip is good enough, and you don't need to do any more here. In fact, it's a bug if you're in here[else]. Maybe the nerds could help you another way, though[end if]"
-
-to say nerd-nah: say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
-
-to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
-
-to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad"
-
-section elm train terminal auxiliary
-
-to say fix-rail: say "[if controls are in gin nope opening]You fixed the rail[else]You need to fix the rails electronically[end if]";
-
-to say psa-vand: say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
-
-to say faded-ad: say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
-
-to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
-
-section bassy abyss auxiliary
-
-to say aligns-no: say "No use messing with the aligns signal when you need to focus on the [b-b]"
-
-this is the resin-lala rule:
-	if resin is moot, the rule succeeds;
-	the rule fails.
-
-chapter resort auxiliary
-
-section astral altars auxiliary
-
-to say astral-nudge: say "While [if feral flare is touchable]you're sort of trapped here[else]there doesn't seem to be much to do here[end if], you don't need to do anything to the location name. The stile and tiles may be more useful."
-
-section leis isle auxiliary
-
-to say the-sand: say "The sand and sands and sands are just--well, sand. They won't help you get off the island";
-
-section potshot hotspot auxiliary
-
-to say no-hotspot:
-	if red bull burdell is moot:
-		say "You don't want to make this place a hotspot again";
-	else:
-		say "[if red bull burdell is touchable]Finding Red Bull Burdell's weakness[else]Placating the people here[end if] is your best bet for making this place less of a hotspot";
-
-this is the bull-moot rule:
-	if red bull burdell is moot and the player is in Potshot Hotspot, the rule succeeds;
-	the rule fails;
-
-to say simple-riot: say "Perhaps it's best to keep it simple and cut down the riot"
-
-this is the hotspot-no-kilns rule:
-	if player is in Potshot Hotspot:
-		if kilns are not in Potshot Hotspot:
-			if protest is in Potshot Hotspot or riot is in Potshot Hotspot, the rule succeeds;
-	the rule fails;
-
-this is the riot-gone rule:
-	if player is in Potshot Hotspot and riot is moot, the rule succeeds;
-	the rule fails;
-
-to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
-
-section means manse auxiliary
-
-to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
-
-chapter general auxiliary
 
 to say no-2: say "You can't really second-guess the help on the prep paper";
 
