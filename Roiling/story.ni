@@ -552,7 +552,7 @@ this is the note-pastries rule:
 the hintpastry babble rule is listed last in the after rules.
 
 this is the hintpastry babble rule:
-	if current action is not objhinting:
+	if current action is not objhinting and noun is a hintpastry:
 		process  the note-pastries rule;
 	continue the action;
 
@@ -16879,18 +16879,6 @@ this is the bore-dogleg rule:
 		let mydir be entry Q in dogleg-dirs;
 		try going mydir instead;
 
-dogleg-dirs is a list of directions variable. dogleg-dirs is { north, west, south }.
-
-to say dogleg-other of (myd - a direction):
-	let NE be number of entries in dogleg-dirs;
-	let X be a random number from 1 to NE;
-	if myd is not entry X in dogleg-dirs:
-		say "[entry X in dogleg-dirs]";
-	else:
-		increase X by a random number from 1 to NE - 1;
-		if X > NE, now X is X - NE;
-		say "[entry X in dogleg-dirs]";
-
 section unorg'd ground
 
 the unorgd ground is bounding boring scenery in Fringe Finger. description of unorgd ground is "The unorg'd ground is not worth falling down to explore. Or worth falling down.". bore-text of unorgd ground is "The unorg'd ground is not worth your time.". printed name is "unorg'd ground".
@@ -18947,11 +18935,6 @@ to say pre-desc:
 to say still-eerie: say "but it's still eerie[if know-restrict is true], even without the CRITTERS RESTRICT blocking every way except back north[else]. You can go back north[end if]"
 
 chapter critters restrict
-
-to say dsknow:
-	now know-restrict is true;
-
-know-restrict is a truth state that varies.
 
 the CRITTERS RESTRICT is bounding boring scenery in Perverse Preserve. description of the CRITTERS RESTRICT is "You can't see it, but it doesn't just restrict critters. It restricts you, too.". bore-text is "You can't do anything about the CRITTERS RESTRICT field. But you don't need to go beyond it."
 

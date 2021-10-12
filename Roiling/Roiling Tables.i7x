@@ -2280,14 +2280,6 @@ volume general blather tables
 
 [this appears across tables]
 
-to say new-mislit-clue: now flip-final-clue is true;
-
-to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
-
-to say 3-random:
-	sort table of magnifs in random order;
-	say "[blurb in row 1 of table of magnifs]! [blurb in row 2 of table of magnifs]! [blurb in row 3 of table of magnifs]! He-he. Eh";
-
 table of ordeal reload general blather
 default-talker	gen-blah
 Respect Specter	"'My past is not important. I can help you now, though, if you SCAN me.'"
@@ -2429,7 +2421,9 @@ Dr Yow	"[if luck node is not moot][doc-in-prison].[else]'Ah yes! My rescuer! Tha
 Tetris Sitter	"[if Tetris Sitter is reflexive][The tetris sitter] has nothing to say. Her game is too important[else if ur pine is not moot]St. Teri looks at your top opt pot, sadly[else if crocus is not moot]St. Teri looks at your top opt pot wistfully[else]'Old clues, eh?' She colludes: speculatively, circular, a polite ole tip about the Curst Palace. Make it [3-random]? 'No closure, counselor,' you lament, but her general tone and how she says it seem to do something for you. Maybe it'll help something pop in your head[new-mislit-clue][end if]."
 keycar	"The keycar just randomly talks about itself. Conversation won't be interesting. Maybe you can find a way to quiet the keycar."
 
-to say war-duh: say "Rodney silences him from answering."
+to say serp-say: say "[if serpent is reflexed]The serpent is motionless[else]The serpent just hisses[end if]"
+
+to say war-duh: say "Rodney silences [the noun] from answering."
 
 to say hostile-red:
 	say " about something irrelevant to what you asked and sees red: [one of]the soil[or]the oils[or]St. Helio[in random order]. Hostile"
@@ -2438,6 +2432,12 @@ to say boat-works:
 	say "[if agnostic has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
 
 to say doc-in-prison: say "[he-she-c] gestures to the ropins and then shakes an invisible cage of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
+
+to say 3-random:
+	sort table of magnifs in random order;
+	say "[blurb in row 1 of table of magnifs]! [blurb in row 2 of table of magnifs]! [blurb in row 3 of table of magnifs]! He-he. Eh";
+
+to say new-mislit-clue: now flip-final-clue is true;
 
 table of otters general blather
 default-talker	gen-blah
