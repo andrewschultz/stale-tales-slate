@@ -137,6 +137,88 @@ when play begins (this is the debug version info that should not be in the relea
 	repeat with Q running through things:
 		if Q is abstract, next;
 
+book regional stubs and definitions (put near the top for administrative purposes)
+
+a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place.
+
+a region has a sto called reg-sto. a region has a portal called reg-ent. a region has a rule called glean-rule.
+
+a region has a table name called done reject table.
+
+a region has a table name called hintobjstable.
+
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs.
+[LLP(s): both bulge/blot, darnels, static]
+
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs.
+[LLP(s): cabinet]
+
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs.
+[LLP(s): slit, banshee]
+
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs.
+[LLP(s): cake pan, grist]
+
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs.
+[LLP(s): antlers]
+
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs.
+[LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
+
+orig-region is Ordeal Loader.
+
+hub-region is Stores.
+
+glean-rule of ordeal loader is ordeal-glean rule.
+glean-rule of stores is stores-glean rule.
+
+[reg-stos are defined after stores are defined]
+
+to solve-region (sre - a region):
+	process the notify score changes rule;
+	say "[line break][sre] node: done! A bump-up, bam![wfak]";
+	now sre is solved;
+	if sre is not Ordeal Loader:
+		moot reg-ent of sre;
+		if reg-sto of sre is in Trips Strip:
+			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
+			moot reg-sto of sre;
+	item-warp;
+	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
+	if number of solved regions is 3 and player has gadget and gadget-secured is true:
+		say "Man! With the SECURE settings on your gadget, you can RECUSE if you want and hit Store R.";
+
+to say espec-xtra:
+	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tin foil is in cabinet]. Well, except the tinfoil info lit[end if]";
+	if tin foil info lit is in cabinet, moot tin foil info lit;
+	now player has all things in cabinet;
+
+to item-warp:
+	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
+	now last-loc of mrlp is location of the player;
+	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
+		if mrlp is solved:
+			if mrlp is Ordeal Loader:
+				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
+			else:
+				say "Out of nowhere swoops the [if cabinet is not flippable]acne-bit [end if]cabinet. [if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is not flippable]You're still a little spooked, but grateful, as it bounces around[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, but they sound pained. You wonder if you can take a bit of time out from questing to fix that[end if][espec-xtra].";
+				if cabinet is in Notices Section, now cabinet is in Trips Strip;
+		repeat with Q running through all things enclosed by the player:
+			if Q is not warpable, moot Q;
+
+to reset-regions:
+	repeat through table of lastlocs:
+		now the item-list of r entry is {};
+		now the worn-list of r entry is {};
+
+section reg-inc
+
+ignore-line-break is a truth state that varies.
+
+to reg-inc:
+	increment the cur-score of mrlp;
+	increment the score;
+
 book inform 6 stubs
 
 [most of these have been moved to Trivial Niceties]
@@ -157,7 +239,7 @@ to dn (a - indexed text):
 	if debug-print is true:
 		say "DEBUG INFO: [a]"
 
-book globals
+volume globals
 
 the release number is 5.
 
@@ -466,88 +548,6 @@ to decide whether the action is procedural: [aip]
 	no;
 
 xmxing is an action applying to one thing. [xmxing is a debug-only command, but we need it to be procedural for automated testing.]
-
-book regional stubs and definitions
-
-a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place.
-
-a region has a sto called reg-sto. a region has a portal called reg-ent. a region has a rule called glean-rule.
-
-a region has a table name called done reject table.
-
-a region has a table name called hintobjstable.
-
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs.
-[LLP(s): both bulge/blot, darnels, static]
-
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs.
-[LLP(s): cabinet]
-
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs.
-[LLP(s): slit, banshee]
-
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs.
-[LLP(s): cake pan, grist]
-
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs.
-[LLP(s): antlers]
-
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs.
-[LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
-
-orig-region is Ordeal Loader.
-
-hub-region is Stores.
-
-glean-rule of ordeal loader is ordeal-glean rule.
-glean-rule of stores is stores-glean rule.
-
-[reg-stos are defined after stores are defined]
-
-to solve-region (sre - a region):
-	process the notify score changes rule;
-	say "[line break][sre] node: done! A bump-up, bam![wfak]";
-	now sre is solved;
-	if sre is not Ordeal Loader:
-		moot reg-ent of sre;
-		if reg-sto of sre is in Trips Strip:
-			say "This is (hopefully) a testing bug, but [reg-sto of sre] should not be in the Trips Strip. Sending it away.";
-			moot reg-sto of sre;
-	item-warp;
-	if player is not in Trips Strip, move player to Trips Strip; ["if" squelches dumb text-reprint bug for testing command TS (#)]
-	if number of solved regions is 3 and player has gadget and gadget-secured is true:
-		say "Man! With the SECURE settings on your gadget, you can RECUSE if you want and hit Store R.";
-
-to say espec-xtra:
-	if number of things in cabinet > 0, say ", especially after it dumped its old contents, the stuff you forgot to take, in your hands[if tin foil is in cabinet]. Well, except the tinfoil info lit[end if]";
-	if tin foil info lit is in cabinet, moot tin foil info lit;
-	now player has all things in cabinet;
-
-to item-warp:
-	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
-	now last-loc of mrlp is location of the player;
-	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
-		if mrlp is solved:
-			if mrlp is Ordeal Loader:
-				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
-			else:
-				say "Out of nowhere swoops the [if cabinet is not flippable]acne-bit [end if]cabinet. [if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is not flippable]You're still a little spooked, but grateful, as it bounces around[else]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, but they sound pained. You wonder if you can take a bit of time out from questing to fix that[end if][espec-xtra].";
-				if cabinet is in Notices Section, now cabinet is in Trips Strip;
-		repeat with Q running through all things enclosed by the player:
-			if Q is not warpable, moot Q;
-
-to reset-regions:
-	repeat through table of lastlocs:
-		now the item-list of r entry is {};
-		now the worn-list of r entry is {};
-
-section reg-inc
-
-ignore-line-break is a truth state that varies.
-
-to reg-inc:
-	increment the cur-score of mrlp;
-	increment the score;
 
 book megachatter
 

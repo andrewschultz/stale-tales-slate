@@ -1064,6 +1064,8 @@ to say i-fle: say "[if player is not in Flesh Shelf] in Flesh Shelf[end if]".
 
 to say i-gt: say "[if player is in Gnarliest Triangles][else] in Gnarliest Triangles[end if]".
 
+volume buffer at end for whatever
+
 Shuffling Tables ends here.
 
 ---- DOCUMENTATION ----
