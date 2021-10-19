@@ -20,6 +20,7 @@ read_file = True
 verbose = False
 wild_card = ""
 space_char = 'x'
+inverse_check = True
 
 reds_file = "c:/writing/dict/reds.txt"
 
@@ -55,6 +56,27 @@ def reds_okay(w1, w2):
     for x in range(0, len(w1)):
         if w1[x] == w2[x]: return False
     return True
+
+def any_matches(my_letters, my_answer):
+    for r in range(0, len(my_letters)):
+        print(my_letters, my_answer, r, my_letters[r], my_answer[r])
+        if my_letters[r] == my_answer[r]:
+            return True
+        print("OK")
+    return False
+
+def inverse_hunt(my_answer):
+    my_l = list(my_answer)
+    all_perm = multiset_permutations(my_l)
+    poss_perm = []
+    print("Possible red-letter words for {}:".format(my_answer.upper()))
+    for x in all_perm:
+        if not any_matches(my_l, x):
+            poss_perm.append(x)
+    poss_perm = sorted(poss_perm)
+    for x in range(0, len(poss_perm)):
+        print(x+1, ''.join(poss_perm[x]))
+    return
 
 def count_remaining_possibilities(my_array, print_whats_valid = True, collate_results = True, show_poss = True, max_guesses = 0):
     target = my_array[0]
@@ -253,11 +275,21 @@ while cmd_count < len(sys.argv):
         check_every = int(arg[2:])
     elif len(arg) >= 3:
         my_array.append(arg)
+    elif arg == 'i':
+        inverse_check = True
     elif arg == '?':
         usage()
     else:
         usage("Bad command " + arg)
     cmd_count += 1
+
+print(1)
+if inverse_check:
+    if not len(my_array):
+        sys.exit("Need something to find red-letter possibilities for.")
+    for m in my_array:
+        inverse_hunt(m)
+    sys.exit()
 
 if len(my_array): read_file = False
 
