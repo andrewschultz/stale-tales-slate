@@ -38,11 +38,11 @@ examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
   'sprite,esprit,stripe', 'sprite,esprit,stripe,!priest' ]
 
 def usage():
-    print("==================================USAGE")
-    print("? shows everything, because it matches data lines, and this program detects ?'s.")
-    print("You can use a word from the reds.text file or from the examples array. Type e to see them.")
-    print("Use =(wanted word,clue word 1,etc.) to give a new set of possible positions.")
-    print("revised,idserve tacks on more red writing to a solution already in reds.txt.")
+    print('==================================USAGE')
+    print('? shows everything, because it matches data lines, and this program detects ?'s.')
+    print('You can use a word from the reds.text file or from the examples array. Type e to see them.')
+    print('Use =(wanted word,clue word 1,etc.) to give a new set of possible positions. X can be used to give a wildcard "wrong" letter.')
+    print('revised,idserve tacks on more red writing to a solution already in reds.txt.')
     sys.exit()
 
 def red_text(a):
@@ -144,18 +144,27 @@ def find_poss(word_array, bail=False):
     if check_overall:
         any_delta = False
         expected_each = len(orig_total) // len(answer)
+        extra_xes = orig_total.count('x')
         for x in ascii_lowercase:
             delta = orig_total.count(x) - answer.count(x) * expected_each
             if delta > 0:
+                if x == 'x':
+                    print("Found {} x which may be a placeholder.".format(orig_total.count('x')))
+                    continue
                 print(delta, 'too many of', x, 'in clues.')
                 any_delta = True
             elif delta < 0:
+                if x != 'x' and extra_xes > 0:
+                    if extra_xes + delta >= 0:
+                        extra_xes += delta
+                        print(-delta, x, 'replaced by x')
+                        continue
                 print(abs(delta), 'too few of', x, 'in clues.')
                 any_delta = True
         if any_delta:
             print("Imbalance in from/to anagrams.")
         else:
-            print("Despite different letter lumpings, no anagram imbalances.")
+            print("Despite different letter lumpings or possible wildcards, no anagram imbalances.")
     if "/" in word_array[0]:
         print("More than one accepted answer in", ', '.join(word_array), "which is beyond the scope of this program.")
         return
