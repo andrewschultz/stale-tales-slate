@@ -678,8 +678,6 @@ chapter upscale capsule
 table of Upscale Capsule nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "upscale"	485659083	--	--	"[locname]."
-"office"	319186909	--	--	"[locname]."
-"fief"	225828747	--	--	"[locname-part]."
 "wagon"	285982378	wonga wagon	--	"You really don't need to rearrange the wonga wagon."
 "cark"	159450384	cark rack	--	"The cark rack is built to be sturdy. No need to change it."
 "vote"	412433524	--	--	"[stove-symbolic]."

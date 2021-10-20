@@ -715,6 +715,11 @@ Want can become <b>DESIRE</b>.
 It is just scenery, to give the Browse Bowers a feeling of isolation.
 The rotunda is a reference to the Browse Bowers' old name.
 The Miser Emirs' Mires are the new scenery to stay.
+?DIVORCES magazine. Is it useful?
+It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
+You need to realize something...
+...there's an actual magazine called the word you need...
+...<b>DISCOVER</b> why the magazine is rubbish.
 >>ECON-CONE
 ?Who is the statue? What should I do with him/it?
 The statue is one of two things you need to figure out to move on to the next area, sort of like the Bortles Lobster and ME ARTS back in Boredom Bedroom.
@@ -753,11 +758,6 @@ Unless you <b>RAMBLE</b>.
 Yes.
 She looks down at you as if you think you're a failure. Or if you think you aren't, because you're lying to yourself.
 You can <b>RESIST</b>.
-?DIVORCES magazine. Is it useful?
-It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
-You need to realize something...
-...there's an actual magazine called the word you need...
-...<b>DISCOVER</b> why the magazine is rubbish.
 >STORE W
 >>LOFTIER TREFOIL
 ?How do I get out?
