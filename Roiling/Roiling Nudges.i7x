@@ -20,6 +20,8 @@ volume nudge tables
 
 book ordeal reload nudges
 
+chapter ordeal reload
+
 table of Ordeal Reload nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "manse"	359250554	--	degen-true rule	"[not-the-reg]."
@@ -124,12 +126,14 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "framing"	324601726	--	--	"[locname]."
 "ridging"	330445496	--	--	"If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you."
 
+chapter highest heights
+
 table of highest heights nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "highest"	479347239	--	--	"[locname]."
 "height"	383073273	--	--	"[locname]."
 
-chapter largely all-grey gallery nudges
+chapter largely all-grey gallery
 
 table of largely all-grey gallery nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -155,7 +159,7 @@ this is the elmo-chat rule:
 	if qbc_litany is table of elmo comments, the rule succeeds;
 	the rule fails;
 
-chapter carven cavern nudges
+chapter carven cavern
 
 table of carven cavern nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -169,11 +173,13 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
-chapter stores nudges
+chapter stores
 
 table of stores nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "storse"	583140439	--	--	"[not-the-reg]."
+
+chapter strip of profits
 
 table of strip of profits nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -245,6 +251,8 @@ to say idols-no: say "The solid idols, being solid, are unchanged. They won't le
 
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Strip of Profits"
 
+chapter cruelest lectures
+
 table of cruelest lectures nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lecture"	621971270	--	--	"[locname]."
@@ -271,6 +279,10 @@ to say pamph-ana: say "You're probably overthinking it. The I-USED-TO examples a
 to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perhaps deal with how tedious it is here instead"
 
 to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious"
+
+book routes
+
+chapter routes
 
 table of routes nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -313,6 +325,8 @@ this is the in-horbert-quest rule:
 to say horb-magic of (tt - a thing): say "[if tt is touchable]Brother Horbert will work his magic with that[else]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[end if]";
 
 to say rev-sum: say "That document is the stone truth! It doesn't need revisionism or embellishment"
+
+chapter same mesa
 
 table of same mesa nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -381,6 +395,8 @@ to say whole-woe: say "It seems best to deal with the whole WOE BOW BELL"
 
 to say whole-bev: say "The whole beverage name must be where it's at"
 
+chapter cleric circle
+
 table of cleric circle nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cleric"	349947767	--	--	"[locname]."
@@ -406,6 +422,8 @@ to say chanty: say "The chant doesn't change. Chants are good at that"
 
 to say no-poi: say "The [if player is in Same Mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
+chapter idle deli
+
 table of idle deli nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "idle"	247641883	--	--	"[locname]."
@@ -420,6 +438,8 @@ to say pit-full: say "[if stupor sprout is off-stage]The whole seed pit[else]You
 
 to say no-carv: say "It's not the carvings that need changing[if stupor sprout is not off-stage]. You got the stupor sprout from the seed pit, and that's what's important[end if]"
 
+chapter adobe abode
+
 table of adobe abode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "adobe"	243794498	--	--	"[locname]."
@@ -428,6 +448,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "trashy"	446537156	ashtray	--	"[ash-soot]."
 
 to say ash-soot: say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
+
+chapter harms marsh
 
 table of harms marsh nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -451,6 +473,8 @@ to say sheol-c: say "You can't change the Sheol Holes. There are too many. You c
 
 to say py-glow: say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Lag Logan"
 
+chapter ripe pier
+
 table of ripe pier nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "pier"	339588717	--	--	"[locname]."
@@ -461,6 +485,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say all-dim:
 	say "You'll have to deal with the whole data-dim mists"
+
+chapter cripple clipper
 
 table of cripple clipper nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -473,6 +499,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "spumes"	571000960	--	--	"[spume-no]."
 
 to say spume-no: say "The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them"
+
+chapter sonancy canyons
 
 table of sonancy canyons nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -487,7 +515,7 @@ to say pat-cont: say "It's more the content of the patters that you could deal w
 
 book troves nudges
 
-chapter troves nudges
+chapter troves
 
 table of troves nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -506,6 +534,8 @@ to say no-spoil: say "[if cur-score of troves is 0]You've got the right idea...s
 
 to say ei2pg: say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
+chapter loather rathole
+
 table of Loather Rathole nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "rathole"	483876463	--	--	"[locname]."
@@ -517,6 +547,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 to say no-hurt: say "No way you could change even one hurt thru on your own. You just need to get by"
 
 to say p-hole: say "City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here"
+
+chapter bustle sublet
 
 table of Bustle Sublet nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -544,6 +576,8 @@ this is the lot-observed rule:
 
 to say sidewalk-oops: say "The sidewalk's condition can't be changed. For better or worse"
 
+chapter boarded roadbed
+
 table of Boarded Roadbed nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "roadbed"	350147390	--	--	"[locname]."
@@ -552,6 +586,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bee"	274031123	evil bee	--	"But it's not just any bee. It's a[if bee-score is 0]n[end if] [evil bee][if bee-score is 2]! Though, really, you've already given it the business.[else]![end if]"
 "snore"	452663963	--	--	"[if SNORE SO ARENA is reflexive]Hmm. Nothing at all. It must be [i]a[r] snore[else]You already managed to REASON with a snore. Nothing else to do[end if]."
 "arena"	286413056	--	--	"[if SNORE SO ARENA is reflexive]Nothing happens. You may need to look at the full SNORE SO ARENA[else]You already managed to REASON your way around the SNORE SO ARENA[end if]."
+
+chapter drain nadir
 
 table of Drain Nadir nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -570,6 +606,8 @@ to say id-cede-full: say "It's the full song name--[Id Cede]"
 this is the glaring-futile rule:
 	if player is in Drain Nadir and lager is moot, the rule succeeds;
 	the rule fails;
+
+chapter boredom bedroom
 
 table of Boredom Bedroom nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -592,6 +630,8 @@ this is the lobster-moot rule:
 
 to say shmoe-homes: say "The people living in them don't want to change. You can't make them. You need to change something for YOU"
 
+chapter browse bowers
+
 table of Browse Bowers nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bowers"	510110133	--	--	"[locname]."
@@ -606,6 +646,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 to say mires-no: say "The [mires] are, well, mired. You need to focus on something else, or you might get mired, too"
 
 to say rotun: say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
+
+chapter econ cone
 
 table of Econ Cone nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -628,6 +670,8 @@ to say cone-rec: say "You think about the econ-cone being the recent center, but
 to say scrapery: say "The godlings['] lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you";
 
 to say full-pod: say "You must deal with the full END PRONER POD"
+
+chapter upscale capsule
 
 table of Upscale Capsule nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -725,6 +769,8 @@ this is the dreidl-dread rule:
 	if ether is off-stage, the rule succeeds;
 	the rule fails;
 
+chapter grey gyre
+
 table of Grey Gyre nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "grye"	368088866	--	--	"[locname]."
@@ -747,9 +793,13 @@ this is the can-see-volt-maze rule:
 	if player is in a mazeroom or player is in Unwary Runway, the rule succeeds;
 	the rule fails.
 
+chapter nowt town
+
 table of Nowt Town nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigl"	149825292	--	--	"The big L may be some sort of clue, but you can't do anything with it."
+
+chapter r10
 
 table of r10 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -757,37 +807,55 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say just-letter: say "It's just one letter in the maze. You may want to focus on the whole volt maze"
 
+chapter r00
+
 table of r00 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bign"	164918961	--	--	"[just-letter]."
+
+chapter r01
 
 table of r01 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigo"	170364030	--	--	"[just-letter]."
 
+chapter r02
+
 table of r02 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigp"	177477412	--	--	"[just-letter]."
+
+chapter r12
 
 table of r12 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigq"	180417070	--	--	"[just-letter]."
 
+chapter r22
+
 table of r22 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigr"	181335256	--	--	"[just-letter]."
+
+chapter r32
 
 table of r32 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigs"	192285419	--	--	"[just-letter]."
 
+chapter r33
+
 table of r33 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigt"	199121471	--	--	"[just-letter]."
 
+chapter r23
+
 table of r23 nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "bigu"	201117260	--	--	"[just-letter]."
+
+chapter unwary runway
 
 table of unwary runway nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -798,6 +866,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mavelt"	458157757	Zo Mavelt	--	"No, his full name is the clue, here."
 "lev"	288784768	Lev Tzoma	--	"No, his full name is the clue, here."
 "tzoma"	366695184	Lev Tzoma	--	"No, his full name is the clue, here."
+
+chapter char arch
 
 table of Char Arch nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -822,6 +892,8 @@ to say no-scen: say "Here in the Char Arch, you don't need to mess with the scen
 
 to say cistern-to-dart: say "[if dart is in cistern]You won't change the cistern, but maybe you can track down the dart[else]You got the dart from the cistern. No need to futz further[end if]"
 
+chapter dirge ridge
+
 table of Dirge Ridge nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dirge"	311751549	--	--	"[locname]."
@@ -832,15 +904,21 @@ this is the Rand-sad rule:
 	if Rand is washed up and player is in Dirge Ridge and Leo is in Dirge Ridge, the rule succeeds;
 	the rule fails;
 
+chapter austerer treasure
+
 table of Austerer Treasure nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "austerer"	732937433	--	--	"[locname]."
+
+chapter marines seminar remains
 
 table of Marines Seminar Remains nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "marines"	489567203	--	--	"[locname]."
 "marine"	393293237	--	--	"[locname]."
 "port"	344252357	--	--	"[if sport ports are reflexive]But there is more than one port[else]You already observed all the ports. No need to try to single one out[end if]."
+
+chapter saps' pass
 
 table of Saps' Pass nudges [because you advance after the hogs are gone, no this-item is needed.]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -980,6 +1058,8 @@ to say slider-activate:
 		say "[line break]";
 		now read-slider-after is true;
 
+chapter posh hops shop
+
 table of posh hops shop nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "posh"	289374801	--	--	"[locname]."
@@ -1002,6 +1082,8 @@ to say no-pesty: say "The pesty types resist change. Not that they wouldn't mind
 
 to say jukebox-overkill: say "You already got a temporary escape from the bad music. You can't really do any more, there"
 
+chapter olde lode
+
 table of Olde Lode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lode"	277001614	--	--	"[locname]."
@@ -1012,6 +1094,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 this is the clam-gone rule:
 	if player is in Olde Lode and clam is not in Olde Lode, the rule succeeds;
 	the rule fails;
+
+chapter disease seaside
 
 table of Disease Seaside nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1041,6 +1125,8 @@ to say sculpt: say "That sculpture is pretty firm and stuck as-is. Better to go 
 
 to say saccade-no: say "That would cause serious injury to people and property, even if it could work"
 
+chapter fighter freight
+
 table of Fighter Freight nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "freight"	457629673	--	--	"[locname]."
@@ -1052,6 +1138,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 to say dest-esc: say "Destroying the boat would be a bad idea. You need to escape it"
 
 to say no-cray: say "No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out"
+
+chapter anger range
 
 table of Anger Range nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1070,6 +1158,8 @@ to say hero-er-oh: say "You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, 
 
 to say all-fish: say "You need to deal with all the bullies at once, somehow, not just one at a time"
 
+chapter hardest trashed dearths
+
 table of Hardest Trashed Dearths nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hardest"	473013102	--	--	"[locname]."
@@ -1079,6 +1169,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "can"	90100911	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
 "cans"	186374877	cans	--	"You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious."
 "eek"	308545396	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
+
+chapter lean lane
 
 table of Lean Lane nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1091,6 +1183,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 this is the dent-gone rule:
 	if dent is moot, the rule succeeds;
 	the rule fails;
+
+chapter lapsin' plains
 
 table of Lapsin' Plains nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1115,6 +1209,8 @@ to say crate-frag: say "[if crate is reflexed]Not worth messing with the fragmen
 
 to say hutzy: say "[if Shuttle Hutlets is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the pans[end if]"
 
+chapter shuttle hutlets
+
 table of shuttle hutlets nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hutlet"	530228090	--	--	"[locname]."
@@ -1128,6 +1224,8 @@ this is the waste-gone rule:
 	if waste is moot, the rule succeeds;
 	the rule fails;
 
+chapter sclerous closures
+
 table of Sclerous Closures nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "closure"	561681686	--	--	"[locname]."
@@ -1139,6 +1237,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say ache-plur: say "[if arches are reflexive]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 
+chapter horned hedron
+
 table of Horned Hedron nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "hedrno"	414701385	--	--	"[locname]."
@@ -1148,19 +1248,27 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "walleye"	595721739	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	walleyes	--	"The walleyes are a bad crowd, past redemption."
 
+chapter rascal craals
+
 table of Rascal Craals nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "craals"	258792829	--	--	"[locname]."
 "craal"	162518863	--	--	"[locname]."
 "hint"	254292671	thin hint	--	"The thin hint doesn't reveal anything else. You've hidden the ruby well enough."
 
+chapter end den
+
 table of End Den nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "end"	217742706	--	--	"[locname]."
 
+chapter plasm lamps
+
 table of Plasm Lamps nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "plam"	201542769	--	--	"[if bogus-psalm is reflexed]You did enough[else]Maybe riff on ALL the lamps. But only for fun[end if]."
+
+chapter den loft
 
 table of den loft nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1305,6 +1413,8 @@ to say no-fril: say "The saver is hopelessly no-frills. It'll never be anything 
 
 to say giz-tex: say "It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better"
 
+chapter loftier trefoil
+
 table of Loftier Trefoil nudges [0 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "trefoil"	515914088	--	--	"[towersloc]."
@@ -1321,6 +1431,8 @@ to say picaro-note: say "[if here-picaros is 1]There's only one picaro left, and
 
 to say all-rodney: say "Deal with Rodney, not any part of his chosen sub-names"
 
+chapter topside deposit
+
 table of Topside Deposit nudges [1 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "deposit"	549030564	--	--	"[towersloc]."
@@ -1334,6 +1446,8 @@ to say ftf: say "The fire-torn frontier has been changed enough. Maybe if you ch
 
 to say no-hut: say "The Shout-So Hut is built to resist words. You aren't getting through, or past, it, and you don't want to go back, anyway"
 
+chapter scope copse
+
 table of Scope Copse nudges [1 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "copse"	398904196	--	--	"[cop-sco]."
@@ -1341,6 +1455,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "yurt"	415898880	yurts	--	"There's more than one yurt there."
 
 to say cop-sco: say "The copse and the Spec-O-Scope are both fine as-is[if yurts are touchable], though maybe you can do something about the yurts[end if]"
+
+chapter outer route
 
 table of Outer Route nudges [0 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1360,6 +1476,8 @@ this is the deviser-reflexed rule:
 
 to say rapier-mach: say "The [deviser] is complicated enough. You [if gizmo is off-stage]probably just need to figure what to put in it[else]already got something from it, and it's too broken to fix[end if]"
 
+chapter baldest blasted saltbed
+
 table of Baldest Blasted Saltbed nudges [1 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "baldest"	422639744	--	--	"[towersloc]."
@@ -1370,17 +1488,23 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say wets-no: say "You can't really do anything about the stew wets. Maybe once Elvira's gone, you can lobby to make them livable or farmable if you need, but that's way in the future"
 
+chapter anemic cinema
+
 table of Anemic Cinema nudges [1 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cinema"	326975019	--	--	"[towersloc]."
 "theater"	586626174	--	--	"You don't need to go looking for screens to stare at right now. You have a world to save."
 "ingrate"	464927804	ingrates	--	"[plutry of ingrates]There's more than one ingrate blocking you." [the ingrates can only guard west of Anemic Cinema]
 
+chapter fringe finger
+
 table of Fringe Finger nudges [0 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "finger"	386144864	--	--	"[towersloc]."
 "sled"	298923003	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	sled rut	--	"Work on the whole sled rut."
+
+chapter shaven havens
 
 table of Shaven Havens nudges [1 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1390,6 +1514,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ravage"	357270070	--	--	"[rav-chao]."
 
 to say rav-chao: say "The ravages are chaotic enough. Changing them is a fight you'd lose"
+
+chapter leveraged everglade
 
 table of Leveraged Everglade nudges [2 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1406,6 +1532,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 to say no-creche: say "You can't change the screech creches. Well, not until you defeat Elvira"
 
 to say ego-dr: say "Until you see the ego-drains themselves as organised, you probably won't see how to get past them"
+
+chapter treading gradient
 
 table of Treading Gradient nudges [2 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1426,6 +1554,8 @@ to say gradient-rej:
 
 to say prob-denim: say "You look at the denim and it's probably the denim you want to deal with, not its properties"
 
+chapter salted deltas
+
 table of Salted Deltas nudges [2 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "salted"	404220839	--	--	"[towersloc]."
@@ -1435,6 +1565,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "atheist"	514763074	atheists	--	"Changing only one atheist would only help you so long. The rest would shortly restore their companion's (lack of) faith and conformism with their anticonformist ways."
 
 to say shoaly: say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
+
+chapter danger garden
 
 table of Danger Garden nudges [3 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1446,6 +1578,8 @@ this is the bonker-gone rule:
 	if player is in Danger Garden and bonker is moot, the rule succeeds;
 	the rule fails;
 
+chapter lost lots
+
 table of Lost Lots nudges [3 0]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "lost"	327550400	--	--	"[towersloc]."
@@ -1456,6 +1590,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "riposte"	613325278	sporties ripostes	--	"You may find it easier to deal with all the ripostes at once."
 
 to say gasgad: say "You can't change the gadflies. There are too many"
+
+chapter obscurest subsector
 
 table of Obscurest Subsector nudges [4 1]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1493,6 +1629,8 @@ this is the agnostic-can-learn rule:
 	if player is in Obscurest Subsector and agnostic is in Obscurest Subsector and ag-atten is true, the rule succeeds;
 	the rule fails.
 
+chapter artist traits strait
+
 table of Artist Traits Strait nudges [3 2]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "strati"	434998469	--	--	"[towersloc]."
@@ -1501,6 +1639,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "coulds"	369580863	--	--	"[could-cloud]."
 
 to say could-cloud: say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form on their own"
+
+chapter actionless coastlines
 
 table of Actionless Coastlines nudges [3 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1515,12 +1655,16 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say fix-boat-parts: say "[if blaster is reflexed and turbos are reflexed]You fixed what you can of the boat[else if turbos are reflexed]You fixed the turbos, so maybe you can tackle the blaster[else if blaster is reflexed]You fixed the blaster, so maybe you can tackle the turbos[else]Hmm. It might be better to fix parts of the boat--the turbos and blaster[end if]";
 
+chapter rawest waters
+
 table of Rawest Waters nudges [4 3]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "waster"	522636487	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. The [neaters] still seem to want to help you, though."
 "spray"	387610798	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
 "water"	426362521	--	--	"The water is too elemental and generic to change. Plus the Wildest Wilteds are dry enough. How to get closer to the [neaters]?"
 "neater"	515141365	--	--	"You need more than one Neater to help you."
+
+chapter mislit limits
 
 table of Mislit Limits nudges [4 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1562,6 +1706,8 @@ this is the cppc rule:
 		if cactus pearl is in Mislit Limits or pearl cactus is in Mislit Limits, the rule succeeds;
 	the rule fails.
 
+chapter mesprise premises
+
 table of Mesprise Premises nudges [3 4]
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesprise"	724017911	--	--	"[towersloc]."
@@ -1572,6 +1718,8 @@ this is the teri-reflexed rule:
 	if player is in Mesprise Premises and Tetris Sitter is reflexed, the rule succeeds;
 	the rule fails;
 
+chapter dire and arid den
+
 table of Dire And Arid Den nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "nerd"	303066509	Nerd Aid	--	"[nerd-a]."
@@ -1580,6 +1728,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say nerd-a: say "Concentrate on the Nerd-Aid. Here in the Dire and Arid Den"
 
+chapter dourest detours
+
 table of Dourest Detours nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "detour"	516727403	--	--	"This may technically be a detour, but since the area name is 'detours,' you need some way to negate ALL the detours."
@@ -1587,7 +1737,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 book otters nudges
 
-chapter otters general
+chapter otters
 
 table of otters nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1644,6 +1794,8 @@ to say eelmry:
 	else:
 		say "You think back to whom you've met so far once past the Disowned Downside"
 
+chapter minded midden
+
 table of Minded Midden nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "midden"	347839794	bleary barley	--	"[locname]."
@@ -1664,6 +1816,8 @@ to say add-ly: say "[adv-help-1][adv-help-2]"
 to say add-li: say "[adv-help-1], but not the usual ones[adv-help-2]"
 
 to say del-ry: say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
+
+chapter disowned downside
 
 table of Disowned Downside nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1725,6 +1879,8 @@ this is the players-macked rule:
 	if players are reflexed, the rule succeeds;
 	the rule fails;
 
+chapter shiner shrine
+
 table of Shiner Shrine nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "shiner"	460586531	--	--	"[locname]."
@@ -1738,6 +1894,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "remote"	582473769	motleyer	--	"[add-ly]."
 
 to say imp-sly: say "The imp's too sly to get tricked by a word THAT short"
+
+chapter clarthead cathedral
 
 table of Clarthead Cathedral nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1790,6 +1948,8 @@ this is the realm-saved rule:
 	if player is in Lamer Realm and adjsolve >= 3, the rule succeeds;
 	the rule fails;
 
+chapter perverse preserve
+
 table of Perverse Preserve nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "preserve"	838970678	--	--	"[locname]."
@@ -1811,6 +1971,8 @@ this is the preserve-saved rule:
 to say lit-no: say "It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it"
 
 to say restrictr: say "The RESTRICT-CRITTERS can't be changed by your own will. Elvira made sure of that"
+
+chapter reclusion inclosure
 
 table of Reclusion Inclosure nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1882,7 +2044,7 @@ to say elv-mach: say "You have enough to think about without one more of Elvira'
 
 to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 
-chapter others nudges
+chapter others
 
 table of others nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -1994,6 +2156,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "miser"	418471877	miser ruble	--	"[whole-item]."
 "ruble"	390468463	miser ruble	--	"[whole-item]."
 
+chapter filed field
+
 table of Filed Field nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "fidle"	274156779	--	--	"[locname]."
@@ -2054,6 +2218,8 @@ this is the lemnomel rule:
 
 to say papay: say "[if auction caution is reflexive]You're probably over-thinking it--just pay attention to what it says, instead[else]You've taken the banner's advice well enough[end if]";
 
+chapter scape space
+
 table of Scape Space nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "space"	326739437	--	--	"[locname]."
@@ -2075,6 +2241,8 @@ to say 1st-name: say "You're not sure you want to be on a first-name basis with 
 
 to say hub-a: say "It's a burr hub, not the burr hub. A small but important distinction"
 
+chapter gates stage
+
 table of Gates Stage nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "gates"	361977613	--	--	"[no-gate]."
@@ -2092,13 +2260,13 @@ to say val-chg: say "The Valence Enclave doesn't need modifications. Especially 
 
 book demo dome nudges
 
-chapter demo dome nudges
+chapter demo dome
 
 table of demo dome nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "demo"	287262928	--	degen-true rule	"Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over."
 
-chapter peek keep nudges
+chapter peek keep
 
 table of Peek Keep nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2129,7 +2297,7 @@ to say no-mess: say "No need to mess with the helpful sign";
 
 to say no-fig-code: say "You won't figure the code. There isn't one. Muahaha"
 
-chapter Evoc Cove nudges
+chapter Evoc Cove
 
 table of Evoc Cove nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2140,7 +2308,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say no-no: say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
 
-chapter Hows Show nudges
+chapter Hows Show
 
 table of Hows Show nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2151,7 +2319,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "coder"	327517163	--	--	"[its-a-museum]."
 "tech"	287204011	--	--	"[its-a-museum]."
 
-chapter Ned's Dens nudges
+chapter Ned's Dens
 
 table of Ned's Dens nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2160,7 +2328,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "icch"	120286315	--	--	"[no-no]!"
 "ernol"	410203836	--	--	"[no-no]!"
 
-chapter Intel Inlet nudges
+chapter Intel Inlet
 
 table of Intel Inlet nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2174,7 +2342,7 @@ to say these-docs: say "These are documents of historical records! Revisionism i
 
 to say passe-control: say "I have full creative control over the Passe Apses, and I'm not giving it up"
 
-chapter Sparse Spares nudges
+chapter Sparse Spares
 
 table of Sparse Spares nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
@@ -2195,7 +2363,9 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ladder"	311189747	--	--	"[its-a-museum]."
 "bulk"	230271729	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."
 
-book general nudges
+book general
+
+chapter general
 
 table of general nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue

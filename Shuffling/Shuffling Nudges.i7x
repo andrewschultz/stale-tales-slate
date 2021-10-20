@@ -20,6 +20,8 @@ understand the command "cross" as something new. [this was mapped to ENTER, but 
 
 book ordeal loader
 
+chapter ordeal loader
+
 table of Ordeal Loader nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "ordeal"	364513235	--	degen-true rule	"[reg-rej]."
@@ -103,6 +105,8 @@ to say no-warpy: say "You can't change Old Warpy. You have to just trust it";
 to say stat-at: say "[if static is touchable]The static crackles[else]The attics shake slightly[end if]."
 
 book stores
+
+chapter stores
 
 table of Stores nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -222,6 +226,8 @@ to say no-store-m: say "No, it's a map of something behind Store M, it looks lik
 to say hub-stur: say "The hubs bush is too sturdy. You can't escape the Trips Strip"
 
 book forest
+
+chapter forest
 
 table of Forest nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -437,6 +443,8 @@ to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if v
 
 book sortie
 
+chapter sortie
+
 table of Sortie nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "kitchen"	454037543	--	kitch-visit rule	"You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them."
@@ -555,6 +563,8 @@ to say ck-p: say "It's not a cake, and it's not quite a pan--it's a cake pan";
 
 to say perf-brand: say "It's the full name brand that really catches your eye"
 
+chapter stiller trellis
+
 table of Stiller Trellis nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "trellis"	565134420	--	--	"[if trel-priv is in Stiller Trellis][loc-rej].[else]You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.[end if]"
@@ -565,6 +575,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "rubble"	408887368	crashing archings	--	"The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need."
 
 to say hway-hint: say "The scraped wall doesn't respond or come any closer to being a hallway"
+
+chapter moor
 
 table of moor nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -611,6 +623,8 @@ to say what-b-says: say "Hm, no, that'd be too abstruse. It's what the button [i
 to say pat-poe: say "Pat won't react kindly to modifications of his poem"
 
 to say peas-poe: say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
+
+chapter sacred cedars
 
 table of Sacred Cedars nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -674,6 +688,8 @@ this is the angst rule:
 	if player has emitter and emitter is angstgnatted, the rule succeeds;
 	the rule fails;
 
+chapter undesired underside
+
 table of Undesired Underside nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "undesired"	698274326	--	--	"[loc-rej]."
@@ -707,6 +723,8 @@ to say no-hot:
 
 to say und-camp: say "You can't do much with or to the camp, here or north"
 
+chapter roarings garrison
+
 table of Roarings Garrison nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "roarings"	489962023	--	--	"[loc-rej]."
@@ -732,6 +750,8 @@ to say condo-visit: say "[if dry cake is in Obtains Boastin Bastion]You should p
 to say harp-annoy: say "The harps are kind of annoying, but they've got nothing on the beats"
 
 to say beat-man: say "He hasn't let the MAN change his designer reedings, and he won't let you. Besides, it could be "
+
+chapter obtains boastin bastion
 
 table of Obtains Boastin Bastion nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -775,6 +795,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "motto"	419000343	motto	--	"It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it."
 "potaot"	438578967	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
 
+chapter fo real florae
+
 table of Fo Real Florae nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "florae"	369999042	--	--	"[loc-rej]."
@@ -792,6 +814,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "begonia"	369265465	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
 
 to say fairy-back-worse: say "If you mangled one of them, the rest of the fairies would mangle you back worse"
+
+chapter esoteric coteries
 
 table of Esoteric Coteries nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -817,6 +841,8 @@ to say nerd-nah: say "The nerds are a little obnoxious, but they've had people t
 to say nnww: say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
 
 to say memo-tote-no: say "Oh no. You'd change it for the worse. And the nerds would be mad"
+
+chapter elm train terminal
 
 table of Elm Train Terminal nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -847,6 +873,8 @@ to say faded-ad: say "The ad and the PSA are just silly. What's to the east is q
 
 to say nope-gin: say "You already transformed the neon pig to the gin-nope opening. [if controls are in gin nope opening]And you put the controls in. Better not do any more[else]Might be better to see if anything fits there[end if]"
 
+chapter bassy abyss
+
 table of Bassy Abyss nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "bassy"	335513907	--	--	"[loc-rej]."
@@ -861,6 +889,8 @@ this is the resin-lala rule:
 	the rule fails.
 
 book resort
+
+chapter resort
 
 table of Resort nudges
 this-cmd	hashval	this-item	this-rule	this-clue
@@ -968,6 +998,8 @@ this is the riot-gone rule:
 to say tshirt-no: say "You slur out a few consonants--maybe you should work with something closer, lower down"
 
 chapter Means Manse
+
+table of Means Manse nudges
 this-cmd	hashval	this-item	this-rule	this-clue
 "manse"	359250554	--	--	"You'd like to feel more welcome in the Means Manse. There must be a way or two. You could also find a way to ignore the exits."
 "extis"	484951020	--	--	"That's not quite the right sort of nothing."
@@ -978,6 +1010,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 to say ennui: say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
 book general
+
+chapter general
 
 table of general nudges
 this-cmd	hashval	this-item	this-rule	this-clue
