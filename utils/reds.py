@@ -59,10 +59,8 @@ def reds_okay(w1, w2):
 
 def any_matches(my_letters, my_answer):
     for r in range(0, len(my_letters)):
-        print(my_letters, my_answer, r, my_letters[r], my_answer[r])
         if my_letters[r] == my_answer[r]:
             return True
-        print("OK")
     return False
 
 def inverse_hunt(my_answer):
@@ -283,7 +281,6 @@ while cmd_count < len(sys.argv):
         usage("Bad command " + arg)
     cmd_count += 1
 
-print(1)
 if inverse_check:
     if not len(my_array):
         sys.exit("Need something to find red-letter possibilities for.")

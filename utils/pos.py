@@ -39,7 +39,7 @@ examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
 
 def usage():
     print('==================================USAGE')
-    print('? shows everything, because it matches data lines, and this program detects ?'s.')
+    print('? shows everything, because it matches data lines, and this program detects ?\'s.')
     print('You can use a word from the reds.text file or from the examples array. Type e to see them.')
     print('Use =(wanted word,clue word 1,etc.) to give a new set of possible positions. X can be used to give a wildcard "wrong" letter.')
     print('revised,idserve tacks on more red writing to a solution already in reds.txt.')
@@ -117,15 +117,20 @@ def valid_v_c(guess, target):
                 return False
     return True
 
+def slots_matching(word_1, word_2):
+    for x in range(0, len(word_1)):
+        if word_1[x] == word_2[x]:
+            return True
+    return False
+
 def valid_red(word_to_redcheck, my_answer):
     if my_answer not in red_anagrams:
         return True
     for x in red_anagrams[my_answer]:
-        for y in range(0, len(x)):
-            if x[y] == word_to_redcheck[y]:
-                if details:
-                    print("red-text {} rejected {}.".format(x, word_to_redcheck))
-                return False
+        if slots_matching(x, word_to_redcheck):
+            if details:
+                print("red-text {} rejected {}.".format(x, word_to_redcheck))
+            return False
     return True
 
 def find_poss(word_array, bail=False):
