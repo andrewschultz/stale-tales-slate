@@ -111,6 +111,9 @@ Browse Bowers
 >score
 Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
+>score
+Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+
 >desire
 Your score has just gone up by one point
 
@@ -119,12 +122,12 @@ Your score has just gone up by one point
 Econ-Cone
 
 >score
-Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >aspire
 Your score has just gone up by one point
 >score
-Score in a scenario: 12 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+Score in a scenario: 12 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >ponder
 Your score has just gone up by one point
@@ -134,27 +137,24 @@ Upscale Capsule
 #lose a maximum point for only one of aspire/strive
 
 >score
-Score in a scenario: 13 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 13 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
 
 >deserve
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 14 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
 
 >last
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
 
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
-
->score
-Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
 
 >misses
 Troves
@@ -178,7 +178,7 @@ Econ-Cone====
 --you could've tried to STRIVE by the statue of Trevis Vister.
 !--you could've tried to ASPIRE, from the praise in the Econ-Cone.
 
-Upscale Capsule====
+Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
 
 --you could've tried to RESIST Sister Tressi.

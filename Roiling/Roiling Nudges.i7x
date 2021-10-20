@@ -642,6 +642,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dour"	285811276	--	--	"[rotun]."
 "tan"	174205344	--	--	"[rotun]."
 "eder"	361965110	--	--	"It's Si Reed's full name."
+"divorce"	479674829	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
+"magazine"	465726572	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 
 to say mires-no: say "The [mires] are, well, mired. You need to focus on something else, or you might get mired, too"
 
@@ -678,8 +680,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "upscale"	485659083	--	--	"[locname]."
 "office"	319186909	--	--	"[locname]."
 "fief"	225828747	--	--	"[locname-part]."
-"divorce"	479674829	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
-"magazine"	465726572	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "wagon"	285982378	wonga wagon	--	"You really don't need to rearrange the wonga wagon."
 "cark"	159450384	cark rack	--	"The cark rack is built to be sturdy. No need to change it."
 "vote"	412433524	--	--	"[stove-symbolic]."
@@ -695,7 +695,6 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "marble"	351625627	--	marble-gone rule	"[mbb-no]."
 "siter"	457506742	Sister Tressi Siters	--	"All the siters."
 "siters"	553780708	--	siters-gone rule	"The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much."
-"divorces"	575948795	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 
 to say stove-symbolic: say "The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote"
 
@@ -717,10 +716,6 @@ to say mbb-no: say "You already stopped thinking too much about [mbb]. If you tr
 
 this is the siters-gone rule:
 	if player is in Upscale Capsule and Sister Tressi is moot, the rule succeeds;
-	the rule fails;
-
-this is the divorces-gone rule:
-	if player is in Upscale Capsule and divorces is moot, the rule succeeds;
 	the rule fails;
 
 book presto nudges

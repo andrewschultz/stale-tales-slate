@@ -930,6 +930,37 @@ In a public place? Worse, in an upscale public place? How shocking!
 {$SCOS}
 
 @nud
+#nudge for divorce
+>divorec
+If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
+#nudge for magazine
+>magazien
+It's not just any magazine. It's DIVORCES!
+#spechelp for divorces
+>divorcse
+DIVORCES suddenly seems more alluring and more rubbish at once.
+DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
+#readables for divorces
+>read divorces
+All sorts of articles that make you see red. This one's about
+/(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
+
+@sli
+#slider test for discover
+>idcsvore
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!mina,minb
+>discover
+by one point
+}}SCORE++
+}}CURMIN++
+
+>score
+@mina,minb
+{$SCOS}
+
+@nud
 #mistake test for bowser
 >bowser
 This game is pretty old school, but it has enough obstacles.
@@ -977,6 +1008,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >desire
 Your score has just gone up by one point
+
+@mina,minb
+}}CURMAX--
 
 #Econ Cone
 
@@ -1235,12 +1269,6 @@ Enough with the (redacted) spelling.
 #You should never need to riff on part of a location name.
 #this is the first such test for troves, so we get the long version.
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
-#nudge for divorce
->divorec
-If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
-#nudge for magazine
->magazien
-It's not just any magazine. It's DIVORCES!
 #nudge for shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
@@ -1423,9 +1451,13 @@ Your score has just gone up by one point
 @hin
 DEBUG INFO: Trance Nectar hinting.
 
-@!mina
+@minb
 >score
 {$SCOS}
+
+@!mina,minb
+>score
+{$SCOMAX}
 
 @nud
 #nudge for marble
@@ -1434,36 +1466,8 @@ You already stopped thinking too much about Marble Blamer Balmer. If you try too
 #nudge for siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
-#spechelp for divorces
->divorcse
-DIVORCES suddenly seems more alluring and more rubbish at once.
-DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
-#readables for divorces
->read divorces
-All sorts of articles that make you see red. This one's about
-/(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
-
-@sli
-#slider test for discover
->idcsvore
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@!mina,minb
->discover
-by one point
-}}SCORE++
-}}CURMIN++
-
->score
-@mina,minb
-{$SCOS}
-@!
-{$SCOMAX}
 
 @nud
-#nudge for divorces
->divorcse
-No! Not another second thinking about that rubbish.
 #spechelp for trance nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
@@ -1510,7 +1514,7 @@ Econ-Cone====
 --you could've tried to ASPIRE, from the praise in the Econ-Cone.
 
 @mina,minb
-Upscale Capsule====
+Browse Bowers====
 --you could've tried to DISCOVER something about DIVORCES magazine.
 
 @mina

@@ -527,6 +527,26 @@ Browse Bowers
 >score
 Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
+#nudge for divorce
+>divorec
+If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
+#nudge for magazine
+>magazien
+It's not just any magazine. It's DIVORCES!
+#spechelp for divorces
+>divorcse
+DIVORCES suddenly seems more alluring and more rubbish at once.
+DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
+#readables for divorces
+>read divorces
+All sorts of articles that make you see red. This one's about
+/(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
+
+>discover
+by one point
+
+>score
+
 #mistake test for bowser
 >bowser
 This game is pretty old school, but it has enough obstacles.
@@ -574,7 +594,7 @@ Your score has just gone up by one point
 Econ-Cone
 
 >score
-Score in a scenario: 17 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
+Score in a scenario: 18 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #mistake test for once
 >once
@@ -618,7 +638,7 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 >aspire
 Your score has just gone up by one point
 >score
-Score in a scenario: 18 out of 26 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
+Score in a scenario: 19 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
 
 #mistake test for penrod
 >penrod
@@ -649,7 +669,7 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 20 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 #mistake retest for once
 >once
@@ -697,7 +717,7 @@ Your score has just gone up by one point
 Upscale Capsule
 
 >score
-Score in a scenario: 20 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 21 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 #mistake test for fren
 >fren
@@ -721,7 +741,7 @@ Etched into the vees are the names of this motivational device's inventors. One 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 22 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 #mistake test for lsat
 >lsat
@@ -740,12 +760,6 @@ Enough with the (redacted) spelling.
 #You should never need to riff on part of a location name.
 #this is the first such test for troves, so we get the long version.
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
-#nudge for divorce
->divorec
-If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
-#nudge for magazine
->magazien
-It's not just any magazine. It's DIVORCES!
 #nudge for shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
@@ -789,7 +803,7 @@ Hmm. Well, four letters can't be bad. The vowel must be in one of those two plac
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 23 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 #nudge for salt
 >lats
@@ -852,13 +866,13 @@ All the siters.
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 26 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 26.
+Score in a scenario: 24 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 26 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 26.
+Score in a scenario: 25 out of 26 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 26 points.
 
 #nudge for marble
 >marbel
@@ -866,24 +880,7 @@ You already stopped thinking too much about Marble Blamer Balmer. If you try too
 #nudge for siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
-#spechelp for divorces
->divorcse
-DIVORCES suddenly seems more alluring and more rubbish at once.
-DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
-#readables for divorces
->read divorces
-All sorts of articles that make you see red. This one's about
-/(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
 
->discover
-by one point
-
->score
-Score in a scenario: 25 out of 26 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 26 points.
-
-#nudge for divorces
->divorcse
-No! Not another second thinking about that rubbish.
 #spechelp for trance nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.

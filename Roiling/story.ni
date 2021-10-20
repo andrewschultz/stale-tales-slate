@@ -177,13 +177,13 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
 [LLP list:
 1/18=Pa Egg Pea
-2?19=A Sty: Tasty, Say
+2/19=A Sty: Tasty, Say
 3/20=both of evil bee or SNORE SO ARENA
-4/21=pleaser leapers
-5/22=lager
+4/21=lager
+5/22=pleaser leapers
 6/23=both of BORTLES lobster/ME ARTS stream,
-7/24=both of Trevis Vister/praise
-8/25=DIVORCES
+7/24=DIVORCES
+8/25=both of Trevis Vister/praise
 9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
@@ -11307,7 +11307,16 @@ a-text of pleaser leapers is "RYRYRRY". b-text of pleaser leapers is "R?R?RRY". 
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called a See Dir advertises upscale housing.". roomnud of Browse Bowers is table of Browse Bowers nudges.
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side and, well, the Miser Emirs['] Mires outside which--well, you think you can do even BETTER.[paragraph break]An exhibit called a See Dir advertises upscale housing[if divorces is touchable], with a copy of DIVORCES magazine off to the side[end if].". roomnud of Browse Bowers is table of Browse Bowers nudges.
+
+chapter DIVORCES magazine
+
+DIVORCES Magazine is vanishing LLPish boring scenery in Browse Bowers. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla][paragraph break]Perhaps there is something deeper to DIVORCES and its advocacy of enhanced lifestyles than you might suspect. It might not be critical, but it could be there.". bore-text is "About the only thing you can do with DIVORCES is read it. Maybe you'll have an epiphany about it in general.". bore-check is bore-divorces rule.
+
+a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
+
+this is the bore-divorces rule:
+	if current action is taking, say "No. It's best read briefly, if at all." instead;
 
 chapter Miser Emirs Mires
 
@@ -11436,7 +11445,7 @@ to say capsule-desc:
 	if red vees are in Upscale Capsule:
 		say "This office isn't very well populated yet. Just some red vees here. You need a lot more to help you REALLY think";
 	else:
-		say "From the nerf fern to the wonga wagon[if divorces is touchable],[else] and[end if] Desk-Sked[if divorces is touchable], and DIVORCES magazine[end if] on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[if salt is moot][which-capsule-pics][end if][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
+		say "From the nerf fern to the wonga wagon and Desk-Sked on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[if salt is moot][which-capsule-pics][end if][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
 
 to decide which number is mbb-sis-points:
 	let temp be 0;
@@ -11571,15 +11580,6 @@ this is the bore-wagon rule:
 section votes vetos stove
 
 the votes vetos stove is boring amusing scenery. description of votes vetos stove is "It's not the real thing, of course. If there were a real thing. But it's symbolic. It shows you know people. It's a reminder some people don't deserve to vote, but you guess you have to let them, but you don't have to make it easy. Oh, and that you deserve access to the vote-counters. It's also Just a Joke, because of course it is."
-
-chapter DIVORCES magazine
-
-DIVORCES Magazine is vanishing LLPish boring scenery. description of DIVORCES magazine is "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla][paragraph break]Perhaps there is something deeper to DIVORCES and its advocacy of enhanced lifestyles than you might suspect. It might not be critical, but it could be there.". bore-text is "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise.". bore-check is bore-divorces rule.
-
-a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
-
-this is the bore-divorces rule:
-	if current action is taking, say "No. It's best read briefly, if at all." instead;
 
 volume presto
 
