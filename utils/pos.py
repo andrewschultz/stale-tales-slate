@@ -30,6 +30,7 @@ got_one_reading = False
 details = False
 check_v_c = False
 show_red_text = False
+input_different_reds = False
 
 red_anagrams = defaultdict(list)
 found_searched = defaultdict(bool)
@@ -43,6 +44,7 @@ def usage():
     print('You can use a word from the reds.text file or from the examples array. Type e to see them.')
     print('Use =(wanted word,clue word 1,etc.) to give a new set of possible positions. X can be used to give a wildcard "wrong" letter.')
     print('revised,idserve tacks on more red writing to a solution already in reds.txt.')
+    print('t = try different reds (useful for long strings)')
     sys.exit()
 
 def red_text(a):
@@ -118,19 +120,45 @@ def valid_v_c(guess, target):
     return True
 
 def slots_matching(word_1, word_2):
+    ret_ary = []
     for x in range(0, len(word_1)):
         if word_1[x] == word_2[x]:
-            return True
-    return False
+            ret_ary.append(x)
+    return ret_ary
 
 def valid_red(word_to_redcheck, my_answer):
     if my_answer not in red_anagrams:
         return True
     for x in red_anagrams[my_answer]:
-        if slots_matching(x, word_to_redcheck):
+        if len(slots_matching(x, word_to_redcheck)):
             if details:
                 print("red-text {} rejected {}.".format(x, word_to_redcheck))
             return False
+    return True
+
+def new_reds_try(answer, answers, hints):
+    bail_early = False
+    remaining_answers = list(answers)
+    my_str = input("Type in CSV of reds ->")
+    if not my_str:
+        return False
+    ary = my_str.lower().replace(' ', '').strip().split(',')
+    for x in ary:
+        temp = slots_matching(x, answer)
+        if len(temp):
+            print("{} and {} have matching slots at {}.".format(x, answer, ", ".join([str(x) for x in temp])))
+            bail_early = True
+    if bail_early:
+        return True
+    for x in ary:
+        modified_answers = []
+        for y in remaining_answers:
+            if slots_matching(x, y):
+                pass
+            else:
+                modified_answers.append(y)
+        remaining_answers = list(modified_answers)
+    print("Remaining answers({} from {}): {}".format(len(remaining_answers), len(answers), ', '.join(remaining_answers)))
     return True
 
 def find_poss(word_array, bail=False):
@@ -236,6 +264,10 @@ def find_poss(word_array, bail=False):
                 print("|".join(temp_ary))
     else:
         print("Uh oh, ",word_array, "has no good answers.")
+    if input_different_reds:
+        answers[0] = answers[0].lower()
+        while new_reds_try(answer, answers, hints):
+            pass
     if bail: sys.exit()
 
 def cheat_reading(words_array, go_lower = True):
@@ -319,6 +351,7 @@ while count < len(sys.argv):
     elif arg == 't': track_letter_type = True
     elif arg == 's': show_all_grids = True
     elif arg == 'r': show_red_text = True
+    elif arg == 'i': input_different_reds = True
     elif arg in ( 'ns', 'sn' ): show_all_grids = False
     elif arg in ( 'vc', 'cv', 'c', 'v'): check_vc = True
     elif arg[0] == 'x' and arg[1:].isdigit():
