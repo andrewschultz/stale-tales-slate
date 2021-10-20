@@ -78,6 +78,8 @@ athwart,?RRR?RR=whattar=tawrath=thatraw=artthaw
 ################troves
 #qver of pa egg pea peg a page
 gape,??R?=paeg=gpea=pega=page
+#qver of tears taser
+stare,RR??Y=tears=taser
 #qver of eh at heat
 hate,?YRY=ehat=heat
 hate,thea

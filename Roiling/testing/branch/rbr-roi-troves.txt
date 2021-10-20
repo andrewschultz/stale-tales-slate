@@ -15,8 +15,8 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ~	verbs	t6
 #~	pad	t5
 
-}}MAX=26
-}}CURMAX=26
+}}MAX=27
+}}CURMAX=27
 }}SCORE=0
 }}CURMIN=17
 
@@ -175,6 +175,30 @@ DEBUG INFO: min-up codepath
 #done rejects for pa egg pea
 >gaep
 You probably did what you could. Or not-did.
+
+@nud
+#spechelp for tears taser
+>staer
+The tears taser makes an odd noise, as if it is recalibrating.
+#scannotes for tears taser
+>staer
+The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
+#nudges for tear
+>trea
+No, something as powerful as a tears taser will cause more than one tear to be shed.
+
+@sli
+>tsrea
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@!mina,minb
+>stare
+Your score has just gone up by one point
+DEBUG INFO: min-up codepath
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @nud
 #spechelp for eh at heat
@@ -1469,8 +1493,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. T
 >misses
 Troves
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.
---you could've tried to STAY around A Sty: Tasty, Say.
+Loather Rathole====
+--you could've tried to STARE at the tears taser.
 Boarded Roadbed====
+--you could've tried to STAY around A Sty: Tasty, Say.
 
 @mina
 !you could've tried to BELIEVE to neutralize the evil bee, too.

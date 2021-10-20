@@ -316,6 +316,7 @@ book troves
 table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	a rule	a rule	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
+tears taser	tears taser	false	414701714	--	"stare"	"stare"	--	--	"You stare right at the [taser], just to prove you have initiative and don't really belong here. You hold up [pa egg]. The taser retracts."
 eh at heat	eh at heat	false	270386244	--	"hate"	"hate"	--	post-heat-hate rule	"You feel a rife fire in your heart, wiping out any if/er...[paragraph break]'How neat! Hate won heat now!' you think to yourself. You find more ways to hate. It feels right.[paragraph break]You think 'Heats ... hates ... haste?!' then 'Ah, set.' So you manage to stay toasty, but something happens to turn your thoughts of gold coin goin['] cold. A bogeyman takes your moneybag! You notice they sneak through a place called the Race Acre. But you feel a need to draw on more emotion now."
 Race Acre	Race Acre	false	234323315	Bustle Sublet	"care"	"care"	--	post-race-acre-care rule	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, they can't have ducked out in plain sight. You run past a loudest used lot, and ... well, you wind up somewhere noisier. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical and evidence-based to move on."
 a sty tasty say	a sty tasty say	false	323931054	--	"stay"	"stay"	--	--	"You resist the temptation for needless spending, all the while forming plans to get rich by making others spend needlessly."
@@ -354,6 +355,7 @@ this is the post-heat-hate rule:
 this is the post-race-acre-care rule:
 	now player has fretful truffle;
 	now loather rathole is shunned;
+	if tears taser is not moot, poss-d;
 
 this is the pre-spot-stop-post rule:
 	if sob ever verbose is touchable:
@@ -2092,6 +2094,7 @@ Gast	"You don't have a weapon big enough to take [Gast]. One won't appear in you
 table of troves attacks
 target	nohit
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering."
+tears taser	"It could fight back much more powerfully."
 
 table of presto attacks
 target	nohit
@@ -2203,6 +2206,7 @@ to say ad-auth:
 
 table of troves readables
 to-read	what-read	alt-read
+tears taser	"RATES is written on the tears taser, in red."
 stop post	"POP'S TOTS is written in red on the stop post."
 a sty tasty say	"YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever."
 LEAD	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a yutz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
@@ -3206,6 +3210,7 @@ thickness sketchins	true	false	false	false	"Those three sentences are certainly 
 table of troves scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
+tears taser	true	true	false	false	"The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now."
 eh at heat	true	true	false	false	"Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted."
 race acre	true	true	false	false	"Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT."
 sob ever verbose	true	true	false	false	"The question marks ... hmm. Oh, you get it now."
@@ -3428,6 +3433,7 @@ yob den	"Some different noises from the yob den."
 table of troves spechelp
 xtrhelp	helptxt
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right."
+tears taser	"The tears taser makes an odd noise, as if it is recalibrating."
 Eh At Heat	"You feel slightly less cold but mad at yourself for not doing better."
 Race Acre	"For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though."
 sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."

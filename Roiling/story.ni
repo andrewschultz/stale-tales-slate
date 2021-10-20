@@ -174,17 +174,18 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 26. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 27. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
 [LLP list:
 1/18=Pa Egg Pea
-2/19=A Sty: Tasty, Say
-3/20=both of evil bee or SNORE SO ARENA
-4/21=lager
-5/22=pleaser leapers
-6/23=both of BORTLES lobster/ME ARTS stream,
-7/24=DIVORCES
-8/25=both of Trevis Vister/praise
-9/26=both ofSister Tressi/Marble Blamer Balmer-Mr Beal
+2/19=tears taser
+3/20=A Sty: Tasty, Say
+4/21=both of evil bee or SNORE SO ARENA
+5/22=lager
+6/23=pleaser leapers
+7/24=both of BORTLES lobster/ME ARTS stream,
+8/25=DIVORCES
+9/26=both of Trevis Vister/praise
+10/27=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
 ]
 
 Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather.
@@ -5601,7 +5602,7 @@ understand the command "kick" as something new.
 
 understand "kick [something]" as attacking.
 
-check attacking: [this takes responses for general types. The table below it is for specific NPCs/objects]
+check attacking: [this takes responses for general types. The table file has specific NPCs/objects]
 	if noun is a store, say "Sore at a store?" instead; [general stuff here that can't fit into a table]
 	if noun is a store, say "Just ENTER [the noun] to, um, attack its challenges." instead; [general stuff here that can't fit into a table]
 	if noun is yourself, say "Surly foe: yourself? Lose fury!" instead;
@@ -11012,7 +11013,7 @@ check examining Pa Egg Pea for the first time:
 
 book Loather Rathole
 
-Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if race acre is touchable]you see the Race Acre where the thief ran, but you're too bummed to follow, And you can't go back in[else][heat] stands. Lor['], [i]HEAT[r]. You're not getting back in.,feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to follow that thief through the Race Acre, though[end if]. Nothing but bone-chilling poverty here. Of course, with all this lost hope, there are plenty of potholes about to distract you from moving up in the world. Every possible exit[if race acre is touchable], even the Race Acre, [end if]looks like a hurt thru.". roomnud of Loather Rathole is table of Loather Rathole nudges.
+Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole. "Under the stinky tin sky, [if race acre is touchable]you see the Race Acre where the thief ran, but you're too bummed to follow, And you can't go back in[else][heat] stands. Lor['], [i]HEAT[r]. You're not getting back in.,feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to follow that thief through the Race Acre, though[end if]. Nothing but bone-chilling poverty here. Of course, with all this lost hope, there are plenty of potholes about to distract you from moving up in the world. Every possible exit[if race acre is touchable], even the Race Acre, [end if]looks like a hurt thru[if tears taser is touchable]. You also detect a hidden tears taser, which may be a distraction from or warmup for your challenges ahead[end if].". roomnud of Loather Rathole is table of Loather Rathole nudges.
 
 the hurt thru is bounding boring scenery in Loather Rathole. description of the hurt thru is "Every way there's a hurt thru, looking seedy and dangerous. Your sensible side knows better, but you also need to leave some way[care-hate-clue].". bore-text is "If you think about doing something with a hurt thru, it'll scare you away. You need to think about yourself, your situation, get emotionally involved. [care-hate-clue]."
 
@@ -11059,6 +11060,12 @@ spoilit is a truth state that varies. spoilit is false.
 chapter potholes
 
 the potholes are useless plural-named boring scenery in Loather Rathole. bore-text is "The potholes symbolize lost hope. You don't need that sort of thinking right now!". description of potholes is "You probably can't use them or do anything with them. They symbolize lost hope."
+
+chapter tears taser
+
+the tears taser is vanishing boring LLPish scenery in Loather Rathole. "The tears taser winks menacingly at you. It is there to cull the weaklings: those who cry at the sight or thought of it, and those who buckle at a little pain. You need to show it no fear, whether you ignore or confront it.". bore-text of tears taser is "You can't really do anything active to destroy it."
+
+a-text of tears taser is "RRYRY". b-text of tears taser is "RR??Y". parse-text of tears taser is "x[sp]T[sp]?[sp]?[sp]-".
 
 book Bustle Sublet
 
@@ -22120,16 +22127,17 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done [b]WITHOUT[r] the content of the raptest patters in Sonancy Canyons.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page.";
+		if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
 		if a sty tasty say is reflexive, say "[2drm of Bustle Sublet]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
-		if [b]SNORE SO ARENA[r] is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
+		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
 		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
 		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]GLARE[r] at the Lager.";
-		if [b]ME ARTS[r] is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
+		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
+		if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
 		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
 		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
-		if [b]DIVORCES[r] is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
 		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
 		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
 	else if myreg is presto:

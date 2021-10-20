@@ -70,13 +70,14 @@ desire
 aspire/ponder
 deserve/last/resist/recant
 Troves (max)
-hate/care/gape
+gape/stare
+hate/care
 stay/observe/spot/believe/reason/recall
 despair/decide/relapse
 glare/master/bolster/deal
-desire
+discover/desire
 aspire/strive/ponder
-deserve/discover/last/resist/ramble/recant
+deserve/last/resist/ramble/recant
 Routes (min)
 inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 Routes (max)

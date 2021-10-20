@@ -5942,7 +5942,7 @@ to say end-it: end the story.
 
 book Frost Forts
 
-Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forst nudges.
+Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. This ain't no snowiest townsies.[paragraph break]The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]Gnash-hangs seem to guard exits every which way[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if].". roomnud of Frost Forts is table of Frost Forts nudges.
 
 Frost Forts is north of Ghouls Slough. nowhere is south of Frost Forts.
 

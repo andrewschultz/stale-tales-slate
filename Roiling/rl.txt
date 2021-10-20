@@ -260,6 +260,13 @@ Here is how things look:\n<pre>PAEG\nGPEA\nPEGA\nPAGE</pre>
 The third slot is red and can't be G, so it's P.
 The first letter is P or G, meaning G.
 That leaves GEPA and GAPE. GAPE.
+# logic for tears taser
+?How do I stand up to the tears taser?
+The reading, RR??Y, seems unhelpful, because 3/4 could be vowel/consonant or vice versa.
+Fortunately, though, considering each case leaves exactly one possibility.
+If 3 is a consonant, it is S. 4 is a vowel, E. 5 is A, then 1 is R and 2 is T. RTSEA isn't a word.
+If 4 is a consonant, it is R. So 3 is a vowel, A. Then 1 is not T or R, so it's S. 2 is T and 5 is E.
+STARE.
 # logic for eh at heat
 ?What can I do to move beyond Eh, At Heat?
 The ?YRY suggests a consonant in alot 1. H or E means H. Then slot 3 is T, the other consonant.
