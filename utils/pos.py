@@ -33,6 +33,7 @@ show_red_text = False
 input_different_reds = False
 
 red_anagrams = defaultdict(list)
+my_match = defaultdict(str)
 found_searched = defaultdict(bool)
 
 examples_array = [ 'peas,apes,apse', 'rome,mere,moor', 'cadres,sacred,cedars',
@@ -78,6 +79,13 @@ def max_digits(freqs):
 
 def process_from_string(my_string):
     ary = my_string.split(',')
+    if ary.count("+") > 1:
+        sys.exit("You can't have more than one + (must-match) in a string.")
+    for x in ary:
+        if '+' in x:
+            my_match[ary[0]] = x.replace('+', '')
+            ary.remove(x)
+            break
     red_anagrams[ary[0]] = [ x.replace('!', '') for x in ary[1:] if '!' in x ]
     main_clue_array = [ x for x in ary[1:] if '!' not in x ]
     main_clue_array.insert(0, ary[0])
@@ -126,6 +134,14 @@ def slots_matching(word_1, word_2):
             ret_ary.append(x)
     return ret_ary
 
+def valid_force_match(word_to_check, force_string):
+    for x in range(0, len(word_to_check)):
+        if force_string[x] == 'x':
+            continue
+        if word_to_check[x] != force_string[x]:
+            return False
+    return True
+
 def valid_red(word_to_redcheck, my_answer):
     if my_answer not in red_anagrams:
         return True
@@ -144,12 +160,22 @@ def new_reds_try(answer, answers, hints):
         return False
     ary = my_str.lower().replace(' ', '').strip().split(',')
     for x in ary:
-        temp = slots_matching(x, answer)
-        if len(temp):
-            print("{} and {} have matching slots at {}.".format(x, answer, ", ".join([str(x) for x in temp])))
-            bail_early = True
+        if '+' not in x:
+            temp = slots_matching(x, answer)
+            if len(temp):
+                print("{} and {} have matching slots at {}.".format(x, answer, ", ".join([str(x) for x in temp])))
+                bail_early = True
     if bail_early:
         return True
+    for x in ary:
+        if '+' in x:
+            modified_answers = []
+            x0 = x.replace('+', '')
+            for y in remaining_answers:
+                if valid_force_match(y, x0):
+                    modified_answers.append(y)
+            remaining_answers = list(modified_answers)
+        ary.remove(x)
     for x in ary:
         modified_answers = []
         for y in remaining_answers:
@@ -222,6 +248,7 @@ def find_poss(word_array, bail=False):
         if p in got_yet: continue
         got_yet[p] = True
         pj = ''.join(p)
+        if answer in my_match and not valid_force_match(p, my_match[answer]): continue
         if not valid_match(p, hints, original): continue
         if not valid_red(p, answer): continue
         if check_v_c and not valid_v_c(p, answer): continue
@@ -239,6 +266,11 @@ def find_poss(word_array, bail=False):
             for x in range(0, len(fixed_answer)):
                 if fixed_answer[x] != pj[x]:
                     fixed_answer[x] = '-'
+    if len(answers) > 0 and not got_answer:
+        print("UH OH, we have a list of answers but the right one isn't in them.")
+        print(answers)
+        print(answer)
+        sys.exit()
     if got_answer:
         answers.insert(0, answer.upper())
         if len(answers) == 1:
@@ -249,6 +281,7 @@ def find_poss(word_array, bail=False):
             my_red = red_text(answer)
             print("    RED TEXT:", my_red)
             poss_array = []
+            full_poss = [ ''.join(sorted(freqs[q])).upper() for q in freqs ]
             for p in full_poss:
                 if len(p) == 1:
                     poss_array.append(p)
@@ -258,7 +291,8 @@ def find_poss(word_array, bail=False):
                     poss_array.append('x')
                 else:
                     poss_array.append('?')
-            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(answer, my_red, answer, hints, answer, '[sp]'.join(poss_array)))
+            my_object = ' '.join(original)
+            print('    a-text of {} is "{}". b-text of {} is "{}". parse-text of {} is "{}".'.format(my_object, my_red, my_object, hints.upper(), my_object, '[sp]'.join(poss_array)))
         maxes = max_digits(freqs)
         max_x = 'x' * (maxes + 2)
         if search_strings or show_all_grids:
