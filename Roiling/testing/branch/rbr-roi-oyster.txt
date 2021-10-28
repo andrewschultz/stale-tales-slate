@@ -946,6 +946,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
+#readables for cans
+>read cans
+You squint. NASC is the name of the company that produced these cans.
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!

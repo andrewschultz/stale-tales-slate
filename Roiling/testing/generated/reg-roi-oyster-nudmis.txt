@@ -569,6 +569,9 @@ It's a HUNTER HUNT AREA, which seems more important.
 >e
 Hardest Trashed Dearths
 
+#readables for cans
+>read cans
+You squint. NASC is the name of the company that produced these cans.
 #spechelp for eeks
 >eesk
 You guess the eeks must be there--no, there!

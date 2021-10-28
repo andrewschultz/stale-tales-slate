@@ -2238,6 +2238,7 @@ stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe." [o
 jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
 tips pits	"IT'S P is written in red on the bottom."
 HUNTER HUNT AREA	"Etahn Ru. Near-Hut Haunter."
+cans	"You squint. NASC is the name of the company that produced these cans."
 span pans	"Red writing indicates the pans were made by Nan's Apps."
 gleaner	"The gleaner was made by Al Green, written in red."
 Templar Ramplet	"Someone named LAMPERT (written in red) constructed the templar ramplet."
