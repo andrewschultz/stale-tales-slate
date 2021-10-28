@@ -160,6 +160,15 @@ def new_reds_try(answer, answers, hints):
         return False
     ary = my_str.lower().replace(' ', '').strip().split(',')
     for x in ary:
+        x0 = x.replace('+', '')
+        adjlen = len(x0)
+        if adjlen > len(answer):
+            print("Too-long length matchup {} vs. {}.".format(x, answer))
+            bail_early = True
+        elif adjlen < len(answer):
+            x1 = x + 'x' * (len(answer) - adjlen)
+            print("Extending", x, "to", x1)
+    for x in ary:
         if '+' not in x:
             temp = slots_matching(x, answer)
             if len(temp):
