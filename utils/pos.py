@@ -172,7 +172,7 @@ def new_reds_try(answer, answers, hints):
         if '+' not in x:
             temp = slots_matching(x, answer)
             if len(temp):
-                print("{} and {} have matching slots at {}.".format(x, answer, ", ".join([str(x) for x in temp])))
+                print("{} and {} have matching slots at {}.".format(x, answer, ", ".join([str(x+1) for x in temp])))
                 bail_early = True
     if bail_early:
         return True
@@ -184,7 +184,7 @@ def new_reds_try(answer, answers, hints):
                 if valid_force_match(y, x0):
                     modified_answers.append(y)
             remaining_answers = list(modified_answers)
-        ary.remove(x)
+            ary.remove(x)
     for x in ary:
         modified_answers = []
         for y in remaining_answers:
@@ -389,6 +389,8 @@ examples_flat = ','.join(examples_array).split(',')
 
 while count < len(sys.argv):
     arg = mt.nohy(sys.argv[count])
+    if arg[0] == '!':
+        sys.exit("You want an auxiliary string to start with !, not the first one. Change it to =.")
     if arg == '?': # no ELIF since we want to pop this warning after seeing all anagrams
         warn_about_usage = True
     if arg == 'd': details = True
