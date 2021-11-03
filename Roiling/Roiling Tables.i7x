@@ -342,8 +342,7 @@ salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start las
 Sister Tressi Siters	Sister Tressi Siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Marble Blamer Balmer	Marble Blamer Balmer	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 Marble Blamer Mr Beal	Marble Blamer Mr Beal	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously." [this is really horrible copied code, but I see no other way to do things.]
-Creationism Reactionism	Creationism Reactionism	false	731028229       --      "romanticise"	"romanticise"	--      post-romanticise rule	"The daydreaming somehow works! What a crazy world you think up! Not one where anyone would actually want to read [creationism], of course. But one where people weren't impressed by it. Still, you know thought-police watch for people who throw it out, so you call up a gullible sucker underling to gift it to. In retrospect, you wonder if the person who gifted it to you did not do so from the bottom of your heart. Well, that doesn't matter now."
-
+Creationism Reactionism	Creationism Reactionism	false	731028229	--	"romanticise"	"romanticise"	--	--	"The daydreaming somehow works! What a crazy world you think up! Not one where anyone would actually want to read [creationism], of course. But one where people weren't impressed by it. Still, you know thought-police watch for people who throw it out, so you call up a gullible sucker underling to gift it to. In retrospect, you wonder if the person who gifted it to you did not do so from the bottom of your heart. Well, that doesn't matter now."
 trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	pre-nectar-recant rule	post-nectar-recant rule	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 to say eicond:
@@ -368,7 +367,6 @@ this is the pre-spot-stop-post rule:
 this is the post-spot-stop-post rule:
 	now purse-stolen is false;
 	now stop post is realized;
-	if tasty sty is reflexive, poss-d;
 	now bustle sublet is shunned;
 
 this is the bee-less-active rule:
@@ -387,6 +385,7 @@ this is the pre-cellar-recall rule:
 
 this is the post-cellar-recall rule:
 	if bee-score < 2, poss-d;
+	if tasty sty is reflexive, poss-d;
 	now boarded roadbed is shunned;
 
 this is the post-diapers-despair rule:
@@ -471,7 +470,7 @@ this is the post-mbb-ramble rule:
 
 this is the pre-nectar-recant rule:
 	if mbb-sis-points is 0:
-		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe the trance nectar any more, but you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
+		say "It ... you know you should drink the trance nectar, for the good of society and the economy, but something nags at you. You've come to loathe [the nectar], and yet you can't quite break free of it. With [bb-st] both staring down at you, you can't quite bring yourself to. But maybe if you dealt with even one of them...";
 		preef trance nectar instead;
 
 this is the post-nectar-recant rule:
@@ -3465,7 +3464,7 @@ Sister Tressi Siters	"Sister Tressi seems a bit more upset than usual."
 marble blamer balmer	"[mbb] seems slightly taken aback."
 marble blamer mr beal	"[mbb] seems slightly taken aback."
 trance nectar	"Your willpower is not quite strong enough to give it all up yet. But you must be on the right track."
-creationism romanticism	"You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, it IS an eleven-word puzzle, and it IS optional."
+creationism reactionism	"You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, it IS an eleven-word puzzle, and it IS optional."
 
 table of presto spechelp
 xtrhelp	helptxt

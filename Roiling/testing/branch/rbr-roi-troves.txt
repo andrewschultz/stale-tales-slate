@@ -15,8 +15,8 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ~	verbs	t6
 #~	pad	t5
 
-}}MAX=27
-}}CURMAX=27
+}}MAX=28
+}}CURMAX=28
 }}SCORE=0
 }}CURMIN=17
 

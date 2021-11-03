@@ -178,7 +178,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 27. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 28. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
 [LLP list:
 1/18=Pa Egg Pea
 2/19=tears taser
@@ -190,6 +190,7 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 8/25=DIVORCES
 9/26=both of Trevis Vister/praise
 10/27=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
+11/28=Creationism Reactionism
 ]
 
 Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather.
@@ -698,7 +699,7 @@ use MAX_SYMBOLS of 150000.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
-use ALLOC_CHUNK_SIZE of 38000.
+use ALLOC_CHUNK_SIZE of 35000.
 
 use MAX_VERBSPACE of 10240.
 
@@ -727,6 +728,8 @@ use MAX_DICT_ENTRIES of 3200.
 use MAX_VERBS of 850. [delta=20]
 
 use SYMBOLS_CHUNK_SIZE of 17000. [delta=10000]
+
+use ALLOC_CHUNK_SIZE of 39000 [delta = 4000]
 
 use MAX_OBJECTS of 990. [delta=10]
 
@@ -5498,7 +5501,7 @@ check going nowhere (this is the main can't go that way rule) :
 			now upwarned is true instead;
 	repeat through nowhere-table of mrlp:
 		if theloc entry is location of player, say "[thereject entry][line break]" instead;
-	if mrlp is troves, say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on."; [this should not be relevant, as all Troves locations should be in the table below, but just in case...]
+	if mrlp is troves, say "Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on." instead; [this should not be relevant, as all Troves locations should be in the table above, but just in case...]
 	if noun is outside and number of viable directions > 1, say "Exiting is ambiguous--if there's only one direction, you'll take it, but otherwise, the cardinal directions usually work better." instead;
 	if number of viable directions is 0, say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	if number of viable directions is 1, say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
@@ -11140,12 +11143,6 @@ check scaning stop post:
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
-chapter A Sty, Tasty, Say
-
-A Sty Tasty Say is a proper-named LLPish reflexive scenery in Bustle Sublet. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
-
-a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
-
 book Boarded Roadbed
 
 Boarded Roadbed is a room in Troves. "It's odd...bare... except for one business, [tasty say], which [if tasty say is reflexed]you've neutralized in your mind[else]can't be where you need to be. It's up to you how directly you wish to ignore it[end if].[paragraph break]But you know L'Clear Cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions. Running away can't help.". roomnud of Boarded Roadbed is table of Boarded Roadbed nudges.
@@ -11221,6 +11218,12 @@ a-text of L Clear Cellar is "RYRYRR". b-text of L Clear Cellar is "R?RYRR". pars
 
 this is the bore-cellar rule:
 	if current action is taking or current action is opening or current action is closing, say "Easier said than done, until you locate L'Clear Cellar." instead;
+
+chapter A Sty, Tasty, Say
+
+A Sty Tasty Say is a proper-named LLPish reflexive scenery in Bustle Sublet. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
+
+a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
 book Drain Nadir
 
@@ -11551,7 +11554,7 @@ does the player mean doing something with mbb: it is very likely.
 
 chapter Trance Nectar
 
-the Trance Nectar is a vanishing thing. "Some Trance Nectar here. It's totally different from the Large Regal Lager, which keeps you from being productive, but you now realize both will leave you equally miserable. There must be a way to break free from its influence!". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
+the Trance Nectar is a vanishing thing. "Some Trance Nectar lies here. It's totally different from the Large Regal Lager, which keeps you from being productive, but you now realize both will leave you equally miserable. There must be a way to break free from its influence!". description is "It's guaranteed to keep you focused on what you need to do, even if not thrilled about it, and recommended by Elvira herself! But .. you're sick of that. And of achieving and so forth. Maybe there's some way to break free."
 
 a-text of trance nectar is "RYRYRR". b-text of trance nectar is "R??YRR". parse-text of trance nectar is "x[sp]?[sp]?[sp]-[sp]x[sp]x".
 
@@ -22138,11 +22141,11 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page.";
 		if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
-		if a sty tasty say is reflexive, say "[2drm of Bustle Sublet]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
+		if a sty tasty say is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
 		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
-		if pleaser leapers are not moot, say "[2drm of Drain Nadir]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
-		if lager is not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]GLARE[r] at the Lager.";
+		if lager is not moot, say "[2drm of Drain Nadir]you could've tried to [b]GLARE[r] at the Lager.";
+		if pleaser leapers are not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
 		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
 		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
 		if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
@@ -22150,6 +22153,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
 		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
 		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
+		if reactionism is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]ROMANTICISE[r] around [reactionism].";
 	else if myreg is presto:
 		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted [b]BLAM[r] at the lamb.";
 		if maze-points < 2, say "[2drm of Grey Gyre]you could've said [b]MAZEL TOV[r] to get past the maze.";
