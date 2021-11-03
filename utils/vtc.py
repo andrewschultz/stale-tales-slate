@@ -4,6 +4,7 @@
 # makes sure verb test cases are linked up with something in an RBR or REG file
 #
 
+invalid_prefixes = [ 'randomize-' ]
 valid_rule_types = [ 'ordeal-reload', 'stores', 'routes', 'troves', 'presto', 'oyster', 'towers', 'otters', 'others', 'demo-dome' ]
 
 import os
@@ -30,6 +31,9 @@ except:
 crit_word = crit_word.replace('-', '')
 
 def is_valid_rule(my_string):
+    for x in invalid_prefixes:
+        if my_string.startswith(x):
+            return False
     for x in valid_rule_types:
         if x + ' rule' in my_string:
             return True
@@ -52,7 +56,7 @@ with open("story.ni") as file:
             current_rule = re.sub("this is (the )?", "", l.strip())
             if is_valid_rule(current_rule):
                 current_rule = re.sub(" +rule:", "", current_rule)
-                #print(current_rule, line_count)
+                print(current_rule, line_count)
             else:
                 current_rule = ''
         if not l.strip():

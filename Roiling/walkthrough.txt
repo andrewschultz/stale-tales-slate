@@ -379,11 +379,11 @@ And you get something for later. The nice mush munchies let you use the slider m
 
 STORE V WALKTHROUGH
 
-STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are seven rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. When this happens, I will list them both. Neither is "better" than the other.
+STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are eight rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. When this happens, I will list them both. Neither is "better" than the other. Store V also has a full Last Lousy Point in every room.
 
 > TROVES
 
-The portal name doesn't matter, but I hope you find my choices amusing. In fact, if there is just one, you can go IN to save keystrokes.
+The portal name doesn't matter, but I hope you find my choices amusing. In fact, if there is just one, you can go IN to save keystrokes. The game will detect it.
 
 > ENTER TASTEE ESTATE
 
@@ -393,17 +393,19 @@ Oh, look, you get a self-help book about thinking right! And how, if you think r
 
 Or, more reductively, you can get a last lousy point from Peg A. Page's book at any time.
 
-You've been kicked out of Eh, At Heat. Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
+The first room-specific Last Lousy Point is from the Tears Taser.
+
+But for now, you've been kicked out of Eh, At Heat. Since the game mentions you can't do anything actively, and you need warmth and heat, you can...
 
 > HATE
 
-Oh no! Hate blinded you to your wallet getting stolen! But you can't visit the Race Acre because you don't feel up to it, yet. So you need to ...
+Oh no! Hate blinded you to your super purse getting stolen! But you can't visit the Race Acre because you don't feel up to it, yet. So you need to ...
 
 > CARE
 
 So you've made it to the Boarded Roadbed. There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
 
-There's a last lousy point with the sty.
+There's a last lousy point with the sty. Err, A Sty, Tasty, Say.
 
 > OBSERVE
 > SPOT
@@ -422,7 +424,7 @@ Now the cellar caller the bee was on is broken. It would get help you find the c
 
 So now you're in the Drain Nadir.
 
-You've hit rock bottom, and you need to bring yourself up. If you want, you can deal with the Large Regal Lager, but you don't have to.
+You've hit rock bottom, and you need to bring yourself up. If you want, you can deal with the Large Regal Lager for a Last Lousy Point, but you don't have to.
 
 > DESPAIR
 
@@ -436,7 +438,7 @@ You need to do one of the two below to have confidence you can move beyond the B
 
 > MASTER
 or
-> BOLSTER
+(ALT) > BOLSTER
 
 (or both, for a bonus point!)
 
@@ -475,6 +477,8 @@ Now to stop needing to be super-productive, despite either the Marble Blamer or 
 or
 (ALT) > RESIST
 (or both, for a bonus point!)
+
+You can also get another LLP with Creationism, Reactionism, but it's a tough one.
 
 You're tired. There's that Trance Nectar which can help you be more productive. It's totally different from the Large Regal Lager! But you still don't want to drink it. One last action or thought will help you break free.
 
@@ -2066,7 +2070,7 @@ Ordeal Reload has a minimum of 37 and a maximum of 78. Find the direct way to th
 
 Stores has a minimum of 36 and a maximum of 67. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, Store H gives 6, and Store B gives 6.
 
-Store V has a minimum of 95 and a maximum of 149. The nine Last Lousy Points account for most of the difference, but the alternate stream/lobster and bee/arena puzzles provide the other two letters. The siters are technically slightly easier than the marble as well, because of the duplicate S.
+Store V has a minimum of 95 and a maximum of 165. The eleven Last Lousy Points account for most of the difference, but the alternate stream/lobster and bee/arena puzzles provide the other two letters. The siters are technically slightly easier than the marble as well, because of the duplicate S.
 
 Store U has a minimum of 120 and a maximum of 134. The last lousy points give you seven letters each. It's debatable here whether U is harder than V. U clearly has fewer choices for words, and V may be a bit longer to clear completely, since the optional points can get skipped. But V is potentially quicker. So the "fewest letters or necessary anagrams" metric may not tell it all.
 
@@ -2141,6 +2145,8 @@ TYNER at the lager in Drain Nadir. (Again, interesting ROT13.)
 ERYNCFR by the Pleaser Leapers in Boredom Bedroom.
 
 QVFPBIRE something about Divorces magazine in Browse Bowers. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than DIVORCES.
+
+EBZNAGVPVFR about Creationism, Reactionism.
 
 Note that Troves has a few 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them. There's no penalty for solving one and no special reward for solving both. For instance, you only need to deal with one of Sister Tressi and the Marble Blamer to solve the final puzzle. All these pairs are listed in the walkthrough.
 
