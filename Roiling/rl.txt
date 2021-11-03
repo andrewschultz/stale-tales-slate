@@ -378,6 +378,15 @@ Well, the R??YRR leaves you with a couple possibities for the 2nd/3rd slot. One 
 Here a minimal bit of guesswork and grinding it out works.
 -RA--- would mean CRAE(NT/TN) as there's a vowel in the fourth slot, and the first can't be N/T or R. So that doesn't work.
 -EC--- would mean RECA(NT/TN) or RECANT.
+# logic for creationism reactionism
+?What can I do with Creationism, Reactionism? Do I have to do anything?
+It's optional, at eleven letters.
+You may really want to read the author names for this one, as logic leaves you with 84 possibilities. However, you can chip away a bit.
+Slot 4 must be a vowel, so it is A. Also, you get slots 9 and 10. ---A----IS-.
+Here you know you need a verb, and verbs don't end in ISO, so E is it. That leaves I in slot 7. ---A--I-ISE.
+From there you may have to guess a whimsical action, though you may find it hard to find something that starts with COMA. That gives R--A--I-ISE.
+Guesswork may give you M in slot 3. Nothing else seems to work.
+Then you get ROMANTICISE.
 >STORE W
 >>LOFTIER TREFOIL
 # logic for yo rend or deny rodney

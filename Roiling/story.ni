@@ -11456,7 +11456,7 @@ to say capsule-desc:
 	if red vees are in Upscale Capsule:
 		say "This office isn't very well populated yet. Just some red vees here. You need a lot more to help you REALLY think";
 	else:
-		say "From the nerf fern to the wonga wagon and Desk-Sked on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[if salt is moot][which-capsule-pics][end if][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if]"
+		say "From the nerf fern to the wonga wagon and Desk-Sked on your cark rack to the pharos phasor above, this FiefCo Office conforms to the opulent/no let-up deco-code. It's ... well, you're too busy and focused to even look for a way out[if salt is moot][which-capsule-pics][end if][if salt is in Upscale Capsule].[paragraph break]A shaker of salt sits on the wonga wagon, too. You're drawn to it[end if][if creationism is in Upscale Capsule]. A ponderous, horribly important tome called [creationism] lies around. It's probably less important than it seems, but maybe you can figure how to deal with it[end if]"
 
 to decide which number is mbb-sis-points:
 	let temp be 0;
@@ -11496,6 +11496,12 @@ this is the bore-salt rule:
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
 a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
+
+chapter Creationism Reactionism
+
+Creationism Reactionism is vanishing boring LLPish scenery. "It's ... well, big and long and [i]there[r] and impressive. Everyone important has a copy. Apparently it's a good practical read, but you never have and probably never will. You suspect you don't have to, in any sense, but all the same, it's there to wrestle with, if you want. You feel a rebellious urge to daydream, just looking at it. The authors['] names are in red writing.". printed name is "[i]Creationism, Reactionism[r]". bore-text is "It would distract you both from attempts to keep up the corporate life as well as attempts to free yourself. You need to ignore it or do something to dispel it."
+
+a-text of creationism reactionism is "RYRYRRYRYRY". b-text of creationism reactionism is "?YR?RRYRGPY". parse-text of creationism reactionism is "x[sp]-[sp]x[sp]A[sp]x[sp]x[sp]-[sp]x[sp]I[sp]S[sp]-".
 
 chapter glarers
 

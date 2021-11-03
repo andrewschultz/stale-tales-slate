@@ -139,6 +139,8 @@ ramble,mrbeal,erlamb
 resist,RY?Y?R=sister=tressi
 #qver of trance nectar
 recant,R??YRR=trance=nectar
+#qver of creationism reactionism
+romanticise,?YR?RRYRGPY=creationism=reactionism
 ################presto
 #grey gyre
 blam,lamb

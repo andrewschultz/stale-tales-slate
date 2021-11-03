@@ -23,14 +23,14 @@
 Loather Rathole
 
 >score
-Score in a scenario: 0 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: 0 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 27.
 
 #not a mistake
 >hate
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: 1 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 27.
 
 #not a mistake
 >care
@@ -39,13 +39,13 @@ Your score has just gone up by one point
 Bustle Sublet
 
 >score
-Score in a scenario: 2 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: 2 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 27.
 
 >observe
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 3 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: 3 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 27.
 
 >spot
 Your score has just gone up by one point
@@ -55,13 +55,13 @@ Your score has just gone up by one point
 Boarded Roadbed
 
 >score
-Score in a scenario: 4 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+Score in a scenario: 4 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
 
 >reason
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+Score in a scenario: 5 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
 
 >recall
 by one point
@@ -71,13 +71,13 @@ Drain Nadir
 #lose max point for only one of believe/reason
 
 >score
-Score in a scenario: 6 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+Score in a scenario: 6 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
 
 >despair
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
+Score in a scenario: 7 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
 
 #verbcase smell-troves-if-noun-is-large-regal-lager
 >smell lager
@@ -89,13 +89,13 @@ Your score has just gone up by one point
 Boredom Bedroom
 
 >score
-Score in a scenario: 8 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+Score in a scenario: 8 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
 
 >master
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+Score in a scenario: 9 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 24.
 
 >deal
 Your score has just gone up by one point
@@ -106,10 +106,10 @@ Browse Bowers
 #lose a point for only one of BOLSTER/MASTER
 
 >score
-Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+Score in a scenario: 10 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
 
 >score
-Score in a scenario: 10 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
+Score in a scenario: 10 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
 
 >desire
 Your score has just gone up by one point
@@ -119,13 +119,13 @@ Your score has just gone up by one point
 Econ-Cone
 
 >score
-Score in a scenario: 11 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 11 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
 >strive
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: 12 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
 >ponder
 Your score has just gone up by one point
@@ -135,31 +135,37 @@ Upscale Capsule
 #lose a maximum point for only one of aspire/strive
 
 >score
-Score in a scenario: 13 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
+Score in a scenario: 13 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >deserve
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
+Score in a scenario: 14 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >last
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
+Score in a scenario: 15 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+
+#readables for creationism reactionism
+>read creationism
+One of the two authors is (Scot Manieri|Cristi Emano)\.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 26 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 19.
+Score in a scenario: 16 out of 27 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
 
 >misses
 Troves
 --you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.
---you could've tried to STAY around A Sty: Tasty, Say.
+Loather Rathole====
+--you could've tried to STARE at the tears taser.
 Boarded Roadbed====
+--you could've tried to STAY around A Sty: Tasty, Say.
 
 you could've tried to BELIEVE to neutralize the evil bee, too.
 !--you could've tried to REASON to neutralize the SNORE SO ARENA, too.
@@ -182,6 +188,7 @@ Browse Bowers====
 
 !--you could've tried to RESIST Sister Tressi.
 --you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+--you could've tried to ROMANTICISE around Creationism, Reactionism
 
 >recant
 Your score has just gone up by one point
@@ -189,4 +196,4 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-, Troves (17/26)
+, Troves (17/27)

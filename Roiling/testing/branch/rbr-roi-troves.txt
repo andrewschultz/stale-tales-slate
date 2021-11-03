@@ -1343,6 +1343,10 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 
+#readables for creationism reactionism
+>read creationism
+One of the two authors is (Scot Manieri|Cristi Emano)\.
+
 @nud
 #nudge for salt
 >lats
@@ -1538,10 +1542,12 @@ Browse Bowers====
 @mina
 --you could've tried to RESIST Sister Tressi.
 !--you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+--you could've tried to ROMANTICISE around Creationism, Reactionism
 
 @minb
 !--you could've tried to RESIST Sister Tressi.
 --you could've tried to RAMBLE to ignore Marble Blamer Balmer.
+--you could've tried to ROMANTICISE around Creationism, Reactionism
 
 >recant
 Your score has just gone up by one point

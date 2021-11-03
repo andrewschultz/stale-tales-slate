@@ -342,6 +342,8 @@ salt	salt	false	255385641	--	"last"	"last"	--	post-salt-last rule	"You start las
 Sister Tressi Siters	Sister Tressi Siters	false	553780708	--	"resist"	"resist"	--	post-tressi-resist rule	"You stare back, just so. You believe you will not be a failure all your life...and it works! And yet, you know, her stare should and will work on people even more delinquent than yourself. Still, you're not one of them any more. If and when you reach the top and make powerful motivational speeches, you will remember this moment! You feel more able to cope with the pressures of the world."
 Marble Blamer Balmer	Marble Blamer Balmer	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously."
 Marble Blamer Mr Beal	Marble Blamer Mr Beal	false	351625627	--	"ramble"	"ramble"	--	post-mbb-ramble rule	"You let your mind wander, and for whatever reason, you figure out even more about yourself than you expected. You are able to snicker a bit at [mbb], and yet--you can still plan how to get ahead. Maybe you don't need to take things TOO seriously." [this is really horrible copied code, but I see no other way to do things.]
+Creationism Reactionism	Creationism Reactionism	false	731028229       --      "romanticise"	"romanticise"	--      post-romanticise rule	"The daydreaming somehow works! What a crazy world you think up! Not one where anyone would actually want to read [creationism], of course. But one where people weren't impressed by it. Still, you know thought-police watch for people who throw it out, so you call up a gullible sucker underling to gift it to. In retrospect, you wonder if the person who gifted it to you did not do so from the bottom of your heart. Well, that doesn't matter now."
+
 trance nectar	trance nectar	false	406340841	Strip of Profits	"recant"	"recant"	pre-nectar-recant rule	post-nectar-recant rule	"As you think of drinking the trance nectar, you think...no. It can't be like this. You can do better. You turn your back on the rat race. It seems so easy once you put your mind to it. [troend]"
 
 to say eicond:
@@ -457,6 +459,7 @@ this is the post-salt-last rule:
 			now the-from entry is mbb;
 			now the-to entry is mbb; [this is part of the silly randomization]
 	now Sister Tressi Siters are in Upscale Capsule;
+	now creationism reactionism is in Upscale Capsule;
 
 this is the post-tressi-resist rule:
 	now mbb is LLPish;
@@ -2213,13 +2216,14 @@ LEAD	"You can't get settled. Everything seems too general or too specific, and a
 large regal lager	"[one of]The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
 pleaser leapers	"SAP-LEER is the 'ironic' name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't."
 See Dir	"Nothing catches your eye except an article on ridees, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out."
+DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 rivets	"The rivets have two messages. One is [one of]RISE, TV[or]VET, SIR[in random order]!"
 red vees	"Etched into the vees are the names of this motivational device's inventors. One is [one of]Erv Dees[or]Ed Evers[in random order]."
-Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
-Blamer Mr Beal	"The likeness was drawn up by E. R. Lamb, whose signature is in red."
-DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 END PRONER POD	"It is, apparently, produced by N-E-PROD corporation."
 r cad card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
+Blamer Balmer	"The likeness was drawn up by Mr. Beal LeBram, whose signature is in red."
+Blamer Mr Beal	"The likeness was drawn up by E. R. Lamb, whose signature is in red."
+creationism reactionism	"One of the two authors is [one of]Scot Manieri[or]Cristi Emano[in random order]."
 
 table of presto readables
 to-read	what-read	alt-read
@@ -3230,6 +3234,7 @@ marble blamer balmer	true	true	false	false	"[beal-or-balmer]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 Sister Tressi Siters	true	false	false	false	"Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't EXACTLY as you'd expect, maybe you'd better learn to think your way around it."
 trance nectar	true	true	false	false	"Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter..."
+creationism reactionism	true	true	false	false	"Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic."
 
 to say beal-or-balmer: say "Wow! Three names. You don't know if, say, [other-mbb] would be easier but, well, you do what you can"
 
@@ -3460,6 +3465,7 @@ Sister Tressi Siters	"Sister Tressi seems a bit more upset than usual."
 marble blamer balmer	"[mbb] seems slightly taken aback."
 marble blamer mr beal	"[mbb] seems slightly taken aback."
 trance nectar	"Your willpower is not quite strong enough to give it all up yet. But you must be on the right track."
+creationism romanticism	"You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, it IS an eleven-word puzzle, and it IS optional."
 
 table of presto spechelp
 xtrhelp	helptxt
