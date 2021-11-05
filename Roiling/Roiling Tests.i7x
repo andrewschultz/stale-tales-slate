@@ -1367,7 +1367,7 @@ understand the command "missed" as something new.
 understand "missed" as misseding.
 
 carry out misseding:
-	say "[miss-types]";
+	say "[miss-types].[paragraph break]";
 	now mrlp is solved;
 	carry out the showing what the player missed activity;
 	now mrlp is unsolved;
@@ -1386,7 +1386,7 @@ understand "missalt" as missalting.
 understand "alt" as missalting.
 
 carry out missalting:
-	say "[miss-types].";
+	say "[miss-types].[paragraph break]";
 	carry out the showing alternate routes activity;
 	the rule succeeds;
 
@@ -1395,7 +1395,7 @@ to say miss-types:
 	say "MISSES = this region's misses (may provide nonsense/spoilers).";
 	say "MISSALT = show alternate mutually exclusive routes for solved regions.";
 	say "THISALT = show alternate mutually exclusive routes for this region (may provide nonsense/spoilers)";
-	say "[paragraph break]========================Real stuff below[paragraph break]";
+	say "[paragraph break]========================Real stuff below";
 
 chapter thisalting
 
