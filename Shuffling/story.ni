@@ -111,11 +111,9 @@ include STS Common by Andrew Schultz.
 
 include Punctuation Stripper by Andrew Schultz.
 
-section test module(s)
+section test module(s) - not for release
 
-include STS Testing by Andrew Schultz
-
-section trivia - not for release
+include STS Tests by Andrew Schultz
 
 include Shuffling Beta Testing by Andrew Schultz
 
@@ -155,22 +153,22 @@ a region has a table name called done reject table.
 
 a region has a table name called hintobjstable.
 
-Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs.
+Ordeal Loader is a region. min-score of Ordeal Loader is 4. max-score of Ordeal Loader is 7. regnud of Ordeal Loader is table of Ordeal Loader nudges. regana of Ordeal Loader is table of Ordeal Loader anagrams. reg-hint-rule of Ordeal Loader is ordeal-loader-hinting rule. goto-check of Ordeal Loader is ordeal-loader-goto rule. spechelp of ordeal loader is table of ordeal loader spechelp. done reject table of ordeal loader is table of ordeal loader done rejects. hintobjstable of ordeal loader is table of ordeal loader hintobjs. misses-rule of ordeal loader is ordeal-loader-misses rule.
 [LLP(s): both bulge/blot, darnels, static]
 
-Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs.
+Stores is an unsolvable region. min-score of Stores is 4. max-score of Stores is 6. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams. reg-hint-rule of Stores is stores-hinting rule. goto-check of stores is stores-goto rule. spechelp of stores is table of stores spechelp. done reject table of stores is table of stores done rejects. hintobjstable of stores is table of stores hintobjs. misses-rule of stores is stores-misses rule.
 [LLP(s): cabinet]
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 17. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams. reg-hint-rule of Forest is forest-hinting rule. goto-check of forest is forest-goto rule. spechelp of forest is table of forest spechelp. done reject table of forest is table of forest done rejects. hintobjstable of forest is table of forest hintobjs. misses-rule of forest is forest-misses rule.
 [LLP(s): slit, banshee]
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams. reg-hint-rule of Sortie is sortie-hinting rule. goto-check of sortie is sortie-goto rule. spechelp of sortie is table of sortie spechelp. done reject table of sortie is table of sortie done rejects. hintobjstable of sortie is table of sortie hintobjs. misses-rule of sortie is sortie-misses rule.
 [LLP(s): cake pan, grist]
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams. reg-hint-rule of Metros is metros-hinting rule. goto-check of metros is metros-goto rule. spechelp of metros is table of metros spechelp. done reject table of metros is table of metros done rejects. hintobjstable of metros is table of metros hintobjs. misses-rule of metros is metros-misses rule.
 [LLP(s): antlers]
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 15. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams. reg-hint-rule of Resort is resort-hinting rule. goto-check of resort is resort-goto rule. spechelp of resort is table of resort spechelp. done reject table of resort is table of resort done rejects. hintobjstable of resort is table of resort hintobjs. misses-rule of resort is resort-misses rule.
 [LLP(s): Leis Isle, both swing/rock, both toolshed/sprig&poles (2), chain links]
 
 orig-region is Ordeal Loader.
@@ -10694,44 +10692,6 @@ to say 2da of (rg - a region):
 
 to say 2dn: say "[unless sr-acc is true]--[end if]".
 
-to show-miss (curr - a region) and (ts - a truth state):
-	if ts is true and curr is not solved, continue the action;
-	if cur-score of curr is max-score of curr:
-		unless curr is metros or curr is resort, continue the action;
-	now sect-missed is false;
-	if curr is Ordeal Loader:
-		if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt into a [b]BLOT[r].";
-		if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge into a [b]BUGLE[r].";
-		if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to [b]SLANDER[r] the darnels.";
-		if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to [b]ATTICS[r].";
-	if curr is stores:
-		if store b is in Trips Strip, say "[2da of stores]store B had some food for you. [b]SORBET[r].";
-		if store f is in Trips Strip, say "[2da of stores]store F in the Trips Strip led to a forest.";
-		if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
-		if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
-		if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
-	if curr is forest:
-		if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to [b]SILT[r].";
-		if banshee is not moot, say "[2da of forest]the banshee could've become a [b]HASBEEN[r] (space or not).";
-	if curr is sortie:
-		if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a [b]PANCAKE[r].";
-		if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become [b]GRITS[r].";
-	if curr is metros:
-		if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the Obtains Boastin Bastion could've become [b]RENTALS[r].";
-		say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
-		say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
-		say "[2dn]the other ways to get the tulip are to [alt-sols].";
-	if curr is resort:
-		if found-lies is false, say "[2da of resort]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the Leis Isle as an illusion[else]instead of taking the leis[end if].";
-		if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to [b]CORK[r].";
-		if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to [b]WINGS[r].";
-		if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to [b]ROPES[r][toolwood].";
-		if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to [b]GRIPS[r][toolwood].";
-		if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to [b]TOEHOLDS[r] for 2 points.";
-		if china is off-stage, say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
-		if curr is solved: [so there are no testing artifacts with MISSES before]
-			say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."
-
 rule for showing what the player missed:
 	now sect-missed is false;
 	let missed-points be 0;
@@ -10760,6 +10720,52 @@ sol	chosen
 "[b]ASK NERDS ABOUT DARKNESS[r]"	false
 "[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"	false
 "[b]SHOW EMITTER TO DEADBEAT[r] after using it the Bastion, then using it again in the Esoteric Coteries"	false
+
+chapter missed rules
+
+to show-miss (myreg - a region) and (ts - a truth state):
+	if ts is true and myreg is not solved, continue the action;
+	if cur-score of myreg is max-score of myreg:
+		unless myreg is metros or myreg is resort, continue the action;
+	now sect-missed is false;
+	process the misses-rule of myreg;
+
+this is the ordeal-loader-misses rule:
+	if blot is off-stage, say "[2da of Ordeal Loader]you could've changed the bolt in Rested Desert into a [b]BLOT[r].";
+	if bugle is off-stage, say "[2da of Ordeal Loader]you could've changed the bulge in Rested Desert into a [b]BUGLE[r].";
+	if darn-slan is false, say "[2da of Ordeal Loader]you could've tried to [b]SLANDER[r] the darnels in Thickest Thickets.";
+	if attics are off-stage, say "[2da of Ordeal Loader]the static in Notices Section was changeable to [b]ATTICS[r].";
+
+this is the stores-misses rule:
+	if store b is in Trips Strip, say "[2da of stores]store B had some food for you. [b]SORBET[r].";
+	if store f is in Trips Strip, say "[2da of stores]store F in the Trips Strip led to a forest.";
+	if store i is in Trips Strip, say "[2da of stores]store I in the Trips Strip led to a sortie. Which is both an exit and a missile launch.";
+	if store m is in Trips Strip, say "[2da of stores]store M in the Trips Strip led to the Metros.";
+	if cabinet is in Trips Strip, say "[2da of stores]the cabinet, once it followed you, could've been cured a bit with [b]BACTINE[r].";
+this is the forest-misses rule:
+	if slit is in Self ID Fields, say "[2da of forest]the slit on Corses Crosse could've been turned to [b]SILT[r].";
+	if banshee is not moot, say "[2da of forest]the banshee in Emptiness Sepiments could've become a [b]HASBEEN[r] (space or not).";
+
+this is the sortie-misses rule:
+	if pancake is off-stage, say "[2da of sortie]the cake pan in the fridge could've become a [b]PANCAKE[r].";
+	if grits are off-stage, say "[2da of sortie]the grist in the fridge could've become [b]GRITS[r].";
+
+this is the metros-misses rule:
+	if antlers are in Obtains Boastin Bastion, say "[2da of metros]the antlers in the [bastion] could've become [b]RENTALS[r].";
+	say "[line break][if max-score of metros is min-score of metros]W[else]Also, w[end if]hile the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
+	say "[2dn]the [if begonias are in Fo Real Florae]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
+	say "[2dn]the other ways to get the tulip are to [alt-sols].";
+
+this is the resort-misses rule:
+	if found-lies is false, say "[2da of resort]you could've said [b]LIES[r] [if l2 are in Leis Isle]to expose the [isle] as an illusion[else]instead of taking the leis[end if].";
+	if rock is in Leis Isle, say "[2da of resort]the rock on the [isle] was changeable to [b]CORK[r].";
+	if swing is in Leis Isle, say "[2da of resort]the swing on the [isle] was changeable to [b]WINGS[r].";
+	if spore is in Rived Drive, say "[2da of resort]the spore in the Rived Drive was changeable to [b]ROPES[r][toolwood].";
+	if sprig is in Rived Drive, say "[2da of resort]the sprig in the Rived Drive was changeable to [b]GRIPS[r][toolwood].";
+	if tool shed is in Rived Drive, say "[2da of resort]the tool shed in the Rived Drive was changeable to [b]TOEHOLDS[r] for 2 points.";
+	if china is off-stage, say "[2da of resort]the chain links in [potshot hotspot] could've become [b]CHINA[r]. [i][bracket]Note: to get this point, you need to change the (chain) links to china before making the kilns.[close bracket][r][line break]";
+	if resort is solved: [so there are no testing artifacts with MISSES before]
+		say "[line break]There were three final commands to win the game. You chose [if end-path is 0][b]EXIST[r][else if end-path is 1][b]NAMES[r][else][b]AMENS[r][end if], but [one of]there are two other ways to win. Type [b]MISSED[r] again to see them, unless you want to type [b]UNDO[r] to guess[or]you could also have tried [if end-path is 0][b]NAMES[r]/[b]AMENS[r][else if end-path is 1][b]EXIST[r]/[b]AMENS[r][else][b]EXIST[r]/[b]NAMES[r][end if][stopping]."
 
 book amusing
 

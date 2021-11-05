@@ -121,6 +121,8 @@ a region has a rule called reg-hint-rule.
 
 a region has a rule called goto-check.
 
+a region has a rule called misses-rule.
+
 a region has a list of things called item-list.
 
 a region has a list of things called worn-list.
