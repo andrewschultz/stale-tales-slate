@@ -229,9 +229,9 @@ sub evaluate {
     my $toB = sprintf(
 "<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $h2,
-      torgb( $inHere, 3, 52.01, "total puzzles in region" ),
+      torgb( $inHere, 3, 53.01, "total puzzles in region" ),
       $inHere,
-      torgb( $t1, 18, 355, "total letters in puzzles" ),
+      torgb( $t1, 18, 360, "total letters in puzzles" ),
       $t1,
       torgb( $t2, 97, 2715, "puzzle letter square sum" ),
       $t2,
@@ -239,11 +239,11 @@ sub evaluate {
       $t1a,
       torgb( $t2b, 4, 8.14, "root mean square of letters in puzzle" ),
       $t2b,
-      torgb( $thislog, 16.65, 408, "sum of logs of possibilities, no settler" ),
+      torgb( $thislog, 16.65, 416, "sum of logs of possibilities, no settler" ),
       $thislog,
       torgb( $tla, 4, 9.53, "average of logs of possibilities, no settler" ),
       $tla,
-      torgb( $thisset, 8, 230, "sum of logs of possibilities with settlers" ),
+      torgb( $thisset, 8, 233, "sum of logs of possibilities with settlers" ),
       $thisset,
       torgb( $tlb, 2, 5.5, "average of logs of possibilities with settlers" ),
       $tlb
@@ -265,12 +265,12 @@ sub torgb {
   # print "$_[0], $_[1], $_[2]: $x\n";
   if ( $x < 0 ) {
     print
-"WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x < 0, rounding to 0\n";
+"WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x < 0, rounding greenness coefficient to 0\n";
     $x = 0;
   }
   if ( $x > 255 ) {
     print
-"WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x > 255, rounding to 255\n";
+"WARNING $_[3] ($header) gives $_[0] not within $_[1]-$_[2] for rgb of $x > 255, rounding greenness coefficient to 255\n";
     $x = 255;
   }
   if ( $header =~ /^ZZZ/i ) {

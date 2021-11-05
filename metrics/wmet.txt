@@ -72,7 +72,8 @@ deserve/last/resist/recant
 Troves (max)
 gape/stare
 hate/care
-stay/observe/spot/believe/reason/recall
+surmise/observe/spot
+stay/believe/reason/recall
 despair/decide/relapse
 glare/master/bolster/deal
 discover/desire
