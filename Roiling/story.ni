@@ -150,11 +150,13 @@ a region has a rule called swear-rule.
 
 a region has a rule called randomization rule.
 
+a region has a rule called misses-rule.
+
 chapter region definition
 
 [some definitions of region properties below may be in brackets. This is intentional. I want them to be placekeepers on the off-chance I add something.]
 
-Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. subject blather table of ordeal reload is table of ordeal reload subject blather. readable table of ordeal reload is table of ordeal reload readables. general blather table of ordeal reload is table of ordeal reload general blather. reflexive blather table of ordeal reload is table of ordeal reload reflexive blather.
+Ordeal Reload is an unsolved region. regnud of Ordeal Reload is table of Ordeal Reload nudges. regana of Ordeal Reload is table of Ordeal Reload anagrams. reg-hint-rule of Ordeal Reload is ordeal-reload-hinting rule. goto-check of Ordeal Reload is goto-ordeal-reload rule. max-score of Ordeal Reload is 15. min-score of Ordeal Reload is 8. listen-rule of ordeal reload is listen-ordeal-reload rule. smell-rule of ordeal reload is smell-ordeal-reload rule. sleep-rule of ordeal reload is sleep-ordeal-reload rule. swear-rule of ordeal reload is swear-ordeal-reload rule. spechelp of ordeal reload is table of ordeal reload spechelp. scannotes of ordeal reload is table of ordeal reload scannotes. attack-table of ordeal reload is table of ordeal reload attacks. [loc-scan-rule of ordeal reload is scan-ordeal reload-loc rule.] [hint-done-note table of ordeal reload is table of ordeal reload hint-done-notes.] nowhere-table of ordeal reload is table of ordeal reload nowheres. done reject table of ordeal reload is table of ordeal reload done rejects. [randomization rule of ordeal reload is randomize-ordeal-reload rule.] hintobjstable of ordeal reload is table of ordeal reload hintobjs. subject blather table of ordeal reload is table of ordeal reload subject blather. readable table of ordeal reload is table of ordeal reload readables. general blather table of ordeal reload is table of ordeal reload general blather. reflexive blather table of ordeal reload is table of ordeal reload reflexive blather. misses-rule of ordeal reload is ordeal-reload-misses rule.
 [BONUS STUFF (note: we assume the player goes BASEMENT here to spell out more possibilities)
 1/9=giant pin
 2/10=stable
@@ -169,7 +171,7 @@ last-loc of Ordeal Reload is Dusty Study. [needed for GT command]
 
 [PTS below lists what points you still may get]
 
-Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. subject blather table of stores is table of stores subject blather. readable table of stores is table of stores readables. general blather table of stores is table of stores general blather. reflexive blather table of stores is table of stores reflexive blather.
+Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. reg-hint-rule of stores is stores-hinting rule. goto-check of stores is goto-stores rule. max-score of stores is 11. min-score of Stores is 3. listen-rule of stores is listen-stores rule. smell-rule of stores is smell-stores rule. sleep-rule of stores is sleep-stores rule. swear-rule of stores is swear-stores rule. spechelp of stores is table of stores spechelp. scannotes of stores is table of stores scannotes. attack-table of stores is table of stores attacks. [loc-scan-rule of stores is scan-stores-loc rule.] [hint-done-note table of stores is table of stores hint-done-notes.] nowhere-table of stores is table of stores nowheres. done reject table of stores is table of stores done rejects. [randomization rule of stores is randomize-stores rule.] hintobjstable of stores is table of stores hintobjs. subject blather table of stores is table of stores subject blather. readable table of stores is table of stores readables. general blather table of stores is table of stores general blather. reflexive blather table of stores is table of stores reflexive blather. misses-rule of stores is stores-misses rule.
 [LLP List:
 1/4=Store K
 2/5=Store N
@@ -178,7 +180,7 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 29. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 29. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather. misses-rule of troves is troves-misses rule.
 [LLP list:
 1/18=Pa Egg Pea
 2/19=tears taser
@@ -194,13 +196,13 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 12/29=Creationism Reactionism
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather. misses-rule of routes is routes-misses rule.
 [LLP list:
 1/21=worst ad in Same Mesa
 2/22=without in Sonancy Canyons
 ]
 
-Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. subject blather table of presto is table of presto subject blather. readable table of presto is table of presto readables. general blather table of presto is table of presto general blather. reflexive blather table of presto is table of presto reflexive blather.
+Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint-done-notes. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. subject blather table of presto is table of presto subject blather. readable table of presto is table of presto readables. general blather table of presto is table of presto general blather. reflexive blather table of presto is table of presto reflexive blather. misses-rule of presto is presto-misses rule.
 [LLP list:
 1/29=lamb
 2/30=ye hoop vs hoop
@@ -217,7 +219,7 @@ Presto is an unsolved region. regnud of Presto is table of presto nudges. regana
 NON ANAGRAM: (get yak on skid) (push yak) (note +3 points for "best" anagrams)
 ]
 
-Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables. general blather table of oyster is table of oyster general blather. reflexive blather table of oyster is table of oyster reflexive blather.
+Oyster is an unsolved region. regnud of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. reg-hint-rule of Oyster is oyster-hinting rule. goto-check of Oyster is goto-oyster rule. max-score of oyster is 42. min-score of oyster is 28. listen-rule of oyster is listen-oyster rule. smell-rule of oyster is smell-oyster rule. sleep-rule of oyster is sleep-oyster rule. swear-rule of oyster is swear-oyster rule. spechelp of oyster is table of oyster spechelp. scannotes of oyster is table of oyster scannotes. attack-table of oyster is table of oyster attacks. loc-scan-rule of oyster is scan-oyster-loc rule. hint-done-note table of oyster is table of oyster hint-done-notes. nowhere-table of oyster is table of oyster nowheres. done reject table of oyster is table of oyster done rejects. randomization rule of oyster is randomize-oyster rule. hintobjstable of oyster is table of oyster hintobjs. subject blather table of oyster is table of oyster subject blather. readable table of oyster is table of oyster readables. general blather table of oyster is table of oyster general blather. reflexive blather table of oyster is table of oyster reflexive blather. misses-rule of oyster is oyster-misses rule.
 [LLP list:
 There are actually 31 points overall if you don't use the pills. You can "lose" 3 by using the pills before you've scored a point.
 1/32=scan cans
@@ -237,7 +239,7 @@ you get -1 if you use the pills on Tortu before EAT.
 NON ANAGRAM: frame the bad guys so the use-saga sausage chases them.
 ]
 
-Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables. general blather table of towers is table of towers general blather. reflexive blather table of towers is table of towers reflexive blather.
+Towers is an unsolved region. regnud of Towers is table of towers nudges. regana of towers is table of towers anagrams. reg-hint-rule of Towers is towers-hinting rule. goto-check of Towers is goto-towers rule. max-score of towers is 56. min-score of towers is 26. listen-rule of towers is listen-towers rule. smell-rule of towers is smell-towers rule. sleep-rule of towers is sleep-towers rule. swear-rule of towers is swear-towers rule. spechelp of towers is table of towers spechelp. scannotes of towers is table of towers scannotes. attack-table of towers is table of towers attacks. [loc-scan-rule of towers is scan-towers-loc rule.] hint-done-note table of towers is table of towers hint-done-notes. nowhere-table of towers is table of towers nowheres. done reject table of towers is table of towers done rejects. randomization rule of towers is randomize-towers rule. hintobjstable of towers is table of towers hintobjs. subject blather table of towers is table of towers subject blather. readable table of towers is table of towers readables. general blather table of towers is table of towers general blather. reflexive blather table of towers is table of towers reflexive blather. misses-rule of towers is towers-misses rule.
 [Necessary points:
 4=4 for minimum picaros to leave Trefoil
 1=5 for dreads adders
@@ -275,7 +277,7 @@ Towers is an unsolved region. regnud of Towers is table of towers nudges. regana
 4=29 for unripe ur-pine/serpent/triste/antsier in Mislit Limits/Mesprise Premises
 1=30 for not using x-ray vision to clear every guardian NON-ANAGRAM]
 
-Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables. general blather table of otters is table of otters general blather. reflexive blather table of otters is table of otters reflexive blather.
+Otters is an unsolved region. regnud of Otters is table of otters nudges. regana of Otters is table of otters anagrams. reg-hint-rule of otters is otters-hinting rule. goto-check of Otters is goto-Otters rule. max-score of otters is 35. min-score of otters is 24. listen-rule of otters is listen-otters rule. smell-rule of otters is smell-otters rule. sleep-rule of otters is sleep-otters rule. swear-rule of otters is swear-otters rule. spechelp of otters is table of otters spechelp. scannotes of otters is table of otters scannotes. attack-table of otters is table of otters attacks. loc-scan-rule of otters is scan-otters-loc rule. hint-done-note table of otters is table of otters hint-done-notes. nowhere-table of otters is table of otters nowheres. done reject table of otters is table of otters done rejects. randomization rule of otters is randomize-otters rule. hintobjstable of otters is table of otters hintobjs. subject blather table of otters is table of otters subject blather. readable table of otters is table of otters readables. general blather table of otters is table of otters general blather. reflexive blather table of otters is table of otters reflexive blather. misses-rule of otters is otters-misses rule.
 [LLP list:
 1=25 for RESCIND
 2=26 for ACTUALLY
@@ -290,11 +292,11 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 42. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather. misses-rule of others is others-misses rule.
 [There are so many possibilities for a minimum solution--about 36 choose 20, or 7.3 billion--I won't go through them all. Well, technically, take away 10c3*26c17 + 10c2*26c18 + 10c1*26c19 + 10c0*26c20 to get 7.1 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (36) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
-Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.]
+Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.] [misses-rule of demo dome is demo dome-misses rule.]
 
 a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
@@ -22129,184 +22131,7 @@ anything-missed is a truth state that varies.
 to show-miss (myreg - a region) and (needsolve - a truth state):
 	now miss-room is Meatier Emerita Emirate;
 	if needsolve is true and myreg is not solved, continue the action;
-	if myreg is Ordeal Reload:
-		if giant pin is in Dusty Study, say "[2dmiss of myreg]the giant pin could've become a [b]PAINTING[r].";
-		if meet bans are in Dusty Study, say "[2dmiss of myreg]you could've made the MEET-BANS into a [b]BASEMENT[r].";
-		if tables are in Dusty Study, say "[2dmiss of myreg]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
-		if sitar is not moot, say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a [b]STAIR[r].";
-		if niche is in Dusty Study, say "[2dmiss of myreg]you could've changed 'my niche' into a [b]CHIMNEY[r].";
-		if pram is in Highest Heights, say "[2dmiss of myreg]you could've changed the pram into a [b]RAMP[r][if Highest Heights is unvisited], if you'd gone up from the study[end if].";
-		if isbn bins are reflexive, say "[2dmiss of myreg]you could've put a [b]SNIB[r] on the [b]ISBN[r] bins.";
-	else if myreg is stores:
-		if store B is in stores, say "[2dmiss of myreg]Store B could've given you some [b]SORBET[r].";
-		if store K is in stores, say "[2dmiss of myreg]Store K could've made some [b]TOKERS[r].";
-		if store N is in stores, say "[2dmiss of myreg][b]NESTOR[r] was hiding in Store K.";
-		if store U is in stores, say "[2dmiss of myreg][b]ROUTES[r] were in Store U.";
-		if store V is in stores, say "[2dmiss of myreg][b]TROVES[r] were in Store V.";
-		if store P is in stores, say "[2dmiss of myreg][b]PRESTO[r] would've opened Store P.";
-		if store Y is in stores, say "[2dmiss of myreg]The [b]OYSTER[r] was in Store Y.";
-		if store W is in stores, say "[2dmiss of myreg][b]TOWERS[r] were in Store W.";
-	else if myreg is routes:
-		if worst ad is in Same Mesa, say "[2dmiss of myreg]you could've tried to go [b]TOWARDS[r] the worst ad in the Same Mesa.";
-		if raptest patters are in Sonancy Canyons, say "[2dmiss of myreg]you could've done [b]WITHOUT[r] the content of the raptest patters in Sonancy Canyons.";
-	else if myreg is troves:
-		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page.";
-		if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
-		if mussier misuser is not moot, say "[2drm of Bustle Sublet]you could've tried to [b]SURMISE[r] about the mussier misuser.";
-		if a sty tasty say is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
-		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
-		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
-		if lager is not moot, say "[2drm of Drain Nadir]you could've tried to [b]GLARE[r] at the Lager.";
-		if pleaser leapers are not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
-		if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
-		if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
-		if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
-		if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
-		if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
-		if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
-		if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
-		if reactionism is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]ROMANTICISE[r] around [reactionism].";
-	else if myreg is presto:
-		if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted [b]BLAM[r] at the lamb.";
-		if maze-points < 2, say "[2drm of Grey Gyre]you could've said [b]MAZEL TOV[r] to get past the maze.";
-		if maze-points is 2, say "[2drm of Grey Gyre]Because you scanned someone in the Unwary Runway, you only got two out of three points for the Volt Maze."; [mazeguide-scanned]
-		if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said [b]GOODNESS[r] to the Odes Song.";
-		if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying [b]PHOOEY[r] instead of [b]POOH[r].";
-		if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said [b]PROST[r] (a German word to toast someone) to the Sport Ports.";
-		if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said [b]WHAT[r] to the Hawt Thaw.";
-		if starch charts are not moot, say "[2drm of Saps Pass]you could've called the starch charts [b]TRASCH[r].";
-		if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become [b]ROM STICKS[r].";
-		if [b]TBA[r] key is reflexive, say "[2drm of Hacks Shack]you could've made the [b]TBA[r] key a [b]TAB[r] key.";
-		if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a [b]CASSEROLE[r].";
-		if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A [b]AVIDER[r].";
-		if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to [b]DERIVE[r] how to improve Drive E.";
-	else if myreg is oyster:
-		if spill-target is not nothing, say "[2dmiss of myreg][endgame-spill-instead].";
-		if number of entries in shop-hint-items > 2, say "[2dmiss of myreg][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
-		if cans are not moot, say "[2dmiss of myreg]you could've tried to [b]SCAN[r] the cans.";
-		if dent is not moot, say "[2dmiss of myreg]you could've stopped to [b]TEND[r] the dent in Aunt Tuna's raw red drawer.";
-		if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2dmiss of myreg]you could've stopped to [b]SHAPE[r] the heaps to beautify the hut.";
-		if wipes are on raw red drawer:
-			say "[2dmiss of myreg]you could've tried to [b]SWIPE[r] the wipes at Aunt Tuna's to start a side quest.";
-		else if waste is not moot:
-			say "[2dmiss of myreg]you could've tried to [b]SWEAT[r] to remove the waste.";
-		else if lance is reflexive:
-			say "[2dmiss of myreg]you could've tried to [b]CLEAN[r] the lance.";
-		else if templar ramplet is not moot:
-			say "[2dmiss of myreg]you could've tried to [b]TRAMPLE[r] the Templar Ramplet.";
-		else if Plasm Lamps is visited and bogus-psalm are not reflexed:
-			say "[2dmiss of myreg]you could've tried to [b]PSALM[r] in Plasm Lamps.";
-		if bogus-plains are reflexive, say "[2dmiss of myreg]you missed a chance to [b]SPLAIN[r] in the plains, at any time during the door-open puzzle.";
-		if lever is not reflexed, say "[2dmiss of myreg]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
-	else if myreg is Towers:
-		if recital article is not moot, say "[2dmiss of myreg]you could've made the recital article [b]TALCIER[r].";
-		if number of pinko picaros > 0:
-			repeat with pk running through pinko picaros:
-				say "[2dmiss of myreg][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
-		let xxx be unripe ur pine;
-		if number of not moot guardians > 0:
-			say "[eqls][eqls]starting missed Towers guardians[line break]";
-			repeat with gua running through not moot guardians:
-				if gua is natives site van:
-					say "[2dmiss of myreg]the natives['] site van in Danger Garden could've been turned [b]VAINEST[r] or [b]NAIVEST[r].";
-					next;
-				if bad-gender-match of gua, next;
-				now xxx is gua;
-				if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reeds Ale;
-				choose row with the-from of xxx in table of towers anagrams;
-				let rm2 be gualoc of gua;
-				now rm2 is the room guadir of gua from rm2;
-				say "[2dmiss of myreg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else][right-word entry in upper case][end if].";
-			if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
-		if yurts are in Scope Copse, say "[2dmiss of myreg]the yurts in the Scope Copse could've become [b]RUSTY[r].";
-		if old ice is not reflexed, say "[2dmiss of myreg]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become [b]COILED[r].";
-		if ego drains are not moot, say "[2dmiss of myreg]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become [b]GRANDIOSE[r].";
-		if keycar is not moot, say "[2dmiss of myreg][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r][else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
-		if dourest detours are unvisited, say "[2dmiss of myreg]you could have [one of]([b]MISSED[r] again for puzzle spoiler) found a puzzle[or]made yourself [b]ROUSTED[r] after you visited Dourest Detours[stopping] east of Anemic Cinema or south of Danger Garden.";
-		if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of myreg]you could have made the seismal samiels [b]AIMLESS[r].";
-		if strudel is reflexive, say "[2dmiss of myreg]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become [b]RUSTLED[r].";
-		if sporties ripostes are not moot, say "[2dmiss of myreg]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become [b]PROSIEST[r].";
-		if mended mini denim is not moot:
-			say "[2dmiss of myreg]the mended mini denim in Treading Gradient could've been [b]MINED[r].";
-			if arid den is unvisited, say "[2dmiss of myreg]there was a Dire and Arid Den below the denim. [one of]Type [b]MISSES[r] again to see how to escape[or]You would've gotten out by feeling [b]DANDIER[r][stopping].";
-		if raves saver is reflexive, say "[2dmiss of myreg]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
-		if ag-atten is false, say "[2dmiss of myreg]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
-		if weirder red wire is part of bot boat, say "[2dmiss of myreg]you could've made the weirder red wire [b]REWIRED[r].";
-		if unripe ur pine is in Mislit Limits, say "[2dmiss of myreg]you could've made the unripe ur-pine [b]PUNIER[r] to uncover something beyond.";
-		if top opt pot is not moot, say "[2dmiss of myreg]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter [b]TRISTE[r][else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
-		if used-ray is true, say "[2dmiss of myreg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
-		if no-pastries is true, say "[2dmiss of myreg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
-	else if myreg is otters:
-		if rescind-cinders is false, say "[2dmiss of myreg]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
-		if loop pool is unvisited:
-			say "[2dmiss of myreg]you could've checked north of the Disowned Downside for the other way to regain your powers.";
-		else if eels are not reflexed:
-			say "[2dmiss of myreg]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
-		if bran barn is not visited:
-			say "[2dmiss of myreg]you could've checked south of the Disowned Downside for the other way to regain your powers.";
-		else if gore ogre is not moot:
-			say "[2dmiss of myreg]you could've [if ghoul hat is not moot]said [b]ALTHOUGH[r] to dissolve the ghoul hat, then [end if]said [b]ERGO[r] to get rid of the Gore Ogre and gain Mr. Lee's trust.";
-		if aside-llp is not reflexed:
-			say "[2dmiss of myreg]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r].";
-		else if holy nest is not reflexed:
-			say "[2dmiss of myreg]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
-		if number of flippable things in Perverse Preserve > 0:
-			repeat with A running through flippable things in Perverse Preserve:
-				if A is raptor or A is parrot, next; [ get rid of white noise parrot/raptor suggestion while testing ]
-				let AA be the the-to corresponding to the-from of A in the table of otters anagrams;
-				say "[2dmiss of myreg]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
-		if number of reflexive animals in Lamer Realm > 0:
-			repeat with A running through reflexive things in Lamer Realm:
-				say "[2dmiss of myreg]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
-		if vow here is in Bran Barn, say "[2dmiss of myreg]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
-		if Sullenness Us is in Loop Pool, say "[2dmiss of myreg]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
-		if asyllabic lilac bays are in Minded Midden, say "[2dmiss of myreg]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
-		if cult laya is in Disowned Downside, say "[2dmiss of myreg]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
-	else if myreg is others:
-		if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";
-		if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become [b]PEARS[r].";
-		if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become [b]PLUMS[r].";
-		if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become [b]GRAPES[r].";
-		if ruts circuits is unexamined:
-			say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
-		else:
-			if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
-			if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
-			if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
-			if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a [b]CANTALOUPE[r].";
-			if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a [b]POMEGRANATE[r].";
-			if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a [b]PERSIMMON[r].";
-		if apples are not dislodged, say "[2drm of Swell Wells]the PSA [']Elp could've become [b]APPLES[r]."; [Swell Wells]
-		if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain [b]TANGERINES[r].";
-		if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become [b]MULBERRIES[r].";
-		if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an [b]APRICOT[r].";
-		if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a [b]GOOSEBERRY[r].";
-		if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become [b]COCONUTS[r].";
-		if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a [b]GRAPEFRUIT[r]."; [Filed Field]
-		if pipe panel lie pen app is not moot, say "[2drm of Filed Field]the pipe panel lie pen app could've become a [b]PINEAPPLE[r].";
-		if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become [b]STRAWBERRIES[r].";
-		if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become [b]CRANBERRIES[r].";
-		if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become [b]BREADFRUIT[r].";
-		if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a [b]RASPBERRY[r].";
-		if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become [b]BLACKBERRIES[r].";
-		if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a [b]WATERMELON[r].";
-		if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked [b]SOLEMN[r] to get lemons."; [Clangier Clearing]
-		if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said [b]MO LEN[r] or [b]LEN MO[r] to get a melon.";
-		if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten [b]PAPAYAS[r] from the 'Pay [b]ASAP[r]' Auction Caution.";
-		if mango is not moot, say "[2drm of Clangier Clearing]you could've gone [b]AMONG[r] the No-Ammo Gang for a mango.";
-		if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach [b]CHEAP[r].";
-		if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said [b]CRIPES[r] at the prices precis.";
-		if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs [b]CINQUE[r].";
-		if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine [b]ANCIENTER[r].";
-		if orange is not dislodged, say "[2drm of Scape Space]you could've tried to [b]GO NEAR[r] to get the orange."; [Scape Space]
-		if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a [b]BANANA[r].";
-		if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub [b]RHUBARB[r].";
-		if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments [b]REVERSED[r].";
-		if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
-	else if myreg is demo dome:
-		say "No points in the Demo Dome, so nothing to find.";
-	else:
-		say "Region [myreg] not found. This should never bee seen, but if it is, it is a bug."
+	process the misses-rule of myreg;
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
 	say "An all-feat leaflet flutters over the fourth wall.";
@@ -22331,6 +22156,190 @@ definition: a region (called R) is test-jumped:
 	yes;
 
 to say keycar-loc: say "in [location of keycar]"
+
+chapter misses rules
+
+this is the ordeal-reload-misses rule:
+	if giant pin is in Dusty Study, say "[2drm of dusty study]the giant pin could've become a [b]PAINTING[r].";
+	if meet bans are in Dusty Study, say "[2drm of dusty study]you could've made the ten beams/MEET-BANS into a [b]BASEMENT[r].";
+	if tables are in Dusty Study, say "[2drm of dusty study]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
+	if sitar is not moot, say "[2drm of farming framing]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a [b]STAIR[r].";
+	if niche is in Dusty Study, say "[2drm of dusty study]you could've changed 'my niche' into a [b]CHIMNEY[r].";
+	if pram is in Highest Heights and highest heights is visited, say "[2dmiss of ordeal reload]you could've changed the pram into a [b]RAMP[r].";
+	if isbn bins are reflexive, say "[2drm of largely all grey gallery]you could've put a [b]SNIB[r] on the [b]ISBN[r] bins.";
+	if respect specter is not reflexed, say "[2drm of carven cavern]you could've gotten a SCEPTER from the [specter].";
+
+this is the stores-misses rule:
+	if store B is in stores, say "[2drm of strip of profits]Store B could've given you some [b]SORBET[r].";
+	if store K is in stores, say "[2drm of strip of profits]Store K could've made some [b]TOKERS[r].";
+	if store N is in stores, say "[2drm of strip of profits][b]NESTOR[r] was hiding in Store K.";
+	if store U is in stores, say "[2drm of strip of profits][b]ROUTES[r] were in Store U.";
+	if store V is in stores, say "[2drm of strip of profits][b]TROVES[r] were in Store V.";
+	if store P is in stores, say "[2drm of strip of profits][b]PRESTO[r] would've opened Store P.";
+	if store Y is in stores, say "[2drm of strip of profits]The [b]OYSTER[r] was in Store Y.";
+	if store W is in stores, say "[2drm of strip of profits][b]TOWERS[r] were in Store W.";
+
+this is the routes-misses rule:
+	if worst ad is in Same Mesa, say "[2drm of same mesa]you could've tried to go [b]TOWARDS[r] the worst ad.";
+	if raptest patters are in Sonancy Canyons, say "[2drm of sonancy canyons]you could've done [b]WITHOUT[r] the content of the raptest patters.";
+
+this is the troves-misses rule:
+	if Pa Egg Pea is reflexive, say "[2dmiss of troves]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page at any time.";
+	if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
+	if mussier misuser is not moot, say "[2drm of Bustle Sublet]you could've tried to [b]SURMISE[r] about the mussier misuser.";
+	if a sty tasty say is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
+	if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
+	if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";
+	if lager is not moot, say "[2drm of Drain Nadir]you could've tried to [b]GLARE[r] at the Lager.";
+	if pleaser leapers are not moot, say "[2drm of Boredom Bedroom]you could've tried to [b]RELAPSE[r] around the pleaser leapers.";
+	if ME ARTS is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]MASTER[r] the [b]ME ARTS[r]."; [1 of 2]
+	if lobster is in Boredom Bedroom, say "[2drm of Boredom Bedroom]you could've tried to [b]BOLSTER[r] yourself to deserve lobster.";
+	if DIVORCES is not moot, say "[2drm of Browse Bowers]you could've tried to [b]DISCOVER[r] something about [b]DIVORCES[r] magazine.";
+	if rivets are reflexive, say "[2drm of Econ Cone]you could've tried to [b]STRIVE[r] by the statue of Trevis Vister."; [1 of 2]
+	if praise spirea is reflexive, say "[2drm of Econ Cone]you could've tried to [b]ASPIRE[r], from the praise in the Econ-Cone.";
+	if Sister Tressi is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RESIST[r] Sister Tressi.";
+	if mbb is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]RAMBLE[r] to ignore [mbb]."; [1 of 2]
+	if reactionism is not moot, say "[2drm of Upscale Capsule]you could've tried to [b]ROMANTICISE[r] around [reactionism].";
+
+this is the presto-misses rule:
+	if lamb is in Grey Gyre, say "[2drm of Grey Gyre]you could've shouted [b]BLAM[r] at the lamb.";
+	if maze-points < 2, say "[2drm of Grey Gyre]you could've said [b]MAZEL TOV[r] to get past the maze.";
+	if maze-points is 2, say "[2drm of Grey Gyre]Because you scanned someone in the Unwary Runway, you only got two out of three points for the Volt Maze."; [mazeguide-scanned]
+	if odes song is in Dirge Ridge, say "[2drm of Dirge Ridge]you could've said [b]GOODNESS[r] to the Odes Song.";
+	if phooeyed is false, say "[2drm of Austerer Treasure]you could've gotten a style point for saying [b]PHOOEY[r] instead of [b]POOH[r].";
+	if sport ports are reflexive, say "[2drm of Marines Seminar Remains]you could've said [b]PROST[r] (a German word to toast someone) to the Sport Ports.";
+	if hawt thaw is not moot, say "[2drm of Saps Pass]you could've said [b]WHAT[r] to the Hawt Thaw.";
+	if starch charts are not moot, say "[2drm of Saps Pass]you could've called the starch charts [b]TRASCH[r].";
+	if rom sticks are off-stage, say "[2drm of Hacks Shack]the trim socks could've become [b]ROM STICKS[r].";
+	if [b]TBA[r] key is reflexive, say "[2drm of Hacks Shack]you could've made the [b]TBA[r] key a [b]TAB[r] key.";
+	if casserole is off-stage, say "[2drm of Hacks Shack]you could've made the escaroles a [b]CASSEROLE[r].";
+	if drive a is reflexive, say "[2drm of Hacks Shack]you could've made Drive A [b]AVIDER[r].";
+	if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to [b]DERIVE[r] how to improve Drive E.";
+
+this is the oyster-misses rule:
+	if spill-target is not nothing, say "[2dmiss of oyster][endgame-spill-instead].";
+	if number of entries in shop-hint-items > 2, say "[2drm of posh hops shop][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
+	if cans are not moot, say "[2drm of dearths]you could've tried to [b]SCAN[r] the cans.";
+	if dent is not moot, say "[2drm of lean lane]you could've stopped to [b]TEND[r] the dent in Aunt Tuna's raw red drawer.";
+	if wipes are on raw red drawer, say "[2drm of lean lane]you could've tried to [b]SWIPE[r] the wipes at Aunt Tuna's to start a side quest.";
+	if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2drm of shuttle hutlets]you could've stopped to [b]SHAPE[r] the heaps to beautify the hut.";
+	if bogus-plains are reflexive, say "[2drm of lapsin plains]you missed a chance to [b]SPLAIN[r] in the plains, at any time during the door-open puzzle.";
+	if waste is not moot, say "[2drm of shuttle hutlets]you could've tried to [b]SWEAT[r] to remove the waste.";
+	if lance is not off-stage and lance is reflexive, say "[2drm of shuttle hutlets]you could've tried to [b]CLEAN[r] the lance[if templar ramplet is prefigured] to allow you to [b]TRAMPLE[r] the Templar Ramplet[end if].";
+	if templar ramplet is not moot and lance is reflexive, say "[2drm of tenfold]you could've tried to [b]TRAMPLE[r] the Templar Ramplet.";
+	if lever is not reflexed, say "[2drm of tenfold]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
+	if Plasm Lamps is visited and bogus-psalm are not reflexed, say "[2drm of plasm lamps]you could've tried to [b]PSALM[r] in Plasm Lamps.";
+
+this is the towers-misses rule:
+	if keycar is not moot, say "[2dmiss of towers][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r][else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
+	if dourest detours are unvisited, say "[2dmiss of towers]you could have [one of]([b]MISSED[r] again for puzzle spoiler) found a puzzle[or]made yourself [b]ROUSTED[r] after you visited Dourest Detours[stopping] going nowhere in [list of detourable rooms].";
+	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
+	if number of pinko picaros > 0:
+		repeat with pk running through pinko picaros:
+			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
+	let xxx be unripe ur pine;
+	if number of not moot guardians > 0:
+		say "[2dmiss of towers]starting missed Towers guardians[line break]";
+		repeat with gua running through not moot guardians:
+			if gua is natives site van:
+				say "[eqls][eqls]the natives['] site van in Danger Garden could've been turned [b]VAINEST[r] or [b]NAIVEST[r].";
+				next;
+			if bad-gender-match of gua, next;
+			now xxx is gua;
+			if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reeds Ale;
+			choose row with the-from of xxx in table of towers anagrams;
+			let rm2 be gualoc of gua;
+			now rm2 is the room guadir of gua from rm2;
+			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else][right-word entry in upper case][end if].";
+		if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
+	if yurts are in Scope Copse, say "[2drm of scope copse]the yurts in the Scope Copse could've become [b]RUSTY[r].";
+	if old ice is not reflexed, say "[2drm of saltbed]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become [b]COILED[r].";
+	if ego drains are not moot, say "[2dmiss of towers]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become [b]GRANDIOSE[r].";
+	if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of towers]you could have made the seismal samiels [b]AIMLESS[r].";
+	if strudel is reflexive, say "[2dmiss of towers]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become [b]RUSTLED[r].";
+	if sporties ripostes are not moot, say "[2dmiss of towers]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become [b]PROSIEST[r].";
+	if mended mini denim is not moot:
+		say "[2dmiss of towers]the mended mini denim in Treading Gradient could've been [b]MINED[r].";
+		if arid den is unvisited, say "[2dmiss of towers]there was a Dire and Arid Den below the denim. [one of]Type [b]MISSES[r] again to see how to escape[or]You would've gotten out by feeling [b]DANDIER[r][stopping].";
+	if raves saver is reflexive, say "[2dmiss of towers]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
+	if ag-atten is false, say "[2dmiss of towers]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
+	if weirder red wire is part of bot boat, say "[2dmiss of towers]you could've made the weirder red wire [b]REWIRED[r].";
+	if unripe ur pine is in Mislit Limits, say "[2dmiss of towers]you could've made the unripe ur-pine [b]PUNIER[r] to uncover something beyond.";
+	if top opt pot is not moot, say "[2dmiss of towers]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter [b]TRISTE[r][else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
+	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from a toasted hint pastry, which cost a style point.";
+	if no-pastries is true, say "[2dmiss of towers]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
+
+this is the otters-misses rule:
+	if rescind-cinders is false, say "[2dmiss of otters]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
+	if loop pool is unvisited:
+		say "[2dmiss of otters]you could've checked north of the Disowned Downside for the other way to regain your powers.";
+	else if eels are not reflexed:
+		say "[2dmiss of otters]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
+	if bran barn is not visited:
+		say "[2dmiss of otters]you could've checked south of the Disowned Downside for the other way to regain your powers.";
+	else if gore ogre is not moot:
+		say "[2dmiss of otters]you could've [if ghoul hat is not moot]said [b]ALTHOUGH[r] to dissolve the ghoul hat, then [end if]said [b]ERGO[r] to get rid of the Gore Ogre and gain Mr. Lee's trust.";
+	if aside-llp is not reflexed:
+		say "[2dmiss of otters]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r].";
+	else if holy nest is not reflexed:
+		say "[2dmiss of otters]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
+	if number of flippable things in Perverse Preserve > 0:
+		repeat with A running through flippable things in Perverse Preserve:
+			if A is raptor or A is parrot, next; [ get rid of white noise parrot/raptor suggestion while testing ]
+			let AA be the the-to corresponding to the-from of A in the table of otters anagrams;
+			say "[2dmiss of otters]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
+	if number of reflexive animals in Lamer Realm > 0:
+		repeat with A running through reflexive things in Lamer Realm:
+			say "[2dmiss of otters]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
+	if vow here is in Bran Barn, say "[2dmiss of otters]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
+	if Sullenness Us is in Loop Pool, say "[2dmiss of otters]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
+	if asyllabic lilac bays are in Minded Midden, say "[2dmiss of otters]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
+	if cult laya is in Disowned Downside, say "[2dmiss of otters]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
+
+this is the others-misses rule:
+	if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";
+	if spear is not moot, say "[2drm of Rustic Citrus]the spear could've become [b]PEARS[r].";
+	if lumps are not moot, say "[2drm of Rustic Citrus]the lumps could've become [b]PLUMS[r].";
+	if grapes are not moot, say "[2drm of Rustic Citrus]the pagers could've become [b]GRAPES[r].";
+	if ruts circuits is unexamined:
+		say "[2drm of Rustic Citrus]you could've examined the ruts circuits to find more things to change to fruits.";
+	else:
+		if mad train is not moot, say "[2drm of Rustic Citrus]the mad train could've become a [b]TAMARIND[r].";
+		if harmonicas are not moot, say "[2drm of Rustic Citrus]the harmonicas could've become [b]MARASCHINO[r] cherries.";
+		if eerie blurbs are not moot, say "[2drm of Rustic Citrus]the eerie blurbs could've become [b]BLUEBERRIES[r].";
+		if peanut cola is not moot, say "[2drm of Rustic Citrus]the peanut cola could've become a [b]CANTALOUPE[r].";
+		if mopeage rant is not moot, say "[2drm of Rustic Citrus]the mopeage rant et al could've become a [b]POMEGRANATE[r].";
+		if omen prism is not moot, say "[2drm of Rustic Citrus]The omen prism could've become a [b]PERSIMMON[r].";
+	if apples are not dislodged, say "[2drm of Swell Wells]the PSA [']Elp could've become [b]APPLES[r]."; [Swell Wells]
+	if green stain is not moot, say "[2drm of Swell Wells]you could've made the green stain [b]TANGERINES[r].";
+	if miser ruble is not moot, say "[2drm of Swell Wells]the miser ruble could've become [b]MULBERRIES[r].";
+	if riot cap is not moot, say "[2drm of Swell Wells]the riot cap could've become an [b]APRICOT[r].";
+	if sorer bogey is not moot, say "[2drm of Swell Wells]the sorer bogey could've become a [b]GOOSEBERRY[r].";
+	if stucco is not moot, say "[2drm of Swell Wells]the message on stucco could've become [b]COCONUTS[r].";
+	if rapt figure is not moot, say "[2drm of Filed Field]the rapt figure could've become a [b]GRAPEFRUIT[r]."; [Filed Field]
+	if pipe panel lie pen app is not moot, say "[2drm of Filed Field]the pipe panel lie pen app could've become a [b]PINEAPPLE[r].";
+	if barriers west are not moot, say "[2drm of Filed Field]the barriers west could've become [b]STRAWBERRIES[r].";
+	if briar screen is not moot, say "[2drm of Filed Field]the briar screen could've become [b]CRANBERRIES[r].";
+	if buried raft is not moot, say "[2drm of Filed Field]the buried raft could've become [b]BREADFRUIT[r].";
+	if pryer bars are not moot, say "[2drm of Filed Field]the pryer bars could've become a [b]RASPBERRY[r].";
+	if barber sickle is not moot, say "[2drm of Filed Field]the barber sickle could've become [b]BLACKBERRIES[r].";
+	if mean trowel is not moot, say "[2drm of Filed Field]the briar screen could've become a [b]WATERMELON[r].";
+	if lemons are not dislodged, say "[2drm of Clangier Clearing]you could've looked [b]SOLEMN[r] to get lemons."; [Clangier Clearing]
+	if melon is not dislodged, say "[2drm of Clangier Clearing]you could've said [b]MO LEN[r] or [b]LEN MO[r] to get a melon.";
+	if papayas are not dislodged, say "[2drm of Clangier Clearing]you could've gotten [b]PAPAYAS[r] from the 'Pay [b]ASAP[r]' Auction Caution.";
+	if mango is not moot, say "[2drm of Clangier Clearing]you could've gone [b]AMONG[r] the No-Ammo Gang for a mango.";
+	if peach is not moot, say "[2drm of Clangier Clearing]you could've gotten the peach [b]CHEAP[r].";
+	if prices precis is not reflexed, say "[2drm of Clangier Clearing]you could've said [b]CRIPES[r] at the prices precis.";
+	if quince is not dislodged, say "[2drm of Clangier Clearing]you could've said the quince costs [b]CINQUE[r].";
+	if nectarine is not dislodged, say "[2drm of Clangier Clearing]you could've made the nectarine [b]ANCIENTER[r].";
+	if orange is not dislodged, say "[2drm of Scape Space]you could've tried to [b]GO NEAR[r] to get the orange."; [Scape Space]
+	if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a [b]BANANA[r].";
+	if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub [b]RHUBARB[r].";
+	if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments [b]REVERSED[r].";
+	if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
+
+this is the demo-dome-misses rule:
+	say "No points in the Demo Dome, so nothing to find.";
 
 book epilogue transition
 
