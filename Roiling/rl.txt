@@ -27,6 +27,8 @@ Brown (orange plus blue, roughly) is a Y in the right place.
 ?What are some general issues and terms?
 Well, for starters, "clog" means too many consonants. "Bleed" means too many vowels in a row.
 There'll also be some terminology and shorthand: EN(DT) means End or Ent, and I may use several parentheses in a row.
+There's one more piece of terminology pertaining to the next question, so it may not make full sense until you understand how the settler works with ambiguous readings.
+Vowel-counting refers to saying, okay, there must be X vowels in the final word, and if we have X-1 and a question mark, that letter slot must be a vowel. X and a question mark, it's a consonant.
 ?What does a question mark in the settler reading mean?
 It means that one of the letters in the description is right, but not all of them.
 Sometimes this can really help you more than an actual reading, though occasionally it can muddle things.
@@ -292,6 +294,13 @@ But it does the same for the first: one of S or P must be right.
 The third is O or S, and the fourth is P or T, but since the first and second can't be consonants, the third must be.
 (SP)(SP)O(PT) is left. That means T must be in slot 4.
 SPOT is right, and PSOT is not.
+# logic for mussier misuser
+?Should I care about the mussier misuser?
+For maximum points, yes.
+The ambiguous settings almost knock it out completely.
+RS UI RM RM IS RMS UIE is what you get. Slot 5 must be a vowel to get three vowels in the final word. So it is I. That leaves U for slot 2 and E for slot 7.
+Now we notice there are 2 S's, and they can't be in slots 3 or 4. So they are in 1 and 6.
+There's no strictly logical way to choose between SUMRISE and SURMISE, but SUMRISE isn't quite a word. SURMISE.
 >>BOARDED ROADBED
 # logic for a sty tasty say
 ?How do I properly deal with A Tasty Sty, Say?

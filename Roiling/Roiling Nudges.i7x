@@ -173,6 +173,8 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 
 to say curtain-block: say "The act-ruin curtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
+book stores nudges
+
 chapter stores
 
 table of stores nudges
@@ -280,7 +282,7 @@ to say rehab-no: say "The Rehabs Basher seems too strong to move directly. Perha
 
 to say no-park: say "The speaker parkees aren't what, or who, you need to change, here. It'll still be tedious"
 
-book routes
+book routes nudges
 
 chapter routes
 
@@ -2037,6 +2039,8 @@ to say elv-mach: say "You have enough to think about without one more of Elvira'
 
 to say one-toy: say "Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army"
 
+book others nudges
+
 chapter others
 
 table of others nudges
@@ -2356,7 +2360,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "ladder"	311189747	--	--	"[its-a-museum]."
 "bulk"	230271729	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."
 
-book general
+book general nudges
 
 chapter general
 

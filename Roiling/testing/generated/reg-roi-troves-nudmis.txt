@@ -69,11 +69,11 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
 >score
-Score in a scenario: 0 out of 28 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 28.
+Score in a scenario: 0 out of 29 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 29.
 
 #spechelp for pa egg pea
 >gaep
-You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
+You look blankly at Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 #scannotes for pa egg pea
 >scan pa egg pea
@@ -83,7 +83,7 @@ Man! It's making the settler go crazy. Between the title and the author's name, 
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 1 out of 28 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 28.
+Score in a scenario: 1 out of 29 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 29.
 
 #done rejects for pa egg pea
 >gaep
@@ -103,7 +103,7 @@ No, something as powerful as a tears taser will cause more than one tear to be s
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 2 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
+Score in a scenario: 2 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #spechelp for eh at heat
 >haet
@@ -118,7 +118,7 @@ Well, it's only four letters, and you're not sure whether to feel glad things st
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 3 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
+Score in a scenario: 3 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #mistake retest for real hot
 >real hot
@@ -144,31 +144,7 @@ Your score has just gone up by one point
 Bustle Sublet
 
 >score
-Score in a scenario: 4 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
-
-#scannotes for a sty tasty say
->scan sty
-Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
->scan sty
-!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
-#spechelp for a sty tasty say
->tsya
-No. You pause. That can't be it. You need to do something, or nothing, differently.
-DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
-#readables for a sty tasty say
->read sty
-YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
-
->stay
-by one point
->score
-Score in a scenario: 5 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
-
-#done rejects for a sty tasty say
->stya
-You can't over-stay your staying power, or something.
+Score in a scenario: 4 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #mistake test for pots
 >pots
@@ -215,6 +191,9 @@ No, you'll want to zone out the whole verbose distraction.
 >vere
 No, you'll want to zone out the whole verbose distraction.
 
+#spechelp for mussier misuser
+>sumirse
+The mussier misuser looks around a bit, worried someone might be out-thinking them.
 #spechelp for sob ever verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
@@ -238,7 +217,7 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
+Score in a scenario: 5 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #spechelp for stop post
 >stpo
@@ -252,13 +231,42 @@ You're already observing by reflex now. No need to tweak things.
 !Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
 
+>surmise
+Your score has just gone up by one point
+>score
+Score in a scenario: 6 out of 29 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 29.
+
 >spot
 Your score has just gone up by one point
 
 Boarded Roadbed
 
 >score
-Score in a scenario: 7 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
+Score in a scenario: 7 out of 29 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 29.
+
+#scannotes for a sty tasty say
+>scan sty
+Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+>scan sty
+!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+#spechelp for a sty tasty say
+>tsya
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+#readables for a sty tasty say
+>read sty
+YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+
+>stay
+by one point
+>score
+Score in a scenario: 8 out of 29 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 29.
+
+#done rejects for a sty tasty say
+>stya
+You can't over-stay your staying power, or something.
 
 #mistake test for norse
 >norse
@@ -311,7 +319,7 @@ That question mark is perhaps, um, clear if you think about it.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 10 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 #mistake retest for norse
 >norse
@@ -343,7 +351,7 @@ by one point
 Drain Nadir
 
 >score
-Score in a scenario: 10 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 11 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 >reclla
 That's not something you can say, do or see here.
@@ -375,7 +383,7 @@ It's an IRES pad.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 12 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 #verbcase smell-troves-if-noun-is-large-regal-lager
 >smell lager
@@ -400,7 +408,7 @@ Your eyes gloss over all but the red ERGAL AGLER.
 >glare
 Your score has just gone up by one point
 >score
-Score in a scenario: 12 out of 28 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 28.
+Score in a scenario: 13 out of 29 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 29.
 
 #nudge for glare
 >glaer
@@ -434,7 +442,7 @@ Your score has just gone up by one point
 Boredom Bedroom
 
 >score
-Score in a scenario: 13 out of 28 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 28.
+Score in a scenario: 14 out of 29 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 29.
 
 #nudge for shmoe
 >shmeo
@@ -487,13 +495,13 @@ You extract more joy out of knowing you can probably work out the ambiguous entr
 >relapse
 Your score has just gone up by one point
 >score
-Score in a scenario: 14 out of 28 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 28.
+Score in a scenario: 15 out of 29 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 29.
 
 >bolster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 28 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 28.
+Score in a scenario: 16 out of 29 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 29.
 
 #nudge for bloters
 >bloters
@@ -515,7 +523,7 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 28 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 28.
+Score in a scenario: 17 out of 29 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
 
 #renudge for amrest
 >amrest
@@ -541,7 +549,7 @@ Your score has just gone up by one point
 Browse Bowers
 
 >score
-Score in a scenario: 17 out of 28 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 28.
+Score in a scenario: 18 out of 29 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
 
 #nudge for divorce
 >divorec
@@ -610,7 +618,7 @@ Your score has just gone up by one point
 Econ-Cone
 
 >score
-Score in a scenario: 19 out of 28 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 28.
+Score in a scenario: 20 out of 29 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 29.
 
 #mistake test for once
 >once
@@ -654,7 +662,7 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 >aspire
 Your score has just gone up by one point
 >score
-Score in a scenario: 20 out of 28 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 28.
+Score in a scenario: 21 out of 29 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 29.
 
 #mistake test for penrod
 >penrod
@@ -685,7 +693,7 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 22 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 #mistake retest for once
 >once
@@ -733,7 +741,7 @@ Your score has just gone up by one point
 Upscale Capsule
 
 >score
-Score in a scenario: 22 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 23 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 #mistake test for fren
 >fren
@@ -754,7 +762,7 @@ Etched into the vees are the names of this motivational device's inventors. One 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 24 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 #mistake test for lsat
 >lsat
@@ -811,7 +819,7 @@ Hmm. Well, four letters can't be bad. The vowel must be in one of those two plac
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 25 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 #readables for creationism reactionism
 >read creationism
@@ -875,16 +883,20 @@ Well of course the final challenge wouldn't have any positive IDs, and the two v
 >sitre
 All the siters.
 
+>romanticise
+>score
+Score in a scenario: 26 out of 29 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 29.
+
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 27 out of 29 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 29.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 28 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 28 points.
+Score in a scenario: 28 out of 29 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 29 points.
 
 #nudge for marble
 >marbel
@@ -904,4 +916,4 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-, Troves (27/28)
+, Troves (29/29)

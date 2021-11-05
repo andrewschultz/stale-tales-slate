@@ -15,8 +15,8 @@ files=reg-roi-troves-max.txt,reg-roi-troves-min-1.txt,reg-roi-troves-min-2.txt,r
 ~	verbs	t6
 #~	pad	t5
 
-}}MAX=28
-}}CURMAX=28
+}}MAX=29
+}}CURMAX=29
 }}SCORE=0
 }}CURMIN=17
 
@@ -102,6 +102,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for gape
 >agep
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for stare
+>tsrea
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
 #mistake test for real hot
@@ -156,7 +159,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 @nud
 #spechelp for pa egg pea
 >gaep
-You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
+You look blankly at Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 #scannotes for pa egg pea
 >scan pa egg pea
@@ -262,40 +265,6 @@ In particular, you feel the need to OBSERVE right now.
 >score
 {$SCOS}
 
-@sli
-#slider test for stay
->tsya
-Your settler begins to make noises: a low hum, but nothing really piercing.
-
-@nud
-#scannotes for a sty tasty say
->scan sty
-Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
->scan sty
-!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
->t
-#spechelp for a sty tasty say
->tsya
-No. You pause. That can't be it. You need to do something, or nothing, differently.
-DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
-#readables for a sty tasty say
->read sty
-YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
-
-@!mina,minb
->stay
-by one point
-}}SCORE++
-}}CURMIN++
->score
-{$SCOS}
-
-@nud
-#done rejects for a sty tasty say
->stya
-You can't over-stay your staying power, or something.
-
 @mis
 #mistake test for pots
 >pots
@@ -345,6 +314,9 @@ No, you'll want to zone out the whole verbose distraction.
 No, you'll want to zone out the whole verbose distraction.
 
 @nud
+#spechelp for mussier misuser
+>sumirse
+The mussier misuser looks around a bit, worried someone might be out-thinking them.
 #spechelp for sob ever verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
@@ -377,12 +349,16 @@ You should SPOT once you're able to focus better.
 #slider test for observe
 >esbover
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for surmise
+>ussierm
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @verbs
 #verbcase listen-troves-if-noun-is-sob-ever-verbose
 >listen verbose
 The sob ever verbose just rattles on and on. A sad, stupid, winding story about
 , which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red.
+
 
 >observe
 Your score has just gone up by one point
@@ -415,13 +391,17 @@ Well, that's a bit confusing. You'd think a four-letter word wouldn't have too m
 >psto
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
+@!mina,minb
+>surmise
+Your score has just gone up by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
 >spot
 Your score has just gone up by one point
 }}SCORE++
-
-@mina,minb
-#lose a point for not ignoring A Tasty Sty, Say
-}}CURMAX--
 
 @spoi
 /In particular, you feel the need to (REASON|BELIEVE) right now\.
@@ -433,6 +413,40 @@ Boarded Roadbed
 
 >score
 {$SCOS}
+
+@sli
+#slider test for stay
+>tsya
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#scannotes for a sty tasty say
+>scan sty
+Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+>scan sty
+!Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
+>t
+#spechelp for a sty tasty say
+>tsya
+No. You pause. That can't be it. You need to do something, or nothing, differently.
+DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
+#readables for a sty tasty say
+>read sty
+YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
+
+@!mina,minb
+>stay
+by one point
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
+
+@nud
+#done rejects for a sty tasty say
+>stya
+You can't over-stay your staying power, or something.
 
 @verbs
 #reverbcase goto-troves-default
@@ -613,7 +627,8 @@ In particular, you feel the need to DESPAIR right now.
 
 @mina,minb
 #lose max point for only one of believe/reason
-}}CURMAX--
+#lose a point for not ignoring A Tasty Sty, Say
+}}CURMAX-=2
 
 }}SCORE++
 >score
@@ -1418,6 +1433,9 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 #slider test for recant
 >eractn
 Your settler begins to make noises: a low hum, but nothing really piercing.
+#slider test for romanticise
+>imonairstec
+Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @max
 ##balance undos
@@ -1452,6 +1470,13 @@ In particular, you feel the need to RECANT right now.
 >resist
 In particular, you feel the need to RECANT right now.
 >undo
+
+@!mina,minb
+>romanticise
+}}SCORE++
+}}CURMIN++
+>score
+{$SCOS}
 
 @!minb
 >ramble

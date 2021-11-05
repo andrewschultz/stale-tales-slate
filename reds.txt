@@ -90,6 +90,8 @@ care,R??G=race=acre
 spot,?R??=stop=post
 spot,pops,tots
 stay,yays,tats
+#qver of mussier misuser
+surmise,R?RR?RY=mussier=misuser
 #qver of sob ever verbose
 observe,YRR?RR?=sobever=verbose
 observe,evesbro,boevers,beevors,ervbeso

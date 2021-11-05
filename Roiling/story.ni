@@ -178,19 +178,20 @@ Stores is an unsolved spoiled region. regnud of Stores is table of Stores nudges
 7/10=Store B=Sorbet
 8/11=Store H=Others (you can get the point but you can't enter until you beat Elvira)]
 
-Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 28. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
+Troves is an unsolved region. regnud of Troves is table of troves nudges. regana of Troves is table of troves anagrams. reg-hint-rule of Troves is troves-hinting rule. goto-check of Troves is goto-troves rule. max-score of Troves is 29. min-score of Troves is 17. listen-rule of troves is listen-troves rule. smell-rule of troves is smell-troves rule. sleep-rule of troves is sleep-troves rule. swear-rule of troves is swear-troves rule. spechelp of troves is table of troves spechelp. scannotes of troves is table of troves scannotes. attack-table of troves is table of troves attacks. loc-scan-rule of troves is scan-troves-loc rule. hint-done-note table of troves is table of troves hint-done-notes. nowhere-table of troves is table of troves nowheres. done reject table of troves is table of troves done rejects. randomization rule of troves is randomize-troves rule. hintobjstable of troves is table of troves hintobjs. subject blather table of troves is table of troves subject blather. readable table of troves is table of troves readables. general blather table of troves is table of troves general blather. reflexive blather table of troves is table of troves reflexive blather.
 [LLP list:
 1/18=Pa Egg Pea
 2/19=tears taser
-3/20=A Sty: Tasty, Say
-4/21=both of evil bee or SNORE SO ARENA
-5/22=lager
-6/23=pleaser leapers
-7/24=both of BORTLES lobster/ME ARTS stream,
-8/25=DIVORCES
-9/26=both of Trevis Vister/praise
-10/27=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
-11/28=Creationism Reactionism
+3/20=mussier misuser
+4/21=A Sty: Tasty, Say
+5/22=both of evil bee or SNORE SO ARENA
+6/23=lager
+7/24=pleaser leapers
+8/25=both of BORTLES lobster/ME ARTS stream,
+9/26=DIVORCES
+10/27=both of Trevis Vister/praise
+11/28=both of Sister Tressi/Marble Blamer Balmer-Mr Beal
+12/29=Creationism Reactionism
 ]
 
 Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of troves scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint-done-notes. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. subject blather table of routes is table of routes subject blather. readable table of routes is table of routes readables. general blather table of routes is table of routes general blather. reflexive blather table of routes is table of routes reflexive blather.
@@ -1854,14 +1855,18 @@ Check asking generically (This is the check for only one sensible converser rule
 the can only talk to talkables rule is not listed in any rulebook.
 
 check talking to (this is the hint looking not talking rule):
-	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
-	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
+	abide by the map out sensible talk tries rule;
 	if litany of noun is not table of no conversation:
 		now qbc_litany is litany of noun;
 		do nothing instead;
-	if noun is span pans, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
 
-section specifically
+this is the map out sensible talk tries rule:
+	if noun is Trevis Vister, say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
+	if noun is span pans, say "The door seems to grumble and curse very quietly[if bogus-plains is reflexive]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
+	if noun is mussier misuser, say "The [misuser] can only give advice to be as important as they are, not more. If you choose not to ignore them, you must find a way to think better than they do." instead;
+	unless the noun provides the property litany and the noun provides the property greeting, say "You may be better off examining non-living things, not talking to them." instead;
+
+section specific subjects that are not people or objects
 
 Rand-first is a truth state that varies.
 
@@ -7520,7 +7525,7 @@ every turn when Dusty Study was not lit and lamp is off-stage (this is the clue 
 Rule for printing the description of a dark room (this is the Dusty Study rule):
 	if location of player is Dusty Study, say "[one of]Rats, kid, it's dark[or]Aww, dark. Awkward[in random order]. You probably can't go stumbling around--you'd poke your eye on that palm, or something. Wouldn't be bright." instead;
 
-the giant pin is an LLPish boring thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of giant pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "You don't need to change the giant pin, you sense, but you probably could if you wanted.". bore-check is bore-pin rule.
+the giant pin is an LLPish boring thing in Dusty Study. "A giant pin (bowling) hangs on the wall here.". description of giant pin is "Man, it's a giant pin. Cardboard, too. It's never managed to bowl or blow over any guests despite being surprisingly artsy. You could READ some red writing on it.". bore-text is "The pin's just there. You get the sense you could change it, with your powers and all, but you don't have to.". bore-check is bore-pin rule.
 
 this is the bore-pin rule:
 	if current action is pushing or pulling, say "It won't budge. It's tall but too thin to hide a way out, too." instead; [??check if this works in general]
@@ -11084,6 +11089,12 @@ after looking in Bustle Sublet:
 	set the pronoun it to sob ever verbose;
 	continue the action;
 
+chapter mussier misuser
+
+the mussier misuser is LLPish vanishing boring scenery in Bustle Sublet. "The misuser skulks just out of sight, probably plotting how to use people. Perhaps they are worth showing to yourself you're better than that, perhaps not. But you will have to think your way to feeling better than them.". bore-text of mussier misuser is "The mussier misuser can probably be safely ignored, but you may be able to look at it, or think of it, effectively."
+
+a-text of mussier misuser is "RYRRYRY". b-text of mussier misuser is "R?RR?RY". parse-text of mussier misuser is "S[sp]U[sp]x[sp]x[sp]I[sp]S[sp]E".
+
 chapter useless scenery
 
 section reastier arteries
@@ -11221,7 +11232,7 @@ this is the bore-cellar rule:
 
 chapter A Sty, Tasty, Say
 
-A Sty Tasty Say is a proper-named LLPish reflexive scenery in Bustle Sublet. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
+A Sty Tasty Say is a proper-named LLPish reflexive scenery in Boarded Roadbed. printed name is "[i]A Sty: Tasty, Say[r]". "It feels both hard and easy to ignore, [if tasty say is reflexed]even after you've dealt with it[else]but perhaps there is a simple way to cast it aside. Not that you need to[end if]."
 
 a-text of a sty tasty say is "RRYO". b-text of a sty tasty say is "RR??". parse-text of a sty tasty say is "-[sp]-[sp]-[sp]-".
 
@@ -22141,6 +22152,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive, say "[2dmiss of myreg]you could've tried to [b]GAPE[r] at Pa, Egg, Pea, by Peg A. Page.";
 		if tears taser is reflexive, say "[2drm of Loather Rathole]you could've tried to [b]STARE[r] at the tears taser.";
+		if mussier misuser is not moot, say "[2drm of Bustle Sublet]you could've tried to [b]SURMISE[r] about the mussier misuser.";
 		if a sty tasty say is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]STAY[r] around A Sty: Tasty, Say.";
 		if evil bee is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]BELIEVE[r] to neutralize the evil bee, too."; [1 of 2]
 		if SNORE SO ARENA is reflexive, say "[2drm of Boarded Roadbed]you could've tried to [b]REASON[r] to neutralize the [b]SNORE SO ARENA[r], too.";

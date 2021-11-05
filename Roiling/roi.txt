@@ -659,6 +659,9 @@ It will help you <b>SPOT</b>. But you need to get rid of the sob ever verbose.
 ?What do I do to ignore/dispel the sob ever verbose?
 You can listen to it for clues. Lots of reds.
 <b>OBSERVE</b>.
+?Is the mussier misuser important?
+Not to get through, but they will give a point.
+<b>SURMISE</b>.
 >>BOARDED ROADBED
 ?A Sty, Tasty, Say. Is it worthwhile?
 To get full points, yes. But it's optional.
@@ -761,6 +764,10 @@ Unless you <b>RAMBLE</b>.
 Yes.
 She looks down at you as if you think you're a failure. Or if you think you aren't, because you're lying to yourself.
 You can <b>RESIST</b>.
+?Is <i>Creationism, Reactionism</i> important?
+It's TERRIBLY important for society, I'm sure. But not necessarily to you.
+You can daydream one last time to ignore it.
+<b>ROMANTICISE</b>.
 >STORE W
 >>LOFTIER TREFOIL
 ?How do I get out?

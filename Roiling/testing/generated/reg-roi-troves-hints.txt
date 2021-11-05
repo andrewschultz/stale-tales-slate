@@ -38,19 +38,19 @@ You pause, wondering if there is a way to preserve resources. Maybe now is a goo
 >ptf 2
 
 >score
-Score in a scenario: 0 out of 28 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 28.
+Score in a scenario: 0 out of 29 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 29.
 
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 1 out of 28 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 28.
+Score in a scenario: 1 out of 29 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 29.
 
 >stare
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 2 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
+Score in a scenario: 2 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #not a mistake
 >hate
@@ -61,7 +61,7 @@ In particular, you feel the need to CARE right now.
 DEBUG INFO: Race Acre hinting.
 
 >score
-Score in a scenario: 3 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
+Score in a scenario: 3 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #not a mistake
 >care
@@ -74,12 +74,7 @@ Bustle Sublet
 In particular, you feel the need to OBSERVE right now.
 
 >score
-Score in a scenario: 4 out of 28 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 28.
-
->stay
-by one point
->score
-Score in a scenario: 5 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
+Score in a scenario: 4 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 >observe
 Your score has just gone up by one point
@@ -89,7 +84,12 @@ In particular, you feel the need to SPOT right now.
 DEBUG INFO: stop post hinting.
 
 >score
-Score in a scenario: 6 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
+Score in a scenario: 5 out of 29 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
+
+>surmise
+Your score has just gone up by one point
+>score
+Score in a scenario: 6 out of 29 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 29.
 
 >spot
 Your score has just gone up by one point
@@ -101,7 +101,12 @@ Your score has just gone up by one point
 Boarded Roadbed
 
 >score
-Score in a scenario: 7 out of 28 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
+Score in a scenario: 7 out of 29 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 29.
+
+>stay
+by one point
+>score
+Score in a scenario: 8 out of 29 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 29.
 
 >believe
 In particular, you feel the need to RECALL right now.
@@ -119,7 +124,7 @@ DEBUG INFO: L'Clear Cellar hinting.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 10 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 >recall
 by one point
@@ -131,7 +136,7 @@ Drain Nadir
 In particular, you feel the need to DESPAIR right now.
 
 >score
-Score in a scenario: 10 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 11 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 >despair
 Your score has just gone up by one point
@@ -141,7 +146,7 @@ In particular, you feel the need to DECIDE right now.
 DEBUG INFO: I'd Cede hinting.
 
 >score
-Score in a scenario: 11 out of 28 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
+Score in a scenario: 12 out of 29 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 29.
 
 #verbcase smell-troves-if-noun-is-large-regal-lager
 >smell lager
@@ -150,7 +155,7 @@ A faint rye-be-beery odor.
 >glare
 Your score has just gone up by one point
 >score
-Score in a scenario: 12 out of 28 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 28.
+Score in a scenario: 13 out of 29 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 29.
 
 >decide
 Your score has just gone up by one point
@@ -162,12 +167,12 @@ Your score has just gone up by one point
 Boredom Bedroom
 
 >score
-Score in a scenario: 13 out of 28 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 28.
+Score in a scenario: 14 out of 29 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 29.
 
 >relapse
 Your score has just gone up by one point
 >score
-Score in a scenario: 14 out of 28 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 28.
+Score in a scenario: 15 out of 29 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 29.
 
 >bolster
 In particular, you feel the need to DEAL right now.
@@ -182,13 +187,13 @@ Your score has just gone up by one point
 DEBUG INFO: LEAD, All: a Deed hinting.
 
 >score
-Score in a scenario: 15 out of 28 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 28.
+Score in a scenario: 16 out of 29 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 29.
 
 >master
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 28 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 28.
+Score in a scenario: 17 out of 29 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
 
 >deal
 Your score has just gone up by one point
@@ -201,7 +206,7 @@ DEBUG INFO: Si Reed hinting.
 In particular, you feel the need to DESIRE right now.
 
 >score
-Score in a scenario: 17 out of 28 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 28.
+Score in a scenario: 18 out of 29 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 29.
 
 >discover
 by one point
@@ -220,12 +225,12 @@ Econ-Cone
 /DEBUG INFO: (rivets|praise spirea) hinting.
 
 >score
-Score in a scenario: 19 out of 28 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 28.
+Score in a scenario: 20 out of 29 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 29.
 
 >aspire
 Your score has just gone up by one point
 >score
-Score in a scenario: 20 out of 28 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 28.
+Score in a scenario: 21 out of 29 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 29.
 
 >strive
 Your score has just gone up by one point
@@ -235,7 +240,7 @@ In particular, you feel the need to PONDER right now.
 DEBUG INFO: END PRONER POD hinting.
 
 >score
-Score in a scenario: 21 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 22 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 >ponder
 Your score has just gone up by one point
@@ -247,7 +252,7 @@ Upscale Capsule
 In particular, you feel the need to DESERVE right now.
 
 >score
-Score in a scenario: 22 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 23 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 >deserve
 Your score has just gone up by one point
@@ -257,7 +262,7 @@ In particular, you feel the need to LAST right now.
 DEBUG INFO: St. Al Salt hinting.
 
 >score
-Score in a scenario: 23 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 24 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 >last
 Your score has just gone up by one point
@@ -267,7 +272,7 @@ Your score has just gone up by one point
 /DEBUG INFO: (Marble Blamer Balmer|Sister Tressi Siters) hinting\.
 
 >score
-Score in a scenario: 24 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 25 out of 29 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 29.
 
 #readables for creationism reactionism
 >read creationism
@@ -280,10 +285,14 @@ In particular, you feel the need to RECANT right now.
 In particular, you feel the need to RECANT right now.
 >undo
 
+>romanticise
+>score
+Score in a scenario: 26 out of 29 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 29.
+
 >ramble
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 28 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 28.
+Score in a scenario: 27 out of 29 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 29.
 
 >resist
 Your score has just gone up by one point
@@ -291,7 +300,7 @@ Your score has just gone up by one point
 DEBUG INFO: Trance Nectar hinting.
 
 >score
-Score in a scenario: 26 out of 28 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 28 points.
+Score in a scenario: 28 out of 29 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 29 points.
 
 >recant
 Your score has just gone up by one point
@@ -299,4 +308,4 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-, Troves (27/28)
+, Troves (29/29)

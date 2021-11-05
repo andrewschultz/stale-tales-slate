@@ -381,6 +381,8 @@ STORE V WALKTHROUGH
 
 STORE V holds troves. Troves of riches! The sort you have to think and earn! It has the fewest mandatory puzzles to win, though STORE U has fewer maximum puzzles. Store V is very one-way. There are eight rooms as you move from poverty to the very top. Many of the optional points occur when you only need to solve one of two puzzles to advance. When this happens, I will list them both. Neither is "better" than the other. Store V also has a full Last Lousy Point in every room.
 
+Last Lousy Points can be clued with shaking the settler, but if you examine them, the game should say you don't necessarily have to deal with them, but it'd be nice.
+
 > TROVES
 
 The portal name doesn't matter, but I hope you find my choices amusing. In fact, if there is just one, you can go IN to save keystrokes. The game will detect it.
@@ -403,9 +405,9 @@ Oh no! Hate blinded you to your super purse getting stolen! But you can't visit 
 
 > CARE
 
-So you've made it to the Boarded Roadbed. There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
+So you've made it to the Bustle Sublet. There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
 
-There's a last lousy point with the sty. Err, A Sty, Tasty, Say.
+The mussier misuser is there to distract you, as well, but they don't need to be dealt with. Unless you like points.
 
 > OBSERVE
 > SPOT
@@ -530,7 +532,7 @@ You're tired. There's that Trance Nectar which can help you be more productive. 
 
 
 
-STORE U is the one with the fewest puzzles needed to get a maximum score.
+STORE U is the one with the fewest puzzles needed to get a maximum score. It may be easier than Store V, because of the type of word needed. But I am sorting the regions based on number of point-scoring commands.
 
 > ROUTES
 
@@ -546,7 +548,7 @@ Ah, there we go. Something a little more formal for a place of worship.
 
 > X LIST
 
-Hmm, a list of stuff on the wall. Maybe the stuff is in the other locations.
+Hmm, a list-o-toils is on the wall. Maybe the stuff is in the other locations.
 
 > EXIT
 
@@ -2134,11 +2136,15 @@ You can also be JVGUBHG the raptest patters any time in the Sonancy Canyons.
 
 TROVES:
 
-TNCR at Simple Impels by Peg A. Page.
+There is an on-its-own LLP in each room. Also note there are a few puzzles where you only need one anagram of two.
+
+TNCR at Simple Impels by Peg A. Page can be done at any time.
 
 FGNER at the tears taser in Loather Rathole.
 
-FGNL around A Sty in Bustle Sublet.
+FHEZVFR around the mussier misuser in Bustle Sublet.
+
+FGNL around A Sty in Boarded Roadbed.
 
 TYNER at the lager in Drain Nadir. (Again, interesting ROT13.)
 
