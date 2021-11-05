@@ -195,6 +195,9 @@ def find_nomatch_anagram(x):
     return ''.join(new_string)
 
 def show_results(q, result_string = "{0} has this anagram with no letters in common: {1}"):
+    if q != q.lower():
+        result_string = result_string.replace('@sli\n', '')
+        q = q.lower()
     temp = find_nomatch_anagram(q)
     if not temp: return
     print(result_string.format(q, temp))
@@ -268,8 +271,8 @@ if len(sys.argv) > 1:
             generate_it(q[2:])
         elif q == 's1': shift_1_on_no_repeat = True #this works for one option, but what if there are several?
         elif q == 'tr': try_rotating_first = True #this works for one option, but what if there are several?
-        elif q == 'c': format_string = COMMAND_AND_COMMENT
-        elif q == 'cx': format_string = FULL_TEST_FILE_NOTES
+        elif q == 'c': format_type = COMMAND_AND_COMMENT
+        elif q == 'cx': format_type = FULL_TEST_FILE_NOTES
         elif q == 'nc': format_type = NO_FORMATS
         elif q[:2] == 's=':
             start_word = q[2:]
@@ -302,7 +305,10 @@ if len(sys.argv) > 1:
                 words_to_shift += rs
                 total_shifts += len(rs)
             else:
-                words_to_shift.append(q.lower())
+                ary = q.split(',')
+                words_to_shift.append(ary[0].lower())
+                for x in range(1,len(ary)):
+                    words_to_shift.append(ary[x].upper())
 
 if format_type == FULL_TEST_FILE_NOTES:
     format_string = "@sli\n#slider test for {0}\n>{1}\nYour settler begins to make noises: a low hum, but nothing really piercing."
