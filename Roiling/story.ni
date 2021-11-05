@@ -22163,7 +22163,7 @@ this is the ordeal-reload-misses rule:
 	if tables are in Dusty Study, say "[2drm of dusty study]you could've made the tables into a [b]STABLE[r] to unlock an alternate way/puzzle to the basement/gallery.";
 	if sitar is not moot, say "[2drm of farming framing]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing or the [end if]stria in the gallery into a [b]STAIR[r].";
 	if niche is in Dusty Study, say "[2drm of dusty study]you could've changed 'my niche' into a [b]CHIMNEY[r].";
-	if pram is in Highest Heights and highest heights is visited, say "[2dmiss of ordeal reload]you could've changed the pram into a [b]RAMP[r].";
+	if pram is in Highest Heights and highest heights is visited, say "[2drm of highest heights]you could've changed the pram into a [b]RAMP[r].";
 	if isbn bins are reflexive, say "[2drm of largely all grey gallery]you could've put a [b]SNIB[r] on the [b]ISBN[r] bins.";
 	if respect specter is not reflexed, say "[2drm of carven cavern]you could've gotten a SCEPTER from the [specter].";
 
@@ -22229,12 +22229,11 @@ this is the oyster-misses rule:
 	if Plasm Lamps is visited and bogus-psalm are not reflexed, say "[2drm of plasm lamps]you could've tried to [b]PSALM[r] in Plasm Lamps.";
 
 this is the towers-misses rule:
-	if keycar is not moot, say "[2dmiss of towers][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r][else]if you'd cleared all the guardians in a central room, a yacker keycar would've appeared[end if]."; [this is possible especially since the keycar cannot appear in Topside or Coastlines, and it relies on clearing all guardians, not just necessary ones]
-	if dourest detours are unvisited, say "[2dmiss of towers]you could have [one of]([b]MISSED[r] again for puzzle spoiler) found a puzzle[or]made yourself [b]ROUSTED[r] after you visited Dourest Detours[stopping] going nowhere in [list of detourable rooms].";
-	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
-	if number of pinko picaros > 0:
-		repeat with pk running through pinko picaros:
-			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
+	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot hintpastries], which cost a style point.";
+	if keycar is off-stage:
+		say "[2dmiss of towers]you didn't clear any location of guardians, besides edges or [coastlines], so you didn't get to see a [keycar].";
+	else if keycar is not moot:
+		say "[2dmiss of towers][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians, not just necessary ones. It cannot appear in Coastlines.]
 	let xxx be unripe ur pine;
 	if number of not moot guardians > 0:
 		say "[2dmiss of towers]starting missed Towers guardians[line break]";
@@ -22250,48 +22249,48 @@ this is the towers-misses rule:
 			now rm2 is the room guadir of gua from rm2;
 			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else][right-word entry in upper case][end if].";
 		if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
+	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
+	if number of pinko picaros > 0:
+		repeat with pk running through pinko picaros:
+			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
 	if yurts are in Scope Copse, say "[2drm of scope copse]the yurts in the Scope Copse could've become [b]RUSTY[r].";
 	if old ice is not reflexed, say "[2drm of saltbed]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become [b]COILED[r].";
-	if ego drains are not moot, say "[2dmiss of towers]the organised ego drains in Leveraged Everglade[if leveraged everglade is unvisited] (south of Treading Gradient)[end if] could've become [b]GRANDIOSE[r].";
-	if dourest detours are visited and seismal samiels are not moot, say "[2dmiss of towers]you could have made the seismal samiels [b]AIMLESS[r].";
-	if strudel is reflexive, say "[2dmiss of towers]the strudel in the Fringe Finger[if fringe finger is unvisited] (west of Anemic Cinema)[end if] could've become [b]RUSTLED[r].";
-	if sporties ripostes are not moot, say "[2dmiss of towers]the sporties['] ripostes in Lost Lots[if lost lots are unvisited] (south of Danger Garden)[end if] could've become [b]PROSIEST[r].";
-	if mended mini denim is not moot:
-		say "[2dmiss of towers]the mended mini denim in Treading Gradient could've been [b]MINED[r].";
-		if arid den is unvisited, say "[2dmiss of towers]there was a Dire and Arid Den below the denim. [one of]Type [b]MISSES[r] again to see how to escape[or]You would've gotten out by feeling [b]DANDIER[r][stopping].";
-	if raves saver is reflexive, say "[2dmiss of towers]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
-	if ag-atten is false, say "[2dmiss of towers]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
-	if weirder red wire is part of bot boat, say "[2dmiss of towers]you could've made the weirder red wire [b]REWIRED[r].";
-	if unripe ur pine is in Mislit Limits, say "[2dmiss of towers]you could've made the unripe ur-pine [b]PUNIER[r] to uncover something beyond.";
-	if top opt pot is not moot, say "[2dmiss of towers]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter [b]TRISTE[r][else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
-	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from a toasted hint pastry, which cost a style point.";
+	if ego drains are not moot and leveraged everglade is visited, say "[2drm of leveraged everglade]the organised ego drains in Leveraged Everglade could've become [b]GRANDIOSE[r].";
+	if strudel is reflexive and fringe finger is visited, say "[2drm of fringe finger]the strudel in the Fringe Finger could've become [b]RUSTLED[r].";
+	if sporties ripostes are not moot and lost lots is visited, say "[2drm of lost lots][the ripostes] ripostes in Lost Lots could've become [b]PROSIEST[r].";
+	if mended mini denim is not moot, say "[2drm of treading gradient]the mended mini denim could've been [b]MINED[r].";
+	if raves saver is reflexive, say "[2drm of treading gradient]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
+	if ag-atten is false, say "[2drm of obscurest subsector]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
+	if weirder red wire is part of bot boat, say "[2drm of actionless coastlines]you could've made the weirder red wire [b]REWIRED[r].";
+	if dourest detours are visited and seismal samiels are not moot, say "[2drm of dourest detours]you could have made the seismal samiels [b]AIMLESS[r].";
+	if unripe ur pine is in Mislit Limits, say "[2drm of mislit limits]you could've made the unripe ur-pine [b]PUNIER[r].";
+	if top opt pot is not moot, say "[2drm of mislit limits]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west";
+	if mesprise premises are visited:
+		if tetris sitter is reflexive, say "[2drm of mesprise premises]you could've made the Tetris Sitter [b]TRISTE[r].";
+		if top opt pot is not moot, say "[2drm of mesprise premises]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest.";
 
 this is the otters-misses rule:
-	if rescind-cinders is false, say "[2dmiss of otters]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
-	if loop pool is unvisited:
-		say "[2dmiss of otters]you could've checked north of the Disowned Downside for the other way to regain your powers.";
-	else if eels are not reflexed:
-		say "[2dmiss of otters]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
-	if bran barn is not visited:
-		say "[2dmiss of otters]you could've checked south of the Disowned Downside for the other way to regain your powers.";
-	else if gore ogre is not moot:
-		say "[2dmiss of otters]you could've [if ghoul hat is not moot]said [b]ALTHOUGH[r] to dissolve the ghoul hat, then [end if]said [b]ERGO[r] to get rid of the Gore Ogre and gain Mr. Lee's trust.";
-	if aside-llp is not reflexed:
-		say "[2dmiss of otters]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r].";
-	else if holy nest is not reflexed:
-		say "[2dmiss of otters]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
+	if rescind-cinders is false, say "[2drm of minded midden]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
+	if asyllabic lilac bays are in Minded Midden, say "[2drm of minded midden]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
+	if cult laya is in Disowned Downside, say "[2drm of disowned downside]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
+	if loop pool is visited:
+		if eels are not reflexed, say "[2drm of loop pool]you could've [if sea cube is not moot]said [b]BECAUSE[r] to dissolve the sea cube, then [end if]said [b]ELSE[r] to gain the eels['] trust.";
+		if Sullenness Us is in Loop Pool, say "[2drm of loop pool]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
+	if bran barn is visited:
+		if gore ogre is not moot, say "[2drm of bran barn]you could've [if ghoul hat is not moot]said [b]ALTHOUGH[r] to dissolve the ghoul hat, then [end if]said [b]ERGO[r] to get rid of the Gore Ogre and gain Mr. Lee's trust.";
+		if vow here is in Bran Barn, say "[2drm of bran barn]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
 	if number of flippable things in Perverse Preserve > 0:
 		repeat with A running through flippable things in Perverse Preserve:
 			if A is raptor or A is parrot, next; [ get rid of white noise parrot/raptor suggestion while testing ]
 			let AA be the the-to corresponding to the-from of A in the table of otters anagrams;
-			say "[2dmiss of otters]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
+			say "[2drm of perverse preserve]you could've turned the [A] in Perverse Preserve into [if AA is plural-named]some[else]a[end if] [AA].";
 	if number of reflexive animals in Lamer Realm > 0:
 		repeat with A running through reflexive things in Lamer Realm:
-			say "[2dmiss of otters]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
-	if vow here is in Bran Barn, say "[2dmiss of otters]you could've dispelled the 'vow here' that reappeared in Bran Barn with [b]HOWEVER[r] after you got rid of the Gore Ogre.";
-	if Sullenness Us is in Loop Pool, say "[2dmiss of otters]you could've dispelled the 'Sullenness, Us' voices in Loop Pool after satisfying the eels by saying [b]UNLESS[r].";
-	if asyllabic lilac bays are in Minded Midden, say "[2dmiss of otters]you could've said [b]BASICALLY[r] around the asyllabic lilac bays in Burnt Brunt.";
-	if cult laya is in Disowned Downside, say "[2dmiss of otters]you could've said [b]ACTUALLY[r] to the [laya] in Disowned Downside.";
+			say "[2drm of lamer realm]you could've changed the [A] in Lamer Realm to be [right-adj of A].";
+	if aside-llp is not reflexed:
+		say "[2drm of reclusion inclosure]you could've recognized [e-n-m] fully as Elvira's ideas aides by pushing them [b]ASIDE[r], opening another LLP.";
+	else if holy nest is not reflexed:
+		say "[2drm of reclusion inclosure]you could've been all '[b]HONESTLY[r]?' at the holy nest.";
 
 this is the others-misses rule:
 	if slime is not moot, say "[2drm of Rustic Citrus]the slime could've become [b]LIMES[r].";
