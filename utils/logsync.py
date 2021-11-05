@@ -537,7 +537,14 @@ def check_scannotes():
             ll = re.split("\t+", line)
             l0 = ll[0].lower()
             in_scannotes[l0] = line_count
-            if len(ll) > 1 and len(ll) != 6: sys.exit("Uh oh, bad # of columns (have {:d} need 6) at line {:d}: {:s}".format(len(ll), line_count, line))
+            if len(ll) > 1 and len(ll) != 6:
+                print("Uh oh, bad # of columns (have {:d} need 6) at line {:d}: {:s}".format(len(ll), line_count, line))
+                for x in range(1, 5):
+                    if ll[x].lower() not in [ 'true', 'false' ]:
+                        print("Need boolean in slot", x)
+                    if '"' not in ll[5]:
+                        print("Need text in slot 5")
+                sys.exit()
             elif len(ll) == 1:
                 print("WARNING need to add full row for line", line_count, "in", os.path.basename(r_src), ":", l0)
                 mt.add_postopen(r_src, line_count)

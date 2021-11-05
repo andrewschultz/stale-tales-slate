@@ -50,7 +50,8 @@ with open("c:/games/inform/roiling.inform/source/hch.txt") as file:
         if prefix == 'slider':
             ary = data.split(',')
             for x in ary[1:]:
-                slider_tracking[ary[0]][x] = False
+                if x.split():
+                    slider_tracking[ary[0]][x] = False
         elif prefix == 'regfile':
             ary1 = data.split('=')
             try:
@@ -119,12 +120,13 @@ def match_slider_tests():
     with open(fi2) as file:
         for (line_count, line) in enumerate(file, 1):
             ll = line.lower().strip()
-            if ll.startswith("chapter") and ("auxiliary" in ll or "nudges" in ll):
+            if ll.startswith("book"):
                 ary = ll.split(' ')
                 aux_sect = ary[1]
             if '[slider test ' in ll:
                 string_to_slide = re.sub(".*slider test ", "", ll)
                 string_to_slide = re.sub("\]", "", string_to_slide)
+                if not aux_sect: sys.exit(ll)
                 slider_tracking[aux_sect][string_to_slide] = False
     for x in slider_tracking:
         file_name = "reg-roi-{}-slider.txt".format(x.replace(' ', '-'))
@@ -153,7 +155,7 @@ def match_slider_tests():
         for y in slider_tracking[x]:
             if y == 'lamp' or y == 'satchel': continue # kludge for now
             if not slider_tracking[x][y]:
-                print("Did not find", y, "/", "#slider test for", y, "in target file", file_name)
+                print("Did not find", y, "/", "#slider test for", y, "in target file", file_name, "... you may wish to amak.py", y)
     exit()
 
 def verify_reg_files(my_proj):

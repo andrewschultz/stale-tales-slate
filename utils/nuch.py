@@ -73,6 +73,7 @@ def trivial_anagram(x):
 
 def pre_process(sts):
     gm =  i7.hdr(sts, 'nu')
+    gb = os.path.basename(gm)
     dupes = 0
     test_match_up = defaultdict(int)
     with open(gm) as file:
@@ -84,8 +85,8 @@ def pre_process(sts):
                 say_stuff = re.sub("\".*", "", say_stuff)
                 say_dict[say_note] = say_stuff
                 continue
-            if line.startswith("chapter "):
-                chapter_name = re.sub("^chapter ", "", line.strip().lower())
+            if line.startswith("book "):
+                chapter_name = re.sub("^[^ ]+ +", "", line.strip().lower())
                 chapter_name = re.sub(" nudges.*", "", chapter_name.strip().lower())
                 current_chapter = sts + '-' + chapter_name
                 if not quiet:
@@ -118,9 +119,9 @@ def pre_process(sts):
                 test_match_up[l] = line_count
                 # print(l)
     if dupes == 0:
-        print("WOO no conflicts for", gm + "!")
+        print("WOO no duplication conflicts for", gb + "!")
     else:
-        print(dupes, 'conflicts for', gm)
+        print(dupes, 'conflicts for', gb)
 
 def int_wo_space(i):
     if re.search("[a-z]", i) or not re.search("[0-9]", i):
@@ -246,7 +247,8 @@ def poke_nudge_files(gm):
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
-        print("Yay, no errors for", gm)
+        if not quiet:
+            print("Yay, no errors for", gm)
         return
     qb = os.path.basename(nudge_files[q])
     out_nudge = re.sub(r'(reg|rbr)-', r"pre\1-", nudge_files[q], 0, re.IGNORECASE)
@@ -379,6 +381,9 @@ if use_html:
             os.system(html_file)
     else:
         print("EVERYTHING PASSED! No need to launch HTML file.")
+else:
+    if excess_global + dupe_global + re_global + to_add_global == 0:
+        print("All nudges are accounted for and not duplicated!")
 
 if not write_to_need_file: print("You can write to file with the w flag.")
 
