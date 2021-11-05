@@ -111,7 +111,11 @@ include STS Common by Andrew Schultz.
 
 include Punctuation Stripper by Andrew Schultz.
 
-section trivia
+section test module(s)
+
+include STS Testing by Andrew Schultz
+
+section trivia - not for release
 
 include Shuffling Beta Testing by Andrew Schultz
 

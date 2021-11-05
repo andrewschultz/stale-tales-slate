@@ -441,7 +441,7 @@ this-cmd	hashval	this-item	this-rule	this-clue
 
 to say froz-ha-ha: say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are touchable]. Except those vowels[end if]";
 
-book sortie
+book sortie nudges
 
 chapter sortie
 
@@ -643,6 +643,8 @@ this-cmd	hashval	this-item	this-rule	this-clue
 "cliche"	301906263	--	--	"[best-not-defile]."
 
 to say best-not-defile: say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
+
+book metros nudges
 
 chapter metros
 
