@@ -16848,8 +16848,6 @@ the blaster is a reflexive thing. description of blaster is "You're not sure how
 
 a-text of blaster is "RRYRRYR". b-text of blaster is "RRGRRGP". parse-text of blaster is "x[sp]x[sp]a[sp]x[sp]x[sp]e[sp]r".
 
-no-pastries is a truth state that varies.
-
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
 	d "Left [number of not moot guardians] guardians: [list of not moot guardians].";
@@ -22267,7 +22265,6 @@ this is the towers-misses rule:
 	if unripe ur pine is in Mislit Limits, say "[2dmiss of towers]you could've made the unripe ur-pine [b]PUNIER[r] to uncover something beyond.";
 	if top opt pot is not moot, say "[2dmiss of towers]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west in Mislit Limits[else if mesprise premises is unvisited]gone west in Mislit Limits for one more quest[else if Tetris Sitter is reflexive]made the Tetris Sitter [b]TRISTE[r][else]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest[end if].";
 	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from a toasted hint pastry, which cost a style point.";
-	if no-pastries is true, say "[2dmiss of towers]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 
 this is the otters-misses rule:
 	if rescind-cinders is false, say "[2dmiss of otters]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";

@@ -1307,7 +1307,7 @@ this is the pre-curst-palace-spectacular rule:
 		do nothing instead;
 
 this is the post-curstpalace-spectacular rule:
-	if used-ray is false and no-pastries is false and cur-score of towers is max-score of towers - 1:
+	if used-ray is false and cur-score of towers is max-score of towers - 1:
 		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere! [if xrayvision is true]And congratulations on resisting temptation after eating [the random moot hintpastry], too.[else][line break][end if]";
 		increment cur-score of towers;
 
