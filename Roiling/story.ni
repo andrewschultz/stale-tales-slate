@@ -15650,7 +15650,12 @@ Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightl
 
 last-loc of Towers is Loftier Trefoil.
 
+trefoil-debug-warn is a truth state that varies.
+
 after looking in Loftier Trefoil:
+	if debug-state is true and trefoil-debug-warn is false:
+		ital-say "Remember, WARWAR skips through the warriors.";
+		now trefoil-debug-warn is true;
 	set the pronoun him to rodney;
 	set the pronoun them to w-p;
 	continue the action;
@@ -17731,7 +17736,7 @@ to choose-new-hint-guardian:
 	let max-priority be 0;
 	let guardian-list be a list of things;
 	repeat with gcand running through touchable guardians:
-		if debug-state is true, say "[gcand]: [other-room of gcand], [guard-hint-prio of gcand] vs max [max-priority].";
+		if debug-state is true, say "DEBUG [gcand]: [other-room of gcand], [guard-hint-prio of gcand] priority vs max priority [max-priority].";
 		if guard-hint-prio of gcand < max-priority, next;
 		if guard-hint-prio of gcand > max-priority:
 			now guardian-list is {};
@@ -22230,44 +22235,49 @@ this is the oyster-misses rule:
 
 this is the towers-misses rule:
 	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot hintpastries], which cost a style point.";
-	if keycar is off-stage:
-		say "[2dmiss of towers]you didn't clear any location of guardians, besides edges or [coastlines], so you didn't get to see a [keycar].";
-	else if keycar is not moot:
-		say "[2dmiss of towers][if keycar is not off-stage]the keycar [keycar-loc] could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians, not just necessary ones. It cannot appear in Coastlines.]
+	if keycar is off-stage, say "[2dmiss of towers]you didn't clear any location of guardians, besides edges or [coastlines], so you didn't get to see a [keycar].";
 	let xxx be unripe ur pine;
 	if number of not moot guardians > 0:
 		say "[2dmiss of towers]starting missed Towers guardians[line break]";
 		repeat with gua running through not moot guardians:
-			if gua is natives site van:
-				say "[eqls][eqls]the natives['] site van in Danger Garden could've been turned [b]VAINEST[r] or [b]NAIVEST[r].";
-				next;
 			if bad-gender-match of gua, next;
 			now xxx is gua;
 			if xxx is Lars Eede or xxx is Elsa Erde, now xxx is Reeds Ale;
 			choose row with the-from of xxx in table of towers anagrams;
 			let rm2 be gualoc of gua;
 			now rm2 is the room guadir of gua from rm2;
-			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else][right-word entry in upper case][end if].";
+			say "[2dmiss of towers][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is Reeds Ale][b]RELEASED[r] or [b]RESEALED[r][else if the-from entry is site van][b]VAINEST[r] or [b]NAIVEST[r][else][b][right-word entry in upper case][r][end if].";
 		if number of not moot guardians > 1, say "(that's all for the guardians)[line break]";
 	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
 	if number of pinko picaros > 0:
 		repeat with pk running through pinko picaros:
 			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
+	towers-miss-track scope copse;
 	if yurts are in Scope Copse, say "[2drm of scope copse]the yurts in the Scope Copse could've become [b]RUSTY[r].";
+	towers-miss-track saltbed;
 	if old ice is not reflexed, say "[2drm of saltbed]the old ice in the Baldest Blasted Saltbed[if saltbed is unvisited] (west of Treading Gradient)[end if] could've become [b]COILED[r].";
+	towers-miss-track leveraged everglade;
 	if ego drains are not moot and leveraged everglade is visited, say "[2drm of leveraged everglade]the organised ego drains in Leveraged Everglade could've become [b]GRANDIOSE[r].";
 	if strudel is reflexive and fringe finger is visited, say "[2drm of fringe finger]the strudel in the Fringe Finger could've become [b]RUSTLED[r].";
+	towers-miss-track anemic cinema;
+	towers-miss-track treading gradient;
 	if sporties ripostes are not moot and lost lots is visited, say "[2drm of lost lots][the ripostes] ripostes in Lost Lots could've become [b]PROSIEST[r].";
 	if mended mini denim is not moot, say "[2drm of treading gradient]the mended mini denim could've been [b]MINED[r].";
 	if raves saver is reflexive, say "[2drm of treading gradient]the [b]REPLAY PLAYER[r] letters on the raves saver could've become [b]PEARLY[r].";
+	towers-miss-track danger garden;
+	towers-miss-track salted deltas;
+	towers-miss-track artist traits strait;
 	if ag-atten is false, say "[2drm of obscurest subsector]you could've made [agnostic] [b]ATTENTIVE[r] to help Dr. Yow's lecture go down a bit smoother.";
 	if weirder red wire is part of bot boat, say "[2drm of actionless coastlines]you could've made the weirder red wire [b]REWIRED[r].";
 	if dourest detours are visited and seismal samiels are not moot, say "[2drm of dourest detours]you could have made the seismal samiels [b]AIMLESS[r].";
 	if unripe ur pine is in Mislit Limits, say "[2drm of mislit limits]you could've made the unripe ur-pine [b]PUNIER[r].";
-	if top opt pot is not moot, say "[2drm of mislit limits]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west";
+	if top opt pot is not moot, say "[2drm of mislit limits]you could've [if serpent is in Mislit Limits]made the repents serpent [b]PRESENT[r] to go west.";
 	if mesprise premises are visited:
 		if tetris sitter is reflexive, say "[2drm of mesprise premises]you could've made the Tetris Sitter [b]TRISTE[r].";
 		if top opt pot is not moot, say "[2drm of mesprise premises]given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest.";
+
+to towers-miss-track (rm - a room):
+	if location of keycar is rm, say "[2drm of rm]the yacker keycar could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians, not just necessary ones. It cannot appear in Coastlines.]
 
 this is the otters-misses rule:
 	if rescind-cinders is false, say "[2drm of minded midden]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
