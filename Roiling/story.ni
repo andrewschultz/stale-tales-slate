@@ -13603,6 +13603,8 @@ after spilling:
 		say "[if spill-target is nothing]PILLS NOT USED SUCCESSFULLY[else]HOW PILLS WERE USED: [how-pills-used][end if].";
 	continue the action;
 
+spill-loc is a room that varies. spill-loc is strip of profits.
+
 to tag-spill-cheated (gc - a thing):
 	now spill-target is gc; [this is for testing MISSES without going to the end]
 	if produce-redo-cup is false:
@@ -13682,11 +13684,12 @@ carry out spilling:
 	if spill-block is true, say "SPILL directed me to [the oi], but it's currently blocked. This should never happen outside of testing." instead;
 	repeat through table of oyster anagrams:
 		if the-from entry is oi:
+			now spill-loc is location of player;
 			try fliptoing the-to entry;
 			tag-spill-cheated the-from entry;
 			if debug-state is true, say "DEBUG: MISSES will show [endgame-spill-instead].";
 			now flip-spill-flag is false;
-			moot pills;
+			if produce-redo-cup is false, moot pills;
 			the rule succeeds;
 	say "WARNING could not flip-from [oi].";
 	now flip-spill-flag is false;
@@ -22220,18 +22223,34 @@ this is the presto-misses rule:
 	if drive e is reflexive, say "[2drm of Hacks Shack]you could've taken time to [b]DERIVE[r] how to improve Drive E.";
 
 this is the oyster-misses rule:
-	if spill-target is not nothing, say "[2dmiss of oyster][endgame-spill-instead].";
+	check-oyster-spill posh hops shop;
 	if number of entries in shop-hint-items > 2, say "[2drm of posh hops shop][if silly-acts is 0]A list of[else]Other[end if] ways to annoy the trolls: [remaining-actions of 0].";
+	check-oyster-spill olde lode;
+	check-oyster-spill disease seaside;
+	check-oyster-spill anger range;
+	check-oyster-spill dearths;
 	if cans are not moot, say "[2drm of dearths]you could've tried to [b]SCAN[r] the cans.";
+	check-oyster-spill lean lane;
 	if dent is not moot, say "[2drm of lean lane]you could've stopped to [b]TEND[r] the dent in Aunt Tuna's raw red drawer.";
 	if wipes are on raw red drawer, say "[2drm of lean lane]you could've tried to [b]SWIPE[r] the wipes at Aunt Tuna's to start a side quest.";
-	if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2drm of shuttle hutlets]you could've stopped to [b]SHAPE[r] the heaps to beautify the hut.";
+	check-oyster-spill lapsin plains;
 	if bogus-plains are reflexive, say "[2drm of lapsin plains]you missed a chance to [b]SPLAIN[r] in the plains, at any time during the door-open puzzle.";
+	check-oyster-spill shuttle hutlets;
+	if heaps are reflexive and heaps are in Shuttle Hutlets, say "[2drm of shuttle hutlets]you could've stopped to [b]SHAPE[r] the heaps to beautify the hut.";
 	if waste is not moot, say "[2drm of shuttle hutlets]you could've tried to [b]SWEAT[r] to remove the waste.";
 	if lance is not off-stage and lance is reflexive, say "[2drm of shuttle hutlets]you could've tried to [b]CLEAN[r] the lance[if templar ramplet is prefigured] to allow you to [b]TRAMPLE[r] the Templar Ramplet[end if].";
+	check-oyster-spill sclerous closures;
+	check-oyster-spill horned hedron;
+	check-oyster-spill rascal craals;
+	check-oyster-spill end den;
+	check-oyster-spill den loft;
 	if templar ramplet is not moot and lance is reflexive, say "[2drm of tenfold]you could've tried to [b]TRAMPLE[r] the Templar Ramplet.";
 	if lever is not reflexed, say "[2drm of tenfold]you could've stopped to [b]REVEL[r] before flipping the [b]LEVER[r].";
+	check-oyster-spill plasm lamps;
 	if Plasm Lamps is visited and bogus-psalm are not reflexed, say "[2drm of plasm lamps]you could've tried to [b]PSALM[r] in Plasm Lamps.";
+
+to check-oyster-spill (rm - a room):
+	if spill-loc is rm, say "[2drm of rm][endgame-spill-instead] in [rm].";
 
 this is the towers-misses rule:
 	if used-ray is true, say "[2dmiss of towers]you used x-ray vision from [list of moot hintpastries], which cost a style point.";

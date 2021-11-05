@@ -50,6 +50,9 @@ carry out produceredocuping:
 	now produce-redo-cup is true;
 	if pills are in Posh Hops Shop, say "(Also, giving you the pills even though [if player is in Posh Hops Shop]you didn't take them[else]they're back in the Posh Hops Shop[end if].)";
 	now player has pills;
+	if jar-empty is true:
+		say "...filling the pills...";
+	now jar-empty is false;
 	the rule succeeds;
 
 book allranding
