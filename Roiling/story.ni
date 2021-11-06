@@ -293,7 +293,7 @@ Otters is an unsolved region. regnud of Otters is table of otters nudges. regana
 NON ANAGRAM: PLAY WHISTLE
 ]
 
-Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 44. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather. misses-rule of others is others-misses rule.
+Others is a frivolous region. regnud of Others is table of others nudges. regana of Others is table of others anagrams. reg-hint-rule of others is others-hinting rule. goto-check of Others is goto-Others rule. max-score of Others is 45. min-score of others is 25. listen-rule of others is listen-others rule. smell-rule of others is smell-others rule. sleep-rule of others is sleep-others rule. swear-rule of others is swear-others rule. spechelp of others is table of others spechelp. scannotes of others is table of others scannotes. attack-table of others is table of others attacks. loc-scan-rule of others is scan-others-loc rule. [hint-done-note table of others is table of others hint-done-notes.] nowhere-table of others is table of others nowheres. done reject table of others is table of others done rejects. randomization rule of others is randomize-others rule. hintobjstable of others is table of others hintobjs. subject blather table of others is table of others subject blather. readable table of others is table of others readables. general blather table of others is table of others general blather. reflexive blather table of others is table of others reflexive blather. misses-rule of others is others-misses rule.
 [There are so many possibilities for a minimum solution--about 38 choose 20, or 33.6 billion--I won't go through them all. Well, technically, take away 10c3*28c17 + 10c2*28c18 + 10c1*28c19 + 10c0*28c20 to get 31.9 billion. You need 4 of the 10 fruits in Rustic Citrus to get going.
 only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits (38) + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
@@ -4371,13 +4371,13 @@ section random fruit hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-rustic-hard-items is a list of things variable. rustic-hard-items is { eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
+rustic-hard-items is a list of things variable. rustic-hard-items is { dates, eerie blurbs, harmonicas, mad train, magenta rope, omen prism, peanut cola }
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, miser ruble, PSA Elp, riot cap, sorer bogey, stucco }.
 
 field-hintables is a list of things variable. field-hintables is { barber sickle, barren cries, barriers west, buried raft, mean trowel, pipe panel lie pen app, pryer bars, rapt figure }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince }.
+clearing-hintables is a list of things variable. clearing-hintables is { Ammo Gang, auction caution, lemons, melon, nectarine, peach, prices precis, quince, olives }.
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { a banna, a brr hub, Dr Severe, orange }
 
@@ -5427,6 +5427,7 @@ check taking inventory:
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
+		now concisions are unmarked for listing;
 		now rosetta toaster is not marked for listing;
 		now all hintpastries are not marked for listing;
 		say "Here in the [mrlp] region you have found:[line break]";
@@ -19437,9 +19438,9 @@ fruits-flipped is a number that varies.
 
 got-forced-others-min is a truth state that varies.
 
-this is the force-others-final-point rule:
+this is the force-others-guru-point rule:
 	if guru-bonus-forced:
-		say "[line break]Congratulations on finding all the fruits! Since you did so without using the arugula to GURU, you will get the final bonus point.";
+		say "[line break]Congratulations on finding all the fruits! Since you did so without using the arugula to [b]GURU[r], you will get [if concisions are reflexed]the final bonus point[else if s-i are moot]the available bonus point[else]one bonus point, but there's one more[end if].";
 		now got-forced-others-min is true;
 		min-up;
 
@@ -19447,7 +19448,7 @@ after fliptoing a fruit (this is the check minimum fruits and score rule) :
 	if player is in Rustic Citrus:
 		coin-eval;
 	check-fruit-min;
-	process the force-others-final-point rule;
+	process the force-others-guru-point rule;
 	continue the action;
 
 to check-fruit-min:
@@ -20217,7 +20218,22 @@ check inserting into lost slot:
 	moot s-i;
 	now player has popstar passport;
 	process the retract halt lath rule;
+	if concisions are reflexive, poss-d;
+	moot concisions;
 	the rule succeeds;
+
+section concisions
+
+to say s-i-c:
+	say "[if player has s-i][s-i][else if player has s-c][s-c][else]BUG coin related item should show[end if]"
+
+the concisions are a privately-named LLPish reflexive thing. printed name of concisions is "weird glow around the [s-i-c]".
+
+understand "concisions" as concisions when debug-state is true.
+
+check scaning s-c: try scaning concisions instead;
+
+a-text of sonicicons is "RYRRYRYYRR". b-text of sonicicons is "RGPRYRYGPP". parse-text of sonicicons is "c[sp]o[sp]n[sp]x[sp]i[sp]x[sp]i[sp]o[sp]n[sp]s".
 
 section final-puzness defined here after thing definitions so articles are right
 
@@ -20345,7 +20361,7 @@ the i solve voiles are plural-named vanishing scenery in Clangier Clearing. "Som
 
 a-text of i solve voiles is "YRYRYR". b-text of i solve voiles is "YR?R??". parse-text of i solve voiles is "o[sp]l[sp]i[sp]x[sp]e[sp]x".
 
-the jar of olives is a boring fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis."
+the jar of olives is a fruit. "Some green (with and without pimentos,) some black.". bore-text of olives is "You can put olives on your fingers or whatever once you're done with this little exploit. You'll have all the olives you want. For now, you're doing stuff for Curtis.". frroom of olives is clangier clearing.
 
 chapter prices precis
 
@@ -22376,6 +22392,7 @@ this is the others-misses rule:
 	if banana is not dislodged, say "[2drm of Scape Space]you could've tried to change a banna['] to a [b]BANANA[r].";
 	if brr hub is not moot, say "[2drm of Scape Space]you could've made a brr hub [b]RHUBARB[r].";
 	if Dr Severe is not moot, say "[2drm of Scape Space]you could've made [Dr Severe]'s arguments [b]REVERSED[r].";
+	if concisions are not reflexed, say "[2drm of Scape Space]you could've made [b]CONCISIONS[r] from the sonic icons before putting them in the Lost Slot.";
 	if did-guru is true, say "[2da]going a-la-guru from the arugula lost you a final point.";
 
 this is the demo-dome-misses rule:

@@ -1715,8 +1715,6 @@ after fliptoing a pickup-line (this is the weaken-players rule):
 	process the post-gretta-help rule;
 	continue the action;
 
-section others auxiliary
-
 to de-inhib:
 	now power-back is true;
 	if atmo moat is prefigured:
@@ -1724,6 +1722,21 @@ to de-inhib:
 		if try-fail-animal:
 			say ", and maybe even the [if try-fail-pit-north is false]loud roar[else if try-fail-cathedral-south is false]owls[else]owls and loud roar[end if] that chased you away back east, too"; [note that try-fail-animal means 1 of pit-north ansd cathedral-south must be true]
 		say ".";
+
+the medal check rules are an object-based rulebook.
+
+a medal check rule for a thing (called x):
+	if player does not have medals:
+		if x is ghoul hat or X is sea cube:
+			say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
+		else:
+			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
+		preef x;
+		[
+		preef ghoul hat;
+		preef sea cube;
+		]
+		do nothing instead;
 
 book others
 
@@ -1773,6 +1786,7 @@ coins	s-c	false	303532482	--	"sonic"	"sonic coins" or "sonic"	--	post-sonic-flip
 icons	s-i	false	303532482	--	"sonic"	"sonic icons" or "sonic"	--	post-sonic-flip rule	"Blam! The icons begin to rattle gently and don't stop."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
 s-c	s-i	false	303532482	--	"icons"	"sonic icons" or "icons"	--	post-sonic-flip rule	"You vacate your mind of material thoughts. The coins become too omen-y to be money."
+concisions	concisions	false	607064964	--	"concisions"	"concisions"	--	--	"Just gazing at [if player has s-i][the s-i][else][the s-c][end if] right, you ... gain wisdom. All your wordplay has made you realize you understand logic but not how to connect. You take a step back to look at the big picture. Yes, you see ways to give your words power even without anagramming."
 coins	icons	false	303532482	--	"icons"	"icons"	--	post-iconic-flip rule	"You vacate your mind of material thoughts. The coin takes on a much cooler design."
 coins	s-i	false	607064964	--	"sonic icons"	"sonic icons" or "icons sonic"	--	post-iconic-flip rule	"You do a little double-think-move on the coins. They become something entirely different."
 viewer	viewer	false	601028460	--	"review"	"review"	pre-gates-stage-flip rule	post-gates-stage-flip rule	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."
@@ -1789,12 +1803,12 @@ this is the post-cranberries rule:
 	moot barren cries;
 
 this is the post-iconic-flip rule:
-	now singed design is part of the noun;
+	concisions-check;
 
 this is the post-sonic-flip rule:
 	if player has So Great Storage, slot-appear;
-	now singed design is part of the noun;
-	if noun is s-i, process the force-others-final-point rule;
+	if noun is s-i, process the force-others-guru-point rule;
+	concisions-check;
 
 this is the pre-gates-stage-flip rule:
 	if gate-level is 2, say "No need to over-study or over-think. Through the gates!" instead;
@@ -1814,22 +1828,15 @@ this is the post-gates-stage-flip rule:
 this is the post-perp-prep rule:
 	moot fleeing feeling;
 
-section otters auxiliary
+section others auxiliary
 
-the medal check rules are an object-based rulebook.
-
-a medal check rule for a thing (called x):
-	if player does not have medals:
-		if x is ghoul hat or X is sea cube:
-			say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if player is in bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.";
-		else:
-			say "That feels right, but it also feels like you're getting way ahead of yourself, there.";
-		preef x;
-		[
-		preef ghoul hat;
-		preef sea cube;
-		]
-		do nothing instead;
+to concisions-check:
+	now singed design is part of the noun;
+	if player has s-i or player has s-c:
+		if concisions are off-stage:
+			now player has concisions;
+	if noun is s-i and concisions are not moot:
+		say "You have a feeling [the s-i] have a hidden use, one you don't need, but one that may give personal growth, a way to find a different sort of word manipulation."
 
 volume demo dome tables
 
