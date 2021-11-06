@@ -298,15 +298,21 @@ only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fru
 
 Demo Dome is a frivolous region. regnud of Demo Dome is table of demo dome nudges. reg-hint-rule of Demo Dome is demo-dome-hinting rule. goto-check of Demo Dome is goto-demo-dome rule. listen-rule of demo dome is listen-demo-dome rule. smell-rule of demo dome is smell-demo-dome rule. sleep-rule of demo dome is sleep-demo-dome rule. swear-rule of demo dome is swear-demo-dome rule. [spechelp of demo dome is table of demo dome spechelp.] [scannotes of demo dome is table of demo dome scannotes.] [attack-table of demo dome is table of demo dome attacks.] [loc-scan-rule of demo dome is scan-demo dome-loc rule.] [hint-done-note table of demo dome is table of demo dome hint-done-notes.] [nowhere-table of demo dome is table of demo dome nowheres.] [done reject table of demo dome is table of demo dome done rejects.] randomization rule of demo dome is randomize-demo-dome rule. hintobjstable of demo dome is table of demo dome hintobjs. [subject blather table of demo dome is table of demo dome subject blather.] [readable table of demo dome is table of demo dome readables.] [general blather table of demo dome is table of demo dome general blather.] [reflexive blather table of demo dome is table of demo dome reflexive blather.] [misses-rule of demo dome is demo dome-misses rule.]
 
-a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
-
 section region stuff for STS Common
 
 orig-region is Ordeal Reload.
 
 hub-region is Stores.
 
+chapter rooms
+
+a sideroom is a kind of room.
+
+a sideroom has text called missed-text.
+
 chapter things
+
+a thing has a region called lreg. lreg of a thing is usually Ordeal Reload.
 
 a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usually nonreflexive.
 
@@ -5496,7 +5502,7 @@ carry out iving:
 chapter going (nowhere)
 
 definition: a room (called r) is detourable:
-	if r is outer route or r is lost lots or r is shaven havens, yes;
+	if r is outer route or r is lost lots or r is shaven havens, yes; [fringe finger doesn't count since you'd fall to your death getting lost]
 	no;
 
 upwarned is a truth state that varies.
@@ -9512,7 +9518,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book Farming Framing
 
-Farming Framing is an innie room in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is touchable]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].". roomnud of farming framing is table of farming framing nudges.
+Farming Framing is an innie sideroom in Ordeal Reload. It is stairy. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is touchable]. The stair you made leads [b]DOWN[r][end if][if tables are moot]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].". roomnud of farming framing is table of farming framing nudges. missed-text of Farming Framing is "a room behind the tables in Dusty Study".
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -9537,7 +9543,7 @@ the girding ridging is bounding boring scenery in Farming Framing. description o
 
 book Highest Heights
 
-Highest Heights is an innie room in Ordeal Reload. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is touchable], and the ramp you made slopes down[end if].". roomnud of highest heights is table of highest heights nudges.
+Highest Heights is an innie sideroom in Ordeal Reload. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is touchable], and the ramp you made slopes down[end if].". roomnud of highest heights is table of highest heights nudges. missed-text of Highest Heights is "a room above the Dusty Study via [if my niche is moot]the chimney[else]MY NICHE[end if]".
 
 study-closeted is a truth state that varies.
 
@@ -9729,7 +9735,7 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 				now curdif is diffic of EP;
 		say "[line break]The [RP] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is mangiest steaming], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
 		if the player regex-prompt-consents, try entering RP instead;
-		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
+		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]. If you want to try another entrance, ENTER it specifically." instead;
 	if mangiest steaming is in strip, try entering mangiest steaming instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
 
@@ -14939,7 +14945,7 @@ carry out burying:
 
 book End Den
 
-End Den is an innie room in Oyster. "You look around, but this probably isn't where you're supposed to be. You can probably go back out[if player has gleaner]. Or maybe you have something that could get you to the right place[end if].". roomnud of End Den is table of End Den nudges.
+End Den is an innie sideroom in Oyster. "You look around, but this probably isn't where you're supposed to be. You can probably go back out[if player has gleaner]. Or maybe you have something that could get you to the right place[end if].". roomnud of End Den is table of End Den nudges. missed-text of End Den is "a useless dead-end room if you'd entered the portal without examining the enlarged gleaner".
 
 check exiting in End Den:
 	say "You find your way back to the Horned Hedron entrance.";
@@ -14948,7 +14954,7 @@ check exiting in End Den:
 
 book Plasm Lamps
 
-Plasm Lamps is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel like going SPLAM! SPLAM! with it.". roomnud of Plasm Lamps is table of Plasm Lamps nudges.
+Plasm Lamps is an innie sideroom in oyster. "It's a bit disorienting here, but your lance helps you feel like going SPLAM! SPLAM! with it.". roomnud of Plasm Lamps is table of Plasm Lamps nudges. missed-text of Plasm Lamps is "a room behind the Templar Ramplet".
 
 bogus-psalm is privately-named reflexive LLPish scenery in Plasm Lamps. description of bogus-psalm is "They light this murky area, [if bogus-psalm are reflexed]and you managed to be clever around them[else]but maybe they present another challenge[end if].". printed name of bogus-psalm is "area around".
 
@@ -16106,7 +16112,7 @@ understand "camp/site/campsite" and "yon camp" as campsite.
 
 book Baldest Blasted Saltbed
 
-Baldest Blasted Saltbed is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if guar-here is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs].". roomnud of Baldest Blasted Saltbed is table of Baldest Blasted Saltbed nudges.
+Baldest Blasted Saltbed is a sideroom. It is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if guar-here is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs].". roomnud of Baldest Blasted Saltbed is table of Baldest Blasted Saltbed nudges. missed-text of Baldest Blasted Saltbed is "an area on the west edge with an LLP".
 
 check going west in Baldest Blasted Saltbed: say "The stew wets are way too dangerous. But any other way is okay." instead;
 
@@ -16126,7 +16132,7 @@ check taking old ice: say "You'd get your hands stuck. And I won't double dog da
 
 book Leveraged Everglade
 
-Leveraged Everglade is east of Scope Copse. Leveraged Everglade is in Towers. "The land here is mucky, but something unseen and man-made allows passage every way except south, where screech creches block your way. You doubt there's much to do here besides get on[if guar-here is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Leveraged Everglade]. They're not blocking you, but they do leave you feeling slightly bummed[end if].". roomnud of Leveraged Everglade is table of Leveraged Everglade nudges.
+Leveraged Everglade is a sideroom in Towers. Leveraged Everglade is east of Scope Copse. "The land here is mucky, but something unseen and man-made allows passage every way except south, where screech creches block your way. You doubt there's much to do here besides get on[if guar-here is 0], especially since you got rid of the guardians here[end if]. Organised ego drains dot the area[if ego drains are in Leveraged Everglade]. They're not blocking you, but they do leave you feeling slightly bummed[end if].". roomnud of Leveraged Everglade is table of Leveraged Everglade nudges. missed-text of Leveraged Everglade is "a room on the north edge west of [coastlines]".
 
 chapter scenery
 
@@ -16371,7 +16377,7 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile is he lot;
 	decide on lois the hostile;
 
-Artist Traits Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Artist Traits Strait is in Towers. roomnud of Artist Traits Strait is table of Artist Traits Strait nudges.
+Artist Traits Strait is a sideroom in Towers. it is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". roomnud of Artist Traits Strait is table of Artist Traits Strait nudges. missed-text of Artist Traits Strait is "a room on the east edge south of [coastlines]".
 
 chapter coulds clouds
 
@@ -16874,7 +16880,7 @@ to say mrmamu: say "[if player is female]Ma'am[else]Mister[end if]";
 
 book Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]There's not much in this area, not even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if][note-detour].". roomnud of Lost Lots is table of Lost Lots nudges.
+Lost Lots is a sideroom. it is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]There's not much in this area, not even a useful slot. A gadflies['] gasfield surrounds you every way except back north[if sporties ripostes are in Lost Lots], and worse, sporties['] ripostes mock you[end if][note-detour].". roomnud of Lost Lots is table of Lost Lots nudges. missed-text of Lost Lots is "an area behind [the site van] south of [danger garden]".
 
 after looking in Lost Lots:
 	if strudel is carried by player or strudel is moot, set the pronoun it to gasfield;
@@ -16899,7 +16905,9 @@ this is the bore-ripostes rule:
 
 book Fringe Finger
 
-Fringe Finger is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n.". roomnud of Fringe Finger is table of Fringe Finger nudges. [NOTE: no note-detour here because you would fall and die off the finger/fringe]
+Fringe Finger is a sideroom. it is west of Anemic Cinema. Fringe Finger is in Towers. "This Fringe Finger looks out over a logged dogleg to ... well, it's a long way down to the unorg'd ground. Falling would mean grief'n.". roomnud of Fringe Finger is table of Fringe Finger nudges. missed-text of Fringe Finger is "an area west of [cinema] behind [the ingrates]".
+
+[NOTE: no note-detour/detourable state here because you would fall and die off the finger/fringe]
 
 understand "loaves" and "loaf" as solve a loaves.
 
@@ -16944,7 +16952,7 @@ check taking sled rut: say "[if strudel is in Fringe Finger]Maybe take the strud
 
 book Rawest Waters
 
-Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waters is table of Rawest Waters nudges.
+Rawest Waters is a sideroom in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back. All you hear is [one of]a call ... can it be? It is! The [neaters]! They are always willing to help someone, but they can't do it by themselves[or]the [neaters], again[stopping].". roomnud of Rawest Waters is table of Rawest Waters nudges. missed-text of Rawest Waters is "the middle of Leak Lake if you didn't fix a bot-boat".
 
 every turn when player is in Rawest Waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
@@ -16968,7 +16976,7 @@ this is the bore-raspy-spray rule:
 
 book Mesprise/Emprise Premise(s)
 
-Mesprise Premises is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges.
+Mesprise Premises is a sideroom. it is west of Mislit Limits. printed name of Mesprise Premises is "[if Tetris Sitter is reflexive]Mesprise Premises[else]Emprise Premise[end if]". Mesprise Premises is an innie room in towers. "A plain dwelling. The only exit is back out east.". roomnud of Mesprise Premises is table of Mesprise Premises nudges. missed-text of Mesprise Premises is "a dwelling west of Mislit Limits".
 
 the Tetris Sitter is a reflexive LLPish person in Mesprise Premises. description is "[if Tetris Sitter is reflexive]Absorbed in a game on her ITSTER[else]A little more at peace with herself now and more interested in other people[end if].". "[The tetris sitter] sits here, [if tetris sitter is reflexive]playing Tetris. She seems rather good at it and almost pleased, but you know 'winning' mindless, endless games isn't real happiness, like fighting through a thoughtful, challenging, well-crafted text adventure[else if top opt pot is moot]legitimately happy now, eager to talk about anything or everything that might help[else]a bit sad now you brought her back to reality, but maybe you can change that[end if]."
 
@@ -17262,7 +17270,7 @@ the shoals aslosh are a useless boring plural-named backdrop. they are in Salted
 
 book Dire and Arid Den
 
-there is an innie room called Dire and Arid Den. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too.". roomnud of Arid Den is table of Dire And Arid Den nudges.
+there is a sideroom called Dire and Arid Den. It is innie. It is in Towers. "You feel drained dreadin['] at the thought of dying here. It's so thick, you bet you could examine or even scan it. You don't really see a way back up, and you aren't going to, until you start thinking more positively.[paragraph break]A Nerd-Aid Diner ad lies here, too.". roomnud of Arid Den is table of Dire And Arid Den nudges. missed-text of Arid Den is "a room below the [denim] in [gradient]".
 
 chapter bogus-dandier (flippable scenery for room)
 
@@ -17288,7 +17296,7 @@ a-text of Nerd Aid Diner ad is "RYRRYYR". b-text of Nerd Aid Diner ad is "?Y??YY
 
 book Dourest Detours
 
-Dourest Detours is an outie room in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges.
+Dourest Detours is an outie sideroom in Towers. "Negativity and apathy overwhelm you here. There must be some way to brush them off and feel energy again. The negativity--well, you can even hear it! You could go any which way, but why bother?". roomnud of Dourest Detours is table of Dourest Detours nudges. missed-text of Dourest Detours is "a room outside of the dead-end edge-rooms if you try to go further out".
 
 last-detour is a room that varies.
 
@@ -18643,7 +18651,7 @@ understand "tindiscreetly" as t-indiscreetly.
 
 book Bran Barn
 
-Bran Barn is an innie room in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north--you can't imagine you'd be safe in the infidel infield in other directions[check-vow].". roomnud of Bran Barn is table of Bran Barn nudges.
+Bran Barn is an innie sideroom in Otters. Bran Barn is south of Disowned Downside. "This is a Bran Barn, empty of grain right now, and it'll probably stay that way[if gore ogre is in Bran Barn]. A painting covers a good chunk of the interior here[end if]. The only way out is back north--you can't imagine you'd be safe in the infidel infield in other directions[check-vow].". roomnud of Bran Barn is table of Bran Barn nudges. missed-text of Bran Barn is "an alternate recharging room south of [downside]".
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if Reclusion Inclosure is visited]. Sort of like [e-n-m]'s much, much nicer brother[end if].". "Mr. Lee stands here, undescribed."
 
@@ -18693,7 +18701,7 @@ a-text of Sullenness Us is "YRRYRR". b-text of Sullenness Us is "YR?YR?". parse-
 
 book Loop Pool
 
-Loop Pool is a room in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-unless].". roomnud of Loop Pool is table of Loop Pool nudges.
+Loop Pool is a sideroom in Otters. Loop Pool is north of Disowned Downside. "Here a wire weir bars you from [one of]a Loop Pool[or]the Loop Pool containing the allot atoll[stopping] and restricts you going every way except back south[check-unless].". roomnud of Loop Pool is table of Loop Pool nudges. missed-text of Loop Pool is "an alternate recharging room north of [downside]".
 
 to say check-unless: if sullenness us is touchable, say ". The 'Sullenness, Us' still echoes. You've done what you need, but maybe you can fix that, too"
 
@@ -20239,7 +20247,7 @@ check going east in swell wells:
 	if tekno token is off-stage, say "The Clangier Clearing to the east is full of the sounds of sale and commerce. You don't have currency or anything resembling it. Maybe you [if fruits-got < 8]will get some from Curtis, if you do enough[else]can go see Curtis for remuneration. You've done a good bit[end if]." instead;
 	if tekno token is moot, say "You bartered for everything you could in the Clangier Clearing." instead
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges.
+Clangier Clearing is a sideroom. it is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices precis and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.". roomnud of Clangier Clearing is table of Clangier Clearing nudges. missed-text of Clangier Clearing is "a sales area east of Swell Wells with a lot of fruits"
 
 after looking in Clangier Clearing:
 	set the pronoun them to nameless salesmen;
@@ -20389,7 +20397,9 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel lie pen app is touchable]Plans for a pipe panel lie pen app are discarded here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft sticks up from the ground, too. [end if][if pipe panel lie pen app is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others. roomnud of Filed Field is table of Filed Field nudges. [?? make sentences less choppy]
+Filed Field is a sideroom. it is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if barriers west are touchable]Barriers west block you a bit extra. [end if][if pipe panel lie pen app is touchable]Plans for a pipe panel lie pen app are discarded here. [end if][if rapt figure is touchable]A rapt figure towers here. [end if][if briar screen is touchable]You can also see a briar screen, and you hear barren cries. [end if][if buried raft is touchable]A buried raft sticks up from the ground, too. [end if][if pipe panel lie pen app is moot and briar screen is moot and barriers west is moot and rapt figure is moot and buried raft is moot]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others. roomnud of Filed Field is table of Filed Field nudges. missed-text of Filed Field is "a field west of Swell Wells with a lot of fruits"
+
+[?? make sentences less choppy in descrption above]
 
 section foliage
 
@@ -20497,7 +20507,7 @@ The basket of blackberries is a fruit. description is "It's from Bickerers['] La
 
 book Scape Space
 
-Scape Space is an innie room in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna is in Scape Space]. A banna['] takes up one part of the wall[end if].". roomnud of Scape Space is table of Scape Space nudges. printed name is "[if greedy-person is moot]Paces[else]Scape[end if] Space".
+Scape Space is an innie sideroom in Others. Scape Space is below Swell Wells. description of Scape Space is "This well-hidden area may be a raft of criminal activity, or maybe any puzzles here may be criminally unfair. A warding drawing suggests going any way other than back up will be dangerous[if a banna is in Scape Space]. A banna['] takes up one part of the wall[end if].". roomnud of Scape Space is table of Scape Space nudges. printed name is "[if greedy-person is moot]Paces[else]Scape[end if] Space". missed-text of Scape Space is "a dark place below Swell Wells with several fruits"
 
 chapter warding drawing
 
@@ -22134,10 +22144,20 @@ to say 2drm of (rr - a room):
 
 anything-missed is a truth state that varies.
 
+show-siderooms is a truth state that varies.
+
 to show-miss (myreg - a region) and (needsolve - a truth state):
 	now miss-room is Meatier Emerita Emirate;
 	if needsolve is true and myreg is not solved, continue the action;
 	process the misses-rule of myreg;
+	let nvs be number of not visited siderooms in myreg;
+	if nvs > 0:
+		now show-siderooms is true;
+		say "[if nvs is 1]You didn't see[else]Places you didn't see:[end if] [list of not visited siderooms in myreg] in [myreg].";
+		now show-siderooms is false;
+
+rule for printing the name of a sideroom (called rm) when show-siderooms is true:
+	say "[if missed-text of rm is empty]([rm], but write missed-text)[else][missed-text of rm][end if]"
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
 	say "An all-feat leaflet flutters over the fourth wall.";

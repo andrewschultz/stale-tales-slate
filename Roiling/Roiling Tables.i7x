@@ -4050,6 +4050,7 @@ yob den	"[one of]It's not really important. They're just a symptom of what's gon
 table of troves hintobjs
 hint-entry	advice-entry	parallel-entry	spoil-entry
 Pa Egg Pea	"[one of]Reading Peg A. Page's book will give you hints what to do in general.[plus][or]The book has a personality-cult feel about it. Perhaps you are reading it too critically.[plus][or]GAPE at the book.[minus][cycling]"	--	"GAPE"
+tears taser	"[one of]The tears taser is optional, but you can't really react to it. You must be more physically passive.[plus][or]How to stand up to the tears taser without showing fear? Give it some of its own medicine.[plus][or]STARE at the tears taser.[minus][cycling]"
 Eh At Heat	"[one of]Man! You're just upset about what happened to you. Maybe there's a way your emotions could make you warmer.[plus][or]There's an emotion you can physically boil over with that anagrams with [heat].[plus][or]You can HATE for a quick surge.[minus][cycling]"	--	"HATE"
 Race Acre	"[one of]You can't be bothered with the Race Acre since you're drained from that hate. You need a new approach to get going again.[plus][or]You need to CARE.[minus][cycling]."	--	"CARE"
 fretful truffle	"The fretful truffle, if you eat it, will tell you what to [if cur-score of troves is 0]type[else]think[end if] next."
@@ -4086,6 +4087,7 @@ salt	"[one of]Anyone can make it to the top, but only those worth their salt wil
 Sister Tressi Siters	"[one of]You can't fully agree with Sister Tressi.[plus][or]You're almost sick of the whole situation, but you need a way out of here. A physical way won't work.[plus][or]What's the first step to saying no?[plus][or]RESIST.[minus][cycling]"	--	"RESIST"
 blamer balmer	"[one of]Blamer Balmer helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
 blamer mr beal	"[one of]Mr. Beal helps you keep your focus.[plus][or]But you'd like to wander a bit... in your mind...[plus][or]RAMBLE.[minus][cycling]"	--	"RAMBLE"
+Creationism Reactionism	"[one of]It's a big book, [creationism], with big words, and a big thinking-verb. Something fanciful and impractical.[plus][or]ROMANTICISE[minus][cycling]"
 trance nectar	"[one of]You don't want to drink it. You want to get out of the whole situation.[plus][or]How to apologize to yourself?[plus][or]RECANT.[minus][cycling]"	--	"RECANT"
 
 table of presto hintobjs
